@@ -310,11 +310,19 @@ def _tire(v, brand):
     man, rest = _find_brand(rest, _brands_for(TIRES, brand))
     if man:
         out["manufacturer"] = man
-    # wheel x width, e.g. 26x4.0, 27.5 x 2.20, 29x2.4", 700x45c. The (?<!\d) stops
-    # the wheel size being split out of a 3-digit number like 700.
-    m, rest = _consume(rest, r"(?<!\d)(\d{2,3}(?:\.\d)?\s*[x×]\s*\d{1,2}(?:\.\d+)?\s*[c\"”]?)")
+    # wheel diameter x tire width, e.g. 26x4.0, 27.5 x 2.20, 29x2.4", 700x45c.
+    # Split into separate diameter + width. The (?<!\d) stops the diameter being
+    # taken out of a 3-digit number. 700-series are road/ISO (width in mm).
+    m = re.search(r"(?<!\d)(\d{2,3}(?:\.\d)?)\s*[x×]\s*(\d{1,2}(?:\.\d+)?)\s*([c\"”]?)", rest)
     if m:
-        out["size"] = re.sub(r"\s+", "", m.group(1)).replace("×", "x").rstrip('"”')
+        dia, wid, suffix = float(m.group(1)), float(m.group(2)), m.group(3)
+        if dia >= 100 or suffix.lower() == "c":          # road/ISO, e.g. 700c
+            out["size"] = f"{int(dia)}c"
+            out["width_mm"] = int(wid)
+        else:                                            # inch sizing (20/26/27.5/29)
+            out["diameter_in"] = dia
+            out["width_in"] = wid
+        rest = rest[:m.start()] + " " + rest[m.end():]
     out["tubeless"] = bool(re.search(r"tubeless|\btlr\b", v, re.I))
     out["details"] = _clean(rest)
     return out
