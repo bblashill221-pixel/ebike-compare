@@ -141,7 +141,7 @@ def normalize_model(brand: str, m: dict) -> dict:
 
 def main():
     models, brands = [], []
-    for f in sorted(glob.glob(str(DATA / "*_ebikes.json"))):
+    for f in sorted(glob.glob(str(DATA / "current" / "*_ebikes.json"))):
         if f.endswith("_normalized.json"):
             continue
         brand = Path(f).stem.replace("_ebikes", "")
@@ -165,7 +165,8 @@ def main():
         "brands": brands,
         "models": models,
     }
-    path = DATA / "ebikes_normalized.json"
+    path = DATA / "current" / "active" / "ebikes_normalized.json"
+    path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(out, indent=2, ensure_ascii=False))
 
     # Light self-check against the required canonical fields.

@@ -247,7 +247,7 @@ async def run(args) -> int:
 
 def main():
     ap = argparse.ArgumentParser(description="Scrape Blix e-bike specifications.")
-    ap.add_argument("-o", "--output", default="data/blix_ebikes.json")
+    ap.add_argument("-o", "--output", default="data/current/blix_ebikes.json")
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--concurrency", type=int, default=2)
     ap.add_argument("--headed", action="store_true")

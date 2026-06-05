@@ -24,10 +24,12 @@ section below). All emit the same JSON shape: `{source, scraped_at, model_count,
 models:[…]}`, where each model has a `warranty` string, `shipping` ({cost, free}), `free_accessories` (the $0 items bundled with the bike), `geometry` (standover, reach, stack, wheelbase, rider-height range, …), `specs.{physical,technical,all}`, and
 `options.colors` = `[{name, hex, swatch_image, image}]`.
 
-> **Output layout:** all generated JSON lives under `data/` (not next to the
-> scrapers): `data/<brand>_ebikes.json` (live per-brand), `data/ebikes_normalized.json`,
-> `data/component_cost_estimates.json`, `data/ebikes.schema.json`; dated snapshots
-> in `data/current/` (newest per brand) and `data/legacy/` (history).
+> **Output layout:** every generated JSON lives under `data/current/` or
+> `data/legacy/` — nothing loose. The live build is `data/current/`:
+> `current/<brand>_ebikes.json` (per-brand scraper source), `current/ebikes.schema.json`,
+> `current/component_cost_estimates.json`, and the published output
+> `current/active/ebikes_normalized.json`. Each superseded build is archived to
+> `data/legacy/<date>/` (its scrape returns + that build's `ebikes_normalized.json`).
  Models with variants also carry a `configurations` list — each entry is one variant with its `options`, `price`, and full `color` scheme (colour availability is per-configuration, e.g. Ride1Up Vorsa).
 
 Each color carries its swatch as a **hex code or an image link** (hex preferred):
@@ -419,12 +421,10 @@ sudo .venv/bin/python -m playwright install-deps chromium
 
 `run_scrape.sh` is a cron-friendly wrapper that runs **all** scrapers. For each:
 
-- runs it with the project venv,
-- keeps the latest result at `<brand>_ebikes.json`,
-- writes a dated snapshot to `data/current/<brand>_ebikes_YYYY-MM-DD.json`,
-  rotating that brand's previous snapshot into `data/legacy/` (so `current/`
-  always holds the newest per brand and `legacy/` keeps the history for diffing
-  prices/specs over time),
+- archives the previous build (scrape returns + `ebikes_normalized.json`) into
+  `data/legacy/<date>/`, dated by that build's `generated_at`,
+- runs each scraper with the project venv, writing to `data/current/<brand>_ebikes.json`,
+- runs the enrichment + normalize (`current/active/ebikes_normalized.json`) + metrics,
 - appends logs to `logs/scrape.log`.
 
 One scraper failing does not stop the others. It's installed to run **weekly,

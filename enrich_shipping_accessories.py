@@ -79,7 +79,7 @@ def free_accessories_from_specs(model: dict) -> list[dict]:
 
 
 def main():
-    for f in sorted(glob.glob(str(DATA / "*_ebikes.json"))):
+    for f in sorted(glob.glob(str(DATA / "current" / "*_ebikes.json"))):
         brand = Path(f).stem.replace("_ebikes", "")
         d = json.load(open(f))
         base = (d.get("source") or "").rstrip("/")

@@ -55,7 +55,7 @@ def per_size(value):
 
 
 def main():
-    for f in sorted(glob.glob(str(DATA / "*_ebikes.json"))):
+    for f in sorted(glob.glob(str(DATA / "current" / "*_ebikes.json"))):
         d = json.load(open(f))
         with_geo = 0
         for m in d.get("models", []):

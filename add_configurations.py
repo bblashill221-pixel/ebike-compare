@@ -54,7 +54,7 @@ def configs_for(product: dict) -> list[dict]:
 
 
 def main():
-    for f in sorted(glob.glob(str(DATA / "*_ebikes.json"))):
+    for f in sorted(glob.glob(str(DATA / "current" / "*_ebikes.json"))):
         brand = Path(f).stem.replace("_ebikes", "")
         if brand in SKIP or brand not in COLLECTION:
             continue

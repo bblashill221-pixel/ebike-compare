@@ -27,7 +27,7 @@ def color_option_key(cfg_options: dict) -> str | None:
 
 
 def main():
-    for f in sorted(glob.glob(str(DATA / "*_ebikes.json"))):
+    for f in sorted(glob.glob(str(DATA / "current" / "*_ebikes.json"))):
         d = json.load(open(f))
         touched = 0
         for m in d.get("models", []):

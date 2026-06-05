@@ -73,7 +73,7 @@ def _handles(m: dict) -> list:
 
 
 def main():
-    for f in sorted(glob.glob(str(DATA / "*_ebikes.json"))):
+    for f in sorted(glob.glob(str(DATA / "current" / "*_ebikes.json"))):
         brand = Path(f).stem.replace("_ebikes", "")
         if brand not in SHOPIFY:
             continue

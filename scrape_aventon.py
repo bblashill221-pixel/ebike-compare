@@ -384,7 +384,7 @@ async def run(args) -> int:
 
 def main():
     ap = argparse.ArgumentParser(description="Scrape Aventon e-bike specifications.")
-    ap.add_argument("-o", "--output", default="data/aventon_ebikes.json")
+    ap.add_argument("-o", "--output", default="data/current/aventon_ebikes.json")
     ap.add_argument("--limit", type=int, default=0, help="Only scrape first N models.")
     ap.add_argument("--concurrency", type=int, default=3)
     ap.add_argument("--headed", action="store_true", help="Run with a visible browser.")

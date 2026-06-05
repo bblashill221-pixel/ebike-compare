@@ -448,8 +448,8 @@ def _highlights(typed: dict) -> list:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("-i", "--input", default=str(DATA / "ebikes_normalized.json"))
-    ap.add_argument("-c", "--costs", default=str(DATA / "component_cost_estimates.json"))
+    ap.add_argument("-i", "--input", default=str(DATA / "current" / "active" / "ebikes_normalized.json"))
+    ap.add_argument("-c", "--costs", default=str(DATA / "current" / "component_cost_estimates.json"))
     args = ap.parse_args()
 
     doc = json.load(open(args.input))

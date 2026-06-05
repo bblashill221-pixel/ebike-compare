@@ -3,11 +3,10 @@
 # Cron-friendly wrapper for the e-bike scrapers (Aventon + Lectric + Ride1Up +
 # Specialized + Velotric + Heybike + Mokwheel + EVELO + Himiway + Euphree + Vvolt
 # + Blix + Tern).
-# For each scraper it:
-#   - runs it with the project's venv,
-#   - writes the latest result to <brand>_ebikes.json,
-#   - archives a dated snapshot to data/<brand>_ebikes_YYYY-MM-DD.json,
-#   - appends stdout/stderr to logs/scrape.log.
+# It archives the previous build (scrape returns + normalized) to
+# data/legacy/<date>/, then runs each scraper with the project's venv writing to
+# data/current/<brand>_ebikes.json, then enrich -> normalize
+# (data/current/active/ebikes_normalized.json) -> metrics. Logs to logs/scrape.log.
 # One scraper failing does not stop the other; the script exits non-zero if any
 # scraper failed.
 #
@@ -20,12 +19,14 @@ PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$PROJECT_DIR"
 
 PY="$PROJECT_DIR/.venv/bin/python"
-STAMP="$(date +%F)"                        # YYYY-MM-DD
 LOG="$PROJECT_DIR/logs/scrape.log"
-# Snapshots: the newest per brand lives in data/current/, older ones in data/legacy/.
+# Layout: the live build is data/current/ (scrape returns + schema + cost estimates)
+# with the normalized output in data/current/active/. Each superseded build is
+# archived to data/legacy/<date>/ (its scrape returns + that build's normalized).
 CURRENT_DIR="$PROJECT_DIR/data/current"
+ACTIVE_DIR="$CURRENT_DIR/active"
 LEGACY_DIR="$PROJECT_DIR/data/legacy"
-mkdir -p "$CURRENT_DIR" "$LEGACY_DIR" "$PROJECT_DIR/logs"
+mkdir -p "$ACTIVE_DIR" "$LEGACY_DIR" "$PROJECT_DIR/logs"
 
 # scraper script | output basename | extra args
 SCRAPERS=(
@@ -47,19 +48,26 @@ SCRAPERS=(
 run_all() {
     local rc=0
     echo "===== $(date -Is) : starting scrape run ====="
+    # Archive the previous build (scrape returns + its normalized) into
+    # data/legacy/<date>/, dated by that build's generated_at (else today).
+    if compgen -G "$CURRENT_DIR/*_ebikes.json" > /dev/null; then
+        local oldstamp
+        oldstamp=$("$PY" -c "import json,glob,sys;
+f=glob.glob('$ACTIVE_DIR/ebikes_normalized.json');
+print((json.load(open(f[0])).get('generated_at','') or '')[:10]) if f else print('')" 2>/dev/null)
+        [ -z "$oldstamp" ] && oldstamp="$(date +%F)"
+        local dest="$LEGACY_DIR/$oldstamp"
+        mkdir -p "$dest"
+        mv -f "$CURRENT_DIR"/*_ebikes.json "$dest/" 2>/dev/null || true
+        [ -f "$ACTIVE_DIR/ebikes_normalized.json" ] && mv -f "$ACTIVE_DIR/ebikes_normalized.json" "$dest/"
+        echo "$(date -Is) : archived previous build -> $dest"
+    fi
     for entry in "${SCRAPERS[@]}"; do
         IFS='|' read -r script base args <<< "$entry"
-        local latest="$PROJECT_DIR/data/${base}.json"
-        local archive="$CURRENT_DIR/${base}_${STAMP}.json"
+        local latest="$CURRENT_DIR/${base}.json"
         echo "--- $(date -Is) : $script ---"
         if "$PY" "$PROJECT_DIR/$script" -o "$latest" $args; then
-            # Rotate any prior current snapshot(s) for this brand into legacy/,
-            # then write the new one to current/ (current/ = newest per brand).
-            for prev in "$CURRENT_DIR/${base}_"*.json; do
-                [ -e "$prev" ] && [ "$prev" != "$archive" ] && mv -f "$prev" "$LEGACY_DIR/"
-            done
-            cp "$latest" "$archive"
-            echo "$(date -Is) : OK -> $latest  (snapshot: $archive)"
+            echo "$(date -Is) : OK -> $latest"
         else
             echo "$(date -Is) : FAILED -> $script"
             rc=1
@@ -80,7 +88,7 @@ run_all() {
     "$PY" "$PROJECT_DIR/normalize.py" || true
     # Metrics last: BOM cost estimates, then the typed-fact + scoring analysis layer.
     "$PY" "$PROJECT_DIR/estimate_component_costs.py" \
-        -o "$PROJECT_DIR/data/component_cost_estimates.json" || true
+        -o "$CURRENT_DIR/component_cost_estimates.json" || true
     "$PY" "$PROJECT_DIR/analyze.py" || true
     echo "===== $(date -Is) : run complete (rc=$rc) ====="
     echo

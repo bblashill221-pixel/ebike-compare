@@ -209,11 +209,11 @@ def estimate(model: dict) -> dict:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("-o", "--output", default="data/component_cost_estimates.json")
+    ap.add_argument("-o", "--output", default="data/current/component_cost_estimates.json")
     args = ap.parse_args()
 
     out_models = []
-    for f in sorted(glob.glob(str(DATA / "*_ebikes.json"))):
+    for f in sorted(glob.glob(str(DATA / "current" / "*_ebikes.json"))):
         brand = Path(f).stem.replace("_ebikes", "")
         d = json.load(open(f))
         for m in d.get("models", []):

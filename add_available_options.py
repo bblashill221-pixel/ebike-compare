@@ -97,7 +97,7 @@ def is_meaningful(group: dict) -> bool:
 
 
 def main():
-    for f in sorted(glob.glob(str(DATA / "*_ebikes.json"))):
+    for f in sorted(glob.glob(str(DATA / "current" / "*_ebikes.json"))):
         d = json.load(open(f))
         for m in d.get("models", []):
             base = base_price(m)

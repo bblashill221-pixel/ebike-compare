@@ -569,7 +569,7 @@ async def run(args) -> int:
 
 def main():
     ap = argparse.ArgumentParser(description="Scrape Lectric eBike specifications.")
-    ap.add_argument("-o", "--output", default="data/lectric_ebikes.json")
+    ap.add_argument("-o", "--output", default="data/current/lectric_ebikes.json")
     ap.add_argument("--limit", type=int, default=0, help="Only scrape first N families.")
     ap.add_argument("--concurrency", type=int, default=1,
                     help="Parallel families. Heavy PDPs hydrate unreliably when "

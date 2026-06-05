@@ -18,7 +18,7 @@ KNOWN_FALLBACK = {"lectric": "1-Year Warranty"}
 
 HERE = Path(__file__).parent
 DATA = HERE / "data"
-for f in sorted(glob.glob(str(DATA / "*_ebikes.json"))):
+for f in sorted(glob.glob(str(DATA / "current" / "*_ebikes.json"))):
     brand = Path(f).stem.replace("_ebikes", "")
     d = json.load(open(f))
     models = d.get("models", [])

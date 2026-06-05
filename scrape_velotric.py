@@ -327,7 +327,7 @@ async def run(args) -> int:
 
 def main():
     ap = argparse.ArgumentParser(description="Scrape Velotric e-bike specifications.")
-    ap.add_argument("-o", "--output", default="data/velotric_ebikes.json")
+    ap.add_argument("-o", "--output", default="data/current/velotric_ebikes.json")
     ap.add_argument("--limit", type=int, default=0, help="Only scrape first N models.")
     ap.add_argument("--concurrency", type=int, default=2,
                     help="Parallel pages. Heavy PDPs hydrate slowly; 2 is reliable.")
