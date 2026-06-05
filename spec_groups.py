@@ -14,7 +14,7 @@ Used by normalize.py. Classification is case-insensitive substring matching in
 import re
 from collections import OrderedDict
 
-from parse_components import parse_component
+from parse_components import parse_component, unitize
 
 # Brands write spec labels in wildly different cases ("BATTERY" / "Battery",
 # "REAR BRAKE" / "Rear brake"). Normalize every field name to snake_case, to match
@@ -26,7 +26,8 @@ def snake(label: str) -> str:
 
 
 _UNIT_SUFFIX = {"_kwh": "kWh", "_wh": "Wh", "_nm": "Nm", "_ah": "Ah",
-                "_mm": "mm", "_w": "W", "_v": "V"}
+                "_mm": "mm", "_mph": "mph", "_lb": "lb", "_mi": "mi",
+                "_in": "in", "_deg": "deg", "_w": "W", "_v": "V"}
 
 
 def _stringify(d: dict) -> str:
@@ -61,6 +62,10 @@ def flatten_grouped(grouped: dict) -> dict:
                 out[k] = v
             elif isinstance(v, dict) and "details" in v:   # parsed component
                 out[k] = _stringify(v)
+            elif isinstance(v, (int, float)) and not isinstance(v, bool):
+                # unitized scalar (top_speed_mph: 28) -> re-attach unit for regexes
+                unit = next((u for suf, u in _UNIT_SUFFIX.items() if k.endswith(suf)), "")
+                out[k] = f"{v}{unit}"
     return out
 
 
@@ -171,8 +176,18 @@ def group_specs(all_specs: dict, geometry: dict | None = None,
             continue
         # classify on the original (spaced) label; emit a snake_case field name.
         field = snake(label)
+        group = buckets.setdefault(classify(low), OrderedDict())
         parsed = parse_component(field, value, brand, siblings=snaked)
-        buckets.setdefault(classify(low), OrderedDict())[field] = parsed or value
+        if parsed:
+            group[field] = parsed
+        else:
+            # unitize a standalone measurement (top_speed -> top_speed_mph: 28) or
+            # keep the original string.
+            uf = unitize(field, value)
+            if uf:
+                group[uf[0]] = uf[1]
+            else:
+                group[field] = value
     if geometry:
         buckets["Geometry"] = OrderedDict((snake(k), v) for k, v in geometry.items())
     out: "OrderedDict" = OrderedDict()

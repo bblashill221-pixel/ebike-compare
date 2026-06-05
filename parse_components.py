@@ -906,6 +906,68 @@ def _resolver(field: str):
     return None
 
 
+# ------------------------- unitized scalar measurements -------------------------
+# Standalone measurement fields (not components) -> a bare number with the unit in
+# the field name, e.g. "top_speed": "28 mph" -> ("top_speed_mph", 28). kph->mph
+# and kg->lb are converted so values are comparable.
+
+def _u_mph(v):
+    vals = []
+    for m in re.finditer(r"(\d+(?:\.\d+)?)\s*(mph|km/?h|kph|kmh)", v, re.I):
+        n = float(m.group(1))
+        if m.group(2).lower() != "mph":
+            n *= 0.621371
+        vals.append(n)
+    return round(max(vals)) if vals else None
+
+
+def _u_lb(v):
+    m = re.search(r"(\d+(?:\.\d+)?)\s*(?:lbs?|pounds?)\b", v, re.I)
+    if m:
+        n = float(m.group(1))
+        return int(n) if n == int(n) else round(n, 1)
+    m = re.search(r"(\d+(?:\.\d+)?)\s*kg", v, re.I)
+    return round(float(m.group(1)) * 2.20462, 1) if m else None
+
+
+def _u_mi(v):
+    vals = [int(x) for x in re.findall(r"(\d{2,3})\s*(?:miles?|mi\b)", v, re.I)]
+    return max(vals) if vals else None
+
+
+def _u_nm(v):
+    m = re.search(r"(\d+(?:\.\d+)?)\s*n[·.\s]?m", v, re.I)
+    return round(float(m.group(1))) if m else None
+
+
+def _u_w(v):
+    m = re.search(r"(\d{2,4})\s*w\b", v, re.I)
+    return int(m.group(1)) if m else None
+
+
+def unitize(field: str, value):
+    """(new_field, number) for a recognized standalone measurement field, else None.
+    Leaves the field untouched when no number is present (e.g. weight_size 'One Size')."""
+    if not isinstance(value, str):
+        return None
+    f = field.lower()
+
+    def out(suffix, n):
+        return (f if f.endswith(suffix) else f + suffix, n) if n is not None else None
+
+    if "speed" in f and "speeds" not in f and "gear" not in f:
+        return out("_mph", _u_mph(value))
+    if any(t in f for t in ("weight", "payload", "load", "capacity")) and "size" not in f:
+        return out("_lb", _u_lb(value))
+    if "range" in f and "height" not in f and "speed" not in f and "adjustable" not in f:
+        return out("_mi", _u_mi(value))
+    if "torque" in f:
+        return out("_nm", _u_nm(value))
+    if ("power" in f or "wattage" in f) and "speed" not in f:
+        return out("_w", _u_w(value))
+    return None
+
+
 def parse_component(field: str, value, brand: str | None = None,
                     siblings: dict | None = None):
     """Structured dict for a known component field, else None. `siblings` lets the

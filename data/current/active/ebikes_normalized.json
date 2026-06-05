@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-05T16:45:14.023362+00:00",
+  "generated_at": "2026-06-05T18:36:29.604246+00:00",
   "brand_count": 13,
   "model_count": 185,
   "brands": [
@@ -3959,10 +3959,10 @@
       "specs": {
         "general_info": {
           "model": "Abound LR Ebike",
-          "weight": "88lbs",
-          "total_weight_limit": "440 lbs",
+          "weight_lb": 88,
+          "total_weight_limit_lb": 440,
           "ebike_class": "Class 2 Ebike",
-          "range": "Up to 60 miles",
+          "range_mi": 60,
           "ideal_use": "Cargo & Utility",
           "carry_capacity": "Carry Up To 2 Passengers",
           "speed": "Class 2"
@@ -3999,7 +3999,7 @@
             "removable": true,
             "details": "Removable Internal Lithium-ion"
           },
-          "battery_weight": "8.7lbs",
+          "battery_weight_lb": 8.7,
           "controller": {
             "voltage_v": 36,
             "amps_a": 33,
@@ -4203,7 +4203,7 @@
         "included_accessories": {
           "fenders": "Included",
           "rear_rack": "Included",
-          "rear_rack_weight_limit": "143 lbs"
+          "rear_rack_weight_limit_lb": 143
         }
       },
       "colors": [
@@ -4477,11 +4477,11 @@
       "specs": {
         "general_info": {
           "model": "Abound SR Ebike",
-          "weight": "80 lbs",
-          "total_weight_limit": "440 lbs",
+          "weight_lb": 80,
+          "total_weight_limit_lb": 440,
           "ebike_class": "Class 2 Ebike",
           "ideal_use": "Cargo & Utility",
-          "range": "Up to 60 miles",
+          "range_mi": 60,
           "folding": "No",
           "carry_capacity": "Carry A Single Passenger",
           "speed": "Class 2"
@@ -4687,7 +4687,7 @@
         "included_accessories": {
           "rear_rack": "Included",
           "kickstand": "Included: E-lock",
-          "rear_rack_weight_limit": "143 lbs"
+          "rear_rack_weight_limit_lb": 143
         }
       },
       "colors": [
@@ -4970,10 +4970,10 @@
       "specs": {
         "general_info": {
           "model": "Aventure 3 Ebike",
-          "weight": "76 lbs",
-          "total_weight_limit": "400 lbs",
+          "weight_lb": 76,
+          "total_weight_limit_lb": 400,
           "ebike_class": "Class 2 Ebike",
-          "range": "Up to 65 miles",
+          "range_mi": 65,
           "ideal_use": "All-Terrain",
           "speed": "Class 2"
         },
@@ -5011,7 +5011,7 @@
             "removable": true,
             "details": "Removable Internal Lithium-ion"
           },
-          "battery_weight": "8.7lbs",
+          "battery_weight_lb": 8.7,
           "controller": {
             "voltage_v": 36,
             "amps_a": 33,
@@ -5552,10 +5552,10 @@
       "specs": {
         "general_info": {
           "model": "Aventure 3 Step-Through Ebike",
-          "weight": "77 lbs",
-          "total_weight_limit": "400 lbs",
+          "weight_lb": 77,
+          "total_weight_limit_lb": 400,
           "ebike_class": "Class 2 Ebike",
-          "range": "Up to 65 miles",
+          "range_mi": 65,
           "ideal_use": "All-Terrain",
           "speed": "Class 2"
         },
@@ -5593,7 +5593,7 @@
             "removable": true,
             "details": "Removable Internal Lithium-ion"
           },
-          "battery_weight": "8.7lbs",
+          "battery_weight_lb": 8.7,
           "controller": {
             "voltage_v": 36,
             "amps_a": 33,
@@ -6138,10 +6138,10 @@
         "general_info": {
           "model": "Aventure M Ebike",
           "ideal_use": "4\" All-Terrain Fat Tires",
-          "weight": "73 lbs",
-          "total_weight_limit": "400 lbs",
+          "weight_lb": 73,
+          "total_weight_limit_lb": 400,
           "ebike_class": "Class 1 (Aftermarket Throttle Available for Class 2 Conversion. Can also be converted to Class 3)",
-          "range": "Up to 85 Miles"
+          "range_mi": 85
         },
         "ebike_system": {
           "motor": {
@@ -6172,7 +6172,7 @@
             "removable": true,
             "details": "Removable Internal Lithium-ion"
           },
-          "battery_weight": "8.7lbs",
+          "battery_weight_lb": 8.7,
           "controller": {
             "details": "Integrated in Motor"
           },
@@ -6721,10 +6721,10 @@
       "spec_count": 46,
       "specs": {
         "general_info": {
-          "weight": "56lbs",
-          "total_weight_limit": "330 lbs",
+          "weight_lb": 56,
+          "total_weight_limit_lb": 330,
           "speed": "Class 1 (Convertible to Class 3)",
-          "range": "Up To 105 Miles",
+          "range_mi": 105,
           "ideal_use": "Mountain Biking, Urban Riding"
         },
         "ebike_system": {
@@ -6750,7 +6750,7 @@
             "removable": false,
             "details": "Integrated Battery"
           },
-          "battery_weight": "9.2 lbs",
+          "battery_weight_lb": 9.2,
           "charging_time_from_0_to_100": "6 hours",
           "charger": {
             "amps_a": 4.0,
@@ -6886,7 +6886,7 @@
             "model": "SRX"
           },
           "seatpost": {
-            "manufacturer": "XFusion",
+            "manufacturer": "Xfusion",
             "type": "dropper",
             "diameter_mm": 31.6,
             "details": "Dropper Seatpost. S/M:, L/XL",
@@ -7233,10 +7233,10 @@
       "spec_count": 46,
       "specs": {
         "general_info": {
-          "weight": "53 lbs",
-          "total_weight_limit": "330 lbs",
+          "weight_lb": 53,
+          "total_weight_limit_lb": 330,
           "speed": "Class 1 (Convertible to Class 3)",
-          "range": "Up To 105 Miles",
+          "range_mi": 105,
           "ideal_use": "Mountain Biking, Urban Riding"
         },
         "ebike_system": {
@@ -7262,7 +7262,7 @@
             "removable": false,
             "details": "Integrated Battery"
           },
-          "battery_weight": "9.2 lbs",
+          "battery_weight_lb": 9.2,
           "charging_time_from_0_to_100": "6 hours",
           "charger": {
             "amps_a": 4.0,
@@ -7403,7 +7403,7 @@
             "model": "SRX"
           },
           "seatpost": {
-            "manufacturer": "XFusion",
+            "manufacturer": "Xfusion",
             "type": "dropper",
             "diameter_mm": 31.6,
             "details": "Dropper Seatpost. S/M:, L/XL",
@@ -7751,11 +7751,11 @@
       "specs": {
         "general_info": {
           "model": "Level 3 Ebike",
-          "weight": "67lbs",
-          "total_weight_limit": "330 lbs",
+          "weight_lb": 67,
+          "total_weight_limit_lb": 330,
           "box_size": "61\"x13\"x34\"",
           "ebike_class": "Class 2 Ebike",
-          "range": "Up to 70 Miles",
+          "range_mi": 70,
           "ideal_use": "Commuting",
           "speed": "Class 2"
         },
@@ -7789,7 +7789,7 @@
             "removable": true,
             "details": "Removable Internal Lithium-ion"
           },
-          "battery_weight": "8.7lbs",
+          "battery_weight_lb": 8.7,
           "controller": {
             "voltage_v": 36,
             "amps_a": 24,
@@ -7993,7 +7993,7 @@
         "included_accessories": {
           "fenders": "Included",
           "rear_rack": "Included",
-          "rear_rack_weight_limit": "60lbs"
+          "rear_rack_weight_limit_lb": 60
         }
       },
       "colors": [
@@ -8298,11 +8298,11 @@
       "specs": {
         "general_info": {
           "model": "Level 3 Step-Through Ebike",
-          "weight": "67lbs",
-          "total_weight_limit": "330 lbs",
+          "weight_lb": 67,
+          "total_weight_limit_lb": 330,
           "box_size": "61\"x13\"x34\"",
           "ebike_class": "Class 2 Ebike",
-          "range": "Up to 70 Miles",
+          "range_mi": 70,
           "ideal_use": "Commuting",
           "speed": "Class 2"
         },
@@ -8336,7 +8336,7 @@
             "removable": true,
             "details": "Removable Internal Lithium-ion"
           },
-          "battery_weight": "8.7lbs",
+          "battery_weight_lb": 8.7,
           "controller": {
             "voltage_v": 36,
             "amps_a": 24,
@@ -8538,7 +8538,7 @@
           "rider_height": "4'11\" - 6'1\""
         },
         "included_accessories": {
-          "rear_rack_weight_limit": "60lbs"
+          "rear_rack_weight_limit_lb": 60
         }
       },
       "colors": [
@@ -8814,10 +8814,10 @@
       "spec_count": 48,
       "specs": {
         "general_info": {
-          "weight": "61lbs",
-          "total_weight_limit": "330 lbs",
+          "weight_lb": 61,
+          "total_weight_limit_lb": 330,
           "ebike_class": "Class 1 (Convertible to Class 2 and/or Class 3)",
-          "range": "Up to 110 Miles",
+          "range_mi": 110,
           "ideal_use": "Commuting"
         },
         "ebike_system": {
@@ -8849,7 +8849,7 @@
             "removable": true,
             "details": "Removable Lithium-Ion., 58E cells"
           },
-          "battery_weight": "8.7lbs",
+          "battery_weight_lb": 8.7,
           "throttle": {
             "details": "Compatible, Not Included"
           },
@@ -9397,10 +9397,10 @@
       "spec_count": 48,
       "specs": {
         "general_info": {
-          "weight": "61lbs",
-          "total_weight_limit": "330 lbs",
+          "weight_lb": 61,
+          "total_weight_limit_lb": 330,
           "ebike_class": "Class 1 (Convertible to Class 2 and/or Class 3)",
-          "range": "Up to 110 Miles",
+          "range_mi": 110,
           "ideal_use": "Commuting"
         },
         "ebike_system": {
@@ -9432,7 +9432,7 @@
             "removable": true,
             "details": "Removable Lithium-Ion., 58E cells"
           },
-          "battery_weight": "8.7lbs",
+          "battery_weight_lb": 8.7,
           "throttle": {
             "details": "Compatible, Not Included"
           },
@@ -9942,10 +9942,10 @@
       "spec_count": 50,
       "specs": {
         "general_info": {
-          "weight": "68.5lbs",
-          "total_weight_limit": "330 lbs",
+          "weight_lb": 68.5,
+          "total_weight_limit_lb": 330,
           "ebike_class": "Class 2 (Convertible to Class 3)",
-          "range": "Up to 75 Miles"
+          "range_mi": 75
         },
         "ebike_system": {
           "motor": {
@@ -9977,7 +9977,7 @@
             "removable": true,
             "details": "Removable Internal Lithium-ion"
           },
-          "battery_weight": "8.7lbs",
+          "battery_weight_lb": 8.7,
           "controller": {
             "voltage_v": 36,
             "amps_a": 33,
@@ -10507,10 +10507,10 @@
       "spec_count": 50,
       "specs": {
         "general_info": {
-          "weight": "68.5lbs",
-          "total_weight_limit": "330 lbs",
+          "weight_lb": 68.5,
+          "total_weight_limit_lb": 330,
           "ebike_class": "Class 2 (Convertible to Class 3)",
-          "range": "Up to 75 Miles"
+          "range_mi": 75
         },
         "ebike_system": {
           "motor": {
@@ -10542,7 +10542,7 @@
             "removable": true,
             "details": "Removable Internal Lithium-ion"
           },
-          "battery_weight": "8.7lbs",
+          "battery_weight_lb": 8.7,
           "controller": {
             "voltage_v": 36,
             "amps_a": 33,
@@ -11071,11 +11071,11 @@
       "specs": {
         "general_info": {
           "model": "Pace 4 Step-Through Ebike",
-          "weight": "58.2 lbs",
-          "total_weight_limit": "330 lbs",
-          "range": "Up to 70 Miles",
+          "weight_lb": 58.2,
+          "total_weight_limit_lb": 330,
+          "range_mi": 70,
           "ebike_class": "Class 2 (Can be converted to Class 3 if local laws and regulations allow)",
-          "speed": "Max: 28 MPH",
+          "speed_mph": 28,
           "ideal_use": "Cruising"
         },
         "ebike_system": {
@@ -11106,7 +11106,7 @@
             "removable": true,
             "details": "Removable Internal Lithium-ion"
           },
-          "battery_weight": "8.7lbs",
+          "battery_weight_lb": 8.7,
           "controller": {
             "voltage_v": 36,
             "amps_a": 24,
@@ -11646,11 +11646,11 @@
       "spec_count": 50,
       "specs": {
         "general_info": {
-          "weight": "60.48lbs",
-          "total_weight_limit": "330 lbs",
+          "weight_lb": 60.5,
+          "total_weight_limit_lb": 330,
           "ebike_class": "Class 2 Ebike",
-          "range": "Up to 75 Miles",
-          "speed": "Max: 28 MPH"
+          "range_mi": 75,
+          "speed_mph": 28
         },
         "ebike_system": {
           "motor": {
@@ -11681,7 +11681,7 @@
             "removable": true,
             "details": "Removable Internal Lithium-ion"
           },
-          "battery_weight": "8.7lbs",
+          "battery_weight_lb": 8.7,
           "controller": {
             "voltage_v": 36,
             "amps_a": 33,
@@ -12278,10 +12278,10 @@
       "specs": {
         "general_info": {
           "model": "Ramblas ADV Ebike",
-          "weight": "54 lbs",
-          "total_weight_limit": "330 lbs",
+          "weight_lb": 54,
+          "total_weight_limit_lb": 330,
           "box_size": "59 x 13 x 36",
-          "range": "Up to 90 miles",
+          "range_mi": 90,
           "ideal_use": "Mountain Biking, Urban Riding",
           "speed": "Class 1"
         },
@@ -12318,7 +12318,7 @@
             "removable": false,
             "details": ""
           },
-          "battery_weight": "8.44 lbs",
+          "battery_weight_lb": 8.4,
           "throttle": {
             "details": "N/A"
           },
@@ -12887,11 +12887,11 @@
       "specs": {
         "general_info": {
           "model": "Soltera 2.5 Ebike",
-          "weight": "46 lbs",
-          "total_weight_limit": "330 lbs",
+          "weight_lb": 46,
+          "total_weight_limit_lb": 330,
           "box_size": "59 x 11 x 33",
           "ebike_class": "Class 2 Ebike",
-          "range": "Up to 46 Miles",
+          "range_mi": 46,
           "ideal_use": "Urban Riding",
           "speed": "Class 2"
         },
@@ -12924,7 +12924,7 @@
             "removable": true,
             "details": "Removable Internal Lithium-ion,(345.6Wh) with Cells"
           },
-          "battery_weight": "4.14 lbs",
+          "battery_weight_lb": 4.1,
           "controller": {
             "voltage_v": 36,
             "amps_a": 15,
@@ -13441,9 +13441,9 @@
       "specs": {
         "general_info": {
           "model": "Soltera 3 ADV Ebike",
-          "weight": "37lbs",
-          "total_weight_limit": "330 lbs",
-          "range": "Up to 70 Miles",
+          "weight_lb": 37,
+          "total_weight_limit_lb": 330,
+          "range_mi": 70,
           "ideal_use": "Urban Riding",
           "speed": "Class 1"
         },
@@ -13467,7 +13467,7 @@
             "removable": false,
             "details": "Integrated Lithium-ion 36.9V, 9., 366.8Wh"
           },
-          "battery_weight": "4.2lbs",
+          "battery_weight_lb": 4.2,
           "controller": {
             "voltage_v": 36,
             "amps_a": 15,
@@ -14056,9 +14056,9 @@
       "spec_count": 41,
       "specs": {
         "general_info": {
-          "weight": "62 lbs",
-          "payload": "400 lbs, 318 lbs max rider weight",
-          "range": "Up to 70 miles"
+          "weight_lb": 62,
+          "payload_lb": 400,
+          "range_mi": 70
         },
         "ebike_system": {
           "battery": {
@@ -14123,7 +14123,7 @@
             "details": "Electric, Auto Function"
           },
           "rear_derailleur": {
-            "manufacturer": "MicroShift",
+            "manufacturer": "microSHIFT",
             "speeds": 8,
             "details": ""
           },
@@ -14195,7 +14195,7 @@
           "8_step_over_height": "17\" (433mm)"
         },
         "included_accessories": {
-          "rear_rack_payload": "60 lbs",
+          "rear_rack_payload_lb": 60,
           "fenders": "Included, Plastic, PVC",
           "rear_rack": "Included, MIK compatible"
         }
@@ -14362,7 +14362,7 @@
       "spec_count": 55,
       "specs": {
         "general_info": {
-          "bike_weight": "Single Battery: 67lbs (29.5kgs)Single Without Battery: 59.5lbs (26.98kgs)Dual Battery: 75.5lbs (34.25kgs)Dual Without Batteries: 60.5lbs (27.2kgs)"
+          "bike_weight_lb": 67
         },
         "ebike_system": {
           "battery": {
@@ -14543,9 +14543,9 @@
         },
         "included_accessories": {
           "fenders": "PVC Material, Black",
-          "payload_rider_cargo_weight": "Rider: <250lbs (113.40kgs)Cargo: <150lbs (68.04kgs); or greater if rider is <200lbs",
-          "front_cargo_capacity": "<50lbs (22.68kgs)",
-          "rear_cargo_capacity": "<150lbs (68.03kgs)"
+          "payload_rider_cargo_weight_lb": 250,
+          "front_cargo_capacity_lb": 50,
+          "rear_cargo_capacity_lb": 150
         },
         "general_other": {
           "front_center": "26.9\" (683mm)"
@@ -14777,9 +14777,7 @@
           "ul_listed": null,
           "warranty_years": 1,
           "connectivity": [],
-          "notable_tech": [
-            "dual-battery"
-          ]
+          "notable_tech": []
         },
         "percentiles": {
           "battery_wh_pct": 0.364,
@@ -14794,12 +14792,11 @@
           "components": 60,
           "safety": 30,
           "security": 0,
-          "tech": 10,
+          "tech": 0,
           "warranty": 20,
           "value": 67.5
         },
         "highlights": [
-          "dual-battery",
           "hydraulic brakes"
         ]
       }
@@ -14828,9 +14825,9 @@
       "spec_count": 41,
       "specs": {
         "general_info": {
-          "weight": "62 lbs",
-          "payload": "400 lbs, 318 lbs max rider weight",
-          "range": "Up to 70 miles"
+          "weight_lb": 62,
+          "payload_lb": 400,
+          "range_mi": 70
         },
         "ebike_system": {
           "battery": {
@@ -14895,7 +14892,7 @@
             "details": "Electric, Auto Function"
           },
           "rear_derailleur": {
-            "manufacturer": "MicroShift",
+            "manufacturer": "microSHIFT",
             "speeds": 8,
             "details": ""
           },
@@ -14967,7 +14964,7 @@
           "8_step_over_height": "17\" (433mm)"
         },
         "included_accessories": {
-          "rear_rack_payload": "60 lbs",
+          "rear_rack_payload_lb": 60,
           "fenders": "Included, Plastic, PVC",
           "rear_rack": "Included, MIK compatible"
         }
@@ -15198,10 +15195,10 @@
       "specs": {
         "general_info": {
           "foldable": "Yes",
-          "weight": "55 lbs",
+          "weight_lb": 55,
           "folding_size": "36\"21\"29\"",
-          "payload": "312 lbs, 270 lbs max rider weight",
-          "range": "Up to 70 miles"
+          "payload_lb": 312,
+          "range_mi": 70
         },
         "ebike_system": {
           "battery": {
@@ -15266,7 +15263,7 @@
             "details": "Electric, Auto Function"
           },
           "rear_derailleur": {
-            "manufacturer": "MicroShift",
+            "manufacturer": "microSHIFT",
             "speeds": 8,
             "details": ""
           },
@@ -15339,7 +15336,7 @@
           "8_step_over_height": "16.6\" (422mm)"
         },
         "included_accessories": {
-          "rear_rack_payload": "60 lbs",
+          "rear_rack_payload_lb": 60,
           "fenders": "Included, Plastic, PVC",
           "rear_rack": "Included, MIK compatible"
         }
@@ -15570,12 +15567,12 @@
       "specs": {
         "general_info": {
           "model": "New City Robin",
-          "range": "Up to 70 miles",
-          "weight": "73 lbs",
-          "total_capacity": "350 lbs"
+          "range_mi": 70,
+          "weight_lb": 73,
+          "total_capacity_lb": 350
         },
         "ebike_system": {
-          "top_speed": "28 mph (Class 3)",
+          "top_speed_mph": 28,
           "sensors": {
             "type": "torque+cadence",
             "details": "Torque & Cadence"
@@ -15957,10 +15954,10 @@
       "spec_count": 4,
       "specs": {
         "general_info": {
-          "max_range": "Up to 40 miles per charge"
+          "max_range_mi": 40
         },
         "ebike_system": {
-          "top_speed": "28 mph (Class 3 compliant)",
+          "top_speed_mph": 28,
           "motor": {
             "placement": "hub",
             "power_w": 500,
@@ -16160,12 +16157,12 @@
       "specs": {
         "general_info": {
           "model": "Stellar Falcon 2 (Mid-Step)",
-          "range": "Up to 70 miles",
-          "weight": "74 lbs",
-          "total_capacity": "350 lbs"
+          "range_mi": 70,
+          "weight_lb": 74,
+          "total_capacity_lb": 350
         },
         "ebike_system": {
-          "top_speed": "28 mph (Class 3)",
+          "top_speed_mph": 28,
           "sensors": {
             "type": "torque+cadence",
             "details": "Torque & Cadence"
@@ -16512,9 +16509,9 @@
       "spec_count": 15,
       "specs": {
         "general_info": {
-          "range": "Up to 70 miles",
-          "bike_weight": "74 lbs",
-          "max_payload": "350 lbs"
+          "range_mi": 70,
+          "bike_weight_lb": 74,
+          "max_payload_lb": 350
         },
         "ebike_system": {
           "motor": {
@@ -16524,7 +16521,7 @@
             "details": "hub",
             "model": "geared"
           },
-          "peak_power": "1,200W peak",
+          "peak_power_w": 200,
           "battery": {
             "capacity_wh": 720,
             "voltage_v": 48,
@@ -16532,7 +16529,7 @@
             "removable": false,
             "details": ""
           },
-          "top_speed": "28 mph (Class 3)",
+          "top_speed_mph": 28,
           "sensor": {
             "type": "torque+cadence",
             "details": "Torque + Cadence"
@@ -16743,7 +16740,7 @@
       "spec_count": 32,
       "specs": {
         "general_info": {
-          "maximum_rider_weight": "Recommended for riders up to 350 lbs. Larger riders can be accommodated – contact us for details."
+          "maximum_rider_weight_lb": 350
         },
         "ebike_system": {
           "motor": {
@@ -16775,9 +16772,9 @@
             "details": "4.7\" Display",
             "model": "C-010 Full-Color"
           },
-          "bicycle_weight_without_battery": "58 lbs",
-          "primary_battery_weight": "8.2 lbs",
-          "secondary_battery_weight": "9.6 lbs w/ Rack"
+          "bicycle_weight_without_battery_lb": 58,
+          "primary_battery_weight_lb": 8.2,
+          "secondary_battery_weight_lb": 9.6
         },
         "safety": {
           "lights": {
@@ -16993,8 +16990,8 @@
       "spec_count": 32,
       "specs": {
         "general_info": {
-          "range": "Up to 40 Miles on Pedal-Assist, 80 Miles with Battery Add-On",
-          "maximum_rider_weight": "Recommended for riders up to 350 lbs. Larger riders can be accommodated – contact us for details."
+          "range_mi": 80,
+          "maximum_rider_weight_lb": 350
         },
         "ebike_system": {
           "motor": {
@@ -17025,8 +17022,8 @@
             "type": "color",
             "details": "Multi-Color 3.2” IPS Display with USB Charger (DPC-18)"
           },
-          "bicycle_weight_without_battery": "71 lbs.",
-          "battery_weight": "6 lbs."
+          "bicycle_weight_without_battery_lb": 71,
+          "battery_weight_lb": 6
         },
         "safety": {
           "lights": {
@@ -17253,8 +17250,8 @@
       "spec_count": 31,
       "specs": {
         "general_info": {
-          "range": "Up to 55 Miles on Pedal-Assist or 25 Miles on Electric-Only",
-          "maximum_rider_weight": "Recommended for riders up to 350 lbs"
+          "range_mi": 55,
+          "maximum_rider_weight_lb": 350
         },
         "ebike_system": {
           "motor": {
@@ -17284,8 +17281,8 @@
             "details": "4.7\" Display",
             "model": "C-010 Full-Color"
           },
-          "bicycle_weight_without_battery": "45.4 lbs",
-          "battery_weight": "7 lbs"
+          "bicycle_weight_without_battery_lb": 45.4,
+          "battery_weight_lb": 7
         },
         "safety": {
           "lights": {
@@ -17496,8 +17493,8 @@
       "spec_count": 32,
       "specs": {
         "general_info": {
-          "range": "Up to 60 Miles or 100 Miles with optional second battery",
-          "maximum_rider_weight": "Recommended for riders up to 350 lbs. Larger riders can be accommodated – contact us for details."
+          "range_mi": 100,
+          "maximum_rider_weight_lb": 350
         },
         "ebike_system": {
           "motor": {
@@ -17529,9 +17526,9 @@
             "details": "4.7\" Display",
             "model": "C-010 Full-Color"
           },
-          "bicycle_weight_without_battery": "55.5 lbs",
-          "primary_battery_weight": "8.5 lbs",
-          "secondary_battery_weight": "9.6 lbs w/ Rack"
+          "bicycle_weight_without_battery_lb": 55.5,
+          "primary_battery_weight_lb": 8.5,
+          "secondary_battery_weight_lb": 9.6
         },
         "safety": {
           "lights": {
@@ -17757,8 +17754,8 @@
       "spec_count": 15,
       "specs": {
         "general_info": {
-          "weight": "32.5 kg / 71.6lbs",
-          "weight_limit": "This bike has a maximum total weight limit (combined weight of rider and cargo) of 400 pounds (181.4kg)."
+          "weight_lb": 71.6,
+          "weight_limit_lb": 400
         },
         "ebike_system": {
           "motor": {
@@ -17983,7 +17980,7 @@
         "general_info": {
           "speed_gears": "Shimano 8-Speed Gear",
           "range": "Up to 80–120 km with PAS Mode",
-          "weight": "18 kg"
+          "weight_lb": 39.7
         },
         "ebike_system": {
           "motor": {
@@ -18010,8 +18007,8 @@
             "output_v": 42,
             "details": "100"
           },
-          "max_speed": "25 km/h",
-          "max_torque": "40 N·m",
+          "max_speed_mph": 16,
+          "max_torque_nm": 40,
           "recharging_time": "4–6 hours"
         },
         "safety": {
@@ -18263,8 +18260,8 @@
       "spec_count": 14,
       "specs": {
         "general_info": {
-          "weight": "34 kg / 75 lbs",
-          "weight_limit": "This bike has a maximum total weight limit (combined weight of rider and cargo) of 400 pounds (181.4kg)."
+          "weight_lb": 75,
+          "weight_limit_lb": 400
         },
         "ebike_system": {
           "motor": {
@@ -18613,8 +18610,8 @@
       "spec_count": 15,
       "specs": {
         "general_info": {
-          "weight": "36 kg / 79.4 lbs",
-          "weight_limit": "Maximum total weight limit (combined weight of rider and cargo) of 330 pounds (149.7kg).",
+          "weight_lb": 79.4,
+          "weight_limit_lb": 330,
           "folded_dimensions": "49.2*23.6*31.5 inch",
           "unfolded_dimensions": "75.6*24.4*46.5 inch"
         },
@@ -18870,9 +18867,9 @@
       "spec_count": 24,
       "specs": {
         "general_info": {
-          "max_range": "Up to 100 Miles (Tested with a 155 lb rider using PAS 1)",
-          "payload_capacity": "440 lb",
-          "bike_weight": "69 lb"
+          "max_range_mi": 100,
+          "payload_capacity_lb": 440,
+          "bike_weight_lb": 69
         },
         "ebike_system": {
           "motor": {
@@ -18880,7 +18877,7 @@
             "power_w": 750,
             "details": "Hub Motor (Galaxy eDrive System)"
           },
-          "torque": "75 Nm",
+          "torque_nm": 75,
           "pedal_assist": {
             "boost": false,
             "details": "Dual Sensor (Torque + Cadence)"
@@ -18894,7 +18891,7 @@
             "amps_a": 3.0,
             "details": "54.6V"
           },
-          "max_speed": "28 MPH",
+          "max_speed_mph": 28,
           "display": {
             "type": "color",
             "details": "LCD Color Display"
@@ -18970,7 +18967,7 @@
           }
         },
         "included_accessories": {
-          "rack_capacity": "66 lb",
+          "rack_capacity_lb": 66,
           "fenders_rear_rack": "Included"
         },
         "general_other": {
@@ -19158,8 +19155,8 @@
       "spec_count": 17,
       "specs": {
         "general_info": {
-          "weight": "32 kg / 70 lbs",
-          "weight_limit": "Maximum total weight limit (combined weight of rider and cargo): 440lbs",
+          "weight_lb": 70,
+          "weight_limit_lb": 440,
           "folded_dimensions": "38.2x19.7x 33.1 inch",
           "unfolded_dimensions": "66.9x25.6x52.0 inch"
         },
@@ -19370,8 +19367,8 @@
       "spec_count": 17,
       "specs": {
         "general_info": {
-          "weight": "34 kg / 75 lbs",
-          "weight_limit": "Maximum total weight limit (combined weight of rider and cargo): 440lbs",
+          "weight_lb": 75,
+          "weight_limit_lb": 440,
           "folded_dimensions": "41.7x20.5x32.7 inch",
           "unfolded_dimensions": "69.7x25.6x52.0 inch"
         },
@@ -19584,9 +19581,9 @@
       "spec_count": 22,
       "specs": {
         "general_info": {
-          "max_range": "30-50 Miles (Single Battery Ver.)55-90 Miles (Dual Battery Ver.)",
-          "payload_capacity": "330 lb",
-          "bike_weight": "103 lb (Single Battery Ver.)115 lb (Dual Battery Ver.)"
+          "max_range_mi": 90,
+          "payload_capacity_lb": 330,
+          "bike_weight_lb": 103
         },
         "ebike_system": {
           "motor": {
@@ -19594,7 +19591,7 @@
             "power_w": 1000,
             "details": "Hub Motor"
           },
-          "torque": "95 N.m",
+          "torque_nm": 95,
           "pedal_assist": {
             "boost": false,
             "details": "Cadence"
@@ -19607,7 +19604,7 @@
             "amps_a": 3.0,
             "details": "58.8V"
           },
-          "max_speed": "28 MPH+",
+          "max_speed_mph": 28,
           "display": {
             "type": "color",
             "details": "TFT"
@@ -19852,8 +19849,8 @@
       "spec_count": 24,
       "specs": {
         "general_info": {
-          "max_range": "Up to 85 Miles (tested with a 155 lb rider in PAS1, no throttle applied)",
-          "bike_weight": "50 lb"
+          "max_range_mi": 85,
+          "bike_weight_lb": 50
         },
         "ebike_system": {
           "motor": {
@@ -19861,7 +19858,7 @@
             "power_w": 750,
             "details": "Hub Motor (Galaxy eDrive System)"
           },
-          "torque": "70 Nm",
+          "torque_nm": 70,
           "pedal_assist": {
             "boost": false,
             "details": "Dual Sensor (Torque + Cadence)"
@@ -19875,7 +19872,7 @@
             "amps_a": 2.0,
             "details": "54.6V"
           },
-          "max_speed": "28 MPH",
+          "max_speed_mph": 28,
           "display": {
             "type": "color",
             "details": "LCD Color Display"
@@ -19949,7 +19946,7 @@
           }
         },
         "included_accessories": {
-          "rack_capacity": "66 lb",
+          "rack_capacity_lb": 66,
           "fenders_rear_rack": "Optional"
         },
         "general_other": {
@@ -20101,9 +20098,9 @@
             "material": "aluminum",
             "details": "Aluminum pedal"
           },
-          "range": "70 miles",
-          "weight": "68.3 lb.",
-          "max_payload_capacity": "300 lb."
+          "range_mi": 70,
+          "weight_lb": 68.3,
+          "max_payload_capacity_lb": 300
         },
         "ebike_system": {
           "battery": {
@@ -20425,9 +20422,9 @@
             "material": "aluminum",
             "details": "Aluminum pedal"
           },
-          "range": "70 miles",
-          "weight": "60.6 lb.",
-          "max_payload_capacity": "300 lb."
+          "range_mi": 70,
+          "weight_lb": 60.6,
+          "max_payload_capacity_lb": 300
         },
         "ebike_system": {
           "battery": {
@@ -20758,9 +20755,9 @@
             "material": "aluminum",
             "details": "Aluminum pedal"
           },
-          "range": "60-80 miles",
-          "weight": "80 lb. (with battery)",
-          "max_payload_capacity": "440 lb. (with battery)"
+          "range_mi": 80,
+          "weight_lb": 80,
+          "max_payload_capacity_lb": 440
         },
         "ebike_system": {
           "battery": {
@@ -21038,9 +21035,9 @@
             "material": "aluminum",
             "details": "Aluminum pedal"
           },
-          "range": "35~60 miles",
-          "weight": "72lb.(with battery)",
-          "max_payload_capacity": "350 lb."
+          "range_mi": 60,
+          "weight_lb": 72,
+          "max_payload_capacity_lb": 350
         },
         "ebike_system": {
           "battery": {
@@ -21299,9 +21296,9 @@
             "material": "aluminum",
             "details": "Aluminum pedal"
           },
-          "range": "35~60 miles",
-          "weight": "72lb.(with battery)",
-          "max_payload_capacity": "350 lb."
+          "range_mi": 60,
+          "weight_lb": 72,
+          "max_payload_capacity_lb": 350
         },
         "ebike_system": {
           "battery": {
@@ -21560,9 +21557,9 @@
             "material": "aluminum",
             "details": "Aluminum pedal"
           },
-          "range": "60-80 miles",
-          "weight": "79 lb. (with battery)",
-          "max_payload_capacity": "400 lb."
+          "range_mi": 80,
+          "weight_lb": 79,
+          "max_payload_capacity_lb": 400
         },
         "ebike_system": {
           "battery": {
@@ -21894,9 +21891,9 @@
             "material": "aluminum",
             "details": "Aluminum pedal"
           },
-          "range": "60-80 miles",
-          "weight": "79 lb. (with battery)",
-          "max_payload_capacity": "400 lb."
+          "range_mi": 80,
+          "weight_lb": 79,
+          "max_payload_capacity_lb": 400
         },
         "ebike_system": {
           "battery": {
@@ -22228,9 +22225,9 @@
             "material": "aluminum",
             "details": "Aluminum pedal"
           },
-          "range": "60-80 miles",
-          "weight": "79 lb. (with battery)",
-          "max_payload_capacity": "400 lb."
+          "range_mi": 80,
+          "weight_lb": 79,
+          "max_payload_capacity_lb": 400
         },
         "ebike_system": {
           "battery": {
@@ -22559,9 +22556,9 @@
             "material": "aluminum",
             "details": "Aluminum pedal"
           },
-          "range": "60-80 miles",
-          "weight": "79 lb. (with battery)",
-          "max_payload_capacity": "400 lb."
+          "range_mi": 80,
+          "weight_lb": 79,
+          "max_payload_capacity_lb": 400
         },
         "ebike_system": {
           "battery": {
@@ -22886,9 +22883,9 @@
             "material": "aluminum",
             "details": "Aluminum pedal"
           },
-          "range": "60-80 miles",
-          "weight": "88.6 lb. (with battery)",
-          "max_payload_capacity": "400 lb."
+          "range_mi": 80,
+          "weight_lb": 88.6,
+          "max_payload_capacity_lb": 400
         },
         "ebike_system": {
           "battery": {
@@ -23154,9 +23151,9 @@
             "material": "aluminum",
             "details": "Aluminum pedal"
           },
-          "range": "30-50 miles",
-          "weight": "92lb.(with battery)",
-          "max_payload_capacity": "330 lb."
+          "range_mi": 50,
+          "weight_lb": 92,
+          "max_payload_capacity_lb": 330
         },
         "ebike_system": {
           "battery": {
@@ -23407,8 +23404,8 @@
       "specs": {
         "general_info": {
           "class": "1/2/3",
-          "bike_weight": "84lbs",
-          "bike_load_capacity": "400lbs"
+          "bike_weight_lb": 84,
+          "bike_load_capacity_lb": 400
         },
         "ebike_system": {
           "motor": {
@@ -23446,12 +23443,12 @@
             "boost": false,
             "details": "Auto Pedal Assistant + 5 PAS Levels"
           },
-          "max_speed_default": "20 MPH",
-          "max_speed_adjustable_range": "4~28 MPH",
+          "max_speed_default_mph": 20,
+          "max_speed_adjustable_range_mph": 28,
           "throttle_range": {
             "details": "40 Miles"
           },
-          "pedal_assist_range": "70 Miles"
+          "pedal_assist_range_mi": 70
         },
         "special_features": {
           "walk_mode": "1.0~3.7 MPH"
@@ -23594,7 +23591,7 @@
           "fenders": "Aluminum Alloy, front and rear full coverage",
           "rear_rack": "MIK HD Compatible Alloy",
           "kickstand": "Aluminum Alloy, included, rear mount",
-          "rear_rack_load_capacity": "60lbs"
+          "rear_rack_load_capacity_lb": 60
         }
       },
       "colors": [
@@ -23878,9 +23875,9 @@
             "material": "aluminum",
             "details": "Aluminum pedal"
           },
-          "range": "35~50 miles",
-          "weight": "77 lb.",
-          "max_payload_capacity": "300 lb."
+          "range_mi": 50,
+          "weight_lb": 77,
+          "max_payload_capacity_lb": 300
         },
         "ebike_system": {
           "battery": {
@@ -24253,9 +24250,9 @@
             "material": "aluminum",
             "details": "Aluminum pedal"
           },
-          "range": "40-50 miles",
-          "weight": "32 lb. (with battery)",
-          "max_payload_capacity": "165 lb."
+          "range_mi": 50,
+          "weight_lb": 32,
+          "max_payload_capacity_lb": 165
         },
         "ebike_system": {
           "battery": {
@@ -24508,9 +24505,9 @@
           "pedal": {
             "details": "0~5 Level Pedal Assist"
           },
-          "range": "60-80 Miles",
-          "weight": "88 lb.",
-          "max_payload_capacity": "330 lb."
+          "range_mi": 80,
+          "weight_lb": 88,
+          "max_payload_capacity_lb": 330
         },
         "ebike_system": {
           "battery": {
@@ -24657,7 +24654,7 @@
           "saddle": {
             "details": "Extended Seat"
           },
-          "max_system_weight": "330 lb.",
+          "max_system_weight_lb": 330,
           "c_handlebar_length": {
             "details": "29.1"
           },
@@ -24910,8 +24907,8 @@
       "specs": {
         "general_info": {
           "class": "1/2/3",
-          "bike_weight": "80lbs",
-          "bike_load_capacity": "440lbs"
+          "bike_weight_lb": 80,
+          "bike_load_capacity_lb": 440
         },
         "ebike_system": {
           "motor": {
@@ -24949,12 +24946,12 @@
             "boost": false,
             "details": "Auto Pedal Assistant + 5 PAS Levels"
           },
-          "max_speed_default": "20 MPH",
-          "max_speed_adjustable_range": "4~28 MPH",
+          "max_speed_default_mph": 20,
+          "max_speed_adjustable_range_mph": 28,
           "throttle_range": {
             "details": "40 Miles"
           },
-          "pedal_assist_range": "70 Miles"
+          "pedal_assist_range_mi": 70
         },
         "special_features": {
           "walk_mode": "1.9~3.7 MPH"
@@ -25102,7 +25099,7 @@
           "fenders": "Plastic, Front and Rear Full Coverage",
           "rear_rack": "MIK HD Compatible Alloy",
           "kickstand": "Aluminum Alloy, included, rear mount",
-          "rear_rack_load_capacity": "120lbs"
+          "rear_rack_load_capacity_lb": 120
         }
       },
       "colors": [
@@ -25434,8 +25431,8 @@
       "specs": {
         "general_info": {
           "class": "1/2/3",
-          "bike_weight": "92lbs",
-          "bike_load_capacity": "400lbs"
+          "bike_weight_lb": 92,
+          "bike_load_capacity_lb": 400
         },
         "ebike_system": {
           "motor": {
@@ -25473,12 +25470,12 @@
             "boost": false,
             "details": "Auto Pedal Assistant + 5 PAS Levels"
           },
-          "max_speed_default": "20 MPH",
-          "max_speed_adjustable_range": "4~28 MPH",
+          "max_speed_default_mph": 20,
+          "max_speed_adjustable_range_mph": 28,
           "throttle_range": {
             "details": "40 Miles"
           },
-          "pedal_assist_range": "70 Miles"
+          "pedal_assist_range_mi": 70
         },
         "special_features": {
           "walk_mode": "1.9~3.7 MPH"
@@ -25625,7 +25622,7 @@
           "fenders": "Aluminum Alloy, front and rear full coverage",
           "rear_rack": "MIK HD Compatible Alloy",
           "kickstand": "Aluminum Alloy, included, rear mount",
-          "rear_rack_load_capacity": "120lbs"
+          "rear_rack_load_capacity_lb": 120
         }
       },
       "colors": [],
@@ -25781,8 +25778,8 @@
       "specs": {
         "general_info": {
           "class": "1/2/3",
-          "bike_weight": "92lbs",
-          "bike_load_capacity": "400lbs"
+          "bike_weight_lb": 92,
+          "bike_load_capacity_lb": 400
         },
         "ebike_system": {
           "motor": {
@@ -25820,12 +25817,12 @@
             "boost": false,
             "details": "Auto Pedal Assistant + 5 PAS Levels"
           },
-          "max_speed_default": "20 MPH",
-          "max_speed_adjustable_range": "4~28 MPH",
+          "max_speed_default_mph": 20,
+          "max_speed_adjustable_range_mph": 28,
           "throttle_range": {
             "details": "40 Miles"
           },
-          "pedal_assist_range": "70 Miles"
+          "pedal_assist_range_mi": 70
         },
         "special_features": {
           "walk_mode": "1.9~3.7 MPH"
@@ -25971,7 +25968,7 @@
           "fenders": "Aluminum Alloy, front and rear full coverage",
           "rear_rack": "MIK HD Compatible Alloy",
           "kickstand": "Aluminum Alloy, included, rear mount",
-          "rear_rack_load_capacity": "60lbs"
+          "rear_rack_load_capacity_lb": 60
         }
       },
       "colors": [
@@ -26221,8 +26218,8 @@
       "specs": {
         "general_info": {
           "class": "1/2/3",
-          "bike_weight": "92lbs",
-          "bike_load_capacity": "400lbs"
+          "bike_weight_lb": 92,
+          "bike_load_capacity_lb": 400
         },
         "ebike_system": {
           "motor": {
@@ -26260,12 +26257,12 @@
             "boost": false,
             "details": "Auto Pedal Assistant + 5 PAS Levels"
           },
-          "max_speed_default": "20 MPH",
-          "max_speed_adjustable_range": "4~28 MPH",
+          "max_speed_default_mph": 20,
+          "max_speed_adjustable_range_mph": 28,
           "throttle_range": {
             "details": "40 Miles"
           },
-          "pedal_assist_range": "70 Miles"
+          "pedal_assist_range_mi": 70
         },
         "special_features": {
           "walk_mode": "1.9~3.7 MPH"
@@ -26411,7 +26408,7 @@
           "fenders": "Aluminum Alloy, front and rear full coverage",
           "rear_rack": "MIK HD Compatible Alloy",
           "kickstand": "Aluminum Alloy, included, rear mount",
-          "rear_rack_load_capacity": "60lbs"
+          "rear_rack_load_capacity_lb": 60
         }
       },
       "colors": [
@@ -26846,8 +26843,8 @@
       "specs": {
         "general_info": {
           "class": "1/2/3",
-          "bike_weight": "92lbs",
-          "bike_load_capacity": "400lbs"
+          "bike_weight_lb": 92,
+          "bike_load_capacity_lb": 400
         },
         "ebike_system": {
           "motor": {
@@ -26885,12 +26882,12 @@
             "boost": false,
             "details": "Auto Pedal Assistant + 5 PAS Levels"
           },
-          "max_speed_default": "20 MPH",
-          "max_speed_adjustable_range": "4~28 MPH",
+          "max_speed_default_mph": 20,
+          "max_speed_adjustable_range_mph": 28,
           "throttle_range": {
             "details": "40 Miles"
           },
-          "pedal_assist_range": "70 Miles"
+          "pedal_assist_range_mi": 70
         },
         "special_features": {
           "walk_mode": "1.9~3.7 MPH"
@@ -27036,7 +27033,7 @@
           "fenders": "Aluminum Alloy, front and rear full coverage",
           "rear_rack": "MIK HD Compatible Alloy",
           "kickstand": "Aluminum Alloy, included, rear mount",
-          "rear_rack_load_capacity": "60lbs"
+          "rear_rack_load_capacity_lb": 60
         }
       },
       "colors": [
@@ -27328,9 +27325,9 @@
           "pedal": {
             "details": "Wellgo B087B"
           },
-          "range": "60-80 miles",
-          "weight": "88.6 lb. (with battery)",
-          "max_payload_capacity": "400 lb."
+          "range_mi": 80,
+          "weight_lb": 88.6,
+          "max_payload_capacity_lb": 400
         },
         "ebike_system": {
           "battery": {
@@ -27643,11 +27640,11 @@
       "spec_count": 39,
       "specs": {
         "general_info": {
-          "range": "up to 60 miles",
-          "payload_capacity": "330 lbs"
+          "range_mi": 60,
+          "payload_capacity_lb": 330
         },
         "ebike_system": {
-          "top_speed": "28 mph",
+          "top_speed_mph": 28,
           "motor_power": {
             "peak_w": 1310,
             "details": ""
@@ -28232,15 +28229,15 @@
       "spec_count": 35,
       "specs": {
         "general_info": {
-          "range": "up to 45 miles",
-          "payload_capacity": "275 lbs",
+          "range_mi": 45,
+          "payload_capacity_lb": 275,
           "foldable": "Yes",
-          "bike_weight": "Total bike weight is 41lbs with the 8lb battery removed making this is one of the most portable eBikes on the market.",
+          "bike_weight_lb": 41,
           "size_adjustable": "An adjustable and removable seat post and a telescoping handlebar stem allows riders to reach a wide range of heights while maintaining comfort and stability.",
           "folding_capabilities": "A foldable design at both the handlebar stem and main frame guarantees your ride will fit into virtually any compact space."
         },
         "ebike_system": {
-          "top_speed": "20 mph",
+          "top_speed_mph": 20,
           "motor_power": {
             "peak_w": 819,
             "details": ""
@@ -29207,15 +29204,15 @@
       "spec_count": 44,
       "specs": {
         "general_info": {
-          "range": "up to 50 miles",
-          "payload_capacity": "415 lbs",
+          "range_mi": 50,
+          "payload_capacity_lb": 415,
           "foldable": "Yes",
           "fully_foldable": "A foldable hinge at both the handlebar stem and frame guarantees your ride will fit into virtually any compact space. Remove the front wheel, battery, and the seat post in seconds for easy and lightweight transport.",
-          "weight": "Total bike weight is 79 lbs. without the battery installed. The XP Trike2 750 long-range battery weighs 9lbs.",
+          "weight_lb": 79,
           "pick_your_pedal_response": "Choose between responsive pedaling vs. standard pedaling with an easy adjustment to the settings, switching between a torque or cadence sensor. The torque sensor offers a more natural, smooth feel with intuitive power that responds to your pedal pressure. The cadence sensor provides power with each revolution of the pedals, making it a great option for beginners or anyone looking for a more relaxed ride."
         },
         "ebike_system": {
-          "top_speed": "14 mph",
+          "top_speed_mph": 14,
           "motor_power": {
             "peak_w": 1092,
             "details": ""
@@ -30306,14 +30303,14 @@
       "spec_count": 40,
       "specs": {
         "general_info": {
-          "range": "up to 50 miles",
-          "payload_capacity": "330 lbs",
+          "range_mi": 50,
+          "payload_capacity_lb": 330,
           "foldable": "Yes",
           "fully_foldable": "A foldable hinge at both the handlebar stem and frame guarantees your ride will fit into virtually any compact space. Remove the pedals and the seat post in seconds for easy and lightweight transport.",
-          "weight": "Total bike weight is 62lbs without the battery installed. The XP4 long-range battery weighs 9lbs."
+          "weight_lb": 62
         },
         "ebike_system": {
-          "top_speed": "28 mph",
+          "top_speed_mph": 28,
           "motor_power": {
             "peak_w": 1092,
             "details": ""
@@ -31977,12 +31974,12 @@
       "spec_count": 37,
       "specs": {
         "general_info": {
-          "range": "up to 60 miles",
-          "payload_capacity": "330 lbs",
-          "weight": "With the battery removed, the XPeak 2.0 is just 64.5 lbs. The battery weighs 10.5 lbs."
+          "range_mi": 60,
+          "payload_capacity_lb": 330,
+          "weight_lb": 64.5
         },
         "ebike_system": {
-          "top_speed": "28 mph",
+          "top_speed_mph": 28,
           "motor_power": {
             "peak_w": 1310,
             "details": ""
@@ -33520,13 +33517,13 @@
       "spec_count": 42,
       "specs": {
         "general_info": {
-          "range": "up to 120 miles",
-          "payload_capacity": "450 lbs",
+          "range_mi": 120,
+          "payload_capacity_lb": 450,
           "folding_capabilities": "A foldable handlebar stem and adjustable seat height allows the XPedition to slide into compact spaces. Remove the pedals, seatpost, and front wheel in minutes for an easy and light-weight transport.",
-          "weight": "Total bike weight 65lbs without batteries installed. Each XPedition battery weighs 9lbs."
+          "weight_lb": 65
         },
         "ebike_system": {
-          "top_speed": "28 mph",
+          "top_speed_mph": 28,
           "motor_power": {
             "peak_w": 1310,
             "details": ""
@@ -34944,11 +34941,11 @@
       "spec_count": 35,
       "specs": {
         "general_info": {
-          "range": "up to 45 miles",
-          "payload_capacity": "330 lbs"
+          "range_mi": 45,
+          "payload_capacity_lb": 330
         },
         "ebike_system": {
-          "top_speed": "28 mph",
+          "top_speed_mph": 28,
           "motor_power": {
             "peak_w": 1092,
             "details": ""
@@ -35510,12 +35507,12 @@
       "spec_count": 39,
       "specs": {
         "general_info": {
-          "range": "up to 60 miles",
-          "payload_capacity": "330 lbs",
+          "range_mi": 60,
+          "payload_capacity_lb": 330,
           "pick_your_pedal_response_xperience_switch": "Choose between responsive pedaling vs. standard pedaling with an easy adjustment to the settings, switching between a torque and cadence sensor. The torque sensor offers a more natural, smooth feel with intuitive power that responds to your pedal pressure. The cadence sensor provides power with each revolution of the pedals, making it a great option for beginners or anyone looking for a more relaxed ride."
         },
         "ebike_system": {
-          "top_speed": "28 mph",
+          "top_speed_mph": 28,
           "motor_power": {
             "peak_w": 1310,
             "details": ""
@@ -36473,10 +36470,10 @@
       "spec_count": 33,
       "specs": {
         "general_info": {
-          "speed_class": "20 mph (Throttle) / 28 mph (PAS)",
-          "weight": "64 lbs",
-          "range": "50~60miles",
-          "payload_capacity": "350 lbs"
+          "speed_class_mph": 28,
+          "weight_lb": 64,
+          "range_mi": 60,
+          "payload_capacity_lb": 350
         },
         "ebike_system": {
           "battery": {
@@ -36735,10 +36732,10 @@
       "spec_count": 33,
       "specs": {
         "general_info": {
-          "speed_class": "20 mph (Throttle) / 28 mph (PAS)",
-          "weight": "63 lbs",
-          "range": "50~60miles",
-          "payload_capacity": "300 lbs"
+          "speed_class_mph": 28,
+          "weight_lb": 63,
+          "range_mi": 60,
+          "payload_capacity_lb": 300
         },
         "ebike_system": {
           "battery": {
@@ -37004,10 +37001,10 @@
       "spec_count": 33,
       "specs": {
         "general_info": {
-          "speed_class": "20 mph (Throttle) / 28 mph (PAS)",
-          "weight": "80 lbs",
-          "range": "60~80miles",
-          "payload_capacity": "450 lbs"
+          "speed_class_mph": 28,
+          "weight_lb": 80,
+          "range_mi": 80,
+          "payload_capacity_lb": 450
         },
         "ebike_system": {
           "battery": {
@@ -37298,10 +37295,10 @@
       "spec_count": 33,
       "specs": {
         "general_info": {
-          "speed_class": "20 mph (Throttle) / 28 mph (PAS)",
-          "weight": "80 lbs",
-          "range": "60~80miles",
-          "payload_capacity": "450 lbs"
+          "speed_class_mph": 28,
+          "weight_lb": 80,
+          "range_mi": 80,
+          "payload_capacity_lb": 450
         },
         "ebike_system": {
           "battery": {
@@ -37687,10 +37684,10 @@
       "spec_count": 31,
       "specs": {
         "general_info": {
-          "speed_class": "20 mph (PAS)",
-          "weight": "35 lbs",
-          "range": "50~70miles",
-          "payload_capacity": "300 lbs"
+          "speed_class_mph": 20,
+          "weight_lb": 35,
+          "range_mi": 70,
+          "payload_capacity_lb": 300
         },
         "ebike_system": {
           "battery": {
@@ -37976,10 +37973,10 @@
       "spec_count": 32,
       "specs": {
         "general_info": {
-          "speed_class": "20 mph (PAS)",
-          "weight": "36 lbs",
-          "range": "50~70miles",
-          "payload_capacity": "350 lbs"
+          "speed_class_mph": 20,
+          "weight_lb": 36,
+          "range_mi": 70,
+          "payload_capacity_lb": 350
         },
         "ebike_system": {
           "battery": {
@@ -38267,10 +38264,10 @@
       "spec_count": 31,
       "specs": {
         "general_info": {
-          "speed_class": "20 mph (PAS)",
-          "weight": "31 lbs",
-          "range": "50~70miles",
-          "payload_capacity": "350 lbs"
+          "speed_class_mph": 20,
+          "weight_lb": 31,
+          "range_mi": 70,
+          "payload_capacity_lb": 350
         },
         "ebike_system": {
           "battery": {
@@ -38554,10 +38551,10 @@
       "spec_count": 32,
       "specs": {
         "general_info": {
-          "speed_class": "20 mph (PAS)",
-          "weight": "40 lbs",
-          "range": "50~70miles",
-          "payload_capacity": "300 lbs"
+          "speed_class_mph": 20,
+          "weight_lb": 40,
+          "range_mi": 70,
+          "payload_capacity_lb": 300
         },
         "ebike_system": {
           "battery": {
@@ -38847,10 +38844,10 @@
       "spec_count": 41,
       "specs": {
         "general_info": {
-          "weight": "101 lbs",
-          "range": "45~55miles",
-          "speed": "15 mph (Throttle) / 20 mph (PAS)",
-          "payload_capacity": "350 lbs"
+          "weight_lb": 101,
+          "range_mi": 55,
+          "speed_mph": 20,
+          "payload_capacity_lb": 350
         },
         "ebike_system": {
           "battery": {
@@ -38966,7 +38963,7 @@
           "head_tube_length": "7\""
         },
         "included_accessories": {
-          "basket_s_max_load": "Front 55 lbs and Rear 220 lbs",
+          "basket_s_max_load_lb": 55,
           "kickstand": "Sturdy Aluminum Alloy"
         }
       },
@@ -39098,10 +39095,10 @@
       "spec_count": 32,
       "specs": {
         "general_info": {
-          "speed_class": "20 mph (Throttle) / 28 mph (PAS)",
-          "weight": "77 lbs",
-          "range": "60~80miles",
-          "payload_capacity": "560 lbs"
+          "speed_class_mph": 28,
+          "weight_lb": 77,
+          "range_mi": 80,
+          "payload_capacity_lb": 560
         },
         "ebike_system": {
           "battery": {
@@ -39368,10 +39365,10 @@
       "spec_count": 32,
       "specs": {
         "general_info": {
-          "speed_class": "20 mph (Throttle) / 28 mph (PAS)",
-          "weight": "77 lbs",
-          "range": "60~80 miles",
-          "payload_capacity": "560 lbs"
+          "speed_class_mph": 28,
+          "weight_lb": 77,
+          "range_mi": 80,
+          "payload_capacity_lb": 560
         },
         "ebike_system": {
           "battery": {
@@ -39638,10 +39635,10 @@
       "spec_count": 32,
       "specs": {
         "general_info": {
-          "speed_class": "20 mph (Throttle) / 28 mph (PAS)",
-          "weight": "89 lbs",
-          "range": "60~80miles",
-          "payload_capacity": "560 lbs"
+          "speed_class_mph": 28,
+          "weight_lb": 89,
+          "range_mi": 80,
+          "payload_capacity_lb": 560
         },
         "ebike_system": {
           "battery": {
@@ -39910,10 +39907,10 @@
       "spec_count": 32,
       "specs": {
         "general_info": {
-          "speed_class": "20 mph (Throttle) / 28 mph (PAS)",
-          "weight": "88 lbs",
-          "range": "60~80miles",
-          "payload_capacity": "560 lbs"
+          "speed_class_mph": 28,
+          "weight_lb": 88,
+          "range_mi": 80,
+          "payload_capacity_lb": 560
         },
         "ebike_system": {
           "battery": {
@@ -40182,10 +40179,10 @@
       "spec_count": 33,
       "specs": {
         "general_info": {
-          "speed_class": "20 mph (Throttle) / 28 mph (PAS)",
-          "weight": "82 lbs",
-          "range": "60~80miles",
-          "payload_capacity": "350 lbs"
+          "speed_class_mph": 28,
+          "weight_lb": 82,
+          "range_mi": 80,
+          "payload_capacity_lb": 350
         },
         "ebike_system": {
           "battery": {
@@ -40496,10 +40493,10 @@
       "spec_count": 42,
       "specs": {
         "general_info": {
-          "speed": "20 mph (Throttle) / 25 mph (PAS)",
-          "weight": "54 lbs",
-          "range": "50~60miles",
-          "payload_capacity": "350 lbs"
+          "speed_mph": 25,
+          "weight_lb": 54,
+          "range_mi": 60,
+          "payload_capacity_lb": 350
         },
         "ebike_system": {
           "battery": {
@@ -40753,10 +40750,10 @@
       "spec_count": 33,
       "specs": {
         "general_info": {
-          "speed_class": "20 mph (Throttle) / 28 mph (PAS)",
-          "weight": "66 lbs",
-          "range": "50~60miles",
-          "payload_capacity": "350 lbs"
+          "speed_class_mph": 28,
+          "weight_lb": 66,
+          "range_mi": 60,
+          "payload_capacity_lb": 350
         },
         "ebike_system": {
           "battery": {
@@ -41083,10 +41080,10 @@
       "spec_count": 33,
       "specs": {
         "general_info": {
-          "speed_class": "20 mph (Throttle) / 28 mph (PAS)",
-          "weight": "57 lbs",
-          "range": "50~60miles",
-          "payload_capacity": "300 lbs"
+          "speed_class_mph": 28,
+          "weight_lb": 57,
+          "range_mi": 60,
+          "payload_capacity_lb": 300
         },
         "ebike_system": {
           "battery": {
@@ -41356,7 +41353,7 @@
       "spec_count": 27,
       "specs": {
         "general_info": {
-          "class_speed": "3 & 28mph"
+          "class_speed_mph": 28
         },
         "ebike_system": {
           "motor": {
@@ -41682,8 +41679,8 @@
       "spec_count": 34,
       "specs": {
         "general_info": {
-          "speed": "28mph",
-          "range": "Up to 40 miles"
+          "speed_mph": 28,
+          "range_mi": 40
         },
         "ebike_system": {
           "motor": {
@@ -42091,8 +42088,8 @@
       "spec_count": 32,
       "specs": {
         "general_info": {
-          "speed": "20mph",
-          "range": "Up to 40 miles"
+          "speed_mph": 20,
+          "range_mi": 40
         },
         "ebike_system": {
           "motor": {
@@ -42382,7 +42379,7 @@
       "spec_count": 31,
       "specs": {
         "general_info": {
-          "class_speed": "Up to 28mph"
+          "class_speed_mph": 28
         },
         "ebike_system": {
           "motor": {
@@ -42454,7 +42451,7 @@
             "model": "Stepless"
           },
           "shifters_xr_st": {
-            "manufacturer": "MicroShift",
+            "manufacturer": "microSHIFT",
             "details": "Shifter",
             "model": "SL-M819 Advent Trigger"
           },
@@ -42474,7 +42471,7 @@
             "model": "Alivio"
           },
           "derailleur_xr_st": {
-            "manufacturer": "MicroShift",
+            "manufacturer": "microSHIFT",
             "speeds": 9,
             "details": "",
             "model": "RD-M619M Advent"
@@ -42895,7 +42892,7 @@
       "spec_count": 29,
       "specs": {
         "general_info": {
-          "class_speed": "1-3 & 28mph"
+          "class_speed_mph": 28
         },
         "ebike_system": {
           "motor": {
@@ -42979,19 +42976,19 @@
         },
         "drivetrain": {
           "shifters": {
-            "manufacturer": "MicroShift",
+            "manufacturer": "microSHIFT",
             "details": "shifter",
             "model": "SL-M819 Advent trigger"
           },
           "gearing": "44T chainring",
           "cassette": {
-            "manufacturer": "MicroShift",
+            "manufacturer": "microSHIFT",
             "cog_range": "11-36T",
             "details": "cassette"
           },
           "drivetrain": "9-speed high-torque chain",
           "derailleur": {
-            "manufacturer": "MicroShift",
+            "manufacturer": "microSHIFT",
             "speeds": 9,
             "details": "Advent clutched, RD-M6195M",
             "model": "Advent clutched RD-M6195M"
@@ -43435,8 +43432,8 @@
       "spec_count": 25,
       "specs": {
         "general_info": {
-          "speed": "28 mph (+)",
-          "range": "30-60 miles"
+          "speed_mph": 28,
+          "range_mi": 60
         },
         "ebike_system": {
           "motor": {
@@ -43728,7 +43725,7 @@
       "specs": {
         "general_info": {
           "speed": "28+ MPH*",
-          "range": "30-60 miles"
+          "range_mi": 60
         },
         "ebike_system": {
           "motor": {
@@ -43990,8 +43987,8 @@
       "spec_count": 24,
       "specs": {
         "general_info": {
-          "speed": "28 mph (+)",
-          "range": "30-60 miles"
+          "speed_mph": 28,
+          "range_mi": 60
         },
         "ebike_system": {
           "motor": {
@@ -44334,8 +44331,8 @@
       "spec_count": 21,
       "specs": {
         "general_info": {
-          "speed": "28 mph (+)",
-          "range": "30-60 miles"
+          "speed_mph": 28,
+          "range_mi": 60
         },
         "ebike_system": {
           "motor": {
@@ -44603,8 +44600,8 @@
       "spec_count": 25,
       "specs": {
         "general_info": {
-          "speed": "Up to 28mph",
-          "range": "30-50 miles (504Wh)"
+          "speed_mph": 28,
+          "range_mi": 50
         },
         "ebike_system": {
           "motor": {
@@ -44950,8 +44947,8 @@
       "spec_count": 30,
       "specs": {
         "general_info": {
-          "class_speed": "1-3 & 28mph",
-          "range": "30-60 miles"
+          "class_speed_mph": 28,
+          "range_mi": 60
         },
         "ebike_system": {
           "motor": {
@@ -45636,7 +45633,7 @@
       "specs": {
         "general_info": {
           "product_id": "277758",
-          "weight": "40 kg (88 lb, 3.0 oz)",
+          "weight_lb": 88,
           "weight_size": "One Size"
         },
         "ebike_system": {
@@ -45702,13 +45699,13 @@
         },
         "drivetrain": {
           "shift_levers": {
-            "manufacturer": "MicroShift",
+            "manufacturer": "microSHIFT",
             "speeds": 9,
             "details": "",
             "model": "Advent"
           },
           "rear_derailleur": {
-            "manufacturer": "MicroShift",
+            "manufacturer": "microSHIFT",
             "speeds": 9,
             "details": "",
             "model": "short cage"
@@ -45992,7 +45989,7 @@
       "specs": {
         "general_info": {
           "product_id": "277759",
-          "weight": "35.0kg (77 lb, 2.6 oz)",
+          "weight_lb": 77,
           "weight_size": "One Size"
         },
         "ebike_system": {
@@ -46058,13 +46055,13 @@
         },
         "drivetrain": {
           "shift_levers": {
-            "manufacturer": "MicroShift",
+            "manufacturer": "microSHIFT",
             "speeds": 9,
             "details": "",
             "model": "Advent"
           },
           "rear_derailleur": {
-            "manufacturer": "MicroShift",
+            "manufacturer": "microSHIFT",
             "speeds": 9,
             "details": "",
             "model": "short cage"
@@ -46336,7 +46333,7 @@
       "specs": {
         "general_info": {
           "product_id": "294787",
-          "weight": "25.16 kg (55 lb, 7.5 oz)",
+          "weight_lb": 55,
           "weight_size": "S4"
         },
         "ebike_system": {
@@ -46502,7 +46499,7 @@
             "details": "Bridge Comp, Hollow Cr-mo rails 155/143"
           },
           "seatpost": {
-            "manufacturer": "XFusion",
+            "manufacturer": "Xfusion",
             "type": "dropper",
             "diameter_mm": 34.9,
             "travel_mm": 190,
@@ -46871,7 +46868,7 @@
       "specs": {
         "general_info": {
           "product_id": "294785",
-          "weight": "24.4 kg (53 lb, 12.7 oz)",
+          "weight_lb": 53,
           "weight_size": "S4"
         },
         "ebike_system": {
@@ -47406,7 +47403,7 @@
       "specs": {
         "general_info": {
           "product_id": "221805",
-          "weight": "12.87 kg (28 lb, 6.0 oz)",
+          "weight_lb": 28,
           "weight_size": "56"
         },
         "ebike_system": {
@@ -47928,7 +47925,7 @@
       "specs": {
         "general_info": {
           "product_id": "221331",
-          "weight": "8.51 kg (18 lb, 12.2 oz)"
+          "weight_lb": 18
         },
         "ebike_system": {
           "motor": {
@@ -48234,7 +48231,7 @@
       "specs": {
         "general_info": {
           "product_id": "291509",
-          "weight": "23.68 kg (52 lb, 3.3 oz)",
+          "weight_lb": 52,
           "weight_size": "S4"
         },
         "ebike_system": {
@@ -48742,7 +48739,7 @@
       "specs": {
         "general_info": {
           "product_id": "218700",
-          "weight": "12.36 kg (27 lb, 4.0 oz)",
+          "weight_lb": 27,
           "weight_size": "S4"
         },
         "ebike_system": {
@@ -49136,7 +49133,7 @@
       "specs": {
         "general_info": {
           "product_id": "260592",
-          "weight": "24.0 kg (52 lb, 14.6 oz)",
+          "weight_lb": 52,
           "weight_size": "S4"
         },
         "ebike_system": {
@@ -49634,7 +49631,7 @@
       "specs": {
         "general_info": {
           "product_id": "223520",
-          "weight": "21.16 kg (46 lb, 10.4 oz)",
+          "weight_lb": 46,
           "weight_size": "S3"
         },
         "ebike_system": {
@@ -49995,7 +49992,7 @@
       "specs": {
         "general_info": {
           "product_id": "221349",
-          "weight": "18.0 kg (39 lb, 10.9 oz)",
+          "weight_lb": 39,
           "weight_size": "S4"
         },
         "ebike_system": {
@@ -50544,7 +50541,7 @@
       "specs": {
         "general_info": {
           "product_id": "277413",
-          "weight": "7.55 kg (16 lb, 10.3 oz)",
+          "weight_lb": 16,
           "weight_size": "S4"
         },
         "ebike_system": {
@@ -50909,7 +50906,7 @@
       "specs": {
         "general_info": {
           "product_id": "222077",
-          "weight": "28.15 kg (62 lb, 1.0 oz)",
+          "weight_lb": 62,
           "weight_size": "MD"
         },
         "ebike_system": {
@@ -51824,7 +51821,7 @@
       "specs": {
         "general_info": {
           "product_id": "222075",
-          "weight": "29.1 kg (64 lb, 2.5 oz)",
+          "weight_lb": 64,
           "weight_size": "MD"
         },
         "ebike_system": {
@@ -52253,7 +52250,7 @@
       "specs": {
         "general_info": {
           "product_id": "277467",
-          "weight": "14.55kg (32 lb, 1.2 oz)",
+          "weight_lb": 32,
           "weight_size": "56"
         },
         "ebike_system": {
@@ -52783,7 +52780,7 @@
       "specs": {
         "general_info": {
           "product_id": "277467",
-          "weight": "14.55kg (32 lb, 1.2 oz)",
+          "weight_lb": 32,
           "weight_size": "56"
         },
         "ebike_system": {
@@ -53313,7 +53310,7 @@
       "specs": {
         "general_info": {
           "product_id": "221861",
-          "weight": "14.99 kg (33 lb, 0.8 oz)",
+          "weight_lb": 33,
           "weight_size": "56"
         },
         "ebike_system": {
@@ -53827,7 +53824,7 @@
       "specs": {
         "general_info": {
           "product_id": "221806",
-          "weight": "13.8 kg (30 lb, 6.8 oz)",
+          "weight_lb": 30,
           "weight_size": "56"
         },
         "ebike_system": {
@@ -54352,7 +54349,7 @@
       "specs": {
         "general_info": {
           "product_id": "221334",
-          "weight": "20.19 kg (44 lb, 8.2 oz)"
+          "weight_lb": 44
         },
         "ebike_system": {
           "motor": {
@@ -54822,7 +54819,7 @@
       "specs": {
         "general_info": {
           "product_id": "277407",
-          "weight": "20.32 kg (44 lb, 12.8 oz)",
+          "weight_lb": 44,
           "weight_size": "S4"
         },
         "ebike_system": {
@@ -55255,7 +55252,7 @@
       "specs": {
         "general_info": {
           "product_id": "277428",
-          "weight": "20.49 kg (45 lb, 2.8 oz)",
+          "weight_lb": 45,
           "weight_size": "S4"
         },
         "ebike_system": {
@@ -55692,7 +55689,7 @@
       "specs": {
         "general_info": {
           "product_id": "221347",
-          "weight": "26.08 kg (57 lb, 7.8 oz)",
+          "weight_lb": 57,
           "weight_size": "S4"
         },
         "ebike_system": {
@@ -56302,7 +56299,7 @@
       "specs": {
         "general_info": {
           "product_id": "218708",
-          "weight": "24.41 kg (53 lb, 13.0 oz)",
+          "weight_lb": 53,
           "weight_size": "S4"
         },
         "ebike_system": {
@@ -56469,7 +56466,7 @@
             "details": "Bridge Comp, Hollow Cr-mo rails"
           },
           "seatpost": {
-            "manufacturer": "XFusion",
+            "manufacturer": "Xfusion",
             "type": "dropper",
             "diameter_mm": 34.9,
             "travel_mm": 190,
@@ -56837,7 +56834,7 @@
       "specs": {
         "general_info": {
           "product_id": "221343",
-          "weight": "25.70 kg (56 lb, 11.2 oz)",
+          "weight_lb": 56,
           "weight_size": "S4"
         },
         "ebike_system": {
@@ -57447,7 +57444,7 @@
       "specs": {
         "general_info": {
           "product_id": "218704",
-          "weight": "24.41 kg (53 lb, 13.0 oz)",
+          "weight_lb": 53,
           "weight_size": "S4"
         },
         "ebike_system": {
@@ -57985,7 +57982,7 @@
       "specs": {
         "general_info": {
           "product_id": "218702",
-          "weight": "23.94kg (52 lb, 12.5 oz)",
+          "weight_lb": 52,
           "weight_size": "S4"
         },
         "ebike_system": {
@@ -58522,7 +58519,7 @@
       "specs": {
         "general_info": {
           "product_id": "223523",
-          "weight": "22.34 kg (49 lb, 4.0 oz)",
+          "weight_lb": 49,
           "weight_size": "S3"
         },
         "ebike_system": {
@@ -59106,7 +59103,7 @@
       "specs": {
         "general_info": {
           "product_id": "229898",
-          "weight": "24.24 kg (53 lb, 7.0 oz)",
+          "weight_lb": 53,
           "weight_size": "S3"
         },
         "ebike_system": {
@@ -59686,7 +59683,7 @@
       "specs": {
         "general_info": {
           "product_id": "223522",
-          "weight": "21.76 kg (47 lb, 15.6 oz)",
+          "weight_lb": 47,
           "weight_size": "S3"
         },
         "ebike_system": {
@@ -60068,7 +60065,7 @@
       "specs": {
         "general_info": {
           "product_id": "221352",
-          "weight": "19.37 kg (42 lb, 11.3 oz)",
+          "weight_lb": 42,
           "weight_size": "S4"
         },
         "ebike_system": {
@@ -60610,7 +60607,7 @@
       "specs": {
         "general_info": {
           "product_id": "221354",
-          "weight": "20.26 kg (45 lb, 8.4 oz)",
+          "weight_lb": 45,
           "weight_size": "S4"
         },
         "ebike_system": {
@@ -61157,7 +61154,7 @@
       "specs": {
         "general_info": {
           "product_id": "277412",
-          "weight": "18.98 kg (41 lb, 13.5 oz)",
+          "weight_lb": 41,
           "weight_size": "S4"
         },
         "ebike_system": {
@@ -61714,7 +61711,7 @@
       "specs": {
         "general_info": {
           "product_id": "221351",
-          "weight": "18.92 kg (41 lb, 11.4 oz)",
+          "weight_lb": 41,
           "weight_size": "S4"
         },
         "ebike_system": {
@@ -62257,7 +62254,7 @@
       "specs": {
         "general_info": {
           "product_id": "277411",
-          "weight": "18.18 kg (40 lb, 1.3 oz)",
+          "weight_lb": 40,
           "weight_size": "S4"
         },
         "ebike_system": {
@@ -62777,7 +62774,7 @@
       "specs": {
         "general_info": {
           "product_id": "279840",
-          "weight": "28.7 kg (63 lb, 4.4 oz)",
+          "weight_lb": 63,
           "weight_size": "MD"
         },
         "ebike_system": {
@@ -63319,7 +63316,7 @@
       "specs": {
         "general_info": {
           "product_id": "279838",
-          "weight": "29.9 kg (65 lb, 14.7 oz)",
+          "weight_lb": 65,
           "weight_size": "MD"
         },
         "ebike_system": {
@@ -63831,7 +63828,7 @@
       "specs": {
         "general_info": {
           "product_id": "293013",
-          "weight": "31.1 kg (68 lb, 9.0 oz)",
+          "weight_lb": 68,
           "weight_size": "MD"
         },
         "ebike_system": {
@@ -64316,7 +64313,7 @@
       "specs": {
         "general_info": {
           "product_id": "293140",
-          "weight": "30.9 kg (68 lb, 2.0 oz)",
+          "weight_lb": 68,
           "weight_size": "MD"
         },
         "ebike_system": {
@@ -64836,7 +64833,7 @@
       "specs": {
         "general_info": {
           "product_id": "293142",
-          "weight": "33.05 kg (72 lb, 13.8 oz)",
+          "weight_lb": 72,
           "weight_size": "MD"
         },
         "ebike_system": {
@@ -65360,7 +65357,7 @@
       "specs": {
         "general_info": {
           "product_id": "277441",
-          "weight": "26.4kg (58 lb, 3.2 oz)",
+          "weight_lb": 58,
           "weight_size": "MD"
         },
         "ebike_system": {
@@ -65853,7 +65850,7 @@
       "specs": {
         "general_info": {
           "product_id": "277442",
-          "weight": "26.4 kg (58 lb, 3.2 oz)",
+          "weight_lb": 58,
           "weight_size": "MD"
         },
         "ebike_system": {
@@ -66354,7 +66351,7 @@
       "specs": {
         "general_info": {
           "product_id": "263673",
-          "weight": "27.1 kg (59 lb, 11.9 oz)",
+          "weight_lb": 59,
           "weight_size": "MD"
         },
         "ebike_system": {
@@ -66834,7 +66831,7 @@
       "specs": {
         "general_info": {
           "product_id": "263675",
-          "weight": "27.57 kg (60 lb, 12.5 oz)",
+          "weight_lb": 60,
           "weight_size": "MD"
         },
         "ebike_system": {
@@ -67314,7 +67311,7 @@
       "specs": {
         "general_info": {
           "product_id": "295057",
-          "weight": "18.6 kg (41 lb, 0.1 oz)",
+          "weight_lb": 41,
           "weight_size": "MD"
         },
         "ebike_system": {
@@ -67800,7 +67797,7 @@
       "specs": {
         "general_info": {
           "product_id": "278243",
-          "weight": "20.28 kg (44 lb, 11.4 oz)",
+          "weight_lb": 44,
           "weight_size": "MD"
         },
         "ebike_system": {
@@ -68315,7 +68312,7 @@
       "specs": {
         "general_info": {
           "product_id": "295569",
-          "weight": "20.9 kg (46 lb, 1.2 oz)",
+          "weight_lb": 46,
           "weight_size": "MD"
         },
         "ebike_system": {
@@ -68770,7 +68767,7 @@
       "specs": {
         "general_info": {
           "product_id": "278245",
-          "weight": "20.54 kg (45 lb, 4.5 oz)",
+          "weight_lb": 45,
           "weight_size": "MD"
         },
         "ebike_system": {
@@ -69249,7 +69246,7 @@
       "specs": {
         "general_info": {
           "product_id": "278244",
-          "weight": "20.11 kg (44 lb, 5.4 oz)",
+          "weight_lb": 44,
           "weight_size": "MD"
         },
         "ebike_system": {
@@ -69781,7 +69778,7 @@
       "specs": {
         "general_info": {
           "product_id": "278246",
-          "weight": "20.3 kg (44 lb, 12.1 oz)",
+          "weight_lb": 44,
           "weight_size": "MD"
         },
         "ebike_system": {
@@ -70277,7 +70274,7 @@
       "specs": {
         "general_info": {
           "product_id": "295053",
-          "weight": "16.32 kg (35 lb, 15.7 oz)",
+          "weight_lb": 35,
           "weight_size": "MD"
         },
         "ebike_system": {
@@ -70749,7 +70746,7 @@
       "specs": {
         "general_info": {
           "product_id": "295054",
-          "weight": "18.35 kg (40 lb, 7.3 oz)",
+          "weight_lb": 40,
           "weight_size": "MD"
         },
         "ebike_system": {
@@ -71226,7 +71223,7 @@
       "specs": {
         "general_info": {
           "product_id": "293307",
-          "weight": "13.7 kg (30 lb, 3.3 oz)",
+          "weight_lb": 30,
           "weight_size": "MD"
         },
         "ebike_system": {
@@ -71636,13 +71633,13 @@
       "specs": {
         "general_info": {
           "generation": "Gen 3",
-          "weight": "35.75 kg (78.8 lb)",
+          "weight_lb": 78.8,
           "folding_size": "182 × 46 × 87 cm (71.7 × 18.1 × 34.3 in)",
           "folding_time": "5 seconds",
-          "max_gross_vehicle_weight": "210 kg (463 lb)",
-          "max_load_weight": "210 kg (463 lb)",
-          "max_rider_weight": "130 kg (286.6 lb)",
-          "range": "500 Wh: 40-102 km (25-63 mi); 1000 Wh: 82-207 km (51-129 mi)"
+          "max_gross_vehicle_weight_lb": 463,
+          "max_load_weight_lb": 463,
+          "max_rider_weight_lb": 286.6,
+          "range_mi": 129
         },
         "ebike_system": {
           "motor": {
@@ -71974,13 +71971,13 @@
       "specs": {
         "general_info": {
           "generation": "Gen 3",
-          "weight": "34.64 kg (76.4 lb)",
+          "weight_lb": 76.4,
           "folding_size": "182 × 46 × 87 cm (71.7 × 18.1 × 34.3 in)",
           "folding_time": "5 seconds",
-          "max_gross_vehicle_weight": "210 kg (463 lb)",
-          "max_load_weight": "210 kg (463 lb)",
-          "max_rider_weight": "130 kg (286.6 lb)",
-          "range": "500 Wh: 40-102 km (25-63 mi); 1000 Wh: 82-207 km (51-129 mi)"
+          "max_gross_vehicle_weight_lb": 463,
+          "max_load_weight_lb": 463,
+          "max_rider_weight_lb": 286.6,
+          "range_mi": 129
         },
         "ebike_system": {
           "motor": {
@@ -72310,13 +72307,13 @@
       "specs": {
         "general_info": {
           "generation": "Gen 3",
-          "weight": "38.77 kg (85.5 lb)",
+          "weight_lb": 85.5,
           "folding_size": "185 × 46 × 88 cm (72.8 × 18.1 × 34.6 in)",
           "folding_time": "5 seconds",
-          "max_gross_vehicle_weight": "210 kg (463 lb)",
-          "max_load_weight": "210 kg (463 lb)",
-          "max_rider_weight": "130 kg (286.6 lb)",
-          "range": "800 Wh: 42-89 mi; 1600 Wh: 83-179 mi"
+          "max_gross_vehicle_weight_lb": 463,
+          "max_load_weight_lb": 463,
+          "max_rider_weight_lb": 286.6,
+          "range_mi": 179
         },
         "ebike_system": {
           "motor": {
@@ -72655,13 +72652,13 @@
       "specs": {
         "general_info": {
           "generation": "Gen 3",
-          "weight": "37.32 kg (82.3 lb)",
+          "weight_lb": 82.3,
           "folding_size": "185 × 46 × 88 cm (72.8 × 18.1 × 34.6 in)",
           "folding_time": "5 seconds",
-          "max_gross_vehicle_weight": "210 kg (463 lb)",
-          "max_load_weight": "210 kg (463 lb)",
-          "max_rider_weight": "130 kg (286.6 lb)",
-          "range": "545 Wh: 45-98 km (28-61 mi); 1090 Wh: 90-196 km (56-122 mi)"
+          "max_gross_vehicle_weight_lb": 463,
+          "max_load_weight_lb": 463,
+          "max_rider_weight_lb": 286.6,
+          "range_mi": 122
         },
         "ebike_system": {
           "motor": {
@@ -73018,12 +73015,12 @@
       "specs": {
         "general_info": {
           "generation": "Gen 2",
-          "weight": "27.6 kg (60.8 lb)",
+          "weight_lb": 60.8,
           "folding_size": "165 × 39.5 × 87 cm (65 × 15.6 × 34.3 in)",
           "folding_time": "5 seconds",
-          "max_gross_vehicle_weight": "180 kg (396.8 lb)",
-          "max_rider_weight": "120 kg (264.6 lb)",
-          "range": "545 Wh: 51-121 km (32-76 mi)"
+          "max_gross_vehicle_weight_lb": 396.8,
+          "max_rider_weight_lb": 264.6,
+          "range_mi": 76
         },
         "ebike_system": {
           "motor": {
@@ -73360,12 +73357,12 @@
       "specs": {
         "general_info": {
           "generation": "Gen 2",
-          "weight": "27.9 kg (61.5 lb)",
+          "weight_lb": 61.5,
           "folding_size": "165 × 39.5 × 87 cm (65 × 15.6 × 34.3 in)",
           "folding_time": "5 seconds",
-          "max_gross_vehicle_weight": "180 kg (396.8 lb)",
-          "max_rider_weight": "120 kg (264.6 lb)",
-          "range": "545 Wh: 51-121 km (32-76 mi)"
+          "max_gross_vehicle_weight_lb": 396.8,
+          "max_rider_weight_lb": 264.6,
+          "range_mi": 76
         },
         "ebike_system": {
           "motor": {
@@ -73705,12 +73702,12 @@
       "specs": {
         "general_info": {
           "generation": "Gen 2",
-          "weight": "28 kg (61.7 lb)",
+          "weight_lb": 61.7,
           "folding_size": "165 × 39.5 × 87 cm (65 × 15.6 × 34.3 in)",
           "folding_time": "5 seconds",
-          "max_gross_vehicle_weight": "180 kg (396.8 lb)",
-          "max_rider_weight": "120 kg (264.6 lb)",
-          "range": "545 Wh: 51-121 km (32-76 mi)"
+          "max_gross_vehicle_weight_lb": 396.8,
+          "max_rider_weight_lb": 264.6,
+          "range_mi": 76
         },
         "ebike_system": {
           "motor": {
@@ -74035,12 +74032,12 @@
       "specs": {
         "general_info": {
           "generation": "Gen 2",
-          "weight": "28.1 kg (61.9 lb)",
+          "weight_lb": 61.9,
           "folding_size": "165 × 39.5 × 87 cm (65 × 15.6 × 34.3 in)",
           "folding_time": "5 seconds",
-          "max_gross_vehicle_weight": "180 kg (396.8 lb)",
-          "max_rider_weight": "120 kg (264.6 lb)",
-          "range": "545 Wh: 51-121 km (32-76 mi)"
+          "max_gross_vehicle_weight_lb": 396.8,
+          "max_rider_weight_lb": 264.6,
+          "range_mi": 76
         },
         "ebike_system": {
           "motor": {
@@ -74378,12 +74375,12 @@
       "specs": {
         "general_info": {
           "generation": "Gen 1",
-          "weight": "23.7 kg (52.2 lb)",
+          "weight_lb": 52.2,
           "folding_size": "38 × 156 × 79 cm (15 × 61.4 × 31.1 in)",
           "folding_time": "5 sec",
-          "max_gross_vehicle_weight": "140 kg (308.6 lb)",
-          "max_rider_weight": "120 kg (264.6 lb)",
-          "range": "54 -108 km (34-67 mi)"
+          "max_gross_vehicle_weight_lb": 308.6,
+          "max_rider_weight_lb": 264.6,
+          "range_mi": 67
         },
         "ebike_system": {
           "motor": {
@@ -74663,12 +74660,12 @@
       "specs": {
         "general_info": {
           "generation": "Gen 1",
-          "weight": "23.4 kg (51.6 lb)",
+          "weight_lb": 51.6,
           "folding_size": "38 × 156 × 79 cm (15 × 61.4 × 31.1 in)",
           "folding_time": "5 sec",
-          "max_gross_vehicle_weight": "140 kg (308.6 lb)",
-          "max_rider_weight": "120 kg (264.6 lb)",
-          "range": "51-118 km (32-74 mi)"
+          "max_gross_vehicle_weight_lb": 308.6,
+          "max_rider_weight_lb": 264.6,
+          "range_mi": 74
         },
         "ebike_system": {
           "motor": {
@@ -74953,10 +74950,10 @@
       "specs": {
         "general_info": {
           "generation": "Gen 1",
-          "weight": "M: 37.7 kg (83.1 lb)",
-          "max_gross_vehicle_weight": "210 kg (463 lb)",
-          "max_rider_weight": "130 kg (286.6 lb)",
-          "range": "800 Wh: 93 - 161 km (58 -100 mi); 1600 Wh: 185 - 322 km (115 - 200 mi)"
+          "weight_lb": 83.1,
+          "max_gross_vehicle_weight_lb": 463,
+          "max_rider_weight_lb": 286.6,
+          "range_mi": 200
         },
         "ebike_system": {
           "motor": {
@@ -75284,10 +75281,10 @@
       "specs": {
         "general_info": {
           "generation": "Gen 1",
-          "weight": "M: 37.1 kg (81.8 lb)",
-          "max_gross_vehicle_weight": "210 kg (463 lb)",
-          "max_rider_weight": "130 kg (286.6 lb)",
-          "range": "725 Wh: 84 - 146 km (52 - 91 mi); 1450 Wh: 168 - 292 km (104 - 181 mi)"
+          "weight_lb": 81.8,
+          "max_gross_vehicle_weight_lb": 463,
+          "max_rider_weight_lb": 286.6,
+          "range_mi": 181
         },
         "ebike_system": {
           "motor": {
@@ -75631,9 +75628,9 @@
       "specs": {
         "general_info": {
           "generation": "Gen 1",
-          "weight": "22.8 kg (50.3 lb)",
-          "max_gross_vehicle_weight": "150 kg (330.7 lb)",
-          "max_rider_weight": "120 kg (264.6 lb)",
+          "weight_lb": 50.3,
+          "max_gross_vehicle_weight_lb": 330.7,
+          "max_rider_weight_lb": 264.6,
           "range": "400 Wh: 54 - 105 km (33.6 - 65.2 mi)"
         },
         "ebike_system": {
@@ -75946,10 +75943,10 @@
       "specs": {
         "general_info": {
           "generation": "Gen 1",
-          "weight": "29.3 kg (64.6 lb)",
-          "max_gross_vehicle_weight": "190 kg (418.9 lb)",
-          "max_rider_weight": "120 kg (264.6 lb)",
-          "range": "500 Wh: 42-85 km (26-53 mi)"
+          "weight_lb": 64.6,
+          "max_gross_vehicle_weight_lb": 418.9,
+          "max_rider_weight_lb": 264.6,
+          "range_mi": 53
         },
         "ebike_system": {
           "motor": {
@@ -76278,9 +76275,9 @@
       "specs": {
         "general_info": {
           "generation": "Gen 1",
-          "weight": "23 kg (50.7 lb)",
-          "max_gross_vehicle_weight": "150 kg (330.7 lb)",
-          "max_rider_weight": "120 kg (264.6 lb)",
+          "weight_lb": 50.7,
+          "max_gross_vehicle_weight_lb": 330.7,
+          "max_rider_weight_lb": 264.6,
           "range": "400 Wh: 51 - 100 km (31.7 - 62.1 mi)"
         },
         "ebike_system": {
@@ -76586,12 +76583,12 @@
       "specs": {
         "general_info": {
           "generation": "Gen 4",
-          "weight": "22.5 kg (49.6 lb)",
+          "weight_lb": 49.6,
           "folding_size": "41 × 86 × 68 cm (16.1 × 33.9 × 26.8 in)",
           "folding_time": "10 sec",
-          "max_gross_vehicle_weight": "125 kg (275.6 lb)",
-          "max_rider_weight": "105 kg (231.5 lb)",
-          "range": "400 Wh: 28-70 mi"
+          "max_gross_vehicle_weight_lb": 275.6,
+          "max_rider_weight_lb": 231.5,
+          "range_mi": 70
         },
         "ebike_system": {
           "motor": {
@@ -76913,12 +76910,12 @@
       "specs": {
         "general_info": {
           "generation": "Gen 4",
-          "weight": "23.9 kg (52.7 lb)",
+          "weight_lb": 52.7,
           "folding_size": "42 × 85 × 69 cm (16.5 × 33.5 × 27.2 in)",
           "folding_time": "10 sec",
-          "max_gross_vehicle_weight": "125 kg (275.6 lb)",
-          "max_rider_weight": "105 kg (231.5 lb)",
-          "range": "400 Wh: 45-112 km (28-70 mi)"
+          "max_gross_vehicle_weight_lb": 275.6,
+          "max_rider_weight_lb": 231.5,
+          "range_mi": 70
         },
         "ebike_system": {
           "motor": {
@@ -77222,12 +77219,12 @@
       "specs": {
         "general_info": {
           "generation": "Gen 3",
-          "weight": "21.9 kg (48.3 lb)",
+          "weight_lb": 48.3,
           "folding_size": "42 × 86 × 68.5 cm (16.5 × 33.9 × 27 in)",
           "folding_time": "10 sec",
-          "max_gross_vehicle_weight": "125 kg (275.6 lb)",
-          "max_rider_weight": "105 kg (231.5 lb)",
-          "range": "400 Wh: 55 -110 km (35-70 mi)"
+          "max_gross_vehicle_weight_lb": 275.6,
+          "max_rider_weight_lb": 231.5,
+          "range_mi": 70
         },
         "ebike_system": {
           "motor": {
@@ -77555,12 +77552,12 @@
       "specs": {
         "general_info": {
           "generation": "Gen 3",
-          "weight": "22.1 kg (48.7 lb)",
+          "weight_lb": 48.7,
           "folding_size": "40 × 85.5 × 67.5 cm (15.7 × 33.7 × 26.6 in)",
           "folding_time": "10 sec",
-          "max_gross_vehicle_weight": "125 kg (275.6 lb)",
-          "max_rider_weight": "105 kg (231.5 lb)",
-          "range": "400 Wh: 53 -106 km (34-68 mi)"
+          "max_gross_vehicle_weight_lb": 275.6,
+          "max_rider_weight_lb": 231.5,
+          "range_mi": 68
         },
         "ebike_system": {
           "motor": {
@@ -77890,7 +77887,7 @@
       "specs": {
         "general_info": {
           "class": "1/2/3",
-          "bike_weight": "48 lbs"
+          "bike_weight_lb": 48
         },
         "ebike_system": {
           "motor_hub": {
@@ -77928,13 +77925,13 @@
             "boost": false,
             "details": "3 Modes x 5 Levels"
           },
-          "max_speed_default": "20 MPH",
-          "max_speed_adjustable_range": "12~28 MPH",
+          "max_speed_default_mph": 20,
+          "max_speed_adjustable_range_mph": 28,
           "throttle_range": {
             "details": "55 Miles"
           },
-          "pedal_assist_range": "70 Miles",
-          "bike_weight_without_battery": "40.8 lbs"
+          "pedal_assist_range_mi": 70,
+          "bike_weight_without_battery_lb": 40.8
         },
         "special_features": {
           "app_apple_find_my": "APP OTA & Find My"
@@ -78088,10 +78085,10 @@
           "fenders_optional": "Front and rear full coverage",
           "rear_rack_optional": "Aluminum Alloy, MIK HD",
           "kickstand": "Aluminum Alloy, included, rear mount",
-          "rear_rack_load_capacity": "66 lbs"
+          "rear_rack_load_capacity_lb": 66
         },
         "general_other": {
-          "max_bike_load": "330 lbs"
+          "max_bike_load_lb": 330
         }
       },
       "colors": [
@@ -78468,8 +78465,8 @@
       "specs": {
         "general_info": {
           "ebike_class": "1/2/3",
-          "bike_weight": "61 lbs",
-          "max_bike_load_capacity": "440 lbs",
+          "bike_weight_lb": 61,
+          "max_bike_load_capacity_lb": 440,
           "total_length": "1818mm"
         },
         "ebike_system": {
@@ -78508,9 +78505,9 @@
             "boost": false,
             "details": "5 Riding Modes /Ride Tuning"
           },
-          "max_speed_default": "20MPH",
-          "max_speed_adjustable_range": "12~28MPH",
-          "pedal_assist_range": "80 Miles",
+          "max_speed_default_mph": 20,
+          "max_speed_adjustable_range_mph": 28,
+          "pedal_assist_range_mi": 80,
           "throttle_range": {
             "details": "65 Miles"
           }
@@ -78682,7 +78679,7 @@
           "fenders": "Aluminum Alloy, Front and Rear Full Coverage",
           "rear_rack": "MIK HD Compatible Alloy",
           "kickstand": "Aluminum Alloy, Included, Rear Mount",
-          "rear_rack_load_capacity": "66 lbs"
+          "rear_rack_load_capacity_lb": 66
         },
         "general_other": {
           "height": "5'2\"~5'11\""
@@ -79010,8 +79007,8 @@
       "specs": {
         "general_info": {
           "ebike_class": "1/2/3",
-          "bike_weight": "60 lbs *Weight does not include fenders, kickstands, or pedals.",
-          "max_bike_load_capacity": "440 lbs",
+          "bike_weight_lb": 60,
+          "max_bike_load_capacity_lb": 440,
           "total_length": "1812mm"
         },
         "ebike_system": {
@@ -79049,9 +79046,9 @@
             "boost": false,
             "details": "4 Riding Modes +Auto Mode/Ride Tuning"
           },
-          "max_speed_default": "20MPH",
-          "max_speed_adjustable_range": "12~28MPH",
-          "pedal_assist_range": "95 Miles",
+          "max_speed_default_mph": 20,
+          "max_speed_adjustable_range_mph": 28,
+          "pedal_assist_range_mi": 95,
           "throttle_range": {
             "details": "70 Miles"
           }
@@ -79225,7 +79222,7 @@
           "fenders": "Aluminum Alloy, Front and Rear Full Coverage",
           "rear_rack": "MIK HD Compatible Alloy",
           "kickstand": "Aluminum Alloy, Included, Rear Mount",
-          "rear_rack_load_capacity": "66 lbs"
+          "rear_rack_load_capacity_lb": 66
         },
         "general_other": {
           "height": "5'2\"~5'11\""
@@ -79471,10 +79468,10 @@
       "spec_count": 48,
       "specs": {
         "general_info": {
-          "default_speed": "20 MPH",
+          "default_speed_mph": 20,
           "class": "1/2/3",
-          "bike_weight": "63lbs",
-          "max_bike_load_capacity": "440lbs"
+          "bike_weight_lb": 63,
+          "max_bike_load_capacity_lb": 440
         },
         "ebike_system": {
           "motor": {
@@ -79513,11 +79510,11 @@
             "boost": false,
             "details": "5 Levels"
           },
-          "max_speed_adjustable_range": "12~28 MPH",
+          "max_speed_adjustable_range_mph": 28,
           "throttle_range": {
             "details": "45 Miles"
           },
-          "pedal_assist_range": "55 Miles"
+          "pedal_assist_range_mi": 55
         },
         "special_features": {
           "walk_mode": "2.9 MPH"
@@ -79664,7 +79661,7 @@
           "fenders": "Steel, front and rear full coverage",
           "rear_rack": "Aluminum Alloy, integrated with frame",
           "kickstand": "Aluminum Alloy, included, rear mount",
-          "rear_rack_load_capacity": "120lbs"
+          "rear_rack_load_capacity_lb": 120
         }
       },
       "colors": [
@@ -79885,7 +79882,7 @@
       "specs": {
         "general_info": {
           "class": "1/2/3",
-          "bike_weight": "63lbs"
+          "bike_weight_lb": 63
         },
         "ebike_system": {
           "motor_hub": {
@@ -79924,12 +79921,12 @@
             "boost": false,
             "details": "3 Riding Modes x 5 PAS Levels"
           },
-          "max_speed_default": "20 MPH",
-          "max_speed_adjustable_range": "12~28 MPH",
+          "max_speed_default_mph": 20,
+          "max_speed_adjustable_range_mph": 28,
           "throttle_range": {
             "details": "45 Miles"
           },
-          "pedal_assist_range": "68 Miles"
+          "pedal_assist_range_mi": 68
         },
         "special_features": {
           "walk_mode": "2.9 MPH",
@@ -80074,10 +80071,10 @@
           "fenders": "Steel, front and rear full coverage",
           "rear_rack": "Aluminum Alloy, integrated with frame",
           "kickstand": "Aluminum Alloy, included, rear mount",
-          "rear_rack_load_capacity": "120lbs"
+          "rear_rack_load_capacity_lb": 120
         },
         "general_other": {
-          "max_bike_load": "450lbs"
+          "max_bike_load_lb": 450
         }
       },
       "colors": [
@@ -80344,8 +80341,8 @@
       "specs": {
         "general_info": {
           "ebike_class": "1/2/3",
-          "bike_weight": "77 lbs",
-          "max_bike_load_capacity": "500 lbs",
+          "bike_weight_lb": 77,
+          "max_bike_load_capacity_lb": 500,
           "total_length": "1811mm"
         },
         "ebike_system": {
@@ -80383,13 +80380,13 @@
             "boost": false,
             "details": "5 Riding Modes+Stealth Mode /Ride Tuning"
           },
-          "max_speed_default": "20MPH",
-          "max_speed_adjustable_range": "12~28MPH",
-          "pedal_assist_range": "75 Miles",
+          "max_speed_default_mph": 20,
+          "max_speed_adjustable_range_mph": 28,
+          "pedal_assist_range_mi": 75,
           "throttle_range": {
             "details": "50 Miles"
           },
-          "bike_weight_without_battery": "67 lbs"
+          "bike_weight_without_battery_lb": 67
         },
         "special_features": {
           "walk_mode": "2.9MPH/ Walk & Hold",
@@ -80559,7 +80556,7 @@
           "rear_rack": "MIK HD Compatible，Integrated with Frame",
           "kickstand": "Aluminum Alloy, Included, Rear Mount",
           "rear_rack_bag": "Included as Standard Equipment",
-          "rear_rack_load_capacity": "176 lbs"
+          "rear_rack_load_capacity_lb": 176
         },
         "general_other": {
           "height": "5'0\" – 6'3\""
@@ -80925,7 +80922,7 @@
       "specs": {
         "general_info": {
           "class": "1/2/3",
-          "bike_weight": "75lbs"
+          "bike_weight_lb": 75
         },
         "ebike_system": {
           "motor_hub": {
@@ -80963,12 +80960,12 @@
             "boost": false,
             "details": "3 Riding Modes x 5 PAS Levels"
           },
-          "max_speed_default": "20 MPH",
-          "max_speed_adjustable_range": "12~28 MPH",
+          "max_speed_default_mph": 20,
+          "max_speed_adjustable_range_mph": 28,
           "throttle_range": {
             "details": "45 Miles"
           },
-          "pedal_assist_range": "65 Miles"
+          "pedal_assist_range_mi": 65
         },
         "special_features": {
           "walk_mode": "2.9 MPH",
@@ -81124,10 +81121,10 @@
           "fenders": "Front and rear full coverage",
           "rear_rack": "MIK HD Compatible Alloy",
           "kickstand": "Aluminum Alloy, included, rear mount",
-          "rear_rack_load_capacity": "66lbs"
+          "rear_rack_load_capacity_lb": 66
         },
         "general_other": {
-          "max_bike_load": "505lbs"
+          "max_bike_load_lb": 505
         }
       },
       "colors": [
@@ -81475,8 +81472,8 @@
       "specs": {
         "general_info": {
           "ebike_class": "1/2/3",
-          "bike_weight": "80lbs",
-          "max_bike_load_capacity": "560lbs",
+          "bike_weight_lb": 80,
+          "max_bike_load_capacity_lb": 560,
           "total_length": "2065mm"
         },
         "ebike_system": {
@@ -81515,9 +81512,9 @@
             "boost": false,
             "details": "3 Riding Modes x 5 PAS Levels"
           },
-          "max_speed_default": "20MPH",
-          "max_speed_adjustable_range": "12~28MPH",
-          "pedal_assist_range": "75 Miles",
+          "max_speed_default_mph": 20,
+          "max_speed_adjustable_range_mph": 28,
+          "pedal_assist_range_mi": 75,
           "throttle_range": {
             "details": "50 Miles"
           }
@@ -81691,7 +81688,7 @@
           "fenders": "Front and rear full coverage",
           "rear_rack": "MIK HD Compatible Alloy",
           "kickstand": "Aluminum Alloy, Included, Rear Mount",
-          "rear_rack_load_capacity": "120lbs"
+          "rear_rack_load_capacity_lb": 120
         },
         "general_other": {
           "height": "4'11\"~5'10\""
@@ -82024,10 +82021,10 @@
       "spec_count": 49,
       "specs": {
         "general_info": {
-          "default_speed": "20 MPH",
+          "default_speed_mph": 20,
           "class": "1/2/3",
-          "bike_weight": "62lbs",
-          "max_bike_load_capacity": "440lbs"
+          "bike_weight_lb": 62,
+          "max_bike_load_capacity_lb": 440
         },
         "ebike_system": {
           "motor": {
@@ -82064,11 +82061,11 @@
             "boost": false,
             "details": "3 Modes × 5 Levels"
           },
-          "max_speed_adjustable_range": "12~28 MPH",
+          "max_speed_adjustable_range_mph": 28,
           "throttle_range": {
             "details": "60 Miles"
           },
-          "pedal_assist_range": "70 Miles"
+          "pedal_assist_range_mi": 70
         },
         "special_features": {
           "security": "Apple Find My™",
@@ -82491,8 +82488,8 @@
       "specs": {
         "general_info": {
           "ebike_class": "1/2/3",
-          "bike_weight": "57 lbs *Weight does not include fenders, kickstands, or pedals.",
-          "max_bike_load_capacity": "440 lbs",
+          "bike_weight_lb": 57,
+          "max_bike_load_capacity_lb": 440,
           "total_length": "1930mm"
         },
         "ebike_system": {
@@ -82530,9 +82527,9 @@
             "boost": false,
             "details": "4 Riding Modes +Pulse Mode/Ride Tuning"
           },
-          "max_speed_default": "20MPH",
-          "max_speed_adjustable_range": "12~28MPH",
-          "pedal_assist_range": "95 Miles",
+          "max_speed_default_mph": 20,
+          "max_speed_adjustable_range_mph": 28,
+          "pedal_assist_range_mi": 95,
           "throttle_range": {
             "details": "70 Miles"
           }
@@ -82707,7 +82704,7 @@
           "fenders": "Plastic，Front and Rear Full Coverage",
           "rear_rack": "Optional",
           "kickstand": "Aluminum Alloy, Included, Rear Mount",
-          "rear_rack_load_capacity": "66 lbs"
+          "rear_rack_load_capacity_lb": 66
         },
         "general_other": {
           "height": "5'2\"~5'10\""
@@ -82974,10 +82971,10 @@
       "spec_count": 44,
       "specs": {
         "general_info": {
-          "default_speed": "20 MPH",
+          "default_speed_mph": 20,
           "class": "1/3",
-          "bike_weight": "39lbs",
-          "max_bike_load_capacity": "330lbs"
+          "bike_weight_lb": 39,
+          "max_bike_load_capacity_lb": 330
         },
         "ebike_system": {
           "motor": {
@@ -83011,8 +83008,8 @@
             "boost": false,
             "details": "3 Riding Modes x 5 PAS Levels"
           },
-          "max_speed_adjustable_range": "12~28 MPH",
-          "pedal_assist_range": "70 Miles"
+          "max_speed_adjustable_range_mph": 28,
+          "pedal_assist_range_mi": 70
         },
         "special_features": {
           "walk_mode": "2.9 MPH"
@@ -83399,8 +83396,8 @@
       "specs": {
         "general_info": {
           "ebike_class": "1/2/3",
-          "bike_weight": "39 lbs",
-          "max_bike_load_capacity": "330 lbs",
+          "bike_weight_lb": 39,
+          "max_bike_load_capacity_lb": 330,
           "total_length": "1838mm"
         },
         "ebike_system": {
@@ -83439,13 +83436,13 @@
             "boost": false,
             "details": "4 Riding Modes+Pulse Mode /Ride Tuning"
           },
-          "max_speed_default": "20MPH",
-          "max_speed_adjustable_range": "12~28MPH",
-          "pedal_assist_range": "60 Miles",
+          "max_speed_default_mph": 20,
+          "max_speed_adjustable_range_mph": 28,
+          "pedal_assist_range_mi": 60,
           "throttle_range": {
             "details": "40 Miles"
           },
-          "bike_weight_without_battery": "34 lbs"
+          "bike_weight_without_battery_lb": 34
         },
         "special_features": {
           "walk_mode": "2.9MPH/ Walk & Hold",
@@ -83939,7 +83936,7 @@
       "specs": {
         "general_info": {
           "class": "1/2",
-          "bike_weight": "85.8lbs"
+          "bike_weight_lb": 85.8
         },
         "ebike_system": {
           "motor_hub": {
@@ -83977,12 +83974,12 @@
             "boost": false,
             "details": "5 PAS Levels"
           },
-          "max_speed_default": "12 MPH",
-          "max_speed_adjustable_range": "8~20 MPH",
+          "max_speed_default_mph": 12,
+          "max_speed_adjustable_range_mph": 20,
           "throttle_range": {
             "details": "50 Miles"
           },
-          "pedal_assist_range": "60 Miles"
+          "pedal_assist_range_mi": 60
         },
         "special_features": {
           "walk_mode": "2.0 MPH",
@@ -84149,7 +84146,7 @@
           "rear_rack": "Aluminum Alloy"
         },
         "general_other": {
-          "max_bike_load": "500lbs（including rear basket load)"
+          "max_bike_load_lb": 500
         }
       },
       "colors": [
@@ -84358,12 +84355,12 @@
       "spec_count": 4,
       "specs": {
         "general_info": {
-          "range": "Up to 40 miles, compatible with alternate Vvolt Ranger battery for up to 60-mile range",
-          "weight": "Only 44 lbs WITH battery!"
+          "range_mi": 40,
+          "weight_lb": 44
         },
         "ebike_system": {
           "power": "550 peak watts, 45nm peak torque",
-          "top_assist_speed": "20 mph"
+          "top_assist_speed_mph": 20
         }
       },
       "colors": [
@@ -84543,12 +84540,12 @@
       "spec_count": 4,
       "specs": {
         "general_info": {
-          "range": "Up to 40 miles, compatible with alternate Vvolt Ranger battery for up to 60-mile range",
-          "weight": "Only 44 lbs WITH battery!"
+          "range_mi": 40,
+          "weight_lb": 44
         },
         "ebike_system": {
           "power": "550 peak watts, 45nm peak torque",
-          "top_assist_speed": "20 mph"
+          "top_assist_speed_mph": 20
         }
       },
       "colors": [
@@ -84889,12 +84886,12 @@
       "spec_count": 4,
       "specs": {
         "general_info": {
-          "range": "up to 60 miles",
-          "weight": "53 lbs with battery!"
+          "range_mi": 60,
+          "weight_lb": 53
         },
         "ebike_system": {
           "power": "650 peak watts, 120nm peak torque",
-          "top_assist_speed": "28 mph"
+          "top_assist_speed_mph": 28
         }
       },
       "colors": [
@@ -85111,12 +85108,12 @@
       "spec_count": 4,
       "specs": {
         "general_info": {
-          "range": "up to 60 miles",
-          "weight": "50 lbs with battery!"
+          "range_mi": 60,
+          "weight_lb": 50
         },
         "ebike_system": {
           "power": "350 peak watts, 120nm peak torque",
-          "top_assist_speed": "28 mph"
+          "top_assist_speed_mph": 28
         }
       },
       "colors": [
