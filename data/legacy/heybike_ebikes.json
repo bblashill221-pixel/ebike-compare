@@ -39,23 +39,10 @@
             "weight_limit": "This bike has a maximum total weight limit (combined weight of rider and cargo) of 400 pounds (181.4kg)."
           },
           "ebike_system": {
-            "motor": {
-              "manufacturer": "Mivice",
-              "placement": "mid",
-              "power_w": 500,
-              "torque_nm": 105,
-              "details": "mid drive motor"
-            },
-            "battery": {
-              "capacity_wh": 680,
-              "removable": true,
-              "details": "UL 2271 certified, removable lithium-ion battery"
-            },
+            "motor": "Mivice 500W mid drive motor, 105 N·m torque",
+            "battery": "UL 2271 certified, 680Wh, removable lithium-ion battery",
             "charger": "2A, 54.6V output, 100V-220V AC input",
-            "display_type": {
-              "type": "lcd",
-              "details": "LCD Display"
-            },
+            "display_type": "LCD Display",
             "throttle": "Half-Twist (Activated in Natural Pedal Start Mode)"
           },
           "safety": {
@@ -63,26 +50,14 @@
           },
           "frameset": {
             "frame": "6061 Aluminum Alloy Frame; removable lithium-ion battery; rear rack and fenders included; hydraulic disc brakes; kickstand mount",
-            "fork": {
-              "type": "coil",
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Hydraulic front suspension fork"
-            }
+            "fork": "Hydraulic front suspension fork"
           },
           "drivetrain": {
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": "Altus"
-            }
+            "rear_derailleur": "Shimano Altus 8 speed"
           },
           "wheelset": {
             "spokes": "6061 Aluminum alloy",
-            "tire": {
-              "tubeless": false,
-              "details": "Puncture protection, 26\"x4.0\" fat tires"
-            }
+            "tire": "Puncture protection, 26\"x4.0\" fat tires"
           },
           "included_accessories": {
             "kickstand": "Alloy"
@@ -195,22 +170,10 @@
             "weight": "18 kg"
           },
           "ebike_system": {
-            "motor": {
-              "placement": "hub",
-              "power_w": 250,
-              "voltage_v": 36,
-              "details": "Rear Hub Motor"
-            },
+            "motor": "36V 250W Rear Hub Motor",
             "sensor_type": "Torque Sensor",
-            "display": {
-              "type": "lcd",
-              "details": "LCD Left Mounted"
-            },
-            "battery": {
-              "capacity_wh": 360,
-              "removable": false,
-              "details": "Lithium Battery"
-            },
+            "display": "LCD Left Mounted",
+            "battery": "360Wh Lithium Battery",
             "charger": "42V 100-240V 2A",
             "max_speed": "25 km/h",
             "max_torque": "40 N·m",
@@ -221,27 +184,13 @@
           },
           "frameset": {
             "frame": "Aluminum Alloy 6061",
-            "front_fork": {
-              "type": "rigid",
-              "lockout": false,
-              "thru_axle": true,
-              "details": "Hydroformed Rigid Fork with Thru Axle"
-            }
+            "front_fork": "Hydroformed Rigid Fork with Thru Axle"
           },
           "brakes": {
-            "brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "Hydraulic Disc Brakes HD-T275"
-            }
+            "brake": "TEKTRO Hydraulic Disc Brakes HD-T275"
           },
           "wheelset": {
-            "tyres": {
-              "manufacturer": "Schwalbe",
-              "tubeless": false,
-              "details": "Billy Bonkers 20'' × 2.0''"
-            }
+            "tyres": "Schwalbe Billy Bonkers 20'' × 2.0''"
           }
         }
       },
@@ -387,23 +336,10 @@
             "weight_limit": "This bike has a maximum total weight limit (combined weight of rider and cargo) of 400 pounds (181.4kg)."
           },
           "ebike_system": {
-            "motor": {
-              "placement": "mid",
-              "peak_w": 1400,
-              "power_w": 750,
-              "torque_nm": 160,
-              "details": "Mid-Drive Motor Version: of"
-            },
-            "battery": {
-              "capacity_wh": 864,
-              "removable": true,
-              "details": "removable lithium-ion battery"
-            },
+            "motor": "750W Mid-Drive Motor Version: 160 N·m of torque, 1400W Peak",
+            "battery": "864Wh, removable lithium-ion battery",
             "charger": "4A, 54.6V output, 100V-220V AC input",
-            "display_type": {
-              "type": "lcd",
-              "details": "Build-in LCD Display"
-            }
+            "display_type": "Build-in LCD Display"
           },
           "safety": {
             "light": "Integrated headlight"
@@ -413,18 +349,11 @@
             "full_suspension": "Horst-link suspension and hydraulic front suspension"
           },
           "drivetrain": {
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 9,
-              "details": ""
-            }
+            "rear_derailleur": "Shimano 9 speed"
           },
           "wheelset": {
             "spokes": "Aluminum alloy",
-            "tire": {
-              "tubeless": false,
-              "details": "Puncture protection, 26\"x4.0\"-max tire size without fenders"
-            }
+            "tire": "Puncture protection, 26\"x4.0\"-max tire size without fenders"
           },
           "included_accessories": {
             "kickstand": "Alloy"
@@ -652,16 +581,9 @@
             "unfolded_dimensions": "75.6*24.4*46.5 inch"
           },
           "ebike_system": {
-            "battery": {
-              "capacity_wh": 692,
-              "removable": true,
-              "details": "removable lithium-ion battery"
-            },
+            "battery": "692Wh, removable lithium-ion battery",
             "charger": "4A, 54.6V output, 100V-220V AC input",
-            "display_type": {
-              "type": "lcd",
-              "details": "LCD Display"
-            }
+            "display_type": "LCD Display"
           },
           "safety": {
             "light": "LED headlight with auto-on feature, and integrated taillight with brake light."
@@ -671,19 +593,12 @@
             "full_suspension": "Horst-link suspension and hydraulic front suspension"
           },
           "drivetrain": {
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 7,
-              "details": ""
-            }
+            "rear_derailleur": "Shimano 7 speed"
           },
           "wheelset": {
             "hub_rear": "Brushless geared hub motor, 80Nm, 1400W",
             "spokes": "Aluminum alloy",
-            "tire": {
-              "tubeless": false,
-              "details": "Puncture protection, 24\"x4.0\"-max tire size without fenders"
-            }
+            "tire": "Puncture protection, 24\"x4.0\"-max tire size without fenders"
           },
           "included_accessories": {
             "kickstand": "Alloy"
@@ -823,24 +738,13 @@
             "bike_weight": "69 lb"
           },
           "ebike_system": {
-            "motor": {
-              "placement": "hub",
-              "power_w": 750,
-              "details": "Hub Motor (Galaxy eDrive System)"
-            },
+            "motor": "750W Hub Motor (Galaxy eDrive System)",
             "torque": "75 Nm",
             "pedal_assist": "Dual Sensor (Torque + Cadence)",
-            "battery": {
-              "capacity_wh": 864,
-              "removable": false,
-              "details": ""
-            },
+            "battery": "864Wh",
             "charger": "54.6V / 3A",
             "max_speed": "28 MPH",
-            "display": {
-              "type": "color",
-              "details": "LCD Color Display"
-            }
+            "display": "LCD Color Display"
           },
           "special_features": {
             "app": "Heybike Smart App (iOS & Android)"
@@ -854,34 +758,18 @@
           },
           "frameset": {
             "frame": "6061 Aluminum Alloy",
-            "fork": {
-              "type": "coil",
-              "travel_mm": 100,
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Hydraulic Front Fork, T"
-            }
+            "fork": "Hydraulic Front Fork, T: 100mm"
           },
           "drivetrain": {
             "drivetrain": "Shimano Altus 8-Speed (12–32T)",
             "chainring": "48T"
           },
           "brakes": {
-            "brakes": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "Hydraulic Disc Brakes"
-            },
+            "brakes": "Tektro Hydraulic Disc Brakes",
             "rotor": "180 × 1.9 mm"
           },
           "wheelset": {
-            "tires": {
-              "manufacturer": "Kenda",
-              "size": "27.5x2.4",
-              "tubeless": false,
-              "details": ""
-            }
+            "tires": "KENDA 27.5 x 2.4\""
           },
           "included_accessories": {
             "rack_capacity": "66 lb",
@@ -1010,23 +898,11 @@
             "unfolded_dimensions": "66.9x25.6x52.0 inch"
           },
           "ebike_system": {
-            "rear_hub_motor": {
-              "peak_w": 1400,
-              "power_w": 750,
-              "torque_nm": 95,
-              "details": ""
-            },
-            "battery": {
-              "capacity_wh": 624,
-              "removable": false,
-              "details": ""
-            },
+            "rear_hub_motor": "750W (sustained), 1400W (peak) 95 N·m torque",
+            "battery": "624Wh",
             "charger": "2A, 54.6V output, 100V-220V AC input",
             "charging_time": "5-7 hrs for full charge",
-            "display_type": {
-              "type": "color",
-              "details": "TFT Display&NFC Start-up"
-            },
+            "display_type": "TFT Display&NFC Start-up",
             "throttle": "Half-Twist"
           },
           "safety": {
@@ -1034,27 +910,14 @@
           },
           "frameset": {
             "frame": "6061 Aluminum Alloy Frame; removable lithium-ion battery; rear rack and fenders included; kickstand mount;",
-            "suspension": {
-              "type": "coil",
-              "travel_mm": 65,
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Front: Hydraulic Suspension Fork, Rear: Horst Link Suspension"
-            }
+            "suspension": "Front: Hydraulic Suspension Fork, 65mm Travel Rear: Horst Link Suspension"
           },
           "drivetrain": {
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": "Altus"
-            }
+            "rear_derailleur": "Shimano Altus 8 speed"
           },
           "wheelset": {
             "spokes": "Aluminum alloy",
-            "tire": {
-              "tubeless": false,
-              "details": "Puncture protection, 20\"x4.0\" fat tires"
-            }
+            "tire": "Puncture protection, 20\"x4.0\" fat tires"
           },
           "included_accessories": {
             "kickstand": "Alloy"
@@ -1143,23 +1006,11 @@
             "unfolded_dimensions": "69.7x25.6x52.0 inch"
           },
           "ebike_system": {
-            "rear_hub_motor": {
-              "peak_w": 1400,
-              "power_w": 750,
-              "torque_nm": 80,
-              "details": ""
-            },
-            "battery": {
-              "capacity_wh": 720,
-              "removable": false,
-              "details": ""
-            },
+            "rear_hub_motor": "750W (sustained), 1400W (peak) 80 N·m torque",
+            "battery": "720Wh",
             "charger": "2A, 54.6V output, 100V-220V AC input",
             "charging_time": "6–8 hrs for full charge",
-            "display_type": {
-              "type": "color",
-              "details": "TFT Display&NFC Start-up"
-            },
+            "display_type": "TFT Display&NFC Start-up",
             "throttle": "Half-Twist"
           },
           "safety": {
@@ -1167,28 +1018,14 @@
           },
           "frameset": {
             "frame": "Hydroformed 6061 Aluminum Alloy Frame; removable lithium-ion battery; rear rack and fenders included; kickstand mount;",
-            "suspension": {
-              "type": "air",
-              "travel_mm": 65,
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Front: Hydraulic Suspension Fork, Rear: Adjustable Air Shock, Up to 174 PSI"
-            }
+            "suspension": "Front: Hydraulic Suspension Fork, 65mm Travel Rear: Adjustable Air Shock, Up to 174 PSI"
           },
           "drivetrain": {
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": "Altus"
-            }
+            "rear_derailleur": "Shimano Altus 8 speed"
           },
           "wheelset": {
             "spokes": "Aluminum alloy",
-            "tire": {
-              "manufacturer": "Kenda",
-              "tubeless": false,
-              "details": "Puncture protection, 20\"x4.0\" fat tires"
-            }
+            "tire": "Puncture protection, Kenda 20\"x4.0\" fat tires"
           },
           "included_accessories": {
             "kickstand": "Alloy"
@@ -1265,23 +1102,13 @@
             "bike_weight": "103 lb (Single Battery Ver.)115 lb (Dual Battery Ver.)"
           },
           "ebike_system": {
-            "motor": {
-              "placement": "hub",
-              "power_w": 1000,
-              "details": "Hub Motor"
-            },
+            "motor": "1000W Hub Motor",
             "torque": "95 N.m",
             "pedal_assist": "Cadence",
-            "battery": {
-              "removable": false,
-              "details": "956.8Wh (Single Battery Ver.)1913.6Wh (Dual Battery Ver.)"
-            },
+            "battery": "956.8Wh (Single Battery Ver.)1913.6Wh (Dual Battery Ver.)",
             "charger": "58.8V / 3A",
             "max_speed": "28 MPH+",
-            "display": {
-              "type": "color",
-              "details": "TFT"
-            }
+            "display": "TFT"
           },
           "special_features": {
             "app": "Heybike Smart App (iOS & Android)"
@@ -1295,32 +1122,17 @@
             "certification": "UL 2849"
           },
           "frameset": {
-            "fork": {
-              "type": "coil",
-              "travel_mm": 140,
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Hydraulic Front Fork, T"
-            }
+            "fork": "Hydraulic Front Fork, T: 140mm"
           },
           "drivetrain": {
             "chainring": "48T"
           },
           "brakes": {
-            "brakes": {
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "pistons": 2,
-              "details": "Hydraulic Disc Brakes with"
-            },
+            "brakes": "2-Piston Hydraulic Disc Brakes with",
             "rotor": "180 × 2.0 mm"
           },
           "wheelset": {
-            "tires": {
-              "size": "20x4.0",
-              "tubeless": false,
-              "details": ""
-            }
+            "tires": "20 x 4.0\""
           },
           "general_other": {
             "rear": "Rear Spring Suspension. T: 55mm",
@@ -1448,24 +1260,13 @@
             "bike_weight": "50 lb"
           },
           "ebike_system": {
-            "motor": {
-              "placement": "hub",
-              "power_w": 750,
-              "details": "Hub Motor (Galaxy eDrive System)"
-            },
+            "motor": "750W Hub Motor (Galaxy eDrive System)",
             "torque": "70 Nm",
             "pedal_assist": "Dual Sensor (Torque + Cadence)",
-            "battery": {
-              "capacity_wh": 680,
-              "removable": false,
-              "details": ""
-            },
+            "battery": "680Wh",
             "charger": "54.6V / 2A",
             "max_speed": "28 MPH",
-            "display": {
-              "type": "color",
-              "details": "LCD Color Display"
-            }
+            "display": "LCD Color Display"
           },
           "special_features": {
             "app": "Heybike Smart App (iOS & Android)"
@@ -1479,32 +1280,18 @@
           },
           "frameset": {
             "frame": "6061 Aluminum Alloy",
-            "fork": {
-              "type": "rigid",
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Aluminum Rigid Fork"
-            }
+            "fork": "Aluminum Rigid Fork"
           },
           "drivetrain": {
             "drivetrain": "Shimano Altus 8-Speed (11–32T)",
             "chainring": "48T"
           },
           "brakes": {
-            "brakes": {
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "Hydraulic Disc Brakes"
-            },
+            "brakes": "Hydraulic Disc Brakes",
             "rotor": "180 × 1.9 mm"
           },
           "wheelset": {
-            "tires": {
-              "manufacturer": "Kenda",
-              "size": "27.5x2.2",
-              "tubeless": false,
-              "details": ""
-            }
+            "tires": "KENDA 27.5 x 2.2\""
           },
           "included_accessories": {
             "rack_capacity": "66 lb",

@@ -14,6 +14,8 @@ Used by normalize.py. Classification is case-insensitive substring matching in
 import re
 from collections import OrderedDict
 
+from parse_components import parse_component
+
 # Brands write spec labels in wildly different cases ("BATTERY" / "Battery",
 # "REAR BRAKE" / "Rear brake"). Normalize every field name to snake_case, to match
 # the rest of the snake_case schema. NB: classification still runs on the original
@@ -23,15 +25,42 @@ def snake(label: str) -> str:
     return re.sub(r"[^a-z0-9]+", "_", (label or "").lower()).strip("_")
 
 
+_UNIT_SUFFIX = {"_kwh": "kWh", "_wh": "Wh", "_nm": "Nm", "_ah": "Ah",
+                "_mm": "mm", "_w": "W", "_v": "V"}
+
+
+def _stringify(d: dict) -> str:
+    """Rebuild a text-ish value from a parsed component dict, re-attaching units so
+    the analysis/cost regexes still match (and marking peak watts as 'peak')."""
+    parts = []
+    for k, v in d.items():
+        if k == "details" or v is None:
+            continue
+        if isinstance(v, bool):
+            if v:
+                parts.append(k.replace("_", " "))
+            continue
+        unit = next((u for suf, u in _UNIT_SUFFIX.items() if k.endswith(suf)), "")
+        token = f"{v}{unit}"
+        if k == "peak_w":
+            token += " peak"
+        parts.append(token)
+    if d.get("details"):
+        parts.append(d["details"])
+    return " ".join(str(p) for p in parts)
+
+
 def flatten_grouped(grouped: dict) -> dict:
-    """Recover a flat label->value map from the grouped view (string values only;
-    the Geometry group's per-size dict values are skipped). Lets the analysis and
-    cost-estimate steps keep working now that `specs.all` is gone."""
+    """Recover a flat label->value text map from the grouped view (parsed component
+    dicts are stringified, re-attaching units; Geometry per-size dicts are skipped).
+    Lets the analysis and cost-estimate steps keep working without `specs.all`."""
     out = {}
     for fields in (grouped or {}).values():
         for k, v in fields.items():
             if isinstance(v, str):
                 out[k] = v
+            elif isinstance(v, dict) and "details" in v:   # parsed component
+                out[k] = _stringify(v)
     return out
 
 
@@ -114,22 +143,25 @@ DISPLAY_ORDER = [
 
 
 def classify(label: str) -> str:
-    low = label.lower()
+    low = label.lower().replace("_", " ")   # tolerant of snake_case or spaced labels
     for name, keywords in GROUPS:
         if any(k in low for k in keywords):
             return name
     return "General / Other"
 
 
-def group_specs(all_specs: dict, geometry: dict | None = None) -> "OrderedDict":
+def group_specs(all_specs: dict, geometry: dict | None = None,
+                brand: str | None = None) -> "OrderedDict":
     """Reorganize a flat label->value spec map into ordered canonical groups.
 
     Labels already present in `geometry` are routed to the Geometry group (built
     from `model.geometry`), not keyword-classified. Junk labels are dropped.
-    Empty groups are omitted.
+    Recognized component values are parsed into structured dicts (manufacturer,
+    speeds, travel, …) with a `details` remainder. Empty groups are omitted.
     """
     geometry = geometry or {}
     geo_labels = set(geometry)
+    snaked = {snake(k): v for k, v in (all_specs or {}).items()}  # for sibling lookup
     buckets: dict[str, "OrderedDict"] = {}
     for label, value in (all_specs or {}).items():
         if label in geo_labels:
@@ -138,7 +170,9 @@ def group_specs(all_specs: dict, geometry: dict | None = None) -> "OrderedDict":
         if _is_junk(low):
             continue
         # classify on the original (spaced) label; emit a snake_case field name.
-        buckets.setdefault(classify(low), OrderedDict())[snake(label)] = value
+        field = snake(label)
+        parsed = parse_component(field, value, brand, siblings=snaked)
+        buckets.setdefault(classify(low), OrderedDict())[field] = parsed or value
     if geometry:
         buckets["Geometry"] = OrderedDict((snake(k), v) for k, v in geometry.items())
     out: "OrderedDict" = OrderedDict()

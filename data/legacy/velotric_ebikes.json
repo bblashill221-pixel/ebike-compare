@@ -64,24 +64,11 @@
             "bike_weight": "48 lbs"
           },
           "ebike_system": {
-            "motor_hub": {
-              "power_w": 750,
-              "torque_nm": 65,
-              "details": ""
-            },
-            "battery": {
-              "capacity_wh": 627,
-              "voltage_v": 48,
-              "amphours_ah": 13.4,
-              "removable": true,
-              "details": "Removable, IPX7, Certificated by UL 2271"
-            },
+            "motor_hub": "750W, 65Nm",
+            "battery": "Removable 48V, 13.4Ah (627Wh), IPX7, Certificated by UL 2271",
             "cell": "18650 cell, Certificated by UL 2580",
             "charger": "48V, 3.0A Fast Charger",
-            "display": {
-              "type": "color",
-              "details": "3.5\" Full color, High brightness, Bluetooth"
-            },
+            "display": "3.5\" Full color, High brightness, Bluetooth",
             "sensor": "Torque/Cadence Sensor",
             "usb_port": "USB Type-C phone charge",
             "throttle_assist": "Trigger-control, removable",
@@ -108,62 +95,26 @@
           },
           "frameset": {
             "frame": "Triple-Butted Aluminum Alloy",
-            "fork": {
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Aluminum Alloy"
-            }
+            "fork": "Aluminum Alloy"
           },
           "drivetrain": {
             "chainrings": "46T, narrow wide chainring",
-            "crankset": {
-              "length_mm": 170,
-              "details": "Aluminum Alloy"
-            },
-            "freewheel": {
-              "cog_range": "11-32T",
-              "speeds": 8,
-              "details": ""
-            },
-            "chain": {
-              "manufacturer": "KMC",
-              "details": "8-speed"
-            },
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": ""
-            },
-            "shift_lever": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": ""
-            },
+            "crankset": "Aluminum Alloy, 170mm",
+            "freewheel": "8-speed, 11-32T",
+            "chain": "KMC 8-speed",
+            "rear_derailleur": "SHIMANO 8-speed",
+            "shift_lever": "SHIMANO 8-speed",
             "pedals": "Plastic"
           },
           "brakes": {
-            "brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "Hydraulic Disc Brake"
-            },
+            "brake": "Tektro Hydraulic Disc Brake",
             "rotors": "180mm front and rear",
-            "brake_levers": {
-              "rotor_mm": 180,
-              "details": "Aluminum Alloy, with power cutoff"
-            }
+            "brake_levers": "Aluminum Alloy, with power cutoff"
           },
           "wheelset": {
             "rims": "Double-wall Aluminum Alloy",
             "front_hub": "NOVATEC Aluminum Alloy, 15x110mm thru-axle",
-            "tire": {
-              "manufacturer": "Kenda",
-              "size": "27.5x2.2",
-              "tubeless": false,
-              "details": "eBike puncture resistant tires"
-            }
+            "tire": "KENDA 27.5x2.2\" eBike puncture resistant tires"
           },
           "cockpit": {
             "handlebar": "Aluminum Alloy, Ф31.8mm, 660mm(R)/680mm(L)",
@@ -486,26 +437,12 @@
             "total_length": "1818mm"
           },
           "ebike_system": {
-            "motor": {
-              "peak_w": 750,
-              "torque_nm": 75,
-              "voltage_v": 48,
-              "details": "Power)"
-            },
-            "battery": {
-              "capacity_wh": 730,
-              "voltage_v": 48,
-              "amphours_ah": 15.2,
-              "removable": false,
-              "details": "IPX7, Certificated by UL 2271"
-            },
+            "motor": "48V, 750W, 1100W(Peak Power), 75Nm",
+            "battery": "48V, 15.2Ah(730Wh), IPX7, Certificated by UL 2271",
             "cell": "Samsung/LG 21700 cell, Certificated by UL2580",
             "charger": "48V, 3A Fast Charger",
             "sensor": "Torque and Cadence Sensor",
-            "display": {
-              "type": "color",
-              "details": "3.5\" Full color, High brightness, Bluetooth, NFC, Adjustable Angle"
-            },
+            "display": "3.5\" Full color, High brightness, Bluetooth, NFC, Adjustable Angle",
             "usb_port": "USB Type-C phone Charge",
             "throttle": "Trigger-control, Removable",
             "pedal_assist": "5 Riding Modes /Ride Tuning",
@@ -532,64 +469,26 @@
           },
           "frameset": {
             "frame": "Triple-Butted Aluminum Alloy",
-            "fork": {
-              "type": "air",
-              "travel_mm": 80,
-              "lockout": true,
-              "thru_axle": false,
-              "details": "Air suspension with Lock-out"
-            }
+            "fork": "Air suspension 80mm Travel with Lock-out"
           },
           "drivetrain": {
             "chainrings": "46T Narrow-Wide Chainring",
-            "crankset": {
-              "length_mm": 170,
-              "details": "Aluminum Alloy"
-            },
-            "freewheel": {
-              "cog_range": "11-40T",
-              "speeds": 8,
-              "details": ""
-            },
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": ""
-            },
-            "shift_lever": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": ""
-            },
-            "chain": {
-              "manufacturer": "KMC",
-              "details": "8-speed"
-            },
+            "crankset": "Aluminum Alloy, 170mm",
+            "freewheel": "8-speed,11-40T",
+            "rear_derailleur": "SHIMANO 8-speed",
+            "shift_lever": "SHIMANO 8-speed",
+            "chain": "KMC 8-speed",
             "pedals": "Plastic"
           },
           "brakes": {
-            "brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "Hydraulic Disc Brake"
-            },
+            "brake": "Tektro Hydraulic Disc Brake",
             "rotors": "180mm Front/180mm Rear",
-            "brake_levers": {
-              "rotor_mm": 180,
-              "details": "Aluminum Alloy, with Power Cutoff"
-            }
+            "brake_levers": "Aluminum Alloy, with Power Cutoff"
           },
           "wheelset": {
             "rims": "Aluminum Alloy",
             "front_hub": "NOVATEC Aluminum Alloy, 15x110mm Thru-axle",
-            "tire": {
-              "manufacturer": "Kenda",
-              "size": "27.5x2.4",
-              "tubeless": false,
-              "details": "eBike Puncture Resistant Tires"
-            }
+            "tire": "KENDA 27.5x2.4\" eBike Puncture Resistant Tires"
           },
           "cockpit": {
             "handlebar": "Aluminum Alloy, Ф31.8mm, 680mm(R)/700mm(L)",
@@ -856,25 +755,12 @@
             "total_length": "1812mm"
           },
           "ebike_system": {
-            "motor": {
-              "peak_w": 500,
-              "torque_nm": 100,
-              "voltage_v": 48,
-              "details": "Power)"
-            },
-            "battery": {
-              "voltage_v": 48,
-              "amphours_ah": 16.7,
-              "removable": false,
-              "details": "(801.6Wh), IPX7, Certificated by UL 2271"
-            },
+            "motor": "48V, 500W, 960W(Peak Power) ,100Nm",
+            "battery": "48V, 16.7Ah (801.6Wh), IPX7, Certificated by UL 2271",
             "cell": "Samsung/LG 21700 cell, Certificated by UL2580",
             "charger": "48V, 3A Fast Charger",
             "sensor": "Torque and Cadence Sensor",
-            "display": {
-              "type": "color",
-              "details": "3.5\" Full color, High brightness, Bluetooth, NFC, Adjustable Angle"
-            },
+            "display": "3.5\" Full color, High brightness, Bluetooth, NFC, Adjustable Angle",
             "usb_port": "USB Type-C phone Charge",
             "throttle": "Trigger-control, Removable",
             "pedal_assist": "4 Riding Modes +Auto Mode/Ride Tuning",
@@ -901,64 +787,26 @@
           },
           "frameset": {
             "frame": "Triple-Butted Aluminum Alloy",
-            "fork": {
-              "type": "air",
-              "travel_mm": 80,
-              "lockout": true,
-              "thru_axle": false,
-              "details": "Air suspension with Lock-out"
-            }
+            "fork": "Air suspension 80mm Travel with Lock-out"
           },
           "drivetrain": {
             "chainrings": "46T Narrow-Wide Chainring",
-            "crankset": {
-              "length_mm": 170,
-              "details": "Aluminum Alloy"
-            },
-            "cassette": {
-              "cog_range": "11-46T",
-              "speeds": 9,
-              "details": ""
-            },
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 9,
-              "details": "Cues"
-            },
-            "shift_lever": {
-              "manufacturer": "Shimano",
-              "speeds": 9,
-              "details": "Cues"
-            },
-            "chain": {
-              "manufacturer": "KMC",
-              "details": "eGlide 9-speed"
-            },
+            "crankset": "Aluminum Alloy, 170mm",
+            "cassette": "9-speed,11-46T",
+            "rear_derailleur": "SHIMANO Cues, 9-speed",
+            "shift_lever": "SHIMANO Cues, 9-speed",
+            "chain": "KMC eGlide 9-speed",
             "pedals": "Plastic"
           },
           "brakes": {
-            "brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "Hydraulic Disc Brake"
-            },
+            "brake": "Tektro Hydraulic Disc Brake",
             "rotors": "180mm Front/180mm Rear",
-            "brake_levers": {
-              "rotor_mm": 180,
-              "details": "Aluminum Alloy, with Power Cutoff"
-            }
+            "brake_levers": "Aluminum Alloy, with Power Cutoff"
           },
           "wheelset": {
             "rims": "Aluminum Alloy",
             "front_hub": "NOVATEC Aluminum Alloy, 15x110mm Thru-axle",
-            "tire": {
-              "manufacturer": "Kenda",
-              "size": "27.5x2.4",
-              "tubeless": false,
-              "details": "eBike Puncture Resistant Tires"
-            }
+            "tire": "KENDA 27.5x2.4\" eBike Puncture Resistant Tires"
           },
           "cockpit": {
             "handlebar": "Aluminum Alloy, Ф31.8mm, 680mm(R)/700mm(L)",
@@ -1167,25 +1015,12 @@
             "max_bike_load_capacity": "440lbs"
           },
           "ebike_system": {
-            "motor": {
-              "power_w": 750,
-              "torque_nm": 70,
-              "voltage_v": 48,
-              "details": ""
-            },
-            "battery": {
-              "capacity_wh": 608,
-              "voltage_v": 48,
-              "removable": false,
-              "details": "IPX7, Certificated by UL 2271"
-            },
+            "motor": "48V, 750W, 70Nm",
+            "battery": "48V, 608Wh, IPX7, Certificated by UL 2271",
             "cell": "18650 cell, Certificated by UL 2580",
             "charger": "48V, 2A Fast Charger",
             "sensor": "Cadence Sensor",
-            "display": {
-              "type": "lcd",
-              "details": "1.8\" LCD, High brightness"
-            },
+            "display": "1.8\" LCD, High brightness",
             "usb_port": "USB Type-A phone charge",
             "throttle": "Thumb-control, removable",
             "pedal_assist": "5 Levels",
@@ -1209,61 +1044,26 @@
           },
           "frameset": {
             "frame": "Aluminum Alloy",
-            "fork": {
-              "type": "coil",
-              "travel_mm": 60,
-              "lockout": true,
-              "thru_axle": false,
-              "details": "Coil suspension with Lock-out"
-            }
+            "fork": "Coil suspension 60mm travel with Lock-out"
           },
           "drivetrain": {
             "chainrings": "52T",
-            "crankset": {
-              "length_mm": 170,
-              "details": "Aluminum Alloy"
-            },
-            "freewheel": {
-              "cog_range": "11-28T",
-              "speeds": 7,
-              "details": ""
-            },
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 7,
-              "details": ""
-            },
-            "shift_lever": {
-              "manufacturer": "Shimano",
-              "speeds": 7,
-              "details": ""
-            },
-            "chain": {
-              "details": "7-speed"
-            },
+            "crankset": "Aluminum Alloy, 170mm",
+            "freewheel": "7-speed, 11-28T",
+            "rear_derailleur": "SHIMANO 7-speed",
+            "shift_lever": "SHIMANO 7-speed",
+            "chain": "7-speed",
             "pedals": "Plastic, foldable"
           },
           "brakes": {
-            "brake": {
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "Hydraulic Disc Brake"
-            },
+            "brake": "Hydraulic Disc Brake",
             "rotors": "180mm front and rear",
-            "brake_levers": {
-              "rotor_mm": 180,
-              "details": "Aluminum Alloy, with power cutoff"
-            }
+            "brake_levers": "Aluminum Alloy, with power cutoff"
           },
           "wheelset": {
             "rims": "Double-wall Aluminum Alloy",
             "front_hub": "Aluminum Alloy, nutted",
-            "tire": {
-              "size": "20x3.0",
-              "tubeless": false,
-              "details": "eBike puncture resistant tires"
-            }
+            "tire": "20x3.0\" eBike puncture resistant tires"
           },
           "cockpit": {
             "handlebar": "Aluminum Alloy, Φ25.4mm, 660mm",
@@ -1443,25 +1243,11 @@
             "bike_weight": "63lbs"
           },
           "ebike_system": {
-            "motor_hub": {
-              "power_w": 750,
-              "torque_nm": 75,
-              "voltage_v": 48,
-              "details": ""
-            },
-            "battery": {
-              "capacity_wh": 608,
-              "voltage_v": 48,
-              "amphours_ah": 13.0,
-              "removable": true,
-              "details": "Removable, IPX7, Certificated by UL 2271"
-            },
+            "motor_hub": "48V, 750W, 75Nm",
+            "battery": "Removable 48V, 13Ah, 608Wh, IPX7, Certificated by UL 2271",
             "cell": "18650 cell, Certificated by UL 2580",
             "charger": "48V, 2.0A Fast Charger",
-            "display": {
-              "type": "color",
-              "details": "3.5\" Full color, High brightness, Bluetooth, Adjustable angle"
-            },
+            "display": "3.5\" Full color, High brightness, Bluetooth, Adjustable angle",
             "sensor": "Torque and Cadence Sensor",
             "usb_port": "USB Type-C phone charge",
             "throttle_assist": "Trigger-control, removable",
@@ -1485,61 +1271,26 @@
           },
           "frameset": {
             "frame": "Aluminum Alloy",
-            "fork": {
-              "type": "coil",
-              "travel_mm": 60,
-              "lockout": true,
-              "thru_axle": false,
-              "details": "Hydraulic Suspension travel with Lock-out"
-            }
+            "fork": "60mm Hydraulic Suspension travel with Lock-out"
           },
           "drivetrain": {
             "chainrings": "52T",
-            "crankset": {
-              "length_mm": 170,
-              "details": "Aluminum Alloy"
-            },
-            "freewheel": {
-              "cog_range": "11-28T",
-              "speeds": 7,
-              "details": ""
-            },
-            "chain": {
-              "details": "7-speed"
-            },
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 7,
-              "details": ""
-            },
-            "shift_lever": {
-              "manufacturer": "Shimano",
-              "speeds": 7,
-              "details": ""
-            },
+            "crankset": "Aluminum Alloy, 170mm",
+            "freewheel": "7-speed, 11-28T",
+            "chain": "7-speed",
+            "rear_derailleur": "SHIMANO 7-speed",
+            "shift_lever": "SHIMANO 7-speed",
             "pedals": "Plastic,foldable"
           },
           "brakes": {
-            "brake": {
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "Hydraulic Disc Brake"
-            },
+            "brake": "Hydraulic Disc Brake",
             "rotors": "180mm Front and Rear",
-            "brake_levers": {
-              "rotor_mm": 180,
-              "details": "Aluminum Alloy, with power cutoff"
-            }
+            "brake_levers": "Aluminum Alloy, with power cutoff"
           },
           "wheelset": {
             "rims": "Double-wall Aluminum Alloy",
             "front_hub": "Aluminum alloy, nutted",
-            "tire": {
-              "size": "20x3.0",
-              "tubeless": false,
-              "details": "eBike puncture resistant tires"
-            }
+            "tire": "20x3.0\" eBike puncture resistant tires"
           },
           "cockpit": {
             "handlebar": "Aluminum Alloy, Φ25.4mm, 660mm",
@@ -1744,25 +1495,12 @@
             "total_length": "1811mm"
           },
           "ebike_system": {
-            "motor": {
-              "peak_w": 750,
-              "torque_nm": 85,
-              "voltage_v": 48,
-              "details": "( Power)"
-            },
-            "battery": {
-              "voltage_v": 48,
-              "amphours_ah": 16.7,
-              "removable": false,
-              "details": "(801.6Wh), IPX7, Certificated by UL2271"
-            },
+            "motor": "48V, 750W, (1300W Peak Power), 85Nm",
+            "battery": "48V, 16.7Ah (801.6Wh), IPX7, Certificated by UL2271",
             "cell": "Samsung/LG 21700 cell, Certificated by UL2580",
             "charger": "48V, 3A Fast Charger",
             "sensor": "Torque and Cadence Sensor",
-            "display": {
-              "type": "color",
-              "details": "3.5\" Full Color, High Brightness, Bluetooth, NFC, Adjustable Angle"
-            },
+            "display": "3.5\" Full Color, High Brightness, Bluetooth, NFC, Adjustable Angle",
             "usb_port": "USB Type-C phone Charge",
             "throttle": "Trigger-control, Removable",
             "pedal_assist": "5 Riding Modes+Stealth Mode /Ride Tuning",
@@ -1790,65 +1528,26 @@
           },
           "frameset": {
             "frame": "Triple-Butted Aluminum Alloy",
-            "fork": {
-              "manufacturer": "RST",
-              "type": "coil",
-              "travel_mm": 100,
-              "lockout": true,
-              "thru_axle": false,
-              "details": "Hydraulic Suspension with Lock-out, 36mm Inner Tube"
-            }
+            "fork": "RST Hydraulic Suspension 100mm Travel with Lock-out, 36mm Inner Tube"
           },
           "drivetrain": {
             "chainrings": "52T Narrow-Wide Chainring",
-            "crankset": {
-              "length_mm": 165,
-              "details": "Aluminum Alloy"
-            },
-            "freewheel": {
-              "cog_range": "11-34T",
-              "speeds": 8,
-              "details": ""
-            },
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": ""
-            },
-            "shift_lever": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": ""
-            },
-            "chain": {
-              "manufacturer": "KMC",
-              "details": "8-speed"
-            },
+            "crankset": "Aluminum Alloy, 165mm",
+            "freewheel": "8-speed,11-34T",
+            "rear_derailleur": "SHIMANO 8-speed",
+            "shift_lever": "SHIMANO 8-speed",
+            "chain": "KMC 8-speed",
             "pedals": "Plastic"
           },
           "brakes": {
-            "brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 203,
-              "details": "Hydraulic Disc Brake"
-            },
+            "brake": "Tektro Hydraulic Disc Brake",
             "rotors": "203mm Front/180mm Rear",
-            "brake_levers": {
-              "rotor_mm": 203,
-              "details": "Aluminum Alloy, with Power Cutoff"
-            }
+            "brake_levers": "Aluminum Alloy, with Power Cutoff"
           },
           "wheelset": {
             "rims": "Aluminum Alloy",
             "front_hub": "NOVATEC Aluminum Alloy, 15x135mm Thru-axle",
-            "tire": {
-              "manufacturer": "Kenda",
-              "size": "20x4.0",
-              "tubeless": false,
-              "details": "eBike Puncture Resistant Tires"
-            }
+            "tire": "KENDA 20x4.0\" eBike Puncture Resistant Tires"
           },
           "cockpit": {
             "handlebar": "BMX Style, 31.8mm Bar Clamp, 700mm",
@@ -2173,24 +1872,11 @@
             "bike_weight": "75lbs"
           },
           "ebike_system": {
-            "motor_hub": {
-              "power_w": 750,
-              "torque_nm": 90,
-              "voltage_v": 48,
-              "details": ""
-            },
-            "battery": {
-              "voltage_v": 48,
-              "amphours_ah": 14.7,
-              "removable": true,
-              "details": "Removable, (705.6Wh), IPX7, Certificated by UL 2271"
-            },
+            "motor_hub": "48V, 750W, 90Nm",
+            "battery": "Removable 48V, 14.7Ah (705.6Wh), IPX7, Certificated by UL 2271",
             "cell": "Samsung/LG 21700 cell, Certificated by UL 2580",
             "charger": "48V, 3.0A Fast Charger",
-            "display": {
-              "type": "color",
-              "details": "3.5\" Full color, High brightness, Bluetooth, Adjustable angle"
-            },
+            "display": "3.5\" Full color, High brightness, Bluetooth, Adjustable angle",
             "sensor": "Torque and Cadence Sensor",
             "usb_port": "USB Type-C phone charge",
             "throttle_assist": "Trigger-control, removable",
@@ -2214,64 +1900,26 @@
           },
           "frameset": {
             "frame": "Triple-Butted Aluminum Alloy",
-            "fork": {
-              "manufacturer": "RST",
-              "type": "coil",
-              "travel_mm": 100,
-              "lockout": true,
-              "thru_axle": false,
-              "details": "Hydraulic suspension with Lock-out, Nutted"
-            }
+            "fork": "RST Hydraulic suspension 100mm travel with Lock-out, Nutted"
           },
           "drivetrain": {
             "chainrings": "48T",
-            "crankset": {
-              "length_mm": 165,
-              "details": "Aluminum Alloy"
-            },
-            "freewheel": {
-              "cog_range": "11-40T",
-              "speeds": 8,
-              "details": ""
-            },
-            "chain": {
-              "details": "8-speed"
-            },
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": ""
-            },
-            "shift_lever": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": ""
-            },
+            "crankset": "Aluminum Alloy, 165mm",
+            "freewheel": "8-speed, 11-40T",
+            "chain": "8-speed",
+            "rear_derailleur": "SHIMANO 8-speed",
+            "shift_lever": "SHIMANO 8-speed",
             "pedals": "Plastic"
           },
           "brakes": {
-            "brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 203,
-              "details": "Hydraulic Disc Brake"
-            },
+            "brake": "Tektro Hydraulic Disc Brake",
             "rotors": "203mm Front/180mm Rear",
-            "brake_levers": {
-              "rotor_mm": 203,
-              "details": "Aluminum Alloy, with power cutoff"
-            }
+            "brake_levers": "Aluminum Alloy, with power cutoff"
           },
           "wheelset": {
             "rims": "Aluminum alloy",
             "front_hub": "Aluminum alloy, nutted",
-            "tire": {
-              "manufacturer": "Kenda",
-              "size": "26x4.0",
-              "tubeless": false,
-              "details": "eBike puncture-resistant tires"
-            }
+            "tire": "KENDA 26x4.0\" eBike puncture-resistant tires"
           },
           "cockpit": {
             "handlebar": "Aluminum Alloy, Φ31.8mm, 680mm(R)/700mm(L)",
@@ -2571,25 +2219,12 @@
             "total_length": "2065mm"
           },
           "ebike_system": {
-            "motor": {
-              "power_w": 750,
-              "torque_nm": 105,
-              "voltage_v": 48,
-              "details": ""
-            },
-            "battery": {
-              "voltage_v": 48,
-              "amphours_ah": 16.7,
-              "removable": false,
-              "details": "(801.6Wh), IPX7, Certificated by UL2271"
-            },
+            "motor": "48V, 750W, 105Nm",
+            "battery": "48V, 16.7Ah (801.6Wh), IPX7, Certificated by UL2271",
             "cell": "Samsung/LG 21700 cell, Certificated by UL2580",
             "charger": "48V, 3A Fast Charger",
             "sensor": "Torque and Cadence Sensor",
-            "display": {
-              "type": "color",
-              "details": "3.5\" Full color, High brightness, Bluetooth, Adjustable angle"
-            },
+            "display": "3.5\" Full color, High brightness, Bluetooth, Adjustable angle",
             "usb_port": "USB Type-C phone Charge",
             "throttle": "Trigger-control, Removable",
             "pedal_assist": "3 Riding Modes x 5 PAS Levels",
@@ -2615,68 +2250,27 @@
           },
           "frameset": {
             "frame": "Triple-Butted Aluminum Alloy, Rear Wheel 80mm Travel",
-            "fork": {
-              "type": "air",
-              "travel_mm": 120,
-              "lockout": true,
-              "thru_axle": false,
-              "details": "Air suspension with Lock-out, Nutted, Rebound adjustable"
-            },
-            "rear_shock": {
-              "manufacturer": "DNM",
-              "type": "air",
-              "details": "Air suspension, 165mm x 38mm Travel"
-            }
+            "fork": "Air suspension 120mm travel with Lock-out, Nutted, Rebound adjustable",
+            "rear_shock": "DNM Air suspension, 165mm x 38mm Travel"
           },
           "drivetrain": {
             "chainrings": "48T",
-            "crankset": {
-              "length_mm": 170,
-              "details": "Aluminum Alloy"
-            },
-            "freewheel": {
-              "cog_range": "11-40T",
-              "speeds": 8,
-              "details": ""
-            },
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": ""
-            },
-            "shift_lever": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": ""
-            },
-            "chain": {
-              "details": "8-speed"
-            },
+            "crankset": "Aluminum Alloy, 170mm",
+            "freewheel": "8-speed, 11-40T",
+            "rear_derailleur": "SHIMANO 8-speed",
+            "shift_lever": "SHIMANO 8-speed",
+            "chain": "8-speed",
             "pedals": "Plastic"
           },
           "brakes": {
-            "brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 203,
-              "details": "Hydraulic Disc Brake"
-            },
+            "brake": "Tektro Hydraulic Disc Brake",
             "rotors": "203mm Front/180mm Rear",
-            "brake_levers": {
-              "rotor_mm": 203,
-              "details": "Aluminum Alloy, with Power Cutoff"
-            }
+            "brake_levers": "Aluminum Alloy, with Power Cutoff"
           },
           "wheelset": {
             "rims": "Aluminum alloy",
             "front_hub": "Aluminum alloy, nutted",
-            "tire": {
-              "manufacturer": "Kenda",
-              "size": "26x4.0",
-              "tubeless": false,
-              "details": "eBike puncture-resistant tires"
-            }
+            "tire": "KENDA 26x4.0\" eBike puncture-resistant tires"
           },
           "cockpit": {
             "handlebar": "Aluminum Alloy, Φ31.8mm, 700mm",
@@ -2955,24 +2549,12 @@
             "max_bike_load_capacity": "440lbs"
           },
           "ebike_system": {
-            "motor": {
-              "power_w": 750,
-              "torque_nm": 90,
-              "voltage_v": 48,
-              "details": ""
-            },
-            "battery": {
-              "voltage_v": 48,
-              "removable": false,
-              "details": "705.6Wh, IPX7, Certificated by UL 2271"
-            },
+            "motor": "48V, 750W, 90Nm",
+            "battery": "48V, 705.6Wh, IPX7, Certificated by UL 2271",
             "cell": "Samsung/LG 21700 cell, Certificated by UL 2580",
             "charger": "48V, 3A Fast Charger",
             "sensor": "Torque/Cadence",
-            "display": {
-              "type": "color",
-              "details": "2.8\" Full color, high brightness, Bluetooth, adjustable angle"
-            },
+            "display": "2.8\" Full color, high brightness, Bluetooth, adjustable angle",
             "usb_port": "USB Type-A phone charge",
             "throttle": "Trigger-control, removable",
             "pedal_assist": "3 Modes × 5 Levels",
@@ -2997,63 +2579,26 @@
           },
           "frameset": {
             "frame": "Triple-Butted Aluminum Alloy",
-            "fork": {
-              "type": "coil",
-              "travel_mm": 120,
-              "lockout": true,
-              "thru_axle": true,
-              "details": "Hydraulic suspension with Lock-out, 15x110mm thru-axle"
-            }
+            "fork": "Hydraulic suspension 120mm travel with Lock-out, 15x110mm thru-axle"
           },
           "drivetrain": {
             "chainrings": "BCD 104, narrow wide chainring",
-            "crankset": {
-              "length_mm": 170,
-              "details": "Aluminum Alloy"
-            },
-            "cassette": {
-              "speeds": 8,
-              "details": ""
-            },
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": ""
-            },
-            "shift_lever": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": ""
-            },
-            "chain": {
-              "manufacturer": "KMC",
-              "details": "8-speed"
-            },
+            "crankset": "Aluminum Alloy, 170mm",
+            "cassette": "8-speed",
+            "rear_derailleur": "SHIMANO 8-speed",
+            "shift_lever": "SHIMANO 8-speed",
+            "chain": "KMC 8-speed",
             "pedals": "Aluminum Alloy"
           },
           "brakes": {
-            "brake": {
-              "manufacturer": "Shimano",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "Hydraulic Disc Brake"
-            },
+            "brake": "SHIMANO Hydraulic Disc Brake",
             "rotors": "180mm front and rear",
-            "brake_levers": {
-              "rotor_mm": 180,
-              "details": "Aluminum Alloy, with power cutoff"
-            }
+            "brake_levers": "Aluminum Alloy, with power cutoff"
           },
           "wheelset": {
             "rims": "Double-wall Aluminum Alloy",
             "front_hub": "NOVATEC Aluminum Alloy, 15x110mm thru-axle",
-            "tire": {
-              "manufacturer": "Kenda",
-              "size": "27.5x2.6",
-              "tubeless": false,
-              "details": "MTB puncture resistant tires"
-            }
+            "tire": "Kenda 27.5x2.6\" MTB puncture resistant tires"
           },
           "cockpit": {
             "handlebar": "Aluminum Alloy, Φ31.8mm, 760mm (R)/780mm (L)",
@@ -3270,25 +2815,12 @@
             "total_length": "1930mm"
           },
           "ebike_system": {
-            "motor": {
-              "peak_w": 750,
-              "torque_nm": 100,
-              "voltage_v": 48,
-              "details": "( Power)"
-            },
-            "battery": {
-              "voltage_v": 48,
-              "amphours_ah": 16.7,
-              "removable": false,
-              "details": "(801.6Wh), IPX7, Certificated by UL2271"
-            },
+            "motor": "48V, 750W (1300W Peak Power), 100Nm",
+            "battery": "48V, 16.7Ah (801.6Wh), IPX7, Certificated by UL2271",
             "cell": "Samsung/LG 21700 cell, Certificated by UL2580",
             "charger": "48V, 3A Fast Charger",
             "sensor": "Torque and Cadence Sensor",
-            "display": {
-              "type": "color",
-              "details": "2.0\" Left-mounted Full-color Display with High Brightness, Bluetooth，NFC"
-            },
+            "display": "2.0\" Left-mounted Full-color Display with High Brightness, Bluetooth，NFC",
             "usb_port": "USB Type-C phone Charge",
             "throttle": "Trigger-control, Removable",
             "pedal_assist": "4 Riding Modes +Pulse Mode/Ride Tuning",
@@ -3314,65 +2846,26 @@
           },
           "frameset": {
             "frame": "Triple-Butted Aluminum Alloy",
-            "fork": {
-              "manufacturer": "RST",
-              "type": "air",
-              "travel_mm": 120,
-              "lockout": true,
-              "thru_axle": false,
-              "details": "Air Suspension with Lock-out, Rebound Adjustable"
-            }
+            "fork": "RST Air Suspension 120mm Travel with Lock-out, Rebound Adjustable"
           },
           "drivetrain": {
             "chainrings": "BCD 104, 40T Narrow-Wide Chainring",
-            "crankset": {
-              "length_mm": 165,
-              "details": "Aluminum Alloy"
-            },
-            "cassette": {
-              "cog_range": "11-46T",
-              "speeds": 9,
-              "details": ""
-            },
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 9,
-              "details": "Cues"
-            },
-            "shift_lever": {
-              "manufacturer": "Shimano",
-              "speeds": 9,
-              "details": "Cues"
-            },
-            "chain": {
-              "manufacturer": "KMC",
-              "details": "XGlide 9-speed"
-            },
+            "crankset": "Aluminum Alloy, 165mm",
+            "cassette": "9-speed,11-46T",
+            "rear_derailleur": "SHIMANO Cues, 9-speed",
+            "shift_lever": "SHIMANO Cues, 9-speed",
+            "chain": "KMC XGlide 9-speed",
             "pedals": "Plastic"
           },
           "brakes": {
-            "brake": {
-              "manufacturer": "Shimano",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "MT200 Hydraulic Disc BraKe"
-            },
+            "brake": "SHIMANO MT200 Hydraulic Disc BraKe",
             "rotors": "180mm Front and Rear",
-            "brake_levers": {
-              "rotor_mm": 180,
-              "details": "Aluminum Alloy, with Power Cutoff"
-            }
+            "brake_levers": "Aluminum Alloy, with Power Cutoff"
           },
           "wheelset": {
             "rims": "Double-wall Aluminum Alloy",
             "front_hub": "NOVATEC Aluminum Alloy, 15x110mm Thru-axle",
-            "tire": {
-              "manufacturer": "Kenda",
-              "size": "27.5x2.4",
-              "tubeless": false,
-              "details": "MTB Puncture Resistant Tires"
-            }
+            "tire": "Kenda 27.5x2.4\" MTB Puncture Resistant Tires"
           },
           "cockpit": {
             "handlebar": "Aluminum Alloy, Φ31.8mm, 740mm",
@@ -3598,24 +3091,12 @@
             "max_bike_load_capacity": "330lbs"
           },
           "ebike_system": {
-            "motor": {
-              "peak_w": 350,
-              "power_w": 600,
-              "torque_nm": 40,
-              "details": ""
-            },
-            "battery": {
-              "voltage_v": 36,
-              "removable": false,
-              "details": "352.8Wh, IPX7, Certificated by UL 2271"
-            },
+            "motor": "350W, Peak 600W, 40Nm",
+            "battery": "36V, 352.8Wh, IPX7, Certificated by UL 2271",
             "cell": "Samsung/LG 21700 cell, Certificated by UL 2580",
             "charger": "36V, 2A",
             "sensor": "Torque sensor",
-            "display": {
-              "type": "color",
-              "details": "1.8\" Full color, high brightness, Bluetooth, adjustable angle"
-            },
+            "display": "1.8\" Full color, high brightness, Bluetooth, adjustable angle",
             "usb_port": "USB Type-A phone charge",
             "pedal_assist": "3 Riding Modes x 5 PAS Levels",
             "max_speed_adjustable_range": "12~28 MPH",
@@ -3637,63 +3118,26 @@
           },
           "frameset": {
             "frame": "6061 Triple-butted Aluminum alloy frame",
-            "fork": {
-              "travel_mm": 100,
-              "lockout": false,
-              "thru_axle": true,
-              "details": "6061 Aluminum alloy, internal brake routing, 12x thru-axle"
-            }
+            "fork": "6061 Aluminum alloy, internal brake routing, 12x100mm thru-axle"
           },
           "drivetrain": {
             "chainrings": "46T",
-            "crankset": {
-              "length_mm": 170,
-              "details": "Aluminum Alloy"
-            },
-            "freewheel": {
-              "cog_range": "11-32T",
-              "speeds": 8,
-              "details": ""
-            },
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": ""
-            },
-            "shift_lever": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": ""
-            },
-            "chain": {
-              "manufacturer": "KMC",
-              "details": "8-speed"
-            },
+            "crankset": "Aluminum Alloy, 170mm",
+            "freewheel": "8-speed, 11-32T",
+            "rear_derailleur": "SHIMANO 8-speed",
+            "shift_lever": "SHIMANO 8-speed",
+            "chain": "KMC 8-speed",
             "pedals": "Plastic"
           },
           "brakes": {
-            "brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 160,
-              "details": "Hydraulic Disc Brake"
-            },
+            "brake": "TEKTRO Hydraulic Disc Brake",
             "rotors": "160mm front and rear",
-            "brake_levers": {
-              "rotor_mm": 160,
-              "details": "Aluminum Alloy"
-            }
+            "brake_levers": "Aluminum Alloy"
           },
           "wheelset": {
             "rims": "Double-wall Aluminum Alloy",
             "front_hub": "NOVATEC Aluminum Alloy, 12x100mm thru-axle",
-            "tire": {
-              "manufacturer": "Kenda",
-              "size": "00x4",
-              "tubeless": false,
-              "details": "70c eBike puncture resistant tires"
-            }
+            "tire": "KENDA 700×40c eBike puncture resistant tires"
           },
           "cockpit": {
             "handlebar": "Aluminum Alloy, Φ31.8mm, 660mm",
@@ -3883,26 +3327,12 @@
             "total_length": "1838mm"
           },
           "ebike_system": {
-            "motor": {
-              "peak_w": 350,
-              "torque_nm": 45,
-              "voltage_v": 36,
-              "details": "Power)"
-            },
-            "battery": {
-              "capacity_wh": 374,
-              "voltage_v": 36,
-              "amphours_ah": 14.0,
-              "removable": false,
-              "details": "10., IPX7, Certificated by UL2271"
-            },
+            "motor": "36V, 350W, 650W(Peak Power), 45Nm",
+            "battery": "36V, 10.14Ah(374Wh), IPX7, Certificated by UL2271",
             "cell": "Samsung/LG 21700 cell, Certificated by UL2580",
             "charger": "36V, 2A Fast Charger",
             "sensor": "Torque and Cadence Sensor",
-            "display": {
-              "type": "color",
-              "details": "2.0\" Left-mounted Full-color Display with High Brightness, Bluetooth，NFC"
-            },
+            "display": "2.0\" Left-mounted Full-color Display with High Brightness, Bluetooth，NFC",
             "usb_port": "USB Type-C phone Charge",
             "throttle": "Trigger-control, Removable",
             "pedal_assist": "4 Riding Modes+Pulse Mode /Ride Tuning",
@@ -3930,63 +3360,26 @@
           },
           "frameset": {
             "frame": "6061 Triple-Butted Aluminum Alloy",
-            "fork": {
-              "travel_mm": 100,
-              "lockout": false,
-              "thru_axle": true,
-              "details": "6061 Aluminum Alloy, Internal Brake Routing, 12x Thru-axle"
-            }
+            "fork": "6061 Aluminum Alloy, Internal Brake Routing, 12x100mm Thru-axle"
           },
           "drivetrain": {
             "chainrings": "46T Narrow-Wide Chainring",
-            "crankset": {
-              "length_mm": 170,
-              "details": "Aluminum Alloy"
-            },
-            "freewheel": {
-              "cog_range": "11-40T",
-              "speeds": 8,
-              "details": ""
-            },
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": ""
-            },
-            "shift_lever": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": ""
-            },
-            "chain": {
-              "manufacturer": "KMC",
-              "details": "8-speed"
-            },
+            "crankset": "Aluminum Alloy, 170mm",
+            "freewheel": "8-speed,11-40T",
+            "rear_derailleur": "SHIMANO 8-speed",
+            "shift_lever": "SHIMANO 8-speed",
+            "chain": "KMC 8-speed",
             "pedals": "Plastic"
           },
           "brakes": {
-            "brake": {
-              "manufacturer": "Shimano",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "Hydraulic Disc Brake"
-            },
+            "brake": "SHIMANO Hydraulic Disc Brake",
             "rotors": "180mm Front/180mm Rear",
-            "brake_levers": {
-              "rotor_mm": 180,
-              "details": "Aluminum Alloy, with Power Cutoff"
-            }
+            "brake_levers": "Aluminum Alloy, with Power Cutoff"
           },
           "wheelset": {
             "rims": "Aluminum Alloy",
             "front_hub": "NOVATEC Aluminum Alloy, 12x100mm Thru-axle",
-            "tire": {
-              "manufacturer": "Kenda",
-              "size": "00x4",
-              "tubeless": false,
-              "details": "72c eBike Puncture Resistant Gravel"
-            }
+            "tire": "KENDA 700×42c eBike Puncture Resistant Gravel"
           },
           "cockpit": {
             "handlebar": "Aluminum Alloy, Ф31.8mm, 660mm",
@@ -4265,24 +3658,11 @@
             "bike_weight": "85.8lbs"
           },
           "ebike_system": {
-            "motor_hub": {
-              "peak_w": 750,
-              "torque_nm": 90,
-              "voltage_v": 48,
-              "details": ""
-            },
-            "battery": {
-              "voltage_v": 48,
-              "amphours_ah": 75.0,
-              "removable": false,
-              "details": "16., IPX7, Certificated by UL 2271"
-            },
+            "motor_hub": "48V, 750W,1300W Peak, 90Nm",
+            "battery": "48V, 16.75 Ah, IPX7, Certificated by UL 2271",
             "cell": "18650 cell, Certificated by UL 2580",
             "charger": "48V, 3.0A Fast Charger",
-            "display": {
-              "type": "color",
-              "details": "3.5\" Full color, High brightness, Bluetooth, Adjustable angle"
-            },
+            "display": "3.5\" Full color, High brightness, Bluetooth, Adjustable angle",
             "sensor": "Torque and Cadence Sensor",
             "usb_port": "USB Type-C phone charge",
             "throttle_assist": "Trigger-control, removable",
@@ -4308,63 +3688,26 @@
           },
           "frameset": {
             "frame": "Aluminum Alloy",
-            "fork": {
-              "type": "coil",
-              "travel_mm": 80,
-              "lockout": true,
-              "thru_axle": false,
-              "details": "Hydraulic suspension with Lock-out"
-            }
+            "fork": "Hydraulic suspension 80mm travel with Lock-out"
           },
           "drivetrain": {
             "chainrings": "40T, narrow wide chainring",
-            "crankset": {
-              "length_mm": 152,
-              "details": "Aluminum Alloy"
-            },
-            "freewheel": {
-              "cog_range": "11-28T",
-              "speeds": 7,
-              "details": ""
-            },
-            "chain": {
-              "manufacturer": "KMC",
-              "details": "7-speed"
-            },
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 7,
-              "details": ""
-            },
-            "shift_lever": {
-              "manufacturer": "Shimano",
-              "speeds": 7,
-              "details": ""
-            },
+            "crankset": "Aluminum Alloy, 152mm",
+            "freewheel": "7-speed, 11-28T",
+            "chain": "KMC 7-speed",
+            "rear_derailleur": "SHIMANO 7-speed",
+            "shift_lever": "SHIMANO 7-speed",
             "pedals": "Plastic"
           },
           "brakes": {
-            "brake": {
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "Hydraulic Disc Brake"
-            },
+            "brake": "Hydraulic Disc Brake",
             "rotors": "180mm Front and Rear",
-            "brake_levers": {
-              "rotor_mm": 180,
-              "details": "Aluminum Alloy, with power cutoff and parking brake"
-            }
+            "brake_levers": "Aluminum Alloy, with power cutoff and parking brake"
           },
           "wheelset": {
             "rims": "Double-wall Aluminum Alloy",
             "front_hub": "Aluminum alloy, nutted",
-            "tire": {
-              "manufacturer": "Kenda",
-              "size": "20x3.0",
-              "tubeless": false,
-              "details": "eBike puncture-resistant tires"
-            }
+            "tire": "KENDA 20x3.0\" eBike puncture-resistant tires"
           },
           "cockpit": {
             "handlebar": "Aluminum Alloy, Φ31.8mm, 660mm",

@@ -308,34 +308,13 @@
           },
           "ebike_system": {
             "top_speed": "28 mph",
-            "motor_power": {
-              "peak_w": 1310,
-              "details": ""
-            },
+            "motor_power": "1310W peak",
             "pedal_assist": "Five levels of pedal-assist and an ergonomic thumb throttle deliver the speed and power to own the road as a Class 1, 2, or 3 eBike.**",
             "thumb_throttle": "An ergonomic below-the-bar trigger throttle on the left hand side is easily engaged with your thumb while simultaneously eliminating joint fatigue.",
-            "color_lcd_display": {
-              "type": "color",
-              "details": "A backlit, heads-up color LCD display with a USB-A port provides trip and battery intelligence on the go. IP-65 rated electrical components ensure greater water and dust resistance"
-            },
-            "motor_controller": {
-              "details": "24 amp controller is IP-65 rated and potted for weather proofing and thermal management"
-            },
-            "motor": {
-              "placement": "hub",
-              "peak_w": 1310,
-              "power_w": 750,
-              "torque_nm": 85,
-              "details": "A Sutto rear hub-motor ( with of delivers power and speed quicker than ever before. New Stealth M24 technology is 400% quieter*, delivering a hushed motor experience without sacrificing power"
-            },
-            "battery": {
-              "manufacturer": "Lectric",
-              "capacity_wh": 672,
-              "voltage_v": 48,
-              "amphours_ah": 14.0,
-              "removable": false,
-              "details": "Available with a Long-Range lithium-ion battery certified to UL 2271 to power your ride for up to 60 miles, respectively.†‡ The ONE is also certified to UL 2849"
-            },
+            "color_lcd_display": "A backlit, heads-up color LCD display with a USB-A port provides trip and battery intelligence on the go. IP-65 rated electrical components ensure greater water and dust resistance.",
+            "motor_controller": "24 amp controller is IP-65 rated and potted for weather proofing and thermal management.",
+            "motor": "A Sutto 750W rear hub-motor (1310W Peak) with 85Nm of torque delivers power and speed quicker than ever before. New Stealth M24 technology is 400% quieter*, delivering a hushed motor experience without sacrificing power.",
+            "battery": "Available with a Long-Range 48V 14ah (672 Wh) lithium-ion battery certified to UL 2271 to power your ride for up to 60 miles, respectively.†‡ The Lectric ONE is also certified to UL 2849.",
             "lectric_pwr": "Lectric's Pedal Assist Wattage Regulation (PWR) programming allows for an improved Pedal Assist experience by assisting the rider up to a certain power level for each PAS setting, instead of limiting the assistance by speed alone. Learn more about PWR here.",
             "pas_sensor": "Lectric's PWR™ allows the rider to control the eBike's output with no additional effort so that a torque sensor is not necessary for smooth rides. Instead, the Lectric ONE has a simply designed and affordable cadence sensor with 96 magnets simulated so you can reach high speeds with ease.",
             "charging": "An external charging port provides riders with the option to charge the eBike without removing the battery. The Lectric ONE comes standard with a 2amp charger for 5-7 hour charging."
@@ -351,39 +330,21 @@
             "safety_certified": "The Lectric ONE is certified to UL 2849. Additionally, the ONE's lithium-ion battery is certified to UL 2271."
           },
           "frameset": {
-            "front_fork": {
-              "type": "rigid",
-              "lockout": false,
-              "thru_axle": true,
-              "details": "This rigid fork is fully aluminum and ultra lightweight, featuring a thru axle dropout"
-            },
+            "front_fork": "This rigid fork is fully aluminum and ultra lightweight, featuring a thru axle dropout.",
             "frame": "6000-series-aluminum frame is sturdy yet lightweight. The chainstays feature vertical dropouts and speciality designed splits on each side for easy access to the belt drive."
           },
           "drivetrain": {
             "pinion_gearbox": "With the Pinion C1.6i six-speed sealed weatherproof gearbox, shifting is done at the touch of a button – quickly, ergonomically, and intuitively. The system shifts while riding, while stationary, and while under load.",
-            "cranks": {
-              "manufacturer": "Pinion",
-              "length_mm": 165,
-              "details": "aluminum cranks are in length"
-            },
+            "cranks": "Pinion aluminum cranks are 165mm in length.",
             "belt_drive": "Gates CDC 113-tooth Carbon Drive Belt System is lightweight and carbon fiber-reinforced. The belt’s performance is nearly maintenance-free while providing a chainless drivetrain that’s clean, quiet, smooth, and strong.",
             "belt_cogs": "A Gates CDC 24-tooth steel rear belt cog is paired with an aluminum CDX 39-tooth front cog providing a ratio-optimized performance to accommodate a wide range of speeds.",
             "removable_pedals": "Quick-release pedals easily detach from the bike for compact transport."
           },
           "brakes": {
-            "brakes": {
-              "actuation": "hydraulic",
-              "rotor_mm": 180,
-              "rotor_thickness_mm": 1.8,
-              "details": "Hydraulic mineral oil brakes and rotors (1.8mm thick) offer ultimate stopping power and peace of mind in wet or dry conditions"
-            }
+            "brakes": "Hydraulic mineral oil brakes and 180mm rotors (1.8mm thick) offer ultimate stopping power and peace of mind in wet or dry conditions."
           },
           "wheelset": {
-            "city_tires": {
-              "size": "20x2.5",
-              "tubeless": false,
-              "details": "'' city tires featuring a reflective strip are equipped with 3mm Hippo Skin with an Aramid Floc Breaker. Shark Skin Protection on the sidewall offers pinch flat protection and all-weather reliability. Slime is installed to prevent flat tires at no additional cost"
-            },
+            "city_tires": "20x2.5'' city tires featuring a reflective strip are equipped with 3mm Hippo Skin with an Aramid Floc Breaker. Shark Skin Protection on the sidewall offers pinch flat protection and all-weather reliability. Slime is installed to prevent flat tires at no additional cost.",
             "thru_axle": "The front wheel features a Thru Axle wheel attachment system for tool-free installation. This feature ensures a straight wheel, consistent brake rotor alignment, and handling stability. Remove the wheel in minutes for an easy and light-weight transport."
           },
           "cockpit": {
@@ -394,17 +355,11 @@
           },
           "geometry": {
             "bike_dimensions": "63\"L x 16\"W x 44\"H",
-            "bike_dimensions_with_front_tire_removed": {
-              "tubeless": false,
-              "details": "58\"L x 16\"W x 34\"H"
-            },
+            "bike_dimensions_with_front_tire_removed": "58\"L x 16\"W x 34\"H",
             "stand_over_height": "18.5\"",
             "handlebar_height": "40\"",
             "bike_weight": "48 lbs w/o battery.",
-            "bike_weight_with_front_tire_removed": {
-              "tubeless": false,
-              "details": "50 lbs"
-            },
+            "bike_weight_with_front_tire_removed": "50 lbs.",
             "payload_capacity": "Max: 330 lbs. Never exceed the payload capacity. Distribute weight within the guidelines: Max Rider weight 330 lbs, Max Front Rack Weight 20 lbs, Max Rear Rack Weight 30 lbs.",
             "rider_payload_capacity": "Max: 330 lbs.",
             "seat_to_ground": "Min: 31” / Max: 39.5”",
@@ -1139,33 +1094,13 @@
           },
           "ebike_system": {
             "top_speed": "20 mph",
-            "motor_power": {
-              "peak_w": 819,
-              "details": ""
-            },
+            "motor_power": "819W peak",
             "pedal_assist": "Five levels of pedal-assist and a twist throttle deliver the speed and power to own the road as a Class 1 or 2 eBike.**",
             "twist_grip_throttle": "A half-twist throttle is easily engaged with a flick of the wrist to deliver pure power on demand.",
-            "color_lcd_display": {
-              "type": "color",
-              "details": "A backlit, color LCD display with a USB-A port provides trip and battery intelligence on the go. IP-65 rated electrical components ensure greater water and dust resistance"
-            },
-            "battery": {
-              "manufacturer": "Lectric",
-              "capacity_wh": 375,
-              "voltage_v": 48,
-              "removable": false,
-              "details": "Available with a Standard or Long-Range lithium-ion battery ( or) certified to UL 2271 to power your ride for up to 80 miles, respectively.*† The XP Lite is also certified to UL 2849"
-            },
-            "motor": {
-              "placement": "hub",
-              "peak_w": 819,
-              "power_w": 300,
-              "torque_nm": 28,
-              "details": "A rear hub-motor ( with of delivers power and speed quicker than ever before. Stealth M24 technology is 400% quieter‡, delivering a hushed motor experience without sacrificing power"
-            },
-            "motor_controller": {
-              "details": "15 amp controller is IP-65 rated with built in thermal sensors to eliminate burn-out"
-            },
+            "color_lcd_display": "A backlit, color LCD display with a USB-A port provides trip and battery intelligence on the go. IP-65 rated electrical components ensure greater water and dust resistance.",
+            "battery": "Available with a Standard or Long-Range 48V lithium-ion battery (375Wh or 672Wh) certified to UL 2271 to power your ride for up to 80 miles, respectively.*† The Lectric XP Lite is also certified to UL 2849.",
+            "motor": "A 300W rear hub-motor (819W Peak) with 28Nm of torque delivers power and speed quicker than ever before. Stealth M24 technology is 400% quieter‡, delivering a hushed motor experience without sacrificing power.",
+            "motor_controller": "15 amp controller is IP-65 rated with built in thermal sensors to eliminate burn-out.",
             "lectric_pwr": "Lectric's Pedal Assist Wattage Regulation (PWR) programming allows for an improved Pedal Assist experience by assisting the rider up to a certain power level for each PAS setting, instead of limiting the assistance by speed alone. Learn more about PWR here. Prefer full wattage while you ride? Access the advanced settings of your display to toggle off PWR Programming.",
             "pas_sensor": "Lectric's PWR™ allows the rider to control the eBike's output with no additional effort so that a torque sensor is not necessary for smooth rides. Instead, the Lectric XP Lite has a simply designed and affordable cadence sensor.",
             "charging": "An external charging port provides riders with the option to charge the eBike without removing the battery. The XP Lite comes standard with a 2amp charger for 2-4 hour charging."
@@ -1177,39 +1112,20 @@
             "safety_certified": "The Lectric XP Lite is certified to UL 2849. Additionally, the XP Lite's lithium-ion battery is certified to UL 2271."
           },
           "frameset": {
-            "front_fork": {
-              "type": "rigid",
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Rigid Steel Fork with a threadless headset"
-            },
+            "front_fork": "Rigid Steel Fork with a threadless headset.",
             "frame": "6000-series-aluminum frame is sturdy yet lightweight."
           },
           "drivetrain": {
-            "crankset": {
-              "details": "Forged aluminum, 52-tooth chainring is the perfect ratio for effortless 20-inch wheel pedaling"
-            },
+            "crankset": "Forged aluminum, 52-tooth chainring is the perfect ratio for effortless 20-inch wheel pedaling.",
             "drivetrain": "52 x 16 tooth single speed drivetrain makes riding efficient and seamless.",
-            "chain": {
-              "manufacturer": "KMC",
-              "details": "Z1 steel chain offers consistent tension and secure performance throughout your ride"
-            },
+            "chain": "KMC Z1 steel chain offers consistent tension and secure performance throughout your ride.",
             "folding_pedals": "Push-fold pedals are easily compressed for compact transport."
           },
           "brakes": {
-            "brakes": {
-              "actuation": "hydraulic",
-              "rotor_mm": 180,
-              "rotor_thickness_mm": 1.8,
-              "details": "Hydraulic mineral oil brakes and rotors (1.8mm thick) offer ultimate stopping power and peace of mind in wet or dry conditions"
-            }
+            "brakes": "Hydraulic mineral oil brakes and 180mm rotors (1.8mm thick) offer ultimate stopping power and peace of mind in wet or dry conditions."
           },
           "wheelset": {
-            "tires": {
-              "size": "20x2.5",
-              "tubeless": false,
-              "details": "'' slick tires featuring a reflective strip are equipped with 3mm Hippo Skin with an Aramid Floc Breaker. Slime is installed to prevent flat tires at no additional cost"
-            }
+            "tires": "20x2.5'' slick tires featuring a reflective strip are equipped with 3mm Hippo Skin with an Aramid Floc Breaker. Slime is installed to prevent flat tires at no additional cost."
           },
           "cockpit": {
             "grips": "Soft durometer ergonomic grips add comfort so you can ride longer. Removable caps on the end allow for various accessory add-on.",
@@ -2141,34 +2057,14 @@
           },
           "ebike_system": {
             "top_speed": "14 mph",
-            "motor_power": {
-              "peak_w": 1092,
-              "details": ""
-            },
+            "motor_power": "1092W peak",
             "twist_throttle": "A half-twist throttle located on the right handlebar delivers pure power on demand.",
-            "stealth_m24_motor": {
-              "placement": "hub",
-              "peak_w": 1092,
-              "power_w": 500,
-              "torque_nm": 65,
-              "details": "A rear hub motor  with of supplies power and speed quicker than ever before. Stealth M24 technology ensures a quieter motor experience without sacrificing power"
-            },
-            "battery": {
-              "capacity_wh": 840,
-              "voltage_v": 48,
-              "amphours_ah": 17.5,
-              "removable": true,
-              "details": "A removable, lithium-ion battery certified to UL 2271 makes for a clean design while powering your ride for up to 70 miles on a single charge.** The XP Trike2 750 is also certified to UL 2849.†"
-            },
-            "tft_lcd_display": {
-              "type": "color",
-              "details": "A custom color TFT display featuring a detachable mount and a USB-C port provides trip, battery, power intelligence on the go. New intuitive drop-down menus make navigating the settings on your eBike easy to understand & allow users to customize their ride settings based on preference. The IP-X5-rated display ensures greater water resistance"
-            },
+            "stealth_m24_motor": "A 500W rear hub motor (1092W peak) with 65 Nm of torque supplies power and speed quicker than ever before. Stealth M24 technology ensures a quieter motor experience without sacrificing power.",
+            "battery": "A removable 48V, 17.5Ah (840 Wh) lithium-ion battery certified to UL 2271 makes for a clean design while powering your ride for up to 70 miles on a single charge.** The XP Trike2 750 is also certified to UL 2849.†",
+            "tft_lcd_display": "A custom color TFT display featuring a detachable mount and a USB-C port provides trip, battery, & power intelligence on the go. New intuitive drop-down menus make navigating the settings on your eBike easy to understand & allow users to customize their ride settings based on preference. The IP-X5-rated display ensures greater water resistance.",
             "pedal_assist_sensor": "A 12-magnet cadence sensor paired with our in-house-designed wattage regulation programming will give you controlled power distribution and a range-optimized riding experience.",
             "easy_charging": "An external charging port provides riders with the option to charge the eBike without removing the battery. The XP Trike2 750 comes standard with a 2amp charger for 7-9 hour charging, but a 5amp Fast Charger can be purchased separately, which can charge the long-range battery in as little as 3.5 hours.",
-            "motor_controller": {
-              "details": "20amp internal controller is IP-X5 rated and potted for weatherproofing and thermal management"
-            },
+            "motor_controller": "20amp internal controller is IP-X5 rated and potted for weatherproofing and thermal management.",
             "pedal_assist_type": "Torque Sensor",
             "torque_sensor": "Our proprietary in-house-designed torque sensor programming will give you smoother power distribution and a better riding experience. It is designed to manage power output based on the rider’s pedaling effort. With this programming experience, riders can reach higher speeds easily and with more control than ever before."
           },
@@ -2184,38 +2080,20 @@
             "safety_certified": "We ensure that the electrical and battery components are manufactured to the industry standard. The Lectric XP Trike2 750 is certified to UL 2849. Additionally, the lithium-ion battery on the XP Trike2 750 is certified to UL 2271."
           },
           "frameset": {
-            "suspension_fork": {
-              "type": "coil",
-              "lockout": false,
-              "thru_axle": false,
-              "details": "The Cloud 50 suspension front fork provides shock absorption for a smooth and cloud-soft ride. Adjust the preload or lock it out to tailor each ride to your preference based on payload capacity and weight distribution"
-            },
+            "suspension_fork": "The Cloud 50 suspension front fork provides shock absorption for a smooth and cloud-soft ride. Adjust the preload or lock it out to tailor each ride to your preference based on payload capacity and weight distribution.",
             "redesigned_frame": "The XP Trike2 750 is crafted with a hydroformed 6000-series aluminum frame that's ultra-strong and up to 30% lighter than comparable steel frames. The reinforced downtube and re-engineered geometry—featuring a set-back seat tube and lowered rear rack—enhance stability and comfort, especially at higher speeds or on uneven paths."
           },
           "drivetrain": {
             "drivetrain": "A 16-tooth single-speed freewheel paired with a forged aluminum, 36-tooth custom chainring makes riding efficient and is the perfect ratio for effortless 20-inch wheel pedaling.",
-            "chain": {
-              "manufacturer": "KMC",
-              "details": "A Z8 steel chain offers consistent tension for a secure performance throughout your ride"
-            },
+            "chain": "A KMC Z8 steel chain offers consistent tension for a secure performance throughout your ride.",
             "pedals": "Custom-designed 6000 Series Aluminum pedals with protruding grip pins improve foot traction for an optimal experience."
           },
           "brakes": {
-            "hydraulic_brakes": {
-              "actuation": "hydraulic",
-              "rotor_mm": 180,
-              "rotor_thickness_mm": 2.3,
-              "details": "Get ultimate stopping power with Star Union hydraulic brakes paired with rotors (2.3mm thick), making it as easy to stop as it is to go, whether in wet or dry conditions. Paired with ergonomically designed aluminum brake levers for durability"
-            },
-            "parking_brakes": {
-              "details": "Lock your trike tires while they aren't in use to keep your ride secure with our front and rear parking brakes. Blue levers on both sides of the handlebars can be micro-adjusted from a locked or unlocked position and engaged with a pull from the brake lever"
-            }
+            "hydraulic_brakes": "Get ultimate stopping power with Star Union hydraulic brakes paired with 180mm rotors (2.3mm thick), making it as easy to stop as it is to go, whether in wet or dry conditions. Paired with ergonomically designed aluminum brake levers for durability.",
+            "parking_brakes": "Lock your trike tires while they aren't in use to keep your ride secure with our front and rear parking brakes. Blue levers on both sides of the handlebars can be micro-adjusted from a locked or unlocked position and engaged with a pull from the brake lever."
           },
           "wheelset": {
-            "tires_with_slime": {
-              "tubeless": false,
-              "details": "Puncture-resistant 20” x 2.5” slim tires allow you to turn on a dime, while an updated tread pattern improves efficiency. The sidewall features reflective strips for better visibility at night. Slime is installed to prevent flat tires—at no additional cost"
-            },
+            "tires_with_slime": "Puncture-resistant 20” x 2.5” slim tires allow you to turn on a dime, while an updated tread pattern improves efficiency. The sidewall features reflective strips for better visibility at night. Slime is installed to prevent flat tires—at no additional cost.",
             "differential_axle": "The 2-wheel-drive, all-wheel braking system is made possible by the open, dual-differential axle. Both the motor and the stationary rotor are centered on the axle, providing power and brakes to both rear wheels. This design ensures stability by creating a balanced center of gravity.",
             "thru_axle": "The front wheel features a thru-axle wheel attachment system for a quick and easy installation. This feature ensures a straight wheel, consistent brake rotor alignment, and handling stability. Remove the wheel in minutes for an easy and lightweight transport."
           },
@@ -3709,34 +3587,14 @@
           },
           "ebike_system": {
             "top_speed": "28 mph",
-            "motor_power": {
-              "peak_w": 1092,
-              "details": ""
-            },
+            "motor_power": "1092W peak",
             "thumb_throttle": "An ergonomic below-the-bar trigger throttle on the left-hand side is easily engaged with your thumb while simultaneously eliminating joint fatigue.",
-            "stealth_m24_motor": {
-              "placement": "hub",
-              "peak_w": 1092,
-              "power_w": 500,
-              "torque_nm": 55,
-              "details": "A rear hub motor  with of supplies power and speed quicker than ever before. Stealth M24 technology delivers a quieter motor experience without sacrificing power"
-            },
-            "battery": {
-              "capacity_wh": 500,
-              "voltage_v": 48,
-              "amphours_ah": 10.4,
-              "removable": true,
-              "details": "An integrated & removable, lithium-ion battery certified to UL 2271 makes for a clean design while powering your ride for up to 50 miles on a single charge.** The XP4 is also certified to UL 2849.† Removing the battery from the frame is a breeze with the side-facing key port location"
-            },
-            "tft_lcd_display": {
-              "type": "color",
-              "details": "A custom color TFT display featuring a detachable mount and a USB-C port. You’ll find trip, battery, power intelligence on the go. New intuitive drop-down menus make navigating the settings on your eBike easy to understand & allow users to customize their ride settings based on preference. The IP-X5-rated display ensures greater water resistance"
-            },
+            "stealth_m24_motor": "A 500W rear hub motor (1092W peak) with 55Nm of torque supplies power and speed quicker than ever before. Stealth M24 technology delivers a quieter motor experience without sacrificing power.",
+            "battery": "An integrated & removable 48V, 10.4Ah (500Wh) lithium-ion battery certified to UL 2271 makes for a clean design while powering your ride for up to 50 miles on a single charge.** The XP4 is also certified to UL 2849.† Removing the battery from the frame is a breeze with the side-facing key port location.",
+            "tft_lcd_display": "A custom color TFT display featuring a detachable mount and a USB-C port. You’ll find trip, battery, & power intelligence on the go. New intuitive drop-down menus make navigating the settings on your eBike easy to understand & allow users to customize their ride settings based on preference. The IP-X5-rated display ensures greater water resistance.",
             "torque_sensor": "Our proprietary in-house-designed torque sensor programming will give you smoother power distribution and a better riding experience. It is designed to manage power output based on the rider’s pedaling effort. With this programming experience, riders can reach higher speeds easily and with more control than ever before.",
             "easy_charging": "An auxiliary charging port near the bottom bracket provides riders with the option to charge the eBike without removing the battery. The XP4 750 comes standard with a 2amp charger for 7-9 hour charging, but a 5amp Fast Charger can be purchased separately, which can charge the long-range battery in as little as 3.5 hours.",
-            "motor_controller": {
-              "details": "20amp internal controller is IP-X5 rated and potted for weatherproofing and thermal management"
-            }
+            "motor_controller": "20amp internal controller is IP-X5 rated and potted for weatherproofing and thermal management."
           },
           "special_features": {
             "5_riding_modes": "Five riding modes deliver the speed and power to own the road as a Class 1, 2, or 3 eBike.* New simplified labels, including Eco, Tour, Sport, Sport+, & Turbo, allow riders to choose their riding experience.",
@@ -3751,37 +3609,20 @@
             "safety_certified": "We ensure that the electrical and battery components are manufactured to the industry standard. The Lectric XP4 is certified to UL 2849. Additionally, the XP4's lithium-ion battery is certified to UL 2271."
           },
           "frameset": {
-            "suspension_fork": {
-              "lockout": false,
-              "thru_axle": false,
-              "details": "The front fork provides shock absorption for a smooth and comfortable ride. Adjust the tension or lock it out to tailor each ride to your preference based on payload capacity and weight distribution"
-            },
+            "suspension_fork": "The front fork provides shock absorption for a smooth and comfortable ride. Adjust the tension or lock it out to tailor each ride to your preference based on payload capacity and weight distribution.",
             "fully_redesigned_frame": "The newly designed, more aesthetic XP4 frame is lightweight and features sturdy 6000 series aluminum with mounting points for various accessory combinations."
           },
           "drivetrain": {
             "drivetrain": "An 11-32 tooth, 8-speed freewheel paired with a Shimano Altus derailleur and a below-the-bar trigger shifter allows you to swiftly change gears while riding to create pedaling efficiency and an easier riding experience at higher speeds.",
-            "crankset": {
-              "details": "Forged aluminum, 56-tooth custom chainring is the perfect ratio for effortless 20-inch wheel pedaling"
-            },
-            "chain": {
-              "manufacturer": "KMC",
-              "details": "A Z8 steel chain with inner plate chamfering offers consistent tension and smooth transitions between shifting for a secure performance throughout your ride"
-            },
+            "crankset": "Forged aluminum, 56-tooth custom chainring is the perfect ratio for effortless 20-inch wheel pedaling.",
+            "chain": "A KMC Z8 steel chain with inner plate chamfering offers consistent tension and smooth transitions between shifting for a secure performance throughout your ride.",
             "quick_release_pedals": "Custom-designed 6000 Series Aluminum quick-release pedals with splined inserts allow for easy, tool-free removal and installation. The new shape of the pedals improves foot traction for an optimal experience."
           },
           "brakes": {
-            "602_hydraulic_brakes": {
-              "actuation": "hydraulic",
-              "rotor_mm": 180,
-              "rotor_thickness_mm": 2.3,
-              "details": "Get ultimate stopping power with 602 hydraulic brakes paired with rotors (2.3mm thick), making it as easy to stop as it is to go, whether in wet or dry conditions. Paired with ergonomically designed aluminum brake levers for durability"
-            }
+            "602_hydraulic_brakes": "Get ultimate stopping power with 602 hydraulic brakes paired with 180mm rotors (2.3mm thick), making it as easy to stop as it is to go, whether in wet or dry conditions. Paired with ergonomically designed aluminum brake levers for durability."
           },
           "wheelset": {
-            "tires_with_slime": {
-              "tubeless": false,
-              "details": "Puncture-resistant 20” x 3” tires are perfect for mixed terrains and make for a smoother ride. The new custom tread pattern has less rolling resistance for better power efficiency and delivers an ultra-quiet experience. Slime is installed to prevent flat tires—at no additional cost"
-            }
+            "tires_with_slime": "Puncture-resistant 20” x 3” tires are perfect for mixed terrains and make for a smoother ride. The new custom tread pattern has less rolling resistance for better power efficiency and delivers an ultra-quiet experience. Slime is installed to prevent flat tires—at no additional cost."
           },
           "cockpit": {
             "lock_on_grips": "Full-length ergonomic lock-on grips add comfort so you can ride longer. The plastic sleeve inside helps lock the grips into place and also allows the grips to be easily removed.",
@@ -5178,29 +5019,15 @@
           },
           "ebike_system": {
             "top_speed": "28 mph",
-            "motor_power": {
-              "peak_w": 1310,
-              "details": ""
-            },
+            "motor_power": "1310W peak",
             "pedal_assist": "Five levels of pedal-assist and a throttle delivers the speed and power to own the road as a Class 1, 2, or 3 eBike.**",
             "thumb_throttle": "An ergonomic below-the-bar trigger throttle on the left hand side is easily engaged with your thumb while simultaneously eliminating joint fatigue.",
-            "motor_controller": {
-              "details": "A 24 amp controller swiftly distributes power to the motor and is IP-65 rated and potted for weather proofing and thermal management"
-            },
-            "motor": {
-              "placement": "hub",
-              "peak_w": 1310,
-              "power_w": 750,
-              "torque_nm": 85,
-              "details": "A rear hub-motor ( with of delivers power and speed quicker than ever before. New Stealth M24 technology is 400% quieter*, delivering a hushed motor experience without sacrificing power"
-            },
+            "motor_controller": "A 24 amp controller swiftly distributes power to the motor and is IP-65 rated and potted for weather proofing and thermal management.",
+            "motor": "A 750W rear hub-motor (1310W Peak) with 85Nm of torque delivers power and speed quicker than ever before. New Stealth M24 technology is 400% quieter*, delivering a hushed motor experience without sacrificing power.",
             "semi_integrated_battery": "A removable 48V, 15Ah (720Wh) lithium-ion battery certified to UL 2271, integrated on the down tube of the frame with a color-matched plate, makes for a clean and easily-accessible design.† The XPeak is also certified to UL 2849.",
             "lectric_pwr": "Lectric's new Pedal Assist Wattage Regulation+ (PWR+) programming allows for an improved Pedal Assist experience by assisting the rider up to a certain power level for each PAS setting. Learn more about PWR here.",
             "pas_torque_sensor": "A unique torque sensor combined with PWR+ technology, or Pedal Assist Wattage Regulation+, helps to manage power output based on the rider’s pedaling effort. With this technology, riders can reach higher speeds easily and with more control than ever before.",
-            "lcd_display": {
-              "type": "color",
-              "details": "A backlit color LCD display with a USB-C port provides trip and battery intelligence on the go. IP-65 rated electrical components ensure greater water and dust resistance"
-            },
+            "lcd_display": "A backlit color LCD display with a USB-C port provides trip and battery intelligence on the go. IP-65 rated electrical components ensure greater water and dust resistance.",
             "charging": "An auxiliary charging port near the bottom bracket provides riders with the option to charge the eBike without removing the battery. The XPeak comes standard with a 2amp charger for 8-10 hour charging but a 5amp Fast Charger can be purchased separately to speed up charging by 250%."
           },
           "safety": {
@@ -5211,46 +5038,21 @@
             "safety_certified": "The Lectric XPeak is certified to UL 2849. Additionally, the XPeak's lithium-ion battery is certified to UL 2271."
           },
           "frameset": {
-            "suspension_fork": {
-              "travel_mm": 80,
-              "lockout": false,
-              "thru_axle": false,
-              "details": "of travel"
-            },
-            "suspension_front_fork": {
-              "manufacturer": "RST",
-              "type": "coil",
-              "travel_mm": 80,
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Adjustable Renegade suspension fork with up to of travel provides shock absorption for a smooth ride"
-            },
+            "suspension_fork": "80mm of travel",
+            "suspension_front_fork": "Adjustable RST Renegade suspension fork with up to 80mm of travel provides shock absorption for a smooth ride.",
             "frame": "The XPeak frame is hydroformed to maximize strength to weight ratio. The lightweight and sturdy 6000 series aluminum is available in 2 different frame styles; a diamond High-Step and an easily mountable Step-Thru."
           },
           "drivetrain": {
             "drivetrain": "11-32 tooth, 8-geared freewheel paired with a Shimano Altus derailleur and a thumb-triggered handlebar shifter allows you to swiftly change gears while riding to create pedaling efficiency and an easier riding experience at higher speeds.",
-            "crankset": {
-              "details": "Forged aluminum, 46-tooth chainring is the perfect ratio for effortless 26-inch wheel pedaling"
-            },
-            "chain": {
-              "manufacturer": "KMC",
-              "details": "The XPeak's Z8.1 steel chain is equipped with anti rust protection and offers consistent tension and secure performance throughout your ride"
-            },
+            "crankset": "Forged aluminum, 46-tooth chainring is the perfect ratio for effortless 26-inch wheel pedaling.",
+            "chain": "The XPeak's KMC Z8.1 steel chain is equipped with anti rust protection and offers consistent tension and secure performance throughout your ride.",
             "removable_pedals": "Quick-release pedals easily detach from the bike for compact transport."
           },
           "brakes": {
-            "brakes": {
-              "actuation": "hydraulic",
-              "rotor_mm": 203,
-              "rotor_thickness_mm": 1.8,
-              "details": "Hydraulic mineral oil brakes paired with a front rotor and a 180mm rear rotor (1.8mm thick) offer ultimate stopping power and peace of mind in wet or dry conditions"
-            }
+            "brakes": "Hydraulic mineral oil brakes paired with a 203mm front rotor and a 180mm rear rotor (1.8mm thick) offer ultimate stopping power and peace of mind in wet or dry conditions."
           },
           "wheelset": {
-            "fat_tires": {
-              "tubeless": false,
-              "details": "Puncture-resistant 26” x 4” knobby tires can handle any terrain with ease. Slime is installed to prevent flat tires at no additional cost"
-            },
+            "fat_tires": "Puncture-resistant 26” x 4” knobby tires can handle any terrain with ease. Slime is installed to prevent flat tires at no additional cost.",
             "thru_axle": "The front wheel features a Thru Axle wheel attachment system for a quick and easy installation. This feature ensures a straight wheel, consistent brake rotor alignment, and handling stability. Remove the wheel in minutes for an easy and light-weight transport."
           },
           "cockpit": {
@@ -6478,33 +6280,13 @@
           },
           "ebike_system": {
             "top_speed": "28 mph",
-            "motor_power": {
-              "peak_w": 1310,
-              "details": ""
-            },
+            "motor_power": "1310W peak",
             "pedal_assist": "Five levels of pedal-assist and a throttle delivers the speed and power to own the road as a Class 1, 2, or 3 eBike.*",
             "thumb_throttle": "An ergonomic below-the-bar trigger throttle on the left hand side is easily engaged with your thumb while simultaneously eliminating joint fatigue.",
-            "motor": {
-              "placement": "hub",
-              "peak_w": 1310,
-              "power_w": 750,
-              "torque_nm": 85,
-              "details": "A rear hub-motor ( with of delivers power and speed quicker than ever before"
-            },
-            "motor_controller": {
-              "details": "24 amp externally mounted controller is IP-65 rated and potted for weather proofing and thermal management"
-            },
-            "battery": {
-              "capacity_wh": 1680,
-              "voltage_v": 48,
-              "amphours_ah": 17.5,
-              "removable": true,
-              "details": "Two removable, (combined) lithium-ion batteries certified to UL 2271 makes for a clean design while powering your ride for up to 170 miles on a single charge.** The XPedition is also certified to UL 2849.†"
-            },
-            "lcd_display": {
-              "type": "color",
-              "details": "A backlit color LCD display with a USB-C port provides trip and battery intelligence on the go. IP-65 rated electrical components ensure greater water and dust resistance"
-            },
+            "motor": "A 750W rear hub-motor (1310W Peak) with 85Nm of torque delivers power and speed quicker than ever before.",
+            "motor_controller": "24 amp externally mounted controller is IP-65 rated and potted for weather proofing and thermal management.",
+            "battery": "Two removable 48V, 17.5Ah (combined 35Ah, 1680Wh) lithium-ion batteries certified to UL 2271 makes for a clean design while powering your ride for up to 170 miles on a single charge.** The XPedition is also certified to UL 2849.†",
+            "lcd_display": "A backlit color LCD display with a USB-C port provides trip and battery intelligence on the go. IP-65 rated electrical components ensure greater water and dust resistance.",
             "lectric_pwr": "Lectric's new Pedal Assist Wattage Regulation+ (PWR+) programming allows for an improved Pedal Assist experience by assisting the rider up to a certain power level for each PAS setting. Learn more about PWR here.",
             "pas_torque_sensor": "A unique torque sensor combined with PWR+ technology, or Pedal Assist Wattage Regulation+, helps to manage power output based on the rider’s pedaling effort. With this technology, riders can reach higher speeds easily and with more control than ever before.",
             "charging": "An external battery allows riders to charge the eBike without removing the battery. The XPedition comes standard with a 2amp charger for 5-7 hour charging per battery but a 5amp Fast Charger can be purchased separately to speed up charging by 250%."
@@ -6521,45 +6303,21 @@
             "safety_certified": "The Lectric XPedition 2.0 is certified to UL 2849. Additionally, the XPedition's lithium-ion batteries are certified to UL 2271."
           },
           "frameset": {
-            "suspension_fork": {
-              "travel_mm": 50,
-              "lockout": false,
-              "thru_axle": false,
-              "details": "of travel"
-            },
-            "suspension_front_fork": {
-              "type": "coil",
-              "travel_mm": 50,
-              "lockout": false,
-              "thru_axle": false,
-              "details": "The Courier 50 is a custom dual-spring suspension fork with up to of travel that provides shock absorption for a smooth and comfortable ride. Independent pre-load adjustments in each fork leg allow you to tailor each ride to your preference based on payload capacity and weight distribution"
-            },
+            "suspension_fork": "50mm of travel",
+            "suspension_front_fork": "The Courier 50 is a custom dual-spring suspension fork with up to 50mm of travel that provides shock absorption for a smooth and comfortable ride. Independent pre-load adjustments in each fork leg allow you to tailor each ride to your preference based on payload capacity and weight distribution.",
             "frame": "The XPedition 2.0 frame is hydroformed to maximize strength to weight ratio. The lightweight and sturdy 6000 series aluminum features multiple mounting points throughout the eBike for various tool-free accessory combinations!"
           },
           "drivetrain": {
             "drivetrain": "11-32 tooth, 8-geared freewheel paired with a Shimano Altus derailleur and a thumb-triggered handlebar shifter allows you to swiftly change gears while riding to create pedaling efficiency and an easier riding experience at higher speeds.",
-            "crankset": {
-              "details": "Forged aluminum, 52-tooth chainring is the perfect ratio for effortless 20-inch wheel pedaling"
-            },
-            "chain": {
-              "manufacturer": "KMC",
-              "details": "A Z8 steel chain paired with an idler pulley offers consistent tension and secure performance throughout your ride"
-            },
+            "crankset": "Forged aluminum, 52-tooth chainring is the perfect ratio for effortless 20-inch wheel pedaling.",
+            "chain": "A KMC Z8 steel chain paired with an idler pulley offers consistent tension and secure performance throughout your ride.",
             "removable_pedals": "Quick-release pedals easily detach from the bike for compact transport."
           },
           "brakes": {
-            "brakes": {
-              "actuation": "hydraulic",
-              "rotor_mm": 180,
-              "rotor_thickness_mm": 2.2,
-              "details": "Ultimate stopping power with hydraulic mineral oil brakes paired with rotors (2.2mm thick) offers peace of mind in wet or dry conditions"
-            }
+            "brakes": "Ultimate stopping power with hydraulic mineral oil brakes paired with 180mm rotors (2.2mm thick) offers peace of mind in wet or dry conditions."
           },
           "wheelset": {
-            "tires": {
-              "tubeless": false,
-              "details": "Puncture-resistant 20” x 2.5” street tires make for a smoother ride with ease of control at hand. Slime is installed to prevent flat tires- at no additional cost"
-            },
+            "tires": "Puncture-resistant 20” x 2.5” street tires make for a smoother ride with ease of control at hand. Slime is installed to prevent flat tires- at no additional cost.",
             "thru_axle": "The front wheel features a quick-release Thru Axle wheel attachment system for tool-free installation. This feature ensures a straight wheel, consistent brake rotor alignment, and handling stability."
           },
           "cockpit": {
@@ -7093,29 +6851,15 @@
           },
           "ebike_system": {
             "top_speed": "28 mph",
-            "motor_power": {
-              "peak_w": 1092,
-              "details": ""
-            },
+            "motor_power": "1092W peak",
             "pedal_assist": "Five levels of pedal-assist and an ergonomic thumb throttle deliver the speed and power to own the road as a Class 1, 2, or 3 eBike.**",
             "thumb_throttle": "An ergonomic below-the-bar trigger throttle designed for your thumb is easily engaged while simultaneously eliminating joint fatigue.",
-            "motor_controller": {
-              "details": "A 20 amp controller swiftly distributes power to the motor"
-            },
-            "motor": {
-              "placement": "hub",
-              "peak_w": 1092,
-              "power_w": 500,
-              "torque_nm": 55,
-              "details": "A rear hub-motor ( with of delivers power and speed quicker than ever before. Stealth M24 technology is 400% quieter*, delivering a hushed motor experience without sacrificing power"
-            },
+            "motor_controller": "A 20 amp controller swiftly distributes power to the motor.",
+            "motor": "A 500W rear hub-motor (1092W Peak) with 55Nm of torque delivers power and speed quicker than ever before. Stealth M24 technology is 400% quieter*, delivering a hushed motor experience without sacrificing power.",
             "semi_integrated_battery": "A removable 48V, 10.4Ah (500 Wh) lithium-ion battery certified to UL 2271, integrated on the down tube of the frame, makes for a clean and easily-accessible design.† The XPress is also certified to UL 2849.",
             "lectric_pwr": "Lectric's new Pedal Assist Wattage Regulation+ (PWR+) programming allows for an improved Pedal Assist experience by assisting the rider up to a certain power level for each PAS setting. Learn more about PWR here.",
             "pas_torque_sensor": "A unique torque sensor combined with PWR+ technology, or Pedal Assist Wattage Regulation+, helps to manage power output based on the rider’s pedaling effort. With this technology, riders can reach higher speeds easily and with more control than ever before.",
-            "lcd_display": {
-              "type": "color",
-              "details": "A backlit color LCD display with a USB-A port provides trip and battery intelligence on the go. IP-65 rated electrical components ensure greater water and dust resistance"
-            },
+            "lcd_display": "A backlit color LCD display with a USB-A port provides trip and battery intelligence on the go. IP-65 rated electrical components ensure greater water and dust resistance.",
             "charging": "A charging port on the top of the integrated battery provides riders with the option to charge the eBike without removing the battery. The XPress comes standard with a 2amp charger for 4-6 hour charging."
           },
           "safety": {
@@ -7125,46 +6869,21 @@
             "safety_certified": "The Lectric XPress is certified to UL 2849. Additionally, the XPress comes with a lithium-ion battery certified to UL 2271."
           },
           "frameset": {
-            "suspension_fork": {
-              "travel_mm": 80,
-              "lockout": false,
-              "thru_axle": false,
-              "details": "of travel"
-            },
-            "suspension_front_fork": {
-              "type": "coil",
-              "travel_mm": 80,
-              "lockout": false,
-              "thru_axle": false,
-              "details": "A custom adjustable TC•Eighty suspension fork with up to of travel provides shock absorption for a smooth ride. Special design rooted in the infamous Twin Cities, Minnesota!"
-            },
+            "suspension_fork": "80mm of travel",
+            "suspension_front_fork": "A custom adjustable TC•Eighty suspension fork with up to 80mm of travel provides shock absorption for a smooth ride. Special design rooted in the infamous Twin Cities, Minnesota!",
             "frame": "The XPress is available in 2 different frame styles; a diamond High-Step and an easy-on Step-Thru."
           },
           "drivetrain": {
             "drivetrain": "11-28 tooth, 7-geared freewheel paired with a Shimano derailleur and a thumb-triggered handlebar shifter allows you to swiftly change gears while riding to create pedaling efficiency and an easier riding experience at higher speeds.",
-            "crankset": {
-              "manufacturer": "Prowheel",
-              "details": "Forged aluminum, 46-tooth chainring is the perfect ratio for effortless 27.5-inch wheel pedaling"
-            },
-            "chain": {
-              "manufacturer": "KMC",
-              "details": "A Z7 steel chain offers consistent tension and secure performance throughout your ride"
-            },
+            "crankset": "Forged aluminum, 46-tooth ProWheel chainring is the perfect ratio for effortless 27.5-inch wheel pedaling.",
+            "chain": "A KMC Z7 steel chain offers consistent tension and secure performance throughout your ride.",
             "removable_pedals": "Quick-release pedals easily detach from the bike for compact transport."
           },
           "brakes": {
-            "brakes": {
-              "actuation": "hydraulic",
-              "rotor_mm": 180,
-              "rotor_thickness_mm": 1.8,
-              "details": "Hydraulic mineral oil brakes and rotors (1.8mm thick) offer ultimate stopping power and peace of mind in wet or dry conditions"
-            }
+            "brakes": "Hydraulic mineral oil brakes and 180mm rotors (1.8mm thick) offer ultimate stopping power and peace of mind in wet or dry conditions."
           },
           "wheelset": {
-            "city_tires": {
-              "tubeless": false,
-              "details": "Puncture-resistant 27.5” x 2.1” slick tires can handle any commute with ease. Slime is installed to prevent flat tires at no additional cost"
-            },
+            "city_tires": "Puncture-resistant 27.5” x 2.1” slick tires can handle any commute with ease. Slime is installed to prevent flat tires at no additional cost.",
             "thru_axle": "The front wheel features a Thru Axle wheel attachment system for tool-free installation. This feature ensures a straight wheel, consistent brake rotor alignment, and handling stability. Remove the wheel in minutes for an easy and light-weight transport."
           },
           "cockpit": {
@@ -7175,17 +6894,11 @@
           },
           "geometry": {
             "bike_dimensions": "72\"L x 17\"W x 43\"H",
-            "bike_dimensions_with_front_tire_removed": {
-              "tubeless": false,
-              "details": "59\"L x 10\"W x 31\"H"
-            },
+            "bike_dimensions_with_front_tire_removed": "59\"L x 10\"W x 31\"H",
             "stand_over_height": "29\"",
             "handlebar_height": "41\"",
             "bike_weight": "50 lbs w/o battery.",
-            "bike_weight_with_front_tire_removed": {
-              "tubeless": false,
-              "details": "52 lbs"
-            },
+            "bike_weight_with_front_tire_removed": "52 lbs.",
             "payload_capacity": "Max: 330 lbs. Never exceed the payload capacity. Distribute weight within the guidelines: Max Rider weight 330 lbs, Max Rear Rack Weight 30 lbs.",
             "rider_payload_capacity": "Max: 330 lbs.",
             "seat_to_ground": "Min: 33.5” / Max: 45”",
@@ -7935,26 +7648,12 @@
           },
           "ebike_system": {
             "top_speed": "28 mph",
-            "motor_power": {
-              "peak_w": 1310,
-              "details": ""
-            },
+            "motor_power": "1310W peak",
             "thumb_throttle": "An ergonomic below-the-bar trigger throttle on the left-hand side is easily engaged with your thumb while simultaneously eliminating joint fatigue.",
-            "stealth_m24_motor": {
-              "placement": "hub",
-              "peak_w": 1310,
-              "power_w": 750,
-              "torque_nm": 85,
-              "details": "A rear hub motor  with of supplies power and speed quicker than ever before. Stealth M24 technology delivers a quieter motor experience without sacrificing power"
-            },
-            "motor_controller": {
-              "details": "24amp internal controller is IP-X5 rated and potted for weatherproofing and thermal management"
-            },
+            "stealth_m24_motor": "A 750W rear hub motor (1310W peak) with 85Nm of torque supplies power and speed quicker than ever before. Stealth M24 technology delivers a quieter motor experience without sacrificing power.",
+            "motor_controller": "24amp internal controller is IP-X5 rated and potted for weatherproofing and thermal management.",
             "semi_intergated_battery": "A removable 48V, 14Ah (672Wh) lithium-ion battery certified to UL 2271, integrated on the down tube of the frame, makes for a clean and easily-accessible design while powering your ride for up to 60 miles on a single charge.*** The XPress2 is also certified to UL 2849.†",
-            "tft_lcd_display": {
-              "type": "color",
-              "details": "A custom color TFT display featuring a detachable mount and a USB-C port provides trip, battery, power intelligence on the go. New intuitive drop-down menus make navigating the settings on your eBike easy to understand & allow users to customize their ride settings based on preference. The IP-X5-rated display ensures greater water resistance"
-            },
+            "tft_lcd_display": "A custom color TFT display featuring a detachable mount and a USB-C port provides trip, battery, & power intelligence on the go. New intuitive drop-down menus make navigating the settings on your eBike easy to understand & allow users to customize their ride settings based on preference. The IP-X5-rated display ensures greater water resistance.",
             "torque_sensor": "Our proprietary in-house-designed torque sensor programming will give you smoother power distribution and a better riding experience. It is designed to manage power output based on the rider’s pedaling effort. With this programming experience, riders can reach higher speeds easily and with more control than ever before.",
             "easy_charging": "An external charging port provides riders with the option to charge the eBike without removing the battery. The XPress2 comes standard with a 2amp charger for 5-7 hour charging, but a 5amp Fast Charger can be purchased separately, which can charge the long-range battery in less than 3 hours."
           },
@@ -7970,46 +7669,21 @@
             "safety_certified": "We ensure that the electrical and battery components are manufactured to the industry standard. The Lectric XPress2 is certified to UL 2849. Additionally, the XPress2's lithium-ion battery is certified to UL 2271."
           },
           "frameset": {
-            "suspension_fork": {
-              "travel_mm": 80,
-              "lockout": false,
-              "thru_axle": false,
-              "details": "of travel"
-            },
-            "suspension_front_fork": {
-              "manufacturer": "SR Suntour",
-              "type": "coil",
-              "travel_mm": 80,
-              "lockout": false,
-              "thru_axle": false,
-              "details": "The XPress2 features a best-in-class XCM 32 suspension fork with up to of travel, providing shock absorption for a smooth ride"
-            },
+            "suspension_fork": "80mm of travel",
+            "suspension_front_fork": "The XPress2 features a best-in-class SR SunTour XCM 32 suspension fork with up to 80mm of travel, providing shock absorption for a smooth ride.",
             "frame": "The XPress is available in 2 different frame styles; a diamond High-Step and an easy-on Step-Thru."
           },
           "drivetrain": {
             "drivetrain": "An 11-32 tooth, 8-speed freewheel paired with a Shimano Altus derailleur and a below-the-bar trigger shifter allows you to swiftly change gears while riding to create pedaling efficiency and an easier riding experience at higher speeds.",
-            "crankset": {
-              "details": "Forged aluminum, 46-tooth custom chainring is the perfect ratio for effortless 27.5-inch wheel pedaling"
-            },
-            "chain": {
-              "manufacturer": "KMC",
-              "details": "A Z8 steel chain with inner plate chamfering offers consistent tension and smooth transitions between shifting for a secure performance throughout your ride"
-            },
+            "crankset": "Forged aluminum, 46-tooth custom chainring is the perfect ratio for effortless 27.5-inch wheel pedaling.",
+            "chain": "A KMC Z8 steel chain with inner plate chamfering offers consistent tension and smooth transitions between shifting for a secure performance throughout your ride.",
             "quick_release_pedals": "Custom-designed 6000 Series Aluminum quick-release pedals with splined inserts allow for easy, tool-free removal and installation. The new shape of the pedals improves foot traction for an optimal experience."
           },
           "brakes": {
-            "602_hydraulic_brakes": {
-              "actuation": "hydraulic",
-              "rotor_mm": 180,
-              "rotor_thickness_mm": 2.3,
-              "details": "Get ultimate stopping power with 602 hydraulic brakes paired with rotors (2.3mm thick), making it as easy to stop as it is to go, whether in wet or dry conditions. Paired with ergonomically designed aluminum brake levers for durability"
-            }
+            "602_hydraulic_brakes": "Get ultimate stopping power with 602 hydraulic brakes paired with 180mm rotors (2.3mm thick), making it as easy to stop as it is to go, whether in wet or dry conditions. Paired with ergonomically designed aluminum brake levers for durability."
           },
           "wheelset": {
-            "tires_with_slime": {
-              "tubeless": false,
-              "details": "Puncture-resistant 27.5” x 2.1” slick tires can handle any commute with ease. The sidewall features reflective strips for better visibility at night. Slime is installed to prevent flat tires—at no additional cost"
-            },
+            "tires_with_slime": "Puncture-resistant 27.5” x 2.1” slick tires can handle any commute with ease. The sidewall features reflective strips for better visibility at night. Slime is installed to prevent flat tires—at no additional cost.",
             "thru_axle": "The front wheel features a specially designed, ultra-fast thru-axle attachment system for quick, tool-free installation. This design helps ensure precise wheel alignment, consistent brake rotor positioning, and stable handling. Remove the wheel in minutes for easier, more lightweight transport."
           },
           "cockpit": {
@@ -8021,10 +7695,7 @@
           },
           "geometry": {
             "bike_dimensions": "72\"L x 17\"W x 43\"H",
-            "bike_dimensions_with_front_tire_removed": {
-              "tubeless": false,
-              "details": "59\"L x 10\"W x 31\"H"
-            },
+            "bike_dimensions_with_front_tire_removed": "59\"L x 10\"W x 31\"H",
             "stand_over_height": {
               "Lectric XPress2 Step-Thru 750": "18.5\"",
               "Lectric XPress2 High-Step 750": "29\""
@@ -8034,10 +7705,7 @@
               "Lectric XPress2 High-Step 750": "41\""
             },
             "bike_weight": "60 lbs w/o battery.",
-            "bike_weight_with_front_tire_removed": {
-              "tubeless": false,
-              "details": "57 lbs"
-            },
+            "bike_weight_with_front_tire_removed": "57 lbs.",
             "payload_capacity": "Max: 330 lbs. Never exceed the payload capacity. Distribute weight within the guidelines: Max Rider weight 330 lbs, Max Rear Rack Weight 30 lbs.",
             "rider_payload_capacity": "Max: 330 lbs.",
             "seat_to_ground": {

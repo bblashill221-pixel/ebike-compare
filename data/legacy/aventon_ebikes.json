@@ -108,31 +108,10 @@
           },
           "ebike_system": {
             "pedal_assist": "3 Levels (with Ride Tune Customization)",
-            "motor": {
-              "manufacturer": "Shengyi",
-              "placement": "hub",
-              "peak_w": 1188,
-              "power_w": 750,
-              "voltage_v": 36,
-              "details": "Hub Drive with 6 speed sensors ("
-            },
-            "motor_torque": {
-              "torque_nm": 80,
-              "details": ""
-            },
-            "display": {
-              "manufacturer": "Aventon",
-              "details": "BC147"
-            },
-            "battery": {
-              "cell_brand": "LG",
-              "capacity_wh": 733,
-              "voltage_v": 36,
-              "amphours_ah": 20.0,
-              "cell_format": "21700",
-              "removable": true,
-              "details": "Removable Internal Lithium-ion"
-            },
+            "motor": "Shengyi 36V 750w Hub Drive with 6 speed sensors (1188W peak)",
+            "motor_torque": "80Nm",
+            "display": "Aventon BC147",
+            "battery": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
             "battery_weight": "8.7lbs",
             "controller": "36V, 33A",
             "throttle": "Aventon LH Handlebar Mounted",
@@ -152,79 +131,32 @@
           },
           "frameset": {
             "frame": "Gravity Cast 6061 Single-Butted Aluminum Alloy with Internal Battery",
-            "fork": {
-              "type": "coil",
-              "travel_mm": 51,
-              "lockout": true,
-              "thru_axle": false,
-              "details": "Threaded Steerer Tube for Quill Stem 15x110 spacing, adjustable lockout black stanchions"
-            },
+            "fork": "Threaded Steerer Tube for Quill Stem 15x110 spacing, 51mm travel, adjustable lockout black stanchions",
             "rear_spacing": "175mm",
-            "fork_spacing": {
-              "travel_mm": 110,
-              "lockout": false,
-              "thru_axle": false,
-              "details": ""
-            },
+            "fork_spacing": "110mm",
             "frame_style": "Step-Through",
             "frame_storage_bag": "Included"
           },
           "drivetrain": {
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": "Altus RD-M310"
-            },
-            "shifter": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": "Trigger SL-M315-8R"
-            },
-            "chain": {
-              "links": 154,
-              "details": "7/8 speed"
-            },
-            "cassette": {
-              "manufacturer": "Shimano",
-              "cog_range": "12-32T",
-              "speeds": 8,
-              "details": "CS HG200-8"
-            },
+            "rear_derailleur": "Shimano Altus RD-M310 8 Speed",
+            "shifter": "Shimano 8 Speed Trigger SL-M315-8R",
+            "chain": "7/8 speed 154L",
+            "cassette": "12-32T / 8 Speed Shimano CS HG200-8",
             "chainring": "52 tooth",
-            "crankset": {
-              "length_mm": 165,
-              "details": "3pc, crank arm"
-            },
+            "crankset": "3pc, 165mm crank arm",
             "bottom_bracket": "Square Taper, Sealed, Dual-Sided Torque Sensor",
             "pedals": "9/16\" Composite Platform"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire"
-            },
-            "rear_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire"
-            },
+            "front_brake": "Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
+            "rear_brake": "Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
             "front_brake_rotor": "180mm 6 bolt",
             "rear_brake_rotor": "203mm 6-bolt"
           },
           "wheelset": {
             "front_wheel": "Double Wall Aluminum, 20in, 36hole, 13g, 20x110 Thru Axle, Schrader Valve",
             "rear_wheel": "Double Wall Aluminum, 20in, 36hole, 12g, Nutted Hub Drive Motor, Scharder Valve",
-            "tires": {
-              "manufacturer": "Innova",
-              "size": "20x3.0",
-              "tubeless": false,
-              "details": "IA-2131 Urban Tire Refective Sidewalls"
-            }
+            "tires": "20x3.0 Innova IA-2131 Urban Tire Refective Sidewalls"
           },
           "cockpit": {
             "saddle": "Aventon Saddle w/ grab handle by Selle Royal",
@@ -465,36 +397,14 @@
           },
           "ebike_system": {
             "pedal_assist": "3 Levels (with Ride Tune Customization)",
-            "motor_torque": {
-              "torque_nm": 80,
-              "details": ""
-            },
+            "motor_torque": "80Nm",
             "ecu": "Aventon ECU Module featuring wired CAN communication, GPS positioning support, wireless Bluetooth connectivity, and cellular communication capabilities",
             "throttle": "Aventon LH Handlebar Mounted",
             "sensors": "Double Sided Bottom Bracket Torque Sensor",
             "charger": "Aventon 4A 42V",
-            "display": {
-              "manufacturer": "Aventon",
-              "details": "BC147"
-            },
-            "battery": {
-              "cell_brand": "LG",
-              "manufacturer": "Aventon",
-              "capacity_wh": 733,
-              "voltage_v": 36,
-              "amphours_ah": 20.0,
-              "cell_format": "21700",
-              "removable": false,
-              "details": ""
-            },
-            "motor": {
-              "manufacturer": "Shengyi",
-              "placement": "hub",
-              "peak_w": 1188,
-              "power_w": 750,
-              "voltage_v": 36,
-              "details": "Hub Drive with 6 speed sensors ("
-            }
+            "display": "Aventon BC147",
+            "battery": "Aventon 36V, 20Ah, 733Wh, LG 21700 cells",
+            "motor": "Shengyi 36V 750w Hub Drive with 6 speed sensors (1188W peak)"
           },
           "certifications": {
             "safety_certifications": "UL and TUV Safety Certified  UL 2849",
@@ -504,69 +414,28 @@
             "water_resistance": "Bike - IPX5 // Components - IPX6"
           },
           "frameset": {
-            "fork": {
-              "type": "coil",
-              "travel_mm": 50,
-              "lockout": true,
-              "thru_axle": false,
-              "details": "Threaded Steerer Tube for Quill Stem 15x110 spacing, adjustable lockout, black stanchions"
-            },
+            "fork": "Threaded Steerer Tube for Quill Stem 15x110 spacing, 50mm travel, adjustable lockout, black stanchions",
             "frame_style": "Step-Through",
             "frame": "6061 Aluminum Alloy with Internal Battery. One piece - Diecast aluminum front triangle"
           },
           "drivetrain": {
-            "chain": {
-              "links": 122,
-              "details": "8 Speed"
-            },
+            "chain": "122 Link, 8 Speed",
             "chainring": "52 tooth",
-            "crankset": {
-              "length_mm": 165,
-              "details": "3pc, crank arm"
-            },
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": "Altus RD-M310"
-            },
-            "shift_lever": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": "SL-M315-8R"
-            },
-            "cassette": {
-              "manufacturer": "Shimano",
-              "cog_range": "12-32T",
-              "speeds": 8,
-              "details": "CS-HG200-8 Cassette"
-            },
+            "crankset": "3pc, 165mm crank arm",
+            "rear_derailleur": "Shimano Altus RD-M310 8 Speed",
+            "shift_lever": "Shimano SL-M315-8R 8 Speed",
+            "cassette": "Shimano CS-HG200-8 8 speed Cassette, 12-32T",
             "pedals": "9/16\" Composite Platform",
             "chainring_bcd": "130"
           },
           "brakes": {
             "rear_brake_rotor": "Tektro 203mm 6 bolt",
-            "front_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 203,
-              "details": "HD-E3520 hydraulic disc brakes"
-            },
-            "rear_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 203,
-              "details": "HD-E3520 hydraulic disc brakes"
-            },
+            "front_brake": "Tektro HD-E3520 hydraulic disc brakes",
+            "rear_brake": "Tektro HD-E3520 hydraulic disc brakes",
             "front_brake_rotor": "Tektro 180mm 6 bolt"
           },
           "wheelset": {
-            "tires": {
-              "size": "20x3.0",
-              "tubeless": false,
-              "details": "urban tire with reflective sidewalls"
-            },
+            "tires": "20 x 3.0 urban tire with reflective sidewalls",
             "wheels": "20-inch, 12-gauge, 36-hole, double-wall aluminum, black",
             "rear_wheel_mesh_guards": "Included"
           },
@@ -789,33 +658,11 @@
           },
           "ebike_system": {
             "pedal_assist": "3 Levels + Boost Mode (with Ride Tune Customization)",
-            "motor": {
-              "placement": "hub",
-              "power_w": 750,
-              "voltage_v": 36,
-              "details": "Hub Drive"
-            },
-            "motor_torque": {
-              "torque_nm": 80,
-              "details": ""
-            },
-            "motor_power": {
-              "power_w": 750,
-              "details": "( under Boost Mode)"
-            },
-            "display": {
-              "manufacturer": "Aventon",
-              "details": "BC280"
-            },
-            "battery": {
-              "cell_brand": "LG",
-              "capacity_wh": 733,
-              "voltage_v": 36,
-              "amphours_ah": 20.0,
-              "cell_format": "21700",
-              "removable": true,
-              "details": "Removable Internal Lithium-ion"
-            },
+            "motor": "36V, 750W Hub Drive",
+            "motor_torque": "80Nm",
+            "motor_power": "750W (1440W under Boost Mode)",
+            "display": "Aventon BC280",
+            "battery": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
             "battery_weight": "8.7lbs",
             "controller": "36V, 33A",
             "throttle": "Aventon LH Handlebar Mounted",
@@ -835,79 +682,32 @@
           },
           "frameset": {
             "frame": "6061 Aluminum, Gravity Cast Front Triangle",
-            "fork": {
-              "manufacturer": "Aventon",
-              "type": "coil",
-              "travel_mm": 80,
-              "lockout": true,
-              "thru_axle": false,
-              "details": "Zoom Suspension Fork, with lockout"
-            },
+            "fork": "Aventon/Zoom Suspension Fork, 80mm travel, with lockout",
             "rear_spacing": "190mm",
-            "fork_spacing": {
-              "travel_mm": 135,
-              "lockout": false,
-              "thru_axle": false,
-              "details": ""
-            },
+            "fork_spacing": "135mm",
             "frame_style": "Step-Over"
           },
           "drivetrain": {
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": "Altus"
-            },
-            "shifter": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": "Trigger"
-            },
-            "chain": {
-              "links": 118,
-              "details": "7/8 Speed"
-            },
-            "cassette": {
-              "manufacturer": "Shimano",
-              "cog_range": "12-32T",
-              "speeds": 8,
-              "details": "CS HG200-8"
-            },
+            "rear_derailleur": "Shimano Altus 8-Speed",
+            "shifter": "Shimano 8-Speed Trigger",
+            "chain": "7/8 Speed 118L",
+            "cassette": "12-32T / 8 Speed Shimano CS HG200-8",
             "chainring": "48T",
             "chainring_bcd": "N/A",
-            "crankset": {
-              "length_mm": 170,
-              "details": "3pc, crank arm"
-            },
+            "crankset": "3pc, 170mm crank arm",
             "bottom_bracket": "100x177 Square Taper, Double Sided Torque sensor bottom bracket",
             "pedals": "9/16\" Alloy Platform"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire"
-            },
-            "rear_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire"
-            },
+            "front_brake": "Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
+            "rear_brake": "Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
             "front_brake_rotor": "Tektro 180mm 6 bolt",
             "rear_brake_rotor": "Tektro 180mm 6 bolt"
           },
           "wheelset": {
             "front_wheel": "26\", 36 hole, 13g, Double Wall Aluminum Fat Tire Rim, Nutted Axle, Schrader Valve",
             "rear_wheel": "26\", 36 hole, 12g, Double Wall Aluminum Fat Tire Rim, Nutted Hub Drive, Schrader Valve",
-            "tires": {
-              "size": "26x4.0",
-              "tubeless": false,
-              "details": "Inova puncture resistant"
-            }
+            "tires": "Inova 26x4.0 puncture resistant"
           },
           "cockpit": {
             "saddle": "Aventon Saddle",
@@ -1192,33 +992,11 @@
           },
           "ebike_system": {
             "pedal_assist": "3 Levels + Boost Mode (with Ride Tune Customization)",
-            "motor": {
-              "placement": "hub",
-              "power_w": 750,
-              "voltage_v": 36,
-              "details": "Hub Drive"
-            },
-            "motor_torque": {
-              "torque_nm": 80,
-              "details": ""
-            },
-            "motor_power": {
-              "power_w": 750,
-              "details": "( under Boost Mode)"
-            },
-            "display": {
-              "manufacturer": "Aventon",
-              "details": "BC280"
-            },
-            "battery": {
-              "cell_brand": "LG",
-              "capacity_wh": 733,
-              "voltage_v": 36,
-              "amphours_ah": 20.0,
-              "cell_format": "21700",
-              "removable": true,
-              "details": "Removable Internal Lithium-ion"
-            },
+            "motor": "36V, 750W Hub Drive",
+            "motor_torque": "80Nm",
+            "motor_power": "750W (1440W under Boost Mode)",
+            "display": "Aventon BC280",
+            "battery": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
             "battery_weight": "8.7lbs",
             "controller": "36V, 33A",
             "throttle": "Aventon LH Handlebar Mounted",
@@ -1238,79 +1016,32 @@
           },
           "frameset": {
             "frame": "6061 Aluminum, Gravity Cast Front Triangle",
-            "fork": {
-              "manufacturer": "Aventon",
-              "type": "coil",
-              "travel_mm": 80,
-              "lockout": true,
-              "thru_axle": false,
-              "details": "Zoom Suspension Fork, with lockout"
-            },
+            "fork": "Aventon/Zoom Suspension Fork, 80mm travel, with lockout",
             "rear_spacing": "190mm",
-            "fork_spacing": {
-              "travel_mm": 135,
-              "lockout": false,
-              "thru_axle": false,
-              "details": ""
-            },
+            "fork_spacing": "135mm",
             "frame_style": "Step-Through"
           },
           "drivetrain": {
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": "Altus"
-            },
-            "shifter": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": "Trigger"
-            },
-            "chain": {
-              "links": 118,
-              "details": "7/8 Speed"
-            },
-            "cassette": {
-              "manufacturer": "Shimano",
-              "cog_range": "12-32T",
-              "speeds": 8,
-              "details": "CS HG200-8"
-            },
+            "rear_derailleur": "Shimano Altus 8-Speed",
+            "shifter": "Shimano 8-Speed Trigger",
+            "chain": "7/8 Speed 118L",
+            "cassette": "12-32T / 8 Speed Shimano CS HG200-8",
             "chainring": "48T",
             "chainring_bcd": "N/A",
-            "crankset": {
-              "length_mm": 170,
-              "details": "3pc, crank arm"
-            },
+            "crankset": "3pc, 170mm crank arm",
             "bottom_bracket": "100x177 Square Taper, Double Sided Torque sensor bottom bracket",
             "pedals": "9/16\" Alloy Platform"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire"
-            },
-            "rear_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire"
-            },
+            "front_brake": "Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
+            "rear_brake": "Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
             "front_brake_rotor": "Tektro 180mm 6 bolt",
             "rear_brake_rotor": "Tektro 180mm 6 bolt"
           },
           "wheelset": {
             "front_wheel": "26\", 36 hole, 13g, Double Wall Aluminum Fat Tire Rim, Nutted Axle, Schrader Valve",
             "rear_wheel": "26\", 36 hole, 12g, Double Wall Aluminum Fat Tire Rim, Nutted Hub Drive, Schrader Valve",
-            "tires": {
-              "size": "26x4.0",
-              "tubeless": false,
-              "details": "Inova puncture resistant"
-            }
+            "tires": "Inova 26x4.0 puncture resistant"
           },
           "cockpit": {
             "saddle": "Aventon Saddle",
@@ -1576,32 +1307,10 @@
             "range": "Up to 85 Miles"
           },
           "ebike_system": {
-            "motor": {
-              "manufacturer": "Aventon",
-              "placement": "mid",
-              "peak_w": 750,
-              "power_w": 250,
-              "torque_nm": 100,
-              "voltage_v": 36,
-              "details": "a100 mid-drive., . IP67 rating"
-            },
-            "motor_torque": {
-              "torque_nm": 100,
-              "details": ""
-            },
-            "display": {
-              "manufacturer": "Aventon",
-              "details": "BC280"
-            },
-            "battery": {
-              "cell_brand": "LG",
-              "capacity_wh": 733,
-              "voltage_v": 36,
-              "amphours_ah": 20.0,
-              "cell_format": "21700",
-              "removable": true,
-              "details": "Removable Internal Lithium-ion"
-            },
+            "motor": "Aventon a100 mid-drive. 36v, 250W (sustained), 750W (peak), 100NM torque. IP67 rating",
+            "motor_torque": "100Nm",
+            "display": "Aventon BC280",
+            "battery": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
             "battery_weight": "8.7lbs",
             "controller": "Integrated in Motor",
             "throttle": "Aftermarket Throttle Available for Purchase",
@@ -1620,78 +1329,32 @@
             "water_resistance": "Bike - IPX6 // Motor - IP67"
           },
           "frameset": {
-            "fork": {
-              "manufacturer": "Aventon",
-              "type": "coil",
-              "travel_mm": 80,
-              "lockout": true,
-              "thru_axle": false,
-              "details": "Zoom Suspension Fork, with lockout"
-            },
+            "fork": "Aventon/Zoom Suspension Fork, 80mm travel, with lockout",
             "rear_spacing": "190mm",
-            "fork_spacing": {
-              "travel_mm": 135,
-              "lockout": false,
-              "thru_axle": false,
-              "details": ""
-            },
+            "fork_spacing": "135mm",
             "frame": "6061 Aluminum"
           },
           "drivetrain": {
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 10,
-              "details": "Cues"
-            },
-            "shifter": {
-              "details": "E-Shifter"
-            },
-            "chain": {
-              "links": 124,
-              "details": "9/10/11 Speed"
-            },
-            "cassette": {
-              "manufacturer": "Shimano",
-              "cog_range": "11-39T",
-              "speeds": 10,
-              "details": "Cues"
-            },
+            "rear_derailleur": "Shimano Cues 10-Speed",
+            "shifter": "E-Shifter",
+            "chain": "9/10/11 Speed 124L",
+            "cassette": "Shimano Cues 10-Speed 11-39T",
             "chainring": "44T",
             "chainring_bcd": "N/A",
-            "crankset": {
-              "manufacturer": "Aventon",
-              "length_mm": 170,
-              "details": "ISIS Splined"
-            },
+            "crankset": "Aventon 170mm ISIS Splined",
             "bottom_bracket": "N/A",
             "pedals": "9/16\" Alloy Platform"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "SRAM",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 200,
-              "details": "DB4 Hydraulic Disc Brakes w/o cutoff"
-            },
-            "rear_brake": {
-              "manufacturer": "SRAM",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 200,
-              "details": "DB4 Hydraulic Disc Brakes w/o cutoff"
-            },
+            "front_brake": "SRAM DB4 Hydraulic Disc Brakes w/o cutoff",
+            "rear_brake": "SRAM DB4 Hydraulic Disc Brakes w/o cutoff",
             "front_brake_rotor": "Sram G2 200mm 6-Bolt",
             "rear_brake_rotor": "SRAM G2 180mm 6-Bolt"
           },
           "wheelset": {
             "front_wheel": "26in, 36 hole, Aluminum Fat tire Rim, Thru Axle, Schrader Valve",
             "rear_wheel": "26in, 36 hole, Aluminum Fat tire Rim, Thru Axle, Schrader Valve",
-            "tires": {
-              "size": "26x4.0",
-              "tubeless": false,
-              "details": "Inova puncture resistant"
-            }
+            "tires": "Inova 26x4.0 puncture resistant"
           },
           "cockpit": {
             "saddle": "Aventon Saddle",
@@ -1979,27 +1642,11 @@
             "ideal_use": "Mountain Biking, Urban Riding"
           },
           "ebike_system": {
-            "motor": {
-              "manufacturer": "Aventon",
-              "details": "Ultro X"
-            },
-            "motor_torque": {
-              "torque_nm": 110,
-              "details": "( in BOOST Mode)"
-            },
-            "motor_power": {
-              "peak_w": 750,
-              "details": "( in BOOST Mode)"
-            },
-            "display": {
-              "type": "touchscreen",
-              "details": "Integrated Top Tube Display with Touch Screen"
-            },
-            "battery": {
-              "capacity_wh": 800,
-              "removable": false,
-              "details": "Integrated Battery"
-            },
+            "motor": "Aventon Ultro X",
+            "motor_torque": "110Nm (120NM in BOOST Mode)",
+            "motor_power": "750W Peak (850W Peak in BOOST Mode)",
+            "display": "Integrated Top Tube Display with Touch Screen",
+            "battery": "800Wh Integrated Battery",
             "battery_weight": "9.2 lbs",
             "charging_time_from_0_to_100": "6 hours",
             "charger": "42V 4A charger"
@@ -2012,77 +1659,33 @@
           },
           "frameset": {
             "frame": "6061 Aluminum",
-            "fork": {
-              "manufacturer": "RockShox",
-              "travel_mm": 150,
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Psylo Gold (44mm Offset)"
-            },
-            "shock": {
-              "manufacturer": "RockShox",
-              "details": "Deluxe Select+ (210x55)"
-            },
+            "fork": "Rockshox Psylo Gold 150mm (44mm Offset)",
+            "shock": "Rockshox Deluxe Select+ (210x55)",
             "rear_spacing": "12x148mm",
-            "fork_spacing": {
-              "travel_mm": 110,
-              "lockout": false,
-              "thru_axle": false,
-              "details": "15x"
-            },
+            "fork_spacing": "15x110mm",
             "frame_style": "Step-Over"
           },
           "drivetrain": {
-            "rear_derailleur": {
-              "manufacturer": "SRAM",
-              "speeds": 12,
-              "details": "Eagle 70 Transmission"
-            },
-            "shifter": {
-              "manufacturer": "SRAM",
-              "details": "Eagle 70 Transmission"
-            },
-            "chain": {
-              "manufacturer": "SRAM",
-              "details": "Eagle 70 Transmission"
-            },
+            "rear_derailleur": "SRAM Eagle 70 Transmission (12-SPD)",
+            "shifter": "SRAM Eagle 70 Transmission",
+            "chain": "SRAM Eagle 70 Transmission",
             "chainring": "SRAM 34T",
             "chainring_bcd": "104",
-            "crankset": {
-              "length_mm": 160,
-              "details": "6061 Aluminum, ISIS splined"
-            },
+            "crankset": "6061 Aluminum, ISIS splined, 160mm",
             "chain_guide": "32-24T Compatible",
             "pedals": "9/16\" Alloy Platform",
-            "cassette": {
-              "manufacturer": "SRAM",
-              "cog_range": "10-52T",
-              "details": "XS-1270 T-Type"
-            }
+            "cassette": "SRAM XS-1270 T-Type 10-52T"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "SRAM",
-              "rotor_mm": 200,
-              "details": "DB8 Stealth"
-            },
-            "rear_brake": {
-              "manufacturer": "SRAM",
-              "rotor_mm": 200,
-              "details": "DB8 Stealth"
-            },
+            "front_brake": "SRAM DB8 Stealth",
+            "rear_brake": "SRAM DB8 Stealth",
             "front_brake_rotor": "SRAM Centerline 200mm 6-Bolt",
             "rear_brake_rotor": "SRAM Centerline 200mm 6-Bolt"
           },
           "wheelset": {
             "front_wheel": "29\", Double-Wall Aluminum, Tubeless Compatible, 32 Hole",
             "rear_wheel": "29\", Double-Wall Aluminum, Tubeless Compatible, 32 Hole",
-            "tires": {
-              "manufacturer": "Maxxis",
-              "size": "29x2.5",
-              "tubeless": true,
-              "details": "Front: Minion DHF EXO (Tubeless Ready), Rear: Maxxis Minion DHR II, 29x2.4\" EXO (Tubeless Ready)"
-            }
+            "tires": "Front: Maxxis Minion DHF 29x2.5\" EXO (Tubeless Ready), Rear: Maxxis Minion DHR II, 29x2.4\" EXO (Tubeless Ready)"
           },
           "cockpit": {
             "saddle": "Selle Royal SRX",
@@ -2352,27 +1955,11 @@
             "ideal_use": "Mountain Biking, Urban Riding"
           },
           "ebike_system": {
-            "motor": {
-              "manufacturer": "Aventon",
-              "details": "Ultro X"
-            },
-            "motor_torque": {
-              "torque_nm": 110,
-              "details": "( in BOOST Mode)"
-            },
-            "motor_power": {
-              "peak_w": 750,
-              "details": "( in BOOST Mode)"
-            },
-            "display": {
-              "type": "touchscreen",
-              "details": "Integrated Top Tube Display with Touch Screen"
-            },
-            "battery": {
-              "capacity_wh": 800,
-              "removable": false,
-              "details": "Integrated Battery"
-            },
+            "motor": "Aventon Ultro X",
+            "motor_torque": "110Nm (120NM in BOOST Mode)",
+            "motor_power": "750W Peak (850W Peak in BOOST Mode)",
+            "display": "Integrated Top Tube Display with Touch Screen",
+            "battery": "800Wh Integrated Battery",
             "battery_weight": "9.2 lbs",
             "charging_time_from_0_to_100": "6 hours",
             "charger": "42V 4A charger"
@@ -2385,81 +1972,33 @@
           },
           "frameset": {
             "frame": "Carbon Front Triangle, 6061 Aluminum Rear Triangle",
-            "fork": {
-              "manufacturer": "RockShox",
-              "travel_mm": 150,
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Lyrik Select (44mm Offsett)"
-            },
-            "shock": {
-              "manufacturer": "RockShox",
-              "details": "Super Deluxe Select+ (210x55)"
-            },
+            "fork": "Rockshox Lyrik Select 150mm (44mm Offsett)",
+            "shock": "Rockshox Super Deluxe Select+ (210x55)",
             "rear_spacing": "12x148mm",
-            "fork_spacing": {
-              "travel_mm": 110,
-              "lockout": false,
-              "thru_axle": false,
-              "details": "15x"
-            },
+            "fork_spacing": "15x110mm",
             "frame_style": "Step-Over"
           },
           "drivetrain": {
-            "rear_derailleur": {
-              "manufacturer": "SRAM",
-              "speeds": 12,
-              "details": "S1000 Transmission"
-            },
-            "shifter": {
-              "manufacturer": "SRAM",
-              "details": "AXS Transmission Shift Pod"
-            },
-            "chain": {
-              "manufacturer": "SRAM",
-              "details": "Eagle 70 Transmission"
-            },
+            "rear_derailleur": "SRAM S1000 Transmission (12-SPD)",
+            "shifter": "SRAM AXS Transmission Shift Pod",
+            "chain": "SRAM Eagle 70 Transmission",
             "chain_guide": "32-34T Compatible",
-            "cassette": {
-              "manufacturer": "SRAM",
-              "cog_range": "10-52T",
-              "details": "XS-1270 T-Type"
-            },
+            "cassette": "SRAM XS-1270 T-Type 10-52T",
             "chainring": "SRAM T-Type 34T",
             "chainring_bcd": "104",
-            "crankset": {
-              "length_mm": 160,
-              "details": "ISIS"
-            },
+            "crankset": "ISIS 160mm",
             "pedals": "9/16\" Alloy Platform"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "SRAM",
-              "actuation": "hydraulic",
-              "pistons": 4,
-              "rotor_mm": 200,
-              "details": "Maven Base (Hydraulic)"
-            },
-            "rear_brake": {
-              "manufacturer": "SRAM",
-              "actuation": "hydraulic",
-              "pistons": 4,
-              "rotor_mm": 200,
-              "details": "Maven Base (Hydraulic)"
-            },
+            "front_brake": "SRAM Maven Base (Hydraulic, 4-Piston)",
+            "rear_brake": "SRAM Maven Base (Hydraulic, 4-Piston)",
             "front_brake_rotor": "SRAM Centerline 200mm 6-Bolt",
             "rear_brake_rotor": "SRAM Centerline 200mm 6-Bolt"
           },
           "wheelset": {
             "front_wheel": "29\", Double-Wall Aluminum, Tubeless Compatible, 32 Hole",
             "rear_wheel": "29\", Double-Wall Aluminum, Tubeless Compatible, 32 Hole",
-            "tires": {
-              "manufacturer": "Maxxis",
-              "size": "29x2.5",
-              "tubeless": true,
-              "details": "Front: Minion DHF EXO (Tubeless Ready), Rear: Maxxis Minion DHR II, 29x2.4\" EXO (Tubeless Ready)"
-            }
+            "tires": "Front: Maxxis Minion DHF 29x2.5\" EXO (Tubeless Ready), Rear: Maxxis Minion DHR II, 29x2.4\" EXO (Tubeless Ready)"
           },
           "cockpit": {
             "saddle": "Selle Royal SRX",
@@ -2745,29 +2284,10 @@
           },
           "ebike_system": {
             "pedal_assist": "3 Levels (with Ride Tune Customization)",
-            "motor": {
-              "peak_w": 864,
-              "power_w": 500,
-              "voltage_v": 36,
-              "details": ""
-            },
-            "motor_torque": {
-              "torque_nm": 60,
-              "details": ""
-            },
-            "display": {
-              "manufacturer": "Aventon",
-              "details": "BC280"
-            },
-            "battery": {
-              "cell_brand": "LG",
-              "capacity_wh": 733,
-              "voltage_v": 36,
-              "amphours_ah": 20.0,
-              "cell_format": "21700",
-              "removable": true,
-              "details": "Removable Internal Lithium-ion"
-            },
+            "motor": "36V, 500W (sustained), 864W (peak)",
+            "motor_torque": "60Nm",
+            "display": "Aventon BC280",
+            "battery": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
             "battery_weight": "8.7lbs",
             "controller": "36V, 24A",
             "throttle": "Aventon LH Handlebar Mounted",
@@ -2787,78 +2307,31 @@
           },
           "frameset": {
             "frame": "6061 Aluminum, Gravity Cast Front Triangle",
-            "fork": {
-              "manufacturer": "Aventon",
-              "type": "coil",
-              "travel_mm": 80,
-              "lockout": true,
-              "thru_axle": true,
-              "details": "Suspension Fork, w/ lockout,coil spring. 15x100mm thru-axle, 43mm offset"
-            },
+            "fork": "Aventon Suspension Fork, 80mm travel, w/ lockout,coil spring. 15x100mm thru-axle, 43mm offset",
             "rear_spacing": "142mm",
-            "fork_spacing": {
-              "travel_mm": 110,
-              "lockout": false,
-              "thru_axle": false,
-              "details": ""
-            },
+            "fork_spacing": "110mm",
             "frame_style": "Step-Over"
           },
           "drivetrain": {
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "details": "Altus RD-M310"
-            },
-            "shifter": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": "Trigger SL-M315-8R"
-            },
-            "chain": {
-              "links": 120,
-              "details": "7/8 speed"
-            },
-            "cassette": {
-              "manufacturer": "Shimano",
-              "cog_range": "12-32T",
-              "speeds": 8,
-              "details": "CS HG200-8"
-            },
+            "rear_derailleur": "Shimano Altus RD-M310",
+            "shifter": "Shimano 8 Speed Trigger SL-M315-8R",
+            "chain": "7/8 speed 120L",
+            "cassette": "12-32T / 8 Speed Shimano CS HG200-8",
             "chainring": "48T",
-            "crankset": {
-              "length_mm": 170,
-              "details": "3pc, crank arm"
-            },
+            "crankset": "3pc, 170mm crank arm",
             "bottom_bracket": "Square Taper, Sealed, double sided Torque Sensor 83mmx158.5mm",
             "pedals": "9/16\" Composite Platform"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "AT-2 Hydraulic disc brake / Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire"
-            },
-            "rear_brake": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "AT-2 Hydraulic disc brake / Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire"
-            },
+            "front_brake": "Magura AT-2 Hydraulic disc brake / Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
+            "rear_brake": "Magura AT-2 Hydraulic disc brake / Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
             "front_brake_rotor": "Magura MDR-A 180mm 6 Bolt Rotor / Tektro 180mm 6 Bolt Rotor",
             "rear_brake_rotor": "Magura MDR-A 180mm 6 Bolt Rotor / Tektro 180mm 6 Bolt Rotor"
           },
           "wheelset": {
             "front_wheel": "27.5in, 13g, 36hole, double wall Aluminum, Thru axle, Schrader Valve, black",
             "rear_wheel": "27.5in, 12g, 36hole, double wall Aluminum, Nutted Hub Drive Motor, Scharder Valve, black",
-            "tires": {
-              "manufacturer": "Kenda",
-              "size": "27.5x2.20",
-              "tubeless": false,
-              "details": "Kwick Seven-5 Sport K1052-006"
-            }
+            "tires": "Kenda Kwick Seven-5 Sport K1052-006 27.5 x 2.20"
           },
           "cockpit": {
             "saddle": "Aventon Saddle",
@@ -3116,29 +2589,10 @@
           },
           "ebike_system": {
             "pedal_assist": "3 Levels (with Ride Tune Customization)",
-            "motor": {
-              "peak_w": 864,
-              "power_w": 500,
-              "voltage_v": 36,
-              "details": ""
-            },
-            "motor_torque": {
-              "torque_nm": 60,
-              "details": ""
-            },
-            "display": {
-              "manufacturer": "Aventon",
-              "details": "BC280"
-            },
-            "battery": {
-              "cell_brand": "LG",
-              "capacity_wh": 733,
-              "voltage_v": 36,
-              "amphours_ah": 20.0,
-              "cell_format": "21700",
-              "removable": true,
-              "details": "Removable Internal Lithium-ion"
-            },
+            "motor": "36V, 500W (sustained), 864W (peak)",
+            "motor_torque": "60Nm",
+            "display": "Aventon BC280",
+            "battery": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
             "battery_weight": "8.7lbs",
             "controller": "36V, 24A",
             "throttle": "Aventon LH Handlebar Mounted",
@@ -3158,78 +2612,31 @@
           },
           "frameset": {
             "frame": "6061 Aluminum, Gravity Cast Front Triangle",
-            "fork": {
-              "manufacturer": "Aventon",
-              "type": "coil",
-              "travel_mm": 80,
-              "lockout": true,
-              "thru_axle": true,
-              "details": "Suspension Fork, w/ lockout,coil spring. 15x100mm thru-axle, 43mm offset"
-            },
+            "fork": "Aventon Suspension Fork, 80mm travel, w/ lockout,coil spring. 15x100mm thru-axle, 43mm offset",
             "rear_spacing": "142mm",
-            "fork_spacing": {
-              "travel_mm": 110,
-              "lockout": false,
-              "thru_axle": false,
-              "details": ""
-            },
+            "fork_spacing": "110mm",
             "frame_style": "Step-Through"
           },
           "drivetrain": {
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "details": "Altus RD-M310"
-            },
-            "shifter": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": "Trigger SL-M315-8R"
-            },
-            "chain": {
-              "links": 120,
-              "details": "7/8 speed"
-            },
-            "cassette": {
-              "manufacturer": "Shimano",
-              "cog_range": "12-32T",
-              "speeds": 8,
-              "details": "CS HG200-8"
-            },
+            "rear_derailleur": "Shimano Altus RD-M310",
+            "shifter": "Shimano 8 Speed Trigger SL-M315-8R",
+            "chain": "7/8 speed 120L",
+            "cassette": "12-32T / 8 Speed Shimano CS HG200-8",
             "chainring": "48T",
-            "crankset": {
-              "length_mm": 170,
-              "details": "3pc, crank arm"
-            },
+            "crankset": "3pc, 170mm crank arm",
             "bottom_bracket": "Square Taper, Sealed, double sided Torque Sensor 83mmx158.5mm",
             "pedals": "9/16\" Composite Platform"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "AT-2 Hydraulic disc brake / Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire"
-            },
-            "rear_brake": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "AT-2 Hydraulic disc brake / Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire"
-            },
+            "front_brake": "Magura AT-2 Hydraulic disc brake / Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
+            "rear_brake": "Magura AT-2 Hydraulic disc brake / Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
             "front_brake_rotor": "Magura MDR-A 180mm 6 Bolt Rotor / Tektro 180mm 6 Bolt Rotor",
             "rear_brake_rotor": "Magura MDR-A 180mm 6 Bolt Rotor / Tektro 180mm 6 Bolt Rotor"
           },
           "wheelset": {
             "front_wheel": "27.5in, 13g, 36hole, double wall Aluminum, Thru axle, Schrader Valve, black",
             "rear_wheel": "27.5in, 12g, 36hole, double wall Aluminum, Nutted Hub Drive Motor, Scharder Valve, black",
-            "tires": {
-              "manufacturer": "Kenda",
-              "size": "27.5x2.20",
-              "tubeless": false,
-              "details": "Kwick Seven-5 Sport K1052-006"
-            }
+            "tires": "Kenda Kwick Seven-5 Sport K1052-006 27.5 x 2.20"
           },
           "cockpit": {
             "saddle": "Aventon Saddle",
@@ -3456,33 +2863,11 @@
             "ideal_use": "Commuting"
           },
           "ebike_system": {
-            "motor": {
-              "manufacturer": "Aventon",
-              "placement": "mid",
-              "peak_w": 750,
-              "torque_nm": 100,
-              "details": "Ultro S Mid-drive Motor, Motor, Power"
-            },
-            "motor_torque": {
-              "torque_nm": 100,
-              "details": ""
-            },
-            "motor_power": {
-              "peak_w": 750,
-              "details": ""
-            },
-            "display": {
-              "details": "A280 Center Display"
-            },
-            "battery": {
-              "cell_brand": "Samsung",
-              "capacity_wh": 800,
-              "voltage_v": 36,
-              "amphours_ah": 20.0,
-              "cell_format": "21700",
-              "removable": true,
-              "details": "Removable Lithium-Ion., 58E cells"
-            },
+            "motor": "Aventon Ultro S Mid-drive Motor, 100Nm Motor Torque, 750W Peak Power",
+            "motor_torque": "100Nm",
+            "motor_power": "750W Peak",
+            "display": "A280 Center Display",
+            "battery": "Removable Lithium-Ion. 36V, 20Ah, 800Wh, Samsung 21700 58E cells",
             "battery_weight": "8.7lbs",
             "throttle": "Compatible, Not Included",
             "charger": "42V 4A charger",
@@ -3504,82 +2889,31 @@
           },
           "frameset": {
             "frame": "6061 Aluminum",
-            "fork": {
-              "type": "coil",
-              "travel_mm": 100,
-              "lockout": true,
-              "thru_axle": true,
-              "details": "Adjustable Coil Spring with Preload Adjustment and Lockout, 15x100 mm Thru Axle, 43 mm Offset, Tapered Steerer Tube"
-            },
+            "fork": "100 mm Travel, Adjustable Coil Spring with Preload Adjustment and Lockout, 15x100 mm Thru Axle, 43 mm Offset, Tapered Steerer Tube",
             "rear_spacing": "135mm",
-            "fork_spacing": {
-              "travel_mm": 100,
-              "lockout": false,
-              "thru_axle": false,
-              "details": ""
-            },
+            "fork_spacing": "100mm",
             "frame_style": "Step-Over"
           },
           "drivetrain": {
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 10,
-              "details": "Cues"
-            },
+            "rear_derailleur": "Shimano Cues 10-Speed",
             "chainring": "48T",
-            "crankset": {
-              "length_mm": 165,
-              "details": "ISIS Splined"
-            },
+            "crankset": "165mm ISIS Splined",
             "pedals": "9/16\" Composite Platform",
-            "shifter": {
-              "details": "E-Shifter"
-            },
-            "chain": {
-              "links": 126,
-              "details": "9/10/11 speed"
-            },
-            "cassette": {
-              "manufacturer": "Shimano",
-              "cog_range": "11-39T",
-              "speeds": 10,
-              "details": "Cues"
-            }
+            "shifter": "E-Shifter",
+            "chain": "9/10/11 speed 126L",
+            "cassette": "Shimano Cues 10-Speed 11-39T"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "pistons": 2,
-              "rotor_mm": 180,
-              "details": "HD-M3120 Hydraulic Disc Brakes"
-            },
-            "rear_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "pistons": 2,
-              "rotor_mm": 180,
-              "details": "HD-M3120 Hydraulic Disc Brakes"
-            },
+            "front_brake": "Tektro HD-M3120 2-Piston Hydraulic Disc Brakes",
+            "rear_brake": "Tektro HD-M3120 2-Piston Hydraulic Disc Brakes",
             "front_brake_rotor": "180mm 6 bolt",
             "rear_brake_rotor": "180mm 6 bolt",
-            "brakes": {
-              "actuation": "hydraulic",
-              "rotor_mm": 180,
-              "details": "Hydraulic"
-            }
+            "brakes": "Hydraulic"
           },
           "wheelset": {
             "front_wheel": "27.5\" Double Wall Aluminum, 36H",
             "rear_wheel": "27.5\" Double Wall Aluminum, 36H",
-            "tires": {
-              "manufacturer": "Kenda",
-              "size": "27.5x2.2",
-              "tubeless": false,
-              "details": "K1052"
-            }
+            "tires": "Kenda K1052, 27.5x2.2\""
           },
           "cockpit": {
             "saddle": "Aventon Saddle",
@@ -3872,33 +3206,11 @@
             "ideal_use": "Commuting"
           },
           "ebike_system": {
-            "motor": {
-              "manufacturer": "Aventon",
-              "placement": "mid",
-              "peak_w": 750,
-              "torque_nm": 100,
-              "details": "Ultro S Mid-drive Motor, Motor, Power"
-            },
-            "motor_torque": {
-              "torque_nm": 100,
-              "details": ""
-            },
-            "motor_power": {
-              "peak_w": 750,
-              "details": ""
-            },
-            "display": {
-              "details": "A280 Center Display"
-            },
-            "battery": {
-              "cell_brand": "Samsung",
-              "capacity_wh": 800,
-              "voltage_v": 36,
-              "amphours_ah": 20.0,
-              "cell_format": "21700",
-              "removable": true,
-              "details": "Removable Lithium-Ion., 58E cells"
-            },
+            "motor": "Aventon Ultro S Mid-drive Motor, 100Nm Motor Torque, 750W Peak Power",
+            "motor_torque": "100Nm",
+            "motor_power": "750W Peak",
+            "display": "A280 Center Display",
+            "battery": "Removable Lithium-Ion. 36V, 20Ah, 800Wh, Samsung 21700 58E cells",
             "battery_weight": "8.7lbs",
             "throttle": "Compatible, Not Included",
             "charger": "42V 4A charger",
@@ -3920,82 +3232,31 @@
           },
           "frameset": {
             "frame": "6061 Aluminum",
-            "fork": {
-              "type": "coil",
-              "travel_mm": 100,
-              "lockout": true,
-              "thru_axle": true,
-              "details": "Adjustable Coil Spring with Preload Adjustment and Lockout, 15x100 mm Thru Axle, 43 mm Offset, Tapered Steerer Tube"
-            },
+            "fork": "100 mm Travel, Adjustable Coil Spring with Preload Adjustment and Lockout, 15x100 mm Thru Axle, 43 mm Offset, Tapered Steerer Tube",
             "rear_spacing": "135mm",
-            "fork_spacing": {
-              "travel_mm": 100,
-              "lockout": false,
-              "thru_axle": false,
-              "details": ""
-            },
+            "fork_spacing": "100mm",
             "frame_style": "Step-Through"
           },
           "drivetrain": {
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 10,
-              "details": "Cues"
-            },
+            "rear_derailleur": "Shimano Cues 10-Speed",
             "chainring": "48T",
-            "crankset": {
-              "length_mm": 165,
-              "details": "ISIS Splined"
-            },
+            "crankset": "165mm ISIS Splined",
             "pedals": "9/16\" Composite Platform",
-            "shifter": {
-              "details": "E-Shifter"
-            },
-            "chain": {
-              "links": 126,
-              "details": "9/10/11 speed"
-            },
-            "cassette": {
-              "manufacturer": "Shimano",
-              "cog_range": "11-39T",
-              "speeds": 10,
-              "details": "Cues"
-            }
+            "shifter": "E-Shifter",
+            "chain": "9/10/11 speed 126L",
+            "cassette": "Shimano Cues 10-Speed 11-39T"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "pistons": 2,
-              "rotor_mm": 180,
-              "details": "HD-M3120 Hydraulic Disc Brakes"
-            },
-            "rear_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "pistons": 2,
-              "rotor_mm": 180,
-              "details": "HD-M3120 Hydraulic Disc Brakes"
-            },
+            "front_brake": "Tektro HD-M3120 2-Piston Hydraulic Disc Brakes",
+            "rear_brake": "Tektro HD-M3120 2-Piston Hydraulic Disc Brakes",
             "front_brake_rotor": "180mm 6 bolt",
             "rear_brake_rotor": "180mm 6 bolt",
-            "brakes": {
-              "actuation": "hydraulic",
-              "rotor_mm": 180,
-              "details": "Hydraulic"
-            }
+            "brakes": "Hydraulic"
           },
           "wheelset": {
             "front_wheel": "27.5\" Double Wall Aluminum, 36H",
             "rear_wheel": "27.5\" Double Wall Aluminum, 36H",
-            "tires": {
-              "manufacturer": "Kenda",
-              "size": "27.5x2.2",
-              "tubeless": false,
-              "details": "K1052"
-            }
+            "tires": "Kenda K1052, 27.5x2.2\""
           },
           "cockpit": {
             "saddle": "Aventon Saddle",
@@ -4248,34 +3509,11 @@
             "range": "Up to 75 Miles"
           },
           "ebike_system": {
-            "motor": {
-              "placement": "hub",
-              "peak_w": 1188,
-              "power_w": 1440,
-              "torque_nm": 80,
-              "details": "Hub Motor, ( in Boost Mode), ( in Boost Mode)"
-            },
-            "motor_torque": {
-              "torque_nm": 80,
-              "details": ""
-            },
-            "motor_power": {
-              "peak_w": 750,
-              "details": ""
-            },
-            "display": {
-              "manufacturer": "Aventon",
-              "details": "A280"
-            },
-            "battery": {
-              "cell_brand": "LG",
-              "capacity_wh": 733,
-              "voltage_v": 36,
-              "amphours_ah": 20.0,
-              "cell_format": "21700",
-              "removable": true,
-              "details": "Removable Internal Lithium-ion"
-            },
+            "motor": "Hub Motor, 80Nm (96Nm in Boost Mode), 1188W Peak (1440W in Boost Mode)",
+            "motor_torque": "80Nm",
+            "motor_power": "750W (1188W Peak)",
+            "display": "Aventon A280",
+            "battery": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
             "battery_weight": "8.7lbs",
             "controller": "36V, 33A",
             "throttle": "Included",
@@ -4298,82 +3536,32 @@
           },
           "frameset": {
             "frame": "6061 Aluminum",
-            "fork": {
-              "type": "coil",
-              "travel_mm": 80,
-              "lockout": true,
-              "thru_axle": false,
-              "details": "Adjustable Coil Spring with Preload Adjustment and Lockout, Nutted Axle"
-            },
+            "fork": "80 mm Travel, Adjustable Coil Spring with Preload Adjustment and Lockout, Nutted Axle",
             "rear_spacing": "148mm",
-            "fork_spacing": {
-              "travel_mm": 100,
-              "lockout": false,
-              "thru_axle": false,
-              "details": ""
-            }
+            "fork_spacing": "100mm"
           },
           "drivetrain": {
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "details": "Altus RD-M310"
-            },
-            "shifter": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": "Trigger"
-            },
-            "chain": {
-              "links": 120,
-              "details": "7/8 speed"
-            },
-            "cassette": {
-              "manufacturer": "Shimano",
-              "cog_range": "12-32T",
-              "speeds": 8,
-              "details": "CS-HG200-8 Cassette"
-            },
+            "rear_derailleur": "Shimano Altus RD-M310",
+            "shifter": "Shimano 8-Speed Trigger",
+            "chain": "7/8 speed 120L",
+            "cassette": "Shimano CS-HG200-8 8 speed Cassette, 12-32T",
             "chainring": "48T",
             "chainring_bcd": "N/A",
-            "crankset": {
-              "length_mm": 165,
-              "details": ""
-            },
+            "crankset": "165mm",
             "bottom_bracket": "Square Tapered, Sealed, Double Sided Torque Sensor, 83mm x 158.5mm",
             "pedals": "9/16\" Composite Platform"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "pistons": 2,
-              "rotor_mm": 180,
-              "details": "HD-E3520 Hydraulic Disc w/ E-Cutoff"
-            },
-            "rear_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "pistons": 2,
-              "rotor_mm": 180,
-              "details": "HD-E3520 Hydraulic Disc w/ E-Cutoff"
-            },
+            "front_brake": "Tektro HD-E3520 2-Piston Hydraulic Disc w/ E-Cutoff",
+            "rear_brake": "Tektro HD-E3520 2-Piston Hydraulic Disc w/ E-Cutoff",
             "front_brake_rotor": "180mm 6 bolt",
             "rear_brake_rotor": "180mm 6 bolt",
-            "brakes": {
-              "rotor_mm": 180,
-              "details": "Regenerative Braking"
-            }
+            "brakes": "Regenerative Braking"
           },
           "wheelset": {
             "front_wheel": "27.5\" Double Wall Aluminum, 36 Hole, 15x100mm Thru Axle",
             "rear_wheel": "27.5\" Double Wall Aluminum, 750W Nutted Axle Hub Motor",
-            "tires": {
-              "manufacturer": "Kenda",
-              "tubeless": false,
-              "details": "Kwick Seven-5 Sport 27.5\"x2.2\""
-            }
+            "tires": "Kenda Kwick Seven-5 Sport 27.5\"x2.2\""
           },
           "cockpit": {
             "saddle": "Aventon Saddle",
@@ -4628,34 +3816,11 @@
             "range": "Up to 75 Miles"
           },
           "ebike_system": {
-            "motor": {
-              "placement": "hub",
-              "peak_w": 1188,
-              "power_w": 1440,
-              "torque_nm": 80,
-              "details": "Hub Motor, ( in Boost Mode), ( in Boost Mode)"
-            },
-            "motor_torque": {
-              "torque_nm": 80,
-              "details": ""
-            },
-            "motor_power": {
-              "peak_w": 750,
-              "details": ""
-            },
-            "display": {
-              "manufacturer": "Aventon",
-              "details": "A280"
-            },
-            "battery": {
-              "cell_brand": "LG",
-              "capacity_wh": 733,
-              "voltage_v": 36,
-              "amphours_ah": 20.0,
-              "cell_format": "21700",
-              "removable": true,
-              "details": "Removable Internal Lithium-ion"
-            },
+            "motor": "Hub Motor, 80Nm (96Nm in Boost Mode), 1188W Peak (1440W in Boost Mode)",
+            "motor_torque": "80Nm",
+            "motor_power": "750W (1188W Peak)",
+            "display": "Aventon A280",
+            "battery": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
             "battery_weight": "8.7lbs",
             "controller": "36V, 33A",
             "throttle": "Included",
@@ -4679,74 +3844,31 @@
           },
           "frameset": {
             "frame": "6061 Aluminum",
-            "fork": {
-              "type": "coil",
-              "travel_mm": 80,
-              "lockout": true,
-              "thru_axle": false,
-              "details": "Adjustable Coil Spring with Preload Adjustment and Lockout, Nutted Axle"
-            },
+            "fork": "80 mm Travel, Adjustable Coil Spring with Preload Adjustment and Lockout, Nutted Axle",
             "rear_spacing": "148mm",
-            "fork_spacing": {
-              "travel_mm": 100,
-              "lockout": false,
-              "thru_axle": false,
-              "details": ""
-            }
+            "fork_spacing": "100mm"
           },
           "drivetrain": {
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "details": "Altus RD-M310"
-            },
-            "shifter": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": "Trigger"
-            },
-            "chain": {
-              "links": 120,
-              "details": "7/8 speed"
-            },
-            "cassette": {
-              "manufacturer": "Shimano",
-              "cog_range": "12-32T",
-              "speeds": 8,
-              "details": "CS-HG200-8 Cassette"
-            },
+            "rear_derailleur": "Shimano Altus RD-M310",
+            "shifter": "Shimano 8-Speed Trigger",
+            "chain": "7/8 speed 120L",
+            "cassette": "Shimano CS-HG200-8 8 speed Cassette, 12-32T",
             "chainring": "48T",
             "chainring_bcd": "N/A",
-            "crankset": {
-              "length_mm": 165,
-              "details": ""
-            },
+            "crankset": "165mm",
             "bottom_bracket": "Square Tapered, Sealed, Double Sided Torque Sensor, 83mm x 158.5mm",
             "pedals": "9/16\" Composite Platform"
           },
           "brakes": {
-            "rear_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "pistons": 2,
-              "rotor_mm": 180,
-              "details": "HD-E3520 Hydraulic Disc w/ E-Cutoff"
-            },
+            "rear_brake": "Tektro HD-E3520 2-Piston Hydraulic Disc w/ E-Cutoff",
             "front_brake_rotor": "180mm 6 bolt",
             "rear_brake_rotor": "180mm 6 bolt",
-            "brakes": {
-              "rotor_mm": 180,
-              "details": "Regenerative Braking"
-            }
+            "brakes": "Regenerative Braking"
           },
           "wheelset": {
             "front_wheel": "27.5\" Double Wall Aluminum, 36 Hole, 15x100mm Thru Axle",
             "rear_wheel": "27.5\" Double Wall Aluminum, 750W Nutted Axle Hub Motor",
-            "tires": {
-              "manufacturer": "Kenda",
-              "tubeless": false,
-              "details": "Kwick Seven-5 Sport 27.5\"x2.2\""
-            }
+            "tires": "Kenda Kwick Seven-5 Sport 27.5\"x2.2\""
           },
           "cockpit": {
             "saddle": "Aventon Saddle",
@@ -5020,32 +4142,11 @@
             "ideal_use": "Cruising"
           },
           "ebike_system": {
-            "motor": {
-              "power_w": 500,
-              "voltage_v": 36,
-              "details": ""
-            },
-            "motor_torque": {
-              "torque_nm": 60,
-              "details": ""
-            },
-            "motor_power": {
-              "power_w": 500,
-              "details": ""
-            },
-            "display": {
-              "manufacturer": "Aventon",
-              "details": "BC147"
-            },
-            "battery": {
-              "cell_brand": "LG",
-              "capacity_wh": 733,
-              "voltage_v": 36,
-              "amphours_ah": 20.0,
-              "cell_format": "21700",
-              "removable": true,
-              "details": "Removable Internal Lithium-ion"
-            },
+            "motor": "36v, 500W",
+            "motor_torque": "60Nm",
+            "motor_power": "500W",
+            "display": "Aventon BC147",
+            "battery": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
             "battery_weight": "8.7lbs",
             "controller": "36V, 24A",
             "throttle": "Aventon LH Handlebar Mounted",
@@ -5069,73 +4170,31 @@
           },
           "frameset": {
             "frame": "6061 Aluminum, Gravity Cast Front Triangle",
-            "fork": {
-              "type": "rigid",
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Rigid Aluminum Fork"
-            },
+            "fork": "Rigid Aluminum Fork",
             "rear_spacing": "142mm",
-            "fork_spacing": {
-              "travel_mm": 100,
-              "lockout": false,
-              "thru_axle": false,
-              "details": ""
-            }
+            "fork_spacing": "100mm"
           },
           "drivetrain": {
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": "Altus"
-            },
-            "shifter": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": "Trigger"
-            },
-            "chain": {
-              "links": 122,
-              "details": "7/8 speed"
-            },
-            "cassette": {
-              "manufacturer": "Shimano",
-              "cog_range": "12-32T",
-              "speeds": 8,
-              "details": "CS HG200-8"
-            },
+            "rear_derailleur": "Shimano Altus 8-Speed",
+            "shifter": "Shimano 8-Speed Trigger",
+            "chain": "7/8 speed 122L",
+            "cassette": "12-32T / 8 Speed Shimano CS HG200-8",
             "chainring": "48T",
             "chainring_bcd": "N/A",
-            "crankset": {
-              "length_mm": 170,
-              "details": "3pc, crank arm"
-            },
+            "crankset": "3pc, 170mm crank arm",
             "bottom_bracket": "Square Taper, Sealed, double sided Torque Sensor 83mmx158.5mm",
             "pedals": "9/16\" Composite Platform"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "rotor_mm": 180,
-              "details": "Hydraulic w/ E-Cutoff"
-            },
-            "rear_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "rotor_mm": 180,
-              "details": "Hydraulic w/ E-Cutoff"
-            },
+            "front_brake": "Tektro Hydraulic w/ E-Cutoff",
+            "rear_brake": "Tektro Hydraulic w/ E-Cutoff",
             "front_brake_rotor": "180mm 6 bolt",
             "rear_brake_rotor": "180mm 6 bolt"
           },
           "wheelset": {
             "front_wheel": "27.5\", 36 hole, Nutted axle, Schrader Valve",
             "rear_wheel": "27.5\", 36 hole, Nutted hub drive motor, Schrader Valve",
-            "tires": {
-              "tubeless": false,
-              "details": "27.5\" x 2.1\""
-            }
+            "tires": "27.5\" x 2.1\""
           },
           "cockpit": {
             "saddle": "Aventon Saddle",
@@ -5423,33 +4482,11 @@
             "speed": "Max: 28 MPH"
           },
           "ebike_system": {
-            "motor": {
-              "placement": "hub",
-              "power_w": 750,
-              "voltage_v": 36,
-              "details": "Hub Drive"
-            },
-            "motor_torque": {
-              "torque_nm": 80,
-              "details": "( in Boost Mode)"
-            },
-            "motor_power": {
-              "peak_w": 750,
-              "details": "att att peak in boost mode"
-            },
-            "display": {
-              "manufacturer": "Aventon",
-              "details": "A280"
-            },
-            "battery": {
-              "cell_brand": "LG",
-              "capacity_wh": 733,
-              "voltage_v": 36,
-              "amphours_ah": 20.0,
-              "cell_format": "21700",
-              "removable": true,
-              "details": "Removable Internal Lithium-ion"
-            },
+            "motor": "36V, 750W Hub Drive",
+            "motor_torque": "80Nm (96Nm in Boost Mode)",
+            "motor_power": "750W, 1188 Watt Peak (1440 watt peak in boost mode)",
+            "display": "Aventon A280",
+            "battery": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
             "battery_weight": "8.7lbs",
             "controller": "36V, 33A",
             "throttle": "Aventon LH Handlebar Mounted",
@@ -5473,80 +4510,31 @@
           },
           "frameset": {
             "frame": "6061 Aluminum, Gravity Cast Front Triangle",
-            "fork": {
-              "manufacturer": "Aventon",
-              "type": "rigid",
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Rigid Alloy"
-            },
+            "fork": "Aventon Rigid Alloy",
             "rear_spacing": "147mm",
-            "fork_spacing": {
-              "travel_mm": 100,
-              "lockout": false,
-              "thru_axle": false,
-              "details": ""
-            }
+            "fork_spacing": "100mm"
           },
           "drivetrain": {
-            "cassette": {
-              "manufacturer": "Shimano",
-              "cog_range": "12-32T",
-              "speeds": 8,
-              "details": "CS-HG200-8 Cassette"
-            },
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": "Altus RD-M310"
-            },
-            "shifter": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": "Trigger SL-M315-8R"
-            },
-            "chain": {
-              "links": 122,
-              "details": "7/8 speed"
-            },
+            "cassette": "Shimano CS-HG200-8 8 speed Cassette, 12-32T",
+            "rear_derailleur": "Shimano Altus RD-M310 8 Speed",
+            "shifter": "Shimano 8 Speed Trigger SL-M315-8R",
+            "chain": "7/8 speed 122L",
             "chainring": "48T",
-            "crankset": {
-              "length_mm": 165,
-              "details": "3pc, crank arm"
-            },
+            "crankset": "3pc, 165mm crank arm",
             "bottom_bracket": "Square Tapered, Sealed, Double Sided Torque Sensor, 83mm x 158.5mm",
             "pedals": "9/16\" Composite Platform"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "HD-E3120 hydraulic disc"
-            },
-            "rear_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "HD-E3120 hydraulic disc"
-            },
+            "front_brake": "Tektro HD-E3120 hydraulic disc",
+            "rear_brake": "Tektro HD-E3120 hydraulic disc",
             "front_brake_rotor": "180mm 6 bolt",
             "rear_brake_rotor": "180mm 6 bolt",
-            "brakes": {
-              "rotor_mm": 180,
-              "details": "Regenerative Braking"
-            }
+            "brakes": "Regenerative Braking"
           },
           "wheelset": {
             "front_wheel": "27.5\" Double Wall Aluminum rim, 36 13g spokes, 15x100mm Thru Axle, Schrader Valve",
             "rear_wheel": "27.5\" Double Wall Aluminum rim, 36 12g spokes, 750W Nutted Axle Hub Motor, Schrader Valve",
-            "tires": {
-              "size": "27.5x2.1",
-              "tubeless": false,
-              "details": "33TPI"
-            }
+            "tires": "27.5x2.1 33TPI"
           },
           "cockpit": {
             "saddle": "Aventon 250mm wide Saddle",
@@ -5862,36 +4850,11 @@
             "speed": "Class 1"
           },
           "ebike_system": {
-            "motor": {
-              "manufacturer": "Aventon",
-              "placement": "mid",
-              "peak_w": 750,
-              "power_w": 250,
-              "torque_nm": 100,
-              "voltage_v": 36,
-              "details": "a100 mid-drive., . IP67 rating"
-            },
-            "motor_torque": {
-              "torque_nm": 100,
-              "details": ""
-            },
-            "motor_power": {
-              "peak_w": 250,
-              "details": ""
-            },
-            "display": {
-              "manufacturer": "Aventon",
-              "details": "BC201"
-            },
-            "battery": {
-              "cell_brand": "LG",
-              "manufacturer": "Aventon",
-              "capacity_wh": 708,
-              "voltage_v": 36,
-              "cell_format": "21700",
-              "removable": false,
-              "details": ""
-            },
+            "motor": "Aventon a100 mid-drive. 36v, 250W (sustained), 750W (peak), 100NM torque. IP67 rating",
+            "motor_torque": "100Nm",
+            "motor_power": "250W (750W Peak)",
+            "display": "Aventon BC201",
+            "battery": "Aventon 708 WH. 36V LG 21700 cells",
             "battery_weight": "8.44 lbs",
             "throttle": "N/A",
             "sensors": "Double Sided Torque Sensor Integrated in Motor",
@@ -5910,80 +4873,32 @@
           },
           "frameset": {
             "frame": "6061 Single-Butted Aluminum Alloy",
-            "fork": {
-              "manufacturer": "RockShox",
-              "type": "coil",
-              "travel_mm": 35,
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Psylo Silver R, Stanchions, coil, 44mm offset, 15x110mm BOOST, 1.5\"tapered steerer tube, Rebound adjust"
-            },
+            "fork": "Rockshox Psylo Silver R, 35mm Stanchions, coil, 44mm offset, 15x110mm BOOST, 1.5\"tapered steerer tube, Rebound adjust",
             "rear_spacing": "12x148mm",
-            "fork_spacing": {
-              "travel_mm": 110,
-              "lockout": false,
-              "thru_axle": false,
-              "details": "15x"
-            },
+            "fork_spacing": "15x110mm",
             "frame_style": "Step-Over"
           },
           "drivetrain": {
-            "rear_derailleur": {
-              "manufacturer": "SRAM",
-              "speeds": 12,
-              "details": "NX"
-            },
-            "shifter": {
-              "manufacturer": "SRAM",
-              "details": "NX"
-            },
-            "chain": {
-              "manufacturer": "SRAM",
-              "details": "12-Speed"
-            },
-            "cassette": {
-              "manufacturer": "SRAM",
-              "cog_range": "10-50T",
-              "speeds": 12,
-              "details": "SX"
-            },
+            "rear_derailleur": "SRAM NX 12-Speed",
+            "shifter": "SRAM NX",
+            "chain": "SRAM 12-Speed",
+            "cassette": "SRAM SX 12-Speed 10-50T",
             "chainring": "SRAM 34T",
             "chainring_bcd": "104",
-            "crankset": {
-              "length_mm": 165,
-              "details": "ISIS Splined"
-            },
+            "crankset": "165mm ISIS Splined",
             "bottom_bracket": "N/A",
             "pedals": "9/16\" Alloy Platform"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "SRAM",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "pistons": 4,
-              "rotor_mm": 200,
-              "details": "DB6 Hydraulic Disc Brakes"
-            },
-            "rear_brake": {
-              "manufacturer": "SRAM",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "pistons": 4,
-              "rotor_mm": 200,
-              "details": "DB6 Hydraulic Disc Brakes"
-            },
+            "front_brake": "SRAM DB6 4-Piston Hydraulic Disc Brakes",
+            "rear_brake": "SRAM DB6 4-Piston Hydraulic Disc Brakes",
             "rear_brake_rotor": "SRAM G2 200mm",
             "front_brake_rotor": "SRAM G2 200mm"
           },
           "wheelset": {
             "rear_wheel": "29in, 32hole, BOOST Thru Axle, Presta Valve, Tubeless Ready",
             "front_wheel": "29in, 32hole, BOOST Thru Axle, Presta Valve, Tubeless Ready",
-            "tires": {
-              "manufacturer": "Maxxis",
-              "tubeless": true,
-              "details": "Rekon 29\"x2.4\" Tubeless Ready"
-            }
+            "tires": "Maxxis Rekon 29\"x2.4\" Tubeless Ready"
           },
           "cockpit": {
             "saddle": "Aventon Saddle",
@@ -6303,28 +5218,10 @@
           },
           "ebike_system": {
             "pedal_assist": "4 Levels",
-            "motor": {
-              "placement": "hub",
-              "peak_w": 540,
-              "power_w": 350,
-              "voltage_v": 36,
-              "details": "sustained, brushless hub motor"
-            },
-            "motor_torque": {
-              "torque_nm": 45,
-              "details": ""
-            },
-            "display": {
-              "manufacturer": "Aventon",
-              "details": "BC280"
-            },
-            "battery": {
-              "cell_brand": "LG",
-              "voltage_v": 36,
-              "amphours_ah": 9.6,
-              "removable": true,
-              "details": "Removable Internal Lithium-ion,(345.6Wh) with Cells"
-            },
+            "motor": "36V, 350W sustained, 540W peak brushless hub motor",
+            "motor_torque": "45Nm",
+            "display": "Aventon BC280",
+            "battery": "Removable Internal Lithium-ion 36V,9.6Ah(345.6Wh) with LG Cells",
             "battery_weight": "4.14 lbs",
             "controller": "36v 15A",
             "throttle": "Aventon LH Handlebar Mounted",
@@ -6344,77 +5241,32 @@
           },
           "frameset": {
             "frame": "6061 Double-Butted Aluminum Alloy with Internal Battery",
-            "fork": {
-              "lockout": false,
-              "thru_axle": false,
-              "details": "AE-E09 Soltera AL fork"
-            },
+            "fork": "AE-E09 Soltera AL fork",
             "rear_spacing": "142mm",
-            "fork_spacing": {
-              "travel_mm": 100,
-              "lockout": false,
-              "thru_axle": false,
-              "details": ""
-            },
+            "fork_spacing": "100mm",
             "frame_style": "Step-Over"
           },
           "drivetrain": {
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 7,
-              "details": "Tourney RD-TY300D"
-            },
-            "shift_lever": {
-              "manufacturer": "Shimano",
-              "speeds": 7,
-              "details": "twist RevoShift"
-            },
-            "chain": {
-              "links": 110,
-              "details": "7/8 speed"
-            },
-            "freewheel": {
-              "manufacturer": "Shimano",
-              "cog_range": "14-28T",
-              "speeds": 7,
-              "details": "MF-TZ500-7 Freewheel"
-            },
+            "rear_derailleur": "Shimano Tourney RD-TY300D 7 speed",
+            "shift_lever": "Shimano 7 speed twist RevoShift",
+            "chain": "7/8 speed 110 link",
+            "freewheel": "Shimano MF-TZ500-7 Freewheel, Speed : 7, 14-28T",
             "chainring": "48T",
             "chainring_bcd": "130",
-            "crankset": {
-              "length_mm": 170,
-              "details": "3pc, crank arm"
-            },
+            "crankset": "3pc, 170mm crank arm",
             "bottom_bracket": "Square Taper, Sealed, Dual-Sided Torque Sensor",
             "pedals": "9/16\" Alloy Platform"
           },
           "brakes": {
             "front_brake_rotor": "180mm 6 bolt",
             "rear_brake_rotor": "180mm 6 bolt",
-            "front_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "HD-T280 Hydraulic disc brake w/o e-cutoff"
-            },
-            "rear_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "HD-T280 Hydraulic disc brake w/o e-cutoff"
-            }
+            "front_brake": "Tektro HD-T280 Hydraulic disc brake w/o e-cutoff",
+            "rear_brake": "Tektro HD-T280 Hydraulic disc brake w/o e-cutoff"
           },
           "wheelset": {
             "front_wheel": "700c, 36-spoke, double-wall aluminum rim, black finish, with a nutted hub drive motor, 13g stainless steel spokes (267mm NDS/269mm DS), Presta valve.",
             "rear_wheel": "700c, 36-spoke, double-wall aluminum rim, black finish, with a nutted hub drive motor, 13g stainless steel spokes (243mm NDS/242mm DS), Presta valve.",
-            "tires": {
-              "manufacturer": "Kenda",
-              "size": "00x3",
-              "tubeless": false,
-              "details": "K1085 78C"
-            }
+            "tires": "Kenda K1085 700x38C"
           },
           "cockpit": {
             "seatpost": "Aventon 27.2",
@@ -6683,24 +5535,10 @@
             "speed": "Class 1"
           },
           "ebike_system": {
-            "motor": {
-              "power_w": 250,
-              "voltage_v": 36,
-              "details": ""
-            },
-            "motor_torque": {
-              "torque_nm": 40,
-              "details": ""
-            },
-            "display": {
-              "manufacturer": "Aventon",
-              "details": "BC147"
-            },
-            "battery": {
-              "amphours_ah": 94.0,
-              "removable": false,
-              "details": "Integrated Lithium-ion 36.9V, 9., 366.8Wh"
-            },
+            "motor": "36v, 250W",
+            "motor_torque": "40Nm",
+            "display": "Aventon BC147",
+            "battery": "Integrated Lithium-ion 36.9V, 9.94Ah, 366.8Wh",
             "battery_weight": "4.2lbs",
             "controller": "36v 15A",
             "throttle": "N/A",
@@ -6720,19 +5558,9 @@
           },
           "frameset": {
             "frame": "6061 Double-Butted Aluminum Alloy with Internal Battery",
-            "fork": {
-              "type": "rigid",
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Rigid Aluminum Fork"
-            },
+            "fork": "Rigid Aluminum Fork",
             "rear_spacing": "142mm",
-            "fork_spacing": {
-              "travel_mm": 100,
-              "lockout": false,
-              "thru_axle": false,
-              "details": ""
-            },
+            "fork_spacing": "100mm",
             "frame_style": "Step-Over"
           },
           "drivetrain": {
@@ -6740,40 +5568,20 @@
             "chainring": "60T",
             "belt": "Gates Carbon Belt Drive 122T CDN",
             "chainring_bcd": "130",
-            "crankset": {
-              "length_mm": 165,
-              "details": "3pc, crank arm"
-            },
+            "crankset": "3pc, 165mm crank arm",
             "bottom_bracket": "Square Taper, Sealed, double sided Torque Sensor 83mmx158.5mm",
             "pedals": "9/16\" Composite Platform"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "HD-T3020 Hydraulic Disc Brake (w/o e-cutoff)"
-            },
-            "rear_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "HD-T3020 Hydraulic Disc Brake (w/o e-cutoff)"
-            },
+            "front_brake": "Tektro HD-T3020 Hydraulic Disc Brake (w/o e-cutoff)",
+            "rear_brake": "Tektro HD-T3020 Hydraulic Disc Brake (w/o e-cutoff)",
             "front_brake_rotor": "Tektro 180mm 6 bolt",
             "rear_brake_rotor": "Tektro 180mm 6 bolt"
           },
           "wheelset": {
             "front_wheel": "700c, 32-spoke, Double Wall Aluminum Rim, Thru Axle",
             "rear_wheel": "700c, 36-spoke, Double Wall Aluminum Rim, Nutted Hub Drive Motor",
-            "tires": {
-              "manufacturer": "Kenda",
-              "size": "00x3",
-              "tubeless": false,
-              "details": "K1085 78C"
-            },
+            "tires": "Kenda K1085 700x38C",
             "hub_flywheel": "22T"
           },
           "cockpit": {

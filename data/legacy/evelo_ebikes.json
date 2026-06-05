@@ -29,29 +29,12 @@
             "maximum_rider_weight": "Recommended for riders up to 350 lbs. Larger riders can be accommodated – contact us for details."
           },
           "ebike_system": {
-            "motor": {
-              "manufacturer": "Bafang",
-              "peak_w": 600,
-              "torque_nm": 120,
-              "details": "M600, Cadence and Sensors"
-            },
-            "battery": {
-              "cell_brand": "Samsung",
-              "voltage_v": 48,
-              "amphours_ah": 15.0,
-              "removable": false,
-              "details": "In Frame Battery - Optional Rear Rack Battery Add-On"
-            },
+            "motor": "Bafang M600 600 W, 1200 W Peak, 120 Nm Cadence and Torque Sensors",
+            "battery": "48V 15AH Samsung In Frame Battery - Optional 14.5AH Rear Rack Battery Add-On",
             "charger": "48V 3A Charger",
-            "maximum_motor_assisted_speed": {
-              "details": "Up to 20 MPH - Can be raised for areas that allow higher speeds"
-            },
+            "maximum_motor_assisted_speed": "Up to 20 MPH - Can be raised for areas that allow higher speeds",
             "electric_assist": "5 levels of Pedal Assistance + Throttle Standard",
-            "display": {
-              "manufacturer": "Bafang",
-              "type": "color",
-              "details": "C-010 Full-Color 4.7\" Display"
-            },
+            "display": "Bafang C-010 Full-Color 4.7\" Display",
             "bicycle_weight_without_battery": "58 lbs",
             "primary_battery_weight": "8.2 lbs",
             "secondary_battery_weight": "9.6 lbs w/ Rack"
@@ -61,43 +44,21 @@
           },
           "frameset": {
             "frame": "Hydroformed Aluminum 6061 T6",
-            "fork": {
-              "manufacturer": "SR Suntour",
-              "type": "coil",
-              "lockout": false,
-              "thru_axle": false,
-              "details": "XCM Suspension Fork"
-            }
+            "fork": "SR Suntour XCM Suspension Fork"
           },
           "drivetrain": {
             "transmission": "Enviolo Trekking, twist shift (mechanical shifter) Gates CDX belt drive",
             "drivetrain": "Gates Carbon Drive CDX with Enviolo Trekking CVT",
-            "shifters": {
-              "manufacturer": "Enviolo",
-              "gearing": "continuously_variable",
-              "details": "Mechanical Twist Shifter"
-            },
+            "shifters": "Enviolo Mechanical Twist Shifter",
             "pedals": "Wellgo Comfort Pedal"
           },
           "brakes": {
-            "brakes": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "details": "Auriga E-Comp Hydraulic Brakes"
-            }
+            "brakes": "Tektro Auriga E-Comp Hydraulic Brakes"
           },
           "wheelset": {
             "wheels": "27.5\" Extra Wide Rims with Heavy Duty 13-gauge Spokes - Tubeless Compatible",
-            "tires": {
-              "manufacturer": "Schwalbe",
-              "size": "27.5x2.8",
-              "tubeless": false,
-              "details": "Moto X with Greenguard flat protection"
-            },
-            "total_length_tire_to_tire": {
-              "tubeless": false,
-              "details": "75\""
-            }
+            "tires": "Schwalbe Moto X 27.5 x 2.8\" with Greenguard flat protection",
+            "total_length_tire_to_tire": "75\""
           },
           "cockpit": {
             "seat": "Selle Royal Freccia with Royal Gel",
@@ -187,30 +148,12 @@
             "maximum_rider_weight": "Recommended for riders up to 350 lbs. Larger riders can be accommodated – contact us for details."
           },
           "ebike_system": {
-            "motor": {
-              "manufacturer": "Bafang",
-              "placement": "mid",
-              "power_w": 500,
-              "torque_nm": 105,
-              "voltage_v": 48,
-              "details": "BBS02 Mid-Drive Brushless Motor w"
-            },
-            "battery": {
-              "cell_brand": "Panasonic",
-              "voltage_v": 48,
-              "amphours_ah": 10.5,
-              "removable": false,
-              "details": "Lithium-Ion with Advanced Battery Management Software"
-            },
+            "motor": "500W Bafang BBS02 Mid-Drive Brushless Motor w/ 105N.m. Torque. 48V",
+            "battery": "Panasonic Lithium-Ion 48V 10.5Ah with Advanced Battery Management Software",
             "charger": "48V Smart Charger",
-            "maximum_motor_assisted_speed": {
-              "details": "20 Miles Per Hour, User Adjustable"
-            },
+            "maximum_motor_assisted_speed": "20 Miles Per Hour, User Adjustable",
             "electric_assist": "Five Levels of Pedal Assist, Plus Electric-Only (via Throttle)",
-            "display": {
-              "type": "color",
-              "details": "Multi-Color 3.2” IPS Display with USB Charger (DPC-18)"
-            },
+            "display": "Multi-Color 3.2” IPS Display with USB Charger (DPC-18)",
             "bicycle_weight_without_battery": "71 lbs.",
             "battery_weight": "6 lbs."
           },
@@ -219,39 +162,20 @@
           },
           "frameset": {
             "frame": "6061 High-Strength Aluminum Alloy",
-            "fork": {
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Custom 6061 Alloy with Steel Steerer Tube, Designed for Fenders"
-            }
+            "fork": "Custom 6061 Alloy with Steel Steerer Tube, Designed for Fenders"
           },
           "drivetrain": {
             "speeds": "Shimano 3-Speed IGH Transmission",
-            "shifters": {
-              "manufacturer": "Shimano",
-              "details": "Grip Shifter, 3 Speeds"
-            },
+            "shifters": "Shimano Grip Shifter, 3 Speeds",
             "pedals": "Wellgo Comfort"
           },
           "brakes": {
-            "brakes": {
-              "manufacturer": "Tektro",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "MD-M300 Disc Brakes. rotor front and rear. Integrated brake sensors"
-            }
+            "brakes": "Tektro MD-M300 Disc Brakes. 180mm rotor front and rear. Integrated brake sensors."
           },
           "wheelset": {
             "wheel": "24\" Extra Wide Rims with Heavy Duty 13-gauge Spokes",
-            "tire": {
-              "manufacturer": "CST",
-              "tubeless": false,
-              "details": "Cyclops 24\" x 2.4″"
-            },
-            "total_length_tire_to_tire": {
-              "tubeless": false,
-              "details": "71.5\""
-            }
+            "tire": "CST Cyclops 24\" x 2.4″",
+            "total_length_tire_to_tire": "71.5\""
           },
           "cockpit": {
             "seat": "Extra Wide Velo Breeze with Memory Foam",
@@ -355,28 +279,12 @@
             "maximum_rider_weight": "Recommended for riders up to 350 lbs"
           },
           "ebike_system": {
-            "motor": {
-              "manufacturer": "Bafang",
-              "peak_w": 600,
-              "torque_nm": 105,
-              "details": "M410HD, Cadence and Sensors"
-            },
-            "battery": {
-              "voltage_v": 48,
-              "amphours_ah": 11.6,
-              "removable": false,
-              "details": "Battery with Advanced Battery Management Software"
-            },
+            "motor": "Bafang M410HD 600 W, 980 W Peak, 105 Nm Cadence and Torque Sensors",
+            "battery": "48V 11.6Ah Battery with Advanced Battery Management Software",
             "charger": "48V Smart Charger",
-            "maximum_motor_assisted_speed": {
-              "details": "Up to 20 MPH - Can be raised for areas that allow higher speeds"
-            },
+            "maximum_motor_assisted_speed": "Up to 20 MPH - Can be raised for areas that allow higher speeds",
             "electric_assist": "Multiple Levels, Plus Electric-Only (via Throttle)",
-            "display": {
-              "manufacturer": "Bafang",
-              "type": "color",
-              "details": "C-010 Full-Color 4.7\" Display"
-            },
+            "display": "Bafang C-010 Full-Color 4.7\" Display",
             "bicycle_weight_without_battery": "45.4 lbs",
             "battery_weight": "7 lbs"
           },
@@ -385,40 +293,20 @@
           },
           "frameset": {
             "frame": "6061 High-Strength Aluminum Alloy",
-            "fork": {
-              "manufacturer": "Evelo",
-              "lockout": false,
-              "thru_axle": false,
-              "details": "4130 Chromoly Fork"
-            }
+            "fork": "EVELO 4130 Chromoly Fork"
           },
           "drivetrain": {
             "gearing": "Enviolo® Continuously Variable Transmission with Automatiq Shifting",
-            "shifters": {
-              "manufacturer": "Enviolo",
-              "gearing": "continuously_variable",
-              "details": "Automatiq, App controlled - Optional handlebar-mounted controller available"
-            },
+            "shifters": "Enviolo Automatiq, App controlled - Optional handlebar-mounted controller available",
             "pedals": "Wellgo Comfort Pedal"
           },
           "brakes": {
-            "brakes": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "details": "Auriga E-Comp Hydraulic Brakes"
-            }
+            "brakes": "Tektro Auriga E-Comp Hydraulic Brakes"
           },
           "wheelset": {
             "wheel": "24\" Extra Wide Rims with Heavy Duty 13-gauge Spokes",
-            "tire": {
-              "manufacturer": "CST",
-              "tubeless": false,
-              "details": "Cyclops 24″ x 2.4\""
-            },
-            "total_length_tire_to_tire": {
-              "tubeless": false,
-              "details": "67\""
-            }
+            "tire": "CST Cyclops 24″ x 2.4\"",
+            "total_length_tire_to_tire": "67\""
           },
           "cockpit": {
             "seat": "Selle Royal Comfort Springer Saddle",
@@ -508,29 +396,12 @@
             "maximum_rider_weight": "Recommended for riders up to 350 lbs. Larger riders can be accommodated – contact us for details."
           },
           "ebike_system": {
-            "motor": {
-              "manufacturer": "Bafang",
-              "peak_w": 600,
-              "torque_nm": 105,
-              "details": "M410HD, Cadence and Sensors"
-            },
-            "battery": {
-              "cell_brand": "Samsung",
-              "voltage_v": 48,
-              "amphours_ah": 15.0,
-              "removable": false,
-              "details": "In Frame Battery - Optional Rear Rack Battery Add-On"
-            },
+            "motor": "Bafang M410HD 600 W, 980 W Peak, 105 Nm Cadence and Torque Sensors",
+            "battery": "48V 15AH Samsung In Frame Battery - Optional 14.5AH Rear Rack Battery Add-On",
             "charger": "48V 3A Charger",
-            "maximum_motor_assisted_speed": {
-              "details": "Up to 20 MPH - Can be raised for areas that allow higher speeds"
-            },
+            "maximum_motor_assisted_speed": "Up to 20 MPH - Can be raised for areas that allow higher speeds",
             "electric_assist": "5 levels of Pedal Assistance + Throttle Standard",
-            "display": {
-              "manufacturer": "Bafang",
-              "type": "color",
-              "details": "C-010 Full-Color 4.7\" Display"
-            },
+            "display": "Bafang C-010 Full-Color 4.7\" Display",
             "bicycle_weight_without_battery": "55.5 lbs",
             "primary_battery_weight": "8.5 lbs",
             "secondary_battery_weight": "9.6 lbs w/ Rack"
@@ -540,40 +411,20 @@
           },
           "frameset": {
             "frame": "Hydroformed Aluminum 6061 T6",
-            "fork": {
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Custom Light Weight Aluminium"
-            }
+            "fork": "Custom Light Weight Aluminium"
           },
           "drivetrain": {
             "transmission": "Enviolo Trekking CVT Hub w/ Automatiq Electronic Shifting",
             "drivetrain": "Gates Carbon Drive CDX with Enviolo Trekking CVT",
-            "shifters": {
-              "manufacturer": "Enviolo",
-              "gearing": "continuously_variable",
-              "details": "Automatiq, App controlled - Optional handlebar-mounted controller available"
-            },
+            "shifters": "Enviolo Automatiq, App controlled - Optional handlebar-mounted controller available",
             "pedals": "Wellgo Comfort Pedal"
           },
           "brakes": {
-            "brakes": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "details": "Auriga E-Comp Hydraulic Brakes"
-            }
+            "brakes": "Tektro Auriga E-Comp Hydraulic Brakes"
           },
           "wheelset": {
-            "tires": {
-              "manufacturer": "Innova",
-              "size": "26x2.8",
-              "tubeless": false,
-              "details": "with aramid puncture belt, specifically for eBikes"
-            },
-            "total_length_tire_to_tire": {
-              "tubeless": false,
-              "details": "74.5\""
-            }
+            "tires": "Innova 26x2.8 with aramid puncture belt, specifically for eBikes",
+            "total_length_tire_to_tire": "74.5\""
           },
           "cockpit": {
             "seat": "Selle Royal Memory Foam Saddle",

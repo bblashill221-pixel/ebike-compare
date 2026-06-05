@@ -41,21 +41,9 @@
             "range": "500 Wh: 40-102 km (25-63 mi); 1000 Wh: 82-207 km (51-129 mi)"
           },
           "ebike_system": {
-            "motor": {
-              "manufacturer": "Bosch",
-              "torque_nm": 85,
-              "details": "Cargo Line, 400% Assist, max speed 20 mph (US)"
-            },
-            "battery": {
-              "manufacturer": "Bosch",
-              "capacity_wh": 500,
-              "removable": false,
-              "details": "500 PowerPack, Fast Swap, Dual Battery bays, optional 2 x max capacity"
-            },
-            "display": {
-              "manufacturer": "Bosch",
-              "details": "Purion"
-            },
+            "motor": "Bosch Cargo Line, 400% Assist, 85 Nm Torque, max speed 20 mph (US)",
+            "battery": "Bosch 500 PowerPack, Fast Swap, Dual Battery bays, optional 2 x 500 Wh max capacity",
+            "display": "Bosch Purion",
             "charger": "100-240V, 4A (US)"
           },
           "special_features": {
@@ -68,67 +56,24 @@
           },
           "frameset": {
             "frame": "Tern GSD, 6061-AL, patented MultiTruss design, DIN 79010 certified: 210 kg",
-            "fork": {
-              "manufacturer": "Suntour",
-              "travel_mm": 32,
-              "lockout": false,
-              "thru_axle": true,
-              "details": "custom for Tern, 1.5\" tapered Chromoly steerer, stanchions, Thru-axle, 50 mm travel, EFBE approved: 210 kg"
-            }
+            "fork": "Suntour custom for Tern, 1.5\" tapered Chromoly steerer, 32 mm stanchions, Thru-axle, 50 mm travel, EFBE approved: 210 kg"
           },
           "drivetrain": {
             "gear_inches": "24\"–90\" (1.9–7.2 m)",
-            "shifter": {
-              "manufacturer": "Enviolo",
-              "gearing": "continuously_variable",
-              "details": "Twist"
-            },
-            "crankset": {
-              "manufacturer": "Tern",
-              "details": "GSD, Gates CDX CNC machined beltring"
-            },
-            "cassette_freewheel": {
-              "manufacturer": "Gates",
-              "details": "CDX, precision CNC machined cog"
-            },
+            "shifter": "Enviolo, Twist",
+            "crankset": "Tern GSD, Gates CDX CNC machined beltring",
+            "cassette_freewheel": "Gates CDX, precision CNC machined cog",
             "bottom_bracket": "Motor integrated",
-            "chain": {
-              "manufacturer": "Gates",
-              "details": "Carbon Drive CDX belt"
-            },
+            "chain": "Gates Carbon Drive CDX belt",
             "pedals": "Urban with non-slip surface, sealed bearings",
-            "shifter_cable_housing": {
-              "details": "Jagwire LEX-SL, slick treatment, alloy ferrules"
-            },
+            "shifter_cable_housing": "Jagwire LEX-SL, slick treatment, alloy ferrules",
             "chainguard": "Tern GSD, full chain cover"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "pistons": 4,
-              "rotor_mm": 180,
-              "details": "MT5, hydraulic disc, rotor, Sport pads"
-            },
-            "rear_brake": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "pistons": 4,
-              "rotor_mm": 180,
-              "details": "MT5, hydraulic disc, rotor, Sport pads"
-            },
-            "brake_levers": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "details": "MT5 e-stop, hydraulic, with brake light sensor"
-            },
-            "brake_cable_housing": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "details": "hydraulic"
-            }
+            "front_brake": "Magura MT5, 4-piston hydraulic disc, 180 mm rotor, Sport pads",
+            "rear_brake": "Magura MT5, 4-piston hydraulic disc, 180 mm rotor, Sport pads",
+            "brake_levers": "Magura MT5 e-stop, hydraulic, with brake light sensor",
+            "brake_cable_housing": "Magura, hydraulic"
           },
           "wheelset": {
             "front_wheel": "Tern Atlas, heavy duty cargo wheel",
@@ -137,11 +82,7 @@
             "rear_hub": "Enviolo Heavy Duty, 380% continuously variable range, Boost",
             "spokes_nipples": "Stainless steel",
             "rims": "Tern Atlas, ultra wide 36 mm, dual reinforced joint",
-            "tires": {
-              "manufacturer": "Schwalbe",
-              "tubeless": false,
-              "details": "F: Big Ben Plus, Green Guard puncture protection, Reflex R: Tern x Schwalbe Super Moto-X, Green Guard puncture protection, Reflex"
-            }
+            "tires": "F: Schwalbe Big Ben Plus, Green Guard puncture protection, Reflex R: Tern x Schwalbe Super Moto-X, Green Guard puncture protection, Reflex"
           },
           "cockpit": {
             "distance_seatpost_to_handlebar": "49 - 59 cm (19.3 - 23.2 in)",
@@ -236,21 +177,9 @@
             "range": "500 Wh: 40-102 km (25-63 mi); 1000 Wh: 82-207 km (51-129 mi)"
           },
           "ebike_system": {
-            "motor": {
-              "manufacturer": "Bosch",
-              "torque_nm": 85,
-              "details": "Cargo Line, 400% Assist, max speed 25 kph (EU); max speed 20 mph (US)"
-            },
-            "battery": {
-              "manufacturer": "Bosch",
-              "capacity_wh": 500,
-              "removable": false,
-              "details": "500 PowerPack, Fast Swap, Dual Battery bays, optional 2 x max capacity"
-            },
-            "display": {
-              "manufacturer": "Bosch",
-              "details": "Purion"
-            },
+            "motor": "Bosch Cargo Line, 400% Assist, 85 Nm Torque, max speed 25 kph (EU); max speed 20 mph (US)",
+            "battery": "Bosch 500 PowerPack, Fast Swap, Dual Battery bays, optional 2 x 500 Wh max capacity",
+            "display": "Bosch Purion",
             "charger": "220V, 4A (EU); 100-240V, 4A (US)"
           },
           "special_features": {
@@ -263,74 +192,26 @@
           },
           "frameset": {
             "frame": "Tern GSD, 6061-AL, patented MultiTruss design, DIN 79010 certified: 210 kg",
-            "fork": {
-              "manufacturer": "Suntour",
-              "travel_mm": 32,
-              "lockout": false,
-              "thru_axle": true,
-              "details": "custom for Tern, 1.5\" tapered Chromoly steerer, stanchions, Thru-axle, 50 mm travel, EFBE approved: 210 kg"
-            }
+            "fork": "Suntour custom for Tern, 1.5\" tapered Chromoly steerer, 32 mm stanchions, Thru-axle, 50 mm travel, EFBE approved: 210 kg"
           },
           "drivetrain": {
             "speeds": "1 x 10",
             "gear_inches": "26\" - 98\" (2.04 - 7.80 m)",
-            "shifter": {
-              "manufacturer": "Shimano",
-              "speeds": 10,
-              "details": "Deore, 1 x"
-            },
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "details": "Deore Shadow+"
-            },
-            "crankset": {
-              "manufacturer": "Tern",
-              "details": "GSD, forged 6061-AL DH crankarm"
-            },
-            "cassette_freewheel": {
-              "manufacturer": "Shimano",
-              "cog_range": "11-42T",
-              "speeds": 10,
-              "details": ""
-            },
+            "shifter": "Shimano Deore, 1 x 10 spd",
+            "rear_derailleur": "Shimano Deore Shadow+",
+            "crankset": "Tern GSD, forged 6061-AL DH crankarm",
+            "cassette_freewheel": "Shimano 11-42T, 10 spd",
             "bottom_bracket": "Motor integrated",
-            "chain": {
-              "manufacturer": "KMC",
-              "details": "10 spd, for eBike, EPT corrosion resistant coating"
-            },
+            "chain": "KMC 10 spd, for eBike, EPT corrosion resistant coating",
             "pedals": "Urban with non-slip surface, sealed bearings",
-            "shifter_cable_housing": {
-              "details": "Jagwire LEX-SL, slick treatment, alloy ferrules"
-            },
+            "shifter_cable_housing": "Jagwire LEX-SL, slick treatment, alloy ferrules",
             "chainguard": "Tern GSD, full chain cover"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "pistons": 4,
-              "rotor_mm": 180,
-              "details": "MT5, hydraulic disc, rotor, Sport pads"
-            },
-            "rear_brake": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "pistons": 4,
-              "rotor_mm": 180,
-              "details": "MT5, hydraulic disc, rotor, Sport pads"
-            },
-            "brake_levers": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "details": "MT5 e-stop, hydraulic, with brake light sensor"
-            },
-            "brake_cable_housing": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "details": "hydraulic"
-            }
+            "front_brake": "Magura MT5, 4-piston hydraulic disc, 180 mm rotor, Sport pads",
+            "rear_brake": "Magura MT5, 4-piston hydraulic disc, 180 mm rotor, Sport pads",
+            "brake_levers": "Magura MT5 e-stop, hydraulic, with brake light sensor",
+            "brake_cable_housing": "Magura, hydraulic"
           },
           "wheelset": {
             "front_wheel": "Tern Atlas, heavy duty cargo wheel",
@@ -339,11 +220,7 @@
             "rear_hub": "Tern Atlas, Cooling Fins, Boost Thru-Axle, Syntace X-12 standard",
             "spokes_nipples": "Stainless steel",
             "rims": "Tern Atlas, ultra wide 36 mm, dual reinforced joint",
-            "tires": {
-              "manufacturer": "Schwalbe",
-              "tubeless": false,
-              "details": "F: Big Ben Plus, Green Guard puncture protection, Reflex R: Tern x Schwalbe Super Moto-X, Green Guard puncture protection, Reflex"
-            }
+            "tires": "F: Schwalbe Big Ben Plus, Green Guard puncture protection, Reflex R: Tern x Schwalbe Super Moto-X, Green Guard puncture protection, Reflex"
           },
           "cockpit": {
             "distance_seatpost_to_handlebar": "49 - 59 cm (19.3 - 23.2 in)",
@@ -438,23 +315,9 @@
             "range": "800 Wh: 42-89 mi; 1600 Wh: 83-179 mi"
           },
           "ebike_system": {
-            "motor": {
-              "manufacturer": "Bosch",
-              "power_w": 250,
-              "torque_nm": 85,
-              "details": "Cargo Line, 400% Assist, (max), max speed 20 mph (US)"
-            },
-            "battery": {
-              "manufacturer": "Bosch",
-              "capacity_wh": 800,
-              "removable": false,
-              "details": "800 PowerPack, Fast Swap, Dual Battery bays, optional 2 x max capacity"
-            },
-            "display": {
-              "manufacturer": "Bosch",
-              "type": "lcd",
-              "details": "Kiox 300 w/ LED remote, connectivity with Bosch eBike Flow IOS/Android app, electronic bike lock, Rohloff integrated shifting w/ auto downshift"
-            },
+            "motor": "Bosch Cargo Line, 400% Assist, 85 Nm Torque; 250 W (nominal), 750 W (max), max speed 20 mph (US)",
+            "battery": "Bosch 800 PowerPack, Fast Swap, Dual Battery bays, optional 2 x 800 Wh max capacity",
+            "display": "Bosch Kiox 300 w/ LED remote, connectivity with Bosch eBike Flow IOS/Android app, electronic bike lock, Rohloff integrated shifting w/ auto downshift",
             "charger": "100-240V, 4A (US)",
             "on_board_charging": "USB-C, 5V/2.4A, 12W max"
           },
@@ -470,67 +333,25 @@
           },
           "frameset": {
             "frame": "Tern GSD, 6061-AL, patented MultiTruss design, DIN 79010 certified: 462 lbs.",
-            "fork": {
-              "manufacturer": "Suntour",
-              "travel_mm": 34,
-              "lockout": false,
-              "thru_axle": true,
-              "details": "custom for Tern, 1.5\" tapered Chromoly steerer, stanchions, Thru-axle, DIN 79010 certified: 210 kg"
-            }
+            "fork": "Suntour custom for Tern, 1.5\" tapered Chromoly steerer, 34 mm stanchions, Thru-axle, DIN 79010 certified: 210 kg"
           },
           "drivetrain": {
             "speeds": "1 x 14",
             "gear_inches": "18\" - 96\" (1.45 - 7.64 m)",
-            "shifter": {
-              "speeds": 14,
-              "details": "Rohloff E14, e-shift"
-            },
-            "crankset": {
-              "manufacturer": "Tern",
-              "details": "GSD, Gates CDX CNC machined beltring"
-            },
-            "cassette_freewheel": {
-              "manufacturer": "Gates",
-              "details": "CDX, precision CNC machined cog"
-            },
+            "shifter": "Rohloff E14, e-shift 14 spd",
+            "crankset": "Tern GSD, Gates CDX CNC machined beltring",
+            "cassette_freewheel": "Gates CDX, precision CNC machined cog",
             "bottom_bracket": "Motor integrated",
-            "chain": {
-              "manufacturer": "Gates",
-              "details": "Carbon Drive CDX belt"
-            },
+            "chain": "Gates Carbon Drive CDX belt",
             "pedals": "Urban with non-slip surface, sealed bearings",
-            "shifter_cable_housing": {
-              "details": "Rohloff E14, e-shift"
-            },
+            "shifter_cable_housing": "Rohloff E14, e-shift",
             "chainguard": "Tern GSD, full chain cover"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "pistons": 4,
-              "rotor_mm": 203,
-              "details": "MT-C ABS, hydraulic disc, rotor"
-            },
-            "rear_brake": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "pistons": 4,
-              "rotor_mm": 203,
-              "details": "MT-C ABS, hydraulic disc, rotor"
-            },
-            "brake_levers": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "details": "MT-C e-stop, hydraulic, with brake light sensor"
-            },
-            "brake_cable_housing": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "details": "ABS, hydraulic"
-            }
+            "front_brake": "Magura MT-C ABS, 4-piston hydraulic disc, 203 mm rotor",
+            "rear_brake": "Magura MT-C ABS, 4-piston hydraulic disc, 203 mm rotor",
+            "brake_levers": "Magura MT-C e-stop, hydraulic, with brake light sensor",
+            "brake_cable_housing": "Magura ABS, hydraulic"
           },
           "wheelset": {
             "front_wheel": "Tern Atlas, heavy duty cargo wheel",
@@ -539,11 +360,7 @@
             "rear_hub": "Rohloff E14, 526% range, Boost",
             "spokes_nipples": "Stainless steel",
             "rims": "Tern Atlas, ultra wide 36 mm, dual reinforced joint",
-            "tires": {
-              "manufacturer": "Schwalbe",
-              "tubeless": false,
-              "details": "Pick-Up, cargo-optimized, Super Defense puncture protection, Reflex"
-            }
+            "tires": "Schwalbe Pick-Up, cargo-optimized, Super Defense puncture protection, Reflex"
           },
           "cockpit": {
             "distance_seatpost_to_handlebar": "49 - 59 cm (19.3 - 23.2 in)",
@@ -650,22 +467,9 @@
             "range": "545 Wh: 45-98 km (28-61 mi); 1090 Wh: 90-196 km (56-122 mi)"
           },
           "ebike_system": {
-            "motor": {
-              "manufacturer": "Bosch",
-              "torque_nm": 85,
-              "details": "Cargo Line, 400% Assist, max speed 25 kph (EU); max speed 20 mph (US)"
-            },
-            "battery": {
-              "manufacturer": "Bosch",
-              "capacity_wh": 800,
-              "removable": false,
-              "details": "545 PowerPack, Fast Swap, Dual Battery bays, optional 2 x max capacity"
-            },
-            "display": {
-              "manufacturer": "Bosch",
-              "type": "lcd",
-              "details": "Kiox 300 w/ LED remote, connectivity with Bosch eBike Flow IOS/Smartphone app, electronic bike lock"
-            },
+            "motor": "Bosch Cargo Line, 400% Assist, 85 Nm Torque, max speed 25 kph (EU); max speed 20 mph (US)",
+            "battery": "Bosch 545 PowerPack, Fast Swap, Dual Battery bays, optional 2 x 800 Wh max capacity",
+            "display": "Bosch Kiox 300 w/ LED remote, connectivity with Bosch eBike Flow IOS/Smartphone app, electronic bike lock",
             "charger": "220V, 4A (EU); 100-240V, 4A (US)",
             "on_board_charging": "USB-C, 5V/2.4A, 12W max"
           },
@@ -681,74 +485,26 @@
           },
           "frameset": {
             "frame": "Tern GSD, 6061-AL, patented MultiTruss design, DIN 79010 certified: 210 kg",
-            "fork": {
-              "manufacturer": "Suntour",
-              "travel_mm": 34,
-              "lockout": false,
-              "thru_axle": true,
-              "details": "custom for Tern, 1.5\" tapered Chromoly steerer, stanchions, Thru-axle, DIN 79010 certified: 210 kg"
-            }
+            "fork": "Suntour custom for Tern, 1.5\" tapered Chromoly steerer, 34 mm stanchions, Thru-axle, DIN 79010 certified: 210 kg"
           },
           "drivetrain": {
             "speeds": "1 x 10",
             "gear_inches": "26\" - 98\" (2.04 - 7.80 m)",
-            "shifter": {
-              "manufacturer": "Shimano",
-              "speeds": 10,
-              "details": "Deore, 1 x"
-            },
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "details": "Deore Shadow+"
-            },
-            "crankset": {
-              "manufacturer": "Tern",
-              "details": "GSD, forged 6061-AL DH crankarm"
-            },
-            "cassette_freewheel": {
-              "manufacturer": "Shimano",
-              "cog_range": "11-42T",
-              "speeds": 10,
-              "details": ""
-            },
+            "shifter": "Shimano Deore, 1 x 10 spd",
+            "rear_derailleur": "Shimano Deore Shadow+",
+            "crankset": "Tern GSD, forged 6061-AL DH crankarm",
+            "cassette_freewheel": "Shimano 11-42T, 10 spd",
             "bottom_bracket": "Motor integrated",
-            "chain": {
-              "manufacturer": "KMC",
-              "details": "10 spd, for eBike, EPT corrosion resistant coating"
-            },
+            "chain": "KMC 10 spd, for eBike, EPT corrosion resistant coating",
             "pedals": "Urban with non-slip surface, sealed bearings",
-            "shifter_cable_housing": {
-              "details": "Jagwire LEX-SL, slick treatment, alloy ferrules"
-            },
+            "shifter_cable_housing": "Jagwire LEX-SL, slick treatment, alloy ferrules",
             "chainguard": "Tern GSD, full chain cover"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "pistons": 4,
-              "rotor_mm": 203,
-              "details": "MT-C ABS, hydraulic disc, rotor"
-            },
-            "rear_brake": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "pistons": 4,
-              "rotor_mm": 203,
-              "details": "MT-C ABS, hydraulic disc, rotor"
-            },
-            "brake_levers": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "details": "MT-C e-stop, hydraulic, with brake light sensor"
-            },
-            "brake_cable_housing": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "details": "ABS, hydraulic"
-            }
+            "front_brake": "Magura MT-C ABS, 4-piston hydraulic disc, 203 mm rotor",
+            "rear_brake": "Magura MT-C ABS, 4-piston hydraulic disc, 203 mm rotor",
+            "brake_levers": "Magura MT-C e-stop, hydraulic, with brake light sensor",
+            "brake_cable_housing": "Magura ABS, hydraulic"
           },
           "wheelset": {
             "front_wheel": "Tern Atlas, heavy duty cargo wheel",
@@ -757,11 +513,7 @@
             "rear_hub": "Tern Atlas, Cooling Fins, Boost Thru-Axle, Syntace X-12 standard",
             "spokes_nipples": "Stainless steel",
             "rims": "Tern Atlas, ultra wide 36 mm, dual reinforced joint",
-            "tires": {
-              "manufacturer": "Schwalbe",
-              "tubeless": false,
-              "details": "Pick-Up, cargo-optimized, Super Defense puncture protection, Reflex"
-            }
+            "tires": "Schwalbe Pick-Up, cargo-optimized, Super Defense puncture protection, Reflex"
           },
           "cockpit": {
             "distance_seatpost_to_handlebar": "49 - 59 cm (19.3 - 23.2 in)",
@@ -861,21 +613,9 @@
             "range": "545 Wh: 51-121 km (32-76 mi)"
           },
           "ebike_system": {
-            "motor": {
-              "manufacturer": "Bosch",
-              "torque_nm": 75,
-              "details": "Performance, 340% Assist, max speed 25 kph (EU); max speed 20 mph (US)"
-            },
-            "battery": {
-              "manufacturer": "Bosch",
-              "removable": false,
-              "details": "PowerPack 545"
-            },
-            "display": {
-              "manufacturer": "Bosch",
-              "type": "lcd",
-              "details": "Intuvia 100 w/ LED remote, 4 mode selectable, walk assist, connectivity with Bosch eBike Flow app, electronic bike lock"
-            },
+            "motor": "Bosch Performance, 340% Assist, 75 Nm Torque, max speed 25 kph (EU); max speed 20 mph (US)",
+            "battery": "Bosch PowerPack 545",
+            "display": "Bosch Intuvia 100 w/ LED remote, 4 mode selectable, walk assist, connectivity with Bosch eBike Flow app, electronic bike lock",
             "charger": "220V, 4A (EU); 100-240V, 4A (US)"
           },
           "special_features": {
@@ -889,74 +629,26 @@
           },
           "frameset": {
             "frame": "Tern HSD, 6061-AL, patented design, Tern sliding dropouts, EFBE Tri-Test approved: 180 kg",
-            "fork": {
-              "manufacturer": "Suntour",
-              "travel_mm": 32,
-              "lockout": false,
-              "thru_axle": true,
-              "details": "custom for Tern, 1.5\" tapered Chromoly steerer, stanchions, Thru-axle, 70 mm travel, EFBE approved: 180 kg"
-            }
+            "fork": "Suntour custom for Tern, 1.5\" tapered Chromoly steerer, 32 mm stanchions, Thru-axle, 70 mm travel, EFBE approved: 180 kg"
           },
           "drivetrain": {
             "speeds": "1 x 10",
             "gear_inches": "30 - 97\" (2.36 - 7.72 m)",
-            "shifter": {
-              "manufacturer": "Shimano",
-              "speeds": 10,
-              "details": "Deore, 1 x, trigger"
-            },
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "details": "Deore Shadow+"
-            },
-            "crankset": {
-              "manufacturer": "Tern",
-              "details": "HSD custom"
-            },
-            "cassette_freewheel": {
-              "manufacturer": "Shimano",
-              "cog_range": "11-36T",
-              "speeds": 10,
-              "details": ""
-            },
+            "shifter": "Shimano Deore, 1 x 10 spd, trigger",
+            "rear_derailleur": "Shimano Deore Shadow+",
+            "crankset": "Tern HSD custom",
+            "cassette_freewheel": "Shimano 11-36T, 10 spd",
             "bottom_bracket": "Motor integrated",
-            "chain": {
-              "manufacturer": "KMC",
-              "details": "10 spd, for eBike, EPT corrosion resistant coating"
-            },
+            "chain": "KMC 10 spd, for eBike, EPT corrosion resistant coating",
             "pedals": "Urban with non-slip surface",
-            "shifter_cable_housing": {
-              "details": "Jagwire LEX-SL, slick treatment, alloy ferrules"
-            },
+            "shifter_cable_housing": "Jagwire LEX-SL, slick treatment, alloy ferrules",
             "chainguard": "Tern Custom, full chain cover"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "hydraulic disc, rotor"
-            },
-            "rear_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 160,
-              "details": "hydraulic disc, rotor"
-            },
-            "brake_levers": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "hydraulic disc"
-            },
-            "brake_cable_housing": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "hydraulic disc"
-            }
+            "front_brake": "Tektro, hydraulic disc, 180 mm rotor",
+            "rear_brake": "Tektro, hydraulic disc, 160 mm rotor",
+            "brake_levers": "Tektro, hydraulic disc",
+            "brake_cable_housing": "Tektro, hydraulic disc"
           },
           "wheelset": {
             "front_wheel": "Tern Atlas H, cargo wheel",
@@ -965,11 +657,7 @@
             "rear_hub": "Novatec, sealed cartridge bearing, disc",
             "spokes_nipples": "Stainless steel",
             "rims": "Tern Atlas H, wide 35 mm",
-            "tires": {
-              "manufacturer": "Schwalbe",
-              "tubeless": false,
-              "details": "Big Apple, 55-406, puncture protection, Reflex"
-            }
+            "tires": "Schwalbe Big Apple, 55-406, puncture protection, Reflex"
           },
           "cockpit": {
             "distance_seatpost_to_handlebar": "54.5 - 62.5 cm (21.5 - 24.6 in)",
@@ -1069,21 +757,9 @@
             "range": "545 Wh: 51-121 km (32-76 mi)"
           },
           "ebike_system": {
-            "motor": {
-              "manufacturer": "Bosch",
-              "torque_nm": 75,
-              "details": "Performance, 340% Assist, Class 1 max speed 20 mph (US)"
-            },
-            "battery": {
-              "manufacturer": "Bosch",
-              "removable": false,
-              "details": "PowerPack 545"
-            },
-            "display": {
-              "manufacturer": "Bosch",
-              "type": "lcd",
-              "details": "Intuvia 100 w/ LED remote, 4 mode selectable, walk assist, connectivity with Bosch eBike Flow app, electronic bike lock"
-            },
+            "motor": "Bosch Performance, 340% Assist, 75 Nm Torque, Class 1 max speed 20 mph (US)",
+            "battery": "Bosch PowerPack 545",
+            "display": "Bosch Intuvia 100 w/ LED remote, 4 mode selectable, walk assist, connectivity with Bosch eBike Flow app, electronic bike lock",
             "charger": "220V, 4A (EU); 100-240V, 4A (US)"
           },
           "special_features": {
@@ -1097,68 +773,25 @@
           },
           "frameset": {
             "frame": "Tern HSD, 6061-AL, patented design, Tern sliding dropouts, EFBE Tri-Test approved: 180 kg",
-            "fork": {
-              "manufacturer": "Suntour",
-              "travel_mm": 32,
-              "lockout": false,
-              "thru_axle": true,
-              "details": "custom for Tern, 1.5\" tapered Chromoly steerer, stanchions, Thru-axle, 70 mm travel, EFBE approved: 180 kg"
-            }
+            "fork": "Suntour custom for Tern, 1.5\" tapered Chromoly steerer, 32 mm stanchions, Thru-axle, 70 mm travel, EFBE approved: 180 kg"
           },
           "drivetrain": {
             "speeds": "1 x 5",
             "gear_inches": "38\" - 99\" (2.99 - 7.88 m)",
-            "shifter": {
-              "manufacturer": "Shimano",
-              "details": "Nexus INTER-5E"
-            },
-            "crankset": {
-              "manufacturer": "Tern",
-              "details": "HSD custom, Gates CDX CNC machined beltring"
-            },
-            "cassette_freewheel": {
-              "manufacturer": "Gates",
-              "details": "CDX, precision CNC machined cog"
-            },
+            "shifter": "Shimano Nexus INTER-5E",
+            "crankset": "Tern HSD custom, Gates CDX CNC machined beltring",
+            "cassette_freewheel": "Gates CDX, precision CNC machined cog",
             "bottom_bracket": "Motor integrated",
-            "chain": {
-              "manufacturer": "Gates",
-              "details": "Carbon Drive CDX belt"
-            },
+            "chain": "Gates Carbon Drive CDX belt",
             "pedals": "Urban with non-slip surface",
-            "shifter_cable_housing": {
-              "manufacturer": "Shimano",
-              "details": ""
-            },
+            "shifter_cable_housing": "Shimano",
             "chainguard": "Tern Custom, full chain cover"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Shimano",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "hydraulic disc, rotor"
-            },
-            "rear_brake": {
-              "manufacturer": "Shimano",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 160,
-              "details": "hydraulic disc, rotor"
-            },
-            "brake_levers": {
-              "manufacturer": "Shimano",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "hydraulic disc"
-            },
-            "brake_cable_housing": {
-              "manufacturer": "Shimano",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "hydraulic disc"
-            }
+            "front_brake": "Shimano, hydraulic disc, 180 mm rotor",
+            "rear_brake": "Shimano, hydraulic disc, 160 mm rotor",
+            "brake_levers": "Shimano, hydraulic disc",
+            "brake_cable_housing": "Shimano, hydraulic disc"
           },
           "wheelset": {
             "front_wheel": "Tern Atlas H, cargo wheel",
@@ -1167,11 +800,7 @@
             "rear_hub": "Shimano Nexus INTER-5E",
             "spokes_nipples": "Stainless steel",
             "rims": "Tern Atlas H, wide 35 mm",
-            "tires": {
-              "manufacturer": "Schwalbe",
-              "tubeless": false,
-              "details": "Big Apple, 55-406, puncture protection, Reflex"
-            }
+            "tires": "Schwalbe Big Apple, 55-406, puncture protection, Reflex"
           },
           "cockpit": {
             "distance_seatpost_to_handlebar": "54.5 - 62.5 cm (21.5 - 24.6 in)",
@@ -1259,21 +888,9 @@
             "range": "545 Wh: 51-121 km (32-76 mi)"
           },
           "ebike_system": {
-            "motor": {
-              "manufacturer": "Bosch",
-              "torque_nm": 75,
-              "details": "Performance, 340% Assist, max speed 25 kph (EU); max speed 20 mph (US)"
-            },
-            "battery": {
-              "manufacturer": "Bosch",
-              "removable": false,
-              "details": "PowerPack 545"
-            },
-            "display": {
-              "manufacturer": "Bosch",
-              "type": "lcd",
-              "details": "Kiox 300 w/ LED remote, 4 mode selectable, walk assist, connectivity with Bosch eBike Flow app, electronic bike lock"
-            },
+            "motor": "Bosch Performance, 340% Assist, 75 Nm Torque, max speed 25 kph (EU); max speed 20 mph (US)",
+            "battery": "Bosch PowerPack 545",
+            "display": "Bosch Kiox 300 w/ LED remote, 4 mode selectable, walk assist, connectivity with Bosch eBike Flow app, electronic bike lock",
             "charger": "220V, 4A (EU); 100-240V, 4A (US)"
           },
           "special_features": {
@@ -1287,63 +904,24 @@
           },
           "frameset": {
             "frame": "Tern HSD, 6061-AL, patented design, Tern sliding dropouts, EFBE Tri-Test approved: 180 kg",
-            "fork": {
-              "manufacturer": "Suntour",
-              "travel_mm": 32,
-              "lockout": false,
-              "thru_axle": true,
-              "details": "custom for Tern, 1.5\" tapered Chromoly steerer, stanchions, Thru-axle, 70 mm travel, EFBE approved: 180 kg"
-            }
+            "fork": "Suntour custom for Tern, 1.5\" tapered Chromoly steerer, 32 mm stanchions, Thru-axle, 70 mm travel, EFBE approved: 180 kg"
           },
           "drivetrain": {
             "speeds": "∞",
             "gear_inches": "28\" - 106\" (2.23 - 8.47 m)",
-            "shifter": {
-              "manufacturer": "Enviolo",
-              "gearing": "continuously_variable",
-              "details": "Twist"
-            },
-            "crankset": {
-              "manufacturer": "Tern",
-              "details": "HSD custom, Gates CDX CNC machined beltring"
-            },
-            "cassette_freewheel": {
-              "manufacturer": "Gates",
-              "details": "CDX, precision CNC machined cog"
-            },
+            "shifter": "Enviolo, Twist",
+            "crankset": "Tern HSD custom, Gates CDX CNC machined beltring",
+            "cassette_freewheel": "Gates CDX, precision CNC machined cog",
             "bottom_bracket": "Motor integrated",
-            "chain": {
-              "manufacturer": "Gates",
-              "details": "Carbon Drive CDX belt"
-            },
+            "chain": "Gates Carbon Drive CDX belt",
             "pedals": "Urban with non-slip surface, sealed bearings",
             "chainguard": "Tern Custom, full chain cover"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "MT4, hydraulic disc, rotor"
-            },
-            "rear_brake": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 160,
-              "details": "MT4, hydraulic disc, rotor"
-            },
-            "brake_levers": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "details": "MT4 e-stop, hydraulic, with brake light sensor"
-            },
-            "brake_cable_housing": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "details": "hydraulic"
-            }
+            "front_brake": "Magura MT4, hydraulic disc, 180 mm rotor",
+            "rear_brake": "Magura MT4, hydraulic disc, 160 mm rotor",
+            "brake_levers": "Magura MT4 e-stop, hydraulic, with brake light sensor",
+            "brake_cable_housing": "Magura, hydraulic"
           },
           "wheelset": {
             "front_wheel": "Tern Atlas H, cargo wheel",
@@ -1352,11 +930,7 @@
             "rear_hub": "Enviolo Heavy Duty, 380% continuously variable range",
             "spokes_nipples": "Stainless steel, double-butted",
             "rims": "Tern Atlas H, wide 35 mm",
-            "tires": {
-              "manufacturer": "Schwalbe",
-              "tubeless": false,
-              "details": "Big Ben, 55-406, RaceGuard puncture protection, ECE-R75 ebike certification"
-            }
+            "tires": "Schwalbe Big Ben, 55-406, RaceGuard puncture protection, ECE-R75 ebike certification"
           },
           "cockpit": {
             "distance_seatpost_to_handlebar": "52 - 62.5 cm (20.5 - 24.6 in)",
@@ -1450,21 +1024,9 @@
             "range": "545 Wh: 51-121 km (32-76 mi)"
           },
           "ebike_system": {
-            "motor": {
-              "manufacturer": "Bosch",
-              "torque_nm": 75,
-              "details": "Performance Sport, 340% Assist, Class 3 max speed 28 mph"
-            },
-            "battery": {
-              "manufacturer": "Bosch",
-              "removable": false,
-              "details": "PowerPack 545"
-            },
-            "display": {
-              "manufacturer": "Bosch",
-              "type": "lcd",
-              "details": "Kiox 300 w/ LED remote, 4 mode selectable, walk assist, connectivity with Bosch eBike Flow app, electronic bike lock"
-            },
+            "motor": "Bosch Performance Sport, 340% Assist, 75 Nm Torque, Class 3 max speed 28 mph",
+            "battery": "Bosch PowerPack 545",
+            "display": "Bosch Kiox 300 w/ LED remote, 4 mode selectable, walk assist, connectivity with Bosch eBike Flow app, electronic bike lock",
             "charger": "100-240V, 4A (US)"
           },
           "special_features": {
@@ -1478,71 +1040,26 @@
           },
           "frameset": {
             "frame": "Tern HSD, 6061-AL, patented design, Tern sliding dropouts, EFBE Tri-Test approved: 180 kg",
-            "fork": {
-              "manufacturer": "Suntour",
-              "travel_mm": 32,
-              "lockout": false,
-              "thru_axle": true,
-              "details": "custom for Tern, 1.5\" tapered Chromoly steerer, stanchions, Thru-axle, 70 mm travel, EFBE approved: 180 kg"
-            }
+            "fork": "Suntour custom for Tern, 1.5\" tapered Chromoly steerer, 32 mm stanchions, Thru-axle, 70 mm travel, EFBE approved: 180 kg"
           },
           "drivetrain": {
             "speeds": "1 x 11",
             "gear_inches": "32\" - 104\" (2.54 - 8.32 m)",
-            "shifter": {
-              "manufacturer": "Shimano",
-              "speeds": 11,
-              "details": "Deore, 1 x"
-            },
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "details": "Deore Shadow+"
-            },
-            "crankset": {
-              "manufacturer": "Tern",
-              "details": "HSD custom"
-            },
-            "cassette_freewheel": {
-              "cog_range": "11-36T",
-              "speeds": 11,
-              "details": ""
-            },
+            "shifter": "Shimano Deore, 1 x 11 spd",
+            "rear_derailleur": "Shimano Deore Shadow+",
+            "crankset": "Tern HSD custom",
+            "cassette_freewheel": "11-36T, 11 spd",
             "bottom_bracket": "Motor integrated",
-            "chain": {
-              "manufacturer": "KMC",
-              "details": "11 spd, for eBike, EPT corrosion resistant coating"
-            },
+            "chain": "KMC 11 spd, for eBike, EPT corrosion resistant coating",
             "pedals": "Urban with non-slip surface, sealed bearings",
-            "shifter_cable_housing": {
-              "details": "Jagwire LEX-SL, slick treatment, alloy ferrules"
-            },
+            "shifter_cable_housing": "Jagwire LEX-SL, slick treatment, alloy ferrules",
             "chainguard": "Custom Bash Guard"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "MT4, hydraulic disc, rotor"
-            },
-            "rear_brake": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 160,
-              "details": "MT4, hydraulic disc, rotor"
-            },
-            "brake_levers": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "details": "MT4 e-stop, hydraulic, with brake light sensor"
-            },
-            "brake_cable_housing": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "details": "hydraulic"
-            }
+            "front_brake": "Magura MT4, hydraulic disc, 180 mm rotor",
+            "rear_brake": "Magura MT4, hydraulic disc, 160 mm rotor",
+            "brake_levers": "Magura MT4 e-stop, hydraulic, with brake light sensor",
+            "brake_cable_housing": "Magura, hydraulic"
           },
           "wheelset": {
             "front_wheel": "Tern Atlas H, cargo wheel",
@@ -1551,11 +1068,7 @@
             "rear_hub": "Novatec, sealed cartridge bearing, disc",
             "spokes_nipples": "Stainless steel, double-butted",
             "rims": "Tern Atlas H, wide 35 mm",
-            "tires": {
-              "manufacturer": "Schwalbe",
-              "tubeless": false,
-              "details": "Big Ben, 55-406, RaceGuard puncture protection, ECE-R75 ebike certification"
-            }
+            "tires": "Schwalbe Big Ben, 55-406, RaceGuard puncture protection, ECE-R75 ebike certification"
           },
           "cockpit": {
             "distance_seatpost_to_handlebar": "52 - 62.5 cm (20.5 - 24.6 in)",
@@ -1649,20 +1162,9 @@
             "range": "54 -108 km (34-67 mi)"
           },
           "ebike_system": {
-            "motor": {
-              "manufacturer": "Bosch",
-              "torque_nm": 50,
-              "details": "Class 1, Active Line Plus, 270% Assist, max speed 25 kph (EU); max speed 20 mph (US)"
-            },
-            "battery": {
-              "manufacturer": "Bosch",
-              "removable": false,
-              "details": "PowerPack 400"
-            },
-            "display": {
-              "manufacturer": "Bosch",
-              "details": "Intuvia, 4 mode selectable, walk assist"
-            },
+            "motor": "Class 1, Bosch Active Line Plus, 270% Assist, 50 Nm Torque, max speed 25 kph (EU); max speed 20 mph (US)",
+            "battery": "Bosch PowerPack 400",
+            "display": "Bosch Intuvia, 4 mode selectable, walk assist",
             "charger": "Bosch Standard Charger"
           },
           "special_features": {
@@ -1675,75 +1177,31 @@
           },
           "frameset": {
             "frame": "Tern NBD, 6061-AL, Patented design, EFBE Tri-Test approved: 140 kg",
-            "fork": {
-              "manufacturer": "Tern",
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Tarsus, 6061-AL, hydroformed, EFBE approved: 140 kg"
-            }
+            "fork": "Tern Tarsus, 6061-AL, hydroformed, EFBE approved: 140 kg"
           },
           "drivetrain": {
             "speeds": "1 x 8",
             "gear_inches": "30\" - 91\" (2.37 - 7.26 m)",
-            "shifter": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": ""
-            },
-            "crankset": {
-              "manufacturer": "Tern",
-              "details": "NBD custom, forged 6061-AL crankarm"
-            },
-            "cassette_freewheel": {
-              "details": "16T"
-            },
-            "chain": {
-              "manufacturer": "KMC",
-              "details": "for eBike, EPT corrosion resistant coating"
-            },
+            "shifter": "Shimano 8 spd.",
+            "crankset": "Tern NBD custom, forged 6061-AL crankarm",
+            "cassette_freewheel": "16T",
+            "chain": "KMC for eBike, EPT corrosion resistant coating",
             "pedals": "MKS Platform, Tern custom design",
-            "shifter_cable_housing": {
-              "manufacturer": "Shimano",
-              "details": ""
-            },
+            "shifter_cable_housing": "Shimano",
             "chainguard": "Tern Custom, full chain cover"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Shimano",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "hydraulic disc"
-            },
-            "rear_brake": {
-              "manufacturer": "Shimano",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "hydraulic disc"
-            },
-            "brake_levers": {
-              "manufacturer": "Shimano",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "hydraulic disc"
-            },
-            "brake_cable_housing": {
-              "manufacturer": "Shimano",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "hydraulic disc"
-            }
+            "front_brake": "Shimano, hydraulic disc",
+            "rear_brake": "Shimano, hydraulic disc",
+            "brake_levers": "Shimano, hydraulic disc",
+            "brake_cable_housing": "Shimano, hydraulic disc"
           },
           "wheelset": {
             "front_hub": "Shimano disc",
             "rear_hub": "Shimano Nexus 8",
             "spokes_nipples": "Stainless steel",
             "rims": "Kinetix Comp, for disc",
-            "tires": {
-              "manufacturer": "Schwalbe",
-              "tubeless": false,
-              "details": "Big Apple, 55-406, puncture protection, Reflex"
-            }
+            "tires": "Schwalbe Big Apple, 55-406, puncture protection, Reflex"
           },
           "cockpit": {
             "distance_seatpost_to_handlebar": "45 - 52 cm (17.7 - 20.5 in)",
@@ -1818,20 +1276,9 @@
             "range": "51-118 km (32-74 mi)"
           },
           "ebike_system": {
-            "motor": {
-              "manufacturer": "Bosch",
-              "torque_nm": 65,
-              "details": "Performance, 300% Assist, max speed 25 kph (EU); max speed 20 mph (US)"
-            },
-            "battery": {
-              "manufacturer": "Bosch",
-              "removable": false,
-              "details": "PowerPack 500"
-            },
-            "display": {
-              "manufacturer": "Bosch",
-              "details": "Intuvia, 4 mode selectable, walk assist"
-            },
+            "motor": "Bosch Performance, 300% Assist, 65 Nm Torque, max speed 25 kph (EU); max speed 20 mph (US)",
+            "battery": "Bosch PowerPack 500",
+            "display": "Bosch Intuvia, 4 mode selectable, walk assist",
             "charger": "Bosch Standard Charger"
           },
           "special_features": {
@@ -1844,74 +1291,31 @@
           },
           "frameset": {
             "frame": "Tern NBD, 6061-AL, Patented design, EFBE Tri-Test approved: 140 kg",
-            "fork": {
-              "manufacturer": "Tern",
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Tarsus, 6061-AL, hydroformed, EFBE approved: 140 kg"
-            }
+            "fork": "Tern Tarsus, 6061-AL, hydroformed, EFBE approved: 140 kg"
           },
           "drivetrain": {
             "speeds": "1 x 5",
             "gear_inches": "34\" - 90\" (2.75 - 7.22 m)",
-            "shifter": {
-              "manufacturer": "Shimano",
-              "speeds": 5,
-              "details": ""
-            },
-            "crankset": {
-              "manufacturer": "Tern",
-              "details": "NBD custom, Gates CDX CNC machined beltring"
-            },
-            "cassette_freewheel": {
-              "manufacturer": "Gates",
-              "details": "CDX, precision CNC machined cog"
-            },
-            "chain": {
-              "manufacturer": "Gates",
-              "details": "Carbon Drive CDX belt"
-            },
+            "shifter": "Shimano 5 spd.",
+            "crankset": "Tern NBD custom, Gates CDX CNC machined beltring",
+            "cassette_freewheel": "Gates CDX, precision CNC machined cog",
+            "chain": "Gates Carbon Drive CDX belt",
             "pedals": "MKS Platform, Tern custom design",
-            "shifter_cable_housing": {
-              "manufacturer": "Shimano",
-              "details": ""
-            },
+            "shifter_cable_housing": "Shimano",
             "chainguard": "Tern Custom, full chain cover"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "MT4, hydraulic disc"
-            },
-            "rear_brake": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "MT4, hydraulic disc"
-            },
-            "brake_levers": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "details": "hydraulic"
-            },
-            "brake_cable_housing": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "details": "hydraulic"
-            }
+            "front_brake": "Magura MT4, hydraulic disc",
+            "rear_brake": "Magura MT4, hydraulic disc",
+            "brake_levers": "Magura, hydraulic",
+            "brake_cable_housing": "Magura, hydraulic"
           },
           "wheelset": {
             "front_hub": "Shimano disc",
             "rear_hub": "Shimano Nexus INTER-5E",
             "spokes_nipples": "Stainless steel",
             "rims": "Kinetix Comp, for disc",
-            "tires": {
-              "manufacturer": "Schwalbe",
-              "tubeless": false,
-              "details": "Big Apple, Performance Line, 55-406, puncture protection, Reflex"
-            }
+            "tires": "Schwalbe Big Apple, Performance Line, 55-406, puncture protection, Reflex"
           },
           "cockpit": {
             "distance_seatpost_to_handlebar": "45 - 52 cm (17.7 - 20.5 in)",
@@ -1978,21 +1382,9 @@
             "range": "800 Wh: 93 - 161 km (58 -100 mi); 1600 Wh: 185 - 322 km (115 - 200 mi)"
           },
           "ebike_system": {
-            "motor": {
-              "manufacturer": "Bosch",
-              "details": "Performance CX, max speed 20 mph (US)"
-            },
-            "battery": {
-              "manufacturer": "Bosch",
-              "capacity_wh": 800,
-              "removable": false,
-              "details": "Dual Battery pack ready"
-            },
-            "display": {
-              "manufacturer": "Bosch",
-              "type": "lcd",
-              "details": "Kiox 300 w/ LED remote, electronic bike lock"
-            },
+            "motor": "Bosch Performance CX, max speed 20 mph (US)",
+            "battery": "800 Wh, Bosch Dual Battery pack ready",
+            "display": "Bosch Kiox 300 w/ LED remote, electronic bike lock",
             "charger": "100-240V, 4A (US)"
           },
           "special_features": {
@@ -2005,64 +1397,25 @@
           },
           "frameset": {
             "frame": "Tern Orox, 6061-AL, patented design, EFBE tested and approved",
-            "fork": {
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Atlas X, butted chromoly steel, EFBE tested and approved"
-            }
+            "fork": "Atlas X, butted chromoly steel, EFBE tested and approved"
           },
           "drivetrain": {
             "speeds": "1 x 14",
             "gear_inches": "18\" - 96\" (1.45 - 7.64 m)",
-            "shifter": {
-              "details": "Rohloff, Twist"
-            },
-            "crankset": {
-              "manufacturer": "Tern",
-              "details": "Orox custom, Gates CDX CNC machined beltring"
-            },
-            "cassette_freewheel": {
-              "manufacturer": "Gates",
-              "details": "CDX, precision CNC machined cog"
-            },
+            "shifter": "Rohloff, Twist",
+            "crankset": "Tern Orox custom, Gates CDX CNC machined beltring",
+            "cassette_freewheel": "Gates CDX, precision CNC machined cog",
             "bottom_bracket": "Motor integrated",
-            "chain": {
-              "manufacturer": "Gates",
-              "details": "Carbon Drive CDX belt"
-            },
+            "chain": "Gates Carbon Drive CDX belt",
             "pedals": "MTB, non-slip",
-            "shifter_cable_housing": {
-              "details": "Rohloff"
-            },
+            "shifter_cable_housing": "Rohloff",
             "chainguard": "Custom Bash Guard"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "pistons": 4,
-              "rotor_mm": 203,
-              "details": "MT5, hydraulic disc, rotor"
-            },
-            "rear_brake": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "pistons": 4,
-              "rotor_mm": 203,
-              "details": "MT5, hydraulic disc, rotor"
-            },
-            "brake_levers": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "details": "MT5, hydraulic"
-            },
-            "brake_cable_housing": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "details": "hydraulic"
-            }
+            "front_brake": "Magura MT5, 4-piston hydraulic disc, 203 mm rotor",
+            "rear_brake": "Magura MT5, 4-piston hydraulic disc, 203 mm rotor",
+            "brake_levers": "Magura MT5, hydraulic",
+            "brake_cable_housing": "Magura, hydraulic"
           },
           "wheelset": {
             "front_wheel": "Tern Atlas X, ultra-heavy duty cargo construction, 27.5\"",
@@ -2071,11 +1424,7 @@
             "rear_hub": "Rohloff, 526% range, Boost",
             "spokes_nipples": "Stainless steel",
             "rims": "Tern Atlas X, custom doublewall construction",
-            "tires": {
-              "manufacturer": "Schwalbe",
-              "tubeless": false,
-              "details": "Johnny Watts 27.5\" x 4\""
-            }
+            "tires": "Schwalbe Johnny Watts 27.5\" x 4\""
           },
           "cockpit": {
             "distance_seatpost_to_handlebar": "M: 61 - 66 cm (24 - 26 in) ; L: 67 - 73 cm (26.4 - 28.7 in)",
@@ -2181,21 +1530,9 @@
             "range": "725 Wh: 84 - 146 km (52 - 91 mi); 1450 Wh: 168 - 292 km (104 - 181 mi)"
           },
           "ebike_system": {
-            "motor": {
-              "manufacturer": "Bosch",
-              "details": "Performance CX, max speed 20 mph (US)"
-            },
-            "battery": {
-              "manufacturer": "Bosch",
-              "capacity_wh": 725,
-              "removable": false,
-              "details": "Dual Battery pack ready"
-            },
-            "display": {
-              "manufacturer": "Bosch",
-              "type": "lcd",
-              "details": "Kiox 300 w/ LED remote, electronic bike lock"
-            },
+            "motor": "Bosch Performance CX, max speed 20 mph (US)",
+            "battery": "725 Wh, Bosch Dual Battery pack ready",
+            "display": "Bosch Kiox 300 w/ LED remote, electronic bike lock",
             "charger": "100-240V, 4A (US)"
           },
           "special_features": {
@@ -2208,72 +1545,26 @@
           },
           "frameset": {
             "frame": "Tern Orox, 6061-AL, patented design, EFBE tested and approved",
-            "fork": {
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Atlas X, butted chromoly steel, EFBE tested and approved"
-            }
+            "fork": "Atlas X, butted chromoly steel, EFBE tested and approved"
           },
           "drivetrain": {
             "speeds": "1 x 12",
             "gear_inches": "18\" - 95\" (1.48 - 7.54 m)",
-            "shifter": {
-              "manufacturer": "Shimano",
-              "speeds": 12,
-              "details": "Deore, 1 x"
-            },
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "details": "Deore XT Shadow+"
-            },
-            "crankset": {
-              "manufacturer": "Tern",
-              "details": "Orox custom"
-            },
-            "cassette_freewheel": {
-              "manufacturer": "Shimano",
-              "cog_range": "10-51T",
-              "speeds": 12,
-              "details": ""
-            },
+            "shifter": "Shimano Deore, 1 x 12 spd",
+            "rear_derailleur": "Shimano Deore XT Shadow+",
+            "crankset": "Tern Orox custom",
+            "cassette_freewheel": "Shimano 10-51T, 12 spd",
             "bottom_bracket": "Motor integrated",
-            "chain": {
-              "manufacturer": "KMC",
-              "details": "12 spd, for eBike, EPT corrosion resistant coating"
-            },
+            "chain": "KMC 12 spd, for eBike, EPT corrosion resistant coating",
             "pedals": "MTB, non-slip",
-            "shifter_cable_housing": {
-              "details": "Jagwire LEX-SL, slick treatment, alloy ferrules"
-            },
+            "shifter_cable_housing": "Jagwire LEX-SL, slick treatment, alloy ferrules",
             "chainguard": "Custom Bash Guard"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "pistons": 4,
-              "rotor_mm": 203,
-              "details": "MT5, hydraulic disc, rotor"
-            },
-            "rear_brake": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "pistons": 4,
-              "rotor_mm": 203,
-              "details": "MT5, hydraulic disc, rotor"
-            },
-            "brake_levers": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "details": "MT5, hydraulic"
-            },
-            "brake_cable_housing": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "details": "hydraulic"
-            }
+            "front_brake": "Magura MT5, 4-piston hydraulic disc, 203 mm rotor",
+            "rear_brake": "Magura MT5, 4-piston hydraulic disc, 203 mm rotor",
+            "brake_levers": "Magura MT5, hydraulic",
+            "brake_cable_housing": "Magura, hydraulic"
           },
           "wheelset": {
             "front_wheel": "Tern Atlas X, ultra-heavy duty cargo construction, 27.5\"",
@@ -2282,12 +1573,7 @@
             "rear_hub": "Tern Atlas X, CNC body, disc cooling fins, Boost Thru-Axle, Syntace X-12 standard",
             "spokes_nipples": "Stainless steel",
             "rims": "Tern Atlas X, custom doublewall construction",
-            "tires": {
-              "manufacturer": "Vee",
-              "size": "27.5x4",
-              "tubeless": false,
-              "details": "Snow Ball"
-            }
+            "tires": "Vee Snow Ball, 27.5 x 4\""
           },
           "cockpit": {
             "distance_seatpost_to_handlebar": "M: 61 - 66 cm (24 - 26 in) ; L: 67 - 73 cm (26.4 - 28.7 in)",
@@ -2399,20 +1685,9 @@
             "range": "400 Wh: 54 - 105 km (33.6 - 65.2 mi)"
           },
           "ebike_system": {
-            "motor": {
-              "manufacturer": "Bosch",
-              "torque_nm": 50,
-              "details": "Active Line Plus, 270% Assist, max speed 25 kph (EU); max speed 20 mph (US)"
-            },
-            "battery": {
-              "manufacturer": "Bosch",
-              "removable": false,
-              "details": "PowerPack 400"
-            },
-            "display": {
-              "manufacturer": "Bosch",
-              "details": "Purion"
-            },
+            "motor": "Bosch Active Line Plus, 270% Assist, 50 Nm Torque, max speed 25 kph (EU); max speed 20 mph (US)",
+            "battery": "Bosch PowerPack 400",
+            "display": "Bosch Purion",
             "charger": "Compact Charger, 100-240V, 2A"
           },
           "safety": {
@@ -2422,81 +1697,33 @@
           },
           "frameset": {
             "frame": "Tern Quick Haul, Patented Design, 6061-AL, EFBE Tri-Test approved: 150 kg",
-            "fork": {
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Cargo, steel, EFBE approved: 150 kg"
-            }
+            "fork": "Cargo, steel, EFBE approved: 150 kg"
           },
           "drivetrain": {
             "speeds": "1 x 8",
             "gear_inches": "31\" - 95\" (2.45 - 7.57 m)",
-            "shifter": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": "Altus, 1 x, trigger"
-            },
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "details": "Altus Shadow"
-            },
-            "crankset": {
-              "manufacturer": "Tern",
-              "details": "custom, forged 6061-AL crankarm"
-            },
-            "cassette_freewheel": {
-              "manufacturer": "Shimano",
-              "cog_range": "11-34T",
-              "speeds": 8,
-              "details": ""
-            },
+            "shifter": "Shimano Altus, 1 x 8 spd, trigger",
+            "rear_derailleur": "Shimano Altus Shadow",
+            "crankset": "Tern custom, forged 6061-AL crankarm",
+            "cassette_freewheel": "Shimano 11-34T, 8 spd",
             "bottom_bracket": "Motor integrated",
-            "chain": {
-              "manufacturer": "KMC",
-              "details": "for eBike, 8 spd"
-            },
+            "chain": "KMC for eBike, 8 spd",
             "pedals": "Urban with non-slip surface",
-            "shifter_cable_housing": {
-              "details": "SP"
-            },
+            "shifter_cable_housing": "SP",
             "chainguard": "SKS Chainblade"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Shimano",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "hydraulic disc"
-            },
-            "rear_brake": {
-              "manufacturer": "Shimano",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "hydraulic disc"
-            },
-            "brake_levers": {
-              "manufacturer": "Shimano",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "hydraulic disc"
-            },
-            "brake_cable_housing": {
-              "manufacturer": "Shimano",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "hydraulic disc"
-            }
+            "front_brake": "Shimano, hydraulic disc",
+            "rear_brake": "Shimano, hydraulic disc",
+            "brake_levers": "Shimano, hydraulic disc",
+            "brake_cable_housing": "Shimano, hydraulic disc"
           },
           "wheelset": {
             "front_hub": "Shimano disc",
             "rear_hub": "Shimano disc",
             "spokes_nipples": "Stainless steel",
             "rims": "Kinetix Comp, for disc",
-            "tires": {
-              "manufacturer": "Schwalbe",
-              "tubeless": false,
-              "details": "Big Apple, 55-406, puncture protection, Reflex"
-            }
+            "tires": "Schwalbe Big Apple, 55-406, puncture protection, Reflex"
           },
           "cockpit": {
             "distance_seatpost_to_handlebar": "60 - 64 cm (23.6 - 25.2 in)",
@@ -2613,20 +1840,9 @@
             "range": "500 Wh: 42-85 km (26-53 mi)"
           },
           "ebike_system": {
-            "motor": {
-              "manufacturer": "Bosch",
-              "torque_nm": 85,
-              "details": "Cargo Line, 400% Assist, max speed 25 kph (EU); max speed 20 mph (US)"
-            },
-            "battery": {
-              "manufacturer": "Bosch",
-              "removable": false,
-              "details": "PowerPack 500"
-            },
-            "display": {
-              "manufacturer": "Bosch",
-              "details": "Purion, 4 mode selectable, walk assist"
-            },
+            "motor": "Bosch Cargo Line, 400% Assist, 85 Nm Torque, max speed 25 kph (EU); max speed 20 mph (US)",
+            "battery": "Bosch PowerPack 500",
+            "display": "Bosch Purion, 4 mode selectable, walk assist",
             "charger": "220V, 4A (EU); 100-240V, 4A (US)"
           },
           "special_features": {
@@ -2639,74 +1855,32 @@
           },
           "frameset": {
             "frame": "Tern Quick Haul Long, Patented Design, 6061-AL, DIN 79010 certified: 190 kg (419 lb)",
-            "fork": {
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Cargo, Aluminum alloy, DIN 79010 certified: 190 kg (419 lb)"
-            }
+            "fork": "Cargo, Aluminum alloy, DIN 79010 certified: 190 kg (419 lb)"
           },
           "drivetrain": {
             "speeds": "1 x 9",
             "gear_inches": "23\" - 89\" (1.87 - 7.13 m)",
-            "shifter": {
-              "speeds": 9,
-              "details": "Tektro, 1 x, trigger"
-            },
-            "rear_derailleur": {
-              "manufacturer": "Tern",
-              "speeds": 9,
-              "details": "Tektro custom for, 1 x"
-            },
-            "crankset": {
-              "manufacturer": "Tern",
-              "details": "custom, forged 6061-AL crankarm, anti-drop chainring"
-            },
-            "cassette_freewheel": {
-              "cog_range": "11-42T",
-              "speeds": 9,
-              "details": "Tektro"
-            },
+            "shifter": "Tektro, 1 x 9 spd, trigger",
+            "rear_derailleur": "Tektro custom for Tern, 1 x 9 spd",
+            "crankset": "Tern custom, forged 6061-AL crankarm, anti-drop chainring",
+            "cassette_freewheel": "Tektro 11-42T, 9 spd",
             "bottom_bracket": "Motor integrated",
-            "chain": {
-              "manufacturer": "KMC",
-              "details": "for eBike, 9 spd"
-            },
+            "chain": "KMC for eBike, 9 spd",
             "pedals": "Urban with non-slip surface",
-            "shifter_cable_housing": {
-              "details": "SP"
-            },
+            "shifter_cable_housing": "SP",
             "chainguard": "SKS Chainblade"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "hydraulic disc"
-            },
-            "rear_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "hydraulic disc"
-            },
-            "brake_levers": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "hydraulic disc"
-            }
+            "front_brake": "Tektro hydraulic disc",
+            "rear_brake": "Tektro hydraulic disc",
+            "brake_levers": "Tektro hydraulic disc"
           },
           "wheelset": {
             "front_hub": "Disc, aluminum",
             "rear_hub": "9 spd, disc, aluminum, Boost",
             "spokes_nipples": "Stainless steel",
             "rims": "Tern Atlas H, cargo",
-            "tires": {
-              "manufacturer": "Tern",
-              "tubeless": false,
-              "details": "x Schwalbe Super Moto-X, Green Guard puncture protection, Reflex"
-            }
+            "tires": "Tern x Schwalbe Super Moto-X, Green Guard puncture protection, Reflex"
           },
           "cockpit": {
             "distance_seatpost_to_handlebar": "60 - 64 cm (23.6 - 25.2 in)",
@@ -2803,20 +1977,9 @@
             "range": "400 Wh: 51 - 100 km (31.7 - 62.1 mi)"
           },
           "ebike_system": {
-            "motor": {
-              "manufacturer": "Bosch",
-              "torque_nm": 65,
-              "details": "Class 3, Performance Sport, 300% Assist, max speed 28 mph"
-            },
-            "battery": {
-              "manufacturer": "Bosch",
-              "removable": false,
-              "details": "PowerPack 400"
-            },
-            "display": {
-              "manufacturer": "Bosch",
-              "details": "Purion"
-            },
+            "motor": "Class 3, Bosch Performance Sport, 300% Assist, 65 Nm Torque, max speed 28 mph",
+            "battery": "Bosch PowerPack 400",
+            "display": "Bosch Purion",
             "charger": "Compact Charger, 100-240V, 2A"
           },
           "safety": {
@@ -2826,81 +1989,33 @@
           },
           "frameset": {
             "frame": "Tern Quick Haul, Patented Design, 6061-AL, EFBE Tri-Test approved: 150 kg",
-            "fork": {
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Cargo, steel, EFBE approved: 150 kg"
-            }
+            "fork": "Cargo, steel, EFBE approved: 150 kg"
           },
           "drivetrain": {
             "speeds": "1 x 9",
             "gear_inches": "31\" - 95\" (2.45 - 7.57 m)",
-            "shifter": {
-              "manufacturer": "Shimano",
-              "speeds": 9,
-              "details": "Alivio, 1 x, trigger"
-            },
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "details": "Alivio Shadow"
-            },
-            "crankset": {
-              "manufacturer": "Tern",
-              "details": "custom, forged 6061-AL crankarm"
-            },
-            "cassette_freewheel": {
-              "manufacturer": "Shimano",
-              "cog_range": "11-34T",
-              "speeds": 9,
-              "details": ""
-            },
+            "shifter": "Shimano Alivio, 1 x 9 spd, trigger",
+            "rear_derailleur": "Shimano Alivio Shadow",
+            "crankset": "Tern custom, forged 6061-AL crankarm",
+            "cassette_freewheel": "Shimano 11-34T, 9 spd",
             "bottom_bracket": "Motor integrated",
-            "chain": {
-              "manufacturer": "KMC",
-              "details": "for eBike, 9 spd"
-            },
+            "chain": "KMC for eBike, 9 spd",
             "pedals": "Urban with non-slip surface",
-            "shifter_cable_housing": {
-              "details": "SP"
-            },
+            "shifter_cable_housing": "SP",
             "chainguard": "SKS Chainblade"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Shimano",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "hydraulic disc"
-            },
-            "rear_brake": {
-              "manufacturer": "Shimano",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "hydraulic disc"
-            },
-            "brake_levers": {
-              "manufacturer": "Shimano",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "hydraulic disc"
-            },
-            "brake_cable_housing": {
-              "manufacturer": "Shimano",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "hydraulic disc"
-            }
+            "front_brake": "Shimano, hydraulic disc",
+            "rear_brake": "Shimano, hydraulic disc",
+            "brake_levers": "Shimano, hydraulic disc",
+            "brake_cable_housing": "Shimano, hydraulic disc"
           },
           "wheelset": {
             "front_hub": "Shimano disc",
             "rear_hub": "Shimano disc",
             "spokes_nipples": "Stainless steel",
             "rims": "Kinetix Comp, for disc",
-            "tires": {
-              "manufacturer": "Schwalbe",
-              "tubeless": false,
-              "details": "Big Apple, 55-406, puncture protection, Reflex"
-            }
+            "tires": "Schwalbe Big Apple, 55-406, puncture protection, Reflex"
           },
           "cockpit": {
             "distance_seatpost_to_handlebar": "60 - 64 cm (23.6 - 25.2 in)",
@@ -2989,20 +2104,9 @@
             "range": "400 Wh: 28-70 mi"
           },
           "ebike_system": {
-            "motor": {
-              "manufacturer": "Bosch",
-              "details": "BES2 Performance, max speed 20 mph"
-            },
-            "battery": {
-              "manufacturer": "Bosch",
-              "capacity_wh": 400,
-              "removable": false,
-              "details": "PowerPack"
-            },
-            "display": {
-              "manufacturer": "Bosch",
-              "details": "Purion"
-            },
+            "motor": "Bosch BES2 Performance, max speed 20 mph",
+            "battery": "Bosch 400Wh PowerPack",
+            "display": "Bosch Purion",
             "charger": "100-120V, 4A"
           },
           "safety": {
@@ -3011,81 +2115,33 @@
           },
           "frameset": {
             "frame": "Tern Vektron, 6061-AL, hydroformed aluminum, OCL+ joint, 3 patented technologies",
-            "fork": {
-              "manufacturer": "Tern",
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Tarsus, 6061-Al, hydroformed"
-            }
+            "fork": "Tern Tarsus, 6061-Al, hydroformed"
           },
           "drivetrain": {
             "speeds": "1 x 10",
             "gear_inches": "30\" - 97\" (2.36 - 7.72 m)",
-            "shifter": {
-              "manufacturer": "Shimano",
-              "speeds": 10,
-              "details": "Deore, 1 x"
-            },
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "details": "Deore Shadow+"
-            },
-            "crankset": {
-              "manufacturer": "Tern",
-              "details": "custom, forged 6061-AL crankarm"
-            },
-            "cassette_freewheel": {
-              "manufacturer": "Shimano",
-              "cog_range": "11-36T",
-              "speeds": 10,
-              "details": ""
-            },
+            "shifter": "Shimano Deore, 1 x 10 spd",
+            "rear_derailleur": "Shimano Deore Shadow+",
+            "crankset": "Tern custom, forged 6061-AL crankarm",
+            "cassette_freewheel": "Shimano 11-36T, 10 spd",
             "bottom_bracket": "Motor integrated",
-            "chain": {
-              "details": "10 spd, DHT for eBike, GST corrosion resistant coating"
-            },
+            "chain": "10 spd, DHT for eBike, GST corrosion resistant coating",
             "pedals": "MKS EZY",
-            "shifter_cable_housing": {
-              "details": "Jagwire LEX-SL, slick treatment, alloy ferrules"
-            },
+            "shifter_cable_housing": "Jagwire LEX-SL, slick treatment, alloy ferrules",
             "chainguard": "SKS Chainblade"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "MT4, hydraulic disc"
-            },
-            "rear_brake": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "MT4, hydraulic disc"
-            },
-            "brake_levers": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "hydraulic disc"
-            },
-            "brake_cable_housing": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "hydraulic disc"
-            }
+            "front_brake": "Magura MT4, hydraulic disc",
+            "rear_brake": "Magura MT4, hydraulic disc",
+            "brake_levers": "Magura, hydraulic disc",
+            "brake_cable_housing": "Magura, hydraulic disc"
           },
           "wheelset": {
             "front_hub": "Novatec, sealed cartridge bearing, disc",
             "rear_hub": "Novatec, sealed cartridge bearing, disc",
             "spokes_nipples": "Stainless steel, double-butted",
             "rims": "Kinetix Comp, for disc",
-            "tires": {
-              "manufacturer": "Schwalbe",
-              "tubeless": false,
-              "details": "Big Apple, Performance Line, 55-406, puncture protection, Reflex"
-            }
+            "tires": "Schwalbe Big Apple, Performance Line, 55-406, puncture protection, Reflex"
           },
           "cockpit": {
             "distance_seatpost_to_handlebar": "62 - 69 cm (24.4 - 27.2 in)",
@@ -3185,20 +2241,9 @@
             "range": "400 Wh: 45-112 km (28-70 mi)"
           },
           "ebike_system": {
-            "motor": {
-              "manufacturer": "Bosch",
-              "details": "BES2 Performance, max speed 20 mph"
-            },
-            "battery": {
-              "manufacturer": "Bosch",
-              "capacity_wh": 400,
-              "removable": false,
-              "details": "PowerPack"
-            },
-            "display": {
-              "manufacturer": "Bosch",
-              "details": "Intuvia"
-            },
+            "motor": "Bosch BES2 Performance, max speed 20 mph",
+            "battery": "Bosch 400Wh PowerPack",
+            "display": "Bosch Intuvia",
             "charger": "100-120V, 4A"
           },
           "special_features": {
@@ -3210,76 +2255,31 @@
           },
           "frameset": {
             "frame": "Tern Vektron, 6061-AL, hydroformed aluminum, OCL+ joint, 3 patented technologies",
-            "fork": {
-              "manufacturer": "Tern",
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Tarsus, 6061-Al, hydroformed"
-            }
+            "fork": "Tern Tarsus, 6061-Al, hydroformed"
           },
           "drivetrain": {
             "speeds": "1 x 5",
             "gear_inches": "34\" - 90\" (2.75 - 7.22 m)",
-            "shifter": {
-              "manufacturer": "Shimano",
-              "speeds": 5,
-              "details": "Nexus"
-            },
-            "crankset": {
-              "manufacturer": "Tern",
-              "details": "custom, Gates CDX CNC machined beltring"
-            },
-            "cassette_freewheel": {
-              "manufacturer": "Gates",
-              "details": "CDX, precision CNC machined cog"
-            },
-            "chain": {
-              "manufacturer": "Gates",
-              "details": "Carbon Drive CDC belt"
-            },
+            "shifter": "Shimano Nexus, 5 spd",
+            "crankset": "Tern custom, Gates CDX CNC machined beltring",
+            "cassette_freewheel": "Gates CDX, precision CNC machined cog",
+            "chain": "Gates Carbon Drive CDC belt",
             "pedals": "MKS EZY",
-            "shifter_cable_housing": {
-              "manufacturer": "Shimano",
-              "details": ""
-            },
+            "shifter_cable_housing": "Shimano",
             "chainguard": "Tern Custom, full chain cover"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "MT4, hydraulic disc"
-            },
-            "rear_brake": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "MT4, hydraulic disc"
-            },
-            "brake_levers": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "hydraulic disc"
-            },
-            "brake_cable_housing": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "hydraulic disc"
-            }
+            "front_brake": "Magura MT4, hydraulic disc",
+            "rear_brake": "Magura MT4, hydraulic disc",
+            "brake_levers": "Magura, hydraulic disc",
+            "brake_cable_housing": "Magura, hydraulic disc"
           },
           "wheelset": {
             "front_hub": "Disc, aluminum",
             "rear_hub": "Shimano Nexus 5",
             "spokes_nipples": "Stainless steel",
             "rims": "Kinetix Comp, for disc",
-            "tires": {
-              "manufacturer": "Schwalbe",
-              "tubeless": false,
-              "details": "Big Apple, Performance Line, 55-406, puncture protection, Reflex"
-            }
+            "tires": "Schwalbe Big Apple, Performance Line, 55-406, puncture protection, Reflex"
           },
           "cockpit": {
             "distance_seatpost_to_handlebar": "62 - 69 cm (24.4 - 27.2 in)",
@@ -3374,21 +2374,9 @@
             "range": "400 Wh: 55 -110 km (35-70 mi)"
           },
           "ebike_system": {
-            "motor": {
-              "manufacturer": "Bosch",
-              "torque_nm": 50,
-              "details": "Class 1, Active Line Plus, 270% Assist, max speed 25 kph (EU); max speed 20 mph (US)"
-            },
-            "battery": {
-              "manufacturer": "Bosch",
-              "capacity_wh": 400,
-              "removable": false,
-              "details": "PowerPack"
-            },
-            "display": {
-              "manufacturer": "Bosch",
-              "details": "Purion, 4 mode selectable, walk assist"
-            },
+            "motor": "Class 1, Bosch Active Line Plus, 270% Assist, 50 Nm Torque, max speed 25 kph (EU); max speed 20 mph (US)",
+            "battery": "Bosch PowerPack 400 Wh",
+            "display": "Bosch Purion, 4 mode selectable, walk assist",
             "charger": "220V, 4A (EU); 100-240V, 4A (US)"
           },
           "safety": {
@@ -3398,80 +2386,33 @@
           },
           "frameset": {
             "frame": "Tern Vektron, hydroformed 7005-AL, OCL+ joint, 3 patented technologies",
-            "fork": {
-              "manufacturer": "Tern",
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Tarsus, 6061-Al, hydroformed"
-            }
+            "fork": "Tern Tarsus, 6061-Al, hydroformed"
           },
           "drivetrain": {
             "speeds": "1 x 9",
             "gear_inches": "33\" - 97\" (2.65 - 7.72 m)",
-            "shifter": {
-              "manufacturer": "Shimano",
-              "speeds": 9,
-              "details": "Alivio, 1 x, trigger"
-            },
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "details": "Alivio Shadow"
-            },
-            "crankset": {
-              "details": "Vektron custom, forged 6061-AL crankarm"
-            },
-            "cassette_freewheel": {
-              "manufacturer": "Shimano",
-              "cog_range": "11-32T",
-              "speeds": 9,
-              "details": ""
-            },
+            "shifter": "Shimano Alivio, 1 x 9 spd, trigger",
+            "rear_derailleur": "Shimano Alivio Shadow",
+            "crankset": "Vektron custom, forged 6061-AL crankarm",
+            "cassette_freewheel": "Shimano 11-32T, 9 spd",
             "bottom_bracket": "Motor integrated",
-            "chain": {
-              "details": "9 spd, DHT for eBike, GST corrosion resistant coating"
-            },
+            "chain": "9 spd, DHT for eBike, GST corrosion resistant coating",
             "pedals": "MKS EZY",
-            "shifter_cable_housing": {
-              "details": "Jagwire LEX-SL, slick treatment, alloy ferrules"
-            },
+            "shifter_cable_housing": "Jagwire LEX-SL, slick treatment, alloy ferrules",
             "chainguard": "SKS Chainblade"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Shimano",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "hydraulic disc"
-            },
-            "rear_brake": {
-              "manufacturer": "Shimano",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "hydraulic disc"
-            },
-            "brake_levers": {
-              "manufacturer": "Shimano",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "hydraulic disc"
-            },
-            "brake_cable_housing": {
-              "manufacturer": "Shimano",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "hydraulic disc"
-            }
+            "front_brake": "Shimano, hydraulic disc",
+            "rear_brake": "Shimano, hydraulic disc",
+            "brake_levers": "Shimano, hydraulic disc",
+            "brake_cable_housing": "Shimano, hydraulic disc"
           },
           "wheelset": {
             "front_hub": "Shimano disc",
             "rear_hub": "Shimano disc",
             "spokes_nipples": "Stainless steel",
             "rims": "Kinetix Comp, for disc",
-            "tires": {
-              "manufacturer": "Schwalbe",
-              "tubeless": false,
-              "details": "Big Apple, 55-406, puncture protection, Reflex"
-            }
+            "tires": "Schwalbe Big Apple, 55-406, puncture protection, Reflex"
           },
           "cockpit": {
             "distance_seatpost_to_handlebar": "62 - 69 cm (24.4 - 27.2 in)",
@@ -3577,21 +2518,9 @@
             "range": "400 Wh: 53 -106 km (34-68 mi)"
           },
           "ebike_system": {
-            "motor": {
-              "manufacturer": "Bosch",
-              "torque_nm": 65,
-              "details": "Performance, 300% Assist, max speed 25 kph (EU); max speed 20 mph (US)"
-            },
-            "battery": {
-              "manufacturer": "Bosch",
-              "capacity_wh": 400,
-              "removable": false,
-              "details": "PowerPack"
-            },
-            "display": {
-              "manufacturer": "Bosch",
-              "details": "Purion, 4 mode selectable, walk assist"
-            },
+            "motor": "Bosch Performance, 300% Assist, 65 Nm Torque, max speed 25 kph (EU); max speed 20 mph (US)",
+            "battery": "Bosch PowerPack 400 Wh",
+            "display": "Bosch Purion, 4 mode selectable, walk assist",
             "charger": "220V, 4A (EU); 100-240V, 4A (US)"
           },
           "safety": {
@@ -3601,80 +2530,33 @@
           },
           "frameset": {
             "frame": "Tern Vektron, hydroformed 7005-AL, OCL+ joint, 3 patented technologies",
-            "fork": {
-              "manufacturer": "Tern",
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Tarsus, 6061-Al, hydroformed"
-            }
+            "fork": "Tern Tarsus, 6061-Al, hydroformed"
           },
           "drivetrain": {
             "speeds": "1 x 10",
             "gear_inches": "30\" - 97\" (2.36 - 7.72 m)",
-            "shifter": {
-              "manufacturer": "Shimano",
-              "speeds": 10,
-              "details": "Deore, 1 x"
-            },
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "details": "Deore Shadow+"
-            },
-            "crankset": {
-              "details": "Vektron custom, forged 6061-AL crankarm"
-            },
-            "cassette_freewheel": {
-              "manufacturer": "Shimano",
-              "cog_range": "11-36T",
-              "speeds": 10,
-              "details": ""
-            },
+            "shifter": "Shimano Deore, 1 x 10 spd",
+            "rear_derailleur": "Shimano Deore Shadow+",
+            "crankset": "Vektron custom, forged 6061-AL crankarm",
+            "cassette_freewheel": "Shimano 11-36T, 10 spd",
             "bottom_bracket": "Motor integrated",
-            "chain": {
-              "details": "10 spd, DHT for eBike, GST corrosion resistant coating"
-            },
+            "chain": "10 spd, DHT for eBike, GST corrosion resistant coating",
             "pedals": "MKS EZY",
-            "shifter_cable_housing": {
-              "details": "Jagwire LEX-SL, slick treatment, alloy ferrules"
-            },
+            "shifter_cable_housing": "Jagwire LEX-SL, slick treatment, alloy ferrules",
             "chainguard": "SKS Chainblade"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "MT4, hydraulic disc"
-            },
-            "rear_brake": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "MT4, hydraulic disc"
-            },
-            "brake_levers": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "hydraulic disc"
-            },
-            "brake_cable_housing": {
-              "manufacturer": "Magura",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "details": "hydraulic disc"
-            }
+            "front_brake": "Magura MT4, hydraulic disc",
+            "rear_brake": "Magura MT4, hydraulic disc",
+            "brake_levers": "Magura, hydraulic disc",
+            "brake_cable_housing": "Magura, hydraulic disc"
           },
           "wheelset": {
             "front_hub": "Novatec, sealed cartridge bearing, disc",
             "rear_hub": "Novatec, sealed cartridge bearing, disc",
             "spokes_nipples": "Stainless steel, double-butted",
             "rims": "Kinetix Comp, for disc",
-            "tires": {
-              "manufacturer": "Schwalbe",
-              "tubeless": false,
-              "details": "Big Apple, Performance Line, 55-406, puncture protection, Reflex"
-            }
+            "tires": "Schwalbe Big Apple, Performance Line, 55-406, puncture protection, Reflex"
           },
           "cockpit": {
             "distance_seatpost_to_handlebar": "62 - 69 cm (24.4 - 27.2 in)",

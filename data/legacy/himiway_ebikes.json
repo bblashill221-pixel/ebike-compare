@@ -45,24 +45,9 @@
             "max_payload_capacity": "300 lb."
           },
           "ebike_system": {
-            "battery": {
-              "cell_brand": "LG",
-              "capacity_wh": 720,
-              "amphours_ah": 15.0,
-              "cell_format": "21700",
-              "removable": false,
-              "details": "48V IP65"
-            },
-            "motor": {
-              "manufacturer": "Himiway",
-              "power_w": 500,
-              "details": "brushless gear motor"
-            },
-            "display": {
-              "manufacturer": "Himiway",
-              "type": "lcd",
-              "details": "LED Display"
-            },
+            "battery": "48V15AH LG 21700 IP65 720Wh",
+            "motor": "500w Himiway brushless gear motor",
+            "display": "Himiway LED Display",
             "throttle": "Thumb throttle",
             "sensors": "Torque sensor丨speed sensor丨brake sensor",
             "controller": "48V/18A",
@@ -73,55 +58,24 @@
           },
           "frameset": {
             "frame": "Front: 6061 aluminum Rear:A356 Steel",
-            "fork": {
-              "travel_mm": 12,
-              "lockout": false,
-              "thru_axle": true,
-              "details": "6061 aluminum 100* thru axle, rack mounts, fender mounts, post disc mount"
-            }
+            "fork": "6061 aluminum 100*12mm thru axle, rack mounts, fender mounts, post disc mount"
           },
           "drivetrain": {
-            "crankset": {
-              "length_mm": 170,
-              "chainring_t": 38,
-              "details": "Crank arm:J6061-T6 | Chain ring: narrow wide steel chainring BCD104"
-            },
-            "freewheel": {
-              "manufacturer": "Shimano",
-              "cog_range": "14-28T",
-              "details": "MF-TZ500-7"
-            },
-            "chain": {
-              "manufacturer": "KMC",
-              "links": 112,
-              "details": "Z8.3 EPT"
-            },
+            "crankset": "Crank arm:J6061-T6 170mm | Chain ring: 38T narrow wide steel chainring BCD104",
+            "freewheel": "Shimano MF-TZ500-7 14-28T",
+            "chain": "KMC Z8.3 EPT 112L",
             "groupset": "Shimano altus M310 7 speed"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "rotor_mm": 160,
-              "details": "HD-E3520 hydraulic brake"
-            },
-            "rear_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "rotor_mm": 160,
-              "details": "HD-E3520 hydraulic brake"
-            },
+            "front_brake": "Tektro HD-E3520 hydraulic brake",
+            "rear_brake": "Tektro HD-E3520 hydraulic brake",
             "rotors": "F:160mm R:160mm"
           },
           "wheelset": {
             "i_wheel_diameter": "26.2",
             "front_wheel": "Rim: 26\"\"*1.75*36H*13G A/V | Spoke: 13G*257.5MM/259.5MM | Hub: R303F-12 12g*36H 12*100mm",
             "rear_wheel": "Rim: 26\"\"*1.75*36H*13G A/V | Spoke: 13G*225.5MM/226.5MM | Hub: 48v 500w Himiway Hub Motor",
-            "tires": {
-              "manufacturer": "Innova",
-              "tubeless": false,
-              "details": "IA-2128 26*2.2 25-60PSI"
-            }
+            "tires": "Innova IA-2128 26*2.2 25-60PSI"
           },
           "cockpit": {
             "b_handlebar_height": "45.3",
@@ -256,24 +210,9 @@
             "max_payload_capacity": "300 lb."
           },
           "ebike_system": {
-            "battery": {
-              "cell_brand": "LG",
-              "capacity_wh": 720,
-              "amphours_ah": 15.0,
-              "cell_format": "21700",
-              "removable": false,
-              "details": "48V IP65"
-            },
-            "motor": {
-              "manufacturer": "Himiway",
-              "power_w": 500,
-              "details": "brushless gear motor"
-            },
-            "display": {
-              "manufacturer": "Himiway",
-              "type": "lcd",
-              "details": "LCD Display"
-            },
+            "battery": "48V15AH LG 21700 IP65 720Wh",
+            "motor": "500w Himiway brushless gear motor",
+            "display": "Himiway LCD Display",
             "throttle": "Thumb throttle",
             "sensors": "Torque sensor丨speed sensor丨brake sensor",
             "controller": "48V/18A",
@@ -284,59 +223,24 @@
           },
           "frameset": {
             "frame": "Front: 6061 aluminum Rear:A356 Steel",
-            "fork": {
-              "type": "coil",
-              "travel_mm": 40,
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Coil suspention fork, is disc mount"
-            }
+            "fork": "Coil suspention fork, 40mm travel, is disc mount"
           },
           "drivetrain": {
-            "crankset": {
-              "length_mm": 145,
-              "chainring_t": 44,
-              "details": "Crank arm:6061-T6 | Chain ring: narrow wide steel chainring BCD104"
-            },
-            "cassette": {
-              "manufacturer": "Shimano",
-              "cog_range": "14-28T",
-              "details": "MF-TZ500-7"
-            },
-            "chain": {
-              "manufacturer": "KMC",
-              "links": 100,
-              "details": "Z8.3 EPT"
-            },
+            "crankset": "Crank arm:6061-T6 145mm | Chain ring: 44T narrow wide steel chainring BCD104",
+            "cassette": "Shimano MF-TZ500-7 14-28T",
+            "chain": "KMC Z8.3 EPT 100L",
             "groupset": "Shimano altus M310 7 speed"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Nutt",
-              "actuation": "mechanical",
-              "kind": "disc",
-              "rotor_mm": 160,
-              "details": "JAK-8 mechanical disc brake"
-            },
-            "rear_brake": {
-              "manufacturer": "Nutt",
-              "actuation": "mechanical",
-              "kind": "disc",
-              "rotor_mm": 160,
-              "details": "JAK-8 mechanical disc brake"
-            },
+            "front_brake": "Nutt JAK-8 mechanical disc brake",
+            "rear_brake": "Nutt JAK-8 mechanical disc brake",
             "rotors": "F:160mm R:160mm"
           },
           "wheelset": {
             "i_wheel_diameter": "20.8",
             "front_wheel": "Rim: MD-260 20*2.5\"\"*36H*13G A/V | Spoke: 13G*171MM/172MM | Hub: MS-37F 13G*36H*100mm",
             "rear_wheel": "Rim: MD-260 20*2.5\"\"*36H*13G A/V | Spoke: 13G*133MM/134MM | Hub: 48v 500w Himiway Hub Motor",
-            "tires": {
-              "manufacturer": "Innova",
-              "size": "20x2.40",
-              "tubeless": false,
-              "details": "lA-1283"
-            }
+            "tires": "Innova 20x2.40 lA-1283"
           },
           "cockpit": {
             "b_handlebar_height": "45.3",
@@ -466,22 +370,9 @@
             "max_payload_capacity": "440 lb. (with battery)"
           },
           "ebike_system": {
-            "battery": {
-              "cell_brand": "Samsung",
-              "voltage_v": 48,
-              "amphours_ah": 20.0,
-              "removable": false,
-              "details": "LG"
-            },
-            "motor": {
-              "power_w": 750,
-              "details": "brushless gear motor"
-            },
-            "display": {
-              "manufacturer": "Himiway",
-              "type": "lcd",
-              "details": "C2 LCD Display"
-            },
+            "battery": "Samsung/LG 48V 20Ah",
+            "motor": "750W brushless gear motor",
+            "display": "Himiway C2 LCD Display",
             "throttle": "Thumb throttle",
             "sensors": "Torque sensor丨speed sensor丨brake sensor",
             "controller": "48V/22A",
@@ -489,50 +380,23 @@
           },
           "frameset": {
             "frame": "6061 Aluminum frame",
-            "fork": {
-              "type": "coil",
-              "travel_mm": 60,
-              "lockout": false,
-              "thru_axle": true,
-              "details": "TRAMA coil suspension 135mm thru axle"
-            }
+            "fork": "TRAMA coil suspension 60mm travel 135mm thru axle"
           },
           "drivetrain": {
-            "crankset": {
-              "length_mm": 145,
-              "chainring_t": 44,
-              "details": "BCD104 6061-T6"
-            },
-            "freewheel": {
-              "manufacturer": "Shimano",
-              "cog_range": "14-28T",
-              "details": "MF-TZ500-7"
-            },
-            "chain": {
-              "manufacturer": "KMC",
-              "links": 120,
-              "details": "Z8.3 EPT"
-            },
+            "crankset": "44T BCD104 6061-T6 145mm",
+            "freewheel": "Shimano MF-TZ500-7 14-28T",
+            "chain": "KMC Z8.3 EPT 120L",
             "groupset": "Shimano altus M310 7 speed"
           },
           "brakes": {
             "rotors": "F:180mm R:180mm",
-            "rear_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "rotor_mm": 180,
-              "details": "HD-E3520 hydraulic brake"
-            }
+            "rear_brake": "Tektro HD-E3520 hydraulic brake"
           },
           "wheelset": {
             "e_wheel_diameter": "23",
             "front_wheel": "Rim: J57SA 20*12G*36H A/V | Spoke: 12G 172mm | Hub: MB016F-92-T 15*135mm 12G*36H",
             "rear_wheel": "Rim: J57SA 20*12G*36H A/V | Spoke: 12G 127mm/128mm | Hub: 48v 750w Himiway Hub Motor",
-            "tires": {
-              "manufacturer": "CST",
-              "tubeless": false,
-              "details": "20\"x3\""
-            }
+            "tires": "CST 20\"x3\""
           },
           "cockpit": {
             "b_handlebar_height": "42",
@@ -633,21 +497,9 @@
             "max_payload_capacity": "350 lb."
           },
           "ebike_system": {
-            "battery": {
-              "cell_brand": "Samsung",
-              "voltage_v": 48,
-              "amphours_ah": 15.0,
-              "removable": false,
-              "details": "LG"
-            },
-            "motor": {
-              "power_w": 750,
-              "details": "brushless gear motor"
-            },
-            "display": {
-              "type": "lcd",
-              "details": "LCD display with USB charging"
-            },
+            "battery": "Samsung/LG 48V 15Ah",
+            "motor": "750W brushless gear motor",
+            "display": "LCD display with USB charging",
             "throttle": "Half twist throttle",
             "sensors": "Cadence sensor丨speed sensor丨brake sensor",
             "controller": "48V/22A",
@@ -658,59 +510,25 @@
           },
           "frameset": {
             "frame": "6061 Aluminum frame",
-            "fork": {
-              "travel_mm": 95,
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Guide-26”-TNL-95"
-            },
-            "shock": {
-              "details": "Alloy front suspension fork with lockout and adjustment"
-            }
+            "fork": "Guide-26”-TNL-95 95mm travel",
+            "shock": "Alloy front suspension fork with lockout and adjustment"
           },
           "drivetrain": {
-            "crankset": {
-              "length_mm": 170,
-              "chainring_t": 46,
-              "details": "Crank arm: 4IXF-212FA | Chain ring"
-            },
-            "freewheel": {
-              "manufacturer": "Shimano",
-              "cog_range": "14-28T",
-              "details": "MF-TZ500-7"
-            },
-            "chain": {
-              "manufacturer": "KMC",
-              "links": 120,
-              "details": "Z8.3 EPT"
-            },
+            "crankset": "Crank arm: 4IXF-212FA 170mm | Chain ring: 46T",
+            "freewheel": "Shimano MF-TZ500-7 14-28T",
+            "chain": "KMC Z8.3 EPT 120L",
             "groupset": "Shimano altus M310 7 speed"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "mechanical",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "ARIES MD-M300 mechanical disc brakes"
-            },
-            "rear_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "mechanical",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "ARIES MD-M300 mechanical disc brakes"
-            },
+            "front_brake": "Tektro ARIES MD-M300 mechanical disc brakes",
+            "rear_brake": "Tektro ARIES MD-M300 mechanical disc brakes",
             "rotors": "Tektro TR180-24 F:180mm R:180mm"
           },
           "wheelset": {
             "e_wheel_diameter": "28.7",
             "front_wheel": "MB015-92 13G*135*9mm MD242 26*87mm 12G*36",
             "rear_wheel": "Rim: 3G*135*9mm MD242 26*87mm | Spoke: 12G*36 | Hub: 48v 750w Himiway hub motor",
-            "tires": {
-              "tubeless": false,
-              "details": "26*4.0"
-            }
+            "tires": "26*4.0"
           },
           "cockpit": {
             "b_handlebar_height": "46.5",
@@ -789,21 +607,9 @@
             "max_payload_capacity": "350 lb."
           },
           "ebike_system": {
-            "battery": {
-              "cell_brand": "Samsung",
-              "voltage_v": 48,
-              "amphours_ah": 15.0,
-              "removable": false,
-              "details": "LG"
-            },
-            "motor": {
-              "power_w": 750,
-              "details": "brushless gear motor"
-            },
-            "display": {
-              "type": "lcd",
-              "details": "LCD display with USB charging"
-            },
+            "battery": "Samsung/LG 48V 15Ah",
+            "motor": "750W brushless gear motor",
+            "display": "LCD display with USB charging",
             "throttle": "Half twist throttle",
             "sensors": "Cadence sensor丨speed sensor丨brake sensor",
             "controller": "48V/22A",
@@ -814,59 +620,25 @@
           },
           "frameset": {
             "frame": "6061 Aluminum frame",
-            "fork": {
-              "travel_mm": 95,
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Guide-26”-TNL-95"
-            },
-            "shock": {
-              "details": "Alloy front suspension fork with lockout and adjustment"
-            }
+            "fork": "Guide-26”-TNL-95 95mm travel",
+            "shock": "Alloy front suspension fork with lockout and adjustment"
           },
           "drivetrain": {
-            "crankset": {
-              "length_mm": 170,
-              "chainring_t": 46,
-              "details": "Crank arm: 4IXF-212FA | Chain ring"
-            },
-            "freewheel": {
-              "manufacturer": "Shimano",
-              "cog_range": "14-28T",
-              "details": "MF-TZ500-7"
-            },
-            "chain": {
-              "manufacturer": "KMC",
-              "links": 120,
-              "details": "Z8.3 EPT"
-            },
+            "crankset": "Crank arm: 4IXF-212FA 170mm | Chain ring: 46T",
+            "freewheel": "Shimano MF-TZ500-7 14-28T",
+            "chain": "KMC Z8.3 EPT 120L",
             "groupset": "Shimano altus M310 7 speed"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "mechanical",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "ARIES MD-M300 mechanical disc brakes"
-            },
-            "rear_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "mechanical",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "ARIES MD-M300 mechanical disc brakes"
-            },
+            "front_brake": "Tektro ARIES MD-M300 mechanical disc brakes",
+            "rear_brake": "Tektro ARIES MD-M300 mechanical disc brakes",
             "rotors": "Tektro TR180-24 F:180mm R:180mm"
           },
           "wheelset": {
             "e_wheel_diameter": "28.7",
             "front_wheel": "MB015-92 13G*135*9mm MD242 26*87mm 12G*36",
             "rear_wheel": "Rim: 3G*135*9mm MD242 26*87mm | Spoke: 12G*36 | Hub: 48v 750w Himiway hub motor",
-            "tires": {
-              "tubeless": false,
-              "details": "26*4.0"
-            }
+            "tires": "26*4.0"
           },
           "cockpit": {
             "b_handlebar_height": "46.5",
@@ -961,22 +733,9 @@
             "max_payload_capacity": "400 lb."
           },
           "ebike_system": {
-            "battery": {
-              "cell_brand": "Samsung",
-              "voltage_v": 48,
-              "amphours_ah": 20.0,
-              "removable": false,
-              "details": "LG"
-            },
-            "motor": {
-              "placement": "mid",
-              "power_w": 500,
-              "details": "mid-drive motor"
-            },
-            "display": {
-              "type": "lcd",
-              "details": "KD718-P LCD display with Type-c charger"
-            },
+            "battery": "Samsung/LG 48V 20Ah",
+            "motor": "500W mid-drive motor",
+            "display": "KD718-P LCD display with Type-c charger",
             "throttle": "Thumb throttle",
             "sensors": "Torque sensor丨shifting sensor speed sensor丨brake sensor",
             "controller": "48V/22A",
@@ -987,60 +746,25 @@
           },
           "frameset": {
             "frame": "6061 Aluminum frame",
-            "fork": {
-              "travel_mm": 100,
-              "lockout": false,
-              "thru_axle": true,
-              "details": "TRAMA FAT34-PLS-26\" 15*135mm thru axle"
-            },
-            "shock": {
-              "details": "Alloy front suspension fork with lockout and adjustment"
-            }
+            "fork": "TRAMA FAT34-PLS-26\" 100mm travel 15*135mm thru axle",
+            "shock": "Alloy front suspension fork with lockout and adjustment"
           },
           "drivetrain": {
-            "crankset": {
-              "manufacturer": "Prowheel",
-              "length_mm": 170,
-              "chainring_t": 44,
-              "details": "Crankarm: / Chain ring: BCD104"
-            },
-            "freewheel": {
-              "manufacturer": "Shimano",
-              "cog_range": "11-36T",
-              "details": "CS-HG201-9"
-            },
-            "chain": {
-              "manufacturer": "KMC",
-              "links": 124,
-              "details": "E9 EPT"
-            },
+            "crankset": "Crankarm: Prowheel 170mm / Chain ring: 44T BCD104",
+            "freewheel": "Shimano CS-HG201-9 11-36T",
+            "chain": "KMC E9 EPT 124L",
             "groupset": "Shimano altus M2000 9 speed"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "rotor_mm": 180,
-              "details": "HD-E3520 hydraulic brake"
-            },
-            "rear_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "HD-E3520 Hydraulic Disc Brake"
-            },
+            "front_brake": "Tektro HD-E3520 hydraulic brake",
+            "rear_brake": "Tektro HD-E3520 Hydraulic Disc Brake",
             "rotors": "Tektro TR180-52 F:180mm R:180mm"
           },
           "wheelset": {
             "e_wheel_diameter": "28.7",
             "front_wheel": "Rim: MD-147 26*4.0\"*36H*12G A/VSpoke: 12G 255/256L stainless (304M)Hub: MB015-92 M9*12G*135*145W",
             "rear_wheel": "Rim: MD-147 26*4.0\"*36H*12G A/V | Spoke: 12G 256/257L stainless (304M) | Hub: GSMB019R-190F-GM14",
-            "tires": {
-              "manufacturer": "Kenda",
-              "tubeless": false,
-              "details": "26*4.0"
-            }
+            "tires": "Kenda 26*4.0"
           },
           "cockpit": {
             "b_handlebar_height": "47",
@@ -1176,22 +900,9 @@
             "max_payload_capacity": "400 lb."
           },
           "ebike_system": {
-            "battery": {
-              "cell_brand": "Samsung",
-              "voltage_v": 48,
-              "amphours_ah": 20.0,
-              "removable": false,
-              "details": "LG"
-            },
-            "motor": {
-              "placement": "mid",
-              "power_w": 500,
-              "details": "mid-drive motor"
-            },
-            "display": {
-              "type": "lcd",
-              "details": "KD718-P LCD display with Type-c charger"
-            },
+            "battery": "Samsung/LG 48V 20Ah",
+            "motor": "500W mid-drive motor",
+            "display": "KD718-P LCD display with Type-c charger",
             "throttle": "Thumb throttle",
             "sensors": "Torque sensor丨shifting sensor speed sensor丨brake sensor",
             "controller": "48V/22A",
@@ -1202,60 +913,25 @@
           },
           "frameset": {
             "frame": "6061 Aluminum frame",
-            "fork": {
-              "travel_mm": 100,
-              "lockout": false,
-              "thru_axle": true,
-              "details": "TRAMA FAT34-PLS-26\" 15*135mm thru axle"
-            },
-            "shock": {
-              "details": "Alloy front suspension fork with lockout and adjustment"
-            }
+            "fork": "TRAMA FAT34-PLS-26\" 100mm travel 15*135mm thru axle",
+            "shock": "Alloy front suspension fork with lockout and adjustment"
           },
           "drivetrain": {
-            "crankset": {
-              "manufacturer": "Prowheel",
-              "length_mm": 170,
-              "chainring_t": 44,
-              "details": "Crankarm: / Chain ring: BCD104"
-            },
-            "freewheel": {
-              "manufacturer": "Shimano",
-              "cog_range": "11-36T",
-              "details": "CS-HG201-9"
-            },
-            "chain": {
-              "manufacturer": "KMC",
-              "links": 124,
-              "details": "E9 EPT"
-            },
+            "crankset": "Crankarm: Prowheel 170mm / Chain ring: 44T BCD104",
+            "freewheel": "Shimano CS-HG201-9 11-36T",
+            "chain": "KMC E9 EPT 124L",
             "groupset": "Shimano altus M2000 9 speed"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "rotor_mm": 180,
-              "details": "HD-E3520 hydraulic brake"
-            },
-            "rear_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "HD-E3520 Hydraulic Disc Brake"
-            },
+            "front_brake": "Tektro HD-E3520 hydraulic brake",
+            "rear_brake": "Tektro HD-E3520 Hydraulic Disc Brake",
             "rotors": "Tektro TR180-52 F:180mm R:180mm"
           },
           "wheelset": {
             "e_wheel_diameter": "28.7",
             "front_wheel": "Rim: MD-147 26*4.0\"*36H*12G A/VSpoke: 12G 255/256L stainless (304M)Hub: MB015-92 M9*12G*135*145W",
             "rear_wheel": "Rim: MD-147 26*4.0\"*36H*12G A/V | Spoke: 12G 256/257L stainless (304M) | Hub: GSMB019R-190F-GM14",
-            "tires": {
-              "manufacturer": "Kenda",
-              "tubeless": false,
-              "details": "26*4.0"
-            }
+            "tires": "Kenda 26*4.0"
           },
           "cockpit": {
             "b_handlebar_height": "47",
@@ -1391,22 +1067,9 @@
             "max_payload_capacity": "400 lb."
           },
           "ebike_system": {
-            "battery": {
-              "cell_brand": "Samsung",
-              "voltage_v": 48,
-              "amphours_ah": 20.0,
-              "removable": false,
-              "details": "LG"
-            },
-            "motor": {
-              "placement": "hub",
-              "power_w": 750,
-              "details": "Hub motor"
-            },
-            "display": {
-              "type": "lcd",
-              "details": "KD718-P LCD display with Type-c charger"
-            },
+            "battery": "Samsung/LG 48V 20Ah",
+            "motor": "750W Hub motor",
+            "display": "KD718-P LCD display with Type-c charger",
             "throttle": "Thumb throttle",
             "sensors": "Torque sensor丨shifting sensor speed sensor丨brake sensor",
             "controller": "48V/22A",
@@ -1417,59 +1080,25 @@
           },
           "frameset": {
             "frame": "6061 Aluminum frame",
-            "fork": {
-              "travel_mm": 100,
-              "lockout": false,
-              "thru_axle": true,
-              "details": "TRAMA FAT34-PLS-26\" 15*135mm thru axle"
-            },
-            "shock": {
-              "details": "Alloy front suspension fork with lockout and adjustment"
-            }
+            "fork": "TRAMA FAT34-PLS-26\" 100mm travel 15*135mm thru axle",
+            "shock": "Alloy front suspension fork with lockout and adjustment"
           },
           "drivetrain": {
-            "crankset": {
-              "manufacturer": "Prowheel",
-              "length_mm": 170,
-              "chainring_t": 44,
-              "details": "Crankarm: / Chain ring: BCD104"
-            },
-            "freewheel": {
-              "manufacturer": "Shimano",
-              "cog_range": "11-36T",
-              "details": "CS-HG201-9"
-            },
-            "chain": {
-              "manufacturer": "KMC",
-              "links": 124,
-              "details": "E9 EPT"
-            },
+            "crankset": "Crankarm: Prowheel 170mm / Chain ring: 44T BCD104",
+            "freewheel": "Shimano CS-HG201-9 11-36T",
+            "chain": "KMC E9 EPT 124L",
             "groupset": "Shimano altus M2000 9 speed"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "rotor_mm": 180,
-              "details": "HD-E350 hydraulic brake"
-            },
-            "rear_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "rotor_mm": 180,
-              "details": "HD-E350 hydraulic brake"
-            },
+            "front_brake": "Tektro HD-E350 hydraulic brake",
+            "rear_brake": "Tektro HD-E350 hydraulic brake",
             "rotors": "Tektro TR180-52 F:180mm R:180mm"
           },
           "wheelset": {
             "e_wheel_diameter": "28.7",
             "front_wheel": "Rim: MD-147 26*4.0\"*36H*12G A/VSpoke: 12G 255/256L stainless (304M)Hub: MB015-92 M9*12G*135*145W",
             "rear_wheel": "Rim: MD-147 26*4.0\"*36H*12G A/V | Spoke: 12G 256/257L stainless (304M) | Hub: GSMB019R-190F-GM14",
-            "tires": {
-              "manufacturer": "Kenda",
-              "tubeless": false,
-              "details": "26*4.0"
-            }
+            "tires": "Kenda 26*4.0"
           },
           "cockpit": {
             "b_handlebar_height": "47",
@@ -1605,21 +1234,9 @@
             "max_payload_capacity": "400 lb."
           },
           "ebike_system": {
-            "battery": {
-              "cell_brand": "Samsung",
-              "voltage_v": 48,
-              "amphours_ah": 20.0,
-              "removable": false,
-              "details": "LG"
-            },
-            "motor": {
-              "power_w": 750,
-              "details": "brushless gear motor"
-            },
-            "display": {
-              "type": "lcd",
-              "details": "LCD display with USB charger"
-            },
+            "battery": "Samsung/LG 48V 20Ah",
+            "motor": "750W brushless gear motor",
+            "display": "LCD display with USB charger",
             "throttle": "Thumb throttle",
             "sensors": "Torque sensor丨speed sensor丨brake sensor",
             "controller": "48V/22A",
@@ -1630,56 +1247,24 @@
           },
           "frameset": {
             "frame": "6061 Aluminum frame",
-            "fork": {
-              "travel_mm": 95,
-              "lockout": false,
-              "thru_axle": false,
-              "details": "TRAMA 26\"\"FAT34-26-HLO 9*135mm quick release"
-            }
+            "fork": "TRAMA 26\"\"FAT34-26-HLO 95mm travel 9*135mm quick release"
           },
           "drivetrain": {
-            "crankset": {
-              "manufacturer": "Prowheel",
-              "length_mm": 170,
-              "chainring_t": 44,
-              "details": "Crankarm: EB-01-242A-S1 | Chain ring: BCD104"
-            },
-            "freewheel": {
-              "manufacturer": "Shimano",
-              "cog_range": "14-28T",
-              "details": "MF-TZ500-7"
-            },
-            "chain": {
-              "manufacturer": "KMC",
-              "links": 120,
-              "details": "Anti-Rust Z8.3 EPT"
-            },
+            "crankset": "Crankarm: Prowheel EB-01-242A-S1 170mm | Chain ring: 44T BCD104",
+            "freewheel": "Shimano MF-TZ500-7 14-28T",
+            "chain": "Anti-Rust KMC Z8.3 EPT 120L",
             "groupset": "Shimano altus M310 7 speed"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "rotor_mm": 180,
-              "details": "HD-E3520 hydraulic brake"
-            },
-            "rear_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "rotor_mm": 180,
-              "details": "HD-E3520 hydraulic brake"
-            },
+            "front_brake": "Tektro HD-E3520 hydraulic brake",
+            "rear_brake": "Tektro HD-E3520 hydraulic brake",
             "rotors": "Tektro TR180-52 F:180mm R:180mm"
           },
           "wheelset": {
             "e_wheel_diameter": "28.7",
             "front_wheel": "Rim: MD-147 26*4.0\"*36H*12G A/VSpoke: 12G 255/256L stainless (304M)Hub: MB015-92 M9*12G*135*145W",
             "rear_wheel": "Rim: MD-147 26*4.0\"\"*36H*12G A/VSpoke: 12G 214L stainless (304M)Hub: 48v 750w Himiway hub motor",
-            "tires": {
-              "manufacturer": "Kenda",
-              "tubeless": false,
-              "details": "26*4.0"
-            }
+            "tires": "Kenda 26*4.0"
           },
           "cockpit": {
             "b_handlebar_height": "47",
@@ -1799,21 +1384,9 @@
             "max_payload_capacity": "400 lb."
           },
           "ebike_system": {
-            "battery": {
-              "cell_brand": "Samsung",
-              "voltage_v": 48,
-              "amphours_ah": 20.0,
-              "removable": false,
-              "details": "LG"
-            },
-            "motor": {
-              "power_w": 1000,
-              "details": "brushless gear motor"
-            },
-            "display": {
-              "type": "lcd",
-              "details": "LCD display with Type-c charger"
-            },
+            "battery": "Samsung/LG 48V 20Ah",
+            "motor": "1000W brushless gear motor",
+            "display": "LCD display with Type-c charger",
             "throttle": "Thumb throttle",
             "sensors": "Torque sensor丨speed sensor丨brake sensor",
             "controller": "48V/25A",
@@ -1824,58 +1397,25 @@
           },
           "frameset": {
             "frame": "6061 Aluminum frame",
-            "fork": {
-              "type": "air",
-              "travel_mm": 120,
-              "lockout": true,
-              "thru_axle": false,
-              "details": "DASH-AIR-20 Inverted Fork lockout & rebound adjustable"
-            },
-            "shock": {
-              "manufacturer": "DNM",
-              "details": "A0-38RC rear shock 190*45mm"
-            }
+            "fork": "DASH-AIR-20 Inverted Fork 120mm lockout & rebound adjustable",
+            "shock": "DNM A0-38RC rear shock 190*45mm"
           },
           "drivetrain": {
-            "crankset": {
-              "length_mm": 170,
-              "chainring_t": 40,
-              "details": "Crank arm: EB-01-242A-S1 | Chain ring: 104BCD narrow wide chainring"
-            },
-            "freewheel": {
-              "manufacturer": "Shimano",
-              "cog_range": "11-34T",
-              "details": "CS-HG41.8"
-            },
-            "chain": {
-              "manufacturer": "KMC",
-              "links": 122,
-              "details": "Z8.3 EPT"
-            },
+            "crankset": "Crank arm: EB-01-242A-S1 170mm | Chain ring: 40T 104BCD narrow wide chainring",
+            "freewheel": "Shimano CS-HG41.8 11-34T",
+            "chain": "KMC Z8.3 EPT 122L",
             "groupset": "Shimano acera M3020 8s"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "details": "HD-E350 hydraulic brake"
-            },
-            "rear_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "details": "HD-E350 hydraulic brake"
-            },
+            "front_brake": "Tektro HD-E350 hydraulic brake",
+            "rear_brake": "Tektro HD-E350 hydraulic brake",
             "rotors": "F:TR-203-52 R:TR-180-52"
           },
           "wheelset": {
             "e_wheel_diameter": "30.3",
             "front_wheel": "M9CF-150 12G*150*15mm 26'' 36h",
             "rear_wheel": "MD-147 12G 214L 48v 1000w Himiway hub motor",
-            "tires": {
-              "manufacturer": "Kenda",
-              "tubeless": false,
-              "details": "X Himiway 26*4.5"
-            }
+            "tires": "Kenda X Himiway 26*4.5"
           },
           "cockpit": {
             "b_handlebar_height": "42.9",
@@ -1953,21 +1493,9 @@
             "max_payload_capacity": "330 lb."
           },
           "ebike_system": {
-            "battery": {
-              "cell_brand": "Samsung",
-              "voltage_v": 48,
-              "amphours_ah": 15.0,
-              "removable": false,
-              "details": "LG"
-            },
-            "motor": {
-              "power_w": 750,
-              "details": "brushless gear motor"
-            },
-            "display": {
-              "type": "lcd",
-              "details": "LCD display with USB charging"
-            },
+            "battery": "Samsung/LG 48V 15Ah",
+            "motor": "750W brushless gear motor",
+            "display": "LCD display with USB charging",
             "throttle": "Half twist throttle",
             "sensors": "Cadence sensor丨speed sensor丨brake sensor",
             "controller": "48V/22A",
@@ -1978,63 +1506,25 @@
           },
           "frameset": {
             "frame": "6061 Aluminum frame",
-            "fork": {
-              "type": "coil",
-              "travel_mm": 270,
-              "lockout": true,
-              "thru_axle": false,
-              "details": "WB800-HLO-20\" 28.6*25.4* lockout & preload adjustable"
-            },
-            "shock": {
-              "type": "coil",
-              "details": "Dual coil spring suspension 290mm"
-            }
+            "fork": "WB800-HLO-20\" 28.6*25.4*270mm lockout & preload adjustable",
+            "shock": "Dual coil spring suspension 290mm"
           },
           "drivetrain": {
-            "crankset": {
-              "length_mm": 170,
-              "chainring_t": 46,
-              "details": "Crank arm: 4-jaw L/R forged alloy | Chain ring"
-            },
-            "freewheel": {
-              "manufacturer": "Shimano",
-              "cog_range": "14-28T",
-              "details": "MF-TZ500-7"
-            },
-            "chain": {
-              "manufacturer": "KMC",
-              "links": 120,
-              "details": "Z8.3-EPT"
-            },
+            "crankset": "Crank arm: 4-jaw L/R forged alloy 170mm | Chain ring: 46T",
+            "freewheel": "Shimano MF-TZ500-7 14-28T",
+            "chain": "KMC Z8.3-EPT 120L",
             "groupset": "Shimano altus M310 7 speed"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "mechanical",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "ARIES MD-M300 mechanical disc brakes"
-            },
-            "rear_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "mechanical",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "ARIES MD-M300 mechanical disc brakes"
-            },
+            "front_brake": "Tektro ARIES MD-M300 mechanical disc brakes",
+            "rear_brake": "Tektro ARIES MD-M300 mechanical disc brakes",
             "rotors": "Tektro TR180-24 F:180mm R:180mm"
           },
           "wheelset": {
             "e_wheel_diameter": "23",
             "front_wheel": "Aluminum integrated wheel",
             "rear_wheel": "Aluminum integrated wheel",
-            "tires": {
-              "manufacturer": "Kenda",
-              "size": "20x4.0",
-              "tubeless": false,
-              "details": "K1188 Krusade"
-            }
+            "tires": "Kenda K1188 Krusade 20x4.0"
           },
           "cockpit": {
             "b_handlebar_height": "44.5",
@@ -2125,24 +1615,11 @@
             "bike_load_capacity": "400lbs"
           },
           "ebike_system": {
-            "motor": {
-              "power_w": 500,
-              "torque_nm": 70,
-              "voltage_v": 48,
-              "details": ""
-            },
-            "battery": {
-              "voltage_v": 48,
-              "amphours_ah": 15.0,
-              "removable": false,
-              "details": "IPX6, Certificated by UL 2271"
-            },
+            "motor": "48V, 500W, 70Nm",
+            "battery": "48V, 15Ah , IPX6, Certificated by UL 2271",
             "cell": "Samsung/LG 21700 cell, Certificated by UL 2580",
             "charger": "48V, 2.0A Fast Charger",
-            "display": {
-              "type": "color",
-              "details": "3.5\" Full color, High brightness, Bluetooth, Adjustable angle"
-            },
+            "display": "3.5\" Full color, High brightness, Bluetooth, Adjustable angle",
             "sensor": "Torque / Cadence Switchable",
             "throttle": "Ergonomic Thumb Throttle",
             "pedal_assist": "Auto Pedal Assistant + 5 PAS Levels",
@@ -2163,63 +1640,26 @@
           },
           "frameset": {
             "frame": "Aluminum Alloy",
-            "fork": {
-              "type": "coil",
-              "travel_mm": 120,
-              "lockout": true,
-              "thru_axle": true,
-              "details": "Hydraulic suspension with Lock-out, 15x110mm thru-axle, Rebound adjustable"
-            }
+            "fork": "Hydraulic suspension 120mm travel with Lock-out, 15x110mm thru-axle, Rebound adjustable"
           },
           "drivetrain": {
             "chainrings": "44T",
-            "crankset": {
-              "length_mm": 170,
-              "details": "Aluminum Alloy"
-            },
-            "freewheel": {
-              "cog_range": "13-32T",
-              "speeds": 8,
-              "details": ""
-            },
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": ""
-            },
-            "shift_lever": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": ""
-            },
-            "chain": {
-              "details": "8-speed"
-            },
+            "crankset": "Aluminum Alloy, 170mm",
+            "freewheel": "8-speed, 13-32T",
+            "rear_derailleur": "SHIMANO 8-speed",
+            "shift_lever": "SHIMANO 8-speed",
+            "chain": "8-speed",
             "pedals": "Aluminum alloy"
           },
           "brakes": {
-            "brake": {
-              "manufacturer": "Shimano",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "MT200 Hydraulic Disc Brake"
-            },
+            "brake": "SHIMANO MT200 Hydraulic Disc Brake",
             "rotors": "180mm front and rear",
-            "brake_levers": {
-              "rotor_mm": 180,
-              "details": "Aluminum Alloy, with power cutoff"
-            }
+            "brake_levers": "Aluminum Alloy, with power cutoff"
           },
           "wheelset": {
             "rims": "Double-wall Aluminum Alloy",
             "front_hub": "Aluminum Alloy bearing hub, 15x110mm thru-axle",
-            "tire": {
-              "manufacturer": "Innova",
-              "size": "27.5x2.4",
-              "tubeless": false,
-              "details": "eBike tires, with reflective strip"
-            }
+            "tire": "Innova 27.5x2.4\" eBike tires, with reflective strip"
           },
           "cockpit": {
             "handlebar": "Aluminum Alloy, Φ31.8mm, 680mm",
@@ -2451,24 +1891,9 @@
             "max_payload_capacity": "300 lb."
           },
           "ebike_system": {
-            "battery": {
-              "cell_brand": "Samsung",
-              "voltage_v": 48,
-              "amphours_ah": 15.0,
-              "removable": false,
-              "details": "LG"
-            },
-            "motor": {
-              "manufacturer": "Ananda",
-              "placement": "mid",
-              "power_w": 500,
-              "voltage_v": 48,
-              "details": "M100 - mid-drive motor"
-            },
-            "display": {
-              "type": "color",
-              "details": "BIGSTONE M300C-TFT"
-            },
+            "battery": "Samsung/LG 48V 15Ah",
+            "motor": "ANANDA M100 48V-500W mid-drive motor",
+            "display": "BIGSTONE M300C-TFT",
             "sensors": "Torque sensor丨shifting sensor丨speed sensor丨brake sensor",
             "controller": "48V/22A",
             "charger": "US standard 2.0 A smart charger"
@@ -2478,61 +1903,25 @@
           },
           "frameset": {
             "frame": "6061 Aluminum frame",
-            "fork": {
-              "manufacturer": "Suntour",
-              "travel_mm": 120,
-              "lockout": false,
-              "thru_axle": false,
-              "details": "SR- X1-BOOST"
-            },
-            "shock": {
-              "manufacturer": "DNM",
-              "details": "AO-06 /165*38mm BK"
-            }
+            "fork": "SR-SUNTOUR X1-BOOST 120mm travel",
+            "shock": "DNM AO-06 /165*38mm BK"
           },
           "drivetrain": {
-            "crankset": {
-              "manufacturer": "Prowheel",
-              "length_mm": 170,
-              "chainring_t": 44,
-              "details": "Crank arm: A00C 44A-S2-CL41 BCD104 | Chain ring: PROWHEEL 104BCD Narrow wide chainring"
-            },
-            "cassette": {
-              "manufacturer": "Shimano",
-              "cog_range": "11-34T",
-              "details": "CS-HG201-9"
-            },
-            "chain": {
-              "manufacturer": "KMC",
-              "links": 120,
-              "details": "E9"
-            },
+            "crankset": "Crank arm: PROWHEEL A00C 170mm 44A-S2-CL41 BCD104 | Chain ring: PROWHEEL 44T 104BCD Narrow wide chainring",
+            "cassette": "Shimano CS-HG201-9 11-34T",
+            "chain": "KMC E9 120L",
             "groupset": "Shimano M3100SGS ALIVO-9S"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Shimano",
-              "actuation": "hydraulic",
-              "rotor_mm": 180,
-              "details": "MT200 hydraulic brake"
-            },
-            "rear_brake": {
-              "manufacturer": "Shimano",
-              "actuation": "hydraulic",
-              "rotor_mm": 180,
-              "details": "MT200 hydraulic brake"
-            },
+            "front_brake": "Shimano MT200 hydraulic brake",
+            "rear_brake": "Shimano MT200 hydraulic brake",
             "rotors": "Shimano RT26 F:180mm R:180mm"
           },
           "wheelset": {
             "e_wheel_diameter": "28.1",
             "front_wheel": "Rim: DM-350 27.5\"\"*13G*36H SV | Spoke: 13G 263L STAINLESS(304M) | Hub: DM41SB-B15 13G*36H*110",
             "rear_wheel": "Rim: DM-350 27.5\"*13G*36H SV | Spoke: 13G 265L STAINLESS(304M) | Hub: M102R-148 12*13*36*148",
-            "tires": {
-              "manufacturer": "Schwalbe",
-              "tubeless": false,
-              "details": "SUPER MOTO-X 27.5*2.4"
-            }
+            "tires": "SCHWALBE SUPER MOTO-X 27.5*2.4"
           },
           "cockpit": {
             "b_handlebar_height": "44",
@@ -2692,48 +2081,25 @@
             "max_payload_capacity": "165 lb."
           },
           "ebike_system": {
-            "battery": {
-              "voltage_v": 36,
-              "amphours_ah": 10.0,
-              "removable": false,
-              "details": ""
-            },
-            "motor": {
-              "power_w": 350,
-              "details": "brushless gear motor"
-            },
-            "display": {
-              "type": "lcd",
-              "details": "LCD display"
-            },
+            "battery": "36V 10Ah",
+            "motor": "350W brushless gear motor",
+            "display": "LCD display",
             "throttle": "Thumb throttle",
             "charger": "US standard 2.0 A smart charger"
           },
           "frameset": {
             "frame": "6061 Aluminum frame",
-            "fork": {
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Steel fork 16\""
-            }
+            "fork": "Steel fork 16\""
           },
           "brakes": {
-            "rear_brake": {
-              "manufacturer": "Nutt",
-              "actuation": "hydraulic",
-              "details": "Y-2C D-2S hydraulic brake (Rear Only)"
-            },
+            "rear_brake": "Nutt Y-2C D-2S hydraulic brake (Rear Only)",
             "rotors": "160*2mm"
           },
           "wheelset": {
             "e_wheel_diameter": "16",
             "front_wheel": "Rim：MD-260 16*3*13G*36 36h A/V | Spoke：13G 125L | Hub：FH901 13G*36H*100mm*140mm",
             "rear_wheel": "Rim：MD-260 16*3*13G*36 36h A/V | Spoke：13G 79/81L | Hub：36v 350w Himiway hub motor",
-            "tires": {
-              "manufacturer": "Innova",
-              "tubeless": false,
-              "details": "HV-5189 16*3.0"
-            }
+            "tires": "Innova HV-5189 16*3.0"
           },
           "cockpit": {
             "b_handlebar_height": "29.1",
@@ -2862,22 +2228,9 @@
             "max_payload_capacity": "330 lb."
           },
           "ebike_system": {
-            "battery": {
-              "cell_brand": "Samsung",
-              "voltage_v": 48,
-              "amphours_ah": 20.0,
-              "removable": false,
-              "details": "LG"
-            },
-            "motor": {
-              "power_w": 750,
-              "voltage_v": 48,
-              "details": "Rearhub Motor"
-            },
-            "display": {
-              "type": "lcd",
-              "details": "LED Display"
-            },
+            "battery": "Samsung/LG 48V 20Ah",
+            "motor": "48V/750W Rearhub Motor",
+            "display": "LED Display",
             "throttle": "Thumb Throttle",
             "sensors": "Cadence Sensor",
             "controller": "48V/22A",
@@ -2888,59 +2241,24 @@
           },
           "frameset": {
             "frame": "6061 Aluminum",
-            "fork": {
-              "type": "rigid",
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Dual Crown Steel Rigid Fork"
-            },
-            "shock": {
-              "details": "EXA A5-RE 180*47mm"
-            }
+            "fork": "Dual Crown Steel Rigid Fork",
+            "shock": "EXA A5-RE 180*47mm"
           },
           "drivetrain": {
-            "crankset": {
-              "length_mm": 142,
-              "details": "Alloy Crankset"
-            },
-            "freewheel": {
-              "details": "16T Single Speed"
-            },
-            "chain": {
-              "manufacturer": "KMC",
-              "links": 120,
-              "details": "Z1eHX"
-            },
+            "crankset": "142MM Alloy Crankset",
+            "freewheel": "16T Single Speed",
+            "chain": "KMC Z1eHX 120L",
             "groupset": "Shimano altus M310 7 speed"
           },
           "brakes": {
-            "brakes": {
-              "actuation": "mechanical",
-              "rotor_mm": 180,
-              "details": "Mechanical Brakes"
-            },
-            "front_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "rotor_mm": 180,
-              "details": "HD-E3520 hydraulic brake"
-            },
-            "rear_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "rotor_mm": 180,
-              "details": "HD-E3520 hydraulic brake"
-            },
+            "brakes": "Mechanical Brakes",
+            "front_brake": "Tektro HD-E3520 hydraulic brake",
+            "rear_brake": "Tektro HD-E3520 hydraulic brake",
             "rotors": "Tektro TR180-52 F:180mm R:180mm"
           },
           "wheelset": {
             "g_wheel_diameter": "23.3",
-            "tires": {
-              "manufacturer": "Innova",
-              "size": "20x4.0",
-              "tubeless": false,
-              "details": "lA-2149"
-            },
+            "tires": "Innova 20x4.0 lA-2149",
             "e_wheel_diameter": "23.3",
             "front_wheel": "\"Rim: MD-147 20*4.0\"\"*36H*12G A/V | Spoke: 12G 171mm/173mm | Hub: MB016F-92-T 15*135MM 12G*36H\"",
             "rear_wheel": "Rim: MD-147 20*4.0\"\"*36H*12G A/V | Spoke: 12G 126mm/127mm Hub: 48v 750w | Himiway Hub Motor"
@@ -3168,24 +2486,11 @@
             "bike_load_capacity": "440lbs"
           },
           "ebike_system": {
-            "motor": {
-              "power_w": 750,
-              "torque_nm": 90,
-              "voltage_v": 48,
-              "details": ""
-            },
-            "battery": {
-              "voltage_v": 48,
-              "amphours_ah": 15.0,
-              "removable": false,
-              "details": "IPX6, Certificated by UL 2271"
-            },
+            "motor": "48V, 750W, 90Nm",
+            "battery": "48V, 15Ah , IPX6, Certificated by UL 2271",
             "cell": "Samsung/LG 21700 cell, Certificated by UL 2580",
             "charger": "48V, 3.0A Fast Charger",
-            "display": {
-              "type": "color",
-              "details": "3.5\" Full color, High brightness, Bluetooth, Adjustable angle"
-            },
+            "display": "3.5\" Full color, High brightness, Bluetooth, Adjustable angle",
             "sensor": "Torque / Cadence Switchable",
             "throttle": "Ergonomic Thumb Throttle",
             "pedal_assist": "Auto Pedal Assistant + 5 PAS Levels",
@@ -3209,64 +2514,26 @@
           },
           "frameset": {
             "frame": "Aluminum Alloy, Rear Wheel 100mm Travel",
-            "fork": {
-              "manufacturer": "Himiway",
-              "type": "coil",
-              "travel_mm": 90,
-              "lockout": true,
-              "thru_axle": false,
-              "details": "Hydraulic Suspension with Lock-out"
-            }
+            "fork": "Himiway Hydraulic Suspension 90mm Travel with Lock-out"
           },
           "drivetrain": {
             "chainrings": "52T Narrow Wide Chainring",
-            "crankset": {
-              "length_mm": 170,
-              "details": "Aluminum Alloy"
-            },
-            "freewheel": {
-              "cog_range": "11-34T",
-              "speeds": 8,
-              "details": ""
-            },
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": ""
-            },
-            "shift_lever": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": ""
-            },
-            "chain": {
-              "details": "8-speed"
-            },
+            "crankset": "Aluminum Alloy, 170mm",
+            "freewheel": "8-speed, 11-34T",
+            "rear_derailleur": "SHIMANO 8-speed",
+            "shift_lever": "SHIMANO 8-speed",
+            "chain": "8-speed",
             "pedals": "Aluminum alloy"
           },
           "brakes": {
-            "brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 203,
-              "details": "Hydraulic Disc Brake"
-            },
+            "brake": "Tektro Hydraulic Disc Brake",
             "rotors": "203mm Front/180mm Rear",
-            "brake_levers": {
-              "rotor_mm": 203,
-              "details": "Aluminum Alloy, with power cutoff"
-            }
+            "brake_levers": "Aluminum Alloy, with power cutoff"
           },
           "wheelset": {
             "rims": "Aluminum alloy",
             "front_hub": "Aluminum alloy, Anti-Theft Quick Release",
-            "tire": {
-              "manufacturer": "Kenda",
-              "size": "20x4.0",
-              "tubeless": false,
-              "details": "×Himiway, K-Shield Punch-Resistant, Reflective Sidewalls"
-            }
+            "tire": "20×4.0 Kenda×Himiway, K-Shield Punch-Resistant, Reflective Sidewalls"
           },
           "cockpit": {
             "handlebar": "Aluminum Alloy, Φ31.8mm, 660mm",
@@ -3506,24 +2773,11 @@
             "bike_load_capacity": "400lbs"
           },
           "ebike_system": {
-            "motor": {
-              "power_w": 750,
-              "torque_nm": 90,
-              "voltage_v": 48,
-              "details": ""
-            },
-            "battery": {
-              "voltage_v": 48,
-              "amphours_ah": 15.0,
-              "removable": false,
-              "details": "IPX6, Certificated by UL 2271"
-            },
+            "motor": "48V, 750W, 90Nm",
+            "battery": "48V, 15Ah , IPX6, Certificated by UL 2271",
             "cell": "Samsung/LG 21700 cell, Certificated by UL 2580",
             "charger": "48V, 3.0A Fast Charger",
-            "display": {
-              "type": "color",
-              "details": "3.5\" Full color, High brightness, Bluetooth, Adjustable angle"
-            },
+            "display": "3.5\" Full color, High brightness, Bluetooth, Adjustable angle",
             "sensor": "Torque / Cadence Switchable",
             "throttle": "Ergonomic Thumb Throttle",
             "pedal_assist": "Auto Pedal Assistant + 5 PAS Levels",
@@ -3547,65 +2801,26 @@
           },
           "frameset": {
             "frame": "Aluminum Alloy, Rear Wheel 130mm Travel",
-            "fork": {
-              "manufacturer": "RST",
-              "type": "coil",
-              "travel_mm": 100,
-              "lockout": true,
-              "thru_axle": false,
-              "details": "Hydraulic suspension with Lock-out, Nutted, Rebound adjustable"
-            }
+            "fork": "RST Hydraulic suspension 100mm travel with Lock-out, Nutted, Rebound adjustable"
           },
           "drivetrain": {
             "chainrings": "52T Narrow Wide Chainring",
-            "crankset": {
-              "length_mm": 170,
-              "details": "Aluminum Alloy"
-            },
-            "freewheel": {
-              "cog_range": "13-32T",
-              "speeds": 8,
-              "details": ""
-            },
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": ""
-            },
-            "shift_lever": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": ""
-            },
-            "chain": {
-              "details": "8-speed"
-            },
+            "crankset": "Aluminum Alloy, 170mm",
+            "freewheel": "8-speed, 13-32T",
+            "rear_derailleur": "SHIMANO 8-speed",
+            "shift_lever": "SHIMANO 8-speed",
+            "chain": "8-speed",
             "pedals": "Aluminum alloy"
           },
           "brakes": {
-            "brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "pistons": 4,
-              "rotor_mm": 203,
-              "details": "Hydraulic Disc Brake"
-            },
+            "brake": "Tektro 4 Piston Hydraulic Disc Brake",
             "rotors": "203mm Front/180mm Rear",
-            "brake_levers": {
-              "rotor_mm": 203,
-              "details": "Aluminum Alloy, with power cutoff"
-            }
+            "brake_levers": "Aluminum Alloy, with power cutoff"
           },
           "wheelset": {
             "rims": "Aluminum alloy",
             "front_hub": "Aluminum alloy, nutted",
-            "tire": {
-              "manufacturer": "Maxxis",
-              "size": "26x4.0",
-              "tubeless": true,
-              "details": "Minion FBF / FBR, Tubeless ready"
-            }
+            "tire": "Maxxis Minion FBF / FBR 26 x 4.0, Tubeless ready"
           },
           "cockpit": {
             "handlebar": "Aluminum Alloy, Φ31.8mm, 680mm",
@@ -3724,24 +2939,11 @@
             "bike_load_capacity": "400lbs"
           },
           "ebike_system": {
-            "motor": {
-              "power_w": 750,
-              "torque_nm": 90,
-              "voltage_v": 48,
-              "details": ""
-            },
-            "battery": {
-              "voltage_v": 48,
-              "amphours_ah": 15.0,
-              "removable": false,
-              "details": "IPX6, Certificated by UL 2271"
-            },
+            "motor": "48V, 750W, 90Nm",
+            "battery": "48V, 15Ah , IPX6, Certificated by UL 2271",
             "cell": "Samsung/LG 21700 cell, Certificated by UL 2580",
             "charger": "48V, 3.0A Fast Charger",
-            "display": {
-              "type": "color",
-              "details": "3.5\" Full color, High brightness, Bluetooth, Adjustable angle"
-            },
+            "display": "3.5\" Full color, High brightness, Bluetooth, Adjustable angle",
             "sensor": "Torque / Cadence Switchable",
             "throttle": "Ergonomic Thumb Throttle",
             "pedal_assist": "Auto Pedal Assistant + 5 PAS Levels",
@@ -3765,64 +2967,26 @@
           },
           "frameset": {
             "frame": "Aluminum Alloy, Rear Wheel 130mm Travel",
-            "fork": {
-              "manufacturer": "RST",
-              "type": "coil",
-              "travel_mm": 100,
-              "lockout": true,
-              "thru_axle": false,
-              "details": "Hydraulic suspension with Lock-out, Nutted, Rebound adjustable"
-            }
+            "fork": "RST Hydraulic suspension 100mm travel with Lock-out, Nutted, Rebound adjustable"
           },
           "drivetrain": {
             "chainrings": "52T Narrow Wide Chainring",
-            "crankset": {
-              "length_mm": 170,
-              "details": "Aluminum Alloy"
-            },
-            "freewheel": {
-              "cog_range": "13-32T",
-              "speeds": 8,
-              "details": ""
-            },
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": ""
-            },
-            "shift_lever": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": ""
-            },
-            "chain": {
-              "details": "8-speed"
-            },
+            "crankset": "Aluminum Alloy, 170mm",
+            "freewheel": "8-speed, 13-32T",
+            "rear_derailleur": "SHIMANO 8-speed",
+            "shift_lever": "SHIMANO 8-speed",
+            "chain": "8-speed",
             "pedals": "Aluminum alloy"
           },
           "brakes": {
-            "brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 203,
-              "details": "Hydraulic Disc Brake"
-            },
+            "brake": "Tektro Hydraulic Disc Brake",
             "rotors": "203mm Front/180mm Rear",
-            "brake_levers": {
-              "rotor_mm": 203,
-              "details": "Aluminum Alloy, with power cutoff"
-            }
+            "brake_levers": "Aluminum Alloy, with power cutoff"
           },
           "wheelset": {
             "rims": "Aluminum alloy",
             "front_hub": "Aluminum alloy, nutted",
-            "tire": {
-              "manufacturer": "Maxxis",
-              "size": "26x4.0",
-              "tubeless": true,
-              "details": "Minion FBF / FBR, Tubeless ready"
-            }
+            "tire": "Maxxis Minion FBF / FBR 26 x 4.0, Tubeless ready"
           },
           "cockpit": {
             "handlebar": "Aluminum Alloy, Φ31.8mm, 680mm",
@@ -4040,24 +3204,11 @@
             "bike_load_capacity": "400lbs"
           },
           "ebike_system": {
-            "motor": {
-              "power_w": 750,
-              "torque_nm": 90,
-              "voltage_v": 48,
-              "details": ""
-            },
-            "battery": {
-              "voltage_v": 48,
-              "amphours_ah": 15.0,
-              "removable": false,
-              "details": "IPX6, Certificated by UL 2271"
-            },
+            "motor": "48V, 750W, 90Nm",
+            "battery": "48V, 15Ah , IPX6, Certificated by UL 2271",
             "cell": "Samsung/LG 21700 cell, Certificated by UL 2580",
             "charger": "48V, 3.0A Fast Charger",
-            "display": {
-              "type": "color",
-              "details": "3.5\" Full color, High brightness, Bluetooth, Adjustable angle"
-            },
+            "display": "3.5\" Full color, High brightness, Bluetooth, Adjustable angle",
             "sensor": "Torque / Cadence Switchable",
             "throttle": "Ergonomic Thumb Throttle",
             "pedal_assist": "Auto Pedal Assistant + 5 PAS Levels",
@@ -4081,64 +3232,26 @@
           },
           "frameset": {
             "frame": "Aluminum Alloy, Rear Wheel 130mm Travel",
-            "fork": {
-              "manufacturer": "RST",
-              "type": "coil",
-              "travel_mm": 100,
-              "lockout": true,
-              "thru_axle": false,
-              "details": "Hydraulic suspension with Lock-out, Nutted, Rebound adjustable"
-            }
+            "fork": "RST Hydraulic suspension 100mm travel with Lock-out, Nutted, Rebound adjustable"
           },
           "drivetrain": {
             "chainrings": "52T Narrow Wide Chainring",
-            "crankset": {
-              "length_mm": 170,
-              "details": "Aluminum Alloy"
-            },
-            "freewheel": {
-              "cog_range": "13-32T",
-              "speeds": 8,
-              "details": ""
-            },
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": ""
-            },
-            "shift_lever": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": ""
-            },
-            "chain": {
-              "details": "8-speed"
-            },
+            "crankset": "Aluminum Alloy, 170mm",
+            "freewheel": "8-speed, 13-32T",
+            "rear_derailleur": "SHIMANO 8-speed",
+            "shift_lever": "SHIMANO 8-speed",
+            "chain": "8-speed",
             "pedals": "Aluminum alloy"
           },
           "brakes": {
-            "brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 203,
-              "details": "Hydraulic Disc Brake"
-            },
+            "brake": "Tektro Hydraulic Disc Brake",
             "rotors": "203mm Front/180mm Rear",
-            "brake_levers": {
-              "rotor_mm": 203,
-              "details": "Aluminum Alloy, with power cutoff"
-            }
+            "brake_levers": "Aluminum Alloy, with power cutoff"
           },
           "wheelset": {
             "rims": "Aluminum alloy",
             "front_hub": "Aluminum alloy, nutted",
-            "tire": {
-              "manufacturer": "Maxxis",
-              "size": "26x4.0",
-              "tubeless": true,
-              "details": "Minion FBF / FBR, Tubeless ready"
-            }
+            "tire": "Maxxis Minion FBF / FBR 26 x 4.0, Tubeless ready"
           },
           "cockpit": {
             "handlebar": "Aluminum Alloy, Φ31.8mm, 680mm",
@@ -4493,24 +3606,11 @@
             "bike_load_capacity": "400lbs"
           },
           "ebike_system": {
-            "motor": {
-              "power_w": 750,
-              "torque_nm": 90,
-              "voltage_v": 48,
-              "details": ""
-            },
-            "battery": {
-              "voltage_v": 48,
-              "amphours_ah": 15.0,
-              "removable": false,
-              "details": "IPX6, Certificated by UL 2271"
-            },
+            "motor": "48V, 750W, 90Nm",
+            "battery": "48V, 15Ah , IPX6, Certificated by UL 2271",
             "cell": "Samsung/LG 21700 cell, Certificated by UL 2580",
             "charger": "48V, 3.0A Fast Charger",
-            "display": {
-              "type": "color",
-              "details": "3.5\" Full color, High brightness, Bluetooth, Adjustable angle"
-            },
+            "display": "3.5\" Full color, High brightness, Bluetooth, Adjustable angle",
             "sensor": "Torque / Cadence Switchable",
             "throttle": "Ergonomic Thumb Throttle",
             "pedal_assist": "Auto Pedal Assistant + 5 PAS Levels",
@@ -4534,64 +3634,26 @@
           },
           "frameset": {
             "frame": "Aluminum Alloy, Rear Wheel 130mm Travel",
-            "fork": {
-              "manufacturer": "RST",
-              "type": "coil",
-              "travel_mm": 100,
-              "lockout": true,
-              "thru_axle": false,
-              "details": "Hydraulic suspension with Lock-out, Nutted, Rebound adjustable"
-            }
+            "fork": "RST Hydraulic suspension 100mm travel with Lock-out, Nutted, Rebound adjustable"
           },
           "drivetrain": {
             "chainrings": "52T Narrow Wide Chainring",
-            "crankset": {
-              "length_mm": 170,
-              "details": "Aluminum Alloy"
-            },
-            "freewheel": {
-              "cog_range": "13-32T",
-              "speeds": 8,
-              "details": ""
-            },
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": ""
-            },
-            "shift_lever": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": ""
-            },
-            "chain": {
-              "details": "8-speed"
-            },
+            "crankset": "Aluminum Alloy, 170mm",
+            "freewheel": "8-speed, 13-32T",
+            "rear_derailleur": "SHIMANO 8-speed",
+            "shift_lever": "SHIMANO 8-speed",
+            "chain": "8-speed",
             "pedals": "Aluminum alloy"
           },
           "brakes": {
-            "brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 203,
-              "details": "Hydraulic Disc Brake"
-            },
+            "brake": "Tektro Hydraulic Disc Brake",
             "rotors": "203mm Front/180mm Rear",
-            "brake_levers": {
-              "rotor_mm": 203,
-              "details": "Aluminum Alloy, with power cutoff"
-            }
+            "brake_levers": "Aluminum Alloy, with power cutoff"
           },
           "wheelset": {
             "rims": "Aluminum alloy",
             "front_hub": "Aluminum alloy, nutted",
-            "tire": {
-              "manufacturer": "Maxxis",
-              "size": "26x4.0",
-              "tubeless": true,
-              "details": "Minion FBF / FBR, Tubeless ready"
-            }
+            "tire": "Maxxis Minion FBF / FBR 26 x 4.0, Tubeless ready"
           },
           "cockpit": {
             "handlebar": "Aluminum Alloy, Φ31.8mm, 680mm",
@@ -4811,24 +3873,9 @@
             "max_payload_capacity": "400 lb."
           },
           "ebike_system": {
-            "battery": {
-              "cell_brand": "Samsung",
-              "voltage_v": 48,
-              "amphours_ah": 20.0,
-              "removable": false,
-              "details": "LG"
-            },
-            "motor": {
-              "manufacturer": "Bafang",
-              "placement": "mid",
-              "power_w": 1000,
-              "details": "M620 mid-drive motor"
-            },
-            "display": {
-              "manufacturer": "Bafang",
-              "type": "lcd",
-              "details": "DP C18 LCD display"
-            },
+            "battery": "Samsung/LG 48V 20Ah",
+            "motor": "BaFang M620 1000W mid-drive motor",
+            "display": "BaFang DP C18 LCD display",
             "throttle": "Thumb throttle",
             "sensors": "Torque sensor丨shifting sensor丨speed sensor丨brake sensor",
             "controller": "48V/25A",
@@ -4839,60 +3886,25 @@
           },
           "frameset": {
             "frame": "6061 Aluminum frame",
-            "fork": {
-              "type": "coil",
-              "travel_mm": 220,
-              "lockout": false,
-              "thru_axle": true,
-              "details": "KKE R150S coil spring fork compression/Rebound adjustable 15*150mm thru axle"
-            },
-            "shock": {
-              "manufacturer": "RockShox",
-              "details": "deluxe select+ 190*45mm"
-            }
+            "fork": "KKE R150S coil spring fork compression/Rebound adjustable 220mm travel 15*150mm thru axle",
+            "shock": "ROCKSHOX deluxe select+ 190*45mm"
           },
           "drivetrain": {
-            "crankset": {
-              "length_mm": 170,
-              "chainring_t": 38,
-              "details": "Crank arm: M620 (Fat) | Chain ring: 104BCD narrow wide chainring"
-            },
-            "cassette": {
-              "manufacturer": "Shimano",
-              "cog_range": "11-48T",
-              "details": "cues CS-LG400-10"
-            },
-            "chain": {
-              "manufacturer": "KMC",
-              "links": 130,
-              "details": "eglide"
-            },
+            "crankset": "Crank arm: M620 (Fat) 170mm | Chain ring: 38T 104BCD narrow wide chainring",
+            "cassette": "Shimano cues CS-LG400-10 11-48T",
+            "chain": "KMC eglide 130L",
             "groupset": "Shimano cues U6000 10 speed"
           },
           "brakes": {
-            "front_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "pistons": 4,
-              "details": "HD-E730 hydraulic brake"
-            },
-            "rear_brake": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "pistons": 4,
-              "details": "HD-E730 hydraulic brake"
-            },
+            "front_brake": "Tektro HD-E730 4-piston hydraulic brake",
+            "rear_brake": "Tektro HD-E730 4-piston hydraulic brake",
             "rotors": "F: TR203-17 R: TR180-17"
           },
           "wheelset": {
             "e_wheel_diameter": "28.7",
             "front_wheel": "M9CF-150 12G*150*15mm 26'' 36h",
             "rear_wheel": "M9ZR-197 12G*197*12mm 26'' 36h",
-            "tires": {
-              "manufacturer": "CST",
-              "tubeless": false,
-              "details": "roly poly 26*4.8"
-            }
+            "tires": "CST roly poly 26*4.8"
           },
           "cockpit": {
             "b_handlebar_height": "42.7",

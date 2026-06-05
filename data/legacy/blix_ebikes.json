@@ -31,21 +31,9 @@
             "range": "Up to 70 miles"
           },
           "ebike_system": {
-            "battery": {
-              "voltage_v": 48,
-              "removable": false,
-              "details": "614.4Wh"
-            },
-            "motor": {
-              "placement": "hub",
-              "power_w": 750,
-              "torque_nm": 70,
-              "details": "Rear Hub, Geared"
-            },
-            "display": {
-              "type": "color",
-              "details": "Color LCD"
-            },
+            "battery": "614.4Wh (48V)",
+            "motor": "Rear Hub, Geared, 750W, 70Nm Torque",
+            "display": "Color LCD",
             "throttle": "Yes",
             "pedal_assist": "3 Levels + Auto Function",
             "sensor": "Torque sensor",
@@ -56,41 +44,19 @@
           },
           "frameset": {
             "frame": "Aluminum Alloy",
-            "fork": {
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Steel"
-            }
+            "fork": "Steel"
           },
           "drivetrain": {
-            "shifter": {
-              "speeds": 8,
-              "details": "Electric, Auto Function"
-            },
-            "rear_derailleur": {
-              "manufacturer": "microSHIFT",
-              "speeds": 8,
-              "details": ""
-            },
-            "chain": {
-              "manufacturer": "KMC",
-              "details": "8spd"
-            }
+            "shifter": "Electric, Auto Function, 8-speed",
+            "rear_derailleur": "Microshift 8-speed",
+            "chain": "KMC 8spd"
           },
           "brakes": {
-            "brakes": {
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "Hydraulic Disc, Rotors"
-            }
+            "brakes": "Hydraulic Disc, 180mm Rotors"
           },
           "wheelset": {
             "rear_hub": "13-32T",
-            "wheel_tire": {
-              "tubeless": false,
-              "details": "26” x 2.4”, Puncture Resistant, Reflective Strip"
-            }
+            "wheel_tire": "26” x 2.4”, Puncture Resistant, Reflective Strip"
           },
           "cockpit": {
             "headset": "1 1/8\" Threadless",
@@ -255,21 +221,9 @@
             "bike_weight": "Single Battery: 67lbs (29.5kgs)Single Without Battery: 59.5lbs (26.98kgs)Dual Battery: 75.5lbs (34.25kgs)Dual Without Batteries: 60.5lbs (27.2kgs)"
           },
           "ebike_system": {
-            "battery": {
-              "capacity_wh": 672,
-              "voltage_v": 48,
-              "removable": false,
-              "details": "1st battery, front 2nd battery, rear"
-            },
-            "motor": {
-              "placement": "hub",
-              "power_w": 750,
-              "details": "Rear Hub, Geared"
-            },
-            "display": {
-              "type": "lcd",
-              "details": "LCD, with USB Charge Port"
-            },
+            "battery": "672Wh (48V) 1st battery, front672Wh (48V) 2nd battery, rear",
+            "motor": "Rear Hub, Geared, 750W",
+            "display": "LCD, with USB Charge Port",
             "throttle": "Yes",
             "controller": "48V",
             "sensor": "12 Magnet Cadence Sensor, BB Mount",
@@ -280,67 +234,23 @@
           },
           "frameset": {
             "frame": "6061 Aluminum Alloy",
-            "fork": {
-              "type": "rigid",
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Rigid Steel, 1 1/8\" Threadless"
-            },
-            "fork_offset": {
-              "travel_mm": 55,
-              "lockout": false,
-              "thru_axle": false,
-              "details": ""
-            }
+            "fork": "Rigid Steel, 1 1/8\" Threadless",
+            "fork_offset": "55mm"
           },
           "drivetrain": {
-            "shifter": {
-              "manufacturer": "Shimano",
-              "speeds": 7,
-              "details": "RevoShift"
-            },
-            "crankset": {
-              "length_mm": 170,
-              "chainring_t": 48,
-              "details": "Chainring, Integrated Chain Guide"
-            },
-            "cassette": {
-              "manufacturer": "Shimano",
-              "cog_range": "14-34T",
-              "speeds": 7,
-              "details": ""
-            },
-            "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 7,
-              "details": "Acera"
-            },
-            "chain": {
-              "manufacturer": "KMC",
-              "details": "7spd"
-            },
+            "shifter": "Shimano 7spd, RevoShift",
+            "crankset": "170mm, 48t Chainring, Integrated Chain Guide",
+            "cassette": "Shimano 7spd, 14-34t",
+            "rear_derailleur": "Shimano Acera 7spd",
+            "chain": "KMC 7spd",
             "bottom_bracket_drop": "1\" (25.4mm)"
           },
           "brakes": {
-            "brakes": {
-              "manufacturer": "Bengal",
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "Hydraulic Disc, Rotors"
-            }
+            "brakes": "Bengal Hydraulic Disc, 180mm Rotors"
           },
           "wheelset": {
-            "wheel_tire": {
-              "tubeless": false,
-              "details": "24” x 2.4”, Puncture Resistant, Reflective Strip"
-            },
-            "fork_length_axle_crown": {
-              "travel_mm": 397,
-              "lockout": false,
-              "thru_axle": false,
-              "details": "15.6\""
-            }
+            "wheel_tire": "24” x 2.4”, Puncture Resistant, Reflective Strip",
+            "fork_length_axle_crown": "15.6\" (397mm)"
           },
           "cockpit": {
             "headset": "1 1/8\" Threadless",
@@ -609,21 +519,9 @@
             "range": "Up to 70 miles"
           },
           "ebike_system": {
-            "battery": {
-              "voltage_v": 48,
-              "removable": false,
-              "details": "614.4Wh"
-            },
-            "motor": {
-              "placement": "hub",
-              "power_w": 750,
-              "torque_nm": 70,
-              "details": "Rear Hub, Geared"
-            },
-            "display": {
-              "type": "color",
-              "details": "Color LCD"
-            },
+            "battery": "614.4Wh (48V)",
+            "motor": "Rear Hub, Geared, 750W, 70Nm Torque",
+            "display": "Color LCD",
             "throttle": "Yes",
             "pedal_assist": "3 Levels + Auto Function",
             "sensor": "Torque sensor",
@@ -634,41 +532,19 @@
           },
           "frameset": {
             "frame": "Aluminum Alloy",
-            "fork": {
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Steel"
-            }
+            "fork": "Steel"
           },
           "drivetrain": {
-            "shifter": {
-              "speeds": 8,
-              "details": "Electric, Auto Function"
-            },
-            "rear_derailleur": {
-              "manufacturer": "microSHIFT",
-              "speeds": 8,
-              "details": ""
-            },
-            "chain": {
-              "manufacturer": "KMC",
-              "details": "8spd"
-            }
+            "shifter": "Electric, Auto Function, 8-speed",
+            "rear_derailleur": "Microshift 8-speed",
+            "chain": "KMC 8spd"
           },
           "brakes": {
-            "brakes": {
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "Hydraulic Disc, Rotors"
-            }
+            "brakes": "Hydraulic Disc, 180mm Rotors"
           },
           "wheelset": {
             "rear_hub": "13-32T",
-            "wheel_tire": {
-              "tubeless": false,
-              "details": "26” x 2.4”, Puncture Resistant, Reflective Strip"
-            }
+            "wheel_tire": "26” x 2.4”, Puncture Resistant, Reflective Strip"
           },
           "cockpit": {
             "headset": "1 1/8\" Threadless",
@@ -867,21 +743,9 @@
             "range": "Up to 70 miles"
           },
           "ebike_system": {
-            "battery": {
-              "voltage_v": 48,
-              "removable": false,
-              "details": "614.4Wh"
-            },
-            "motor": {
-              "placement": "hub",
-              "power_w": 500,
-              "torque_nm": 55,
-              "details": "Rear Hub, Geared"
-            },
-            "display": {
-              "type": "color",
-              "details": "TFT, Color"
-            },
+            "battery": "614.4Wh (48V)",
+            "motor": "Rear Hub, Geared, 500W, 55Nm Torque",
+            "display": "TFT, Color",
             "throttle": "Yes",
             "pedal_assist": "3 Levels + Auto Function",
             "sensor": "Torque sensor",
@@ -892,41 +756,19 @@
           },
           "frameset": {
             "frame": "Aluminum Alloy, Folding",
-            "fork": {
-              "lockout": false,
-              "thru_axle": false,
-              "details": "Steel"
-            }
+            "fork": "Steel"
           },
           "drivetrain": {
-            "shifter": {
-              "speeds": 8,
-              "details": "Electric, Auto Function"
-            },
-            "rear_derailleur": {
-              "manufacturer": "microSHIFT",
-              "speeds": 8,
-              "details": ""
-            },
-            "chain": {
-              "manufacturer": "KMC",
-              "details": "8spd"
-            }
+            "shifter": "Electric, Auto Function, 8-speed",
+            "rear_derailleur": "Microshift 8-speed",
+            "chain": "KMC 8spd"
           },
           "brakes": {
-            "brakes": {
-              "actuation": "hydraulic",
-              "kind": "disc",
-              "rotor_mm": 180,
-              "details": "Hydraulic Disc, Rotors"
-            }
+            "brakes": "Hydraulic Disc, 180mm Rotors"
           },
           "wheelset": {
             "rear_hub": "13-32T",
-            "wheel_tire": {
-              "tubeless": false,
-              "details": "20” x 2.4”, Puncture Resistant, Reflective Strip"
-            }
+            "wheel_tire": "20” x 2.4”, Puncture Resistant, Reflective Strip"
           },
           "cockpit": {
             "headset": "1 1/8\" Threadless",
