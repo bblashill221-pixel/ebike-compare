@@ -648,6 +648,126 @@ def _rims(v, brand):
     return out
 
 
+def _bottom_bracket(v, brand):
+    out, low = {}, v.lower()
+    if re.search(r"square[\s-]?taper", low):
+        out["type"] = "square_taper"
+    elif "isis" in low:
+        out["type"] = "isis"
+    elif re.search(r"press[\s-]?fit", low):
+        out["type"] = "press_fit"
+    elif "cartridge" in low:
+        out["type"] = "cartridge"
+    elif "thread" in low:
+        out["type"] = "threaded"
+    out["sealed"] = "sealed" in low
+    out["torque_sensor"] = bool(re.search(r"torque sensor", low))
+    mw = re.search(r"(\d{2,3})\s*mm", low)
+    if mw:
+        out["width_mm"] = int(mw.group(1))
+    out["details"] = _clean(v)
+    return out
+
+
+def _throttle(v, brand):
+    rest, low = v, v.lower()
+    out = {}
+    man, rest = _find_brand(rest, _brands_for((), brand))
+    if man:
+        out["manufacturer"] = man
+    if re.search(r"half[\s-]?twist", low):
+        out["type"] = "half_twist"
+    elif "twist" in low:
+        out["type"] = "twist"
+    elif "thumb" in low:
+        out["type"] = "thumb"
+    if re.search(r"\bleft\b|\blh\b", low):
+        out["side"] = "left"
+    elif re.search(r"\bright\b|\brh\b", low):
+        out["side"] = "right"
+    out["details"] = _clean(rest)
+    return out
+
+
+def _grips(v, brand):
+    rest, low = v, v.lower()
+    out = {}
+    man, rest = _find_brand(rest, _brands_for(("Ergon", "Velo"), brand))
+    if man:
+        out["manufacturer"] = man
+    out["lock_on"] = bool(re.search(r"lock[\s-]?on|locking|lockable", low))
+    out["ergonomic"] = "ergonomic" in low
+    if "leather" in low:
+        out["material"] = "leather"
+    elif "rubber" in low:
+        out["material"] = "rubber"
+    elif "foam" in low:
+        out["material"] = "foam"
+    out["details"] = _clean(rest)
+    return out
+
+
+def _light(v, brand):
+    out, low = {}, v.lower()
+    ml = re.search(r"(\d{2,4})\s*lux", low)
+    if ml:
+        out["lux"] = int(ml.group(1))
+    mlm = re.search(r"(\d{3,4})\s*(?:lm\b|lumen)", low)
+    if mlm:
+        out["lumens"] = int(mlm.group(1))
+    out["brake_light"] = bool(re.search(r"brake\s*(?:signal|light)|braking\s*indicator", low))
+    out["turn_signal"] = bool(re.search(r"turn\s*signal|blinker", low))
+    out["horn"] = "horn" in low
+    out["integrated"] = "integrated" in low
+    rest = re.sub(r"\d{2,4}\s*lux|\d{3,4}\s*(?:lm\b|lumen)", " ", v, flags=re.I)
+    out["details"] = _clean(rest)
+    return out
+
+
+def _wheel(v, brand):
+    rest, low = v, v.lower()
+    out = {}
+    ms = re.search(r"\b(\d{2}(?:\.\d)?)\s*(?:\"|in\b|inch)", low)
+    if ms:
+        out["size_in"] = float(ms.group(1))
+    mh = re.search(r"(\d{2})\s*(?:hole|h\b)", low)
+    if mh:
+        out["holes"] = int(mh.group(1))
+    mg = re.search(r"(\d{2})\s*g\b", low)
+    if mg:
+        out["gauge"] = int(mg.group(1))
+    if re.search(r"thru[\s-]?axle", low):
+        out["axle"] = "thru"
+    elif "nutted" in low:
+        out["axle"] = "nutted"
+    elif re.search(r"quick[\s-]?release|\bqr\b", low):
+        out["axle"] = "quick_release"
+    if "presta" in low:
+        out["valve"] = "presta"
+    elif "schrader" in low:
+        out["valve"] = "schrader"
+    out["double_wall"] = bool(re.search(r"double.?wall", low))
+    out["tubeless"] = "tubeless" in low
+    if re.search(r"alloy|alumin", low):
+        out["material"] = "aluminum"
+    for pat in (r"\d{2}(?:\.\d)?\s*(?:\"|in\b|inch)", r"\d{2}\s*(?:hole|h\b)", r"\d{2}\s*g\b",
+                r"\d{1,2}x\d{2,3}\s*mm?", r"thru[\s-]?axle|nutted\s*axle|quick[\s-]?release",
+                r"presta|schrader", r"double.?wall", r"tubeless(?:\s*(?:ready|compatible))?",
+                r"\bvalve\b", r"alumin\w*|alloy", r"fat\s*tire\s*rim|\brim\b"):
+        rest = re.sub(pat, " ", rest, flags=re.I)
+    out["details"] = _clean(rest)
+    return out
+
+
+def _cert(v, brand):
+    out = {}
+    stds = re.findall(r"\bUL\s*\d{3,4}\b|\bEN\s*\d{4,5}\b|\bISO\s*\d{3,5}\b|\bIEC\s*\d{4,5}\b", v, re.I)
+    if stds:
+        out["standards"] = list(dict.fromkeys(re.sub(r"\s+", " ", s).upper() for s in stds))
+    out["details"] = _clean(v)
+    return out
+
+
 def _display(v, brand):
     rest = v
     out = {}
@@ -721,6 +841,18 @@ def _resolver(field: str):
         return _rims
     if f == "frame":
         return _frame
+    if "bottom_bracket" in f:
+        return _bottom_bracket
+    if "throttle" in f:
+        return _throttle
+    if "grip" in f:
+        return _grips
+    if "light" in f:
+        return _light
+    if f.endswith("_wheel") or f in ("wheel", "wheels"):
+        return _wheel
+    if "certif" in f or "compliance" in f or f == "iso_standard":
+        return _cert
     return None
 
 
