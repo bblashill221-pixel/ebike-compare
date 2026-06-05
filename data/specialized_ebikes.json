@@ -73,6 +73,48 @@
         "Bar height from ground - Min": "One Size: 1051mm"
       },
       "specs": {
+        "all": {
+          "Motor": "Globe custom tuned motor, alloy, 6-bolt disc, 9 speed freehub, bolt on, 36h",
+          "Battery": "Globe external battery, 772Wh, UL 2271 certified, IPX7",
+          "UI/Remote": "Globe handlebar remote HMI, State of charge, Ride Mode display, USB plug, BLE",
+          "Charger": "Globe charger, 48V System w/ Globe system charger plug, AC power cord included",
+          "Wiring Harness": "Globe wiring harness, IP65",
+          "Frame": "Haul LT Premium Aluminum, Post mount disc brake, fender/rack mounts",
+          "Seat Binder": "Alloy, Bolt-type, 39mm",
+          "Fork": "Globe Steel, Post mount disc brake, fender/rack mounts",
+          "Front Brake": "Tektro HD-T535, 4 piston caliper, hydraulic disc, 203mm rotor, E-Bike rated",
+          "Rear Brake": "Tektro HD-T535, 4 piston caliper, hydraulic disc, 203mm rotor, E-Bike rated",
+          "Shift Levers": "microSHIFT Advent, 9-speed",
+          "Rear Derailleur": "microSHIFT, short cage, 9-speed",
+          "Cassette": "SunRace, 9-Speed, 11-36t",
+          "Chain": "KMC e9S EPT, anti-rust coating, 9-speed w/ reusable Missing Link™",
+          "Crankset": "Forged alloy arm, alloy chainring guard, 160mm",
+          "Chainrings": "50T",
+          "Chaincase": "Chain Guide, Upper Guard",
+          "Bottom Bracket": "Square-tapered, 100mm BB width, 184mm spindle, w/ torque sensor",
+          "Rims": "20'', double-wall alloy, 50X20mm, 36h",
+          "Front Hub": "Alloy, 6-bolt disc, 110mm spacing, loose ball bearings, bolt on, 36h",
+          "Spokes": "Stainless, 13g front, 13g-12g butted rear",
+          "Front Tire": "Globe Reflect, Tan Sidewall, 20x3.5",
+          "Rear Tire": "Globe Reflect, Tan Sidewall, 20x3.5",
+          "Inner Tubes": "Schrader, 32mm valve",
+          "Stem": "Globe, cargo 35X150mm quill stem",
+          "Handlebars": "Globe, cargo, alloy, 12-degree backsweep, 80mm rise, 31.8mm. 700mm width",
+          "Grips": "Globe closed end slip on type, 155mm",
+          "Saddle": "Specialized Body Geometry Comfort Gel",
+          "SeatPost": "Telescoping, alloy, 2-bolt Clamp, 20mm offset, 34.9mm, 525mm",
+          "Pedals": "Specialized Body Geometry Fitness, platform, plastic",
+          "Headlight": "Globe Cargo Drive, 1500 Lumen, remote switch, multiple modes.",
+          "Taillight": "Globe Cargo Drive, 50 Lumen",
+          "Rack": "Globe, Long Tail, MIK HD interface, rail system",
+          "Fenders": "Globe Cargo fenders, w/headlight mount",
+          "Kickstand": "Globe, Long Tail, extra-wide leg design, center mount",
+          "Bell": "Specialized brass bell",
+          "Product ID": "277758",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "40 kg (88 lb, 3.0 oz)",
+          "Weight Size": "One Size"
+        },
         "grouped": {
           "general_info": {
             "product_id": "277758",
@@ -113,12 +155,12 @@
           },
           "drivetrain": {
             "shift_levers": {
-              "manufacturer": "MicroShift",
+              "manufacturer": "microSHIFT",
               "speeds": 9,
               "details": "Advent"
             },
             "rear_derailleur": {
-              "manufacturer": "MicroShift",
+              "manufacturer": "microSHIFT",
               "speeds": 9,
               "details": "short cage"
             },
@@ -186,10 +228,7 @@
             "seatpost": "Telescoping, alloy, 2-bolt Clamp, 20mm offset, 34.9mm, 525mm"
           },
           "geometry": {
-            "crank_length": {
-              "length_mm": 160,
-              "details": "One Size"
-            },
+            "crank_length": "One Size: 160mm",
             "handlebar_width": "One Size: 700mm",
             "stem_length": "One Size: 45mm",
             "saddle_width": "One Size: 200mm",
@@ -201,18 +240,8 @@
             "b_b_height": "One Size: 285mm",
             "b_b_drop": "One Size: 5mm",
             "trail": "One Size: 47mm",
-            "fork_length_full": {
-              "travel_mm": 372,
-              "lockout": false,
-              "thru_axle": false,
-              "details": "One Size"
-            },
-            "fork_rake_offset": {
-              "travel_mm": 55,
-              "lockout": false,
-              "thru_axle": false,
-              "details": "One Size"
-            },
+            "fork_length_full": "One Size: 372mm",
+            "fork_rake_offset": "One Size: 55mm",
             "front_center": "One Size: 624mm",
             "chain_stay_length": "One Size: 732mm",
             "wheelbase": "One Size: 1356mm",
@@ -309,6 +338,47 @@
         "Bar height from ground - Min": "One Size: 1051mm"
       },
       "specs": {
+        "all": {
+          "Motor": "Globe custom tuned motor, alloy, 6-bolt disc, 9 speed freehub, bolt on, 36h",
+          "Battery": "Globe external battery, 772Wh, IPX7",
+          "UI/Remote": "Globe handlebar remote HMI, State of charge, Ride Mode display, USB plug, BLE",
+          "Charger": "Globe charger, 48V System w/ Globe system charger plug, AC power cord included",
+          "Wiring Harness": "Globe wiring harness, IP65",
+          "Frame": "Haul ST Premium Aluminum, Post mount disc brake, fender/rack mounts",
+          "Seat Binder": "Alloy, Bolt-type, 39mm",
+          "Fork": "2022 Globe Fork",
+          "Front Brake": "Tektro HD-T535, 4 piston caliper, hydraulic disc, 203mm rotor",
+          "Rear Brake": "Tektro HD-T535, 4 piston caliper, hydraulic disc, 203mm rotor",
+          "Shift Levers": "microSHIFT Advent, 9-speed",
+          "Rear Derailleur": "microSHIFT, short cage, 9-speed",
+          "Cassette": "SunRace, 9-Speed, 11-36t",
+          "Chain": "KMC e9S EPT, anti-rust coating, 9-speed w/ reusable Missing Link™",
+          "Crankset": "Forged alloy arm, alloy chainring guard, 160mm",
+          "Chainrings": "50T",
+          "Bottom Bracket": "Square-tapered, 100mm BB width, 184mm spindle, w/ torque sensor",
+          "Rims": "20'', double-wall alloy, 50X20mm, 36h",
+          "Front Hub": "Alloy, 6-bolt disc, 110mm spacing, loose ball bearings, bolt on, 36h",
+          "Spokes": "Stainless, 13g/2.3mm",
+          "Front Tire": "Carless Whisper Reflect, 20X3.5",
+          "Rear Tire": "Carless Whisper Reflect, 20X3.5",
+          "Inner Tubes": "Schrader, 32mm valve",
+          "Stem": "Globe, cargo 1.5X150mm quill stem",
+          "Handlebars": "Globe, cargo, alloy, 12-degree backsweep, 80mm rise, 31.8mm. 700mm width",
+          "Grips": "Globe closed end slip on type, 155mm",
+          "Saddle": "Specialized Body Geometry Comfort Gel",
+          "SeatPost": "Double Extension Seatpost +/- 330mm, 34.9mm, 585mm, 20mm Offset",
+          "Pedals": "Specialized Flat pedal",
+          "Headlight": "Globe Cargo Drive, 1500 Lumen, remote switch, multiple modes.",
+          "Taillight": "Globe Cargo Drive, 50 Lumen",
+          "Rack": "Globe, Short Tail, MIK HD interface, rail system",
+          "Fenders": "Globe Cargo fenders, w/headlight mount",
+          "Kickstand": "Globe, Short Tail, center mount",
+          "Bell": "Brass bell",
+          "Product ID": "277759",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "35.0kg (77 lb, 2.6 oz)",
+          "Weight Size": "One Size"
+        },
         "grouped": {
           "general_info": {
             "product_id": "277759",
@@ -349,12 +419,12 @@
           },
           "drivetrain": {
             "shift_levers": {
-              "manufacturer": "MicroShift",
+              "manufacturer": "microSHIFT",
               "speeds": 9,
               "details": "Advent"
             },
             "rear_derailleur": {
-              "manufacturer": "MicroShift",
+              "manufacturer": "microSHIFT",
               "speeds": 9,
               "details": "short cage"
             },
@@ -419,10 +489,7 @@
             "seatpost": "Double Extension Seatpost +/- 330mm, 34.9mm, 585mm, 20mm Offset"
           },
           "geometry": {
-            "crank_length": {
-              "length_mm": 160,
-              "details": "One Size"
-            },
+            "crank_length": "One Size: 160mm",
             "handlebar_width": "One Size: 700mm",
             "stem_length": "One Size: 45mm",
             "saddle_width": "One Size: 200mm",
@@ -433,18 +500,8 @@
             "b_b_height": "One Size: 285mm",
             "b_b_drop": "One Size: 5mm",
             "trail": "One Size: 47mm",
-            "fork_length_full": {
-              "travel_mm": 372,
-              "lockout": false,
-              "thru_axle": false,
-              "details": "One Size"
-            },
-            "fork_rake_offset": {
-              "travel_mm": 55,
-              "lockout": false,
-              "thru_axle": false,
-              "details": "One Size"
-            },
+            "fork_length_full": "One Size: 372mm",
+            "fork_rake_offset": "One Size: 55mm",
             "front_center": "One Size: 624mm",
             "chain_stay_length": "One Size: 465mm",
             "wheelbase": "One Size: 1089mm",
@@ -731,6 +788,41 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 3.1 Motor, 105Nm torque, 810W power",
+          "Battery": "840Wh battery",
+          "UI/Remote": "Mastermind TCU, 2.2\" high resolution screen, fully customizeable with Specialized app, works with Apple Find My",
+          "Charger": "Specialized 4amp charger",
+          "Frame": "Levo Evo FACT 11m carbon frame, 12x148mm dropouts, sealed cartridge bearing pivots, SRAM UDH compatible, 170mm rear travel, 29\" front wheel/27.5\" rear wheel, adjustable head tube angle, chainstay length, integrated SWAT storage",
+          "Seat Binder": "Alloy, 38.6mm",
+          "Rear Shock": "All New Vivid Select air, 230x62.5mm, Linear XL spring, RT damper w/climb switch, rebound adjust",
+          "Fork": "All New SRAM FS ZEB Select, 29\" 180mm, Linear XL spring, Delta RC damper, rebound adjust",
+          "Front Brake": "SRAM Maven Bronze, 4-piston caliper, hydraulic disc, 220mm rotor",
+          "Rear Brake": "SRAM Maven Bronze, 4-piston caliper, hydraulic disc, 220mm rotor",
+          "Shift Levers": "SRAM AXS Pod Controller w/discrete clamp",
+          "Rear Derailleur": "SRAM S1000 Eagle AXS",
+          "Cassette": "SRAM 12-speed,10-52t",
+          "Chain": "SRAM GX Eagle Transmission 12-Speed Flattop Chain",
+          "Crankset": "SRAM S1000 Alloy crank, ISIS interface, 155mm length",
+          "Chainrings": "SRAM 34t T-Type chainring, 104 BCD, steel",
+          "Rims": "Specialized Alloy Rims",
+          "Front Hub": "Specialized alloy front hub disc, sealed cardridge bearings, 6-bolt, 15x110mm thru-axle, 28h",
+          "Rear Hub": "Specialized alloy rear hub disc, sealed cartridge bearings, 6-Bolt, 12X148mm thru-axle, 32h, HG Steel Fhb",
+          "Spokes": "DT Swiss Elemental",
+          "Front Tire": "Butcher, GRID Gravity, T9, TLR, 29x2.4\"",
+          "Rear Tire": "Cannibal GRID Gravity T9 TLR Downhill Tire 27.5x2.4\"",
+          "Inner Tubes": "Standard, Presta Valve",
+          "Stem": "Alloy Trail Stem, 35mm bar bore",
+          "Handlebars": "Alloy handlebars, 35mm diameter, 8 degree back sweep, 6 degree up sweep, S1/S2: 780mm/30mm rise, S3-S6: 800mm/50mm rise",
+          "Grips": "Specialized Trail Grips",
+          "Saddle": "Bridge Comp, Hollow Cr-mo rails 155/143",
+          "SeatPost": "Xfusion Manic, infinite adjustable, two bolt head, Remote SLR LE lever, 34.9, S2: 125mm, S3: 170mm, S4-S6: 190mm",
+          "SWAT": "SWAT Internal downtube storage",
+          "Product ID": "294787",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "25.16 kg (55 lb, 7.5 oz)",
+          "Weight Size": "S4"
+        },
         "grouped": {
           "general_info": {
             "product_id": "294787",
@@ -1307,6 +1399,39 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 3.1 Motor, 105Nm torque, 810W power",
+          "Battery": "840Wh battery",
+          "UI/Remote": "Mastermind TCU, 2.2\" high resolution screen, fully customizeable with Specialized app, works with Apple Find My",
+          "Charger": "Specialized 4amp charger",
+          "Frame": "Levo Evo FACT 11m carbon frame, 12x148mm dropouts, sealed cartridge bearing pivots, SRAM UDH compatible, 170mm rear travel, 29\" front wheel/27.5\" rear wheel, adjustable head tube angle, chainstay length, integrated SWAT storage",
+          "Seat Binder": "Alloy, 38.6mm",
+          "Rear Shock": "All New Vivid Ultimate air, 230x62.5mm, Linear XL spring, RCT2 damper w/HSC and LCS adjust, and HBO adjust, rebound adjust",
+          "Fork": "All New SRAM FS ZEB Ultimate, 29\" 180mm, Linear XL spring with ButterCups and adjustable bottom out, new Charger 3.2 damper with HSC and LSC, rebound adjust",
+          "Front Brake": "SRAM Maven Silver, 4-piston caliper, hydraulic disc, 220mm rotor",
+          "Rear Brake": "SRAM Maven Silver, 4-piston caliper, hydraulic disc, 220mm rotor",
+          "Shift Levers": "SRAM AXS Pod Controller w/discrete clamp",
+          "Rear Derailleur": "SRAM X0 Eagle Transmission",
+          "Cassette": "SRAM XS 1295, 12 speed, 10-52",
+          "Chain": "SRAM X0 Eagle Transmission 12-Speed Flattop Chain",
+          "Crankset": "SRAM XO Alloy crank, 155mm, ISIS interface",
+          "Chainrings": "SRAM 34t T-Type chainring, 104 BCD, steel",
+          "Front Tire": "Butcher, GRID Gravity, T9, TLR, 29x2.4\"",
+          "Front Wheel": "Traverse HD Carbon 29\" rim, DT Swiss 350, 29, 28H, carbon rim, 30mm inner width",
+          "Rear Tire": "Cannibal GRID Gravity T9 TLR Downhill Tire 27.5x2.4\"",
+          "Rear Wheel": "Traverse HD 350, 27.5\", 32H, carbon rim, 30mm inner width, DT Swiss 350 hub, 12x148",
+          "Inner Tubes": "Standard, Presta Valve",
+          "Stem": "Deity, 35mm clamp, 42mm length",
+          "Handlebars": "Deity Speedway Carbon, 5-degree upsweep, 9-degree backsweep. S1-S2: 810 width, 30mm rise: S3-S6: 810 width, 50mm rise",
+          "Grips": "Deity Lockjaw, Lock On, 32mm OD, 133mm Length, Black",
+          "Saddle": "Bridge Expert with MIMIC, Hollow Ti rails",
+          "SeatPost": "Bike Yoke Revive Max 3.0, 34.9, S2:125mm, S3:160mm, S4: 185mm, S5/S6:213mm",
+          "SWAT": "SWAT Internal downtube storage",
+          "Product ID": "294785",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "24.4 kg (53 lb, 12.7 oz)",
+          "Weight Size": "S4"
+        },
         "grouped": {
           "general_info": {
             "product_id": "294785",
@@ -1891,6 +2016,38 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 1.2 SL Custom Lightweight Motor",
+          "Battery": "Specialized SL1-320, fully integrated, 320Wh",
+          "UI/Remote": "Specialized MasterMind TCU, percentage of remaining charge, 120 possible display configurations, MicroTune assist adjustment, over-the-air updates, ANT+/Bluetooth®, w/Handlebar remote",
+          "Charger": "Custom charger, 48V System w/ SL system charger plug",
+          "Wiring Harness": "Custom Specialized wiring harness w/ chargeport",
+          "Frame": "FACT 11r carbon, front/rear thru-axles, fully integrated down tube battery, internal cable routing, fender/rack mounts, 12x142mm",
+          "Seat Binder": "Specialized Alloy, 31.8",
+          "Fork": "Future Shock 3.3 w/ Smooth Boot, 12x100mm thru-axle, flat-mount disc",
+          "Front Brake": "SRAM RED E1",
+          "Rear Brake": "SRAM RED E1",
+          "Shift Levers": "SRAM RED AXS E1",
+          "Rear Derailleur": "SRAM XX1 Eagle AXS",
+          "Cassette": "SRAM XG-1295 Eagle, 12-speed, 10-50t",
+          "Chain": "SRAM XX1 Eagle",
+          "Crankset": "SRAM Carbon DUB Crank Arms",
+          "Chainrings": "SRAM X-Sync Eagle, 107 BCD, 44T",
+          "Front Tire": "Tracer TLR All Terrain Gravel Tire, 700x50c, Tubeless Ready",
+          "Front Wheel": "Roval Terra CLX II, 25mm internal width, Tubeless Ready, 32mm depth, 21h, Roval LF13 hub with ceramic SINC bearings, Centerlock disc, DT Swiss Aerolite spokes",
+          "Rear Tire": "Tracer TLR All Terrain Gravel Tire, 700x50c, Tubeless Ready",
+          "Rear Wheel": "Roval Terra CLX II, 25mm internal width, Tubeless Ready, 32mm depth, 24h, Roval LF14R2, Centerlock, DT Swiss EXP internals, SRAM XDR, DT Swiss Aerolite spokes",
+          "Inner Tubes": "700x32x50mm, 60mm Presta valve",
+          "SeatPost": "SRAM Reverb AXS XPLR Dropper, 49cm-52cm: 50mm drop",
+          "Stem": "S-Works Future Stem w/ Integrated Computer mount",
+          "Handlebars": "Roval Terra, carbon, 103mm drop x 70mm reach x 12º flare",
+          "Grips": "Supacaz Super Sticky Kush",
+          "Saddle": "S-Works Power with Mirror",
+          "Product ID": "221805",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "12.87 kg (28 lb, 6.0 oz)",
+          "Weight Size": "56"
+        },
         "grouped": {
           "general_info": {
             "product_id": "221805",
@@ -1961,15 +2118,15 @@
           },
           "wheelset": {
             "front_tire": {
-              "size": "00x5",
+              "size": "700x50c",
               "tubeless": true,
-              "details": "Tracer TLR All Terrain Gravel Tire, 70c, Tubeless Ready"
+              "details": "Tracer TLR All Terrain Gravel Tire, Tubeless Ready"
             },
             "front_wheel": "Roval Terra CLX II, 25mm internal width, Tubeless Ready, 32mm depth, 21h, Roval LF13 hub with ceramic SINC bearings, Centerlock disc, DT Swiss Aerolite spokes",
             "rear_tire": {
-              "size": "00x5",
+              "size": "700x50c",
               "tubeless": true,
-              "details": "Tracer TLR All Terrain Gravel Tire, 70c, Tubeless Ready"
+              "details": "Tracer TLR All Terrain Gravel Tire, Tubeless Ready"
             },
             "rear_wheel": "Roval Terra CLX II, 25mm internal width, Tubeless Ready, 32mm depth, 24h, Roval LF14R2, Centerlock, DT Swiss EXP internals, SRAM XDR, DT Swiss Aerolite spokes",
             "inner_tubes": "700x32x50mm, 60mm Presta valve"
@@ -2349,6 +2506,20 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized SL 1.2 Custom Rx Trail Tuned Motor",
+          "Battery": "Specialized SL1-320, fully integrated, 320Wh",
+          "UI/Remote": "Specialized MasterMind TCU, percentage of remaining charge, 120 possible display configurations, MicroTune assist adjustment, over-the-air updates, ANT+/Bluetooth®, w/Handlebar remote",
+          "Charger": "Custom charger, 48V System w/ SL system charger plug",
+          "Frame": "FACT 11m full carbon, 29\", full internal cable routing, 148mm spacing, fully sealed cartridge bearings, 170mm rear travel, geo adjust head tube, geo adjust horst pivot",
+          "Seat Binder": "Alloy, 38.6mm",
+          "Rear Shock": "Rockshox Vivid Ultimate, 230x62.5mm",
+          "Crankset": "SRAM Carbon crankset, 165mm, Dub interface",
+          "Chainrings": "SRAM T-type ring, 32t, alloy",
+          "SWAT": "SWAT CC steerer tube integrated tool with chain tool and link",
+          "Product ID": "221331",
+          "Weight": "8.51 kg (18 lb, 12.2 oz)"
+        },
         "grouped": {
           "general_info": {
             "product_id": "221331",
@@ -2760,6 +2931,39 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 3.1 S-Works motor, 111Nm power, 850W power",
+          "Battery": "Specialized Turbo X2 840Wh",
+          "UI/Remote": "Mastermind TCU, 2.2\" high resolution screen, fully customizeable with Specialized app, works with Apple Find My",
+          "Charger": "Specialized 12amp smart charger, 4 different charge functions including Standard, Fast, Eco, and charge to 80%",
+          "Frame": "Levo 4 frame, 150mm travel, w/SWAT storage, side entry battery, fork travel up to 180mm, adjustable head angle, BB height, chainstay length",
+          "Seat Binder": "Alloy, 38.6mm",
+          "Rear Shock": "Fox Float X Factory with Specialized GENIE Shock Tech, Ride Dynamics Trail Tune, 2-position lever, LSR adjustment, 210x55mm",
+          "Fork": "FOX FLOAT 38 Factory, GRIP X2 damper, HS and LS rebound and compression adjustment, 15x110mm QR axle, 44mm offset, 160mm of travel",
+          "Front Brake": "SRAM Maven Ultimate, 4-piston caliper, hydraulic disc, 220mm HS2 Rotor",
+          "Rear Brake": "SRAM Maven Ultimate, 4-piston caliper, hydraulic disc, 200mm HS2 Rotor",
+          "Shift Levers": "SRAM AXS Pod Ultimate with DISCRETE CLAMP",
+          "Rear Derailleur": "SRAM XX Eagle Transmission Derailleur",
+          "Cassette": "SRAM XX Transmission, XS 1297, 10-52t",
+          "Chain": "SRAM XX, T-Type",
+          "Crankset": "SRAM XX Carbon crank, 160mm, ISIS interface",
+          "Chainrings": "SRAM 34t T-Type chainring, 104 BCD, steel",
+          "Front Tire": "Butcher, GRID GRAVITY Casing, GRIPTON® T9 compound, TLR, 29x2.4\"",
+          "Front Wheel": "Roval Traverse HD carbon 29\", hookless carbon, 30mm inner width, tubeless ready, DT Swiss 240 DEG Hub, 15x110mm, 28h",
+          "Rear Tire": "Butcher, GRID GRAVITY Casing, GRIPTON® T9 compound, TLR, 27.5x2.4\"",
+          "Rear Wheel": "Roval Traverse HD carbon 27.5\", hookless carbon, 30mm inner width, tubeless ready, DT Swiss 240 DEG Hub, 12x148mm, 32h",
+          "Inner Tubes": "Standard, Presta Valve",
+          "Stem": "Industry 9 Mountain stem, 35mm clamp, 40mm length",
+          "Handlebars": "Race Face Era Carbon Handlebars, 35mm clamp, back-sweep 8-degrees, up-sweep 5 degrees, 800mm width, S1/S2: 40mm rise, S3-S6: 55mm rise",
+          "Grips": "Deity Lockjaw, Lock On, 32mm OD, 133mm Length, Black",
+          "Saddle": "Specialized Power Pro Mirror w/hollow Ti Rails, 143mm/155mm",
+          "SeatPost": "FOX Transfer NEO Factory, 34.9, S2: 125mm, S3: 175mm, S4-S6: 200mm",
+          "SWAT": "SWAT Internal downtube storage",
+          "Product ID": "291509",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "23.68 kg (52 lb, 3.3 oz)",
+          "Weight Size": "S4"
+        },
         "grouped": {
           "general_info": {
             "product_id": "291509",
@@ -2794,10 +2998,10 @@
             },
             "fork": {
               "manufacturer": "Fox",
-              "travel_mm": 110,
+              "travel_mm": 160,
               "lockout": false,
               "thru_axle": false,
-              "details": "FLOAT 38 Factory, GRIP X2 damper, HS and LS rebound and compression adjustment, 15x QR axle, 44mm offset, 160mm of travel"
+              "details": "FLOAT 38 Factory, GRIP X2 damper, HS and LS rebound and compression adjustment, 15x110mm QR axle, 44mm offset"
             }
           },
           "drivetrain": {
@@ -3303,6 +3507,22 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 3.1 S-Works motor, 111Nm power, 850W power",
+          "Battery": "840wh battery",
+          "UI/Remote": "All New MasterMind T3 Display System, 2.2\" high resolution color screen, fully customizeable with Specialized app",
+          "Charger": "Specialized 12amp smart charger, 4 different charge functions including Standard, Fast, Eco, and charge to 80%",
+          "Frame": "All new S-Works Levo 4 frame with carbon shock extension, FACT 11m carbon chassis and rear-end, 12x148mm dropouts, sealed cartridge bearing pivots, SRAM UDH compatible, w/ SWAT storage, 150mm of travel, side entry battery, fork travel up to 180mm",
+          "Seat Binder": "Alloy, 38.6mm",
+          "Rear Shock": "FOX FLOAT X Factory with Specialized GENIE Shock Tech, Ride Dynamics Trail Tune, 2-position lever w/3 setting Open mode tuning range, LSR adjustment, 210x55mm",
+          "Crankset": "SRAM XX Carbon crank, 55mm Chainline, ISIS interface, 160mm",
+          "Chainrings": "SRAM 34t T-Type chainring, 104 BCD, steel",
+          "SWAT": "SWAT internal downtube storage",
+          "Product ID": "218700",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "12.36 kg (27 lb, 4.0 oz)",
+          "Weight Size": "S4"
+        },
         "grouped": {
           "general_info": {
             "product_id": "218700",
@@ -3783,6 +4003,39 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 3.1 S-Works motor, 111Nm power, 850W power",
+          "Battery": "840wh battery",
+          "UI/Remote": "All New Mastermind TCU, 2.2\" high resolution screen, fully customizeable with Specialized app, works with Apple Find My",
+          "Charger": "Specialized 12amp smart charger, 4 different charge functions including Standard, Fast, Eco, and charge to 80%",
+          "Frame": "All new S-Works Levo 4 frame with carbon shock extension, 150mm travel, w/SWAT storage, side entry battery, fork travel up to 180mm",
+          "Seat Binder": "Alloy, 38.6mm",
+          "Rear Shock": "FOX FLOAT X Factory with Specialized GENIE Shock Tech, Ride Dynamics Trail Tune, 2-position lever w/3 setting Open mode tuning range, LSR adjustment, 210x55mm",
+          "Fork": "FOX Factory Podium, GRIP X2 damper, HS and LS rebound and compression adjustment, 160mm, 20x110mm axle, 44mm offset",
+          "Front Brake": "Trickstuff Maxima brake, 4 piston, 223mm rotor",
+          "Rear Brake": "Trickstuff Maxima brake, 4 piston, 223mm rotor",
+          "Shift Levers": "SRAM AXS POD Ultimate Controller with Discrete clamp",
+          "Rear Derailleur": "SRAM XX Eagle Transmission Derailleur",
+          "Cassette": "SRAM XX Eagle Transmission Cassette, 12spd, 10-52t",
+          "Chain": "SRAM XX EagleTransmission Flattop Chain",
+          "Crankset": "Cane Creek, Electric Wings printed titanium cranks, 160mm length",
+          "Chainrings": "SRAM 34t T-Type chainring, 104 BCD, steel",
+          "Front Tire": "Butcher, GRID GRAVITY casing, GRIPTON® T9 compound, TLR, 29x2.4\"",
+          "Front Wheel": "Traverse HD I9 Hydra 2, 29\", 20x110mm axle, 28h, carbon rim, 30mm inner width",
+          "Rear Tire": "Butcher, GRID GRAVITY casing, GRIPTON® T9 compound, TLR, 27.5x2.4\"",
+          "Rear Wheel": "Traverse HD I9 Hydra 2, 27.5\", 12x148mm axle, 32h, carbon rim, 30mm inner width, XD freehub body",
+          "Inner Tubes": "Standard, Presta Valve",
+          "Stem": "Industry 9 Mountain stem, 35mm clamp, 40mm length",
+          "Handlebars": "Race Face Era Carbon Handlebars, 35mm clamp, back-sweep 8-degrees, up-sweep 5 degrees, 800mm width, S1/S2: 40mm rise, S3-S6: 55mm rise",
+          "Grips": "Deity Lockjaw grips",
+          "Saddle": "Specialized Power Pro Mirror w/hollow Ti rails",
+          "SeatPost": "FOX Transfer NEO Factory, 34.9, S2: 125mm, S3: 175mm, S4-S6: 200mm",
+          "SWAT": "SWAT internal downtube storage",
+          "Product ID": "260592",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "24.0 kg (52 lb, 14.6 oz)",
+          "Weight Size": "S4"
+        },
         "grouped": {
           "general_info": {
             "product_id": "260592",
@@ -4199,6 +4452,38 @@
         "Saddle Height for Effective ST Angle": "S2 - 29: 690mm | S3 - 29: 735mm | S4 - 29: 780mm | S5 - 29: 825mm | S6 - 29: 870mm"
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 3.1 S-Works motor, 111Nm power, 850W power",
+          "Battery": "Specialized Turbo X2 840Wh integrated battery pack",
+          "UI/Remote": "Mastermind TCU, 2.2\" high resolution screen, fully customizeable with Specialized app, works with Apple Find My",
+          "Charger": "Specialized 12amp smart charger, 4 different charge functions including Standard, Fast, Eco, and charge to 80%",
+          "Frame": "FACT 11m Carbon, carbon shock extension, titanium hardware, SWAT downtube storage, 12x148mm UDH compatible rear dropout, side entry battery, adjustable geometry, 130mm of travel",
+          "Seat Binder": "Alloy, 38.6mm",
+          "Rear Shock": "FOX FLOAT Factory GENIE, Ride Dynamics Developed, 2-position compression adjust, 190x45mm",
+          "Fork": "FOX 36 SL Factory, GRIP X Damper, HSC, LSC, LSR adjust, 140mm travel, 44mm offset, 15x110mm",
+          "Front Brake": "SRAM Motive Ultimate, 4-piston caliper, hydraulic disc, 200mm rotor",
+          "Rear Brake": "SRAM Motive Ultimate, 4-piston caliper, hydraulic disc, 200mm rotor",
+          "Shift Levers": "SRAM AXS POD Ultimate Controller",
+          "Rear Derailleur": "SRAM XX SL Eagle AXS",
+          "Cassette": "SRAM XX Transmission, XS 1297, 10-52t",
+          "Chain": "SRAM XX, T-Type",
+          "Crankset": "SRAM XX Carbon crank, 160mm, ISIS interface",
+          "Chainrings": "SRAM 34t T-Type chainring, 104 BCD, steel",
+          "Front Tire": "Specialized Purgatory, GRID Casing, T9 Compound, 29x2.4",
+          "Front Wheel": "Roval Traverse SL II Rim, hookless carbon, 30mm inner width, tubeless ready, 29\", Industry 9 Hydra 2 Hub, 15x110mm, 28H, DT Swiss Revolite Spokes, 6 bolt",
+          "Rear Tire": "Specialized Purgatory, GRID Trail Casing, T9 Compound, 29x2.4",
+          "Rear Wheel": "Roval Traverse SL II Rim, hookless carbon, 30mm inner width, tubeless ready, 29\", Industry 9 Hydra 2 Hub, 12x148mm, 32H, DT Swiss Revolite Spokes, 6 bolt",
+          "Inner Tubes": "Specialized Turbo Tube",
+          "Handlebars": "Roval Control SL RISE Integrated cockpit, 50mm integrated stem, 8-degree backsweep, 2 degree upsweep, 780mm wide",
+          "Grips": "Specialized Trail Grips",
+          "Saddle": "Specialized Power Mirror Pro, 143mm/155mm",
+          "SeatPost": "RockShox Reverb AXS, 34.9mm, S2: 125mm, S3: 150mm, S4-6: 200mm",
+          "SWAT": "SWAT internal downtube storage",
+          "Product ID": "223520",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "21.16 kg (46 lb, 10.4 oz)",
+          "Weight Size": "S3"
+        },
         "grouped": {
           "general_info": {
             "product_id": "223520",
@@ -4307,10 +4592,7 @@
             "seatpost": "RockShox Reverb AXS, 34.9mm, S2: 125mm, S3: 150mm, S4-6: 200mm"
           },
           "geometry": {
-            "crank_length": {
-              "length_mm": 160,
-              "details": "S2 - 29: | S3 - 29: 160mm | S4 - 29: 160mm | S5 - 29: 160mm | S6 - 29: 160mm"
-            },
+            "crank_length": "S2 - 29: 160mm | S3 - 29: 160mm | S4 - 29: 160mm | S5 - 29: 160mm | S6 - 29: 160mm",
             "handlebar_width": "S2 - 29: 780mm | S3 - 29: 780mm | S4 - 29: 780mm | S5 - 29: 780mm | S6 - 29: 780mm",
             "saddle_width": "S2 - 29: 155mm | S3 - 29: 143mm | S4 - 29: 143mm | S5 - 29: 143mm | S6 - 29: 143mm",
             "seatpost_length": "S2 - 29: 125mm | S3 - 29: 150mm | S4 - 29: 200mm | S5 - 29: 200mm | S6 - 29: 200mm",
@@ -4321,18 +4603,8 @@
             "b_b_height_low_bb": "S2 - 29: 339mm | S3 - 29: 339mm | S4 - 29: 339mm | S5 - 29: 339mm | S6 - 29: 339mm",
             "b_b_drop": "S2 - 29: 36mm | S3 - 29: 36mm | S4 - 29: 36mm | S5 - 29: 36mm | S6 - 29: 36mm",
             "trail": "S2 - 29: 126mm | S3 - 29: 126mm | S4 - 29: 126mm | S5 - 29: 126mm | S6 - 29: 126mm",
-            "fork_length_full": {
-              "travel_mm": 550,
-              "lockout": false,
-              "thru_axle": false,
-              "details": "S2 - 29: | S3 - 29: 550mm | S4 - 29: 550mm | S5 - 29: 550mm | S6 - 29: 550mm"
-            },
-            "fork_rake_offset": {
-              "travel_mm": 44,
-              "lockout": false,
-              "thru_axle": false,
-              "details": "S2 - 29: | S3 - 29: 44mm | S4 - 29: 44mm | S5 - 29: 44mm | S6 - 29: 44mm"
-            },
+            "fork_length_full": "S2 - 29: 550mm | S3 - 29: 550mm | S4 - 29: 550mm | S5 - 29: 550mm | S6 - 29: 550mm",
+            "fork_rake_offset": "S2 - 29: 44mm | S3 - 29: 44mm | S4 - 29: 44mm | S5 - 29: 44mm | S6 - 29: 44mm",
             "front_center": "S2 - 29: 736mm | S3 - 29: 770mm | S4 - 29: 801mm | S5 - 29: 833mm | S6 - 29: 863mm",
             "chain_stay_length": "S2 - 29: 447mm | S3 - 29: 447mm | S4 - 29: 447mm | S5 - 29: 447mm | S6 - 29: 447mm",
             "wheelbase": "S2 - 29: 1181mm | S3 - 29: 1215mm | S4 - 29: 1246mm | S5 - 29: 1277mm | S6 - 29: 1309mm",
@@ -4626,6 +4898,39 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized SL 1.2 Custom Rx Trail Tuned Motor",
+          "Battery": "Specialized SL1-320, fully integrated, 320Wh",
+          "UI/Remote": "Specialized MasterMind TCU, percentage of remaining charge, 120 possible display configurations, MicroTune assist adjustment, over-the-air updates, ANT+/Bluetooth®, w/Handlebar remote",
+          "Charger": "Custom charger, 48V System w/ SL system charger plug",
+          "Frame": "Levo SL Carbon Frame, Fact 11m Carbon, Carbon shock extension, 150mm travel, adjustable head angle, BB height, and compatible with 27.5 or 29\" wheels.",
+          "Seat Binder": "Alloy, 38.6mm",
+          "Rear Shock": "FOX FLOAT X Factory with Specialized GENIE Shock Tech, Ride Dynamics Trail Tune, 2-position lever w/3 setting Open mode tuning range, LSR adjustment, S2-S6:210x55mm, S1: FOX FLOAT Factory 210x52.5mm",
+          "Fork": "FOX FLOAT 36 Factory, GRIP X2 damper, HS and LS rebound and compression adjustment, 15x110mm QR axle, 44mm offset",
+          "Front Brake": "Shimano XTR 9220, 4-piston caliper, hydraulic disc, 203mm rotor",
+          "Rear Brake": "Shimano XTR 9220, 4-piston caliper, hydraulic disc, 203mm rotor",
+          "Shift Levers": "Shimano XTR Di2",
+          "Rear Derailleur": "Shimano XTR Di2, 12-speed",
+          "Cassette": "Shimano XTR, 12 Speed, 10-51T",
+          "Chain": "Shimano XTR M9100, 12-speed w/ quick link",
+          "Crankset": "SRAM Carbon crankset, 165mm, Dub interface",
+          "Chainrings": "Race Face alloy chainring, 104 BCD, 32T",
+          "Front Tire": "Butcher, GRID TRAIL casing, GRIPTON® T9 compound, TLR, 29X2.4",
+          "Front Wheel": "Roval Traverse HD carbon, 29\", hookless carbon, 30mm inner width, tubeless ready, DT Swiss 240 Hub, 15x110mm, 28h, 6 bolt",
+          "Rear Tire": "Eliminator, GRID GRAVITY casing, GRIPTON® T7/T9 compound, TLR, 27.5X2.4",
+          "Rear Wheel": "Roval Traverse HD carbon, 27.5\", hookless carbon, 30mm inner width, tubeless ready, DT Swiss 240 DEG Hub, 12x148mm, 32h, 6 bolt",
+          "Inner Tubes": "Standard, Presta Valve",
+          "Stem": "Race Face Turbine R,35mm clamp,40mm length",
+          "Handlebars": "Race Face Era Carbon Handlebars, 35mm clamp, back-sweep 8-degrees, up-sweep 5 degrees, 800mm width, S1/S2: 40mm rise, S3-S6: 55mm rise",
+          "Grips": "Deity Lockjaw Grips",
+          "Saddle": "Specialized Power Pro Mirror, Ti Rails, 143/155mm",
+          "SeatPost": "FOX Transfer Neo wireless, 34.9mm, S1: 100mm, S2: 125mm, S3: 175mm, S4-S6: 200mm",
+          "SWAT": "SWAT CC steerer tube integrated tool with chain tool and link",
+          "Product ID": "221349",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "18.0 kg (39 lb, 10.9 oz)",
+          "Weight Size": "S4"
+        },
         "grouped": {
           "general_info": {
             "product_id": "221349",
@@ -5137,6 +5442,23 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 1.2 SL Custom RX Trail Tuned Motor, 50Nm power, 320W power",
+          "Battery": "Specialized SL1-320, fully integrated, 320Wh",
+          "UI/Remote": "Specialized MasterMind TCU, percentage of remaining charge, 120 possible display configurations, MicroTune assist adjustment, over-the-air updates, ANT+/Bluetooth®, w/Handlebar remote",
+          "Charger": "Custom charger, 48V System w/ SL system charger plug",
+          "Wiring Harness": "Custom Specialized wiring harness",
+          "Frame": "Levo SL carbon Frame, Fact 11m carbon, alloy shock extension, 150mm travel, adjustable head angle, BB height, and compatible with 27.5 or 29\" wheels.",
+          "Seat Binder": "Alloy, 38.6mm",
+          "Rear Shock": "FOX FLOAT X Factory with Specialized GENIE Shock Tech, Ride Dynamics Trail Tune, 2-position lever w/3 setting Open mode tuning range, LSR adjustment, S2-S6:210x55mm, S1: FOX FLOAT Factory 210x52.5mm",
+          "Crankset": "SRAM Eagle Crankset, 32T ring, Integrated Guard, 55mm Chainline, 165mm",
+          "Chainrings": "SRAM T-type ring, 32t",
+          "SWAT": "SWAT CC steerer tube integrated tool with chain tool and link",
+          "Product ID": "277413",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "7.55 kg (16 lb, 10.3 oz)",
+          "Weight Size": "S4"
+        },
         "grouped": {
           "general_info": {
             "product_id": "277413",
@@ -5554,6 +5876,48 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Motor, Brose, gen2, torque 70nm, 28mph",
+          "Battery": "Specialized integrated battery, state of charge display, 710Wh, UL",
+          "UI/Remote": "Display with handlebar remote, Bluetooth® connectivity, customizable display pages",
+          "Charger": "Custom charger, 42V4A w/ Rosenberger plug, 100-240V",
+          "Frame": "E5 Aluminum, bottom bracket motor mount, fully integrated & lockable downtube battery, internal cable routing, lock and front rack mount",
+          "Seat Binder": "Specialized bolt-type, alloy, 42.9mm",
+          "Fork": "Front Suspension SR Suntour, 80mm of travel, 32mm Stanchion",
+          "Front Brake": "Shimano 2 pistons hydraulic disc, 180mm",
+          "Rear Brake": "Shimano 2 pistons hydraulic disc, 160mm",
+          "Shift Levers": "Shimano CUES 9-Speed with Optical Gear Display",
+          "Rear Derailleur": "Shimano CUES 9-Speed",
+          "Cassette": "Shimano CUES 9-speed, 11-41t",
+          "Chain": "Shimano LG500",
+          "Crankset": "Praxis, Brose Isis,165mm, Bcd 104mm, S48T",
+          "Chainrings": "40 Teeth with Chain Retention Technology",
+          "Chaincase": "Specilaized Chain Cover 48T",
+          "Rims": "29 front, 27.5 rear, 30mm inner width, 32h",
+          "Front Hub": "Shimano Center Lock Disc 32H, 15mm Thru Type Axle, 100mm",
+          "Rear Hub": "Shimano Freehub, Center Lock Disc",
+          "Spokes": "DT Swiss Elemental",
+          "Front Tire": "Hemisphere Flat Protection Reflect, 650b X 2.3",
+          "Rear Tire": "Hemisphere Flat Protection Reflect, 650b X 2.3",
+          "Inner Tubes": "Standard 40mm Schrader valve 650Bx1.75-2.4",
+          "Stem": "Specialized integrated stem",
+          "Handlebars": "Specialized Como handlebar/stem combo",
+          "Grips": "Specialized Body Geometry Contour, lock-on",
+          "Saddle": "Body Geometry Comfort Gel, 200mm W/ Handle",
+          "SeatPost": "Suspension, 40mm travel, 34.9mm",
+          "Pedals": "Specialized Commuter w/ grip tape & reflectors",
+          "Headlight": "Lezyne, Ebike Mini Stvzo E300+, 300 Lumen, 160Cm Wire, With Reflector",
+          "Taillight": "Spanninga, Stvzo, Commuter Glow With auto Brake",
+          "Rack": "Specialized rack, MIK HD interface, built-in pannier mounts, 27kg max load",
+          "Bike Lock": "Turbo System Lock",
+          "Fenders": "Specialized DRYTECH fenders, 65mm width, extra strong aluminum fenderstay",
+          "Kickstand": "Specialized kickstand, 40mm mount",
+          "Bell": "Bell",
+          "Product ID": "222077",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "28.15 kg (62 lb, 1.0 oz)",
+          "Weight Size": "MD"
+        },
         "grouped": {
           "general_info": {
             "product_id": "222077",
@@ -5594,7 +5958,7 @@
               "travel_mm": 80,
               "lockout": false,
               "thru_axle": false,
-              "details": "Front Suspension, of travel, 32mm Stanchion"
+              "details": "Front Suspension, 32mm Stanchion"
             }
           },
           "drivetrain": {
@@ -5972,6 +6336,48 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 2.0, 70Nm torque, custom tuned motor, 250W nominal",
+          "Battery": "Specialized U2-710, integrated battery, state of charge display, 710Wh, UL",
+          "UI/Remote": "MasterMind TCD, w/handlebar remote, built-in anti-theft feature, Bluetooth® connectivity, customizable display pages",
+          "Charger": "Custom charger, 42V4A w/ Rosenberger plug, 100-240V",
+          "Wiring Harness": "Custom wire harness",
+          "Frame": "E5 Aluminum, bottom bracket motor mount, fully integrated &lockable downtube battery, internal cable routing, lock and front rack mount, sliding dropout",
+          "Seat Binder": "Specialized bolt-type, alloy, 42.9mm",
+          "Fork": "SR Suntour MobieA32, 80mm travel, lockout, fender-mounts, integrated light mount",
+          "Front Brake": "SRAM Level, 2-piston caliper, hydraulic disc, 180mm",
+          "Rear Brake": "SRAM Level, 2-piston caliper, hydraulic disc, 180mm",
+          "Shift Levers": "enviolo Twist Display Pure",
+          "Internal Gear Hub": "enviolo CVP Multi-Turn",
+          "Cassette": "Gates Carbon Drive CDX 22t sprocket, silver",
+          "Chain": "Gates Carbon Drive CDX 122t belt, black",
+          "Crankset": "Custom alloy forged crankarms",
+          "Chainrings": "Gates Carbon Drive CDC 50T chainring, black",
+          "Chaincase": "Integrated Chaincover",
+          "Rims": "650b disc, double-wall alloy, pinned, 32h",
+          "Front Hub": "Specialized alloy front hub disc, sealed cardridge bearings, 6-bolt, 15x110mm thru-axle, 32h",
+          "Rear Hub": "enviolo CITY, 310% range, 6-bolt, 10x135mm, 32h",
+          "Spokes": "DT Swiss Industry",
+          "Front Tire": "Hemisphere Flat Protection Reflect, 650b X 2.3",
+          "Rear Tire": "Hemisphere Flat Protection Reflect, 650b X 2.3",
+          "Inner Tubes": "Standard 40mm SV 650Bx1.75-2.4",
+          "Stem": "Specialized integrated stem",
+          "Handlebars": "Specialized Como handlebar/stem combo",
+          "Grips": "Specialized Body Geometry Contour, lock-on",
+          "Saddle": "Body Geometry Comfort Gel, 200mm w/ SWAT™ Mount",
+          "SeatPost": "Spring suspension, alloy, 40mm travel, 30.9mm, 2-bolt clamp, 34.9mm sleeve",
+          "Pedals": "Specialized Commuter w/ grip tape & reflectors",
+          "Mirror": "Handlebar rear view mirror, aluminum",
+          "Headlight": "Lezyne, Ebike Hecto Stvzo E350+, 350 Lumen, 160Cm Wire, With Reflector",
+          "Taillight": "Spanninga, Stvzo, Commuter Glow With Brake XEr",
+          "Rack": "Specialized rack, MIK HD interface, built-in pannier mounts, 27kg max load",
+          "Bike Lock": "Turbo System Lock",
+          "Fenders": "Specialized DRYTECH fenders, 65mm width, aluminum fenderstay",
+          "Kickstand": "Specialized kickstand, 40mm mount",
+          "Bell": "Simple bell",
+          "Product ID": "277418",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries"
+        },
         "grouped": {
           "general_info": {
             "product_id": "277418"
@@ -6383,6 +6789,47 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Motor, Brose, gen2, torque 90nm, 28mph",
+          "Battery": "Specialized integrated battery, state of charge display, 710Wh, UL",
+          "UI/Remote": "Display with handlebar remote, Bluetooth® connectivity, customizable display pages",
+          "Charger": "Custom charger, 42V4A w/ Rosenberger plug, 100-240V",
+          "Frame": "E5 Aluminum, bottom bracket motor mount, fully integrated &lockable downtube battery, internal cable routing, lock and front rack mount, sliding dropout",
+          "Seat Binder": "Specialized bolt-type, alloy, 42.9mm",
+          "Fork": "Rockshox Recon Silver RL, 80mm travel, Motion-Control",
+          "Front Brake": "Shimano CUES BL-U8000. 4 Pistons",
+          "Rear Brake": "Shimano CUES BL-U8000. 4 Pistons",
+          "Rear Derailleur": "Enviolo Automatiq",
+          "Cassette": "Gates Carbon Drive Sprocket, 22T",
+          "Chain": "Gates Carbon Drive CDX 122t belt, black",
+          "Crankset": "Praxis, Brose Isis, 165mm, Bcd 104mm",
+          "Chainrings": "Gates Carbon Drive CDX 50T chainring, black",
+          "Chaincase": "Specialized Belt Cover",
+          "Rims": "29 front, 27.5 rear, 30mm inner width, 32h",
+          "Front Hub": "Specialized alloy front hub disc, sealed cardridge bearings, 6-bolt, 15x110mm thru-axle, 32h",
+          "Rear Hub": "REAR HUB, CVP, ENVIOLO CHINA, CVP-TR-32-DC-OE-2, TREKKING, 32 SPOKE, DISC BRAKE - 40T SPLINE",
+          "Spokes": "DT Swiss Elemental",
+          "Front Tire": "Hemisphere Flat Protection Reflect, 650b X 2.3",
+          "Rear Tire": "Hemisphere Flat Protection Reflect, 650b X 2.3",
+          "Inner Tubes": "Standard 40mm Schrader valve 650Bx1.75-2.4",
+          "Stem": "Specialized integrated stem",
+          "Handlebars": "Specialized Como handlebar/stem combo",
+          "Grips": "ERGON extra comfort Custom, 132mm Length",
+          "Saddle": "Body Geometry Comfort Gel, 200mm W/ Handle",
+          "SeatPost": "Suspended Cane Creek, Thudbuster St, 30.9 mm",
+          "Radar": "Integrated Garmin Radar, with custom information displayed directly on the Mastermind TCD",
+          "Headlight": "Lezyne, Ebike Power Stvzo E450+, 450 Lumen, 160Cm Wire, With Reflector",
+          "Taillight": "Spanninga, Stvzo, Commuter Glow With auto Brake",
+          "Rack": "Specialized rack, MIK HD interface, built-in pannier mounts, 27kg max load",
+          "Bike Lock": "Turbo System Lock",
+          "Fenders": "Specialized DRYTECH fenders, 65mm width, extra strong aluminum fenderstay",
+          "Kickstand": "Specialized kickstand, 40mm mount",
+          "Bell": "Bell",
+          "Product ID": "222075",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "29.1 kg (64 lb, 2.5 oz)",
+          "Weight Size": "MD"
+        },
         "grouped": {
           "general_info": {
             "product_id": "222075",
@@ -6887,16 +7334,48 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "New Specialized 1.2 SL Custom Lightweight Motor",
+          "Battery": "Specialized SL1-320, fully integrated, 320Wh",
+          "UI/Remote": "Specialized MasterMind TCU, percentage of remaining charge, 120 possible display configurations, MicroTune assist adjustment, over-the-air updates, ANT+/Bluetooth®, w/Handlebar remote",
+          "Charger": "Custom charger, 48V System w/ SL system charger plug",
+          "Wiring Harness": "Custom Specialized wiring harness w/ charge port",
+          "Frame": "FACT 11r carbon, front/rear thru-axles, fully integrated down tube battery, internal cable routing, fender/rack mounts, 12x142mm",
+          "Seat Binder": "Specialized Alloy, 31.8",
+          "Fork": "Future Shock 3.2 w/ Smooth Boot, 12x100mm thru-axle, flat-mount disc",
+          "Front Brake": "SRAM APEX, hydraulic disc, 180mm",
+          "Rear Brake": "SRAM APEX, hydraulic disc, 160mm",
+          "Shift Levers": "SRAM Apex eTap AXS",
+          "Rear Derailleur": "SRAM X1 Eagle AXS",
+          "Cassette": "SRAM PG1210, 12-Speed, 11-50t",
+          "Chain": "SRAM NX Eagle, 12-Speed",
+          "Crankset": "SRAM Alloy DUB Crank Arms",
+          "Chainrings": "SRAM X-Sync Eagle, 107 BCD, 44T",
+          "Front Wheel": "DT Swiss G540 rim, 24mm internal width, tubeless ready, 24h, Specialized full sealed bearing thru axle hub, centerlock disc, DT Swiss Champion 14G stainless steel spokes, DT Swiss brass nipples",
+          "Front Tire": "Tracer Pro, 700x42c",
+          "Rear Tire": "Tracer Pro, 700x42c",
+          "Rear Wheel": "DT Swiss G540 rim, 24mm internal width, tubeless ready, 24h, Specialized full sealed bearing thru axle hub, centerlock disc, DT Swiss Champion 14G stainless steel spokes, DT Swiss brass nipples",
+          "Inner Tubes": "700x32/50mm, 48mm Presta valve",
+          "Stem": "Future Stem Comp",
+          "Handlebars": "Specialized Adventure Gear Hover, 103mm drop x 70mm reach x 12º flare",
+          "Tape": "Supacaz Super Sticky Kush",
+          "Saddle": "Body Geometry Power Sport",
+          "SeatPost": "Trans-X Dropper, 50mm Travel",
+          "Product ID": "277467",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "14.55kg (32 lb, 1.2 oz)",
+          "Weight Size": "56"
+        },
         "grouped": {
           "general_info": {
-            "product_id": "263260",
-            "weight": "14.65 kg (32 lb, 4.8 oz)",
+            "product_id": "277467",
+            "weight": "14.55kg (32 lb, 1.2 oz)",
             "weight_size": "56"
           },
           "ebike_system": {
             "motor": {
               "manufacturer": "Specialized",
-              "details": "1.2 SL Custom Lightweight Motor"
+              "details": "New 1.2 SL Custom Lightweight Motor"
             },
             "battery": {
               "manufacturer": "Specialized",
@@ -6906,7 +7385,7 @@
             },
             "ui_remote": "Specialized MasterMind TCU, percentage of remaining charge, 120 possible display configurations, MicroTune assist adjustment, over-the-air updates, ANT+/Bluetooth®, w/Handlebar remote",
             "charger": "Custom charger, 48V System w/ SL system charger plug",
-            "wiring_harness": "Custom Specialized wiring harness w/ chargeport"
+            "wiring_harness": "Custom Specialized wiring harness w/ charge port"
           },
           "certifications": {
             "compliance_certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries"
@@ -6922,64 +7401,66 @@
           },
           "drivetrain": {
             "shift_levers": {
-              "manufacturer": "Shimano",
-              "details": "GRX Di2 RX715/717"
+              "manufacturer": "SRAM",
+              "details": "Apex eTap AXS"
             },
             "rear_derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 12,
-              "details": "GRX Di2 RD-RX717"
+              "manufacturer": "SRAM",
+              "details": "X1 Eagle AXS"
             },
             "cassette": {
-              "manufacturer": "Shimano",
-              "cog_range": "10-51T",
+              "manufacturer": "SRAM",
+              "cog_range": "11-50T",
               "speeds": 12,
-              "details": "Deore M6100, w/ Hyperglide+"
+              "details": "PG1210"
             },
             "chain": {
-              "manufacturer": "Shimano",
-              "details": "Deore M6100, 12-speed w/quick link"
+              "manufacturer": "SRAM",
+              "details": "NX Eagle, 12-Speed"
             },
             "crankset": {
               "manufacturer": "SRAM",
-              "details": "Alloy Crankset, DUB interface"
+              "details": "Alloy DUB Crank Arms"
             },
-            "chainrings": "SRAM X-Sync Eagle, 107 BCD, 44t"
+            "chainrings": "SRAM X-Sync Eagle, 107 BCD, 44T"
           },
           "brakes": {
             "front_brake": {
-              "manufacturer": "Shimano",
+              "manufacturer": "SRAM",
+              "actuation": "hydraulic",
               "kind": "disc",
-              "details": "GRX RX410, hyrdaulic disc"
+              "rotor_mm": 180,
+              "details": "APEX, hydraulic disc"
             },
             "rear_brake": {
-              "manufacturer": "Shimano",
+              "manufacturer": "SRAM",
+              "actuation": "hydraulic",
               "kind": "disc",
-              "details": "GRX RX410, hyrdaulic disc"
+              "rotor_mm": 160,
+              "details": "APEX, hydraulic disc"
             }
           },
           "wheelset": {
-            "front_tire": {
-              "size": "00x5",
-              "tubeless": true,
-              "details": "Tracer TLR All Terrain Gravel Tire, 70c, Tubeless Ready"
-            },
             "front_wheel": "DT Swiss G540 rim, 24mm internal width, tubeless ready, 24h, Specialized full sealed bearing thru axle hub, centerlock disc, DT Swiss Champion 14G stainless steel spokes, DT Swiss brass nipples",
+            "front_tire": {
+              "size": "700x42c",
+              "tubeless": false,
+              "details": "Tracer Pro"
+            },
             "rear_tire": {
-              "size": "00x5",
-              "tubeless": true,
-              "details": "Tracer TLR All Terrain Gravel Tire, 70c, Tubeless Ready"
+              "size": "700x42c",
+              "tubeless": false,
+              "details": "Tracer Pro"
             },
             "rear_wheel": "DT Swiss G540 rim, 24mm internal width, tubeless ready, 24h, Specialized full sealed bearing thru axle hub, centerlock disc, DT Swiss Champion 14G stainless steel spokes, DT Swiss brass nipples",
-            "inner_tubes": "700x32-50mm, 40mm Presta valve"
+            "inner_tubes": "700x32/50mm, 48mm Presta valve"
           },
           "cockpit": {
             "seat_binder": "Specialized Alloy, 31.8",
-            "stem": "Future Stem, Comp",
+            "stem": "Future Stem Comp",
             "handlebars": "Specialized Adventure Gear Hover, 103mm drop x 70mm reach x 12º flare",
-            "grips": "Supacaz Super Sticky Kush",
-            "saddle": "Body Geometry Power Sport, steel rails",
-            "seatpost": "X-Fusion Manic Dropper, 50mm travel"
+            "saddle": "Body Geometry Power Sport",
+            "seatpost": "Trans-X Dropper, 50mm Travel"
           },
           "geometry": {
             "crank_length": {
@@ -7150,6 +7631,9 @@
               "58": "73.5°",
               "61": "73°"
             }
+          },
+          "general_other": {
+            "tape": "Supacaz Super Sticky Kush"
           }
         }
       },
@@ -7461,6 +7945,38 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "New Specialized 1.2 SL Custom Lightweight Motor",
+          "Battery": "Specialized SL1-320, fully integrated, 320Wh",
+          "UI/Remote": "Specialized MasterMind TCU, percentage of remaining charge, 120 possible display configurations, MicroTune assist adjustment, over-the-air updates, ANT+/Bluetooth®, w/Handlebar remote",
+          "Charger": "Custom charger, 48V System w/ SL system charger plug",
+          "Wiring Harness": "Custom Specialized wiring harness w/ charge port",
+          "Frame": "FACT 11r carbon, front/rear thru-axles, fully integrated down tube battery, internal cable routing, fender/rack mounts, 12x142mm",
+          "Seat Binder": "Specialized Alloy, 31.8",
+          "Fork": "Future Shock 3.2 w/ Smooth Boot, 12x100mm thru-axle, flat-mount disc",
+          "Front Brake": "SRAM APEX, hydraulic disc, 180mm",
+          "Rear Brake": "SRAM APEX, hydraulic disc, 160mm",
+          "Shift Levers": "SRAM Apex eTap AXS",
+          "Rear Derailleur": "SRAM X1 Eagle AXS",
+          "Cassette": "SRAM PG1210, 12-Speed, 11-50t",
+          "Chain": "SRAM NX Eagle, 12-Speed",
+          "Crankset": "SRAM Alloy DUB Crank Arms",
+          "Chainrings": "SRAM X-Sync Eagle, 107 BCD, 44T",
+          "Front Wheel": "DT Swiss G540 rim, 24mm internal width, tubeless ready, 24h, Specialized full sealed bearing thru axle hub, centerlock disc, DT Swiss Champion 14G stainless steel spokes, DT Swiss brass nipples",
+          "Front Tire": "Tracer Pro, 700x42c",
+          "Rear Tire": "Tracer Pro, 700x42c",
+          "Rear Wheel": "DT Swiss G540 rim, 24mm internal width, tubeless ready, 24h, Specialized full sealed bearing thru axle hub, centerlock disc, DT Swiss Champion 14G stainless steel spokes, DT Swiss brass nipples",
+          "Inner Tubes": "700x32/50mm, 48mm Presta valve",
+          "Stem": "Future Stem Comp",
+          "Handlebars": "Specialized Adventure Gear Hover, 103mm drop x 70mm reach x 12º flare",
+          "Tape": "Supacaz Super Sticky Kush",
+          "Saddle": "Body Geometry Power Sport",
+          "SeatPost": "Trans-X Dropper, 50mm Travel",
+          "Product ID": "277467",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "14.55kg (32 lb, 1.2 oz)",
+          "Weight Size": "56"
+        },
         "grouped": {
           "general_info": {
             "product_id": "277467",
@@ -7538,14 +8054,14 @@
           "wheelset": {
             "front_wheel": "DT Swiss G540 rim, 24mm internal width, tubeless ready, 24h, Specialized full sealed bearing thru axle hub, centerlock disc, DT Swiss Champion 14G stainless steel spokes, DT Swiss brass nipples",
             "front_tire": {
-              "size": "00x4",
+              "size": "700x42c",
               "tubeless": false,
-              "details": "Tracer Pro, 72c"
+              "details": "Tracer Pro"
             },
             "rear_tire": {
-              "size": "00x4",
+              "size": "700x42c",
               "tubeless": false,
-              "details": "Tracer Pro, 72c"
+              "details": "Tracer Pro"
             },
             "rear_wheel": "DT Swiss G540 rim, 24mm internal width, tubeless ready, 24h, Specialized full sealed bearing thru axle hub, centerlock disc, DT Swiss Champion 14G stainless steel spokes, DT Swiss brass nipples",
             "inner_tubes": "700x32/50mm, 48mm Presta valve"
@@ -8040,6 +8556,37 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 1.2 SL Custom Lightweight Motor",
+          "Battery": "Specialized SL1-320, fully integrated, 320Wh",
+          "UI/Remote": "Specialized MasterMind TCU, percentage of remaining charge, 120 possible display configurations, MicroTune assist adjustment, over-the-air updates, ANT+/Bluetooth®, w/Handlebar remote",
+          "Charger": "Custom charger, 48V System w/ SL system charger plug",
+          "Wiring Harness": "Custom Specialized wiring harness w/ chargeport",
+          "Frame": "Specialized E5 Premium Aluminum frame, front/rear thru-axles, fully integrated down tube battery, internal cable routing, fender/rack mounts, 12x142mm, flat-mount disc brakes",
+          "Fork": "Future Shock 2.0 w/Smooth Boot, FACT carbon, 12x100 mm thru-axle, flat-mount",
+          "Front Brake": "SRAM Apex, Hydraulic disc",
+          "Rear Brake": "SRAM Apex, hydraulic disc",
+          "Shift Levers": "SRAM Apex 12-speed",
+          "Rear Derailleur": "SRAM Apex Eagle 12-speed",
+          "Cassette": "SRAM PG-1210 Eagle, 12-speed, 11-50t",
+          "Chain": "SRAM NX Eagle, 12-speed",
+          "Crankset": "SRAM Alloy Crankset, DUB interface",
+          "Chainrings": "SRAM X-Sync Eagle, 107 BCD, 44T",
+          "Front Tire": "Pathfinder TLR Fast Gravel Tire 700x40c, GRIPTON T2/T5",
+          "Front Wheel": "DT G540 DISC ASVN",
+          "Rear Tire": "Pathfinder TLR Fast Gravel Tire 700x40c, GRIPTON T2/T5",
+          "Rear Wheel": "DT G540 DISC ASVN",
+          "Inner Tubes": "700x32-50mm, 40mm Presta valve",
+          "Stem": "Future Stem, Comp",
+          "Handlebars": "Specialized Adventure Gear Hover, 103mm drop x 70mm reach x 12º flare",
+          "Tape": "Supacaz Suave",
+          "Saddle": "Body Geometry Power Sport, steel rails",
+          "SeatPost": "Carbon, single-bolt, 27.2mm",
+          "Seat Binder": "Specialized Alloy, 30.8mm",
+          "Product ID": "221861",
+          "Weight": "14.99 kg (33 lb, 0.8 oz)",
+          "Weight Size": "56"
+        },
         "grouped": {
           "general_info": {
             "product_id": "221861",
@@ -8113,15 +8660,15 @@
           },
           "wheelset": {
             "front_tire": {
-              "size": "00x4",
+              "size": "700x40c",
               "tubeless": true,
-              "details": "Pathfinder TLR Fast Gravel Tire 70c, GRIPTON T2/T5"
+              "details": "Pathfinder TLR Fast Gravel Tire, GRIPTON T2/T5"
             },
             "front_wheel": "DT G540 DISC ASVN",
             "rear_tire": {
-              "size": "00x4",
+              "size": "700x40c",
               "tubeless": true,
-              "details": "Pathfinder TLR Fast Gravel Tire 70c, GRIPTON T2/T5"
+              "details": "Pathfinder TLR Fast Gravel Tire, GRIPTON T2/T5"
             },
             "rear_wheel": "DT G540 DISC ASVN",
             "inner_tubes": "700x32-50mm, 40mm Presta valve"
@@ -8616,6 +9163,38 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 1.2 SL Custom Lightweight Motor",
+          "Battery": "Specialized SL1-320, fully integrated, 320Wh",
+          "UI/Remote": "Specialized MasterMind TCU, percentage of remaining charge, 120 possible display configurations, MicroTune assist adjustment, over-the-air updates, ANT+/Bluetooth®, w/Handlebar remote",
+          "Charger": "Custom charger, 48V System w/ SL system charger plug",
+          "Wiring Harness": "Custom Specialized wiring harness w/ chargeport",
+          "Frame": "FACT 11r carbon, front/rear thru-axles, fully integrated down tube battery, internal cable routing, fender/rack mounts, 12x142mm",
+          "Seat Binder": "Specialized Alloy, 31.8",
+          "Fork": "Future Shock 3.3 w/ Smooth Boot, 12x100mm thru-axle, flat-mount disc",
+          "Front Brake": "Shimano GRX RX820, hyrdaulic disc",
+          "Rear Brake": "Shimano GRX RX820, hyrdaulic disc",
+          "Shift Levers": "NEW Shimano GRX Di2 RX825",
+          "Rear Derailleur": "Shimano GRX Di2 RD-RX827, 12-speed",
+          "Cassette": "Shimano XT M8200, 12-speed, 10-51t",
+          "Chain": "Shimano XT CN-M8100, 12-speed",
+          "Crankset": "SRAM Alloy Crankset, DUB interface",
+          "Chainrings": "New SL 1.2 spider, 104BCD w/SRAM 107BCD 44T",
+          "Front Tire": "Tracer TLR All Terrain Gravel Tire, 700x50c, Tubeless Ready",
+          "Front Wheel": "Roval Terra C, 25mm inner width carbon tubeless ready rim, 32mm depth, DT 370 hub, 24h, DT Swiss Comp Race spokes",
+          "Rear Tire": "Tracer TLR All Terrain Gravel Tire, 700x50c, Tubeless Ready",
+          "Rear Wheel": "Roval Terra C, 25mm inner width carbon tubeless ready rim, 32mm depth, DT 370 hub, 24h, DT Swiss Comp Race spokes",
+          "Inner Tubes": "700x32x50mm, 60mm Presta valve",
+          "Stem": "Future Stem, Pro",
+          "Handlebars": "Specialized Adventure Gear Hover, 103mm drop x 70mm reach x 12º flare",
+          "Grips": "Supacaz Super Sticky Kush",
+          "Saddle": "Body Geometry Power Expert",
+          "SeatPost": "X-Fusion Manic Dropper, 50mm travel",
+          "Product ID": "221806",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "13.8 kg (30 lb, 6.8 oz)",
+          "Weight Size": "56"
+        },
         "grouped": {
           "general_info": {
             "product_id": "221806",
@@ -8689,15 +9268,15 @@
           },
           "wheelset": {
             "front_tire": {
-              "size": "00x5",
+              "size": "700x50c",
               "tubeless": true,
-              "details": "Tracer TLR All Terrain Gravel Tire, 70c, Tubeless Ready"
+              "details": "Tracer TLR All Terrain Gravel Tire, Tubeless Ready"
             },
             "front_wheel": "Roval Terra C, 25mm inner width carbon tubeless ready rim, 32mm depth, DT 370 hub, 24h, DT Swiss Comp Race spokes",
             "rear_tire": {
-              "size": "00x5",
+              "size": "700x50c",
               "tubeless": true,
-              "details": "Tracer TLR All Terrain Gravel Tire, 70c, Tubeless Ready"
+              "details": "Tracer TLR All Terrain Gravel Tire, Tubeless Ready"
             },
             "rear_wheel": "Roval Terra C, 25mm inner width carbon tubeless ready rim, 32mm depth, DT 370 hub, 24h, DT Swiss Comp Race spokes",
             "inner_tubes": "700x32x50mm, 60mm Presta valve"
@@ -9132,6 +9711,39 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized SL 1.2 Custom Rx Trail Tuned Motor",
+          "Battery": "Specialized SL1-320, fully integrated, 320Wh",
+          "UI/Remote": "Specialized MasterMind TCU, percentage of remaining charge, 120 possible display configurations, MicroTune assist adjustment, over-the-air updates, ANT+/Bluetooth®, w/Handlebar remote",
+          "Charger": "Custom charger, 48V System w/ SL system charger plug",
+          "Frame": "FACT 11m full carbon, 29\", full internal cable routing, 148mm spacing, fully sealed cartridge bearings, 170mm rear travel, geo adjust head tube, geo adjust horst pivot",
+          "Seat Binder": "Alloy, 38.6mm",
+          "Rear Shock": "Rockshox SuperDeluxe Select rear shock, 230x62.5mm",
+          "Fork": "RockShox Zeb Select, Charger RC damper, 15x110mm, 44mm offset, 170mm of travel",
+          "Front Brake": "SRAM Maven Bronze, 4-piston caliper, hydraulic disc",
+          "Rear Brake": "SRAM Maven Bronze, 4-piston caliper, hydraulic disc",
+          "Shift Levers": "SRAM AXS POD Controller w/discrete clamp",
+          "Rear Derailleur": "SRAM S-1000 Eagle AXS Transmission",
+          "Cassette": "SRAM 1270 Transmission Cassette, 12 Spd,10-52t",
+          "Chain": "SRAM GX Eagle Transmission 12-Speed Flattop Chain",
+          "Crankset": "SRAM Alloy Crankset, 165mm, Dub interface",
+          "Chainrings": "SRAM T-type ring, 32t, alloy",
+          "Rims": "Specialized, hookless alloy, 30mm inner width, tubeless ready",
+          "Front Hub": "Specialized alloy front hub disc, sealed cardridge bearings, 6-bolt, 15x110mm thru-axle, 32h",
+          "Rear Hub": "Specialized alloy rear hub disc, sealed cartridge bearings, 6-Bolt, 12X148mm thru-axle, 28h, HG Steel Fhb",
+          "Spokes": "DT Swiss Elemental",
+          "Front Tire": "Butcher, GRID GRAVITY casing, GRIPTON® T9 compound, TLR, 29x2.4\"",
+          "Rear Tire": "Butcher, GRID GRAVITY casing, GRIPTON® T9 compound, TLR, 29x2.4\"",
+          "Inner Tubes": "Specialized Turbo Tube",
+          "Stem": "Alloy Trail Stem, 35mm bar bore",
+          "Handlebars": "Alloy handlebars, 35mm diameter, 8 degree back sweep, 6 degree up sweep, S1/S2: 780mm/30mm rise, S3-S6: 800mm/50mm rise",
+          "Grips": "Specialized Trail Grips",
+          "Saddle": "Bridge Comp, Hollow Cr-mo rails 155/143",
+          "SeatPost": "X-Fusion Manic, infinite adjustable, two-bolt head, bottom mount cable routing, remote SLR LE lever, 34.9mm, S2: 125mm, S3/S4: 150mm, S5: 170mm",
+          "SWAT": "SWAT CC steerer tube integrated tool with chain tool and link",
+          "Product ID": "221334",
+          "Weight": "20.19 kg (44 lb, 8.2 oz)"
+        },
         "grouped": {
           "general_info": {
             "product_id": "221334",
@@ -9160,10 +9772,10 @@
             },
             "fork": {
               "manufacturer": "RockShox",
-              "travel_mm": 110,
+              "travel_mm": 170,
               "lockout": false,
               "thru_axle": false,
-              "details": "Zeb Select, Charger RC damper, 15x, 44mm offset, 170mm of travel"
+              "details": "Zeb Select, Charger RC damper, 15x110mm, 44mm offset"
             }
           },
           "drivetrain": {
@@ -9576,6 +10188,40 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 1.2 SL Custom Rx Trail Tuned Motor",
+          "Battery": "Specialized SL1-320, fully integrated, 320Wh",
+          "UI/Remote": "Specialized MasterMind TCU, percentage of remaining charge, 120 possible display configurations, MicroTune assist adjustment, ANT+/Bluetooth®, w/Handlebar remote",
+          "Charger": "Custom charger, 48V System w/ SL system charger plug",
+          "Wiring Harness": "Custom Specialized wiring harness",
+          "Frame": "FACT 11m full carbon, 29\", full internal cable routing, 148mm spacing, fully sealed cartridge bearings, 170mm rear travel, geo adjust head tube, geo adjust horst pivot",
+          "Seat Binder": "Alloy, 38.6mm",
+          "Rear Shock": "SRAM Vivid Select Plus, 230x62.5",
+          "Fork": "RockShox Zeb Select Plus, Charger RC damper, 15x110mm, 44mm offset, 170mm of travel",
+          "Front Brake": "SRAM Maven Bronze, 220mm rotor",
+          "Rear Brake": "SRAM Maven Bronze, 200mm rotor",
+          "Shift Levers": "SRAM AXS POD Controller",
+          "Rear Derailleur": "SRAM GX Eagle Transmission Cassette, 12spd, 10-52t",
+          "Cassette": "SRAM GX Eagle Transmission Flattop Chain",
+          "Chain": "SRAM GX Eagle Transmission Derailleur",
+          "Crankset": "SRAM Alloy Crankset, Dub interface, S2/S3: 165mm, S4/S5: 170mm",
+          "Chainrings": "104 BCD alloy spider, SRAM alloy T-Type chainring, 32t",
+          "Front Tire": "Butcher, GRID GRAVITY casing, GRIPTON® T9 compound, 2Bliss Ready, 29x2.3\"",
+          "Front Wheel": "Traverse HD Alloy 29\", DT Swiss 370, 15x110mm",
+          "Rear Tire": "Butcher, GRID GRAVITY casing, GRIPTON® T9 compound, 2Bliss Ready, 29x2.3\"",
+          "Rear Wheel": "Traverse HD Alloy 29\", DT Swiss 370, 12x148mm",
+          "Inner Tubes": "Standard, Presta Valve",
+          "Stem": "Alloy Trail Stem, 35mm bar bore",
+          "Handlebars": "Specialized, 6061 alloy, 6-degree upsweep, 8-degree backsweep, 30mm rise, 800mm width",
+          "Grips": "Deity Lockjaw Grips",
+          "Saddle": "Bridge Comp, Hollow Cr-mo rails, 155/143mm",
+          "SeatPost": "PNW Loam dropper post, S2: 125mm, S3: 150, S4: 170mm, S5: 200mm",
+          "SWAT": "SWAT CC steerer tube integrated tool with chain tool and link",
+          "Product ID": "277407",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "20.32 kg (44 lb, 12.8 oz)",
+          "Weight Size": "S4"
+        },
         "grouped": {
           "general_info": {
             "product_id": "277407",
@@ -9607,10 +10253,10 @@
             },
             "fork": {
               "manufacturer": "RockShox",
-              "travel_mm": 110,
+              "travel_mm": 170,
               "lockout": false,
               "thru_axle": false,
-              "details": "Zeb Select Plus, Charger RC damper, 15x, 44mm offset, 170mm of travel"
+              "details": "Zeb Select Plus, Charger RC damper, 15x110mm, 44mm offset"
             }
           },
           "drivetrain": {
@@ -10004,6 +10650,41 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 1.2 SL Custom Rx Trail Tuned Motor",
+          "Battery": "Specialized SL1-320, fully integrated, 320Wh",
+          "UI/Remote": "Specialized MasterMind TCU, percentage of remaining charge, 120 possible display configurations, MicroTune assist adjustment, over-the-air updates, ANT+/Bluetooth®, w/Handlebar remote",
+          "Charger": "Custom charger, 48V System w/ SL system charger plug",
+          "Wiring Harness": "Custom Specialized wiring harness",
+          "Frame": "FACT 11m full carbon, 29\", full internal cable routing, 148mm spacing, fully sealed cartridge bearings, 170mm rear travel, geo adjust head tube, geo adjust horst pivot",
+          "Seat Binder": "Alloy, 38.6mm",
+          "Rear Shock": "Ohlins TTX coil shock, 230 x 62.5mm",
+          "Fork": "Öhlins RXF38 m.2, TTX 18 damper, 15x110mm, 44mm offset, 170mm of travel",
+          "Front Brake": "TRP DH-R Evo brakes, 220mm rotor",
+          "Rear Brake": "TRP DH-R Evo brakes, 220mm rotor",
+          "Shift Levers": "SRAM AXS POD Controller",
+          "Rear Derailleur": "SRAM GX Eagle Transmission Cassette, 12spd, 10-52t",
+          "Cassette": "SRAM GX Eagle Transmission Flattop Chain",
+          "Chain": "SRAM GX Eagle Transmission Derailleur",
+          "Crankset": "SRAM Alloy Crankset, Dub interface, S2/S3: 165mm, S4/S5: 170mm",
+          "Chainrings": "104 BCD alloy spider, SRAM alloy T-Type chainring, 32t",
+          "Front Tire": "Butcher, GRID GRAVITY casing, GRIPTON® T9 compound, 2Bliss Ready, 29x2.3\"",
+          "Front Wheel": "Traverse HD Alloy 29\", DT Swiss 370",
+          "Rear Tire": "Butcher, GRID GRAVITY casing, GRIPTON® T9 compound, 2Bliss Ready, 29x2.3\"",
+          "Rear Wheel": "Traverse HD Alloy 29\", DT Swiss 370",
+          "Inner Tubes": "Standard, Presta Valve",
+          "Stem": "RaceFace Aeffect R 35mm bore, 40mm length",
+          "Handlebars": "Raceface Turbine Alloy, 35mm dia, S1/S2: 20mm rise, 800mm width, S3-S6: 40mm rise, 800mm width",
+          "Grips": "Deity Lockjaw Grips",
+          "Saddle": "Bridge Comp, Hollow Cr-mo rails, 155/143mm",
+          "SeatPost": "Bike Yoke, Revive Max, 34.9, S2: 125mm, S3: 130mm, S4: 185mm, S5: 213mm",
+          "Pedals": "TEST RIDE PEDALS PROVIDED BY SPECIALIZED",
+          "SWAT": "SWAT CC steerer tube integrated tool with chain tool and link",
+          "Product ID": "277428",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "20.49 kg (45 lb, 2.8 oz)",
+          "Weight Size": "S4"
+        },
         "grouped": {
           "general_info": {
             "product_id": "277428",
@@ -10036,10 +10717,10 @@
               "details": "Ohlins TTX coil shock"
             },
             "fork": {
-              "travel_mm": 110,
+              "travel_mm": 170,
               "lockout": false,
               "thru_axle": false,
-              "details": "Öhlins RXF38 m.2, TTX 18 damper, 15x, 44mm offset, 170mm of travel"
+              "details": "Öhlins RXF38 m.2, TTX 18 damper, 15x110mm, 44mm offset"
             }
           },
           "drivetrain": {
@@ -10590,6 +11271,41 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 3.1 Motor, 105Nm torque, 810W power",
+          "Battery": "840Wh battery",
+          "UI/Remote": "All New MasterMind T3 Display System, 2.2\" high resolution color screen, fully customizeable with Specialized app",
+          "Charger": "Specialized 4amp charger",
+          "Frame": "All new Levo 4 M5 Alloy frame, 150mm travel,, adjustable chainstay, adjustable head tube angle, adjustable bottom bracket, internal SWAT storage 148mm spacing, 29\" front wheel/27.5\" rear wheel, fork travel up to 180mm",
+          "Seat Binder": "Alloy, 38.6mm",
+          "Rear Shock": "*Marzocchi Bomber Inline, EVOL LV air sleeve, rebound adjust, 210x55mm",
+          "Fork": "Marzocchi Bomber Z1, 29\", S2-S6: 160mm, S1: 150mm, sweep adjust compression",
+          "Front Brake": "SRAM DB8 Stealth, 4-piston caliper, hydraulic disc, 220mm Centerline rotor",
+          "Rear Brake": "SRAM DB8 Stealth, 4-piston caliper, hydraulic disc, 200mm Centerline rotor",
+          "Shift Levers": "SRAM 70 trigger, 12-speed, single click",
+          "Rear Derailleur": "SRAM Eagle 70 T-Type",
+          "Cassette": "XS-1270, 12-speed, 10-52t",
+          "Chain": "SRAM Eagle 70 T-Type Flattop Chain",
+          "Crankset": "SRAM S1000 Crankset, ISIS Interface, Integrated Guard, 55mm Chainline, 155mm",
+          "Chainrings": "SRAM 34t T-Type chainring, 104 BCD, steel",
+          "Rims": "Specialized 29/27.5, hookless alloy, 30mm inner width, tubeless ready",
+          "Front Hub": "Alloy, sealed cartridge bearings, 15x110mm thru-axle, 28h",
+          "Rear Hub": "Alloy, sealed cartridge bearings, 12x148mm thru-axle, 32h",
+          "Spokes": "DT Swiss Industry",
+          "Front Tire": "Butcher, GRID GRAVITY casing, GRIPTON® T9 compound, TLR, 29x2.4\"",
+          "Rear Tire": "Butcher, GRID GRAVITY casing, GRIPTON® T9 compound, TLR, 27.5x2.4\"",
+          "Inner Tubes": "Standard, Presta valve",
+          "Stem": "Alloy Trail Stem, 35mm bar bore",
+          "Handlebars": "Specialized, 6061 alloy, 6-degree upsweep, 8-degree backsweep, S1-S2: 780mm width/30mm rise, S3-S6 800mm width/50mm rise",
+          "Grips": "Specialized Trail Grips",
+          "Saddle": "Body Geometry Bridge Saddle, steel rails",
+          "SeatPost": "TranzX dropper, 34.9mm, S1: 100mm, S2: 125mm, S3: 150mm. S4-S5: 170mm, S6: 200mm",
+          "SWAT": "SWAT internal downtube storage",
+          "Product ID": "221347",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "26.08 kg (57 lb, 7.8 oz)",
+          "Weight Size": "S4"
+        },
         "grouped": {
           "general_info": {
             "product_id": "221347",
@@ -11195,6 +11911,41 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 3.1 Motor, 105Nm torque, 810W power",
+          "Battery": "840Wh battery",
+          "UI/Remote": "All New MasterMind T3 Display System, 2.2\" high resolution color screen, fully customizeable with Specialized app",
+          "Charger": "Specialized 4amp charger",
+          "Frame": "All new Levo 4 frame, FACT 11m carbon chassis and rear-end, 12x148mm dropouts, sealed cartridge bearing pivots, SRAM UDH compatible, w/ SWAT storage, 150mm of travel, side entry battery, fork travel up to 180mm",
+          "Seat Binder": "Alloy, 38.6mm",
+          "Rear Shock": "FOX FLOAT X Performance with Specialized GENIE Shock Tech, Ride Dynamics Trail Tune, 2-position lever, LSR adjustment",
+          "Fork": "FOX FLOAT 36 Rhythm, GRIP damper, two position Sweep adjustment, 15x110mm axle, 44mm offset, 160mm of travel",
+          "Front Brake": "SRAM Maven Bronze, 4-piston caliper, hydraulic disc, 220mm Rotor",
+          "Rear Brake": "SRAM Maven Bronze, 4-piston caliper, hydraulic disc, 200mm Rotor",
+          "Shift Levers": "SRAM AXS POD Controller",
+          "Rear Derailleur": "SRAM S1000 Eagle Transmission, Wired SRAM AXS battery (powers AXS rear derailleur with integrated hot shoe directly off the Levo 4 main battery).",
+          "Cassette": "SRAM 12-speed,10-52t",
+          "Chain": "SRAM GX Eagle Transmission Flattop Chain",
+          "Crankset": "SRAM S1000 Crankset, ISIS interface, Integrated Guard, 55mm Chainline, 155mm",
+          "Chainrings": "SRAM T-type ring, 34T, 104 BCD, steel",
+          "Rims": "Specialized 29F/27.5R, hookless alloy, 30mm inner width, tubeless ready",
+          "Front Hub": "Sealed cartridge bearings, 6-bolt, 15x110mm thru-axle, 32h",
+          "Rear Hub": "Alloy, sealed cartridge bearings, 12x148mm thru-axle, 32h",
+          "Spokes": "DT Swiss Industry",
+          "Front Tire": "Butcher, GRID GRAVITY casing, GRIPTON® T9 compound, 2Bliss Ready, 29x2.3\"",
+          "Rear Tire": "Butcher, GRID GRAVITY casing, GRIPTON® T9 compound, 2Bliss Ready, 27.5x2.3\"",
+          "Inner Tubes": "Standard, Presta valve",
+          "Stem": "Alloy Trail Stem, 35mm bar bore",
+          "Handlebars": "Alloy handlebars, 35mm diameter, 8 degree back sweep, 6 degree up sweep, S2: 30mm rise, 780mm width, S3-S5: 40mm rise 800mm width",
+          "Grips": "Specialized Trail Grips",
+          "Saddle": "Bridge Comp, Hollow Cr-mo rails",
+          "SeatPost": "Xfusion Manic, infinite adjustable, two bolt head, Remote SLR LE lever, 34.9, S2: 125mm, S3: 170mm, S4-S6: 190mm",
+          "SWAT": "SWAT internal downtube storage",
+          "Product ID": "218708",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "24.41 kg (53 lb, 13.0 oz)",
+          "Weight Size": "S4"
+        },
         "grouped": {
           "general_info": {
             "product_id": "218708",
@@ -11227,10 +11978,10 @@
             },
             "fork": {
               "manufacturer": "Fox",
-              "travel_mm": 110,
+              "travel_mm": 160,
               "lockout": false,
               "thru_axle": false,
-              "details": "FLOAT 36 Rhythm, GRIP damper, two position Sweep adjustment, 15x axle, 44mm offset, 160mm of travel"
+              "details": "FLOAT 36 Rhythm, GRIP damper, two position Sweep adjustment, 15x110mm axle, 44mm offset"
             }
           },
           "drivetrain": {
@@ -11841,6 +12592,41 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 3.1 Motor, 105Nm torque, 810W power",
+          "Battery": "840Wh battery",
+          "UI/Remote": "All New MasterMind T3 Display System, 2.2\" high resolution color screen, fully customizeable with Specialized App",
+          "Charger": "Specialized 4amp charger",
+          "Frame": "All new Levo 4 M5 Alloy frame, 150mm travel, adjustable chainstay, adjustable head tube angle, adjustable bottom bracket, internal SWAT storage 148mm spacing, 29\" front wheel/27.5\" rear wheel, fork travel up to 180mm",
+          "Seat Binder": "Alloy, 38.6mm",
+          "Rear Shock": "S2-S6: FOX FLOAT X Performance with Specialized GENIE Shock Tech, Ride Dynamics Trail Tune, 2-position lever, LSR adjustment, 210x55mm, S1: FOX FLOAT X Performance, Ride Dynamics Trail Tune, 2-position lever w/ LSR adjustment 210x55mm",
+          "Fork": "FOX 36 Rhythm, 29\", S2-S6: 160mm S1: 150mm, GRIP damper with Sweep adjust, 44mm offset, 15x110mm boost, through axle",
+          "Front Brake": "SRAM Maven Bronze, 4-piston caliper, hydraulic disc, 220mm Centerline rotor",
+          "Rear Brake": "SRAM Maven Bronze, 4-piston caliper, hydraulic disc, 200mm Centerline rotor",
+          "Shift Levers": "SRAM 90 trigger, 12-speed, single click",
+          "Rear Derailleur": "SRAM Eagle 90 T-Type",
+          "Cassette": "SRAM 12-speed,10-52t",
+          "Chain": "SRAM 70 Transmission 12-Speed Flattop Chain",
+          "Crankset": "SRAM S1000 Crankset, ISIS Interface, Integrated Guard, 55mm Chainline, 155mm",
+          "Chainrings": "SRAM 34t T-Type chainring, 104 BCD, steel",
+          "Rims": "Specialized, hookless alloy, 30mm inner width, tubeless ready",
+          "Front Hub": "Alloy, sealed cartridge bearings, 15x110mm thru-axle, 28h",
+          "Rear Hub": "Alloy, sealed cartridge bearings, 12x148mm thru-axle, 32h",
+          "Spokes": "DT Swiss Industry",
+          "Front Tire": "Butcher, GRID GRAVITY casing, GRIPTON® T9 compound, TLR, 29x2.4\"",
+          "Rear Tire": "Butcher, GRID GRAVITY casing, GRIPTON® T9 compound, TLR, 27.5x2.4\"",
+          "Inner Tubes": "Standard, Presta valve",
+          "Stem": "Alloy Trail Stem, 35mm bar bore",
+          "Handlebars": "Specialized, 6061 alloy, 6-degree upsweep, 8-degree backsweep, S1-S2: 780mm width and 30mm rise, S3-S6 800mm width and 50mm rise",
+          "Grips": "Specialized Trail Grips",
+          "Saddle": "Bridge Comp, Hollow Cr-mo rails 155/143",
+          "SeatPost": "X-Fusion Manic, infinite adjustable, two-bolt head, bottom mount cable routing, remote SLR LE lever, 34.9, S1: 100mm, S2: 125mm, S3: 150mm, S4: 170mm, S5/S6: 190mm",
+          "SWAT": "SWAT internal downtube storage",
+          "Product ID": "221343",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "25.70 kg (56 lb, 11.2 oz)",
+          "Weight Size": "S4"
+        },
         "grouped": {
           "general_info": {
             "product_id": "221343",
@@ -12446,6 +13232,39 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 3.1 Motor, 105Nm torque, 810W power",
+          "Battery": "840Wh battery",
+          "UI/Remote": "All New MasterMind T3 Display System, 2.2\" high resolution color screen, fully customizeable with Specialized app",
+          "Charger": "Specialized 4amp charger",
+          "Frame": "All new Levo 4 frame, FACT 11m carbon chassis and rear-end, 12x148mm dropouts, sealed cartridge bearing pivots, SRAM UDH compatible, w/ SWAT storage, 150mm of travel, side entry battery, fork travel up to 180mm",
+          "Seat Binder": "Alloy, 38.6mm",
+          "Rear Shock": "FOX FLOAT X Performance Elite with Specialized GENIE Shock Tech, Ride Dynamics Trail Tune, 2-position lever w/3 setting Open mode tuning range, LSR adjustment",
+          "Fork": "FOX 38 Performance Elite series, 29\", GRIP X2 damper,15x110mm axle, 44mm offset, 160mm of travel",
+          "Front Brake": "SRAM Maven Silver, 4-piston caliper, hydraulic disc, 220mm Rotor",
+          "Rear Brake": "SRAM Maven Silver, 4-piston caliper, hydraulic disc, 200mm rotor",
+          "Shift Levers": "SRAM AXS POD Controller",
+          "Rear Derailleur": "SRAM GX Eagle Transmission, Wired SRAM AXS battery (powers AXS rear derailleur with integrated hot shoe directly off the Levo 4 main battery).",
+          "Cassette": "SRAM GX Eagle Transmission Cassette, 12spd, 10-52t",
+          "Chain": "SRAM GX Eagle Transmission Flattop Chain",
+          "Crankset": "SRAM GX Eagle Crankset, ISIS interface, Integrated Guard, 55mm Chainline, 155mm",
+          "Chainrings": "SRAM 34t T-Type chainring, 104 BCD, steel",
+          "Front Tire": "Butcher, GRID GRAVITY casing, GRIPTON® T9 compound, 2Bliss Ready, 29x2.3\"",
+          "Front Wheel": "Roval Traverse Alloy 29\", DT Swiss 370, 15x110mm, 28h",
+          "Rear Tire": "Butcher, GRID GRAVITY casing, GRIPTON® T9 compound, 2Bliss Ready, 27.5x2.3\"",
+          "Rear Wheel": "Roval Traverse Alloy 27.5\", DT Swiss 370 XD freehub body, 12x148mm, 32h",
+          "Inner Tubes": "Standard, Presta valve",
+          "Stem": "Alloy Trail Stem, 35mm bar bore",
+          "Handlebars": "Alloy handlebars, 35mm diameter, 8 degree back sweep, 6 degree up sweep, S1/S2: 780mm/30mm rise, S3-S6: 800mm/50mm rise",
+          "Grips": "Deity Lockjaw grips",
+          "Saddle": "Bridge Comp, Hollow Cr-mo rails",
+          "SeatPost": "PNW Loam post w/travel adjust S2: 125mm, S3: 170mm, S4/S5/S6: 200mm",
+          "SWAT": "SWAT internal downtube storage",
+          "Product ID": "218704",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "24.41 kg (53 lb, 13.0 oz)",
+          "Weight Size": "S4"
+        },
         "grouped": {
           "general_info": {
             "product_id": "218704",
@@ -12478,10 +13297,10 @@
             },
             "fork": {
               "manufacturer": "Fox",
-              "travel_mm": 110,
+              "travel_mm": 160,
               "lockout": false,
               "thru_axle": false,
-              "details": "38 Performance Elite series, 29\", GRIP X2 damper,15x axle, 44mm offset, 160mm of travel"
+              "details": "38 Performance Elite series, 29\", GRIP X2 damper,15x110mm axle, 44mm offset"
             }
           },
           "drivetrain": {
@@ -13019,6 +13838,39 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 3.1 Motor, 105Nm torque, 810W power",
+          "Battery": "840Wh battery",
+          "UI/Remote": "All New MasterMind T3 Display System, 2.2\" high resolution color screen, fully customizeable with Specialized app",
+          "Charger": "Specialized 4amp charger",
+          "Frame": "All new Levo 4 frame, FACT 11m carbon chassis and rear-end, 12x148mm dropouts, sealed cartridge bearing pivots, SRAM UDH compatible, w/ SWAT storage, 150mm of travel, side entry battery, fork travel up to 180mm",
+          "Seat Binder": "Alloy, 38.6mm",
+          "Rear Shock": "FOX FLOAT X Factory with Specialized GENIE Shock Tech, Ride Dynamics Trail Tune, 2-position lever w/3 setting Open mode tuning range, LSR adjustment, 210x55mm",
+          "Fork": "FOX FLOAT 38 Factory, GRIP X2 damper, HS and LS rebound and compression adjustment, 15x110mm axle, 44mm offset, 160mm of travel",
+          "Front Brake": "SRAM Maven Silver, 4-piston caliper, hydraulic disc, 220mm HS2 Rotor",
+          "Rear Brake": "SRAM Maven Silver, 4-piston caliper, hydraulic disc, 200mm HS2 Rotor",
+          "Shift Levers": "SRAM AXS Pod Controller w/discrete clamp",
+          "Rear Derailleur": "SRAM X0 Eagle Transmission, Wired SRAM AXS battery (powers AXS rear derailleur with integrated hot shoe directly off the Levo 4 main battery).",
+          "Cassette": "SRAM XO 1295, 12 speed, 10-52",
+          "Chain": "SRAM X0",
+          "Crankset": "SRAM XO Alloy crank, ISIS interface, 55mm Chainline, 155mm",
+          "Chainrings": "SRAM 34T T-Type chainring, 104 BCD, steel",
+          "Front Tire": "Butcher, GRID GRAVITY casing, GRIPTON® T9 compound, 2Bliss Ready, 29x2.3\"",
+          "Front Wheel": "Roval Traverse HD 29\", hookless carbon, 30mm inner width, tubeless ready, DT Swiss 350, 15x110, 28h",
+          "Rear Tire": "Butcher, GRID GRAVITY casing, GRIPTON® T9 compound, 2Bliss Ready, 27.5x2.3\"",
+          "Rear Wheel": "Roval Traverse HD 27.5\", hookless carbon, 30mm inner width, tubeless ready, DT Swiss 350, 12x148, 32h",
+          "Inner Tubes": "Standard, Presta valve",
+          "Stem": "Industry 9 Mountain stem, 35mm clamp, 40mm length",
+          "Handlebars": "RaceFace Era Carbon, riser bar, 5-degree upsweep, 8-degree backsweep, S2:20mm Rise, S3-S6:40mm Rise, 800mm",
+          "Grips": "Deity Lockjaw grips",
+          "Saddle": "Bridge Mimic Expert, Hollow Ti rails",
+          "SeatPost": "Bike Yoke Revive Max 3.0, 34.9, S2:125mm, S3:160mm, S4: 185mm, S5/S6:213mm",
+          "SWAT": "SWAT internal downtube storage",
+          "Product ID": "218702",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "23.94kg (52 lb, 12.5 oz)",
+          "Weight Size": "S4"
+        },
         "grouped": {
           "general_info": {
             "product_id": "218702",
@@ -13052,10 +13904,10 @@
             },
             "fork": {
               "manufacturer": "Fox",
-              "travel_mm": 110,
+              "travel_mm": 160,
               "lockout": false,
               "thru_axle": false,
-              "details": "FLOAT 38 Factory, GRIP X2 damper, HS and LS rebound and compression adjustment, 15x axle, 44mm offset, 160mm of travel"
+              "details": "FLOAT 38 Factory, GRIP X2 damper, HS and LS rebound and compression adjustment, 15x110mm axle, 44mm offset"
             }
           },
           "drivetrain": {
@@ -13627,6 +14479,41 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 3.1 Motor, 105Nm torque, 810W power",
+          "Battery": "Specialized Turbo X2 840Wh integrated battery pack",
+          "UI/Remote": "Mastermind TCU, 2.2\" high resolution screen, fully customizeable with Specialized app, works with Apple Find My",
+          "Charger": "Specialized 4amp charger",
+          "Frame": "FACT 11m Carbon, SWAT downtube storage, 12x148mm UDH compatible rear dropout, side entry battery, adjustable geometry, 130mm of travel",
+          "Seat Binder": "Alloy, 38.6mm",
+          "Rear Shock": "FOX FLOAT Performance GENIE, Ride Dynamics Developed, 2-position compression adjust, 190x45mm",
+          "Fork": "FOX 36 SL Performance, GRIP Damper, 140mm travel, 44mm offset, 15x110mm",
+          "Front Brake": "SRAM Motive Bronze, 4-piston caliper, hydraulic disc, 200mm rotor",
+          "Rear Brake": "SRAM Motive Bronze, 4-piston caliper, hydraulic disc, 200mm rotor",
+          "Shift Levers": "SRAM AXS POD Controller",
+          "Rear Derailleur": "SRAM S1000 Eagle AXS",
+          "Cassette": "SRAM GX Transmission, XS 1275, 10-52t",
+          "Chain": "SRAM GX Eagle Transmission 12-Speed Flattop Chain",
+          "Crankset": "SRAM Eagle 70, BROSE/ISIS, 160mm, 32T",
+          "Chainrings": "SRAM 34t T-Type chainring, 104 BCD, steel",
+          "Rims": "Specialized, hookless alloy, 30mm inner width, tubeless ready",
+          "Front Hub": "Sealed cartridge bearings, 6-bolt, 15x110mm thru-axle, 32h",
+          "Rear Hub": "Specialized Alloy Rear Hub Disc, Sealed Cardridge Bearings, 6-Bolt, 12X148mm Thru-Axle, 32H, Xd Steel Fhb",
+          "Spokes": "DT Swiss Elemental",
+          "Front Tire": "Specialized Purgatory, GRID Casing, T9 Compound, 29x2.4",
+          "Rear Tire": "Specialized Purgatory, GRID Trail Casing, T7 Compound, 29x2.4 (S1 27.5x2.4)",
+          "Inner Tubes": "Standard, Presta Valve",
+          "Stem": "Alloy Trail Stem, 35mm bar bore",
+          "Handlebars": "Specialized Alloy, 30mm/40mm rise, 35mm, 800mm wide",
+          "Grips": "Specialized Trail Grips",
+          "Saddle": "Body Geometry Power Comp, steel rails",
+          "SeatPost": "X-Fusion Manic, 34.9, S1-S2: 125mm, S3: 150mm, S4: 170mm, S5-S6: 190mm Travel, 0mm offset",
+          "SWAT": "SWAT internal downtube storage",
+          "Product ID": "223523",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "22.34 kg (49 lb, 4.0 oz)",
+          "Weight Size": "S3"
+        },
         "grouped": {
           "general_info": {
             "product_id": "223523",
@@ -14269,6 +15156,41 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 3.1 Motor, 105Nm torque, 810W power",
+          "Battery": "840Wh battery",
+          "UI/Remote": "Mastermind TCU, 2.2\" high resolution screen, fully customizeable with Specialized app, works with Apple Find My",
+          "Charger": "Specialized 4amp charger",
+          "Frame": "M5 Aluminum, SWAT downtube storage, 12x148mm UDH compatible rear dropout, side entry battery, adjustable geometry, 130mm of travel",
+          "Seat Binder": "Alloy, 38.6mm",
+          "Rear Shock": "FOX FLOAT Performance GENIE, Ride Dynamics Developed, 2-position compression adjust, 190x45mm",
+          "Fork": "FOX 36 SL Performance, GRIP Damper, 140mm travel, 44mm offset, 15x110mm",
+          "Front Brake": "SRAM Motive Bronze, 4-piston caliper, hydraulic disc, 200mm rotor",
+          "Rear Brake": "SRAM Motive Bronze, 4-piston caliper, hydraulic disc, 200mm rotor",
+          "Shift Levers": "SRAM Eagle 90T, single click, with MMX",
+          "Rear Derailleur": "SRAM Eagle 90 T-Type",
+          "Cassette": "SRAM GX Transmission, XS 1275, 10-52t",
+          "Chain": "SRAM 70 Transmission 12-Speed Flattop Chain",
+          "Crankset": "SRAM Eagle 70, BROSE/ISIS, 160mm, 32T",
+          "Chainrings": "SRAM 34t T-Type chainring, 104 BCD, steel",
+          "Rims": "Specialized, hookless alloy, 30mm inner width, tubeless ready",
+          "Front Hub": "Sealed cartridge bearings, 6-bolt, 15x110mm thru-axle, 32h",
+          "Rear Hub": "Specialized Alloy Rear Hub Disc, Sealed Cardridge Bearings, 6-Bolt, 12X148mm Thru-Axle, 32H, Xd Steel Fhb",
+          "Spokes": "DT Swiss Elemental",
+          "Front Tire": "Specialized Purgatory, GRID Casing, T9 Compound, 29x2.4",
+          "Rear Tire": "Specialized Purgatory, GRID Trail Casing, T7 Compound, 29x2.4 (S1 27.5x2.4)",
+          "Inner Tubes": "Standard, Presta Valve",
+          "Stem": "Alloy Trail Stem, 35mm bar bore",
+          "Handlebars": "Specialized Alloy, 30mm/40mm rise, 35mm, 800mm wide",
+          "Grips": "Specialized Trail Grips",
+          "Saddle": "Body Geometry Power Comp, steel rails",
+          "SeatPost": "X-Fusion Manic, 34.9, S1-S2: 125mm, S3: 150mm, S4: 170mm, S5-S6: 190mm Travel, 0mm offset",
+          "SWAT": "SWAT internal downtube storage",
+          "Product ID": "229898",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "24.24 kg (53 lb, 7.0 oz)",
+          "Weight Size": "S3"
+        },
         "grouped": {
           "general_info": {
             "product_id": "229898",
@@ -14735,6 +15657,39 @@
         "Saddle Height for Effective ST Angle": "S1 - 27.5: 645mm | S2 - 29: 690mm | S3 - 29: 735mm | S4 - 29: 780mm | S5 - 29: 825mm | S6 - 29: 870mm"
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 3.1 Motor, 105Nm torque, 810W power",
+          "Battery": "Specialized Turbo X2 840Wh integrated battery pack",
+          "UI/Remote": "Mastermind TCU, 2.2\" high resolution screen, fully customizeable with Specialized app, works with Apple Find My",
+          "Charger": "Specialized 4amp charger",
+          "Frame": "FACT 11m Carbon, SWAT downtube storage, 12x148mm UDH compatible rear dropout, side entry battery, adjustable geometry, 130mm of travel",
+          "Seat Binder": "Alloy, 38.6mm",
+          "Rear Shock": "FOX FLOAT Performance Elite GENIE, Ride Dynamics Developed, 2-position compression adjust, 190x45mm",
+          "Fork": "FOX 36 SL Performance Elite, GRIP X Damper, HSC, LSC, LSR adjust, 140mm travel, 44mm offset, 15x110mm",
+          "Front Brake": "SRAM Motive Bronze, 4-piston caliper, hydraulic disc, 200mm rotor",
+          "Rear Brake": "SRAM Motive Bronze, 4-piston caliper, hydraulic disc, 200mm rotor",
+          "Shift Levers": "SRAM AXS POD Controller",
+          "Rear Derailleur": "SRAM GX Eagle AXS Transmission",
+          "Cassette": "SRAM GX Transmission, XS 1275, 10-52t",
+          "Chain": "SRAM GX Eagle Transmission 12-Speed Flattop Chain",
+          "Crankset": "SRAM GX Eagle, BROSE/ISIS, 160mm, 32T",
+          "Chainrings": "SRAM 34t T-Type chainring, 104 BCD, steel",
+          "Front Tire": "Specialized Purgatory, GRID Casing, T9 Compound, 29x2.4",
+          "Front Wheel": "Roval Traverse SL II Rim, hookless carbon, 30mm inner width, tubeless ready, 29\", Industry 9 1/1 Hub, 15x110mm, 28H, Sapim D-Light Spokes",
+          "Rear Tire": "Specialized Purgatory, GRID Trail Casing, T7 Compound, 29x2.4 (S1 27.5x2.4)",
+          "Rear Wheel": "Roval Traverse SL II Rim, hookless carbon, 30mm inner width, tubeless ready, 29\", Industry 9 1/1 Hub, 12x148mm, 32H, Sapim D-Light Spokes",
+          "Inner Tubes": "Standard, Presta Valve",
+          "Stem": "Alloy Trail Stem, 35mm bar bore",
+          "Handlebars": "Specialized Alloy, 30mm/40mm rise, 35mm, 800mm wide",
+          "Grips": "Specialized Trail Grips",
+          "Saddle": "Body Geometry Power Comp, steel rails",
+          "SeatPost": "X-Fusion Manic, 34.9, S1-S2: 125mm, S3: 150mm, S4: 170mm, S5-S6: 190mm Travel, 0mm offset",
+          "SWAT": "SWAT internal downtube storage",
+          "Product ID": "223522",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "21.76 kg (47 lb, 15.6 oz)",
+          "Weight Size": "S3"
+        },
         "grouped": {
           "general_info": {
             "product_id": "223522",
@@ -14845,10 +15800,7 @@
             "seatpost": "X-Fusion Manic, 34.9, S1-S2: 125mm, S3: 150mm, S4: 170mm, S5-S6: 190mm Travel, 0mm offset"
           },
           "geometry": {
-            "crank_length": {
-              "length_mm": 160,
-              "details": "S1 - 27.5: | S2 - 29: 160mm | S3 - 29: 160mm | S4 - 29: 160mm | S5 - 29: 160mm | S6 - 29: 160mm"
-            },
+            "crank_length": "S1 - 27.5: 160mm | S2 - 29: 160mm | S3 - 29: 160mm | S4 - 29: 160mm | S5 - 29: 160mm | S6 - 29: 160mm",
             "handlebar_width": "S1 - 27.5: 800mm | S2 - 29: 800mm | S3 - 29: 800mm | S4 - 29: 800mm | S5 - 29: 800mm | S6 - 29: 800mm",
             "stem_length": "S1 - 27.5: 50mm | S2 - 29: 50mm | S3 - 29: 50mm | S4 - 29: 50mm | S5 - 29: 50mm | S6 - 29: 50mm",
             "saddle_width": "S1 - 27.5: 155mm | S2 - 29: 155mm | S3 - 29: 143mm | S4 - 29: 143mm | S5 - 29: 143mm | S6 - 29: 143mm",
@@ -14860,18 +15812,8 @@
             "b_b_height_low_bb": "S1 - 27.5: 339mm | S2 - 29: 339mm | S3 - 29: 339mm | S4 - 29: 339mm | S5 - 29: 339mm | S6 - 29: 339mm",
             "b_b_drop": "S1 - 27.5: 36mm | S2 - 29: 36mm | S3 - 29: 36mm | S4 - 29: 36mm | S5 - 29: 36mm | S6 - 29: 36mm",
             "trail": "S1 - 27.5: 128mm | S2 - 29: 126mm | S3 - 29: 126mm | S4 - 29: 126mm | S5 - 29: 126mm | S6 - 29: 126mm",
-            "fork_length_full": {
-              "travel_mm": 550,
-              "lockout": false,
-              "thru_axle": false,
-              "details": "S1 - 27.5: | S2 - 29: 550mm | S3 - 29: 550mm | S4 - 29: 550mm | S5 - 29: 550mm | S6 - 29: 550mm"
-            },
-            "fork_rake_offset": {
-              "travel_mm": 44,
-              "lockout": false,
-              "thru_axle": false,
-              "details": "S1 - 27.5: | S2 - 29: 44mm | S3 - 29: 44mm | S4 - 29: 44mm | S5 - 29: 44mm | S6 - 29: 44mm"
-            },
+            "fork_length_full": "S1 - 27.5: 550mm | S2 - 29: 550mm | S3 - 29: 550mm | S4 - 29: 550mm | S5 - 29: 550mm | S6 - 29: 550mm",
+            "fork_rake_offset": "S1 - 27.5: 44mm | S2 - 29: 44mm | S3 - 29: 44mm | S4 - 29: 44mm | S5 - 29: 44mm | S6 - 29: 44mm",
             "front_center": "S1 - 27.5: 716mm | S2 - 29: 736mm | S3 - 29: 770mm | S4 - 29: 801mm | S5 - 29: 833mm | S6 - 29: 863mm",
             "chain_stay_length": "S1 - 27.5: 447mm | S2 - 29: 447mm | S3 - 29: 447mm | S4 - 29: 447mm | S5 - 29: 447mm | S6 - 29: 447mm",
             "wheelbase": "S1 - 27.5: 1160mm | S2 - 29: 1181mm | S3 - 29: 1215mm | S4 - 29: 1246mm | S5 - 29: 1277mm | S6 - 29: 1309mm",
@@ -15165,6 +16107,42 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized SL 1.2 Custom Rx Trail Tuned Motor",
+          "Battery": "Specialized SL1-320, fully integrated, 320Wh",
+          "UI/Remote": "Specialized MasterMind TCU, percentage of remaining charge, 120 possible display configurations, MicroTune assist adjustment, over-the-air updates, ANT+/Bluetooth®, w/Handlebar remote",
+          "Charger": "Custom charger, 48V System w/ SL system charger plug",
+          "Wiring Harness": "Custom Specialized wiring harness",
+          "Frame": "Levo SL carbon Frame, Fact 11m carbon, alloy shock extension, 150mm travel, adjustable head angle, BB height, and compatible with 27.5 or 29\" wheels.",
+          "Seat Binder": "Alloy, 38.6mm",
+          "Rear Shock": "FOX FLOAT X Performance with Specialized GENIE Shock Tech, Ride Dynamics Trail Tune, 2-position lever, LSR adjustment, S2-S6:210x55mm, S1: FOX FLOAT Performance 210x52.5mm",
+          "Fork": "FOX FLOAT 36 Rhythm, GRIP damper, two position Sweep adjustment, 15x110mm QR axle, 44mm offset",
+          "Front Brake": "SRAM Maven Bronze, 4-piston caliper, hydraulic disc",
+          "Rear Brake": "SRAM Maven Bronze, 4-piston caliper, hydraulic disc",
+          "Shift Levers": "SRAM AXS POD Controller w/discrete clamp",
+          "Rear Derailleur": "SRAM S-1000 Eagle AXS Transmission",
+          "Cassette": "SRAM 1270 Transmission Cassette, 12 Spd,10-52t",
+          "Chain": "SRAM 70 Transmission Chain",
+          "Crankset": "SRAM Alloy Crankset, 165mm, Dub interface",
+          "Chainrings": "SRAM T-type ring, 32t, alloy",
+          "Rims": "Specialized, hookless alloy, 30mm inner width, tubeless ready",
+          "Front Hub": "Specialized alloy front hub disc, sealed cartridge bearings, 6-bolt, 15x110mm thru-axle, 32h",
+          "Rear Hub": "Specialized alloy rear hub disc, sealed cartridge bearings, 6-Bolt, 12X148mm thru-axle, 28h, HG Steel Fhb",
+          "Spokes": "DT Swiss Elemental",
+          "Front Tire": "Butcher, GRID TRAIL casing, Gripton T9 compound, 29X2.4",
+          "Rear Tire": "Eliminator, GRID GRAVITY casing, Gripton T7/T9 compound, 27.5X2.4",
+          "Inner Tubes": "Standard, Presta Valve",
+          "Stem": "Alloy Trail Stem, 35mm bar bore",
+          "Handlebars": "Alloy handlebars, 35mm diameter, 8 degree back sweep, 6 degree up sweep, S1/S2: 780mm/30mm rise, S3-S6: 800mm/50mm rise",
+          "Grips": "Specialized Trail Grips",
+          "Saddle": "Bridge Comp, Hollow Cr-mo rails 155/143",
+          "SeatPost": "X-Fusion Manic, infinite adjustable, two-bolt head, bottom mount cable routing, remote SLR LE lever, 34.9, S1: 100mm, S2: 125mm, S3: 150mm, S4/S5: 170mm, S6: 190mm",
+          "SWAT": "SWAT CC steerer tube integrated tool with chain tool and link",
+          "Product ID": "221352",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "19.37 kg (42 lb, 11.3 oz)",
+          "Weight Size": "S4"
+        },
         "grouped": {
           "general_info": {
             "product_id": "221352",
@@ -15754,6 +16732,41 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 1.2 SL Custom RX Trail Tuned Motor, 50Nm power, 320W power",
+          "Battery": "Specialized SL1-320, fully integrated, 320Wh",
+          "UI/Remote": "Specialized MasterMind TCU, percentage of remaining charge, 120 possible display configurations, MicroTune assist adjustment, over-the-air updates, ANT+/Bluetooth®, w/Handlebar remote",
+          "Charger": "Custom charger, 48V System w/ SL system charger plug",
+          "Frame": "Levo SL Alloy Frame, M5 alloy, 150mm travel, adjustable head angle, BB height, and compatible with 27.5 or 29\" wheels",
+          "Seat Binder": "Alloy, 38.6mm",
+          "Rear Shock": "FOX FLOAT X Performance with Specialized GENIE Shock Tech, Ride Dynamics Trail Tune, 2-position lever w/3 setting Open mode tuning range, LSR adjustment, S2-S6:210x55mm, S1: FOX FLOAT Performance 210x52.5mm",
+          "Fork": "FOX FLOAT 36 Rhythm, GRIP damper, two position Sweep adjustment, 15x110mm QR axle, 44mm offset, S1:140mm of travel, S2-S6:150mm of travel",
+          "Front Brake": "SRAM Maven Bronze, 4-piston caliper, hydraulic disc, 200mm Centerline rotor",
+          "Rear Brake": "SRAM Maven Bronze, 4-piston caliper, hydraulic disc, 200mm Centerline rotor",
+          "Shift Levers": "SRAM EAGLE 90T, single click, with MMX",
+          "Rear Derailleur": "SRAM Eagle 90 T-Type",
+          "Cassette": "SRAM 1270 Transmission Cassette, 12 Spd,10-52t",
+          "Chain": "SRAM 70 Transmission Chain",
+          "Crankset": "SRAM S1000 Crankset, 32T ring, Integrated Guard, 55mm Chainline, 155mm",
+          "Chainrings": "SRAM 32t T-Type chainring, 104 BCD, steel",
+          "Rims": "Specialized 29/27.5, hookless alloy, 30mm inner width, tubeless ready",
+          "Front Hub": "Alloy, sealed cartridge bearings, 15x110mm thru-axle, 28h",
+          "Rear Hub": "Specialized alloy rear hub disc, sealed cartridge bearings, 6-Bolt, 12X148mm thru-axle, 28h, HG Steel Fhb",
+          "Spokes": "DT Swiss Elemental",
+          "Front Tire": "Butcher, GRID TRAIL casing, Gripton T9 compound, 29X2.4",
+          "Rear Tire": "Eliminator, GRID GRAVITY casing, Gripton T7/T9 compound, 27.5X2.4",
+          "Inner Tubes": "Standard, Presta Valve",
+          "Stem": "Alloy Trail Stem, 35mm bar bore",
+          "Handlebars": "Alloy handlebars, 35mm diameter, 8 degree back sweep, 6 degree up sweep, S1/S2: 780mm/30mm rise, S3-S6: 800mm/50mm rise",
+          "Grips": "Specialized Trail Grips",
+          "Saddle": "Bridge Comp, Hollow Cr-mo rails 155/143",
+          "SeatPost": "X-Fusion Manic, infinite adjustable, two-bolt head, bottom mount cable routing, remote SLR LE lever, 34.9, S1: 100mm, S2: 125mm, S3: 150mm, S4/S5: 170mm, S6: 190mm",
+          "SWAT": "SWAT CC steerer tube integrated tool with chain tool and link",
+          "Product ID": "221354",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "20.26 kg (45 lb, 8.4 oz)",
+          "Weight Size": "S4"
+        },
         "grouped": {
           "general_info": {
             "product_id": "221354",
@@ -15788,10 +16801,10 @@
             },
             "fork": {
               "manufacturer": "Fox",
-              "travel_mm": 110,
+              "travel_mm": 140,
               "lockout": false,
               "thru_axle": false,
-              "details": "FLOAT 36 Rhythm, GRIP damper, two position Sweep adjustment, 15x QR axle, 44mm offset, S1:140mm of travel, S2-S6:150mm of travel"
+              "details": "FLOAT 36 Rhythm, GRIP damper, two position Sweep adjustment, 15x110mm QR axle, 44mm offset, S1:, S2-S6:150mm of travel"
             }
           },
           "drivetrain": {
@@ -16347,6 +17360,40 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 1.2 SL Custom RX Trail Tuned Motor, 50Nm power, 320W power",
+          "Battery": "Specialized SL1-320, fully integrated, 320Wh",
+          "UI/Remote": "Specialized MasterMind TCU, percentage of remaining charge, 120 possible display configurations, MicroTune assist adjustment, ANT+/Bluetooth®, w/Handlebar remote",
+          "Charger": "Custom charger, 48V System w/ SL system charger plug",
+          "Wiring Harness": "Custom Specialized wiring harness",
+          "Frame": "Levo SL carbon Frame, Fact 11m carbon, alloy shock extension, 150mm travel, adjustable head angle, BB height, and compatible with 27.5 or 29\" wheels.",
+          "Seat Binder": "Alloy, 38.6mm",
+          "Rear Shock": "FOX FLOAT X Performance Elite with Specialized GENIE Shock Tech, Ride Dynamics Trail Tune, 2-position lever w/3 setting Open mode tuning range, LSR adjustment, S2-S6:210x55mm, S1: FOX FLOAT Performance Elite 210x52.5mm",
+          "Fork": "Fox 36 Performance Elite series, 29\", Grip X2 damper, S1: 150mm, S2-S6: 160mm",
+          "Front Brake": "SRAM Maven Bronze, 4-piston caliper, hydraulic disc, 200mm HS2 rotor",
+          "Rear Brake": "SRAM Maven Bronze, 4-piston caliper, hydraulic disc, 200mm HS2 rotor",
+          "Shift Levers": "SRAM AXS POD Controller",
+          "Rear Derailleur": "SRAM GX Eagle Transmission Derailleur",
+          "Cassette": "SRAM GX Eagle Transmission Cassette, 12spd, 10-52t",
+          "Chain": "SRAM GX Eagle Transmission Flattop Chain",
+          "Crankset": "SRAM Alloy Crankset, Dub interface, 32T ring, Integrated Guard, 55mm Chainline, 165mmm",
+          "Chainrings": "SRAM T-type ring, 32t",
+          "Front Tire": "Butcher, GRID TRAIL casing, GRIPTON® T9 compound, 2Bliss Ready, 29x2.3\"",
+          "Front Wheel": "Roval Traverse 29\" Rim, hookless alloy, 30mm inner width, tubeless ready, DT Swiss 370 Hub, 15x110mm, 28h, Sapim Force Spokes",
+          "Rear Tire": "Eliminator, GRID GRAVITY casing, GRIPTON® T9/T7 compound, 2Bliss Ready, 27.5x2.3\"",
+          "Rear Wheel": "Roval Traverse HD alloy 29\" Rim, hookless alloy, 30mm inner width, tubeless ready, DT Swiss 370 Hub, 12x148mm, 32h, Sapim Force Spokes",
+          "Inner Tubes": "Standard, Presta Valve",
+          "Stem": "Alloy Trail Stem, 35mm bar bore",
+          "Handlebars": "Specialized, 6000 series alloy, 6-degree upsweep, 8-degree backsweep. S1-S2: 780 width, 20mm rise: S3-S4: 800 width, 30mm rise: S5-S6: 800 width, 40mm rise",
+          "Grips": "Specialized Trail Grips",
+          "Saddle": "Bridge Comp, Hollow Cr-mo rails, 155/143mm",
+          "SeatPost": "PNW Loam post w/travel adjust S1: 125mm, S2: 150mm, S3: 170mm, S4/S5/S6: 200mm",
+          "SWAT": "SWAT CC steerer tube integrated tool with chain tool and link",
+          "Product ID": "277412",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "18.98 kg (41 lb, 13.5 oz)",
+          "Weight Size": "S4"
+        },
         "grouped": {
           "general_info": {
             "product_id": "277412",
@@ -16939,6 +17986,39 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized SL 1.2 Custom Rx Trail Tuned Motor",
+          "Battery": "Specialized SL1-320, fully integrated, 320Wh",
+          "UI/Remote": "Specialized MasterMind TCU, percentage of remaining charge, 120 possible display configurations, MicroTune assist adjustment, over-the-air updates, ANT+/Bluetooth®, w/Handlebar remote",
+          "Charger": "Custom charger, 48V System w/ SL system charger plug",
+          "Frame": "Levo SL carbon Frame, Fact 11m carbon, alloy shock extension, 150mm travel, adjustable head angle, BB height, and compatible with 27.5 or 29\" wheels.",
+          "Seat Binder": "Alloy, 38.6mm",
+          "Rear Shock": "FOX FLOAT X Performance Elite with Specialized GENIE Shock Tech, Ride Dynamics Trail Tune, 2-position lever , LSR adjustment, S2-S6:210x55mm, S1: FOX FLOAT Performance Elite 210x52.5mm",
+          "Fork": "FOX FLOAT 36 Performance Elite, GRIP X2 damper, HS and LS rebound and compression adjustment, 15x110mm QR axle, 44mm offset",
+          "Front Brake": "Shimano Deore XT brake, 4 piston, Metal pad w/fin, 203mm rotor",
+          "Rear Brake": "Shimano Deore XT brake, 4 piston, Metal pad w/fin, 203mm rotor",
+          "Shift Levers": "Shimano XT Di2",
+          "Rear Derailleur": "Shimano XT Di2, 12-speed",
+          "Cassette": "Shimano XT M8200, 12-speed, 10-51",
+          "Chain": "Shimano XT M8100, 12-speed w/ quick link",
+          "Crankset": "SRAM Alloy Crankset, 165mm, Dub interface",
+          "Chainrings": "Race Face alloy chainring, 104 BCD, 32T",
+          "Front Tire": "Butcher, GRID TRAIL casing, GRIPTON® T9 compound, TLR, 29X2.4",
+          "Front Wheel": "Traverse Alloy 370, 29, 28H, alloy rim, 30mm inner width, 15x110mm, 6 bolt",
+          "Rear Tire": "Eliminator, GRID GRAVITY casing, GRIPTON® T7/T9 compound, TLR, 27.5X2.4",
+          "Rear Wheel": "Traverse Alloy 370, 27.5, 32H, alloy rim, 30mm inner width, DT Swiss 370 rear hub, 12x148mm, 6 bolt",
+          "Inner Tubes": "Standard, Presta Valve",
+          "Stem": "Alloy Trail Stem, 35mm bar bore",
+          "Handlebars": "Alloy handlebars, 35mm diameter, 8 degree back sweep, 6 degree up sweep, S1/S2: 780mm/30mm rise, S3-S6: 800mm/50mm rise",
+          "Grips": "Deity Lockjaw Grips",
+          "Saddle": "Specialized Bridge Comp with Mimic",
+          "SeatPost": "PNW Loam Dropper, tool-less travel adjust, Range lever, 34.9, S1: 125mm, S2: 150mm, S3: 175mm, S4-S5: 200mm, S6: 225mm",
+          "SWAT": "SWAT CC steerer tube integrated tool with chain tool and link",
+          "Product ID": "221351",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "18.92 kg (41 lb, 11.4 oz)",
+          "Weight Size": "S4"
+        },
         "grouped": {
           "general_info": {
             "product_id": "221351",
@@ -17487,6 +18567,40 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 1.2 SL Custom RX Trail Tuned Motor, 50Nm power, 320W power",
+          "Battery": "Specialized SL1-320, fully integrated, 320Wh",
+          "UI/Remote": "Specialized MasterMind TCU, percentage of remaining charge, 120 possible display configurations, MicroTune assist adjustment, ANT+/Bluetooth®, w/Handlebar remote",
+          "Charger": "Custom charger, 48V System w/ SL system charger plug",
+          "Wiring Harness": "Custom Specialized wiring harness",
+          "Frame": "Levo SL carbon Frame, Fact 11m carbon, alloy shock extension, 150mm travel, adjustable head angle, BB height, and compatible with 27.5 or 29\" wheels.",
+          "Seat Binder": "Alloy, 38.6mm",
+          "Rear Shock": "FOX FLOAT X Factory with Specialized GENIE Shock Tech, Ride Dynamics Trail Tune, 2-position lever w/3 setting Open mode tuning range, LSR adjustment, S2-S6:210x55mm, S1: FOX FLOAT Factory 210x52.5mm",
+          "Fork": "Fox 36 Factory series, 29\", Grip X2 damper, Kashima, S1: 150mm, S2-S6: 160mm",
+          "Front Brake": "SRAM Maven Silver, 4-piston caliper, hydraulic disc, 200mm HS2 Rotor",
+          "Rear Brake": "SRAM Maven Silver, 4-piston caliper, hydraulic disc, 200mm HS2 Rotor",
+          "Shift Levers": "SRAM AXS POD Controller",
+          "Rear Derailleur": "SRAM X0 Eagle Transmission Derailleur",
+          "Cassette": "SRAM X0 Eagle Transmission Cassette, 12spd, 10-52t",
+          "Chain": "SRAM X0 Eagle Transmission Flattop Chain",
+          "Crankset": "SRAM Eagle Crankset, 32T ring, Integrated Guard, 55mm Chainline, 165mm",
+          "Chainrings": "SRAM T-type ring, 32t",
+          "Front Tire": "Butcher, GRID TRAIL casing, GRIPTON® T9 compound, 2Bliss Ready, 29x2.3\"",
+          "Front Wheel": "Traverse HD 29\", DT Swiss 350, 15x110mm, 28h",
+          "Rear Tire": "Eliminator, GRID GRAVITY casing, GRIPTON® T9/T7 compound, 2Bliss Ready, 27.5x2.3\"",
+          "Rear Wheel": "Traverse HD 27.5\", DT Swiss 350, XD freehub body, 12x148mm, 28h",
+          "Inner Tubes": "Standard, Presta Valve",
+          "Stem": "Industry 9 A35 stem, 40mm length, 35mm clamp diameter",
+          "Handlebars": "RaceFace Era Carbon, riser bar, 5-degree upsweep, 8-degree backsweep, S2:20mm Rise, S3-S6:40mm Rise, 800mm",
+          "Grips": "Diety Lockjaw grips",
+          "Saddle": "Specialized Bridge Expert Mimic, hollow ti rail",
+          "SeatPost": "Bike Yoke, Revive Max, 34.9, S1-S2: 125mm, S3: 160mm, S4: 185mm, S5-S6: 213mm",
+          "SWAT": "SWAT CC steerer tube integrated tool with chain tool and link",
+          "Product ID": "277411",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "18.18 kg (40 lb, 1.3 oz)",
+          "Weight Size": "S4"
+        },
         "grouped": {
           "general_info": {
             "product_id": "277411",
@@ -18041,6 +19155,49 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 3.1 Motor, 105Nm torque, 810W power",
+          "Battery": "Specialized Turbo X2 840Wh integrated battery pack",
+          "UI/Remote": "Turbo Ergonomic remote",
+          "Charger": "Specialized 4amp charger",
+          "Frame": "Vado 3 frame, comfort optimized geometry, side entry battery",
+          "Seat Binder": "Alloy, 38.6mm",
+          "Fork": "SR Suntour suspension fork, 120MM of travel (100MM size S), Stanchion 34MM, 15MM Thru axle, 27.5\" wheel",
+          "Front Brake": "Shimano BR-MT200, hydraulic disc, 180mm",
+          "Rear Brake": "Shimano BR-MT200, hydraulic disc, 180mm",
+          "Shift Levers": "Shimano CUES 9-Speed with Optical Gear Display",
+          "Rear Derailleur": "Shimano CUES 9-Speed",
+          "Cassette": "Shimano CUES 9-speed, 11-41t",
+          "Chain": "KMC eGlide for 11-Speed CUES",
+          "Crankset": "170mm, 55mm Chainline, w/BCD 110mm, NW 40T, w/ Chain Guard",
+          "Chainrings": "40 Teeth with Chain Retention Technology",
+          "Chaincase": "Vado 3 Custom Chaincase",
+          "Rims": "27.5\" front and rear, 30mm inner width, 32h",
+          "Front Hub": "Shimano, center lock disc",
+          "Rear Hub": "Shimano Freehub, Center Lock Disc",
+          "Spokes": "DT Swiss Elemental",
+          "Front Tire": "Specialized Hemishpere Flat Resistant ALLTERRAIN Reflect 27.5X2.6",
+          "Rear Tire": "Specialized Hemishpere Flat Resistant ALLTERRAIN Reflect 27.5X2.6",
+          "Inner Tubes": "Reinforced anti flat 27.5X2.5/2.7, Schrader valve 60MM",
+          "Stem": "Stem w/ integrated Colored Display & USB-C Phone charger, 31.8MM",
+          "Handlebars": "Alloy, Rise 34.4mm,31.8mm, Back Sweep 13°, Up Sweep 7.8°, Bar End 22.2mm, 690-730mm",
+          "Grips": "Specialized Body Geometry",
+          "Saddle": "Bridge Sport, Steel rails, 155mm",
+          "SeatPost": "Suspension, 40mm travel, 34.9mm",
+          "Pedals": "Turbo Pedals, anti-slip",
+          "SWAT": "MIK HD 27.5 Kg rear rack with integrated elastics, MIK front rack 10kg compatible (not included)",
+          "Headlight": "Lezyne Stvzo E500+ 500lm, Fork Mounted",
+          "Taillight": "Spanninga Rack Integrated Rear Light With Brake Light",
+          "Rack": "Vado 3 Custom Seatstay Mounted MIK HD Rack, 27Kg Max Load",
+          "Bike Lock": "Mechanical Battery Lock With Key",
+          "Fenders": "Vado 3 Custom Alloy Profile Fenders",
+          "Kickstand": "Vado 3 Custom Kickstand, With Adjustable Shoe",
+          "Bell": "Bell",
+          "Product ID": "279840",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "28.7 kg (63 lb, 4.4 oz)",
+          "Weight Size": "MD"
+        },
         "grouped": {
           "general_info": {
             "product_id": "279840",
@@ -18082,7 +19239,7 @@
               "travel_mm": 120,
               "lockout": false,
               "thru_axle": true,
-              "details": "suspension fork, of travel (100MM size S), Stanchion 34MM, 15MM Thru axle, 27.5\" wheel"
+              "details": "suspension fork, (100MM size S), Stanchion 34MM, 15MM Thru axle, 27.5\" wheel"
             }
           },
           "drivetrain": {
@@ -18542,6 +19699,49 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 3.1 Motor, 105Nm torque, 810W power",
+          "Battery": "Specialized Turbo X2 840Wh integrated battery pack",
+          "UI/Remote": "Turbo Ergonomic Remote",
+          "Charger": "Specialized 4amp charger",
+          "Frame": "Vado 3 frame, comfort optimized geometry, side entry battery",
+          "Seat Binder": "Alloy, 38.6mm",
+          "Fork": "SR Suntour suspension fork, 120MM of travel (100MM size S), Stanchion 34MM, 15MM Thru axle, 27.5\" wheel",
+          "Front Brake": "TEKTRO, HD-T5040, 4- Piston Caliper, Extra Thick 2.3MM Rotor and 5MM Brake Pads",
+          "Rear Brake": "TEKTRO, HD-T5040, 4- Piston Caliper, Extra Thick 2.3MM Rotor and 5MM Brake Pads",
+          "Shift Levers": "Shimano 11-Speed RAPIDFIRE PLUS, Short Reach Spec",
+          "Rear Derailleur": "Shimano CUES 11-speed w/ Shadow Plus",
+          "Cassette": "Shimano CUES CS-LG400-11, 11-speed, 11-50t",
+          "Chain": "KMC eGlide for 11-Speed CUES",
+          "Crankset": "170MM, CL 55MM,W/BCD 110MM, 48T, Chain Guard",
+          "Chainrings": "40 Teeth with Chain Retention Technology",
+          "Chaincase": "Vado 3 Custom Chaincase",
+          "Rims": "27.5\" front and rear, 30mm inner width, 32h",
+          "Front Hub": "Sealed cartridge bearings, 6-bolt, 15x110mm thru-axle, 32h",
+          "Rear Hub": "Specialized alloy rear hub disc, sealed cartridge bearings, 6-Bolt, 12X148mm thru-axle, 32h, HG Steel Fhb",
+          "Spokes": "DT Swiss Elemental",
+          "Front Tire": "Specialized Hemishpere Flat Resistant ALLTERRAIN Reflect 27.5X2.6",
+          "Rear Tire": "Specialized Hemishpere Flat Resistant ALLTERRAIN Reflect 27.5X2.6",
+          "Inner Tubes": "Reinforced anti flat 27.5X2.5/2.7, Schrader valve 60MM",
+          "Stem": "Cockpit with Integrated Colored Touch Screen Display",
+          "Handlebars": "Integrated Cockpit",
+          "Grips": "Specialized Body Geometry",
+          "Saddle": "Bridge Sport, Steel rails, 155mm",
+          "SeatPost": "Lower Suspension Post, 100-125MM Travel, 40MM Suspension, 34.9 MM, Offset 0MM",
+          "Pedals": "Turbo Pedals, anti-slip",
+          "SWAT": "MIK HD 27.5 Kg rear rack with integrated elastics, MIK front rack 10kg compatible (not included)",
+          "Headlight": "Supernova Custom Cockpit Integrated Hi/Low-Beam 805lm/450lm",
+          "Taillight": "Spanninga Rack Integrated Rear Light With Brake Light",
+          "Rack": "Vado 3 Custom Seatstay Mounted MIK HD Rack, 27Kg Max Load",
+          "Bike Lock": "Mechanical Battery Lock w/ Matching Wheel Lock Key",
+          "Fenders": "Vado 3 Custom Alloy Profile Fenders",
+          "Kickstand": "Vado 3 Custom Kickstand, With Adjustable Shoe",
+          "Bell": "Bell",
+          "Product ID": "279838",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "29.9 kg (65 lb, 14.7 oz)",
+          "Weight Size": "MD"
+        },
         "grouped": {
           "general_info": {
             "product_id": "279838",
@@ -18583,7 +19783,7 @@
               "travel_mm": 120,
               "lockout": false,
               "thru_axle": true,
-              "details": "suspension fork, of travel (100MM size S), Stanchion 34MM, 15MM Thru axle, 27.5\" wheel"
+              "details": "suspension fork, (100MM size S), Stanchion 34MM, 15MM Thru axle, 27.5\" wheel"
             }
           },
           "drivetrain": {
@@ -19016,6 +20216,50 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 3.1 Motor, 105Nm torque, 810W power",
+          "Battery": "Specialized Turbo X2 840Wh integrated battery pack",
+          "UI/Remote": "Turbo Ergonomic Remote",
+          "Charger": "Specialized 4amp charger",
+          "Frame": "Vado 3 frame, comfort optimized geometry, side entry battery",
+          "Seat Binder": "Alloy, 38.6mm",
+          "Fork": "Rock Shox Psylo suspension fork, extra comfort and sensitivity, 120MM of travel (100MM size S, 15MM Thru axle, 27.5'' wheel, lock out",
+          "Front Brake": "SRAM DB DB6 Custom Red Metallic",
+          "Rear Brake": "SRAM DB DB6 Custom Red Metallic",
+          "Shift Levers": "SRAM Electric 12S",
+          "Rear Derailleur": "SRAM S1000 Eagle AXS",
+          "Cassette": "SRAM 12-speed,10-52t",
+          "Chain": "SRAM Eagle",
+          "Crankset": "170mm, CL 55mm, w/BCD 110mm, 48T, w/ Chain Guard",
+          "Chainrings": "SRAM CR T-TYPE 110BCD 48T",
+          "Chaincase": "Vado 3 Custom Chaincase",
+          "Rims": "27.5 Specialized rim with high profile, balck brush finish",
+          "Front Hub": "Sealed cartridge bearings, 6-bolt, 15x110mm thru-axle, 32h",
+          "Rear Hub": "Sealed cartridge bearings, 32H, 12mm steel axle,148mm spacing",
+          "Spokes": "DT Swiss Elemental",
+          "Front Tire": "Specialized Hemishpere Flat Resistant ALLTERRAIN Reflect 27.5X2.6",
+          "Rear Tire": "Specialized Hemishpere Flat Resistant ALLTERRAIN Reflect 27.5X2.6",
+          "Inner Tubes": "Reinforced anti flat 27.5X2.5/2.7, Schrader valve 60MM",
+          "Stem": "Cockpit with Integrated Colored Touch Screen Display, Wireless Quadlock Phone Charger",
+          "Handlebars": "Integrated Cockpit",
+          "Grips": "ERGON, GA30-S Custom, 134.8mm Length",
+          "Saddle": "Bridge Sport, Steel rails, 155mm",
+          "SeatPost": "Lower Suspension Post, 100-125MM Travel, 40MM Suspension, 34.9 MM, Offset 0MM",
+          "Pedals": "Turbo Pedals, anti-slip",
+          "Radar": "Garmin Active Car Detection",
+          "SWAT": "MIK HD 27.5 Kg rear rack with premium metalic finish, integrated elastics, MIK front rack 10kg compatible",
+          "Headlight": "Supernova Custom Cockpit Integrated Hi/Low-Beam 805lm/450lm",
+          "Taillight": "Spanninga Rack Integrated Rear Light With Brake Light",
+          "Rack": "Vado 3 Custom Seatstay Mounted MIK HD Rack, 27Kg Max Load",
+          "Bike Lock": "Digital Keyless Battery Lock",
+          "Fenders": "Vado 3 Custom Alloy Profile Fenders",
+          "Kickstand": "Vado 3 Custom Kickstand, With Adjustable Shoe",
+          "Bell": "Bell",
+          "Product ID": "293013",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "31.1 kg (68 lb, 9.0 oz)",
+          "Weight Size": "MD"
+        },
         "grouped": {
           "general_info": {
             "product_id": "293013",
@@ -19058,7 +20302,7 @@
               "travel_mm": 120,
               "lockout": true,
               "thru_axle": true,
-              "details": "Psylo suspension fork, extra comfort and sensitivity, of travel (100MM size S, 15MM Thru axle, 27.5'' wheel, lock out"
+              "details": "Psylo suspension fork, extra comfort and sensitivity, 100MM size S, 15MM Thru axle, 27.5'' wheel, lock out"
             }
           },
           "drivetrain": {
@@ -19515,6 +20759,49 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 3.1 Motor, 105Nm torque, 810W power",
+          "Battery": "Specialized Turbo X2 840Wh integrated battery pack",
+          "UI/Remote": "Turbo ergonomic remote",
+          "Charger": "Specialized 4amp charger",
+          "Frame": "Vado X frame, premium comfort with 120mm rear travel, side entry battery",
+          "Seat Binder": "Alloy, 38.6mm",
+          "Rear Shock": "Rock Shox Delux Select rear suspension, 120mm of travel",
+          "Fork": "SR Suntour suspension fork, 130mm of travel, Stanchion 34mm, 15mm Thru axle, 27.5\" wheel",
+          "Front Brake": "TEKTRO, HD-T5040, 4-piston caliper, extra thick 2.3mm rotor and 5mm brake pads",
+          "Rear Brake": "TEKTRO, HD-T5040, 4-piston caliper, extra thick 2.3mm rotor and 5mm brake pads",
+          "Shift Levers": "Shimano, CUES, Right, 10-speed RAPIDFIRE PLUS",
+          "Rear Derailleur": "Shimano CUES 11-speed w/ Shadow Plus",
+          "Cassette": "Shimano CUES, 10-speed, 11-48t",
+          "Chain": "Shimano LG",
+          "Crankset": "170mm, CL 55mm, w/BCD 110mm, 48t, chain guard",
+          "Chainrings": "48 Teeth with Chain Retention Technology",
+          "Rims": "27.5 front, 27.5 rear, 30mm inner width, 32h",
+          "Front Hub": "Sealed cartridge bearings, 6-bolt, 15x110mm thru-axle, 32h",
+          "Rear Hub": "Specialized alloy rear hub disc, sealed cartridge bearings, 6-Bolt, 12X148mm thru-axle, 32h, HG Steel Fhb",
+          "Spokes": "DT Swiss Elemental",
+          "Front Tire": "Specialized Hemisphere Flat Resistant ALLTERRAIN Reflect 27.5X2.6",
+          "Rear Tire": "Specialized Hemisphere Flat Resistant ALLTERRAIN Reflect 27.5X2.6",
+          "Inner Tubes": "Reinforced anti-flat 27.5X2.5/2.7, Schrader valve 60mm",
+          "Stem": "Stem with integrated colored display & USB-C phone charger, 31.8mm.",
+          "Handlebars": "Alloy, Rise 34.4mm,31.8mm, Back Sweep 13°, Up Sweep 7.8°, Bar End 22.2mm, 690-730mm",
+          "Grips": "Specialized Body Geometry",
+          "Saddle": "Bridge Sport, Steel rails, 155mm",
+          "SeatPost": "Seatpost, Lowerable, 34.9mm, Offset 0mm, 100/125/150 Travel",
+          "Pedals": "Turbo pedals anti-slip",
+          "SWAT": "MIK 25 kg rear rack with integrated elastics, MIK front rack 10kg compatible (not included)",
+          "Headlight": "Lezyne POWER StVZO E500+, 500 Lumens w/ reflector",
+          "Taillight": "Rack integrated, automatic braking detection",
+          "Rack": "25kg rear rack with integrated straps, QL3.1, MIK Stud, Arkel",
+          "Bike Lock": "Key secured battery by Abus",
+          "Fenders": "Extra long fender, water diffusion, durable metal construction",
+          "Kickstand": "Adjustable alloy kickstand",
+          "Bell": "Bell",
+          "Product ID": "293140",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "30.9 kg (68 lb, 2.0 oz)",
+          "Weight Size": "MD"
+        },
         "grouped": {
           "general_info": {
             "product_id": "293140",
@@ -19560,7 +20847,7 @@
               "travel_mm": 130,
               "lockout": false,
               "thru_axle": true,
-              "details": "suspension fork, of travel, Stanchion 34mm, 15mm Thru axle, 27.5\" wheel"
+              "details": "suspension fork, Stanchion 34mm, 15mm Thru axle, 27.5\" wheel"
             }
           },
           "drivetrain": {
@@ -20014,6 +21301,50 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 3.1 Motor, 105Nm torque, 810W power",
+          "Battery": "Specialized Turbo X2 840Wh integrated battery pack",
+          "UI/Remote": "Turbo ergonomic remote",
+          "Charger": "Specialized 4amp charger",
+          "Frame": "Vado X frame, premium comfort with 120mm rear travel, side entry battery",
+          "Seat Binder": "Alloy, 38.6mm",
+          "Rear Shock": "Rock Shox Delux Select rear suspension, 120MM of travel, lock out",
+          "Fork": "Rock Shox Psylo suspension fork, extra comfort and sensitivity, 130MM of travel, 27.5 wheel, lock out",
+          "Front Brake": "SRAM DB DB6 Custom Red Metallic",
+          "Rear Brake": "SRAM DB DB6 Custom Red Metallic",
+          "Shift Levers": "SRAM Electric 12S",
+          "Rear Derailleur": "SRAM S1000 Eagle AXS",
+          "Cassette": "SRAM 12-speed,10-52t",
+          "Chain": "SRAM Eagle",
+          "Crankset": "170mm, CL 55mm, w/BCD 110mm, 48t, chain guard",
+          "Chainrings": "SRAM CR T-Type 110 BCD 48t",
+          "Rims": "27.5 Specialized rim with high profile, balck brush finish",
+          "Front Hub": "Sealed cartridge bearings, 6-bolt, 15x110mm thru-axle, 32h",
+          "Rear Hub": "Specialized alloy rear hub disc, sealed cartridge bearings, 6-Bolt, 12X148mm thru-axle, 32h, HG Steel Fhb",
+          "Spokes": "DT Swiss Elemental",
+          "Front Tire": "Specialized Hemisphere Flat Resistant ALLTERRAIN Reflect 27.5X2.6",
+          "Rear Tire": "Specialized Hemisphere Flat Resistant ALLTERRAIN Reflect 27.5X2.6",
+          "Inner Tubes": "Reinforced anti-flat 27.5X2.5/2.7, Schrader valve 60mm",
+          "Stem": "Cockpit with integrated colored touch screen display, Wireless Quad Lock phone charger",
+          "Handlebars": "Integrated cockpit",
+          "Grips": "ERGON, GA30-S Custom, 134.8mm Length",
+          "Saddle": "Bridge Sport, Steel rails, 155mm",
+          "SeatPost": "Seatpost, Lowerable, 34.9mm, Offset 0mm, 100/125/150 Travel",
+          "Pedals": "Turbo pedals anti-slip",
+          "Radar": "Garmin Active Car Detection",
+          "SWAT": "MIK 25Kg rear rack with premium metalic finish, integrated elastics, MIK front rack 10kg compatible",
+          "Headlight": "SUPERNOVA, integrated light, high beam and low beam remote, adjustable 12°, up to 800 Lumens",
+          "Taillight": "Rack integrated, automatic braking detection",
+          "Rack": "25kg rear rack with integrated straps, QL3.1, MIK Stud, Arkel",
+          "Bike Lock": "Key secured battery by Abus",
+          "Fenders": "Extra long fender, water diffusion, durable metal construction",
+          "Kickstand": "Adjustable alloy kickstand",
+          "Bell": "Bell",
+          "Product ID": "293142",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "33.05 kg (72 lb, 13.8 oz)",
+          "Weight Size": "MD"
+        },
         "grouped": {
           "general_info": {
             "product_id": "293142",
@@ -20060,7 +21391,7 @@
               "travel_mm": 130,
               "lockout": true,
               "thru_axle": false,
-              "details": "Psylo suspension fork, extra comfort and sensitivity, of travel, 27.5 wheel, lock out"
+              "details": "Psylo suspension fork, extra comfort and sensitivity, 27.5 wheel, lock out"
             }
           },
           "drivetrain": {
@@ -20527,6 +21858,48 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 2.0, 70Nm torque, custom tuned motor, 250W nominal",
+          "Battery": "Specialized U2-710, alloy casing, state of charge display, 710Wh",
+          "UI/Remote": "MasterMind TCD, w/handlebar remote, built-in anti-theft feature, Bluetooth® connectivity, customizable display pages",
+          "Charger": "Custom charger, 42V4A w/ Rosenberger plug, 100-240V",
+          "Wiring Harness": "Custom wire harness",
+          "Frame": "E5 Aluminum, mid-drive motor, fully integrated & lockable downtube battery, internal cable routing, wheel lock mount, and front rack compatible",
+          "Seat Binder": "Alloy, bolt-type, 34.9mm",
+          "Fork": "SR Suntour MobieA32, 80mm travel, lockout, fender-mounts, integrated light mount",
+          "Front Brake": "Shimano BR-MT200, hydraulic disc, 180mm",
+          "Rear Brake": "Shimano BR-MT200, hydraulic disc, 180mm",
+          "Shift Levers": "Shimano CUES 9-Speed with Optical Gear Display",
+          "Rear Derailleur": "Shimano CUES 9-Speed",
+          "Cassette": "Shimano CUES 9-speed, 11-41t",
+          "Chain": "Shimano LG500",
+          "Crankset": "Custom alloy forged crankarms, 170mm",
+          "Chainrings": "48T",
+          "Chaincase": "Custom chaincover",
+          "Rims": "29 front, 27.5 rear, 30mm inner width, 32h",
+          "Front Hub": "Shimano Center Lock Disc 32H, 15mm Thru Type Axle, 100mm",
+          "Rear Hub": "Shimano Freehub, Center Lock Disc",
+          "Spokes": "DT Swiss Industry",
+          "Front Tire": "Pathfinder Sport Reflect, 650Bx2.3",
+          "Rear Tire": "Pathfinder Sport Reflect, 650Bx2.3",
+          "Inner Tubes": "Standard 40mm Schrader valve 650Bx1.75-2.4",
+          "Stem": "Specialized Flowset, 3D-forged alloy, 20-degree rise, 31.8mm clamp",
+          "Handlebars": "Specialized, alloy, 15-degree backsweep, 46mm rise, 31.8mm",
+          "Grips": "Specialized Body Geometry",
+          "Saddle": "Bridge Sport, Steel rails, 155mm",
+          "SeatPost": "Suspension, 40mm travel, 34.9mm",
+          "Pedals": "Specialized Commuter w/ grip tape & reflectors",
+          "Headlight": "Lezyne, Ebike Mini Stvzo E300+, 300 Lumen, 160Cm Wire, With Reflector",
+          "Taillight": "Spanninga, Stvzo, Commuter Glow With auto Brake",
+          "Rack": "Specialized rack, MIK HD interface, built-in pannier mounts, 27kg max load",
+          "Bike Lock": "Turbo System Lock",
+          "Fenders": "Specialized DRYTECH fenders, 65mm width, extra strong aluminum fenderstay",
+          "Kickstand": "Specialized kickstand, 40mm mount",
+          "Bell": "Specialized bell",
+          "Product ID": "277441",
+          "Weight": "26.4kg (58 lb, 3.2 oz)",
+          "Weight Size": "MD"
+        },
         "grouped": {
           "general_info": {
             "product_id": "277441",
@@ -21008,6 +22381,49 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 2.0, 70Nm torque, custom tuned motor, 250W nominal",
+          "Battery": "Specialized integrated battery, state of charge display, 710Wh, UL",
+          "UI/Remote": "MasterMind TCD, w/handlebar remote, built-in anti-theft feature, Bluetooth® connectivity, customizable display pages",
+          "Charger": "Custom charger, 42V4A w/ Rosenberger plug, 100-240V",
+          "Wiring Harness": "Custom wire harness",
+          "Frame": "E5 Aluminum, mid-drive motor, fully integrated & lockable downtube battery, internal cable routing, wheel lock mount, and front rack compatible",
+          "Seat Binder": "Alloy, bolt-type, 34.9mm",
+          "Fork": "SR Suntour MobieA32, 80mm travel, lockout, fender-mounts, integrated light mount",
+          "Front Brake": "Shimano BR-MT200, hydraulic disc, 180mm",
+          "Rear Brake": "Shimano BR-MT200, hydraulic disc, 180mm",
+          "Shift Levers": "Shimano CUES 9-Speed with Optical Gear Display",
+          "Rear Derailleur": "Shimano CUES 9-Speed",
+          "Cassette": "Shimano CUES 9-speed, 11-41t",
+          "Chain": "Shimano LG500",
+          "Crankset": "Custom alloy forged crankarms, 170mm",
+          "Chainrings": "48T",
+          "Chaincase": "Custom chaincover",
+          "Rims": "29 front, 27.5 rear, 30mm inner width, 32h",
+          "Front Hub": "Shimano Center Lock Disc 32H, 15mm Thru Type Axle, 100mm",
+          "Rear Hub": "Shimano Freehub, Center Lock Disc",
+          "Spokes": "DT Swiss Industry",
+          "Front Tire": "Pathfinder Sport Reflect, 650Bx2.3",
+          "Rear Tire": "Pathfinder Sport Reflect, 650Bx2.3",
+          "Inner Tubes": "Standard 40mm Schrader valve 650Bx1.75-2.4",
+          "Stem": "Specialized Flowset, 3D-forged alloy, 20-degree rise, 31.8mm clamp",
+          "Handlebars": "Specialized, alloy, 15-degree backsweep, 46mm rise, 31.8mm",
+          "Grips": "Specialized Body Geometry Contour",
+          "Saddle": "Bridge Sport, Steel rails, 155mm",
+          "SeatPost": "Suspension, 40mm travel, 34.9mm",
+          "Pedals": "Specialized Commuter w/ grip tape & reflectors",
+          "Headlight": "Lezyne, Ebike Mini Stvzo E300+, 300 Lumen, 160Cm Wire, With Reflector",
+          "Taillight": "Spanninga, Stvzo, Commuter Glow With auto Brake",
+          "Rack": "Specialized rack, MIK HD interface, built-in pannier mounts, 27kg max load",
+          "Bike Lock": "Turbo System Lock",
+          "Fenders": "Specialized DRYTECH fenders, 65mm width, extra strong aluminum fenderstay",
+          "Kickstand": "Specialized kickstand, 40mm mount",
+          "Bell": "Specialized bell",
+          "Product ID": "277442",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "26.4 kg (58 lb, 3.2 oz)",
+          "Weight Size": "MD"
+        },
         "grouped": {
           "general_info": {
             "product_id": "277442",
@@ -21492,6 +22908,49 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 2.2, 90Nm torque, custom tuned motor, 250W nominal",
+          "Battery": "Specialized integrated battery, state of charge display, 710Wh, UL",
+          "UI/Remote": "MasterMind TCD, w/handlebar remote, built-in anti-theft feature, Bluetooth® connectivity, customizable display pages",
+          "Charger": "Custom charger, 42V4A w/ Rosenberger plug, 100-240V",
+          "Frame": "E5 Aluminum, bottom bracket motor mount, fully integrated & lockable downtube battery, internal cable routing, lock and front rack mount, sliding dropout",
+          "Seat Binder": "Specialized Alloy 34.9, Steel Bolt",
+          "Fork": "Rockshox Recon Silver RL, 80mm travel, Motion-Control",
+          "Front Brake": "Shimano CUES BL-U8000. 4 Pistons",
+          "Rear Brake": "Shimano CUES BL-U8000. 4 Pistons",
+          "Rear Derailleur": "Enviolo Automatiq",
+          "Chain": "Gates Carbon Drive CDX 122t belt, black",
+          "Crankset": "Custom alloy forged crankarms",
+          "Chainrings": "Gates Carbon Drive CDX 50T chainring, black",
+          "Chaincase": "Specilaized Belt Cover",
+          "Rims": "29 front, 27.5 rear, 30mm inner width, 32h",
+          "Front Hub": "Specialized alloy front hub disc, sealed cardridge bearings, 6-bolt, 15x110mm thru-axle, 32h",
+          "Rear Hub": "Enviolo Heavy Duty, 380% range, 6-bolt, 10x135mm, 32h",
+          "Spokes": "DT Swiss Elemental",
+          "Front Tire": "Pathfinder Sport Reflect, 650Bx2.3",
+          "Rear Tire": "Pathfinder Sport Reflect, 650Bx2.3",
+          "Inner Tubes": "Standard 40mm Schrader valve 650Bx1.75-2.4",
+          "Stem": "Specialized Flowset, 3D-forged alloy, 20-degree rise, 31.8mm clamp",
+          "Handlebars": "Specialized, alloy, 15-degree backsweep, 46mm rise, 31.8mm",
+          "Grips": "ERGON, GA30-S Custom, 134.8mm Length",
+          "Saddle": "Bridge Sport, Steel rails, 155mm",
+          "SeatPost": "Suspended Cane Creek, Thudbuster St, 30.9 mm",
+          "Pedals": "Specialized Commuter w/ grip tape & reflectors",
+          "Radar": "Integrated Garmin Radar, with custom information displayed directly on the Mastermind TCD",
+          "Mirror": "Handlebar rear view mirror, aluminum",
+          "SWAT": "enviolo, Threaded Freewheel Lockring",
+          "Headlight": "Lezyne, Ebike Power Stvzo E450+, 450 Lumen, 160Cm Wire, With Reflector",
+          "Taillight": "Spanninga, Stvzo, Commuter Glow With auto Brake",
+          "Rack": "Specialized rack, MIK HD interface, built-in pannier mounts, 27kg max load",
+          "Bike Lock": "Turbo System Lock",
+          "Fenders": "Specialized DRYTECH fenders, 65mm width, extra strong aluminum fenderstay",
+          "Kickstand": "Specialized kickstand, 40mm mount",
+          "Bell": "Specialized brass bell",
+          "Product ID": "263673",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "27.1 kg (59 lb, 11.9 oz)",
+          "Weight Size": "MD"
+        },
         "grouped": {
           "general_info": {
             "product_id": "263673",
@@ -21961,6 +23420,49 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 2.2, 90Nm torque, custom tuned motor, 250W nominal",
+          "Battery": "Specialized integrated battery, state of charge display, 710Wh, UL",
+          "UI/Remote": "MasterMind TCD, w/handlebar remote, built-in anti-theft feature, Bluetooth® connectivity, customizable display pages",
+          "Charger": "Custom charger, 42V4A w/ Rosenberger plug, 100-240V",
+          "Frame": "E5 Aluminum, bottom bracket motor mount, fully integrated &lockable downtube battery, internal cable routing, lock and front rack mount, sliding dropout",
+          "Seat Binder": "Specialized Alloy 34.9, Steel Bolt",
+          "Fork": "Rockshox Recon Silver RL, 80mm travel, Motion-Control",
+          "Front Brake": "Shimano CUES BL-U8000. 4 Pistons",
+          "Rear Brake": "Shimano CUES BL-U8000. 4 Pistons",
+          "Rear Derailleur": "Enviolo Automatiq",
+          "Chain": "Gates Carbon Drive CDX 122t belt, black",
+          "Crankset": "Custom alloy forged crankarms",
+          "Chainrings": "Gates Carbon Drive CDX 50T chainring, black",
+          "Chaincase": "Specilaized Belt Cover",
+          "Rims": "29 front, 27.5 rear, 30mm inner width, 32h",
+          "Front Hub": "Specialized alloy front hub disc, sealed cardridge bearings, 6-bolt, 15x110mm thru-axle, 32h",
+          "Rear Hub": "Enviolo Heavy Duty, 380% range, 6-bolt, 10x135mm, 32h",
+          "Spokes": "DT Swiss Elemental",
+          "Front Tire": "Pathfinder Sport Reflect, 650Bx2.3",
+          "Rear Tire": "Pathfinder Sport Reflect, 650Bx2.3",
+          "Inner Tubes": "Standard 40mm Schrader valve 650Bx1.75-2.4",
+          "Stem": "Specialized Flowset, 3D-forged alloy, 20-degree rise, 31.8mm clamp",
+          "Handlebars": "Specialized, alloy, 15-degree backsweep, 46mm rise, 31.8mm",
+          "Grips": "ERGON, GA30-S Custom, 134.8mm Length",
+          "Saddle": "Bridge Sport, Steel rails, 155mm",
+          "SeatPost": "Suspended Cane Creek, Thudbuster St, 30.9 mm",
+          "Pedals": "Specialized Commuter w/ grip tape & reflectors",
+          "Radar": "Integrated Garmin Radar, with custom information displayed directly on the Mastermind TCD",
+          "Mirror": "Handlebar rear view mirror, aluminum",
+          "SWAT": "enviolo, Threaded Freewheel Lockring",
+          "Headlight": "Lezyne, Ebike Power Stvzo E450+, 450 Lumen, 160Cm Wire, With Reflector",
+          "Taillight": "Spanninga, Stvzo, Commuter Glow With auto Brake",
+          "Rack": "Specialized rack, MIK HD interface, built-in pannier mounts, 27kg max load",
+          "Bike Lock": "Turbo System Lock",
+          "Fenders": "Specialized DRYTECH fenders, 65mm width, extra strong aluminum fenderstay",
+          "Kickstand": "Specialized kickstand, 40mm mount",
+          "Bell": "Bell",
+          "Product ID": "263675",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "27.57 kg (60 lb, 12.5 oz)",
+          "Weight Size": "MD"
+        },
         "grouped": {
           "general_info": {
             "product_id": "263675",
@@ -22430,6 +23932,44 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized SL 1.2 Custom Rx Trail Tuned Motor",
+          "Battery": "Specialized SL2-520, Fully Integrated, 520Wh",
+          "UI/Remote": "HMI TLA,H3,SBC-D10,EUBR COMPLIANT,APLW2,APLUTO,DAYTON",
+          "Charger": "Custom charger, 48V System w/ SL system charger plug",
+          "Frame": "2024 Vado SL",
+          "Seat Binder": "Specialized Alloy 34.9, Steel Bolt",
+          "Fork": "Vado SL Fork,Tubus front rack mounts up to 14kg",
+          "Front Brake": "Tektro HD-R285, hydraulic disc",
+          "Rear Brake": "Tektro HD-R285, hydraulic disc",
+          "Shift Levers": "Shimano CUES 10-Speed Rapidfire Plus, W/ OPTICAL GEAR DISPLAY, SL-U6000-10R",
+          "Rear Derailleur": "Shimano CUES 11-speed w/ Shadow Plus",
+          "Cassette": "Shimano CUES CS-LG400-10, 10-speed, 11-48t",
+          "Chain": "KMC eGlide for 11-Speed CUES",
+          "Crankset": "SRAM Alloy Crankset, DUB interface",
+          "Chainrings": "Praxis, Cl 49.8mm, NW, 44T, Bcd 104mm",
+          "Chaincase": "Specialized Custom Chaincover",
+          "Rims": "Double-wall alloy, 27mm internal width, 28h",
+          "Front Hub": "Alloy, 6-bolt disc, sealed cartridge bearing, high-low flange, 12x100mm thru-axle, 24h",
+          "Rear Hub": "Bear Pawls Rear Hub, 6-Bolt Disc, Sealed Cartridge Bearing, 12x142mm",
+          "Spokes": "DT Swiss Elemental",
+          "Front Tire": "Specialized Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire, 700x47c",
+          "Rear Tire": "Specialized Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire, 700x47c",
+          "Inner Tubes": "29x1.75-2.4, 40mm Schrader Valve",
+          "Stem": "Specialized Stealth Stem, Alloy, 31.8mm, Integrated Display And Light Mount, Size S: 60mm 17 Deg, M/L/Xl: 75mm 15.5 Deg",
+          "Handlebars": "Specialized, alloy, 9-degree backsweep, 15mm rise, 31.8mm",
+          "Grips": "Specialized Body Geometry",
+          "Saddle": "Bridge Sport, Steel rails, 155mm",
+          "SeatPost": "Specialized, alloy, single bolt, 21mm offset, 27.2mm",
+          "Pedals": "Specialized Commuter w/ grip tape & reflectors",
+          "Headlight": "Lezyne, Ebike Power STVZO E500+, 350 Lumens, Reflector",
+          "Taillight": "REAR LIGHT, FU AN, FC28-12V, WITH EXTRA 1500MM CABLE",
+          "Bell": "Bell",
+          "Product ID": "295057",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "18.6 kg (41 lb, 0.1 oz)",
+          "Weight Size": "MD"
+        },
         "grouped": {
           "general_info": {
             "product_id": "295057",
@@ -22516,15 +24056,15 @@
             "spokes": "DT Swiss Elemental",
             "front_tire": {
               "manufacturer": "Specialized",
-              "size": "00x4",
+              "size": "700x47c",
               "tubeless": false,
-              "details": "Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire, 77c"
+              "details": "Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire"
             },
             "rear_tire": {
               "manufacturer": "Specialized",
-              "size": "00x4",
+              "size": "700x47c",
               "tubeless": false,
-              "details": "Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire, 77c"
+              "details": "Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire"
             },
             "inner_tubes": "29x1.75-2.4, 40mm Schrader Valve"
           },
@@ -22902,6 +24442,48 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 1.2 SL System",
+          "Battery": "Specialized SL2-520, Fully Integrated, 520Wh",
+          "UI/Remote": "Mastermind H3, W/Handlebar Remote, Ant+/Bluetooth®, Built-In System Lock Feature, Integrated Apple Find My, Customizable Display Pages, 2.1\"",
+          "Charger": "Custom charger, 48V System w/ SL system charger plug",
+          "Wiring Harness": "Custom Specialized wiring harness w/ chargeport",
+          "Frame": "2024 Vado SL",
+          "Seat Binder": "Specialized Alloy 34.9, Steel Bolt",
+          "Fork": "2024 Vado SL",
+          "Front Brake": "Tektro HD-R285, hydraulic disc",
+          "Rear Brake": "Tektro HD-R285, hydraulic disc",
+          "Shift Levers": "Shimano Cues 10-speed, SL-U6000",
+          "Rear Derailleur": "Shimano Cues 10-speed, RD-U6000",
+          "Cassette": "Shimano Cues 10-speed, Linkglide 11-48T, CS-LG400",
+          "Chain": "KMC EGlide 10-speed",
+          "Crankset": "SRAM FC S699 Alloy S-165mm / M-L-170mm / XL-175mm",
+          "Chainrings": "Praxis, Cl 49.8mm, NW, 44T, Bcd 104mm",
+          "Chaincase": "Specialized Custom Chainguard",
+          "Rims": "700c Double-wall Alloy 27mm internal width",
+          "Front Hub": "Alloy 6 Bolt 24H 12x100mm thru-axle",
+          "Rear Hub": "Alloy 6 Bolt 28H 12mm Axle 142mm Spacing",
+          "Spokes": "DT Swiss J-Bend",
+          "Front Tire": "Specialized Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire, 700x47c",
+          "Rear Tire": "Specialized Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire, 700x47c",
+          "Inner Tubes": "Standard 40mm SV 29X1.75-2.4",
+          "Stem": "Specialized Stealth Stem, Alloy, 31.8mm, Integrated Display And Light Mount, Size S/M : 60mm 17 Deg, L/XL : 75mm 15.5 Deg",
+          "Handlebars": "Specialized, alloy, 9-degree backsweep, 15mm rise, 31.8mm",
+          "Grips": "Specialized Body Geometry",
+          "Saddle": "Bridge Sport, Steel rails, 155mm",
+          "SeatPost": "Specialized Alloy, Single Bolt, 30.9mm",
+          "Pedals": "Specialized Commuter w/ grip tape & reflectors",
+          "Headlight": "Lezyne EBike Hecto STVZO E350+",
+          "Taillight": "Spanninga, Stvzo, Commuter Glow With auto Brake",
+          "Rack": "Turbo SL Rack, MIK HD-Compatible, 27kg",
+          "Fenders": "Specialized custom alloy Fender, Sandblast anodized black finish, 700c, integrated alloy stay",
+          "Kickstand": "Specialized kickstand, 40mm mount",
+          "Bell": "Bell",
+          "Product ID": "278243",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "20.28 kg (44 lb, 11.4 oz)",
+          "Weight Size": "MD"
+        },
         "grouped": {
           "general_info": {
             "product_id": "278243",
@@ -22990,15 +24572,15 @@
             "spokes": "DT Swiss J-Bend",
             "front_tire": {
               "manufacturer": "Specialized",
-              "size": "00x4",
+              "size": "700x47c",
               "tubeless": false,
-              "details": "Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire, 77c"
+              "details": "Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire"
             },
             "rear_tire": {
               "manufacturer": "Specialized",
-              "size": "00x4",
+              "size": "700x47c",
               "tubeless": false,
-              "details": "Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire, 77c"
+              "details": "Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire"
             },
             "inner_tubes": "Standard 40mm SV 29X1.75-2.4"
           },
@@ -23346,6 +24928,47 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized SL 1.2 Custom Rx Trail Tuned Motor",
+          "Battery": "Specialized SL2-520, Fully Integrated, 520Wh",
+          "UI/Remote": "HMI TLA,H3,SBC-D10,EUBR COMPLIANT,APLW2,APLUTO,DAYTON",
+          "Charger": "Custom charger, 48V System w/ SL system charger plug",
+          "Frame": "2025 Vado SL Step-Through",
+          "Seat Binder": "Alloy, 38.6mm",
+          "Fork": "Vado SL Fork,Tubus front rack mounts up to 14kg",
+          "Front Brake": "Tektro HD-R285, hydraulic disc",
+          "Rear Brake": "Tektro HD-R285, hydraulic disc",
+          "Shift Levers": "Shimano CUES 10-Speed Rapidfire Plus, W/ OPTICAL GEAR DISPLAY, SL-U6000-10R",
+          "Rear Derailleur": "Shimano CUES 11-speed w/ Shadow Plus",
+          "Cassette": "Shimano CUES CS-LG400-10, 10-speed, 11-48t",
+          "Chain": "KMC eGlide for 11-Speed CUES",
+          "Crankset": "SRAM Alloy Crankset, DUB interface",
+          "Chainrings": "Praxis, Cl 49.8mm, NW, 44T, Bcd 104mm",
+          "Chaincase": "Specialized Custom Chaincover",
+          "Rims": "Double-wall alloy, 27mm internal width, 28h",
+          "Front Hub": "Alloy, 6-bolt disc, sealed cartridge bearing, high-low flange, 12x100mm thru-axle, 24h",
+          "Rear Hub": "Bear Pawls Rear Hub, 6-Bolt Disc, Sealed Cartridge Bearing, 12x142mm",
+          "Spokes": "DT Swiss Elemental",
+          "Front Tire": "Specialized Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire, 700x47c",
+          "Rear Tire": "Specialized Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire, 700x47c",
+          "Inner Tubes": "29x1.75-2.4, 40mm Schrader Valve",
+          "Stem": "Specialized Stealth Stem, Alloy, 31.8mm, Integrated Display And Light Mount, Size S: 60mm 17 Deg, M/L/Xl: 75mm 15.5 Deg",
+          "Handlebars": "Specialized, alloy, 9-degree backsweep, 15mm rise, 31.8mm",
+          "Grips": "Specialized Body Geometry",
+          "Saddle": "Bridge Sport, Steel rails, 155mm",
+          "SeatPost": "Specialized Alloy, Single Bolt, 30.9mm",
+          "Pedals": "Specialized Commuter w/ grip tape & reflectors",
+          "Headlight": "Lezyne, Ebike Power STVZO E500+, 350 Lumens, Reflector",
+          "Taillight": "Spanninga, Stvzo, Commuter Glow With auto Brake",
+          "Rack": "Turbo SL Rack, MIK HD Compatible, 25kg",
+          "Fenders": "Specialized custom alloy Fender, Sandblast anodized black finish, 700c, integrated alloy stay",
+          "Kickstand": "Specialized kickstand, 40mm mount",
+          "Bell": "Bell",
+          "Product ID": "295569",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "20.9 kg (46 lb, 1.2 oz)",
+          "Weight Size": "MD"
+        },
         "grouped": {
           "general_info": {
             "product_id": "295569",
@@ -23432,15 +25055,15 @@
             "spokes": "DT Swiss Elemental",
             "front_tire": {
               "manufacturer": "Specialized",
-              "size": "00x4",
+              "size": "700x47c",
               "tubeless": false,
-              "details": "Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire, 77c"
+              "details": "Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire"
             },
             "rear_tire": {
               "manufacturer": "Specialized",
-              "size": "00x4",
+              "size": "700x47c",
               "tubeless": false,
-              "details": "Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire, 77c"
+              "details": "Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire"
             },
             "inner_tubes": "29x1.75-2.4, 40mm Schrader Valve"
           },
@@ -23784,6 +25407,48 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 1.2 SL System",
+          "Battery": "Specialized SL2-520, Fully Integrated, 520Wh",
+          "UI/Remote": "Mastermind H3, W/Handlebar Remote, Ant+/Bluetooth®, Built-In System Lock Feature, Integrated Apple Find My, Customizable Display Pages, 2.1\"",
+          "Charger": "Custom charger, 48V System w/ SL system charger plug",
+          "Wiring Harness": "Custom Specialized wiring harness w/ chargeport",
+          "Frame": "2025 Vado SL Step-through",
+          "Seat Binder": "Alloy, 38.6mm",
+          "Fork": "2024 Vado SL",
+          "Front Brake": "Tektro HD-R285, hydraulic disc",
+          "Rear Brake": "Tektro HD-R285, hydraulic disc",
+          "Shift Levers": "Shimano Cues 10-speed, SL-U6000",
+          "Rear Derailleur": "Shimano Cues 10-speed, RD-U6000",
+          "Cassette": "Shimano Cues 10-speed Linkglide 11-48T, CS-LG400",
+          "Chain": "KMC EGlide 10-speed",
+          "Crankset": "SRAM FC S699 Alloy S-165mm / M-L-170mm / XL-175mm",
+          "Chainrings": "Praxis, Cl 49.8mm, NW, 44T, Bcd 104mm",
+          "Chaincase": "Specialized Custom Chainguard",
+          "Rims": "700c Double-wall Alloy 27mm internal width",
+          "Front Hub": "Alloy 6 Bolt 24H 12x100mm thru-axle",
+          "Rear Hub": "Alloy 6 Bolt 28H 12mm Axle 142mm Spacing",
+          "Spokes": "DT Swiss J-Bend",
+          "Front Tire": "Specialized Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire, 700x47c",
+          "Rear Tire": "Specialized Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire, 700x47c",
+          "Inner Tubes": "Standard 40mm SV 29X1.75-2.4",
+          "Stem": "Specialized Stealth Stem, Alloy, 31.8mm, Integrated Display And Light Mount, Size S/M : 60mm 17 Deg, L/XL : 75mm 15.5 Deg",
+          "Handlebars": "Specialized, alloy, 9-degree backsweep, 15mm rise, 31.8mm",
+          "Grips": "Specialized Body Geometry",
+          "Saddle": "Bridge Sport, Steel rails, 155mm",
+          "SeatPost": "Specialized Alloy, Single Bolt, 30.9mm",
+          "Pedals": "Specialized Commuter w/ grip tape & reflectors",
+          "Headlight": "Lezyne EBike Hecto STVZO E350+",
+          "Taillight": "Spanninga, Stvzo, Commuter Glow With auto Brake",
+          "Rack": "Turbo SL Rack, MIK HD-Compatible, 27kg",
+          "Fenders": "Specialized custom alloy Fender, Sandblast anodized black finish, 700c, integrated alloy stay",
+          "Kickstand": "Specialized kickstand, 40mm mount",
+          "Bell": "Bell",
+          "Product ID": "278245",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "20.54 kg (45 lb, 4.5 oz)",
+          "Weight Size": "MD"
+        },
         "grouped": {
           "general_info": {
             "product_id": "278245",
@@ -23872,15 +25537,15 @@
             "spokes": "DT Swiss J-Bend",
             "front_tire": {
               "manufacturer": "Specialized",
-              "size": "00x4",
+              "size": "700x47c",
               "tubeless": false,
-              "details": "Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire, 77c"
+              "details": "Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire"
             },
             "rear_tire": {
               "manufacturer": "Specialized",
-              "size": "00x4",
+              "size": "700x47c",
               "tubeless": false,
-              "details": "Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire, 77c"
+              "details": "Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire"
             },
             "inner_tubes": "Standard 40mm SV 29X1.75-2.4"
           },
@@ -24256,6 +25921,48 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 1.2 SL System",
+          "Battery": "Specialized SL2-520, Fully Integrated, 520Wh",
+          "UI/Remote": "Mastermind H3, W/Handlebar Remote, Ant+/Bluetooth®, Built-In System Lock Feature, Integrated Apple Find My, Customizable Display Pages, 2.1\"",
+          "Charger": "Custom charger, 48V System w/ SL system charger plug",
+          "Wiring Harness": "Custom Specialized wiring harness w/ chargeport",
+          "Frame": "2024 Vado SL",
+          "Seat Binder": "Specialized Alloy 34.9, Steel Bolt",
+          "Fork": "2024 Vado SL",
+          "Front Brake": "Tektro HD-R510, hydraulic disc, 160mm",
+          "Rear Brake": "Tektro HD-R510, hydraulic disc, 160mm",
+          "Shift Levers": "Shimano Cues 11-speed, SL-U8000",
+          "Rear Derailleur": "Shimano Cues 11-speed, RD-U8000",
+          "Cassette": "Shimano Cues 11-speed, Linkglide 11-50T, CS-LG700",
+          "Chain": "Shimano 11-speed",
+          "Crankset": "SRAM FC S699 Alloy S-165mm / M-L-170mm / XL-175mm",
+          "Chainrings": "Praxis, Cl 49.8mm, NW, 44T, Bcd 104mm",
+          "Chaincase": "Specialized Custom Chainguard",
+          "Rims": "700c Double-wall Alloy 27mm internal width",
+          "Front Hub": "Alloy 6 Bolt 28H 12x100mm thru-axle",
+          "Rear Hub": "Alloy 6 Bolt 28H 12mm Axle 142mm Spacing",
+          "Spokes": "DT Swiss J-Bend",
+          "Front Tire": "Specialized Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire, 700x47c",
+          "Rear Tire": "Specialized Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire, 700x47c",
+          "Inner Tubes": "Standard 40mm SV 29X1.75-2.4",
+          "Stem": "Specialized Stealth Stem, Alloy, 31.8mm, Integrated Display And Light Mount, Size S/M : 60mm 17 Deg, L/XL : 75mm 15.5 Deg",
+          "Handlebars": "Specialized, alloy, 9-degree backsweep, 15mm rise, 31.8mm",
+          "Grips": "ERGON, GA30-S Custom, 134.8mm Length",
+          "Saddle": "Bridge Sport, hollow cr-mo rails, 155mm",
+          "SeatPost": "Specialized Alloy, Single Bolt, 30.9mm",
+          "Pedals": "Specialized Commuter w/ grip tape & reflectors",
+          "Headlight": "Lezyne EBike Power STVZO E500+, Integrated Mount",
+          "Taillight": "Spanninga, Stvzo, Commuter Glow With auto Brake",
+          "Rack": "Turbo SL Rack, MIK HD-Compatible, 27kg",
+          "Fenders": "Specialized custom alloy Fender, Sandblast anodized black finish, 700c, integrated alloy stay",
+          "Kickstand": "Specialized kickstand, 40mm mount",
+          "Bell": "Specialized brass bell",
+          "Product ID": "278244",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "20.11 kg (44 lb, 5.4 oz)",
+          "Weight Size": "MD"
+        },
         "grouped": {
           "general_info": {
             "product_id": "278244",
@@ -24346,15 +26053,15 @@
             "spokes": "DT Swiss J-Bend",
             "front_tire": {
               "manufacturer": "Specialized",
-              "size": "00x4",
+              "size": "700x47c",
               "tubeless": false,
-              "details": "Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire, 77c"
+              "details": "Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire"
             },
             "rear_tire": {
               "manufacturer": "Specialized",
-              "size": "00x4",
+              "size": "700x47c",
               "tubeless": false,
-              "details": "Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire, 77c"
+              "details": "Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire"
             },
             "inner_tubes": "Standard 40mm SV 29X1.75-2.4"
           },
@@ -24734,6 +26441,48 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized 1.2 SL System",
+          "Battery": "Specialized SL2-520, Fully Integrated, 520Wh",
+          "UI/Remote": "Mastermind H3, W/Handlebar Remote, Ant+/Bluetooth®, Built-In System Lock Feature, Integrated Apple Find My, Customizable Display Pages, 2.1\"",
+          "Charger": "Custom charger, 48V System w/ SL system charger plug",
+          "Wiring Harness": "Custom Specialized wiring harness w/ chargeport",
+          "Frame": "2025 Vado SL Step-through",
+          "Seat Binder": "Alloy, 38.6mm",
+          "Fork": "2024 Vado SL",
+          "Front Brake": "Tektro HD-R510, hydraulic disc, 160mm",
+          "Rear Brake": "Tektro HD-R510, hydraulic disc, 160mm",
+          "Shift Levers": "Shimano Cues 11-speed, SL-U8000",
+          "Rear Derailleur": "Shimano Cues 11-speed, RD-U8000",
+          "Cassette": "Shimano Cues 11-speed, Linkglide 11-50T, CS-LG700",
+          "Chain": "Shimano 11-speed",
+          "Crankset": "SRAM FC S699 Alloy S-165mm / M-L-170mm / XL-175mm",
+          "Chainrings": "Praxis, Cl 49.8mm, NW, 44T, Bcd 104mm",
+          "Chaincase": "Specialized Custom Chainguard",
+          "Rims": "700c Double-wall Alloy 27mm internal width",
+          "Front Hub": "Alloy 6 Bolt 24H 12x100mm thru-axle",
+          "Rear Hub": "Alloy 6 Bolt 28H 12mm Axle 142mm Spacing",
+          "Spokes": "DT Swiss J-Bend",
+          "Front Tire": "Specialized Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire, 700x47c",
+          "Rear Tire": "Specialized Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire, 700x47c",
+          "Inner Tubes": "Standard 40mm SV 29X1.75-2.4",
+          "Stem": "Specialized Stealth Stem, Alloy, 31.8mm, Integrated Display And Light Mount, Size S/M : 60mm 17 Deg, L/XL : 75mm 15.5 Deg",
+          "Handlebars": "Specialized, alloy, 9-degree backsweep, 15mm rise, 31.8mm",
+          "Grips": "ERGON, GA30-S Custom, 134.8mm Length",
+          "Saddle": "Bridge Sport, hollow cr-mo rails, 155mm",
+          "SeatPost": "Specialized Alloy, Single Bolt, 30.9mm",
+          "Pedals": "Specialized Commuter w/ grip tape & reflectors",
+          "Headlight": "Lezyne EBike Power STVZO E500+, Integrated Mount",
+          "Taillight": "Spanninga, Stvzo, Commuter Glow With auto Brake",
+          "Rack": "Turbo SL Rack, MIK HD-Compatible, 27kg",
+          "Fenders": "Specialized custom alloy Fender, Sandblast anodized black finish, 700c, integrated alloy stay",
+          "Kickstand": "Specialized kickstand, 40mm mount",
+          "Bell": "Specialized brass bell",
+          "Product ID": "278246",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "20.3 kg (44 lb, 12.1 oz)",
+          "Weight Size": "MD"
+        },
         "grouped": {
           "general_info": {
             "product_id": "278246",
@@ -24824,15 +26573,15 @@
             "spokes": "DT Swiss J-Bend",
             "front_tire": {
               "manufacturer": "Specialized",
-              "size": "00x4",
+              "size": "700x47c",
               "tubeless": false,
-              "details": "Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire, 77c"
+              "details": "Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire"
             },
             "rear_tire": {
               "manufacturer": "Specialized",
-              "size": "00x4",
+              "size": "700x47c",
               "tubeless": false,
-              "details": "Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire, 77c"
+              "details": "Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire"
             },
             "inner_tubes": "Standard 40mm SV 29X1.75-2.4"
           },
@@ -25193,6 +26942,40 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized SL 1.2 Custom Rx Trail Tuned Motor",
+          "Battery": "Specialized SL2-520, Fully Integrated, 520Wh",
+          "UI/Remote": "HMI TLA,H3,SBC-D10,EUBR COMPLIANT,APLW2,APLUTO,DAYTON",
+          "Charger": "Custom charger, 48V System w/ SL system charger plug",
+          "Frame": "2024 Vado SL",
+          "Seat Binder": "Specialized Integrated",
+          "Fork": "2024 Vado SL",
+          "Front Brake": "TRP FMR, HD-R803",
+          "Rear Brake": "TRP HD-R803, hydraulic disc",
+          "Shift Levers": "Shimano ,SL-M8100-IR, Deore Xt, Right, 12-Speed Rapidfire, W/O Optical Gear Display, I-Spec",
+          "Rear Derailleur": "Shimano Deore XT RD-M8100, 12-speed w/ Shadow Plus",
+          "Cassette": "Shimano SLX, CS-M7100, 12-speed, 10-51t",
+          "Chain": "Shimano SLX CN-M7100, 12-speed",
+          "Crankset": "SRAM Carbon DUB Crank Arms",
+          "Chainrings": "Praxis, Cl 49.8mm, NW, 44T, Bcd 104mm",
+          "Front Tire": "Specialized Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire, 700x47c",
+          "Front Wheel": "700c, DT Swiss G540, Center Lock Disc",
+          "Rear Tire": "Specialized Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire, 700x47c",
+          "Rear Wheel": "700c, DT Swiss G540, Center Lock Disc",
+          "Inner Tubes": "Specialized Turbo Tube 48MM Presta valve, 29''x1.75''/2.4''",
+          "Stem": "Specialized Stealth Stem, Alloy, 31.8mm, Integrated Display And Light Mount, Size S: 60mm 17 Deg, M/L/Xl: 75mm 15.5 Deg",
+          "Handlebars": "Specialized, alloy, 9-degree backsweep, 15mm rise, 31.8mm",
+          "Grips": "ERGON, GA30-S Custom, 134.8mm Length",
+          "Saddle": "Bridge Sport, hollow cr-mo rails, 155mm",
+          "SeatPost": "Carbon Fiber, 30.9 mm, Offset 21mm",
+          "Headlight": "Lezyne, Ebike Fusion Stvzo E500+, 500 Lumen, 50Cm Wire, With Reflector",
+          "Taillight": "Specialized integrated saddle mount, LED Technology, 12V",
+          "Bell": "Bell",
+          "Product ID": "295053",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "16.32 kg (35 lb, 15.7 oz)",
+          "Weight Size": "MD"
+        },
         "grouped": {
           "general_info": {
             "product_id": "295053",
@@ -25271,16 +27054,16 @@
           "wheelset": {
             "front_tire": {
               "manufacturer": "Specialized",
-              "size": "00x4",
+              "size": "700x47c",
               "tubeless": false,
-              "details": "Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire, 77c"
+              "details": "Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire"
             },
             "front_wheel": "700c, DT Swiss G540, Center Lock Disc",
             "rear_tire": {
               "manufacturer": "Specialized",
-              "size": "00x4",
+              "size": "700x47c",
               "tubeless": false,
-              "details": "Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire, 77c"
+              "details": "Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire"
             },
             "rear_wheel": "700c, DT Swiss G540, Center Lock Disc",
             "inner_tubes": "Specialized Turbo Tube 48MM Presta valve, 29''x1.75''/2.4''"
@@ -25651,6 +27434,43 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized SL 1.2 Custom Rx Trail Tuned Motor",
+          "Battery": "Specialized SL2-520, Fully Integrated, 520Wh",
+          "UI/Remote": "HMI TLA,H3,SBC-D10,EUBR COMPLIANT,APLW2,APLUTO,DAYTON",
+          "Charger": "Custom charger, 48V System w/ SL system charger plug",
+          "Frame": "2024 Vado SL",
+          "Seat Binder": "Specialized Integrated",
+          "Fork": "2024 Vado SL",
+          "Front Brake": "TRP FMR, HD-R803",
+          "Rear Brake": "TRP HD-R803, hydraulic disc",
+          "Shift Levers": "Shimano ,SL-M8100-IR, Deore Xt, Right, 12-Speed Rapidfire, W/O Optical Gear Display, I-Spec",
+          "Rear Derailleur": "Shimano Deore XT RD-M8100, 12-speed w/ Shadow Plus",
+          "Cassette": "Shimano SLX, CS-M7100, 12-speed, 10-51t",
+          "Chain": "Shimano SLX CN-M7100, 12-speed",
+          "Crankset": "SRAM Carbon DUB Crank Arms",
+          "Chainrings": "Praxis, Cl 49.8mm, NW, 44T, Bcd 104mm",
+          "Front Tire": "Specialized Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire, 700x47c",
+          "Front Wheel": "700c, DT Swiss G540, Center Lock Disc",
+          "Rear Tire": "Specialized Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire, 700x47c",
+          "Rear Wheel": "700c, DT Swiss G540, Center Lock Disc",
+          "Inner Tubes": "Specialized Turbo Tube 48MM Presta valve, 29''x1.75''/2.4''",
+          "Stem": "Specialized Stealth Stem, Alloy, 31.8mm, Integrated Display And Light Mount, Size S: 60mm 17 Deg, M/L/Xl: 75mm 15.5 Deg",
+          "Handlebars": "Specialized, alloy, 9-degree backsweep, 15mm rise, 31.8mm",
+          "Grips": "ERGON, GA30-S Custom, 134.8mm Length",
+          "Saddle": "Bridge Sport, hollow cr-mo rails, 155mm",
+          "SeatPost": "Carbon Fiber, 30.9 mm, Offset 21mm",
+          "Headlight": "Lezyne, Ebike Fusion Stvzo E500+, 500 Lumen, 50Cm Wire, With Reflector",
+          "Taillight": "Spanninga, Stvzo, Commuter Glow With auto Brake",
+          "Rack": "Turbo SL Rack, MIK HD Compatible, 25kg",
+          "Fenders": "Specialized custom alloy Fender, Sandblast anodized black finish, 700c, integrated alloy stay",
+          "Kickstand": "Specialized kickstand, 40mm mount",
+          "Bell": "Bell",
+          "Product ID": "295054",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "18.35 kg (40 lb, 7.3 oz)",
+          "Weight Size": "MD"
+        },
         "grouped": {
           "general_info": {
             "product_id": "295054",
@@ -25729,16 +27549,16 @@
           "wheelset": {
             "front_tire": {
               "manufacturer": "Specialized",
-              "size": "00x4",
+              "size": "700x47c",
               "tubeless": false,
-              "details": "Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire, 77c"
+              "details": "Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire"
             },
             "front_wheel": "700c, DT Swiss G540, Center Lock Disc",
             "rear_tire": {
               "manufacturer": "Specialized",
-              "size": "00x4",
+              "size": "700x47c",
               "tubeless": false,
-              "details": "Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire, 77c"
+              "details": "Hemisphere flat protection, Reflective side walls, Wirebead, All terrain tire"
             },
             "rear_wheel": "700c, DT Swiss G540, Center Lock Disc",
             "inner_tubes": "Specialized Turbo Tube 48MM Presta valve, 29''x1.75''/2.4''"
@@ -26108,6 +27928,39 @@
         }
       },
       "specs": {
+        "all": {
+          "Motor": "Specialized SL 1.2 Custom Rx Trail Tuned Motor",
+          "Battery": "Specialized SL2-520, Fully Integrated, 520Wh",
+          "UI/Remote": "Mastermind H3, W/Handlebar Remote, Ant+/Bluetooth®, Built-In System Lock Feature, Integrated Apple Find My, Customizable Display Pages, 2.1\"",
+          "Charger": "Custom charger, 48V System w/ SL system charger plug",
+          "Wiring Harness": "Custom Specialized wiring harness w/ chargeport",
+          "Frame": "2024 Vado SL",
+          "Seat Binder": "Specialized Integrated",
+          "Fork": "2024 Vado SL",
+          "Front Brake": "SRAM DB RED",
+          "Rear Brake": "SRAM DB RED",
+          "Shift Levers": "SRAM AXS POD Controller",
+          "Rear Derailleur": "SRAM RD RED AXS E1",
+          "Cassette": "SRAM RED XG-1290 E1, 12-speed, 10-36t",
+          "Chain": "SRAM RED Flattop E1",
+          "Crankset": "SRAM Carbon DUB Crank Arms",
+          "Chainrings": "Praxis, Cl 49.8mm, NW, 44T, Bcd 104mm",
+          "Front Tire": "Mondo Folding Endurance Tire, 700x35c, GRIPTON T5",
+          "Front Wheel": "Roval Rapide CL III, 21mm internal width carbon rim tubeless ready, 51mm depth, Win Tunnel Engineered, DT for Roval 350 hub, 18h, DT Swiss Comp Race spokes",
+          "Rear Tire": "Mondo Folding Endurance Tire, 700x35c, GRIPTON T5",
+          "Rear Wheel": "Roval Rapide CL III, 21mm internal width carbon rim tubeless ready, 48mm depth, Win Tunnel Engineered, DT for Roval 350 hub, 24h, DT Swiss Comp Race spokes",
+          "Inner Tubes": "700x28-38mm, 48mm Presta valve",
+          "Handlebars": "Roval SL Carbon Cockpit, 780mm width, 5-degree upsweep, 9-degree backsweep",
+          "Grips": "ERGON, GA30-S Custom, 134.8mm Length",
+          "Saddle": "Specialized Power Pro Mirror, Titanium Rails, 155mm",
+          "SeatPost": "Carbon Fiber, 30.9 mm, Offset 21mm",
+          "Pedals": "Silver with Sandpaper Specialized Custom",
+          "SWAT": "TOOL, STARWINN, 3MM HEX OPEN WRENCH",
+          "Bell": "Specialized brass bell",
+          "Product ID": "293307",
+          "Weight": "13.7 kg (30 lb, 3.3 oz)",
+          "Weight Size": "MD"
+        },
         "grouped": {
           "general_info": {
             "product_id": "293307",
@@ -26178,15 +28031,15 @@
           },
           "wheelset": {
             "front_tire": {
-              "size": "00x3",
+              "size": "700x35c",
               "tubeless": false,
-              "details": "Mondo Folding Endurance Tire, 75c, GRIPTON T5"
+              "details": "Mondo Folding Endurance Tire, GRIPTON T5"
             },
             "front_wheel": "Roval Rapide CL III, 21mm internal width carbon rim tubeless ready, 51mm depth, Win Tunnel Engineered, DT for Roval 350 hub, 18h, DT Swiss Comp Race spokes",
             "rear_tire": {
-              "size": "00x3",
+              "size": "700x35c",
               "tubeless": false,
-              "details": "Mondo Folding Endurance Tire, 75c, GRIPTON T5"
+              "details": "Mondo Folding Endurance Tire, GRIPTON T5"
             },
             "rear_wheel": "Roval Rapide CL III, 21mm internal width carbon rim tubeless ready, 48mm depth, Win Tunnel Engineered, DT for Roval 350 hub, 24h, DT Swiss Comp Race spokes",
             "inner_tubes": "700x28-38mm, 48mm Presta valve"

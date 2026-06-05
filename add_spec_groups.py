@@ -26,22 +26,12 @@ def main():
         brand = Path(f).stem.replace("_ebikes", "")
         d = json.load(open(f))
         for m in d.get("models", []):
-            specs = m.get("specs") or {}
-            if specs.get("all"):
-                # fresh scraper output: build the grouped view from the flat map.
-                m["specs"] = {"grouped": group_specs(specs["all"], m.get("geometry") or {}, brand)}
-            elif specs.get("grouped"):
-                # already grouped: just parse component values in place (idempotent).
-                grouped = specs["grouped"]
-                sib = {k: v for fields in grouped.values()
-                       for k, v in fields.items() if isinstance(v, str)}
-                for fields in grouped.values():
-                    for field, value in list(fields.items()):
-                        if isinstance(value, str):
-                            parsed = parse_component(field, value, brand, siblings=sib)
-                            if parsed:
-                                fields[field] = parsed
-                m["specs"] = {"grouped": grouped}
+            # Keep the verbatim flat `all` as the build source (so grouping and
+            # component parsing can be re-derived without re-scraping); normalize.py
+            # drops it so the published dataset stays grouped-only.
+            all_specs = (m.get("specs") or {}).get("all") or {}
+            m["specs"] = {"all": all_specs,
+                          "grouped": group_specs(all_specs, m.get("geometry") or {}, brand)}
         json.dump(d, open(f, "w"), indent=2, ensure_ascii=False)
         ms = d.get("models", [])
         groups = {g for m in ms for g in m["specs"]["grouped"]}

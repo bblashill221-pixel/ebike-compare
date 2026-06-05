@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T07:11:42.333482+00:00",
+  "generated_at": "2026-06-05T07:14:16.359292+00:00",
   "disclaimer": "Rough wholesale/BOM cost ESTIMATES derived heuristically from each bike's published specs. For comparison only; not actual manufacturer costs.",
   "model_count": 185,
   "models": [
@@ -9,8 +9,8 @@
       "warranty": "2-Year Warranty",
       "component_costs": {
         "battery": 339,
-        "motor": 201,
         "frame": 200,
+        "motor": 152,
         "wheels": 130,
         "assembly_misc": 120,
         "brakes": 95,
@@ -49,9 +49,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1656,
+      "estimated_component_total": 1607,
       "retail_price": 1999.0,
-      "bom_pct_of_retail": 0.828
+      "bom_pct_of_retail": 0.804
     },
     {
       "brand": "aventon",
@@ -59,8 +59,8 @@
       "warranty": "2-Year Warranty",
       "component_costs": {
         "battery": 339,
-        "motor": 201,
         "frame": 200,
+        "motor": 152,
         "wheels": 130,
         "assembly_misc": 120,
         "brakes": 95,
@@ -95,9 +95,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1573,
+      "estimated_component_total": 1524,
       "retail_price": 1899.0,
-      "bom_pct_of_retail": 0.828
+      "bom_pct_of_retail": 0.803
     },
     {
       "brand": "aventon",
@@ -208,12 +208,12 @@
       "model": "Aventure M Ebike",
       "warranty": "2-Year Warranty",
       "component_costs": {
-        "motor": 380,
         "battery": 339,
+        "motor": 280,
         "frame": 200,
         "wheels": 130,
         "assembly_misc": 120,
-        "drivetrain": 111,
+        "drivetrain": 105,
         "brakes": 95,
         "fork_suspension": 95,
         "tires": 55,
@@ -233,7 +233,7 @@
         "battery": "733Wh @ ~$0.42/Wh",
         "motor": "mid-drive",
         "brakes": "hydraulic disc",
-        "drivetrain": "11-speed derailleur",
+        "drivetrain": "10-speed derailleur",
         "fork_suspension": "suspension fork",
         "display": "LCD display",
         "tires": "tires",
@@ -251,9 +251,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1865,
+      "estimated_component_total": 1759,
       "retail_price": 2899.0,
-      "bom_pct_of_retail": 0.643
+      "bom_pct_of_retail": 0.607
     },
     {
       "brand": "aventon",
@@ -301,9 +301,9 @@
         "frame": 520,
         "battery": 336,
         "motor": 332,
+        "brakes": 130,
         "wheels": 130,
         "assembly_misc": 120,
-        "brakes": 95,
         "drivetrain": 87,
         "tires": 80,
         "fork_suspension": 45,
@@ -315,7 +315,7 @@
       "notes": {
         "battery": "800Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
-        "brakes": "hydraulic disc",
+        "brakes": "hydraulic disc, 4-piston",
         "drivetrain": "~7-speed derailleur",
         "fork_suspension": "rigid fork",
         "display": "LCD display",
@@ -327,9 +327,9 @@
         "frame": "carbon frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1893,
+      "estimated_component_total": 1928,
       "retail_price": 5999.0,
-      "bom_pct_of_retail": 0.316
+      "bom_pct_of_retail": 0.321
     },
     {
       "brand": "aventon",
@@ -338,8 +338,8 @@
       "component_costs": {
         "battery": 339,
         "frame": 200,
-        "motor": 165,
         "wheels": 130,
+        "motor": 125,
         "assembly_misc": 120,
         "brakes": 95,
         "fork_suspension": 95,
@@ -377,9 +377,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1620,
+      "estimated_component_total": 1580,
       "retail_price": 1699.0,
-      "bom_pct_of_retail": 0.954
+      "bom_pct_of_retail": 0.93
     },
     {
       "brand": "aventon",
@@ -388,8 +388,8 @@
       "component_costs": {
         "battery": 339,
         "frame": 200,
-        "motor": 165,
         "wheels": 130,
+        "motor": 125,
         "assembly_misc": 120,
         "brakes": 95,
         "fork_suspension": 95,
@@ -425,9 +425,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1595,
+      "estimated_component_total": 1555,
       "retail_price": 1699.0,
-      "bom_pct_of_retail": 0.939
+      "bom_pct_of_retail": 0.915
     },
     {
       "brand": "aventon",
@@ -439,7 +439,7 @@
         "frame": 200,
         "wheels": 130,
         "assembly_misc": 120,
-        "drivetrain": 111,
+        "drivetrain": 105,
         "brakes": 95,
         "fork_suspension": 95,
         "tires": 55,
@@ -456,7 +456,7 @@
         "battery": "800Wh @ ~$0.42/Wh",
         "motor": "mid-drive (premium brand)",
         "brakes": "hydraulic disc",
-        "drivetrain": "11-speed derailleur",
+        "drivetrain": "10-speed derailleur",
         "fork_suspension": "suspension fork",
         "display": "LCD display",
         "tires": "tires",
@@ -471,9 +471,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1989,
+      "estimated_component_total": 1983,
       "retail_price": 2799.0,
-      "bom_pct_of_retail": 0.711
+      "bom_pct_of_retail": 0.708
     },
     {
       "brand": "aventon",
@@ -485,7 +485,7 @@
         "frame": 200,
         "wheels": 130,
         "assembly_misc": 120,
-        "drivetrain": 111,
+        "drivetrain": 105,
         "brakes": 95,
         "fork_suspension": 95,
         "tires": 55,
@@ -502,7 +502,7 @@
         "battery": "800Wh @ ~$0.42/Wh",
         "motor": "mid-drive (premium brand)",
         "brakes": "hydraulic disc",
-        "drivetrain": "11-speed derailleur",
+        "drivetrain": "10-speed derailleur",
         "fork_suspension": "suspension fork",
         "display": "LCD display",
         "tires": "tires",
@@ -517,9 +517,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1989,
+      "estimated_component_total": 1983,
       "retail_price": 2799.0,
-      "bom_pct_of_retail": 0.711
+      "bom_pct_of_retail": 0.708
     },
     {
       "brand": "aventon",
@@ -724,13 +724,13 @@
       "model": "Ramblas ADV Ebike",
       "warranty": "2-Year Warranty",
       "component_costs": {
-        "motor": 380,
         "battery": 327,
+        "motor": 280,
         "frame": 200,
+        "brakes": 130,
         "wheels": 130,
         "assembly_misc": 120,
         "drivetrain": 117,
-        "brakes": 95,
         "fork_suspension": 95,
         "tires": 80,
         "saddle_seatpost": 45,
@@ -747,7 +747,7 @@
       "notes": {
         "battery": "708Wh @ ~$0.42/Wh",
         "motor": "mid-drive",
-        "brakes": "hydraulic disc",
+        "brakes": "hydraulic disc, 4-piston",
         "drivetrain": "12-speed derailleur",
         "fork_suspension": "suspension fork",
         "display": "LCD display",
@@ -765,9 +765,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1844,
+      "estimated_component_total": 1779,
       "retail_price": 2899.0,
-      "bom_pct_of_retail": 0.636
+      "bom_pct_of_retail": 0.614
     },
     {
       "brand": "aventon",
@@ -777,10 +777,10 @@
         "frame": 200,
         "battery": 160,
         "wheels": 130,
-        "motor": 129,
         "assembly_misc": 120,
+        "motor": 108,
         "brakes": 95,
-        "drivetrain": 93,
+        "drivetrain": 87,
         "tires": 55,
         "fork_suspension": 45,
         "saddle_seatpost": 45,
@@ -798,7 +798,7 @@
         "battery": "346Wh @ ~$0.42/Wh",
         "motor": "hub motor",
         "brakes": "hydraulic disc",
-        "drivetrain": "8-speed derailleur",
+        "drivetrain": "7-speed derailleur",
         "fork_suspension": "rigid fork",
         "display": "LCD display",
         "tires": "tires",
@@ -815,9 +815,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1342,
+      "estimated_component_total": 1315,
       "retail_price": 1199.0,
-      "bom_pct_of_retail": 1.119
+      "bom_pct_of_retail": 1.097
     },
     {
       "brand": "aventon",
@@ -880,7 +880,7 @@
         "wheels": 130,
         "assembly_misc": 120,
         "brakes": 95,
-        "drivetrain": 87,
+        "drivetrain": 93,
         "tires": 80,
         "display": 65,
         "fork_suspension": 45,
@@ -897,7 +897,7 @@
         "battery": "614Wh @ ~$0.42/Wh",
         "motor": "hub motor",
         "brakes": "hydraulic disc",
-        "drivetrain": "~7-speed derailleur",
+        "drivetrain": "8-speed derailleur",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
         "tires": "fat tires",
@@ -913,9 +913,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1492,
+      "estimated_component_total": 1498,
       "retail_price": 2899.0,
-      "bom_pct_of_retail": 0.515
+      "bom_pct_of_retail": 0.517
     },
     {
       "brand": "blix",
@@ -978,7 +978,7 @@
         "wheels": 130,
         "assembly_misc": 120,
         "brakes": 95,
-        "drivetrain": 87,
+        "drivetrain": 93,
         "tires": 80,
         "display": 65,
         "fork_suspension": 45,
@@ -995,7 +995,7 @@
         "battery": "614Wh @ ~$0.42/Wh",
         "motor": "hub motor",
         "brakes": "hydraulic disc",
-        "drivetrain": "~7-speed derailleur",
+        "drivetrain": "8-speed derailleur",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
         "tires": "fat tires",
@@ -1011,9 +1011,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1492,
+      "estimated_component_total": 1498,
       "retail_price": 1899.0,
-      "bom_pct_of_retail": 0.786
+      "bom_pct_of_retail": 0.789
     },
     {
       "brand": "blix",
@@ -1026,7 +1026,7 @@
         "motor": 125,
         "assembly_misc": 120,
         "brakes": 95,
-        "drivetrain": 87,
+        "drivetrain": 93,
         "tires": 80,
         "display": 65,
         "fork_suspension": 45,
@@ -1043,7 +1043,7 @@
         "battery": "614Wh @ ~$0.42/Wh",
         "motor": "hub motor",
         "brakes": "hydraulic disc",
-        "drivetrain": "~7-speed derailleur",
+        "drivetrain": "8-speed derailleur",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
         "tires": "fat tires",
@@ -1059,9 +1059,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1465,
+      "estimated_component_total": 1471,
       "retail_price": 1799.0,
-      "bom_pct_of_retail": 0.814
+      "bom_pct_of_retail": 0.818
     },
     {
       "brand": "euphree",
@@ -1074,10 +1074,10 @@
         "wheels": 130,
         "assembly_misc": 120,
         "brakes": 95,
-        "fork_suspension": 95,
-        "drivetrain": 87,
+        "drivetrain": 93,
+        "tires": 80,
         "display": 65,
-        "tires": 55,
+        "fork_suspension": 45,
         "saddle_seatpost": 45,
         "controller": 40,
         "cockpit": 40,
@@ -1093,10 +1093,10 @@
         "battery": "720Wh @ ~$0.42/Wh",
         "motor": "hub motor",
         "brakes": "hydraulic disc",
-        "drivetrain": "~7-speed derailleur",
-        "fork_suspension": "suspension fork",
+        "drivetrain": "8-speed derailleur",
+        "fork_suspension": "rigid fork",
         "display": "color/TFT display",
-        "tires": "tires",
+        "tires": "fat tires",
         "lights": "lights",
         "fenders": "fenders",
         "rack": "rear rack",
@@ -1111,9 +1111,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1613,
+      "estimated_component_total": 1594,
       "retail_price": 2149.99,
-      "bom_pct_of_retail": 0.75
+      "bom_pct_of_retail": 0.741
     },
     {
       "brand": "euphree",
@@ -1149,7 +1149,7 @@
         "wheels": 130,
         "assembly_misc": 120,
         "brakes": 95,
-        "drivetrain": 87,
+        "drivetrain": 93,
         "display": 65,
         "tires": 55,
         "saddle_seatpost": 45,
@@ -1167,7 +1167,7 @@
         "battery": "720Wh @ ~$0.42/Wh",
         "motor": "hub motor",
         "brakes": "hydraulic disc",
-        "drivetrain": "~7-speed derailleur",
+        "drivetrain": "8-speed derailleur",
         "fork_suspension": "air suspension fork",
         "display": "color/TFT display",
         "tires": "tires",
@@ -1185,9 +1185,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1693,
+      "estimated_component_total": 1699,
       "retail_price": 2299.99,
-      "bom_pct_of_retail": 0.736
+      "bom_pct_of_retail": 0.739
     },
     {
       "brand": "euphree",
@@ -1200,7 +1200,7 @@
         "motor": 152,
         "assembly_misc": 120,
         "brakes": 95,
-        "drivetrain": 87,
+        "drivetrain": 93,
         "tires": 55,
         "saddle_seatpost": 45,
         "sensor": 35
@@ -1209,7 +1209,7 @@
         "battery": "720Wh @ ~$0.42/Wh",
         "motor": "hub motor",
         "brakes": "hydraulic disc",
-        "drivetrain": "~7-speed derailleur",
+        "drivetrain": "8-speed derailleur",
         "fork_suspension": "air suspension fork",
         "tires": "tires",
         "sensor": "torque/cadence sensor",
@@ -1217,9 +1217,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1266,
+      "estimated_component_total": 1272,
       "retail_price": 2299.99,
-      "bom_pct_of_retail": 0.55
+      "bom_pct_of_retail": 0.553
     },
     {
       "brand": "evelo",
@@ -1408,7 +1408,7 @@
         "wheels": 130,
         "assembly_misc": 120,
         "fork_suspension": 95,
-        "drivetrain": 87,
+        "drivetrain": 93,
         "tires": 80,
         "charger": 35,
         "lights": 30,
@@ -1419,7 +1419,7 @@
       "notes": {
         "battery": "680Wh @ ~$0.42/Wh",
         "motor": "mid-drive",
-        "drivetrain": "~7-speed derailleur",
+        "drivetrain": "8-speed derailleur",
         "fork_suspension": "suspension fork",
         "display": "LCD display",
         "tires": "fat tires",
@@ -1431,9 +1431,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1448,
+      "estimated_component_total": 1454,
       "retail_price": 1299.0,
-      "bom_pct_of_retail": 1.115
+      "bom_pct_of_retail": 1.119
     },
     {
       "brand": "heybike",
@@ -1477,12 +1477,12 @@
       "warranty": "2-Year Warranty",
       "component_costs": {
         "frame": 520,
-        "motor": 510,
+        "motor": 380,
         "battery": 363,
         "fork_suspension": 240,
         "wheels": 130,
         "assembly_misc": 120,
-        "drivetrain": 87,
+        "drivetrain": 99,
         "tires": 80,
         "charger": 35,
         "lights": 30,
@@ -1492,7 +1492,7 @@
       "notes": {
         "battery": "864Wh @ ~$0.42/Wh",
         "motor": "mid-drive",
-        "drivetrain": "~7-speed derailleur",
+        "drivetrain": "9-speed derailleur",
         "fork_suspension": "full suspension",
         "display": "LCD display",
         "tires": "fat tires",
@@ -1503,9 +1503,9 @@
         "frame": "carbon frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 2155,
+      "estimated_component_total": 2037,
       "retail_price": 1899.0,
-      "bom_pct_of_retail": 1.135
+      "bom_pct_of_retail": 1.073
     },
     {
       "brand": "heybike",
@@ -1528,7 +1528,7 @@
       "notes": {
         "battery": "692Wh @ ~$0.42/Wh",
         "motor": "hub motor",
-        "drivetrain": "~7-speed derailleur",
+        "drivetrain": "7-speed derailleur",
         "fork_suspension": "full suspension",
         "display": "LCD display",
         "tires": "fat tires",
@@ -1555,8 +1555,8 @@
         "brakes": 95,
         "fork_suspension": 95,
         "drivetrain": 93,
+        "tires": 80,
         "display": 65,
-        "tires": 55,
         "rack": 35,
         "charger": 35,
         "lights": 30,
@@ -1569,7 +1569,7 @@
         "drivetrain": "8-speed derailleur",
         "fork_suspension": "suspension fork",
         "display": "color/TFT display",
-        "tires": "tires",
+        "tires": "fat tires",
         "lights": "lights",
         "fenders": "fenders",
         "rack": "rear rack",
@@ -1577,9 +1577,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1363,
+      "estimated_component_total": 1388,
       "retail_price": 1699.0,
-      "bom_pct_of_retail": 0.802
+      "bom_pct_of_retail": 0.817
     },
     {
       "brand": "heybike",
@@ -1588,11 +1588,11 @@
       "component_costs": {
         "battery": 262,
         "fork_suspension": 240,
-        "motor": 224,
         "frame": 200,
+        "motor": 152,
         "wheels": 130,
         "assembly_misc": 120,
-        "drivetrain": 87,
+        "drivetrain": 93,
         "tires": 80,
         "display": 65,
         "charger": 35,
@@ -1603,7 +1603,7 @@
       "notes": {
         "battery": "624Wh @ ~$0.42/Wh",
         "motor": "hub motor",
-        "drivetrain": "~7-speed derailleur",
+        "drivetrain": "8-speed derailleur",
         "fork_suspension": "full suspension",
         "display": "color/TFT display",
         "tires": "fat tires",
@@ -1615,9 +1615,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1500,
+      "estimated_component_total": 1434,
       "retail_price": 1199.0,
-      "bom_pct_of_retail": 1.251
+      "bom_pct_of_retail": 1.196
     },
     {
       "brand": "heybike",
@@ -1625,12 +1625,12 @@
       "warranty": "2-Year Warranty",
       "component_costs": {
         "battery": 302,
-        "motor": 224,
         "frame": 200,
         "fork_suspension": 175,
+        "motor": 152,
         "wheels": 130,
         "assembly_misc": 120,
-        "drivetrain": 87,
+        "drivetrain": 93,
         "tires": 80,
         "display": 65,
         "charger": 35,
@@ -1641,7 +1641,7 @@
       "notes": {
         "battery": "720Wh @ ~$0.42/Wh",
         "motor": "hub motor",
-        "drivetrain": "~7-speed derailleur",
+        "drivetrain": "8-speed derailleur",
         "fork_suspension": "air suspension fork",
         "display": "color/TFT display",
         "tires": "fat tires",
@@ -1653,9 +1653,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1475,
+      "estimated_component_total": 1409,
       "retail_price": 1499.0,
-      "bom_pct_of_retail": 0.984
+      "bom_pct_of_retail": 0.94
     },
     {
       "brand": "heybike",
@@ -1669,8 +1669,8 @@
         "brakes": 95,
         "fork_suspension": 95,
         "drivetrain": 87,
+        "tires": 80,
         "display": 65,
-        "tires": 55,
         "rack": 35,
         "charger": 35,
         "lights": 30,
@@ -1683,7 +1683,7 @@
         "drivetrain": "~7-speed derailleur",
         "fork_suspension": "suspension fork",
         "display": "color/TFT display",
-        "tires": "tires",
+        "tires": "fat tires",
         "lights": "lights",
         "fenders": "fenders",
         "rack": "rear rack",
@@ -1691,9 +1691,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1424,
+      "estimated_component_total": 1449,
       "retail_price": 999.0,
-      "bom_pct_of_retail": 1.425
+      "bom_pct_of_retail": 1.45
     },
     {
       "brand": "heybike",
@@ -2272,8 +2272,8 @@
         "brakes": 95,
         "fork_suspension": 95,
         "drivetrain": 93,
+        "tires": 80,
         "display": 65,
-        "tires": 55,
         "saddle_seatpost": 45,
         "cockpit": 40,
         "rack": 35,
@@ -2291,7 +2291,7 @@
         "drivetrain": "8-speed derailleur",
         "fork_suspension": "suspension fork",
         "display": "color/TFT display",
-        "tires": "tires",
+        "tires": "fat tires",
         "lights": "lights",
         "fenders": "fenders",
         "rack": "rear rack",
@@ -2305,9 +2305,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1582,
+      "estimated_component_total": 1607,
       "retail_price": 1799.0,
-      "bom_pct_of_retail": 0.879
+      "bom_pct_of_retail": 0.893
     },
     {
       "brand": "himiway",
@@ -2501,9 +2501,9 @@
         "battery": 332,
         "frame": 200,
         "motor": 152,
+        "brakes": 130,
         "wheels": 130,
         "assembly_misc": 120,
-        "brakes": 95,
         "fork_suspension": 95,
         "drivetrain": 93,
         "display": 65,
@@ -2521,7 +2521,7 @@
       "notes": {
         "battery": "720Wh @ ~$0.42/Wh",
         "motor": "hub motor",
-        "brakes": "hydraulic disc",
+        "brakes": "hydraulic disc, 4-piston",
         "drivetrain": "8-speed derailleur",
         "fork_suspension": "suspension fork",
         "display": "color/TFT display",
@@ -2539,9 +2539,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1609,
+      "estimated_component_total": 1644,
       "retail_price": 2199.0,
-      "bom_pct_of_retail": 0.732
+      "bom_pct_of_retail": 0.748
     },
     {
       "brand": "himiway",
@@ -2701,9 +2701,9 @@
         "battery": 443,
         "motor": 430,
         "frame": 200,
+        "brakes": 130,
         "wheels": 130,
         "assembly_misc": 120,
-        "brakes": 95,
         "fork_suspension": 95,
         "drivetrain": 87,
         "tires": 55,
@@ -2720,7 +2720,7 @@
       "notes": {
         "battery": "960Wh @ ~$0.42/Wh",
         "motor": "mid-drive",
-        "brakes": "hydraulic disc",
+        "brakes": "hydraulic disc, 4-piston",
         "drivetrain": "~7-speed derailleur",
         "fork_suspension": "suspension fork",
         "display": "LCD display",
@@ -2737,9 +2737,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1935,
+      "estimated_component_total": 1970,
       "retail_price": 3999.0,
-      "bom_pct_of_retail": 0.484
+      "bom_pct_of_retail": 0.493
     },
     {
       "brand": "lectric",
@@ -2752,8 +2752,8 @@
         "frame": 200,
         "assembly_misc": 120,
         "brakes": 95,
-        "tires": 80,
         "display": 65,
+        "tires": 55,
         "fork_suspension": 45,
         "saddle_seatpost": 45,
         "controller": 40,
@@ -2770,7 +2770,7 @@
         "drivetrain": "belt / internally-geared / CVT",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
-        "tires": "fat tires",
+        "tires": "tires",
         "lights": "lights",
         "kickstand": "kickstand",
         "throttle": "throttle",
@@ -2781,9 +2781,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1638,
+      "estimated_component_total": 1613,
       "retail_price": 2399.0,
-      "bom_pct_of_retail": 0.683
+      "bom_pct_of_retail": 0.672
     },
     {
       "brand": "lectric",
@@ -2837,7 +2837,6 @@
         "battery": 353,
         "motor": 190,
         "frame": 150,
-        "wheels": 130,
         "assembly_misc": 120,
         "brakes": 95,
         "fork_suspension": 95,
@@ -2869,13 +2868,12 @@
         "controller": "controller",
         "saddle_seatpost": "saddle/seatpost",
         "cockpit": "handlebar/stem/grips",
-        "wheels": "wheelset",
         "frame": "steel frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1548,
+      "estimated_component_total": 1418,
       "retail_price": 1499.0,
-      "bom_pct_of_retail": 1.033
+      "bom_pct_of_retail": 0.946
     },
     {
       "brand": "lectric",
@@ -2934,7 +2932,6 @@
         "battery": 302,
         "motor": 214,
         "frame": 200,
-        "wheels": 130,
         "assembly_misc": 120,
         "brakes": 95,
         "fork_suspension": 95,
@@ -2963,13 +2960,12 @@
         "controller": "controller",
         "saddle_seatpost": "saddle/seatpost",
         "cockpit": "handlebar/stem/grips",
-        "wheels": "wheelset",
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1838,
+      "estimated_component_total": 1708,
       "retail_price": 1499.0,
-      "bom_pct_of_retail": 1.226
+      "bom_pct_of_retail": 1.139
     },
     {
       "brand": "lectric",
@@ -3498,7 +3494,7 @@
       "component_costs": {
         "battery": 395,
         "frame": 200,
-        "motor": 180,
+        "motor": 152,
         "wheels": 130,
         "assembly_misc": 120,
         "drivetrain": 105,
@@ -3531,9 +3527,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1610,
+      "estimated_component_total": 1582,
       "retail_price": 2199.99,
-      "bom_pct_of_retail": 0.732
+      "bom_pct_of_retail": 0.719
     },
     {
       "brand": "mokwheel",
@@ -3542,7 +3538,7 @@
       "component_costs": {
         "battery": 395,
         "frame": 200,
-        "motor": 180,
+        "motor": 152,
         "wheels": 130,
         "assembly_misc": 120,
         "drivetrain": 105,
@@ -3575,21 +3571,21 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1610,
+      "estimated_component_total": 1582,
       "retail_price": 2199.99,
-      "bom_pct_of_retail": 0.732
+      "bom_pct_of_retail": 0.719
     },
     {
       "brand": "mokwheel",
       "model": "Onyx Ebike",
       "warranty": "2-Year Warranty",
       "component_costs": {
-        "motor": 430,
+        "motor": 380,
         "frame": 200,
+        "brakes": 130,
         "wheels": 130,
         "assembly_misc": 120,
         "drivetrain": 105,
-        "brakes": 95,
         "fork_suspension": 95,
         "tires": 80,
         "saddle_seatpost": 45,
@@ -3602,7 +3598,7 @@
       },
       "notes": {
         "motor": "mid-drive",
-        "brakes": "hydraulic disc",
+        "brakes": "hydraulic disc, 4-piston",
         "drivetrain": "10-speed derailleur",
         "fork_suspension": "suspension fork",
         "display": "LCD display",
@@ -3617,21 +3613,21 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1465,
+      "estimated_component_total": 1450,
       "retail_price": 3299.99,
-      "bom_pct_of_retail": 0.444
+      "bom_pct_of_retail": 0.439
     },
     {
       "brand": "mokwheel",
       "model": "Onyx ST Ebike",
       "warranty": "2-Year Warranty",
       "component_costs": {
-        "motor": 430,
+        "motor": 380,
         "frame": 200,
+        "brakes": 130,
         "wheels": 130,
         "assembly_misc": 120,
         "drivetrain": 105,
-        "brakes": 95,
         "fork_suspension": 95,
         "tires": 80,
         "saddle_seatpost": 45,
@@ -3644,7 +3640,7 @@
       },
       "notes": {
         "motor": "mid-drive",
-        "brakes": "hydraulic disc",
+        "brakes": "hydraulic disc, 4-piston",
         "drivetrain": "10-speed derailleur",
         "fork_suspension": "suspension fork",
         "display": "LCD display",
@@ -3659,9 +3655,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1465,
+      "estimated_component_total": 1450,
       "retail_price": 3299.99,
-      "bom_pct_of_retail": 0.444
+      "bom_pct_of_retail": 0.439
     },
     {
       "brand": "mokwheel",
@@ -4069,10 +4065,10 @@
         "battery": 481,
         "fork_suspension": 240,
         "frame": 200,
+        "brakes": 130,
         "wheels": 130,
         "motor": 125,
         "assembly_misc": 120,
-        "brakes": 95,
         "drivetrain": 87,
         "tires": 55,
         "controller": 40,
@@ -4086,7 +4082,7 @@
       "notes": {
         "battery": "1040Wh @ ~$0.42/Wh",
         "motor": "hub motor",
-        "brakes": "hydraulic disc",
+        "brakes": "hydraulic disc, 4-piston",
         "drivetrain": "~7-speed derailleur",
         "fork_suspension": "full suspension",
         "display": "LCD display",
@@ -4101,9 +4097,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1746,
+      "estimated_component_total": 1781,
       "retail_price": 2195.0,
-      "bom_pct_of_retail": 0.795
+      "bom_pct_of_retail": 0.811
     },
     {
       "brand": "ride1up",
@@ -4113,8 +4109,8 @@
         "battery": 437,
         "frame": 200,
         "motor": 152,
+        "brakes": 130,
         "assembly_misc": 120,
-        "brakes": 95,
         "fork_suspension": 95,
         "drivetrain": 87,
         "tires": 80,
@@ -4129,7 +4125,7 @@
       "notes": {
         "battery": "1040Wh @ ~$0.42/Wh",
         "motor": "hub motor",
-        "brakes": "hydraulic disc",
+        "brakes": "hydraulic disc, 4-piston",
         "drivetrain": "~7-speed derailleur",
         "fork_suspension": "suspension fork",
         "display": "color/TFT display",
@@ -4143,9 +4139,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1516,
+      "estimated_component_total": 1551,
       "retail_price": 2395.0,
-      "bom_pct_of_retail": 0.633
+      "bom_pct_of_retail": 0.648
     },
     {
       "brand": "ride1up",
@@ -4155,11 +4151,11 @@
         "battery": 481,
         "frame": 200,
         "fork_suspension": 175,
+        "brakes": 130,
         "motor": 125,
         "assembly_misc": 120,
-        "brakes": 95,
         "drivetrain": 87,
-        "tires": 55,
+        "tires": 80,
         "controller": 40,
         "cockpit": 40,
         "sensor": 35,
@@ -4171,11 +4167,11 @@
       "notes": {
         "battery": "1040Wh @ ~$0.42/Wh",
         "motor": "hub motor",
-        "brakes": "hydraulic disc",
+        "brakes": "hydraulic disc, 4-piston",
         "drivetrain": "~7-speed derailleur",
         "fork_suspension": "air suspension fork",
         "display": "LCD display",
-        "tires": "tires",
+        "tires": "fat tires",
         "lights": "lights",
         "fenders": "fenders",
         "throttle": "throttle",
@@ -4185,9 +4181,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1551,
+      "estimated_component_total": 1611,
       "retail_price": 1895.0,
-      "bom_pct_of_retail": 0.818
+      "bom_pct_of_retail": 0.85
     },
     {
       "brand": "ride1up",
@@ -4196,12 +4192,12 @@
       "component_costs": {
         "battery": 361,
         "frame": 200,
+        "brakes": 130,
         "motor": 125,
         "assembly_misc": 120,
-        "brakes": 95,
         "fork_suspension": 95,
         "drivetrain": 87,
-        "tires": 55,
+        "tires": 80,
         "controller": 40,
         "cockpit": 40,
         "sensor": 35,
@@ -4213,11 +4209,11 @@
       "notes": {
         "battery": "780Wh @ ~$0.42/Wh",
         "motor": "hub motor",
-        "brakes": "hydraulic disc",
+        "brakes": "hydraulic disc, 4-piston",
         "drivetrain": "~7-speed derailleur",
         "fork_suspension": "suspension fork",
         "display": "LCD display",
-        "tires": "tires",
+        "tires": "fat tires",
         "lights": "lights",
         "fenders": "fenders",
         "throttle": "throttle",
@@ -4227,9 +4223,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1351,
+      "estimated_component_total": 1411,
       "retail_price": 1695.0,
-      "bom_pct_of_retail": 0.797
+      "bom_pct_of_retail": 0.832
     },
     {
       "brand": "ride1up",
@@ -4242,7 +4238,7 @@
         "fork_suspension": 175,
         "wheels": 130,
         "assembly_misc": 120,
-        "drivetrain": 87,
+        "drivetrain": 105,
         "display": 65,
         "brakes": 60,
         "tires": 55,
@@ -4255,7 +4251,7 @@
         "battery": "504Wh @ ~$0.42/Wh",
         "motor": "mid-drive (premium brand)",
         "brakes": "disc brakes",
-        "drivetrain": "~7-speed derailleur",
+        "drivetrain": "10-speed derailleur",
         "fork_suspension": "air suspension fork",
         "display": "color/TFT display",
         "tires": "tires",
@@ -4267,9 +4263,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1795,
+      "estimated_component_total": 1813,
       "retail_price": 1995.0,
-      "bom_pct_of_retail": 0.9
+      "bom_pct_of_retail": 0.909
     },
     {
       "brand": "ride1up",
@@ -4324,11 +4320,11 @@
       "component_costs": {
         "battery": 324,
         "frame": 200,
+        "brakes": 130,
         "wheels": 130,
         "motor": 125,
         "assembly_misc": 120,
         "drivetrain": 99,
-        "brakes": 95,
         "tires": 55,
         "fork_suspension": 45,
         "saddle_seatpost": 45,
@@ -4343,7 +4339,7 @@
       "notes": {
         "battery": "772Wh @ ~$0.42/Wh",
         "motor": "hub motor",
-        "brakes": "hydraulic disc",
+        "brakes": "hydraulic disc, 4-piston",
         "drivetrain": "9-speed derailleur",
         "fork_suspension": "rigid fork",
         "display": "LCD display",
@@ -4359,9 +4355,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1443,
+      "estimated_component_total": 1478,
       "retail_price": 3799.99,
-      "bom_pct_of_retail": 0.38
+      "bom_pct_of_retail": 0.389
     },
     {
       "brand": "specialized",
@@ -4370,11 +4366,11 @@
       "component_costs": {
         "battery": 324,
         "frame": 200,
+        "brakes": 130,
         "wheels": 130,
         "motor": 125,
         "assembly_misc": 120,
         "drivetrain": 99,
-        "brakes": 95,
         "tires": 55,
         "fork_suspension": 45,
         "saddle_seatpost": 45,
@@ -4389,7 +4385,7 @@
       "notes": {
         "battery": "772Wh @ ~$0.42/Wh",
         "motor": "hub motor",
-        "brakes": "hydraulic disc",
+        "brakes": "hydraulic disc, 4-piston",
         "drivetrain": "9-speed derailleur",
         "fork_suspension": "rigid fork",
         "display": "LCD display",
@@ -4405,9 +4401,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1443,
+      "estimated_component_total": 1478,
       "retail_price": 2699.99,
-      "bom_pct_of_retail": 0.534
+      "bom_pct_of_retail": 0.547
     },
     {
       "brand": "specialized",
@@ -4417,13 +4413,13 @@
         "frame": 520,
         "battery": 353,
         "motor": 339,
+        "brakes": 130,
         "wheels": 130,
         "assembly_misc": 120,
         "drivetrain": 117,
-        "brakes": 95,
-        "fork_suspension": 95,
+        "tires": 80,
         "display": 65,
-        "tires": 55,
+        "fork_suspension": 45,
         "saddle_seatpost": 45,
         "cockpit": 40,
         "charger": 35
@@ -4431,11 +4427,11 @@
       "notes": {
         "battery": "840Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
-        "brakes": "hydraulic disc",
+        "brakes": "hydraulic disc, 4-piston",
         "drivetrain": "12-speed derailleur",
-        "fork_suspension": "suspension fork",
+        "fork_suspension": "rigid fork",
         "display": "color/TFT display",
-        "tires": "tires",
+        "tires": "fat tires",
         "charger": "charger",
         "saddle_seatpost": "saddle/seatpost",
         "cockpit": "handlebar/stem/grips",
@@ -4443,9 +4439,9 @@
         "frame": "carbon frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 2009,
+      "estimated_component_total": 2019,
       "retail_price": 8499.99,
-      "bom_pct_of_retail": 0.236
+      "bom_pct_of_retail": 0.238
     },
     {
       "brand": "specialized",
@@ -4455,13 +4451,13 @@
         "frame": 520,
         "battery": 353,
         "motor": 339,
+        "brakes": 130,
         "wheels": 130,
         "assembly_misc": 120,
         "drivetrain": 117,
-        "brakes": 95,
-        "fork_suspension": 95,
+        "tires": 80,
         "display": 65,
-        "tires": 55,
+        "fork_suspension": 45,
         "saddle_seatpost": 45,
         "cockpit": 40,
         "charger": 35
@@ -4469,11 +4465,11 @@
       "notes": {
         "battery": "840Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
-        "brakes": "hydraulic disc",
+        "brakes": "hydraulic disc, 4-piston",
         "drivetrain": "12-speed derailleur",
-        "fork_suspension": "suspension fork",
+        "fork_suspension": "rigid fork",
         "display": "color/TFT display",
-        "tires": "tires",
+        "tires": "fat tires",
         "charger": "charger",
         "saddle_seatpost": "saddle/seatpost",
         "cockpit": "handlebar/stem/grips",
@@ -4481,9 +4477,9 @@
         "frame": "carbon frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 2009,
+      "estimated_component_total": 2019,
       "retail_price": 10499.99,
-      "bom_pct_of_retail": 0.191
+      "bom_pct_of_retail": 0.192
     },
     {
       "brand": "specialized",
@@ -4495,7 +4491,7 @@
         "battery": 134,
         "wheels": 130,
         "assembly_misc": 120,
-        "drivetrain": 87,
+        "drivetrain": 117,
         "display": 65,
         "brakes": 60,
         "tires": 55,
@@ -4508,7 +4504,7 @@
         "battery": "320Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
         "brakes": "disc brakes",
-        "drivetrain": "~7-speed derailleur",
+        "drivetrain": "12-speed derailleur",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
         "tires": "tires",
@@ -4519,9 +4515,9 @@
         "frame": "carbon frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1641,
+      "estimated_component_total": 1671,
       "retail_price": 14399.99,
-      "bom_pct_of_retail": 0.114
+      "bom_pct_of_retail": 0.116
     },
     {
       "brand": "specialized",
@@ -4559,12 +4555,12 @@
         "battery": 353,
         "motor": 344,
         "frame": 200,
+        "brakes": 130,
         "wheels": 130,
         "assembly_misc": 120,
-        "brakes": 95,
         "drivetrain": 87,
+        "tires": 80,
         "display": 65,
-        "tires": 55,
         "fork_suspension": 45,
         "saddle_seatpost": 45,
         "cockpit": 40,
@@ -4573,11 +4569,11 @@
       "notes": {
         "battery": "840Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
-        "brakes": "hydraulic disc",
+        "brakes": "hydraulic disc, 4-piston",
         "drivetrain": "~7-speed derailleur",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
-        "tires": "tires",
+        "tires": "fat tires",
         "charger": "charger",
         "saddle_seatpost": "saddle/seatpost",
         "cockpit": "handlebar/stem/grips",
@@ -4585,9 +4581,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1614,
+      "estimated_component_total": 1674,
       "retail_price": 11499.99,
-      "bom_pct_of_retail": 0.14
+      "bom_pct_of_retail": 0.146
     },
     {
       "brand": "specialized",
@@ -4627,10 +4623,10 @@
         "motor": 344,
         "wheels": 130,
         "assembly_misc": 120,
+        "brakes": 95,
         "drivetrain": 87,
+        "tires": 80,
         "display": 65,
-        "brakes": 60,
-        "tires": 55,
         "fork_suspension": 45,
         "saddle_seatpost": 45,
         "cockpit": 40,
@@ -4639,11 +4635,11 @@
       "notes": {
         "battery": "840Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
-        "brakes": "disc brakes",
+        "brakes": "disc brakes, 4-piston",
         "drivetrain": "~7-speed derailleur",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
-        "tires": "tires",
+        "tires": "fat tires",
         "charger": "charger",
         "saddle_seatpost": "saddle/seatpost",
         "cockpit": "handlebar/stem/grips",
@@ -4651,9 +4647,9 @@
         "frame": "carbon frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1899,
+      "estimated_component_total": 1959,
       "retail_price": 19999.99,
-      "bom_pct_of_retail": 0.095
+      "bom_pct_of_retail": 0.098
     },
     {
       "brand": "specialized",
@@ -4663,9 +4659,9 @@
         "frame": 520,
         "battery": 353,
         "motor": 344,
+        "brakes": 130,
         "wheels": 130,
         "assembly_misc": 120,
-        "brakes": 95,
         "drivetrain": 87,
         "display": 65,
         "tires": 55,
@@ -4677,7 +4673,7 @@
       "notes": {
         "battery": "840Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
-        "brakes": "hydraulic disc",
+        "brakes": "hydraulic disc, 4-piston",
         "drivetrain": "~7-speed derailleur",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
@@ -4689,9 +4685,9 @@
         "frame": "carbon frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1934,
+      "estimated_component_total": 1969,
       "retail_price": 11499.99,
-      "bom_pct_of_retail": 0.168
+      "bom_pct_of_retail": 0.171
     },
     {
       "brand": "specialized",
@@ -4701,10 +4697,10 @@
         "frame": 520,
         "motor": 305,
         "battery": 134,
+        "brakes": 130,
         "wheels": 130,
         "assembly_misc": 120,
         "drivetrain": 117,
-        "brakes": 95,
         "display": 65,
         "tires": 55,
         "fork_suspension": 45,
@@ -4715,7 +4711,7 @@
       "notes": {
         "battery": "320Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
-        "brakes": "hydraulic disc",
+        "brakes": "hydraulic disc, 4-piston",
         "drivetrain": "12-speed derailleur",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
@@ -4727,9 +4723,9 @@
         "frame": "carbon frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1706,
+      "estimated_component_total": 1741,
       "retail_price": 11999.99,
-      "bom_pct_of_retail": 0.142
+      "bom_pct_of_retail": 0.145
     },
     {
       "brand": "specialized",
@@ -4769,9 +4765,9 @@
         "frame": 200,
         "wheels": 130,
         "assembly_misc": 120,
+        "drivetrain": 99,
         "brakes": 95,
         "fork_suspension": 95,
-        "drivetrain": 87,
         "tires": 55,
         "saddle_seatpost": 45,
         "cockpit": 40,
@@ -4786,7 +4782,7 @@
         "battery": "710Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
         "brakes": "hydraulic disc",
-        "drivetrain": "~7-speed derailleur",
+        "drivetrain": "9-speed derailleur",
         "fork_suspension": "suspension fork",
         "display": "LCD display",
         "tires": "tires",
@@ -4801,9 +4797,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1635,
+      "estimated_component_total": 1647,
       "retail_price": 4499.99,
-      "bom_pct_of_retail": 0.363
+      "bom_pct_of_retail": 0.366
     },
     {
       "brand": "specialized",
@@ -4862,7 +4858,7 @@
         "frame": 200,
         "wheels": 130,
         "assembly_misc": 120,
-        "brakes": 60,
+        "brakes": 95,
         "tires": 55,
         "fork_suspension": 45,
         "saddle_seatpost": 45,
@@ -4877,7 +4873,7 @@
       "notes": {
         "battery": "710Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
-        "brakes": "disc brakes",
+        "brakes": "disc brakes, 4-piston",
         "drivetrain": "belt / internally-geared / CVT",
         "fork_suspension": "rigid fork",
         "display": "LCD display",
@@ -4893,9 +4889,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1783,
+      "estimated_component_total": 1818,
       "retail_price": 6499.99,
-      "bom_pct_of_retail": 0.274
+      "bom_pct_of_retail": 0.28
     },
     {
       "brand": "specialized",
@@ -4908,8 +4904,8 @@
         "wheels": 130,
         "assembly_misc": 120,
         "drivetrain": 117,
+        "brakes": 95,
         "display": 65,
-        "brakes": 60,
         "tires": 55,
         "fork_suspension": 45,
         "saddle_seatpost": 45,
@@ -4919,7 +4915,7 @@
       "notes": {
         "battery": "320Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
-        "brakes": "disc brakes",
+        "brakes": "hydraulic disc",
         "drivetrain": "12-speed derailleur",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
@@ -4931,9 +4927,9 @@
         "frame": "carbon frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1671,
+      "estimated_component_total": 1706,
       "retail_price": 6999.99,
-      "bom_pct_of_retail": 0.239
+      "bom_pct_of_retail": 0.244
     },
     {
       "brand": "specialized",
@@ -5057,12 +5053,12 @@
         "frame": 520,
         "motor": 305,
         "battery": 134,
+        "brakes": 130,
         "wheels": 130,
         "assembly_misc": 120,
         "drivetrain": 117,
-        "brakes": 95,
+        "tires": 80,
         "display": 65,
-        "tires": 55,
         "fork_suspension": 45,
         "saddle_seatpost": 45,
         "cockpit": 40,
@@ -5071,11 +5067,11 @@
       "notes": {
         "battery": "320Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
-        "brakes": "hydraulic disc",
+        "brakes": "hydraulic disc, 4-piston",
         "drivetrain": "12-speed derailleur",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
-        "tires": "tires",
+        "tires": "fat tires",
         "charger": "charger",
         "saddle_seatpost": "saddle/seatpost",
         "cockpit": "handlebar/stem/grips",
@@ -5083,9 +5079,9 @@
         "frame": "carbon frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1706,
+      "estimated_component_total": 1766,
       "retail_price": 5999.99,
-      "bom_pct_of_retail": 0.284
+      "bom_pct_of_retail": 0.294
     },
     {
       "brand": "specialized",
@@ -5098,9 +5094,9 @@
         "wheels": 130,
         "assembly_misc": 120,
         "drivetrain": 87,
+        "tires": 80,
         "display": 65,
         "brakes": 60,
-        "tires": 55,
         "fork_suspension": 45,
         "saddle_seatpost": 45,
         "cockpit": 40,
@@ -5113,7 +5109,7 @@
         "drivetrain": "~7-speed derailleur",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
-        "tires": "tires",
+        "tires": "fat tires",
         "charger": "charger",
         "saddle_seatpost": "saddle/seatpost",
         "cockpit": "handlebar/stem/grips",
@@ -5121,9 +5117,9 @@
         "frame": "carbon frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1641,
+      "estimated_component_total": 1666,
       "retail_price": 6999.99,
-      "bom_pct_of_retail": 0.234
+      "bom_pct_of_retail": 0.238
     },
     {
       "brand": "specialized",
@@ -5136,9 +5132,9 @@
         "wheels": 130,
         "assembly_misc": 120,
         "drivetrain": 87,
+        "tires": 80,
         "display": 65,
         "brakes": 60,
-        "tires": 55,
         "fork_suspension": 45,
         "saddle_seatpost": 45,
         "cockpit": 40,
@@ -5151,7 +5147,7 @@
         "drivetrain": "~7-speed derailleur",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
-        "tires": "tires",
+        "tires": "fat tires",
         "charger": "charger",
         "saddle_seatpost": "saddle/seatpost",
         "cockpit": "handlebar/stem/grips",
@@ -5159,9 +5155,9 @@
         "frame": "carbon frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1641,
+      "estimated_component_total": 1666,
       "retail_price": 9999.99,
-      "bom_pct_of_retail": 0.164
+      "bom_pct_of_retail": 0.167
     },
     {
       "brand": "specialized",
@@ -5171,12 +5167,12 @@
         "battery": 353,
         "motor": 339,
         "frame": 200,
+        "brakes": 130,
         "wheels": 130,
         "assembly_misc": 120,
-        "brakes": 95,
-        "drivetrain": 87,
+        "drivetrain": 117,
+        "tires": 80,
         "display": 65,
-        "tires": 55,
         "fork_suspension": 45,
         "saddle_seatpost": 45,
         "cockpit": 40,
@@ -5185,11 +5181,11 @@
       "notes": {
         "battery": "840Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
-        "brakes": "hydraulic disc",
-        "drivetrain": "~7-speed derailleur",
+        "brakes": "hydraulic disc, 4-piston",
+        "drivetrain": "12-speed derailleur",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
-        "tires": "tires",
+        "tires": "fat tires",
         "charger": "charger",
         "saddle_seatpost": "saddle/seatpost",
         "cockpit": "handlebar/stem/grips",
@@ -5197,9 +5193,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1609,
+      "estimated_component_total": 1699,
       "retail_price": 4999.99,
-      "bom_pct_of_retail": 0.322
+      "bom_pct_of_retail": 0.34
     },
     {
       "brand": "specialized",
@@ -5209,12 +5205,12 @@
         "frame": 520,
         "battery": 353,
         "motor": 339,
+        "brakes": 130,
         "wheels": 130,
         "assembly_misc": 120,
-        "brakes": 95,
-        "drivetrain": 87,
+        "drivetrain": 117,
+        "tires": 80,
         "display": 65,
-        "tires": 55,
         "fork_suspension": 45,
         "saddle_seatpost": 45,
         "cockpit": 40,
@@ -5223,11 +5219,11 @@
       "notes": {
         "battery": "840Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
-        "brakes": "hydraulic disc",
-        "drivetrain": "~7-speed derailleur",
+        "brakes": "hydraulic disc, 4-piston",
+        "drivetrain": "12-speed derailleur",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
-        "tires": "tires",
+        "tires": "fat tires",
         "charger": "charger",
         "saddle_seatpost": "saddle/seatpost",
         "cockpit": "handlebar/stem/grips",
@@ -5235,9 +5231,9 @@
         "frame": "carbon frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1929,
+      "estimated_component_total": 2019,
       "retail_price": 7999.99,
-      "bom_pct_of_retail": 0.241
+      "bom_pct_of_retail": 0.252
     },
     {
       "brand": "specialized",
@@ -5247,12 +5243,12 @@
         "battery": 353,
         "motor": 339,
         "frame": 200,
+        "brakes": 130,
         "wheels": 130,
         "assembly_misc": 120,
         "drivetrain": 117,
-        "brakes": 95,
+        "tires": 80,
         "display": 65,
-        "tires": 55,
         "fork_suspension": 45,
         "saddle_seatpost": 45,
         "cockpit": 40,
@@ -5261,11 +5257,11 @@
       "notes": {
         "battery": "840Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
-        "brakes": "hydraulic disc",
+        "brakes": "hydraulic disc, 4-piston",
         "drivetrain": "12-speed derailleur",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
-        "tires": "tires",
+        "tires": "fat tires",
         "charger": "charger",
         "saddle_seatpost": "saddle/seatpost",
         "cockpit": "handlebar/stem/grips",
@@ -5273,9 +5269,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1639,
+      "estimated_component_total": 1699,
       "retail_price": 6699.99,
-      "bom_pct_of_retail": 0.245
+      "bom_pct_of_retail": 0.254
     },
     {
       "brand": "specialized",
@@ -5285,12 +5281,12 @@
         "frame": 520,
         "battery": 353,
         "motor": 339,
+        "brakes": 130,
         "wheels": 130,
         "assembly_misc": 120,
-        "brakes": 95,
         "drivetrain": 87,
+        "tires": 80,
         "display": 65,
-        "tires": 55,
         "fork_suspension": 45,
         "saddle_seatpost": 45,
         "cockpit": 40,
@@ -5299,11 +5295,11 @@
       "notes": {
         "battery": "840Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
-        "brakes": "hydraulic disc",
+        "brakes": "hydraulic disc, 4-piston",
         "drivetrain": "~7-speed derailleur",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
-        "tires": "tires",
+        "tires": "fat tires",
         "charger": "charger",
         "saddle_seatpost": "saddle/seatpost",
         "cockpit": "handlebar/stem/grips",
@@ -5311,9 +5307,9 @@
         "frame": "carbon frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1929,
+      "estimated_component_total": 1989,
       "retail_price": 8499.99,
-      "bom_pct_of_retail": 0.227
+      "bom_pct_of_retail": 0.234
     },
     {
       "brand": "specialized",
@@ -5323,12 +5319,12 @@
         "frame": 520,
         "battery": 353,
         "motor": 339,
+        "brakes": 130,
         "wheels": 130,
         "assembly_misc": 120,
-        "brakes": 95,
-        "drivetrain": 87,
+        "drivetrain": 117,
+        "tires": 80,
         "display": 65,
-        "tires": 55,
         "fork_suspension": 45,
         "saddle_seatpost": 45,
         "cockpit": 40,
@@ -5337,11 +5333,11 @@
       "notes": {
         "battery": "840Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
-        "brakes": "hydraulic disc",
-        "drivetrain": "~7-speed derailleur",
+        "brakes": "hydraulic disc, 4-piston",
+        "drivetrain": "12-speed derailleur",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
-        "tires": "tires",
+        "tires": "fat tires",
         "charger": "charger",
         "saddle_seatpost": "saddle/seatpost",
         "cockpit": "handlebar/stem/grips",
@@ -5349,9 +5345,9 @@
         "frame": "carbon frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1929,
+      "estimated_component_total": 2019,
       "retail_price": 9999.99,
-      "bom_pct_of_retail": 0.193
+      "bom_pct_of_retail": 0.202
     },
     {
       "brand": "specialized",
@@ -5361,10 +5357,10 @@
         "frame": 520,
         "battery": 353,
         "motor": 339,
+        "brakes": 130,
         "wheels": 130,
         "assembly_misc": 120,
         "drivetrain": 117,
-        "brakes": 95,
         "display": 65,
         "tires": 55,
         "fork_suspension": 45,
@@ -5375,7 +5371,7 @@
       "notes": {
         "battery": "840Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
-        "brakes": "hydraulic disc",
+        "brakes": "hydraulic disc, 4-piston",
         "drivetrain": "12-speed derailleur",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
@@ -5387,9 +5383,9 @@
         "frame": "carbon frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1959,
+      "estimated_component_total": 1994,
       "retail_price": 7999.99,
-      "bom_pct_of_retail": 0.245
+      "bom_pct_of_retail": 0.249
     },
     {
       "brand": "specialized",
@@ -5399,10 +5395,10 @@
         "battery": 353,
         "motor": 339,
         "frame": 200,
+        "brakes": 130,
         "wheels": 130,
         "assembly_misc": 120,
         "drivetrain": 117,
-        "brakes": 95,
         "display": 65,
         "tires": 55,
         "fork_suspension": 45,
@@ -5413,7 +5409,7 @@
       "notes": {
         "battery": "840Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
-        "brakes": "hydraulic disc",
+        "brakes": "hydraulic disc, 4-piston",
         "drivetrain": "12-speed derailleur",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
@@ -5425,9 +5421,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1639,
+      "estimated_component_total": 1674,
       "retail_price": 6699.99,
-      "bom_pct_of_retail": 0.245
+      "bom_pct_of_retail": 0.25
     },
     {
       "brand": "specialized",
@@ -5437,10 +5433,10 @@
         "frame": 520,
         "battery": 353,
         "motor": 339,
+        "brakes": 130,
         "wheels": 130,
         "assembly_misc": 120,
         "drivetrain": 117,
-        "brakes": 95,
         "display": 65,
         "tires": 55,
         "fork_suspension": 45,
@@ -5451,7 +5447,7 @@
       "notes": {
         "battery": "840Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
-        "brakes": "hydraulic disc",
+        "brakes": "hydraulic disc, 4-piston",
         "drivetrain": "12-speed derailleur",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
@@ -5463,9 +5459,9 @@
         "frame": "carbon frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1959,
+      "estimated_component_total": 1994,
       "retail_price": 8999.99,
-      "bom_pct_of_retail": 0.218
+      "bom_pct_of_retail": 0.222
     },
     {
       "brand": "specialized",
@@ -5475,9 +5471,9 @@
         "frame": 520,
         "motor": 305,
         "battery": 134,
+        "brakes": 130,
         "wheels": 130,
         "assembly_misc": 120,
-        "brakes": 95,
         "drivetrain": 87,
         "display": 65,
         "tires": 55,
@@ -5489,7 +5485,7 @@
       "notes": {
         "battery": "320Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
-        "brakes": "hydraulic disc",
+        "brakes": "hydraulic disc, 4-piston",
         "drivetrain": "~7-speed derailleur",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
@@ -5501,9 +5497,9 @@
         "frame": "carbon frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1676,
+      "estimated_component_total": 1711,
       "retail_price": 7699.99,
-      "bom_pct_of_retail": 0.218
+      "bom_pct_of_retail": 0.222
     },
     {
       "brand": "specialized",
@@ -5513,9 +5509,9 @@
         "motor": 285,
         "frame": 200,
         "battery": 134,
+        "brakes": 130,
         "wheels": 130,
         "assembly_misc": 120,
-        "brakes": 95,
         "drivetrain": 87,
         "display": 65,
         "tires": 55,
@@ -5527,7 +5523,7 @@
       "notes": {
         "battery": "320Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
-        "brakes": "hydraulic disc",
+        "brakes": "hydraulic disc, 4-piston",
         "drivetrain": "~7-speed derailleur",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
@@ -5539,9 +5535,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1336,
+      "estimated_component_total": 1371,
       "retail_price": 7099.99,
-      "bom_pct_of_retail": 0.188
+      "bom_pct_of_retail": 0.193
     },
     {
       "brand": "specialized",
@@ -5551,12 +5547,12 @@
         "frame": 520,
         "motor": 285,
         "battery": 134,
+        "brakes": 130,
         "wheels": 130,
         "assembly_misc": 120,
-        "brakes": 95,
         "drivetrain": 87,
+        "tires": 80,
         "display": 65,
-        "tires": 55,
         "fork_suspension": 45,
         "saddle_seatpost": 45,
         "cockpit": 40,
@@ -5565,11 +5561,11 @@
       "notes": {
         "battery": "320Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
-        "brakes": "hydraulic disc",
+        "brakes": "hydraulic disc, 4-piston",
         "drivetrain": "~7-speed derailleur",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
-        "tires": "tires",
+        "tires": "fat tires",
         "charger": "charger",
         "saddle_seatpost": "saddle/seatpost",
         "cockpit": "handlebar/stem/grips",
@@ -5577,9 +5573,9 @@
         "frame": "carbon frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1656,
+      "estimated_component_total": 1716,
       "retail_price": 8999.99,
-      "bom_pct_of_retail": 0.184
+      "bom_pct_of_retail": 0.191
     },
     {
       "brand": "specialized",
@@ -5592,8 +5588,8 @@
         "wheels": 130,
         "assembly_misc": 120,
         "drivetrain": 117,
+        "brakes": 95,
         "display": 65,
-        "brakes": 60,
         "tires": 55,
         "fork_suspension": 45,
         "saddle_seatpost": 45,
@@ -5603,7 +5599,7 @@
       "notes": {
         "battery": "320Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
-        "brakes": "disc brakes",
+        "brakes": "disc brakes, 4-piston",
         "drivetrain": "12-speed derailleur",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
@@ -5615,9 +5611,9 @@
         "frame": "carbon frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1671,
+      "estimated_component_total": 1706,
       "retail_price": 8499.99,
-      "bom_pct_of_retail": 0.197
+      "bom_pct_of_retail": 0.201
     },
     {
       "brand": "specialized",
@@ -5627,12 +5623,12 @@
         "frame": 520,
         "motor": 285,
         "battery": 134,
+        "brakes": 130,
         "wheels": 130,
         "assembly_misc": 120,
-        "brakes": 95,
         "drivetrain": 87,
+        "tires": 80,
         "display": 65,
-        "tires": 55,
         "fork_suspension": 45,
         "saddle_seatpost": 45,
         "cockpit": 40,
@@ -5641,11 +5637,11 @@
       "notes": {
         "battery": "320Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
-        "brakes": "hydraulic disc",
+        "brakes": "hydraulic disc, 4-piston",
         "drivetrain": "~7-speed derailleur",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
-        "tires": "tires",
+        "tires": "fat tires",
         "charger": "charger",
         "saddle_seatpost": "saddle/seatpost",
         "cockpit": "handlebar/stem/grips",
@@ -5653,9 +5649,9 @@
         "frame": "carbon frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1656,
+      "estimated_component_total": 1716,
       "retail_price": 9999.99,
-      "bom_pct_of_retail": 0.166
+      "bom_pct_of_retail": 0.172
     },
     {
       "brand": "specialized",
@@ -5667,7 +5663,7 @@
         "frame": 200,
         "wheels": 130,
         "assembly_misc": 120,
-        "drivetrain": 111,
+        "drivetrain": 99,
         "brakes": 95,
         "fork_suspension": 95,
         "tires": 55,
@@ -5684,7 +5680,7 @@
         "battery": "840Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
         "brakes": "hydraulic disc",
-        "drivetrain": "11-speed derailleur",
+        "drivetrain": "9-speed derailleur",
         "fork_suspension": "suspension fork",
         "display": "LCD display",
         "tires": "tires",
@@ -5699,9 +5695,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1748,
+      "estimated_component_total": 1736,
       "retail_price": 4499.99,
-      "bom_pct_of_retail": 0.388
+      "bom_pct_of_retail": 0.386
     },
     {
       "brand": "specialized",
@@ -5759,8 +5755,8 @@
         "frame": 200,
         "wheels": 130,
         "assembly_misc": 120,
+        "drivetrain": 117,
         "fork_suspension": 95,
-        "drivetrain": 87,
         "brakes": 60,
         "tires": 55,
         "saddle_seatpost": 45,
@@ -5776,7 +5772,7 @@
         "battery": "840Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
         "brakes": "disc brakes",
-        "drivetrain": "~7-speed derailleur",
+        "drivetrain": "12-speed derailleur",
         "fork_suspension": "suspension fork",
         "display": "LCD display",
         "tires": "tires",
@@ -5791,9 +5787,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1689,
+      "estimated_component_total": 1719,
       "retail_price": 6999.99,
-      "bom_pct_of_retail": 0.241
+      "bom_pct_of_retail": 0.246
     },
     {
       "brand": "specialized",
@@ -5806,8 +5802,8 @@
         "frame": 200,
         "wheels": 130,
         "assembly_misc": 120,
+        "brakes": 95,
         "fork_suspension": 95,
-        "brakes": 60,
         "tires": 55,
         "saddle_seatpost": 45,
         "cockpit": 40,
@@ -5821,7 +5817,7 @@
       "notes": {
         "battery": "840Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
-        "brakes": "disc brakes",
+        "brakes": "disc brakes, 4-piston",
         "drivetrain": "belt / internally-geared / CVT",
         "fork_suspension": "suspension fork",
         "display": "LCD display",
@@ -5837,9 +5833,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1922,
+      "estimated_component_total": 1957,
       "retail_price": 5499.99,
-      "bom_pct_of_retail": 0.349
+      "bom_pct_of_retail": 0.356
     },
     {
       "brand": "specialized",
@@ -5851,8 +5847,8 @@
         "frame": 200,
         "wheels": 130,
         "assembly_misc": 120,
+        "drivetrain": 117,
         "fork_suspension": 95,
-        "drivetrain": 87,
         "brakes": 60,
         "tires": 55,
         "saddle_seatpost": 45,
@@ -5868,7 +5864,7 @@
         "battery": "840Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
         "brakes": "disc brakes",
-        "drivetrain": "~7-speed derailleur",
+        "drivetrain": "12-speed derailleur",
         "fork_suspension": "suspension fork",
         "display": "LCD display",
         "tires": "tires",
@@ -5883,9 +5879,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1689,
+      "estimated_component_total": 1719,
       "retail_price": 7999.99,
-      "bom_pct_of_retail": 0.211
+      "bom_pct_of_retail": 0.215
     },
     {
       "brand": "specialized",
@@ -5897,9 +5893,9 @@
         "frame": 200,
         "wheels": 130,
         "assembly_misc": 120,
+        "drivetrain": 99,
         "brakes": 95,
         "fork_suspension": 95,
-        "drivetrain": 87,
         "display": 65,
         "tires": 55,
         "saddle_seatpost": 45,
@@ -5914,7 +5910,7 @@
         "battery": "710Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
         "brakes": "hydraulic disc",
-        "drivetrain": "~7-speed derailleur",
+        "drivetrain": "9-speed derailleur",
         "fork_suspension": "suspension fork",
         "display": "color/TFT display",
         "tires": "tires",
@@ -5929,9 +5925,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1645,
+      "estimated_component_total": 1657,
       "retail_price": 2799.99,
-      "bom_pct_of_retail": 0.588
+      "bom_pct_of_retail": 0.592
     },
     {
       "brand": "specialized",
@@ -5943,9 +5939,9 @@
         "frame": 200,
         "wheels": 130,
         "assembly_misc": 120,
+        "drivetrain": 99,
         "brakes": 95,
         "fork_suspension": 95,
-        "drivetrain": 87,
         "display": 65,
         "tires": 55,
         "saddle_seatpost": 45,
@@ -5960,7 +5956,7 @@
         "battery": "710Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
         "brakes": "hydraulic disc",
-        "drivetrain": "~7-speed derailleur",
+        "drivetrain": "9-speed derailleur",
         "fork_suspension": "suspension fork",
         "display": "color/TFT display",
         "tires": "tires",
@@ -5975,9 +5971,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1645,
+      "estimated_component_total": 1657,
       "retail_price": 2799.99,
-      "bom_pct_of_retail": 0.588
+      "bom_pct_of_retail": 0.592
     },
     {
       "brand": "specialized",
@@ -5990,8 +5986,8 @@
         "frame": 200,
         "wheels": 130,
         "assembly_misc": 120,
+        "brakes": 95,
         "display": 65,
-        "brakes": 60,
         "tires": 55,
         "fork_suspension": 45,
         "saddle_seatpost": 45,
@@ -6005,7 +6001,7 @@
       "notes": {
         "battery": "710Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
-        "brakes": "disc brakes",
+        "brakes": "disc brakes, 4-piston",
         "drivetrain": "belt / internally-geared / CVT",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
@@ -6021,9 +6017,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1793,
+      "estimated_component_total": 1828,
       "retail_price": 5249.99,
-      "bom_pct_of_retail": 0.342
+      "bom_pct_of_retail": 0.348
     },
     {
       "brand": "specialized",
@@ -6036,8 +6032,8 @@
         "frame": 200,
         "wheels": 130,
         "assembly_misc": 120,
+        "brakes": 95,
         "display": 65,
-        "brakes": 60,
         "tires": 55,
         "fork_suspension": 45,
         "saddle_seatpost": 45,
@@ -6051,7 +6047,7 @@
       "notes": {
         "battery": "710Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
-        "brakes": "disc brakes",
+        "brakes": "disc brakes, 4-piston",
         "drivetrain": "belt / internally-geared / CVT",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
@@ -6067,9 +6063,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1793,
+      "estimated_component_total": 1828,
       "retail_price": 5249.99,
-      "bom_pct_of_retail": 0.342
+      "bom_pct_of_retail": 0.348
     },
     {
       "brand": "specialized",
@@ -6081,7 +6077,7 @@
         "frame": 200,
         "wheels": 130,
         "assembly_misc": 120,
-        "drivetrain": 111,
+        "drivetrain": 105,
         "brakes": 95,
         "tires": 55,
         "fork_suspension": 45,
@@ -6095,7 +6091,7 @@
         "battery": "520Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
         "brakes": "hydraulic disc",
-        "drivetrain": "11-speed derailleur",
+        "drivetrain": "10-speed derailleur",
         "fork_suspension": "rigid fork",
         "display": "LCD display",
         "tires": "tires",
@@ -6107,9 +6103,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1457,
+      "estimated_component_total": 1451,
       "retail_price": 3599.99,
-      "bom_pct_of_retail": 0.405
+      "bom_pct_of_retail": 0.403
     },
     {
       "brand": "specialized",
@@ -6167,7 +6163,7 @@
         "frame": 200,
         "wheels": 130,
         "assembly_misc": 120,
-        "drivetrain": 111,
+        "drivetrain": 105,
         "brakes": 95,
         "tires": 55,
         "fork_suspension": 45,
@@ -6184,7 +6180,7 @@
         "battery": "520Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
         "brakes": "hydraulic disc",
-        "drivetrain": "11-speed derailleur",
+        "drivetrain": "10-speed derailleur",
         "fork_suspension": "rigid fork",
         "display": "LCD display",
         "tires": "tires",
@@ -6199,9 +6195,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1529,
+      "estimated_component_total": 1523,
       "retail_price": 3999.99,
-      "bom_pct_of_retail": 0.382
+      "bom_pct_of_retail": 0.381
     },
     {
       "brand": "specialized",
@@ -6437,7 +6433,7 @@
         "frame": 200,
         "wheels": 130,
         "assembly_misc": 120,
-        "drivetrain": 87,
+        "drivetrain": 117,
         "display": 65,
         "brakes": 60,
         "tires": 55,
@@ -6450,7 +6446,7 @@
         "battery": "520Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
         "brakes": "disc brakes",
-        "drivetrain": "~7-speed derailleur",
+        "drivetrain": "12-speed derailleur",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
         "tires": "tires",
@@ -6461,9 +6457,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1405,
+      "estimated_component_total": 1435,
       "retail_price": 9999.99,
-      "bom_pct_of_retail": 0.141
+      "bom_pct_of_retail": 0.144
     },
     {
       "brand": "tern",
@@ -6474,9 +6470,9 @@
         "motor": 305,
         "battery": 210,
         "frame": 200,
+        "brakes": 130,
         "wheels": 130,
         "assembly_misc": 120,
-        "brakes": 95,
         "display": 65,
         "tires": 55,
         "fork_suspension": 45,
@@ -6491,7 +6487,7 @@
       "notes": {
         "battery": "500Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
-        "brakes": "hydraulic disc",
+        "brakes": "hydraulic disc, 4-piston",
         "drivetrain": "belt / internally-geared / CVT",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
@@ -6507,9 +6503,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1767,
+      "estimated_component_total": 1802,
       "retail_price": 6999,
-      "bom_pct_of_retail": 0.252
+      "bom_pct_of_retail": 0.257
     },
     {
       "brand": "tern",
@@ -6519,9 +6515,9 @@
         "motor": 305,
         "battery": 210,
         "frame": 200,
+        "brakes": 130,
         "wheels": 130,
         "assembly_misc": 120,
-        "brakes": 95,
         "drivetrain": 87,
         "display": 65,
         "tires": 55,
@@ -6537,7 +6533,7 @@
       "notes": {
         "battery": "500Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
-        "brakes": "hydraulic disc",
+        "brakes": "hydraulic disc, 4-piston",
         "drivetrain": "~7-speed derailleur",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
@@ -6553,9 +6549,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1534,
+      "estimated_component_total": 1569,
       "retail_price": 5799,
-      "bom_pct_of_retail": 0.265
+      "bom_pct_of_retail": 0.271
     },
     {
       "brand": "tern",
@@ -6566,9 +6562,9 @@
         "drivetrain": 320,
         "motor": 278,
         "frame": 200,
+        "brakes": 130,
         "wheels": 130,
         "assembly_misc": 120,
-        "brakes": 95,
         "display": 65,
         "tires": 55,
         "fork_suspension": 45,
@@ -6583,7 +6579,7 @@
       "notes": {
         "battery": "800Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
-        "brakes": "hydraulic disc",
+        "brakes": "hydraulic disc, 4-piston",
         "drivetrain": "belt / internally-geared / CVT",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
@@ -6599,9 +6595,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1866,
+      "estimated_component_total": 1901,
       "retail_price": 10999,
-      "bom_pct_of_retail": 0.17
+      "bom_pct_of_retail": 0.173
     },
     {
       "brand": "tern",
@@ -6611,9 +6607,9 @@
         "battery": 336,
         "motor": 305,
         "frame": 200,
+        "brakes": 130,
         "wheels": 130,
         "assembly_misc": 120,
-        "brakes": 95,
         "drivetrain": 87,
         "display": 65,
         "tires": 55,
@@ -6629,7 +6625,7 @@
       "notes": {
         "battery": "800Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
-        "brakes": "hydraulic disc",
+        "brakes": "hydraulic disc, 4-piston",
         "drivetrain": "~7-speed derailleur",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
@@ -6645,9 +6641,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1660,
+      "estimated_component_total": 1695,
       "retail_price": 7999,
-      "bom_pct_of_retail": 0.208
+      "bom_pct_of_retail": 0.212
     },
     {
       "brand": "tern",
@@ -6922,9 +6918,9 @@
         "drivetrain": 320,
         "motor": 305,
         "frame": 200,
+        "brakes": 130,
         "wheels": 130,
         "assembly_misc": 120,
-        "brakes": 95,
         "tires": 80,
         "display": 65,
         "fork_suspension": 45,
@@ -6939,7 +6935,7 @@
       "notes": {
         "battery": "800Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
-        "brakes": "hydraulic disc",
+        "brakes": "hydraulic disc, 4-piston",
         "drivetrain": "belt / internally-geared / CVT",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
@@ -6955,9 +6951,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1918,
+      "estimated_component_total": 1953,
       "retail_price": 6999,
-      "bom_pct_of_retail": 0.274
+      "bom_pct_of_retail": 0.279
     },
     {
       "brand": "tern",
@@ -6967,12 +6963,12 @@
         "motor": 305,
         "battery": 304,
         "frame": 200,
+        "brakes": 130,
         "wheels": 130,
         "assembly_misc": 120,
-        "brakes": 95,
         "drivetrain": 87,
+        "tires": 80,
         "display": 65,
-        "tires": 55,
         "fork_suspension": 45,
         "saddle_seatpost": 45,
         "cockpit": 40,
@@ -6985,11 +6981,11 @@
       "notes": {
         "battery": "725Wh @ ~$0.42/Wh",
         "motor": "hub motor (premium brand)",
-        "brakes": "hydraulic disc",
+        "brakes": "hydraulic disc, 4-piston",
         "drivetrain": "~7-speed derailleur",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
-        "tires": "tires",
+        "tires": "fat tires",
         "lights": "lights",
         "fenders": "fenders",
         "rack": "rear rack",
@@ -7001,9 +6997,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1628,
+      "estimated_component_total": 1688,
       "retail_price": 4999,
-      "bom_pct_of_retail": 0.326
+      "bom_pct_of_retail": 0.338
     },
     {
       "brand": "tern",
@@ -7384,8 +7380,8 @@
         "assembly_misc": 120,
         "brakes": 95,
         "drivetrain": 93,
+        "tires": 80,
         "display": 65,
-        "tires": 55,
         "saddle_seatpost": 45,
         "cockpit": 40,
         "rack": 35,
@@ -7403,7 +7399,7 @@
         "drivetrain": "8-speed derailleur",
         "fork_suspension": "air suspension fork",
         "display": "color/TFT display",
-        "tires": "tires",
+        "tires": "fat tires",
         "lights": "lights",
         "fenders": "fenders",
         "rack": "rear rack",
@@ -7417,9 +7413,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1695,
+      "estimated_component_total": 1720,
       "retail_price": 1999.0,
-      "bom_pct_of_retail": 0.848
+      "bom_pct_of_retail": 0.86
     },
     {
       "brand": "velotric",
@@ -7434,8 +7430,8 @@
         "assembly_misc": 120,
         "drivetrain": 99,
         "brakes": 95,
+        "tires": 80,
         "display": 65,
-        "tires": 55,
         "saddle_seatpost": 45,
         "cockpit": 40,
         "rack": 35,
@@ -7453,7 +7449,7 @@
         "drivetrain": "9-speed derailleur",
         "fork_suspension": "air suspension fork",
         "display": "color/TFT display",
-        "tires": "tires",
+        "tires": "fat tires",
         "lights": "lights",
         "fenders": "fenders",
         "rack": "rear rack",
@@ -7467,9 +7463,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1707,
+      "estimated_component_total": 1732,
       "retail_price": 2499.0,
-      "bom_pct_of_retail": 0.683
+      "bom_pct_of_retail": 0.693
     },
     {
       "brand": "velotric",
@@ -7484,7 +7480,7 @@
         "brakes": 95,
         "fork_suspension": 95,
         "drivetrain": 87,
-        "tires": 55,
+        "tires": 80,
         "saddle_seatpost": 45,
         "cockpit": 40,
         "rack": 35,
@@ -7503,7 +7499,7 @@
         "drivetrain": "7-speed derailleur",
         "fork_suspension": "suspension fork",
         "display": "LCD display",
-        "tires": "tires",
+        "tires": "fat tires",
         "lights": "lights",
         "fenders": "fenders",
         "rack": "rear rack",
@@ -7517,9 +7513,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1489,
+      "estimated_component_total": 1514,
       "retail_price": 1299.0,
-      "bom_pct_of_retail": 1.146
+      "bom_pct_of_retail": 1.166
     },
     {
       "brand": "velotric",
@@ -7534,8 +7530,8 @@
         "brakes": 95,
         "fork_suspension": 95,
         "drivetrain": 87,
+        "tires": 80,
         "display": 65,
-        "tires": 55,
         "saddle_seatpost": 45,
         "cockpit": 40,
         "rack": 35,
@@ -7553,7 +7549,7 @@
         "drivetrain": "7-speed derailleur",
         "fork_suspension": "suspension fork",
         "display": "color/TFT display",
-        "tires": "tires",
+        "tires": "fat tires",
         "lights": "lights",
         "fenders": "fenders",
         "rack": "rear rack",
@@ -7567,9 +7563,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1526,
+      "estimated_component_total": 1551,
       "retail_price": 1499.0,
-      "bom_pct_of_retail": 1.018
+      "bom_pct_of_retail": 1.035
     },
     {
       "brand": "velotric",
@@ -7584,8 +7580,8 @@
         "brakes": 95,
         "fork_suspension": 95,
         "drivetrain": 93,
+        "tires": 80,
         "display": 65,
-        "tires": 55,
         "saddle_seatpost": 45,
         "cockpit": 40,
         "rack": 35,
@@ -7603,7 +7599,7 @@
         "drivetrain": "8-speed derailleur",
         "fork_suspension": "suspension fork",
         "display": "color/TFT display",
-        "tires": "tires",
+        "tires": "fat tires",
         "lights": "lights",
         "fenders": "fenders",
         "rack": "rear rack",
@@ -7617,9 +7613,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1648,
+      "estimated_component_total": 1673,
       "retail_price": 1999.0,
-      "bom_pct_of_retail": 0.824
+      "bom_pct_of_retail": 0.837
     },
     {
       "brand": "velotric",
@@ -7634,8 +7630,8 @@
         "brakes": 95,
         "fork_suspension": 95,
         "drivetrain": 93,
+        "tires": 80,
         "display": 65,
-        "tires": 55,
         "saddle_seatpost": 45,
         "cockpit": 40,
         "rack": 35,
@@ -7653,7 +7649,7 @@
         "drivetrain": "8-speed derailleur",
         "fork_suspension": "suspension fork",
         "display": "color/TFT display",
-        "tires": "tires",
+        "tires": "fat tires",
         "lights": "lights",
         "fenders": "fenders",
         "rack": "rear rack",
@@ -7667,9 +7663,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1603,
+      "estimated_component_total": 1628,
       "retail_price": 1999.0,
-      "bom_pct_of_retail": 0.802
+      "bom_pct_of_retail": 0.814
     },
     {
       "brand": "velotric",
@@ -7684,8 +7680,8 @@
         "assembly_misc": 120,
         "brakes": 95,
         "drivetrain": 93,
+        "tires": 80,
         "display": 65,
-        "tires": 55,
         "saddle_seatpost": 45,
         "cockpit": 40,
         "rack": 35,
@@ -7703,7 +7699,7 @@
         "drivetrain": "8-speed derailleur",
         "fork_suspension": "air suspension fork",
         "display": "color/TFT display",
-        "tires": "tires",
+        "tires": "fat tires",
         "lights": "lights",
         "fenders": "fenders",
         "rack": "rear rack",
@@ -7717,9 +7713,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1728,
+      "estimated_component_total": 1753,
       "retail_price": 2399.0,
-      "bom_pct_of_retail": 0.72
+      "bom_pct_of_retail": 0.731
     },
     {
       "brand": "velotric",
@@ -7784,8 +7780,8 @@
         "assembly_misc": 120,
         "drivetrain": 99,
         "brakes": 95,
+        "tires": 80,
         "display": 65,
-        "tires": 55,
         "saddle_seatpost": 45,
         "cockpit": 40,
         "rack": 35,
@@ -7803,7 +7799,7 @@
         "drivetrain": "9-speed derailleur",
         "fork_suspension": "air suspension fork",
         "display": "color/TFT display",
-        "tires": "tires",
+        "tires": "fat tires",
         "lights": "lights",
         "fenders": "fenders",
         "rack": "rear rack",
@@ -7817,9 +7813,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1734,
+      "estimated_component_total": 1759,
       "retail_price": 2099.0,
-      "bom_pct_of_retail": 0.826
+      "bom_pct_of_retail": 0.838
     },
     {
       "brand": "velotric",
@@ -7916,7 +7912,7 @@
       "model": "Velotric Triker Electric Tricycle",
       "warranty": "2-Year Warranty",
       "component_costs": {
-        "battery": 1512,
+        "battery": 338,
         "frame": 200,
         "motor": 152,
         "wheels": 130,
@@ -7924,8 +7920,8 @@
         "brakes": 95,
         "fork_suspension": 95,
         "drivetrain": 87,
+        "tires": 80,
         "display": 65,
-        "tires": 55,
         "saddle_seatpost": 45,
         "cockpit": 40,
         "rack": 35,
@@ -7936,13 +7932,13 @@
         "throttle": 15
       },
       "notes": {
-        "battery": "3600Wh @ ~$0.42/Wh",
+        "battery": "804Wh @ ~$0.42/Wh",
         "motor": "hub motor",
         "brakes": "hydraulic disc",
         "drivetrain": "7-speed derailleur",
         "fork_suspension": "suspension fork",
         "display": "color/TFT display",
-        "tires": "tires",
+        "tires": "fat tires",
         "lights": "lights",
         "fenders": "fenders",
         "rack": "rear rack",
@@ -7955,9 +7951,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 2771,
+      "estimated_component_total": 1622,
       "retail_price": 2499.0,
-      "bom_pct_of_retail": 1.109
+      "bom_pct_of_retail": 0.649
     },
     {
       "brand": "vvolt",
