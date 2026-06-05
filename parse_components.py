@@ -759,17 +759,18 @@ def _grips(v, brand):
 
 def _light(v, brand):
     out, low = {}, v.lower()
+    # lumens = total light output (the light's "power"); capture it robustly.
+    mlm = re.search(r"(\d{2,4})\s*[-]?\s*(?:lm\b|lumens?)", low)
+    if mlm:
+        out["lumens"] = int(mlm.group(1))
     ml = re.search(r"(\d{2,4})\s*lux", low)
     if ml:
         out["lux"] = int(ml.group(1))
-    mlm = re.search(r"(\d{3,4})\s*(?:lm\b|lumen)", low)
-    if mlm:
-        out["lumens"] = int(mlm.group(1))
     out["brake_light"] = bool(re.search(r"brake\s*(?:signal|light)|braking\s*indicator", low))
     out["turn_signal"] = bool(re.search(r"turn\s*signal|blinker", low))
     out["horn"] = "horn" in low
     out["integrated"] = "integrated" in low
-    rest = re.sub(r"\d{2,4}\s*lux|\d{3,4}\s*(?:lm\b|lumen)", " ", v, flags=re.I)
+    rest = re.sub(r"\d{2,4}\s*lux|\d{2,4}\s*[-]?\s*(?:lm\b|lumens?)", " ", v, flags=re.I)
     out["details"] = _clean(rest)
     return out
 
