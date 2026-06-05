@@ -320,6 +320,156 @@ def _tire(v, brand):
     return out
 
 
+def _stem(v, brand):
+    rest = v
+    out = {}
+    man, rest = _find_brand(rest, _brands_for(
+        ("Zoom", "Promax", "Kalloy", "UNO", "Satori", "Aerozine", "Brose"), brand))
+    if man:
+        out["manufacturer"] = man
+    low = v.lower()
+    if "carbon" in low:
+        out["material"] = "carbon"
+    elif re.search(r"alloy|alumin", low):
+        out["material"] = "aluminum"
+    elif "steel" in low:
+        out["material"] = "steel"
+    if "quill" in low:
+        out["type"] = "quill"
+    elif re.search(r"thread\s*less|ahead", low):
+        out["type"] = "threadless"
+    elif "fold" in low:
+        out["type"] = "folding"
+    out["adjustable"] = bool(re.search(r"adjust", low))
+
+    # AxBxC dimension form: steerer(28.6/22.2) x length x clamp(31.8/35).
+    m3 = re.search(r"(\d{2}(?:\.\d)?)\s*[x*]\s*(\d{2,3})(?:\s*[x*]\s*(\d{2}(?:\.\d)?))?\s*mm", v)
+    if m3:
+        nums = [float(x) for x in m3.groups() if x]
+        for n in nums:
+            if n in (31.8, 35.0, 25.4) and "clamp_mm" not in out:
+                out["clamp_mm"] = n
+            elif n not in (28.6, 22.2, 31.8, 35.0, 25.4) and 25 <= n <= 160:
+                out.setdefault("length_mm", int(n))
+        rest = rest.replace(m3.group(0), " ", 1)
+    mc = re.search(r"(?:Φ|ø)?\s*(31\.8|35|25\.4|22\.2)\s*mm", v)
+    if mc and "clamp_mm" not in out:
+        out["clamp_mm"] = float(mc.group(1))
+        rest = rest.replace(mc.group(0), " ", 1)
+    if "length_mm" not in out:
+        ml = (re.search(r"(\d{2,3})\s*mm\s*(?:length|extension)", v, re.I)
+              or re.search(r"(?:length|ext(?:ension)?)\s*:?\s*(\d{2,3})\s*mm?", v, re.I)
+              or re.search(r"(?<![.\d])(\d{2,3})\s*mm\b", rest))
+        if ml:
+            out["length_mm"] = int(ml.group(1))
+            rest = rest.replace(ml.group(0), " ", 1)
+    angs = [int(x) for x in re.findall(r"(\d{1,3})\s*(?:°|deg)", v, re.I)]
+    if angs:
+        out["angle_deg"] = max(angs)
+    for pat in (r"\d{1,3}\s*(?:°|deg(?:ree)?s?)", r"\b(?:rise|height|ext(?:ension)?|length)\b\s*:?",
+                r"\badjustable\b|\beasy adjust\b"):
+        rest = re.sub(pat, " ", rest, flags=re.I)
+    out["details"] = _clean(rest)
+    return out
+
+
+def _seatpost(v, brand):
+    rest = v
+    out = {}
+    man, rest = _find_brand(rest, _brands_for(
+        ("SR Suntour", "Suntour", "X-Fusion", "XFusion", "Xfusion", "SRAM",
+         "RockShox", "Rock Shox", "Fox", "Bike Yoke", "Kind Shock", "Brand-X",
+         "PNW", "Satori", "Promax", "Exa", "TranzX"), brand))
+    if man:
+        out["manufacturer"] = man
+    low = v.lower()
+    if re.search(r"dropper|telescop|double extension|reverb|transfer|revive|\bmanic\b|\baxs\b", low):
+        out["type"] = "dropper"
+    elif re.search(r"suspension|travel", low):
+        out["type"] = "suspension"
+    if "carbon" in low:
+        out["material"] = "carbon"
+    elif re.search(r"alloy|alumin", low):
+        out["material"] = "aluminum"
+    md = re.search(r"(?:Φ|ø|Ø)?\s*(27\.2|28\.6|30\.4|30\.9|31\.6|33\.9|34\.9)(?![\d.])", v)
+    if md:
+        out["diameter_mm"] = float(md.group(1))
+        rest = rest.replace(md.group(0), " ", 1)
+    mt = re.search(r"(\d{2,3})\s*mm\s*(?:travel|drop)|travel\s*:?\s*(\d{2,3})\s*mm?", v, re.I)
+    if mt:
+        out["travel_mm"] = int(mt.group(1) or mt.group(2))
+    else:
+        sizes = [int(x) for x in re.findall(r"s\d\s*:?\s*(\d{2,3})\s*mm", v, re.I)]
+        if sizes:
+            out["travel_mm"] = max(sizes)
+    mo = re.search(r"(\d{1,2})\s*mm\s*offset", v, re.I)
+    if mo:
+        out["offset_mm"] = int(mo.group(1))
+    rest2 = re.sub(r"\d{2,3}\s*mm\s*(?:travel|drop)", " ", rest, flags=re.I)
+    ml = re.search(r"(?:length\s*:?\s*)?(\d{3})\s*mm", rest2, re.I) or re.search(r"[x*]\s*(\d{3})\b", rest2)
+    if ml and 200 <= int(ml.group(1)) <= 700:
+        out["length_mm"] = int(ml.group(1))
+        rest = re.sub(re.escape(ml.group(0)), " ", rest, count=1)
+    for pat in (r"(?:Φ|ø|Ø)?\s*\d{2}\.\d\b", r"\d{2,3}\s*mm\s*(?:travel|drop|length)?",
+                r"\btravel\b\s*:?", r"\blength\b\s*:?", r"[x*]\s*\d{3}\b",
+                r"\d{1,2}\s*mm\s*offset", r"s\d\s*:?\s*\d{2,3}\s*mm"):
+        rest = re.sub(pat, " ", rest, flags=re.I)
+    out["details"] = _clean(rest)
+    return out
+
+
+def _handlebars(v, brand):
+    rest = v
+    out = {}
+    man, rest = _find_brand(rest, _brands_for(
+        ("Zoom", "Promax", "Kalloy", "UNO", "Satori", "Aerozine"), brand))
+    if man:
+        out["manufacturer"] = man
+    low = v.lower()
+    if "carbon" in low:
+        out["material"] = "carbon"
+    elif re.search(r"alloy|alumin", low):
+        out["material"] = "aluminum"
+    elif "steel" in low:
+        out["material"] = "steel"
+    if "bmx" in low:
+        out["type"] = "bmx"
+    elif re.search(r"riser|rise", low):
+        out["type"] = "riser"
+    elif re.search(r"cruiser|swept|curved", low):
+        out["type"] = "cruiser"
+    elif re.search(r"\bflat\b|straight", low):
+        out["type"] = "flat"
+    mc = re.search(r"(31\.8|35|25\.4|22\.2)\s*mm?\s*(?:bar\s*)?clamp", v, re.I) \
+        or re.search(r"[x*]\s*(31\.8|35|25\.4)\s*(?:mm)?", v) \
+        or re.search(r"(?:Φ|ø|Ø)?\s*(31\.8|35)\s*mm", v)   # bar clamp is 31.8/35
+    if mc:
+        out["clamp_mm"] = float(mc.group(1))
+    mw = (re.search(r"(\d{3})\s*mm\s*(?:width|wide)", v, re.I)
+          or re.search(r"\b(?:width|w)\s*:?\s*(\d{3})", v, re.I)
+          or re.search(r"[x*]\s*(\d{3})\s*mm", v)
+          or re.search(r"(?<![.\d])(\d{3})\s*mm\b", rest))
+    if mw and 500 <= int(mw.group(1)) <= 860:
+        out["width_mm"] = int(mw.group(1))
+    mr = re.search(r"(\d{1,3})\s*mm\s*rise|rise\s*:?\s*(\d{1,3})\s*mm", v, re.I)
+    if mr:
+        out["rise_mm"] = int(mr.group(1) or mr.group(2))
+    mb = re.search(r"(\d{1,2})\s*[°*]\s*back\s*sweep", v, re.I)
+    if mb:
+        out["backsweep_deg"] = int(mb.group(1))
+    mu = re.search(r"(\d{1,2})\s*[°*]\s*up\s*sweep", v, re.I)
+    if mu:
+        out["upsweep_deg"] = int(mu.group(1))
+    for pat in (r"\d{3}\s*mm\s*(?:width|wide)?", r"\b(?:width|w)\s*:?\s*\d{3}",
+                r"[x*]\s*\d{3}\s*mm?", r"(31\.8|35|25\.4|22\.2)\s*mm?\s*(?:bar\s*)?clamp",
+                r"[x*]\s*(?:31\.8|35|25\.4|22\.2)", r"(?:Φ|ø|Ø)?\s*(?:31\.8|35)\s*mm",
+                r"\d{1,3}\s*mm\s*rise", r"rise\s*:?",
+                r"\d{1,2}\s*[°*]\s*(?:up|back)\s*sweep", r"\bclamp\b", r"\bwidth\b|\bwide\b"):
+        rest = re.sub(pat, " ", rest, flags=re.I)
+    out["details"] = _clean(rest)
+    return out
+
+
 def _display(v, brand):
     rest = v
     out = {}
@@ -363,6 +513,12 @@ def _resolver(field: str):
         return _tire
     if "display" in f:
         return _display
+    if f == "stem":
+        return _stem
+    if f in ("seatpost", "seat_post"):
+        return _seatpost
+    if "handlebar" in f:
+        return _handlebars
     return None
 
 

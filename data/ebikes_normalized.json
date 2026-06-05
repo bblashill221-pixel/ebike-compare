@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-05T07:26:38.366438+00:00",
+  "generated_at": "2026-06-05T07:39:46.772903+00:00",
   "brand_count": 13,
   "model_count": 185,
   "brands": [
@@ -4090,9 +4090,22 @@
           },
           "cockpit": {
             "saddle": "Aventon Saddle w/ grab handle by Selle Royal",
-            "seatpost": "Aventon Suspension Seatpost, Ø 30.9mm, 350mm Length. 50mm travel",
+            "seatpost": {
+              "manufacturer": "Aventon",
+              "type": "suspension",
+              "diameter_mm": 30.9,
+              "travel_mm": 50,
+              "length_mm": 350,
+              "details": "Suspension Seatpost, mm"
+            },
             "seatpost_clamp": "34.9mm",
-            "handlebars": "BMX Style Aluminum 31.8mm, 720mm",
+            "handlebars": {
+              "material": "aluminum",
+              "type": "bmx",
+              "clamp_mm": 31.8,
+              "width_mm": 720,
+              "details": "BMX Style Aluminum"
+            },
             "grips": "Aventon Ergonomic Comfort lock on grips",
             "headset": "H886HW Peilin 28.6mm * 56mm * 56mm H19.5mm 6pcs"
           },
@@ -4499,9 +4512,26 @@
           },
           "cockpit": {
             "saddle": "Aventon by SelleRoyal",
-            "seatpost": "30.9mm Aventon Suspension Seatpost with 50mm travel",
-            "handlebars": "BMX Style, 31.8mm bar clamp, 680mm width",
-            "stem": "Quill Stem with 31.8mm bar clamp diameter, 40mm length, and 140mm of vertical adjustment",
+            "seatpost": {
+              "manufacturer": "Aventon",
+              "type": "suspension",
+              "diameter_mm": 30.9,
+              "travel_mm": 50,
+              "details": "mm Suspension Seatpost with"
+            },
+            "handlebars": {
+              "type": "bmx",
+              "clamp_mm": 31.8,
+              "width_mm": 680,
+              "details": "BMX Style"
+            },
+            "stem": {
+              "type": "quill",
+              "adjustable": true,
+              "clamp_mm": 31.8,
+              "length_mm": 40,
+              "details": "Quill Stem with bar clamp diameter, and 140mm of vertical adjustment"
+            },
             "seat_clamp": "34.9mm Quick Release",
             "grips": "Lock-on ergonomic"
           },
@@ -4930,9 +4960,21 @@
           },
           "cockpit": {
             "saddle": "Aventon Saddle",
-            "seatpost": "Aventon Suspension Seatpost, Ø 30.9mm, 350mm Length. 50mm travel",
+            "seatpost": {
+              "manufacturer": "Aventon",
+              "type": "suspension",
+              "diameter_mm": 30.9,
+              "travel_mm": 50,
+              "length_mm": 350,
+              "details": "Suspension Seatpost, mm"
+            },
             "seatpost_clamp": "34.9mm",
-            "handlebars": "Aluminum 31.8mm, 680mm",
+            "handlebars": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 680,
+              "details": "Aluminum"
+            },
             "grips": "Aventon Lock on grips",
             "headset": "Sealed bearing H887 Peilin 28.6mm * 56mm * 56mm H18.6mm 7pcs"
           },
@@ -5414,9 +5456,21 @@
           },
           "cockpit": {
             "saddle": "Aventon Saddle",
-            "seatpost": "Aventon Suspension Seatpost, Ø 30.9mm, 350mm Length. 50mm travel",
+            "seatpost": {
+              "manufacturer": "Aventon",
+              "type": "suspension",
+              "diameter_mm": 30.9,
+              "travel_mm": 50,
+              "length_mm": 350,
+              "details": "Suspension Seatpost, mm"
+            },
             "seatpost_clamp": "34.9mm",
-            "handlebars": "Aluminum 31.8mm, 680mm",
+            "handlebars": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 680,
+              "details": "Aluminum"
+            },
             "grips": "Aventon Lock on grips",
             "headset": "Sealed bearing H887 Peilin 28.6mm * 56mm * 56mm H18.6mm 7pcs"
           },
@@ -5896,9 +5950,20 @@
           },
           "cockpit": {
             "saddle": "Aventon Saddle",
-            "seatpost": "Aventon Suspension Seatpost, Ø 30.9mm, 350mm Length. 50mm travel",
+            "seatpost": {
+              "manufacturer": "Aventon",
+              "type": "suspension",
+              "diameter_mm": 30.9,
+              "travel_mm": 50,
+              "length_mm": 350,
+              "details": "Suspension Seatpost, mm"
+            },
             "seatpost_clamp": "34.9mm",
-            "handlebars": "Aluminum 31.8, 720mm",
+            "handlebars": {
+              "material": "aluminum",
+              "width_mm": 720,
+              "details": "Aluminum 31.8"
+            },
             "grips": "Aventon Lock on grips",
             "headset": "Sealed bearing H887 Peilin 28.6mm * 56mm * 56mm H18.6mm 7pcs"
           },
@@ -6382,10 +6447,28 @@
           },
           "cockpit": {
             "saddle": "Selle Royal SRX",
-            "seatpost": "31.6mm XFusion Manic Dropper Seatpost. S/M: 150mm, L/XL: 170mm",
+            "seatpost": {
+              "manufacturer": "Xfusion",
+              "type": "dropper",
+              "diameter_mm": 31.6,
+              "details": "mm Manic Dropper Seatpost. S/M:, L/XL"
+            },
             "seatpost_clamp": "34.9mm",
-            "stem": "50mm Length, 35mm Clamp",
-            "handlebars": "35mm Clamp, 5° Upsweep, 7° Backsweep. S/M: 780mm, 20mm Rise. L/XL: 800mm, 30mm Rise",
+            "stem": {
+              "adjustable": false,
+              "clamp_mm": 35.0,
+              "length_mm": 50,
+              "details": "Clamp"
+            },
+            "handlebars": {
+              "type": "riser",
+              "clamp_mm": 35.0,
+              "width_mm": 780,
+              "rise_mm": 20,
+              "backsweep_deg": 7,
+              "upsweep_deg": 5,
+              "details": "S/M:,. L/XL"
+            },
             "headset": "ZS56 Upper/Lower",
             "grips": "Aventon Lock on grips"
           },
@@ -6829,10 +6912,28 @@
           },
           "cockpit": {
             "saddle": "Selle Royal SRX",
-            "seatpost": "31.6mm XFusion Manic Dropper Seatpost. S/M: 150mm, L/XL: 170mm",
+            "seatpost": {
+              "manufacturer": "Xfusion",
+              "type": "dropper",
+              "diameter_mm": 31.6,
+              "details": "mm Manic Dropper Seatpost. S/M:, L/XL"
+            },
             "seatpost_clamp": "34.9mm",
-            "stem": "50mm Length, 35mm Clamp",
-            "handlebars": "35mm Clamp, 5° Upsweep, 7° Backsweep. S/M: 780mm, 20mm Rise. L/XL: 800mm, 30mm Rise",
+            "stem": {
+              "adjustable": false,
+              "clamp_mm": 35.0,
+              "length_mm": 50,
+              "details": "Clamp"
+            },
+            "handlebars": {
+              "type": "riser",
+              "clamp_mm": 35.0,
+              "width_mm": 780,
+              "rise_mm": 20,
+              "backsweep_deg": 7,
+              "upsweep_deg": 5,
+              "details": "S/M:,. L/XL"
+            },
             "headset": "ZS56 Upper/Lower",
             "grips": "Aventon Lock on grips"
           },
@@ -7286,9 +7387,20 @@
           },
           "cockpit": {
             "saddle": "Aventon Saddle",
-            "seatpost": "30.9mm Aventon Suspension Seatpost with 50mm travel",
+            "seatpost": {
+              "manufacturer": "Aventon",
+              "type": "suspension",
+              "diameter_mm": 30.9,
+              "travel_mm": 50,
+              "details": "mm Suspension Seatpost with"
+            },
             "seatpost_clamp": "34.9mm",
-            "handlebars": "Aluminum 31.8mm, 680mm",
+            "handlebars": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 680,
+              "details": "Aluminum"
+            },
             "grips": "Aventon Lock on grips",
             "headset": "Sealed Bearing Headset"
           },
@@ -7735,9 +7847,20 @@
           },
           "cockpit": {
             "saddle": "Aventon Saddle",
-            "seatpost": "30.9mm Aventon Suspension Seatpost with 50mm travel",
+            "seatpost": {
+              "manufacturer": "Aventon",
+              "type": "suspension",
+              "diameter_mm": 30.9,
+              "travel_mm": 50,
+              "details": "mm Suspension Seatpost with"
+            },
             "seatpost_clamp": "34.9mm",
-            "handlebars": "Aluminum 31.8mm, 680mm",
+            "handlebars": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 680,
+              "details": "Aluminum"
+            },
             "grips": "Aventon Lock on grips",
             "headset": "Sealed Bearing Headset"
           },
@@ -8160,9 +8283,22 @@
           },
           "cockpit": {
             "saddle": "Aventon Saddle",
-            "seatpost": "Aventon Suspension Post, 30.9mm, 50mm Travel, 400mm Length",
+            "seatpost": {
+              "manufacturer": "Aventon",
+              "type": "suspension",
+              "diameter_mm": 30.9,
+              "travel_mm": 50,
+              "length_mm": 400,
+              "details": "Suspension Post, mm"
+            },
             "seatpost_clamp": "34.9mm",
-            "handlebars": "31.8mm, 680mm Width, 30mm Rise",
+            "handlebars": {
+              "type": "riser",
+              "clamp_mm": 31.8,
+              "width_mm": 680,
+              "rise_mm": 30,
+              "details": ""
+            },
             "grips": "Aventon Lock on grips"
           },
           "geometry": {
@@ -8664,9 +8800,22 @@
           },
           "cockpit": {
             "saddle": "Aventon Saddle",
-            "seatpost": "Aventon Suspension Post, 30.9mm, 50mm Travel, 400mm Length",
+            "seatpost": {
+              "manufacturer": "Aventon",
+              "type": "suspension",
+              "diameter_mm": 30.9,
+              "travel_mm": 50,
+              "length_mm": 400,
+              "details": "Suspension Post, mm"
+            },
             "seatpost_clamp": "34.9mm",
-            "handlebars": "31.8mm, 680mm Width, 30mm Rise",
+            "handlebars": {
+              "type": "riser",
+              "clamp_mm": 31.8,
+              "width_mm": 680,
+              "rise_mm": 30,
+              "details": ""
+            },
             "grips": "Aventon Lock on grips"
           },
           "geometry": {
@@ -9131,10 +9280,28 @@
           },
           "cockpit": {
             "saddle": "Aventon Saddle",
-            "seatpost": "30.9mm Aventon Suspension Seatpost with 50mm travel",
+            "seatpost": {
+              "manufacturer": "Aventon",
+              "type": "suspension",
+              "diameter_mm": 30.9,
+              "travel_mm": 50,
+              "details": "mm Suspension Seatpost with"
+            },
             "seatpost_clamp": "34.9mm",
-            "handlebars": "Aluminum 31.8mm, 680mm",
-            "stem": "Aluminum, 31.8mm Clamp, 60mm Length, 90 Degree Adjustable w/ Internal Routing",
+            "handlebars": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 680,
+              "details": "Aluminum"
+            },
+            "stem": {
+              "material": "aluminum",
+              "adjustable": true,
+              "clamp_mm": 31.8,
+              "length_mm": 60,
+              "angle_deg": 90,
+              "details": "Aluminum, Clamp, w/ Internal Routing"
+            },
             "grips": "Aventon Lock on grips"
           },
           "geometry": {
@@ -9592,10 +9759,28 @@
           },
           "cockpit": {
             "saddle": "Aventon Saddle",
-            "seatpost": "30.9mm Aventon Suspension Seatpost with 50mm travel",
+            "seatpost": {
+              "manufacturer": "Aventon",
+              "type": "suspension",
+              "diameter_mm": 30.9,
+              "travel_mm": 50,
+              "details": "mm Suspension Seatpost with"
+            },
             "seatpost_clamp": "34.9mm",
-            "handlebars": "Aluminum 31.8mm, 680mm",
-            "stem": "Aluminum, 31.8mm Clamp, 60mm Length, 90 Degree Adjustable w/ Internal Routing",
+            "handlebars": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 680,
+              "details": "Aluminum"
+            },
+            "stem": {
+              "material": "aluminum",
+              "adjustable": true,
+              "clamp_mm": 31.8,
+              "length_mm": 60,
+              "angle_deg": 90,
+              "details": "Aluminum, Clamp, w/ Internal Routing"
+            },
             "grips": "Aventon Lock on grips"
           },
           "geometry": {
@@ -10054,10 +10239,29 @@
           },
           "cockpit": {
             "saddle": "Aventon Saddle",
-            "seatpost": "Aventon Suspension Seatpost, Ø 30.9mm, 350mm Length. 50mm travel",
+            "seatpost": {
+              "manufacturer": "Aventon",
+              "type": "suspension",
+              "diameter_mm": 30.9,
+              "travel_mm": 50,
+              "length_mm": 350,
+              "details": "Suspension Seatpost, mm"
+            },
             "seatpost_clamp": "34.9mm",
-            "handlebars": "BMX Style Aluminum 31.8mm, 720mm",
-            "stem": "31.8mm x 50mm, +15 Degree Rise",
+            "handlebars": {
+              "material": "aluminum",
+              "type": "bmx",
+              "clamp_mm": 31.8,
+              "width_mm": 720,
+              "details": "BMX Style Aluminum"
+            },
+            "stem": {
+              "adjustable": false,
+              "clamp_mm": 31.8,
+              "length_mm": 50,
+              "angle_deg": 15,
+              "details": "x, +"
+            },
             "grips": "Aventon Ergonomic Comfort lock on grips",
             "headset": "Sealed Bearing Headset"
           },
@@ -10542,10 +10746,27 @@
           },
           "cockpit": {
             "saddle": "Aventon 250mm wide Saddle",
-            "seatpost": "Aventon Seatpost, 30.9Ø, Length: 300 mm (Size R) / 350 mm (Size L)",
+            "seatpost": {
+              "manufacturer": "Aventon",
+              "diameter_mm": 30.9,
+              "length_mm": 300,
+              "details": "Seatpost, Ø, (Size R) / (Size L)"
+            },
             "seatpost_clamp": "34.9mm",
-            "handlebars": "Aventon aluminum swept back handlebars. 31.8mm, 620mm, 38mm rise",
-            "stem": "60mm length, Adjustable rise, 31.8 handlebar clamp",
+            "handlebars": {
+              "manufacturer": "Aventon",
+              "material": "aluminum",
+              "type": "riser",
+              "clamp_mm": 31.8,
+              "width_mm": 620,
+              "rise_mm": 38,
+              "details": "aluminum swept back handlebars"
+            },
+            "stem": {
+              "adjustable": true,
+              "length_mm": 60,
+              "details": "31.8 handlebar clamp"
+            },
             "grips": "Aventon Lock on grips",
             "headset": "Sealed Bearing Headset"
           },
@@ -11078,9 +11299,23 @@
           },
           "cockpit": {
             "saddle": "Aventon Saddle",
-            "seatpost": "Manic LC 150mm travel for size M-XL. 31.6mm ø. 395mm length",
+            "seatpost": {
+              "type": "dropper",
+              "diameter_mm": 31.6,
+              "travel_mm": 150,
+              "length_mm": 395,
+              "details": "Manic LC for size M-XL. mm ø"
+            },
             "seatpost_clamp": "34.9mm",
-            "handlebars": "760mm width, 35mm clamp diameter, 33mm rise, 3* upsweep, 9* backsweep.",
+            "handlebars": {
+              "type": "riser",
+              "clamp_mm": 35.0,
+              "width_mm": 760,
+              "rise_mm": 33,
+              "backsweep_deg": 9,
+              "upsweep_deg": 3,
+              "details": "diameter"
+            },
             "grips": "Aventon Lock on grips",
             "headset": "T51Ks 28.6*56-56*39.8/ H:23.4mm"
           },
@@ -11586,9 +11821,18 @@
             }
           },
           "cockpit": {
-            "seatpost": "Aventon 27.2",
+            "seatpost": {
+              "manufacturer": "Aventon",
+              "diameter_mm": 27.2,
+              "details": ""
+            },
             "seat_clamp": "Aventon 31.8",
-            "handlebars": "Aluminum 31.8mm, 620mm",
+            "handlebars": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 620,
+              "details": "Aluminum"
+            },
             "grips": "Lock on grips with twist shift",
             "headset": "Aventon headset with integrated cable routing",
             "saddle": "Aventon Saddle"
@@ -12025,10 +12269,25 @@
           },
           "cockpit": {
             "saddle": "Aventon Saddle",
-            "seatpost": "Aventon 27.2",
+            "seatpost": {
+              "manufacturer": "Aventon",
+              "diameter_mm": 27.2,
+              "details": ""
+            },
             "seatpost_clamp": "31.8mm",
-            "handlebars": "Aluminum 31.8mm, 680mm",
-            "stem": "31.8mm, 70mm Length, 15°",
+            "handlebars": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 680,
+              "details": "Aluminum"
+            },
+            "stem": {
+              "adjustable": false,
+              "clamp_mm": 31.8,
+              "length_mm": 70,
+              "angle_deg": 15,
+              "details": ""
+            },
             "grips": "Aventon Lock on grips",
             "headset": "Aventon headset with integrated cable routing"
           },
@@ -12526,12 +12785,28 @@
           "cockpit": {
             "headset": "1 1/8\" Threadless",
             "saddle": "Comfort Padded",
-            "seatpost": "27.2mm x 350mm, Alloy",
-            "stem": "Easy Adjust",
-            "handlebar": "660mm Wide, 25.4mm Clamp",
+            "seatpost": {
+              "material": "aluminum",
+              "diameter_mm": 27.2,
+              "length_mm": 350,
+              "details": "mm x, Alloy"
+            },
+            "stem": {
+              "adjustable": true,
+              "details": ""
+            },
+            "handlebar": {
+              "clamp_mm": 25.4,
+              "width_mm": 660,
+              "details": ""
+            },
             "grip": "Ergonomic, Rubber",
-            "handlebar_height_min": "46.9\" (1190mm)",
-            "handlebar_height_max": "47.6\" (1210mm)"
+            "handlebar_height_min": {
+              "details": "46.9\" (1)"
+            },
+            "handlebar_height_max": {
+              "details": "47.6\" (1)"
+            }
           },
           "geometry": {
             "1_seat_tube_length": "17.8\" (454mm)",
@@ -12822,12 +13097,31 @@
           "cockpit": {
             "headset": "1 1/8\" Threadless",
             "saddle": "Comfort Padded",
-            "seatpost": "27.2 x 300mm, Alloy",
-            "stem": "Adjustable Angle, 1 1/8\" Threadless, 31.8mm Clamp",
-            "handlebar": "Riser Bar, 640mm x 31.8mm Clamp",
+            "seatpost": {
+              "material": "aluminum",
+              "diameter_mm": 27.2,
+              "length_mm": 300,
+              "details": "x, Alloy"
+            },
+            "stem": {
+              "type": "threadless",
+              "adjustable": true,
+              "clamp_mm": 31.8,
+              "details": "Angle, 1 1/8\" Threadless, Clamp"
+            },
+            "handlebar": {
+              "type": "riser",
+              "clamp_mm": 31.8,
+              "width_mm": 640,
+              "details": "r Bar, x"
+            },
             "grip": "Ergonomic",
-            "handlebar_height_minimum": "42.5\" (1079.5mm)",
-            "handlebar_height_maximum": "45.5\" (1155.7mm)"
+            "handlebar_height_minimum": {
+              "details": "42.5\" (1079.5mm)"
+            },
+            "handlebar_height_maximum": {
+              "details": "45.5\" (1155.7mm)"
+            }
           },
           "geometry": {
             "1_seat_tube_length": "16.8\" (428mm)",
@@ -13233,12 +13527,28 @@
           "cockpit": {
             "headset": "1 1/8\" Threadless",
             "saddle": "Comfort Padded",
-            "seatpost": "27.2mm x 350mm, Alloy",
-            "stem": "Easy Adjust",
-            "handlebar": "660mm Wide, 25.4mm Clamp",
+            "seatpost": {
+              "material": "aluminum",
+              "diameter_mm": 27.2,
+              "length_mm": 350,
+              "details": "mm x, Alloy"
+            },
+            "stem": {
+              "adjustable": true,
+              "details": ""
+            },
+            "handlebar": {
+              "clamp_mm": 25.4,
+              "width_mm": 660,
+              "details": ""
+            },
             "grip": "Ergonomic, Rubber",
-            "handlebar_height_min": "46.9\" (1190mm)",
-            "handlebar_height_max": "47.6\" (1210mm)"
+            "handlebar_height_min": {
+              "details": "46.9\" (1)"
+            },
+            "handlebar_height_max": {
+              "details": "47.6\" (1)"
+            }
           },
           "geometry": {
             "1_seat_tube_length": "17.8\" (454mm)",
@@ -13570,12 +13880,29 @@
           "cockpit": {
             "headset": "1 1/8\" Threadless",
             "saddle": "Comfort Padded",
-            "seatpost": "27.2mm x 400mm, Alloy",
-            "stem": "Foldable",
-            "handlebar": "640mm Wide, 25.4mm Clamp",
+            "seatpost": {
+              "material": "aluminum",
+              "diameter_mm": 27.2,
+              "length_mm": 400,
+              "details": "mm x, Alloy"
+            },
+            "stem": {
+              "type": "folding",
+              "adjustable": false,
+              "details": "Foldable"
+            },
+            "handlebar": {
+              "clamp_mm": 25.4,
+              "width_mm": 640,
+              "details": ""
+            },
             "grip": "Ergonomic, Rubber",
-            "handlebar_height_min": "41.7\" (1060mm)",
-            "handlebar_height_max": "47.6\" (1210mm)"
+            "handlebar_height_min": {
+              "details": "41.7\" (1)"
+            },
+            "handlebar_height_max": {
+              "details": "47.6\" (1)"
+            }
           },
           "geometry": {
             "1_seat_tube_length": "16\" (408mm)",
@@ -13929,10 +14256,23 @@
             "front_hub": "Thru-Axle"
           },
           "cockpit": {
-            "handlebar": "Aluminum Alloy, Curved Back w/ Rise",
+            "handlebar": {
+              "material": "aluminum",
+              "type": "riser",
+              "details": "Aluminum Alloy, Curved Back w"
+            },
             "grips": "Ergonomic Locking Grips",
-            "stem": "90mm",
-            "seatpost": "SR Suntour NCX Suspension, 50mm travel",
+            "stem": {
+              "adjustable": false,
+              "length_mm": 90,
+              "details": ""
+            },
+            "seatpost": {
+              "manufacturer": "SR Suntour",
+              "type": "suspension",
+              "travel_mm": 50,
+              "details": "NCX Suspension"
+            },
             "saddle": "Velo Plush Comfort"
           },
           "included_accessories": {
@@ -14451,10 +14791,24 @@
             "front_hub": "Thru-Axle"
           },
           "cockpit": {
-            "handlebar": "730mm Alloy, Straight w/ Rise",
+            "handlebar": {
+              "material": "aluminum",
+              "type": "riser",
+              "width_mm": 730,
+              "details": "Alloy, Straight w"
+            },
             "grips": "Ergonomic Locking Grips",
-            "stem": "110mm",
-            "seatpost": "SR Suntour NCX Suspension, 50mm travel",
+            "stem": {
+              "adjustable": false,
+              "length_mm": 110,
+              "details": ""
+            },
+            "seatpost": {
+              "manufacturer": "SR Suntour",
+              "type": "suspension",
+              "travel_mm": 50,
+              "details": "NCX Suspension"
+            },
             "saddle": "Stella Royal Sport Comfort"
           },
           "included_accessories": {
@@ -14696,7 +15050,12 @@
             }
           },
           "cockpit": {
-            "seatpost": "SR Suntour NCX Suspension, 50mm travel"
+            "seatpost": {
+              "manufacturer": "SR Suntour",
+              "type": "suspension",
+              "travel_mm": 50,
+              "details": "NCX Suspension"
+            }
           },
           "geometry": {
             "rider_height": "5'2\" – 6'0\""
@@ -14929,9 +15288,15 @@
           },
           "cockpit": {
             "seat": "Selle Royal Freccia with Royal Gel",
-            "stem": "Forged Alloy 4 bolt stem",
+            "stem": {
+              "material": "aluminum",
+              "adjustable": false,
+              "details": "Forged Alloy 4 bolt stem"
+            },
             "seat_to_pedal_lowest_highest": "29\" / 37\"",
-            "handlebar_height": "42.5\""
+            "handlebar_height": {
+              "details": "42.5\""
+            }
           },
           "geometry": {
             "recommended_rider_heights": "5'6\" - 6'3\"",
@@ -15151,9 +15516,15 @@
           },
           "cockpit": {
             "seat": "Extra Wide Velo Breeze with Memory Foam",
-            "stem_handlebar": "Alloy Stem, 5” Rise Steel Handlebar",
+            "stem_handlebar": {
+              "material": "aluminum",
+              "type": "riser",
+              "details": "Alloy Stem, 5” Steel Handlebar"
+            },
             "seat_to_pedal_lowest_to_highest": "24\" - 32.5\"",
-            "handlebar_height": "44\""
+            "handlebar_height": {
+              "details": "44\""
+            }
           },
           "geometry": {
             "recommended_rider_heights": "4'10\" - 6'2\"",
@@ -15389,9 +15760,15 @@
           },
           "cockpit": {
             "seat": "Selle Royal Comfort Springer Saddle",
-            "stem": "EVELO Stargazer High-Rise",
+            "stem": {
+              "manufacturer": "Evelo",
+              "adjustable": false,
+              "details": "Stargazer High"
+            },
             "seat_to_pedal_lowest_to_highest": "25\" - 33\"",
-            "handlebar_height": "42.5\""
+            "handlebar_height": {
+              "details": "42.5\""
+            }
           },
           "geometry": {
             "recommended_rider_height": "4'10\" - 5'10\"",
@@ -15610,9 +15987,15 @@
           },
           "cockpit": {
             "seat": "Selle Royal Memory Foam Saddle",
-            "stem": "EVELO Stargazer High-Rise",
+            "stem": {
+              "manufacturer": "Evelo",
+              "adjustable": false,
+              "details": "Stargazer High"
+            },
             "seat_to_pedal_lowest_highest": "27\" / 35\"",
-            "handlebar_height": "43\""
+            "handlebar_height": {
+              "details": "43\""
+            }
           },
           "geometry": {
             "recommended_rider_heights": "5'4\" - 6'2\"",
@@ -18011,11 +18394,24 @@
             }
           },
           "cockpit": {
-            "b_handlebar_height": "45.3",
-            "k_handlebar_length": "26.7",
+            "b_handlebar_height": {
+              "details": "45.3"
+            },
+            "k_handlebar_length": {
+              "details": "26.7"
+            },
             "headset": "Neco A16M 44*44*30",
-            "handlebar": "Himiway integrated handlebar-Stem 680mm width*90mm stem",
-            "seatpost": "Himiway flip seatpost 27.2*300",
+            "handlebar": {
+              "manufacturer": "Himiway",
+              "width_mm": 680,
+              "details": "integrated handlebar-Stem *90mm stem"
+            },
+            "seatpost": {
+              "manufacturer": "Himiway",
+              "diameter_mm": 27.2,
+              "length_mm": 300,
+              "details": "flip seatpost"
+            },
             "saddle": "TTZ032X"
           },
           "geometry": {
@@ -18290,12 +18686,29 @@
             }
           },
           "cockpit": {
-            "b_handlebar_height": "45.3",
-            "k_handlebar_length": "23.6",
+            "b_handlebar_height": {
+              "details": "45.3"
+            },
+            "k_handlebar_length": {
+              "details": "23.6"
+            },
             "headset": "Neco H510",
-            "stem": "Folding stem, riser length: 360mm",
-            "handlebar": "JY-A153 W:600",
-            "seatpost": "Himiway flip seatpost 27.2*300",
+            "stem": {
+              "type": "folding",
+              "adjustable": false,
+              "length_mm": 360,
+              "details": "Folding stem, riser"
+            },
+            "handlebar": {
+              "width_mm": 600,
+              "details": "JY-A153"
+            },
+            "seatpost": {
+              "manufacturer": "Himiway",
+              "diameter_mm": 27.2,
+              "length_mm": 300,
+              "details": "flip seatpost"
+            },
             "saddle": "Himiway TTZ032X"
           },
           "geometry": {
@@ -18555,11 +18968,24 @@
             }
           },
           "cockpit": {
-            "b_handlebar_height": "42",
-            "c_handlebar_length": "28.4",
+            "b_handlebar_height": {
+              "details": "42"
+            },
+            "c_handlebar_length": {
+              "details": "28.4"
+            },
             "headset": "Neco H114 28.6*44*30",
-            "stem": "3D forged alloy Ext:40mm",
-            "handlebar": "YC-B086 22.2*31.8*720mm",
+            "stem": {
+              "material": "aluminum",
+              "adjustable": false,
+              "length_mm": 40,
+              "details": "3D forged alloy"
+            },
+            "handlebar": {
+              "clamp_mm": 31.8,
+              "width_mm": 720,
+              "details": "YC-B086 22.2 *"
+            },
             "saddle": "Himwiay saddle"
           },
           "geometry": {
@@ -18806,12 +19232,29 @@
             }
           },
           "cockpit": {
-            "b_handlebar_height": "46.5",
-            "c_handlebar_length": "28",
+            "b_handlebar_height": {
+              "details": "46.5"
+            },
+            "c_handlebar_length": {
+              "details": "28"
+            },
             "headset": "Neco H148 28.6×44*44×30mm",
-            "stem": "YC-C410 28.6*80*31.8mm",
-            "handlebar": "YC-B087 22.2*31.8*700mm",
-            "seatpost": "H202211DJ ISO-M 30.4*350mm",
+            "stem": {
+              "adjustable": false,
+              "length_mm": 80,
+              "clamp_mm": 31.8,
+              "details": "YC-C410"
+            },
+            "handlebar": {
+              "clamp_mm": 31.8,
+              "width_mm": 700,
+              "details": "YC-B087 22.2 *"
+            },
+            "seatpost": {
+              "diameter_mm": 30.4,
+              "length_mm": 350,
+              "details": "H202211DJ ISO-M *"
+            },
             "saddle": "TTZ032X"
           },
           "geometry": {
@@ -19019,12 +19462,29 @@
             }
           },
           "cockpit": {
-            "b_handlebar_height": "46.5",
-            "c_handlebar_length": "28",
+            "b_handlebar_height": {
+              "details": "46.5"
+            },
+            "c_handlebar_length": {
+              "details": "28"
+            },
             "headset": "Neco H148 28.6×44*44×30mm",
-            "stem": "YC-C410 28.6*80*31.8mm",
-            "handlebar": "YC-B087 22.2*31.8*700mm",
-            "seatpost": "H202211DJ ISO-M 30.4*350mm",
+            "stem": {
+              "adjustable": false,
+              "length_mm": 80,
+              "clamp_mm": 31.8,
+              "details": "YC-C410"
+            },
+            "handlebar": {
+              "clamp_mm": 31.8,
+              "width_mm": 700,
+              "details": "YC-B087 22.2 *"
+            },
+            "seatpost": {
+              "diameter_mm": 30.4,
+              "length_mm": 350,
+              "details": "H202211DJ ISO-M *"
+            },
             "saddle": "TTZ032X"
           },
           "geometry": {
@@ -19234,12 +19694,30 @@
             }
           },
           "cockpit": {
-            "b_handlebar_height": "47",
-            "c_handlebar_length": "28",
+            "b_handlebar_height": {
+              "details": "47"
+            },
+            "c_handlebar_length": {
+              "details": "28"
+            },
             "headset": "Neco H156EM 28.6*44-56*30",
-            "stem": "Zoom TDS-C269-8FOV 31.8*90mm",
-            "handlebar": "Promax HB-3188 22.2*31.8*700mm",
-            "seatpost": "Himiway Seatpost",
+            "stem": {
+              "manufacturer": "Zoom",
+              "adjustable": false,
+              "clamp_mm": 31.8,
+              "length_mm": 90,
+              "details": "TDS-C269-8FOV"
+            },
+            "handlebar": {
+              "manufacturer": "Promax",
+              "clamp_mm": 31.8,
+              "width_mm": 700,
+              "details": "HB-3188 22.2 *"
+            },
+            "seatpost": {
+              "manufacturer": "Himiway",
+              "details": "Seatpost"
+            },
             "saddle": "Himiway Saddle"
           },
           "geometry": {
@@ -19515,12 +19993,30 @@
             }
           },
           "cockpit": {
-            "b_handlebar_height": "47",
-            "c_handlebar_length": "28",
+            "b_handlebar_height": {
+              "details": "47"
+            },
+            "c_handlebar_length": {
+              "details": "28"
+            },
             "headset": "Neco H156EM 28.6*44-56*30",
-            "stem": "Zoom TDS-C269-8FOV 31.8*90mm",
-            "handlebar": "Promax HB-3188 22.2*31.8*700mm",
-            "seatpost": "Himiway Seatpost",
+            "stem": {
+              "manufacturer": "Zoom",
+              "adjustable": false,
+              "clamp_mm": 31.8,
+              "length_mm": 90,
+              "details": "TDS-C269-8FOV"
+            },
+            "handlebar": {
+              "manufacturer": "Promax",
+              "clamp_mm": 31.8,
+              "width_mm": 700,
+              "details": "HB-3188 22.2 *"
+            },
+            "seatpost": {
+              "manufacturer": "Himiway",
+              "details": "Seatpost"
+            },
             "saddle": "Himiway Saddle"
           },
           "geometry": {
@@ -19795,12 +20291,30 @@
             }
           },
           "cockpit": {
-            "b_handlebar_height": "47",
-            "c_handlebar_length": "28",
+            "b_handlebar_height": {
+              "details": "47"
+            },
+            "c_handlebar_length": {
+              "details": "28"
+            },
             "headset": "Neco H156EM 28.6*44-56*30",
-            "stem": "Zoom TDS-C269-8FOV 31.8*90mm",
-            "handlebar": "Promax HB-3188 22.2*31.8*700mm",
-            "seatpost": "Himiway Seatpost",
+            "stem": {
+              "manufacturer": "Zoom",
+              "adjustable": false,
+              "clamp_mm": 31.8,
+              "length_mm": 90,
+              "details": "TDS-C269-8FOV"
+            },
+            "handlebar": {
+              "manufacturer": "Promax",
+              "clamp_mm": 31.8,
+              "width_mm": 700,
+              "details": "HB-3188 22.2 *"
+            },
+            "seatpost": {
+              "manufacturer": "Himiway",
+              "details": "Seatpost"
+            },
             "saddle": "Himiway Saddle"
           },
           "geometry": {
@@ -20069,12 +20583,30 @@
             }
           },
           "cockpit": {
-            "b_handlebar_height": "47",
-            "c_handlebar_length": "28",
+            "b_handlebar_height": {
+              "details": "47"
+            },
+            "c_handlebar_length": {
+              "details": "28"
+            },
             "headset": "Neco H156EM 28.6*44-56*30",
-            "stem": "Zoom TDS-C269-8FOV 31.8*90mm",
-            "handlebar": "Promax HB-3188 22.2*31.8*700mm",
-            "seatpost": "Himiway Seatpost",
+            "stem": {
+              "manufacturer": "Zoom",
+              "adjustable": false,
+              "clamp_mm": 31.8,
+              "length_mm": 90,
+              "details": "TDS-C269-8FOV"
+            },
+            "handlebar": {
+              "manufacturer": "Promax",
+              "clamp_mm": 31.8,
+              "width_mm": 700,
+              "details": "HB-3188 22.2 *"
+            },
+            "seatpost": {
+              "manufacturer": "Himiway",
+              "details": "Seatpost"
+            },
             "saddle": "Himiway Saddle"
           },
           "geometry": {
@@ -20345,12 +20877,29 @@
             }
           },
           "cockpit": {
-            "b_handlebar_height": "42.9",
-            "c_handlebar_length": "27.6",
+            "b_handlebar_height": {
+              "details": "42.9"
+            },
+            "c_handlebar_length": {
+              "details": "27.6"
+            },
             "headset": "Neco H383AEM 28.6*44*56*39.8",
-            "stem": "XF-827 alloy Ext:50mm",
-            "handlebar": "Promax HB-3188DB -W780",
-            "seatpost": "SP-2003 30.9*350mm",
+            "stem": {
+              "material": "aluminum",
+              "adjustable": false,
+              "length_mm": 50,
+              "details": "XF-827 alloy"
+            },
+            "handlebar": {
+              "manufacturer": "Promax",
+              "width_mm": 780,
+              "details": "HB-3188DB"
+            },
+            "seatpost": {
+              "diameter_mm": 30.9,
+              "length_mm": 350,
+              "details": "SP-2003 *"
+            },
             "saddle": "Selle royal A054UE"
           },
           "geometry": {
@@ -20564,11 +21113,23 @@
             }
           },
           "cockpit": {
-            "b_handlebar_height": "44.5",
-            "c_handlebar_length": "28",
+            "b_handlebar_height": {
+              "details": "44.5"
+            },
+            "c_handlebar_length": {
+              "details": "28"
+            },
             "headset": "Neco A16M 44*44*30",
-            "stem": "MA-5040 28.6*31.8mm",
-            "handlebar": "HB-6001 22.2*31.8*710mm",
+            "stem": {
+              "adjustable": false,
+              "clamp_mm": 31.8,
+              "details": "MA-5040 28.6*"
+            },
+            "handlebar": {
+              "clamp_mm": 31.8,
+              "width_mm": 710,
+              "details": "HB-6001 22.2 *"
+            },
             "saddle": "Himwiay saddle"
           },
           "geometry": {
@@ -20785,11 +21346,27 @@
             }
           },
           "cockpit": {
-            "handlebar": "Aluminum Alloy, Φ31.8mm, 680mm",
+            "handlebar": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 680,
+              "details": "Aluminum Alloy"
+            },
             "grips": "Durable ergonomic grips, lockable",
-            "stem": "0-60° Adjustable, Aluminum Alloy, Φ31.8mm, 90mm",
+            "stem": {
+              "material": "aluminum",
+              "adjustable": true,
+              "clamp_mm": 31.8,
+              "length_mm": 90,
+              "angle_deg": 60,
+              "details": "0-, Aluminum Alloy"
+            },
             "saddle": "Memory Foam comfort ergonomic seat",
-            "seatpost": "Aluminum Alloy, Φ31.6mm",
+            "seatpost": {
+              "material": "aluminum",
+              "diameter_mm": 31.6,
+              "details": "Aluminum Alloy, mm"
+            },
             "clamp": "Aluminum Alloy, quick release"
           },
           "included_accessories": {
@@ -21169,12 +21746,30 @@
             }
           },
           "cockpit": {
-            "b_handlebar_height": "44",
-            "c_handlebar_length": "27.2",
+            "b_handlebar_height": {
+              "details": "44"
+            },
+            "c_handlebar_length": {
+              "details": "27.2"
+            },
             "headset": "TOPYCWZ-5662-01 52*52*39.8",
-            "stem": "Promax Alloy ssabk",
-            "handlebar": "MTB-AL-325BT/Φ31.8*/W:680/6°",
-            "seatpost": "ESP-AD635 31.6*350mm | travel:100mm",
+            "stem": {
+              "manufacturer": "Promax",
+              "material": "aluminum",
+              "adjustable": false,
+              "details": "Alloy ssabk"
+            },
+            "handlebar": {
+              "width_mm": 680,
+              "details": "MTB-AL-325BT/Φ31.8*, 6°"
+            },
+            "seatpost": {
+              "type": "suspension",
+              "diameter_mm": 31.6,
+              "travel_mm": 100,
+              "length_mm": 350,
+              "details": "ESP-AD635 * |"
+            },
             "saddle": "DDK 153MF"
           },
           "geometry": {
@@ -21449,11 +22044,21 @@
             }
           },
           "cockpit": {
-            "b_handlebar_height": "29.1",
-            "c_handlebar_length": "21.8",
+            "b_handlebar_height": {
+              "details": "29.1"
+            },
+            "c_handlebar_length": {
+              "details": "21.8"
+            },
             "headset": "Neco H114 44*44*30",
-            "stem": "XF-8241 28.6*E30",
-            "handlebar": "XF-2180 22.2*540mm",
+            "stem": {
+              "adjustable": false,
+              "details": "XF-8241 28.6*E30"
+            },
+            "handlebar": {
+              "width_mm": 540,
+              "details": "XF-2180 22.2*"
+            },
             "saddle": "Extended seat"
           },
           "geometry": {
@@ -21715,15 +22320,30 @@
             "rear_wheel": "Rim: MD-147 20*4.0\"\"*36H*12G A/V | Spoke: 12G 126mm/127mm Hub: 48v 750w | Himiway Hub Motor"
           },
           "cockpit": {
-            "b_handlebar_height": "48.8",
-            "i_handlebar_length": "26.7",
+            "b_handlebar_height": {
+              "details": "48.8"
+            },
+            "i_handlebar_length": {
+              "details": "26.7"
+            },
             "headset": "H115",
-            "stem": "28.6*31.8*40L",
-            "handlebar": "JY-AL-SMT2,W680*L211*22.2*31.8*10°",
+            "stem": {
+              "adjustable": false,
+              "details": "28.6*31.8*40L"
+            },
+            "handlebar": {
+              "clamp_mm": 31.8,
+              "width_mm": 680,
+              "details": "JY-AL-SMT2, *L211 *10°"
+            },
             "saddle": "Extended Seat",
             "max_system_weight": "330 lb.",
-            "c_handlebar_length": "29.1",
-            "seatpost": "/"
+            "c_handlebar_length": {
+              "details": "29.1"
+            },
+            "seatpost": {
+              "details": ""
+            }
           },
           "geometry": {
             "c_wheelbase": "47",
@@ -22096,11 +22716,28 @@
             }
           },
           "cockpit": {
-            "handlebar": "Aluminum Alloy, Φ31.8mm, 660mm",
+            "handlebar": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 660,
+              "details": "Aluminum Alloy"
+            },
             "grips": "Durable ergonomic grips, lockable",
-            "stem": "0-60° Adjustable, Aluminum Alloy, Φ31.8mm, 60mm",
+            "stem": {
+              "material": "aluminum",
+              "adjustable": true,
+              "clamp_mm": 31.8,
+              "length_mm": 60,
+              "angle_deg": 60,
+              "details": "0-, Aluminum Alloy"
+            },
             "saddle": "Memory Foam comfort ergonomic seat",
-            "seatpost": "Aluminum Alloy, Φ33.9mm, 350mm",
+            "seatpost": {
+              "material": "aluminum",
+              "diameter_mm": 33.9,
+              "length_mm": 350,
+              "details": "Aluminum Alloy, mm"
+            },
             "clamp": "Aluminum Alloy, quick release"
           },
           "included_accessories": {
@@ -22548,11 +23185,27 @@
             }
           },
           "cockpit": {
-            "handlebar": "Aluminum Alloy, Φ31.8mm, 680mm",
+            "handlebar": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 680,
+              "details": "Aluminum Alloy"
+            },
             "grips": "Durable ergonomic grips, lockable",
-            "stem": "0-60° Adjustable, Aluminum Alloy, Φ31.8mm, 90mm",
+            "stem": {
+              "material": "aluminum",
+              "adjustable": true,
+              "clamp_mm": 31.8,
+              "length_mm": 90,
+              "angle_deg": 60,
+              "details": "0-, Aluminum Alloy"
+            },
             "saddle": "Memory Foam comfort ergonomic seat",
-            "seatpost": "Aluminum Alloy, Φ33.9mm",
+            "seatpost": {
+              "material": "aluminum",
+              "diameter_mm": 33.9,
+              "details": "Aluminum Alloy, mm"
+            },
             "clamp": "Aluminum Alloy, quick release"
           },
           "included_accessories": {
@@ -22823,11 +23476,27 @@
             }
           },
           "cockpit": {
-            "handlebar": "Aluminum Alloy, Φ31.8mm, 680mm",
+            "handlebar": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 680,
+              "details": "Aluminum Alloy"
+            },
             "grips": "Durable ergonomic grips, lockable",
-            "stem": "0-60° Adjustable, Aluminum Alloy, Φ31.8mm, 90mm",
+            "stem": {
+              "material": "aluminum",
+              "adjustable": true,
+              "clamp_mm": 31.8,
+              "length_mm": 90,
+              "angle_deg": 60,
+              "details": "0-, Aluminum Alloy"
+            },
             "saddle": "Memory Foam comfort ergonomic seat",
-            "seatpost": "Aluminum Alloy, Φ33.9mm",
+            "seatpost": {
+              "material": "aluminum",
+              "diameter_mm": 33.9,
+              "details": "Aluminum Alloy, mm"
+            },
             "clamp": "Aluminum Alloy, quick release"
           },
           "included_accessories": {
@@ -23192,11 +23861,27 @@
             }
           },
           "cockpit": {
-            "handlebar": "Aluminum Alloy, Φ31.8mm, 680mm",
+            "handlebar": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 680,
+              "details": "Aluminum Alloy"
+            },
             "grips": "Durable ergonomic grips, lockable",
-            "stem": "0-60° Adjustable, Aluminum Alloy, Φ31.8mm, 90mm",
+            "stem": {
+              "material": "aluminum",
+              "adjustable": true,
+              "clamp_mm": 31.8,
+              "length_mm": 90,
+              "angle_deg": 60,
+              "details": "0-, Aluminum Alloy"
+            },
             "saddle": "Memory Foam comfort ergonomic seat",
-            "seatpost": "Aluminum Alloy, Φ33.9mm",
+            "seatpost": {
+              "material": "aluminum",
+              "diameter_mm": 33.9,
+              "details": "Aluminum Alloy, mm"
+            },
             "clamp": "Aluminum Alloy, quick release"
           },
           "included_accessories": {
@@ -23746,11 +24431,27 @@
             }
           },
           "cockpit": {
-            "handlebar": "Aluminum Alloy, Φ31.8mm, 680mm",
+            "handlebar": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 680,
+              "details": "Aluminum Alloy"
+            },
             "grips": "Durable ergonomic grips, lockable",
-            "stem": "0-60° Adjustable, Aluminum Alloy, Φ31.8mm, 90mm",
+            "stem": {
+              "material": "aluminum",
+              "adjustable": true,
+              "clamp_mm": 31.8,
+              "length_mm": 90,
+              "angle_deg": 60,
+              "details": "0-, Aluminum Alloy"
+            },
             "saddle": "Memory Foam comfort ergonomic seat",
-            "seatpost": "Aluminum Alloy, Φ33.9mm",
+            "seatpost": {
+              "material": "aluminum",
+              "diameter_mm": 33.9,
+              "details": "Aluminum Alloy, mm"
+            },
             "clamp": "Aluminum Alloy, quick release"
           },
           "included_accessories": {
@@ -24139,12 +24840,32 @@
             }
           },
           "cockpit": {
-            "b_handlebar_height": "42.7",
-            "c_handlebar_length": "30.7",
+            "b_handlebar_height": {
+              "details": "42.7"
+            },
+            "c_handlebar_length": {
+              "details": "30.7"
+            },
             "headset": "Neco H383AE 28.6×44*56×30mm",
-            "stem": "3D forged alloy Ext:50mm",
-            "handlebar": "Promax HB-3188DB -W780",
-            "seatpost": "Exa speed-up 30.9*500mm 150mm travel",
+            "stem": {
+              "material": "aluminum",
+              "adjustable": false,
+              "length_mm": 50,
+              "details": "3D forged alloy"
+            },
+            "handlebar": {
+              "manufacturer": "Promax",
+              "width_mm": 780,
+              "details": "HB-3188DB"
+            },
+            "seatpost": {
+              "manufacturer": "Exa",
+              "type": "suspension",
+              "diameter_mm": 30.9,
+              "travel_mm": 150,
+              "length_mm": 500,
+              "details": "speed-up *"
+            },
             "saddle": "Selle royal vivo"
           },
           "geometry": {
@@ -24395,7 +25116,10 @@
           },
           "cockpit": {
             "telescoping_seat_post": "An adjustable and removable seat post allows riders to reach a range of heights while maintaining comfort and stability.",
-            "adjustable_handlebar_stem": "Easily adjustable handlebar stem riser includes a quick-release lever to comfortably adjust your handlebar reach to your liking; bring your handlebars toward you or push them further back.",
+            "adjustable_handlebar_stem": {
+              "type": "riser",
+              "details": "Easily adjustable handlebar stem r includes a quick-release lever to comfortably adjust your handlebar reach to your liking; bring your handlebars toward you or push them further back"
+            },
             "lock_on_grips": "Ergonomic lock-on grips add comfort so you can ride longer. The plastic sleeve inside helps lock the grips into place and also allows the grips to be easily removed.",
             "saddle": "A custom-designed saddle compliments a sportier look while adding comfort so you can ride longer."
           },
@@ -24959,7 +25683,10 @@
           },
           "cockpit": {
             "grips": "Soft durometer ergonomic grips add comfort so you can ride longer. Removable caps on the end allow for various accessory add-on.",
-            "handlebars": "Newly added BMX-style handlebars are sturdy, comfortable, and offer more opportunities for customizing your ride with accessories.",
+            "handlebars": {
+              "type": "bmx",
+              "details": "Newly added BMX-style handlebars are sturdy, comfortable, and offer more opportunities for customizing your ride with accessories"
+            },
             "saddle": "A custom-designed saddle compliments a sportier look and can be angle adjusted."
           },
           "geometry": {
@@ -25916,7 +26643,9 @@
           "cockpit": {
             "lock_on_grips": "Ergonomic lock-on grips add comfort so you can ride longer. The plastic sleeve inside helps lock the grips into place and also allows the grips to be easily removed.",
             "saddle": "A custom-designed saddle complements a sporty look while adding comfort so you can ride longer.",
-            "adjustable_handlebar_stem": "Ride longer and more comfortably in an upright cruising position with our new 9-degree stem, which shortens the handlebar reach. Plus, telescoping functionality allows riders to reach a wide range of heights while maintaining comfort and stability.",
+            "adjustable_handlebar_stem": {
+              "details": "Ride longer and more comfortably in an upright cruising position with our new 9-degree stem, which shortens the handlebar reach. Plus, telescoping functionality allows riders to reach a range of heights while maintaining comfort and stability"
+            },
             "telescoping_seat_post": "Customize the bike to your perfect size by adjusting the seat post height; simply open the quick-release collar and slide the post to your preferred height and lock it in place by closing the collar."
           },
           "geometry": {
@@ -26994,7 +27723,9 @@
           "cockpit": {
             "lock_on_grips": "Full-length ergonomic lock-on grips add comfort so you can ride longer. The plastic sleeve inside helps lock the grips into place and also allows the grips to be easily removed.",
             "saddle": "A custom-designed saddle complements a sporty look while adding comfort so you can ride longer.",
-            "adjustable_handlebar_stem": "Ride longer and more comfortably in an upright cruising position with our new zero-degree stem, which shortens the handlebar reach. Plus, telescoping functionality allows riders to reach a wide range of heights while maintaining comfort and stability.",
+            "adjustable_handlebar_stem": {
+              "details": "Ride longer and more comfortably in an upright cruising position with our new zero-degree stem, which shortens the handlebar reach. Plus, telescoping functionality allows riders to reach a range of heights while maintaining comfort and stability"
+            },
             "telescoping_seat_post": "Customize the bike to your perfect size by adjusting the seat post height; simply open the quick-release collar and slide the post to your preferred height and lock it in place by closing the collar."
           },
           "geometry": {
@@ -30219,7 +30950,10 @@
             "lock_on_grips": "Ergonomic lock-on grips add comfort so you can ride longer. The plastic sleeve inside helps lock the grips into place and also allows the grips to be easily removed.",
             "saddle": "A custom-designed saddle compliments a sporty look while adding comfort so you can ride longer.",
             "dual_seat_post": "An adjustable and removable seat post with two different expansion points allows riders to reach a wide range of heights while maintaining comfort and stability.",
-            "adjustable_handlebar_stem": "Easily adjustable handlebar stem riser includes a quick-release lever to comfortably adjust your handlebar reach to your liking; bring your handlebars toward you or push them further back."
+            "adjustable_handlebar_stem": {
+              "type": "riser",
+              "details": "Easily adjustable handlebar stem r includes a quick-release lever to comfortably adjust your handlebar reach to your liking; bring your handlebars toward you or push them further back"
+            }
           },
           "geometry": {
             "bike_unfolded": "77\"L x 17\"W x 46\"H",
@@ -31608,7 +32342,9 @@
           },
           "cockpit": {
             "telescoping_seat_post": "An adjustable and removable seat post allows riders to reach a range of heights while maintaining comfort and stability.",
-            "fixed_handlebar_stem": "Designed for lasting comfort and control, the XPress High-Step features a fixed handlebar stem, offering a reliable riding position with minimal maintenance. Its timeless silhouette adds to the classic bike look, perfect for riders who value simplicity and style.",
+            "fixed_handlebar_stem": {
+              "details": "Designed for lasting comfort and control, the XPress High-Step features a fixed handlebar stem, offering a reliable riding position with minimal maintenance. Its timeless silhouette adds to the classic bike look, perfect for riders who value simplicity and style"
+            },
             "grips": "Soft durometer ergonomic grips are full-length on both sides and easily customizable.",
             "saddle": "A custom-designed saddle compliments a sportier look while adding comfort so you can ride longer."
           },
@@ -32160,10 +32896,15 @@
           },
           "cockpit": {
             "telescoping_seat_post": "Customize the bike to your perfect size by adjusting the seat post height; simply open the quick-release collar and slide the post to your preferred height and lock it in place by closing the collar.",
-            "comfort_curve_handlebars": "The XPress2 Step-Thru Cruiser features curved handlebars paired with an adjustable stem riser and quick-release lever, allowing riders to easily customize handlebar reach and positioning for a more comfortable, upright riding experience.",
+            "comfort_curve_handlebars": {
+              "type": "riser",
+              "details": "The XPress2 Step-Thru Cruiser features curved handlebars paired with an adjustable stem r and quick-release lever, allowing riders to easily customize handlebar reach and positioning for a more comfortable, upright riding experience"
+            },
             "lock_on_grips": "Full-length ergonomic lock-on grips add comfort so you can ride longer. The plastic sleeve inside helps lock the grips into place and also allows the grips to be easily removed.",
             "saddle": "A custom-designed saddle complements a sporty look while adding comfort so you can ride longer.",
-            "hybrid_sprint_handlebars": "The XPress2 High-Step Commuter features sporty Hybrid Sprint™ handlebars with a fixed stem, creating a more athletic, active riding position for confident handling and responsive control. Designed for riders who prefer a performance-inspired feel, the setup delivers a sleek, streamlined look while maintaining the durability and low-maintenance simplicity of a classic commuter bike."
+            "hybrid_sprint_handlebars": {
+              "details": "The XPress2 High-Step Commuter features sporty Hybrid Sprint™ handlebars with a fixed stem, creating a more athletic, active riding position for confident handling and responsive control. Designed for riders who prefer a performance-inspired feel, the setup delivers a sleek, streamlined look while maintaining the durability and low-maintenance simplicity of a classic commuter bike"
+            }
           },
           "geometry": {
             "bike_dimensions": "72\"L x 17\"W x 43\"H",
@@ -33109,7 +33850,12 @@
             "spokes": "Heavy-duty carbon steel, 13G × 263 mm (front) / 223 mm (rear)"
           },
           "cockpit": {
-            "handlebar": "Aluminum Alloy, φ31.8mm, 700mm",
+            "handlebar": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 700,
+              "details": "Aluminum Alloy"
+            },
             "saddle": "Customized Comfort Leather Seat"
           },
           "included_accessories": {
@@ -33343,7 +34089,12 @@
             "spokes": "Heavy-duty carbon steel, 13G × 263 mm (front) / 223 mm (rear)"
           },
           "cockpit": {
-            "handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
+            "handlebar": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 680,
+              "details": "Aluminum Alloy"
+            },
             "saddle": "Customized Comfort Leather Seat"
           },
           "included_accessories": {
@@ -33584,7 +34335,12 @@
             "spokes": "Heavy-duty carbon steel, 12G × 248 mm (front) / 219 mm (rear)"
           },
           "cockpit": {
-            "handlebar": "Aluminum Alloy, φ31.8mm, 720mm",
+            "handlebar": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 720,
+              "details": "Aluminum Alloy"
+            },
             "saddle": "Customized Comfort Leather Seat"
           },
           "geometry": {
@@ -33859,7 +34615,12 @@
             "spokes": "Heavy-duty carbon steel, 12G × 248 mm (front) / 219 mm (rear)"
           },
           "cockpit": {
-            "handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
+            "handlebar": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 680,
+              "details": "Aluminum Alloy"
+            },
             "saddle": "Customized Comfort Leather Seat"
           },
           "geometry": {
@@ -34224,7 +34985,12 @@
             "spokes": "Heavy-duty carbon steel, 13G × 278 mm (front) / 263 mm (rear) , 13G × 280 mm (front) / 263mm (rear)"
           },
           "cockpit": {
-            "handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
+            "handlebar": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 680,
+              "details": "Aluminum Alloy"
+            },
             "saddle": "High-resilience cushioning"
           },
           "geometry": {
@@ -34499,7 +35265,12 @@
             "spokes": "Heavy-duty carbon steel, 13G × 278 mm (front) / 253 mm (rear) , 13G × 280 mm (front) / 255 mm (rear)"
           },
           "cockpit": {
-            "handlebar": "Aluminum Alloy, φ31.8mm, 700mm",
+            "handlebar": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 700,
+              "details": "Aluminum Alloy"
+            },
             "saddle": "High-resilience cushioning"
           },
           "geometry": {
@@ -34767,7 +35538,12 @@
             "spokes": "Heavy-duty carbon steel, 13G × 278 mm (front) / 263 mm (rear) , 13G × 280 mm (front) / 263mm (rear)"
           },
           "cockpit": {
-            "handlebar": "Aluminum Alloy, φ31.8mm, 700mm",
+            "handlebar": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 700,
+              "details": "Aluminum Alloy"
+            },
             "saddle": "High-resilience cushioning"
           },
           "geometry": {
@@ -35044,7 +35820,12 @@
             "spokes": "Heavy-duty carbon steel, 13G × 278 mm (front) / 253 mm (rear) , 13G × 280 mm (front) / 255 mm (rear)"
           },
           "cockpit": {
-            "handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
+            "handlebar": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 680,
+              "details": "Aluminum Alloy"
+            },
             "saddle": "High-resilience cushioning"
           },
           "geometry": {
@@ -35318,7 +36099,12 @@
             "spokes": "Heavy-duty carbon steel ，13G×183mm"
           },
           "cockpit": {
-            "handlebar_length": "Aluminum Alloy, φ31.8mm, 620 mm",
+            "handlebar_length": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 620,
+              "details": "Aluminum Alloy"
+            },
             "saddle": "Customized Comfort Leather Seat"
           },
           "geometry": {
@@ -35548,7 +36334,12 @@
             "spokes": "Heavy-duty carbon steel, 12G × 248 mm (front) / 216 mm (rear)"
           },
           "cockpit": {
-            "handlebar": "Aluminum Alloy, φ31.8mm, 720mm",
+            "handlebar": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 720,
+              "details": "Aluminum Alloy"
+            },
             "saddle": "Customized Comfort Leather Seat"
           },
           "geometry": {
@@ -35799,7 +36590,12 @@
             "spokes": "Heavy-duty carbon steel, 12G × 248 mm (front) / 216 mm (rear)"
           },
           "cockpit": {
-            "handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
+            "handlebar": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 680,
+              "details": "Aluminum Alloy"
+            },
             "saddle": "Hydraulic Two-Stage Adjustable Seat"
           },
           "geometry": {
@@ -36050,7 +36846,12 @@
             "spokes": "Heavy-duty carbon steel, 12G × 248 mm (front) / 251 mm (rear)"
           },
           "cockpit": {
-            "handlebar": "Aluminum Alloy, φ31.8mm, 720mm",
+            "handlebar": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 720,
+              "details": "Aluminum Alloy"
+            },
             "saddle": "Hydraulic Two-Stage Adjustable Seat"
           },
           "geometry": {
@@ -36303,7 +37104,12 @@
             "spokes": "Heavy-duty carbon steel, 12G × 248 mm (front) / 251 mm (rear)"
           },
           "cockpit": {
-            "handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
+            "handlebar": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 680,
+              "details": "Aluminum Alloy"
+            },
             "saddle": "Hydraulic Two-Stage Adjustable Seat"
           },
           "geometry": {
@@ -36558,7 +37364,12 @@
             "spokes": "Heavy-duty carbon steel, 13G × 172 mm (front) / 123 mm (rear) , 13G × 172 mm (front) / 125 mm (rear)"
           },
           "cockpit": {
-            "handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
+            "handlebar": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 680,
+              "details": "Aluminum Alloy"
+            },
             "saddle": "Customized Comfort Leather Seat"
           },
           "geometry": {
@@ -36853,9 +37664,19 @@
             "spokes": "Heavy-duty carbon steel, 13G × 172 mm (front) / 123 mm (rear), 13G × 125 mm (rear)"
           },
           "cockpit": {
-            "handlebar": "Aluminum Alloy, φ31.8mm, 620 mm",
+            "handlebar": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 620,
+              "details": "Aluminum Alloy"
+            },
             "saddle": "Customized Comfort Leather Seat",
-            "handlebar_length": "Aluminum Alloy, φ31.8mm, 620 mm"
+            "handlebar_length": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 620,
+              "details": "Aluminum Alloy"
+            }
           },
           "geometry": {
             "rider_height": "5'0\" ~ 6'2\"",
@@ -37087,7 +37908,12 @@
             "spokes": "Heavy-duty carbon steel, 13G × 275 mm (front) / 245 mm (rear) , 13G × 275 mm (front) / 243 mm (rear)"
           },
           "cockpit": {
-            "handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
+            "handlebar": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 680,
+              "details": "Aluminum Alloy"
+            },
             "saddle": "Customized Comfort Leather Seat"
           },
           "geometry": {
@@ -37398,7 +38224,12 @@
             "spokes": "Heavy-duty carbon steel, 13G × 263 mm (front) / 226 mm (rear) , 13G × 265 mm (front) / 224 mm (rear)"
           },
           "cockpit": {
-            "handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
+            "handlebar": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 680,
+              "details": "Aluminum Alloy"
+            },
             "saddle": "Customized Comfort Leather Seat"
           },
           "geometry": {
@@ -37657,11 +38488,23 @@
             "spokes": "Sapim 14G"
           },
           "cockpit": {
-            "stem": "90mm extension, single-piece carbon fiber",
-            "handlebar": "Size Small: 15° Flare, 400mm Hood, 467mm Drop Bars Size Large: 15° Flare, 420mm Hood, 487mm Drop Bars",
+            "stem": {
+              "material": "carbon",
+              "adjustable": false,
+              "length_mm": 90,
+              "details": "single-piece carbon fiber"
+            },
+            "handlebar": {
+              "details": "Size Small: 15° Flare, Hood, Drop Bars Size Large: 15° Flare, Hood, Drop Bars"
+            },
             "grips": "PU Leather Bar Wrap",
             "saddle": "Selle Royale Asphalt GF",
-            "seat_post": "Carbon 27.2x300mm"
+            "seat_post": {
+              "material": "carbon",
+              "diameter_mm": 27.2,
+              "length_mm": 300,
+              "details": "Carbon x"
+            }
           }
         }
       },
@@ -37939,10 +38782,19 @@
           },
           "cockpit": {
             "folding_stem": "12° Rise, 285mm length, 31.8mm Bar Clamp",
-            "handlebar": "Straight Bars: 31.8mm Bar Clamp, 6° Sweep, 0° Rise, 600mm Width",
+            "handlebar": {
+              "type": "riser",
+              "clamp_mm": 31.8,
+              "width_mm": 600,
+              "details": "Straight Bars:, 6° Sweep, 0°"
+            },
             "grips": "Ergonomic Rubber Grips",
             "saddle": "DDK City Comfort Saddle",
-            "seat_post": "Zoom 31.6mm x 350mm"
+            "seat_post": {
+              "diameter_mm": 31.6,
+              "length_mm": 350,
+              "details": "Zoom mm x"
+            }
           },
           "geometry": {
             "rider_height_range": {
@@ -38297,10 +39149,19 @@
           },
           "cockpit": {
             "folding_stem": "12° Rise, 285mm length, 31.8mm Bar Clamp",
-            "handlebar": "Straight Bars: 31.8mm Bar Clamp, 6° Sweep, 0° Rise, 600mm Width",
+            "handlebar": {
+              "type": "riser",
+              "clamp_mm": 31.8,
+              "width_mm": 600,
+              "details": "Straight Bars:, 6° Sweep, 0°"
+            },
             "grips": "Ergonomic Rubber Grips",
             "saddle": "DDK City Comfort Saddle",
-            "seat_post": "Zoom 31.6mm x 350mm"
+            "seat_post": {
+              "diameter_mm": 31.6,
+              "length_mm": 350,
+              "details": "Zoom mm x"
+            }
           },
           "geometry": {
             "rider_height_range": {
@@ -38537,11 +39398,27 @@
             "spokes": "13G Black Stainless Steel"
           },
           "cockpit": {
-            "handlebars": "MTB: 45mm Rise, 9° Sweep 31.8mm Bars",
+            "handlebars": {
+              "type": "riser",
+              "clamp_mm": 31.8,
+              "rise_mm": 45,
+              "details": "MTB:, 9° Sweep Bars"
+            },
             "grips": "Ergonomic Rubber Locking Grips",
             "saddle": "Selle Royal Viento",
-            "seat_post": "Zoom 350mm x 31.6mm",
-            "stem": "Brose 80mm Rise 25° 31.8mm Bar Clamp"
+            "seat_post": {
+              "diameter_mm": 31.6,
+              "length_mm": 350,
+              "details": "Zoom x mm"
+            },
+            "stem": {
+              "manufacturer": "Brose",
+              "adjustable": false,
+              "clamp_mm": 31.8,
+              "length_mm": 80,
+              "angle_deg": 25,
+              "details": "Bar Clamp"
+            }
           },
           "geometry": {
             "rider_height_range": {
@@ -38997,11 +39874,27 @@
             "spokes": "Stainless steel 14G front/13G rear"
           },
           "cockpit": {
-            "handlebars": "Straight bars; 680mm width; 40mm rise; 31.8mm bar clamp; 10° sweep",
+            "handlebars": {
+              "type": "riser",
+              "clamp_mm": 31.8,
+              "width_mm": 680,
+              "rise_mm": 40,
+              "details": "Straight bars, 10° sweep"
+            },
             "grips": "Ergonomic grips by Ergotec",
             "saddle": "Selle Royale Vivo",
-            "seat_post": "31.6mm x 350mm seat post, dual bolt pivot clamp",
-            "stem": "0-90 degree; 80mm extension; 31.8mm bar clamp hidden cable adjustable stem"
+            "seat_post": {
+              "diameter_mm": 31.6,
+              "length_mm": 350,
+              "details": "mm x seat post, dual bolt pivot clamp"
+            },
+            "stem": {
+              "adjustable": true,
+              "clamp_mm": 31.8,
+              "length_mm": 80,
+              "angle_deg": 90,
+              "details": "0-, bar clamp hidden cable stem"
+            }
           },
           "geometry": {
             "rider_height_range": {
@@ -39467,8 +40360,21 @@
             "spokes": "12G Stainless Steel"
           },
           "cockpit": {
-            "handlebar": "Width: 720mm, Sweep: 25°, Rise: 120mm, Bar Clamp 31.8mm",
-            "stem": "Promax. Height: 45mm, Rise: 6° , 31.8mm Clamp",
+            "handlebar": {
+              "type": "riser",
+              "clamp_mm": 31.8,
+              "width_mm": 720,
+              "rise_mm": 120,
+              "details": "Sweep: 25°, Bar"
+            },
+            "stem": {
+              "manufacturer": "Promax",
+              "adjustable": false,
+              "clamp_mm": 31.8,
+              "length_mm": 45,
+              "angle_deg": 6,
+              "details": "Clamp"
+            },
             "grips": "Anti-slip Rubber Grips",
             "seat": "Customized cafe style saddle"
           },
@@ -39707,8 +40613,20 @@
             }
           },
           "cockpit": {
-            "handlebar": "Width: 720mm, Sweep: 22°, Rise: 160mm, Bar Clamp 31.8mm",
-            "stem": "Promax. Height: 50mm, Rise: 6°",
+            "handlebar": {
+              "type": "riser",
+              "clamp_mm": 31.8,
+              "width_mm": 720,
+              "rise_mm": 160,
+              "details": "Sweep: 22°, Bar"
+            },
+            "stem": {
+              "manufacturer": "Promax",
+              "adjustable": false,
+              "length_mm": 50,
+              "angle_deg": 6,
+              "details": ""
+            },
             "grips": "Dual Lock on Grip with lockring.",
             "seat": "Two-passenger saddle with 400 lb payload capacity"
           },
@@ -39941,8 +40859,20 @@
             }
           },
           "cockpit": {
-            "handlebar": "Width: 720mm, Sweep: 25°, Rise: 120mm, Bar Clamp 31.8mm",
-            "stem": "Promax. Height: 45mm, Rise: 6°",
+            "handlebar": {
+              "type": "riser",
+              "clamp_mm": 31.8,
+              "width_mm": 720,
+              "rise_mm": 120,
+              "details": "Sweep: 25°, Bar"
+            },
+            "stem": {
+              "manufacturer": "Promax",
+              "adjustable": false,
+              "length_mm": 45,
+              "angle_deg": 6,
+              "details": ""
+            },
             "grips": "Anti-slip Rubber Grips",
             "seat": "Customized cafe style saddle"
           },
@@ -40229,8 +41159,19 @@
             }
           },
           "cockpit": {
-            "handlebar": "Width: 720mm, Sweep: 25°, Rise: 120mm",
-            "stem": "Promax. Height: 45mm, Rise: 6°",
+            "handlebar": {
+              "type": "riser",
+              "width_mm": 720,
+              "rise_mm": 120,
+              "details": "Sweep: 25°"
+            },
+            "stem": {
+              "manufacturer": "Promax",
+              "adjustable": false,
+              "length_mm": 45,
+              "angle_deg": 6,
+              "details": ""
+            },
             "grips": "Anti-slip Rubber Grips",
             "seat": "Customized cafe style saddle"
           },
@@ -40465,10 +41406,21 @@
             "spokes": "Black Stainless Steel, 13G"
           },
           "cockpit": {
-            "handlebars": "780mm Width, 28mm Rise, 6° Sweep",
+            "handlebars": {
+              "type": "riser",
+              "width_mm": 780,
+              "rise_mm": 28,
+              "details": "6° Sweep"
+            },
             "grips": "Velo Silica Gel Ergonomic Grips",
             "saddle": "Selle Royal SRX",
-            "stem": "Toothless 0° Bore, 45mm Rise, 35mm Bar Clamp"
+            "stem": {
+              "adjustable": false,
+              "clamp_mm": 35.0,
+              "length_mm": 45,
+              "angle_deg": 0,
+              "details": "Toothless Bore, Bar Clamp"
+            }
           },
           "general_other": {
             "dropper_post": "150mm Exaform KSP900; 31.6mm Seatpost Diameter"
@@ -40773,11 +41725,27 @@
             "spokes": "Stainless steel 13G front/12G rear"
           },
           "cockpit": {
-            "handlebars": "Riser bars; 680mm width; 30mm rise; 31.8mm bar clamp; 10° sweep",
+            "handlebars": {
+              "type": "riser",
+              "clamp_mm": 31.8,
+              "width_mm": 680,
+              "rise_mm": 30,
+              "details": "r bars, 10° sweep"
+            },
             "grips": "VELO ergonomic silicone grips",
             "saddle": "VELO saddle",
-            "seat_post": "31.6mm x 350mm dual-bolt adjustable angle seat post",
-            "stem": "Sleek 0-60 degree adjustable angle 90mm extension 31.8mm bar clamp stem with 2nd secure point for stability"
+            "seat_post": {
+              "diameter_mm": 31.6,
+              "length_mm": 350,
+              "details": "mm x dual-bolt adjustable angle seat post"
+            },
+            "stem": {
+              "adjustable": true,
+              "clamp_mm": 31.8,
+              "length_mm": 90,
+              "angle_deg": 60,
+              "details": "Sleek 0- angle bar clamp stem with 2nd secure point for stability"
+            }
           },
           "geometry": {
             "rider_height_range": {
@@ -41354,12 +42322,12 @@
           },
           "drivetrain": {
             "shift_levers": {
-              "manufacturer": "microSHIFT",
+              "manufacturer": "MicroShift",
               "speeds": 9,
               "details": "Advent"
             },
             "rear_derailleur": {
-              "manufacturer": "microSHIFT",
+              "manufacturer": "MicroShift",
               "speeds": 9,
               "details": "short cage"
             },
@@ -41420,11 +42388,32 @@
           },
           "cockpit": {
             "seat_binder": "Alloy, Bolt-type, 39mm",
-            "stem": "Globe, cargo 35X150mm quill stem",
-            "handlebars": "Globe, cargo, alloy, 12-degree backsweep, 80mm rise, 31.8mm. 700mm width",
+            "stem": {
+              "manufacturer": "Globe",
+              "type": "quill",
+              "adjustable": false,
+              "length_mm": 150,
+              "details": "cargo 35X quill stem"
+            },
+            "handlebars": {
+              "manufacturer": "Globe",
+              "material": "aluminum",
+              "type": "riser",
+              "clamp_mm": 31.8,
+              "width_mm": 700,
+              "rise_mm": 80,
+              "details": "cargo, alloy, 12-degree backsweep"
+            },
             "grips": "Globe closed end slip on type, 155mm",
             "saddle": "Specialized Body Geometry Comfort Gel",
-            "seatpost": "Telescoping, alloy, 2-bolt Clamp, 20mm offset, 34.9mm, 525mm"
+            "seatpost": {
+              "type": "dropper",
+              "material": "aluminum",
+              "diameter_mm": 34.9,
+              "offset_mm": 20,
+              "length_mm": 525,
+              "details": "Telescoping, alloy, 2-bolt Clamp, offset, mm"
+            }
           },
           "geometry": {
             "crank_length": "One Size: 160mm",
@@ -41637,12 +42626,12 @@
           },
           "drivetrain": {
             "shift_levers": {
-              "manufacturer": "microSHIFT",
+              "manufacturer": "MicroShift",
               "speeds": 9,
               "details": "Advent"
             },
             "rear_derailleur": {
-              "manufacturer": "microSHIFT",
+              "manufacturer": "MicroShift",
               "speeds": 9,
               "details": "short cage"
             },
@@ -41700,11 +42689,31 @@
           },
           "cockpit": {
             "seat_binder": "Alloy, Bolt-type, 39mm",
-            "stem": "Globe, cargo 1.5X150mm quill stem",
-            "handlebars": "Globe, cargo, alloy, 12-degree backsweep, 80mm rise, 31.8mm. 700mm width",
+            "stem": {
+              "manufacturer": "Globe",
+              "type": "quill",
+              "adjustable": false,
+              "length_mm": 150,
+              "details": "cargo 1.5X quill stem"
+            },
+            "handlebars": {
+              "manufacturer": "Globe",
+              "material": "aluminum",
+              "type": "riser",
+              "clamp_mm": 31.8,
+              "width_mm": 700,
+              "rise_mm": 80,
+              "details": "cargo, alloy, 12-degree backsweep"
+            },
             "grips": "Globe closed end slip on type, 155mm",
             "saddle": "Specialized Body Geometry Comfort Gel",
-            "seatpost": "Double Extension Seatpost +/- 330mm, 34.9mm, 585mm, 20mm Offset"
+            "seatpost": {
+              "type": "dropper",
+              "diameter_mm": 34.9,
+              "offset_mm": 20,
+              "length_mm": 330,
+              "details": "Double Extension Seatpost +/-, mm, Offset"
+            }
           },
           "geometry": {
             "crank_length": "One Size: 160mm",
@@ -41979,11 +42988,29 @@
           },
           "cockpit": {
             "seat_binder": "Alloy, 38.6mm",
-            "stem": "Alloy Trail Stem, 35mm bar bore",
-            "handlebars": "Alloy handlebars, 35mm diameter, 8 degree back sweep, 6 degree up sweep, S1/S2: 780mm/30mm rise, S3-S6: 800mm/50mm rise",
+            "stem": {
+              "material": "aluminum",
+              "adjustable": false,
+              "clamp_mm": 35.0,
+              "details": "Alloy Trail Stem, bar bore"
+            },
+            "handlebars": {
+              "material": "aluminum",
+              "type": "riser",
+              "clamp_mm": 35.0,
+              "width_mm": 780,
+              "rise_mm": 30,
+              "details": "Alloy handlebars, diameter, 8 degree back sweep, 6 degree up sweep, S1/S2: , S3-S6"
+            },
             "grips": "Specialized Trail Grips",
             "saddle": "Bridge Comp, Hollow Cr-mo rails 155/143",
-            "seatpost": "Xfusion Manic, infinite adjustable, two bolt head, Remote SLR LE lever, 34.9, S2: 125mm, S3: 170mm, S4-S6: 190mm"
+            "seatpost": {
+              "manufacturer": "XFusion",
+              "type": "dropper",
+              "diameter_mm": 34.9,
+              "travel_mm": 190,
+              "details": "Manic, infinite adjustable, two bolt head, Remote SLR LE lever, S2:, S3:, S4-S6"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -42614,11 +43641,27 @@
           },
           "cockpit": {
             "seat_binder": "Alloy, 38.6mm",
-            "stem": "Deity, 35mm clamp, 42mm length",
-            "handlebars": "Deity Speedway Carbon, 5-degree upsweep, 9-degree backsweep. S1-S2: 810 width, 30mm rise: S3-S6: 810 width, 50mm rise",
+            "stem": {
+              "adjustable": false,
+              "clamp_mm": 35.0,
+              "length_mm": 42,
+              "details": "Deity, clamp"
+            },
+            "handlebars": {
+              "material": "carbon",
+              "type": "riser",
+              "rise_mm": 30,
+              "details": "Deity Speedway Carbon, 5-degree upsweep, 9-degree backsweep. S1-S2: 810, : S3-S6: 810"
+            },
             "grips": "Deity Lockjaw, Lock On, 32mm OD, 133mm Length, Black",
             "saddle": "Bridge Expert with MIMIC, Hollow Ti rails",
-            "seatpost": "Bike Yoke Revive Max 3.0, 34.9, S2:125mm, S3:160mm, S4: 185mm, S5/S6:213mm"
+            "seatpost": {
+              "manufacturer": "Bike Yoke",
+              "type": "dropper",
+              "diameter_mm": 34.9,
+              "travel_mm": 213,
+              "details": "Revive Max 3.0, S2:, S3:, S4:, S5/S6"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -43235,9 +44278,21 @@
           },
           "cockpit": {
             "seat_binder": "Specialized Alloy, 31.8",
-            "seatpost": "SRAM Reverb AXS XPLR Dropper, 49cm-52cm: 50mm drop",
-            "stem": "S-Works Future Stem w/ Integrated Computer mount",
-            "handlebars": "Roval Terra, carbon, 103mm drop x 70mm reach x 12º flare",
+            "seatpost": {
+              "manufacturer": "SRAM",
+              "type": "dropper",
+              "travel_mm": 50,
+              "details": "Reverb AXS XPLR Dropper, 49cm-52cm"
+            },
+            "stem": {
+              "adjustable": false,
+              "details": "S-Works Future Stem w/ Integrated Computer mount"
+            },
+            "handlebars": {
+              "manufacturer": "Roval",
+              "material": "carbon",
+              "details": "Terra, carbon, drop x 70mm reach x 12º flare"
+            },
             "grips": "Supacaz Super Sticky Kush",
             "saddle": "S-Works Power with Mirror"
           },
@@ -44276,11 +45331,29 @@
           },
           "cockpit": {
             "seat_binder": "Alloy, 38.6mm",
-            "stem": "Industry 9 Mountain stem, 35mm clamp, 40mm length",
-            "handlebars": "Race Face Era Carbon Handlebars, 35mm clamp, back-sweep 8-degrees, up-sweep 5 degrees, 800mm width, S1/S2: 40mm rise, S3-S6: 55mm rise",
+            "stem": {
+              "adjustable": false,
+              "clamp_mm": 35.0,
+              "length_mm": 40,
+              "details": "Industry 9 Mountain stem, clamp"
+            },
+            "handlebars": {
+              "material": "carbon",
+              "type": "riser",
+              "clamp_mm": 35.0,
+              "width_mm": 800,
+              "rise_mm": 40,
+              "details": "Race Face Era Carbon Handlebars, back-sweep 8-degrees, up-sweep 5 degrees, S1/S2:, S3-S6"
+            },
             "grips": "Deity Lockjaw, Lock On, 32mm OD, 133mm Length, Black",
             "saddle": "Specialized Power Pro Mirror w/hollow Ti Rails, 143mm/155mm",
-            "seatpost": "FOX Transfer NEO Factory, 34.9, S2: 125mm, S3: 175mm, S4-S6: 200mm"
+            "seatpost": {
+              "manufacturer": "Fox",
+              "type": "dropper",
+              "diameter_mm": 34.9,
+              "travel_mm": 200,
+              "details": "Transfer NEO Factory, S2:, S3:, S4-S6"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -45410,11 +46483,29 @@
           },
           "cockpit": {
             "seat_binder": "Alloy, 38.6mm",
-            "stem": "Industry 9 Mountain stem, 35mm clamp, 40mm length",
-            "handlebars": "Race Face Era Carbon Handlebars, 35mm clamp, back-sweep 8-degrees, up-sweep 5 degrees, 800mm width, S1/S2: 40mm rise, S3-S6: 55mm rise",
+            "stem": {
+              "adjustable": false,
+              "clamp_mm": 35.0,
+              "length_mm": 40,
+              "details": "Industry 9 Mountain stem, clamp"
+            },
+            "handlebars": {
+              "material": "carbon",
+              "type": "riser",
+              "clamp_mm": 35.0,
+              "width_mm": 800,
+              "rise_mm": 40,
+              "details": "Race Face Era Carbon Handlebars, back-sweep 8-degrees, up-sweep 5 degrees, S1/S2:, S3-S6"
+            },
             "grips": "Deity Lockjaw grips",
             "saddle": "Specialized Power Pro Mirror w/hollow Ti rails",
-            "seatpost": "FOX Transfer NEO Factory, 34.9, S2: 125mm, S3: 175mm, S4-S6: 200mm"
+            "seatpost": {
+              "manufacturer": "Fox",
+              "type": "dropper",
+              "diameter_mm": 34.9,
+              "travel_mm": 200,
+              "details": "Transfer NEO Factory, S2:, S3:, S4-S6"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -46014,10 +47105,21 @@
           },
           "cockpit": {
             "seat_binder": "Alloy, 38.6mm",
-            "handlebars": "Roval Control SL RISE Integrated cockpit, 50mm integrated stem, 8-degree backsweep, 2 degree upsweep, 780mm wide",
+            "handlebars": {
+              "manufacturer": "Roval",
+              "type": "riser",
+              "width_mm": 780,
+              "details": "Control SL Integrated cockpit, 50mm integrated stem, 8-degree backsweep, 2 degree upsweep"
+            },
             "grips": "Specialized Trail Grips",
             "saddle": "Specialized Power Mirror Pro, 143mm/155mm",
-            "seatpost": "RockShox Reverb AXS, 34.9mm, S2: 125mm, S3: 150mm, S4-6: 200mm"
+            "seatpost": {
+              "manufacturer": "RockShox",
+              "type": "dropper",
+              "diameter_mm": 34.9,
+              "travel_mm": 150,
+              "details": "Reverb AXS, mm, S2:, S3:, S4-6"
+            }
           },
           "geometry": {
             "crank_length": "S2 - 29: 160mm | S3 - 29: 160mm | S4 - 29: 160mm | S5 - 29: 160mm | S6 - 29: 160mm",
@@ -46325,11 +47427,29 @@
           },
           "cockpit": {
             "seat_binder": "Alloy, 38.6mm",
-            "stem": "Race Face Turbine R,35mm clamp,40mm length",
-            "handlebars": "Race Face Era Carbon Handlebars, 35mm clamp, back-sweep 8-degrees, up-sweep 5 degrees, 800mm width, S1/S2: 40mm rise, S3-S6: 55mm rise",
+            "stem": {
+              "adjustable": false,
+              "clamp_mm": 35.0,
+              "length_mm": 40,
+              "details": "Race Face Turbine R, clamp"
+            },
+            "handlebars": {
+              "material": "carbon",
+              "type": "riser",
+              "clamp_mm": 35.0,
+              "width_mm": 800,
+              "rise_mm": 40,
+              "details": "Race Face Era Carbon Handlebars, back-sweep 8-degrees, up-sweep 5 degrees, S1/S2:, S3-S6"
+            },
             "grips": "Deity Lockjaw Grips",
             "saddle": "Specialized Power Pro Mirror, Ti Rails, 143/155mm",
-            "seatpost": "FOX Transfer Neo wireless, 34.9mm, S1: 100mm, S2: 125mm, S3: 175mm, S4-S6: 200mm"
+            "seatpost": {
+              "manufacturer": "Fox",
+              "type": "dropper",
+              "diameter_mm": 34.9,
+              "travel_mm": 200,
+              "details": "Transfer Neo wireless, mm, S1:, S2:, S3:, S4-S6"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -47460,11 +48580,23 @@
           },
           "cockpit": {
             "seat_binder": "Specialized bolt-type, alloy, 42.9mm",
-            "stem": "Specialized integrated stem",
-            "handlebars": "Specialized Como handlebar/stem combo",
+            "stem": {
+              "manufacturer": "Specialized",
+              "adjustable": false,
+              "details": "integrated stem"
+            },
+            "handlebars": {
+              "manufacturer": "Specialized",
+              "details": "Como handlebar/stem combo"
+            },
             "grips": "Specialized Body Geometry Contour, lock-on",
             "saddle": "Body Geometry Comfort Gel, 200mm W/ Handle",
-            "seatpost": "Suspension, 40mm travel, 34.9mm"
+            "seatpost": {
+              "type": "suspension",
+              "diameter_mm": 34.9,
+              "travel_mm": 40,
+              "details": "Suspension, mm"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -47952,11 +49084,24 @@
           },
           "cockpit": {
             "seat_binder": "Specialized bolt-type, alloy, 42.9mm",
-            "stem": "Specialized integrated stem",
-            "handlebars": "Specialized Como handlebar/stem combo",
+            "stem": {
+              "manufacturer": "Specialized",
+              "adjustable": false,
+              "details": "integrated stem"
+            },
+            "handlebars": {
+              "manufacturer": "Specialized",
+              "details": "Como handlebar/stem combo"
+            },
             "grips": "Specialized Body Geometry Contour, lock-on",
             "saddle": "Body Geometry Comfort Gel, 200mm w/ SWAT™ Mount",
-            "seatpost": "Spring suspension, alloy, 40mm travel, 30.9mm, 2-bolt clamp, 34.9mm sleeve"
+            "seatpost": {
+              "type": "suspension",
+              "material": "aluminum",
+              "diameter_mm": 30.9,
+              "travel_mm": 40,
+              "details": "Spring suspension, alloy, mm, 2-bolt clamp, 34.9mm sleeve"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -48420,11 +49565,21 @@
           },
           "cockpit": {
             "seat_binder": "Specialized bolt-type, alloy, 42.9mm",
-            "stem": "Specialized integrated stem",
-            "handlebars": "Specialized Como handlebar/stem combo",
+            "stem": {
+              "manufacturer": "Specialized",
+              "adjustable": false,
+              "details": "integrated stem"
+            },
+            "handlebars": {
+              "manufacturer": "Specialized",
+              "details": "Como handlebar/stem combo"
+            },
             "grips": "ERGON extra comfort Custom, 132mm Length",
             "saddle": "Body Geometry Comfort Gel, 200mm W/ Handle",
-            "seatpost": "Suspended Cane Creek, Thudbuster St, 30.9 mm"
+            "seatpost": {
+              "diameter_mm": 30.9,
+              "details": "Suspended Cane Creek, Thudbuster St, mm"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -48882,10 +50037,20 @@
           },
           "cockpit": {
             "seat_binder": "Specialized Alloy, 31.8",
-            "stem": "Future Stem Comp",
-            "handlebars": "Specialized Adventure Gear Hover, 103mm drop x 70mm reach x 12º flare",
+            "stem": {
+              "adjustable": false,
+              "details": "Future Stem Comp"
+            },
+            "handlebars": {
+              "manufacturer": "Specialized",
+              "details": "Adventure Gear Hover, drop x 70mm reach x 12º flare"
+            },
             "saddle": "Body Geometry Power Sport",
-            "seatpost": "Trans-X Dropper, 50mm Travel"
+            "seatpost": {
+              "type": "dropper",
+              "travel_mm": 50,
+              "details": "Trans-X Dropper"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -49521,10 +50686,20 @@
           },
           "cockpit": {
             "seat_binder": "Specialized Alloy, 31.8",
-            "stem": "Future Stem Comp",
-            "handlebars": "Specialized Adventure Gear Hover, 103mm drop x 70mm reach x 12º flare",
+            "stem": {
+              "adjustable": false,
+              "details": "Future Stem Comp"
+            },
+            "handlebars": {
+              "manufacturer": "Specialized",
+              "details": "Adventure Gear Hover, drop x 70mm reach x 12º flare"
+            },
             "saddle": "Body Geometry Power Sport",
-            "seatpost": "Trans-X Dropper, 50mm Travel"
+            "seatpost": {
+              "type": "dropper",
+              "travel_mm": 50,
+              "details": "Trans-X Dropper"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -50156,10 +51331,20 @@
             "inner_tubes": "700x32-50mm, 40mm Presta valve"
           },
           "cockpit": {
-            "stem": "Future Stem, Comp",
-            "handlebars": "Specialized Adventure Gear Hover, 103mm drop x 70mm reach x 12º flare",
+            "stem": {
+              "adjustable": false,
+              "details": "Future Stem, Comp"
+            },
+            "handlebars": {
+              "manufacturer": "Specialized",
+              "details": "Adventure Gear Hover, drop x 70mm reach x 12º flare"
+            },
             "saddle": "Body Geometry Power Sport, steel rails",
-            "seatpost": "Carbon, single-bolt, 27.2mm",
+            "seatpost": {
+              "material": "carbon",
+              "diameter_mm": 27.2,
+              "details": "Carbon, single-bolt, mm"
+            },
             "seat_binder": "Specialized Alloy, 30.8mm"
           },
           "geometry": {
@@ -50792,11 +51977,22 @@
           },
           "cockpit": {
             "seat_binder": "Specialized Alloy, 31.8",
-            "stem": "Future Stem, Pro",
-            "handlebars": "Specialized Adventure Gear Hover, 103mm drop x 70mm reach x 12º flare",
+            "stem": {
+              "adjustable": false,
+              "details": "Future Stem, Pro"
+            },
+            "handlebars": {
+              "manufacturer": "Specialized",
+              "details": "Adventure Gear Hover, drop x 70mm reach x 12º flare"
+            },
             "grips": "Supacaz Super Sticky Kush",
             "saddle": "Body Geometry Power Expert",
-            "seatpost": "X-Fusion Manic Dropper, 50mm travel"
+            "seatpost": {
+              "manufacturer": "X-Fusion",
+              "type": "dropper",
+              "travel_mm": 50,
+              "details": "Manic Dropper"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -51432,11 +52628,29 @@
           },
           "cockpit": {
             "seat_binder": "Alloy, 38.6mm",
-            "stem": "Alloy Trail Stem, 35mm bar bore",
-            "handlebars": "Alloy handlebars, 35mm diameter, 8 degree back sweep, 6 degree up sweep, S1/S2: 780mm/30mm rise, S3-S6: 800mm/50mm rise",
+            "stem": {
+              "material": "aluminum",
+              "adjustable": false,
+              "clamp_mm": 35.0,
+              "details": "Alloy Trail Stem, bar bore"
+            },
+            "handlebars": {
+              "material": "aluminum",
+              "type": "riser",
+              "clamp_mm": 35.0,
+              "width_mm": 780,
+              "rise_mm": 30,
+              "details": "Alloy handlebars, diameter, 8 degree back sweep, 6 degree up sweep, S1/S2: , S3-S6"
+            },
             "grips": "Specialized Trail Grips",
             "saddle": "Bridge Comp, Hollow Cr-mo rails 155/143",
-            "seatpost": "X-Fusion Manic, infinite adjustable, two-bolt head, bottom mount cable routing, remote SLR LE lever, 34.9mm, S2: 125mm, S3/S4: 150mm, S5: 170mm"
+            "seatpost": {
+              "manufacturer": "X-Fusion",
+              "type": "dropper",
+              "diameter_mm": 34.9,
+              "travel_mm": 170,
+              "details": "Manic, infinite adjustable, two-bolt head, bottom mount cable routing, remote SLR LE lever, mm, S2:, S3/S4:, S5"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -51970,11 +53184,28 @@
           },
           "cockpit": {
             "seat_binder": "Alloy, 38.6mm",
-            "stem": "Alloy Trail Stem, 35mm bar bore",
-            "handlebars": "Specialized, 6061 alloy, 6-degree upsweep, 8-degree backsweep, 30mm rise, 800mm width",
+            "stem": {
+              "material": "aluminum",
+              "adjustable": false,
+              "clamp_mm": 35.0,
+              "details": "Alloy Trail Stem, bar bore"
+            },
+            "handlebars": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "type": "riser",
+              "width_mm": 800,
+              "rise_mm": 30,
+              "details": "6061 alloy, 6-degree upsweep, 8-degree backsweep"
+            },
             "grips": "Deity Lockjaw Grips",
             "saddle": "Bridge Comp, Hollow Cr-mo rails, 155/143mm",
-            "seatpost": "PNW Loam dropper post, S2: 125mm, S3: 150, S4: 170mm, S5: 200mm"
+            "seatpost": {
+              "manufacturer": "PNW",
+              "type": "dropper",
+              "travel_mm": 200,
+              "details": "Loam dropper post, S2:, S3: 150, S4:, S5"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -52457,11 +53688,29 @@
           },
           "cockpit": {
             "seat_binder": "Alloy, 38.6mm",
-            "stem": "RaceFace Aeffect R 35mm bore, 40mm length",
-            "handlebars": "Raceface Turbine Alloy, 35mm dia, S1/S2: 20mm rise, 800mm width, S3-S6: 40mm rise, 800mm width",
+            "stem": {
+              "adjustable": false,
+              "clamp_mm": 35.0,
+              "length_mm": 40,
+              "details": "RaceFace Aeffect R bore"
+            },
+            "handlebars": {
+              "material": "aluminum",
+              "type": "riser",
+              "clamp_mm": 35.0,
+              "width_mm": 800,
+              "rise_mm": 20,
+              "details": "Raceface Turbine Alloy, dia, S1/S2:, S3-S6"
+            },
             "grips": "Deity Lockjaw Grips",
             "saddle": "Bridge Comp, Hollow Cr-mo rails, 155/143mm",
-            "seatpost": "Bike Yoke, Revive Max, 34.9, S2: 125mm, S3: 130mm, S4: 185mm, S5: 213mm"
+            "seatpost": {
+              "manufacturer": "Bike Yoke",
+              "type": "dropper",
+              "diameter_mm": 34.9,
+              "travel_mm": 213,
+              "details": "Revive Max, S2:, S3:, S4:, S5"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -52954,11 +54203,29 @@
           },
           "cockpit": {
             "seat_binder": "Alloy, 38.6mm",
-            "stem": "Alloy Trail Stem, 35mm bar bore",
-            "handlebars": "Specialized, 6061 alloy, 6-degree upsweep, 8-degree backsweep, S1-S2: 780mm width/30mm rise, S3-S6 800mm width/50mm rise",
+            "stem": {
+              "material": "aluminum",
+              "adjustable": false,
+              "clamp_mm": 35.0,
+              "details": "Alloy Trail Stem, bar bore"
+            },
+            "handlebars": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "type": "riser",
+              "width_mm": 780,
+              "rise_mm": 30,
+              "details": "6061 alloy, 6-degree upsweep, 8-degree backsweep, S1-S2: , S3-S6"
+            },
             "grips": "Specialized Trail Grips",
             "saddle": "Body Geometry Bridge Saddle, steel rails",
-            "seatpost": "TranzX dropper, 34.9mm, S1: 100mm, S2: 125mm, S3: 150mm. S4-S5: 170mm, S6: 200mm"
+            "seatpost": {
+              "manufacturer": "TranzX",
+              "type": "dropper",
+              "diameter_mm": 34.9,
+              "travel_mm": 200,
+              "details": "dropper, mm, S1:, S2:, S3:. S4-S5:, S6"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -53689,11 +54956,29 @@
           },
           "cockpit": {
             "seat_binder": "Alloy, 38.6mm",
-            "stem": "Alloy Trail Stem, 35mm bar bore",
-            "handlebars": "Alloy handlebars, 35mm diameter, 8 degree back sweep, 6 degree up sweep, S2: 30mm rise, 780mm width, S3-S5: 40mm rise 800mm width",
+            "stem": {
+              "material": "aluminum",
+              "adjustable": false,
+              "clamp_mm": 35.0,
+              "details": "Alloy Trail Stem, bar bore"
+            },
+            "handlebars": {
+              "material": "aluminum",
+              "type": "riser",
+              "clamp_mm": 35.0,
+              "width_mm": 780,
+              "rise_mm": 30,
+              "details": "Alloy handlebars, diameter, 8 degree back sweep, 6 degree up sweep, S2:, S3-S5"
+            },
             "grips": "Specialized Trail Grips",
             "saddle": "Bridge Comp, Hollow Cr-mo rails",
-            "seatpost": "Xfusion Manic, infinite adjustable, two bolt head, Remote SLR LE lever, 34.9, S2: 125mm, S3: 170mm, S4-S6: 190mm"
+            "seatpost": {
+              "manufacturer": "XFusion",
+              "type": "dropper",
+              "diameter_mm": 34.9,
+              "travel_mm": 190,
+              "details": "Manic, infinite adjustable, two bolt head, Remote SLR LE lever, S2:, S3:, S4-S6"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -54327,11 +55612,29 @@
           },
           "cockpit": {
             "seat_binder": "Alloy, 38.6mm",
-            "stem": "Alloy Trail Stem, 35mm bar bore",
-            "handlebars": "Specialized, 6061 alloy, 6-degree upsweep, 8-degree backsweep, S1-S2: 780mm width and 30mm rise, S3-S6 800mm width and 50mm rise",
+            "stem": {
+              "material": "aluminum",
+              "adjustable": false,
+              "clamp_mm": 35.0,
+              "details": "Alloy Trail Stem, bar bore"
+            },
+            "handlebars": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "type": "riser",
+              "width_mm": 780,
+              "rise_mm": 30,
+              "details": "6061 alloy, 6-degree upsweep, 8-degree backsweep, S1-S2: and, S3-S6 and"
+            },
             "grips": "Specialized Trail Grips",
             "saddle": "Bridge Comp, Hollow Cr-mo rails 155/143",
-            "seatpost": "X-Fusion Manic, infinite adjustable, two-bolt head, bottom mount cable routing, remote SLR LE lever, 34.9, S1: 100mm, S2: 125mm, S3: 150mm, S4: 170mm, S5/S6: 190mm"
+            "seatpost": {
+              "manufacturer": "X-Fusion",
+              "type": "dropper",
+              "diameter_mm": 34.9,
+              "travel_mm": 190,
+              "details": "Manic, infinite adjustable, two-bolt head, bottom mount cable routing, remote SLR LE lever, S1:, S2:, S3:, S4:, S5/S6"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -55061,11 +56364,28 @@
           },
           "cockpit": {
             "seat_binder": "Alloy, 38.6mm",
-            "stem": "Alloy Trail Stem, 35mm bar bore",
-            "handlebars": "Alloy handlebars, 35mm diameter, 8 degree back sweep, 6 degree up sweep, S1/S2: 780mm/30mm rise, S3-S6: 800mm/50mm rise",
+            "stem": {
+              "material": "aluminum",
+              "adjustable": false,
+              "clamp_mm": 35.0,
+              "details": "Alloy Trail Stem, bar bore"
+            },
+            "handlebars": {
+              "material": "aluminum",
+              "type": "riser",
+              "clamp_mm": 35.0,
+              "width_mm": 780,
+              "rise_mm": 30,
+              "details": "Alloy handlebars, diameter, 8 degree back sweep, 6 degree up sweep, S1/S2: , S3-S6"
+            },
             "grips": "Deity Lockjaw grips",
             "saddle": "Bridge Comp, Hollow Cr-mo rails",
-            "seatpost": "PNW Loam post w/travel adjust S2: 125mm, S3: 170mm, S4/S5/S6: 200mm"
+            "seatpost": {
+              "manufacturer": "PNW",
+              "type": "suspension",
+              "travel_mm": 200,
+              "details": "Loam post w/ adjust S2:, S3:, S4/S5/S6"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -55695,11 +57015,28 @@
           },
           "cockpit": {
             "seat_binder": "Alloy, 38.6mm",
-            "stem": "Industry 9 Mountain stem, 35mm clamp, 40mm length",
-            "handlebars": "RaceFace Era Carbon, riser bar, 5-degree upsweep, 8-degree backsweep, S2:20mm Rise, S3-S6:40mm Rise, 800mm",
+            "stem": {
+              "adjustable": false,
+              "clamp_mm": 35.0,
+              "length_mm": 40,
+              "details": "Industry 9 Mountain stem, clamp"
+            },
+            "handlebars": {
+              "material": "carbon",
+              "type": "riser",
+              "width_mm": 800,
+              "rise_mm": 20,
+              "details": "RaceFace Era Carbon, r bar, 5-degree upsweep, 8-degree backsweep, S2:, S3-S6"
+            },
             "grips": "Deity Lockjaw grips",
             "saddle": "Bridge Mimic Expert, Hollow Ti rails",
-            "seatpost": "Bike Yoke Revive Max 3.0, 34.9, S2:125mm, S3:160mm, S4: 185mm, S5/S6:213mm"
+            "seatpost": {
+              "manufacturer": "Bike Yoke",
+              "type": "dropper",
+              "diameter_mm": 34.9,
+              "travel_mm": 213,
+              "details": "Revive Max 3.0, S2:, S3:, S4:, S5/S6"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -56335,11 +57672,31 @@
           },
           "cockpit": {
             "seat_binder": "Alloy, 38.6mm",
-            "stem": "Alloy Trail Stem, 35mm bar bore",
-            "handlebars": "Specialized Alloy, 30mm/40mm rise, 35mm, 800mm wide",
+            "stem": {
+              "material": "aluminum",
+              "adjustable": false,
+              "clamp_mm": 35.0,
+              "details": "Alloy Trail Stem, bar bore"
+            },
+            "handlebars": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "type": "riser",
+              "clamp_mm": 35.0,
+              "width_mm": 800,
+              "rise_mm": 40,
+              "details": "Alloy, 30mm"
+            },
             "grips": "Specialized Trail Grips",
             "saddle": "Body Geometry Power Comp, steel rails",
-            "seatpost": "X-Fusion Manic, 34.9, S1-S2: 125mm, S3: 150mm, S4: 170mm, S5-S6: 190mm Travel, 0mm offset"
+            "seatpost": {
+              "manufacturer": "X-Fusion",
+              "type": "dropper",
+              "diameter_mm": 34.9,
+              "travel_mm": 190,
+              "offset_mm": 0,
+              "details": "Manic, S1-S2:, S3:, S4:, S5-S6"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -57038,11 +58395,31 @@
           },
           "cockpit": {
             "seat_binder": "Alloy, 38.6mm",
-            "stem": "Alloy Trail Stem, 35mm bar bore",
-            "handlebars": "Specialized Alloy, 30mm/40mm rise, 35mm, 800mm wide",
+            "stem": {
+              "material": "aluminum",
+              "adjustable": false,
+              "clamp_mm": 35.0,
+              "details": "Alloy Trail Stem, bar bore"
+            },
+            "handlebars": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "type": "riser",
+              "clamp_mm": 35.0,
+              "width_mm": 800,
+              "rise_mm": 40,
+              "details": "Alloy, 30mm"
+            },
             "grips": "Specialized Trail Grips",
             "saddle": "Body Geometry Power Comp, steel rails",
-            "seatpost": "X-Fusion Manic, 34.9, S1-S2: 125mm, S3: 150mm, S4: 170mm, S5-S6: 190mm Travel, 0mm offset"
+            "seatpost": {
+              "manufacturer": "X-Fusion",
+              "type": "dropper",
+              "diameter_mm": 34.9,
+              "travel_mm": 190,
+              "offset_mm": 0,
+              "details": "Manic, S1-S2:, S3:, S4:, S5-S6"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -57739,11 +59116,31 @@
           },
           "cockpit": {
             "seat_binder": "Alloy, 38.6mm",
-            "stem": "Alloy Trail Stem, 35mm bar bore",
-            "handlebars": "Specialized Alloy, 30mm/40mm rise, 35mm, 800mm wide",
+            "stem": {
+              "material": "aluminum",
+              "adjustable": false,
+              "clamp_mm": 35.0,
+              "details": "Alloy Trail Stem, bar bore"
+            },
+            "handlebars": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "type": "riser",
+              "clamp_mm": 35.0,
+              "width_mm": 800,
+              "rise_mm": 40,
+              "details": "Alloy, 30mm"
+            },
             "grips": "Specialized Trail Grips",
             "saddle": "Body Geometry Power Comp, steel rails",
-            "seatpost": "X-Fusion Manic, 34.9, S1-S2: 125mm, S3: 150mm, S4: 170mm, S5-S6: 190mm Travel, 0mm offset"
+            "seatpost": {
+              "manufacturer": "X-Fusion",
+              "type": "dropper",
+              "diameter_mm": 34.9,
+              "travel_mm": 190,
+              "offset_mm": 0,
+              "details": "Manic, S1-S2:, S3:, S4:, S5-S6"
+            }
           },
           "geometry": {
             "crank_length": "S1 - 27.5: 160mm | S2 - 29: 160mm | S3 - 29: 160mm | S4 - 29: 160mm | S5 - 29: 160mm | S6 - 29: 160mm",
@@ -58064,11 +59461,29 @@
           },
           "cockpit": {
             "seat_binder": "Alloy, 38.6mm",
-            "stem": "Alloy Trail Stem, 35mm bar bore",
-            "handlebars": "Alloy handlebars, 35mm diameter, 8 degree back sweep, 6 degree up sweep, S1/S2: 780mm/30mm rise, S3-S6: 800mm/50mm rise",
+            "stem": {
+              "material": "aluminum",
+              "adjustable": false,
+              "clamp_mm": 35.0,
+              "details": "Alloy Trail Stem, bar bore"
+            },
+            "handlebars": {
+              "material": "aluminum",
+              "type": "riser",
+              "clamp_mm": 35.0,
+              "width_mm": 780,
+              "rise_mm": 30,
+              "details": "Alloy handlebars, diameter, 8 degree back sweep, 6 degree up sweep, S1/S2: , S3-S6"
+            },
             "grips": "Specialized Trail Grips",
             "saddle": "Bridge Comp, Hollow Cr-mo rails 155/143",
-            "seatpost": "X-Fusion Manic, infinite adjustable, two-bolt head, bottom mount cable routing, remote SLR LE lever, 34.9, S1: 100mm, S2: 125mm, S3: 150mm, S4/S5: 170mm, S6: 190mm"
+            "seatpost": {
+              "manufacturer": "X-Fusion",
+              "type": "dropper",
+              "diameter_mm": 34.9,
+              "travel_mm": 190,
+              "details": "Manic, infinite adjustable, two-bolt head, bottom mount cable routing, remote SLR LE lever, S1:, S2:, S3:, S4/S5:, S6"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -58716,11 +60131,29 @@
           },
           "cockpit": {
             "seat_binder": "Alloy, 38.6mm",
-            "stem": "Alloy Trail Stem, 35mm bar bore",
-            "handlebars": "Alloy handlebars, 35mm diameter, 8 degree back sweep, 6 degree up sweep, S1/S2: 780mm/30mm rise, S3-S6: 800mm/50mm rise",
+            "stem": {
+              "material": "aluminum",
+              "adjustable": false,
+              "clamp_mm": 35.0,
+              "details": "Alloy Trail Stem, bar bore"
+            },
+            "handlebars": {
+              "material": "aluminum",
+              "type": "riser",
+              "clamp_mm": 35.0,
+              "width_mm": 780,
+              "rise_mm": 30,
+              "details": "Alloy handlebars, diameter, 8 degree back sweep, 6 degree up sweep, S1/S2: , S3-S6"
+            },
             "grips": "Specialized Trail Grips",
             "saddle": "Bridge Comp, Hollow Cr-mo rails 155/143",
-            "seatpost": "X-Fusion Manic, infinite adjustable, two-bolt head, bottom mount cable routing, remote SLR LE lever, 34.9, S1: 100mm, S2: 125mm, S3: 150mm, S4/S5: 170mm, S6: 190mm"
+            "seatpost": {
+              "manufacturer": "X-Fusion",
+              "type": "dropper",
+              "diameter_mm": 34.9,
+              "travel_mm": 190,
+              "details": "Manic, infinite adjustable, two-bolt head, bottom mount cable routing, remote SLR LE lever, S1:, S2:, S3:, S4/S5:, S6"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -59368,11 +60801,27 @@
           },
           "cockpit": {
             "seat_binder": "Alloy, 38.6mm",
-            "stem": "Alloy Trail Stem, 35mm bar bore",
-            "handlebars": "Specialized, 6000 series alloy, 6-degree upsweep, 8-degree backsweep. S1-S2: 780 width, 20mm rise: S3-S4: 800 width, 30mm rise: S5-S6: 800 width, 40mm rise",
+            "stem": {
+              "material": "aluminum",
+              "adjustable": false,
+              "clamp_mm": 35.0,
+              "details": "Alloy Trail Stem, bar bore"
+            },
+            "handlebars": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "type": "riser",
+              "rise_mm": 20,
+              "details": "6000 series alloy, 6-degree upsweep, 8-degree backsweep. S1-S2: 780, : S3-S4: 800, : S5-S6: 800"
+            },
             "grips": "Specialized Trail Grips",
             "saddle": "Bridge Comp, Hollow Cr-mo rails, 155/143mm",
-            "seatpost": "PNW Loam post w/travel adjust S1: 125mm, S2: 150mm, S3: 170mm, S4/S5/S6: 200mm"
+            "seatpost": {
+              "manufacturer": "PNW",
+              "type": "suspension",
+              "travel_mm": 200,
+              "details": "Loam post w/ adjust S1:, S2:, S3:, S4/S5/S6"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -60013,11 +61462,29 @@
           },
           "cockpit": {
             "seat_binder": "Alloy, 38.6mm",
-            "stem": "Alloy Trail Stem, 35mm bar bore",
-            "handlebars": "Alloy handlebars, 35mm diameter, 8 degree back sweep, 6 degree up sweep, S1/S2: 780mm/30mm rise, S3-S6: 800mm/50mm rise",
+            "stem": {
+              "material": "aluminum",
+              "adjustable": false,
+              "clamp_mm": 35.0,
+              "details": "Alloy Trail Stem, bar bore"
+            },
+            "handlebars": {
+              "material": "aluminum",
+              "type": "riser",
+              "clamp_mm": 35.0,
+              "width_mm": 780,
+              "rise_mm": 30,
+              "details": "Alloy handlebars, diameter, 8 degree back sweep, 6 degree up sweep, S1/S2: , S3-S6"
+            },
             "grips": "Deity Lockjaw Grips",
             "saddle": "Specialized Bridge Comp with Mimic",
-            "seatpost": "PNW Loam Dropper, tool-less travel adjust, Range lever, 34.9, S1: 125mm, S2: 150mm, S3: 175mm, S4-S5: 200mm, S6: 225mm"
+            "seatpost": {
+              "manufacturer": "PNW",
+              "type": "dropper",
+              "diameter_mm": 34.9,
+              "travel_mm": 225,
+              "details": "Loam Dropper, tool-less adjust, Range lever, S1:, S2:, S3:, S4-S5:, S6"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -60664,11 +62131,28 @@
           },
           "cockpit": {
             "seat_binder": "Alloy, 38.6mm",
-            "stem": "Industry 9 A35 stem, 40mm length, 35mm clamp diameter",
-            "handlebars": "RaceFace Era Carbon, riser bar, 5-degree upsweep, 8-degree backsweep, S2:20mm Rise, S3-S6:40mm Rise, 800mm",
+            "stem": {
+              "adjustable": false,
+              "clamp_mm": 35.0,
+              "length_mm": 40,
+              "details": "Industry 9 A35 stem, clamp diameter"
+            },
+            "handlebars": {
+              "material": "carbon",
+              "type": "riser",
+              "width_mm": 800,
+              "rise_mm": 20,
+              "details": "RaceFace Era Carbon, r bar, 5-degree upsweep, 8-degree backsweep, S2:, S3-S6"
+            },
             "grips": "Diety Lockjaw grips",
             "saddle": "Specialized Bridge Expert Mimic, hollow ti rail",
-            "seatpost": "Bike Yoke, Revive Max, 34.9, S1-S2: 125mm, S3: 160mm, S4: 185mm, S5-S6: 213mm"
+            "seatpost": {
+              "manufacturer": "Bike Yoke",
+              "type": "dropper",
+              "diameter_mm": 34.9,
+              "travel_mm": 213,
+              "details": "Revive Max, S1-S2:, S3:, S4:, S5-S6"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -61288,11 +62772,25 @@
           },
           "cockpit": {
             "seat_binder": "Alloy, 38.6mm",
-            "stem": "Stem w/ integrated Colored Display & USB-C Phone charger, 31.8MM",
-            "handlebars": "Alloy, Rise 34.4mm,31.8mm, Back Sweep 13°, Up Sweep 7.8°, Bar End 22.2mm, 690-730mm",
+            "stem": {
+              "adjustable": false,
+              "details": "Stem w/ integrated Colored Display & USB-C Phone charger, 31.8MM"
+            },
+            "handlebars": {
+              "material": "aluminum",
+              "type": "riser",
+              "clamp_mm": 31.8,
+              "width_mm": 730,
+              "details": "Alloy, 34.4mm, Back Sweep 13°, Up Sweep 7.8°, Bar End 22.2mm, 690"
+            },
             "grips": "Specialized Body Geometry",
             "saddle": "Bridge Sport, Steel rails, 155mm",
-            "seatpost": "Suspension, 40mm travel, 34.9mm"
+            "seatpost": {
+              "type": "suspension",
+              "diameter_mm": 34.9,
+              "travel_mm": 40,
+              "details": "Suspension, mm"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -61880,11 +63378,21 @@
           },
           "cockpit": {
             "seat_binder": "Alloy, 38.6mm",
-            "stem": "Cockpit with Integrated Colored Touch Screen Display",
-            "handlebars": "Integrated Cockpit",
+            "stem": {
+              "adjustable": false,
+              "details": "Cockpit with Integrated Colored Touch Screen Display"
+            },
+            "handlebars": {
+              "details": "Integrated Cockpit"
+            },
             "grips": "Specialized Body Geometry",
             "saddle": "Bridge Sport, Steel rails, 155mm",
-            "seatpost": "Lower Suspension Post, 100-125MM Travel, 40MM Suspension, 34.9 MM, Offset 0MM"
+            "seatpost": {
+              "type": "suspension",
+              "diameter_mm": 34.9,
+              "travel_mm": 125,
+              "details": "Lower Suspension Post, 100-, Suspension, MM, Offset 0MM"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -62445,11 +63953,21 @@
           },
           "cockpit": {
             "seat_binder": "Alloy, 38.6mm",
-            "stem": "Cockpit with Integrated Colored Touch Screen Display, Wireless Quadlock Phone Charger",
-            "handlebars": "Integrated Cockpit",
+            "stem": {
+              "adjustable": false,
+              "details": "Cockpit with Integrated Colored Touch Screen Display, Wireless Quadlock Phone Charger"
+            },
+            "handlebars": {
+              "details": "Integrated Cockpit"
+            },
             "grips": "ERGON, GA30-S Custom, 134.8mm Length",
             "saddle": "Bridge Sport, Steel rails, 155mm",
-            "seatpost": "Lower Suspension Post, 100-125MM Travel, 40MM Suspension, 34.9 MM, Offset 0MM"
+            "seatpost": {
+              "type": "suspension",
+              "diameter_mm": 34.9,
+              "travel_mm": 125,
+              "details": "Lower Suspension Post, 100-, Suspension, MM, Offset 0MM"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -62988,11 +64506,25 @@
           },
           "cockpit": {
             "seat_binder": "Alloy, 38.6mm",
-            "stem": "Stem with integrated colored display & USB-C phone charger, 31.8mm.",
-            "handlebars": "Alloy, Rise 34.4mm,31.8mm, Back Sweep 13°, Up Sweep 7.8°, Bar End 22.2mm, 690-730mm",
+            "stem": {
+              "adjustable": false,
+              "clamp_mm": 31.8,
+              "details": "Stem with integrated colored display & USB-C phone charger"
+            },
+            "handlebars": {
+              "material": "aluminum",
+              "type": "riser",
+              "clamp_mm": 31.8,
+              "width_mm": 730,
+              "details": "Alloy, 34.4mm, Back Sweep 13°, Up Sweep 7.8°, Bar End 22.2mm, 690"
+            },
             "grips": "Specialized Body Geometry",
             "saddle": "Bridge Sport, Steel rails, 155mm",
-            "seatpost": "Seatpost, Lowerable, 34.9mm, Offset 0mm, 100/125/150 Travel"
+            "seatpost": {
+              "type": "suspension",
+              "diameter_mm": 34.9,
+              "details": "Seatpost, Lowerable, mm, Offset 0mm, 100/125/150"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -63555,11 +65087,20 @@
           },
           "cockpit": {
             "seat_binder": "Alloy, 38.6mm",
-            "stem": "Cockpit with integrated colored touch screen display, Wireless Quad Lock phone charger",
-            "handlebars": "Integrated cockpit",
+            "stem": {
+              "adjustable": false,
+              "details": "Cockpit with integrated colored touch screen display, Wireless Quad Lock phone charger"
+            },
+            "handlebars": {
+              "details": "Integrated cockpit"
+            },
             "grips": "ERGON, GA30-S Custom, 134.8mm Length",
             "saddle": "Bridge Sport, Steel rails, 155mm",
-            "seatpost": "Seatpost, Lowerable, 34.9mm, Offset 0mm, 100/125/150 Travel"
+            "seatpost": {
+              "type": "suspension",
+              "diameter_mm": 34.9,
+              "details": "Seatpost, Lowerable, mm, Offset 0mm, 100/125/150"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -64122,11 +65663,29 @@
           },
           "cockpit": {
             "seat_binder": "Alloy, bolt-type, 34.9mm",
-            "stem": "Specialized Flowset, 3D-forged alloy, 20-degree rise, 31.8mm clamp",
-            "handlebars": "Specialized, alloy, 15-degree backsweep, 46mm rise, 31.8mm",
+            "stem": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "adjustable": false,
+              "clamp_mm": 31.8,
+              "details": "Flowset, 3D-forged alloy, 20-degree, clamp"
+            },
+            "handlebars": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "type": "riser",
+              "clamp_mm": 31.8,
+              "rise_mm": 46,
+              "details": "alloy, 15-degree backsweep"
+            },
             "grips": "Specialized Body Geometry",
             "saddle": "Bridge Sport, Steel rails, 155mm",
-            "seatpost": "Suspension, 40mm travel, 34.9mm"
+            "seatpost": {
+              "type": "suspension",
+              "diameter_mm": 34.9,
+              "travel_mm": 40,
+              "details": "Suspension, mm"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -64672,11 +66231,29 @@
           },
           "cockpit": {
             "seat_binder": "Alloy, bolt-type, 34.9mm",
-            "stem": "Specialized Flowset, 3D-forged alloy, 20-degree rise, 31.8mm clamp",
-            "handlebars": "Specialized, alloy, 15-degree backsweep, 46mm rise, 31.8mm",
+            "stem": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "adjustable": false,
+              "clamp_mm": 31.8,
+              "details": "Flowset, 3D-forged alloy, 20-degree, clamp"
+            },
+            "handlebars": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "type": "riser",
+              "clamp_mm": 31.8,
+              "rise_mm": 46,
+              "details": "alloy, 15-degree backsweep"
+            },
             "grips": "Specialized Body Geometry Contour",
             "saddle": "Bridge Sport, Steel rails, 155mm",
-            "seatpost": "Suspension, 40mm travel, 34.9mm"
+            "seatpost": {
+              "type": "suspension",
+              "diameter_mm": 34.9,
+              "travel_mm": 40,
+              "details": "Suspension, mm"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -65206,11 +66783,27 @@
           },
           "cockpit": {
             "seat_binder": "Specialized Alloy 34.9, Steel Bolt",
-            "stem": "Specialized Flowset, 3D-forged alloy, 20-degree rise, 31.8mm clamp",
-            "handlebars": "Specialized, alloy, 15-degree backsweep, 46mm rise, 31.8mm",
+            "stem": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "adjustable": false,
+              "clamp_mm": 31.8,
+              "details": "Flowset, 3D-forged alloy, 20-degree, clamp"
+            },
+            "handlebars": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "type": "riser",
+              "clamp_mm": 31.8,
+              "rise_mm": 46,
+              "details": "alloy, 15-degree backsweep"
+            },
             "grips": "ERGON, GA30-S Custom, 134.8mm Length",
             "saddle": "Bridge Sport, Steel rails, 155mm",
-            "seatpost": "Suspended Cane Creek, Thudbuster St, 30.9 mm"
+            "seatpost": {
+              "diameter_mm": 30.9,
+              "details": "Suspended Cane Creek, Thudbuster St, mm"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -65740,11 +67333,27 @@
           },
           "cockpit": {
             "seat_binder": "Specialized Alloy 34.9, Steel Bolt",
-            "stem": "Specialized Flowset, 3D-forged alloy, 20-degree rise, 31.8mm clamp",
-            "handlebars": "Specialized, alloy, 15-degree backsweep, 46mm rise, 31.8mm",
+            "stem": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "adjustable": false,
+              "clamp_mm": 31.8,
+              "details": "Flowset, 3D-forged alloy, 20-degree, clamp"
+            },
+            "handlebars": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "type": "riser",
+              "clamp_mm": 31.8,
+              "rise_mm": 46,
+              "details": "alloy, 15-degree backsweep"
+            },
             "grips": "ERGON, GA30-S Custom, 134.8mm Length",
             "saddle": "Bridge Sport, Steel rails, 155mm",
-            "seatpost": "Suspended Cane Creek, Thudbuster St, 30.9 mm"
+            "seatpost": {
+              "diameter_mm": 30.9,
+              "details": "Suspended Cane Creek, Thudbuster St, mm"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -66283,11 +67892,32 @@
           },
           "cockpit": {
             "seat_binder": "Specialized Alloy 34.9, Steel Bolt",
-            "stem": "Specialized Stealth Stem, Alloy, 31.8mm, Integrated Display And Light Mount, Size S: 60mm 17 Deg, M/L/Xl: 75mm 15.5 Deg",
-            "handlebars": "Specialized, alloy, 9-degree backsweep, 15mm rise, 31.8mm",
+            "stem": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "adjustable": false,
+              "clamp_mm": 31.8,
+              "length_mm": 60,
+              "angle_deg": 17,
+              "details": "Stealth Stem, Alloy, Integrated Display And Light Mount, Size S:, M/L/Xl: 75mm 15"
+            },
+            "handlebars": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "type": "riser",
+              "clamp_mm": 31.8,
+              "rise_mm": 15,
+              "details": "alloy, 9-degree backsweep"
+            },
             "grips": "Specialized Body Geometry",
             "saddle": "Bridge Sport, Steel rails, 155mm",
-            "seatpost": "Specialized, alloy, single bolt, 21mm offset, 27.2mm"
+            "seatpost": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "diameter_mm": 27.2,
+              "offset_mm": 21,
+              "details": "alloy, single bolt, offset, mm"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -66814,11 +68444,31 @@
           },
           "cockpit": {
             "seat_binder": "Specialized Alloy 34.9, Steel Bolt",
-            "stem": "Specialized Stealth Stem, Alloy, 31.8mm, Integrated Display And Light Mount, Size S/M : 60mm 17 Deg, L/XL : 75mm 15.5 Deg",
-            "handlebars": "Specialized, alloy, 9-degree backsweep, 15mm rise, 31.8mm",
+            "stem": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "adjustable": false,
+              "clamp_mm": 31.8,
+              "length_mm": 60,
+              "angle_deg": 17,
+              "details": "Stealth Stem, Alloy, Integrated Display And Light Mount, Size S/M :, L/XL : 75mm 15"
+            },
+            "handlebars": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "type": "riser",
+              "clamp_mm": 31.8,
+              "rise_mm": 15,
+              "details": "alloy, 9-degree backsweep"
+            },
             "grips": "Specialized Body Geometry",
             "saddle": "Bridge Sport, Steel rails, 155mm",
-            "seatpost": "Specialized Alloy, Single Bolt, 30.9mm"
+            "seatpost": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "diameter_mm": 30.9,
+              "details": "Alloy, Single Bolt, mm"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -67373,11 +69023,31 @@
           },
           "cockpit": {
             "seat_binder": "Alloy, 38.6mm",
-            "stem": "Specialized Stealth Stem, Alloy, 31.8mm, Integrated Display And Light Mount, Size S: 60mm 17 Deg, M/L/Xl: 75mm 15.5 Deg",
-            "handlebars": "Specialized, alloy, 9-degree backsweep, 15mm rise, 31.8mm",
+            "stem": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "adjustable": false,
+              "clamp_mm": 31.8,
+              "length_mm": 60,
+              "angle_deg": 17,
+              "details": "Stealth Stem, Alloy, Integrated Display And Light Mount, Size S:, M/L/Xl: 75mm 15"
+            },
+            "handlebars": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "type": "riser",
+              "clamp_mm": 31.8,
+              "rise_mm": 15,
+              "details": "alloy, 9-degree backsweep"
+            },
             "grips": "Specialized Body Geometry",
             "saddle": "Bridge Sport, Steel rails, 155mm",
-            "seatpost": "Specialized Alloy, Single Bolt, 30.9mm"
+            "seatpost": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "diameter_mm": 30.9,
+              "details": "Alloy, Single Bolt, mm"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -67853,11 +69523,31 @@
           },
           "cockpit": {
             "seat_binder": "Alloy, 38.6mm",
-            "stem": "Specialized Stealth Stem, Alloy, 31.8mm, Integrated Display And Light Mount, Size S/M : 60mm 17 Deg, L/XL : 75mm 15.5 Deg",
-            "handlebars": "Specialized, alloy, 9-degree backsweep, 15mm rise, 31.8mm",
+            "stem": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "adjustable": false,
+              "clamp_mm": 31.8,
+              "length_mm": 60,
+              "angle_deg": 17,
+              "details": "Stealth Stem, Alloy, Integrated Display And Light Mount, Size S/M :, L/XL : 75mm 15"
+            },
+            "handlebars": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "type": "riser",
+              "clamp_mm": 31.8,
+              "rise_mm": 15,
+              "details": "alloy, 9-degree backsweep"
+            },
             "grips": "Specialized Body Geometry",
             "saddle": "Bridge Sport, Steel rails, 155mm",
-            "seatpost": "Specialized Alloy, Single Bolt, 30.9mm"
+            "seatpost": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "diameter_mm": 30.9,
+              "details": "Alloy, Single Bolt, mm"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -68359,11 +70049,31 @@
           },
           "cockpit": {
             "seat_binder": "Specialized Alloy 34.9, Steel Bolt",
-            "stem": "Specialized Stealth Stem, Alloy, 31.8mm, Integrated Display And Light Mount, Size S/M : 60mm 17 Deg, L/XL : 75mm 15.5 Deg",
-            "handlebars": "Specialized, alloy, 9-degree backsweep, 15mm rise, 31.8mm",
+            "stem": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "adjustable": false,
+              "clamp_mm": 31.8,
+              "length_mm": 60,
+              "angle_deg": 17,
+              "details": "Stealth Stem, Alloy, Integrated Display And Light Mount, Size S/M :, L/XL : 75mm 15"
+            },
+            "handlebars": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "type": "riser",
+              "clamp_mm": 31.8,
+              "rise_mm": 15,
+              "details": "alloy, 9-degree backsweep"
+            },
             "grips": "ERGON, GA30-S Custom, 134.8mm Length",
             "saddle": "Bridge Sport, hollow cr-mo rails, 155mm",
-            "seatpost": "Specialized Alloy, Single Bolt, 30.9mm"
+            "seatpost": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "diameter_mm": 30.9,
+              "details": "Alloy, Single Bolt, mm"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -68937,11 +70647,31 @@
           },
           "cockpit": {
             "seat_binder": "Alloy, 38.6mm",
-            "stem": "Specialized Stealth Stem, Alloy, 31.8mm, Integrated Display And Light Mount, Size S/M : 60mm 17 Deg, L/XL : 75mm 15.5 Deg",
-            "handlebars": "Specialized, alloy, 9-degree backsweep, 15mm rise, 31.8mm",
+            "stem": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "adjustable": false,
+              "clamp_mm": 31.8,
+              "length_mm": 60,
+              "angle_deg": 17,
+              "details": "Stealth Stem, Alloy, Integrated Display And Light Mount, Size S/M :, L/XL : 75mm 15"
+            },
+            "handlebars": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "type": "riser",
+              "clamp_mm": 31.8,
+              "rise_mm": 15,
+              "details": "alloy, 9-degree backsweep"
+            },
             "grips": "ERGON, GA30-S Custom, 134.8mm Length",
             "saddle": "Bridge Sport, hollow cr-mo rails, 155mm",
-            "seatpost": "Specialized Alloy, Single Bolt, 30.9mm"
+            "seatpost": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "diameter_mm": 30.9,
+              "details": "Alloy, Single Bolt, mm"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -69448,11 +71178,30 @@
           },
           "cockpit": {
             "seat_binder": "Specialized Integrated",
-            "stem": "Specialized Stealth Stem, Alloy, 31.8mm, Integrated Display And Light Mount, Size S: 60mm 17 Deg, M/L/Xl: 75mm 15.5 Deg",
-            "handlebars": "Specialized, alloy, 9-degree backsweep, 15mm rise, 31.8mm",
+            "stem": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "adjustable": false,
+              "clamp_mm": 31.8,
+              "length_mm": 60,
+              "angle_deg": 17,
+              "details": "Stealth Stem, Alloy, Integrated Display And Light Mount, Size S:, M/L/Xl: 75mm 15"
+            },
+            "handlebars": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "type": "riser",
+              "clamp_mm": 31.8,
+              "rise_mm": 15,
+              "details": "alloy, 9-degree backsweep"
+            },
             "grips": "ERGON, GA30-S Custom, 134.8mm Length",
             "saddle": "Bridge Sport, hollow cr-mo rails, 155mm",
-            "seatpost": "Carbon Fiber, 30.9 mm, Offset 21mm"
+            "seatpost": {
+              "material": "carbon",
+              "diameter_mm": 30.9,
+              "details": "Carbon Fiber, mm, Offset"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -69967,11 +71716,30 @@
           },
           "cockpit": {
             "seat_binder": "Specialized Integrated",
-            "stem": "Specialized Stealth Stem, Alloy, 31.8mm, Integrated Display And Light Mount, Size S: 60mm 17 Deg, M/L/Xl: 75mm 15.5 Deg",
-            "handlebars": "Specialized, alloy, 9-degree backsweep, 15mm rise, 31.8mm",
+            "stem": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "adjustable": false,
+              "clamp_mm": 31.8,
+              "length_mm": 60,
+              "angle_deg": 17,
+              "details": "Stealth Stem, Alloy, Integrated Display And Light Mount, Size S:, M/L/Xl: 75mm 15"
+            },
+            "handlebars": {
+              "manufacturer": "Specialized",
+              "material": "aluminum",
+              "type": "riser",
+              "clamp_mm": 31.8,
+              "rise_mm": 15,
+              "details": "alloy, 9-degree backsweep"
+            },
             "grips": "ERGON, GA30-S Custom, 134.8mm Length",
             "saddle": "Bridge Sport, hollow cr-mo rails, 155mm",
-            "seatpost": "Carbon Fiber, 30.9 mm, Offset 21mm"
+            "seatpost": {
+              "material": "carbon",
+              "diameter_mm": 30.9,
+              "details": "Carbon Fiber, mm, Offset"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -70482,10 +72250,19 @@
           },
           "cockpit": {
             "seat_binder": "Specialized Integrated",
-            "handlebars": "Roval SL Carbon Cockpit, 780mm width, 5-degree upsweep, 9-degree backsweep",
+            "handlebars": {
+              "manufacturer": "Roval",
+              "material": "carbon",
+              "width_mm": 780,
+              "details": "SL Carbon Cockpit, 5-degree upsweep, 9-degree backsweep"
+            },
             "grips": "ERGON, GA30-S Custom, 134.8mm Length",
             "saddle": "Specialized Power Pro Mirror, Titanium Rails, 155mm",
-            "seatpost": "Carbon Fiber, 30.9 mm, Offset 21mm"
+            "seatpost": {
+              "material": "carbon",
+              "diameter_mm": 30.9,
+              "details": "Carbon Fiber, mm, Offset"
+            }
           },
           "geometry": {
             "crank_length": {
@@ -70988,15 +72765,28 @@
             }
           },
           "cockpit": {
-            "distance_seatpost_to_handlebar": "49 - 59 cm (19.3 - 23.2 in)",
+            "distance_seatpost_to_handlebar": {
+              "details": "49 - 59 cm (19.3 - 23.2 in)"
+            },
             "distance_saddle_to_pedal": "69 - 105 cm (27.2 - 41.3 in)",
             "handlepost": "Tern Physis 3D, 3D forged, 5 patented technologies, 12°, 290 mm",
-            "stem": "Tern Andros, adjustable, forged construction, patented technology",
+            "stem": {
+              "manufacturer": "Tern",
+              "adjustable": true,
+              "details": "Andros, forged construction, patented technology"
+            },
             "headset": "Tern Flux Pro Taper by FSA, 1.5\", angular contact bearings, Physis integrated",
-            "handlebar": "Tern Sweep, 6061-AL, Tern Andros adapted",
+            "handlebar": {
+              "manufacturer": "Tern",
+              "details": "Sweep, 6061-AL, Tern Andros adapted"
+            },
             "grips_bar_tape": "Ergon",
             "saddle": "Tern GSD by Velo",
-            "seatpost": "Tern VLT (Very Large Telescope) with LightAction levers",
+            "seatpost": {
+              "manufacturer": "Tern",
+              "type": "dropper",
+              "details": "VLT (Very Large Telescope) with LightAction levers"
+            },
             "seatpost_clamp": "Tern Collar"
           },
           "geometry": {
@@ -71267,15 +73057,28 @@
             }
           },
           "cockpit": {
-            "distance_seatpost_to_handlebar": "49 - 59 cm (19.3 - 23.2 in)",
+            "distance_seatpost_to_handlebar": {
+              "details": "49 - 59 cm (19.3 - 23.2 in)"
+            },
             "distance_saddle_to_pedal": "69 - 105 cm (27.2 - 41.3 in)",
             "handlepost": "Tern Physis 3D, 3D forged, 5 patented technologies, 12°, 290 mm",
-            "stem": "Tern Andros, adjustable, forged construction, patented technology",
+            "stem": {
+              "manufacturer": "Tern",
+              "adjustable": true,
+              "details": "Andros, forged construction, patented technology"
+            },
             "headset": "Tern Flux Pro Taper by FSA, 1.5\", angular contact bearings, Physis integrated",
-            "handlebar": "Tern Sweep, 6061-AL, Tern Andros adapted",
+            "handlebar": {
+              "manufacturer": "Tern",
+              "details": "Sweep, 6061-AL, Tern Andros adapted"
+            },
             "grips_bar_tape": "Ergon",
             "saddle": "Tern GSD by Velo",
-            "seatpost": "Tern VLT (Very Large Telescope) with LightAction levers",
+            "seatpost": {
+              "manufacturer": "Tern",
+              "type": "dropper",
+              "details": "VLT (Very Large Telescope) with LightAction levers"
+            },
             "seatpost_clamp": "Tern Collar"
           },
           "geometry": {
@@ -71534,15 +73337,28 @@
             }
           },
           "cockpit": {
-            "distance_seatpost_to_handlebar": "49 - 59 cm (19.3 - 23.2 in)",
+            "distance_seatpost_to_handlebar": {
+              "details": "49 - 59 cm (19.3 - 23.2 in)"
+            },
             "distance_saddle_to_pedal": "69 - 105 cm (27.2 - 41.3 in)",
             "handlepost": "Tern Physis 3D, 3D forged, 5 patented technologies, 12°, 290 mm",
-            "stem": "Tern Andros, adjustable, forged construction, patented technology",
+            "stem": {
+              "manufacturer": "Tern",
+              "adjustable": true,
+              "details": "Andros, forged construction, patented technology"
+            },
             "headset": "Tern Flux Pro Taper by FSA, 1.5\", angular contact bearings, Physis integrated",
-            "handlebar": "Tern Sweep, 6061-AL, Tern Andros adapted",
+            "handlebar": {
+              "manufacturer": "Tern",
+              "details": "Sweep, 6061-AL, Tern Andros adapted"
+            },
             "grips_bar_tape": "Ergon",
             "saddle": "Tern GSD by Velo",
-            "seatpost": "Tern VLT (Very Large Telescope) with Cane Creek suspension and LightAction levers",
+            "seatpost": {
+              "manufacturer": "Tern",
+              "type": "dropper",
+              "details": "VLT (Very Large Telescope) with Cane Creek suspension and LightAction levers"
+            },
             "seatpost_clamp": "Tern Collar"
           },
           "geometry": {
@@ -71818,15 +73634,28 @@
             }
           },
           "cockpit": {
-            "distance_seatpost_to_handlebar": "49 - 59 cm (19.3 - 23.2 in)",
+            "distance_seatpost_to_handlebar": {
+              "details": "49 - 59 cm (19.3 - 23.2 in)"
+            },
             "distance_saddle_to_pedal": "69 - 105 cm (27.2 - 41.3 in)",
             "handlepost": "Tern Physis 3D, 3D forged, 5 patented technologies, 12°, 290 mm",
-            "stem": "Tern Andros, adjustable, forged construction, patented technology",
+            "stem": {
+              "manufacturer": "Tern",
+              "adjustable": true,
+              "details": "Andros, forged construction, patented technology"
+            },
             "headset": "Tern Flux Pro Taper by FSA, 1.5\", angular contact bearings, Physis integrated",
-            "handlebar": "Tern Sweep, 6061-AL, Tern Andros adapted",
+            "handlebar": {
+              "manufacturer": "Tern",
+              "details": "Sweep, 6061-AL, Tern Andros adapted"
+            },
             "grips_bar_tape": "Ergon",
             "saddle": "Tern GSD by Velo",
-            "seatpost": "Tern VLT (Very Large Telescope) with Cane Creek suspension and LightAction levers",
+            "seatpost": {
+              "manufacturer": "Tern",
+              "type": "dropper",
+              "details": "VLT (Very Large Telescope) with Cane Creek suspension and LightAction levers"
+            },
             "seatpost_clamp": "Tern Collar"
           },
           "geometry": {
@@ -72110,15 +73939,29 @@
             }
           },
           "cockpit": {
-            "distance_seatpost_to_handlebar": "54.5 - 62.5 cm (21.5 - 24.6 in)",
+            "distance_seatpost_to_handlebar": {
+              "details": "54.5 - 62.5 cm (21.5 - 24.6 in)"
+            },
             "distance_saddle_to_pedal": "70 - 102.5 cm (27.6 - 40.4 in)",
             "handlepost": "Tern Physis 3D, 3D forged, 5 patented technologies, 12°, 290 mm",
-            "stem": "Tern Andros, adjustable, forged construction, patented technology",
+            "stem": {
+              "manufacturer": "Tern",
+              "adjustable": true,
+              "details": "Andros, forged construction, patented technology"
+            },
             "headset": "Tern Flux Pro Taper by FSA, 1.5\", angular contact bearings, Physis integrated",
-            "handlebar": "Tern Sweep, 6061-AL, Tern Andros adapted",
+            "handlebar": {
+              "manufacturer": "Tern",
+              "details": "Sweep, 6061-AL, Tern Andros adapted"
+            },
             "grips_bar_tape": "Ergon",
             "saddle": "Tern Upright by Velo",
-            "seatpost": "Tern Telescope, 34.9/30.9 mm, 2014-AL",
+            "seatpost": {
+              "manufacturer": "Tern",
+              "type": "dropper",
+              "diameter_mm": 34.9,
+              "details": "Telescope, mm, 2014-AL"
+            },
             "seatpost_clamp": "Tern Collar"
           },
           "geometry": {
@@ -72377,15 +74220,29 @@
             }
           },
           "cockpit": {
-            "distance_seatpost_to_handlebar": "54.5 - 62.5 cm (21.5 - 24.6 in)",
+            "distance_seatpost_to_handlebar": {
+              "details": "54.5 - 62.5 cm (21.5 - 24.6 in)"
+            },
             "distance_saddle_to_pedal": "70 - 102.5 cm (27.6 - 40.4 in)",
             "handlepost": "Tern Physis 3D, 3D forged, 5 patented technologies, 12°, 290 mm",
-            "stem": "Tern Andros, adjustable, forged construction, patented technology",
+            "stem": {
+              "manufacturer": "Tern",
+              "adjustable": true,
+              "details": "Andros, forged construction, patented technology"
+            },
             "headset": "Tern Flux Pro Taper by FSA, 1.5\", angular contact bearings, Physis integrated",
-            "handlebar": "Tern Sweep, 6061-AL, Tern Andros adapted",
+            "handlebar": {
+              "manufacturer": "Tern",
+              "details": "Sweep, 6061-AL, Tern Andros adapted"
+            },
             "grips_bar_tape": "Ergon",
             "saddle": "Tern Upright by Velo",
-            "seatpost": "Tern Telescope, 34.9/30.9 mm, 2014-AL",
+            "seatpost": {
+              "manufacturer": "Tern",
+              "type": "dropper",
+              "diameter_mm": 34.9,
+              "details": "Telescope, mm, 2014-AL"
+            },
             "seatpost_clamp": "Tern Collar"
           },
           "geometry": {
@@ -72648,15 +74505,29 @@
             }
           },
           "cockpit": {
-            "distance_seatpost_to_handlebar": "52 - 62.5 cm (20.5 - 24.6 in)",
+            "distance_seatpost_to_handlebar": {
+              "details": "52 - 62.5 cm (20.5 - 24.6 in)"
+            },
             "distance_saddle_to_pedal": "76 - 110 cm (29.9 - 43.3 in)",
             "handlepost": "Tern Physis 3D, 3D forged, 5 patented technologies, 12°, 290 mm",
-            "stem": "Tern Andros, adjustable, forged construction, patented technology",
+            "stem": {
+              "manufacturer": "Tern",
+              "adjustable": true,
+              "details": "Andros, forged construction, patented technology"
+            },
             "headset": "Tern Flux Pro Taper by FSA, 1.5\", angular contact bearings, Physis integrated",
-            "handlebar": "Tern Sweep, 6061-AL, Tern Andros adapted",
+            "handlebar": {
+              "manufacturer": "Tern",
+              "details": "Sweep, 6061-AL, Tern Andros adapted"
+            },
             "grips_bar_tape": "Ergon",
             "saddle": "Tern Upright by Velo",
-            "seatpost": "Cane Creek Thudbuster G4, Tern Telescope, 34.9/30.9 mm",
+            "seatpost": {
+              "manufacturer": "Tern",
+              "type": "dropper",
+              "diameter_mm": 34.9,
+              "details": "Cane Creek Thudbuster G4, Telescope, mm"
+            },
             "seatpost_clamp": "Tern Collar"
           },
           "geometry": {
@@ -72914,15 +74785,29 @@
             }
           },
           "cockpit": {
-            "distance_seatpost_to_handlebar": "52 - 62.5 cm (20.5 - 24.6 in)",
+            "distance_seatpost_to_handlebar": {
+              "details": "52 - 62.5 cm (20.5 - 24.6 in)"
+            },
             "distance_saddle_to_pedal": "76 - 110 cm (29.9 - 43.3 in)",
             "handlepost": "Tern Physis 3D, 3D forged, 5 patented technologies, 12°, 290 mm",
-            "stem": "Tern Andros, adjustable, forged construction, patented technology",
+            "stem": {
+              "manufacturer": "Tern",
+              "adjustable": true,
+              "details": "Andros, forged construction, patented technology"
+            },
             "headset": "Tern Flux Pro Taper by FSA, 1.5\", angular contact bearings, Physis integrated",
-            "handlebar": "Tern Sweep, 6061-AL, Tern Andros adapted",
+            "handlebar": {
+              "manufacturer": "Tern",
+              "details": "Sweep, 6061-AL, Tern Andros adapted"
+            },
             "grips_bar_tape": "Ergon",
             "saddle": "Tern Upright by Velo",
-            "seatpost": "Cane Creek Thudbuster G4, Tern Telescope, 34.9/30.9 mm",
+            "seatpost": {
+              "manufacturer": "Tern",
+              "type": "dropper",
+              "diameter_mm": 34.9,
+              "details": "Cane Creek Thudbuster G4, Telescope, mm"
+            },
             "seatpost_clamp": "Tern Collar"
           },
           "geometry": {
@@ -73174,15 +75059,29 @@
             }
           },
           "cockpit": {
-            "distance_seatpost_to_handlebar": "45 - 52 cm (17.7 - 20.5 in)",
+            "distance_seatpost_to_handlebar": {
+              "details": "45 - 52 cm (17.7 - 20.5 in)"
+            },
             "distance_saddle_to_pedal": "70 - 100 cm (27.6 - 39.4 in)",
             "handlepost": "Tern Physis 3D, 3D forged, 5 patented technologies, 12°, 350 mm",
-            "stem": "Tern Andros, adjustable, forged construction, patented technology",
+            "stem": {
+              "manufacturer": "Tern",
+              "adjustable": true,
+              "details": "Andros, forged construction, patented technology"
+            },
             "headset": "Tern Flux by FSA, cartridge bearings, Physis integrated",
-            "handlebar": "Tern Sweep, 6061-AL, Tern Andros adapted",
+            "handlebar": {
+              "manufacturer": "Tern",
+              "details": "Sweep, 6061-AL, Tern Andros adapted"
+            },
             "grips_bar_tape": "Ergon",
             "saddle": "Tern Upright by Velo",
-            "seatpost": "Tern RideEasy Suspension, 34.9 mm",
+            "seatpost": {
+              "manufacturer": "Tern",
+              "type": "suspension",
+              "diameter_mm": 34.9,
+              "details": "RideEasy Suspension, mm"
+            },
             "seatpost_clamp": "Tern Collar"
           },
           "geometry": {
@@ -73402,15 +75301,29 @@
             }
           },
           "cockpit": {
-            "distance_seatpost_to_handlebar": "45 - 52 cm (17.7 - 20.5 in)",
+            "distance_seatpost_to_handlebar": {
+              "details": "45 - 52 cm (17.7 - 20.5 in)"
+            },
             "distance_saddle_to_pedal": "70 - 100 cm (27.6 - 39.4 in)",
             "handlepost": "Tern Physis 3D, 3D forged, 5 patented technologies, 12°, 350 mm",
-            "stem": "Tern Andros, adjustable, forged construction, patented technology",
+            "stem": {
+              "manufacturer": "Tern",
+              "adjustable": true,
+              "details": "Andros, forged construction, patented technology"
+            },
             "headset": "Tern Flux by FSA, cartridge bearings, Physis integrated",
-            "handlebar": "Tern Sweep, 6061-AL, Tern Andros adapted",
+            "handlebar": {
+              "manufacturer": "Tern",
+              "details": "Sweep, 6061-AL, Tern Andros adapted"
+            },
             "grips_bar_tape": "Ergon",
             "saddle": "Tern Upright by Velo",
-            "seatpost": "Tern RideEasy Suspension, 34.9 mm, Air cartridge, Preload adjustable",
+            "seatpost": {
+              "manufacturer": "Tern",
+              "type": "suspension",
+              "diameter_mm": 34.9,
+              "details": "RideEasy Suspension, mm, Air cartridge, Preload adjustable"
+            },
             "seatpost_clamp": "Tern Collar"
           },
           "geometry": {
@@ -73635,14 +75548,27 @@
             }
           },
           "cockpit": {
-            "distance_seatpost_to_handlebar": "M: 61 - 66 cm (24 - 26 in) ; L: 67 - 73 cm (26.4 - 28.7 in)",
+            "distance_seatpost_to_handlebar": {
+              "details": "M: 61 - 66 cm (24 - 26 in); L: 67 - 73 cm (26.4 - 28.7 in)"
+            },
             "distance_saddle_to_pedal": "M: 71 - 99 cm (28 - 39 in) ; L: 76.5 - 104.5 cm (30.1 - 41.1 in)",
-            "stem": "Level Nine, 45 mm (M), 65 mm (L), Syntace VR-3 certified",
+            "stem": {
+              "adjustable": false,
+              "length_mm": 45,
+              "details": "Level Nine, (M), 65 mm (L), Syntace VR-3 certified"
+            },
             "headset": "FSA, 1.5\", angular contact bearings",
-            "handlebar": "Level Nine, AL-7050, 800 mm, riser, eMTB approved",
+            "handlebar": {
+              "type": "riser",
+              "width_mm": 800,
+              "details": "Level Nine, AL-7050, r, eMTB approved"
+            },
             "grips_bar_tape": "Ergon",
             "saddle": "Ergon SM, E-Mountain Sport, CrMo Rail",
-            "seatpost": "Syntace P6 AL7050, 34.9 mm, Syntace VR-3 SP-approved",
+            "seatpost": {
+              "diameter_mm": 34.9,
+              "details": "Syntace P6 AL7050, mm, Syntace VR-3 SP-approved"
+            },
             "seatpost_clamp": "Tern Collar"
           },
           "geometry": {
@@ -73915,14 +75841,27 @@
             }
           },
           "cockpit": {
-            "distance_seatpost_to_handlebar": "M: 61 - 66 cm (24 - 26 in) ; L: 67 - 73 cm (26.4 - 28.7 in)",
+            "distance_seatpost_to_handlebar": {
+              "details": "M: 61 - 66 cm (24 - 26 in); L: 67 - 73 cm (26.4 - 28.7 in)"
+            },
             "distance_saddle_to_pedal": "M: 71 - 99 cm (28 - 39 in) ; L: 76.5 - 104.5 cm (30.1 - 41.1 in)",
-            "stem": "Level Nine, 45 mm (M), 65 mm (L), Syntace VR-3 certified",
+            "stem": {
+              "adjustable": false,
+              "length_mm": 45,
+              "details": "Level Nine, (M), 65 mm (L), Syntace VR-3 certified"
+            },
             "headset": "FSA, 1.5\", angular contact bearings",
-            "handlebar": "Level Nine, AL-7050, 800 mm, riser, eMTB approved",
+            "handlebar": {
+              "type": "riser",
+              "width_mm": 800,
+              "details": "Level Nine, AL-7050, r, eMTB approved"
+            },
             "grips_bar_tape": "Ergon",
             "saddle": "Ergon SM, E-Mountain Sport, CrMo Rail",
-            "seatpost": "Syntace P6 AL7050, 34.9 mm, Syntace VR-3 SP-approved",
+            "seatpost": {
+              "diameter_mm": 34.9,
+              "details": "Syntace P6 AL7050, mm, Syntace VR-3 SP-approved"
+            },
             "seatpost_clamp": "Tern Collar"
           },
           "geometry": {
@@ -74191,14 +76130,26 @@
             }
           },
           "cockpit": {
-            "distance_seatpost_to_handlebar": "60 - 64 cm (23.6 - 25.2 in)",
+            "distance_seatpost_to_handlebar": {
+              "details": "60 - 64 cm (23.6 - 25.2 in)"
+            },
             "distance_saddle_to_pedal": "68 - 110 cm (26.8 - 43.3 in)",
-            "stem": "Speedlifter, 150 mm extension, 3D Forged stem, 31.8",
+            "stem": {
+              "adjustable": false,
+              "length_mm": 150,
+              "details": "Speedlifter, 3D Forged stem, 31.8"
+            },
             "headset": "TH, cartridge bearings",
-            "handlebar": "Low riser, 31.8, 6061-AL",
+            "handlebar": {
+              "type": "riser",
+              "details": "Low r, 31.8, 6061-AL"
+            },
             "grips_bar_tape": "Velo ergonomic, lock-on",
             "saddle": "Velo Comfort",
-            "seatpost": "31.6 mm, 6061-AL, micro-adjust clamp",
+            "seatpost": {
+              "diameter_mm": 31.6,
+              "details": "mm, 6061-AL, micro-adjust clamp"
+            },
             "seatpost_clamp": "Tern Collar"
           },
           "geometry": {
@@ -74449,14 +76400,25 @@
             }
           },
           "cockpit": {
-            "distance_seatpost_to_handlebar": "60 - 64 cm (23.6 - 25.2 in)",
+            "distance_seatpost_to_handlebar": {
+              "details": "60 - 64 cm (23.6 - 25.2 in)"
+            },
             "distance_saddle_to_pedal": "76 - 99 cm (29.9 - 39 in)",
-            "stem": "Speedlifter, adjustable, 3D forged stem, 31.8",
+            "stem": {
+              "adjustable": true,
+              "details": "Speedlifter, 3D forged stem, 31.8"
+            },
             "headset": "TH, cartridge bearings",
-            "handlebar": "Low riser ergo, 31.8, 6061-AL",
+            "handlebar": {
+              "type": "riser",
+              "details": "Low r ergo, 31.8, 6061-AL"
+            },
             "grips_bar_tape": "Velo ergonomic, lock-on",
             "saddle": "Velo Comfort",
-            "seatpost": "34.9 mm, 6061-AL, micro-adjust clamp",
+            "seatpost": {
+              "diameter_mm": 34.9,
+              "details": "mm, 6061-AL, micro-adjust clamp"
+            },
             "seatpost_clamp": "Tern Collar"
           },
           "geometry": {
@@ -74736,14 +76698,26 @@
             }
           },
           "cockpit": {
-            "distance_seatpost_to_handlebar": "60 - 64 cm (23.6 - 25.2 in)",
+            "distance_seatpost_to_handlebar": {
+              "details": "60 - 64 cm (23.6 - 25.2 in)"
+            },
             "distance_saddle_to_pedal": "68 - 110 cm (26.8 - 43.3 in)",
-            "stem": "Speedlifter, 150 mm extension, 3D Forged stem, 31.8",
+            "stem": {
+              "adjustable": false,
+              "length_mm": 150,
+              "details": "Speedlifter, 3D Forged stem, 31.8"
+            },
             "headset": "TH, cartridge bearings",
-            "handlebar": "Low riser, 31.8, 6061-AL",
+            "handlebar": {
+              "type": "riser",
+              "details": "Low r, 31.8, 6061-AL"
+            },
             "grips_bar_tape": "Velo ergonomic, lock-on",
             "saddle": "Velo Comfort",
-            "seatpost": "31.6 mm, 6061-AL, micro-adjust clamp",
+            "seatpost": {
+              "diameter_mm": 31.6,
+              "details": "mm, 6061-AL, micro-adjust clamp"
+            },
             "seatpost_clamp": "Tern Collar"
           },
           "geometry": {
@@ -74992,15 +76966,29 @@
             }
           },
           "cockpit": {
-            "distance_seatpost_to_handlebar": "62 - 69 cm (24.4 - 27.2 in)",
+            "distance_seatpost_to_handlebar": {
+              "details": "62 - 69 cm (24.4 - 27.2 in)"
+            },
             "distance_saddle_to_pedal": "67 - 110 cm (26.4 - 43.3 in)",
             "handlepost": "Tern Physis 3D, 3D forged, 5 patented technologies, 12°, 320 mm",
-            "stem": "Tern Andros, adjustable, forged construction, patented technology",
+            "stem": {
+              "manufacturer": "Tern",
+              "adjustable": true,
+              "details": "Andros, forged construction, patented technology"
+            },
             "headset": "Tern Flux by FSA, cartridge bearings, Physis integrated",
-            "handlebar": "Kinetix Comp, double-butted 6061-AL, Tern Andros adapted",
+            "handlebar": {
+              "manufacturer": "Tern",
+              "details": "Kinetix Comp, double-butted 6061-AL, Andros adapted"
+            },
             "grips_bar_tape": "Ergon",
             "saddle": "Tern Porter+ by Velo, patented GripPad design, PrimeGel padding",
-            "seatpost": "Tern Telescope, 34.9/30.9 mm",
+            "seatpost": {
+              "manufacturer": "Tern",
+              "type": "dropper",
+              "diameter_mm": 34.9,
+              "details": "Telescope, mm"
+            },
             "seatpost_clamp": "Tern Collar",
             "clip_system": "Magnetix 3.0"
           },
@@ -75254,15 +77242,29 @@
             }
           },
           "cockpit": {
-            "distance_seatpost_to_handlebar": "62 - 69 cm (24.4 - 27.2 in)",
+            "distance_seatpost_to_handlebar": {
+              "details": "62 - 69 cm (24.4 - 27.2 in)"
+            },
             "distance_saddle_to_pedal": "67 - 110 cm (26.4 - 43.3 in)",
             "handlepost": "Tern Physis 3D, 3D forged, 5 patented technologies, 12°, 350 mm",
-            "stem": "Tern Andros, adjustable, forged construction, patented technology",
+            "stem": {
+              "manufacturer": "Tern",
+              "adjustable": true,
+              "details": "Andros, forged construction, patented technology"
+            },
             "headset": "Tern Flux by FSA, cartridge bearings, Physis integrated",
-            "handlebar": "Tern Sweep, 6061-AL, Tern Andros adapted",
+            "handlebar": {
+              "manufacturer": "Tern",
+              "details": "Sweep, 6061-AL, Tern Andros adapted"
+            },
             "grips_bar_tape": "Ergon",
             "saddle": "Tern Upright by Velo",
-            "seatpost": "Tern Telescope, 34.9/30.9 mm",
+            "seatpost": {
+              "manufacturer": "Tern",
+              "type": "dropper",
+              "diameter_mm": 34.9,
+              "details": "Telescope, mm"
+            },
             "seatpost_clamp": "Tern Collar",
             "clip_system": "Magnetix 3.0"
           },
@@ -75507,15 +77509,30 @@
             }
           },
           "cockpit": {
-            "distance_seatpost_to_handlebar": "62 - 69 cm (24.4 - 27.2 in)",
+            "distance_seatpost_to_handlebar": {
+              "details": "62 - 69 cm (24.4 - 27.2 in)"
+            },
             "distance_saddle_to_pedal": "67 - 110 cm (26.4 - 43.3 in)",
             "handlepost": "Tern Physis 3D, 3D forged, 5 patented technologies, 12°, 320 mm",
-            "stem": "Tern Andros, adjustable, forged construction, patented technology",
+            "stem": {
+              "manufacturer": "Tern",
+              "adjustable": true,
+              "details": "Andros, forged construction, patented technology"
+            },
             "headset": "Tern Flux, cartridge bearings, Physis integrated",
-            "handlebar": "Flat bar, 6061-AL, Tern Andros adapted",
+            "handlebar": {
+              "manufacturer": "Tern",
+              "type": "flat",
+              "details": "Flat bar, 6061-AL, Andros adapted"
+            },
             "grips_bar_tape": "Velo ergonomic, lock-on",
             "saddle": "Tern Porter, patented GripPad design",
-            "seatpost": "Tern Telescope, 34.9/30.9 mm, 2014-AL",
+            "seatpost": {
+              "manufacturer": "Tern",
+              "type": "dropper",
+              "diameter_mm": 34.9,
+              "details": "Telescope, mm, 2014-AL"
+            },
             "seatpost_clamp": "Tern Collar, 6061-AL, 2pc",
             "clip_system": "Magnetix 3.0"
           },
@@ -75780,15 +77797,29 @@
             }
           },
           "cockpit": {
-            "distance_seatpost_to_handlebar": "62 - 69 cm (24.4 - 27.2 in)",
+            "distance_seatpost_to_handlebar": {
+              "details": "62 - 69 cm (24.4 - 27.2 in)"
+            },
             "distance_saddle_to_pedal": "67 - 110 cm (26.4 - 43.3 in)",
             "handlepost": "Tern Physis 3D, 3D forged, 5 patented technologies",
-            "stem": "Tern Andros, adjustable, forged construction, patented technology",
+            "stem": {
+              "manufacturer": "Tern",
+              "adjustable": true,
+              "details": "Andros, forged construction, patented technology"
+            },
             "headset": "Flux Pro, angular contact bearings, Physis integrated",
-            "handlebar": "Kinetix Comp, double-butted 6061-AL, Tern Andros adapted",
+            "handlebar": {
+              "manufacturer": "Tern",
+              "details": "Kinetix Comp, double-butted 6061-AL, Andros adapted"
+            },
             "grips_bar_tape": "Ergon",
             "saddle": "Tern Porter+, patented GripPad design, PrimeGel padding",
-            "seatpost": "Tern Telescope, 34.9/30.9 mm, 2014-AL",
+            "seatpost": {
+              "manufacturer": "Tern",
+              "type": "dropper",
+              "diameter_mm": 34.9,
+              "details": "Telescope, mm, 2014-AL"
+            },
             "seatpost_clamp": "Tern Collar, 6061-AL, 2pc",
             "clip_system": "Magnetix 3.0"
           },
@@ -76050,11 +78081,25 @@
             }
           },
           "cockpit": {
-            "handlebar": "Aluminum Alloy, Ф31.8mm, 660mm(R)/680mm(L)",
+            "handlebar": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 660,
+              "details": "Aluminum Alloy, Ф, (R)/ (L)"
+            },
             "grips": "Durable ergonomic grips, lockable",
-            "stem": "Adjustable, Aluminum Alloy",
+            "stem": {
+              "material": "aluminum",
+              "adjustable": true,
+              "details": "Aluminum Alloy"
+            },
             "saddle": "VELOTRIC comfort ergonomic seat",
-            "seatpost": "Aluminum Alloy, φ30.9mm, 350mm",
+            "seatpost": {
+              "material": "aluminum",
+              "diameter_mm": 30.9,
+              "length_mm": 350,
+              "details": "Aluminum Alloy, φ mm"
+            },
             "clamp": "Aluminum Alloy, quick release"
           },
           "geometry": {
@@ -76562,13 +78607,31 @@
             }
           },
           "cockpit": {
-            "handlebar": "Aluminum Alloy, Ф31.8mm, 680mm(R)/700mm(L)",
+            "handlebar": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 680,
+              "details": "Aluminum Alloy, Ф, (R)/ (L)"
+            },
             "grips": "Durable Ergonomic Grips, Lockable",
-            "stem": "Adjustable, Aluminum Alloy, ф31.8mm, 60mm Length",
+            "stem": {
+              "material": "aluminum",
+              "adjustable": true,
+              "clamp_mm": 31.8,
+              "length_mm": 60,
+              "details": "Aluminum Alloy, ф"
+            },
             "saddle": "VELOTRIC Comfort Ergonomic Seat",
-            "seatpost": "Aluminum Alloy, Ф30.9mm, Suspension",
+            "seatpost": {
+              "type": "suspension",
+              "material": "aluminum",
+              "diameter_mm": 30.9,
+              "details": "Aluminum Alloy, Ф mm, Suspension"
+            },
             "clamp": "Aluminum Alloy, Quick Release",
-            "handlebar_height": "1110mm"
+            "handlebar_height": {
+              "details": "1"
+            }
           },
           "geometry": {
             "bike_size": "Regular / Large",
@@ -77032,13 +79095,31 @@
             }
           },
           "cockpit": {
-            "handlebar": "Aluminum Alloy, Ф31.8mm, 680mm(R)/700mm(L)",
+            "handlebar": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 680,
+              "details": "Aluminum Alloy, Ф, (R)/ (L)"
+            },
             "grips": "Durable Ergonomic Grips, Lockable",
-            "stem": "Adjustable, Aluminum Alloy, ф31.8mm, 60mm Length",
+            "stem": {
+              "material": "aluminum",
+              "adjustable": true,
+              "clamp_mm": 31.8,
+              "length_mm": 60,
+              "details": "Aluminum Alloy, ф"
+            },
             "saddle": "VELOTRIC Comfort Ergonomic Seat",
-            "seatpost": "Aluminum Alloy, Ф30.9mm, Suspension",
+            "seatpost": {
+              "type": "suspension",
+              "material": "aluminum",
+              "diameter_mm": 30.9,
+              "details": "Aluminum Alloy, Ф mm, Suspension"
+            },
             "clamp": "Aluminum Alloy, Quick Release",
-            "handlebar_height": "1110mm"
+            "handlebar_height": {
+              "details": "1"
+            }
           },
           "geometry": {
             "bike_size": "Regular / Large",
@@ -77415,10 +79496,19 @@
             }
           },
           "cockpit": {
-            "handlebar": "Aluminum Alloy, Φ25.4mm, 660mm",
+            "handlebar": {
+              "material": "aluminum",
+              "width_mm": 660,
+              "details": "Aluminum Alloy, Φ25.4mm"
+            },
             "grips": "Durable ergonomic grips, lockable",
             "saddle": "VELOTRIC urban comfort ergonomic seat",
-            "seatpost": "Aluminum Alloy, φ30.9mm, 350mm",
+            "seatpost": {
+              "material": "aluminum",
+              "diameter_mm": 30.9,
+              "length_mm": 350,
+              "details": "Aluminum Alloy, φ mm"
+            },
             "clamp": "Aluminum Alloy, quick release"
           },
           "geometry": {
@@ -77758,10 +79848,19 @@
             }
           },
           "cockpit": {
-            "handlebar": "Aluminum Alloy, Φ25.4mm, 660mm",
+            "handlebar": {
+              "material": "aluminum",
+              "width_mm": 660,
+              "details": "Aluminum Alloy, Φ25.4mm"
+            },
             "grips": "Durable ergonomic grips, lockable",
             "saddle": "VELOTRIC urban comfort ergonomic seat",
-            "seatpost": "Aluminum Alloy, φ30.9mm, 350mm",
+            "seatpost": {
+              "material": "aluminum",
+              "diameter_mm": 30.9,
+              "length_mm": 350,
+              "details": "Aluminum Alloy, φ mm"
+            },
             "clamp": "Aluminum Alloy, quick release"
           },
           "geometry": {
@@ -78160,13 +80259,30 @@
             }
           },
           "cockpit": {
-            "handlebar": "BMX Style, 31.8mm Bar Clamp, 700mm",
+            "handlebar": {
+              "type": "bmx",
+              "clamp_mm": 31.8,
+              "width_mm": 700,
+              "details": "BMX Style"
+            },
             "grips": "Durable Ergonomic Grips, Lockable",
-            "stem": "Quill Stem, 31.8mm Clamp, 30mm Length, 140mm Vertical Adjustment Range",
+            "stem": {
+              "type": "quill",
+              "adjustable": true,
+              "clamp_mm": 31.8,
+              "length_mm": 30,
+              "details": "Quill Stem, Clamp, 140mm Vertical Adjustment Range"
+            },
             "saddle": "VELOTRIC Comfort Ergonomic Seat",
-            "seatpost": "Aluminum Alloy, Ф30.9mm",
+            "seatpost": {
+              "material": "aluminum",
+              "diameter_mm": 30.9,
+              "details": "Aluminum Alloy, Ф mm"
+            },
             "clamp": "Aluminum Alloy, Quick Release",
-            "handlebar_height": "1040-1180mm"
+            "handlebar_height": {
+              "details": "1040-1"
+            }
           },
           "geometry": {
             "bike_size": "One Size",
@@ -78663,11 +80779,27 @@
             }
           },
           "cockpit": {
-            "handlebar": "Aluminum Alloy, Φ31.8mm, 680mm(R)/700mm(L)",
+            "handlebar": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 680,
+              "details": "Aluminum Alloy, (R)/ (L)"
+            },
             "grips": "Durable ergonomic grips, lockable",
-            "stem": "Adjustable, Aluminum Alloy, Φ31.8mm, 60mm(R)/90mm(L)",
+            "stem": {
+              "material": "aluminum",
+              "adjustable": true,
+              "clamp_mm": 31.8,
+              "length_mm": 60,
+              "details": "Aluminum Alloy, (R)/90mm(L)"
+            },
             "saddle": "VELOTRIC comfort ergonomic seat",
-            "seatpost": "Aluminum Alloy, Φ30.9mm, Suspension",
+            "seatpost": {
+              "type": "suspension",
+              "material": "aluminum",
+              "diameter_mm": 30.9,
+              "details": "Aluminum Alloy, mm, Suspension"
+            },
             "clamp": "Aluminum Alloy, quick release"
           },
           "geometry": {
@@ -79148,13 +81280,30 @@
             }
           },
           "cockpit": {
-            "handlebar": "Aluminum Alloy, Φ31.8mm, 700mm",
+            "handlebar": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 700,
+              "details": "Aluminum Alloy"
+            },
             "grips": "Durable ergonomic grips, lockable",
-            "stem": "Adjustable, Aluminum Alloy, Φ31.8mm, 60mm(ST)/90mm(HS)",
+            "stem": {
+              "material": "aluminum",
+              "adjustable": true,
+              "clamp_mm": 31.8,
+              "length_mm": 60,
+              "details": "Aluminum Alloy, (ST)/90mm(HS)"
+            },
             "saddle": "VELOTRIC comfort ergonomic seat",
-            "seatpost": "Aluminum Alloy, Φ30.9mm",
+            "seatpost": {
+              "material": "aluminum",
+              "diameter_mm": 30.9,
+              "details": "Aluminum Alloy, mm"
+            },
             "clamp": "Aluminum Alloy, quick release",
-            "handlebar_height": "1080mm"
+            "handlebar_height": {
+              "details": "1"
+            }
           },
           "geometry": {
             "bike_size": "Step-Thru / High-Step",
@@ -79620,11 +81769,27 @@
             }
           },
           "cockpit": {
-            "handlebar": "Aluminum Alloy, Φ31.8mm, 760mm (R)/780mm (L)",
+            "handlebar": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 760,
+              "details": "Aluminum Alloy, (R)/ (L)"
+            },
             "grips": "Velotric sports grips, lockable",
-            "stem": "Aluminum Alloy, φ31.8mm, 35mm (R)/50mm (L)",
+            "stem": {
+              "material": "aluminum",
+              "adjustable": false,
+              "clamp_mm": 31.8,
+              "length_mm": 35,
+              "details": "Aluminum Alloy, φ, (R)/50mm (L)"
+            },
             "saddle": "VELOTRIC ergonomic seat",
-            "seatpost": "Aluminum Alloy, φ30.9mm, 350mm",
+            "seatpost": {
+              "material": "aluminum",
+              "diameter_mm": 30.9,
+              "length_mm": 350,
+              "details": "Aluminum Alloy, φ mm"
+            },
             "clamp": "Aluminum Alloy, quick release"
           },
           "geometry": {
@@ -80015,13 +82180,31 @@
             }
           },
           "cockpit": {
-            "handlebar": "Aluminum Alloy, Φ31.8mm, 740mm",
+            "handlebar": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 740,
+              "details": "Aluminum Alloy"
+            },
             "grips": "Durable Ergonomic Grips, Lockable",
-            "stem": "Adjustable, Aluminum Alloy, ф31.8mm, 60mm Length",
+            "stem": {
+              "material": "aluminum",
+              "adjustable": true,
+              "clamp_mm": 31.8,
+              "length_mm": 60,
+              "details": "Aluminum Alloy, ф"
+            },
             "saddle": "VELOTRIC Comfort Ergonomic Seat",
-            "seatpost": "Aluminum Alloy, φ31.6mm, 350mm",
+            "seatpost": {
+              "material": "aluminum",
+              "diameter_mm": 31.6,
+              "length_mm": 350,
+              "details": "Aluminum Alloy, φ mm"
+            },
             "clamp": "Aluminum Alloy, Quick Release",
-            "handlebar_height": "1000mm"
+            "handlebar_height": {
+              "details": "1"
+            }
           },
           "geometry": {
             "bike_size": "Regular / Large",
@@ -80418,11 +82601,27 @@
             }
           },
           "cockpit": {
-            "handlebar": "Aluminum Alloy, Φ31.8mm, 660mm",
+            "handlebar": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 660,
+              "details": "Aluminum Alloy"
+            },
             "grips": "VELOTRIC ergonomic comfort grips",
-            "stem": "Adjustable, Aluminum Alloy, φ31.8mm, 60mm",
+            "stem": {
+              "material": "aluminum",
+              "adjustable": true,
+              "clamp_mm": 31.8,
+              "length_mm": 60,
+              "details": "Aluminum Alloy, φ"
+            },
             "saddle": "VELOTRIC urban comfort ergonomic seat",
-            "seatpost": "Aluminum Alloy, φ30.9mm, 350mm",
+            "seatpost": {
+              "material": "aluminum",
+              "diameter_mm": 30.9,
+              "length_mm": 350,
+              "details": "Aluminum Alloy, φ mm"
+            },
             "clamp": "Aluminum Alloy"
           },
           "geometry": {
@@ -80778,13 +82977,31 @@
             }
           },
           "cockpit": {
-            "handlebar": "Aluminum Alloy, Ф31.8mm, 660mm",
+            "handlebar": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 660,
+              "details": "Aluminum Alloy, Ф"
+            },
             "grips": "Durable Ergonomic Grips, Lockable",
-            "stem": "Adjustable, Aluminum Alloy, ф31.8mm, 60mm Length",
+            "stem": {
+              "material": "aluminum",
+              "adjustable": true,
+              "clamp_mm": 31.8,
+              "length_mm": 60,
+              "details": "Aluminum Alloy, ф"
+            },
             "saddle": "VELOTRIC Comfort Ergonomic Seat",
-            "seatpost": "Aluminum Alloy, Ф30.9mm, 350mm",
+            "seatpost": {
+              "material": "aluminum",
+              "diameter_mm": 30.9,
+              "length_mm": 350,
+              "details": "Aluminum Alloy, Ф mm"
+            },
             "clamp": "Aluminum Alloy, Quick Release",
-            "handlebar_height": "1060mm"
+            "handlebar_height": {
+              "details": "1"
+            }
           },
           "geometry": {
             "bike_size": "Regular / Large",
@@ -81241,11 +83458,28 @@
             }
           },
           "cockpit": {
-            "handlebar": "Aluminum Alloy, Φ31.8mm, 660mm",
+            "handlebar": {
+              "material": "aluminum",
+              "clamp_mm": 31.8,
+              "width_mm": 660,
+              "details": "Aluminum Alloy"
+            },
             "grips": "Durable ergonomic grips, lockable",
-            "stem": "Foldable and adjustable, Aluminum Alloy, φ31.8mm, 60mm",
+            "stem": {
+              "material": "aluminum",
+              "type": "folding",
+              "adjustable": true,
+              "clamp_mm": 31.8,
+              "length_mm": 60,
+              "details": "Foldable and, Aluminum Alloy, φ"
+            },
             "saddle": "VELOTRIC Triker seat with adjustable back rest",
-            "seatpost": "Aluminum Alloy, φ30.9mm, 350mm/Aluminum Alloy, φ34.9mm, 260mm",
+            "seatpost": {
+              "material": "aluminum",
+              "diameter_mm": 30.9,
+              "length_mm": 350,
+              "details": "Aluminum Alloy, φ mm, Aluminum Alloy, φ34.9mm"
+            },
             "clamp": "Aluminum Alloy, quick release/Aluminum Alloy, nutted"
           },
           "geometry": {
