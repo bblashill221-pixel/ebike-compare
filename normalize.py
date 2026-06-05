@@ -123,9 +123,9 @@ def normalize_model(brand: str, m: dict) -> dict:
         "shipping_free": shipping.get("free"),
         "shipping_cost": shipping.get("cost"),
         "spec_count": m.get("spec_count", 0),
-        # Specs as an Aventon-style grouped view with snake_case field names
-        # (replaces the old physical/technical/all maps). Geometry is its own group.
-        "specs": {"grouped": grouped},
+        # Specs as an Aventon-style grouped map (group -> {field: value|parsed
+        # component}), snake_case throughout. Geometry is one of the groups.
+        "specs": grouped,
         "geometry": geometry,
         "colors": colors,
         "color_names": [c["name"] for c in colors if c.get("name")],

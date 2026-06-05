@@ -247,8 +247,9 @@ def _notable_tech(specs):
 
 
 def extract_typed_specs(model: dict) -> dict:
-    specs = (model.get("specs") or {}).get("all") \
-        or flatten_grouped((model.get("specs") or {}).get("grouped")) or {}
+    # `specs` is the grouped map (group -> {field: value|parsed component});
+    # flatten it back to a flat label->text map for the typed-fact regexes.
+    specs = flatten_grouped(model.get("specs") or {})
     motor_w, motor_peak_w = _motor_w(specs)
     return {
         "battery_wh": _battery_wh(specs),

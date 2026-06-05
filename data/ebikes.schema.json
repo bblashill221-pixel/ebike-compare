@@ -187,14 +187,8 @@
         "spec_count": { "type": "integer" },
         "specs": {
           "type": "object",
-          "description": "Aventon-style grouped spec view; snake_case field names throughout.",
-          "properties": {
-            "grouped": {
-              "type": "object",
-              "description": "snake_case label->value specs organized into ordered canonical groups (general_info, ebike_system, special_features, safety, certifications, water_resistance, frameset, drivetrain, brakes, wheelset, cockpit, geometry, included_accessories, general_other)",
-              "additionalProperties": { "type": "object" }
-            }
-          }
+          "description": "Aventon-style grouped spec map: group -> { field: value | parsed-component }, snake_case throughout. Groups: general_info, ebike_system, special_features, safety, certifications, water_resistance, frameset, drivetrain, brakes, wheelset, cockpit, geometry, included_accessories, general_other.",
+          "additionalProperties": { "type": "object" }
         },
         "geometry": {
           "type": "object",
