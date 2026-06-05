@@ -70,6 +70,48 @@ def _clean(s: str) -> str:
     return s.strip(" ,;:/&-–—.")
 
 
+# Tokens that end a model name (spec descriptors, materials, component nouns,
+# connectors) — used to pull the model/series out of the leftover after the
+# manufacturer (e.g. "SRAM Apex Hydraulic Disc 160mm" -> model "Apex").
+_MODEL_STOP = {
+    "hydraulic", "mechanical", "cable", "disc", "rim", "air", "coil", "spring",
+    "rigid", "suspension", "sealed", "alloy", "aluminum", "aluminium", "carbon",
+    "steel", "composite", "nylon", "plastic", "resin", "removable", "internal",
+    "integrated", "lithium-ion", "lithium", "tubeless", "double-wall", "double",
+    "wall", "thru-axle", "nutted", "schrader", "presta", "ergonomic", "lock-on",
+    "lock", "platform", "folding", "dropper", "telescoping", "threadless", "quill",
+    "riser", "flat", "bmx", "cruiser", "narrow", "wide", "adjustable", "forged",
+    "custom", "tuned", "comfort", "premium", "standard", "front", "rear", "dual",
+    "single", "with", "and", "the", "for", "by", "or", "of", "w/",
+    "saddle", "seatpost", "seat", "post", "stem", "handlebar", "handlebars",
+    "grip", "grips", "fork", "shock", "motor", "battery", "cell", "cells", "brake",
+    "brakes", "lever", "levers", "rotor", "rotors", "chain", "cassette",
+    "freewheel", "derailleur", "shifter", "crank", "crankset", "chainring",
+    "chainrings", "pedal", "pedals", "wheel", "wheels", "tire", "tires", "rims",
+    "spoke", "spokes", "hub", "controller", "charger", "display", "throttle",
+    "sensor", "headset", "binder", "kickstand", "rack", "fender", "fenders",
+    "light", "bell", "bracket", "bottom", "drive",
+}
+
+
+def _leading_model(text: str) -> str:
+    """The model/series name at the start of a leftover string (up to 4 tokens),
+    stopping at a number, unit, or spec/component word."""
+    out = []
+    for tok in text.split():
+        t = tok.strip(",.;:()/\"'")
+        tl = t.lower()
+        if not t or tl in _MODEL_STOP:
+            break
+        if re.match(r"^[\d.]+$", t) or re.match(
+                r"^\d+(\.\d+)?(mm|cm|w|v|ah|wh|kwh|nm|t|g|h|lux|lm|°|%|in|\")$", tl):
+            break
+        out.append(t)
+        if len(out) >= 4:
+            break
+    return " ".join(out).strip(" ,.-/")
+
+
 def _consume(text: str, pattern: str):
     """If `pattern` matches, return (match, text_with_match_removed); else (None, text)."""
     m = re.search(pattern, text, re.I)
@@ -876,5 +918,16 @@ def parse_component(field: str, value, brand: str | None = None,
         for k, sv in (siblings or {}).items():
             if "rotor" in k and isinstance(sv, str):
                 rotor += " " + sv
-        return _brake(value, brand, rotor)
-    return fn(value, brand)
+        result = _brake(value, brand, rotor)
+    else:
+        result = fn(value, brand)
+    # When a manufacturer was found, pull the model/series out of the leftover
+    # (e.g. "SRAM Apex Hydraulic Disc 160mm" -> manufacturer SRAM, model "Apex").
+    if result and result.get("manufacturer") and not result.get("model"):
+        mdl = _leading_model(result.get("details", ""))
+        if mdl:
+            det = result["details"]
+            result["model"] = mdl
+            tail = det[len(mdl):] if det[:len(mdl)].lower() == mdl.lower() else det.replace(mdl, "", 1)
+            result["details"] = _clean(tail)
+    return result
