@@ -171,9 +171,20 @@ def _fork(v, brand):
     elif re.search(r"coil|spring|mechanical|hydraulic|suspension|lockout", low):
         out["type"] = "coil"
     if out.get("type") != "rigid":
-        m, rest = _consume(rest, r"(\d{2,3})\s*mm(?:\s*travel)?")
-        if m:
-            out["travel_mm"] = int(m.group(1))
+        # prefer an mm value explicitly labeled "travel"; else the first mm that
+        # isn't an offset/axle/spacing/rotor measurement.
+        mt = re.search(r"(\d{2,3})\s*mm\s*(?:of\s+)?travel", v, re.I) \
+            or re.search(r"travel[:\s]+(\d{2,3})\s*mm", v, re.I)
+        if mt:
+            out["travel_mm"] = int(mt.group(1))
+            rest = rest.replace(mt.group(0), " ", 1)
+        else:
+            for mm in re.finditer(r"(\d{2,3})\s*mm", rest):
+                tail = rest[mm.end():mm.end() + 12].lower()
+                if not re.match(r"\s*(offset|spacing|axle|rotor|stanchion|steer)", tail):
+                    out["travel_mm"] = int(mm.group(1))
+                    rest = rest[:mm.start()] + " " + rest[mm.end():]
+                    break
     out["lockout"] = bool(re.search(r"lock[\s-]?out", low))
     out["thru_axle"] = bool(re.search(r"thru[\s-]?axle|thru axle", low))
     out["details"] = _clean(rest)
