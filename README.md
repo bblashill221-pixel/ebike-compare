@@ -464,12 +464,13 @@ does the detailed **spec grouping + component parsing** into
 `ebikes_normalized.json`. **Metrics run last** (`estimate_component_costs.py` then
 `analyze.py`), after normalization completes.
 
-**Grouped specs.** In the normalized doc `specs` is `{ grouped }` only — an ordered,
-Aventon-style set of sections (`spec_groups.py`), with **snake_case field names and
-group names** throughout (every brand's labels are normalized, so `BATTERY`/`Battery`
-→ `battery`, `REAR BRAKE`/`Rear brake` → `rear_brake`). Groups: **general_info,
-ebike_system, special_features, safety, certifications, water_resistance, frameset,
-drivetrain, brakes, wheelset, cockpit, geometry, included_accessories, general_other**.
+**Grouped specs.** In the normalized doc `specs` is the **group map directly**
+(`specs.ebike_system.motor`, `specs.cockpit.stem`, …) — an ordered, Aventon-style set
+of sections (`spec_groups.py`), with **snake_case field names and group names**
+throughout (every brand's labels are normalized, so `BATTERY`/`Battery` → `battery`,
+`REAR BRAKE`/`Rear brake` → `rear_brake`). Groups: **general_info, ebike_system,
+special_features, safety, certifications, water_resistance, frameset, drivetrain,
+brakes, wheelset, cockpit, geometry, included_accessories, general_other**.
 The taxonomy follows Aventon's real PDP sections, extended with safety / certifications
 / water_resistance / special_features (regen, radar, app, anti-theft, walk mode…). The
 **geometry** group is the model's `geometry` field (the Aventon geometry-data set from
