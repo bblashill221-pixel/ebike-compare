@@ -103,8 +103,9 @@ def normalize_model(brand: str, m: dict) -> dict:
         brand_extra["configs"] = m["configs"]
     raw_specs = m.get("specs") or {}
     geometry = m.get("geometry") or {}
-    # Use the grouped view if add_spec_groups already built it; else derive it.
-    grouped = raw_specs.get("grouped") or group_specs(raw_specs.get("all") or {}, geometry, brand)
+    # The detailed grouping + component parsing happens here, during normalization,
+    # from each scraper's verbatim flat `specs.all`.
+    grouped = group_specs(raw_specs.get("all") or {}, geometry, brand)
     geometry = {snake(k): v for k, v in geometry.items()}
     return {
         "id": f"{brand}__{source_id}",

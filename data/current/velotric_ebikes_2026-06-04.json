@@ -58,85 +58,57 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "grouped": {
-          "general_info": {
-            "class": "1/2/3",
-            "bike_weight": "48 lbs"
-          },
-          "ebike_system": {
-            "motor_hub": "750W, 65Nm",
-            "battery": "Removable 48V, 13.4Ah (627Wh), IPX7, Certificated by UL 2271",
-            "cell": "18650 cell, Certificated by UL 2580",
-            "charger": "48V, 3.0A Fast Charger",
-            "display": "3.5\" Full color, High brightness, Bluetooth",
-            "sensor": "Torque/Cadence Sensor",
-            "usb_port": "USB Type-C phone charge",
-            "throttle_assist": "Trigger-control, removable",
-            "pedal_assist": "3 Modes x 5 Levels",
-            "max_speed_default": "20 MPH",
-            "max_speed_adjustable_range": "12~28 MPH",
-            "throttle_range": "55 Miles",
-            "pedal_assist_range": "70 Miles",
-            "bike_weight_without_battery": "40.8 lbs"
-          },
-          "special_features": {
-            "app_apple_find_my": "APP OTA & Find My"
-          },
-          "safety": {
-            "rear_light": "Brake highlight, turn signal",
-            "front_light": "400 LM high-output integrated LED, adjustable angle"
-          },
-          "certifications": {
-            "ul_certification": "UL 2849",
-            "iso_standard": "ISO 4210"
-          },
-          "water_resistance": {
-            "water_resistant": "IPX6"
-          },
-          "frameset": {
-            "frame": "Triple-Butted Aluminum Alloy",
-            "fork": "Aluminum Alloy"
-          },
-          "drivetrain": {
-            "chainrings": "46T, narrow wide chainring",
-            "crankset": "Aluminum Alloy, 170mm",
-            "freewheel": "8-speed, 11-32T",
-            "chain": "KMC 8-speed",
-            "rear_derailleur": "SHIMANO 8-speed",
-            "shift_lever": "SHIMANO 8-speed",
-            "pedals": "Plastic"
-          },
-          "brakes": {
-            "brake": "Tektro Hydraulic Disc Brake",
-            "rotors": "180mm front and rear",
-            "brake_levers": "Aluminum Alloy, with power cutoff"
-          },
-          "wheelset": {
-            "rims": "Double-wall Aluminum Alloy",
-            "front_hub": "NOVATEC Aluminum Alloy, 15x110mm thru-axle",
-            "tire": "KENDA 27.5x2.2\" eBike puncture resistant tires"
-          },
-          "cockpit": {
-            "handlebar": "Aluminum Alloy, Ф31.8mm, 660mm(R)/680mm(L)",
-            "grips": "Durable ergonomic grips, lockable",
-            "stem": "Adjustable, Aluminum Alloy",
-            "saddle": "VELOTRIC comfort ergonomic seat",
-            "seatpost": "Aluminum Alloy, φ30.9mm, 350mm",
-            "clamp": "Aluminum Alloy, quick release"
-          },
-          "geometry": {
-            "bike_size": "Regular / Large",
-            "user_height_range": "Regular: 4'11'' - 5'8'' Large: 5'6'' - 6'4''"
-          },
-          "included_accessories": {
-            "fenders_optional": "Front and rear full coverage",
-            "rear_rack_optional": "Aluminum Alloy, MIK HD",
-            "kickstand": "Aluminum Alloy, included, rear mount",
-            "rear_rack_load_capacity": "66 lbs"
-          },
-          "general_other": {
-            "max_bike_load": "330 lbs"
-          }
+        "all": {
+          "Bike Size": "Regular / Large",
+          "User Height Range": "Regular: 4'11'' - 5'8'' Large: 5'6'' - 6'4''",
+          "Frame": "Triple-Butted Aluminum Alloy",
+          "Fork": "Aluminum Alloy",
+          "Motor Hub": "750W, 65Nm",
+          "Battery": "Removable 48V, 13.4Ah (627Wh), IPX7, Certificated by UL 2271",
+          "Cell": "18650 cell, Certificated by UL 2580",
+          "Charger": "48V, 3.0A Fast Charger",
+          "Display": "3.5\" Full color, High brightness, Bluetooth",
+          "Sensor": "Torque/Cadence Sensor",
+          "USB Port": "USB Type-C phone charge",
+          "Throttle Assist": "Trigger-control, removable",
+          "Pedal Assist": "3 Modes x 5 Levels",
+          "Rear Light": "Brake highlight, turn signal",
+          "Front Light": "400 LM high-output integrated LED, adjustable angle",
+          "Water Resistant": "IPX6",
+          "App & Apple Find My™": "APP OTA & Find My",
+          "Max Speed (Default)": "20 MPH",
+          "Max Speed Adjustable Range": "12~28 MPH",
+          "Class": "1/2/3",
+          "Throttle Range": "55 Miles",
+          "Pedal Assist Range": "70 Miles",
+          "Chainrings": "46T, narrow wide chainring",
+          "Crankset": "Aluminum Alloy, 170mm",
+          "Freewheel": "8-speed, 11-32T",
+          "Chain": "KMC 8-speed",
+          "Rear Derailleur": "SHIMANO 8-speed",
+          "Shift Lever": "SHIMANO 8-speed",
+          "Brake": "Tektro Hydraulic Disc Brake",
+          "Rotors": "180mm front and rear",
+          "Brake Levers": "Aluminum Alloy, with power cutoff",
+          "Rims": "Double-wall Aluminum Alloy",
+          "Front Hub": "NOVATEC Aluminum Alloy, 15x110mm thru-axle",
+          "Tire": "KENDA 27.5x2.2\" eBike puncture resistant tires",
+          "Handlebar": "Aluminum Alloy, Ф31.8mm, 660mm(R)/680mm(L)",
+          "Grips": "Durable ergonomic grips, lockable",
+          "Stem": "Adjustable, Aluminum Alloy",
+          "Saddle": "VELOTRIC comfort ergonomic seat",
+          "Seatpost": "Aluminum Alloy, φ30.9mm, 350mm",
+          "Clamp": "Aluminum Alloy, quick release",
+          "Fenders (Optional)": "Front and rear full coverage",
+          "Rear Rack (Optional)": "Aluminum Alloy, MIK HD",
+          "Pedals": "Plastic",
+          "Kickstand": "Aluminum Alloy, included, rear mount",
+          "Bike Weight": "48 lbs",
+          "Bike Weight (Without Battery)": "40.8 lbs",
+          "Max Bike Load": "330 lbs",
+          "Rear Rack Load Capacity": "66 lbs",
+          "UL Certification": "UL 2849",
+          "ISO Standard": "ISO 4210"
         }
       },
       "spec_count": 50,
@@ -429,94 +401,66 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "grouped": {
-          "general_info": {
-            "ebike_class": "1/2/3",
-            "bike_weight": "61 lbs",
-            "max_bike_load_capacity": "440 lbs",
-            "total_length": "1818mm"
-          },
-          "ebike_system": {
-            "motor": "48V, 750W, 1100W(Peak Power), 75Nm",
-            "battery": "48V, 15.2Ah(730Wh), IPX7, Certificated by UL 2271",
-            "cell": "Samsung/LG 21700 cell, Certificated by UL2580",
-            "charger": "48V, 3A Fast Charger",
-            "sensor": "Torque and Cadence Sensor",
-            "display": "3.5\" Full color, High brightness, Bluetooth, NFC, Adjustable Angle",
-            "usb_port": "USB Type-C phone Charge",
-            "throttle": "Trigger-control, Removable",
-            "pedal_assist": "5 Riding Modes /Ride Tuning",
-            "max_speed_default": "20MPH",
-            "max_speed_adjustable_range": "12~28MPH",
-            "pedal_assist_range": "80 Miles",
-            "throttle_range": "65 Miles"
-          },
-          "special_features": {
-            "walk_mode": "2.9MPH/ Walk & Hold",
-            "app": "App OTA",
-            "anti_theft": "Apple Find My & Google's Find Hub，NFC Card Unlock"
-          },
-          "safety": {
-            "front_light": "500LM High-output Integrated LED, Adjustable Angle",
-            "rear_light": "Braking Indicator, Turn Signal, Rear Light Steady/Flash, Integrated with Rear Rack"
-          },
-          "certifications": {
-            "ul_certification": "UL2849 & UL2271",
-            "iso_standard": "ISO 4210"
-          },
-          "water_resistance": {
-            "water_resistant": "IPX6"
-          },
-          "frameset": {
-            "frame": "Triple-Butted Aluminum Alloy",
-            "fork": "Air suspension 80mm Travel with Lock-out"
-          },
-          "drivetrain": {
-            "chainrings": "46T Narrow-Wide Chainring",
-            "crankset": "Aluminum Alloy, 170mm",
-            "freewheel": "8-speed,11-40T",
-            "rear_derailleur": "SHIMANO 8-speed",
-            "shift_lever": "SHIMANO 8-speed",
-            "chain": "KMC 8-speed",
-            "pedals": "Plastic"
-          },
-          "brakes": {
-            "brake": "Tektro Hydraulic Disc Brake",
-            "rotors": "180mm Front/180mm Rear",
-            "brake_levers": "Aluminum Alloy, with Power Cutoff"
-          },
-          "wheelset": {
-            "rims": "Aluminum Alloy",
-            "front_hub": "NOVATEC Aluminum Alloy, 15x110mm Thru-axle",
-            "tire": "KENDA 27.5x2.4\" eBike Puncture Resistant Tires"
-          },
-          "cockpit": {
-            "handlebar": "Aluminum Alloy, Ф31.8mm, 680mm(R)/700mm(L)",
-            "grips": "Durable Ergonomic Grips, Lockable",
-            "stem": "Adjustable, Aluminum Alloy, ф31.8mm, 60mm Length",
-            "saddle": "VELOTRIC Comfort Ergonomic Seat",
-            "seatpost": "Aluminum Alloy, Ф30.9mm, Suspension",
-            "clamp": "Aluminum Alloy, Quick Release",
-            "handlebar_height": "1110mm"
-          },
-          "geometry": {
-            "bike_size": "Regular / Large",
-            "user_height_range": "R：5'2''~5'11'' L：5'9''~6'7'' （With Suspension Seatpost） R：4'11''~5'9'' L：5'6''~6'4'' （Without Suspension Seatpost）",
-            "reach": "373mm",
-            "wheelbase": "1113mm",
-            "min_saddle_height": "829mm",
-            "max_saddle_height": "985mm",
-            "stand_over_height": "400mm"
-          },
-          "included_accessories": {
-            "fenders": "Aluminum Alloy, Front and Rear Full Coverage",
-            "rear_rack": "MIK HD Compatible Alloy",
-            "kickstand": "Aluminum Alloy, Included, Rear Mount",
-            "rear_rack_load_capacity": "66 lbs"
-          },
-          "general_other": {
-            "height": "5'2\"~5'11\""
-          }
+        "all": {
+          "Bike Size": "Regular / Large",
+          "User Height Range": "R：5'2''~5'11'' L：5'9''~6'7'' （With Suspension Seatpost） R：4'11''~5'9'' L：5'6''~6'4'' （Without Suspension Seatpost）",
+          "Frame": "Triple-Butted Aluminum Alloy",
+          "Fork": "Air suspension 80mm Travel with Lock-out",
+          "Motor": "48V, 750W, 1100W(Peak Power), 75Nm",
+          "Battery": "48V, 15.2Ah(730Wh), IPX7, Certificated by UL 2271",
+          "Cell": "Samsung/LG 21700 cell, Certificated by UL2580",
+          "Charger": "48V, 3A Fast Charger",
+          "Sensor": "Torque and Cadence Sensor",
+          "Display": "3.5\" Full color, High brightness, Bluetooth, NFC, Adjustable Angle",
+          "USB Port": "USB Type-C phone Charge",
+          "Throttle": "Trigger-control, Removable",
+          "Pedal Assist": "5 Riding Modes /Ride Tuning",
+          "Walk Mode": "2.9MPH/ Walk & Hold",
+          "Front Light": "500LM High-output Integrated LED, Adjustable Angle",
+          "Rear Light": "Braking Indicator, Turn Signal, Rear Light Steady/Flash, Integrated with Rear Rack",
+          "Water Resistant": "IPX6",
+          "App": "App OTA",
+          "Anti-theft": "Apple Find My & Google's Find Hub，NFC Card Unlock",
+          "Max Speed (Default）": "20MPH",
+          "Max Speed Adjustable Range": "12~28MPH",
+          "Ebike Class": "1/2/3",
+          "Pedal Assist Range": "80 Miles",
+          "Throttle Range": "65 Miles",
+          "Chainrings": "46T Narrow-Wide Chainring",
+          "Crankset": "Aluminum Alloy, 170mm",
+          "Freewheel": "8-speed,11-40T",
+          "Rear Derailleur": "SHIMANO 8-speed",
+          "Shift Lever": "SHIMANO 8-speed",
+          "Chain": "KMC 8-speed",
+          "Brake": "Tektro Hydraulic Disc Brake",
+          "Rotors": "180mm Front/180mm Rear",
+          "Brake Levers": "Aluminum Alloy, with Power Cutoff",
+          "Rims": "Aluminum Alloy",
+          "Front Hub": "NOVATEC Aluminum Alloy, 15x110mm Thru-axle",
+          "Tire": "KENDA 27.5x2.4\" eBike Puncture Resistant Tires",
+          "Handlebar": "Aluminum Alloy, Ф31.8mm, 680mm(R)/700mm(L)",
+          "Grips": "Durable Ergonomic Grips, Lockable",
+          "Stem": "Adjustable, Aluminum Alloy, ф31.8mm, 60mm Length",
+          "Saddle": "VELOTRIC Comfort Ergonomic Seat",
+          "Seatpost": "Aluminum Alloy, Ф30.9mm, Suspension",
+          "Clamp": "Aluminum Alloy, Quick Release",
+          "Fenders": "Aluminum Alloy, Front and Rear Full Coverage",
+          "Rear Rack": "MIK HD Compatible Alloy",
+          "Pedals": "Plastic",
+          "Kickstand": "Aluminum Alloy, Included, Rear Mount",
+          "Bike Weight": "61 lbs",
+          "Rear Rack Load Capacity": "66 lbs",
+          "Max Bike Load Capacity": "440 lbs",
+          "UL Certification": "UL2849 & UL2271",
+          "ISO Standard": "ISO 4210",
+          "Height": "5'2\"~5'11\"",
+          "Reach": "373mm",
+          "Handlebar Height": "1110mm",
+          "Wheelbase": "1113mm",
+          "Stand-Over Height": "400mm",
+          "Min Saddle Height": "829mm",
+          "Max Saddle Height": "985mm",
+          "Total Length": "1818mm"
         }
       },
       "spec_count": 59,
@@ -747,94 +691,66 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "grouped": {
-          "general_info": {
-            "ebike_class": "1/2/3",
-            "bike_weight": "60 lbs *Weight does not include fenders, kickstands, or pedals.",
-            "max_bike_load_capacity": "440 lbs",
-            "total_length": "1812mm"
-          },
-          "ebike_system": {
-            "motor": "48V, 500W, 960W(Peak Power) ,100Nm",
-            "battery": "48V, 16.7Ah (801.6Wh), IPX7, Certificated by UL 2271",
-            "cell": "Samsung/LG 21700 cell, Certificated by UL2580",
-            "charger": "48V, 3A Fast Charger",
-            "sensor": "Torque and Cadence Sensor",
-            "display": "3.5\" Full color, High brightness, Bluetooth, NFC, Adjustable Angle",
-            "usb_port": "USB Type-C phone Charge",
-            "throttle": "Trigger-control, Removable",
-            "pedal_assist": "4 Riding Modes +Auto Mode/Ride Tuning",
-            "max_speed_default": "20MPH",
-            "max_speed_adjustable_range": "12~28MPH",
-            "pedal_assist_range": "95 Miles",
-            "throttle_range": "70 Miles"
-          },
-          "special_features": {
-            "walk_mode": "2.9MPH/ Walk & Hold",
-            "app": "App OTA",
-            "anti_theft": "Apple Find My & Google's Find Hub，NFC Card Unlock"
-          },
-          "safety": {
-            "front_light": "500LM High-output Integrated LED, Adjustable Angle",
-            "rear_light": "Braking Indicator, Turn Signal, Rear Light Steady/Flash, Integrated with Rear Rack"
-          },
-          "certifications": {
-            "ul_certification": "UL2849 & UL2271",
-            "iso_standard": "ISO 4210"
-          },
-          "water_resistance": {
-            "water_resistant": "IPX6"
-          },
-          "frameset": {
-            "frame": "Triple-Butted Aluminum Alloy",
-            "fork": "Air suspension 80mm Travel with Lock-out"
-          },
-          "drivetrain": {
-            "chainrings": "46T Narrow-Wide Chainring",
-            "crankset": "Aluminum Alloy, 170mm",
-            "cassette": "9-speed,11-46T",
-            "rear_derailleur": "SHIMANO Cues, 9-speed",
-            "shift_lever": "SHIMANO Cues, 9-speed",
-            "chain": "KMC eGlide 9-speed",
-            "pedals": "Plastic"
-          },
-          "brakes": {
-            "brake": "Tektro Hydraulic Disc Brake",
-            "rotors": "180mm Front/180mm Rear",
-            "brake_levers": "Aluminum Alloy, with Power Cutoff"
-          },
-          "wheelset": {
-            "rims": "Aluminum Alloy",
-            "front_hub": "NOVATEC Aluminum Alloy, 15x110mm Thru-axle",
-            "tire": "KENDA 27.5x2.4\" eBike Puncture Resistant Tires"
-          },
-          "cockpit": {
-            "handlebar": "Aluminum Alloy, Ф31.8mm, 680mm(R)/700mm(L)",
-            "grips": "Durable Ergonomic Grips, Lockable",
-            "stem": "Adjustable, Aluminum Alloy, ф31.8mm, 60mm Length",
-            "saddle": "VELOTRIC Comfort Ergonomic Seat",
-            "seatpost": "Aluminum Alloy, Ф30.9mm, Suspension",
-            "clamp": "Aluminum Alloy, Quick Release",
-            "handlebar_height": "1110mm"
-          },
-          "geometry": {
-            "bike_size": "Regular / Large",
-            "user_height_range": "R：5'2''~5'11'' L：5'9''~6'7'' （With Suspension Seatpost） R：4'11''~5'9'' L：5'6''~6'4'' （Without Suspension Seatpost）",
-            "reach": "374mm",
-            "wheelbase": "1113mm",
-            "min_saddle_height": "838mm",
-            "max_saddle_height": "995mm",
-            "stand_over_height": "399mm"
-          },
-          "included_accessories": {
-            "fenders": "Aluminum Alloy, Front and Rear Full Coverage",
-            "rear_rack": "MIK HD Compatible Alloy",
-            "kickstand": "Aluminum Alloy, Included, Rear Mount",
-            "rear_rack_load_capacity": "66 lbs"
-          },
-          "general_other": {
-            "height": "5'2\"~5'11\""
-          }
+        "all": {
+          "Bike Size": "Regular / Large",
+          "User Height Range": "R：5'2''~5'11'' L：5'9''~6'7'' （With Suspension Seatpost） R：4'11''~5'9'' L：5'6''~6'4'' （Without Suspension Seatpost）",
+          "Frame": "Triple-Butted Aluminum Alloy",
+          "Fork": "Air suspension 80mm Travel with Lock-out",
+          "Motor": "48V, 500W, 960W(Peak Power) ,100Nm",
+          "Battery": "48V, 16.7Ah (801.6Wh), IPX7, Certificated by UL 2271",
+          "Cell": "Samsung/LG 21700 cell, Certificated by UL2580",
+          "Charger": "48V, 3A Fast Charger",
+          "Sensor": "Torque and Cadence Sensor",
+          "Display": "3.5\" Full color, High brightness, Bluetooth, NFC, Adjustable Angle",
+          "USB Port": "USB Type-C phone Charge",
+          "Throttle": "Trigger-control, Removable",
+          "Pedal Assist": "4 Riding Modes +Auto Mode/Ride Tuning",
+          "Walk Mode": "2.9MPH/ Walk & Hold",
+          "Front Light": "500LM High-output Integrated LED, Adjustable Angle",
+          "Rear Light": "Braking Indicator, Turn Signal, Rear Light Steady/Flash, Integrated with Rear Rack",
+          "Water Resistant": "IPX6",
+          "App": "App OTA",
+          "Anti-theft": "Apple Find My & Google's Find Hub，NFC Card Unlock",
+          "Max Speed (Default）": "20MPH",
+          "Max Speed Adjustable Range": "12~28MPH",
+          "Ebike Class": "1/2/3",
+          "Pedal Assist Range": "95 Miles",
+          "Throttle Range": "70 Miles",
+          "Chainrings": "46T Narrow-Wide Chainring",
+          "Crankset": "Aluminum Alloy, 170mm",
+          "Cassette": "9-speed,11-46T",
+          "Rear Derailleur": "SHIMANO Cues, 9-speed",
+          "Shift Lever": "SHIMANO Cues, 9-speed",
+          "Chain": "KMC eGlide 9-speed",
+          "Brake": "Tektro Hydraulic Disc Brake",
+          "Rotors": "180mm Front/180mm Rear",
+          "Brake Levers": "Aluminum Alloy, with Power Cutoff",
+          "Rims": "Aluminum Alloy",
+          "Front Hub": "NOVATEC Aluminum Alloy, 15x110mm Thru-axle",
+          "Tire": "KENDA 27.5x2.4\" eBike Puncture Resistant Tires",
+          "Handlebar": "Aluminum Alloy, Ф31.8mm, 680mm(R)/700mm(L)",
+          "Grips": "Durable Ergonomic Grips, Lockable",
+          "Stem": "Adjustable, Aluminum Alloy, ф31.8mm, 60mm Length",
+          "Saddle": "VELOTRIC Comfort Ergonomic Seat",
+          "Seatpost": "Aluminum Alloy, Ф30.9mm, Suspension",
+          "Clamp": "Aluminum Alloy, Quick Release",
+          "Fenders": "Aluminum Alloy, Front and Rear Full Coverage",
+          "Rear Rack": "MIK HD Compatible Alloy",
+          "Pedals": "Plastic",
+          "Kickstand": "Aluminum Alloy, Included, Rear Mount",
+          "Bike Weight": "60 lbs *Weight does not include fenders, kickstands, or pedals.",
+          "Rear Rack Load Capacity": "66 lbs",
+          "Max Bike Load Capacity": "440 lbs",
+          "UL Certification": "UL2849 & UL2271",
+          "ISO Standard": "ISO 4210",
+          "Height": "5'2\"~5'11\"",
+          "Reach": "374mm",
+          "Handlebar Height": "1110mm",
+          "Wheelbase": "1113mm",
+          "Stand-Over Height": "399mm",
+          "Min Saddle Height": "838mm",
+          "Max Saddle Height": "995mm",
+          "Total Length": "1812mm"
         }
       },
       "spec_count": 59,
@@ -1007,81 +923,55 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "grouped": {
-          "general_info": {
-            "default_speed": "20 MPH",
-            "class": "1/2/3",
-            "bike_weight": "63lbs",
-            "max_bike_load_capacity": "440lbs"
-          },
-          "ebike_system": {
-            "motor": "48V, 750W, 70Nm",
-            "battery": "48V, 608Wh, IPX7, Certificated by UL 2271",
-            "cell": "18650 cell, Certificated by UL 2580",
-            "charger": "48V, 2A Fast Charger",
-            "sensor": "Cadence Sensor",
-            "display": "1.8\" LCD, High brightness",
-            "usb_port": "USB Type-A phone charge",
-            "throttle": "Thumb-control, removable",
-            "pedal_assist": "5 Levels",
-            "max_speed_adjustable_range": "12~28 MPH",
-            "throttle_range": "45 Miles",
-            "pedal_assist_range": "55 Miles"
-          },
-          "special_features": {
-            "walk_mode": "2.9 MPH"
-          },
-          "safety": {
-            "front_light": "60 Lux high-output integrated LED, adjustable angle",
-            "rear_light": "Braking Indicator, integrated with rear rack"
-          },
-          "certifications": {
-            "ul_certification": "UL 2849",
-            "iso_standard": "ISO 4210"
-          },
-          "water_resistance": {
-            "water_resistant": "IPX6"
-          },
-          "frameset": {
-            "frame": "Aluminum Alloy",
-            "fork": "Coil suspension 60mm travel with Lock-out"
-          },
-          "drivetrain": {
-            "chainrings": "52T",
-            "crankset": "Aluminum Alloy, 170mm",
-            "freewheel": "7-speed, 11-28T",
-            "rear_derailleur": "SHIMANO 7-speed",
-            "shift_lever": "SHIMANO 7-speed",
-            "chain": "7-speed",
-            "pedals": "Plastic, foldable"
-          },
-          "brakes": {
-            "brake": "Hydraulic Disc Brake",
-            "rotors": "180mm front and rear",
-            "brake_levers": "Aluminum Alloy, with power cutoff"
-          },
-          "wheelset": {
-            "rims": "Double-wall Aluminum Alloy",
-            "front_hub": "Aluminum Alloy, nutted",
-            "tire": "20x3.0\" eBike puncture resistant tires"
-          },
-          "cockpit": {
-            "handlebar": "Aluminum Alloy, Φ25.4mm, 660mm",
-            "grips": "Durable ergonomic grips, lockable",
-            "saddle": "VELOTRIC urban comfort ergonomic seat",
-            "seatpost": "Aluminum Alloy, φ30.9mm, 350mm",
-            "clamp": "Aluminum Alloy, quick release"
-          },
-          "geometry": {
-            "bike_size": "One Size",
-            "user_height_range": "Regular: 4'9\" ~ 6'5\""
-          },
-          "included_accessories": {
-            "fenders": "Steel, front and rear full coverage",
-            "rear_rack": "Aluminum Alloy, integrated with frame",
-            "kickstand": "Aluminum Alloy, included, rear mount",
-            "rear_rack_load_capacity": "120lbs"
-          }
+        "all": {
+          "Bike Size": "One Size",
+          "User Height Range": "Regular: 4'9\" ~ 6'5\"",
+          "Frame": "Aluminum Alloy",
+          "Fork": "Coil suspension 60mm travel with Lock-out",
+          "Motor": "48V, 750W, 70Nm",
+          "Battery": "48V, 608Wh, IPX7, Certificated by UL 2271",
+          "Cell": "18650 cell, Certificated by UL 2580",
+          "Charger": "48V, 2A Fast Charger",
+          "Sensor": "Cadence Sensor",
+          "Display": "1.8\" LCD, High brightness",
+          "USB Port": "USB Type-A phone charge",
+          "Throttle": "Thumb-control, removable",
+          "Pedal Assist": "5 Levels",
+          "Walk Mode": "2.9 MPH",
+          "Front Light": "60 Lux high-output integrated LED, adjustable angle",
+          "Rear Light": "Braking Indicator, integrated with rear rack",
+          "Water Resistant": "IPX6",
+          "Default Speed": "20 MPH",
+          "Max Speed Adjustable Range": "12~28 MPH",
+          "Class": "1/2/3",
+          "Throttle Range": "45 Miles",
+          "Pedal Assist Range": "55 Miles",
+          "Chainrings": "52T",
+          "Crankset": "Aluminum Alloy, 170mm",
+          "Freewheel": "7-speed, 11-28T",
+          "Rear Derailleur": "SHIMANO 7-speed",
+          "Shift Lever": "SHIMANO 7-speed",
+          "Chain": "7-speed",
+          "Brake": "Hydraulic Disc Brake",
+          "Rotors": "180mm front and rear",
+          "Brake Levers": "Aluminum Alloy, with power cutoff",
+          "Rims": "Double-wall Aluminum Alloy",
+          "Front Hub": "Aluminum Alloy, nutted",
+          "Tire": "20x3.0\" eBike puncture resistant tires",
+          "Handlebar": "Aluminum Alloy, Φ25.4mm, 660mm",
+          "Grips": "Durable ergonomic grips, lockable",
+          "Saddle": "VELOTRIC urban comfort ergonomic seat",
+          "Seatpost": "Aluminum Alloy, φ30.9mm, 350mm",
+          "Clamp": "Aluminum Alloy, quick release",
+          "Fenders": "Steel, front and rear full coverage",
+          "Rear Rack": "Aluminum Alloy, integrated with frame",
+          "Pedals": "Plastic, foldable",
+          "Kickstand": "Aluminum Alloy, included, rear mount",
+          "Bike Weight": "63lbs",
+          "Rear Rack Load Capacity": "120lbs",
+          "Max Bike Load Capacity": "440lbs",
+          "UL Certification": "UL 2849",
+          "ISO Standard": "ISO 4210"
         }
       },
       "spec_count": 48,
@@ -1237,81 +1127,55 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "grouped": {
-          "general_info": {
-            "class": "1/2/3",
-            "bike_weight": "63lbs"
-          },
-          "ebike_system": {
-            "motor_hub": "48V, 750W, 75Nm",
-            "battery": "Removable 48V, 13Ah, 608Wh, IPX7, Certificated by UL 2271",
-            "cell": "18650 cell, Certificated by UL 2580",
-            "charger": "48V, 2.0A Fast Charger",
-            "display": "3.5\" Full color, High brightness, Bluetooth, Adjustable angle",
-            "sensor": "Torque and Cadence Sensor",
-            "usb_port": "USB Type-C phone charge",
-            "throttle_assist": "Trigger-control, removable",
-            "pedal_assist": "3 Riding Modes x 5 PAS Levels",
-            "max_speed_default": "20 MPH",
-            "max_speed_adjustable_range": "12~28 MPH",
-            "throttle_range": "45 Miles",
-            "pedal_assist_range": "68 Miles"
-          },
-          "special_features": {
-            "walk_mode": "2.9 MPH",
-            "app_apple_find_my": "APP OTA & Find My"
-          },
-          "safety": {
-            "front_light": "12V/5W 130Lux high-output integrated LED, Adjustable angle",
-            "rear_light": "Braking Indicator, turn signal, rear light steady/flash, integrated with rear rack"
-          },
-          "certifications": {
-            "ul_certification": "UL 2849",
-            "iso_standard": "ISO 4210"
-          },
-          "frameset": {
-            "frame": "Aluminum Alloy",
-            "fork": "60mm Hydraulic Suspension travel with Lock-out"
-          },
-          "drivetrain": {
-            "chainrings": "52T",
-            "crankset": "Aluminum Alloy, 170mm",
-            "freewheel": "7-speed, 11-28T",
-            "chain": "7-speed",
-            "rear_derailleur": "SHIMANO 7-speed",
-            "shift_lever": "SHIMANO 7-speed",
-            "pedals": "Plastic,foldable"
-          },
-          "brakes": {
-            "brake": "Hydraulic Disc Brake",
-            "rotors": "180mm Front and Rear",
-            "brake_levers": "Aluminum Alloy, with power cutoff"
-          },
-          "wheelset": {
-            "rims": "Double-wall Aluminum Alloy",
-            "front_hub": "Aluminum alloy, nutted",
-            "tire": "20x3.0\" eBike puncture resistant tires"
-          },
-          "cockpit": {
-            "handlebar": "Aluminum Alloy, Φ25.4mm, 660mm",
-            "grips": "Durable ergonomic grips, lockable",
-            "saddle": "VELOTRIC urban comfort ergonomic seat",
-            "seatpost": "Aluminum Alloy, φ30.9mm, 350mm",
-            "clamp": "Aluminum Alloy, quick release"
-          },
-          "geometry": {
-            "bike_size": "One Size",
-            "user_height_range": "4'9'' ~ 6'5''"
-          },
-          "included_accessories": {
-            "fenders": "Steel, front and rear full coverage",
-            "rear_rack": "Aluminum Alloy, integrated with frame",
-            "kickstand": "Aluminum Alloy, included, rear mount",
-            "rear_rack_load_capacity": "120lbs"
-          },
-          "general_other": {
-            "max_bike_load": "450lbs"
-          }
+        "all": {
+          "Bike Size": "One Size",
+          "User Height Range": "4'9'' ~ 6'5''",
+          "Frame": "Aluminum Alloy",
+          "Fork": "60mm Hydraulic Suspension travel with Lock-out",
+          "Motor Hub": "48V, 750W, 75Nm",
+          "Battery": "Removable 48V, 13Ah, 608Wh, IPX7, Certificated by UL 2271",
+          "Cell": "18650 cell, Certificated by UL 2580",
+          "Charger": "48V, 2.0A Fast Charger",
+          "Display": "3.5\" Full color, High brightness, Bluetooth, Adjustable angle",
+          "Sensor": "Torque and Cadence Sensor",
+          "USB Port": "USB Type-C phone charge",
+          "Throttle Assist": "Trigger-control, removable",
+          "Pedal Assist": "3 Riding Modes x 5 PAS Levels",
+          "Walk Mode": "2.9 MPH",
+          "Front Light": "12V/5W 130Lux high-output integrated LED, Adjustable angle",
+          "Rear Light": "Braking Indicator, turn signal, rear light steady/flash, integrated with rear rack",
+          "App & Apple Find My™": "APP OTA & Find My",
+          "Max Speed (Default)": "20 MPH",
+          "Max Speed Adjustable Range": "12~28 MPH",
+          "Class": "1/2/3",
+          "Throttle Range": "45 Miles",
+          "Pedal Assist Range": "68 Miles",
+          "Chainrings": "52T",
+          "Crankset": "Aluminum Alloy, 170mm",
+          "Freewheel": "7-speed, 11-28T",
+          "Chain": "7-speed",
+          "Rear Derailleur": "SHIMANO 7-speed",
+          "Shift Lever": "SHIMANO 7-speed",
+          "Brake": "Hydraulic Disc Brake",
+          "Rotors": "180mm Front and Rear",
+          "Brake Levers": "Aluminum Alloy, with power cutoff",
+          "Rims": "Double-wall Aluminum Alloy",
+          "Front Hub": "Aluminum alloy, nutted",
+          "Tire": "20x3.0\" eBike puncture resistant tires",
+          "Handlebar": "Aluminum Alloy, Φ25.4mm, 660mm",
+          "Grips": "Durable ergonomic grips, lockable",
+          "Saddle": "VELOTRIC urban comfort ergonomic seat",
+          "Seatpost": "Aluminum Alloy, φ30.9mm, 350mm",
+          "Clamp": "Aluminum Alloy, quick release",
+          "Fenders": "Steel, front and rear full coverage",
+          "Rear Rack": "Aluminum Alloy, integrated with frame",
+          "Pedals": "Plastic,foldable",
+          "Kickstand": "Aluminum Alloy, included, rear mount",
+          "Bike Weight": "63lbs",
+          "Max Bike Load": "450lbs",
+          "Rear Rack Load Capacity": "120lbs",
+          "UL Certification": "UL 2849",
+          "ISO Standard": "ISO 4210"
         }
       },
       "spec_count": 48,
@@ -1487,96 +1351,68 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "grouped": {
-          "general_info": {
-            "ebike_class": "1/2/3",
-            "bike_weight": "77 lbs",
-            "max_bike_load_capacity": "500 lbs",
-            "total_length": "1811mm"
-          },
-          "ebike_system": {
-            "motor": "48V, 750W, (1300W Peak Power), 85Nm",
-            "battery": "48V, 16.7Ah (801.6Wh), IPX7, Certificated by UL2271",
-            "cell": "Samsung/LG 21700 cell, Certificated by UL2580",
-            "charger": "48V, 3A Fast Charger",
-            "sensor": "Torque and Cadence Sensor",
-            "display": "3.5\" Full Color, High Brightness, Bluetooth, NFC, Adjustable Angle",
-            "usb_port": "USB Type-C phone Charge",
-            "throttle": "Trigger-control, Removable",
-            "pedal_assist": "5 Riding Modes+Stealth Mode /Ride Tuning",
-            "max_speed_default": "20MPH",
-            "max_speed_adjustable_range": "12~28MPH",
-            "pedal_assist_range": "75 Miles",
-            "throttle_range": "50 Miles",
-            "bike_weight_without_battery": "67 lbs"
-          },
-          "special_features": {
-            "walk_mode": "2.9MPH/ Walk & Hold",
-            "app": "App OTA",
-            "anti_theft": "Apple Find My & Google's Find Hub，NFC Card Unlock"
-          },
-          "safety": {
-            "front_light": "500LM High-output Integrated LED, Adjustable Angle",
-            "rear_light": "Braking Indicator, Turn Signal, Rear Light Steady/Flash, Integrated with Rear Rack"
-          },
-          "certifications": {
-            "ul_certification": "UL2849 & UL2271",
-            "iso_standard": "ISO 4210"
-          },
-          "water_resistance": {
-            "water_resistant": "IPX6"
-          },
-          "frameset": {
-            "frame": "Triple-Butted Aluminum Alloy",
-            "fork": "RST Hydraulic Suspension 100mm Travel with Lock-out, 36mm Inner Tube"
-          },
-          "drivetrain": {
-            "chainrings": "52T Narrow-Wide Chainring",
-            "crankset": "Aluminum Alloy, 165mm",
-            "freewheel": "8-speed,11-34T",
-            "rear_derailleur": "SHIMANO 8-speed",
-            "shift_lever": "SHIMANO 8-speed",
-            "chain": "KMC 8-speed",
-            "pedals": "Plastic"
-          },
-          "brakes": {
-            "brake": "Tektro Hydraulic Disc Brake",
-            "rotors": "203mm Front/180mm Rear",
-            "brake_levers": "Aluminum Alloy, with Power Cutoff"
-          },
-          "wheelset": {
-            "rims": "Aluminum Alloy",
-            "front_hub": "NOVATEC Aluminum Alloy, 15x135mm Thru-axle",
-            "tire": "KENDA 20x4.0\" eBike Puncture Resistant Tires"
-          },
-          "cockpit": {
-            "handlebar": "BMX Style, 31.8mm Bar Clamp, 700mm",
-            "grips": "Durable Ergonomic Grips, Lockable",
-            "stem": "Quill Stem, 31.8mm Clamp, 30mm Length, 140mm Vertical Adjustment Range",
-            "saddle": "VELOTRIC Comfort Ergonomic Seat",
-            "seatpost": "Aluminum Alloy, Ф30.9mm",
-            "clamp": "Aluminum Alloy, Quick Release",
-            "handlebar_height": "1040-1180mm"
-          },
-          "geometry": {
-            "bike_size": "One Size",
-            "user_height_range": "5'0'' ~ 6'3''",
-            "reach": "420mm",
-            "wheelbase": "1171mm",
-            "min_saddle_height": "720mm",
-            "max_saddle_height": "930mm",
-            "stand_over_height": "500mm"
-          },
-          "included_accessories": {
-            "fenders": "Plastic, Front and Rear Full Coverage",
-            "rear_rack": "MIK HD Compatible，Integrated with Frame",
-            "kickstand": "Aluminum Alloy, Included, Rear Mount",
-            "rear_rack_bag": "Included as Standard Equipment",
-            "rear_rack_load_capacity": "176 lbs"
-          },
-          "general_other": {
-            "height": "5'0\" – 6'3\""
-          }
+        "all": {
+          "Bike Size": "One Size",
+          "User Height Range": "5'0'' ~ 6'3''",
+          "Frame": "Triple-Butted Aluminum Alloy",
+          "Fork": "RST Hydraulic Suspension 100mm Travel with Lock-out, 36mm Inner Tube",
+          "Motor": "48V, 750W, (1300W Peak Power), 85Nm",
+          "Battery": "48V, 16.7Ah (801.6Wh), IPX7, Certificated by UL2271",
+          "Cell": "Samsung/LG 21700 cell, Certificated by UL2580",
+          "Charger": "48V, 3A Fast Charger",
+          "Sensor": "Torque and Cadence Sensor",
+          "Display": "3.5\" Full Color, High Brightness, Bluetooth, NFC, Adjustable Angle",
+          "USB Port": "USB Type-C phone Charge",
+          "Throttle": "Trigger-control, Removable",
+          "Pedal Assist": "5 Riding Modes+Stealth Mode /Ride Tuning",
+          "Walk Mode": "2.9MPH/ Walk & Hold",
+          "Front Light": "500LM High-output Integrated LED, Adjustable Angle",
+          "Rear Light": "Braking Indicator, Turn Signal, Rear Light Steady/Flash, Integrated with Rear Rack",
+          "Water Resistant": "IPX6",
+          "App": "App OTA",
+          "Anti-theft": "Apple Find My & Google's Find Hub，NFC Card Unlock",
+          "Max Speed (Default）": "20MPH",
+          "Max Speed Adjustable Range": "12~28MPH",
+          "Ebike Class": "1/2/3",
+          "Pedal Assist Range": "75 Miles",
+          "Throttle Range": "50 Miles",
+          "Chainrings": "52T Narrow-Wide Chainring",
+          "Crankset": "Aluminum Alloy, 165mm",
+          "Freewheel": "8-speed,11-34T",
+          "Rear Derailleur": "SHIMANO 8-speed",
+          "Shift Lever": "SHIMANO 8-speed",
+          "Chain": "KMC 8-speed",
+          "Brake": "Tektro Hydraulic Disc Brake",
+          "Rotors": "203mm Front/180mm Rear",
+          "Brake Levers": "Aluminum Alloy, with Power Cutoff",
+          "Rims": "Aluminum Alloy",
+          "Front Hub": "NOVATEC Aluminum Alloy, 15x135mm Thru-axle",
+          "Tire": "KENDA 20x4.0\" eBike Puncture Resistant Tires",
+          "Handlebar": "BMX Style, 31.8mm Bar Clamp, 700mm",
+          "Grips": "Durable Ergonomic Grips, Lockable",
+          "Stem": "Quill Stem, 31.8mm Clamp, 30mm Length, 140mm Vertical Adjustment Range",
+          "Saddle": "VELOTRIC Comfort Ergonomic Seat",
+          "Seatpost": "Aluminum Alloy, Ф30.9mm",
+          "Clamp": "Aluminum Alloy, Quick Release",
+          "Fenders": "Plastic, Front and Rear Full Coverage",
+          "Rear Rack": "MIK HD Compatible，Integrated with Frame",
+          "Pedals": "Plastic",
+          "Kickstand": "Aluminum Alloy, Included, Rear Mount",
+          "Rear Rack Bag": "Included as Standard Equipment",
+          "Bike Weight": "77 lbs",
+          "Bike Weight (Without Battery)": "67 lbs",
+          "Rear Rack Load Capacity": "176 lbs",
+          "Max Bike Load Capacity": "500 lbs",
+          "UL Certification": "UL2849 & UL2271",
+          "ISO Standard": "ISO 4210",
+          "Height": "5'0\" – 6'3\"",
+          "Reach": "420mm",
+          "Handlebar Height": "1040-1180mm",
+          "Wheelbase": "1171mm",
+          "Stand-Over Height": "500mm",
+          "Min Saddle Height": "720mm",
+          "Max Saddle Height": "930mm",
+          "Total Length": "1811mm"
         }
       },
       "spec_count": 61,
@@ -1866,82 +1702,56 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "grouped": {
-          "general_info": {
-            "class": "1/2/3",
-            "bike_weight": "75lbs"
-          },
-          "ebike_system": {
-            "motor_hub": "48V, 750W, 90Nm",
-            "battery": "Removable 48V, 14.7Ah (705.6Wh), IPX7, Certificated by UL 2271",
-            "cell": "Samsung/LG 21700 cell, Certificated by UL 2580",
-            "charger": "48V, 3.0A Fast Charger",
-            "display": "3.5\" Full color, High brightness, Bluetooth, Adjustable angle",
-            "sensor": "Torque and Cadence Sensor",
-            "usb_port": "USB Type-C phone charge",
-            "throttle_assist": "Trigger-control, removable",
-            "pedal_assist": "3 Riding Modes x 5 PAS Levels",
-            "max_speed_default": "20 MPH",
-            "max_speed_adjustable_range": "12~28 MPH",
-            "throttle_range": "45 Miles",
-            "pedal_assist_range": "65 Miles"
-          },
-          "special_features": {
-            "walk_mode": "2.9 MPH",
-            "app_apple_find_my": "APP OTA & Find My"
-          },
-          "safety": {
-            "front_light": "Light sensing 130 Lux /500 LM high-output integrated LED, adjustable angle",
-            "rear_light": "Braking Indicator, turn signal, rear light steady/flash, integrated with rear rack"
-          },
-          "certifications": {
-            "ul_certification": "UL 2849",
-            "iso_standard": "ISO 4210"
-          },
-          "frameset": {
-            "frame": "Triple-Butted Aluminum Alloy",
-            "fork": "RST Hydraulic suspension 100mm travel with Lock-out, Nutted"
-          },
-          "drivetrain": {
-            "chainrings": "48T",
-            "crankset": "Aluminum Alloy, 165mm",
-            "freewheel": "8-speed, 11-40T",
-            "chain": "8-speed",
-            "rear_derailleur": "SHIMANO 8-speed",
-            "shift_lever": "SHIMANO 8-speed",
-            "pedals": "Plastic"
-          },
-          "brakes": {
-            "brake": "Tektro Hydraulic Disc Brake",
-            "rotors": "203mm Front/180mm Rear",
-            "brake_levers": "Aluminum Alloy, with power cutoff"
-          },
-          "wheelset": {
-            "rims": "Aluminum alloy",
-            "front_hub": "Aluminum alloy, nutted",
-            "tire": "KENDA 26x4.0\" eBike puncture-resistant tires"
-          },
-          "cockpit": {
-            "handlebar": "Aluminum Alloy, Φ31.8mm, 680mm(R)/700mm(L)",
-            "grips": "Durable ergonomic grips, lockable",
-            "stem": "Adjustable, Aluminum Alloy, Φ31.8mm, 60mm(R)/90mm(L)",
-            "saddle": "VELOTRIC comfort ergonomic seat",
-            "seatpost": "Aluminum Alloy, Φ30.9mm, Suspension",
-            "clamp": "Aluminum Alloy, quick release"
-          },
-          "geometry": {
-            "bike_size": "Regular / Large",
-            "user_height_range": "Step-Thru / Regular: 5'2'' - 5'11'' Step-Thru / Large: 5'10'' - 6'5'' High-Step / Regular:5'2'' - 5'11'' High-Step / Large: 5'10'' - 6'5''"
-          },
-          "included_accessories": {
-            "fenders": "Front and rear full coverage",
-            "rear_rack": "MIK HD Compatible Alloy",
-            "kickstand": "Aluminum Alloy, included, rear mount",
-            "rear_rack_load_capacity": "66lbs"
-          },
-          "general_other": {
-            "max_bike_load": "505lbs"
-          }
+        "all": {
+          "Bike Size": "Regular / Large",
+          "User Height Range": "Step-Thru / Regular: 5'2'' - 5'11'' Step-Thru / Large: 5'10'' - 6'5'' High-Step / Regular:5'2'' - 5'11'' High-Step / Large: 5'10'' - 6'5''",
+          "Frame": "Triple-Butted Aluminum Alloy",
+          "Fork": "RST Hydraulic suspension 100mm travel with Lock-out, Nutted",
+          "Motor Hub": "48V, 750W, 90Nm",
+          "Battery": "Removable 48V, 14.7Ah (705.6Wh), IPX7, Certificated by UL 2271",
+          "Cell": "Samsung/LG 21700 cell, Certificated by UL 2580",
+          "Charger": "48V, 3.0A Fast Charger",
+          "Display": "3.5\" Full color, High brightness, Bluetooth, Adjustable angle",
+          "Sensor": "Torque and Cadence Sensor",
+          "USB Port": "USB Type-C phone charge",
+          "Throttle Assist": "Trigger-control, removable",
+          "Pedal Assist": "3 Riding Modes x 5 PAS Levels",
+          "Walk Mode": "2.9 MPH",
+          "Front Light": "Light sensing 130 Lux /500 LM high-output integrated LED, adjustable angle",
+          "Rear Light": "Braking Indicator, turn signal, rear light steady/flash, integrated with rear rack",
+          "App & Apple Find My™": "APP OTA & Find My",
+          "Max Speed (Default)": "20 MPH",
+          "Max Speed Adjustable Range": "12~28 MPH",
+          "Class": "1/2/3",
+          "Throttle Range": "45 Miles",
+          "Pedal Assist Range": "65 Miles",
+          "Chainrings": "48T",
+          "Crankset": "Aluminum Alloy, 165mm",
+          "Freewheel": "8-speed, 11-40T",
+          "Chain": "8-speed",
+          "Rear Derailleur": "SHIMANO 8-speed",
+          "Shift Lever": "SHIMANO 8-speed",
+          "Brake": "Tektro Hydraulic Disc Brake",
+          "Rotors": "203mm Front/180mm Rear",
+          "Brake Levers": "Aluminum Alloy, with power cutoff",
+          "Rims": "Aluminum alloy",
+          "Front Hub": "Aluminum alloy, nutted",
+          "Tire": "KENDA 26x4.0\" eBike puncture-resistant tires",
+          "Handlebar": "Aluminum Alloy, Φ31.8mm, 680mm(R)/700mm(L)",
+          "Grips": "Durable ergonomic grips, lockable",
+          "Stem": "Adjustable, Aluminum Alloy, Φ31.8mm, 60mm(R)/90mm(L)",
+          "Saddle": "VELOTRIC comfort ergonomic seat",
+          "Seatpost": "Aluminum Alloy, Φ30.9mm, Suspension",
+          "Clamp": "Aluminum Alloy, quick release",
+          "Fenders": "Front and rear full coverage",
+          "Rear Rack": "MIK HD Compatible Alloy",
+          "Pedals": "Plastic",
+          "Kickstand": "Aluminum Alloy, included, rear mount",
+          "Bike Weight": "75lbs",
+          "Max Bike Load": "505lbs",
+          "Rear Rack Load Capacity": "66lbs",
+          "UL Certification": "UL 2849",
+          "ISO Standard": "ISO 4210"
         }
       },
       "spec_count": 49,
@@ -2211,94 +2021,66 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "grouped": {
-          "general_info": {
-            "ebike_class": "1/2/3",
-            "bike_weight": "80lbs",
-            "max_bike_load_capacity": "560lbs",
-            "total_length": "2065mm"
-          },
-          "ebike_system": {
-            "motor": "48V, 750W, 105Nm",
-            "battery": "48V, 16.7Ah (801.6Wh), IPX7, Certificated by UL2271",
-            "cell": "Samsung/LG 21700 cell, Certificated by UL2580",
-            "charger": "48V, 3A Fast Charger",
-            "sensor": "Torque and Cadence Sensor",
-            "display": "3.5\" Full color, High brightness, Bluetooth, Adjustable angle",
-            "usb_port": "USB Type-C phone Charge",
-            "throttle": "Trigger-control, Removable",
-            "pedal_assist": "3 Riding Modes x 5 PAS Levels",
-            "max_speed_default": "20MPH",
-            "max_speed_adjustable_range": "12~28MPH",
-            "pedal_assist_range": "75 Miles",
-            "throttle_range": "50 Miles"
-          },
-          "special_features": {
-            "walk_mode": "2.9MPH/ Walk & Hold",
-            "anti_theft": "APP OTA & Find My"
-          },
-          "safety": {
-            "front_light": "Light sensing 130 Lux /500 LM high-output integrated LED, adjustable angle",
-            "rear_light": "Braking Indicator, turn signal, rear light steady/flash, integrated with rear rack"
-          },
-          "certifications": {
-            "ul_certification": "UL2849 & UL2271",
-            "iso_standard": "ISO 4210"
-          },
-          "water_resistance": {
-            "water_resistant": "IPX6"
-          },
-          "frameset": {
-            "frame": "Triple-Butted Aluminum Alloy, Rear Wheel 80mm Travel",
-            "fork": "Air suspension 120mm travel with Lock-out, Nutted, Rebound adjustable",
-            "rear_shock": "DNM Air suspension, 165mm x 38mm Travel"
-          },
-          "drivetrain": {
-            "chainrings": "48T",
-            "crankset": "Aluminum Alloy, 170mm",
-            "freewheel": "8-speed, 11-40T",
-            "rear_derailleur": "SHIMANO 8-speed",
-            "shift_lever": "SHIMANO 8-speed",
-            "chain": "8-speed",
-            "pedals": "Plastic"
-          },
-          "brakes": {
-            "brake": "Tektro Hydraulic Disc Brake",
-            "rotors": "203mm Front/180mm Rear",
-            "brake_levers": "Aluminum Alloy, with Power Cutoff"
-          },
-          "wheelset": {
-            "rims": "Aluminum alloy",
-            "front_hub": "Aluminum alloy, nutted",
-            "tire": "KENDA 26x4.0\" eBike puncture-resistant tires"
-          },
-          "cockpit": {
-            "handlebar": "Aluminum Alloy, Φ31.8mm, 700mm",
-            "grips": "Durable ergonomic grips, lockable",
-            "stem": "Adjustable, Aluminum Alloy, Φ31.8mm, 60mm(ST)/90mm(HS)",
-            "saddle": "VELOTRIC comfort ergonomic seat",
-            "seatpost": "Aluminum Alloy, Φ30.9mm",
-            "clamp": "Aluminum Alloy, quick release",
-            "handlebar_height": "1080mm"
-          },
-          "geometry": {
-            "bike_size": "Step-Thru / High-Step",
-            "user_height_range": "Step-Thru: 4'11'' - 5'10'' High-Step: 5'10'' - 6'5''",
-            "reach": "420mm",
-            "wheelbase": "1330mm",
-            "min_saddle_height": "795mm",
-            "max_saddle_height": "1100mm",
-            "stand_over_height": "450mm"
-          },
-          "included_accessories": {
-            "fenders": "Front and rear full coverage",
-            "rear_rack": "MIK HD Compatible Alloy",
-            "kickstand": "Aluminum Alloy, Included, Rear Mount",
-            "rear_rack_load_capacity": "120lbs"
-          },
-          "general_other": {
-            "height": "4'11\"~5'10\""
-          }
+        "all": {
+          "Bike Size": "Step-Thru / High-Step",
+          "User Height Range": "Step-Thru: 4'11'' - 5'10'' High-Step: 5'10'' - 6'5''",
+          "Frame": "Triple-Butted Aluminum Alloy, Rear Wheel 80mm Travel",
+          "Fork": "Air suspension 120mm travel with Lock-out, Nutted, Rebound adjustable",
+          "Rear Shock": "DNM Air suspension, 165mm x 38mm Travel",
+          "Motor": "48V, 750W, 105Nm",
+          "Battery": "48V, 16.7Ah (801.6Wh), IPX7, Certificated by UL2271",
+          "Cell": "Samsung/LG 21700 cell, Certificated by UL2580",
+          "Charger": "48V, 3A Fast Charger",
+          "Sensor": "Torque and Cadence Sensor",
+          "Display": "3.5\" Full color, High brightness, Bluetooth, Adjustable angle",
+          "USB Port": "USB Type-C phone Charge",
+          "Throttle": "Trigger-control, Removable",
+          "Pedal Assist": "3 Riding Modes x 5 PAS Levels",
+          "Walk Mode": "2.9MPH/ Walk & Hold",
+          "Front Light": "Light sensing 130 Lux /500 LM high-output integrated LED, adjustable angle",
+          "Rear Light": "Braking Indicator, turn signal, rear light steady/flash, integrated with rear rack",
+          "Water Resistant": "IPX6",
+          "Anti-theft": "APP OTA & Find My",
+          "Max Speed (Default）": "20MPH",
+          "Max Speed Adjustable Range": "12~28MPH",
+          "Ebike Class": "1/2/3",
+          "Pedal Assist Range": "75 Miles",
+          "Throttle Range": "50 Miles",
+          "Chainrings": "48T",
+          "Crankset": "Aluminum Alloy, 170mm",
+          "Freewheel": "8-speed, 11-40T",
+          "Rear Derailleur": "SHIMANO 8-speed",
+          "Shift Lever": "SHIMANO 8-speed",
+          "Chain": "8-speed",
+          "Brake": "Tektro Hydraulic Disc Brake",
+          "Rotors": "203mm Front/180mm Rear",
+          "Brake Levers": "Aluminum Alloy, with Power Cutoff",
+          "Rims": "Aluminum alloy",
+          "Front Hub": "Aluminum alloy, nutted",
+          "Tire": "KENDA 26x4.0\" eBike puncture-resistant tires",
+          "Handlebar": "Aluminum Alloy, Φ31.8mm, 700mm",
+          "Grips": "Durable ergonomic grips, lockable",
+          "Stem": "Adjustable, Aluminum Alloy, Φ31.8mm, 60mm(ST)/90mm(HS)",
+          "Saddle": "VELOTRIC comfort ergonomic seat",
+          "Seatpost": "Aluminum Alloy, Φ30.9mm",
+          "Clamp": "Aluminum Alloy, quick release",
+          "Fenders": "Front and rear full coverage",
+          "Rear Rack": "MIK HD Compatible Alloy",
+          "Pedals": "Plastic",
+          "Kickstand": "Aluminum Alloy, Included, Rear Mount",
+          "Bike Weight": "80lbs",
+          "Rear Rack Load Capacity": "120lbs",
+          "Max Bike Load Capacity": "560lbs",
+          "UL Certification": "UL2849 & UL2271",
+          "ISO Standard": "ISO 4210",
+          "Height": "4'11\"~5'10\"",
+          "Reach": "420mm",
+          "Handlebar Height": "1080mm",
+          "Wheelbase": "1330mm",
+          "Stand-Over Height": "450mm",
+          "Min Saddle Height": "795mm",
+          "Max Saddle Height": "1100mm",
+          "Total Length": "2065mm"
         }
       },
       "spec_count": 59,
@@ -2541,82 +2323,56 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "grouped": {
-          "general_info": {
-            "default_speed": "20 MPH",
-            "class": "1/2/3",
-            "bike_weight": "62lbs",
-            "max_bike_load_capacity": "440lbs"
-          },
-          "ebike_system": {
-            "motor": "48V, 750W, 90Nm",
-            "battery": "48V, 705.6Wh, IPX7, Certificated by UL 2271",
-            "cell": "Samsung/LG 21700 cell, Certificated by UL 2580",
-            "charger": "48V, 3A Fast Charger",
-            "sensor": "Torque/Cadence",
-            "display": "2.8\" Full color, high brightness, Bluetooth, adjustable angle",
-            "usb_port": "USB Type-A phone charge",
-            "throttle": "Trigger-control, removable",
-            "pedal_assist": "3 Modes × 5 Levels",
-            "max_speed_adjustable_range": "12~28 MPH",
-            "throttle_range": "60 Miles",
-            "pedal_assist_range": "70 Miles"
-          },
-          "special_features": {
-            "security": "Apple Find My™",
-            "walk_mode": "2.9 MPH"
-          },
-          "safety": {
-            "front_light": "Light sensing 130Lux high-output integrated LED, adjustable angle",
-            "rear_light": "Brake highlight, rear light steady/flash"
-          },
-          "certifications": {
-            "ul_certification": "UL 2849",
-            "iso_standard": "ISO 4210"
-          },
-          "water_resistance": {
-            "water_resistant": "IPX6"
-          },
-          "frameset": {
-            "frame": "Triple-Butted Aluminum Alloy",
-            "fork": "Hydraulic suspension 120mm travel with Lock-out, 15x110mm thru-axle"
-          },
-          "drivetrain": {
-            "chainrings": "BCD 104, narrow wide chainring",
-            "crankset": "Aluminum Alloy, 170mm",
-            "cassette": "8-speed",
-            "rear_derailleur": "SHIMANO 8-speed",
-            "shift_lever": "SHIMANO 8-speed",
-            "chain": "KMC 8-speed",
-            "pedals": "Aluminum Alloy"
-          },
-          "brakes": {
-            "brake": "SHIMANO Hydraulic Disc Brake",
-            "rotors": "180mm front and rear",
-            "brake_levers": "Aluminum Alloy, with power cutoff"
-          },
-          "wheelset": {
-            "rims": "Double-wall Aluminum Alloy",
-            "front_hub": "NOVATEC Aluminum Alloy, 15x110mm thru-axle",
-            "tire": "Kenda 27.5x2.6\" MTB puncture resistant tires"
-          },
-          "cockpit": {
-            "handlebar": "Aluminum Alloy, Φ31.8mm, 760mm (R)/780mm (L)",
-            "grips": "Velotric sports grips, lockable",
-            "stem": "Aluminum Alloy, φ31.8mm, 35mm (R)/50mm (L)",
-            "saddle": "VELOTRIC ergonomic seat",
-            "seatpost": "Aluminum Alloy, φ30.9mm, 350mm",
-            "clamp": "Aluminum Alloy, quick release"
-          },
-          "geometry": {
-            "bike_size": "Regular/Large",
-            "user_height_range": "Regular: 5'1\" ~ 5'10\"/Large: 5'8\" ~ 6'6\""
-          },
-          "included_accessories": {
-            "fenders": "Optional",
-            "rear_rack": "Optional",
-            "kickstand": "Aluminum Alloy, included, rear mount"
-          }
+        "all": {
+          "Bike Size": "Regular/Large",
+          "User Height Range": "Regular: 5'1\" ~ 5'10\"/Large: 5'8\" ~ 6'6\"",
+          "Frame": "Triple-Butted Aluminum Alloy",
+          "Fork": "Hydraulic suspension 120mm travel with Lock-out, 15x110mm thru-axle",
+          "Motor": "48V, 750W, 90Nm",
+          "Battery": "48V, 705.6Wh, IPX7, Certificated by UL 2271",
+          "Cell": "Samsung/LG 21700 cell, Certificated by UL 2580",
+          "Charger": "48V, 3A Fast Charger",
+          "Sensor": "Torque/Cadence",
+          "Display": "2.8\" Full color, high brightness, Bluetooth, adjustable angle",
+          "USB Port": "USB Type-A phone charge",
+          "Security": "Apple Find My™",
+          "Throttle": "Trigger-control, removable",
+          "Pedal Assist": "3 Modes × 5 Levels",
+          "Walk Mode": "2.9 MPH",
+          "Front Light": "Light sensing 130Lux high-output integrated LED, adjustable angle",
+          "Rear Light": "Brake highlight, rear light steady/flash",
+          "Water Resistant": "IPX6",
+          "Default Speed": "20 MPH",
+          "Max Speed Adjustable Range": "12~28 MPH",
+          "Class": "1/2/3",
+          "Throttle Range": "60 Miles",
+          "Pedal Assist Range": "70 Miles",
+          "Chainrings": "BCD 104, narrow wide chainring",
+          "Crankset": "Aluminum Alloy, 170mm",
+          "Cassette": "8-speed",
+          "Rear Derailleur": "SHIMANO 8-speed",
+          "Shift Lever": "SHIMANO 8-speed",
+          "Chain": "KMC 8-speed",
+          "Brake": "SHIMANO Hydraulic Disc Brake",
+          "Rotors": "180mm front and rear",
+          "Brake Levers": "Aluminum Alloy, with power cutoff",
+          "Rims": "Double-wall Aluminum Alloy",
+          "Front Hub": "NOVATEC Aluminum Alloy, 15x110mm thru-axle",
+          "Tire": "Kenda 27.5x2.6\" MTB puncture resistant tires",
+          "Handlebar": "Aluminum Alloy, Φ31.8mm, 760mm (R)/780mm (L)",
+          "Grips": "Velotric sports grips, lockable",
+          "Stem": "Aluminum Alloy, φ31.8mm, 35mm (R)/50mm (L)",
+          "Saddle": "VELOTRIC ergonomic seat",
+          "Seatpost": "Aluminum Alloy, φ30.9mm, 350mm",
+          "Clamp": "Aluminum Alloy, quick release",
+          "Fenders": "Optional",
+          "Rear Rack": "Optional",
+          "Pedals": "Aluminum Alloy",
+          "Kickstand": "Aluminum Alloy, included, rear mount",
+          "Bike Weight": "62lbs",
+          "Max Bike Load Capacity": "440lbs",
+          "UL Certification": "UL 2849",
+          "ISO Standard": "ISO 4210"
         }
       },
       "spec_count": 49,
@@ -2807,93 +2563,65 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "grouped": {
-          "general_info": {
-            "ebike_class": "1/2/3",
-            "bike_weight": "57 lbs *Weight does not include fenders, kickstands, or pedals.",
-            "max_bike_load_capacity": "440 lbs",
-            "total_length": "1930mm"
-          },
-          "ebike_system": {
-            "motor": "48V, 750W (1300W Peak Power), 100Nm",
-            "battery": "48V, 16.7Ah (801.6Wh), IPX7, Certificated by UL2271",
-            "cell": "Samsung/LG 21700 cell, Certificated by UL2580",
-            "charger": "48V, 3A Fast Charger",
-            "sensor": "Torque and Cadence Sensor",
-            "display": "2.0\" Left-mounted Full-color Display with High Brightness, Bluetooth，NFC",
-            "usb_port": "USB Type-C phone Charge",
-            "throttle": "Trigger-control, Removable",
-            "pedal_assist": "4 Riding Modes +Pulse Mode/Ride Tuning",
-            "max_speed_default": "20MPH",
-            "max_speed_adjustable_range": "12~28MPH",
-            "pedal_assist_range": "95 Miles",
-            "throttle_range": "70 Miles"
-          },
-          "special_features": {
-            "walk_mode": "2.9MPH/ Walk & Hold",
-            "anti_theft": "Apple Find My & Google's Find Hub，NFC Card Unlock"
-          },
-          "safety": {
-            "front_light": "500LM High-output Integrated LED, Adjustable Angle",
-            "rear_light": "Brake highlight, Turn Signal"
-          },
-          "certifications": {
-            "ul_certification": "UL2849 & UL2271",
-            "iso_standard": "ISO 4210"
-          },
-          "water_resistance": {
-            "water_resistant": "IPX6"
-          },
-          "frameset": {
-            "frame": "Triple-Butted Aluminum Alloy",
-            "fork": "RST Air Suspension 120mm Travel with Lock-out, Rebound Adjustable"
-          },
-          "drivetrain": {
-            "chainrings": "BCD 104, 40T Narrow-Wide Chainring",
-            "crankset": "Aluminum Alloy, 165mm",
-            "cassette": "9-speed,11-46T",
-            "rear_derailleur": "SHIMANO Cues, 9-speed",
-            "shift_lever": "SHIMANO Cues, 9-speed",
-            "chain": "KMC XGlide 9-speed",
-            "pedals": "Plastic"
-          },
-          "brakes": {
-            "brake": "SHIMANO MT200 Hydraulic Disc BraKe",
-            "rotors": "180mm Front and Rear",
-            "brake_levers": "Aluminum Alloy, with Power Cutoff"
-          },
-          "wheelset": {
-            "rims": "Double-wall Aluminum Alloy",
-            "front_hub": "NOVATEC Aluminum Alloy, 15x110mm Thru-axle",
-            "tire": "Kenda 27.5x2.4\" MTB Puncture Resistant Tires"
-          },
-          "cockpit": {
-            "handlebar": "Aluminum Alloy, Φ31.8mm, 740mm",
-            "grips": "Durable Ergonomic Grips, Lockable",
-            "stem": "Adjustable, Aluminum Alloy, ф31.8mm, 60mm Length",
-            "saddle": "VELOTRIC Comfort Ergonomic Seat",
-            "seatpost": "Aluminum Alloy, φ31.6mm, 350mm",
-            "clamp": "Aluminum Alloy, Quick Release",
-            "handlebar_height": "1000mm"
-          },
-          "geometry": {
-            "bike_size": "Regular / Large",
-            "user_height_range": "R：5'2''~5'10'' L：5'7''~6'5''",
-            "reach": "446mm",
-            "wheelbase": "1210mm",
-            "min_saddle_height": "790mm",
-            "max_saddle_height": "1000mm",
-            "stand_over_height": "720mm"
-          },
-          "included_accessories": {
-            "fenders": "Plastic，Front and Rear Full Coverage",
-            "rear_rack": "Optional",
-            "kickstand": "Aluminum Alloy, Included, Rear Mount",
-            "rear_rack_load_capacity": "66 lbs"
-          },
-          "general_other": {
-            "height": "5'2\"~5'10\""
-          }
+        "all": {
+          "Bike Size": "Regular / Large",
+          "User Height Range": "R：5'2''~5'10'' L：5'7''~6'5''",
+          "Frame": "Triple-Butted Aluminum Alloy",
+          "Fork": "RST Air Suspension 120mm Travel with Lock-out, Rebound Adjustable",
+          "Motor": "48V, 750W (1300W Peak Power), 100Nm",
+          "Battery": "48V, 16.7Ah (801.6Wh), IPX7, Certificated by UL2271",
+          "Cell": "Samsung/LG 21700 cell, Certificated by UL2580",
+          "Charger": "48V, 3A Fast Charger",
+          "Sensor": "Torque and Cadence Sensor",
+          "Display": "2.0\" Left-mounted Full-color Display with High Brightness, Bluetooth，NFC",
+          "USB Port": "USB Type-C phone Charge",
+          "Throttle": "Trigger-control, Removable",
+          "Pedal Assist": "4 Riding Modes +Pulse Mode/Ride Tuning",
+          "Walk Mode": "2.9MPH/ Walk & Hold",
+          "Front Light": "500LM High-output Integrated LED, Adjustable Angle",
+          "Rear Light": "Brake highlight, Turn Signal",
+          "Water Resistant": "IPX6",
+          "Anti-theft": "Apple Find My & Google's Find Hub，NFC Card Unlock",
+          "Max Speed (Default）": "20MPH",
+          "Max Speed Adjustable Range": "12~28MPH",
+          "Ebike Class": "1/2/3",
+          "Pedal Assist Range": "95 Miles",
+          "Throttle Range": "70 Miles",
+          "Chainrings": "BCD 104, 40T Narrow-Wide Chainring",
+          "Crankset": "Aluminum Alloy, 165mm",
+          "Cassette": "9-speed,11-46T",
+          "Rear Derailleur": "SHIMANO Cues, 9-speed",
+          "Shift Lever": "SHIMANO Cues, 9-speed",
+          "Chain": "KMC XGlide 9-speed",
+          "Brake": "SHIMANO MT200 Hydraulic Disc BraKe",
+          "Rotors": "180mm Front and Rear",
+          "Brake Levers": "Aluminum Alloy, with Power Cutoff",
+          "Rims": "Double-wall Aluminum Alloy",
+          "Front Hub": "NOVATEC Aluminum Alloy, 15x110mm Thru-axle",
+          "Tire": "Kenda 27.5x2.4\" MTB Puncture Resistant Tires",
+          "Handlebar": "Aluminum Alloy, Φ31.8mm, 740mm",
+          "Grips": "Durable Ergonomic Grips, Lockable",
+          "Stem": "Adjustable, Aluminum Alloy, ф31.8mm, 60mm Length",
+          "Saddle": "VELOTRIC Comfort Ergonomic Seat",
+          "Seatpost": "Aluminum Alloy, φ31.6mm, 350mm",
+          "Clamp": "Aluminum Alloy, Quick Release",
+          "Fenders": "Plastic，Front and Rear Full Coverage",
+          "Rear Rack": "Optional",
+          "Pedals": "Plastic",
+          "Kickstand": "Aluminum Alloy, Included, Rear Mount",
+          "Bike Weight": "57 lbs *Weight does not include fenders, kickstands, or pedals.",
+          "Rear Rack Load Capacity": "66 lbs",
+          "Max Bike Load Capacity": "440 lbs",
+          "UL Certification": "UL2849 & UL2271",
+          "ISO Standard": "ISO 4210",
+          "Height": "5'2\"~5'10\"",
+          "Reach": "446mm",
+          "Handlebar Height": "1000mm",
+          "Wheelbase": "1210mm",
+          "Stand-Over Height": "720mm",
+          "Min Saddle Height": "790mm",
+          "Max Saddle Height": "1000mm",
+          "Total Length": "1930mm"
         }
       },
       "spec_count": 58,
@@ -3083,77 +2811,51 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "grouped": {
-          "general_info": {
-            "default_speed": "20 MPH",
-            "class": "1/3",
-            "bike_weight": "39lbs",
-            "max_bike_load_capacity": "330lbs"
-          },
-          "ebike_system": {
-            "motor": "350W, Peak 600W, 40Nm",
-            "battery": "36V, 352.8Wh, IPX7, Certificated by UL 2271",
-            "cell": "Samsung/LG 21700 cell, Certificated by UL 2580",
-            "charger": "36V, 2A",
-            "sensor": "Torque sensor",
-            "display": "1.8\" Full color, high brightness, Bluetooth, adjustable angle",
-            "usb_port": "USB Type-A phone charge",
-            "pedal_assist": "3 Riding Modes x 5 PAS Levels",
-            "max_speed_adjustable_range": "12~28 MPH",
-            "pedal_assist_range": "70 Miles"
-          },
-          "special_features": {
-            "walk_mode": "2.9 MPH"
-          },
-          "safety": {
-            "front_light": "High output integrated LED, 60Lux, adjustable angle",
-            "rear_light": "LED light"
-          },
-          "certifications": {
-            "ul_certification": "UL 2849",
-            "iso_standard": "ISO 4210"
-          },
-          "water_resistance": {
-            "water_resistant": "IPX6"
-          },
-          "frameset": {
-            "frame": "6061 Triple-butted Aluminum alloy frame",
-            "fork": "6061 Aluminum alloy, internal brake routing, 12x100mm thru-axle"
-          },
-          "drivetrain": {
-            "chainrings": "46T",
-            "crankset": "Aluminum Alloy, 170mm",
-            "freewheel": "8-speed, 11-32T",
-            "rear_derailleur": "SHIMANO 8-speed",
-            "shift_lever": "SHIMANO 8-speed",
-            "chain": "KMC 8-speed",
-            "pedals": "Plastic"
-          },
-          "brakes": {
-            "brake": "TEKTRO Hydraulic Disc Brake",
-            "rotors": "160mm front and rear",
-            "brake_levers": "Aluminum Alloy"
-          },
-          "wheelset": {
-            "rims": "Double-wall Aluminum Alloy",
-            "front_hub": "NOVATEC Aluminum Alloy, 12x100mm thru-axle",
-            "tire": "KENDA 700×40c eBike puncture resistant tires"
-          },
-          "cockpit": {
-            "handlebar": "Aluminum Alloy, Φ31.8mm, 660mm",
-            "grips": "VELOTRIC ergonomic comfort grips",
-            "stem": "Adjustable, Aluminum Alloy, φ31.8mm, 60mm",
-            "saddle": "VELOTRIC urban comfort ergonomic seat",
-            "seatpost": "Aluminum Alloy, φ30.9mm, 350mm",
-            "clamp": "Aluminum Alloy"
-          },
-          "geometry": {
-            "bike_size": "Regular/Large",
-            "user_height_range": "Regular: 4'11\" ~ 5'9\"/Large: 5'6\" ~ 6'4\""
-          },
-          "included_accessories": {
-            "kickstand": "Aluminum Alloy, included, rear mount"
-          }
+        "all": {
+          "Bike Size": "Regular/Large",
+          "User Height Range": "Regular: 4'11\" ~ 5'9\"/Large: 5'6\" ~ 6'4\"",
+          "Frame": "6061 Triple-butted Aluminum alloy frame",
+          "Fork": "6061 Aluminum alloy, internal brake routing, 12x100mm thru-axle",
+          "Motor": "350W, Peak 600W, 40Nm",
+          "Battery": "36V, 352.8Wh, IPX7, Certificated by UL 2271",
+          "Cell": "Samsung/LG 21700 cell, Certificated by UL 2580",
+          "Charger": "36V, 2A",
+          "Sensor": "Torque sensor",
+          "Display": "1.8\" Full color, high brightness, Bluetooth, adjustable angle",
+          "USB Port": "USB Type-A phone charge",
+          "Pedal Assist": "3 Riding Modes x 5 PAS Levels",
+          "Walk Mode": "2.9 MPH",
+          "Front Light": "High output integrated LED, 60Lux, adjustable angle",
+          "Rear Light": "LED light",
+          "Water Resistant": "IPX6",
+          "Default Speed": "20 MPH",
+          "Max Speed Adjustable Range": "12~28 MPH",
+          "Class": "1/3",
+          "Pedal Assist Range": "70 Miles",
+          "Chainrings": "46T",
+          "Crankset": "Aluminum Alloy, 170mm",
+          "Freewheel": "8-speed, 11-32T",
+          "Rear Derailleur": "SHIMANO 8-speed",
+          "Shift Lever": "SHIMANO 8-speed",
+          "Chain": "KMC 8-speed",
+          "Brake": "TEKTRO Hydraulic Disc Brake",
+          "Rotors": "160mm front and rear",
+          "Brake Levers": "Aluminum Alloy",
+          "Rims": "Double-wall Aluminum Alloy",
+          "Front Hub": "NOVATEC Aluminum Alloy, 12x100mm thru-axle",
+          "Tire": "KENDA 700×40c eBike puncture resistant tires",
+          "Handlebar": "Aluminum Alloy, Φ31.8mm, 660mm",
+          "Grips": "VELOTRIC ergonomic comfort grips",
+          "Stem": "Adjustable, Aluminum Alloy, φ31.8mm, 60mm",
+          "Saddle": "VELOTRIC urban comfort ergonomic seat",
+          "Seatpost": "Aluminum Alloy, φ30.9mm, 350mm",
+          "Clamp": "Aluminum Alloy",
+          "Pedals": "Plastic",
+          "Kickstand": "Aluminum Alloy, included, rear mount",
+          "Bike Weight": "39lbs",
+          "Max Bike Load Capacity": "330lbs",
+          "UL Certification": "UL 2849",
+          "ISO Standard": "ISO 4210"
         }
       },
       "spec_count": 44,
@@ -3319,92 +3021,64 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "grouped": {
-          "general_info": {
-            "ebike_class": "1/2/3",
-            "bike_weight": "39 lbs",
-            "max_bike_load_capacity": "330 lbs",
-            "total_length": "1838mm"
-          },
-          "ebike_system": {
-            "motor": "36V, 350W, 650W(Peak Power), 45Nm",
-            "battery": "36V, 10.14Ah(374Wh), IPX7, Certificated by UL2271",
-            "cell": "Samsung/LG 21700 cell, Certificated by UL2580",
-            "charger": "36V, 2A Fast Charger",
-            "sensor": "Torque and Cadence Sensor",
-            "display": "2.0\" Left-mounted Full-color Display with High Brightness, Bluetooth，NFC",
-            "usb_port": "USB Type-C phone Charge",
-            "throttle": "Trigger-control, Removable",
-            "pedal_assist": "4 Riding Modes+Pulse Mode /Ride Tuning",
-            "max_speed_default": "20MPH",
-            "max_speed_adjustable_range": "12~28MPH",
-            "pedal_assist_range": "60 Miles",
-            "throttle_range": "40 Miles",
-            "bike_weight_without_battery": "34 lbs"
-          },
-          "special_features": {
-            "walk_mode": "2.9MPH/ Walk & Hold",
-            "app": "App OTA",
-            "anti_theft": "Apple Find My & Google's Find Hub，NFC Card Unlock"
-          },
-          "safety": {
-            "front_light": "500LM High-output Integrated LED, Adjustable Angle",
-            "rear_light": "Braking Indicator, Turn Signal"
-          },
-          "certifications": {
-            "ul_certification": "UL2849 & UL2271",
-            "iso_standard": "ISO 4210"
-          },
-          "water_resistance": {
-            "water_resistant": "IPX6"
-          },
-          "frameset": {
-            "frame": "6061 Triple-Butted Aluminum Alloy",
-            "fork": "6061 Aluminum Alloy, Internal Brake Routing, 12x100mm Thru-axle"
-          },
-          "drivetrain": {
-            "chainrings": "46T Narrow-Wide Chainring",
-            "crankset": "Aluminum Alloy, 170mm",
-            "freewheel": "8-speed,11-40T",
-            "rear_derailleur": "SHIMANO 8-speed",
-            "shift_lever": "SHIMANO 8-speed",
-            "chain": "KMC 8-speed",
-            "pedals": "Plastic"
-          },
-          "brakes": {
-            "brake": "SHIMANO Hydraulic Disc Brake",
-            "rotors": "180mm Front/180mm Rear",
-            "brake_levers": "Aluminum Alloy, with Power Cutoff"
-          },
-          "wheelset": {
-            "rims": "Aluminum Alloy",
-            "front_hub": "NOVATEC Aluminum Alloy, 12x100mm Thru-axle",
-            "tire": "KENDA 700×42c eBike Puncture Resistant Gravel"
-          },
-          "cockpit": {
-            "handlebar": "Aluminum Alloy, Ф31.8mm, 660mm",
-            "grips": "Durable Ergonomic Grips, Lockable",
-            "stem": "Adjustable, Aluminum Alloy, ф31.8mm, 60mm Length",
-            "saddle": "VELOTRIC Comfort Ergonomic Seat",
-            "seatpost": "Aluminum Alloy, Ф30.9mm, 350mm",
-            "clamp": "Aluminum Alloy, Quick Release",
-            "handlebar_height": "1060mm"
-          },
-          "geometry": {
-            "bike_size": "Regular / Large",
-            "user_height_range": "MS/R：4'10''~5'5'' MS/ L：5'3''~5'11'' HS/R：4'11''~5'8'' HS/ L：5'6''~6'4''",
-            "reach": "413mm",
-            "wheelbase": "1122mm",
-            "min_saddle_height": "750mm",
-            "max_saddle_height": "980mm",
-            "stand_over_height": "521mm"
-          },
-          "included_accessories": {
-            "kickstand": "Aluminum Alloy, Included, Rear Mount"
-          },
-          "general_other": {
-            "height": "4'10\" – 5'5\""
-          }
+        "all": {
+          "Bike Size": "Regular / Large",
+          "User Height Range": "MS/R：4'10''~5'5'' MS/ L：5'3''~5'11'' HS/R：4'11''~5'8'' HS/ L：5'6''~6'4''",
+          "Frame": "6061 Triple-Butted Aluminum Alloy",
+          "Fork": "6061 Aluminum Alloy, Internal Brake Routing, 12x100mm Thru-axle",
+          "Motor": "36V, 350W, 650W(Peak Power), 45Nm",
+          "Battery": "36V, 10.14Ah(374Wh), IPX7, Certificated by UL2271",
+          "Cell": "Samsung/LG 21700 cell, Certificated by UL2580",
+          "Charger": "36V, 2A Fast Charger",
+          "Sensor": "Torque and Cadence Sensor",
+          "Display": "2.0\" Left-mounted Full-color Display with High Brightness, Bluetooth，NFC",
+          "USB Port": "USB Type-C phone Charge",
+          "Throttle": "Trigger-control, Removable",
+          "Pedal Assist": "4 Riding Modes+Pulse Mode /Ride Tuning",
+          "Walk Mode": "2.9MPH/ Walk & Hold",
+          "Front Light": "500LM High-output Integrated LED, Adjustable Angle",
+          "Rear Light": "Braking Indicator, Turn Signal",
+          "Water Resistant": "IPX6",
+          "App": "App OTA",
+          "Anti-theft": "Apple Find My & Google's Find Hub，NFC Card Unlock",
+          "Max Speed (Default）": "20MPH",
+          "Max Speed Adjustable Range": "12~28MPH",
+          "Ebike Class": "1/2/3",
+          "Pedal Assist Range": "60 Miles",
+          "Throttle Range": "40 Miles",
+          "Chainrings": "46T Narrow-Wide Chainring",
+          "Crankset": "Aluminum Alloy, 170mm",
+          "Freewheel": "8-speed,11-40T",
+          "Rear Derailleur": "SHIMANO 8-speed",
+          "Shift Lever": "SHIMANO 8-speed",
+          "Chain": "KMC 8-speed",
+          "Brake": "SHIMANO Hydraulic Disc Brake",
+          "Rotors": "180mm Front/180mm Rear",
+          "Brake Levers": "Aluminum Alloy, with Power Cutoff",
+          "Rims": "Aluminum Alloy",
+          "Front Hub": "NOVATEC Aluminum Alloy, 12x100mm Thru-axle",
+          "Tire": "KENDA 700×42c eBike Puncture Resistant Gravel",
+          "Handlebar": "Aluminum Alloy, Ф31.8mm, 660mm",
+          "Grips": "Durable Ergonomic Grips, Lockable",
+          "Stem": "Adjustable, Aluminum Alloy, ф31.8mm, 60mm Length",
+          "Saddle": "VELOTRIC Comfort Ergonomic Seat",
+          "Seatpost": "Aluminum Alloy, Ф30.9mm, 350mm",
+          "Clamp": "Aluminum Alloy, Quick Release",
+          "Pedals": "Plastic",
+          "Kickstand": "Aluminum Alloy, Included, Rear Mount",
+          "Bike Weight": "39 lbs",
+          "Bike Weight (Without Battery)": "34 lbs",
+          "Max Bike Load Capacity": "330 lbs",
+          "UL Certification": "UL2849 & UL2271",
+          "ISO Standard": "ISO 4210",
+          "Height": "4'10\" – 5'5\"",
+          "Reach": "413mm",
+          "Handlebar Height": "1060mm",
+          "Wheelbase": "1122mm",
+          "Stand-Over Height": "521mm",
+          "Min Saddle Height": "750mm",
+          "Max Saddle Height": "980mm",
+          "Total Length": "1838mm"
         }
       },
       "spec_count": 57,
@@ -3652,82 +3326,56 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "grouped": {
-          "general_info": {
-            "class": "1/2",
-            "bike_weight": "85.8lbs"
-          },
-          "ebike_system": {
-            "motor_hub": "48V, 750W,1300W Peak, 90Nm",
-            "battery": "48V, 16.75 Ah, IPX7, Certificated by UL 2271",
-            "cell": "18650 cell, Certificated by UL 2580",
-            "charger": "48V, 3.0A Fast Charger",
-            "display": "3.5\" Full color, High brightness, Bluetooth, Adjustable angle",
-            "sensor": "Torque and Cadence Sensor",
-            "usb_port": "USB Type-C phone charge",
-            "throttle_assist": "Trigger-control, removable",
-            "pedal_assist": "5 PAS Levels",
-            "max_speed_default": "12 MPH",
-            "max_speed_adjustable_range": "8~20 MPH",
-            "throttle_range": "50 Miles",
-            "pedal_assist_range": "60 Miles"
-          },
-          "special_features": {
-            "walk_mode": "2.0 MPH",
-            "app_apple_find_my": "APP OTA & Find My"
-          },
-          "safety": {
-            "front_light": "Light sensing 130 Lux /500 LM high-output integrated LED, adjustable angle",
-            "rear_light": "Braking Indicator, turn signal, rear light steady/flash, integrated with rear rack",
-            "turn_light": "Left/Right turn signal, with turn signal click",
-            "horn": "Electric horn integrated with front light, 90 db"
-          },
-          "certifications": {
-            "ul_certification": "UL 2849",
-            "iso_standard": "ISO 4210"
-          },
-          "frameset": {
-            "frame": "Aluminum Alloy",
-            "fork": "Hydraulic suspension 80mm travel with Lock-out"
-          },
-          "drivetrain": {
-            "chainrings": "40T, narrow wide chainring",
-            "crankset": "Aluminum Alloy, 152mm",
-            "freewheel": "7-speed, 11-28T",
-            "chain": "KMC 7-speed",
-            "rear_derailleur": "SHIMANO 7-speed",
-            "shift_lever": "SHIMANO 7-speed",
-            "pedals": "Plastic"
-          },
-          "brakes": {
-            "brake": "Hydraulic Disc Brake",
-            "rotors": "180mm Front and Rear",
-            "brake_levers": "Aluminum Alloy, with power cutoff and parking brake"
-          },
-          "wheelset": {
-            "rims": "Double-wall Aluminum Alloy",
-            "front_hub": "Aluminum alloy, nutted",
-            "tire": "KENDA 20x3.0\" eBike puncture-resistant tires"
-          },
-          "cockpit": {
-            "handlebar": "Aluminum Alloy, Φ31.8mm, 660mm",
-            "grips": "Durable ergonomic grips, lockable",
-            "stem": "Foldable and adjustable, Aluminum Alloy, φ31.8mm, 60mm",
-            "saddle": "VELOTRIC Triker seat with adjustable back rest",
-            "seatpost": "Aluminum Alloy, φ30.9mm, 350mm/Aluminum Alloy, φ34.9mm, 260mm",
-            "clamp": "Aluminum Alloy, quick release/Aluminum Alloy, nutted"
-          },
-          "geometry": {
-            "bike_size": "One Size",
-            "user_height_range": "4'10''-6'5''"
-          },
-          "included_accessories": {
-            "fenders": "Front and rear full coverage",
-            "rear_rack": "Aluminum Alloy"
-          },
-          "general_other": {
-            "max_bike_load": "500lbs（including rear basket load)"
-          }
+        "all": {
+          "Bike Size": "One Size",
+          "User Height Range": "4'10''-6'5''",
+          "Frame": "Aluminum Alloy",
+          "Fork": "Hydraulic suspension 80mm travel with Lock-out",
+          "Motor Hub": "48V, 750W,1300W Peak, 90Nm",
+          "Battery": "48V, 16.75 Ah, IPX7, Certificated by UL 2271",
+          "Cell": "18650 cell, Certificated by UL 2580",
+          "Charger": "48V, 3.0A Fast Charger",
+          "Display": "3.5\" Full color, High brightness, Bluetooth, Adjustable angle",
+          "Sensor": "Torque and Cadence Sensor",
+          "USB Port": "USB Type-C phone charge",
+          "Throttle Assist": "Trigger-control, removable",
+          "Pedal Assist": "5 PAS Levels",
+          "Walk Mode": "2.0 MPH",
+          "Front Light": "Light sensing 130 Lux /500 LM high-output integrated LED, adjustable angle",
+          "Rear Light": "Braking Indicator, turn signal, rear light steady/flash, integrated with rear rack",
+          "App & Apple Find My™": "APP OTA & Find My",
+          "Turn Light": "Left/Right turn signal, with turn signal click",
+          "Horn": "Electric horn integrated with front light, 90 db",
+          "Max Speed (Default)": "12 MPH",
+          "Max Speed Adjustable Range": "8~20 MPH",
+          "Class": "1/2",
+          "Throttle Range": "50 Miles",
+          "Pedal Assist Range": "60 Miles",
+          "Chainrings": "40T, narrow wide chainring",
+          "Crankset": "Aluminum Alloy, 152mm",
+          "Freewheel": "7-speed, 11-28T",
+          "Chain": "KMC 7-speed",
+          "Rear Derailleur": "SHIMANO 7-speed",
+          "Shift Lever": "SHIMANO 7-speed",
+          "Brake": "Hydraulic Disc Brake",
+          "Rotors": "180mm Front and Rear",
+          "Brake Levers": "Aluminum Alloy, with power cutoff and parking brake",
+          "Rims": "Double-wall Aluminum Alloy",
+          "Front Hub": "Aluminum alloy, nutted",
+          "Tire": "KENDA 20x3.0\" eBike puncture-resistant tires",
+          "Handlebar": "Aluminum Alloy, Φ31.8mm, 660mm",
+          "Grips": "Durable ergonomic grips, lockable",
+          "Stem": "Foldable and adjustable, Aluminum Alloy, φ31.8mm, 60mm",
+          "Saddle": "VELOTRIC Triker seat with adjustable back rest",
+          "Seatpost": "Aluminum Alloy, φ30.9mm, 350mm/Aluminum Alloy, φ34.9mm, 260mm",
+          "Clamp": "Aluminum Alloy, quick release/Aluminum Alloy, nutted",
+          "Fenders": "Front and rear full coverage",
+          "Rear Rack": "Aluminum Alloy",
+          "Pedals": "Plastic",
+          "Bike Weight": "85.8lbs",
+          "Max Bike Load": "500lbs（including rear basket load)",
+          "UL Certification": "UL 2849",
+          "ISO Standard": "ISO 4210"
         }
       },
       "spec_count": 49,

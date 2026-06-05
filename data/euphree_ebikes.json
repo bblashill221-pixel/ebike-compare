@@ -82,114 +82,6 @@
           "Kickstand": "Adjustable Alloy",
           "Rear Rack": "Integrated Aluminum, 100 lb capacity",
           "Phone Mount": "SP Connect Integrated"
-        },
-        "grouped": {
-          "general_info": {
-            "model": "New City Robin",
-            "range": "Up to 70 miles",
-            "weight": "73 lbs",
-            "total_capacity": "350 lbs"
-          },
-          "ebike_system": {
-            "top_speed": "28 mph (Class 3)",
-            "sensors": "Torque & Cadence",
-            "motor": {
-              "manufacturer": "Bafang",
-              "placement": "hub",
-              "power_w": 750,
-              "details": "H560 Geared Hub Motor"
-            },
-            "battery": {
-              "capacity_wh": 720,
-              "voltage_v": 48,
-              "amphours_ah": 15.0,
-              "removable": false,
-              "details": ""
-            },
-            "controller": "Custom 48V / 25A in-frame",
-            "display": {
-              "type": "color",
-              "details": "Left-Side Color LCD"
-            },
-            "throttle": "Left Thumb Throttle",
-            "usb_port": "Type-C Charging",
-            "charger": "48V, 2 Amp"
-          },
-          "safety": {
-            "headlight": "200 lumens Dual Beam LED",
-            "rear_light": "Brake Signal, 220° Visibility"
-          },
-          "certifications": {
-            "certification": "SGS certified to meet UL 2271 (battery) & UL 2849 (system)"
-          },
-          "frameset": {
-            "front_fork": {
-              "manufacturer": "SR Suntour",
-              "type": "coil",
-              "travel_mm": 120,
-              "lockout": false,
-              "thru_axle": false,
-              "details": "XCM Mechanical"
-            }
-          },
-          "drivetrain": {
-            "derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": "Altus"
-            },
-            "freewheel": {
-              "cog_range": "10-28T",
-              "speeds": 8,
-              "details": ""
-            },
-            "chain": {
-              "manufacturer": "KMC",
-              "details": "Z7 Stainless Steel"
-            },
-            "crankset": {
-              "length_mm": 170,
-              "details": "Alloy"
-            },
-            "chainring": "50T Double-Sided",
-            "pedals": "Alloy w/ rubber grip"
-          },
-          "brakes": {
-            "brakes": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "rotor_mm": 180,
-              "details": "E350 Hydraulic"
-            },
-            "brake_levers": {
-              "rotor_mm": 180,
-              "details": "Adjustable w/ motor cut-off"
-            },
-            "rotors": "180mm Front & Rear"
-          },
-          "wheelset": {
-            "tires": {
-              "size": "27.5x2.4",
-              "tubeless": false,
-              "details": "City Comfort Tread"
-            },
-            "rims": "Double-Walled Aluminum",
-            "spokes": "13G Front / 12G Rear",
-            "front_hub": "Thru-Axle"
-          },
-          "cockpit": {
-            "handlebar": "Aluminum Alloy, Curved Back w/ Rise",
-            "grips": "Ergonomic Locking Grips",
-            "stem": "90mm",
-            "seatpost": "SR Suntour NCX Suspension, 50mm travel",
-            "saddle": "Velo Plush Comfort"
-          },
-          "included_accessories": {
-            "fenders": "Aluminum, Full Coverage",
-            "kickstand": "Adjustable Alloy",
-            "rear_rack": "Integrated Aluminum, 100 lb capacity",
-            "phone_mount": "SP Connect Integrated"
-          }
         }
       },
       "spec_count": 39,
@@ -338,22 +230,6 @@
           "Top Speed": "28 mph (Class 3 compliant)",
           "Motor": "500W hub motor, torque + cadence assist",
           "Drivetrain": "Gates Carbon Belt Drive – smooth & low-maintenance"
-        },
-        "grouped": {
-          "general_info": {
-            "max_range": "Up to 40 miles per charge"
-          },
-          "ebike_system": {
-            "top_speed": "28 mph (Class 3 compliant)",
-            "motor": {
-              "placement": "hub",
-              "power_w": 500,
-              "details": "hub motor, + cadence assist"
-            }
-          },
-          "drivetrain": {
-            "drivetrain": "Gates Carbon Belt Drive – smooth & low-maintenance"
-          }
         }
       },
       "spec_count": 4,
@@ -470,8 +346,7 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "all": {},
-        "grouped": {}
+        "all": {}
       },
       "spec_count": 0,
       "scrape_error": "RuntimeError: no specs extracted",
@@ -598,115 +473,6 @@
           "Kickstand": "Adjustable Alloy",
           "Rear Rack": "Aluminum Bolt On Rack, 55 lb capacity",
           "Phone Mount": "SP Connect Integrated"
-        },
-        "grouped": {
-          "general_info": {
-            "model": "Stellar Falcon 2 (Mid-Step)",
-            "range": "Up to 70 miles",
-            "weight": "74 lbs",
-            "total_capacity": "350 lbs"
-          },
-          "ebike_system": {
-            "top_speed": "28 mph (Class 3)",
-            "sensors": "Torque & Cadence",
-            "motor": {
-              "manufacturer": "Bafang",
-              "placement": "hub",
-              "power_w": 750,
-              "details": "H560 Geared Hub Motor"
-            },
-            "battery": {
-              "capacity_wh": 720,
-              "voltage_v": 48,
-              "amphours_ah": 15.0,
-              "removable": false,
-              "details": ""
-            },
-            "controller": "Custom 48V / 25A In-frame",
-            "display": {
-              "type": "color",
-              "details": "Left-Side Color LCD"
-            },
-            "throttle": "Left Thumb Throttle",
-            "usb_port": "Type-C Charging",
-            "charger": "48V, 2 Amp"
-          },
-          "safety": {
-            "headlight": "200 lumens Dual Beam LED",
-            "rear_light": "Brake Signal, 220° Visibility"
-          },
-          "certifications": {
-            "certification": "SGS certified to meet UL 2271 (battery) & UL 2849 (system)"
-          },
-          "frameset": {
-            "front_fork": {
-              "manufacturer": "SR Suntour",
-              "type": "air",
-              "travel_mm": 90,
-              "lockout": false,
-              "thru_axle": false,
-              "details": "XCM 32 Air"
-            }
-          },
-          "drivetrain": {
-            "derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": "Altus"
-            },
-            "freewheel": {
-              "cog_range": "10-32T",
-              "speeds": 8,
-              "details": ""
-            },
-            "chain": {
-              "manufacturer": "KMC",
-              "details": "Z7 Stainless Steel"
-            },
-            "crankset": {
-              "length_mm": 170,
-              "details": "Alloy"
-            },
-            "chainring": "50T Double-Sided",
-            "pedals": "Alloy w/ rubber grip"
-          },
-          "brakes": {
-            "brakes": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "rotor_mm": 203,
-              "details": "E350 Hydraulic"
-            },
-            "brake_levers": {
-              "rotor_mm": 203,
-              "details": "Adjustable w/ motor cut-off"
-            },
-            "rotors": "203mm front & rear"
-          },
-          "wheelset": {
-            "tires": {
-              "manufacturer": "Schwalbe",
-              "size": "27.5x2.8",
-              "tubeless": false,
-              "details": "Johnny Watts"
-            },
-            "rims": "Double-Walled Aluminum",
-            "spokes": "13G Front / 12G Rear",
-            "front_hub": "Thru-Axle"
-          },
-          "cockpit": {
-            "handlebar": "730mm Alloy, Straight w/ Rise",
-            "grips": "Ergonomic Locking Grips",
-            "stem": "110mm",
-            "seatpost": "SR Suntour NCX Suspension, 50mm travel",
-            "saddle": "Stella Royal Sport Comfort"
-          },
-          "included_accessories": {
-            "fenders": "Full Aluminum Coverage",
-            "kickstand": "Adjustable Alloy",
-            "rear_rack": "Aluminum Bolt On Rack, 55 lb capacity",
-            "phone_mount": "SP Connect Integrated"
-          }
         }
       },
       "spec_count": 39,
@@ -829,72 +595,6 @@
           "Bike Weight": "74 lbs",
           "Max Payload": "350 lbs",
           "Certification": "SGS · UL 2271 + 2849"
-        },
-        "grouped": {
-          "general_info": {
-            "range": "Up to 70 miles",
-            "bike_weight": "74 lbs",
-            "max_payload": "350 lbs"
-          },
-          "ebike_system": {
-            "motor": {
-              "manufacturer": "Bafang",
-              "placement": "hub",
-              "power_w": 750,
-              "details": "geared hub"
-            },
-            "peak_power": "1,200W peak",
-            "battery": {
-              "capacity_wh": 720,
-              "voltage_v": 48,
-              "amphours_ah": 15.0,
-              "removable": false,
-              "details": ""
-            },
-            "top_speed": "28 mph (Class 3)",
-            "sensor": "Torque + Cadence"
-          },
-          "certifications": {
-            "certification": "SGS · UL 2271 + 2849"
-          },
-          "frameset": {
-            "front_fork": {
-              "manufacturer": "SR Suntour",
-              "type": "air",
-              "travel_mm": 90,
-              "lockout": false,
-              "thru_axle": false,
-              "details": "XCM 32 Air"
-            }
-          },
-          "drivetrain": {
-            "derailleur": {
-              "manufacturer": "Shimano",
-              "speeds": 8,
-              "details": "Altus"
-            }
-          },
-          "brakes": {
-            "brakes": {
-              "manufacturer": "Tektro",
-              "actuation": "hydraulic",
-              "details": "E350 Hydraulic"
-            }
-          },
-          "wheelset": {
-            "tires": {
-              "manufacturer": "Schwalbe",
-              "size": "27.5x2.8",
-              "tubeless": false,
-              "details": "Johnny Watts"
-            }
-          },
-          "cockpit": {
-            "seatpost": "SR Suntour NCX Suspension, 50mm travel"
-          },
-          "geometry": {
-            "rider_height": "5'2\" – 6'0\""
-          }
         }
       },
       "spec_count": 15,

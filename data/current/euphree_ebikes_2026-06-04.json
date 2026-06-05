@@ -42,66 +42,46 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "grouped": {
-          "general_info": {
-            "model": "New City Robin",
-            "range": "Up to 70 miles",
-            "weight": "73 lbs",
-            "total_capacity": "350 lbs"
-          },
-          "ebike_system": {
-            "top_speed": "28 mph (Class 3)",
-            "sensors": "Torque & Cadence",
-            "motor": "750W Bafang H560 Geared Hub Motor",
-            "battery": "48V, 15Ah (720Wh)",
-            "controller": "Custom 48V / 25A in-frame",
-            "display": "Left-Side Color LCD",
-            "throttle": "Left Thumb Throttle",
-            "usb_port": "Type-C Charging",
-            "charger": "48V, 2 Amp"
-          },
-          "safety": {
-            "headlight": "200 lumens Dual Beam LED",
-            "rear_light": "Brake Signal, 220° Visibility"
-          },
-          "certifications": {
-            "certification": "SGS certified to meet UL 2271 (battery) & UL 2849 (system)"
-          },
-          "frameset": {
-            "front_fork": "SR Suntour XCM Mechanical, 120mm travel"
-          },
-          "drivetrain": {
-            "derailleur": "Shimano Altus, 8-speed",
-            "freewheel": "10–28T, 8-speed",
-            "chain": "KMC Z7 Stainless Steel",
-            "crankset": "170mm Alloy",
-            "chainring": "50T Double-Sided",
-            "pedals": "Alloy w/ rubber grip"
-          },
-          "brakes": {
-            "brakes": "Tektro E350 Hydraulic",
-            "brake_levers": "Adjustable w/ motor cut-off",
-            "rotors": "180mm Front & Rear"
-          },
-          "wheelset": {
-            "tires": "City Comfort Tread 27.5 x 2.4\"",
-            "rims": "Double-Walled Aluminum",
-            "spokes": "13G Front / 12G Rear",
-            "front_hub": "Thru-Axle"
-          },
-          "cockpit": {
-            "handlebar": "Aluminum Alloy, Curved Back w/ Rise",
-            "grips": "Ergonomic Locking Grips",
-            "stem": "90mm",
-            "seatpost": "SR Suntour NCX Suspension, 50mm travel",
-            "saddle": "Velo Plush Comfort"
-          },
-          "included_accessories": {
-            "fenders": "Aluminum, Full Coverage",
-            "kickstand": "Adjustable Alloy",
-            "rear_rack": "Integrated Aluminum, 100 lb capacity",
-            "phone_mount": "SP Connect Integrated"
-          }
+        "all": {
+          "Model": "New City Robin",
+          "Range": "Up to 70 miles",
+          "Top Speed": "28 mph (Class 3)",
+          "Weight": "73 lbs",
+          "Total Capacity": "350 lbs",
+          "Sensors": "Torque & Cadence",
+          "Certification": "SGS certified to meet UL 2271 (battery) & UL 2849 (system)",
+          "Motor": "750W Bafang H560 Geared Hub Motor",
+          "Battery": "48V, 15Ah (720Wh)",
+          "Controller": "Custom 48V / 25A in-frame",
+          "Display": "Left-Side Color LCD",
+          "Headlight": "200 lumens Dual Beam LED",
+          "Rear Light": "Brake Signal, 220° Visibility",
+          "Throttle": "Left Thumb Throttle",
+          "USB Port": "Type-C Charging",
+          "Charger": "48V, 2 Amp",
+          "Derailleur": "Shimano Altus, 8-speed",
+          "Freewheel": "10–28T, 8-speed",
+          "Chain": "KMC Z7 Stainless Steel",
+          "Crankset": "170mm Alloy",
+          "Chainring": "50T Double-Sided",
+          "Pedals": "Alloy w/ rubber grip",
+          "Brakes": "Tektro E350 Hydraulic",
+          "Brake Levers": "Adjustable w/ motor cut-off",
+          "Rotors": "180mm Front & Rear",
+          "Handlebar": "Aluminum Alloy, Curved Back w/ Rise",
+          "Grips": "Ergonomic Locking Grips",
+          "Stem": "90mm",
+          "Front Fork": "SR Suntour XCM Mechanical, 120mm travel",
+          "Seatpost": "SR Suntour NCX Suspension, 50mm travel",
+          "Saddle": "Velo Plush Comfort",
+          "Tires": "City Comfort Tread 27.5 x 2.4\"",
+          "Rims": "Double-Walled Aluminum",
+          "Spokes": "13G Front / 12G Rear",
+          "Front Hub": "Thru-Axle",
+          "Fenders": "Aluminum, Full Coverage",
+          "Kickstand": "Adjustable Alloy",
+          "Rear Rack": "Integrated Aluminum, 100 lb capacity",
+          "Phone Mount": "SP Connect Integrated"
         }
       },
       "spec_count": 39,
@@ -245,17 +225,11 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "grouped": {
-          "general_info": {
-            "max_range": "Up to 40 miles per charge"
-          },
-          "ebike_system": {
-            "top_speed": "28 mph (Class 3 compliant)",
-            "motor": "500W hub motor, torque + cadence assist"
-          },
-          "drivetrain": {
-            "drivetrain": "Gates Carbon Belt Drive – smooth & low-maintenance"
-          }
+        "all": {
+          "Max Range": "Up to 40 miles per charge",
+          "Top Speed": "28 mph (Class 3 compliant)",
+          "Motor": "500W hub motor, torque + cadence assist",
+          "Drivetrain": "Gates Carbon Belt Drive – smooth & low-maintenance"
         }
       },
       "spec_count": 4,
@@ -372,7 +346,7 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "grouped": {}
+        "all": {}
       },
       "spec_count": 0,
       "scrape_error": "RuntimeError: no specs extracted",
@@ -459,66 +433,46 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "grouped": {
-          "general_info": {
-            "model": "Stellar Falcon 2 (Mid-Step)",
-            "range": "Up to 70 miles",
-            "weight": "74 lbs",
-            "total_capacity": "350 lbs"
-          },
-          "ebike_system": {
-            "top_speed": "28 mph (Class 3)",
-            "sensors": "Torque & Cadence",
-            "motor": "750W Bafang H560 Geared Hub Motor",
-            "battery": "48V, 15Ah (720Wh)",
-            "controller": "Custom 48V / 25A In-frame",
-            "display": "Left-Side Color LCD",
-            "throttle": "Left Thumb Throttle",
-            "usb_port": "Type-C Charging",
-            "charger": "48V, 2 Amp"
-          },
-          "safety": {
-            "headlight": "200 lumens Dual Beam LED",
-            "rear_light": "Brake Signal, 220° Visibility"
-          },
-          "certifications": {
-            "certification": "SGS certified to meet UL 2271 (battery) & UL 2849 (system)"
-          },
-          "frameset": {
-            "front_fork": "SR Suntour XCM 32 Air, 90mm travel"
-          },
-          "drivetrain": {
-            "derailleur": "Shimano Altus, 8-speed",
-            "freewheel": "10–32T, 8-speed",
-            "chain": "KMC Z7 Stainless Steel",
-            "crankset": "170mm Alloy",
-            "chainring": "50T Double-Sided",
-            "pedals": "Alloy w/ rubber grip"
-          },
-          "brakes": {
-            "brakes": "Tektro E350 Hydraulic",
-            "brake_levers": "Adjustable w/ motor cut-off",
-            "rotors": "203mm front & rear"
-          },
-          "wheelset": {
-            "tires": "Schwalbe Johnny Watts 27.5 x 2.8\"",
-            "rims": "Double-Walled Aluminum",
-            "spokes": "13G Front / 12G Rear",
-            "front_hub": "Thru-Axle"
-          },
-          "cockpit": {
-            "handlebar": "730mm Alloy, Straight w/ Rise",
-            "grips": "Ergonomic Locking Grips",
-            "stem": "110mm",
-            "seatpost": "SR Suntour NCX Suspension, 50mm travel",
-            "saddle": "Stella Royal Sport Comfort"
-          },
-          "included_accessories": {
-            "fenders": "Full Aluminum Coverage",
-            "kickstand": "Adjustable Alloy",
-            "rear_rack": "Aluminum Bolt On Rack, 55 lb capacity",
-            "phone_mount": "SP Connect Integrated"
-          }
+        "all": {
+          "Model": "Stellar Falcon 2 (Mid-Step)",
+          "Range": "Up to 70 miles",
+          "Top Speed": "28 mph (Class 3)",
+          "Weight": "74 lbs",
+          "Total Capacity": "350 lbs",
+          "Sensors": "Torque & Cadence",
+          "Certification": "SGS certified to meet UL 2271 (battery) & UL 2849 (system)",
+          "Motor": "750W Bafang H560 Geared Hub Motor",
+          "Battery": "48V, 15Ah (720Wh)",
+          "Controller": "Custom 48V / 25A In-frame",
+          "Display": "Left-Side Color LCD",
+          "Headlight": "200 lumens Dual Beam LED",
+          "Rear Light": "Brake Signal, 220° Visibility",
+          "Throttle": "Left Thumb Throttle",
+          "USB Port": "Type-C Charging",
+          "Charger": "48V, 2 Amp",
+          "Derailleur": "Shimano Altus, 8-speed",
+          "Freewheel": "10–32T, 8-speed",
+          "Chain": "KMC Z7 Stainless Steel",
+          "Crankset": "170mm Alloy",
+          "Chainring": "50T Double-Sided",
+          "Pedals": "Alloy w/ rubber grip",
+          "Brakes": "Tektro E350 Hydraulic",
+          "Brake Levers": "Adjustable w/ motor cut-off",
+          "Rotors": "203mm front & rear",
+          "Handlebar": "730mm Alloy, Straight w/ Rise",
+          "Grips": "Ergonomic Locking Grips",
+          "Stem": "110mm",
+          "Front Fork": "SR Suntour XCM 32 Air, 90mm travel",
+          "Seatpost": "SR Suntour NCX Suspension, 50mm travel",
+          "Saddle": "Stella Royal Sport Comfort",
+          "Tires": "Schwalbe Johnny Watts 27.5 x 2.8\"",
+          "Rims": "Double-Walled Aluminum",
+          "Spokes": "13G Front / 12G Rear",
+          "Front Hub": "Thru-Axle",
+          "Fenders": "Full Aluminum Coverage",
+          "Kickstand": "Adjustable Alloy",
+          "Rear Rack": "Aluminum Bolt On Rack, 55 lb capacity",
+          "Phone Mount": "SP Connect Integrated"
         }
       },
       "spec_count": 39,
@@ -625,40 +579,22 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "grouped": {
-          "general_info": {
-            "range": "Up to 70 miles",
-            "bike_weight": "74 lbs",
-            "max_payload": "350 lbs"
-          },
-          "ebike_system": {
-            "motor": "750W Bafang geared hub",
-            "peak_power": "1,200W peak",
-            "battery": "48V, 15Ah (720Wh)",
-            "top_speed": "28 mph (Class 3)",
-            "sensor": "Torque + Cadence"
-          },
-          "certifications": {
-            "certification": "SGS · UL 2271 + 2849"
-          },
-          "frameset": {
-            "front_fork": "SR Suntour XCM 32 Air, 90mm travel"
-          },
-          "drivetrain": {
-            "derailleur": "Shimano Altus, 8-speed"
-          },
-          "brakes": {
-            "brakes": "Tektro E350 Hydraulic"
-          },
-          "wheelset": {
-            "tires": "Schwalbe Johnny Watts 27.5 x 2.8”"
-          },
-          "cockpit": {
-            "seatpost": "SR Suntour NCX Suspension, 50mm travel"
-          },
-          "geometry": {
-            "rider_height": "5'2\" – 6'0\""
-          }
+        "all": {
+          "Motor": "750W Bafang geared hub",
+          "Peak Power": "1,200W peak",
+          "Battery": "48V, 15Ah (720Wh)",
+          "Range": "Up to 70 miles",
+          "Top Speed": "28 mph (Class 3)",
+          "Sensor": "Torque + Cadence",
+          "Front Fork": "SR Suntour XCM 32 Air, 90mm travel",
+          "Seatpost": "SR Suntour NCX Suspension, 50mm travel",
+          "Tires": "Schwalbe Johnny Watts 27.5 x 2.8”",
+          "Derailleur": "Shimano Altus, 8-speed",
+          "Brakes": "Tektro E350 Hydraulic",
+          "Rider Height": "5'2\" – 6'0\"",
+          "Bike Weight": "74 lbs",
+          "Max Payload": "350 lbs",
+          "Certification": "SGS · UL 2271 + 2849"
         }
       },
       "spec_count": 15,

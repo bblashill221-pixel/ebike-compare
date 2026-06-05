@@ -75,13 +75,12 @@ run_all() {
     "$PY" "$PROJECT_DIR/add_config_colors.py" || true
     "$PY" "$PROJECT_DIR/add_available_options.py" || true
     "$PY" "$PROJECT_DIR/add_pricing.py" || true
-    # Grouped specs (needs geometry above) -> every per-brand file gets specs.{all,grouped}.
-    "$PY" "$PROJECT_DIR/add_spec_groups.py" || true
+    # Normalize unifies all brands AND does the detailed spec grouping + component
+    # parsing into ebikes_normalized.json (the single transform step).
+    "$PY" "$PROJECT_DIR/normalize.py" || true
+    # Metrics last: BOM cost estimates, then the typed-fact + scoring analysis layer.
     "$PY" "$PROJECT_DIR/estimate_component_costs.py" \
         -o "$PROJECT_DIR/data/component_cost_estimates.json" || true
-    "$PY" "$PROJECT_DIR/normalize.py" || true
-    # Derive the analysis layer (typed searchable specs + field-relative compare
-    # metrics). Needs both normalize.py and the component-cost estimates above.
     "$PY" "$PROJECT_DIR/analyze.py" || true
     echo "===== $(date -Is) : run complete (rc=$rc) ====="
     echo
