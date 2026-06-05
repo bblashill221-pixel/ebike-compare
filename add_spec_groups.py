@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """
 Add the grouped spec view to every per-brand file so all JSON files share the
-same `specs` schema as the normalized dataset: `{ all, grouped }`.
+same `specs` schema as the normalized dataset: `{ grouped }`.
 
-`grouped` reorganizes the flat `specs.all` map into ordered, Aventon-style
-sections (see spec_groups.py); the Geometry group is the model's `geometry`
-field, so this MUST run after add_geometry.py. The raw physical/technical split
-is dropped (superseded by `grouped`). Runs in the post-scrape build chain.
+`grouped` reorganizes the flat spec map into ordered, Aventon-style sections with
+snake_case field names (see spec_groups.py); the Geometry group is the model's
+`geometry` field, so this MUST run after add_geometry.py. The raw
+physical/technical/all maps are dropped (superseded by `grouped`). Runs in the
+post-scrape build chain.
 """
 import glob
 import json
@@ -24,10 +25,7 @@ def main():
         d = json.load(open(f))
         for m in d.get("models", []):
             all_specs = (m.get("specs") or {}).get("all") or {}
-            m["specs"] = {
-                "all": all_specs,
-                "grouped": group_specs(all_specs, m.get("geometry") or {}),
-            }
+            m["specs"] = {"grouped": group_specs(all_specs, m.get("geometry") or {})}
         json.dump(d, open(f, "w"), indent=2, ensure_ascii=False)
         ms = d.get("models", [])
         groups = {g for m in ms for g in m["specs"]["grouped"]}

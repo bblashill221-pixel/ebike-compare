@@ -24,110 +24,67 @@
       },
       "warranty": "1-Year Warranty",
       "specs": {
-        "all": {
-          "Weight": "62 lbs",
-          "Payload": "400 lbs, 318 lbs max rider weight",
-          "Rear Rack Payload": "60 lbs",
-          "Battery": "614.4Wh (48V)",
-          "Motor": "Rear Hub, Geared, 750W, 70Nm Torque",
-          "Display": "Color LCD",
-          "Throttle": "Yes",
-          "Pedal Assist": "3 Levels + Auto Function",
-          "Sensor": "Torque sensor",
-          "Charger": "2A, AC 120V - 240V",
-          "Range": "Up to 70 miles",
-          "Shifter": "Electric, Auto Function, 8-speed",
-          "Rear Hub": "13-32T",
-          "Rear Derailleur": "Microshift 8-speed",
-          "Chain": "KMC 8spd",
-          "Brakes": "Hydraulic Disc, 180mm Rotors",
-          "Frame": "Aluminum Alloy",
-          "Fork": "Steel",
-          "Headset": "1 1/8\" Threadless",
-          "Wheel & Tire": "26” x 2.4”, Puncture Resistant, Reflective Strip",
-          "Saddle": "Comfort Padded",
-          "Seatpost": "27.2mm x 350mm, Alloy",
-          "Stem": "Easy Adjust",
-          "Handlebar": "660mm Wide, 25.4mm Clamp",
-          "Grip": "Ergonomic, Rubber",
-          "Lights": "Front: Integrated, Low-beam 70 lux, High-beam 120 luxRear: Integrated, Turn Signal, Break Light",
-          "Fenders": "Included, Plastic, PVC",
-          "Rear Rack": "Included, MIK compatible",
-          "1. Seat Tube Length": "17.8\" (454mm)",
-          "2. Effective Top Tube": "26\" (660mm)",
-          "3. Head Tube Length": "7\" (180mm)",
-          "4. Head Tube Angle": "65°",
-          "5. Seat Tube Angle": "66\"",
-          "6. Chain Stay Length": "23.5\" (598mm)",
-          "7. Reach": "15.5\" (395mm)",
-          "8. Step-over Height": "17\" (433mm)",
-          "Recommended Rider Height": "5'1\" - 6'2\"",
-          "Saddle Height Min": "31.9\" (810mm)",
-          "Saddle Height Max": "40.2\" (1020mm)",
-          "Handlebar Height Min": "46.9\" (1190mm)",
-          "Handlebar Height Max": "47.6\" (1210mm)"
-        },
         "grouped": {
-          "General Info": {
-            "Weight": "62 lbs",
-            "Payload": "400 lbs, 318 lbs max rider weight",
-            "Range": "Up to 70 miles"
+          "general_info": {
+            "weight": "62 lbs",
+            "payload": "400 lbs, 318 lbs max rider weight",
+            "range": "Up to 70 miles"
           },
-          "Ebike System": {
-            "Battery": "614.4Wh (48V)",
-            "Motor": "Rear Hub, Geared, 750W, 70Nm Torque",
-            "Display": "Color LCD",
-            "Throttle": "Yes",
-            "Pedal Assist": "3 Levels + Auto Function",
-            "Sensor": "Torque sensor",
-            "Charger": "2A, AC 120V - 240V"
+          "ebike_system": {
+            "battery": "614.4Wh (48V)",
+            "motor": "Rear Hub, Geared, 750W, 70Nm Torque",
+            "display": "Color LCD",
+            "throttle": "Yes",
+            "pedal_assist": "3 Levels + Auto Function",
+            "sensor": "Torque sensor",
+            "charger": "2A, AC 120V - 240V"
           },
-          "Safety": {
-            "Lights": "Front: Integrated, Low-beam 70 lux, High-beam 120 luxRear: Integrated, Turn Signal, Break Light"
+          "safety": {
+            "lights": "Front: Integrated, Low-beam 70 lux, High-beam 120 luxRear: Integrated, Turn Signal, Break Light"
           },
-          "Frameset": {
-            "Frame": "Aluminum Alloy",
-            "Fork": "Steel"
+          "frameset": {
+            "frame": "Aluminum Alloy",
+            "fork": "Steel"
           },
-          "Drivetrain": {
-            "Shifter": "Electric, Auto Function, 8-speed",
-            "Rear Derailleur": "Microshift 8-speed",
-            "Chain": "KMC 8spd"
+          "drivetrain": {
+            "shifter": "Electric, Auto Function, 8-speed",
+            "rear_derailleur": "Microshift 8-speed",
+            "chain": "KMC 8spd"
           },
-          "Brakes": {
-            "Brakes": "Hydraulic Disc, 180mm Rotors"
+          "brakes": {
+            "brakes": "Hydraulic Disc, 180mm Rotors"
           },
-          "Wheelset": {
-            "Rear Hub": "13-32T",
-            "Wheel & Tire": "26” x 2.4”, Puncture Resistant, Reflective Strip"
+          "wheelset": {
+            "rear_hub": "13-32T",
+            "wheel_tire": "26” x 2.4”, Puncture Resistant, Reflective Strip"
           },
-          "Cockpit": {
-            "Headset": "1 1/8\" Threadless",
-            "Saddle": "Comfort Padded",
-            "Seatpost": "27.2mm x 350mm, Alloy",
-            "Stem": "Easy Adjust",
-            "Handlebar": "660mm Wide, 25.4mm Clamp",
-            "Grip": "Ergonomic, Rubber",
-            "Handlebar Height Min": "46.9\" (1190mm)",
-            "Handlebar Height Max": "47.6\" (1210mm)"
+          "cockpit": {
+            "headset": "1 1/8\" Threadless",
+            "saddle": "Comfort Padded",
+            "seatpost": "27.2mm x 350mm, Alloy",
+            "stem": "Easy Adjust",
+            "handlebar": "660mm Wide, 25.4mm Clamp",
+            "grip": "Ergonomic, Rubber",
+            "handlebar_height_min": "46.9\" (1190mm)",
+            "handlebar_height_max": "47.6\" (1210mm)"
           },
-          "Geometry": {
-            "1. Seat Tube Length": "17.8\" (454mm)",
-            "2. Effective Top Tube": "26\" (660mm)",
-            "3. Head Tube Length": "7\" (180mm)",
-            "4. Head Tube Angle": "65°",
-            "5. Seat Tube Angle": "66\"",
-            "6. Chain Stay Length": "23.5\" (598mm)",
-            "7. Reach": "15.5\" (395mm)",
-            "Recommended Rider Height": "5'1\" - 6'2\"",
-            "Saddle Height Min": "31.9\" (810mm)",
-            "Saddle Height Max": "40.2\" (1020mm)",
-            "8. Step-over Height": "17\" (433mm)"
+          "geometry": {
+            "1_seat_tube_length": "17.8\" (454mm)",
+            "2_effective_top_tube": "26\" (660mm)",
+            "3_head_tube_length": "7\" (180mm)",
+            "4_head_tube_angle": "65°",
+            "5_seat_tube_angle": "66\"",
+            "6_chain_stay_length": "23.5\" (598mm)",
+            "7_reach": "15.5\" (395mm)",
+            "recommended_rider_height": "5'1\" - 6'2\"",
+            "saddle_height_min": "31.9\" (810mm)",
+            "saddle_height_max": "40.2\" (1020mm)",
+            "8_step_over_height": "17\" (433mm)"
           },
-          "Included Accessories": {
-            "Rear Rack Payload": "60 lbs",
-            "Fenders": "Included, Plastic, PVC",
-            "Rear Rack": "Included, MIK compatible"
+          "included_accessories": {
+            "rear_rack_payload": "60 lbs",
+            "fenders": "Included, Plastic, PVC",
+            "rear_rack": "Included, MIK compatible"
           }
         }
       },
@@ -259,140 +216,83 @@
       },
       "warranty": "1-Year Warranty",
       "specs": {
-        "all": {
-          "Battery": "672Wh (48V) 1st battery, front672Wh (48V) 2nd battery, rear",
-          "Motor": "Rear Hub, Geared, 750W",
-          "Display": "LCD, with USB Charge Port",
-          "Throttle": "Yes",
-          "Controller": "48V",
-          "Sensor": "12 Magnet Cadence Sensor, BB Mount",
-          "Charger": "2A, AC 120V - 240V",
-          "Shifter": "Shimano 7spd, RevoShift",
-          "Crankset": "170mm, 48t Chainring, Integrated Chain Guide",
-          "Cassette": "Shimano 7spd, 14-34t",
-          "Rear Derailleur": "Shimano Acera 7spd",
-          "Chain": "KMC 7spd",
-          "Brakes": "Bengal Hydraulic Disc, 180mm Rotors",
-          "Frame": "6061 Aluminum Alloy",
-          "Fork": "Rigid Steel, 1 1/8\" Threadless",
-          "Headset": "1 1/8\" Threadless",
-          "Wheel & Tire": "24” x 2.4”, Puncture Resistant, Reflective Strip",
-          "Saddle": "Comfort Padded",
-          "Seatpost": "27.2 x 300mm, Alloy",
-          "Stem": "Adjustable Angle, 1 1/8\" Threadless, 31.8mm Clamp",
-          "Handlebar": "Riser Bar, 640mm x 31.8mm Clamp",
-          "Grip": "Ergonomic",
-          "Lights": "Front: Integrated, Powered by Main BatteryRear: Included with Brake Light, Powered by Main Battery",
-          "Fenders": "PVC Material, Black",
-          "1. Seat Tube Length": "16.8\" (428mm)",
-          "2. Effective Top Tube Length": "24\" (610mm)",
-          "3. Head Tube Length": "9.5\" (240mm)",
-          "4. Head Tube Angle": "69°",
-          "5. Seat Tube Angle": "71°",
-          "6. Chainstay Length": "26.85\" (682mm)",
-          "7. Reach": "15.9\"",
-          "8. Standover Height": "19.4\" (492mm)",
-          "Recommended Rider Height": "5'1\" - 6'3\" (155cm - 192cm)",
-          "Recommended Rider Weight": "<250lbs (113.40kgs)",
-          "Saddle Height Minimum": "31.5\" (800mm)",
-          "Saddle Height Maximum": "38.5\" (978mm)",
-          "Handlebar Height Minimum": "42.5\" (1079.5mm)",
-          "Handlebar Height Maximum": "45.5\" (1155.7mm)",
-          "Standover Height": "19.4\" (492mm)",
-          "Payload (Rider + Cargo Weight)": "Rider: <250lbs (113.40kgs)Cargo: <150lbs (68.04kgs); or greater if rider is <200lbs",
-          "Front Cargo Capacity": "<50lbs (22.68kgs)",
-          "Rear Cargo Capacity": "<150lbs (68.03kgs)",
-          "Bike Weight": "Single Battery: 67lbs (29.5kgs)Single Without Battery: 59.5lbs (26.98kgs)Dual Battery: 75.5lbs (34.25kgs)Dual Without Batteries: 60.5lbs (27.2kgs)",
-          "Seat Tube Length": "16.8\" (428mm)",
-          "Seat Tube Angle": "71°",
-          "Head Tube Length": "9.5\" (240mm)",
-          "Head Tube Angle": "69°",
-          "Effective Top Tube Length": "24\" (610mm)",
-          "Reach": "15.9\" (403mm)",
-          "Bottom Bracket Drop": "1\" (25.4mm)",
-          "Chainstay Length": "26.85\" (682mm)",
-          "Wheelbase": "53.7\" (1364mm)",
-          "Front Center": "26.9\" (683mm)",
-          "Fork Length (Axle-Crown)": "15.6\" (397mm)",
-          "Fork Offset": "55mm"
-        },
         "grouped": {
-          "General Info": {
-            "Bike Weight": "Single Battery: 67lbs (29.5kgs)Single Without Battery: 59.5lbs (26.98kgs)Dual Battery: 75.5lbs (34.25kgs)Dual Without Batteries: 60.5lbs (27.2kgs)"
+          "general_info": {
+            "bike_weight": "Single Battery: 67lbs (29.5kgs)Single Without Battery: 59.5lbs (26.98kgs)Dual Battery: 75.5lbs (34.25kgs)Dual Without Batteries: 60.5lbs (27.2kgs)"
           },
-          "Ebike System": {
-            "Battery": "672Wh (48V) 1st battery, front672Wh (48V) 2nd battery, rear",
-            "Motor": "Rear Hub, Geared, 750W",
-            "Display": "LCD, with USB Charge Port",
-            "Throttle": "Yes",
-            "Controller": "48V",
-            "Sensor": "12 Magnet Cadence Sensor, BB Mount",
-            "Charger": "2A, AC 120V - 240V"
+          "ebike_system": {
+            "battery": "672Wh (48V) 1st battery, front672Wh (48V) 2nd battery, rear",
+            "motor": "Rear Hub, Geared, 750W",
+            "display": "LCD, with USB Charge Port",
+            "throttle": "Yes",
+            "controller": "48V",
+            "sensor": "12 Magnet Cadence Sensor, BB Mount",
+            "charger": "2A, AC 120V - 240V"
           },
-          "Safety": {
-            "Lights": "Front: Integrated, Powered by Main BatteryRear: Included with Brake Light, Powered by Main Battery"
+          "safety": {
+            "lights": "Front: Integrated, Powered by Main BatteryRear: Included with Brake Light, Powered by Main Battery"
           },
-          "Frameset": {
-            "Frame": "6061 Aluminum Alloy",
-            "Fork": "Rigid Steel, 1 1/8\" Threadless",
-            "Fork Offset": "55mm"
+          "frameset": {
+            "frame": "6061 Aluminum Alloy",
+            "fork": "Rigid Steel, 1 1/8\" Threadless",
+            "fork_offset": "55mm"
           },
-          "Drivetrain": {
-            "Shifter": "Shimano 7spd, RevoShift",
-            "Crankset": "170mm, 48t Chainring, Integrated Chain Guide",
-            "Cassette": "Shimano 7spd, 14-34t",
-            "Rear Derailleur": "Shimano Acera 7spd",
-            "Chain": "KMC 7spd",
-            "Bottom Bracket Drop": "1\" (25.4mm)"
+          "drivetrain": {
+            "shifter": "Shimano 7spd, RevoShift",
+            "crankset": "170mm, 48t Chainring, Integrated Chain Guide",
+            "cassette": "Shimano 7spd, 14-34t",
+            "rear_derailleur": "Shimano Acera 7spd",
+            "chain": "KMC 7spd",
+            "bottom_bracket_drop": "1\" (25.4mm)"
           },
-          "Brakes": {
-            "Brakes": "Bengal Hydraulic Disc, 180mm Rotors"
+          "brakes": {
+            "brakes": "Bengal Hydraulic Disc, 180mm Rotors"
           },
-          "Wheelset": {
-            "Wheel & Tire": "24” x 2.4”, Puncture Resistant, Reflective Strip",
-            "Fork Length (Axle-Crown)": "15.6\" (397mm)"
+          "wheelset": {
+            "wheel_tire": "24” x 2.4”, Puncture Resistant, Reflective Strip",
+            "fork_length_axle_crown": "15.6\" (397mm)"
           },
-          "Cockpit": {
-            "Headset": "1 1/8\" Threadless",
-            "Saddle": "Comfort Padded",
-            "Seatpost": "27.2 x 300mm, Alloy",
-            "Stem": "Adjustable Angle, 1 1/8\" Threadless, 31.8mm Clamp",
-            "Handlebar": "Riser Bar, 640mm x 31.8mm Clamp",
-            "Grip": "Ergonomic",
-            "Handlebar Height Minimum": "42.5\" (1079.5mm)",
-            "Handlebar Height Maximum": "45.5\" (1155.7mm)"
+          "cockpit": {
+            "headset": "1 1/8\" Threadless",
+            "saddle": "Comfort Padded",
+            "seatpost": "27.2 x 300mm, Alloy",
+            "stem": "Adjustable Angle, 1 1/8\" Threadless, 31.8mm Clamp",
+            "handlebar": "Riser Bar, 640mm x 31.8mm Clamp",
+            "grip": "Ergonomic",
+            "handlebar_height_minimum": "42.5\" (1079.5mm)",
+            "handlebar_height_maximum": "45.5\" (1155.7mm)"
           },
-          "Geometry": {
-            "1. Seat Tube Length": "16.8\" (428mm)",
-            "2. Effective Top Tube Length": "24\" (610mm)",
-            "3. Head Tube Length": "9.5\" (240mm)",
-            "4. Head Tube Angle": "69°",
-            "5. Seat Tube Angle": "71°",
-            "6. Chainstay Length": "26.85\" (682mm)",
-            "7. Reach": "15.9\"",
-            "8. Standover Height": "19.4\" (492mm)",
-            "Recommended Rider Height": "5'1\" - 6'3\" (155cm - 192cm)",
-            "Recommended Rider Weight": "<250lbs (113.40kgs)",
-            "Saddle Height Minimum": "31.5\" (800mm)",
-            "Saddle Height Maximum": "38.5\" (978mm)",
-            "Standover Height": "19.4\" (492mm)",
-            "Seat Tube Length": "16.8\" (428mm)",
-            "Seat Tube Angle": "71°",
-            "Head Tube Length": "9.5\" (240mm)",
-            "Head Tube Angle": "69°",
-            "Effective Top Tube Length": "24\" (610mm)",
-            "Reach": "15.9\" (403mm)",
-            "Chainstay Length": "26.85\" (682mm)",
-            "Wheelbase": "53.7\" (1364mm)"
+          "geometry": {
+            "1_seat_tube_length": "16.8\" (428mm)",
+            "2_effective_top_tube_length": "24\" (610mm)",
+            "3_head_tube_length": "9.5\" (240mm)",
+            "4_head_tube_angle": "69°",
+            "5_seat_tube_angle": "71°",
+            "6_chainstay_length": "26.85\" (682mm)",
+            "7_reach": "15.9\"",
+            "8_standover_height": "19.4\" (492mm)",
+            "recommended_rider_height": "5'1\" - 6'3\" (155cm - 192cm)",
+            "recommended_rider_weight": "<250lbs (113.40kgs)",
+            "saddle_height_minimum": "31.5\" (800mm)",
+            "saddle_height_maximum": "38.5\" (978mm)",
+            "standover_height": "19.4\" (492mm)",
+            "seat_tube_length": "16.8\" (428mm)",
+            "seat_tube_angle": "71°",
+            "head_tube_length": "9.5\" (240mm)",
+            "head_tube_angle": "69°",
+            "effective_top_tube_length": "24\" (610mm)",
+            "reach": "15.9\" (403mm)",
+            "chainstay_length": "26.85\" (682mm)",
+            "wheelbase": "53.7\" (1364mm)"
           },
-          "Included Accessories": {
-            "Fenders": "PVC Material, Black",
-            "Payload (Rider + Cargo Weight)": "Rider: <250lbs (113.40kgs)Cargo: <150lbs (68.04kgs); or greater if rider is <200lbs",
-            "Front Cargo Capacity": "<50lbs (22.68kgs)",
-            "Rear Cargo Capacity": "<150lbs (68.03kgs)"
+          "included_accessories": {
+            "fenders": "PVC Material, Black",
+            "payload_rider_cargo_weight": "Rider: <250lbs (113.40kgs)Cargo: <150lbs (68.04kgs); or greater if rider is <200lbs",
+            "front_cargo_capacity": "<50lbs (22.68kgs)",
+            "rear_cargo_capacity": "<150lbs (68.03kgs)"
           },
-          "General / Other": {
-            "Front Center": "26.9\" (683mm)"
+          "general_other": {
+            "front_center": "26.9\" (683mm)"
           }
         }
       },
@@ -612,110 +512,67 @@
       },
       "warranty": "1-Year Warranty",
       "specs": {
-        "all": {
-          "Weight": "62 lbs",
-          "Payload": "400 lbs, 318 lbs max rider weight",
-          "Rear Rack Payload": "60 lbs",
-          "Battery": "614.4Wh (48V)",
-          "Motor": "Rear Hub, Geared, 750W, 70Nm Torque",
-          "Display": "Color LCD",
-          "Throttle": "Yes",
-          "Pedal Assist": "3 Levels + Auto Function",
-          "Sensor": "Torque sensor",
-          "Charger": "2A, AC 120V - 240V",
-          "Range": "Up to 70 miles",
-          "Shifter": "Electric, Auto Function, 8-speed",
-          "Rear Hub": "13-32T",
-          "Rear Derailleur": "Microshift 8-speed",
-          "Chain": "KMC 8spd",
-          "Brakes": "Hydraulic Disc, 180mm Rotors",
-          "Frame": "Aluminum Alloy",
-          "Fork": "Steel",
-          "Headset": "1 1/8\" Threadless",
-          "Wheel & Tire": "26” x 2.4”, Puncture Resistant, Reflective Strip",
-          "Saddle": "Comfort Padded",
-          "Seatpost": "27.2mm x 350mm, Alloy",
-          "Stem": "Easy Adjust",
-          "Handlebar": "660mm Wide, 25.4mm Clamp",
-          "Grip": "Ergonomic, Rubber",
-          "Lights": "Front: Integrated, Low-beam 70 lux, High-beam 120 luxRear: Integrated, Turn Signal, Break Light",
-          "Fenders": "Included, Plastic, PVC",
-          "Rear Rack": "Included, MIK compatible",
-          "1. Seat Tube Length": "17.8\" (454mm)",
-          "2. Effective Top Tube": "26\" (660mm)",
-          "3. Head Tube Length": "7\" (180mm)",
-          "4. Head Tube Angle": "65°",
-          "5. Seat Tube Angle": "66\"",
-          "6. Chain Stay Length": "23.5\" (598mm)",
-          "7. Reach": "15.5\" (395mm)",
-          "8. Step-over Height": "17\" (433mm)",
-          "Recommended Rider Height": "5'1\" - 6'2\"",
-          "Saddle Height Min": "31.9\" (810mm)",
-          "Saddle Height Max": "40.2\" (1020mm)",
-          "Handlebar Height Min": "46.9\" (1190mm)",
-          "Handlebar Height Max": "47.6\" (1210mm)"
-        },
         "grouped": {
-          "General Info": {
-            "Weight": "62 lbs",
-            "Payload": "400 lbs, 318 lbs max rider weight",
-            "Range": "Up to 70 miles"
+          "general_info": {
+            "weight": "62 lbs",
+            "payload": "400 lbs, 318 lbs max rider weight",
+            "range": "Up to 70 miles"
           },
-          "Ebike System": {
-            "Battery": "614.4Wh (48V)",
-            "Motor": "Rear Hub, Geared, 750W, 70Nm Torque",
-            "Display": "Color LCD",
-            "Throttle": "Yes",
-            "Pedal Assist": "3 Levels + Auto Function",
-            "Sensor": "Torque sensor",
-            "Charger": "2A, AC 120V - 240V"
+          "ebike_system": {
+            "battery": "614.4Wh (48V)",
+            "motor": "Rear Hub, Geared, 750W, 70Nm Torque",
+            "display": "Color LCD",
+            "throttle": "Yes",
+            "pedal_assist": "3 Levels + Auto Function",
+            "sensor": "Torque sensor",
+            "charger": "2A, AC 120V - 240V"
           },
-          "Safety": {
-            "Lights": "Front: Integrated, Low-beam 70 lux, High-beam 120 luxRear: Integrated, Turn Signal, Break Light"
+          "safety": {
+            "lights": "Front: Integrated, Low-beam 70 lux, High-beam 120 luxRear: Integrated, Turn Signal, Break Light"
           },
-          "Frameset": {
-            "Frame": "Aluminum Alloy",
-            "Fork": "Steel"
+          "frameset": {
+            "frame": "Aluminum Alloy",
+            "fork": "Steel"
           },
-          "Drivetrain": {
-            "Shifter": "Electric, Auto Function, 8-speed",
-            "Rear Derailleur": "Microshift 8-speed",
-            "Chain": "KMC 8spd"
+          "drivetrain": {
+            "shifter": "Electric, Auto Function, 8-speed",
+            "rear_derailleur": "Microshift 8-speed",
+            "chain": "KMC 8spd"
           },
-          "Brakes": {
-            "Brakes": "Hydraulic Disc, 180mm Rotors"
+          "brakes": {
+            "brakes": "Hydraulic Disc, 180mm Rotors"
           },
-          "Wheelset": {
-            "Rear Hub": "13-32T",
-            "Wheel & Tire": "26” x 2.4”, Puncture Resistant, Reflective Strip"
+          "wheelset": {
+            "rear_hub": "13-32T",
+            "wheel_tire": "26” x 2.4”, Puncture Resistant, Reflective Strip"
           },
-          "Cockpit": {
-            "Headset": "1 1/8\" Threadless",
-            "Saddle": "Comfort Padded",
-            "Seatpost": "27.2mm x 350mm, Alloy",
-            "Stem": "Easy Adjust",
-            "Handlebar": "660mm Wide, 25.4mm Clamp",
-            "Grip": "Ergonomic, Rubber",
-            "Handlebar Height Min": "46.9\" (1190mm)",
-            "Handlebar Height Max": "47.6\" (1210mm)"
+          "cockpit": {
+            "headset": "1 1/8\" Threadless",
+            "saddle": "Comfort Padded",
+            "seatpost": "27.2mm x 350mm, Alloy",
+            "stem": "Easy Adjust",
+            "handlebar": "660mm Wide, 25.4mm Clamp",
+            "grip": "Ergonomic, Rubber",
+            "handlebar_height_min": "46.9\" (1190mm)",
+            "handlebar_height_max": "47.6\" (1210mm)"
           },
-          "Geometry": {
-            "1. Seat Tube Length": "17.8\" (454mm)",
-            "2. Effective Top Tube": "26\" (660mm)",
-            "3. Head Tube Length": "7\" (180mm)",
-            "4. Head Tube Angle": "65°",
-            "5. Seat Tube Angle": "66\"",
-            "6. Chain Stay Length": "23.5\" (598mm)",
-            "7. Reach": "15.5\" (395mm)",
-            "Recommended Rider Height": "5'1\" - 6'2\"",
-            "Saddle Height Min": "31.9\" (810mm)",
-            "Saddle Height Max": "40.2\" (1020mm)",
-            "8. Step-over Height": "17\" (433mm)"
+          "geometry": {
+            "1_seat_tube_length": "17.8\" (454mm)",
+            "2_effective_top_tube": "26\" (660mm)",
+            "3_head_tube_length": "7\" (180mm)",
+            "4_head_tube_angle": "65°",
+            "5_seat_tube_angle": "66\"",
+            "6_chain_stay_length": "23.5\" (598mm)",
+            "7_reach": "15.5\" (395mm)",
+            "recommended_rider_height": "5'1\" - 6'2\"",
+            "saddle_height_min": "31.9\" (810mm)",
+            "saddle_height_max": "40.2\" (1020mm)",
+            "8_step_over_height": "17\" (433mm)"
           },
-          "Included Accessories": {
-            "Rear Rack Payload": "60 lbs",
-            "Fenders": "Included, Plastic, PVC",
-            "Rear Rack": "Included, MIK compatible"
+          "included_accessories": {
+            "rear_rack_payload": "60 lbs",
+            "fenders": "Included, Plastic, PVC",
+            "rear_rack": "Included, MIK compatible"
           }
         }
       },
@@ -877,114 +734,69 @@
       },
       "warranty": "1-Year Warranty",
       "specs": {
-        "all": {
-          "Foldable": "Yes",
-          "Weight": "55 lbs",
-          "Folding size": "36\"21\"29\"",
-          "Payload": "312 lbs, 270 lbs max rider weight",
-          "Rear Rack Payload": "60 lbs",
-          "Battery": "614.4Wh (48V)",
-          "Motor": "Rear Hub, Geared, 500W, 55Nm Torque",
-          "Display": "TFT, Color",
-          "Throttle": "Yes",
-          "Pedal Assist": "3 Levels + Auto Function",
-          "Sensor": "Torque sensor",
-          "Charger": "2A, AC 120V - 240V",
-          "Range": "Up to 70 miles",
-          "Shifter": "Electric, Auto Function, 8-speed",
-          "Rear Hub": "13-32T",
-          "Rear Derailleur": "Microshift 8-speed",
-          "Chain": "KMC 8spd",
-          "Brakes": "Hydraulic Disc, 180mm Rotors",
-          "Frame": "Aluminum Alloy, Folding",
-          "Fork": "Steel",
-          "Headset": "1 1/8\" Threadless",
-          "Wheel & Tire": "20” x 2.4”, Puncture Resistant, Reflective Strip",
-          "Saddle": "Comfort Padded",
-          "Seatpost": "27.2mm x 400mm, Alloy",
-          "Stem": "Foldable",
-          "Handlebar": "640mm Wide, 25.4mm Clamp",
-          "Grip": "Ergonomic, Rubber",
-          "Lights": "Front: Integrated, Low-beam 70 lux, High-beam 120 luxRear: Integrated, Turn Signal, Break Light",
-          "Fenders": "Included, Plastic, PVC",
-          "Rear Rack": "Included, MIK compatible",
-          "1. Seat Tube Length": "16\" (408mm)",
-          "2. Effective Top Tube": "24.4\" 620mm)",
-          "3. Head Tube Length": "5.5\" (140mm)",
-          "4. Head Tube Angle": "70.5°",
-          "5. Seat Tube Angle": "72\"",
-          "6. Chain Stay Length": "17.5\" (444mm)",
-          "7. Reach": "16.2\" (412mm)",
-          "8. Step-over Height": "16.6\" (422mm)",
-          "Recommended Rider Height": "4'10\" - 6'2\"",
-          "Saddle Height Min": "32\" (812mm)",
-          "Saddle Height Max": "41.8\" (1062mm)",
-          "Handlebar Height Min": "41.7\" (1060mm)",
-          "Handlebar Height Max": "47.6\" (1210mm)"
-        },
         "grouped": {
-          "General Info": {
-            "Foldable": "Yes",
-            "Weight": "55 lbs",
-            "Folding size": "36\"21\"29\"",
-            "Payload": "312 lbs, 270 lbs max rider weight",
-            "Range": "Up to 70 miles"
+          "general_info": {
+            "foldable": "Yes",
+            "weight": "55 lbs",
+            "folding_size": "36\"21\"29\"",
+            "payload": "312 lbs, 270 lbs max rider weight",
+            "range": "Up to 70 miles"
           },
-          "Ebike System": {
-            "Battery": "614.4Wh (48V)",
-            "Motor": "Rear Hub, Geared, 500W, 55Nm Torque",
-            "Display": "TFT, Color",
-            "Throttle": "Yes",
-            "Pedal Assist": "3 Levels + Auto Function",
-            "Sensor": "Torque sensor",
-            "Charger": "2A, AC 120V - 240V"
+          "ebike_system": {
+            "battery": "614.4Wh (48V)",
+            "motor": "Rear Hub, Geared, 500W, 55Nm Torque",
+            "display": "TFT, Color",
+            "throttle": "Yes",
+            "pedal_assist": "3 Levels + Auto Function",
+            "sensor": "Torque sensor",
+            "charger": "2A, AC 120V - 240V"
           },
-          "Safety": {
-            "Lights": "Front: Integrated, Low-beam 70 lux, High-beam 120 luxRear: Integrated, Turn Signal, Break Light"
+          "safety": {
+            "lights": "Front: Integrated, Low-beam 70 lux, High-beam 120 luxRear: Integrated, Turn Signal, Break Light"
           },
-          "Frameset": {
-            "Frame": "Aluminum Alloy, Folding",
-            "Fork": "Steel"
+          "frameset": {
+            "frame": "Aluminum Alloy, Folding",
+            "fork": "Steel"
           },
-          "Drivetrain": {
-            "Shifter": "Electric, Auto Function, 8-speed",
-            "Rear Derailleur": "Microshift 8-speed",
-            "Chain": "KMC 8spd"
+          "drivetrain": {
+            "shifter": "Electric, Auto Function, 8-speed",
+            "rear_derailleur": "Microshift 8-speed",
+            "chain": "KMC 8spd"
           },
-          "Brakes": {
-            "Brakes": "Hydraulic Disc, 180mm Rotors"
+          "brakes": {
+            "brakes": "Hydraulic Disc, 180mm Rotors"
           },
-          "Wheelset": {
-            "Rear Hub": "13-32T",
-            "Wheel & Tire": "20” x 2.4”, Puncture Resistant, Reflective Strip"
+          "wheelset": {
+            "rear_hub": "13-32T",
+            "wheel_tire": "20” x 2.4”, Puncture Resistant, Reflective Strip"
           },
-          "Cockpit": {
-            "Headset": "1 1/8\" Threadless",
-            "Saddle": "Comfort Padded",
-            "Seatpost": "27.2mm x 400mm, Alloy",
-            "Stem": "Foldable",
-            "Handlebar": "640mm Wide, 25.4mm Clamp",
-            "Grip": "Ergonomic, Rubber",
-            "Handlebar Height Min": "41.7\" (1060mm)",
-            "Handlebar Height Max": "47.6\" (1210mm)"
+          "cockpit": {
+            "headset": "1 1/8\" Threadless",
+            "saddle": "Comfort Padded",
+            "seatpost": "27.2mm x 400mm, Alloy",
+            "stem": "Foldable",
+            "handlebar": "640mm Wide, 25.4mm Clamp",
+            "grip": "Ergonomic, Rubber",
+            "handlebar_height_min": "41.7\" (1060mm)",
+            "handlebar_height_max": "47.6\" (1210mm)"
           },
-          "Geometry": {
-            "1. Seat Tube Length": "16\" (408mm)",
-            "2. Effective Top Tube": "24.4\" 620mm)",
-            "3. Head Tube Length": "5.5\" (140mm)",
-            "4. Head Tube Angle": "70.5°",
-            "5. Seat Tube Angle": "72\"",
-            "6. Chain Stay Length": "17.5\" (444mm)",
-            "7. Reach": "16.2\" (412mm)",
-            "Recommended Rider Height": "4'10\" - 6'2\"",
-            "Saddle Height Min": "32\" (812mm)",
-            "Saddle Height Max": "41.8\" (1062mm)",
-            "8. Step-over Height": "16.6\" (422mm)"
+          "geometry": {
+            "1_seat_tube_length": "16\" (408mm)",
+            "2_effective_top_tube": "24.4\" 620mm)",
+            "3_head_tube_length": "5.5\" (140mm)",
+            "4_head_tube_angle": "70.5°",
+            "5_seat_tube_angle": "72\"",
+            "6_chain_stay_length": "17.5\" (444mm)",
+            "7_reach": "16.2\" (412mm)",
+            "recommended_rider_height": "4'10\" - 6'2\"",
+            "saddle_height_min": "32\" (812mm)",
+            "saddle_height_max": "41.8\" (1062mm)",
+            "8_step_over_height": "16.6\" (422mm)"
           },
-          "Included Accessories": {
-            "Rear Rack Payload": "60 lbs",
-            "Fenders": "Included, Plastic, PVC",
-            "Rear Rack": "Included, MIK compatible"
+          "included_accessories": {
+            "rear_rack_payload": "60 lbs",
+            "fenders": "Included, Plastic, PVC",
+            "rear_rack": "Included, MIK compatible"
           }
         }
       },

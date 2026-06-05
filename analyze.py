@@ -31,6 +31,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from spec_parse import num, find_spec, blob, kg_to_lb, percentile_rank
+from spec_groups import flatten_grouped
 
 HERE = Path(__file__).parent
 DATA = HERE / "data"
@@ -246,7 +247,8 @@ def _notable_tech(specs):
 
 
 def extract_typed_specs(model: dict) -> dict:
-    specs = (model.get("specs") or {}).get("all") or {}
+    specs = (model.get("specs") or {}).get("all") \
+        or flatten_grouped((model.get("specs") or {}).get("grouped")) or {}
     motor_w, motor_peak_w = _motor_w(specs)
     return {
         "battery_wh": _battery_wh(specs),

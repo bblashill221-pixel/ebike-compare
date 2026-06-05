@@ -21,6 +21,8 @@ import re
 from datetime import datetime, timezone
 from pathlib import Path
 
+from spec_groups import flatten_grouped
+
 HERE = Path(__file__).parent
 DATA = HERE / "data"
 
@@ -175,7 +177,8 @@ FIXED = {"frame": cost_frame, "assembly_misc": lambda s: (120, "cables, bolts, a
 
 
 def estimate(model: dict) -> dict:
-    specs = model.get("specs", {}).get("all", {}) or {}
+    specs = model.get("specs", {}).get("all") \
+        or flatten_grouped(model.get("specs", {}).get("grouped")) or {}
     breakdown, notes = {}, {}
     for name, fn in SPEC_DRIVEN.items():
         c, note = fn(specs)

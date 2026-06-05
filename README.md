@@ -458,16 +458,20 @@ per-brand differences: `model` (from model/title), `price`/`price_min`/`price_ma
 (from price_from or price_range or the configurations), `configurations` (Lectric
 `configs` folded in), with brand-specific fields preserved under `brand_extra`.
 
-**Grouped specs.** The normalized `specs` is `{ all, grouped }` — `all` is the flat
-searchable label→value map; `grouped` reorganizes it into ordered, Aventon-style
-sections (`spec_groups.py`): **General Info, Ebike System, Special Features, Safety,
-Certifications, Water Resistance, Frameset, Drivetrain, Brakes, Wheelset, Cockpit,
-Geometry, Included Accessories, General / Other**. The taxonomy follows Aventon's real
-PDP sections, extended with Safety / Certifications / Water Resistance / Special
-Features (regen, radar, app, anti-theft, walk mode…). The **Geometry** group is the
-model's `geometry` field (the Aventon geometry-data set from `add_geometry.py`).
-(The raw per-brand `physical`/`technical` split is not carried into the normalized
-doc — `grouped` replaces it.)
+**Grouped specs.** `specs` is `{ grouped }` only — an ordered, Aventon-style set of
+sections (`spec_groups.py`), with **snake_case field names and group names**
+throughout (every brand's labels are normalized, so `BATTERY`/`Battery` →
+`battery`, `REAR BRAKE`/`Rear brake` → `rear_brake`). Groups: **general_info,
+ebike_system, special_features, safety, certifications, water_resistance, frameset,
+drivetrain, brakes, wheelset, cockpit, geometry, included_accessories,
+general_other**. The taxonomy follows Aventon's real PDP sections, extended with
+safety / certifications / water_resistance / special_features (regen, radar, app,
+anti-theft, walk mode…). The **geometry** group is the model's `geometry` field (the
+Aventon geometry-data set from `add_geometry.py`). `add_spec_groups.py` writes this
+view into every per-brand file too, so **all JSON files share one `specs` schema**;
+the raw `physical`/`technical`/`all` maps are dropped. (`analyze.py` /
+`estimate_component_costs.py` flatten `grouped` internally via
+`spec_groups.flatten_grouped`.)
 
 **Options under the model.** `available_options` lists only real options for that
 model. **Color is an option only when it raises the price** (otherwise colors are a

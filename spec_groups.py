@@ -11,9 +11,31 @@ by add_geometry.py); page-chrome junk labels are dropped.
 Used by normalize.py. Classification is case-insensitive substring matching in
 **priority order** (first match wins) so specific groups beat broad ones.
 """
+import re
 from collections import OrderedDict
 
-# Page-chrome strings that leaked into specs.all but aren't real specs -> dropped.
+# Brands write spec labels in wildly different cases ("BATTERY" / "Battery",
+# "REAR BRAKE" / "Rear brake"). Normalize every field name to snake_case, to match
+# the rest of the snake_case schema. NB: classification still runs on the original
+# (spaced) label so multi-word keywords like "pedal assist" keep matching.
+def snake(label: str) -> str:
+    """Field-name -> snake_case (e.g. 'REAR BRAKE' / 'Rear brake' -> 'rear_brake')."""
+    return re.sub(r"[^a-z0-9]+", "_", (label or "").lower()).strip("_")
+
+
+def flatten_grouped(grouped: dict) -> dict:
+    """Recover a flat label->value map from the grouped view (string values only;
+    the Geometry group's per-size dict values are skipped). Lets the analysis and
+    cost-estimate steps keep working now that `specs.all` is gone."""
+    out = {}
+    for fields in (grouped or {}).values():
+        for k, v in fields.items():
+            if isinstance(v, str):
+                out[k] = v
+    return out
+
+
+# Page-chrome strings that leaked into the specs but aren't real specs -> dropped.
 _JUNK_EXACT = {
     "color", "colors", "color(s)", "free", "free gift", "free gifts",
     "regular price", "sale price", "price", "q", "a", "q:", "a:",
@@ -115,11 +137,12 @@ def group_specs(all_specs: dict, geometry: dict | None = None) -> "OrderedDict":
         low = " ".join(label.split()).lower()
         if _is_junk(low):
             continue
-        buckets.setdefault(classify(low), OrderedDict())[label] = value
+        # classify on the original (spaced) label; emit a snake_case field name.
+        buckets.setdefault(classify(low), OrderedDict())[snake(label)] = value
     if geometry:
-        buckets["Geometry"] = OrderedDict(geometry)
+        buckets["Geometry"] = OrderedDict((snake(k), v) for k, v in geometry.items())
     out: "OrderedDict" = OrderedDict()
     for g in DISPLAY_ORDER:
         if buckets.get(g):
-            out[g] = buckets[g]
+            out[snake(g)] = buckets[g]   # snake_case group names too
     return out

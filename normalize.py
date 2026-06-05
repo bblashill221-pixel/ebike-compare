@@ -14,7 +14,7 @@ import re
 from datetime import datetime, timezone
 from pathlib import Path
 
-from spec_groups import group_specs
+from spec_groups import group_specs, snake
 
 
 def slugify(s: str) -> str:
@@ -101,8 +101,11 @@ def normalize_model(brand: str, m: dict) -> dict:
     brand_extra = {k: v for k, v in m.items() if k not in _MAPPED}
     if m.get("configs"):
         brand_extra["configs"] = m["configs"]
-    specs_all = (m.get("specs") or {}).get("all") or {}
+    raw_specs = m.get("specs") or {}
     geometry = m.get("geometry") or {}
+    # Use the grouped view if add_spec_groups already built it; else derive it.
+    grouped = raw_specs.get("grouped") or group_specs(raw_specs.get("all") or {}, geometry)
+    geometry = {snake(k): v for k, v in geometry.items()}
     return {
         "id": f"{brand}__{source_id}",
         "brand": brand,
@@ -119,9 +122,9 @@ def normalize_model(brand: str, m: dict) -> dict:
         "shipping_free": shipping.get("free"),
         "shipping_cost": shipping.get("cost"),
         "spec_count": m.get("spec_count", 0),
-        # Specs as one flat searchable map + an Aventon-style grouped view
-        # (replaces the old physical/technical split). Geometry is its own group.
-        "specs": {"all": specs_all, "grouped": group_specs(specs_all, geometry)},
+        # Specs as an Aventon-style grouped view with snake_case field names
+        # (replaces the old physical/technical/all maps). Geometry is its own group.
+        "specs": {"grouped": grouped},
         "geometry": geometry,
         "colors": colors,
         "color_names": [c["name"] for c in colors if c.get("name")],
