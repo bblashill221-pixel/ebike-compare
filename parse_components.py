@@ -470,6 +470,184 @@ def _handlebars(v, brand):
     return out
 
 
+def _charger(v, brand):
+    rest = v
+    out = {}
+    man, rest = _find_brand(rest, _brands_for(("Bosch",), brand))
+    if man:
+        out["manufacturer"] = man
+    ma = re.search(r"(\d+(?:\.\d)?)\s*a\b", v, re.I)
+    if ma:
+        out["amps_a"] = float(ma.group(1))
+    mo = re.search(r"output\s*:?\s*(\d{2,3})\s*v", v, re.I) or re.search(r"(\d{2,3})\s*v", v, re.I)
+    if mo:
+        out["output_v"] = int(mo.group(1))
+    for pat in (r"output\s*:?", r"\d+(?:\.\d)?\s*a\b", r"\d{2,3}\s*v"):
+        rest = re.sub(pat, " ", rest, flags=re.I)
+    out["details"] = _clean(rest)
+    return out
+
+
+def _controller(v, brand):
+    rest = v
+    out = {}
+    mv = re.search(r"(\d{2,3})\s*v", v, re.I)
+    if mv:
+        out["voltage_v"] = int(mv.group(1))
+    ma = re.search(r"(\d{1,3})\s*a\b", v, re.I)
+    if ma:
+        out["amps_a"] = int(ma.group(1))
+    for pat in (r"\d{2,3}\s*v", r"\d{1,3}\s*a\b"):
+        rest = re.sub(pat, " ", rest, flags=re.I)
+    out["details"] = _clean(rest)
+    return out
+
+
+def _sensor(v, brand):
+    out, low = {}, v.lower()
+    types = [t for t in ("torque", "cadence", "speed") if re.search(rf"\b{t}\b", low)]
+    if types:
+        out["type"] = "+".join(types)
+    mm = re.search(r"(\d{1,2})\s*magnet", low)
+    if mm:
+        out["magnets"] = int(mm.group(1))
+    out["details"] = _clean(v)
+    return out
+
+
+def _pedal_assist(v, brand):
+    out = {}
+    ml = re.search(r"(\d{1,2})\s*(?:levels?|pas\b|modes?)", v, re.I)
+    if ml:
+        out["levels"] = int(ml.group(1))
+    out["boost"] = bool(re.search(r"boost", v, re.I))
+    out["details"] = _clean(v)
+    return out
+
+
+def _chainring(v, brand):
+    rest = v
+    out = {}
+    man, rest = _find_brand(rest, _brands_for(SHIFTING + ("Prowheel", "Lasco"), brand))
+    if man:
+        out["manufacturer"] = man
+    mt = re.search(r"(\d{2})\s*t\b", v, re.I)
+    if mt:
+        out["teeth"] = int(mt.group(1))
+        rest = re.sub(r"\d{2}\s*t\b", " ", rest, count=1, flags=re.I)
+    out["narrow_wide"] = bool(re.search(r"narrow.?wide", v, re.I))
+    out["details"] = _clean(rest)
+    return out
+
+
+def _pedals(v, brand):
+    rest, low = v, v.lower()
+    out = {}
+    mt = re.search(r"(9/16|1/2)\s*\"?", v)
+    if mt:
+        out["thread"] = mt.group(1) + '"'
+        rest = rest.replace(mt.group(0), " ", 1)
+    if "carbon" in low:
+        out["material"] = "carbon"
+    elif re.search(r"alloy|alumin", low):
+        out["material"] = "aluminum"
+    elif re.search(r"composite|nylon|plastic|resin", low):
+        out["material"] = "composite"
+    if "fold" in low:
+        out["type"] = "folding"
+    elif "platform" in low:
+        out["type"] = "platform"
+    out["details"] = _clean(rest)
+    return out
+
+
+def _spokes(v, brand):
+    out, low = {}, v.lower()
+    mg = re.search(r"(\d{1,2})\s*g\b", v, re.I)
+    if mg:
+        out["gauge"] = int(mg.group(1))
+    if "stainless" in low:
+        out["material"] = "stainless"
+    elif re.search(r"alloy|alumin", low):
+        out["material"] = "aluminum"
+    out["details"] = _clean(v)
+    return out
+
+
+def _saddle(v, brand):
+    rest = v
+    out = {}
+    man, rest = _find_brand(rest, _brands_for(SADDLES, brand))
+    if man:
+        out["manufacturer"] = man
+    mw = re.search(r"(\d{2,3})\s*mm\s*(?:wide|width)", v, re.I)
+    if mw:
+        out["width_mm"] = int(mw.group(1))
+        rest = re.sub(r"\d{2,3}\s*mm\s*(?:wide|width)", " ", rest, flags=re.I)
+    out["details"] = _clean(rest)
+    return out
+
+
+def _seat_binder(v, brand):
+    rest, low = v, v.lower()
+    out = {}
+    md = re.search(r"(\d{2}(?:\.\d)?)\s*mm", v)
+    if md:
+        out["diameter_mm"] = float(md.group(1))
+        rest = re.sub(r"\d{2}(?:\.\d)?\s*mm", " ", rest, count=1)
+    if re.search(r"alloy|alumin", low):
+        out["material"] = "aluminum"
+    if re.search(r"quick.?release|\bqr\b", low):
+        out["type"] = "quick_release"
+    elif "bolt" in low:
+        out["type"] = "bolt"
+    out["details"] = _clean(rest)
+    return out
+
+
+def _tubes(v, brand):
+    out, low = {}, v.lower()
+    if "presta" in low:
+        out["valve"] = "presta"
+    elif "schrader" in low:
+        out["valve"] = "schrader"
+    mv = re.search(r"(\d{2})\s*mm\s*valve", low)
+    if mv:
+        out["valve_mm"] = int(mv.group(1))
+    out["details"] = _clean(v)
+    return out
+
+
+def _frame(v, brand):
+    out, low = {}, v.lower()
+    if "carbon" in low:
+        out["material"] = "carbon"
+    elif re.search(r"6061|6063|alumin|alloy", low):
+        out["material"] = "aluminum"
+    elif re.search(r"cro-?mo|chromoly|steel", low):
+        out["material"] = "steel"
+    elif "magnesium" in low:
+        out["material"] = "magnesium"
+    out["integrated_battery"] = bool(re.search(r"intern(al)? battery|integrated battery|in[\s-]?frame batter", low))
+    out["folding"] = bool(re.search(r"fold", low))
+    out["details"] = _clean(v)
+    return out
+
+
+def _rims(v, brand):
+    out, low = {}, v.lower()
+    if re.search(r"alloy|alumin", low):
+        out["material"] = "aluminum"
+    elif "steel" in low:
+        out["material"] = "steel"
+    out["double_wall"] = bool(re.search(r"double.?wall", low))
+    ms = re.search(r"\b(\d{2}(?:\.\d)?)\s*(?:\"|in\b|inch)", low)
+    if ms:
+        out["size_in"] = float(ms.group(1))
+    out["details"] = _clean(v)
+    return out
+
+
 def _display(v, brand):
     rest = v
     out = {}
@@ -491,12 +669,16 @@ def _resolver(field: str):
     """Map a (snake) field name to a component parser via tolerant substring rules,
     so label variants (hydraulic_brakes, front_fork, motor_hub, …) are covered."""
     f = field
+    if f == "pedal_assist":
+        return _pedal_assist
     if "derailleur" in f or "shifter" in f or "shift_lever" in f or f == "e_shifter":
         return _derailleur
     if "cassette" in f or "freewheel" in f:
         return _cassette
     if f == "chain":
         return _chain
+    if f.startswith("chainring"):
+        return _chainring
     if "crank" in f:
         return _crankset
     if "fork" in f or f == "suspension":
@@ -505,12 +687,20 @@ def _resolver(field: str):
         return _shock
     if "brake" in f and "rotor" not in f:
         return _brake
+    if "charger" in f:
+        return _charger
+    if "controller" in f:
+        return _controller
+    if "sensor" in f:
+        return _sensor
     if "motor" in f or f == "drive_unit":
         return _motor
     if f == "battery":
         return _battery
     if "tire" in f or "tyre" in f:
         return _tire
+    if "tube" in f:
+        return _tubes
     if "display" in f:
         return _display
     if f == "stem":
@@ -519,6 +709,18 @@ def _resolver(field: str):
         return _seatpost
     if "handlebar" in f:
         return _handlebars
+    if f == "saddle":
+        return _saddle
+    if "binder" in f:
+        return _seat_binder
+    if f in ("pedals", "pedal"):
+        return _pedals
+    if "spoke" in f:
+        return _spokes
+    if f in ("rims", "rim"):
+        return _rims
+    if f == "frame":
+        return _frame
     return None
 
 
