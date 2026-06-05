@@ -1,0 +1,295 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ebike-compare/ebikes.schema.json",
+  "title": "Normalized e-bike dataset",
+  "description": "Single combined, snake_case dataset of all brands/models, built by normalize.py from the per-brand *_ebikes.json files. Designed for client-side search (Orama).",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "generated_at",
+    "model_count",
+    "models"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "brand_count": {
+      "type": "integer"
+    },
+    "model_count": {
+      "type": "integer"
+    },
+    "analysis_stats": {
+      "type": "object",
+      "description": "Per numeric typed-spec field, its distribution across the whole field (min/p10/p50/p90/max/count). The baseline every model's percentiles are measured against.",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "min": { "type": "number" },
+          "p10": { "type": "number" },
+          "p50": { "type": "number" },
+          "p90": { "type": "number" },
+          "max": { "type": "number" },
+          "count": { "type": "integer" }
+        }
+      }
+    },
+    "analysis_disclaimer": {
+      "type": "string"
+    },
+    "brands": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "brand": {
+            "type": "string"
+          },
+          "source": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "logo": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "URL of the brand's company logo, for display on the site"
+          },
+          "model_count": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "available_accessories": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/accessory"
+            }
+          }
+        }
+      }
+    },
+    "models": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/model"
+      }
+    }
+  },
+  "$defs": {
+    "color": {
+      "type": "object",
+      "properties": {
+        "name": { "type": ["string", "null"] },
+        "hex": { "type": ["string", "null"] },
+        "swatch_image": { "type": ["string", "null"] },
+        "image": { "type": ["string", "null"] }
+      }
+    },
+    "accessory": {
+      "type": "object",
+      "properties": {
+        "name": { "type": ["string", "null"] },
+        "price": { "type": ["number", "null"] },
+        "free": { "type": ["boolean", "null"] },
+        "url": { "type": ["string", "null"] }
+      }
+    },
+    "option_choice": {
+      "type": "object",
+      "properties": {
+        "value": { "type": ["string", "null"] },
+        "price": { "type": ["number", "null"] },
+        "price_delta": { "type": ["number", "null"] },
+        "free": { "type": ["boolean", "null"] }
+      }
+    },
+    "available_option": {
+      "type": "object",
+      "properties": {
+        "group": { "type": "string" },
+        "type": { "type": "string", "enum": ["variant", "accessory"] },
+        "choices": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/option_choice" }
+        }
+      }
+    },
+    "configuration": {
+      "type": "object",
+      "properties": {
+        "options": { "type": "object" },
+        "price": { "type": ["number", "null"] },
+        "color": {
+          "anyOf": [
+            { "$ref": "#/$defs/color" },
+            { "type": "null" }
+          ]
+        },
+        "sku": { "type": ["string", "null"] },
+        "available": { "type": ["boolean", "null"] }
+      }
+    },
+    "model": {
+      "type": "object",
+      "required": [
+        "id",
+        "brand",
+        "model",
+        "currency",
+        "specs",
+        "colors",
+        "available_options"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "brand__source_id (unique key)"
+        },
+        "brand": { "type": "string" },
+        "model": { "type": "string" },
+        "url": { "type": ["string", "null"] },
+        "source_id": {
+          "type": ["string", "null"],
+          "description": "shopify handle / slug / sku"
+        },
+        "product_type": { "type": ["string", "null"] },
+        "price": {
+          "type": ["number", "null"],
+          "description": "representative (lowest) price"
+        },
+        "price_min": { "type": ["number", "null"] },
+        "price_max": { "type": ["number", "null"] },
+        "currency": { "type": "string" },
+        "pricing": {
+          "type": "object",
+          "description": "Discount info derived from a regular (compare-at) price.",
+          "properties": {
+            "price": { "type": ["number", "null"] },
+            "regular_price": { "type": ["number", "null"] },
+            "on_sale": { "type": "boolean" },
+            "discount_amount": { "type": ["number", "null"] },
+            "discount_pct": { "type": ["number", "null"] }
+          }
+        },
+        "warranty": { "type": ["string", "null"] },
+        "shipping_free": { "type": ["boolean", "null"] },
+        "shipping_cost": { "type": ["number", "null"] },
+        "spec_count": { "type": "integer" },
+        "specs": {
+          "type": "object",
+          "description": "Flat searchable map plus an Aventon-style grouped view.",
+          "properties": {
+            "all": {
+              "type": "object",
+              "additionalProperties": { "type": "string" }
+            },
+            "grouped": {
+              "type": "object",
+              "description": "label->value specs organized into ordered canonical groups (General Info, Ebike System, Special Features, Safety, Certifications, Water Resistance, Frameset, Drivetrain, Brakes, Wheelset, Cockpit, Geometry, Included Accessories, General / Other)",
+              "additionalProperties": { "type": "object" }
+            }
+          }
+        },
+        "geometry": {
+          "type": "object",
+          "additionalProperties": {
+            "type": ["string", "object"]
+          },
+          "description": "dimension -> value, or dimension -> {variant/size: value} when it differs by variant"
+        },
+        "colors": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/color" }
+        },
+        "color_names": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "variant_options": {
+          "type": "object",
+          "description": "non-colour option groups -> value lists"
+        },
+        "available_options": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/available_option" }
+        },
+        "configurations": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/configuration" }
+        },
+        "free_accessories": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/accessory" }
+        },
+        "included_accessories": {
+          "type": "array",
+          "description": "The $0 items bundled with the bike (free_accessories + any included add-ons), deduped.",
+          "items": { "$ref": "#/$defs/accessory" }
+        },
+        "scrape_error": { "type": ["string", "null"] },
+        "brand_extra": {
+          "type": "object",
+          "description": "brand-specific fields preserved verbatim"
+        },
+        "analysis": { "$ref": "#/$defs/analysis" }
+      }
+    },
+    "analysis": {
+      "type": "object",
+      "description": "Derived by analyze.py. Tier 1 (specs_typed) is the primary searchable data; the rest are field-relative comparison aids. There is deliberately no composite/overall score.",
+      "properties": {
+        "specs_typed": {
+          "type": "object",
+          "description": "Predictable, unit-fixed, searchable fields parsed from the free-text specs. One fixed type+unit per field across all models; null when not found (never 0).",
+          "properties": {
+            "battery_wh": { "type": ["integer", "null"], "description": "watt-hours" },
+            "cell_brand": { "type": ["string", "null"] },
+            "removable_battery": { "type": ["boolean", "null"] },
+            "motor_w": { "type": ["integer", "null"], "description": "continuous watts" },
+            "motor_peak_w": { "type": ["integer", "null"], "description": "peak watts" },
+            "torque_nm": { "type": ["integer", "null"], "description": "newton-metres" },
+            "drive_type": { "type": ["string", "null"], "enum": ["hub", "mid", null] },
+            "range_mi": { "type": ["integer", "null"], "description": "miles (max of a claimed range)" },
+            "weight_lb": { "type": ["number", "null"], "description": "pounds (bike weight)" },
+            "brake_type": { "type": ["string", "null"] },
+            "drivetrain_type": { "type": ["string", "null"] },
+            "gears": { "type": ["integer", "null"] },
+            "suspension": { "type": ["string", "null"] },
+            "frame_material": { "type": ["string", "null"] },
+            "sensor_type": { "type": ["string", "null"] },
+            "display_type": { "type": ["string", "null"] },
+            "water_resistance": { "type": ["string", "null"], "description": "IP rating" },
+            "ul_listed": { "type": ["boolean", "null"] },
+            "warranty_years": { "type": ["integer", "null"], "description": "99 = lifetime" },
+            "connectivity": { "type": "array", "items": { "type": "string" } },
+            "notable_tech": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "percentiles": {
+          "type": "object",
+          "description": "Field-relative position (0..1) per numeric field; *_pct. weight/price inverted so lighter/cheaper rank higher.",
+          "additionalProperties": { "type": "number" }
+        },
+        "scores": {
+          "type": "object",
+          "description": "Independent, heuristic 0-100 per dimension (null when un-scoreable). No composite.",
+          "additionalProperties": { "type": ["number", "null"] }
+        },
+        "highlights": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+}
