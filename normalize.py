@@ -14,7 +14,7 @@ import re
 from datetime import datetime, timezone
 from pathlib import Path
 
-from spec_groups import group_specs, snake
+from spec_groups import group_specs
 
 
 def slugify(s: str) -> str:
@@ -102,11 +102,10 @@ def normalize_model(brand: str, m: dict) -> dict:
     if m.get("configs"):
         brand_extra["configs"] = m["configs"]
     raw_specs = m.get("specs") or {}
-    geometry = m.get("geometry") or {}
     # The detailed grouping + component parsing happens here, during normalization,
-    # from each scraper's verbatim flat `specs.all`.
-    grouped = group_specs(raw_specs.get("all") or {}, geometry, brand)
-    geometry = {snake(k): v for k, v in geometry.items()}
+    # from each scraper's verbatim flat `specs.all`. Geometry becomes one of the
+    # groups (`specs.geometry`) — not a separate top-level field.
+    grouped = group_specs(raw_specs.get("all") or {}, m.get("geometry") or {}, brand)
     return {
         "id": f"{brand}__{source_id}",
         "brand": brand,
@@ -126,7 +125,6 @@ def normalize_model(brand: str, m: dict) -> dict:
         # Specs as an Aventon-style grouped map (group -> {field: value|parsed
         # component}), snake_case throughout. Geometry is one of the groups.
         "specs": grouped,
-        "geometry": geometry,
         "colors": colors,
         "color_names": [c["name"] for c in colors if c.get("name")],
         "variant_options": variant_options,

@@ -190,13 +190,6 @@
           "description": "Aventon-style grouped spec map: group -> { field: value | parsed-component }, snake_case throughout. Groups: general_info, ebike_system, special_features, safety, certifications, water_resistance, frameset, drivetrain, brakes, wheelset, cockpit, geometry, included_accessories, general_other.",
           "additionalProperties": { "type": "object" }
         },
-        "geometry": {
-          "type": "object",
-          "additionalProperties": {
-            "type": ["string", "object"]
-          },
-          "description": "dimension -> value, or dimension -> {variant/size: value} when it differs by variant"
-        },
         "colors": {
           "type": "array",
           "items": { "$ref": "#/$defs/color" }
