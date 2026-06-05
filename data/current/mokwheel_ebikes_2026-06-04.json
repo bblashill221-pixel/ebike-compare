@@ -1,5 +1,6 @@
 {
   "source": "https://www.mokwheel.com",
+  "logo": "https://www.mokwheel.com/cdn/shop/files/mokwheel_logo.png?v=1737345448",
   "collection": "electric-bikes",
   "scraped_at": "2026-06-04T09:24:53.294991+00:00",
   "model_count": 17,
@@ -35,77 +36,50 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "Regular price": "$1,699.99",
-          "Shop All E-Bikes": "Your new favorite ride is just a click away.",
-          "Free": "$499.99",
-          "Frame:": "Step Over",
-          "Free Gifts": "$179.98",
-          "Weight": "64 lbs",
-          "Payload Capacity": "350 lbs",
-          "Tires": "27.5\" x 2.4\" Tire",
-          "Gearing": "Shimano 7-Speed",
-          "Derailleur": "7-speed Shimano",
-          "Brakes": "TEKTRO TKD171 Hydraulic Disc Brakes",
-          "Brake lever": "Aluminum Alloy, with power cutoff",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 44T chainring",
-          "Front Fork": "100mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 700mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Customized Comfort Leather Seat",
-          "Spokes": "Heavy-duty carbon steel, 13G × 263 mm (front) / 223 mm (rear)",
-          "Q:": "We purchased 2 Asphalt ST’s early last year. When did these bikes get the water proof rating?"
-        },
-        "technical": {
-          "*Ships Within 2 Business Days": "In stock",
-          "Battery": "48V 14.7A Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Power:500W Peak Power:860W Torque: 70Nm+",
-          "Speed Class": "20 mph (Throttle) / 28 mph (PAS)",
-          "Range": "50~60miles",
-          "Sensor": "Torque+Cadence Sensor",
-          "Display": "LED Integrated",
-          "Throttle": "Thumb Throttle",
-          "A:": "Hello Eric, Thank you for reaching out! For detailed answers please contact us at support@mokwheel.com. Our team will be happy to assist you. Best regards, Mokwheel Support Team"
-        },
-        "all": {
-          "Regular price": "$1,699.99",
-          "Shop All E-Bikes": "Your new favorite ride is just a click away.",
-          "Free": "$499.99",
-          "Frame:": "Step Over",
-          "*Ships Within 2 Business Days": "In stock",
-          "Free Gifts": "$179.98",
-          "Battery": "48V 14.7A Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Power:500W Peak Power:860W Torque: 70Nm+",
-          "Speed Class": "20 mph (Throttle) / 28 mph (PAS)",
-          "Weight": "64 lbs",
-          "Range": "50~60miles",
-          "Payload Capacity": "350 lbs",
-          "Sensor": "Torque+Cadence Sensor",
-          "Tires": "27.5\" x 2.4\" Tire",
-          "Display": "LED Integrated",
-          "Gearing": "Shimano 7-Speed",
-          "Derailleur": "7-speed Shimano",
-          "Brakes": "TEKTRO TKD171 Hydraulic Disc Brakes",
-          "Brake lever": "Aluminum Alloy, with power cutoff",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 44T chainring",
-          "Front Fork": "100mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Throttle": "Thumb Throttle",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 700mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Customized Comfort Leather Seat",
-          "Spokes": "Heavy-duty carbon steel, 13G × 263 mm (front) / 223 mm (rear)",
-          "Q:": "We purchased 2 Asphalt ST’s early last year. When did these bikes get the water proof rating?",
-          "A:": "Hello Eric, Thank you for reaching out! For detailed answers please contact us at support@mokwheel.com. Our team will be happy to assist you. Best regards, Mokwheel Support Team"
+        "grouped": {
+          "general_info": {
+            "speed_class": "20 mph (Throttle) / 28 mph (PAS)",
+            "weight": "64 lbs",
+            "range": "50~60miles",
+            "payload_capacity": "350 lbs"
+          },
+          "ebike_system": {
+            "battery": "48V 14.7A Complies with UL standards, IPX7 Waterproof",
+            "charger": "48V 3A",
+            "motor": "Continuous Power:500W Peak Power:860W Torque: 70Nm+",
+            "sensor": "Torque+Cadence Sensor",
+            "display": "LED Integrated",
+            "throttle": "Thumb Throttle"
+          },
+          "water_resistance": {
+            "waterproof_rating": "IPX6 (Whole Bike)"
+          },
+          "frameset": {
+            "frame": "6061 Aluminum Alloy",
+            "front_fork": "100mm Adjustable Suspension"
+          },
+          "drivetrain": {
+            "gearing": "Shimano 7-Speed",
+            "derailleur": "7-speed Shimano",
+            "chain": "KMC Stainless Chain",
+            "crank_set": "Aluminum alloy, 170mm, 44T chainring"
+          },
+          "brakes": {
+            "brakes": "TEKTRO TKD171 Hydraulic Disc Brakes",
+            "brake_lever": "Aluminum Alloy, with power cutoff"
+          },
+          "wheelset": {
+            "tires": "27.5\" x 2.4\" Tire",
+            "rims": "Aluminum Alloy",
+            "spokes": "Heavy-duty carbon steel, 13G × 263 mm (front) / 223 mm (rear)"
+          },
+          "cockpit": {
+            "handlebar": "Aluminum Alloy, φ31.8mm, 700mm",
+            "saddle": "Customized Comfort Leather Seat"
+          },
+          "included_accessories": {
+            "kickstand": "Sturdy Aluminum Alloy"
+          }
         }
       },
       "spec_count": 33,
@@ -160,32 +134,8 @@
           }
         }
       ],
-      "available_options": [
-        {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Khaki",
-              "price": 1499.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Orange",
-              "price": 1499.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Denim",
-              "price": 1499.99,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        }
-      ]
+      "available_options": [],
+      "regular_price": 1599.99
     },
     {
       "model": "Asphalt ST Ebike",
@@ -221,77 +171,50 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "Regular price": "$1,699.99",
-          "Shop All E-Bikes": "Your new favorite ride is just a click away.",
-          "Free": "$499.99",
-          "Frame:": "Step Through",
-          "Free Gifts": "$179.98",
-          "Weight": "63 lbs",
-          "Payload Capacity": "300 lbs",
-          "Tires": "27.5\" x 2.4\" Tire",
-          "Brakes": "TEKTRO TKD171 Hydraulic Disc Brakes",
-          "Gearing": "Shimano 7-Speed",
-          "Derailleur": "7-speed Shimano",
-          "Brake lever": "Aluminum Alloy, with power cutoff",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 44T chainring",
-          "Front Fork": "100mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Customized Comfort Leather Seat",
-          "Spokes": "Heavy-duty carbon steel, 13G × 263 mm (front) / 223 mm (rear)",
-          "Q:": "I'm new at this .. does this bike ride on its own or do you hv to peddle? Ty April",
-          "A:": "The weight of the Asphalt St is 63 lbs."
-        },
-        "technical": {
-          "*Ships Within 2 Business Days": "In stock",
-          "Battery": "48V 14.7A Complies with UL standards, IPX7 Waterproof",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Charger": "48V 3A",
-          "Motor": "Continuous Power: 500W Peak Power: 860W Torque: 70Nm+",
-          "Speed Class": "20 mph (Throttle) / 28 mph (PAS)",
-          "Range": "50~60miles",
-          "Sensor": "Torque+Cadence Sensor",
-          "Display": "LED Integrated",
-          "Throttle": "Thumb Throttle"
-        },
-        "all": {
-          "Regular price": "$1,699.99",
-          "Shop All E-Bikes": "Your new favorite ride is just a click away.",
-          "Free": "$499.99",
-          "Frame:": "Step Through",
-          "*Ships Within 2 Business Days": "In stock",
-          "Free Gifts": "$179.98",
-          "Battery": "48V 14.7A Complies with UL standards, IPX7 Waterproof",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Charger": "48V 3A",
-          "Motor": "Continuous Power: 500W Peak Power: 860W Torque: 70Nm+",
-          "Speed Class": "20 mph (Throttle) / 28 mph (PAS)",
-          "Weight": "63 lbs",
-          "Range": "50~60miles",
-          "Payload Capacity": "300 lbs",
-          "Sensor": "Torque+Cadence Sensor",
-          "Tires": "27.5\" x 2.4\" Tire",
-          "Display": "LED Integrated",
-          "Brakes": "TEKTRO TKD171 Hydraulic Disc Brakes",
-          "Gearing": "Shimano 7-Speed",
-          "Derailleur": "7-speed Shimano",
-          "Brake lever": "Aluminum Alloy, with power cutoff",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 44T chainring",
-          "Front Fork": "100mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Throttle": "Thumb Throttle",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Customized Comfort Leather Seat",
-          "Spokes": "Heavy-duty carbon steel, 13G × 263 mm (front) / 223 mm (rear)",
-          "Q:": "I'm new at this .. does this bike ride on its own or do you hv to peddle? Ty April",
-          "A:": "The weight of the Asphalt St is 63 lbs."
+        "grouped": {
+          "general_info": {
+            "speed_class": "20 mph (Throttle) / 28 mph (PAS)",
+            "weight": "63 lbs",
+            "range": "50~60miles",
+            "payload_capacity": "300 lbs"
+          },
+          "ebike_system": {
+            "battery": "48V 14.7A Complies with UL standards, IPX7 Waterproof",
+            "charger": "48V 3A",
+            "motor": "Continuous Power: 500W Peak Power: 860W Torque: 70Nm+",
+            "sensor": "Torque+Cadence Sensor",
+            "display": "LED Integrated",
+            "throttle": "Thumb Throttle"
+          },
+          "water_resistance": {
+            "waterproof_rating": "IPX6 (Whole Bike)"
+          },
+          "frameset": {
+            "frame": "6061 Aluminum Alloy",
+            "front_fork": "100mm Adjustable Suspension"
+          },
+          "drivetrain": {
+            "gearing": "Shimano 7-Speed",
+            "derailleur": "7-speed Shimano",
+            "chain": "KMC Stainless Chain",
+            "crank_set": "Aluminum alloy, 170mm, 44T chainring"
+          },
+          "brakes": {
+            "brakes": "TEKTRO TKD171 Hydraulic Disc Brakes",
+            "brake_lever": "Aluminum Alloy, with power cutoff"
+          },
+          "wheelset": {
+            "tires": "27.5\" x 2.4\" Tire",
+            "rims": "Aluminum Alloy",
+            "spokes": "Heavy-duty carbon steel, 13G × 263 mm (front) / 223 mm (rear)"
+          },
+          "cockpit": {
+            "handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
+            "saddle": "Customized Comfort Leather Seat"
+          },
+          "included_accessories": {
+            "kickstand": "Sturdy Aluminum Alloy"
+          }
         }
       },
       "spec_count": 33,
@@ -349,44 +272,8 @@
           }
         }
       ],
-      "available_options": [
-        {
-          "group": "Size",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Standard",
-              "price": 1499.99,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "White",
-              "price": 1499.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Lapis",
-              "price": 1499.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Mocha",
-              "price": 1499.99,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        }
-      ]
+      "available_options": [],
+      "regular_price": 1599.99
     },
     {
       "model": "Basalt 2.0 Ebike",
@@ -425,77 +312,60 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "Rider Height": "5'7\" ~ 6'9\"",
-          "Reach": "17\"",
-          "Top Tube Length": "25\"",
-          "Standover Height": "30\"",
-          "Wheelbase": "46\"",
-          "Min Saddle Height": "33\"",
-          "Max Saddle Height": "41\"",
-          "Head Tube Length": "6\"",
-          "Weight": "80 lbs",
-          "Payload Capacity": "450 lbs",
-          "Tires": "26\" × 4.0\" Fat Tire (Puncture-Resistant)",
-          "Brakes": "TEKTRO TKD171 Hydraulic Disc Brakes",
-          "Brake LEVER": "Aluminum Alloy, with power cutoff",
-          "Gearing": "Shimano 8-Speed",
-          "Derailleur": "8 Speed Shimano",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 52T chainring",
-          "Front Fork": "110mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 720mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Customized Comfort Leather Seat",
-          "Spokes": "Heavy-duty carbon steel, 12G × 248 mm (front) / 219 mm (rear)"
-        },
-        "technical": {
-          "Battery": "48V 19.6Ah , Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Power: 750W Peak Power: 1100W Torque: 90Nm+",
-          "Speed Class": "20 mph (Throttle) / 28 mph (PAS)",
-          "Range": "60~80miles",
-          "Sensor": "Torque+Cadence Sensor",
-          "Display": "Detachable High-Definition Display",
-          "Throttle": "Thumb Throttle"
-        },
-        "all": {
-          "Rider Height": "5'7\" ~ 6'9\"",
-          "Reach": "17\"",
-          "Top Tube Length": "25\"",
-          "Standover Height": "30\"",
-          "Wheelbase": "46\"",
-          "Min Saddle Height": "33\"",
-          "Max Saddle Height": "41\"",
-          "Head Tube Length": "6\"",
-          "Battery": "48V 19.6Ah , Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Power: 750W Peak Power: 1100W Torque: 90Nm+",
-          "Speed Class": "20 mph (Throttle) / 28 mph (PAS)",
-          "Weight": "80 lbs",
-          "Range": "60~80miles",
-          "Payload Capacity": "450 lbs",
-          "Sensor": "Torque+Cadence Sensor",
-          "Tires": "26\" × 4.0\" Fat Tire (Puncture-Resistant)",
-          "Display": "Detachable High-Definition Display",
-          "Brakes": "TEKTRO TKD171 Hydraulic Disc Brakes",
-          "Brake LEVER": "Aluminum Alloy, with power cutoff",
-          "Gearing": "Shimano 8-Speed",
-          "Derailleur": "8 Speed Shimano",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 52T chainring",
-          "Front Fork": "110mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Throttle": "Thumb Throttle",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 720mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Customized Comfort Leather Seat",
-          "Spokes": "Heavy-duty carbon steel, 12G × 248 mm (front) / 219 mm (rear)"
+        "grouped": {
+          "general_info": {
+            "speed_class": "20 mph (Throttle) / 28 mph (PAS)",
+            "weight": "80 lbs",
+            "range": "60~80miles",
+            "payload_capacity": "450 lbs"
+          },
+          "ebike_system": {
+            "battery": "48V 19.6Ah , Complies with UL standards, IPX7 Waterproof",
+            "charger": "48V 3A",
+            "motor": "Continuous Power: 750W Peak Power: 1100W Torque: 90Nm+",
+            "sensor": "Torque+Cadence Sensor",
+            "display": "Detachable High-Definition Display",
+            "throttle": "Thumb Throttle"
+          },
+          "water_resistance": {
+            "waterproof_rating": "IPX6 (Whole Bike)"
+          },
+          "frameset": {
+            "front_fork": "110mm Adjustable Suspension",
+            "frame": "6061 Aluminum Alloy"
+          },
+          "drivetrain": {
+            "gearing": "Shimano 8-Speed",
+            "derailleur": "8 Speed Shimano",
+            "chain": "KMC Stainless Chain",
+            "crank_set": "Aluminum alloy, 170mm, 52T chainring"
+          },
+          "brakes": {
+            "brakes": "TEKTRO TKD171 Hydraulic Disc Brakes",
+            "brake_lever": "Aluminum Alloy, with power cutoff"
+          },
+          "wheelset": {
+            "tires": "26\" × 4.0\" Fat Tire (Puncture-Resistant)",
+            "rims": "Aluminum Alloy",
+            "spokes": "Heavy-duty carbon steel, 12G × 248 mm (front) / 219 mm (rear)"
+          },
+          "cockpit": {
+            "handlebar": "Aluminum Alloy, φ31.8mm, 720mm",
+            "saddle": "Customized Comfort Leather Seat"
+          },
+          "geometry": {
+            "rider_height": "5'7\" ~ 6'9\"",
+            "reach": "17\"",
+            "top_tube_length": "25\"",
+            "standover_height": "30\"",
+            "wheelbase": "46\"",
+            "min_saddle_height": "33\"",
+            "max_saddle_height": "41\"",
+            "head_tube_length": "6\""
+          },
+          "included_accessories": {
+            "kickstand": "Sturdy Aluminum Alloy"
+          }
         }
       },
       "spec_count": 33,
@@ -573,38 +443,7 @@
           }
         }
       ],
-      "available_options": [
-        {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Phantom Black",
-              "price": 1699.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Grey",
-              "price": 1699.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "DarkBlue",
-              "price": 1699.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Jungle Camo",
-              "price": 1699.99,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        }
-      ]
+      "available_options": []
     },
     {
       "model": "Basalt ST 2.0 Ebike",
@@ -653,77 +492,60 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "Rider Height": "5'6\" ~ 6'8\"",
-          "Reach": "16\"",
-          "Top Tube Length": "24\"",
-          "Standover Height": "17\"",
-          "Wheelbase": "46\"",
-          "Min Saddle Height": "34\"",
-          "Max Saddle Height": "42\"",
-          "Head Tube Length": "6\"",
-          "Weight": "80 lbs",
-          "Payload Capacity": "450 lbs",
-          "Tires": "26\" × 4.0\" Fat Tire (Puncture-Resistant)",
-          "Brakes": "TEKTRO TKD171 Hydraulic Disc Brakes",
-          "Brake LEVER": "Aluminum Alloy, with power cutoff",
-          "Gearing": "Shimano 8-Speed",
-          "Derailleur": "8-Speed Shimano",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 52T chainring",
-          "Front Fork": "110mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Customized Comfort Leather Seat",
-          "Spokes": "Heavy-duty carbon steel, 12G × 248 mm (front) / 219 mm (rear)"
-        },
-        "technical": {
-          "Battery": "48V 19.6Ah Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Power: 750W Peak Power: 1100W Torque: 90Nm+",
-          "Speed Class": "20 mph (Throttle) / 28 mph (PAS)",
-          "Range": "60~80miles",
-          "Sensor": "Torque+Cadence Sensor",
-          "Display": "Detachable High-Definition Display",
-          "Throttle": "Thumb Throttle"
-        },
-        "all": {
-          "Rider Height": "5'6\" ~ 6'8\"",
-          "Reach": "16\"",
-          "Top Tube Length": "24\"",
-          "Standover Height": "17\"",
-          "Wheelbase": "46\"",
-          "Min Saddle Height": "34\"",
-          "Max Saddle Height": "42\"",
-          "Head Tube Length": "6\"",
-          "Battery": "48V 19.6Ah Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Power: 750W Peak Power: 1100W Torque: 90Nm+",
-          "Speed Class": "20 mph (Throttle) / 28 mph (PAS)",
-          "Weight": "80 lbs",
-          "Range": "60~80miles",
-          "Payload Capacity": "450 lbs",
-          "Sensor": "Torque+Cadence Sensor",
-          "Tires": "26\" × 4.0\" Fat Tire (Puncture-Resistant)",
-          "Display": "Detachable High-Definition Display",
-          "Brakes": "TEKTRO TKD171 Hydraulic Disc Brakes",
-          "Brake LEVER": "Aluminum Alloy, with power cutoff",
-          "Gearing": "Shimano 8-Speed",
-          "Derailleur": "8-Speed Shimano",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 52T chainring",
-          "Front Fork": "110mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Throttle": "Thumb Throttle",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Customized Comfort Leather Seat",
-          "Spokes": "Heavy-duty carbon steel, 12G × 248 mm (front) / 219 mm (rear)"
+        "grouped": {
+          "general_info": {
+            "speed_class": "20 mph (Throttle) / 28 mph (PAS)",
+            "weight": "80 lbs",
+            "range": "60~80miles",
+            "payload_capacity": "450 lbs"
+          },
+          "ebike_system": {
+            "battery": "48V 19.6Ah Complies with UL standards, IPX7 Waterproof",
+            "charger": "48V 3A",
+            "motor": "Continuous Power: 750W Peak Power: 1100W Torque: 90Nm+",
+            "sensor": "Torque+Cadence Sensor",
+            "display": "Detachable High-Definition Display",
+            "throttle": "Thumb Throttle"
+          },
+          "water_resistance": {
+            "waterproof_rating": "IPX6 (Whole Bike)"
+          },
+          "frameset": {
+            "front_fork": "110mm Adjustable Suspension",
+            "frame": "6061 Aluminum Alloy"
+          },
+          "drivetrain": {
+            "gearing": "Shimano 8-Speed",
+            "derailleur": "8-Speed Shimano",
+            "chain": "KMC Stainless Chain",
+            "crank_set": "Aluminum alloy, 170mm, 52T chainring"
+          },
+          "brakes": {
+            "brakes": "TEKTRO TKD171 Hydraulic Disc Brakes",
+            "brake_lever": "Aluminum Alloy, with power cutoff"
+          },
+          "wheelset": {
+            "tires": "26\" × 4.0\" Fat Tire (Puncture-Resistant)",
+            "rims": "Aluminum Alloy",
+            "spokes": "Heavy-duty carbon steel, 12G × 248 mm (front) / 219 mm (rear)"
+          },
+          "cockpit": {
+            "handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
+            "saddle": "Customized Comfort Leather Seat"
+          },
+          "geometry": {
+            "rider_height": "5'6\" ~ 6'8\"",
+            "reach": "16\"",
+            "top_tube_length": "24\"",
+            "standover_height": "17\"",
+            "wheelbase": "46\"",
+            "min_saddle_height": "34\"",
+            "max_saddle_height": "42\"",
+            "head_tube_length": "6\""
+          },
+          "included_accessories": {
+            "kickstand": "Sturdy Aluminum Alloy"
+          }
         }
       },
       "spec_count": 33,
@@ -883,42 +705,6 @@
               "free": true
             }
           ]
-        },
-        {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Orange",
-              "price": 1699.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Olive Green",
-              "price": 1699.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Crystal Pink",
-              "price": 1699.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Jungle Camo",
-              "price": 1699.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "White",
-              "price": 1699.99,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
         }
       ]
     },
@@ -959,73 +745,58 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "Rider Height": "5'5\" ~ 6'7\"",
-          "Reach": "16\"",
-          "Top Tube Length": "24\"",
-          "Standover Height": "17\"",
-          "Wheelbase": "44\"",
-          "Min Saddle Height": "34\"",
-          "Max Saddle Height": "43\"",
-          "Head Tube Length": "7\"",
-          "Weight": "35 lbs",
-          "Payload Capacity": "300 lbs",
-          "Tires": "CST 700×45C",
-          "Brakes": "TEKTRO HD-M275 Hydraulic Brakes",
-          "Gearing": "Single-Speed Belt Drive",
-          "Derailleur": "Single-Speed Belt Drive",
-          "Chain": "Gates Carbon Fiber Belt",
-          "Crank Set": "Aluminum alloy, 170mm, 55T chainring",
-          "Front Fork": "65mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "High-resilience cushioning",
-          "Spokes": "Heavy-duty carbon steel, 13G × 278 mm (front) / 263 mm (rear) , 13G × 280 mm (front) / 263mm (rear)"
-        },
-        "technical": {
-          "Battery": "36V 10Ah Complies with UL standards, IPX7 Waterproof",
-          "Charger": "36V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Power: 250W Peak Power: 500W Torque: 40Nm",
-          "Speed Class": "20 mph (PAS)",
-          "Range": "50~70miles",
-          "Sensor": "Torque+Cadence Sensor",
-          "Display": "Intuitive Ride Data Display"
-        },
-        "all": {
-          "Rider Height": "5'5\" ~ 6'7\"",
-          "Reach": "16\"",
-          "Top Tube Length": "24\"",
-          "Standover Height": "17\"",
-          "Wheelbase": "44\"",
-          "Min Saddle Height": "34\"",
-          "Max Saddle Height": "43\"",
-          "Head Tube Length": "7\"",
-          "Battery": "36V 10Ah Complies with UL standards, IPX7 Waterproof",
-          "Charger": "36V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Power: 250W Peak Power: 500W Torque: 40Nm",
-          "Speed Class": "20 mph (PAS)",
-          "Weight": "35 lbs",
-          "Range": "50~70miles",
-          "Payload Capacity": "300 lbs",
-          "Sensor": "Torque+Cadence Sensor",
-          "Tires": "CST 700×45C",
-          "Display": "Intuitive Ride Data Display",
-          "Brakes": "TEKTRO HD-M275 Hydraulic Brakes",
-          "Gearing": "Single-Speed Belt Drive",
-          "Derailleur": "Single-Speed Belt Drive",
-          "Chain": "Gates Carbon Fiber Belt",
-          "Crank Set": "Aluminum alloy, 170mm, 55T chainring",
-          "Front Fork": "65mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "High-resilience cushioning",
-          "Spokes": "Heavy-duty carbon steel, 13G × 278 mm (front) / 263 mm (rear) , 13G × 280 mm (front) / 263mm (rear)"
+        "grouped": {
+          "general_info": {
+            "speed_class": "20 mph (PAS)",
+            "weight": "35 lbs",
+            "range": "50~70miles",
+            "payload_capacity": "300 lbs"
+          },
+          "ebike_system": {
+            "battery": "36V 10Ah Complies with UL standards, IPX7 Waterproof",
+            "charger": "36V 3A",
+            "motor": "Continuous Power: 250W Peak Power: 500W Torque: 40Nm",
+            "sensor": "Torque+Cadence Sensor",
+            "display": "Intuitive Ride Data Display"
+          },
+          "water_resistance": {
+            "waterproof_rating": "IPX6 (Whole Bike)"
+          },
+          "frameset": {
+            "front_fork": "65mm Adjustable Suspension",
+            "frame": "6061 Aluminum Alloy"
+          },
+          "drivetrain": {
+            "gearing": "Single-Speed Belt Drive",
+            "derailleur": "Single-Speed Belt Drive",
+            "chain": "Gates Carbon Fiber Belt",
+            "crank_set": "Aluminum alloy, 170mm, 55T chainring"
+          },
+          "brakes": {
+            "brakes": "TEKTRO HD-M275 Hydraulic Brakes"
+          },
+          "wheelset": {
+            "tires": "CST 700×45C",
+            "rims": "Aluminum Alloy",
+            "spokes": "Heavy-duty carbon steel, 13G × 278 mm (front) / 263 mm (rear) , 13G × 280 mm (front) / 263mm (rear)"
+          },
+          "cockpit": {
+            "handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
+            "saddle": "High-resilience cushioning"
+          },
+          "geometry": {
+            "rider_height": "5'5\" ~ 6'7\"",
+            "reach": "16\"",
+            "top_tube_length": "24\"",
+            "standover_height": "17\"",
+            "wheelbase": "44\"",
+            "min_saddle_height": "34\"",
+            "max_saddle_height": "43\"",
+            "head_tube_length": "7\""
+          },
+          "included_accessories": {
+            "kickstand": "Sturdy Aluminum Alloy"
+          }
         }
       },
       "spec_count": 31,
@@ -1103,38 +874,7 @@
           }
         }
       ],
-      "available_options": [
-        {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "White",
-              "price": 1599.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Crystal Pink",
-              "price": 1599.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Skyblue",
-              "price": 1599.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Mocha",
-              "price": 1599.99,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        }
-      ]
+      "available_options": []
     },
     {
       "model": "FLINT Ebike",
@@ -1173,75 +913,59 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "Rider Height": "5'5\" ~ 6'7\"",
-          "Reach": "16\"",
-          "Top Tube Length": "24\"",
-          "Standover Height": "30\"",
-          "Wheelbase": "43\"",
-          "Min Saddle Height": "34\"",
-          "Max Saddle Height": "43\"",
-          "Head Tube Length": "6\"",
-          "Weight": "36 lbs",
-          "Payload Capacity": "350 lbs",
-          "Tires": "CST 700×45C",
-          "Brakes": "LOGAN HD-M500 Hydraulic Brakes",
-          "Brake LEVER": "Aluminum Alloy",
-          "Gearing": "Shimano 8-Speed",
-          "Derailleur": "8-Speed Shimano",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 46T chainring",
-          "Front Fork": "Aluminum front fork",
-          "Frame": "6061 Aluminum Alloy",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 700mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "High-resilience cushioning",
-          "Spokes": "Heavy-duty carbon steel, 13G × 278 mm (front) / 253 mm (rear) , 13G × 280 mm (front) / 255 mm (rear)"
-        },
-        "technical": {
-          "Battery": "36V 10Ah Complies with UL standards, IPX7 Waterproof",
-          "Charger": "36V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Power: 350W Peak Power: 550W Torque: 40Nm",
-          "Speed Class": "20 mph (PAS)",
-          "Range": "50~70miles",
-          "Sensor": "Torque+Cadence Sensor",
-          "Display": "Intuitive Ride Data Display"
-        },
-        "all": {
-          "Rider Height": "5'5\" ~ 6'7\"",
-          "Reach": "16\"",
-          "Top Tube Length": "24\"",
-          "Standover Height": "30\"",
-          "Wheelbase": "43\"",
-          "Min Saddle Height": "34\"",
-          "Max Saddle Height": "43\"",
-          "Head Tube Length": "6\"",
-          "Battery": "36V 10Ah Complies with UL standards, IPX7 Waterproof",
-          "Charger": "36V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Power: 350W Peak Power: 550W Torque: 40Nm",
-          "Speed Class": "20 mph (PAS)",
-          "Weight": "36 lbs",
-          "Range": "50~70miles",
-          "Payload Capacity": "350 lbs",
-          "Sensor": "Torque+Cadence Sensor",
-          "Tires": "CST 700×45C",
-          "Display": "Intuitive Ride Data Display",
-          "Brakes": "LOGAN HD-M500 Hydraulic Brakes",
-          "Brake LEVER": "Aluminum Alloy",
-          "Gearing": "Shimano 8-Speed",
-          "Derailleur": "8-Speed Shimano",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 46T chainring",
-          "Front Fork": "Aluminum front fork",
-          "Frame": "6061 Aluminum Alloy",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 700mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "High-resilience cushioning",
-          "Spokes": "Heavy-duty carbon steel, 13G × 278 mm (front) / 253 mm (rear) , 13G × 280 mm (front) / 255 mm (rear)"
+        "grouped": {
+          "general_info": {
+            "speed_class": "20 mph (PAS)",
+            "weight": "36 lbs",
+            "range": "50~70miles",
+            "payload_capacity": "350 lbs"
+          },
+          "ebike_system": {
+            "battery": "36V 10Ah Complies with UL standards, IPX7 Waterproof",
+            "charger": "36V 3A",
+            "motor": "Continuous Power: 350W Peak Power: 550W Torque: 40Nm",
+            "sensor": "Torque+Cadence Sensor",
+            "display": "Intuitive Ride Data Display"
+          },
+          "water_resistance": {
+            "waterproof_rating": "IPX6 (Whole Bike)"
+          },
+          "frameset": {
+            "front_fork": "Aluminum front fork",
+            "frame": "6061 Aluminum Alloy"
+          },
+          "drivetrain": {
+            "gearing": "Shimano 8-Speed",
+            "derailleur": "8-Speed Shimano",
+            "chain": "KMC Stainless Chain",
+            "crank_set": "Aluminum alloy, 170mm, 46T chainring"
+          },
+          "brakes": {
+            "brakes": "LOGAN HD-M500 Hydraulic Brakes",
+            "brake_lever": "Aluminum Alloy"
+          },
+          "wheelset": {
+            "tires": "CST 700×45C",
+            "rims": "Aluminum Alloy",
+            "spokes": "Heavy-duty carbon steel, 13G × 278 mm (front) / 253 mm (rear) , 13G × 280 mm (front) / 255 mm (rear)"
+          },
+          "cockpit": {
+            "handlebar": "Aluminum Alloy, φ31.8mm, 700mm",
+            "saddle": "High-resilience cushioning"
+          },
+          "geometry": {
+            "rider_height": "5'5\" ~ 6'7\"",
+            "reach": "16\"",
+            "top_tube_length": "24\"",
+            "standover_height": "30\"",
+            "wheelbase": "43\"",
+            "min_saddle_height": "34\"",
+            "max_saddle_height": "43\"",
+            "head_tube_length": "6\""
+          },
+          "included_accessories": {
+            "kickstand": "Sturdy Aluminum Alloy"
+          }
         }
       },
       "spec_count": 32,
@@ -1319,38 +1043,7 @@
           }
         }
       ],
-      "available_options": [
-        {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Phantom Black",
-              "price": 1399.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Grey",
-              "price": 1399.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Steel Blue",
-              "price": 1399.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Orange",
-              "price": 1399.99,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        }
-      ]
+      "available_options": []
     },
     {
       "model": "FLINT PRO Ebike",
@@ -1389,73 +1082,58 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "Rider Height": "5'5\" ~ 6'7\"",
-          "Reach": "17\"",
-          "Top Tube Length": "24\"",
-          "Standover Height": "30\"",
-          "Wheelbase": "44\"",
-          "Min Saddle Height": "34\"",
-          "Max Saddle Height": "43\"",
-          "Head Tube Length": "6\"",
-          "Weight": "31 lbs",
-          "Payload Capacity": "350 lbs",
-          "Tires": "CST 700×45C",
-          "Brakes": "TEKTRO HD-M275 Hydraulic Brakes",
-          "Gearing": "Single-Speed Belt Drive",
-          "Derailleur": "Single-Speed Belt Drive",
-          "Chain": "Gates Carbon Fiber Belt",
-          "Crank Set": "Aluminum alloy, 170mm, 60T chainring",
-          "Front Fork": "Aluminum front fork",
-          "Frame": "6061 Aluminum Alloy",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 700mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "High-resilience cushioning",
-          "Spokes": "Heavy-duty carbon steel, 13G × 278 mm (front) / 263 mm (rear) , 13G × 280 mm (front) / 263mm (rear)"
-        },
-        "technical": {
-          "Battery": "36V 10Ah Complies with UL standards, IPX7 Waterproof",
-          "Charger": "36V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Power: 250W Peak Power: 500W Torque: 40Nm",
-          "Speed Class": "20 mph (PAS)",
-          "Range": "50~70miles",
-          "Sensor": "Torque+Cadence Sensor",
-          "Display": "Intuitive Ride Data Display"
-        },
-        "all": {
-          "Rider Height": "5'5\" ~ 6'7\"",
-          "Reach": "17\"",
-          "Top Tube Length": "24\"",
-          "Standover Height": "30\"",
-          "Wheelbase": "44\"",
-          "Min Saddle Height": "34\"",
-          "Max Saddle Height": "43\"",
-          "Head Tube Length": "6\"",
-          "Battery": "36V 10Ah Complies with UL standards, IPX7 Waterproof",
-          "Charger": "36V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Power: 250W Peak Power: 500W Torque: 40Nm",
-          "Speed Class": "20 mph (PAS)",
-          "Weight": "31 lbs",
-          "Range": "50~70miles",
-          "Payload Capacity": "350 lbs",
-          "Sensor": "Torque+Cadence Sensor",
-          "Tires": "CST 700×45C",
-          "Display": "Intuitive Ride Data Display",
-          "Brakes": "TEKTRO HD-M275 Hydraulic Brakes",
-          "Gearing": "Single-Speed Belt Drive",
-          "Derailleur": "Single-Speed Belt Drive",
-          "Chain": "Gates Carbon Fiber Belt",
-          "Crank Set": "Aluminum alloy, 170mm, 60T chainring",
-          "Front Fork": "Aluminum front fork",
-          "Frame": "6061 Aluminum Alloy",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 700mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "High-resilience cushioning",
-          "Spokes": "Heavy-duty carbon steel, 13G × 278 mm (front) / 263 mm (rear) , 13G × 280 mm (front) / 263mm (rear)"
+        "grouped": {
+          "general_info": {
+            "speed_class": "20 mph (PAS)",
+            "weight": "31 lbs",
+            "range": "50~70miles",
+            "payload_capacity": "350 lbs"
+          },
+          "ebike_system": {
+            "battery": "36V 10Ah Complies with UL standards, IPX7 Waterproof",
+            "charger": "36V 3A",
+            "motor": "Continuous Power: 250W Peak Power: 500W Torque: 40Nm",
+            "sensor": "Torque+Cadence Sensor",
+            "display": "Intuitive Ride Data Display"
+          },
+          "water_resistance": {
+            "waterproof_rating": "IPX6 (Whole Bike)"
+          },
+          "frameset": {
+            "front_fork": "Aluminum front fork",
+            "frame": "6061 Aluminum Alloy"
+          },
+          "drivetrain": {
+            "gearing": "Single-Speed Belt Drive",
+            "derailleur": "Single-Speed Belt Drive",
+            "chain": "Gates Carbon Fiber Belt",
+            "crank_set": "Aluminum alloy, 170mm, 60T chainring"
+          },
+          "brakes": {
+            "brakes": "TEKTRO HD-M275 Hydraulic Brakes"
+          },
+          "wheelset": {
+            "tires": "CST 700×45C",
+            "rims": "Aluminum Alloy",
+            "spokes": "Heavy-duty carbon steel, 13G × 278 mm (front) / 263 mm (rear) , 13G × 280 mm (front) / 263mm (rear)"
+          },
+          "cockpit": {
+            "handlebar": "Aluminum Alloy, φ31.8mm, 700mm",
+            "saddle": "High-resilience cushioning"
+          },
+          "geometry": {
+            "rider_height": "5'5\" ~ 6'7\"",
+            "reach": "17\"",
+            "top_tube_length": "24\"",
+            "standover_height": "30\"",
+            "wheelbase": "44\"",
+            "min_saddle_height": "34\"",
+            "max_saddle_height": "43\"",
+            "head_tube_length": "6\""
+          },
+          "included_accessories": {
+            "kickstand": "Sturdy Aluminum Alloy"
+          }
         }
       },
       "spec_count": 31,
@@ -1533,38 +1211,7 @@
           }
         }
       ],
-      "available_options": [
-        {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Orange",
-              "price": 1599.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Grey",
-              "price": 1599.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Steel Blue",
-              "price": 1599.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Phantom Black",
-              "price": 1599.99,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        }
-      ]
+      "available_options": []
     },
     {
       "model": "FLINT ST Ebike",
@@ -1603,75 +1250,59 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "Rider Height": "5'5\" ~ 6'7\"",
-          "Reach": "16\"",
-          "Top Tube Length": "24\"",
-          "Standover Height": "17\"",
-          "Wheelbase": "44\"",
-          "Min Saddle Height": "32\"",
-          "Max Saddle Height": "41\"",
-          "Head Tube Length": "7\"",
-          "Weight": "40 lbs",
-          "Payload Capacity": "300 lbs",
-          "Tires": "CST 700×45C",
-          "Brakes": "LOGAN HD-M500 Hydraulic Brakes",
-          "Brake LEVER": "Aluminum Alloy",
-          "Gearing": "Shimano 8-Speed",
-          "Derailleur": "8-Speed Shimano",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 46T chainring",
-          "Front Fork": "65mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "High-resilience cushioning",
-          "Spokes": "Heavy-duty carbon steel, 13G × 278 mm (front) / 253 mm (rear) , 13G × 280 mm (front) / 255 mm (rear)"
-        },
-        "technical": {
-          "Battery": "36V 10Ah Complies with UL standards, IPX7 Waterproof",
-          "Charger": "36V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Power: 350W Peak Power: 550W Torque: 40Nm",
-          "Speed Class": "20 mph (PAS)",
-          "Range": "50~70miles",
-          "Sensor": "Torque+Cadence Sensor",
-          "Display": "Intuitive Ride Data Display"
-        },
-        "all": {
-          "Rider Height": "5'5\" ~ 6'7\"",
-          "Reach": "16\"",
-          "Top Tube Length": "24\"",
-          "Standover Height": "17\"",
-          "Wheelbase": "44\"",
-          "Min Saddle Height": "32\"",
-          "Max Saddle Height": "41\"",
-          "Head Tube Length": "7\"",
-          "Battery": "36V 10Ah Complies with UL standards, IPX7 Waterproof",
-          "Charger": "36V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Power: 350W Peak Power: 550W Torque: 40Nm",
-          "Speed Class": "20 mph (PAS)",
-          "Weight": "40 lbs",
-          "Range": "50~70miles",
-          "Payload Capacity": "300 lbs",
-          "Sensor": "Torque+Cadence Sensor",
-          "Tires": "CST 700×45C",
-          "Display": "Intuitive Ride Data Display",
-          "Brakes": "LOGAN HD-M500 Hydraulic Brakes",
-          "Brake LEVER": "Aluminum Alloy",
-          "Gearing": "Shimano 8-Speed",
-          "Derailleur": "8-Speed Shimano",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 46T chainring",
-          "Front Fork": "65mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "High-resilience cushioning",
-          "Spokes": "Heavy-duty carbon steel, 13G × 278 mm (front) / 253 mm (rear) , 13G × 280 mm (front) / 255 mm (rear)"
+        "grouped": {
+          "general_info": {
+            "speed_class": "20 mph (PAS)",
+            "weight": "40 lbs",
+            "range": "50~70miles",
+            "payload_capacity": "300 lbs"
+          },
+          "ebike_system": {
+            "battery": "36V 10Ah Complies with UL standards, IPX7 Waterproof",
+            "charger": "36V 3A",
+            "motor": "Continuous Power: 350W Peak Power: 550W Torque: 40Nm",
+            "sensor": "Torque+Cadence Sensor",
+            "display": "Intuitive Ride Data Display"
+          },
+          "water_resistance": {
+            "waterproof_rating": "IPX6 (Whole Bike)"
+          },
+          "frameset": {
+            "front_fork": "65mm Adjustable Suspension",
+            "frame": "6061 Aluminum Alloy"
+          },
+          "drivetrain": {
+            "gearing": "Shimano 8-Speed",
+            "derailleur": "8-Speed Shimano",
+            "chain": "KMC Stainless Chain",
+            "crank_set": "Aluminum alloy, 170mm, 46T chainring"
+          },
+          "brakes": {
+            "brakes": "LOGAN HD-M500 Hydraulic Brakes",
+            "brake_lever": "Aluminum Alloy"
+          },
+          "wheelset": {
+            "tires": "CST 700×45C",
+            "rims": "Aluminum Alloy",
+            "spokes": "Heavy-duty carbon steel, 13G × 278 mm (front) / 253 mm (rear) , 13G × 280 mm (front) / 255 mm (rear)"
+          },
+          "cockpit": {
+            "handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
+            "saddle": "High-resilience cushioning"
+          },
+          "geometry": {
+            "rider_height": "5'5\" ~ 6'7\"",
+            "reach": "16\"",
+            "top_tube_length": "24\"",
+            "standover_height": "17\"",
+            "wheelbase": "44\"",
+            "min_saddle_height": "32\"",
+            "max_saddle_height": "41\"",
+            "head_tube_length": "7\""
+          },
+          "included_accessories": {
+            "kickstand": "Sturdy Aluminum Alloy"
+          }
         }
       },
       "spec_count": 32,
@@ -1749,38 +1380,7 @@
           }
         }
       ],
-      "available_options": [
-        {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Crystal Pink",
-              "price": 1399.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Skyblue",
-              "price": 1399.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "White",
-              "price": 1399.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Mocha",
-              "price": 1399.99,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        }
-      ]
+      "available_options": []
     },
     {
       "model": "Granite E-Trike",
@@ -1807,93 +1407,61 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "Regular price": "$1,699.99",
-          "Shop All E-Bikes": "Your new favorite ride is just a click away.",
-          "Free": "$499.99",
-          "*Out of Stock ETA: 6/8/2026.": "Out of stock",
-          "Free Gift": "$99.99",
-          "Basket's Max Load": "Front 55 lbs and Rear 220 lbs",
-          "Weight": "101 lbs",
-          "Payload Capacity": "350 lbs",
-          "Frame": "6061 Aluminum Alloy",
-          "Brakes": "ZOOM HB-892E Hydraulic Brake",
-          "Tires": "20\" × 3.0\" Tire",
-          "Gearing": "Shimano 7-Speed",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 46T chainring",
-          "Derailleur": "7-speed Shimano",
-          "Brake lever": "Aluminum Alloy, with power cutoff",
-          "Front Fork": "80mm fork travel",
-          "Handlebar Length": "Aluminum Alloy, φ31.8mm, 620 mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Customized Comfort Leather Seat",
-          "Spokes": "Heavy-duty carbon steel ，13G×183mm",
-          "Rider Height": "5'0\" ~ 6'2\"",
-          "Reach": "20\"",
-          "Top Tube Length": "26\"",
-          "Standover Height": "13\"",
-          "Wheelbase": "49\"",
-          "Min Saddle Height": "32\"",
-          "Max Saddle Height": "38\"",
-          "Head Tube Length": "7\""
-        },
-        "technical": {
-          "Battery": "48V 15Ah Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 2A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Power: 500W Peak Power:860W Torque: 70Nm+",
-          "Range": "45~55miles",
-          "Speed": "15 mph (Throttle) / 20 mph (PAS)",
-          "Sensor": "Cadence sensor",
-          "Display": "LED Integrated",
-          "Throttle": "Thumb Throttle",
-          "Q:": "Do u ship to Puerto Rico?",
-          "A:": "Hello Steve, We only ship to the continental US. I am sorry for any inconvenience. Regards, Chad"
-        },
-        "all": {
-          "Regular price": "$1,699.99",
-          "Shop All E-Bikes": "Your new favorite ride is just a click away.",
-          "Free": "$499.99",
-          "*Out of Stock ETA: 6/8/2026.": "Out of stock",
-          "Free Gift": "$99.99",
-          "Battery": "48V 15Ah Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 2A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Power: 500W Peak Power:860W Torque: 70Nm+",
-          "Basket's Max Load": "Front 55 lbs and Rear 220 lbs",
-          "Weight": "101 lbs",
-          "Range": "45~55miles",
-          "Speed": "15 mph (Throttle) / 20 mph (PAS)",
-          "Payload Capacity": "350 lbs",
-          "Sensor": "Cadence sensor",
-          "Frame": "6061 Aluminum Alloy",
-          "Brakes": "ZOOM HB-892E Hydraulic Brake",
-          "Tires": "20\" × 3.0\" Tire",
-          "Display": "LED Integrated",
-          "Gearing": "Shimano 7-Speed",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 46T chainring",
-          "Derailleur": "7-speed Shimano",
-          "Brake lever": "Aluminum Alloy, with power cutoff",
-          "Front Fork": "80mm fork travel",
-          "Throttle": "Thumb Throttle",
-          "Handlebar Length": "Aluminum Alloy, φ31.8mm, 620 mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Customized Comfort Leather Seat",
-          "Spokes": "Heavy-duty carbon steel ，13G×183mm",
-          "Rider Height": "5'0\" ~ 6'2\"",
-          "Reach": "20\"",
-          "Top Tube Length": "26\"",
-          "Standover Height": "13\"",
-          "Wheelbase": "49\"",
-          "Min Saddle Height": "32\"",
-          "Max Saddle Height": "38\"",
-          "Head Tube Length": "7\"",
-          "Q:": "Do u ship to Puerto Rico?",
-          "A:": "Hello Steve, We only ship to the continental US. I am sorry for any inconvenience. Regards, Chad"
+        "grouped": {
+          "general_info": {
+            "weight": "101 lbs",
+            "range": "45~55miles",
+            "speed": "15 mph (Throttle) / 20 mph (PAS)",
+            "payload_capacity": "350 lbs"
+          },
+          "ebike_system": {
+            "battery": "48V 15Ah Complies with UL standards, IPX7 Waterproof",
+            "charger": "48V 2A",
+            "motor": "Continuous Power: 500W Peak Power:860W Torque: 70Nm+",
+            "sensor": "Cadence sensor",
+            "display": "LED Integrated",
+            "throttle": "Thumb Throttle"
+          },
+          "water_resistance": {
+            "waterproof_rating": "IPX6 (Whole Bike)"
+          },
+          "frameset": {
+            "frame": "6061 Aluminum Alloy",
+            "front_fork": "80mm fork travel"
+          },
+          "drivetrain": {
+            "gearing": "Shimano 7-Speed",
+            "chain": "KMC Stainless Chain",
+            "crank_set": "Aluminum alloy, 170mm, 46T chainring",
+            "derailleur": "7-speed Shimano"
+          },
+          "brakes": {
+            "brakes": "ZOOM HB-892E Hydraulic Brake",
+            "brake_lever": "Aluminum Alloy, with power cutoff"
+          },
+          "wheelset": {
+            "tires": "20\" × 3.0\" Tire",
+            "rims": "Aluminum Alloy",
+            "spokes": "Heavy-duty carbon steel ，13G×183mm"
+          },
+          "cockpit": {
+            "handlebar_length": "Aluminum Alloy, φ31.8mm, 620 mm",
+            "saddle": "Customized Comfort Leather Seat"
+          },
+          "geometry": {
+            "rider_height": "5'0\" ~ 6'2\"",
+            "reach": "20\"",
+            "top_tube_length": "26\"",
+            "standover_height": "13\"",
+            "wheelbase": "49\"",
+            "min_saddle_height": "32\"",
+            "max_saddle_height": "38\"",
+            "head_tube_length": "7\""
+          },
+          "included_accessories": {
+            "basket_s_max_load": "Front 55 lbs and Rear 220 lbs",
+            "kickstand": "Sturdy Aluminum Alloy"
+          }
         }
       },
       "spec_count": 41,
@@ -1943,26 +1511,7 @@
           }
         }
       ],
-      "available_options": [
-        {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Steel Blue",
-              "price": 1999.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Grey",
-              "price": 1999.99,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        }
-      ]
+      "available_options": []
     },
     {
       "model": "Obsidian 2.0 Ebike",
@@ -1995,75 +1544,59 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "Rider Height": "5'6\" ~ 6'8\"",
-          "Reach": "17\"",
-          "Top Tube Length": "25\"",
-          "Standover Height": "30\"",
-          "Wheelbase": "48\"",
-          "Min Saddle Height": "35\"",
-          "Max Saddle Height": "41\"",
-          "Head Tube Length": "6\"",
-          "Weight": "77 lbs",
-          "Payload Capacity": "560 lbs",
-          "Brakes": "TEKTRO TKD171 Hydraulic Disc Brakes",
-          "Tires": "26\" × 4.0\" Fat Tire (Puncture-Resistant)",
-          "Gearing": "Shimano 10-Speed",
-          "Derailleur": "10-speed Shimano",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 46T chainring",
-          "Front Fork": "130mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 720mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Customized Comfort Leather Seat",
-          "Spokes": "Heavy-duty carbon steel, 12G × 248 mm (front) / 216 mm (rear)"
-        },
-        "technical": {
-          "Battery": "48V 19.6Ah ,Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Rated Power: 750WContinuous Power: 1000W Peak Power: 1300W Torque: 105Nm+",
-          "Speed Class": "20 mph (Throttle) / 28 mph (PAS)",
-          "Range": "60~80miles",
-          "Sensor": "Torque+Cadence Sensor",
-          "Display": "Detachable High-Definition Display",
-          "Throttle": "Thumb Throttle"
-        },
-        "all": {
-          "Rider Height": "5'6\" ~ 6'8\"",
-          "Reach": "17\"",
-          "Top Tube Length": "25\"",
-          "Standover Height": "30\"",
-          "Wheelbase": "48\"",
-          "Min Saddle Height": "35\"",
-          "Max Saddle Height": "41\"",
-          "Head Tube Length": "6\"",
-          "Battery": "48V 19.6Ah ,Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Rated Power: 750WContinuous Power: 1000W Peak Power: 1300W Torque: 105Nm+",
-          "Speed Class": "20 mph (Throttle) / 28 mph (PAS)",
-          "Weight": "77 lbs",
-          "Range": "60~80miles",
-          "Payload Capacity": "560 lbs",
-          "Sensor": "Torque+Cadence Sensor",
-          "Brakes": "TEKTRO TKD171 Hydraulic Disc Brakes",
-          "Tires": "26\" × 4.0\" Fat Tire (Puncture-Resistant)",
-          "Display": "Detachable High-Definition Display",
-          "Gearing": "Shimano 10-Speed",
-          "Derailleur": "10-speed Shimano",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 46T chainring",
-          "Front Fork": "130mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Throttle": "Thumb Throttle",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 720mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Customized Comfort Leather Seat",
-          "Spokes": "Heavy-duty carbon steel, 12G × 248 mm (front) / 216 mm (rear)"
+        "grouped": {
+          "general_info": {
+            "speed_class": "20 mph (Throttle) / 28 mph (PAS)",
+            "weight": "77 lbs",
+            "range": "60~80miles",
+            "payload_capacity": "560 lbs"
+          },
+          "ebike_system": {
+            "battery": "48V 19.6Ah ,Complies with UL standards, IPX7 Waterproof",
+            "charger": "48V 3A",
+            "motor": "Rated Power: 750WContinuous Power: 1000W Peak Power: 1300W Torque: 105Nm+",
+            "sensor": "Torque+Cadence Sensor",
+            "display": "Detachable High-Definition Display",
+            "throttle": "Thumb Throttle"
+          },
+          "water_resistance": {
+            "waterproof_rating": "IPX6 (Whole Bike)"
+          },
+          "frameset": {
+            "front_fork": "130mm Adjustable Suspension",
+            "frame": "6061 Aluminum Alloy"
+          },
+          "drivetrain": {
+            "gearing": "Shimano 10-Speed",
+            "derailleur": "10-speed Shimano",
+            "chain": "KMC Stainless Chain",
+            "crank_set": "Aluminum alloy, 170mm, 46T chainring"
+          },
+          "brakes": {
+            "brakes": "TEKTRO TKD171 Hydraulic Disc Brakes"
+          },
+          "wheelset": {
+            "tires": "26\" × 4.0\" Fat Tire (Puncture-Resistant)",
+            "rims": "Aluminum Alloy",
+            "spokes": "Heavy-duty carbon steel, 12G × 248 mm (front) / 216 mm (rear)"
+          },
+          "cockpit": {
+            "handlebar": "Aluminum Alloy, φ31.8mm, 720mm",
+            "saddle": "Customized Comfort Leather Seat"
+          },
+          "geometry": {
+            "rider_height": "5'6\" ~ 6'8\"",
+            "reach": "17\"",
+            "top_tube_length": "25\"",
+            "standover_height": "30\"",
+            "wheelbase": "48\"",
+            "min_saddle_height": "35\"",
+            "max_saddle_height": "41\"",
+            "head_tube_length": "6\""
+          },
+          "included_accessories": {
+            "kickstand": "Sturdy Aluminum Alloy"
+          }
         }
       },
       "spec_count": 32,
@@ -2127,32 +1660,7 @@
           }
         }
       ],
-      "available_options": [
-        {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Black and Red",
-              "price": 2199.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Yellow and Black",
-              "price": 2199.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Jungle Camo",
-              "price": 2199.99,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        }
-      ]
+      "available_options": []
     },
     {
       "model": "Obsidian ST 2.0 Ebike",
@@ -2185,75 +1693,59 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "Rider Height": "5'6\" ~ 6'8\"",
-          "Reach": "19\"",
-          "Top Tube Length": "25\"",
-          "Standover Height": "20\"",
-          "Wheelbase": "50\"",
-          "Min Saddle Height": "35\"",
-          "Max Saddle Height": "41\"",
-          "Head Tube Length": "6\"",
-          "Weight": "77 lbs",
-          "Payload Capacity": "560 lbs",
-          "Brakes": "TEKTRO TKD171 Hydraulic Disc Brakes",
-          "Tires": "26\" × 4.0\" Fat Tire (Puncture-Resistant)",
-          "Gearing": "Shimano 10-Speed",
-          "Derailleur": "10-speed Shimano",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 46T chainring",
-          "Front Fork": "130mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Hydraulic Two-Stage Adjustable Seat",
-          "Spokes": "Heavy-duty carbon steel, 12G × 248 mm (front) / 216 mm (rear)"
-        },
-        "technical": {
-          "Battery": "48V 19.6Ah Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Rated power：750W Continuous Power: 1000W Peak Power: 1300W Torque: 105Nm+",
-          "Speed Class": "20 mph (Throttle) / 28 mph (PAS)",
-          "Range": "60~80 miles",
-          "Sensor": "Torque+Cadence Sensor",
-          "Display": "Detachable High-Definition Display",
-          "Throttle": "Thumb Throttle"
-        },
-        "all": {
-          "Rider Height": "5'6\" ~ 6'8\"",
-          "Reach": "19\"",
-          "Top Tube Length": "25\"",
-          "Standover Height": "20\"",
-          "Wheelbase": "50\"",
-          "Min Saddle Height": "35\"",
-          "Max Saddle Height": "41\"",
-          "Head Tube Length": "6\"",
-          "Battery": "48V 19.6Ah Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Rated power：750W Continuous Power: 1000W Peak Power: 1300W Torque: 105Nm+",
-          "Speed Class": "20 mph (Throttle) / 28 mph (PAS)",
-          "Weight": "77 lbs",
-          "Range": "60~80 miles",
-          "Payload Capacity": "560 lbs",
-          "Sensor": "Torque+Cadence Sensor",
-          "Brakes": "TEKTRO TKD171 Hydraulic Disc Brakes",
-          "Tires": "26\" × 4.0\" Fat Tire (Puncture-Resistant)",
-          "Display": "Detachable High-Definition Display",
-          "Gearing": "Shimano 10-Speed",
-          "Derailleur": "10-speed Shimano",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 46T chainring",
-          "Front Fork": "130mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Throttle": "Thumb Throttle",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Hydraulic Two-Stage Adjustable Seat",
-          "Spokes": "Heavy-duty carbon steel, 12G × 248 mm (front) / 216 mm (rear)"
+        "grouped": {
+          "general_info": {
+            "speed_class": "20 mph (Throttle) / 28 mph (PAS)",
+            "weight": "77 lbs",
+            "range": "60~80 miles",
+            "payload_capacity": "560 lbs"
+          },
+          "ebike_system": {
+            "battery": "48V 19.6Ah Complies with UL standards, IPX7 Waterproof",
+            "charger": "48V 3A",
+            "motor": "Rated power：750W Continuous Power: 1000W Peak Power: 1300W Torque: 105Nm+",
+            "sensor": "Torque+Cadence Sensor",
+            "display": "Detachable High-Definition Display",
+            "throttle": "Thumb Throttle"
+          },
+          "water_resistance": {
+            "waterproof_rating": "IPX6 (Whole Bike)"
+          },
+          "frameset": {
+            "front_fork": "130mm Adjustable Suspension",
+            "frame": "6061 Aluminum Alloy"
+          },
+          "drivetrain": {
+            "gearing": "Shimano 10-Speed",
+            "derailleur": "10-speed Shimano",
+            "chain": "KMC Stainless Chain",
+            "crank_set": "Aluminum alloy, 170mm, 46T chainring"
+          },
+          "brakes": {
+            "brakes": "TEKTRO TKD171 Hydraulic Disc Brakes"
+          },
+          "wheelset": {
+            "tires": "26\" × 4.0\" Fat Tire (Puncture-Resistant)",
+            "rims": "Aluminum Alloy",
+            "spokes": "Heavy-duty carbon steel, 12G × 248 mm (front) / 216 mm (rear)"
+          },
+          "cockpit": {
+            "handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
+            "saddle": "Hydraulic Two-Stage Adjustable Seat"
+          },
+          "geometry": {
+            "rider_height": "5'6\" ~ 6'8\"",
+            "reach": "19\"",
+            "top_tube_length": "25\"",
+            "standover_height": "20\"",
+            "wheelbase": "50\"",
+            "min_saddle_height": "35\"",
+            "max_saddle_height": "41\"",
+            "head_tube_length": "6\""
+          },
+          "included_accessories": {
+            "kickstand": "Sturdy Aluminum Alloy"
+          }
         }
       },
       "spec_count": 32,
@@ -2317,32 +1809,7 @@
           }
         }
       ],
-      "available_options": [
-        {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Black and Red",
-              "price": 2199.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Blue and Grey",
-              "price": 2199.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Desert Camo",
-              "price": 2199.99,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        }
-      ]
+      "available_options": []
     },
     {
       "model": "Onyx Ebike",
@@ -2375,75 +1842,59 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "Rider Height": "5'7\" ~ 6'9\"",
-          "Reach": "19\"",
-          "Top Tube Length": "25\"",
-          "Standover Height": "31\"",
-          "Wheelbase": "50\"",
-          "Min Saddle Height": "35\"",
-          "Max Saddle Height": "41\"",
-          "Head Tube Length": "6\"",
-          "Weight": "89 lbs",
-          "Payload Capacity": "560 lbs",
-          "Brakes": "TEKTRO HD-E3940 4-Piston Hydraulic Brake",
-          "Tires": "26\" × 4.0\" Fat Tire (Puncture-Resistant)",
-          "Gearing": "Shimano 10-Speed",
-          "Derailleur": "10-speed Shimano",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 44T chainring",
-          "Front Fork": "135mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 720mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Hydraulic Two-Stage Adjustable Seat",
-          "Spokes": "Heavy-duty carbon steel, 12G × 248 mm (front) / 251 mm (rear)"
-        },
-        "technical": {
-          "Battery": "48V 19.6A, Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Mid-drive MotorRated Power: 750W Continuous Power: 1000W Peak Power: 1300W Torque: 210Nm+",
-          "Speed Class": "20 mph (Throttle) / 28 mph (PAS)",
-          "Range": "60~80miles",
-          "Sensor": "Torque+Cadence Sensor",
-          "Display": "HD Stem Display",
-          "Throttle": "Thumb Throttle"
-        },
-        "all": {
-          "Rider Height": "5'7\" ~ 6'9\"",
-          "Reach": "19\"",
-          "Top Tube Length": "25\"",
-          "Standover Height": "31\"",
-          "Wheelbase": "50\"",
-          "Min Saddle Height": "35\"",
-          "Max Saddle Height": "41\"",
-          "Head Tube Length": "6\"",
-          "Battery": "48V 19.6A, Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Mid-drive MotorRated Power: 750W Continuous Power: 1000W Peak Power: 1300W Torque: 210Nm+",
-          "Speed Class": "20 mph (Throttle) / 28 mph (PAS)",
-          "Weight": "89 lbs",
-          "Range": "60~80miles",
-          "Payload Capacity": "560 lbs",
-          "Sensor": "Torque+Cadence Sensor",
-          "Brakes": "TEKTRO HD-E3940 4-Piston Hydraulic Brake",
-          "Tires": "26\" × 4.0\" Fat Tire (Puncture-Resistant)",
-          "Display": "HD Stem Display",
-          "Gearing": "Shimano 10-Speed",
-          "Derailleur": "10-speed Shimano",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 44T chainring",
-          "Front Fork": "135mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Throttle": "Thumb Throttle",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 720mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Hydraulic Two-Stage Adjustable Seat",
-          "Spokes": "Heavy-duty carbon steel, 12G × 248 mm (front) / 251 mm (rear)"
+        "grouped": {
+          "general_info": {
+            "speed_class": "20 mph (Throttle) / 28 mph (PAS)",
+            "weight": "89 lbs",
+            "range": "60~80miles",
+            "payload_capacity": "560 lbs"
+          },
+          "ebike_system": {
+            "battery": "48V 19.6A, Complies with UL standards, IPX7 Waterproof",
+            "charger": "48V 3A",
+            "motor": "Mid-drive MotorRated Power: 750W Continuous Power: 1000W Peak Power: 1300W Torque: 210Nm+",
+            "sensor": "Torque+Cadence Sensor",
+            "display": "HD Stem Display",
+            "throttle": "Thumb Throttle"
+          },
+          "water_resistance": {
+            "waterproof_rating": "IPX6 (Whole Bike)"
+          },
+          "frameset": {
+            "front_fork": "135mm Adjustable Suspension",
+            "frame": "6061 Aluminum Alloy"
+          },
+          "drivetrain": {
+            "gearing": "Shimano 10-Speed",
+            "derailleur": "10-speed Shimano",
+            "chain": "KMC Stainless Chain",
+            "crank_set": "Aluminum alloy, 170mm, 44T chainring"
+          },
+          "brakes": {
+            "brakes": "TEKTRO HD-E3940 4-Piston Hydraulic Brake"
+          },
+          "wheelset": {
+            "tires": "26\" × 4.0\" Fat Tire (Puncture-Resistant)",
+            "rims": "Aluminum Alloy",
+            "spokes": "Heavy-duty carbon steel, 12G × 248 mm (front) / 251 mm (rear)"
+          },
+          "cockpit": {
+            "handlebar": "Aluminum Alloy, φ31.8mm, 720mm",
+            "saddle": "Hydraulic Two-Stage Adjustable Seat"
+          },
+          "geometry": {
+            "rider_height": "5'7\" ~ 6'9\"",
+            "reach": "19\"",
+            "top_tube_length": "25\"",
+            "standover_height": "31\"",
+            "wheelbase": "50\"",
+            "min_saddle_height": "35\"",
+            "max_saddle_height": "41\"",
+            "head_tube_length": "6\""
+          },
+          "included_accessories": {
+            "kickstand": "Sturdy Aluminum Alloy"
+          }
         }
       },
       "spec_count": 32,
@@ -2507,32 +1958,7 @@
           }
         }
       ],
-      "available_options": [
-        {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Brown Gray",
-              "price": 3299.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Black and Blue",
-              "price": 3299.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Jungle Camo",
-              "price": 3299.99,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        }
-      ]
+      "available_options": []
     },
     {
       "model": "Onyx ST Ebike",
@@ -2565,75 +1991,59 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "Rider Height": "5'5\" ~ 6'7\"",
-          "Reach": "19\"",
-          "Top Tube Length": "25\"",
-          "Standover Height": "20\"",
-          "Wheelbase": "50\"",
-          "Min Saddle Height": "35\"",
-          "Max Saddle Height": "41\"",
-          "Head Tube Length": "6\"",
-          "Weight": "88 lbs",
-          "Payload Capacity": "560 lbs",
-          "Brakes": "TEKTRO HD-E3940 4-Piston Hydraulic Brake",
-          "Tires": "26\" × 4.0\" Fat Tire (Puncture-Resistant)",
-          "Gearing": "Shimano 10-Speed",
-          "Derailleur": "10-speed Shimano",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 44T chainring",
-          "Front Fork": "135mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Hydraulic Two-Stage Adjustable Seat",
-          "Spokes": "Heavy-duty carbon steel, 12G × 248 mm (front) / 251 mm (rear)"
-        },
-        "technical": {
-          "Battery": "48V 19.6A , Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Mid-drive MotorRated Power: 750W Continuous Power: 1000W Peak Power: 1300W Torque: 210Nm+",
-          "Speed Class": "20 mph (Throttle) / 28 mph (PAS)",
-          "Range": "60~80miles",
-          "Sensor": "Torque+Cadence Sensor",
-          "Display": "HD Stem Display",
-          "Throttle": "Thumb Throttle"
-        },
-        "all": {
-          "Rider Height": "5'5\" ~ 6'7\"",
-          "Reach": "19\"",
-          "Top Tube Length": "25\"",
-          "Standover Height": "20\"",
-          "Wheelbase": "50\"",
-          "Min Saddle Height": "35\"",
-          "Max Saddle Height": "41\"",
-          "Head Tube Length": "6\"",
-          "Battery": "48V 19.6A , Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Mid-drive MotorRated Power: 750W Continuous Power: 1000W Peak Power: 1300W Torque: 210Nm+",
-          "Speed Class": "20 mph (Throttle) / 28 mph (PAS)",
-          "Weight": "88 lbs",
-          "Range": "60~80miles",
-          "Payload Capacity": "560 lbs",
-          "Sensor": "Torque+Cadence Sensor",
-          "Brakes": "TEKTRO HD-E3940 4-Piston Hydraulic Brake",
-          "Tires": "26\" × 4.0\" Fat Tire (Puncture-Resistant)",
-          "Display": "HD Stem Display",
-          "Gearing": "Shimano 10-Speed",
-          "Derailleur": "10-speed Shimano",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 44T chainring",
-          "Front Fork": "135mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Throttle": "Thumb Throttle",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Hydraulic Two-Stage Adjustable Seat",
-          "Spokes": "Heavy-duty carbon steel, 12G × 248 mm (front) / 251 mm (rear)"
+        "grouped": {
+          "general_info": {
+            "speed_class": "20 mph (Throttle) / 28 mph (PAS)",
+            "weight": "88 lbs",
+            "range": "60~80miles",
+            "payload_capacity": "560 lbs"
+          },
+          "ebike_system": {
+            "battery": "48V 19.6A , Complies with UL standards, IPX7 Waterproof",
+            "charger": "48V 3A",
+            "motor": "Mid-drive MotorRated Power: 750W Continuous Power: 1000W Peak Power: 1300W Torque: 210Nm+",
+            "sensor": "Torque+Cadence Sensor",
+            "display": "HD Stem Display",
+            "throttle": "Thumb Throttle"
+          },
+          "water_resistance": {
+            "waterproof_rating": "IPX6 (Whole Bike)"
+          },
+          "frameset": {
+            "front_fork": "135mm Adjustable Suspension",
+            "frame": "6061 Aluminum Alloy"
+          },
+          "drivetrain": {
+            "gearing": "Shimano 10-Speed",
+            "derailleur": "10-speed Shimano",
+            "chain": "KMC Stainless Chain",
+            "crank_set": "Aluminum alloy, 170mm, 44T chainring"
+          },
+          "brakes": {
+            "brakes": "TEKTRO HD-E3940 4-Piston Hydraulic Brake"
+          },
+          "wheelset": {
+            "tires": "26\" × 4.0\" Fat Tire (Puncture-Resistant)",
+            "rims": "Aluminum Alloy",
+            "spokes": "Heavy-duty carbon steel, 12G × 248 mm (front) / 251 mm (rear)"
+          },
+          "cockpit": {
+            "handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
+            "saddle": "Hydraulic Two-Stage Adjustable Seat"
+          },
+          "geometry": {
+            "rider_height": "5'5\" ~ 6'7\"",
+            "reach": "19\"",
+            "top_tube_length": "25\"",
+            "standover_height": "20\"",
+            "wheelbase": "50\"",
+            "min_saddle_height": "35\"",
+            "max_saddle_height": "41\"",
+            "head_tube_length": "6\""
+          },
+          "included_accessories": {
+            "kickstand": "Sturdy Aluminum Alloy"
+          }
         }
       },
       "spec_count": 32,
@@ -2697,32 +2107,7 @@
           }
         }
       ],
-      "available_options": [
-        {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Mint Green",
-              "price": 3299.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Desert Camo",
-              "price": 3299.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Panda",
-              "price": 3299.99,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        }
-      ]
+      "available_options": []
     },
     {
       "model": "Scoria 2.0 Ebike",
@@ -2767,77 +2152,60 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "Rider Height": "5'0\" ~ 6'2\"",
-          "Reach": "19\"",
-          "Top Tube Length": "25\"",
-          "Standover Height": "16\"",
-          "Wheelbase": "46\"",
-          "Min Saddle Height": "30\"",
-          "Max Saddle Height": "35\"",
-          "Head Tube Length": "6\"",
-          "Weight": "82 lbs",
-          "Payload Capacity": "350 lbs",
-          "Brakes": "TEKTRO TKD171 Hydraulic Disc Brakes",
-          "Brake lever": "Aluminum Alloy, with power cutoff",
-          "Tires": "20\"x 4.0\" Fat Tire (Puncture-Resistant)",
-          "Derailleur": "8 Speed Shimano",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 52T chainring",
-          "Front Fork": "100mm fork travel",
-          "Frame": "6061 Aluminum Alloy",
-          "Gearing": "Shimano 8-Speed",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Customized Comfort Leather Seat",
-          "Spokes": "Heavy-duty carbon steel, 13G × 172 mm (front) / 123 mm (rear) , 13G × 172 mm (front) / 125 mm (rear)"
-        },
-        "technical": {
-          "Battery": "48V 19.6Ah , Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Power: 750W Peak Power: 1100W Torque: 90Nm+",
-          "Speed Class": "20 mph (Throttle) / 28 mph (PAS)",
-          "Range": "60~80miles",
-          "Sensor": "Torque+Cadence Sensor",
-          "Display": "Detachable High-Definition Display",
-          "Throttle": "Thumb Throttle"
-        },
-        "all": {
-          "Rider Height": "5'0\" ~ 6'2\"",
-          "Reach": "19\"",
-          "Top Tube Length": "25\"",
-          "Standover Height": "16\"",
-          "Wheelbase": "46\"",
-          "Min Saddle Height": "30\"",
-          "Max Saddle Height": "35\"",
-          "Head Tube Length": "6\"",
-          "Battery": "48V 19.6Ah , Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Power: 750W Peak Power: 1100W Torque: 90Nm+",
-          "Speed Class": "20 mph (Throttle) / 28 mph (PAS)",
-          "Weight": "82 lbs",
-          "Range": "60~80miles",
-          "Payload Capacity": "350 lbs",
-          "Sensor": "Torque+Cadence Sensor",
-          "Brakes": "TEKTRO TKD171 Hydraulic Disc Brakes",
-          "Brake lever": "Aluminum Alloy, with power cutoff",
-          "Tires": "20\"x 4.0\" Fat Tire (Puncture-Resistant)",
-          "Display": "Detachable High-Definition Display",
-          "Derailleur": "8 Speed Shimano",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 52T chainring",
-          "Front Fork": "100mm fork travel",
-          "Frame": "6061 Aluminum Alloy",
-          "Gearing": "Shimano 8-Speed",
-          "Throttle": "Thumb Throttle",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Customized Comfort Leather Seat",
-          "Spokes": "Heavy-duty carbon steel, 13G × 172 mm (front) / 123 mm (rear) , 13G × 172 mm (front) / 125 mm (rear)"
+        "grouped": {
+          "general_info": {
+            "speed_class": "20 mph (Throttle) / 28 mph (PAS)",
+            "weight": "82 lbs",
+            "range": "60~80miles",
+            "payload_capacity": "350 lbs"
+          },
+          "ebike_system": {
+            "battery": "48V 19.6Ah , Complies with UL standards, IPX7 Waterproof",
+            "charger": "48V 3A",
+            "motor": "Continuous Power: 750W Peak Power: 1100W Torque: 90Nm+",
+            "sensor": "Torque+Cadence Sensor",
+            "display": "Detachable High-Definition Display",
+            "throttle": "Thumb Throttle"
+          },
+          "water_resistance": {
+            "waterproof_rating": "IPX6 (Whole Bike)"
+          },
+          "frameset": {
+            "front_fork": "100mm fork travel",
+            "frame": "6061 Aluminum Alloy"
+          },
+          "drivetrain": {
+            "derailleur": "8 Speed Shimano",
+            "chain": "KMC Stainless Chain",
+            "crank_set": "Aluminum alloy, 170mm, 52T chainring",
+            "gearing": "Shimano 8-Speed"
+          },
+          "brakes": {
+            "brakes": "TEKTRO TKD171 Hydraulic Disc Brakes",
+            "brake_lever": "Aluminum Alloy, with power cutoff"
+          },
+          "wheelset": {
+            "tires": "20\"x 4.0\" Fat Tire (Puncture-Resistant)",
+            "rims": "Aluminum Alloy",
+            "spokes": "Heavy-duty carbon steel, 13G × 172 mm (front) / 123 mm (rear) , 13G × 172 mm (front) / 125 mm (rear)"
+          },
+          "cockpit": {
+            "handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
+            "saddle": "Customized Comfort Leather Seat"
+          },
+          "geometry": {
+            "rider_height": "5'0\" ~ 6'2\"",
+            "reach": "19\"",
+            "top_tube_length": "25\"",
+            "standover_height": "16\"",
+            "wheelbase": "46\"",
+            "min_saddle_height": "30\"",
+            "max_saddle_height": "35\"",
+            "head_tube_length": "6\""
+          },
+          "included_accessories": {
+            "kickstand": "Sturdy Aluminum Alloy"
+          }
         }
       },
       "spec_count": 33,
@@ -2929,44 +2297,7 @@
           }
         }
       ],
-      "available_options": [
-        {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "White",
-              "price": 1799.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Dark Blue",
-              "price": 1799.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Firebrick",
-              "price": 1799.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Olive Green",
-              "price": 1799.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Orange",
-              "price": 1799.99,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        }
-      ]
+      "available_options": []
     },
     {
       "model": "Slate Ebike",
@@ -2993,95 +2324,62 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "Regular price": "$1,699.99",
-          "Shop All E-Bikes": "Your new favorite ride is just a click away.",
-          "Free": "$499.99",
-          "Free Gifts": "$179.98",
-          "Pedals Assist Intelligent": "1-5 Level",
-          "Weight": "54 lbs",
-          "Payload Capacity": "350 lbs",
-          "Brakes": "LOGAN HD-E500 Hydraulic Brakes",
-          "Tires": "20\" × 3.0\" Tire",
-          "Derailleur": "7-speed Shimano",
-          "Brake lever": "Aluminum Alloy, with power cutoff",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 165mm, 52T chainring",
-          "Front Fork": "80mm fork travel",
-          "Frame": "6061 Aluminum Alloy",
-          "Gearing": "Shimano 7-Speed",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 620 mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Customized Comfort Leather Seat",
-          "Spokes": "Heavy-duty carbon steel, 13G × 172 mm (front) / 123 mm (rear), 13G × 125 mm (rear)",
-          "Rider Height": "5'0\" ~ 6'2\"",
-          "Reach": "20\"",
-          "Top Tube Length": "25\"",
-          "Stand over Height": "16\"",
-          "Wheelbase": "43\"",
-          "Min Saddle Height": "32\"",
-          "Max Saddle Height": "37\"",
-          "Head Tube Length": "7\"",
-          "Handlebar Length": "Aluminum Alloy, φ31.8mm, 620 mm",
-          "Q:": "how much does the foldable Slate Ebike weigh",
-          "A:": "The weight of the Mokwheel Slate is 54 lbs."
-        },
-        "technical": {
-          "*Ships Within 2 Business Days": "In stock",
-          "Battery": "48V 15Ah Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Powerr: 500W Peak Power:860W Torque: 70Nm+",
-          "Speed": "20 mph (Throttle) / 25 mph (PAS)",
-          "Range": "50~60miles",
-          "Sensor": "Torque+Cadence Sensor",
-          "Display": "Detachable High-Definition Display",
-          "Throttle": "Thumb Throttle"
-        },
-        "all": {
-          "Regular price": "$1,699.99",
-          "Shop All E-Bikes": "Your new favorite ride is just a click away.",
-          "Free": "$499.99",
-          "*Ships Within 2 Business Days": "In stock",
-          "Free Gifts": "$179.98",
-          "Battery": "48V 15Ah Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Powerr: 500W Peak Power:860W Torque: 70Nm+",
-          "Pedals Assist Intelligent": "1-5 Level",
-          "Speed": "20 mph (Throttle) / 25 mph (PAS)",
-          "Weight": "54 lbs",
-          "Range": "50~60miles",
-          "Payload Capacity": "350 lbs",
-          "Sensor": "Torque+Cadence Sensor",
-          "Brakes": "LOGAN HD-E500 Hydraulic Brakes",
-          "Tires": "20\" × 3.0\" Tire",
-          "Display": "Detachable High-Definition Display",
-          "Derailleur": "7-speed Shimano",
-          "Brake lever": "Aluminum Alloy, with power cutoff",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 165mm, 52T chainring",
-          "Front Fork": "80mm fork travel",
-          "Frame": "6061 Aluminum Alloy",
-          "Gearing": "Shimano 7-Speed",
-          "Throttle": "Thumb Throttle",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 620 mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Customized Comfort Leather Seat",
-          "Spokes": "Heavy-duty carbon steel, 13G × 172 mm (front) / 123 mm (rear), 13G × 125 mm (rear)",
-          "Rider Height": "5'0\" ~ 6'2\"",
-          "Reach": "20\"",
-          "Top Tube Length": "25\"",
-          "Stand over Height": "16\"",
-          "Wheelbase": "43\"",
-          "Min Saddle Height": "32\"",
-          "Max Saddle Height": "37\"",
-          "Head Tube Length": "7\"",
-          "Handlebar Length": "Aluminum Alloy, φ31.8mm, 620 mm",
-          "Q:": "how much does the foldable Slate Ebike weigh",
-          "A:": "The weight of the Mokwheel Slate is 54 lbs."
+        "grouped": {
+          "general_info": {
+            "speed": "20 mph (Throttle) / 25 mph (PAS)",
+            "weight": "54 lbs",
+            "range": "50~60miles",
+            "payload_capacity": "350 lbs"
+          },
+          "ebike_system": {
+            "battery": "48V 15Ah Complies with UL standards, IPX7 Waterproof",
+            "charger": "48V 3A",
+            "motor": "Continuous Powerr: 500W Peak Power:860W Torque: 70Nm+",
+            "sensor": "Torque+Cadence Sensor",
+            "display": "Detachable High-Definition Display",
+            "throttle": "Thumb Throttle"
+          },
+          "water_resistance": {
+            "waterproof_rating": "IPX6 (Whole Bike)"
+          },
+          "frameset": {
+            "front_fork": "80mm fork travel",
+            "frame": "6061 Aluminum Alloy"
+          },
+          "drivetrain": {
+            "pedals_assist_intelligent": "1-5 Level",
+            "derailleur": "7-speed Shimano",
+            "chain": "KMC Stainless Chain",
+            "crank_set": "Aluminum alloy, 165mm, 52T chainring",
+            "gearing": "Shimano 7-Speed"
+          },
+          "brakes": {
+            "brakes": "LOGAN HD-E500 Hydraulic Brakes",
+            "brake_lever": "Aluminum Alloy, with power cutoff"
+          },
+          "wheelset": {
+            "tires": "20\" × 3.0\" Tire",
+            "rims": "Aluminum Alloy",
+            "spokes": "Heavy-duty carbon steel, 13G × 172 mm (front) / 123 mm (rear), 13G × 125 mm (rear)"
+          },
+          "cockpit": {
+            "handlebar": "Aluminum Alloy, φ31.8mm, 620 mm",
+            "saddle": "Customized Comfort Leather Seat",
+            "handlebar_length": "Aluminum Alloy, φ31.8mm, 620 mm"
+          },
+          "geometry": {
+            "rider_height": "5'0\" ~ 6'2\"",
+            "reach": "20\"",
+            "top_tube_length": "25\"",
+            "stand_over_height": "16\"",
+            "wheelbase": "43\"",
+            "min_saddle_height": "32\"",
+            "max_saddle_height": "37\"",
+            "head_tube_length": "7\""
+          },
+          "included_accessories": {
+            "kickstand": "Sturdy Aluminum Alloy"
+          }
         }
       },
       "spec_count": 42,
@@ -3131,26 +2429,7 @@
           }
         }
       ],
-      "available_options": [
-        {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Platinum",
-              "price": 1499.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Denim",
-              "price": 1499.99,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        }
-      ]
+      "available_options": []
     },
     {
       "model": "Tarmac Ebike",
@@ -3187,77 +2466,60 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "Rider Height": "5'7\" ~ 6'7\"",
-          "Reach": "17\"",
-          "Top Tube Length": "25\"",
-          "Standover Height": "32\"",
-          "Wheelbase": "47\"",
-          "Min Saddle Height": "36\"",
-          "Max Saddle Height": "44\"",
-          "Head Tube Length": "6\"",
-          "Weight": "66 lbs",
-          "Payload Capacity": "350 lbs",
-          "Tires": "29\" x 2.35\" Tire",
-          "Gearing": "Shimano 8-Speed",
-          "Derailleur": "8-speed Shimano",
-          "Brakes": "TEKTRO TKD171 Hydraulic Disc Brakes",
-          "Brake lever": "Aluminum Alloy, with power cutoff",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 46T chainring",
-          "Front Fork": "80mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Customized Comfort Leather Seat",
-          "Spokes": "Heavy-duty carbon steel, 13G × 275 mm (front) / 245 mm (rear) , 13G × 275 mm (front) / 243 mm (rear)"
-        },
-        "technical": {
-          "Battery": "48V 15Ah Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Power:750W Peak Power:920W Torque: 75Nm",
-          "Speed Class": "20 mph (Throttle) / 28 mph (PAS)",
-          "Range": "50~60miles",
-          "Sensor": "Torque+Cadence Sensor",
-          "Display": "Detachable High-Definition Display",
-          "Throttle": "Thumb Throttle"
-        },
-        "all": {
-          "Rider Height": "5'7\" ~ 6'7\"",
-          "Reach": "17\"",
-          "Top Tube Length": "25\"",
-          "Standover Height": "32\"",
-          "Wheelbase": "47\"",
-          "Min Saddle Height": "36\"",
-          "Max Saddle Height": "44\"",
-          "Head Tube Length": "6\"",
-          "Battery": "48V 15Ah Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Power:750W Peak Power:920W Torque: 75Nm",
-          "Speed Class": "20 mph (Throttle) / 28 mph (PAS)",
-          "Weight": "66 lbs",
-          "Range": "50~60miles",
-          "Payload Capacity": "350 lbs",
-          "Sensor": "Torque+Cadence Sensor",
-          "Tires": "29\" x 2.35\" Tire",
-          "Display": "Detachable High-Definition Display",
-          "Gearing": "Shimano 8-Speed",
-          "Derailleur": "8-speed Shimano",
-          "Brakes": "TEKTRO TKD171 Hydraulic Disc Brakes",
-          "Brake lever": "Aluminum Alloy, with power cutoff",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 46T chainring",
-          "Front Fork": "80mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Throttle": "Thumb Throttle",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Customized Comfort Leather Seat",
-          "Spokes": "Heavy-duty carbon steel, 13G × 275 mm (front) / 245 mm (rear) , 13G × 275 mm (front) / 243 mm (rear)"
+        "grouped": {
+          "general_info": {
+            "speed_class": "20 mph (Throttle) / 28 mph (PAS)",
+            "weight": "66 lbs",
+            "range": "50~60miles",
+            "payload_capacity": "350 lbs"
+          },
+          "ebike_system": {
+            "battery": "48V 15Ah Complies with UL standards, IPX7 Waterproof",
+            "charger": "48V 3A",
+            "motor": "Continuous Power:750W Peak Power:920W Torque: 75Nm",
+            "sensor": "Torque+Cadence Sensor",
+            "display": "Detachable High-Definition Display",
+            "throttle": "Thumb Throttle"
+          },
+          "water_resistance": {
+            "waterproof_rating": "IPX6 (Whole Bike)"
+          },
+          "frameset": {
+            "front_fork": "80mm Adjustable Suspension",
+            "frame": "6061 Aluminum Alloy"
+          },
+          "drivetrain": {
+            "gearing": "Shimano 8-Speed",
+            "derailleur": "8-speed Shimano",
+            "chain": "KMC Stainless Chain",
+            "crank_set": "Aluminum alloy, 170mm, 46T chainring"
+          },
+          "brakes": {
+            "brakes": "TEKTRO TKD171 Hydraulic Disc Brakes",
+            "brake_lever": "Aluminum Alloy, with power cutoff"
+          },
+          "wheelset": {
+            "tires": "29\" x 2.35\" Tire",
+            "rims": "Aluminum Alloy",
+            "spokes": "Heavy-duty carbon steel, 13G × 275 mm (front) / 245 mm (rear) , 13G × 275 mm (front) / 243 mm (rear)"
+          },
+          "cockpit": {
+            "handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
+            "saddle": "Customized Comfort Leather Seat"
+          },
+          "geometry": {
+            "rider_height": "5'7\" ~ 6'7\"",
+            "reach": "17\"",
+            "top_tube_length": "25\"",
+            "standover_height": "32\"",
+            "wheelbase": "47\"",
+            "min_saddle_height": "36\"",
+            "max_saddle_height": "44\"",
+            "head_tube_length": "6\""
+          },
+          "included_accessories": {
+            "kickstand": "Sturdy Aluminum Alloy"
+          }
         }
       },
       "spec_count": 33,
@@ -3372,30 +2634,6 @@
               "free": true
             }
           ]
-        },
-        {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Phantom Black",
-              "price": 1699.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Pine Green",
-              "price": 1699.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Marine Blue",
-              "price": 1699.99,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
         }
       ]
     },
@@ -3430,77 +2668,60 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "Rider Height": "5'6\" ~ 6'8\"",
-          "Reach": "16\"",
-          "Top Tube Length": "23\"",
-          "Standover Height": "19\"",
-          "Wheelbase": "44\"",
-          "Min Saddle Height": "32\"",
-          "Max Saddle Height": "41\"",
-          "Head Tube Length": "7\"",
-          "Weight": "57 lbs",
-          "Payload Capacity": "300 lbs",
-          "Tires": "27.5\" x 2.4\" Tire",
-          "Gearing": "Shimano 8-Speed",
-          "Derailleur": "8-speed Shimano",
-          "Brakes": "TEKTRO TKD171 Hydraulic Disc Brakes",
-          "Brake lever": "Aluminum Alloy, with power cutoff",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 46T chainring",
-          "Front Fork": "80mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Customized Comfort Leather Seat",
-          "Spokes": "Heavy-duty carbon steel, 13G × 263 mm (front) / 226 mm (rear) , 13G × 265 mm (front) / 224 mm (rear)"
-        },
-        "technical": {
-          "Battery": "48V 15Ah, Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Power:750W Peak Power:920W Torque: 75Nm",
-          "Speed Class": "20 mph (Throttle) / 28 mph (PAS)",
-          "Range": "50~60miles",
-          "Sensor": "Torque+Cadence Sensor",
-          "Display": "Detachable High-Definition Display",
-          "Throttle": "Thumb Throttle"
-        },
-        "all": {
-          "Rider Height": "5'6\" ~ 6'8\"",
-          "Reach": "16\"",
-          "Top Tube Length": "23\"",
-          "Standover Height": "19\"",
-          "Wheelbase": "44\"",
-          "Min Saddle Height": "32\"",
-          "Max Saddle Height": "41\"",
-          "Head Tube Length": "7\"",
-          "Battery": "48V 15Ah, Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Power:750W Peak Power:920W Torque: 75Nm",
-          "Speed Class": "20 mph (Throttle) / 28 mph (PAS)",
-          "Weight": "57 lbs",
-          "Range": "50~60miles",
-          "Payload Capacity": "300 lbs",
-          "Sensor": "Torque+Cadence Sensor",
-          "Tires": "27.5\" x 2.4\" Tire",
-          "Display": "Detachable High-Definition Display",
-          "Gearing": "Shimano 8-Speed",
-          "Derailleur": "8-speed Shimano",
-          "Brakes": "TEKTRO TKD171 Hydraulic Disc Brakes",
-          "Brake lever": "Aluminum Alloy, with power cutoff",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 46T chainring",
-          "Front Fork": "80mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Throttle": "Thumb Throttle",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Customized Comfort Leather Seat",
-          "Spokes": "Heavy-duty carbon steel, 13G × 263 mm (front) / 226 mm (rear) , 13G × 265 mm (front) / 224 mm (rear)"
+        "grouped": {
+          "general_info": {
+            "speed_class": "20 mph (Throttle) / 28 mph (PAS)",
+            "weight": "57 lbs",
+            "range": "50~60miles",
+            "payload_capacity": "300 lbs"
+          },
+          "ebike_system": {
+            "battery": "48V 15Ah, Complies with UL standards, IPX7 Waterproof",
+            "charger": "48V 3A",
+            "motor": "Continuous Power:750W Peak Power:920W Torque: 75Nm",
+            "sensor": "Torque+Cadence Sensor",
+            "display": "Detachable High-Definition Display",
+            "throttle": "Thumb Throttle"
+          },
+          "water_resistance": {
+            "waterproof_rating": "IPX6 (Whole Bike)"
+          },
+          "frameset": {
+            "front_fork": "80mm Adjustable Suspension",
+            "frame": "6061 Aluminum Alloy"
+          },
+          "drivetrain": {
+            "gearing": "Shimano 8-Speed",
+            "derailleur": "8-speed Shimano",
+            "chain": "KMC Stainless Chain",
+            "crank_set": "Aluminum alloy, 170mm, 46T chainring"
+          },
+          "brakes": {
+            "brakes": "TEKTRO TKD171 Hydraulic Disc Brakes",
+            "brake_lever": "Aluminum Alloy, with power cutoff"
+          },
+          "wheelset": {
+            "tires": "27.5\" x 2.4\" Tire",
+            "rims": "Aluminum Alloy",
+            "spokes": "Heavy-duty carbon steel, 13G × 263 mm (front) / 226 mm (rear) , 13G × 265 mm (front) / 224 mm (rear)"
+          },
+          "cockpit": {
+            "handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
+            "saddle": "Customized Comfort Leather Seat"
+          },
+          "geometry": {
+            "rider_height": "5'6\" ~ 6'8\"",
+            "reach": "16\"",
+            "top_tube_length": "23\"",
+            "standover_height": "19\"",
+            "wheelbase": "44\"",
+            "min_saddle_height": "32\"",
+            "max_saddle_height": "41\"",
+            "head_tube_length": "7\""
+          },
+          "included_accessories": {
+            "kickstand": "Sturdy Aluminum Alloy"
+          }
         }
       },
       "spec_count": 33,
@@ -3564,32 +2785,7 @@
           }
         }
       ],
-      "available_options": [
-        {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Smoke Grey",
-              "price": 1699.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Hazelnut Yellow",
-              "price": 1699.99,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Crimson Red",
-              "price": 1699.99,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        }
-      ]
+      "available_options": []
     }
   ],
   "available_accessories": [

@@ -1,5 +1,6 @@
 {
   "source": "https://vvolt.com",
+  "logo": "https://vvolt.com/cdn/shop/files/Vvolt_logo_1200_628.png?v=1716483589",
   "collection": "e-bikes",
   "scraped_at": "2026-06-04T09:38:20.043339+00:00",
   "model_count": 5,
@@ -33,19 +34,15 @@
       },
       "warranty": "3-Year Warranty",
       "specs": {
-        "physical": {
-          "Weight": "Only 44 lbs WITH battery!"
-        },
-        "technical": {
-          "Range": "Up to 40 miles, compatible with alternate Vvolt Ranger battery for up to 60-mile range",
-          "Power": "550 peak watts, 45nm peak torque",
-          "Top Assist Speed": "20 mph"
-        },
-        "all": {
-          "Range": "Up to 40 miles, compatible with alternate Vvolt Ranger battery for up to 60-mile range",
-          "Power": "550 peak watts, 45nm peak torque",
-          "Top Assist Speed": "20 mph",
-          "Weight": "Only 44 lbs WITH battery!"
+        "grouped": {
+          "general_info": {
+            "range": "Up to 40 miles, compatible with alternate Vvolt Ranger battery for up to 60-mile range",
+            "weight": "Only 44 lbs WITH battery!"
+          },
+          "ebike_system": {
+            "power": "550 peak watts, 45nm peak torque",
+            "top_assist_speed": "20 mph"
+          }
         }
       },
       "spec_count": 4,
@@ -136,24 +133,6 @@
               "free": true
             }
           ]
-        },
-        {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Reef",
-              "price": 1499.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Black Pearl",
-              "price": 1499.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
         }
       ]
     },
@@ -191,19 +170,15 @@
       },
       "warranty": "3-Year Warranty",
       "specs": {
-        "physical": {
-          "Weight": "Only 44 lbs WITH battery!"
-        },
-        "technical": {
-          "Range": "Up to 40 miles, compatible with alternate Vvolt Ranger battery for up to 60-mile range",
-          "Power": "550 peak watts, 45nm peak torque",
-          "Top Assist Speed": "20 mph"
-        },
-        "all": {
-          "Range": "Up to 40 miles, compatible with alternate Vvolt Ranger battery for up to 60-mile range",
-          "Power": "550 peak watts, 45nm peak torque",
-          "Top Assist Speed": "20 mph",
-          "Weight": "Only 44 lbs WITH battery!"
+        "grouped": {
+          "general_info": {
+            "range": "Up to 40 miles, compatible with alternate Vvolt Ranger battery for up to 60-mile range",
+            "weight": "Only 44 lbs WITH battery!"
+          },
+          "ebike_system": {
+            "power": "550 peak watts, 45nm peak torque",
+            "top_assist_speed": "20 mph"
+          }
         }
       },
       "spec_count": 4,
@@ -434,24 +409,6 @@
           ]
         },
         {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Black Pearl",
-              "price": 1499.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Reef",
-              "price": 1499.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
           "group": "Choose your discount",
           "type": "variant",
           "choices": [
@@ -469,7 +426,8 @@
             }
           ]
         }
-      ]
+      ],
+      "regular_price": 1899.0
     },
     {
       "model": "Centauri II",
@@ -501,19 +459,15 @@
       },
       "warranty": "3-Year Warranty",
       "specs": {
-        "physical": {
-          "Weight": "53 lbs with battery!"
-        },
-        "technical": {
-          "Range": "up to 60 miles",
-          "Power": "650 peak watts, 120nm peak torque",
-          "Top Assist Speed": "28 mph"
-        },
-        "all": {
-          "Range": "up to 60 miles",
-          "Power": "650 peak watts, 120nm peak torque",
-          "Top Assist Speed": "28 mph",
-          "Weight": "53 lbs with battery!"
+        "grouped": {
+          "general_info": {
+            "range": "up to 60 miles",
+            "weight": "53 lbs with battery!"
+          },
+          "ebike_system": {
+            "power": "650 peak watts, 120nm peak torque",
+            "top_assist_speed": "28 mph"
+          }
         }
       },
       "spec_count": 4,
@@ -618,24 +572,6 @@
       ],
       "available_options": [
         {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Galactic Storm",
-              "price": 2399.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Forest Planet",
-              "price": 2399.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
           "group": "Size",
           "type": "variant",
           "choices": [
@@ -659,7 +595,8 @@
             }
           ]
         }
-      ]
+      ],
+      "regular_price": 3199.0
     },
     {
       "model": "Centauri SE",
@@ -696,19 +633,15 @@
       },
       "warranty": "3-Year Warranty",
       "specs": {
-        "physical": {
-          "Weight": "50 lbs with battery!"
-        },
-        "technical": {
-          "Range": "up to 60 miles",
-          "Power": "350 peak watts, 120nm peak torque",
-          "Top Assist Speed": "28 mph"
-        },
-        "all": {
-          "Range": "up to 60 miles",
-          "Power": "350 peak watts, 120nm peak torque",
-          "Top Assist Speed": "28 mph",
-          "Weight": "50 lbs with battery!"
+        "grouped": {
+          "general_info": {
+            "range": "up to 60 miles",
+            "weight": "50 lbs with battery!"
+          },
+          "ebike_system": {
+            "power": "350 peak watts, 120nm peak torque",
+            "top_assist_speed": "28 mph"
+          }
         }
       },
       "spec_count": 4,
@@ -813,30 +746,6 @@
       ],
       "available_options": [
         {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Black Pearl",
-              "price": 2299.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Chalk White",
-              "price": 2299.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Mars",
-              "price": 2299.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
           "group": "Size",
           "type": "variant",
           "choices": [
@@ -854,7 +763,8 @@
             }
           ]
         }
-      ]
+      ],
+      "regular_price": 3299.0
     },
     {
       "model": "Slice Lite",
@@ -881,9 +791,7 @@
       },
       "warranty": "3-Year Warranty",
       "specs": {
-        "physical": {},
-        "technical": {},
-        "all": {}
+        "grouped": {}
       },
       "spec_count": 0,
       "scrape_error": "RuntimeError: no specs extracted",
@@ -942,7 +850,8 @@
             }
           ]
         }
-      ]
+      ],
+      "regular_price": 1999.0
     }
   ],
   "available_accessories": [

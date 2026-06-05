@@ -1,5 +1,6 @@
 {
   "source": "https://www.aventon.com",
+  "logo": "https://aventon.imgix.net/aventon_favicon_72.png?w=256",
   "collection": "ebikes",
   "scraped_at": "2026-06-04T08:56:25.877338+00:00",
   "model_count": 18,
@@ -94,119 +95,85 @@
       },
       "available": true,
       "specs": {
-        "physical": {
-          "MODEL": "Abound LR Ebike",
-          "WEIGHT": "88lbs",
-          "TOTAL WEIGHT LIMIT": "440 lbs",
-          "RIDER HEIGHT": "4'11\" - 6'3\"",
-          "IDEAL USE": "Cargo & Utility",
-          "PEDAL ASSIST": "3 Levels (with Ride Tune Customization)",
-          "CARRY CAPACITY": "Carry Up To 2 Passengers",
-          "FRAME": "Gravity Cast 6061 Single-Butted Aluminum Alloy with Internal Battery",
-          "FORK": "Threaded Steerer Tube for Quill Stem 15x110 spacing, 51mm travel, adjustable lockout black stanchions",
-          "REAR SPACING": "175mm",
-          "FORK SPACING": "110mm",
-          "FRAME STYLE": "Step-Through",
-          "FRONT WHEEL": "Double Wall Aluminum, 20in, 36hole, 13g, 20x110 Thru Axle, Schrader Valve",
-          "REAR WHEEL": "Double Wall Aluminum, 20in, 36hole, 12g, Nutted Hub Drive Motor, Scharder Valve",
-          "TIRES": "20x3.0 Innova IA-2131 Urban Tire Refective Sidewalls",
-          "BATTERY WEIGHT": "8.7lbs",
-          "LIGHTS": "Front and Rear Lights Integrated w/ Turn Signals",
-          "FRONT BRAKE": "Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
-          "REAR BRAKE": "Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
-          "FRONT BRAKE ROTOR": "180mm 6 bolt",
-          "REAR BRAKE ROTOR": "203mm 6-bolt",
-          "REAR DERAILLEUR": "Shimano Altus RD-M310 8 Speed",
-          "SHIFTER": "Shimano 8 Speed Trigger SL-M315-8R",
-          "CHAIN": "7/8 speed 154L",
-          "CASSETTE": "12-32T / 8 Speed Shimano CS HG200-8",
-          "CHAINRING": "52 tooth",
-          "CRANKSET": "3pc, 165mm crank arm",
-          "BOTTOM BRACKET": "Square Taper, Sealed, Dual-Sided Torque Sensor",
-          "PEDALS": "9/16\" Composite Platform",
-          "SADDLE": "Aventon Saddle w/ grab handle by Selle Royal",
-          "SEATPOST": "Aventon Suspension Seatpost, Ø 30.9mm, 350mm Length. 50mm travel",
-          "SEATPOST CLAMP": "34.9mm",
-          "HANDLEBARS": "BMX Style Aluminum 31.8mm, 720mm",
-          "GRIPS": "Aventon Ergonomic Comfort lock on grips",
-          "HEADSET": "H886HW Peilin 28.6mm * 56mm * 56mm H19.5mm 6pcs",
-          "FENDERS": "Included",
-          "REAR RACK": "Included",
-          "REAR RACK WEIGHT LIMIT": "143 lbs",
-          "FRAME STORAGE BAG": "Included"
-        },
-        "technical": {
-          "EBIKE CLASS": "Class 2 Ebike",
-          "RANGE": "Up to 60 miles",
-          "BATTERY SAFETY CERTIFICATIONS": "Certified to UL 2271",
-          "SAFETY CERTIFICATIONS": "UL and TUV Safety Certified  UL 2849",
-          "WATER RESISTANCE": "Bike - IPX5 // Components - IPX6",
-          "MOTOR": "Shengyi 36V 750w Hub Drive with 6 speed sensors (1188W peak)",
-          "MOTOR TORQUE": "80Nm",
-          "DISPLAY": "Aventon BC147",
-          "BATTERY": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
-          "CONTROLLER": "36V, 33A",
-          "THROTTLE": "Aventon LH Handlebar Mounted",
-          "SENSORS": "Double Sided Bottom Bracket Torque Sensor",
-          "CHARGER": "36V Output: 42V/ 4A",
-          "CHARGING TIME FROM 0% TO 100%": "5 hours",
-          "SPEED": "Class 2"
-        },
-        "all": {
-          "MODEL": "Abound LR Ebike",
-          "WEIGHT": "88lbs",
-          "TOTAL WEIGHT LIMIT": "440 lbs",
-          "RIDER HEIGHT": "4'11\" - 6'3\"",
-          "EBIKE CLASS": "Class 2 Ebike",
-          "RANGE": "Up to 60 miles",
-          "BATTERY SAFETY CERTIFICATIONS": "Certified to UL 2271",
-          "SAFETY CERTIFICATIONS": "UL and TUV Safety Certified  UL 2849",
-          "IDEAL USE": "Cargo & Utility",
-          "PEDAL ASSIST": "3 Levels (with Ride Tune Customization)",
-          "CARRY CAPACITY": "Carry Up To 2 Passengers",
-          "WATER RESISTANCE": "Bike - IPX5 // Components - IPX6",
-          "FRAME": "Gravity Cast 6061 Single-Butted Aluminum Alloy with Internal Battery",
-          "FORK": "Threaded Steerer Tube for Quill Stem 15x110 spacing, 51mm travel, adjustable lockout black stanchions",
-          "REAR SPACING": "175mm",
-          "FORK SPACING": "110mm",
-          "FRAME STYLE": "Step-Through",
-          "FRONT WHEEL": "Double Wall Aluminum, 20in, 36hole, 13g, 20x110 Thru Axle, Schrader Valve",
-          "REAR WHEEL": "Double Wall Aluminum, 20in, 36hole, 12g, Nutted Hub Drive Motor, Scharder Valve",
-          "TIRES": "20x3.0 Innova IA-2131 Urban Tire Refective Sidewalls",
-          "MOTOR": "Shengyi 36V 750w Hub Drive with 6 speed sensors (1188W peak)",
-          "MOTOR TORQUE": "80Nm",
-          "DISPLAY": "Aventon BC147",
-          "BATTERY": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
-          "BATTERY WEIGHT": "8.7lbs",
-          "CONTROLLER": "36V, 33A",
-          "THROTTLE": "Aventon LH Handlebar Mounted",
-          "SENSORS": "Double Sided Bottom Bracket Torque Sensor",
-          "CHARGER": "36V Output: 42V/ 4A",
-          "CHARGING TIME FROM 0% TO 100%": "5 hours",
-          "LIGHTS": "Front and Rear Lights Integrated w/ Turn Signals",
-          "SPEED": "Class 2",
-          "FRONT BRAKE": "Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
-          "REAR BRAKE": "Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
-          "FRONT BRAKE ROTOR": "180mm 6 bolt",
-          "REAR BRAKE ROTOR": "203mm 6-bolt",
-          "REAR DERAILLEUR": "Shimano Altus RD-M310 8 Speed",
-          "SHIFTER": "Shimano 8 Speed Trigger SL-M315-8R",
-          "CHAIN": "7/8 speed 154L",
-          "CASSETTE": "12-32T / 8 Speed Shimano CS HG200-8",
-          "CHAINRING": "52 tooth",
-          "CRANKSET": "3pc, 165mm crank arm",
-          "BOTTOM BRACKET": "Square Taper, Sealed, Dual-Sided Torque Sensor",
-          "PEDALS": "9/16\" Composite Platform",
-          "SADDLE": "Aventon Saddle w/ grab handle by Selle Royal",
-          "SEATPOST": "Aventon Suspension Seatpost, Ø 30.9mm, 350mm Length. 50mm travel",
-          "SEATPOST CLAMP": "34.9mm",
-          "HANDLEBARS": "BMX Style Aluminum 31.8mm, 720mm",
-          "GRIPS": "Aventon Ergonomic Comfort lock on grips",
-          "HEADSET": "H886HW Peilin 28.6mm * 56mm * 56mm H19.5mm 6pcs",
-          "FENDERS": "Included",
-          "REAR RACK": "Included",
-          "REAR RACK WEIGHT LIMIT": "143 lbs",
-          "FRAME STORAGE BAG": "Included"
+        "grouped": {
+          "general_info": {
+            "model": "Abound LR Ebike",
+            "weight": "88lbs",
+            "total_weight_limit": "440 lbs",
+            "ebike_class": "Class 2 Ebike",
+            "range": "Up to 60 miles",
+            "ideal_use": "Cargo & Utility",
+            "carry_capacity": "Carry Up To 2 Passengers",
+            "speed": "Class 2"
+          },
+          "ebike_system": {
+            "pedal_assist": "3 Levels (with Ride Tune Customization)",
+            "motor": "Shengyi 36V 750w Hub Drive with 6 speed sensors (1188W peak)",
+            "motor_torque": "80Nm",
+            "display": "Aventon BC147",
+            "battery": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
+            "battery_weight": "8.7lbs",
+            "controller": "36V, 33A",
+            "throttle": "Aventon LH Handlebar Mounted",
+            "sensors": "Double Sided Bottom Bracket Torque Sensor",
+            "charger": "36V Output: 42V/ 4A",
+            "charging_time_from_0_to_100": "5 hours"
+          },
+          "safety": {
+            "lights": "Front and Rear Lights Integrated w/ Turn Signals"
+          },
+          "certifications": {
+            "battery_safety_certifications": "Certified to UL 2271",
+            "safety_certifications": "UL and TUV Safety Certified  UL 2849"
+          },
+          "water_resistance": {
+            "water_resistance": "Bike - IPX5 // Components - IPX6"
+          },
+          "frameset": {
+            "frame": "Gravity Cast 6061 Single-Butted Aluminum Alloy with Internal Battery",
+            "fork": "Threaded Steerer Tube for Quill Stem 15x110 spacing, 51mm travel, adjustable lockout black stanchions",
+            "rear_spacing": "175mm",
+            "fork_spacing": "110mm",
+            "frame_style": "Step-Through",
+            "frame_storage_bag": "Included"
+          },
+          "drivetrain": {
+            "rear_derailleur": "Shimano Altus RD-M310 8 Speed",
+            "shifter": "Shimano 8 Speed Trigger SL-M315-8R",
+            "chain": "7/8 speed 154L",
+            "cassette": "12-32T / 8 Speed Shimano CS HG200-8",
+            "chainring": "52 tooth",
+            "crankset": "3pc, 165mm crank arm",
+            "bottom_bracket": "Square Taper, Sealed, Dual-Sided Torque Sensor",
+            "pedals": "9/16\" Composite Platform"
+          },
+          "brakes": {
+            "front_brake": "Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
+            "rear_brake": "Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
+            "front_brake_rotor": "180mm 6 bolt",
+            "rear_brake_rotor": "203mm 6-bolt"
+          },
+          "wheelset": {
+            "front_wheel": "Double Wall Aluminum, 20in, 36hole, 13g, 20x110 Thru Axle, Schrader Valve",
+            "rear_wheel": "Double Wall Aluminum, 20in, 36hole, 12g, Nutted Hub Drive Motor, Scharder Valve",
+            "tires": "20x3.0 Innova IA-2131 Urban Tire Refective Sidewalls"
+          },
+          "cockpit": {
+            "saddle": "Aventon Saddle w/ grab handle by Selle Royal",
+            "seatpost": "Aventon Suspension Seatpost, Ø 30.9mm, 350mm Length. 50mm travel",
+            "seatpost_clamp": "34.9mm",
+            "handlebars": "BMX Style Aluminum 31.8mm, 720mm",
+            "grips": "Aventon Ergonomic Comfort lock on grips",
+            "headset": "H886HW Peilin 28.6mm * 56mm * 56mm H19.5mm 6pcs"
+          },
+          "geometry": {
+            "rider_height": "4'11\" - 6'3\""
+          },
+          "included_accessories": {
+            "fenders": "Included",
+            "rear_rack": "Included",
+            "rear_rack_weight_limit": "143 lbs"
+          }
         }
       },
       "spec_count": 54,
@@ -278,36 +245,6 @@
         }
       ],
       "available_options": [
-        {
-          "group": "Size",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "One Size",
-              "price": 1999.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Sage",
-              "price": 1999.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Matte Stealth",
-              "price": 1999.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
         {
           "group": "Included accessories",
           "type": "accessory",
@@ -446,109 +383,78 @@
       },
       "available": true,
       "specs": {
-        "physical": {
-          "MODEL": "Abound SR Ebike",
-          "WEIGHT": "80 lbs",
-          "TOTAL WEIGHT LIMIT": "440 lbs",
-          "RIDER HEIGHT": "4'11\" - 6'3\"",
-          "IDEAL USE": "Cargo & Utility",
-          "PEDAL ASSIST": "3 Levels (with Ride Tune Customization)",
-          "FOLDING": "No",
-          "CARRY CAPACITY": "Carry A Single Passenger",
-          "FORK": "Threaded Steerer Tube for Quill Stem 15x110 spacing, 50mm travel, adjustable lockout, black stanchions",
-          "FRAME STYLE": "Step-Through",
-          "FRAME": "6061 Aluminum Alloy with Internal Battery. One piece - Diecast aluminum front triangle",
-          "TIRES": "20 x 3.0 urban tire with reflective sidewalls",
-          "WHEELS": "20-inch, 12-gauge, 36-hole, double-wall aluminum, black",
-          "ECU": "Aventon ECU Module featuring wired CAN communication, GPS positioning support, wireless Bluetooth connectivity, and cellular communication capabilities",
-          "REAR BRAKE ROTOR": "Tektro 203mm 6 bolt",
-          "FRONT BRAKE": "Tektro HD-E3520 hydraulic disc brakes",
-          "REAR BRAKE": "Tektro HD-E3520 hydraulic disc brakes",
-          "FRONT BRAKE ROTOR": "Tektro 180mm 6 bolt",
-          "CHAIN": "122 Link, 8 Speed",
-          "CHAINRING": "52 tooth",
-          "CRANKSET": "3pc, 165mm crank arm",
-          "REAR DERAILLEUR": "Shimano Altus RD-M310 8 Speed",
-          "SHIFT LEVER": "Shimano SL-M315-8R 8 Speed",
-          "CASSETTE": "Shimano CS-HG200-8 8 speed Cassette, 12-32T",
-          "PEDALS": "9/16\" Composite Platform",
-          "CHAINRING BCD": "130",
-          "SADDLE": "Aventon by SelleRoyal",
-          "SEATPOST": "30.9mm Aventon Suspension Seatpost with 50mm travel",
-          "HANDLEBARS": "BMX Style, 31.8mm bar clamp, 680mm width",
-          "STEM": "Quill Stem with 31.8mm bar clamp diameter, 40mm length, and 140mm of vertical adjustment",
-          "SEAT CLAMP": "34.9mm Quick Release",
-          "GRIPS": "Lock-on ergonomic",
-          "REAR RACK": "Included",
-          "KICKSTAND": "Included: E-lock",
-          "REAR WHEEL MESH GUARDS": "Included",
-          "REAR RACK WEIGHT LIMIT": "143 lbs"
-        },
-        "technical": {
-          "EBIKE CLASS": "Class 2 Ebike",
-          "SAFETY CERTIFICATIONS": "UL and TUV Safety Certified  UL 2849",
-          "RANGE": "Up to 60 miles",
-          "BATTERY SAFETY CERTIFICATIONS": "Certified to UL 2271",
-          "WATER RESISTANCE": "Bike - IPX5 // Components - IPX6",
-          "MOTOR TORQUE": "80Nm",
-          "THROTTLE": "Aventon LH Handlebar Mounted",
-          "SENSORS": "Double Sided Bottom Bracket Torque Sensor",
-          "CHARGER": "Aventon 4A 42V",
-          "DISPLAY": "Aventon BC147",
-          "SPEED": "Class 2",
-          "BATTERY": "Aventon 36V, 20Ah, 733Wh, LG 21700 cells",
-          "MOTOR": "Shengyi 36V 750w Hub Drive with 6 speed sensors (1188W peak)"
-        },
-        "all": {
-          "MODEL": "Abound SR Ebike",
-          "WEIGHT": "80 lbs",
-          "TOTAL WEIGHT LIMIT": "440 lbs",
-          "RIDER HEIGHT": "4'11\" - 6'3\"",
-          "EBIKE CLASS": "Class 2 Ebike",
-          "IDEAL USE": "Cargo & Utility",
-          "PEDAL ASSIST": "3 Levels (with Ride Tune Customization)",
-          "SAFETY CERTIFICATIONS": "UL and TUV Safety Certified  UL 2849",
-          "RANGE": "Up to 60 miles",
-          "FOLDING": "No",
-          "BATTERY SAFETY CERTIFICATIONS": "Certified to UL 2271",
-          "CARRY CAPACITY": "Carry A Single Passenger",
-          "WATER RESISTANCE": "Bike - IPX5 // Components - IPX6",
-          "FORK": "Threaded Steerer Tube for Quill Stem 15x110 spacing, 50mm travel, adjustable lockout, black stanchions",
-          "FRAME STYLE": "Step-Through",
-          "FRAME": "6061 Aluminum Alloy with Internal Battery. One piece - Diecast aluminum front triangle",
-          "TIRES": "20 x 3.0 urban tire with reflective sidewalls",
-          "WHEELS": "20-inch, 12-gauge, 36-hole, double-wall aluminum, black",
-          "MOTOR TORQUE": "80Nm",
-          "ECU": "Aventon ECU Module featuring wired CAN communication, GPS positioning support, wireless Bluetooth connectivity, and cellular communication capabilities",
-          "THROTTLE": "Aventon LH Handlebar Mounted",
-          "SENSORS": "Double Sided Bottom Bracket Torque Sensor",
-          "CHARGER": "Aventon 4A 42V",
-          "DISPLAY": "Aventon BC147",
-          "SPEED": "Class 2",
-          "BATTERY": "Aventon 36V, 20Ah, 733Wh, LG 21700 cells",
-          "MOTOR": "Shengyi 36V 750w Hub Drive with 6 speed sensors (1188W peak)",
-          "REAR BRAKE ROTOR": "Tektro 203mm 6 bolt",
-          "FRONT BRAKE": "Tektro HD-E3520 hydraulic disc brakes",
-          "REAR BRAKE": "Tektro HD-E3520 hydraulic disc brakes",
-          "FRONT BRAKE ROTOR": "Tektro 180mm 6 bolt",
-          "CHAIN": "122 Link, 8 Speed",
-          "CHAINRING": "52 tooth",
-          "CRANKSET": "3pc, 165mm crank arm",
-          "REAR DERAILLEUR": "Shimano Altus RD-M310 8 Speed",
-          "SHIFT LEVER": "Shimano SL-M315-8R 8 Speed",
-          "CASSETTE": "Shimano CS-HG200-8 8 speed Cassette, 12-32T",
-          "PEDALS": "9/16\" Composite Platform",
-          "CHAINRING BCD": "130",
-          "SADDLE": "Aventon by SelleRoyal",
-          "SEATPOST": "30.9mm Aventon Suspension Seatpost with 50mm travel",
-          "HANDLEBARS": "BMX Style, 31.8mm bar clamp, 680mm width",
-          "STEM": "Quill Stem with 31.8mm bar clamp diameter, 40mm length, and 140mm of vertical adjustment",
-          "SEAT CLAMP": "34.9mm Quick Release",
-          "GRIPS": "Lock-on ergonomic",
-          "REAR RACK": "Included",
-          "KICKSTAND": "Included: E-lock",
-          "REAR WHEEL MESH GUARDS": "Included",
-          "REAR RACK WEIGHT LIMIT": "143 lbs"
+        "grouped": {
+          "general_info": {
+            "model": "Abound SR Ebike",
+            "weight": "80 lbs",
+            "total_weight_limit": "440 lbs",
+            "ebike_class": "Class 2 Ebike",
+            "ideal_use": "Cargo & Utility",
+            "range": "Up to 60 miles",
+            "folding": "No",
+            "carry_capacity": "Carry A Single Passenger",
+            "speed": "Class 2"
+          },
+          "ebike_system": {
+            "pedal_assist": "3 Levels (with Ride Tune Customization)",
+            "motor_torque": "80Nm",
+            "ecu": "Aventon ECU Module featuring wired CAN communication, GPS positioning support, wireless Bluetooth connectivity, and cellular communication capabilities",
+            "throttle": "Aventon LH Handlebar Mounted",
+            "sensors": "Double Sided Bottom Bracket Torque Sensor",
+            "charger": "Aventon 4A 42V",
+            "display": "Aventon BC147",
+            "battery": "Aventon 36V, 20Ah, 733Wh, LG 21700 cells",
+            "motor": "Shengyi 36V 750w Hub Drive with 6 speed sensors (1188W peak)"
+          },
+          "certifications": {
+            "safety_certifications": "UL and TUV Safety Certified  UL 2849",
+            "battery_safety_certifications": "Certified to UL 2271"
+          },
+          "water_resistance": {
+            "water_resistance": "Bike - IPX5 // Components - IPX6"
+          },
+          "frameset": {
+            "fork": "Threaded Steerer Tube for Quill Stem 15x110 spacing, 50mm travel, adjustable lockout, black stanchions",
+            "frame_style": "Step-Through",
+            "frame": "6061 Aluminum Alloy with Internal Battery. One piece - Diecast aluminum front triangle"
+          },
+          "drivetrain": {
+            "chain": "122 Link, 8 Speed",
+            "chainring": "52 tooth",
+            "crankset": "3pc, 165mm crank arm",
+            "rear_derailleur": "Shimano Altus RD-M310 8 Speed",
+            "shift_lever": "Shimano SL-M315-8R 8 Speed",
+            "cassette": "Shimano CS-HG200-8 8 speed Cassette, 12-32T",
+            "pedals": "9/16\" Composite Platform",
+            "chainring_bcd": "130"
+          },
+          "brakes": {
+            "rear_brake_rotor": "Tektro 203mm 6 bolt",
+            "front_brake": "Tektro HD-E3520 hydraulic disc brakes",
+            "rear_brake": "Tektro HD-E3520 hydraulic disc brakes",
+            "front_brake_rotor": "Tektro 180mm 6 bolt"
+          },
+          "wheelset": {
+            "tires": "20 x 3.0 urban tire with reflective sidewalls",
+            "wheels": "20-inch, 12-gauge, 36-hole, double-wall aluminum, black",
+            "rear_wheel_mesh_guards": "Included"
+          },
+          "cockpit": {
+            "saddle": "Aventon by SelleRoyal",
+            "seatpost": "30.9mm Aventon Suspension Seatpost with 50mm travel",
+            "handlebars": "BMX Style, 31.8mm bar clamp, 680mm width",
+            "stem": "Quill Stem with 31.8mm bar clamp diameter, 40mm length, and 140mm of vertical adjustment",
+            "seat_clamp": "34.9mm Quick Release",
+            "grips": "Lock-on ergonomic"
+          },
+          "geometry": {
+            "rider_height": "4'11\" - 6'3\""
+          },
+          "included_accessories": {
+            "rear_rack": "Included",
+            "kickstand": "Included: E-lock",
+            "rear_rack_weight_limit": "143 lbs"
+          }
         }
       },
       "spec_count": 49,
@@ -623,42 +529,6 @@
         }
       ],
       "available_options": [
-        {
-          "group": "Size",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "One Size",
-              "price": 1899.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Cobalt",
-              "price": 1899.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Stealth",
-              "price": 1899.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Haze",
-              "price": 1899.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
         {
           "group": "Included accessories",
           "type": "accessory",
@@ -776,119 +646,88 @@
       },
       "available": true,
       "specs": {
-        "physical": {
-          "MODEL": "Aventure 3 Ebike",
-          "WEIGHT": "76 lbs",
-          "TOTAL WEIGHT LIMIT": "400 lbs",
-          "RIDER HEIGHT": "R: 5'3\" -5'10\" | L: 5'10\" - 6'4\"",
-          "IDEAL USE": "All-Terrain",
-          "PEDAL ASSIST": "3 Levels + Boost Mode (with Ride Tune Customization)",
-          "FRAME": "6061 Aluminum, Gravity Cast Front Triangle",
-          "FORK": "Aventon/Zoom Suspension Fork, 80mm travel, with lockout",
-          "REAR SPACING": "190mm",
-          "FORK SPACING": "135mm",
-          "FRAME STYLE": "Step-Over",
-          "FRONT WHEEL": "26\", 36 hole, 13g, Double Wall Aluminum Fat Tire Rim, Nutted Axle, Schrader Valve",
-          "REAR WHEEL": "26\", 36 hole, 12g, Double Wall Aluminum Fat Tire Rim, Nutted Hub Drive, Schrader Valve",
-          "TIRES": "Inova 26x4.0 puncture resistant",
-          "BATTERY WEIGHT": "8.7lbs",
-          "LIGHTS": "Front and rear lights integrated",
-          "FRONT BRAKE": "Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
-          "REAR BRAKE": "Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
-          "FRONT BRAKE ROTOR": "Tektro 180mm 6 bolt",
-          "REAR BRAKE ROTOR": "Tektro 180mm 6 bolt",
-          "REAR DERAILLEUR": "Shimano Altus 8-Speed",
-          "SHIFTER": "Shimano 8-Speed Trigger",
-          "CHAIN": "7/8 Speed 118L",
-          "CASSETTE": "12-32T / 8 Speed Shimano CS HG200-8",
-          "CHAINRING": "48T",
-          "CHAINRING BCD": "N/A",
-          "CRANKSET": "3pc, 170mm crank arm",
-          "BOTTOM BRACKET": "100x177 Square Taper, Double Sided Torque sensor bottom bracket",
-          "PEDALS": "9/16\" Alloy Platform",
-          "SADDLE": "Aventon Saddle",
-          "SEATPOST": "Aventon Suspension Seatpost, Ø 30.9mm, 350mm Length. 50mm travel",
-          "SEATPOST CLAMP": "34.9mm",
-          "HANDLEBARS": "Aluminum 31.8mm, 680mm",
-          "GRIPS": "Aventon Lock on grips",
-          "HEADSET": "Sealed bearing H887 Peilin 28.6mm * 56mm * 56mm H18.6mm 7pcs",
-          "KICKSTAND": "Included, rear mount",
-          "REAR RACK": "Included",
-          "FENDERS": "Included"
-        },
-        "technical": {
-          "EBIKE CLASS": "Class 2 Ebike",
-          "RANGE": "Up to 65 miles",
-          "BATTERY SAFETY CERTIFICATIONS": "Certified to UL 2271",
-          "BIKE SAFETY CERTIFICATIONS": "UL Safety Certified  UL 2849",
-          "WATER RESISTANCE": "Bike - IPX5 // Components - IPX6",
-          "SPEED": "Class 2",
-          "MOTOR": "36V, 750W Hub Drive",
-          "MOTOR TORQUE": "80Nm",
-          "MOTOR POWER": "750W (1440W under Boost Mode)",
-          "DISPLAY": "Aventon BC280",
-          "BATTERY": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
-          "CONTROLLER": "36V, 33A",
-          "THROTTLE": "Aventon LH Handlebar Mounted",
-          "SENSORS": "Double Sided Bottom Bracket Torque Sensor",
-          "CHARGER": "36V Output: 42V/ 4A",
-          "CHARGING TIME FROM 0% TO 100%": "5 hours"
-        },
-        "all": {
-          "MODEL": "Aventure 3 Ebike",
-          "WEIGHT": "76 lbs",
-          "TOTAL WEIGHT LIMIT": "400 lbs",
-          "RIDER HEIGHT": "R: 5'3\" -5'10\" | L: 5'10\" - 6'4\"",
-          "EBIKE CLASS": "Class 2 Ebike",
-          "RANGE": "Up to 65 miles",
-          "BATTERY SAFETY CERTIFICATIONS": "Certified to UL 2271",
-          "IDEAL USE": "All-Terrain",
-          "BIKE SAFETY CERTIFICATIONS": "UL Safety Certified  UL 2849",
-          "WATER RESISTANCE": "Bike - IPX5 // Components - IPX6",
-          "PEDAL ASSIST": "3 Levels + Boost Mode (with Ride Tune Customization)",
-          "FRAME": "6061 Aluminum, Gravity Cast Front Triangle",
-          "FORK": "Aventon/Zoom Suspension Fork, 80mm travel, with lockout",
-          "REAR SPACING": "190mm",
-          "FORK SPACING": "135mm",
-          "FRAME STYLE": "Step-Over",
-          "FRONT WHEEL": "26\", 36 hole, 13g, Double Wall Aluminum Fat Tire Rim, Nutted Axle, Schrader Valve",
-          "REAR WHEEL": "26\", 36 hole, 12g, Double Wall Aluminum Fat Tire Rim, Nutted Hub Drive, Schrader Valve",
-          "TIRES": "Inova 26x4.0 puncture resistant",
-          "SPEED": "Class 2",
-          "MOTOR": "36V, 750W Hub Drive",
-          "MOTOR TORQUE": "80Nm",
-          "MOTOR POWER": "750W (1440W under Boost Mode)",
-          "DISPLAY": "Aventon BC280",
-          "BATTERY": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
-          "BATTERY WEIGHT": "8.7lbs",
-          "CONTROLLER": "36V, 33A",
-          "THROTTLE": "Aventon LH Handlebar Mounted",
-          "SENSORS": "Double Sided Bottom Bracket Torque Sensor",
-          "CHARGER": "36V Output: 42V/ 4A",
-          "CHARGING TIME FROM 0% TO 100%": "5 hours",
-          "LIGHTS": "Front and rear lights integrated",
-          "FRONT BRAKE": "Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
-          "REAR BRAKE": "Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
-          "FRONT BRAKE ROTOR": "Tektro 180mm 6 bolt",
-          "REAR BRAKE ROTOR": "Tektro 180mm 6 bolt",
-          "REAR DERAILLEUR": "Shimano Altus 8-Speed",
-          "SHIFTER": "Shimano 8-Speed Trigger",
-          "CHAIN": "7/8 Speed 118L",
-          "CASSETTE": "12-32T / 8 Speed Shimano CS HG200-8",
-          "CHAINRING": "48T",
-          "CHAINRING BCD": "N/A",
-          "CRANKSET": "3pc, 170mm crank arm",
-          "BOTTOM BRACKET": "100x177 Square Taper, Double Sided Torque sensor bottom bracket",
-          "PEDALS": "9/16\" Alloy Platform",
-          "SADDLE": "Aventon Saddle",
-          "SEATPOST": "Aventon Suspension Seatpost, Ø 30.9mm, 350mm Length. 50mm travel",
-          "SEATPOST CLAMP": "34.9mm",
-          "HANDLEBARS": "Aluminum 31.8mm, 680mm",
-          "GRIPS": "Aventon Lock on grips",
-          "HEADSET": "Sealed bearing H887 Peilin 28.6mm * 56mm * 56mm H18.6mm 7pcs",
-          "KICKSTAND": "Included, rear mount",
-          "REAR RACK": "Included",
-          "FENDERS": "Included"
+        "grouped": {
+          "general_info": {
+            "model": "Aventure 3 Ebike",
+            "weight": "76 lbs",
+            "total_weight_limit": "400 lbs",
+            "ebike_class": "Class 2 Ebike",
+            "range": "Up to 65 miles",
+            "ideal_use": "All-Terrain",
+            "speed": "Class 2"
+          },
+          "ebike_system": {
+            "pedal_assist": "3 Levels + Boost Mode (with Ride Tune Customization)",
+            "motor": "36V, 750W Hub Drive",
+            "motor_torque": "80Nm",
+            "motor_power": "750W (1440W under Boost Mode)",
+            "display": "Aventon BC280",
+            "battery": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
+            "battery_weight": "8.7lbs",
+            "controller": "36V, 33A",
+            "throttle": "Aventon LH Handlebar Mounted",
+            "sensors": "Double Sided Bottom Bracket Torque Sensor",
+            "charger": "36V Output: 42V/ 4A",
+            "charging_time_from_0_to_100": "5 hours"
+          },
+          "safety": {
+            "lights": "Front and rear lights integrated"
+          },
+          "certifications": {
+            "battery_safety_certifications": "Certified to UL 2271",
+            "bike_safety_certifications": "UL Safety Certified  UL 2849"
+          },
+          "water_resistance": {
+            "water_resistance": "Bike - IPX5 // Components - IPX6"
+          },
+          "frameset": {
+            "frame": "6061 Aluminum, Gravity Cast Front Triangle",
+            "fork": "Aventon/Zoom Suspension Fork, 80mm travel, with lockout",
+            "rear_spacing": "190mm",
+            "fork_spacing": "135mm",
+            "frame_style": "Step-Over"
+          },
+          "drivetrain": {
+            "rear_derailleur": "Shimano Altus 8-Speed",
+            "shifter": "Shimano 8-Speed Trigger",
+            "chain": "7/8 Speed 118L",
+            "cassette": "12-32T / 8 Speed Shimano CS HG200-8",
+            "chainring": "48T",
+            "chainring_bcd": "N/A",
+            "crankset": "3pc, 170mm crank arm",
+            "bottom_bracket": "100x177 Square Taper, Double Sided Torque sensor bottom bracket",
+            "pedals": "9/16\" Alloy Platform"
+          },
+          "brakes": {
+            "front_brake": "Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
+            "rear_brake": "Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
+            "front_brake_rotor": "Tektro 180mm 6 bolt",
+            "rear_brake_rotor": "Tektro 180mm 6 bolt"
+          },
+          "wheelset": {
+            "front_wheel": "26\", 36 hole, 13g, Double Wall Aluminum Fat Tire Rim, Nutted Axle, Schrader Valve",
+            "rear_wheel": "26\", 36 hole, 12g, Double Wall Aluminum Fat Tire Rim, Nutted Hub Drive, Schrader Valve",
+            "tires": "Inova 26x4.0 puncture resistant"
+          },
+          "cockpit": {
+            "saddle": "Aventon Saddle",
+            "seatpost": "Aventon Suspension Seatpost, Ø 30.9mm, 350mm Length. 50mm travel",
+            "seatpost_clamp": "34.9mm",
+            "handlebars": "Aluminum 31.8mm, 680mm",
+            "grips": "Aventon Lock on grips",
+            "headset": "Sealed bearing H887 Peilin 28.6mm * 56mm * 56mm H18.6mm 7pcs"
+          },
+          "geometry": {
+            "rider_height": {
+              "R": "5'3\" -5'10\"",
+              "L": "5'10\" - 6'4\""
+            }
+          },
+          "included_accessories": {
+            "kickstand": "Included, rear mount",
+            "rear_rack": "Included",
+            "fenders": "Included"
+          }
         }
       },
       "spec_count": 54,
@@ -1005,24 +844,6 @@
             },
             {
               "value": "Large",
-              "price": 1999.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Stealth",
-              "price": 1999.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Matcha",
               "price": 1999.0,
               "price_delta": 0.0,
               "free": true
@@ -1159,119 +980,88 @@
       },
       "available": true,
       "specs": {
-        "physical": {
-          "MODEL": "Aventure 3 Step-Through Ebike",
-          "WEIGHT": "77 lbs",
-          "TOTAL WEIGHT LIMIT": "400 lbs",
-          "RIDER HEIGHT": "R: 4'11\" -5'7\" | L: 5'7\" - 6'1\"",
-          "IDEAL USE": "All-Terrain",
-          "PEDAL ASSIST": "3 Levels + Boost Mode (with Ride Tune Customization)",
-          "FRAME": "6061 Aluminum, Gravity Cast Front Triangle",
-          "FORK": "Aventon/Zoom Suspension Fork, 80mm travel, with lockout",
-          "REAR SPACING": "190mm",
-          "FORK SPACING": "135mm",
-          "FRAME STYLE": "Step-Through",
-          "FRONT WHEEL": "26\", 36 hole, 13g, Double Wall Aluminum Fat Tire Rim, Nutted Axle, Schrader Valve",
-          "REAR WHEEL": "26\", 36 hole, 12g, Double Wall Aluminum Fat Tire Rim, Nutted Hub Drive, Schrader Valve",
-          "TIRES": "Inova 26x4.0 puncture resistant",
-          "BATTERY WEIGHT": "8.7lbs",
-          "LIGHTS": "Front and rear lights integrated",
-          "FRONT BRAKE": "Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
-          "REAR BRAKE": "Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
-          "FRONT BRAKE ROTOR": "Tektro 180mm 6 bolt",
-          "REAR BRAKE ROTOR": "Tektro 180mm 6 bolt",
-          "REAR DERAILLEUR": "Shimano Altus 8-Speed",
-          "SHIFTER": "Shimano 8-Speed Trigger",
-          "CHAIN": "7/8 Speed 118L",
-          "CASSETTE": "12-32T / 8 Speed Shimano CS HG200-8",
-          "CHAINRING": "48T",
-          "CHAINRING BCD": "N/A",
-          "CRANKSET": "3pc, 170mm crank arm",
-          "BOTTOM BRACKET": "100x177 Square Taper, Double Sided Torque sensor bottom bracket",
-          "PEDALS": "9/16\" Alloy Platform",
-          "SADDLE": "Aventon Saddle",
-          "SEATPOST": "Aventon Suspension Seatpost, Ø 30.9mm, 350mm Length. 50mm travel",
-          "SEATPOST CLAMP": "34.9mm",
-          "HANDLEBARS": "Aluminum 31.8mm, 680mm",
-          "GRIPS": "Aventon Lock on grips",
-          "HEADSET": "Sealed bearing H887 Peilin 28.6mm * 56mm * 56mm H18.6mm 7pcs",
-          "KICKSTAND": "Included, rear mount",
-          "REAR RACK": "Included",
-          "FENDERS": "Included"
-        },
-        "technical": {
-          "EBIKE CLASS": "Class 2 Ebike",
-          "RANGE": "Up to 65 miles",
-          "BATTERY SAFETY CERTIFICATIONS": "Certified to UL 2271",
-          "BIKE SAFETY CERTIFICATIONS": "UL Safety Certified  UL 2849",
-          "WATER RESISTANCE": "Bike - IPX5 // Components - IPX6",
-          "SPEED": "Class 2",
-          "MOTOR": "36V, 750W Hub Drive",
-          "MOTOR TORQUE": "80Nm",
-          "MOTOR POWER": "750W (1440W under Boost Mode)",
-          "DISPLAY": "Aventon BC280",
-          "BATTERY": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
-          "CONTROLLER": "36V, 33A",
-          "THROTTLE": "Aventon LH Handlebar Mounted",
-          "SENSORS": "Double Sided Bottom Bracket Torque Sensor",
-          "CHARGER": "36V Output: 42V/ 4A",
-          "CHARGING TIME FROM 0% TO 100%": "5 hours"
-        },
-        "all": {
-          "MODEL": "Aventure 3 Step-Through Ebike",
-          "WEIGHT": "77 lbs",
-          "TOTAL WEIGHT LIMIT": "400 lbs",
-          "RIDER HEIGHT": "R: 4'11\" -5'7\" | L: 5'7\" - 6'1\"",
-          "EBIKE CLASS": "Class 2 Ebike",
-          "RANGE": "Up to 65 miles",
-          "BATTERY SAFETY CERTIFICATIONS": "Certified to UL 2271",
-          "IDEAL USE": "All-Terrain",
-          "BIKE SAFETY CERTIFICATIONS": "UL Safety Certified  UL 2849",
-          "WATER RESISTANCE": "Bike - IPX5 // Components - IPX6",
-          "PEDAL ASSIST": "3 Levels + Boost Mode (with Ride Tune Customization)",
-          "FRAME": "6061 Aluminum, Gravity Cast Front Triangle",
-          "FORK": "Aventon/Zoom Suspension Fork, 80mm travel, with lockout",
-          "REAR SPACING": "190mm",
-          "FORK SPACING": "135mm",
-          "FRAME STYLE": "Step-Through",
-          "FRONT WHEEL": "26\", 36 hole, 13g, Double Wall Aluminum Fat Tire Rim, Nutted Axle, Schrader Valve",
-          "REAR WHEEL": "26\", 36 hole, 12g, Double Wall Aluminum Fat Tire Rim, Nutted Hub Drive, Schrader Valve",
-          "TIRES": "Inova 26x4.0 puncture resistant",
-          "SPEED": "Class 2",
-          "MOTOR": "36V, 750W Hub Drive",
-          "MOTOR TORQUE": "80Nm",
-          "MOTOR POWER": "750W (1440W under Boost Mode)",
-          "DISPLAY": "Aventon BC280",
-          "BATTERY": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
-          "BATTERY WEIGHT": "8.7lbs",
-          "CONTROLLER": "36V, 33A",
-          "THROTTLE": "Aventon LH Handlebar Mounted",
-          "SENSORS": "Double Sided Bottom Bracket Torque Sensor",
-          "CHARGER": "36V Output: 42V/ 4A",
-          "CHARGING TIME FROM 0% TO 100%": "5 hours",
-          "LIGHTS": "Front and rear lights integrated",
-          "FRONT BRAKE": "Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
-          "REAR BRAKE": "Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
-          "FRONT BRAKE ROTOR": "Tektro 180mm 6 bolt",
-          "REAR BRAKE ROTOR": "Tektro 180mm 6 bolt",
-          "REAR DERAILLEUR": "Shimano Altus 8-Speed",
-          "SHIFTER": "Shimano 8-Speed Trigger",
-          "CHAIN": "7/8 Speed 118L",
-          "CASSETTE": "12-32T / 8 Speed Shimano CS HG200-8",
-          "CHAINRING": "48T",
-          "CHAINRING BCD": "N/A",
-          "CRANKSET": "3pc, 170mm crank arm",
-          "BOTTOM BRACKET": "100x177 Square Taper, Double Sided Torque sensor bottom bracket",
-          "PEDALS": "9/16\" Alloy Platform",
-          "SADDLE": "Aventon Saddle",
-          "SEATPOST": "Aventon Suspension Seatpost, Ø 30.9mm, 350mm Length. 50mm travel",
-          "SEATPOST CLAMP": "34.9mm",
-          "HANDLEBARS": "Aluminum 31.8mm, 680mm",
-          "GRIPS": "Aventon Lock on grips",
-          "HEADSET": "Sealed bearing H887 Peilin 28.6mm * 56mm * 56mm H18.6mm 7pcs",
-          "KICKSTAND": "Included, rear mount",
-          "REAR RACK": "Included",
-          "FENDERS": "Included"
+        "grouped": {
+          "general_info": {
+            "model": "Aventure 3 Step-Through Ebike",
+            "weight": "77 lbs",
+            "total_weight_limit": "400 lbs",
+            "ebike_class": "Class 2 Ebike",
+            "range": "Up to 65 miles",
+            "ideal_use": "All-Terrain",
+            "speed": "Class 2"
+          },
+          "ebike_system": {
+            "pedal_assist": "3 Levels + Boost Mode (with Ride Tune Customization)",
+            "motor": "36V, 750W Hub Drive",
+            "motor_torque": "80Nm",
+            "motor_power": "750W (1440W under Boost Mode)",
+            "display": "Aventon BC280",
+            "battery": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
+            "battery_weight": "8.7lbs",
+            "controller": "36V, 33A",
+            "throttle": "Aventon LH Handlebar Mounted",
+            "sensors": "Double Sided Bottom Bracket Torque Sensor",
+            "charger": "36V Output: 42V/ 4A",
+            "charging_time_from_0_to_100": "5 hours"
+          },
+          "safety": {
+            "lights": "Front and rear lights integrated"
+          },
+          "certifications": {
+            "battery_safety_certifications": "Certified to UL 2271",
+            "bike_safety_certifications": "UL Safety Certified  UL 2849"
+          },
+          "water_resistance": {
+            "water_resistance": "Bike - IPX5 // Components - IPX6"
+          },
+          "frameset": {
+            "frame": "6061 Aluminum, Gravity Cast Front Triangle",
+            "fork": "Aventon/Zoom Suspension Fork, 80mm travel, with lockout",
+            "rear_spacing": "190mm",
+            "fork_spacing": "135mm",
+            "frame_style": "Step-Through"
+          },
+          "drivetrain": {
+            "rear_derailleur": "Shimano Altus 8-Speed",
+            "shifter": "Shimano 8-Speed Trigger",
+            "chain": "7/8 Speed 118L",
+            "cassette": "12-32T / 8 Speed Shimano CS HG200-8",
+            "chainring": "48T",
+            "chainring_bcd": "N/A",
+            "crankset": "3pc, 170mm crank arm",
+            "bottom_bracket": "100x177 Square Taper, Double Sided Torque sensor bottom bracket",
+            "pedals": "9/16\" Alloy Platform"
+          },
+          "brakes": {
+            "front_brake": "Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
+            "rear_brake": "Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
+            "front_brake_rotor": "Tektro 180mm 6 bolt",
+            "rear_brake_rotor": "Tektro 180mm 6 bolt"
+          },
+          "wheelset": {
+            "front_wheel": "26\", 36 hole, 13g, Double Wall Aluminum Fat Tire Rim, Nutted Axle, Schrader Valve",
+            "rear_wheel": "26\", 36 hole, 12g, Double Wall Aluminum Fat Tire Rim, Nutted Hub Drive, Schrader Valve",
+            "tires": "Inova 26x4.0 puncture resistant"
+          },
+          "cockpit": {
+            "saddle": "Aventon Saddle",
+            "seatpost": "Aventon Suspension Seatpost, Ø 30.9mm, 350mm Length. 50mm travel",
+            "seatpost_clamp": "34.9mm",
+            "handlebars": "Aluminum 31.8mm, 680mm",
+            "grips": "Aventon Lock on grips",
+            "headset": "Sealed bearing H887 Peilin 28.6mm * 56mm * 56mm H18.6mm 7pcs"
+          },
+          "geometry": {
+            "rider_height": {
+              "R": "4'11\" -5'7\"",
+              "L": "5'7\" - 6'1\""
+            }
+          },
+          "included_accessories": {
+            "kickstand": "Included, rear mount",
+            "rear_rack": "Included",
+            "fenders": "Included"
+          }
         }
       },
       "spec_count": 54,
@@ -1395,24 +1185,6 @@
           ]
         },
         {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Cobalt Blue",
-              "price": 1999.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Java",
-              "price": 1999.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
           "group": "Included accessories",
           "type": "accessory",
           "choices": [
@@ -1525,111 +1297,84 @@
       },
       "available": true,
       "specs": {
-        "physical": {
-          "MODEL": "Aventure M Ebike",
-          "IDEAL USE": "4\" All-Terrain Fat Tires",
-          "WEIGHT": "73 lbs",
-          "TOTAL WEIGHT LIMIT": "400 lbs",
-          "RIDER HEIGHT": "R: 5'3\" -5'10\" | L: 5'10\" - 6'4\"",
-          "FORK": "Aventon/Zoom Suspension Fork, 80mm travel, with lockout",
-          "REAR SPACING": "190mm",
-          "FORK SPACING": "135mm",
-          "FRAME": "6061 Aluminum",
-          "FRONT WHEEL": "26in, 36 hole, Aluminum Fat tire Rim, Thru Axle, Schrader Valve",
-          "REAR WHEEL": "26in, 36 hole, Aluminum Fat tire Rim, Thru Axle, Schrader Valve",
-          "TIRES": "Inova 26x4.0 puncture resistant",
-          "BATTERY WEIGHT": "8.7lbs",
-          "LIGHTS": "Integrated front and rear running lights (no brake lights)",
-          "FRONT BRAKE": "SRAM DB4 Hydraulic Disc Brakes w/o cutoff",
-          "REAR BRAKE": "SRAM DB4 Hydraulic Disc Brakes w/o cutoff",
-          "FRONT BRAKE ROTOR": "Sram G2 200mm 6-Bolt",
-          "REAR BRAKE ROTOR": "SRAM G2 180mm 6-Bolt",
-          "REAR DERAILLEUR": "Shimano Cues 10-Speed",
-          "SHIFTER": "E-Shifter",
-          "CHAIN": "9/10/11 Speed 124L",
-          "CASSETTE": "Shimano Cues 10-Speed 11-39T",
-          "CHAINRING": "44T",
-          "CHAINRING BCD": "N/A",
-          "CRANKSET": "Aventon 170mm ISIS Splined",
-          "BOTTOM BRACKET": "N/A",
-          "PEDALS": "9/16\" Alloy Platform",
-          "SADDLE": "Aventon Saddle",
-          "SEATPOST": "Aventon Suspension Seatpost, Ø 30.9mm, 350mm Length. 50mm travel",
-          "SEATPOST CLAMP": "34.9mm",
-          "HANDLEBARS": "Aluminum 31.8, 720mm",
-          "GRIPS": "Aventon Lock on grips",
-          "HEADSET": "Sealed bearing H887 Peilin 28.6mm * 56mm * 56mm H18.6mm 7pcs",
-          "KICKSTAND": "Included, rear mount",
-          "REAR RACK": "Included",
-          "FENDERS": "Included"
-        },
-        "technical": {
-          "EBIKE CLASS": "Class 1 (Aftermarket Throttle Available for Class 2 Conversion. Can also be converted to Class 3)",
-          "RANGE": "Up to 85 Miles",
-          "WATER RESISTANCE": "Bike - IPX6 // Motor - IP67",
-          "BATTERY SAFETY CERTIFICATIONS": "Certified to UL 2271",
-          "SAFETY CERTIFICATIONS": "UL Safety Certified  UL 2849",
-          "MOTOR": "Aventon a100 mid-drive. 36v, 250W (sustained), 750W (peak), 100NM torque. IP67 rating",
-          "MOTOR TORQUE": "100Nm",
-          "DISPLAY": "Aventon BC280",
-          "BATTERY": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
-          "CONTROLLER": "Integrated in Motor",
-          "THROTTLE": "Aftermarket Throttle Available for Purchase",
-          "SENSORS": "Double Sided Torque Sensor Integrated in Motor",
-          "CHARGER": "36V Output: 42V/ 4A",
-          "CHARGING TIME FROM 0% TO 100%": "5 hours"
-        },
-        "all": {
-          "MODEL": "Aventure M Ebike",
-          "IDEAL USE": "4\" All-Terrain Fat Tires",
-          "WEIGHT": "73 lbs",
-          "TOTAL WEIGHT LIMIT": "400 lbs",
-          "RIDER HEIGHT": "R: 5'3\" -5'10\" | L: 5'10\" - 6'4\"",
-          "EBIKE CLASS": "Class 1 (Aftermarket Throttle Available for Class 2 Conversion. Can also be converted to Class 3)",
-          "RANGE": "Up to 85 Miles",
-          "WATER RESISTANCE": "Bike - IPX6 // Motor - IP67",
-          "BATTERY SAFETY CERTIFICATIONS": "Certified to UL 2271",
-          "SAFETY CERTIFICATIONS": "UL Safety Certified  UL 2849",
-          "FORK": "Aventon/Zoom Suspension Fork, 80mm travel, with lockout",
-          "REAR SPACING": "190mm",
-          "FORK SPACING": "135mm",
-          "FRAME": "6061 Aluminum",
-          "FRONT WHEEL": "26in, 36 hole, Aluminum Fat tire Rim, Thru Axle, Schrader Valve",
-          "REAR WHEEL": "26in, 36 hole, Aluminum Fat tire Rim, Thru Axle, Schrader Valve",
-          "TIRES": "Inova 26x4.0 puncture resistant",
-          "MOTOR": "Aventon a100 mid-drive. 36v, 250W (sustained), 750W (peak), 100NM torque. IP67 rating",
-          "MOTOR TORQUE": "100Nm",
-          "DISPLAY": "Aventon BC280",
-          "BATTERY": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
-          "BATTERY WEIGHT": "8.7lbs",
-          "CONTROLLER": "Integrated in Motor",
-          "THROTTLE": "Aftermarket Throttle Available for Purchase",
-          "SENSORS": "Double Sided Torque Sensor Integrated in Motor",
-          "CHARGER": "36V Output: 42V/ 4A",
-          "CHARGING TIME FROM 0% TO 100%": "5 hours",
-          "LIGHTS": "Integrated front and rear running lights (no brake lights)",
-          "FRONT BRAKE": "SRAM DB4 Hydraulic Disc Brakes w/o cutoff",
-          "REAR BRAKE": "SRAM DB4 Hydraulic Disc Brakes w/o cutoff",
-          "FRONT BRAKE ROTOR": "Sram G2 200mm 6-Bolt",
-          "REAR BRAKE ROTOR": "SRAM G2 180mm 6-Bolt",
-          "REAR DERAILLEUR": "Shimano Cues 10-Speed",
-          "SHIFTER": "E-Shifter",
-          "CHAIN": "9/10/11 Speed 124L",
-          "CASSETTE": "Shimano Cues 10-Speed 11-39T",
-          "CHAINRING": "44T",
-          "CHAINRING BCD": "N/A",
-          "CRANKSET": "Aventon 170mm ISIS Splined",
-          "BOTTOM BRACKET": "N/A",
-          "PEDALS": "9/16\" Alloy Platform",
-          "SADDLE": "Aventon Saddle",
-          "SEATPOST": "Aventon Suspension Seatpost, Ø 30.9mm, 350mm Length. 50mm travel",
-          "SEATPOST CLAMP": "34.9mm",
-          "HANDLEBARS": "Aluminum 31.8, 720mm",
-          "GRIPS": "Aventon Lock on grips",
-          "HEADSET": "Sealed bearing H887 Peilin 28.6mm * 56mm * 56mm H18.6mm 7pcs",
-          "KICKSTAND": "Included, rear mount",
-          "REAR RACK": "Included",
-          "FENDERS": "Included"
+        "grouped": {
+          "general_info": {
+            "model": "Aventure M Ebike",
+            "ideal_use": "4\" All-Terrain Fat Tires",
+            "weight": "73 lbs",
+            "total_weight_limit": "400 lbs",
+            "ebike_class": "Class 1 (Aftermarket Throttle Available for Class 2 Conversion. Can also be converted to Class 3)",
+            "range": "Up to 85 Miles"
+          },
+          "ebike_system": {
+            "motor": "Aventon a100 mid-drive. 36v, 250W (sustained), 750W (peak), 100NM torque. IP67 rating",
+            "motor_torque": "100Nm",
+            "display": "Aventon BC280",
+            "battery": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
+            "battery_weight": "8.7lbs",
+            "controller": "Integrated in Motor",
+            "throttle": "Aftermarket Throttle Available for Purchase",
+            "sensors": "Double Sided Torque Sensor Integrated in Motor",
+            "charger": "36V Output: 42V/ 4A",
+            "charging_time_from_0_to_100": "5 hours"
+          },
+          "safety": {
+            "lights": "Integrated front and rear running lights (no brake lights)"
+          },
+          "certifications": {
+            "battery_safety_certifications": "Certified to UL 2271",
+            "safety_certifications": "UL Safety Certified  UL 2849"
+          },
+          "water_resistance": {
+            "water_resistance": "Bike - IPX6 // Motor - IP67"
+          },
+          "frameset": {
+            "fork": "Aventon/Zoom Suspension Fork, 80mm travel, with lockout",
+            "rear_spacing": "190mm",
+            "fork_spacing": "135mm",
+            "frame": "6061 Aluminum"
+          },
+          "drivetrain": {
+            "rear_derailleur": "Shimano Cues 10-Speed",
+            "shifter": "E-Shifter",
+            "chain": "9/10/11 Speed 124L",
+            "cassette": "Shimano Cues 10-Speed 11-39T",
+            "chainring": "44T",
+            "chainring_bcd": "N/A",
+            "crankset": "Aventon 170mm ISIS Splined",
+            "bottom_bracket": "N/A",
+            "pedals": "9/16\" Alloy Platform"
+          },
+          "brakes": {
+            "front_brake": "SRAM DB4 Hydraulic Disc Brakes w/o cutoff",
+            "rear_brake": "SRAM DB4 Hydraulic Disc Brakes w/o cutoff",
+            "front_brake_rotor": "Sram G2 200mm 6-Bolt",
+            "rear_brake_rotor": "SRAM G2 180mm 6-Bolt"
+          },
+          "wheelset": {
+            "front_wheel": "26in, 36 hole, Aluminum Fat tire Rim, Thru Axle, Schrader Valve",
+            "rear_wheel": "26in, 36 hole, Aluminum Fat tire Rim, Thru Axle, Schrader Valve",
+            "tires": "Inova 26x4.0 puncture resistant"
+          },
+          "cockpit": {
+            "saddle": "Aventon Saddle",
+            "seatpost": "Aventon Suspension Seatpost, Ø 30.9mm, 350mm Length. 50mm travel",
+            "seatpost_clamp": "34.9mm",
+            "handlebars": "Aluminum 31.8, 720mm",
+            "grips": "Aventon Lock on grips",
+            "headset": "Sealed bearing H887 Peilin 28.6mm * 56mm * 56mm H18.6mm 7pcs"
+          },
+          "geometry": {
+            "rider_height": {
+              "R": "5'3\" -5'10\"",
+              "L": "5'10\" - 6'4\""
+            }
+          },
+          "included_accessories": {
+            "kickstand": "Included, rear mount",
+            "rear_rack": "Included",
+            "fenders": "Included"
+          }
         }
       },
       "spec_count": 50,
@@ -1783,30 +1528,6 @@
           ]
         },
         {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Camouflage",
-              "price": 2899.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Pacific",
-              "price": 2899.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Basalt",
-              "price": 2899.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
           "group": "Included accessories",
           "type": "accessory",
           "choices": [
@@ -1912,103 +1633,75 @@
       },
       "available": true,
       "specs": {
-        "physical": {
-          "Weight": "56lbs",
-          "Total Weight Limit": "330 lbs",
-          "Rider Height": "5'3\" - 6'1\"",
-          "Ideal Use": "Mountain Biking, Urban Riding",
-          "Frame": "6061 Aluminum",
-          "Fork": "Rockshox Psylo Gold 150mm (44mm Offset)",
-          "Shock": "Rockshox Deluxe Select+ (210x55)",
-          "Rear Spacing": "12x148mm",
-          "Fork Spacing": "15x110mm",
-          "Frame Style": "Step-Over",
-          "Support Level Percentage": "400% (500% in BOOST Mode)",
-          "Battery Weight": "9.2 lbs",
-          "Smart Features": "Jump Tracking, Overrun, Wheel Lift Control, 4G/GPS, Anti-Theft, Touchscreen, BOOST mode, and AUTO Assist mode",
-          "Rear Derailleur": "SRAM Eagle 70 Transmission (12-SPD)",
-          "Shifter": "SRAM Eagle 70 Transmission",
-          "Chain": "SRAM Eagle 70 Transmission",
-          "Chainring": "SRAM 34T",
-          "Chainring BCD": "104",
-          "Crankset": "6061 Aluminum, ISIS splined, 160mm",
-          "Chain Guide": "32-24T Compatible",
-          "Pedals": "9/16\" Alloy Platform",
-          "Cassette": "SRAM XS-1270 T-Type 10-52T",
-          "Front Wheel": "29\", Double-Wall Aluminum, Tubeless Compatible, 32 Hole",
-          "Rear Wheel": "29\", Double-Wall Aluminum, Tubeless Compatible, 32 Hole",
-          "Tires": "Front: Maxxis Minion DHF 29x2.5\" EXO (Tubeless Ready), Rear: Maxxis Minion DHR II, 29x2.4\" EXO (Tubeless Ready)",
-          "Front Brake": "SRAM DB8 Stealth",
-          "Rear Brake": "SRAM DB8 Stealth",
-          "Front Brake Rotor": "SRAM Centerline 200mm 6-Bolt",
-          "Rear Brake Rotor": "SRAM Centerline 200mm 6-Bolt",
-          "Saddle": "Selle Royal SRX",
-          "Seatpost": "31.6mm XFusion Manic Dropper Seatpost. S/M: 150mm, L/XL: 170mm",
-          "Seatpost Clamp": "34.9mm",
-          "Stem": "50mm Length, 35mm Clamp",
-          "Handlebars": "35mm Clamp, 5° Upsweep, 7° Backsweep. S/M: 780mm, 20mm Rise. L/XL: 800mm, 30mm Rise",
-          "Headset": "ZS56 Upper/Lower",
-          "Grips": "Aventon Lock on grips"
-        },
-        "technical": {
-          "Speed": "Class 1 (Convertible to Class 3)",
-          "Water Resistance": "Bike - IPX6 // Motor - IP67",
-          "Range": "Up To 105 Miles",
-          "Motor": "Aventon Ultro X",
-          "Motor Torque": "110Nm (120NM in BOOST Mode)",
-          "Motor Power": "750W Peak (850W Peak in BOOST Mode)",
-          "Display": "Integrated Top Tube Display with Touch Screen",
-          "Battery": "800Wh Integrated Battery",
-          "Charging time from 0% to 100%": "6 hours",
-          "Charger": "42V 4A charger"
-        },
-        "all": {
-          "Weight": "56lbs",
-          "Total Weight Limit": "330 lbs",
-          "Rider Height": "5'3\" - 6'1\"",
-          "Speed": "Class 1 (Convertible to Class 3)",
-          "Water Resistance": "Bike - IPX6 // Motor - IP67",
-          "Range": "Up To 105 Miles",
-          "Ideal Use": "Mountain Biking, Urban Riding",
-          "Frame": "6061 Aluminum",
-          "Fork": "Rockshox Psylo Gold 150mm (44mm Offset)",
-          "Shock": "Rockshox Deluxe Select+ (210x55)",
-          "Rear Spacing": "12x148mm",
-          "Fork Spacing": "15x110mm",
-          "Frame Style": "Step-Over",
-          "Motor": "Aventon Ultro X",
-          "Motor Torque": "110Nm (120NM in BOOST Mode)",
-          "Motor Power": "750W Peak (850W Peak in BOOST Mode)",
-          "Support Level Percentage": "400% (500% in BOOST Mode)",
-          "Display": "Integrated Top Tube Display with Touch Screen",
-          "Battery": "800Wh Integrated Battery",
-          "Battery Weight": "9.2 lbs",
-          "Charging time from 0% to 100%": "6 hours",
-          "Charger": "42V 4A charger",
-          "Smart Features": "Jump Tracking, Overrun, Wheel Lift Control, 4G/GPS, Anti-Theft, Touchscreen, BOOST mode, and AUTO Assist mode",
-          "Rear Derailleur": "SRAM Eagle 70 Transmission (12-SPD)",
-          "Shifter": "SRAM Eagle 70 Transmission",
-          "Chain": "SRAM Eagle 70 Transmission",
-          "Chainring": "SRAM 34T",
-          "Chainring BCD": "104",
-          "Crankset": "6061 Aluminum, ISIS splined, 160mm",
-          "Chain Guide": "32-24T Compatible",
-          "Pedals": "9/16\" Alloy Platform",
-          "Cassette": "SRAM XS-1270 T-Type 10-52T",
-          "Front Wheel": "29\", Double-Wall Aluminum, Tubeless Compatible, 32 Hole",
-          "Rear Wheel": "29\", Double-Wall Aluminum, Tubeless Compatible, 32 Hole",
-          "Tires": "Front: Maxxis Minion DHF 29x2.5\" EXO (Tubeless Ready), Rear: Maxxis Minion DHR II, 29x2.4\" EXO (Tubeless Ready)",
-          "Front Brake": "SRAM DB8 Stealth",
-          "Rear Brake": "SRAM DB8 Stealth",
-          "Front Brake Rotor": "SRAM Centerline 200mm 6-Bolt",
-          "Rear Brake Rotor": "SRAM Centerline 200mm 6-Bolt",
-          "Saddle": "Selle Royal SRX",
-          "Seatpost": "31.6mm XFusion Manic Dropper Seatpost. S/M: 150mm, L/XL: 170mm",
-          "Seatpost Clamp": "34.9mm",
-          "Stem": "50mm Length, 35mm Clamp",
-          "Handlebars": "35mm Clamp, 5° Upsweep, 7° Backsweep. S/M: 780mm, 20mm Rise. L/XL: 800mm, 30mm Rise",
-          "Headset": "ZS56 Upper/Lower",
-          "Grips": "Aventon Lock on grips"
+        "grouped": {
+          "general_info": {
+            "weight": "56lbs",
+            "total_weight_limit": "330 lbs",
+            "speed": "Class 1 (Convertible to Class 3)",
+            "range": "Up To 105 Miles",
+            "ideal_use": "Mountain Biking, Urban Riding"
+          },
+          "ebike_system": {
+            "motor": "Aventon Ultro X",
+            "motor_torque": "110Nm (120NM in BOOST Mode)",
+            "motor_power": "750W Peak (850W Peak in BOOST Mode)",
+            "display": "Integrated Top Tube Display with Touch Screen",
+            "battery": "800Wh Integrated Battery",
+            "battery_weight": "9.2 lbs",
+            "charging_time_from_0_to_100": "6 hours",
+            "charger": "42V 4A charger"
+          },
+          "special_features": {
+            "smart_features": "Jump Tracking, Overrun, Wheel Lift Control, 4G/GPS, Anti-Theft, Touchscreen, BOOST mode, and AUTO Assist mode"
+          },
+          "water_resistance": {
+            "water_resistance": "Bike - IPX6 // Motor - IP67"
+          },
+          "frameset": {
+            "frame": "6061 Aluminum",
+            "fork": "Rockshox Psylo Gold 150mm (44mm Offset)",
+            "shock": "Rockshox Deluxe Select+ (210x55)",
+            "rear_spacing": "12x148mm",
+            "fork_spacing": "15x110mm",
+            "frame_style": "Step-Over"
+          },
+          "drivetrain": {
+            "rear_derailleur": "SRAM Eagle 70 Transmission (12-SPD)",
+            "shifter": "SRAM Eagle 70 Transmission",
+            "chain": "SRAM Eagle 70 Transmission",
+            "chainring": "SRAM 34T",
+            "chainring_bcd": "104",
+            "crankset": "6061 Aluminum, ISIS splined, 160mm",
+            "chain_guide": "32-24T Compatible",
+            "pedals": "9/16\" Alloy Platform",
+            "cassette": "SRAM XS-1270 T-Type 10-52T"
+          },
+          "brakes": {
+            "front_brake": "SRAM DB8 Stealth",
+            "rear_brake": "SRAM DB8 Stealth",
+            "front_brake_rotor": "SRAM Centerline 200mm 6-Bolt",
+            "rear_brake_rotor": "SRAM Centerline 200mm 6-Bolt"
+          },
+          "wheelset": {
+            "front_wheel": "29\", Double-Wall Aluminum, Tubeless Compatible, 32 Hole",
+            "rear_wheel": "29\", Double-Wall Aluminum, Tubeless Compatible, 32 Hole",
+            "tires": "Front: Maxxis Minion DHF 29x2.5\" EXO (Tubeless Ready), Rear: Maxxis Minion DHR II, 29x2.4\" EXO (Tubeless Ready)"
+          },
+          "cockpit": {
+            "saddle": "Selle Royal SRX",
+            "seatpost": "31.6mm XFusion Manic Dropper Seatpost. S/M: 150mm, L/XL: 170mm",
+            "seatpost_clamp": "34.9mm",
+            "stem": "50mm Length, 35mm Clamp",
+            "handlebars": "35mm Clamp, 5° Upsweep, 7° Backsweep. S/M: 780mm, 20mm Rise. L/XL: 800mm, 30mm Rise",
+            "headset": "ZS56 Upper/Lower",
+            "grips": "Aventon Lock on grips"
+          },
+          "geometry": {
+            "rider_height": "5'3\" - 6'1\""
+          },
+          "general_other": {
+            "support_level_percentage": "400% (500% in BOOST Mode)"
+          }
         }
       },
       "spec_count": 46,
@@ -2174,24 +1867,6 @@
               "free": true
             }
           ]
-        },
-        {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Blue Onyx",
-              "price": 3999.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Camouflage",
-              "price": 3999.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
         }
       ]
     },
@@ -2271,103 +1946,75 @@
       },
       "available": true,
       "specs": {
-        "physical": {
-          "WEIGHT": "53 lbs",
-          "TOTAL WEIGHT LIMIT": "330 lbs",
-          "RIDER HEIGHT": "5'1\" - 6'3\"",
-          "IDEAL USE": "Mountain Biking, Urban Riding",
-          "FRAME": "Carbon Front Triangle, 6061 Aluminum Rear Triangle",
-          "FORK": "Rockshox Lyrik Select 150mm (44mm Offsett)",
-          "SHOCK": "Rockshox Super Deluxe Select+ (210x55)",
-          "REAR SPACING": "12x148mm",
-          "FORK SPACING": "15x110mm",
-          "FRAME STYLE": "Step-Over",
-          "SUPPORT LEVEL PERCENTAGE": "400% (500% in BOOST Mode)",
-          "BATTERY WEIGHT": "9.2 lbs",
-          "SMART FEATURES": "Jump Tracking, Overrun, Wheel Lift Control, 4G/GPS, Anti-Theft, Touchscreen, BOOST mode, and AUTO Assist mode",
-          "REAR DERAILLEUR": "SRAM S1000 Transmission (12-SPD)",
-          "SHIFTER": "SRAM AXS Transmission Shift Pod",
-          "CHAIN": "SRAM Eagle 70 Transmission",
-          "CHAIN GUIDE": "32-34T Compatible",
-          "CASSETTE": "SRAM XS-1270 T-Type 10-52T",
-          "CHAINRING": "SRAM T-Type 34T",
-          "CHAINRING BCD": "104",
-          "CRANKSET": "ISIS 160mm",
-          "PEDALS": "9/16\" Alloy Platform",
-          "FRONT WHEEL": "29\", Double-Wall Aluminum, Tubeless Compatible, 32 Hole",
-          "REAR WHEEL": "29\", Double-Wall Aluminum, Tubeless Compatible, 32 Hole",
-          "TIRES": "Front: Maxxis Minion DHF 29x2.5\" EXO (Tubeless Ready), Rear: Maxxis Minion DHR II, 29x2.4\" EXO (Tubeless Ready)",
-          "FRONT BRAKE": "SRAM Maven Base (Hydraulic, 4-Piston)",
-          "REAR BRAKE": "SRAM Maven Base (Hydraulic, 4-Piston)",
-          "FRONT BRAKE ROTOR": "SRAM Centerline 200mm 6-Bolt",
-          "REAR BRAKE ROTOR": "SRAM Centerline 200mm 6-Bolt",
-          "SADDLE": "Selle Royal SRX",
-          "SEATPOST": "31.6mm XFusion Manic Dropper Seatpost. S/M: 150mm, L/XL: 170mm",
-          "SEATPOST CLAMP": "34.9mm",
-          "STEM": "50mm Length, 35mm Clamp",
-          "HANDLEBARS": "35mm Clamp, 5° Upsweep, 7° Backsweep. S/M: 780mm, 20mm Rise. L/XL: 800mm, 30mm Rise",
-          "HEADSET": "ZS56 Upper/Lower",
-          "GRIPS": "Aventon Lock on grips"
-        },
-        "technical": {
-          "SPEED": "Class 1 (Convertible to Class 3)",
-          "RANGE": "Up To 105 Miles",
-          "WATER RESISTANCE": "Bike - IPX6 // Motor - IP67",
-          "MOTOR": "Aventon Ultro X",
-          "MOTOR TORQUE": "110Nm (120NM in BOOST Mode)",
-          "MOTOR POWER": "750W Peak (850W Peak in BOOST Mode)",
-          "DISPLAY": "Integrated Top Tube Display with Touch Screen",
-          "BATTERY": "800Wh Integrated Battery",
-          "CHARGING TIME FROM 0% TO 100%": "6 hours",
-          "CHARGER": "42V 4A charger"
-        },
-        "all": {
-          "WEIGHT": "53 lbs",
-          "TOTAL WEIGHT LIMIT": "330 lbs",
-          "RIDER HEIGHT": "5'1\" - 6'3\"",
-          "SPEED": "Class 1 (Convertible to Class 3)",
-          "RANGE": "Up To 105 Miles",
-          "WATER RESISTANCE": "Bike - IPX6 // Motor - IP67",
-          "IDEAL USE": "Mountain Biking, Urban Riding",
-          "FRAME": "Carbon Front Triangle, 6061 Aluminum Rear Triangle",
-          "FORK": "Rockshox Lyrik Select 150mm (44mm Offsett)",
-          "SHOCK": "Rockshox Super Deluxe Select+ (210x55)",
-          "REAR SPACING": "12x148mm",
-          "FORK SPACING": "15x110mm",
-          "FRAME STYLE": "Step-Over",
-          "MOTOR": "Aventon Ultro X",
-          "MOTOR TORQUE": "110Nm (120NM in BOOST Mode)",
-          "MOTOR POWER": "750W Peak (850W Peak in BOOST Mode)",
-          "SUPPORT LEVEL PERCENTAGE": "400% (500% in BOOST Mode)",
-          "DISPLAY": "Integrated Top Tube Display with Touch Screen",
-          "BATTERY": "800Wh Integrated Battery",
-          "BATTERY WEIGHT": "9.2 lbs",
-          "CHARGING TIME FROM 0% TO 100%": "6 hours",
-          "CHARGER": "42V 4A charger",
-          "SMART FEATURES": "Jump Tracking, Overrun, Wheel Lift Control, 4G/GPS, Anti-Theft, Touchscreen, BOOST mode, and AUTO Assist mode",
-          "REAR DERAILLEUR": "SRAM S1000 Transmission (12-SPD)",
-          "SHIFTER": "SRAM AXS Transmission Shift Pod",
-          "CHAIN": "SRAM Eagle 70 Transmission",
-          "CHAIN GUIDE": "32-34T Compatible",
-          "CASSETTE": "SRAM XS-1270 T-Type 10-52T",
-          "CHAINRING": "SRAM T-Type 34T",
-          "CHAINRING BCD": "104",
-          "CRANKSET": "ISIS 160mm",
-          "PEDALS": "9/16\" Alloy Platform",
-          "FRONT WHEEL": "29\", Double-Wall Aluminum, Tubeless Compatible, 32 Hole",
-          "REAR WHEEL": "29\", Double-Wall Aluminum, Tubeless Compatible, 32 Hole",
-          "TIRES": "Front: Maxxis Minion DHF 29x2.5\" EXO (Tubeless Ready), Rear: Maxxis Minion DHR II, 29x2.4\" EXO (Tubeless Ready)",
-          "FRONT BRAKE": "SRAM Maven Base (Hydraulic, 4-Piston)",
-          "REAR BRAKE": "SRAM Maven Base (Hydraulic, 4-Piston)",
-          "FRONT BRAKE ROTOR": "SRAM Centerline 200mm 6-Bolt",
-          "REAR BRAKE ROTOR": "SRAM Centerline 200mm 6-Bolt",
-          "SADDLE": "Selle Royal SRX",
-          "SEATPOST": "31.6mm XFusion Manic Dropper Seatpost. S/M: 150mm, L/XL: 170mm",
-          "SEATPOST CLAMP": "34.9mm",
-          "STEM": "50mm Length, 35mm Clamp",
-          "HANDLEBARS": "35mm Clamp, 5° Upsweep, 7° Backsweep. S/M: 780mm, 20mm Rise. L/XL: 800mm, 30mm Rise",
-          "HEADSET": "ZS56 Upper/Lower",
-          "GRIPS": "Aventon Lock on grips"
+        "grouped": {
+          "general_info": {
+            "weight": "53 lbs",
+            "total_weight_limit": "330 lbs",
+            "speed": "Class 1 (Convertible to Class 3)",
+            "range": "Up To 105 Miles",
+            "ideal_use": "Mountain Biking, Urban Riding"
+          },
+          "ebike_system": {
+            "motor": "Aventon Ultro X",
+            "motor_torque": "110Nm (120NM in BOOST Mode)",
+            "motor_power": "750W Peak (850W Peak in BOOST Mode)",
+            "display": "Integrated Top Tube Display with Touch Screen",
+            "battery": "800Wh Integrated Battery",
+            "battery_weight": "9.2 lbs",
+            "charging_time_from_0_to_100": "6 hours",
+            "charger": "42V 4A charger"
+          },
+          "special_features": {
+            "smart_features": "Jump Tracking, Overrun, Wheel Lift Control, 4G/GPS, Anti-Theft, Touchscreen, BOOST mode, and AUTO Assist mode"
+          },
+          "water_resistance": {
+            "water_resistance": "Bike - IPX6 // Motor - IP67"
+          },
+          "frameset": {
+            "frame": "Carbon Front Triangle, 6061 Aluminum Rear Triangle",
+            "fork": "Rockshox Lyrik Select 150mm (44mm Offsett)",
+            "shock": "Rockshox Super Deluxe Select+ (210x55)",
+            "rear_spacing": "12x148mm",
+            "fork_spacing": "15x110mm",
+            "frame_style": "Step-Over"
+          },
+          "drivetrain": {
+            "rear_derailleur": "SRAM S1000 Transmission (12-SPD)",
+            "shifter": "SRAM AXS Transmission Shift Pod",
+            "chain": "SRAM Eagle 70 Transmission",
+            "chain_guide": "32-34T Compatible",
+            "cassette": "SRAM XS-1270 T-Type 10-52T",
+            "chainring": "SRAM T-Type 34T",
+            "chainring_bcd": "104",
+            "crankset": "ISIS 160mm",
+            "pedals": "9/16\" Alloy Platform"
+          },
+          "brakes": {
+            "front_brake": "SRAM Maven Base (Hydraulic, 4-Piston)",
+            "rear_brake": "SRAM Maven Base (Hydraulic, 4-Piston)",
+            "front_brake_rotor": "SRAM Centerline 200mm 6-Bolt",
+            "rear_brake_rotor": "SRAM Centerline 200mm 6-Bolt"
+          },
+          "wheelset": {
+            "front_wheel": "29\", Double-Wall Aluminum, Tubeless Compatible, 32 Hole",
+            "rear_wheel": "29\", Double-Wall Aluminum, Tubeless Compatible, 32 Hole",
+            "tires": "Front: Maxxis Minion DHF 29x2.5\" EXO (Tubeless Ready), Rear: Maxxis Minion DHR II, 29x2.4\" EXO (Tubeless Ready)"
+          },
+          "cockpit": {
+            "saddle": "Selle Royal SRX",
+            "seatpost": "31.6mm XFusion Manic Dropper Seatpost. S/M: 150mm, L/XL: 170mm",
+            "seatpost_clamp": "34.9mm",
+            "stem": "50mm Length, 35mm Clamp",
+            "handlebars": "35mm Clamp, 5° Upsweep, 7° Backsweep. S/M: 780mm, 20mm Rise. L/XL: 800mm, 30mm Rise",
+            "headset": "ZS56 Upper/Lower",
+            "grips": "Aventon Lock on grips"
+          },
+          "geometry": {
+            "rider_height": "5'1\" - 6'3\""
+          },
+          "general_other": {
+            "support_level_percentage": "400% (500% in BOOST Mode)"
+          }
         }
       },
       "spec_count": 46,
@@ -2533,24 +2180,6 @@
               "free": true
             }
           ]
-        },
-        {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Midnight Black",
-              "price": 5999.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Glacier Mint",
-              "price": 5999.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
         }
       ]
     },
@@ -2642,117 +2271,84 @@
       },
       "available": true,
       "specs": {
-        "physical": {
-          "MODEL": "Level 3 Ebike",
-          "WEIGHT": "67lbs",
-          "TOTAL WEIGHT LIMIT": "330 lbs",
-          "BOX SIZE": "61\"x13\"x34\"",
-          "RIDER HEIGHT": "5'3\" - 6'4\"",
-          "IDEAL USE": "Commuting",
-          "PEDAL ASSIST": "3 Levels (with Ride Tune Customization)",
-          "FRAME": "6061 Aluminum, Gravity Cast Front Triangle",
-          "FORK": "Aventon Suspension Fork, 80mm travel, w/ lockout,coil spring. 15x100mm thru-axle, 43mm offset",
-          "REAR SPACING": "142mm",
-          "FORK SPACING": "110mm",
-          "FRAME STYLE": "Step-Over",
-          "FRONT WHEEL": "27.5in, 13g, 36hole, double wall Aluminum, Thru axle, Schrader Valve, black",
-          "REAR WHEEL": "27.5in, 12g, 36hole, double wall Aluminum, Nutted Hub Drive Motor, Scharder Valve, black",
-          "TIRES": "Kenda Kwick Seven-5 Sport K1052-006 27.5 x 2.20",
-          "BATTERY WEIGHT": "8.7lbs",
-          "LIGHTS": "Front and rear lights integrated",
-          "FRONT BRAKE": "Magura AT-2 Hydraulic disc brake / Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
-          "REAR BRAKE": "Magura AT-2 Hydraulic disc brake / Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
-          "FRONT BRAKE ROTOR": "Magura MDR-A 180mm 6 Bolt Rotor / Tektro 180mm 6 Bolt Rotor",
-          "REAR BRAKE ROTOR": "Magura MDR-A 180mm 6 Bolt Rotor / Tektro 180mm 6 Bolt Rotor",
-          "REAR DERAILLEUR": "Shimano Altus RD-M310",
-          "SHIFTER": "Shimano 8 Speed Trigger SL-M315-8R",
-          "CHAIN": "7/8 speed 120L",
-          "CASSETTE": "12-32T / 8 Speed Shimano CS HG200-8",
-          "CHAINRING": "48T",
-          "CRANKSET": "3pc, 170mm crank arm",
-          "BOTTOM BRACKET": "Square Taper, Sealed, double sided Torque Sensor 83mmx158.5mm",
-          "PEDALS": "9/16\" Composite Platform",
-          "SADDLE": "Aventon Saddle",
-          "SEATPOST": "30.9mm Aventon Suspension Seatpost with 50mm travel",
-          "SEATPOST CLAMP": "34.9mm",
-          "HANDLEBARS": "Aluminum 31.8mm, 680mm",
-          "GRIPS": "Aventon Lock on grips",
-          "HEADSET": "Sealed Bearing Headset",
-          "FENDERS": "Included",
-          "REAR RACK": "Included",
-          "REAR RACK WEIGHT LIMIT": "60lbs"
-        },
-        "technical": {
-          "EBIKE CLASS": "Class 2 Ebike",
-          "RANGE": "Up to 70 Miles",
-          "BATTERY SAFETY CERTIFICATIONS": "Certified to UL 2271",
-          "SAFETY CERTIFICATIONS": "UL Safety Certified  UL 2849",
-          "WATER RESISTANCE": "Bike - IPX5 // Components - IPX6",
-          "MOTOR": "36V, 500W (sustained), 864W (peak)",
-          "MOTOR TORQUE": "60Nm",
-          "DISPLAY": "Aventon BC280",
-          "BATTERY": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
-          "CONTROLLER": "36V, 24A",
-          "THROTTLE": "Aventon LH Handlebar Mounted",
-          "SENSORS": "Double Sided Bottom Bracket Torque Sensor",
-          "CHARGER": "36V Output: 42V/ 4A",
-          "CHARGING TIME FROM 0% TO 100%": "5 hours",
-          "SPEED": "Class 2"
-        },
-        "all": {
-          "MODEL": "Level 3 Ebike",
-          "WEIGHT": "67lbs",
-          "TOTAL WEIGHT LIMIT": "330 lbs",
-          "BOX SIZE": "61\"x13\"x34\"",
-          "RIDER HEIGHT": "5'3\" - 6'4\"",
-          "EBIKE CLASS": "Class 2 Ebike",
-          "RANGE": "Up to 70 Miles",
-          "BATTERY SAFETY CERTIFICATIONS": "Certified to UL 2271",
-          "SAFETY CERTIFICATIONS": "UL Safety Certified  UL 2849",
-          "IDEAL USE": "Commuting",
-          "PEDAL ASSIST": "3 Levels (with Ride Tune Customization)",
-          "WATER RESISTANCE": "Bike - IPX5 // Components - IPX6",
-          "FRAME": "6061 Aluminum, Gravity Cast Front Triangle",
-          "FORK": "Aventon Suspension Fork, 80mm travel, w/ lockout,coil spring. 15x100mm thru-axle, 43mm offset",
-          "REAR SPACING": "142mm",
-          "FORK SPACING": "110mm",
-          "FRAME STYLE": "Step-Over",
-          "FRONT WHEEL": "27.5in, 13g, 36hole, double wall Aluminum, Thru axle, Schrader Valve, black",
-          "REAR WHEEL": "27.5in, 12g, 36hole, double wall Aluminum, Nutted Hub Drive Motor, Scharder Valve, black",
-          "TIRES": "Kenda Kwick Seven-5 Sport K1052-006 27.5 x 2.20",
-          "MOTOR": "36V, 500W (sustained), 864W (peak)",
-          "MOTOR TORQUE": "60Nm",
-          "DISPLAY": "Aventon BC280",
-          "BATTERY": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
-          "BATTERY WEIGHT": "8.7lbs",
-          "CONTROLLER": "36V, 24A",
-          "THROTTLE": "Aventon LH Handlebar Mounted",
-          "SENSORS": "Double Sided Bottom Bracket Torque Sensor",
-          "CHARGER": "36V Output: 42V/ 4A",
-          "CHARGING TIME FROM 0% TO 100%": "5 hours",
-          "LIGHTS": "Front and rear lights integrated",
-          "SPEED": "Class 2",
-          "FRONT BRAKE": "Magura AT-2 Hydraulic disc brake / Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
-          "REAR BRAKE": "Magura AT-2 Hydraulic disc brake / Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
-          "FRONT BRAKE ROTOR": "Magura MDR-A 180mm 6 Bolt Rotor / Tektro 180mm 6 Bolt Rotor",
-          "REAR BRAKE ROTOR": "Magura MDR-A 180mm 6 Bolt Rotor / Tektro 180mm 6 Bolt Rotor",
-          "REAR DERAILLEUR": "Shimano Altus RD-M310",
-          "SHIFTER": "Shimano 8 Speed Trigger SL-M315-8R",
-          "CHAIN": "7/8 speed 120L",
-          "CASSETTE": "12-32T / 8 Speed Shimano CS HG200-8",
-          "CHAINRING": "48T",
-          "CRANKSET": "3pc, 170mm crank arm",
-          "BOTTOM BRACKET": "Square Taper, Sealed, double sided Torque Sensor 83mmx158.5mm",
-          "PEDALS": "9/16\" Composite Platform",
-          "SADDLE": "Aventon Saddle",
-          "SEATPOST": "30.9mm Aventon Suspension Seatpost with 50mm travel",
-          "SEATPOST CLAMP": "34.9mm",
-          "HANDLEBARS": "Aluminum 31.8mm, 680mm",
-          "GRIPS": "Aventon Lock on grips",
-          "HEADSET": "Sealed Bearing Headset",
-          "FENDERS": "Included",
-          "REAR RACK": "Included",
-          "REAR RACK WEIGHT LIMIT": "60lbs"
+        "grouped": {
+          "general_info": {
+            "model": "Level 3 Ebike",
+            "weight": "67lbs",
+            "total_weight_limit": "330 lbs",
+            "box_size": "61\"x13\"x34\"",
+            "ebike_class": "Class 2 Ebike",
+            "range": "Up to 70 Miles",
+            "ideal_use": "Commuting",
+            "speed": "Class 2"
+          },
+          "ebike_system": {
+            "pedal_assist": "3 Levels (with Ride Tune Customization)",
+            "motor": "36V, 500W (sustained), 864W (peak)",
+            "motor_torque": "60Nm",
+            "display": "Aventon BC280",
+            "battery": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
+            "battery_weight": "8.7lbs",
+            "controller": "36V, 24A",
+            "throttle": "Aventon LH Handlebar Mounted",
+            "sensors": "Double Sided Bottom Bracket Torque Sensor",
+            "charger": "36V Output: 42V/ 4A",
+            "charging_time_from_0_to_100": "5 hours"
+          },
+          "safety": {
+            "lights": "Front and rear lights integrated"
+          },
+          "certifications": {
+            "battery_safety_certifications": "Certified to UL 2271",
+            "safety_certifications": "UL Safety Certified  UL 2849"
+          },
+          "water_resistance": {
+            "water_resistance": "Bike - IPX5 // Components - IPX6"
+          },
+          "frameset": {
+            "frame": "6061 Aluminum, Gravity Cast Front Triangle",
+            "fork": "Aventon Suspension Fork, 80mm travel, w/ lockout,coil spring. 15x100mm thru-axle, 43mm offset",
+            "rear_spacing": "142mm",
+            "fork_spacing": "110mm",
+            "frame_style": "Step-Over"
+          },
+          "drivetrain": {
+            "rear_derailleur": "Shimano Altus RD-M310",
+            "shifter": "Shimano 8 Speed Trigger SL-M315-8R",
+            "chain": "7/8 speed 120L",
+            "cassette": "12-32T / 8 Speed Shimano CS HG200-8",
+            "chainring": "48T",
+            "crankset": "3pc, 170mm crank arm",
+            "bottom_bracket": "Square Taper, Sealed, double sided Torque Sensor 83mmx158.5mm",
+            "pedals": "9/16\" Composite Platform"
+          },
+          "brakes": {
+            "front_brake": "Magura AT-2 Hydraulic disc brake / Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
+            "rear_brake": "Magura AT-2 Hydraulic disc brake / Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
+            "front_brake_rotor": "Magura MDR-A 180mm 6 Bolt Rotor / Tektro 180mm 6 Bolt Rotor",
+            "rear_brake_rotor": "Magura MDR-A 180mm 6 Bolt Rotor / Tektro 180mm 6 Bolt Rotor"
+          },
+          "wheelset": {
+            "front_wheel": "27.5in, 13g, 36hole, double wall Aluminum, Thru axle, Schrader Valve, black",
+            "rear_wheel": "27.5in, 12g, 36hole, double wall Aluminum, Nutted Hub Drive Motor, Scharder Valve, black",
+            "tires": "Kenda Kwick Seven-5 Sport K1052-006 27.5 x 2.20"
+          },
+          "cockpit": {
+            "saddle": "Aventon Saddle",
+            "seatpost": "30.9mm Aventon Suspension Seatpost with 50mm travel",
+            "seatpost_clamp": "34.9mm",
+            "handlebars": "Aluminum 31.8mm, 680mm",
+            "grips": "Aventon Lock on grips",
+            "headset": "Sealed Bearing Headset"
+          },
+          "geometry": {
+            "rider_height": "5'3\" - 6'4\""
+          },
+          "included_accessories": {
+            "fenders": "Included",
+            "rear_rack": "Included",
+            "rear_rack_weight_limit": "60lbs"
+          }
         }
       },
       "spec_count": 53,
@@ -2867,24 +2463,6 @@
           ]
         },
         {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Matte Black",
-              "price": 1699.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Matte Aurora",
-              "price": 1699.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
           "group": "Included accessories",
           "type": "accessory",
           "choices": [
@@ -2905,7 +2483,8 @@
             }
           ]
         }
-      ]
+      ],
+      "regular_price": 1899.0
     },
     {
       "title": "Level 3 Step-Through Ebike",
@@ -2997,113 +2576,82 @@
       },
       "available": true,
       "specs": {
-        "physical": {
-          "MODEL": "Level 3 Step-Through Ebike",
-          "WEIGHT": "67lbs",
-          "TOTAL WEIGHT LIMIT": "330 lbs",
-          "BOX SIZE": "61\"x13\"x34\"",
-          "RIDER HEIGHT": "4'11\" - 6'1\"",
-          "IDEAL USE": "Commuting",
-          "PEDAL ASSIST": "3 Levels (with Ride Tune Customization)",
-          "FRAME": "6061 Aluminum, Gravity Cast Front Triangle",
-          "FORK": "Aventon Suspension Fork, 80mm travel, w/ lockout,coil spring. 15x100mm thru-axle, 43mm offset",
-          "REAR SPACING": "142mm",
-          "FORK SPACING": "110mm",
-          "FRAME STYLE": "Step-Through",
-          "FRONT WHEEL": "27.5in, 13g, 36hole, double wall Aluminum, Thru axle, Schrader Valve, black",
-          "REAR WHEEL": "27.5in, 12g, 36hole, double wall Aluminum, Nutted Hub Drive Motor, Scharder Valve, black",
-          "TIRES": "Kenda Kwick Seven-5 Sport K1052-006 27.5 x 2.20",
-          "BATTERY WEIGHT": "8.7lbs",
-          "LIGHTS": "Front and rear lights integrated",
-          "FRONT BRAKE": "Magura AT-2 Hydraulic disc brake / Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
-          "REAR BRAKE": "Magura AT-2 Hydraulic disc brake / Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
-          "FRONT BRAKE ROTOR": "Magura MDR-A 180mm 6 Bolt Rotor / Tektro 180mm 6 Bolt Rotor",
-          "REAR BRAKE ROTOR": "Magura MDR-A 180mm 6 Bolt Rotor / Tektro 180mm 6 Bolt Rotor",
-          "REAR DERAILLEUR": "Shimano Altus RD-M310",
-          "SHIFTER": "Shimano 8 Speed Trigger SL-M315-8R",
-          "CHAIN": "7/8 speed 120L",
-          "CASSETTE": "12-32T / 8 Speed Shimano CS HG200-8",
-          "CHAINRING": "48T",
-          "CRANKSET": "3pc, 170mm crank arm",
-          "BOTTOM BRACKET": "Square Taper, Sealed, double sided Torque Sensor 83mmx158.5mm",
-          "PEDALS": "9/16\" Composite Platform",
-          "SADDLE": "Aventon Saddle",
-          "SEATPOST": "30.9mm Aventon Suspension Seatpost with 50mm travel",
-          "SEATPOST CLAMP": "34.9mm",
-          "HANDLEBARS": "Aluminum 31.8mm, 680mm",
-          "GRIPS": "Aventon Lock on grips",
-          "HEADSET": "Sealed Bearing Headset",
-          "REAR RACK WEIGHT LIMIT": "60lbs"
-        },
-        "technical": {
-          "EBIKE CLASS": "Class 2 Ebike",
-          "RANGE": "Up to 70 Miles",
-          "BATTERY SAFETY CERTIFICATIONS": "Certified to UL 2271",
-          "SAFETY CERTIFICATIONS": "UL Safety Certified  UL 2849",
-          "WATER RESISTANCE": "Bike - IPX5 // Components - IPX6",
-          "MOTOR": "36V, 500W (sustained), 864W (peak)",
-          "MOTOR TORQUE": "60Nm",
-          "DISPLAY": "Aventon BC280",
-          "BATTERY": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
-          "CONTROLLER": "36V, 24A",
-          "THROTTLE": "Aventon LH Handlebar Mounted",
-          "SENSORS": "Double Sided Bottom Bracket Torque Sensor",
-          "CHARGER": "36V Output: 42V/ 4A",
-          "CHARGING TIME FROM 0% TO 100%": "5 hours",
-          "SPEED": "Class 2"
-        },
-        "all": {
-          "MODEL": "Level 3 Step-Through Ebike",
-          "WEIGHT": "67lbs",
-          "TOTAL WEIGHT LIMIT": "330 lbs",
-          "BOX SIZE": "61\"x13\"x34\"",
-          "RIDER HEIGHT": "4'11\" - 6'1\"",
-          "EBIKE CLASS": "Class 2 Ebike",
-          "RANGE": "Up to 70 Miles",
-          "BATTERY SAFETY CERTIFICATIONS": "Certified to UL 2271",
-          "SAFETY CERTIFICATIONS": "UL Safety Certified  UL 2849",
-          "IDEAL USE": "Commuting",
-          "PEDAL ASSIST": "3 Levels (with Ride Tune Customization)",
-          "WATER RESISTANCE": "Bike - IPX5 // Components - IPX6",
-          "FRAME": "6061 Aluminum, Gravity Cast Front Triangle",
-          "FORK": "Aventon Suspension Fork, 80mm travel, w/ lockout,coil spring. 15x100mm thru-axle, 43mm offset",
-          "REAR SPACING": "142mm",
-          "FORK SPACING": "110mm",
-          "FRAME STYLE": "Step-Through",
-          "FRONT WHEEL": "27.5in, 13g, 36hole, double wall Aluminum, Thru axle, Schrader Valve, black",
-          "REAR WHEEL": "27.5in, 12g, 36hole, double wall Aluminum, Nutted Hub Drive Motor, Scharder Valve, black",
-          "TIRES": "Kenda Kwick Seven-5 Sport K1052-006 27.5 x 2.20",
-          "MOTOR": "36V, 500W (sustained), 864W (peak)",
-          "MOTOR TORQUE": "60Nm",
-          "DISPLAY": "Aventon BC280",
-          "BATTERY": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
-          "BATTERY WEIGHT": "8.7lbs",
-          "CONTROLLER": "36V, 24A",
-          "THROTTLE": "Aventon LH Handlebar Mounted",
-          "SENSORS": "Double Sided Bottom Bracket Torque Sensor",
-          "CHARGER": "36V Output: 42V/ 4A",
-          "CHARGING TIME FROM 0% TO 100%": "5 hours",
-          "LIGHTS": "Front and rear lights integrated",
-          "SPEED": "Class 2",
-          "FRONT BRAKE": "Magura AT-2 Hydraulic disc brake / Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
-          "REAR BRAKE": "Magura AT-2 Hydraulic disc brake / Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
-          "FRONT BRAKE ROTOR": "Magura MDR-A 180mm 6 Bolt Rotor / Tektro 180mm 6 Bolt Rotor",
-          "REAR BRAKE ROTOR": "Magura MDR-A 180mm 6 Bolt Rotor / Tektro 180mm 6 Bolt Rotor",
-          "REAR DERAILLEUR": "Shimano Altus RD-M310",
-          "SHIFTER": "Shimano 8 Speed Trigger SL-M315-8R",
-          "CHAIN": "7/8 speed 120L",
-          "CASSETTE": "12-32T / 8 Speed Shimano CS HG200-8",
-          "CHAINRING": "48T",
-          "CRANKSET": "3pc, 170mm crank arm",
-          "BOTTOM BRACKET": "Square Taper, Sealed, double sided Torque Sensor 83mmx158.5mm",
-          "PEDALS": "9/16\" Composite Platform",
-          "SADDLE": "Aventon Saddle",
-          "SEATPOST": "30.9mm Aventon Suspension Seatpost with 50mm travel",
-          "SEATPOST CLAMP": "34.9mm",
-          "HANDLEBARS": "Aluminum 31.8mm, 680mm",
-          "GRIPS": "Aventon Lock on grips",
-          "HEADSET": "Sealed Bearing Headset",
-          "REAR RACK WEIGHT LIMIT": "60lbs"
+        "grouped": {
+          "general_info": {
+            "model": "Level 3 Step-Through Ebike",
+            "weight": "67lbs",
+            "total_weight_limit": "330 lbs",
+            "box_size": "61\"x13\"x34\"",
+            "ebike_class": "Class 2 Ebike",
+            "range": "Up to 70 Miles",
+            "ideal_use": "Commuting",
+            "speed": "Class 2"
+          },
+          "ebike_system": {
+            "pedal_assist": "3 Levels (with Ride Tune Customization)",
+            "motor": "36V, 500W (sustained), 864W (peak)",
+            "motor_torque": "60Nm",
+            "display": "Aventon BC280",
+            "battery": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
+            "battery_weight": "8.7lbs",
+            "controller": "36V, 24A",
+            "throttle": "Aventon LH Handlebar Mounted",
+            "sensors": "Double Sided Bottom Bracket Torque Sensor",
+            "charger": "36V Output: 42V/ 4A",
+            "charging_time_from_0_to_100": "5 hours"
+          },
+          "safety": {
+            "lights": "Front and rear lights integrated"
+          },
+          "certifications": {
+            "battery_safety_certifications": "Certified to UL 2271",
+            "safety_certifications": "UL Safety Certified  UL 2849"
+          },
+          "water_resistance": {
+            "water_resistance": "Bike - IPX5 // Components - IPX6"
+          },
+          "frameset": {
+            "frame": "6061 Aluminum, Gravity Cast Front Triangle",
+            "fork": "Aventon Suspension Fork, 80mm travel, w/ lockout,coil spring. 15x100mm thru-axle, 43mm offset",
+            "rear_spacing": "142mm",
+            "fork_spacing": "110mm",
+            "frame_style": "Step-Through"
+          },
+          "drivetrain": {
+            "rear_derailleur": "Shimano Altus RD-M310",
+            "shifter": "Shimano 8 Speed Trigger SL-M315-8R",
+            "chain": "7/8 speed 120L",
+            "cassette": "12-32T / 8 Speed Shimano CS HG200-8",
+            "chainring": "48T",
+            "crankset": "3pc, 170mm crank arm",
+            "bottom_bracket": "Square Taper, Sealed, double sided Torque Sensor 83mmx158.5mm",
+            "pedals": "9/16\" Composite Platform"
+          },
+          "brakes": {
+            "front_brake": "Magura AT-2 Hydraulic disc brake / Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
+            "rear_brake": "Magura AT-2 Hydraulic disc brake / Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
+            "front_brake_rotor": "Magura MDR-A 180mm 6 Bolt Rotor / Tektro 180mm 6 Bolt Rotor",
+            "rear_brake_rotor": "Magura MDR-A 180mm 6 Bolt Rotor / Tektro 180mm 6 Bolt Rotor"
+          },
+          "wheelset": {
+            "front_wheel": "27.5in, 13g, 36hole, double wall Aluminum, Thru axle, Schrader Valve, black",
+            "rear_wheel": "27.5in, 12g, 36hole, double wall Aluminum, Nutted Hub Drive Motor, Scharder Valve, black",
+            "tires": "Kenda Kwick Seven-5 Sport K1052-006 27.5 x 2.20"
+          },
+          "cockpit": {
+            "saddle": "Aventon Saddle",
+            "seatpost": "30.9mm Aventon Suspension Seatpost with 50mm travel",
+            "seatpost_clamp": "34.9mm",
+            "handlebars": "Aluminum 31.8mm, 680mm",
+            "grips": "Aventon Lock on grips",
+            "headset": "Sealed Bearing Headset"
+          },
+          "geometry": {
+            "rider_height": "4'11\" - 6'1\""
+          },
+          "included_accessories": {
+            "rear_rack_weight_limit": "60lbs"
+          }
         }
       },
       "spec_count": 51,
@@ -3206,24 +2754,6 @@
           ]
         },
         {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Glacier Mint",
-              "price": 1699.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Sandstone",
-              "price": 1699.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
           "group": "Included accessories",
           "type": "accessory",
           "choices": [
@@ -3234,7 +2764,8 @@
             }
           ]
         }
-      ]
+      ],
+      "regular_price": 1899.0
     },
     {
       "title": "Level 4 ADV Ebike",
@@ -3323,107 +2854,81 @@
       },
       "available": false,
       "specs": {
-        "physical": {
-          "WEIGHT": "61lbs",
-          "TOTAL WEIGHT LIMIT": "330 lbs",
-          "RIDER HEIGHT": "Medium - 5'3\"-5'10\". || Large - 5'10\"-6'4\". || Extra Large - 6'4\"-6'7\"",
-          "IDEAL USE": "Commuting",
-          "FRAME": "6061 Aluminum",
-          "FORK": "100 mm Travel, Adjustable Coil Spring with Preload Adjustment and Lockout, 15x100 mm Thru Axle, 43 mm Offset, Tapered Steerer Tube",
-          "REAR SPACING": "135mm",
-          "FORK SPACING": "100mm",
-          "FRAME STYLE": "Step-Over",
-          "FRONT WHEEL": "27.5\" Double Wall Aluminum, 36H",
-          "REAR WHEEL": "27.5\" Double Wall Aluminum, 36H",
-          "TIRES": "Kenda K1052, 27.5x2.2\"",
-          "BATTERY WEIGHT": "8.7lbs",
-          "LIGHTS": "Front and rear lights integrated",
-          "SMART FEATURES": "Uphill Start Assist, E-Shift, Autoshift, Ride Tune, 4G/GPS, Unusual activity detection, E-lock, Hold Mode, Remote Notification",
-          "FRONT BRAKE": "Tektro HD-M3120 2-Piston Hydraulic Disc Brakes",
-          "REAR BRAKE": "Tektro HD-M3120 2-Piston Hydraulic Disc Brakes",
-          "FRONT BRAKE ROTOR": "180mm 6 bolt",
-          "REAR BRAKE ROTOR": "180mm 6 bolt",
-          "BRAKES": "Hydraulic",
-          "REAR DERAILLEUR": "Shimano Cues 10-Speed",
-          "CHAINRING": "48T",
-          "CRANKSET": "165mm ISIS Splined",
-          "PEDALS": "9/16\" Composite Platform",
-          "SHIFTER": "E-Shifter",
-          "CHAIN": "9/10/11 speed 126L",
-          "CASSETTE": "Shimano Cues 10-Speed 11-39T",
-          "SADDLE": "Aventon Saddle",
-          "SEATPOST": "Aventon Suspension Post, 30.9mm, 50mm Travel, 400mm Length",
-          "SEATPOST CLAMP": "34.9mm",
-          "HANDLEBARS": "31.8mm, 680mm Width, 30mm Rise",
-          "GRIPS": "Aventon Lock on grips",
-          "REAR RACK": "Included",
-          "FENDERS": "Included",
-          "INTEGRATED LIGHTS": "Included"
-        },
-        "technical": {
-          "EBIKE CLASS": "Class 1 (Convertible to Class 2 and/or Class 3)",
-          "WATER RESISTANCE": "Bike - IPX6 // Motor - IP67",
-          "RANGE": "Up to 110 Miles",
-          "SAFETY CERTIFICATIONS": "UL Safety Certified  UL 2849",
-          "BATTERY SAFETY CERTIFICATIONS": "Certified to UL 2271",
-          "MOTOR": "Aventon Ultro S Mid-drive Motor, 100Nm Motor Torque, 750W Peak Power",
-          "MOTOR TORQUE": "100Nm",
-          "MOTOR POWER": "750W Peak",
-          "DISPLAY": "A280 Center Display",
-          "BATTERY": "Removable Lithium-Ion. 36V, 20Ah, 800Wh, Samsung 21700 58E cells",
-          "THROTTLE": "Compatible, Not Included",
-          "CHARGER": "42V 4A charger",
-          "CHARGING TIME FROM 0% TO 100%": "5 hours"
-        },
-        "all": {
-          "WEIGHT": "61lbs",
-          "TOTAL WEIGHT LIMIT": "330 lbs",
-          "RIDER HEIGHT": "Medium - 5'3\"-5'10\". || Large - 5'10\"-6'4\". || Extra Large - 6'4\"-6'7\"",
-          "EBIKE CLASS": "Class 1 (Convertible to Class 2 and/or Class 3)",
-          "WATER RESISTANCE": "Bike - IPX6 // Motor - IP67",
-          "RANGE": "Up to 110 Miles",
-          "SAFETY CERTIFICATIONS": "UL Safety Certified  UL 2849",
-          "BATTERY SAFETY CERTIFICATIONS": "Certified to UL 2271",
-          "IDEAL USE": "Commuting",
-          "FRAME": "6061 Aluminum",
-          "FORK": "100 mm Travel, Adjustable Coil Spring with Preload Adjustment and Lockout, 15x100 mm Thru Axle, 43 mm Offset, Tapered Steerer Tube",
-          "REAR SPACING": "135mm",
-          "FORK SPACING": "100mm",
-          "FRAME STYLE": "Step-Over",
-          "FRONT WHEEL": "27.5\" Double Wall Aluminum, 36H",
-          "REAR WHEEL": "27.5\" Double Wall Aluminum, 36H",
-          "TIRES": "Kenda K1052, 27.5x2.2\"",
-          "MOTOR": "Aventon Ultro S Mid-drive Motor, 100Nm Motor Torque, 750W Peak Power",
-          "MOTOR TORQUE": "100Nm",
-          "MOTOR POWER": "750W Peak",
-          "DISPLAY": "A280 Center Display",
-          "BATTERY": "Removable Lithium-Ion. 36V, 20Ah, 800Wh, Samsung 21700 58E cells",
-          "BATTERY WEIGHT": "8.7lbs",
-          "THROTTLE": "Compatible, Not Included",
-          "CHARGER": "42V 4A charger",
-          "CHARGING TIME FROM 0% TO 100%": "5 hours",
-          "LIGHTS": "Front and rear lights integrated",
-          "SMART FEATURES": "Uphill Start Assist, E-Shift, Autoshift, Ride Tune, 4G/GPS, Unusual activity detection, E-lock, Hold Mode, Remote Notification",
-          "FRONT BRAKE": "Tektro HD-M3120 2-Piston Hydraulic Disc Brakes",
-          "REAR BRAKE": "Tektro HD-M3120 2-Piston Hydraulic Disc Brakes",
-          "FRONT BRAKE ROTOR": "180mm 6 bolt",
-          "REAR BRAKE ROTOR": "180mm 6 bolt",
-          "BRAKES": "Hydraulic",
-          "REAR DERAILLEUR": "Shimano Cues 10-Speed",
-          "CHAINRING": "48T",
-          "CRANKSET": "165mm ISIS Splined",
-          "PEDALS": "9/16\" Composite Platform",
-          "SHIFTER": "E-Shifter",
-          "CHAIN": "9/10/11 speed 126L",
-          "CASSETTE": "Shimano Cues 10-Speed 11-39T",
-          "SADDLE": "Aventon Saddle",
-          "SEATPOST": "Aventon Suspension Post, 30.9mm, 50mm Travel, 400mm Length",
-          "SEATPOST CLAMP": "34.9mm",
-          "HANDLEBARS": "31.8mm, 680mm Width, 30mm Rise",
-          "GRIPS": "Aventon Lock on grips",
-          "REAR RACK": "Included",
-          "FENDERS": "Included",
-          "INTEGRATED LIGHTS": "Included"
+        "grouped": {
+          "general_info": {
+            "weight": "61lbs",
+            "total_weight_limit": "330 lbs",
+            "ebike_class": "Class 1 (Convertible to Class 2 and/or Class 3)",
+            "range": "Up to 110 Miles",
+            "ideal_use": "Commuting"
+          },
+          "ebike_system": {
+            "motor": "Aventon Ultro S Mid-drive Motor, 100Nm Motor Torque, 750W Peak Power",
+            "motor_torque": "100Nm",
+            "motor_power": "750W Peak",
+            "display": "A280 Center Display",
+            "battery": "Removable Lithium-Ion. 36V, 20Ah, 800Wh, Samsung 21700 58E cells",
+            "battery_weight": "8.7lbs",
+            "throttle": "Compatible, Not Included",
+            "charger": "42V 4A charger",
+            "charging_time_from_0_to_100": "5 hours"
+          },
+          "special_features": {
+            "smart_features": "Uphill Start Assist, E-Shift, Autoshift, Ride Tune, 4G/GPS, Unusual activity detection, E-lock, Hold Mode, Remote Notification"
+          },
+          "safety": {
+            "lights": "Front and rear lights integrated",
+            "integrated_lights": "Included"
+          },
+          "certifications": {
+            "safety_certifications": "UL Safety Certified  UL 2849",
+            "battery_safety_certifications": "Certified to UL 2271"
+          },
+          "water_resistance": {
+            "water_resistance": "Bike - IPX6 // Motor - IP67"
+          },
+          "frameset": {
+            "frame": "6061 Aluminum",
+            "fork": "100 mm Travel, Adjustable Coil Spring with Preload Adjustment and Lockout, 15x100 mm Thru Axle, 43 mm Offset, Tapered Steerer Tube",
+            "rear_spacing": "135mm",
+            "fork_spacing": "100mm",
+            "frame_style": "Step-Over"
+          },
+          "drivetrain": {
+            "rear_derailleur": "Shimano Cues 10-Speed",
+            "chainring": "48T",
+            "crankset": "165mm ISIS Splined",
+            "pedals": "9/16\" Composite Platform",
+            "shifter": "E-Shifter",
+            "chain": "9/10/11 speed 126L",
+            "cassette": "Shimano Cues 10-Speed 11-39T"
+          },
+          "brakes": {
+            "front_brake": "Tektro HD-M3120 2-Piston Hydraulic Disc Brakes",
+            "rear_brake": "Tektro HD-M3120 2-Piston Hydraulic Disc Brakes",
+            "front_brake_rotor": "180mm 6 bolt",
+            "rear_brake_rotor": "180mm 6 bolt",
+            "brakes": "Hydraulic"
+          },
+          "wheelset": {
+            "front_wheel": "27.5\" Double Wall Aluminum, 36H",
+            "rear_wheel": "27.5\" Double Wall Aluminum, 36H",
+            "tires": "Kenda K1052, 27.5x2.2\""
+          },
+          "cockpit": {
+            "saddle": "Aventon Saddle",
+            "seatpost": "Aventon Suspension Post, 30.9mm, 50mm Travel, 400mm Length",
+            "seatpost_clamp": "34.9mm",
+            "handlebars": "31.8mm, 680mm Width, 30mm Rise",
+            "grips": "Aventon Lock on grips"
+          },
+          "geometry": {
+            "rider_height": "Medium - 5'3\"-5'10\". || Large - 5'10\"-6'4\". || Extra Large - 6'4\"-6'7\""
+          },
+          "included_accessories": {
+            "rear_rack": "Included",
+            "fenders": "Included"
+          }
         }
       },
       "spec_count": 48,
@@ -3580,24 +3085,6 @@
           ]
         },
         {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Matte Black",
-              "price": 2799.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Camouflage",
-              "price": 2799.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
           "group": "Included accessories",
           "type": "accessory",
           "choices": [
@@ -3710,107 +3197,81 @@
       },
       "available": true,
       "specs": {
-        "physical": {
-          "Weight": "61lbs",
-          "Total Weight Limit": "330 lbs",
-          "Rider Height": "Regular - 4'11\"-5'7\".  ||  Large - 5'7\"-6'1\"",
-          "Ideal Use": "Commuting",
-          "Frame": "6061 Aluminum",
-          "Fork": "100 mm Travel, Adjustable Coil Spring with Preload Adjustment and Lockout, 15x100 mm Thru Axle, 43 mm Offset, Tapered Steerer Tube",
-          "Rear Spacing": "135mm",
-          "Fork Spacing": "100mm",
-          "Frame Style": "Step-Through",
-          "Front Wheel": "27.5\" Double Wall Aluminum, 36H",
-          "Rear Wheel": "27.5\" Double Wall Aluminum, 36H",
-          "Tires": "Kenda K1052, 27.5x2.2\"",
-          "Battery Weight": "8.7lbs",
-          "Lights": "Front and rear lights integrated",
-          "Smart Features": "Uphill Start Assist, E-Shift, Autoshift, Ride Tune, 4G/GPS, Unusual activity detection, E-lock, Hold Mode, Remote Notification",
-          "Front Brake": "Tektro HD-M3120 2-Piston Hydraulic Disc Brakes",
-          "Rear Brake": "Tektro HD-M3120 2-Piston Hydraulic Disc Brakes",
-          "Front Brake Rotor": "180mm 6 bolt",
-          "Rear Brake Rotor": "180mm 6 bolt",
-          "Brakes": "Hydraulic",
-          "Rear Derailleur": "Shimano Cues 10-Speed",
-          "Chainring": "48T",
-          "Crankset": "165mm ISIS Splined",
-          "Pedals": "9/16\" Composite Platform",
-          "Shifter": "E-Shifter",
-          "Chain": "9/10/11 speed 126L",
-          "Cassette": "Shimano Cues 10-Speed 11-39T",
-          "Saddle": "Aventon Saddle",
-          "Seatpost": "Aventon Suspension Post, 30.9mm, 50mm Travel, 400mm Length",
-          "Seatpost Clamp": "34.9mm",
-          "Handlebars": "31.8mm, 680mm Width, 30mm Rise",
-          "Grips": "Aventon Lock on grips",
-          "Rear Rack": "Included",
-          "Fenders": "Included",
-          "Integrated Lights": "Included"
-        },
-        "technical": {
-          "Ebike Class": "Class 1 (Convertible to Class 2 and/or Class 3)",
-          "Water Resistance": "Bike - IPX6 // Motor - IP67",
-          "Range": "Up to 110 Miles",
-          "Safety Certifications": "UL Safety Certified  UL 2849",
-          "Battery Safety Certifications": "Certified to UL 2271",
-          "Motor": "Aventon Ultro S Mid-drive Motor, 100Nm Motor Torque, 750W Peak Power",
-          "Motor Torque": "100Nm",
-          "Motor Power": "750W Peak",
-          "Display": "A280 Center Display",
-          "Battery": "Removable Lithium-Ion. 36V, 20Ah, 800Wh, Samsung 21700 58E cells",
-          "Throttle": "Compatible, Not Included",
-          "Charger": "42V 4A charger",
-          "Charging time from 0% to 100%": "5 hours"
-        },
-        "all": {
-          "Weight": "61lbs",
-          "Total Weight Limit": "330 lbs",
-          "Rider Height": "Regular - 4'11\"-5'7\".  ||  Large - 5'7\"-6'1\"",
-          "Ebike Class": "Class 1 (Convertible to Class 2 and/or Class 3)",
-          "Water Resistance": "Bike - IPX6 // Motor - IP67",
-          "Range": "Up to 110 Miles",
-          "Safety Certifications": "UL Safety Certified  UL 2849",
-          "Battery Safety Certifications": "Certified to UL 2271",
-          "Ideal Use": "Commuting",
-          "Frame": "6061 Aluminum",
-          "Fork": "100 mm Travel, Adjustable Coil Spring with Preload Adjustment and Lockout, 15x100 mm Thru Axle, 43 mm Offset, Tapered Steerer Tube",
-          "Rear Spacing": "135mm",
-          "Fork Spacing": "100mm",
-          "Frame Style": "Step-Through",
-          "Front Wheel": "27.5\" Double Wall Aluminum, 36H",
-          "Rear Wheel": "27.5\" Double Wall Aluminum, 36H",
-          "Tires": "Kenda K1052, 27.5x2.2\"",
-          "Motor": "Aventon Ultro S Mid-drive Motor, 100Nm Motor Torque, 750W Peak Power",
-          "Motor Torque": "100Nm",
-          "Motor Power": "750W Peak",
-          "Display": "A280 Center Display",
-          "Battery": "Removable Lithium-Ion. 36V, 20Ah, 800Wh, Samsung 21700 58E cells",
-          "Battery Weight": "8.7lbs",
-          "Throttle": "Compatible, Not Included",
-          "Charger": "42V 4A charger",
-          "Charging time from 0% to 100%": "5 hours",
-          "Lights": "Front and rear lights integrated",
-          "Smart Features": "Uphill Start Assist, E-Shift, Autoshift, Ride Tune, 4G/GPS, Unusual activity detection, E-lock, Hold Mode, Remote Notification",
-          "Front Brake": "Tektro HD-M3120 2-Piston Hydraulic Disc Brakes",
-          "Rear Brake": "Tektro HD-M3120 2-Piston Hydraulic Disc Brakes",
-          "Front Brake Rotor": "180mm 6 bolt",
-          "Rear Brake Rotor": "180mm 6 bolt",
-          "Brakes": "Hydraulic",
-          "Rear Derailleur": "Shimano Cues 10-Speed",
-          "Chainring": "48T",
-          "Crankset": "165mm ISIS Splined",
-          "Pedals": "9/16\" Composite Platform",
-          "Shifter": "E-Shifter",
-          "Chain": "9/10/11 speed 126L",
-          "Cassette": "Shimano Cues 10-Speed 11-39T",
-          "Saddle": "Aventon Saddle",
-          "Seatpost": "Aventon Suspension Post, 30.9mm, 50mm Travel, 400mm Length",
-          "Seatpost Clamp": "34.9mm",
-          "Handlebars": "31.8mm, 680mm Width, 30mm Rise",
-          "Grips": "Aventon Lock on grips",
-          "Rear Rack": "Included",
-          "Fenders": "Included",
-          "Integrated Lights": "Included"
+        "grouped": {
+          "general_info": {
+            "weight": "61lbs",
+            "total_weight_limit": "330 lbs",
+            "ebike_class": "Class 1 (Convertible to Class 2 and/or Class 3)",
+            "range": "Up to 110 Miles",
+            "ideal_use": "Commuting"
+          },
+          "ebike_system": {
+            "motor": "Aventon Ultro S Mid-drive Motor, 100Nm Motor Torque, 750W Peak Power",
+            "motor_torque": "100Nm",
+            "motor_power": "750W Peak",
+            "display": "A280 Center Display",
+            "battery": "Removable Lithium-Ion. 36V, 20Ah, 800Wh, Samsung 21700 58E cells",
+            "battery_weight": "8.7lbs",
+            "throttle": "Compatible, Not Included",
+            "charger": "42V 4A charger",
+            "charging_time_from_0_to_100": "5 hours"
+          },
+          "special_features": {
+            "smart_features": "Uphill Start Assist, E-Shift, Autoshift, Ride Tune, 4G/GPS, Unusual activity detection, E-lock, Hold Mode, Remote Notification"
+          },
+          "safety": {
+            "lights": "Front and rear lights integrated",
+            "integrated_lights": "Included"
+          },
+          "certifications": {
+            "safety_certifications": "UL Safety Certified  UL 2849",
+            "battery_safety_certifications": "Certified to UL 2271"
+          },
+          "water_resistance": {
+            "water_resistance": "Bike - IPX6 // Motor - IP67"
+          },
+          "frameset": {
+            "frame": "6061 Aluminum",
+            "fork": "100 mm Travel, Adjustable Coil Spring with Preload Adjustment and Lockout, 15x100 mm Thru Axle, 43 mm Offset, Tapered Steerer Tube",
+            "rear_spacing": "135mm",
+            "fork_spacing": "100mm",
+            "frame_style": "Step-Through"
+          },
+          "drivetrain": {
+            "rear_derailleur": "Shimano Cues 10-Speed",
+            "chainring": "48T",
+            "crankset": "165mm ISIS Splined",
+            "pedals": "9/16\" Composite Platform",
+            "shifter": "E-Shifter",
+            "chain": "9/10/11 speed 126L",
+            "cassette": "Shimano Cues 10-Speed 11-39T"
+          },
+          "brakes": {
+            "front_brake": "Tektro HD-M3120 2-Piston Hydraulic Disc Brakes",
+            "rear_brake": "Tektro HD-M3120 2-Piston Hydraulic Disc Brakes",
+            "front_brake_rotor": "180mm 6 bolt",
+            "rear_brake_rotor": "180mm 6 bolt",
+            "brakes": "Hydraulic"
+          },
+          "wheelset": {
+            "front_wheel": "27.5\" Double Wall Aluminum, 36H",
+            "rear_wheel": "27.5\" Double Wall Aluminum, 36H",
+            "tires": "Kenda K1052, 27.5x2.2\""
+          },
+          "cockpit": {
+            "saddle": "Aventon Saddle",
+            "seatpost": "Aventon Suspension Post, 30.9mm, 50mm Travel, 400mm Length",
+            "seatpost_clamp": "34.9mm",
+            "handlebars": "31.8mm, 680mm Width, 30mm Rise",
+            "grips": "Aventon Lock on grips"
+          },
+          "geometry": {
+            "rider_height": "Regular - 4'11\"-5'7\".  ||  Large - 5'7\"-6'1\""
+          },
+          "included_accessories": {
+            "rear_rack": "Included",
+            "fenders": "Included"
+          }
         }
       },
       "spec_count": 48,
@@ -3931,24 +3392,6 @@
           ]
         },
         {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Matte Black",
-              "price": 2799.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Haze",
-              "price": 2799.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
           "group": "Included accessories",
           "type": "accessory",
           "choices": [
@@ -4058,111 +3501,83 @@
       },
       "available": true,
       "specs": {
-        "physical": {
-          "WEIGHT": "68.5lbs",
-          "TOTAL WEIGHT LIMIT": "330 lbs",
-          "RIDER HEIGHT": "Regular - 5'3\"-5'10\". || Large - 5'10\"-6'4\"",
-          "FRAME": "6061 Aluminum",
-          "FORK": "80 mm Travel, Adjustable Coil Spring with Preload Adjustment and Lockout, Nutted Axle",
-          "REAR SPACING": "148mm",
-          "FORK SPACING": "100mm",
-          "FRONT WHEEL": "27.5\" Double Wall Aluminum, 36 Hole, 15x100mm Thru Axle",
-          "REAR WHEEL": "27.5\" Double Wall Aluminum, 750W Nutted Axle Hub Motor",
-          "TIRES": "Kenda Kwick Seven-5 Sport 27.5\"x2.2\"",
-          "BATTERY WEIGHT": "8.7lbs",
-          "LIGHTS": "Front and rear lights integrated",
-          "SMART FEATURES": "Regenerative Braking, Ride Tune, 4G/GPS, Unusual activity detection, E-lock, Hold Mode, Remote Notification",
-          "FRONT BRAKE": "Tektro HD-E3520 2-Piston Hydraulic Disc w/ E-Cutoff",
-          "REAR BRAKE": "Tektro HD-E3520 2-Piston Hydraulic Disc w/ E-Cutoff",
-          "FRONT BRAKE ROTOR": "180mm 6 bolt",
-          "REAR BRAKE ROTOR": "180mm 6 bolt",
-          "BRAKES": "Regenerative Braking",
-          "REAR DERAILLEUR": "Shimano Altus RD-M310",
-          "SHIFTER": "Shimano 8-Speed Trigger",
-          "CHAIN": "7/8 speed 120L",
-          "CASSETTE": "Shimano CS-HG200-8 8 speed Cassette, 12-32T",
-          "CHAINRING": "48T",
-          "CHAINRING BCD": "N/A",
-          "CRANKSET": "165mm",
-          "BOTTOM BRACKET": "Square Tapered, Sealed, Double Sided Torque Sensor, 83mm x 158.5mm",
-          "PEDALS": "9/16\" Composite Platform",
-          "SADDLE": "Aventon Saddle",
-          "SEATPOST": "30.9mm Aventon Suspension Seatpost with 50mm travel",
-          "SEATPOST CLAMP": "34.9mm",
-          "HANDLEBARS": "Aluminum 31.8mm, 680mm",
-          "STEM": "Aluminum, 31.8mm Clamp, 60mm Length, 90 Degree Adjustable w/ Internal Routing",
-          "GRIPS": "Aventon Lock on grips",
-          "REAR RACK": "Included",
-          "FENDERS": "Included",
-          "INTEGRATED LIGHTS": "Included"
-        },
-        "technical": {
-          "EBIKE CLASS": "Class 2 (Convertible to Class 3)",
-          "WATER RESISTANCE": "Bike - IPX5 // Components - IPX6",
-          "RANGE": "Up to 75 Miles",
-          "SAFETY CERTIFICATIONS": "UL Safety Certified  UL 2849",
-          "MOTOR": "Hub Motor, 80Nm (96Nm in Boost Mode), 1188W Peak (1440W in Boost Mode)",
-          "MOTOR TORQUE": "80Nm",
-          "MOTOR POWER": "750W (1188W Peak)",
-          "DISPLAY": "Aventon A280",
-          "BATTERY": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
-          "CONTROLLER": "36V, 33A",
-          "THROTTLE": "Included",
-          "SENSORS": "Sensor Switch Compatible (Cadence & Torque)",
-          "CHARGER": "42V 4A charger",
-          "CHARGING TIME FROM 0% TO 100%": "5 hours"
-        },
-        "all": {
-          "WEIGHT": "68.5lbs",
-          "TOTAL WEIGHT LIMIT": "330 lbs",
-          "RIDER HEIGHT": "Regular - 5'3\"-5'10\". || Large - 5'10\"-6'4\"",
-          "EBIKE CLASS": "Class 2 (Convertible to Class 3)",
-          "WATER RESISTANCE": "Bike - IPX5 // Components - IPX6",
-          "RANGE": "Up to 75 Miles",
-          "SAFETY CERTIFICATIONS": "UL Safety Certified  UL 2849",
-          "FRAME": "6061 Aluminum",
-          "FORK": "80 mm Travel, Adjustable Coil Spring with Preload Adjustment and Lockout, Nutted Axle",
-          "REAR SPACING": "148mm",
-          "FORK SPACING": "100mm",
-          "FRONT WHEEL": "27.5\" Double Wall Aluminum, 36 Hole, 15x100mm Thru Axle",
-          "REAR WHEEL": "27.5\" Double Wall Aluminum, 750W Nutted Axle Hub Motor",
-          "TIRES": "Kenda Kwick Seven-5 Sport 27.5\"x2.2\"",
-          "MOTOR": "Hub Motor, 80Nm (96Nm in Boost Mode), 1188W Peak (1440W in Boost Mode)",
-          "MOTOR TORQUE": "80Nm",
-          "MOTOR POWER": "750W (1188W Peak)",
-          "DISPLAY": "Aventon A280",
-          "BATTERY": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
-          "BATTERY WEIGHT": "8.7lbs",
-          "CONTROLLER": "36V, 33A",
-          "THROTTLE": "Included",
-          "SENSORS": "Sensor Switch Compatible (Cadence & Torque)",
-          "CHARGER": "42V 4A charger",
-          "CHARGING TIME FROM 0% TO 100%": "5 hours",
-          "LIGHTS": "Front and rear lights integrated",
-          "SMART FEATURES": "Regenerative Braking, Ride Tune, 4G/GPS, Unusual activity detection, E-lock, Hold Mode, Remote Notification",
-          "FRONT BRAKE": "Tektro HD-E3520 2-Piston Hydraulic Disc w/ E-Cutoff",
-          "REAR BRAKE": "Tektro HD-E3520 2-Piston Hydraulic Disc w/ E-Cutoff",
-          "FRONT BRAKE ROTOR": "180mm 6 bolt",
-          "REAR BRAKE ROTOR": "180mm 6 bolt",
-          "BRAKES": "Regenerative Braking",
-          "REAR DERAILLEUR": "Shimano Altus RD-M310",
-          "SHIFTER": "Shimano 8-Speed Trigger",
-          "CHAIN": "7/8 speed 120L",
-          "CASSETTE": "Shimano CS-HG200-8 8 speed Cassette, 12-32T",
-          "CHAINRING": "48T",
-          "CHAINRING BCD": "N/A",
-          "CRANKSET": "165mm",
-          "BOTTOM BRACKET": "Square Tapered, Sealed, Double Sided Torque Sensor, 83mm x 158.5mm",
-          "PEDALS": "9/16\" Composite Platform",
-          "SADDLE": "Aventon Saddle",
-          "SEATPOST": "30.9mm Aventon Suspension Seatpost with 50mm travel",
-          "SEATPOST CLAMP": "34.9mm",
-          "HANDLEBARS": "Aluminum 31.8mm, 680mm",
-          "STEM": "Aluminum, 31.8mm Clamp, 60mm Length, 90 Degree Adjustable w/ Internal Routing",
-          "GRIPS": "Aventon Lock on grips",
-          "REAR RACK": "Included",
-          "FENDERS": "Included",
-          "INTEGRATED LIGHTS": "Included"
+        "grouped": {
+          "general_info": {
+            "weight": "68.5lbs",
+            "total_weight_limit": "330 lbs",
+            "ebike_class": "Class 2 (Convertible to Class 3)",
+            "range": "Up to 75 Miles"
+          },
+          "ebike_system": {
+            "motor": "Hub Motor, 80Nm (96Nm in Boost Mode), 1188W Peak (1440W in Boost Mode)",
+            "motor_torque": "80Nm",
+            "motor_power": "750W (1188W Peak)",
+            "display": "Aventon A280",
+            "battery": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
+            "battery_weight": "8.7lbs",
+            "controller": "36V, 33A",
+            "throttle": "Included",
+            "sensors": "Sensor Switch Compatible (Cadence & Torque)",
+            "charger": "42V 4A charger",
+            "charging_time_from_0_to_100": "5 hours"
+          },
+          "special_features": {
+            "smart_features": "Regenerative Braking, Ride Tune, 4G/GPS, Unusual activity detection, E-lock, Hold Mode, Remote Notification"
+          },
+          "safety": {
+            "lights": "Front and rear lights integrated",
+            "integrated_lights": "Included"
+          },
+          "certifications": {
+            "safety_certifications": "UL Safety Certified  UL 2849"
+          },
+          "water_resistance": {
+            "water_resistance": "Bike - IPX5 // Components - IPX6"
+          },
+          "frameset": {
+            "frame": "6061 Aluminum",
+            "fork": "80 mm Travel, Adjustable Coil Spring with Preload Adjustment and Lockout, Nutted Axle",
+            "rear_spacing": "148mm",
+            "fork_spacing": "100mm"
+          },
+          "drivetrain": {
+            "rear_derailleur": "Shimano Altus RD-M310",
+            "shifter": "Shimano 8-Speed Trigger",
+            "chain": "7/8 speed 120L",
+            "cassette": "Shimano CS-HG200-8 8 speed Cassette, 12-32T",
+            "chainring": "48T",
+            "chainring_bcd": "N/A",
+            "crankset": "165mm",
+            "bottom_bracket": "Square Tapered, Sealed, Double Sided Torque Sensor, 83mm x 158.5mm",
+            "pedals": "9/16\" Composite Platform"
+          },
+          "brakes": {
+            "front_brake": "Tektro HD-E3520 2-Piston Hydraulic Disc w/ E-Cutoff",
+            "rear_brake": "Tektro HD-E3520 2-Piston Hydraulic Disc w/ E-Cutoff",
+            "front_brake_rotor": "180mm 6 bolt",
+            "rear_brake_rotor": "180mm 6 bolt",
+            "brakes": "Regenerative Braking"
+          },
+          "wheelset": {
+            "front_wheel": "27.5\" Double Wall Aluminum, 36 Hole, 15x100mm Thru Axle",
+            "rear_wheel": "27.5\" Double Wall Aluminum, 750W Nutted Axle Hub Motor",
+            "tires": "Kenda Kwick Seven-5 Sport 27.5\"x2.2\""
+          },
+          "cockpit": {
+            "saddle": "Aventon Saddle",
+            "seatpost": "30.9mm Aventon Suspension Seatpost with 50mm travel",
+            "seatpost_clamp": "34.9mm",
+            "handlebars": "Aluminum 31.8mm, 680mm",
+            "stem": "Aluminum, 31.8mm Clamp, 60mm Length, 90 Degree Adjustable w/ Internal Routing",
+            "grips": "Aventon Lock on grips"
+          },
+          "geometry": {
+            "rider_height": "Regular - 5'3\"-5'10\". || Large - 5'10\"-6'4\""
+          },
+          "included_accessories": {
+            "rear_rack": "Included",
+            "fenders": "Included"
+          }
         }
       },
       "spec_count": 50,
@@ -4283,24 +3698,6 @@
           ]
         },
         {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Matte Black",
-              "price": 1999.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Matte Storm Blue",
-              "price": 1999.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
           "group": "Included accessories",
           "type": "accessory",
           "choices": [
@@ -4411,111 +3808,83 @@
       },
       "available": true,
       "specs": {
-        "physical": {
-          "WEIGHT": "68.5lbs",
-          "TOTAL WEIGHT LIMIT": "330 lbs",
-          "RIDER HEIGHT": "Regular - 4'11\"-5'7\". || Large - 5'7\"-6'1\"",
-          "FRAME": "6061 Aluminum",
-          "FORK": "80 mm Travel, Adjustable Coil Spring with Preload Adjustment and Lockout, Nutted Axle",
-          "REAR SPACING": "148mm",
-          "FORK SPACING": "100mm",
-          "FRONT WHEEL": "27.5\" Double Wall Aluminum, 36 Hole, 15x100mm Thru Axle",
-          "REAR WHEEL": "27.5\" Double Wall Aluminum, 750W Nutted Axle Hub Motor",
-          "TIRES": "Kenda Kwick Seven-5 Sport 27.5\"x2.2\"",
-          "BATTERY WEIGHT": "8.7lbs",
-          "LIGHTS": "Front and rear lights integrated",
-          "SMART FEATURES": "Regenerative Braking, Ride Tune, 4G/GPS, Unusual activity detection, E-lock, Hold Mode, Remote Notification",
-          "REAR BRAKE": "Tektro HD-E3520 2-Piston Hydraulic Disc w/ E-Cutoff",
-          "FRONT BRAKE ROTOR": "180mm 6 bolt",
-          "REAR BRAKE ROTOR": "180mm 6 bolt",
-          "BRAKES": "Regenerative Braking",
-          "REAR DERAILLEUR": "Shimano Altus RD-M310",
-          "SHIFTER": "Shimano 8-Speed Trigger",
-          "CHAIN": "7/8 speed 120L",
-          "CASSETTE": "Shimano CS-HG200-8 8 speed Cassette, 12-32T",
-          "CHAINRING": "48T",
-          "CHAINRING BCD": "N/A",
-          "CRANKSET": "165mm",
-          "BOTTOM BRACKET": "Square Tapered, Sealed, Double Sided Torque Sensor, 83mm x 158.5mm",
-          "PEDALS": "9/16\" Composite Platform",
-          "SADDLE": "Aventon Saddle",
-          "SEATPOST": "30.9mm Aventon Suspension Seatpost with 50mm travel",
-          "SEATPOST CLAMP": "34.9mm",
-          "HANDLEBARS": "Aluminum 31.8mm, 680mm",
-          "STEM": "Aluminum, 31.8mm Clamp, 60mm Length, 90 Degree Adjustable w/ Internal Routing",
-          "GRIPS": "Aventon Lock on grips",
-          "REAR RACK": "Included",
-          "FENDERS": "Included",
-          "INTEGRATED LIGHTS": "Included"
-        },
-        "technical": {
-          "EBIKE CLASS": "Class 2 (Convertible to Class 3)",
-          "WATER RESISTANCE": "Bike - IPX5 // Components - IPX6",
-          "RANGE": "Up to 75 Miles",
-          "SAFETY CERTIFICATIONS": "UL Safety Certified  UL 2849",
-          "BATTERY SAFETY CERTIFICATIONS": "Certified to UL 2271",
-          "MOTOR": "Hub Motor, 80Nm (96Nm in Boost Mode), 1188W Peak (1440W in Boost Mode)",
-          "MOTOR TORQUE": "80Nm",
-          "MOTOR POWER": "750W (1188W Peak)",
-          "DISPLAY": "Aventon A280",
-          "BATTERY": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
-          "CONTROLLER": "36V, 33A",
-          "THROTTLE": "Included",
-          "SENSORS": "Sensor Switch Compatible (Cadence & Torque)",
-          "CHARGER": "42V 4A charger",
-          "CHARGING TIME FROM 0% TO 100%": "5 hours"
-        },
-        "all": {
-          "WEIGHT": "68.5lbs",
-          "TOTAL WEIGHT LIMIT": "330 lbs",
-          "RIDER HEIGHT": "Regular - 4'11\"-5'7\". || Large - 5'7\"-6'1\"",
-          "EBIKE CLASS": "Class 2 (Convertible to Class 3)",
-          "WATER RESISTANCE": "Bike - IPX5 // Components - IPX6",
-          "RANGE": "Up to 75 Miles",
-          "SAFETY CERTIFICATIONS": "UL Safety Certified  UL 2849",
-          "BATTERY SAFETY CERTIFICATIONS": "Certified to UL 2271",
-          "FRAME": "6061 Aluminum",
-          "FORK": "80 mm Travel, Adjustable Coil Spring with Preload Adjustment and Lockout, Nutted Axle",
-          "REAR SPACING": "148mm",
-          "FORK SPACING": "100mm",
-          "FRONT WHEEL": "27.5\" Double Wall Aluminum, 36 Hole, 15x100mm Thru Axle",
-          "REAR WHEEL": "27.5\" Double Wall Aluminum, 750W Nutted Axle Hub Motor",
-          "TIRES": "Kenda Kwick Seven-5 Sport 27.5\"x2.2\"",
-          "MOTOR": "Hub Motor, 80Nm (96Nm in Boost Mode), 1188W Peak (1440W in Boost Mode)",
-          "MOTOR TORQUE": "80Nm",
-          "MOTOR POWER": "750W (1188W Peak)",
-          "DISPLAY": "Aventon A280",
-          "BATTERY": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
-          "BATTERY WEIGHT": "8.7lbs",
-          "CONTROLLER": "36V, 33A",
-          "THROTTLE": "Included",
-          "SENSORS": "Sensor Switch Compatible (Cadence & Torque)",
-          "CHARGER": "42V 4A charger",
-          "CHARGING TIME FROM 0% TO 100%": "5 hours",
-          "LIGHTS": "Front and rear lights integrated",
-          "SMART FEATURES": "Regenerative Braking, Ride Tune, 4G/GPS, Unusual activity detection, E-lock, Hold Mode, Remote Notification",
-          "REAR BRAKE": "Tektro HD-E3520 2-Piston Hydraulic Disc w/ E-Cutoff",
-          "FRONT BRAKE ROTOR": "180mm 6 bolt",
-          "REAR BRAKE ROTOR": "180mm 6 bolt",
-          "BRAKES": "Regenerative Braking",
-          "REAR DERAILLEUR": "Shimano Altus RD-M310",
-          "SHIFTER": "Shimano 8-Speed Trigger",
-          "CHAIN": "7/8 speed 120L",
-          "CASSETTE": "Shimano CS-HG200-8 8 speed Cassette, 12-32T",
-          "CHAINRING": "48T",
-          "CHAINRING BCD": "N/A",
-          "CRANKSET": "165mm",
-          "BOTTOM BRACKET": "Square Tapered, Sealed, Double Sided Torque Sensor, 83mm x 158.5mm",
-          "PEDALS": "9/16\" Composite Platform",
-          "SADDLE": "Aventon Saddle",
-          "SEATPOST": "30.9mm Aventon Suspension Seatpost with 50mm travel",
-          "SEATPOST CLAMP": "34.9mm",
-          "HANDLEBARS": "Aluminum 31.8mm, 680mm",
-          "STEM": "Aluminum, 31.8mm Clamp, 60mm Length, 90 Degree Adjustable w/ Internal Routing",
-          "GRIPS": "Aventon Lock on grips",
-          "REAR RACK": "Included",
-          "FENDERS": "Included",
-          "INTEGRATED LIGHTS": "Included"
+        "grouped": {
+          "general_info": {
+            "weight": "68.5lbs",
+            "total_weight_limit": "330 lbs",
+            "ebike_class": "Class 2 (Convertible to Class 3)",
+            "range": "Up to 75 Miles"
+          },
+          "ebike_system": {
+            "motor": "Hub Motor, 80Nm (96Nm in Boost Mode), 1188W Peak (1440W in Boost Mode)",
+            "motor_torque": "80Nm",
+            "motor_power": "750W (1188W Peak)",
+            "display": "Aventon A280",
+            "battery": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
+            "battery_weight": "8.7lbs",
+            "controller": "36V, 33A",
+            "throttle": "Included",
+            "sensors": "Sensor Switch Compatible (Cadence & Torque)",
+            "charger": "42V 4A charger",
+            "charging_time_from_0_to_100": "5 hours"
+          },
+          "special_features": {
+            "smart_features": "Regenerative Braking, Ride Tune, 4G/GPS, Unusual activity detection, E-lock, Hold Mode, Remote Notification"
+          },
+          "safety": {
+            "lights": "Front and rear lights integrated",
+            "integrated_lights": "Included"
+          },
+          "certifications": {
+            "safety_certifications": "UL Safety Certified  UL 2849",
+            "battery_safety_certifications": "Certified to UL 2271"
+          },
+          "water_resistance": {
+            "water_resistance": "Bike - IPX5 // Components - IPX6"
+          },
+          "frameset": {
+            "frame": "6061 Aluminum",
+            "fork": "80 mm Travel, Adjustable Coil Spring with Preload Adjustment and Lockout, Nutted Axle",
+            "rear_spacing": "148mm",
+            "fork_spacing": "100mm"
+          },
+          "drivetrain": {
+            "rear_derailleur": "Shimano Altus RD-M310",
+            "shifter": "Shimano 8-Speed Trigger",
+            "chain": "7/8 speed 120L",
+            "cassette": "Shimano CS-HG200-8 8 speed Cassette, 12-32T",
+            "chainring": "48T",
+            "chainring_bcd": "N/A",
+            "crankset": "165mm",
+            "bottom_bracket": "Square Tapered, Sealed, Double Sided Torque Sensor, 83mm x 158.5mm",
+            "pedals": "9/16\" Composite Platform"
+          },
+          "brakes": {
+            "rear_brake": "Tektro HD-E3520 2-Piston Hydraulic Disc w/ E-Cutoff",
+            "front_brake_rotor": "180mm 6 bolt",
+            "rear_brake_rotor": "180mm 6 bolt",
+            "brakes": "Regenerative Braking"
+          },
+          "wheelset": {
+            "front_wheel": "27.5\" Double Wall Aluminum, 36 Hole, 15x100mm Thru Axle",
+            "rear_wheel": "27.5\" Double Wall Aluminum, 750W Nutted Axle Hub Motor",
+            "tires": "Kenda Kwick Seven-5 Sport 27.5\"x2.2\""
+          },
+          "cockpit": {
+            "saddle": "Aventon Saddle",
+            "seatpost": "30.9mm Aventon Suspension Seatpost with 50mm travel",
+            "seatpost_clamp": "34.9mm",
+            "handlebars": "Aluminum 31.8mm, 680mm",
+            "stem": "Aluminum, 31.8mm Clamp, 60mm Length, 90 Degree Adjustable w/ Internal Routing",
+            "grips": "Aventon Lock on grips"
+          },
+          "geometry": {
+            "rider_height": "Regular - 4'11\"-5'7\". || Large - 5'7\"-6'1\""
+          },
+          "included_accessories": {
+            "rear_rack": "Included",
+            "fenders": "Included"
+          }
         }
       },
       "spec_count": 50,
@@ -4629,24 +3998,6 @@
             },
             {
               "value": "Large",
-              "price": 1999.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Glacier Mint",
-              "price": 1999.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Sandstone",
               "price": 1999.0,
               "price_delta": 0.0,
               "free": true
@@ -4780,117 +4131,89 @@
       },
       "available": true,
       "specs": {
-        "physical": {
-          "MODEL": "Pace 4 Step-Through Ebike",
-          "WEIGHT": "58.2 lbs",
-          "TOTAL WEIGHT LIMIT": "330 lbs",
-          "RIDER HEIGHT": "R: 4'11\" -5'7\" | L: 5'7\" - 6'1\"",
-          "IDEAL USE": "Cruising",
-          "FRAME": "6061 Aluminum, Gravity Cast Front Triangle",
-          "FORK": "Rigid Aluminum Fork",
-          "REAR SPACING": "142mm",
-          "FORK SPACING": "100mm",
-          "FRONT WHEEL": "27.5\", 36 hole, Nutted axle, Schrader Valve",
-          "REAR WHEEL": "27.5\", 36 hole, Nutted hub drive motor, Schrader Valve",
-          "TIRES": "27.5\" x 2.1\"",
-          "BATTERY WEIGHT": "8.7lbs",
-          "LIGHTS": "Front and rear lights integrated",
-          "SMART FEATURES": "Ride Tune, 4G/GPS, Unusual activity detection, E-lock, Hold Mode, Remote Notification, Apple Watch Connectivity, Keyless Battery, Cruise Control, Boost Mode, Sensor Switch",
-          "ACU OVER-THE-AIR UPDATES": "Yes",
-          "FRONT BRAKE": "Tektro Hydraulic w/ E-Cutoff",
-          "REAR BRAKE": "Tektro Hydraulic w/ E-Cutoff",
-          "FRONT BRAKE ROTOR": "180mm 6 bolt",
-          "REAR BRAKE ROTOR": "180mm 6 bolt",
-          "REAR DERAILLEUR": "Shimano Altus 8-Speed",
-          "SHIFTER": "Shimano 8-Speed Trigger",
-          "CHAIN": "7/8 speed 122L",
-          "CASSETTE": "12-32T / 8 Speed Shimano CS HG200-8",
-          "CHAINRING": "48T",
-          "CHAINRING BCD": "N/A",
-          "CRANKSET": "3pc, 170mm crank arm",
-          "BOTTOM BRACKET": "Square Taper, Sealed, double sided Torque Sensor 83mmx158.5mm",
-          "PEDALS": "9/16\" Composite Platform",
-          "SADDLE": "Aventon Saddle",
-          "SEATPOST": "Aventon Suspension Seatpost, Ø 30.9mm, 350mm Length. 50mm travel",
-          "SEATPOST CLAMP": "34.9mm",
-          "HANDLEBARS": "BMX Style Aluminum 31.8mm, 720mm",
-          "STEM": "31.8mm x 50mm, +15 Degree Rise",
-          "GRIPS": "Aventon Ergonomic Comfort lock on grips",
-          "HEADSET": "Sealed Bearing Headset",
-          "KICKSTAND": "Included, rear mount"
-        },
-        "technical": {
-          "RANGE": "Up to 70 Miles",
-          "EBIKE CLASS": "Class 2 (Can be converted to Class 3 if local laws and regulations allow)",
-          "BATTERY SAFETY CERTIFICATIONS": "Certified to UL 2271",
-          "SPEED": "Max: 28 MPH",
-          "BIKE SAFETY CERTIFICATIONS": "UL Safety Certified  UL 2849",
-          "WATER RESISTANCE": "Bike - IPX5 // Components - IPX6",
-          "MOTOR": "36v, 500W",
-          "MOTOR TORQUE": "60Nm",
-          "MOTOR POWER": "500W",
-          "DISPLAY": "Aventon BC147",
-          "BATTERY": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
-          "CONTROLLER": "36V, 24A",
-          "THROTTLE": "Aventon LH Handlebar Mounted",
-          "SENSORS": "Double Sided Bottom Bracket Torque Sensor",
-          "CHARGER": "36V Output: 42V/ 4A",
-          "CHARGING TIME FROM 0% TO 100%": "5 hours"
-        },
-        "all": {
-          "MODEL": "Pace 4 Step-Through Ebike",
-          "WEIGHT": "58.2 lbs",
-          "TOTAL WEIGHT LIMIT": "330 lbs",
-          "RIDER HEIGHT": "R: 4'11\" -5'7\" | L: 5'7\" - 6'1\"",
-          "RANGE": "Up to 70 Miles",
-          "EBIKE CLASS": "Class 2 (Can be converted to Class 3 if local laws and regulations allow)",
-          "BATTERY SAFETY CERTIFICATIONS": "Certified to UL 2271",
-          "SPEED": "Max: 28 MPH",
-          "BIKE SAFETY CERTIFICATIONS": "UL Safety Certified  UL 2849",
-          "IDEAL USE": "Cruising",
-          "WATER RESISTANCE": "Bike - IPX5 // Components - IPX6",
-          "FRAME": "6061 Aluminum, Gravity Cast Front Triangle",
-          "FORK": "Rigid Aluminum Fork",
-          "REAR SPACING": "142mm",
-          "FORK SPACING": "100mm",
-          "FRONT WHEEL": "27.5\", 36 hole, Nutted axle, Schrader Valve",
-          "REAR WHEEL": "27.5\", 36 hole, Nutted hub drive motor, Schrader Valve",
-          "TIRES": "27.5\" x 2.1\"",
-          "MOTOR": "36v, 500W",
-          "MOTOR TORQUE": "60Nm",
-          "MOTOR POWER": "500W",
-          "DISPLAY": "Aventon BC147",
-          "BATTERY": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
-          "BATTERY WEIGHT": "8.7lbs",
-          "CONTROLLER": "36V, 24A",
-          "THROTTLE": "Aventon LH Handlebar Mounted",
-          "SENSORS": "Double Sided Bottom Bracket Torque Sensor",
-          "CHARGER": "36V Output: 42V/ 4A",
-          "CHARGING TIME FROM 0% TO 100%": "5 hours",
-          "LIGHTS": "Front and rear lights integrated",
-          "SMART FEATURES": "Ride Tune, 4G/GPS, Unusual activity detection, E-lock, Hold Mode, Remote Notification, Apple Watch Connectivity, Keyless Battery, Cruise Control, Boost Mode, Sensor Switch",
-          "ACU OVER-THE-AIR UPDATES": "Yes",
-          "FRONT BRAKE": "Tektro Hydraulic w/ E-Cutoff",
-          "REAR BRAKE": "Tektro Hydraulic w/ E-Cutoff",
-          "FRONT BRAKE ROTOR": "180mm 6 bolt",
-          "REAR BRAKE ROTOR": "180mm 6 bolt",
-          "REAR DERAILLEUR": "Shimano Altus 8-Speed",
-          "SHIFTER": "Shimano 8-Speed Trigger",
-          "CHAIN": "7/8 speed 122L",
-          "CASSETTE": "12-32T / 8 Speed Shimano CS HG200-8",
-          "CHAINRING": "48T",
-          "CHAINRING BCD": "N/A",
-          "CRANKSET": "3pc, 170mm crank arm",
-          "BOTTOM BRACKET": "Square Taper, Sealed, double sided Torque Sensor 83mmx158.5mm",
-          "PEDALS": "9/16\" Composite Platform",
-          "SADDLE": "Aventon Saddle",
-          "SEATPOST": "Aventon Suspension Seatpost, Ø 30.9mm, 350mm Length. 50mm travel",
-          "SEATPOST CLAMP": "34.9mm",
-          "HANDLEBARS": "BMX Style Aluminum 31.8mm, 720mm",
-          "STEM": "31.8mm x 50mm, +15 Degree Rise",
-          "GRIPS": "Aventon Ergonomic Comfort lock on grips",
-          "HEADSET": "Sealed Bearing Headset",
-          "KICKSTAND": "Included, rear mount"
+        "grouped": {
+          "general_info": {
+            "model": "Pace 4 Step-Through Ebike",
+            "weight": "58.2 lbs",
+            "total_weight_limit": "330 lbs",
+            "range": "Up to 70 Miles",
+            "ebike_class": "Class 2 (Can be converted to Class 3 if local laws and regulations allow)",
+            "speed": "Max: 28 MPH",
+            "ideal_use": "Cruising"
+          },
+          "ebike_system": {
+            "motor": "36v, 500W",
+            "motor_torque": "60Nm",
+            "motor_power": "500W",
+            "display": "Aventon BC147",
+            "battery": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
+            "battery_weight": "8.7lbs",
+            "controller": "36V, 24A",
+            "throttle": "Aventon LH Handlebar Mounted",
+            "sensors": "Double Sided Bottom Bracket Torque Sensor",
+            "charger": "36V Output: 42V/ 4A",
+            "charging_time_from_0_to_100": "5 hours"
+          },
+          "special_features": {
+            "smart_features": "Ride Tune, 4G/GPS, Unusual activity detection, E-lock, Hold Mode, Remote Notification, Apple Watch Connectivity, Keyless Battery, Cruise Control, Boost Mode, Sensor Switch",
+            "acu_over_the_air_updates": "Yes"
+          },
+          "safety": {
+            "lights": "Front and rear lights integrated"
+          },
+          "certifications": {
+            "battery_safety_certifications": "Certified to UL 2271",
+            "bike_safety_certifications": "UL Safety Certified  UL 2849"
+          },
+          "water_resistance": {
+            "water_resistance": "Bike - IPX5 // Components - IPX6"
+          },
+          "frameset": {
+            "frame": "6061 Aluminum, Gravity Cast Front Triangle",
+            "fork": "Rigid Aluminum Fork",
+            "rear_spacing": "142mm",
+            "fork_spacing": "100mm"
+          },
+          "drivetrain": {
+            "rear_derailleur": "Shimano Altus 8-Speed",
+            "shifter": "Shimano 8-Speed Trigger",
+            "chain": "7/8 speed 122L",
+            "cassette": "12-32T / 8 Speed Shimano CS HG200-8",
+            "chainring": "48T",
+            "chainring_bcd": "N/A",
+            "crankset": "3pc, 170mm crank arm",
+            "bottom_bracket": "Square Taper, Sealed, double sided Torque Sensor 83mmx158.5mm",
+            "pedals": "9/16\" Composite Platform"
+          },
+          "brakes": {
+            "front_brake": "Tektro Hydraulic w/ E-Cutoff",
+            "rear_brake": "Tektro Hydraulic w/ E-Cutoff",
+            "front_brake_rotor": "180mm 6 bolt",
+            "rear_brake_rotor": "180mm 6 bolt"
+          },
+          "wheelset": {
+            "front_wheel": "27.5\", 36 hole, Nutted axle, Schrader Valve",
+            "rear_wheel": "27.5\", 36 hole, Nutted hub drive motor, Schrader Valve",
+            "tires": "27.5\" x 2.1\""
+          },
+          "cockpit": {
+            "saddle": "Aventon Saddle",
+            "seatpost": "Aventon Suspension Seatpost, Ø 30.9mm, 350mm Length. 50mm travel",
+            "seatpost_clamp": "34.9mm",
+            "handlebars": "BMX Style Aluminum 31.8mm, 720mm",
+            "stem": "31.8mm x 50mm, +15 Degree Rise",
+            "grips": "Aventon Ergonomic Comfort lock on grips",
+            "headset": "Sealed Bearing Headset"
+          },
+          "geometry": {
+            "rider_height": {
+              "R": "4'11\" -5'7\"",
+              "L": "5'7\" - 6'1\""
+            }
+          },
+          "included_accessories": {
+            "kickstand": "Included, rear mount"
+          }
         }
       },
       "spec_count": 53,
@@ -5032,30 +4355,6 @@
           ]
         },
         {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Blue Steel",
-              "price": 1599.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Mica",
-              "price": 1599.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Flint",
-              "price": 1599.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
           "group": "Included accessories",
           "type": "accessory",
           "choices": [
@@ -5071,7 +4370,8 @@
             }
           ]
         }
-      ]
+      ],
+      "regular_price": 1799.0
     },
     {
       "title": "Pace 5 REC Step-Through Ebike",
@@ -5173,111 +4473,84 @@
       },
       "available": true,
       "specs": {
-        "physical": {
-          "WEIGHT": "60.48lbs",
-          "TOTAL WEIGHT LIMIT": "330 lbs",
-          "RIDER HEIGHT": "R: 5'0\" -5'9\" | L: 5'9\" - 6'3\"",
-          "SADDLE": "Aventon 250mm wide Saddle",
-          "SEATPOST": "Aventon Seatpost, 30.9Ø, Length: 300 mm (Size R) / 350 mm (Size L)",
-          "SEATPOST CLAMP": "34.9mm",
-          "HANDLEBARS": "Aventon aluminum swept back handlebars. 31.8mm, 620mm, 38mm rise",
-          "STEM": "60mm length, Adjustable rise, 31.8 handlebar clamp",
-          "GRIPS": "Aventon Lock on grips",
-          "HEADSET": "Sealed Bearing Headset",
-          "FRAME": "6061 Aluminum, Gravity Cast Front Triangle",
-          "FORK": "Aventon Rigid Alloy",
-          "REAR SPACING": "147mm",
-          "FORK SPACING": "100mm",
-          "FRONT WHEEL": "27.5\" Double Wall Aluminum rim, 36 13g spokes, 15x100mm Thru Axle, Schrader Valve",
-          "REAR WHEEL": "27.5\" Double Wall Aluminum rim, 36 12g spokes, 750W Nutted Axle Hub Motor, Schrader Valve",
-          "TIRES": "27.5x2.1 33TPI",
-          "FRONT BRAKE": "Tektro HD-E3120 hydraulic disc",
-          "REAR BRAKE": "Tektro HD-E3120 hydraulic disc",
-          "FRONT BRAKE ROTOR": "180mm 6 bolt",
-          "REAR BRAKE ROTOR": "180mm 6 bolt",
-          "BRAKES": "Regenerative Braking",
-          "CASSETTE": "Shimano CS-HG200-8 8 speed Cassette, 12-32T",
-          "REAR DERAILLEUR": "Shimano Altus RD-M310 8 Speed",
-          "SHIFTER": "Shimano 8 Speed Trigger SL-M315-8R",
-          "CHAIN": "7/8 speed 122L",
-          "CHAINRING": "48T",
-          "CRANKSET": "3pc, 165mm crank arm",
-          "BOTTOM BRACKET": "Square Tapered, Sealed, Double Sided Torque Sensor, 83mm x 158.5mm",
-          "PEDALS": "9/16\" Composite Platform",
-          "BATTERY WEIGHT": "8.7lbs",
-          "LIGHTS": "Front and rear lights integrated",
-          "ACU OVER-THE-AIR UPDATES": "Yes",
-          "SMART FEATURES": "Regenerative Braking, Ride Tune, 4G/GPS, Unusual activity detection, E-lock, Hold Mode, Remote Notification, Apple Watch Connectivity, Keyless Battery, Cruise Control, Boost Mode, Sensor Switch"
-        },
-        "technical": {
-          "EBIKE CLASS": "Class 2 Ebike",
-          "WATER RESISTANCE": "Bike - IPX5 // Components - IPX6",
-          "RANGE": "Up to 75 Miles",
-          "SAFETY CERTIFICATIONS": "UL Safety Certified  UL 2849",
-          "BATTERY SAFETY CERTIFICATIONS": "Certified to UL 2271",
-          "SPEED": "Max: 28 MPH",
-          "MOTOR": "36V, 750W Hub Drive",
-          "MOTOR TORQUE": "80Nm (96Nm in Boost Mode)",
-          "MOTOR POWER": "750W, 1188 Watt Peak (1440 watt peak in boost mode)",
-          "DISPLAY": "Aventon A280",
-          "BATTERY": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
-          "CONTROLLER": "36V, 33A",
-          "THROTTLE": "Aventon LH Handlebar Mounted",
-          "SENSORS": "Double Sided Bottom Bracket Torque Sensor",
-          "CHARGER": "36V Output: 42V/ 4A",
-          "CHARGING TIME FROM 0% TO 100%": "5 hours"
-        },
-        "all": {
-          "WEIGHT": "60.48lbs",
-          "TOTAL WEIGHT LIMIT": "330 lbs",
-          "EBIKE CLASS": "Class 2 Ebike",
-          "WATER RESISTANCE": "Bike - IPX5 // Components - IPX6",
-          "RANGE": "Up to 75 Miles",
-          "SAFETY CERTIFICATIONS": "UL Safety Certified  UL 2849",
-          "BATTERY SAFETY CERTIFICATIONS": "Certified to UL 2271",
-          "RIDER HEIGHT": "R: 5'0\" -5'9\" | L: 5'9\" - 6'3\"",
-          "SPEED": "Max: 28 MPH",
-          "SADDLE": "Aventon 250mm wide Saddle",
-          "SEATPOST": "Aventon Seatpost, 30.9Ø, Length: 300 mm (Size R) / 350 mm (Size L)",
-          "SEATPOST CLAMP": "34.9mm",
-          "HANDLEBARS": "Aventon aluminum swept back handlebars. 31.8mm, 620mm, 38mm rise",
-          "STEM": "60mm length, Adjustable rise, 31.8 handlebar clamp",
-          "GRIPS": "Aventon Lock on grips",
-          "HEADSET": "Sealed Bearing Headset",
-          "FRAME": "6061 Aluminum, Gravity Cast Front Triangle",
-          "FORK": "Aventon Rigid Alloy",
-          "REAR SPACING": "147mm",
-          "FORK SPACING": "100mm",
-          "FRONT WHEEL": "27.5\" Double Wall Aluminum rim, 36 13g spokes, 15x100mm Thru Axle, Schrader Valve",
-          "REAR WHEEL": "27.5\" Double Wall Aluminum rim, 36 12g spokes, 750W Nutted Axle Hub Motor, Schrader Valve",
-          "TIRES": "27.5x2.1 33TPI",
-          "FRONT BRAKE": "Tektro HD-E3120 hydraulic disc",
-          "REAR BRAKE": "Tektro HD-E3120 hydraulic disc",
-          "FRONT BRAKE ROTOR": "180mm 6 bolt",
-          "REAR BRAKE ROTOR": "180mm 6 bolt",
-          "BRAKES": "Regenerative Braking",
-          "CASSETTE": "Shimano CS-HG200-8 8 speed Cassette, 12-32T",
-          "REAR DERAILLEUR": "Shimano Altus RD-M310 8 Speed",
-          "SHIFTER": "Shimano 8 Speed Trigger SL-M315-8R",
-          "CHAIN": "7/8 speed 122L",
-          "CHAINRING": "48T",
-          "CRANKSET": "3pc, 165mm crank arm",
-          "BOTTOM BRACKET": "Square Tapered, Sealed, Double Sided Torque Sensor, 83mm x 158.5mm",
-          "PEDALS": "9/16\" Composite Platform",
-          "MOTOR": "36V, 750W Hub Drive",
-          "MOTOR TORQUE": "80Nm (96Nm in Boost Mode)",
-          "MOTOR POWER": "750W, 1188 Watt Peak (1440 watt peak in boost mode)",
-          "DISPLAY": "Aventon A280",
-          "BATTERY": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
-          "BATTERY WEIGHT": "8.7lbs",
-          "CONTROLLER": "36V, 33A",
-          "THROTTLE": "Aventon LH Handlebar Mounted",
-          "SENSORS": "Double Sided Bottom Bracket Torque Sensor",
-          "CHARGER": "36V Output: 42V/ 4A",
-          "CHARGING TIME FROM 0% TO 100%": "5 hours",
-          "LIGHTS": "Front and rear lights integrated",
-          "ACU OVER-THE-AIR UPDATES": "Yes",
-          "SMART FEATURES": "Regenerative Braking, Ride Tune, 4G/GPS, Unusual activity detection, E-lock, Hold Mode, Remote Notification, Apple Watch Connectivity, Keyless Battery, Cruise Control, Boost Mode, Sensor Switch"
+        "grouped": {
+          "general_info": {
+            "weight": "60.48lbs",
+            "total_weight_limit": "330 lbs",
+            "ebike_class": "Class 2 Ebike",
+            "range": "Up to 75 Miles",
+            "speed": "Max: 28 MPH"
+          },
+          "ebike_system": {
+            "motor": "36V, 750W Hub Drive",
+            "motor_torque": "80Nm (96Nm in Boost Mode)",
+            "motor_power": "750W, 1188 Watt Peak (1440 watt peak in boost mode)",
+            "display": "Aventon A280",
+            "battery": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
+            "battery_weight": "8.7lbs",
+            "controller": "36V, 33A",
+            "throttle": "Aventon LH Handlebar Mounted",
+            "sensors": "Double Sided Bottom Bracket Torque Sensor",
+            "charger": "36V Output: 42V/ 4A",
+            "charging_time_from_0_to_100": "5 hours"
+          },
+          "special_features": {
+            "acu_over_the_air_updates": "Yes",
+            "smart_features": "Regenerative Braking, Ride Tune, 4G/GPS, Unusual activity detection, E-lock, Hold Mode, Remote Notification, Apple Watch Connectivity, Keyless Battery, Cruise Control, Boost Mode, Sensor Switch"
+          },
+          "safety": {
+            "lights": "Front and rear lights integrated"
+          },
+          "certifications": {
+            "safety_certifications": "UL Safety Certified  UL 2849",
+            "battery_safety_certifications": "Certified to UL 2271"
+          },
+          "water_resistance": {
+            "water_resistance": "Bike - IPX5 // Components - IPX6"
+          },
+          "frameset": {
+            "frame": "6061 Aluminum, Gravity Cast Front Triangle",
+            "fork": "Aventon Rigid Alloy",
+            "rear_spacing": "147mm",
+            "fork_spacing": "100mm"
+          },
+          "drivetrain": {
+            "cassette": "Shimano CS-HG200-8 8 speed Cassette, 12-32T",
+            "rear_derailleur": "Shimano Altus RD-M310 8 Speed",
+            "shifter": "Shimano 8 Speed Trigger SL-M315-8R",
+            "chain": "7/8 speed 122L",
+            "chainring": "48T",
+            "crankset": "3pc, 165mm crank arm",
+            "bottom_bracket": "Square Tapered, Sealed, Double Sided Torque Sensor, 83mm x 158.5mm",
+            "pedals": "9/16\" Composite Platform"
+          },
+          "brakes": {
+            "front_brake": "Tektro HD-E3120 hydraulic disc",
+            "rear_brake": "Tektro HD-E3120 hydraulic disc",
+            "front_brake_rotor": "180mm 6 bolt",
+            "rear_brake_rotor": "180mm 6 bolt",
+            "brakes": "Regenerative Braking"
+          },
+          "wheelset": {
+            "front_wheel": "27.5\" Double Wall Aluminum rim, 36 13g spokes, 15x100mm Thru Axle, Schrader Valve",
+            "rear_wheel": "27.5\" Double Wall Aluminum rim, 36 12g spokes, 750W Nutted Axle Hub Motor, Schrader Valve",
+            "tires": "27.5x2.1 33TPI"
+          },
+          "cockpit": {
+            "saddle": "Aventon 250mm wide Saddle",
+            "seatpost": "Aventon Seatpost, 30.9Ø, Length: 300 mm (Size R) / 350 mm (Size L)",
+            "seatpost_clamp": "34.9mm",
+            "handlebars": "Aventon aluminum swept back handlebars. 31.8mm, 620mm, 38mm rise",
+            "stem": "60mm length, Adjustable rise, 31.8 handlebar clamp",
+            "grips": "Aventon Lock on grips",
+            "headset": "Sealed Bearing Headset"
+          },
+          "geometry": {
+            "rider_height": {
+              "R": "5'0\" -5'9\"",
+              "L": "5'9\" - 6'3\""
+            }
+          }
         }
       },
       "spec_count": 50,
@@ -5473,42 +4746,6 @@
           ]
         },
         {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Glacier Mint",
-              "price": 1799.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Sakura",
-              "price": 1799.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Koi",
-              "price": 1799.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Anvil",
-              "price": 1799.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Lagoon",
-              "price": 1799.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
           "group": "Included accessories",
           "type": "accessory",
           "choices": [
@@ -5602,115 +4839,83 @@
       },
       "available": true,
       "specs": {
-        "physical": {
-          "MODEL": "Ramblas ADV Ebike",
-          "WEIGHT": "54 lbs",
-          "TOTAL WEIGHT LIMIT": "330 lbs",
-          "RIDER HEIGHT": "5'5\" - 6'5\"",
-          "BOX SIZE": "59 x 13 x 36",
-          "IDEAL USE": "Mountain Biking, Urban Riding",
-          "FRAME": "6061 Single-Butted Aluminum Alloy",
-          "FORK": "Rockshox Psylo Silver R, 35mm Stanchions, coil, 44mm offset, 15x110mm BOOST, 1.5\"tapered steerer tube, Rebound adjust",
-          "REAR SPACING": "12x148mm",
-          "FORK SPACING": "15x110mm",
-          "FRAME STYLE": "Step-Over",
-          "REAR WHEEL": "29in, 32hole, BOOST Thru Axle, Presta Valve, Tubeless Ready",
-          "FRONT WHEEL": "29in, 32hole, BOOST Thru Axle, Presta Valve, Tubeless Ready",
-          "TIRES": "Maxxis Rekon 29\"x2.4\" Tubeless Ready",
-          "BATTERY WEIGHT": "8.44 lbs",
-          "LIGHTS": "Lights: Included",
-          "FRONT BRAKE": "SRAM DB6 4-Piston Hydraulic Disc Brakes",
-          "REAR BRAKE": "SRAM DB6 4-Piston Hydraulic Disc Brakes",
-          "REAR BRAKE ROTOR": "SRAM G2 200mm",
-          "FRONT BRAKE ROTOR": "SRAM G2 200mm",
-          "REAR DERAILLEUR": "SRAM NX 12-Speed",
-          "SHIFTER": "SRAM NX",
-          "CHAIN": "SRAM 12-Speed",
-          "CASSETTE": "SRAM SX 12-Speed 10-50T",
-          "CHAINRING": "SRAM 34T",
-          "CHAINRING BCD": "104",
-          "CRANKSET": "165mm ISIS Splined",
-          "BOTTOM BRACKET": "N/A",
-          "PEDALS": "9/16\" Alloy Platform",
-          "SADDLE": "Aventon Saddle",
-          "SEATPOST": "Manic LC 150mm travel for size M-XL. 31.6mm ø. 395mm length",
-          "SEATPOST CLAMP": "34.9mm",
-          "HANDLEBARS": "760mm width, 35mm clamp diameter, 33mm rise, 3* upsweep, 9* backsweep.",
-          "GRIPS": "Aventon Lock on grips",
-          "HEADSET": "T51Ks 28.6*56-56*39.8/ H:23.4mm",
-          "KICKSTAND": "Included in accessory box",
-          "FENDERS": "Compatible",
-          "REAR RACK": "Compatible"
-        },
-        "technical": {
-          "WATER RESISTANCE": "Bike - IPX6 // Motor - IP67",
-          "RANGE": "Up to 90 miles",
-          "BIKE SAFETY CERTIFICATIONS": "TUV Certified in accordance with UL 2849 / UL 2271",
-          "BATTERY SAFETY CERTIFICATIONS": "TUV Certified in accordance with UL 2849 / UL 2271",
-          "SPEED": "Class 1",
-          "MOTOR": "Aventon a100 mid-drive. 36v, 250W (sustained), 750W (peak), 100NM torque. IP67 rating",
-          "MOTOR TORQUE": "100Nm",
-          "MOTOR POWER": "250W (750W Peak)",
-          "DISPLAY": "Aventon BC201",
-          "BATTERY": "Aventon 708 WH. 36V LG 21700 cells",
-          "THROTTLE": "N/A",
-          "SENSORS": "Double Sided Torque Sensor Integrated in Motor",
-          "CHARGER": "42V 4A charger",
-          "CHARGING TIME FROM 0% TO 100%": "5 hours"
-        },
-        "all": {
-          "MODEL": "Ramblas ADV Ebike",
-          "WEIGHT": "54 lbs",
-          "TOTAL WEIGHT LIMIT": "330 lbs",
-          "RIDER HEIGHT": "5'5\" - 6'5\"",
-          "BOX SIZE": "59 x 13 x 36",
-          "WATER RESISTANCE": "Bike - IPX6 // Motor - IP67",
-          "RANGE": "Up to 90 miles",
-          "BIKE SAFETY CERTIFICATIONS": "TUV Certified in accordance with UL 2849 / UL 2271",
-          "BATTERY SAFETY CERTIFICATIONS": "TUV Certified in accordance with UL 2849 / UL 2271",
-          "IDEAL USE": "Mountain Biking, Urban Riding",
-          "FRAME": "6061 Single-Butted Aluminum Alloy",
-          "FORK": "Rockshox Psylo Silver R, 35mm Stanchions, coil, 44mm offset, 15x110mm BOOST, 1.5\"tapered steerer tube, Rebound adjust",
-          "REAR SPACING": "12x148mm",
-          "FORK SPACING": "15x110mm",
-          "FRAME STYLE": "Step-Over",
-          "REAR WHEEL": "29in, 32hole, BOOST Thru Axle, Presta Valve, Tubeless Ready",
-          "FRONT WHEEL": "29in, 32hole, BOOST Thru Axle, Presta Valve, Tubeless Ready",
-          "TIRES": "Maxxis Rekon 29\"x2.4\" Tubeless Ready",
-          "SPEED": "Class 1",
-          "MOTOR": "Aventon a100 mid-drive. 36v, 250W (sustained), 750W (peak), 100NM torque. IP67 rating",
-          "MOTOR TORQUE": "100Nm",
-          "MOTOR POWER": "250W (750W Peak)",
-          "DISPLAY": "Aventon BC201",
-          "BATTERY": "Aventon 708 WH. 36V LG 21700 cells",
-          "BATTERY WEIGHT": "8.44 lbs",
-          "THROTTLE": "N/A",
-          "SENSORS": "Double Sided Torque Sensor Integrated in Motor",
-          "CHARGER": "42V 4A charger",
-          "CHARGING TIME FROM 0% TO 100%": "5 hours",
-          "LIGHTS": "Lights: Included",
-          "FRONT BRAKE": "SRAM DB6 4-Piston Hydraulic Disc Brakes",
-          "REAR BRAKE": "SRAM DB6 4-Piston Hydraulic Disc Brakes",
-          "REAR BRAKE ROTOR": "SRAM G2 200mm",
-          "FRONT BRAKE ROTOR": "SRAM G2 200mm",
-          "REAR DERAILLEUR": "SRAM NX 12-Speed",
-          "SHIFTER": "SRAM NX",
-          "CHAIN": "SRAM 12-Speed",
-          "CASSETTE": "SRAM SX 12-Speed 10-50T",
-          "CHAINRING": "SRAM 34T",
-          "CHAINRING BCD": "104",
-          "CRANKSET": "165mm ISIS Splined",
-          "BOTTOM BRACKET": "N/A",
-          "PEDALS": "9/16\" Alloy Platform",
-          "SADDLE": "Aventon Saddle",
-          "SEATPOST": "Manic LC 150mm travel for size M-XL. 31.6mm ø. 395mm length",
-          "SEATPOST CLAMP": "34.9mm",
-          "HANDLEBARS": "760mm width, 35mm clamp diameter, 33mm rise, 3* upsweep, 9* backsweep.",
-          "GRIPS": "Aventon Lock on grips",
-          "HEADSET": "T51Ks 28.6*56-56*39.8/ H:23.4mm",
-          "KICKSTAND": "Included in accessory box",
-          "FENDERS": "Compatible",
-          "REAR RACK": "Compatible"
+        "grouped": {
+          "general_info": {
+            "model": "Ramblas ADV Ebike",
+            "weight": "54 lbs",
+            "total_weight_limit": "330 lbs",
+            "box_size": "59 x 13 x 36",
+            "range": "Up to 90 miles",
+            "ideal_use": "Mountain Biking, Urban Riding",
+            "speed": "Class 1"
+          },
+          "ebike_system": {
+            "motor": "Aventon a100 mid-drive. 36v, 250W (sustained), 750W (peak), 100NM torque. IP67 rating",
+            "motor_torque": "100Nm",
+            "motor_power": "250W (750W Peak)",
+            "display": "Aventon BC201",
+            "battery": "Aventon 708 WH. 36V LG 21700 cells",
+            "battery_weight": "8.44 lbs",
+            "throttle": "N/A",
+            "sensors": "Double Sided Torque Sensor Integrated in Motor",
+            "charger": "42V 4A charger",
+            "charging_time_from_0_to_100": "5 hours"
+          },
+          "safety": {
+            "lights": "Lights: Included"
+          },
+          "certifications": {
+            "bike_safety_certifications": "TUV Certified in accordance with UL 2849 / UL 2271",
+            "battery_safety_certifications": "TUV Certified in accordance with UL 2849 / UL 2271"
+          },
+          "water_resistance": {
+            "water_resistance": "Bike - IPX6 // Motor - IP67"
+          },
+          "frameset": {
+            "frame": "6061 Single-Butted Aluminum Alloy",
+            "fork": "Rockshox Psylo Silver R, 35mm Stanchions, coil, 44mm offset, 15x110mm BOOST, 1.5\"tapered steerer tube, Rebound adjust",
+            "rear_spacing": "12x148mm",
+            "fork_spacing": "15x110mm",
+            "frame_style": "Step-Over"
+          },
+          "drivetrain": {
+            "rear_derailleur": "SRAM NX 12-Speed",
+            "shifter": "SRAM NX",
+            "chain": "SRAM 12-Speed",
+            "cassette": "SRAM SX 12-Speed 10-50T",
+            "chainring": "SRAM 34T",
+            "chainring_bcd": "104",
+            "crankset": "165mm ISIS Splined",
+            "bottom_bracket": "N/A",
+            "pedals": "9/16\" Alloy Platform"
+          },
+          "brakes": {
+            "front_brake": "SRAM DB6 4-Piston Hydraulic Disc Brakes",
+            "rear_brake": "SRAM DB6 4-Piston Hydraulic Disc Brakes",
+            "rear_brake_rotor": "SRAM G2 200mm",
+            "front_brake_rotor": "SRAM G2 200mm"
+          },
+          "wheelset": {
+            "rear_wheel": "29in, 32hole, BOOST Thru Axle, Presta Valve, Tubeless Ready",
+            "front_wheel": "29in, 32hole, BOOST Thru Axle, Presta Valve, Tubeless Ready",
+            "tires": "Maxxis Rekon 29\"x2.4\" Tubeless Ready"
+          },
+          "cockpit": {
+            "saddle": "Aventon Saddle",
+            "seatpost": "Manic LC 150mm travel for size M-XL. 31.6mm ø. 395mm length",
+            "seatpost_clamp": "34.9mm",
+            "handlebars": "760mm width, 35mm clamp diameter, 33mm rise, 3* upsweep, 9* backsweep.",
+            "grips": "Aventon Lock on grips",
+            "headset": "T51Ks 28.6*56-56*39.8/ H:23.4mm"
+          },
+          "geometry": {
+            "rider_height": "5'5\" - 6'5\""
+          },
+          "included_accessories": {
+            "kickstand": "Included in accessory box",
+            "fenders": "Compatible",
+            "rear_rack": "Compatible"
+          }
         }
       },
       "spec_count": 52,
@@ -5900,30 +5105,6 @@
           ]
         },
         {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Cerulean",
-              "price": 2899.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Tropos",
-              "price": 2899.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Borealis",
-              "price": 2899.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
           "group": "Included accessories",
           "type": "accessory",
           "choices": [
@@ -6024,115 +5205,83 @@
       },
       "available": true,
       "specs": {
-        "physical": {
-          "MODEL": "Soltera 2.5 Ebike",
-          "WEIGHT": "46 lbs",
-          "TOTAL WEIGHT LIMIT": "330 lbs",
-          "RIDER HEIGHT": "S 5'1\"-5'5\", M 5'5\"-5'9\", L 5'10\"-6'2\"",
-          "BOX SIZE": "59 x 11 x 33",
-          "IDEAL USE": "Urban Riding",
-          "PEDAL ASSIST": "4 Levels",
-          "FRAME": "6061 Double-Butted Aluminum Alloy with Internal Battery",
-          "FORK": "AE-E09 Soltera AL fork",
-          "REAR SPACING": "142mm",
-          "FORK SPACING": "100mm",
-          "FRAME STYLE": "Step-Over",
-          "FRONT WHEEL": "700c, 36-spoke, double-wall aluminum rim, black finish, with a nutted hub drive motor, 13g stainless steel spokes (267mm NDS/269mm DS), Presta valve.",
-          "REAR WHEEL": "700c, 36-spoke, double-wall aluminum rim, black finish, with a nutted hub drive motor, 13g stainless steel spokes (243mm NDS/242mm DS), Presta valve.",
-          "TIRES": "Kenda K1085 700x38C",
-          "BATTERY WEIGHT": "4.14 lbs",
-          "LIGHTS": "Front and rear lights integrated",
-          "FRONT BRAKE ROTOR": "180mm 6 bolt",
-          "REAR BRAKE ROTOR": "180mm 6 bolt",
-          "FRONT BRAKE": "Tektro HD-T280 Hydraulic disc brake w/o e-cutoff",
-          "REAR BRAKE": "Tektro HD-T280 Hydraulic disc brake w/o e-cutoff",
-          "REAR DERAILLEUR": "Shimano Tourney RD-TY300D 7 speed",
-          "SHIFT LEVER": "Shimano 7 speed twist RevoShift",
-          "CHAIN": "7/8 speed 110 link",
-          "FREEWHEEL": "Shimano MF-TZ500-7 Freewheel, Speed : 7, 14-28T",
-          "CHAINRING": "48T",
-          "CHAINRING BCD": "130",
-          "CRANKSET": "3pc, 170mm crank arm",
-          "BOTTOM BRACKET": "Square Taper, Sealed, Dual-Sided Torque Sensor",
-          "PEDALS": "9/16\" Alloy Platform",
-          "SEATPOST": "Aventon 27.2",
-          "SEAT CLAMP": "Aventon 31.8",
-          "HANDLEBARS": "Aluminum 31.8mm, 620mm",
-          "GRIPS": "Lock on grips with twist shift",
-          "HEADSET": "Aventon headset with integrated cable routing",
-          "SADDLE": "Aventon Saddle",
-          "KICKSTAND": "Included, rear mount"
-        },
-        "technical": {
-          "EBIKE CLASS": "Class 2 Ebike",
-          "SAFETY CERTIFICATIONS": "UL and TUV Safety Certified  UL 2849 / UL 2271",
-          "BATTERY SAFETY CERTIFICATIONS": "Certified to UL 2271",
-          "RANGE": "Up to 46 Miles",
-          "WATER RESISTANCE": "IPX5",
-          "SPEED": "Class 2",
-          "MOTOR": "36V, 350W sustained, 540W peak brushless hub motor",
-          "MOTOR TORQUE": "45Nm",
-          "DISPLAY": "Aventon BC280",
-          "BATTERY": "Removable Internal Lithium-ion 36V,9.6Ah(345.6Wh) with LG Cells",
-          "CONTROLLER": "36v 15A",
-          "THROTTLE": "Aventon LH Handlebar Mounted",
-          "SENSORS": "Double Sided Bottom Bracket Torque Sensor",
-          "CHARGER": "36V, 2 amp fast charger",
-          "CHARGING TIME FROM 0% TO 100%": "4-5 Hours"
-        },
-        "all": {
-          "MODEL": "Soltera 2.5 Ebike",
-          "WEIGHT": "46 lbs",
-          "TOTAL WEIGHT LIMIT": "330 lbs",
-          "RIDER HEIGHT": "S 5'1\"-5'5\", M 5'5\"-5'9\", L 5'10\"-6'2\"",
-          "BOX SIZE": "59 x 11 x 33",
-          "EBIKE CLASS": "Class 2 Ebike",
-          "SAFETY CERTIFICATIONS": "UL and TUV Safety Certified  UL 2849 / UL 2271",
-          "BATTERY SAFETY CERTIFICATIONS": "Certified to UL 2271",
-          "RANGE": "Up to 46 Miles",
-          "IDEAL USE": "Urban Riding",
-          "PEDAL ASSIST": "4 Levels",
-          "WATER RESISTANCE": "IPX5",
-          "FRAME": "6061 Double-Butted Aluminum Alloy with Internal Battery",
-          "FORK": "AE-E09 Soltera AL fork",
-          "REAR SPACING": "142mm",
-          "FORK SPACING": "100mm",
-          "FRAME STYLE": "Step-Over",
-          "FRONT WHEEL": "700c, 36-spoke, double-wall aluminum rim, black finish, with a nutted hub drive motor, 13g stainless steel spokes (267mm NDS/269mm DS), Presta valve.",
-          "REAR WHEEL": "700c, 36-spoke, double-wall aluminum rim, black finish, with a nutted hub drive motor, 13g stainless steel spokes (243mm NDS/242mm DS), Presta valve.",
-          "TIRES": "Kenda K1085 700x38C",
-          "SPEED": "Class 2",
-          "MOTOR": "36V, 350W sustained, 540W peak brushless hub motor",
-          "MOTOR TORQUE": "45Nm",
-          "DISPLAY": "Aventon BC280",
-          "BATTERY": "Removable Internal Lithium-ion 36V,9.6Ah(345.6Wh) with LG Cells",
-          "BATTERY WEIGHT": "4.14 lbs",
-          "CONTROLLER": "36v 15A",
-          "THROTTLE": "Aventon LH Handlebar Mounted",
-          "SENSORS": "Double Sided Bottom Bracket Torque Sensor",
-          "CHARGER": "36V, 2 amp fast charger",
-          "CHARGING TIME FROM 0% TO 100%": "4-5 Hours",
-          "LIGHTS": "Front and rear lights integrated",
-          "FRONT BRAKE ROTOR": "180mm 6 bolt",
-          "REAR BRAKE ROTOR": "180mm 6 bolt",
-          "FRONT BRAKE": "Tektro HD-T280 Hydraulic disc brake w/o e-cutoff",
-          "REAR BRAKE": "Tektro HD-T280 Hydraulic disc brake w/o e-cutoff",
-          "REAR DERAILLEUR": "Shimano Tourney RD-TY300D 7 speed",
-          "SHIFT LEVER": "Shimano 7 speed twist RevoShift",
-          "CHAIN": "7/8 speed 110 link",
-          "FREEWHEEL": "Shimano MF-TZ500-7 Freewheel, Speed : 7, 14-28T",
-          "CHAINRING": "48T",
-          "CHAINRING BCD": "130",
-          "CRANKSET": "3pc, 170mm crank arm",
-          "BOTTOM BRACKET": "Square Taper, Sealed, Dual-Sided Torque Sensor",
-          "PEDALS": "9/16\" Alloy Platform",
-          "SEATPOST": "Aventon 27.2",
-          "SEAT CLAMP": "Aventon 31.8",
-          "HANDLEBARS": "Aluminum 31.8mm, 620mm",
-          "GRIPS": "Lock on grips with twist shift",
-          "HEADSET": "Aventon headset with integrated cable routing",
-          "SADDLE": "Aventon Saddle",
-          "KICKSTAND": "Included, rear mount"
+        "grouped": {
+          "general_info": {
+            "model": "Soltera 2.5 Ebike",
+            "weight": "46 lbs",
+            "total_weight_limit": "330 lbs",
+            "box_size": "59 x 11 x 33",
+            "ebike_class": "Class 2 Ebike",
+            "range": "Up to 46 Miles",
+            "ideal_use": "Urban Riding",
+            "speed": "Class 2"
+          },
+          "ebike_system": {
+            "pedal_assist": "4 Levels",
+            "motor": "36V, 350W sustained, 540W peak brushless hub motor",
+            "motor_torque": "45Nm",
+            "display": "Aventon BC280",
+            "battery": "Removable Internal Lithium-ion 36V,9.6Ah(345.6Wh) with LG Cells",
+            "battery_weight": "4.14 lbs",
+            "controller": "36v 15A",
+            "throttle": "Aventon LH Handlebar Mounted",
+            "sensors": "Double Sided Bottom Bracket Torque Sensor",
+            "charger": "36V, 2 amp fast charger",
+            "charging_time_from_0_to_100": "4-5 Hours"
+          },
+          "safety": {
+            "lights": "Front and rear lights integrated"
+          },
+          "certifications": {
+            "safety_certifications": "UL and TUV Safety Certified  UL 2849 / UL 2271",
+            "battery_safety_certifications": "Certified to UL 2271"
+          },
+          "water_resistance": {
+            "water_resistance": "IPX5"
+          },
+          "frameset": {
+            "frame": "6061 Double-Butted Aluminum Alloy with Internal Battery",
+            "fork": "AE-E09 Soltera AL fork",
+            "rear_spacing": "142mm",
+            "fork_spacing": "100mm",
+            "frame_style": "Step-Over"
+          },
+          "drivetrain": {
+            "rear_derailleur": "Shimano Tourney RD-TY300D 7 speed",
+            "shift_lever": "Shimano 7 speed twist RevoShift",
+            "chain": "7/8 speed 110 link",
+            "freewheel": "Shimano MF-TZ500-7 Freewheel, Speed : 7, 14-28T",
+            "chainring": "48T",
+            "chainring_bcd": "130",
+            "crankset": "3pc, 170mm crank arm",
+            "bottom_bracket": "Square Taper, Sealed, Dual-Sided Torque Sensor",
+            "pedals": "9/16\" Alloy Platform"
+          },
+          "brakes": {
+            "front_brake_rotor": "180mm 6 bolt",
+            "rear_brake_rotor": "180mm 6 bolt",
+            "front_brake": "Tektro HD-T280 Hydraulic disc brake w/o e-cutoff",
+            "rear_brake": "Tektro HD-T280 Hydraulic disc brake w/o e-cutoff"
+          },
+          "wheelset": {
+            "front_wheel": "700c, 36-spoke, double-wall aluminum rim, black finish, with a nutted hub drive motor, 13g stainless steel spokes (267mm NDS/269mm DS), Presta valve.",
+            "rear_wheel": "700c, 36-spoke, double-wall aluminum rim, black finish, with a nutted hub drive motor, 13g stainless steel spokes (243mm NDS/242mm DS), Presta valve.",
+            "tires": "Kenda K1085 700x38C"
+          },
+          "cockpit": {
+            "seatpost": "Aventon 27.2",
+            "seat_clamp": "Aventon 31.8",
+            "handlebars": "Aluminum 31.8mm, 620mm",
+            "grips": "Lock on grips with twist shift",
+            "headset": "Aventon headset with integrated cable routing",
+            "saddle": "Aventon Saddle"
+          },
+          "geometry": {
+            "rider_height": "S 5'1\"-5'5\", M 5'5\"-5'9\", L 5'10\"-6'2\""
+          },
+          "included_accessories": {
+            "kickstand": "Included, rear mount"
+          }
         }
       },
       "spec_count": 52,
@@ -6252,24 +5401,6 @@
         }
       ],
       "available_options": [
-        {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Matte Midnight Black",
-              "price": 1199.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Baja",
-              "price": 1199.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
         {
           "group": "Size",
           "type": "variant",
@@ -6394,109 +5525,80 @@
       },
       "available": false,
       "specs": {
-        "physical": {
-          "MODEL": "Soltera 3 ADV Ebike",
-          "WEIGHT": "37lbs",
-          "TOTAL WEIGHT LIMIT": "330 lbs",
-          "RIDER HEIGHT": "S 5'1\"-5'5\", M 5'5\"-5'9\", L 5'9\"-6'1\", XL 5'1\"-6'4\"",
-          "IDEAL USE": "Urban Riding",
-          "FRAME": "6061 Double-Butted Aluminum Alloy with Internal Battery",
-          "FORK": "Rigid Aluminum Fork",
-          "REAR SPACING": "142mm",
-          "FORK SPACING": "100mm",
-          "FRAME STYLE": "Step-Over",
-          "FRONT WHEEL": "700c, 32-spoke, Double Wall Aluminum Rim, Thru Axle",
-          "REAR WHEEL": "700c, 36-spoke, Double Wall Aluminum Rim, Nutted Hub Drive Motor",
-          "TIRES": "Kenda K1085 700x38C",
-          "BATTERY WEIGHT": "4.2lbs",
-          "LIGHTS": "Front and Rear Lights Integrated w/ Turn Signals",
-          "FRONT BRAKE": "Tektro HD-T3020 Hydraulic Disc Brake (w/o e-cutoff)",
-          "REAR BRAKE": "Tektro HD-T3020 Hydraulic Disc Brake (w/o e-cutoff)",
-          "FRONT BRAKE ROTOR": "Tektro 180mm 6 bolt",
-          "REAR BRAKE ROTOR": "Tektro 180mm 6 bolt",
-          "DRIVETRAIN": "Single Speed, Gates Carbon Belt Drive",
-          "CHAINRING": "60T",
-          "HUB FLYWHEEL": "22T",
-          "BELT": "Gates Carbon Belt Drive 122T CDN",
-          "CHAINRING BCD": "130",
-          "CRANKSET": "3pc, 165mm crank arm",
-          "BOTTOM BRACKET": "Square Taper, Sealed, double sided Torque Sensor 83mmx158.5mm",
-          "PEDALS": "9/16\" Composite Platform",
-          "SADDLE": "Aventon Saddle",
-          "SEATPOST": "Aventon 27.2",
-          "SEATPOST CLAMP": "31.8mm",
-          "HANDLEBARS": "Aluminum 31.8mm, 680mm",
-          "STEM": "31.8mm, 70mm Length, 15°",
-          "GRIPS": "Aventon Lock on grips",
-          "HEADSET": "Aventon headset with integrated cable routing",
-          "KICKSTAND": "Included in accessory box"
-        },
-        "technical": {
-          "WATER RESISTANCE": "IPX6",
-          "RANGE": "Up to 70 Miles",
-          "BIKE SAFETY CERTIFICATIONS": "TUV Certified",
-          "BATTERY SAFETY CERTIFICATIONS": "TUV Certified",
-          "SPEED": "Class 1",
-          "MOTOR": "36v, 250W",
-          "MOTOR TORQUE": "40Nm",
-          "DISPLAY": "Aventon BC147",
-          "BATTERY": "Integrated Lithium-ion 36.9V, 9.94Ah, 366.8Wh",
-          "CONTROLLER": "36v 15A",
-          "THROTTLE": "N/A",
-          "SENSORS": "Double Sided Bottom Bracket Torque Sensor",
-          "CHARGER": "36V Output: 42V/ 4A",
-          "CHARGING TIME FROM 0% TO 100%": "3-4 hours"
-        },
-        "all": {
-          "MODEL": "Soltera 3 ADV Ebike",
-          "WEIGHT": "37lbs",
-          "TOTAL WEIGHT LIMIT": "330 lbs",
-          "RIDER HEIGHT": "S 5'1\"-5'5\", M 5'5\"-5'9\", L 5'9\"-6'1\", XL 5'1\"-6'4\"",
-          "WATER RESISTANCE": "IPX6",
-          "RANGE": "Up to 70 Miles",
-          "BIKE SAFETY CERTIFICATIONS": "TUV Certified",
-          "BATTERY SAFETY CERTIFICATIONS": "TUV Certified",
-          "IDEAL USE": "Urban Riding",
-          "FRAME": "6061 Double-Butted Aluminum Alloy with Internal Battery",
-          "FORK": "Rigid Aluminum Fork",
-          "REAR SPACING": "142mm",
-          "FORK SPACING": "100mm",
-          "FRAME STYLE": "Step-Over",
-          "FRONT WHEEL": "700c, 32-spoke, Double Wall Aluminum Rim, Thru Axle",
-          "REAR WHEEL": "700c, 36-spoke, Double Wall Aluminum Rim, Nutted Hub Drive Motor",
-          "TIRES": "Kenda K1085 700x38C",
-          "SPEED": "Class 1",
-          "MOTOR": "36v, 250W",
-          "MOTOR TORQUE": "40Nm",
-          "DISPLAY": "Aventon BC147",
-          "BATTERY": "Integrated Lithium-ion 36.9V, 9.94Ah, 366.8Wh",
-          "BATTERY WEIGHT": "4.2lbs",
-          "CONTROLLER": "36v 15A",
-          "THROTTLE": "N/A",
-          "SENSORS": "Double Sided Bottom Bracket Torque Sensor",
-          "CHARGER": "36V Output: 42V/ 4A",
-          "CHARGING TIME FROM 0% TO 100%": "3-4 hours",
-          "LIGHTS": "Front and Rear Lights Integrated w/ Turn Signals",
-          "FRONT BRAKE": "Tektro HD-T3020 Hydraulic Disc Brake (w/o e-cutoff)",
-          "REAR BRAKE": "Tektro HD-T3020 Hydraulic Disc Brake (w/o e-cutoff)",
-          "FRONT BRAKE ROTOR": "Tektro 180mm 6 bolt",
-          "REAR BRAKE ROTOR": "Tektro 180mm 6 bolt",
-          "DRIVETRAIN": "Single Speed, Gates Carbon Belt Drive",
-          "CHAINRING": "60T",
-          "HUB FLYWHEEL": "22T",
-          "BELT": "Gates Carbon Belt Drive 122T CDN",
-          "CHAINRING BCD": "130",
-          "CRANKSET": "3pc, 165mm crank arm",
-          "BOTTOM BRACKET": "Square Taper, Sealed, double sided Torque Sensor 83mmx158.5mm",
-          "PEDALS": "9/16\" Composite Platform",
-          "SADDLE": "Aventon Saddle",
-          "SEATPOST": "Aventon 27.2",
-          "SEATPOST CLAMP": "31.8mm",
-          "HANDLEBARS": "Aluminum 31.8mm, 680mm",
-          "STEM": "31.8mm, 70mm Length, 15°",
-          "GRIPS": "Aventon Lock on grips",
-          "HEADSET": "Aventon headset with integrated cable routing",
-          "KICKSTAND": "Included in accessory box"
+        "grouped": {
+          "general_info": {
+            "model": "Soltera 3 ADV Ebike",
+            "weight": "37lbs",
+            "total_weight_limit": "330 lbs",
+            "range": "Up to 70 Miles",
+            "ideal_use": "Urban Riding",
+            "speed": "Class 1"
+          },
+          "ebike_system": {
+            "motor": "36v, 250W",
+            "motor_torque": "40Nm",
+            "display": "Aventon BC147",
+            "battery": "Integrated Lithium-ion 36.9V, 9.94Ah, 366.8Wh",
+            "battery_weight": "4.2lbs",
+            "controller": "36v 15A",
+            "throttle": "N/A",
+            "sensors": "Double Sided Bottom Bracket Torque Sensor",
+            "charger": "36V Output: 42V/ 4A",
+            "charging_time_from_0_to_100": "3-4 hours"
+          },
+          "safety": {
+            "lights": "Front and Rear Lights Integrated w/ Turn Signals"
+          },
+          "certifications": {
+            "bike_safety_certifications": "TUV Certified",
+            "battery_safety_certifications": "TUV Certified"
+          },
+          "water_resistance": {
+            "water_resistance": "IPX6"
+          },
+          "frameset": {
+            "frame": "6061 Double-Butted Aluminum Alloy with Internal Battery",
+            "fork": "Rigid Aluminum Fork",
+            "rear_spacing": "142mm",
+            "fork_spacing": "100mm",
+            "frame_style": "Step-Over"
+          },
+          "drivetrain": {
+            "drivetrain": "Single Speed, Gates Carbon Belt Drive",
+            "chainring": "60T",
+            "belt": "Gates Carbon Belt Drive 122T CDN",
+            "chainring_bcd": "130",
+            "crankset": "3pc, 165mm crank arm",
+            "bottom_bracket": "Square Taper, Sealed, double sided Torque Sensor 83mmx158.5mm",
+            "pedals": "9/16\" Composite Platform"
+          },
+          "brakes": {
+            "front_brake": "Tektro HD-T3020 Hydraulic Disc Brake (w/o e-cutoff)",
+            "rear_brake": "Tektro HD-T3020 Hydraulic Disc Brake (w/o e-cutoff)",
+            "front_brake_rotor": "Tektro 180mm 6 bolt",
+            "rear_brake_rotor": "Tektro 180mm 6 bolt"
+          },
+          "wheelset": {
+            "front_wheel": "700c, 32-spoke, Double Wall Aluminum Rim, Thru Axle",
+            "rear_wheel": "700c, 36-spoke, Double Wall Aluminum Rim, Nutted Hub Drive Motor",
+            "tires": "Kenda K1085 700x38C",
+            "hub_flywheel": "22T"
+          },
+          "cockpit": {
+            "saddle": "Aventon Saddle",
+            "seatpost": "Aventon 27.2",
+            "seatpost_clamp": "31.8mm",
+            "handlebars": "Aluminum 31.8mm, 680mm",
+            "stem": "31.8mm, 70mm Length, 15°",
+            "grips": "Aventon Lock on grips",
+            "headset": "Aventon headset with integrated cable routing"
+          },
+          "geometry": {
+            "rider_height": "S 5'1\"-5'5\", M 5'5\"-5'9\", L 5'9\"-6'1\", XL 5'1\"-6'4\""
+          },
+          "included_accessories": {
+            "kickstand": "Included in accessory box"
+          }
         }
       },
       "spec_count": 49,
@@ -6730,30 +5832,6 @@
             },
             {
               "value": "Extra Large",
-              "price": 1499.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Matte Midnight Black",
-              "price": 1499.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Matte Storm Blue",
-              "price": 1499.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Sterling",
               "price": 1499.0,
               "price_delta": 0.0,
               "free": true

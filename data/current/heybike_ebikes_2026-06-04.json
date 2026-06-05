@@ -1,5 +1,6 @@
 {
   "source": "https://www.heybike.com",
+  "logo": "https://www.heybike.com/cdn/shop/files/heybike-logo_c0d69677-ad00-41d8-940c-f1aeac5cee34.svg?v=1745923766&width=500",
   "collection": "electric-bike",
   "scraped_at": "2026-06-04T09:16:30.881811+00:00",
   "model_count": 9,
@@ -32,41 +33,38 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "Frame": "6061 Aluminum Alloy Frame; removable lithium-ion battery; rear rack and fenders included; hydraulic disc brakes; kickstand mount",
-          "Fork": "Hydraulic front suspension fork",
-          "Spokes": "6061 Aluminum alloy",
-          "Tire": "Puncture protection, 26\"x4.0\" fat tires",
-          "Rear Derailleur": "Shimano Altus 8 speed",
-          "Light": "LED headlight with auto-on feature, and integrated taillight with brake light.",
-          "Kickstand": "Alloy",
-          "Weight": "32.5 kg / 71.6lbs",
-          "Weight limit": "This bike has a maximum total weight limit (combined weight of rider and cargo) of 400 pounds (181.4kg).",
-          "Ebike Dimensions": "76.77\" × 27.56\" × 46.46\""
-        },
-        "technical": {
-          "Motor": "Mivice 500W mid drive motor, 105 N·m torque",
-          "Battery": "UL 2271 certified, 680Wh, removable lithium-ion battery",
-          "Charger": "2A, 54.6V output, 100V-220V AC input",
-          "Display Type": "LCD Display",
-          "Throttle": "Half-Twist (Activated in Natural Pedal Start Mode)"
-        },
-        "all": {
-          "Frame": "6061 Aluminum Alloy Frame; removable lithium-ion battery; rear rack and fenders included; hydraulic disc brakes; kickstand mount",
-          "Fork": "Hydraulic front suspension fork",
-          "Spokes": "6061 Aluminum alloy",
-          "Tire": "Puncture protection, 26\"x4.0\" fat tires",
-          "Motor": "Mivice 500W mid drive motor, 105 N·m torque",
-          "Battery": "UL 2271 certified, 680Wh, removable lithium-ion battery",
-          "Charger": "2A, 54.6V output, 100V-220V AC input",
-          "Display Type": "LCD Display",
-          "Rear Derailleur": "Shimano Altus 8 speed",
-          "Throttle": "Half-Twist (Activated in Natural Pedal Start Mode)",
-          "Light": "LED headlight with auto-on feature, and integrated taillight with brake light.",
-          "Kickstand": "Alloy",
-          "Weight": "32.5 kg / 71.6lbs",
-          "Weight limit": "This bike has a maximum total weight limit (combined weight of rider and cargo) of 400 pounds (181.4kg).",
-          "Ebike Dimensions": "76.77\" × 27.56\" × 46.46\""
+        "grouped": {
+          "general_info": {
+            "weight": "32.5 kg / 71.6lbs",
+            "weight_limit": "This bike has a maximum total weight limit (combined weight of rider and cargo) of 400 pounds (181.4kg)."
+          },
+          "ebike_system": {
+            "motor": "Mivice 500W mid drive motor, 105 N·m torque",
+            "battery": "UL 2271 certified, 680Wh, removable lithium-ion battery",
+            "charger": "2A, 54.6V output, 100V-220V AC input",
+            "display_type": "LCD Display",
+            "throttle": "Half-Twist (Activated in Natural Pedal Start Mode)"
+          },
+          "safety": {
+            "light": "LED headlight with auto-on feature, and integrated taillight with brake light."
+          },
+          "frameset": {
+            "frame": "6061 Aluminum Alloy Frame; removable lithium-ion battery; rear rack and fenders included; hydraulic disc brakes; kickstand mount",
+            "fork": "Hydraulic front suspension fork"
+          },
+          "drivetrain": {
+            "rear_derailleur": "Shimano Altus 8 speed"
+          },
+          "wheelset": {
+            "spokes": "6061 Aluminum alloy",
+            "tire": "Puncture protection, 26\"x4.0\" fat tires"
+          },
+          "included_accessories": {
+            "kickstand": "Alloy"
+          },
+          "general_other": {
+            "ebike_dimensions": "76.77\" × 27.56\" × 46.46\""
+          }
         }
       },
       "spec_count": 15,
@@ -106,36 +104,6 @@
       ],
       "available_options": [
         {
-          "group": "Version",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "500W (Peak 1000W)",
-              "price": 1299.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
-          "group": "Colors",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Step-Through (Pearl White)",
-              "price": 1299.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Step-Over (Galaxy Black)",
-              "price": 1299.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
           "group": "Included accessories",
           "type": "accessory",
           "choices": [
@@ -146,7 +114,8 @@
             }
           ]
         }
-      ]
+      ],
+      "regular_price": 1699.0
     },
     {
       "model": "Helio F",
@@ -194,43 +163,35 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "Lights": "Front: LED / Rear: LED with Braking Light",
-          "Frame": "Aluminum Alloy 6061",
-          "Tyres": "Schwalbe Billy Bonkers 20'' × 2.0''",
-          "Brake": "TEKTRO Hydraulic Disc Brakes HD-T275",
-          "Front Fork": "Hydroformed Rigid Fork with Thru Axle",
-          "Recharging Time": "4–6 hours",
-          "Weight": "18 kg"
-        },
-        "technical": {
-          "Motor": "36V 250W Rear Hub Motor",
-          "Sensor Type": "Torque Sensor",
-          "Display": "LCD Left Mounted",
-          "Battery": "360Wh Lithium Battery",
-          "Charger": "42V 100-240V 2A",
-          "Speed Gears": "Shimano 8-Speed Gear",
-          "Max Speed": "25 km/h",
-          "Max Torque": "40 N·m",
-          "Range": "Up to 80–120 km with PAS Mode"
-        },
-        "all": {
-          "Motor": "36V 250W Rear Hub Motor",
-          "Sensor Type": "Torque Sensor",
-          "Display": "LCD Left Mounted",
-          "Battery": "360Wh Lithium Battery",
-          "Charger": "42V 100-240V 2A",
-          "Lights": "Front: LED / Rear: LED with Braking Light",
-          "Frame": "Aluminum Alloy 6061",
-          "Tyres": "Schwalbe Billy Bonkers 20'' × 2.0''",
-          "Speed Gears": "Shimano 8-Speed Gear",
-          "Brake": "TEKTRO Hydraulic Disc Brakes HD-T275",
-          "Front Fork": "Hydroformed Rigid Fork with Thru Axle",
-          "Max Speed": "25 km/h",
-          "Max Torque": "40 N·m",
-          "Range": "Up to 80–120 km with PAS Mode",
-          "Recharging Time": "4–6 hours",
-          "Weight": "18 kg"
+        "grouped": {
+          "general_info": {
+            "speed_gears": "Shimano 8-Speed Gear",
+            "range": "Up to 80–120 km with PAS Mode",
+            "weight": "18 kg"
+          },
+          "ebike_system": {
+            "motor": "36V 250W Rear Hub Motor",
+            "sensor_type": "Torque Sensor",
+            "display": "LCD Left Mounted",
+            "battery": "360Wh Lithium Battery",
+            "charger": "42V 100-240V 2A",
+            "max_speed": "25 km/h",
+            "max_torque": "40 N·m",
+            "recharging_time": "4–6 hours"
+          },
+          "safety": {
+            "lights": "Front: LED / Rear: LED with Braking Light"
+          },
+          "frameset": {
+            "frame": "Aluminum Alloy 6061",
+            "front_fork": "Hydroformed Rigid Fork with Thru Axle"
+          },
+          "brakes": {
+            "brake": "TEKTRO Hydraulic Disc Brakes HD-T275"
+          },
+          "wheelset": {
+            "tyres": "Schwalbe Billy Bonkers 20'' × 2.0''"
+          }
         }
       },
       "spec_count": 16,
@@ -290,18 +251,6 @@
       ],
       "available_options": [
         {
-          "group": "Version",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "250W (Peak 500W)",
-              "price": 1299.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
           "group": "Colors",
           "type": "variant",
           "choices": [
@@ -337,7 +286,8 @@
             }
           ]
         }
-      ]
+      ],
+      "regular_price": 2099.0
     },
     {
       "model": "Hero",
@@ -380,39 +330,37 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "Frame": "T800 carbon fiber mainframe, Intergrated Handlebar, Shock-Absorbing Saddle, Removable lithium-ion battery, Fender mounts, Rear Rack mounts, Hydraulic disc, Kickstand mount",
-          "Full Suspension": "Horst-link suspension and hydraulic front suspension",
-          "Spokes": "Aluminum alloy",
-          "Tire": "Puncture protection, 26\"x4.0\"-max tire size without fenders",
-          "Rear Derailleur": "Shimano 9 speed",
-          "Light": "Integrated headlight",
-          "Kickstand": "Alloy",
-          "Weight": "34 kg / 75 lbs",
-          "Weight limit": "This bike has a maximum total weight limit (combined weight of rider and cargo) of 400 pounds (181.4kg).",
-          "Overall Dimensions": "2035mm*735mm*1125mm"
-        },
-        "technical": {
-          "Motor": "750W Mid-Drive Motor Version: 160 N·m of torque, 1400W Peak",
-          "Battery": "864Wh, removable lithium-ion battery",
-          "Charger": "4A, 54.6V output, 100V-220V AC input",
-          "Display Type": "Build-in LCD Display"
-        },
-        "all": {
-          "Frame": "T800 carbon fiber mainframe, Intergrated Handlebar, Shock-Absorbing Saddle, Removable lithium-ion battery, Fender mounts, Rear Rack mounts, Hydraulic disc, Kickstand mount",
-          "Full Suspension": "Horst-link suspension and hydraulic front suspension",
-          "Motor": "750W Mid-Drive Motor Version: 160 N·m of torque, 1400W Peak",
-          "Spokes": "Aluminum alloy",
-          "Tire": "Puncture protection, 26\"x4.0\"-max tire size without fenders",
-          "Battery": "864Wh, removable lithium-ion battery",
-          "Charger": "4A, 54.6V output, 100V-220V AC input",
-          "Display Type": "Build-in LCD Display",
-          "Rear Derailleur": "Shimano 9 speed",
-          "Light": "Integrated headlight",
-          "Kickstand": "Alloy",
-          "Weight": "34 kg / 75 lbs",
-          "Weight limit": "This bike has a maximum total weight limit (combined weight of rider and cargo) of 400 pounds (181.4kg).",
-          "Overall Dimensions": "2035mm*735mm*1125mm"
+        "grouped": {
+          "general_info": {
+            "weight": "34 kg / 75 lbs",
+            "weight_limit": "This bike has a maximum total weight limit (combined weight of rider and cargo) of 400 pounds (181.4kg)."
+          },
+          "ebike_system": {
+            "motor": "750W Mid-Drive Motor Version: 160 N·m of torque, 1400W Peak",
+            "battery": "864Wh, removable lithium-ion battery",
+            "charger": "4A, 54.6V output, 100V-220V AC input",
+            "display_type": "Build-in LCD Display"
+          },
+          "safety": {
+            "light": "Integrated headlight"
+          },
+          "frameset": {
+            "frame": "T800 carbon fiber mainframe, Intergrated Handlebar, Shock-Absorbing Saddle, Removable lithium-ion battery, Fender mounts, Rear Rack mounts, Hydraulic disc, Kickstand mount",
+            "full_suspension": "Horst-link suspension and hydraulic front suspension"
+          },
+          "drivetrain": {
+            "rear_derailleur": "Shimano 9 speed"
+          },
+          "wheelset": {
+            "spokes": "Aluminum alloy",
+            "tire": "Puncture protection, 26\"x4.0\"-max tire size without fenders"
+          },
+          "included_accessories": {
+            "kickstand": "Alloy"
+          },
+          "general_other": {
+            "overall_dimensions": "2035mm*735mm*1125mm"
+          }
         }
       },
       "spec_count": 14,
@@ -572,36 +520,6 @@
           ]
         },
         {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Tangerine",
-              "price": 1899.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Lime Yellow",
-              "price": 1899.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Limited Edition (Step-Thru)",
-              "price": 1899.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Limited Edition (Step-Over)",
-              "price": 1899.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
           "group": "Included accessories",
           "type": "accessory",
           "choices": [
@@ -612,7 +530,8 @@
             }
           ]
         }
-      ]
+      ],
+      "regular_price": 2699.0
     },
     {
       "model": "Horizon",
@@ -654,41 +573,36 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "Frame": "Aluminum Alloy, removable lithium-ion battery, rear rack included, fender mounts, front & rear mount mechanical disc, kickstand mount",
-          "Full Suspension": "Horst-link suspension and hydraulic front suspension",
-          "Spokes": "Aluminum alloy",
-          "Tire": "Puncture protection, 24\"x4.0\"-max tire size without fenders",
-          "Rear Derailleur": "Shimano 7 speed",
-          "Light": "LED headlight with auto-on feature, and integrated taillight with brake light.",
-          "Kickstand": "Alloy",
-          "Weight": "36 kg / 79.4 lbs",
-          "Weight limit": "Maximum total weight limit (combined weight of rider and cargo) of 330 pounds (149.7kg).",
-          "Folded Dimensions": "49.2*23.6*31.5 inch",
-          "Unfolded Dimensions": "75.6*24.4*46.5 inch"
-        },
-        "technical": {
-          "Hub rear": "Brushless geared hub motor, 80Nm, 1400W",
-          "Battery": "692Wh, removable lithium-ion battery",
-          "Charger": "4A, 54.6V output, 100V-220V AC input",
-          "Display Type": "LCD Display"
-        },
-        "all": {
-          "Frame": "Aluminum Alloy, removable lithium-ion battery, rear rack included, fender mounts, front & rear mount mechanical disc, kickstand mount",
-          "Full Suspension": "Horst-link suspension and hydraulic front suspension",
-          "Hub rear": "Brushless geared hub motor, 80Nm, 1400W",
-          "Spokes": "Aluminum alloy",
-          "Tire": "Puncture protection, 24\"x4.0\"-max tire size without fenders",
-          "Battery": "692Wh, removable lithium-ion battery",
-          "Charger": "4A, 54.6V output, 100V-220V AC input",
-          "Display Type": "LCD Display",
-          "Rear Derailleur": "Shimano 7 speed",
-          "Light": "LED headlight with auto-on feature, and integrated taillight with brake light.",
-          "Kickstand": "Alloy",
-          "Weight": "36 kg / 79.4 lbs",
-          "Weight limit": "Maximum total weight limit (combined weight of rider and cargo) of 330 pounds (149.7kg).",
-          "Folded Dimensions": "49.2*23.6*31.5 inch",
-          "Unfolded Dimensions": "75.6*24.4*46.5 inch"
+        "grouped": {
+          "general_info": {
+            "weight": "36 kg / 79.4 lbs",
+            "weight_limit": "Maximum total weight limit (combined weight of rider and cargo) of 330 pounds (149.7kg).",
+            "folded_dimensions": "49.2*23.6*31.5 inch",
+            "unfolded_dimensions": "75.6*24.4*46.5 inch"
+          },
+          "ebike_system": {
+            "battery": "692Wh, removable lithium-ion battery",
+            "charger": "4A, 54.6V output, 100V-220V AC input",
+            "display_type": "LCD Display"
+          },
+          "safety": {
+            "light": "LED headlight with auto-on feature, and integrated taillight with brake light."
+          },
+          "frameset": {
+            "frame": "Aluminum Alloy, removable lithium-ion battery, rear rack included, fender mounts, front & rear mount mechanical disc, kickstand mount",
+            "full_suspension": "Horst-link suspension and hydraulic front suspension"
+          },
+          "drivetrain": {
+            "rear_derailleur": "Shimano 7 speed"
+          },
+          "wheelset": {
+            "hub_rear": "Brushless geared hub motor, 80Nm, 1400W",
+            "spokes": "Aluminum alloy",
+            "tire": "Puncture protection, 24\"x4.0\"-max tire size without fenders"
+          },
+          "included_accessories": {
+            "kickstand": "Alloy"
+          }
         }
       },
       "spec_count": 15,
@@ -770,48 +684,6 @@
       ],
       "available_options": [
         {
-          "group": "Version",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "750W (Peak 1400W)",
-              "price": 1399.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Cyan and Pearl",
-              "price": 1399.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Black and Blue",
-              "price": 1399.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Gradient Cynical Black",
-              "price": 1399.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Sunset",
-              "price": 1399.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
           "group": "Included accessories",
           "type": "accessory",
           "choices": [
@@ -822,7 +694,8 @@
             }
           ]
         }
-      ]
+      ],
+      "regular_price": 1999.0
     },
     {
       "model": "Hybrid",
@@ -858,59 +731,53 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "Frame": "6061 Aluminum Alloy",
-          "Fork": "Hydraulic Front Fork, T: 100mm",
-          "Tires": "KENDA 27.5 x 2.4\"",
-          "Brakes": "Tektro Hydraulic Disc Brakes",
-          "Rotor": "180 × 1.9 mm",
-          "Chainring": "48T",
-          "Front Light": "White Light with Horn",
-          "Rear Light": "Taillight with Brake & Turn Signals",
-          "Rack Capacity": "66 lb",
-          "Payload Capacity": "440 lb",
-          "Fenders & Rear Rack": "Included",
-          "Bike Weight": "69 lb",
-          "Dimension": "75.8×27.6×42.1–44.9\""
-        },
-        "technical": {
-          "Motor": "750W Hub Motor (Galaxy eDrive System)",
-          "Torque": "75 Nm",
-          "Drivetrain": "Shimano Altus 8-Speed (12–32T)",
-          "Pedal Assist": "Dual Sensor (Torque + Cadence)",
-          "Battery": "864Wh",
-          "Certification": "UL 2849 (Whole Bike), UL 2271 (Battery)",
-          "Charger": "54.6V / 3A",
-          "Max Speed": "28 MPH",
-          "Max Range": "Up to 100 Miles (Tested with a 155 lb rider using PAS 1)",
-          "Display": "LCD Color Display",
-          "App": "Heybike Smart App (iOS & Android)"
-        },
-        "all": {
-          "Frame": "6061 Aluminum Alloy",
-          "Fork": "Hydraulic Front Fork, T: 100mm",
-          "Tires": "KENDA 27.5 x 2.4\"",
-          "Brakes": "Tektro Hydraulic Disc Brakes",
-          "Rotor": "180 × 1.9 mm",
-          "Motor": "750W Hub Motor (Galaxy eDrive System)",
-          "Torque": "75 Nm",
-          "Drivetrain": "Shimano Altus 8-Speed (12–32T)",
-          "Chainring": "48T",
-          "Pedal Assist": "Dual Sensor (Torque + Cadence)",
-          "Battery": "864Wh",
-          "Certification": "UL 2849 (Whole Bike), UL 2271 (Battery)",
-          "Charger": "54.6V / 3A",
-          "Max Speed": "28 MPH",
-          "Max Range": "Up to 100 Miles (Tested with a 155 lb rider using PAS 1)",
-          "Display": "LCD Color Display",
-          "App": "Heybike Smart App (iOS & Android)",
-          "Front Light": "White Light with Horn",
-          "Rear Light": "Taillight with Brake & Turn Signals",
-          "Rack Capacity": "66 lb",
-          "Payload Capacity": "440 lb",
-          "Fenders & Rear Rack": "Included",
-          "Bike Weight": "69 lb",
-          "Dimension": "75.8×27.6×42.1–44.9\""
+        "grouped": {
+          "general_info": {
+            "max_range": "Up to 100 Miles (Tested with a 155 lb rider using PAS 1)",
+            "payload_capacity": "440 lb",
+            "bike_weight": "69 lb"
+          },
+          "ebike_system": {
+            "motor": "750W Hub Motor (Galaxy eDrive System)",
+            "torque": "75 Nm",
+            "pedal_assist": "Dual Sensor (Torque + Cadence)",
+            "battery": "864Wh",
+            "charger": "54.6V / 3A",
+            "max_speed": "28 MPH",
+            "display": "LCD Color Display"
+          },
+          "special_features": {
+            "app": "Heybike Smart App (iOS & Android)"
+          },
+          "safety": {
+            "front_light": "White Light with Horn",
+            "rear_light": "Taillight with Brake & Turn Signals"
+          },
+          "certifications": {
+            "certification": "UL 2849 (Whole Bike), UL 2271 (Battery)"
+          },
+          "frameset": {
+            "frame": "6061 Aluminum Alloy",
+            "fork": "Hydraulic Front Fork, T: 100mm"
+          },
+          "drivetrain": {
+            "drivetrain": "Shimano Altus 8-Speed (12–32T)",
+            "chainring": "48T"
+          },
+          "brakes": {
+            "brakes": "Tektro Hydraulic Disc Brakes",
+            "rotor": "180 × 1.9 mm"
+          },
+          "wheelset": {
+            "tires": "KENDA 27.5 x 2.4\""
+          },
+          "included_accessories": {
+            "rack_capacity": "66 lb",
+            "fenders_rear_rack": "Included"
+          },
+          "general_other": {
+            "dimension": "75.8×27.6×42.1–44.9\""
+          }
         }
       },
       "spec_count": 24,
@@ -977,42 +844,6 @@
       ],
       "available_options": [
         {
-          "group": "Version",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "750W  (Peak 1400W)",
-              "price": 1699.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Onyx Black",
-              "price": 1699.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Ruby Red",
-              "price": 1699.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Emerald Green",
-              "price": 1699.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
           "group": "Included accessories",
           "type": "accessory",
           "choices": [
@@ -1059,45 +890,38 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "Frame": "6061 Aluminum Alloy Frame; removable lithium-ion battery; rear rack and fenders included; kickstand mount;",
-          "Suspension": "Front: Hydraulic Suspension Fork, 65mm Travel Rear: Horst Link Suspension",
-          "Spokes": "Aluminum alloy",
-          "Tire": "Puncture protection, 20\"x4.0\" fat tires",
-          "Charging Time": "5-7 hrs for full charge",
-          "Rear Derailleur": "Shimano Altus 8 speed",
-          "Light": "Frontlight with Horn, Taillight with Brake & Turn Signals",
-          "Kickstand": "Alloy",
-          "Weight": "32 kg / 70 lbs",
-          "Weight limit": "Maximum total weight limit (combined weight of rider and cargo): 440lbs",
-          "Folded Dimensions": "38.2x19.7x 33.1 inch",
-          "Unfolded Dimensions": "66.9x25.6x52.0 inch"
-        },
-        "technical": {
-          "Rear Hub Motor": "750W (sustained), 1400W (peak) 95 N·m torque",
-          "Battery": "624Wh",
-          "Charger": "2A, 54.6V output, 100V-220V AC input",
-          "Display Type": "TFT Display&NFC Start-up",
-          "Throttle": "Half-Twist"
-        },
-        "all": {
-          "Frame": "6061 Aluminum Alloy Frame; removable lithium-ion battery; rear rack and fenders included; kickstand mount;",
-          "Suspension": "Front: Hydraulic Suspension Fork, 65mm Travel Rear: Horst Link Suspension",
-          "Rear Hub Motor": "750W (sustained), 1400W (peak) 95 N·m torque",
-          "Spokes": "Aluminum alloy",
-          "Tire": "Puncture protection, 20\"x4.0\" fat tires",
-          "Battery": "624Wh",
-          "Charger": "2A, 54.6V output, 100V-220V AC input",
-          "Charging Time": "5-7 hrs for full charge",
-          "Display Type": "TFT Display&NFC Start-up",
-          "Rear Derailleur": "Shimano Altus 8 speed",
-          "Throttle": "Half-Twist",
-          "Light": "Frontlight with Horn, Taillight with Brake & Turn Signals",
-          "Kickstand": "Alloy",
-          "Weight": "32 kg / 70 lbs",
-          "Weight limit": "Maximum total weight limit (combined weight of rider and cargo): 440lbs",
-          "Folded Dimensions": "38.2x19.7x 33.1 inch",
-          "Unfolded Dimensions": "66.9x25.6x52.0 inch"
+        "grouped": {
+          "general_info": {
+            "weight": "32 kg / 70 lbs",
+            "weight_limit": "Maximum total weight limit (combined weight of rider and cargo): 440lbs",
+            "folded_dimensions": "38.2x19.7x 33.1 inch",
+            "unfolded_dimensions": "66.9x25.6x52.0 inch"
+          },
+          "ebike_system": {
+            "rear_hub_motor": "750W (sustained), 1400W (peak) 95 N·m torque",
+            "battery": "624Wh",
+            "charger": "2A, 54.6V output, 100V-220V AC input",
+            "charging_time": "5-7 hrs for full charge",
+            "display_type": "TFT Display&NFC Start-up",
+            "throttle": "Half-Twist"
+          },
+          "safety": {
+            "light": "Frontlight with Horn, Taillight with Brake & Turn Signals"
+          },
+          "frameset": {
+            "frame": "6061 Aluminum Alloy Frame; removable lithium-ion battery; rear rack and fenders included; kickstand mount;",
+            "suspension": "Front: Hydraulic Suspension Fork, 65mm Travel Rear: Horst Link Suspension"
+          },
+          "drivetrain": {
+            "rear_derailleur": "Shimano Altus 8 speed"
+          },
+          "wheelset": {
+            "spokes": "Aluminum alloy",
+            "tire": "Puncture protection, 20\"x4.0\" fat tires"
+          },
+          "included_accessories": {
+            "kickstand": "Alloy"
+          }
         }
       },
       "spec_count": 17,
@@ -1137,44 +961,8 @@
           "available": true
         }
       ],
-      "available_options": [
-        {
-          "group": "Version",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "750W  (Peak 1400W)",
-              "price": 1199.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
-          "group": "Colors",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Vivid Orange",
-              "price": 1199.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Stormy Blue",
-              "price": 1199.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Nightrider Black",
-              "price": 1199.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        }
-      ]
+      "available_options": [],
+      "regular_price": 1799.0
     },
     {
       "model": "Ranger 3.0 Pro",
@@ -1210,45 +998,38 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "Frame": "Hydroformed 6061 Aluminum Alloy Frame; removable lithium-ion battery; rear rack and fenders included; kickstand mount;",
-          "Suspension": "Front: Hydraulic Suspension Fork, 65mm Travel Rear: Adjustable Air Shock, Up to 174 PSI",
-          "Spokes": "Aluminum alloy",
-          "Tire": "Puncture protection, Kenda 20\"x4.0\" fat tires",
-          "Charging Time": "6–8 hrs for full charge",
-          "Rear Derailleur": "Shimano Altus 8 speed",
-          "Light": "Frontlight with Horn, Taillight with Brake & Turn Signals",
-          "Kickstand": "Alloy",
-          "Weight": "34 kg / 75 lbs",
-          "Weight limit": "Maximum total weight limit (combined weight of rider and cargo): 440lbs",
-          "Folded Dimensions": "41.7x20.5x32.7 inch",
-          "Unfolded Dimensions": "69.7x25.6x52.0 inch"
-        },
-        "technical": {
-          "Rear Hub Motor": "750W (sustained), 1400W (peak) 80 N·m torque",
-          "Battery": "720Wh",
-          "Charger": "2A, 54.6V output, 100V-220V AC input",
-          "Display Type": "TFT Display&NFC Start-up",
-          "Throttle": "Half-Twist"
-        },
-        "all": {
-          "Frame": "Hydroformed 6061 Aluminum Alloy Frame; removable lithium-ion battery; rear rack and fenders included; kickstand mount;",
-          "Suspension": "Front: Hydraulic Suspension Fork, 65mm Travel Rear: Adjustable Air Shock, Up to 174 PSI",
-          "Rear Hub Motor": "750W (sustained), 1400W (peak) 80 N·m torque",
-          "Spokes": "Aluminum alloy",
-          "Tire": "Puncture protection, Kenda 20\"x4.0\" fat tires",
-          "Battery": "720Wh",
-          "Charger": "2A, 54.6V output, 100V-220V AC input",
-          "Charging Time": "6–8 hrs for full charge",
-          "Display Type": "TFT Display&NFC Start-up",
-          "Rear Derailleur": "Shimano Altus 8 speed",
-          "Throttle": "Half-Twist",
-          "Light": "Frontlight with Horn, Taillight with Brake & Turn Signals",
-          "Kickstand": "Alloy",
-          "Weight": "34 kg / 75 lbs",
-          "Weight limit": "Maximum total weight limit (combined weight of rider and cargo): 440lbs",
-          "Folded Dimensions": "41.7x20.5x32.7 inch",
-          "Unfolded Dimensions": "69.7x25.6x52.0 inch"
+        "grouped": {
+          "general_info": {
+            "weight": "34 kg / 75 lbs",
+            "weight_limit": "Maximum total weight limit (combined weight of rider and cargo): 440lbs",
+            "folded_dimensions": "41.7x20.5x32.7 inch",
+            "unfolded_dimensions": "69.7x25.6x52.0 inch"
+          },
+          "ebike_system": {
+            "rear_hub_motor": "750W (sustained), 1400W (peak) 80 N·m torque",
+            "battery": "720Wh",
+            "charger": "2A, 54.6V output, 100V-220V AC input",
+            "charging_time": "6–8 hrs for full charge",
+            "display_type": "TFT Display&NFC Start-up",
+            "throttle": "Half-Twist"
+          },
+          "safety": {
+            "light": "Frontlight with Horn, Taillight with Brake & Turn Signals"
+          },
+          "frameset": {
+            "frame": "Hydroformed 6061 Aluminum Alloy Frame; removable lithium-ion battery; rear rack and fenders included; kickstand mount;",
+            "suspension": "Front: Hydraulic Suspension Fork, 65mm Travel Rear: Adjustable Air Shock, Up to 174 PSI"
+          },
+          "drivetrain": {
+            "rear_derailleur": "Shimano Altus 8 speed"
+          },
+          "wheelset": {
+            "spokes": "Aluminum alloy",
+            "tire": "Puncture protection, Kenda 20\"x4.0\" fat tires"
+          },
+          "included_accessories": {
+            "kickstand": "Alloy"
+          }
         }
       },
       "spec_count": 17,
@@ -1288,44 +1069,8 @@
           "available": true
         }
       ],
-      "available_options": [
-        {
-          "group": "Version",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "750W  (Peak 1400W)",
-              "price": 1499.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
-          "group": "Colors",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Ruby Red",
-              "price": 1499.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Sapphire Blue",
-              "price": 1499.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Emerald Green",
-              "price": 1499.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        }
-      ]
+      "available_options": [],
+      "regular_price": 1999.0
     },
     {
       "model": "Saturn",
@@ -1350,55 +1095,49 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "Fork": "Hydraulic Front Fork, T: 140mm",
-          "Rear": "Rear Spring Suspension. T: 55mm",
-          "Tires": "20 x 4.0\"",
-          "Brakes": "2-Piston Hydraulic Disc Brakes with",
-          "Rotor": "180 × 2.0 mm",
-          "Chainring": "48T",
-          "Certification": "UL 2849",
-          "Front Light": "White Light with Horn",
-          "Rear Light": "Taillight with Brake & Turn Signals",
-          "Payload Capacity": "330 lb",
-          "Fenders & Rear Rack & Rear Mirrors": "Included",
-          "Bike Weight": "103 lb (Single Battery Ver.)115 lb (Dual Battery Ver.)",
-          "Dimension": "70.9×26.8×48–48.8\""
-        },
-        "technical": {
-          "Motor": "1000W Hub Motor",
-          "Torque": "95 N.m",
-          "Pedal Assist": "Cadence",
-          "Battery": "956.8Wh (Single Battery Ver.)1913.6Wh (Dual Battery Ver.)",
-          "Charger": "58.8V / 3A",
-          "Max Speed": "28 MPH+",
-          "Max Range": "30-50 Miles (Single Battery Ver.)55-90 Miles (Dual Battery Ver.)",
-          "Display": "TFT",
-          "App": "Heybike Smart App (iOS & Android)"
-        },
-        "all": {
-          "Fork": "Hydraulic Front Fork, T: 140mm",
-          "Rear": "Rear Spring Suspension. T: 55mm",
-          "Tires": "20 x 4.0\"",
-          "Brakes": "2-Piston Hydraulic Disc Brakes with",
-          "Rotor": "180 × 2.0 mm",
-          "Motor": "1000W Hub Motor",
-          "Torque": "95 N.m",
-          "Chainring": "48T",
-          "Pedal Assist": "Cadence",
-          "Battery": "956.8Wh (Single Battery Ver.)1913.6Wh (Dual Battery Ver.)",
-          "Certification": "UL 2849",
-          "Charger": "58.8V / 3A",
-          "Max Speed": "28 MPH+",
-          "Max Range": "30-50 Miles (Single Battery Ver.)55-90 Miles (Dual Battery Ver.)",
-          "Display": "TFT",
-          "App": "Heybike Smart App (iOS & Android)",
-          "Front Light": "White Light with Horn",
-          "Rear Light": "Taillight with Brake & Turn Signals",
-          "Payload Capacity": "330 lb",
-          "Fenders & Rear Rack & Rear Mirrors": "Included",
-          "Bike Weight": "103 lb (Single Battery Ver.)115 lb (Dual Battery Ver.)",
-          "Dimension": "70.9×26.8×48–48.8\""
+        "grouped": {
+          "general_info": {
+            "max_range": "30-50 Miles (Single Battery Ver.)55-90 Miles (Dual Battery Ver.)",
+            "payload_capacity": "330 lb",
+            "bike_weight": "103 lb (Single Battery Ver.)115 lb (Dual Battery Ver.)"
+          },
+          "ebike_system": {
+            "motor": "1000W Hub Motor",
+            "torque": "95 N.m",
+            "pedal_assist": "Cadence",
+            "battery": "956.8Wh (Single Battery Ver.)1913.6Wh (Dual Battery Ver.)",
+            "charger": "58.8V / 3A",
+            "max_speed": "28 MPH+",
+            "display": "TFT"
+          },
+          "special_features": {
+            "app": "Heybike Smart App (iOS & Android)"
+          },
+          "safety": {
+            "front_light": "White Light with Horn",
+            "rear_light": "Taillight with Brake & Turn Signals",
+            "fenders_rear_rack_rear_mirrors": "Included"
+          },
+          "certifications": {
+            "certification": "UL 2849"
+          },
+          "frameset": {
+            "fork": "Hydraulic Front Fork, T: 140mm"
+          },
+          "drivetrain": {
+            "chainring": "48T"
+          },
+          "brakes": {
+            "brakes": "2-Piston Hydraulic Disc Brakes with",
+            "rotor": "180 × 2.0 mm"
+          },
+          "wheelset": {
+            "tires": "20 x 4.0\""
+          },
+          "general_other": {
+            "rear": "Rear Spring Suspension. T: 55mm",
+            "dimension": "70.9×26.8×48–48.8\""
+          }
         }
       },
       "spec_count": 22,
@@ -1468,18 +1207,6 @@
           ]
         },
         {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Leather Black",
-              "price": 999.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
           "group": "Included accessories",
           "type": "accessory",
           "choices": [
@@ -1490,7 +1217,8 @@
             }
           ]
         }
-      ]
+      ],
+      "regular_price": 1099.0
     },
     {
       "model": "Venus",
@@ -1526,59 +1254,53 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "Frame": "6061 Aluminum Alloy",
-          "Fork": "Aluminum Rigid Fork",
-          "Tires": "KENDA 27.5 x 2.2\"",
-          "Brakes": "Hydraulic Disc Brakes",
-          "Rotor": "180 × 1.9 mm",
-          "Chainring": "48T",
-          "Front Light": "White Light with Horn",
-          "Rear Light": "Integrated Turn Signal, Rear Red LED (optional)",
-          "Rack Capacity": "66 lb",
-          "Fenders & Rear Rack": "Optional",
-          "Bike Weight": "50 lb",
-          "Dimensions": "72.8\" × 29.5\" × 40.9\"/43.7\"",
-          "Metric": "1850×750×1040/1100 mm"
-        },
-        "technical": {
-          "Motor": "750W Hub Motor (Galaxy eDrive System)",
-          "Torque": "70 Nm",
-          "Drivetrain": "Shimano Altus 8-Speed (11–32T)",
-          "Pedal Assist": "Dual Sensor (Torque + Cadence)",
-          "Battery": "680Wh",
-          "Certification": "UL 2849 (Whole Bike), UL 2271 (Battery)",
-          "Charger": "54.6V / 2A",
-          "Max Speed": "28 MPH",
-          "Max Range": "Up to 85 Miles (tested with a 155 lb rider in PAS1, no throttle applied)",
-          "Display": "LCD Color Display",
-          "App": "Heybike Smart App (iOS & Android)"
-        },
-        "all": {
-          "Frame": "6061 Aluminum Alloy",
-          "Fork": "Aluminum Rigid Fork",
-          "Tires": "KENDA 27.5 x 2.2\"",
-          "Brakes": "Hydraulic Disc Brakes",
-          "Rotor": "180 × 1.9 mm",
-          "Motor": "750W Hub Motor (Galaxy eDrive System)",
-          "Torque": "70 Nm",
-          "Drivetrain": "Shimano Altus 8-Speed (11–32T)",
-          "Chainring": "48T",
-          "Pedal Assist": "Dual Sensor (Torque + Cadence)",
-          "Battery": "680Wh",
-          "Certification": "UL 2849 (Whole Bike), UL 2271 (Battery)",
-          "Charger": "54.6V / 2A",
-          "Max Speed": "28 MPH",
-          "Max Range": "Up to 85 Miles (tested with a 155 lb rider in PAS1, no throttle applied)",
-          "Display": "LCD Color Display",
-          "App": "Heybike Smart App (iOS & Android)",
-          "Front Light": "White Light with Horn",
-          "Rear Light": "Integrated Turn Signal, Rear Red LED (optional)",
-          "Rack Capacity": "66 lb",
-          "Fenders & Rear Rack": "Optional",
-          "Bike Weight": "50 lb",
-          "Dimensions": "72.8\" × 29.5\" × 40.9\"/43.7\"",
-          "Metric": "1850×750×1040/1100 mm"
+        "grouped": {
+          "general_info": {
+            "max_range": "Up to 85 Miles (tested with a 155 lb rider in PAS1, no throttle applied)",
+            "bike_weight": "50 lb"
+          },
+          "ebike_system": {
+            "motor": "750W Hub Motor (Galaxy eDrive System)",
+            "torque": "70 Nm",
+            "pedal_assist": "Dual Sensor (Torque + Cadence)",
+            "battery": "680Wh",
+            "charger": "54.6V / 2A",
+            "max_speed": "28 MPH",
+            "display": "LCD Color Display"
+          },
+          "special_features": {
+            "app": "Heybike Smart App (iOS & Android)"
+          },
+          "safety": {
+            "front_light": "White Light with Horn",
+            "rear_light": "Integrated Turn Signal, Rear Red LED (optional)"
+          },
+          "certifications": {
+            "certification": "UL 2849 (Whole Bike), UL 2271 (Battery)"
+          },
+          "frameset": {
+            "frame": "6061 Aluminum Alloy",
+            "fork": "Aluminum Rigid Fork"
+          },
+          "drivetrain": {
+            "drivetrain": "Shimano Altus 8-Speed (11–32T)",
+            "chainring": "48T"
+          },
+          "brakes": {
+            "brakes": "Hydraulic Disc Brakes",
+            "rotor": "180 × 1.9 mm"
+          },
+          "wheelset": {
+            "tires": "KENDA 27.5 x 2.2\""
+          },
+          "included_accessories": {
+            "rack_capacity": "66 lb",
+            "fenders_rear_rack": "Optional"
+          },
+          "general_other": {
+            "dimensions": "72.8\" × 29.5\" × 40.9\"/43.7\"",
+            "metric": "1850×750×1040/1100 mm"
+          }
         }
       },
       "spec_count": 24,
@@ -1618,44 +1340,8 @@
           "available": true
         }
       ],
-      "available_options": [
-        {
-          "group": "Version",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "750W (Peak 1400W)",
-              "price": 1499.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
-          "group": "Colors",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Rose Gold",
-              "price": 1499.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Pearl White",
-              "price": 1499.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Titanium Grey",
-              "price": 1499.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        }
-      ]
+      "available_options": [],
+      "regular_price": 1999.0
     }
   ],
   "available_accessories": [
