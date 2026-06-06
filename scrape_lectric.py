@@ -214,24 +214,26 @@ def pick_config_skus(skus: list[dict]) -> list[dict]:
 JS_SPECS = r"""() => {
     const norm = s => (s || '').replace(/\s+/g, ' ').trim();
     const result = {tiles: [], cards: []};
-    const grid = document.querySelector('#productFeaturesDesktop, .product-features-grid');
-    if (grid) {
-        for (const it of grid.querySelectorAll('.feature-item')) {
-            // Label + value are the non-icon child elements. textContent is used
-            // so values are still read when a tab panel is collapsed/hidden.
-            const parts = [...it.children]
-                .filter(c => !c.classList.contains('icon'))
-                .map(c => norm(c.textContent)).filter(Boolean);
-            let label = null, value = '';
-            if (parts.length >= 2) { label = parts[0]; value = parts.slice(1).join(' '); }
-            else {
-                const lines = (it.innerText || '').split('\n').map(s => s.trim()).filter(Boolean);
-                if (lines.length) { label = lines[0]; value = lines.slice(1).join(' '); }
-            }
-            if (label) result.tiles.push([label, value]);
+    // Scan the whole document for the spec markup rather than anchoring to the
+    // #productFeaturesDesktop grid / #specifications section: feature tiles and
+    // spec cards for some models render outside those containers. The class
+    // selectors (.feature-item, .specifications-list li) stay specific enough
+    // to avoid unrelated content.
+    for (const it of document.querySelectorAll('.feature-item')) {
+        // Label + value are the non-icon child elements. textContent is used
+        // so values are still read when a tab panel is collapsed/hidden.
+        const parts = [...it.children]
+            .filter(c => !c.classList.contains('icon'))
+            .map(c => norm(c.textContent)).filter(Boolean);
+        let label = null, value = '';
+        if (parts.length >= 2) { label = parts[0]; value = parts.slice(1).join(' '); }
+        else {
+            const lines = (it.innerText || '').split('\n').map(s => s.trim()).filter(Boolean);
+            if (lines.length) { label = lines[0]; value = lines.slice(1).join(' '); }
         }
+        if (label) result.tiles.push([label, value]);
     }
-    for (const li of document.querySelectorAll('#specifications .specifications-list li')) {
+    for (const li of document.querySelectorAll('.specifications-list li')) {
         const name = norm(li.querySelector('h3')?.textContent);
         const detail = norm(li.querySelector('p')?.textContent);
         if (name && detail) result.cards.push([name, detail]);

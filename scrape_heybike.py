@@ -141,7 +141,11 @@ def discover_models() -> list[dict]:
 # </strong>value<br>...</p>.
 JS_SPECS = r"""() => {
     const norm = s => (s || '').replace(/\s+/g, ' ').trim();
-    const sec = document.querySelector('.specifications-section') || document;
+    // Scan the whole document, not just the specs section: some models render
+    // spec rows outside .specifications-section. The structural guards below
+    // (h6 immediately followed by p; <strong>label:</strong> runs; length caps)
+    // keep unrelated bold/heading text out.
+    const sec = document;
     sec.querySelectorAll('details').forEach(d => { try { d.open = true; } catch (e) {} });
     const out = [];
     // Template A: h6 -> following p.

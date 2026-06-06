@@ -141,7 +141,10 @@ def discover_models() -> list[dict]:
 # A generic scan over the section handles both.
 JS_SPECS = r"""() => {
     const norm = s => (s || '').replace(/\s+/g, ' ').trim();
-    const sec = document.querySelector('.alp-keynote-specification') || document.body;
+    // Scan the whole document, not just the keynote spec section: spec rows for
+    // some models live outside .alp-keynote-specification. The per-row guards
+    // below (name != value, length caps, dedupe) reject unrelated divs.
+    const sec = document.body;
     const out = [], seen = new Set();
     for (const div of sec.querySelectorAll('div')) {
         const kids = [...div.children];
