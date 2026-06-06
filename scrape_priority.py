@@ -27,14 +27,8 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
-_DEPS = Path(__file__).parent / ".chromium-deps" / "root"
-if _DEPS.exists():
-    os.environ["LD_LIBRARY_PATH"] = os.pathsep.join([
-        str(_DEPS / "usr/lib/x86_64-linux-gnu"),
-        str(_DEPS / "lib/x86_64-linux-gnu"),
-        os.environ.get("LD_LIBRARY_PATH", ""),
-    ]).strip(os.pathsep)
 
+from scraper_common import fetch_json, clean_title, build_colors, make_classifier  # noqa: E402  (import also sets LD_LIBRARY_PATH for bundled chromium)
 from playwright.async_api import async_playwright  # noqa: E402
 from warranty_js import JS_WARRANTY
 
@@ -59,47 +53,12 @@ PHYSICAL_KEYWORDS = (
 )
 
 
-def classify(label: str) -> str:
-    low = label.lower()
-    for kw in PHYSICAL_KEYWORDS:
-        if kw in low:
-            return "physical"
-    for kw in TECHNICAL_KEYWORDS:
-        if kw in low:
-            return "technical"
-    return "physical"
-
-
-def clean_title(t: str) -> str:
-    """Strip HTML tags/entities from a Shopify product title."""
-    return html.unescape(re.sub(r"<[^>]+>", "", t or "")).replace("  ", " ").strip()
-
-
-def fetch_json(url: str) -> dict:
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        return json.load(resp)
+classify = make_classifier(TECHNICAL_KEYWORDS, PHYSICAL_KEYWORDS)
 
 
 def _tags(p: dict) -> list[str]:
     t = p.get("tags")
     return [x.lower() for x in (t if isinstance(t, list) else [t] if t else [])]
-
-
-def build_colors(color_values, color_idx, variants, fallback_image):
-    colors = []
-    for name in color_values:
-        img = None
-        if color_idx is not None:
-            for v in variants:
-                if v.get(f"option{color_idx}") == name:
-                    fi = v.get("featured_image")
-                    if fi and fi.get("src"):
-                        img = fi["src"]
-                        break
-        colors.append({"name": name, "hex": None, "swatch_image": None,
-                       "image": img or fallback_image})
-    return colors
 
 
 def discover_models() -> list[dict]:

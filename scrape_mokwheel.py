@@ -31,14 +31,8 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
-_DEPS = Path(__file__).parent / ".chromium-deps" / "root"
-if _DEPS.exists():
-    os.environ["LD_LIBRARY_PATH"] = os.pathsep.join([
-        str(_DEPS / "usr/lib/x86_64-linux-gnu"),
-        str(_DEPS / "lib/x86_64-linux-gnu"),
-        os.environ.get("LD_LIBRARY_PATH", ""),
-    ]).strip(os.pathsep)
 
+from scraper_common import fetch_json  # noqa: E402  (import also sets LD_LIBRARY_PATH for bundled chromium)
 from playwright.async_api import async_playwright  # noqa: E402
 from warranty_js import JS_WARRANTY
 
@@ -77,11 +71,6 @@ def classify(label: str, value: str) -> str:
 
 
 # ----------------------------- catalog discovery -----------------------------
-
-def fetch_json(url: str) -> dict:
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        return json.load(resp)
 
 
 def build_colors(color_values, color_idx, variants, fallback_image):
