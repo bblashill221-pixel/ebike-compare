@@ -2,7 +2,7 @@
 #
 # Cron-friendly wrapper for the e-bike scrapers (Aventon + Lectric + Ride1Up +
 # Specialized + Velotric + Heybike + Mokwheel + EVELO + Himiway + Euphree + Vvolt
-# + Blix + Tern + Priority + Monarc).
+# + Blix + Tern + Priority + Monarc + Velowave).
 # It archives the previous build (scrape returns + normalized) to
 # data/legacy/<date>/, then runs each scraper with the project's venv writing to
 # data/current/<brand>_ebikes.json, then enrich -> normalize
@@ -45,6 +45,7 @@ SCRAPERS=(
     "scrape_tern.py|tern_ebikes|"
     "scrape_priority.py|priority_ebikes|"
     "scrape_monarc.py|monarc_ebikes|"
+    "scrape_velowave.py|velowave_ebikes|"
 )
 
 run_all() {
