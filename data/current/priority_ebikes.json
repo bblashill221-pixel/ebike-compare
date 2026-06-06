@@ -94,7 +94,73 @@
         "cost": 0,
         "free": true
       },
-      "free_accessories": []
+      "free_accessories": [],
+      "geometry": {
+        "Approx. Inseam and Height": {
+          "Small": "26.0\" - 29.0\" 5'0 - 5'6",
+          "Medium": "29.0\" - 32.0\" 5'6 - 5'10",
+          "Large": "32.0\" - 35.0\" 5'10 - 6'3"
+        },
+        "(A) Reach": {
+          "Small": "15.74\" (400mm)",
+          "Medium": "16.14\" (410mm)",
+          "Large": "16.33\" (415mm)"
+        },
+        "(B) Stack": {
+          "Small": "23.62\" (600mm)",
+          "Medium": "23.62\" (600mm)",
+          "Large": "25.19\" (640mm)"
+        },
+        "(C) Min Seat Height (from ground)": {
+          "Small": "30.5\"",
+          "Medium": "32.5\"",
+          "Large": "34.5\""
+        },
+        "(D) Max Seat Height (from ground)": {
+          "Small": "36.5\"",
+          "Medium": "40.5\"",
+          "Large": "42.5\""
+        },
+        "(E) Stepover height (from ground)": {
+          "Small": "22.5\"",
+          "Medium": "23.5\"",
+          "Large": "24.5\""
+        }
+      },
+      "available_options": [
+        {
+          "group": "Step 1 Select Your Gearing System",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "Shimano ($3299)",
+              "free": true
+            },
+            {
+              "value": "Enviolo ($3499)",
+              "free": true
+            }
+          ]
+        },
+        {
+          "group": "Step 2 Select Your Size",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "Small",
+              "free": true
+            },
+            {
+              "value": "Medium",
+              "free": true
+            },
+            {
+              "value": "Large",
+              "free": true
+            }
+          ]
+        }
+      ]
     },
     {
       "model": "PRIORITY E-COAST",
@@ -167,7 +233,33 @@
         "cost": 0,
         "free": true
       },
-      "free_accessories": []
+      "free_accessories": [],
+      "geometry": {
+        "Approx. Inseam": "DIAMOND: 32 - 35\" | STEP-THROUGH: 26 - 32\"",
+        "Seat Tube Length": "DIAMOND: 18\" | STEP-THROUGH: 17\"",
+        "Effective Top Tube": "DIAMOND: 658mm | STEP-THROUGH: 620mm",
+        "Head Tube Length": "DIAMOND: 165mm | STEP-THROUGH: 150mm",
+        "Head Tube Angle": "DIAMOND: 70 degrees | STEP-THROUGH: 68 degrees",
+        "Seat Tube Angle": "DIAMOND: 70 degrees | STEP-THROUGH: 69 degrees",
+        "Wheelbase": "DIAMOND: 1165mm | STEP-THROUGH: 1127mm",
+        "Chainstay Length": "DIAMOND: 473mm | STEP-THROUGH: 473mm"
+      },
+      "available_options": [
+        {
+          "group": "Step 1 Select Your Frame Style",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "Diamond",
+              "free": true
+            },
+            {
+              "value": "Step-Through",
+              "free": true
+            }
+          ]
+        }
+      ]
     },
     {
       "model": "PRIORITY GLIDE E-BIKE",
@@ -291,7 +383,38 @@
         "cost": 0,
         "free": true
       },
-      "free_accessories": []
+      "free_accessories": [],
+      "geometry": {
+        "Minimum Inseam": "small/medium: 26.5\" | medium/large: 30\"",
+        "Rider Height": "small/medium: 5'2\" - 5'10\" | medium/large: 5'9\" - 6'2\"",
+        "Standover Height": "small/medium: 25\" | medium/large: 27\"",
+        "Stepover Height": "small/medium: 24.5\" | medium/large: 25\"",
+        "(A) Seat Tube Length": "small/medium: 440mm | medium/large: 510mm",
+        "(B) Seat Tube Angle": "small/medium: 73.5 degrees | medium/large: 74 degrees",
+        "(C) Head Tube Length": "small/medium: 170mm | medium/large: 190mm",
+        "(D) Head Tube Angle": "small/medium: 70 degrees | medium/large: 70 degrees",
+        "(E) Stack": "small/medium: 598mm | medium/large: 617mm",
+        "(F) Reach": "small/medium: 400mm | medium/large: 430mm",
+        "(G) Effective Top Tube": "small/medium: 580mm | medium/large: 610mm",
+        "(H) Chain Stay": "small/medium: 444mm in Stock Position | medium/large: 444mm in Stock Position",
+        "(I) Wheelbase": "small/medium: 1081mm | medium/large: 1116mm"
+      },
+      "available_options": [
+        {
+          "group": "Step 1 Select Your Size",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "Small/Medium",
+              "free": true
+            },
+            {
+              "value": "Medium/Large",
+              "free": true
+            }
+          ]
+        }
+      ]
     },
     {
       "model": "PRIORITY SKYLINE SMART.SHIFT E-BIKE",
@@ -427,6 +550,104 @@
           "price": 0,
           "free": true,
           "detail": "Integrated with rear fender, 48.5 lbs weight limit"
+        }
+      ],
+      "geometry": {
+        "Approx. Inseam": {
+          "Small": "28.0\" - 31.0\"",
+          "Medium": "30.0\" - 33.0\"",
+          "Large": "32.0\" - 35.0\""
+        },
+        "Standover": {
+          "Small": "27\"",
+          "Medium": "29\"",
+          "Large": "31\""
+        },
+        "(A) Seat Tube Length": {
+          "Small": "432mm",
+          "Medium": "480mm",
+          "Large": "533mm"
+        },
+        "(B) Seat Tube Angle": {
+          "Small": "74 degrees",
+          "Medium": "74 degrees",
+          "Large": "74 degrees"
+        },
+        "(C) Effective Top Tube": {
+          "Small": "588mm",
+          "Medium": "608mm",
+          "Large": "640mm"
+        },
+        "(D) Chainstay Length": {
+          "Small": "447mm",
+          "Medium": "447mm",
+          "Large": "447mm"
+        },
+        "(E) Head Tube Length": {
+          "Small": "100mm",
+          "Medium": "160mm",
+          "Large": "190mm"
+        },
+        "(F) Wheelbase": {
+          "Small": "1110mm",
+          "Medium": "1135mm",
+          "Large": "1170mm"
+        },
+        "(G) Head Tube Angle": {
+          "Small": "68.5 degrees",
+          "Medium": "68.5 degrees",
+          "Large": "68.5 degrees"
+        },
+        "(H) Stack": {
+          "Small": "590mm",
+          "Medium": "646mm",
+          "Large": "674mm"
+        },
+        "(I) Reach": {
+          "Small": "416mm",
+          "Medium": "418mm",
+          "Large": "442mm"
+        }
+      },
+      "available_options": [
+        {
+          "group": "Step 1 Select Your Size",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "Small",
+              "free": true
+            },
+            {
+              "value": "Medium",
+              "free": true
+            },
+            {
+              "value": "Large",
+              "free": true
+            }
+          ]
+        },
+        {
+          "group": "Included accessories",
+          "type": "accessory",
+          "choices": [
+            {
+              "value": "Fenders",
+              "price": 0,
+              "free": true
+            },
+            {
+              "value": "Lights",
+              "price": 0,
+              "free": true
+            },
+            {
+              "value": "Rear Rack",
+              "price": 0,
+              "free": true
+            }
+          ]
         }
       ]
     }

@@ -412,7 +412,7 @@
           }
         ]
       },
-      "warranty": null,
+      "warranty": "1-Year Warranty",
       "geometry": {
         "Bike Dimensions": "63\"L x 16\"W x 44\"H",
         "Bike Dimensions with Front Tire removed": "58\"L x 16\"W x 34\"H",
@@ -440,7 +440,42 @@
           "free": true,
           "detail": "An integrated safety system, featuring a headlamp and a brake-activated taillight powered by the battery allows you to be seen at any time of day."
         }
-      ]
+      ],
+      "available_options": [
+        {
+          "group": "Included accessories",
+          "type": "accessory",
+          "choices": [
+            {
+              "value": "Safety Lights",
+              "price": 0,
+              "free": true
+            }
+          ]
+        },
+        {
+          "group": "Add-on accessories",
+          "type": "accessory",
+          "choices": [
+            {
+              "value": "Frame Bag",
+              "price": 99,
+              "free": false
+            },
+            {
+              "value": "Waterproof Pannier Bag",
+              "price": 79,
+              "free": false
+            },
+            {
+              "value": "Bottle Holder & Mounting Adapter",
+              "price": 29,
+              "free": false
+            }
+          ]
+        }
+      ],
+      "regular_price": 2619.0
     },
     {
       "model": "Lectric XP Lite2",
@@ -1182,7 +1217,7 @@
           }
         ]
       },
-      "warranty": null,
+      "warranty": "1-Year Warranty",
       "geometry": {
         "Bike Unfolded": "64L x 25W x 41.5H”",
         "Payload Capacity": "Max: 275 lbs.",
@@ -1207,7 +1242,99 @@
           "free": true,
           "detail": "An integrated safety system, featuring a headlamp and taillight powered by the battery allows you to be seen at any time of day."
         }
-      ]
+      ],
+      "available_options": [
+        {
+          "group": "battery",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "Long-Range",
+              "free": true
+            },
+            {
+              "value": "Standard",
+              "free": true
+            }
+          ]
+        },
+        {
+          "group": "performance",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "Standard Battery + Chain Drive +$0 Sold Out",
+              "free": true
+            },
+            {
+              "value": "Long-Range Battery + Chain Drive +$200",
+              "free": true
+            },
+            {
+              "value": "Standard Battery + Gates Carbon Belt Drive +$100",
+              "free": true
+            },
+            {
+              "value": "Long-Range Battery + Gates Carbon Belt Drive +$300",
+              "free": true
+            },
+            {
+              "value": "Standard Battery + Chain Drive -$200",
+              "free": true
+            },
+            {
+              "value": "Long-Range Battery + Chain Drive +$0",
+              "free": true
+            },
+            {
+              "value": "Standard Battery + Gates Carbon Belt Drive -$100",
+              "free": true
+            },
+            {
+              "value": "Long-Range Battery + Gates Carbon Belt Drive +$100",
+              "free": true
+            }
+          ]
+        },
+        {
+          "group": "Included accessories",
+          "type": "accessory",
+          "choices": [
+            {
+              "value": "Safety Lights",
+              "price": 0,
+              "free": true
+            }
+          ]
+        },
+        {
+          "group": "Add-on accessories",
+          "type": "accessory",
+          "choices": [
+            {
+              "value": "Rear Rack",
+              "price": 89,
+              "free": false
+            },
+            {
+              "value": "Fenders",
+              "price": 69,
+              "free": false
+            },
+            {
+              "value": "eBike Bell",
+              "price": 24,
+              "free": false
+            },
+            {
+              "value": "Cargo Package",
+              "price": 198,
+              "free": false
+            }
+          ]
+        }
+      ],
+      "regular_price": 1409.0
     },
     {
       "model": "Lectric XP Trike2",
@@ -2073,7 +2200,7 @@
           }
         ]
       },
-      "warranty": null,
+      "warranty": "1-Year Warranty",
       "geometry": {
         "Bike Unfolded": "65\"L x 30\"W x 43\"H",
         "Stand Over Height": "13.5\"",
@@ -2109,7 +2236,88 @@
           "free": true,
           "detail": "An integrated safety system, featuring a new bright 90-lumen headlamp with side amber lights and a brake-activated rear light powered by the internal battery, allows you to be seen at any time of day."
         }
-      ]
+      ],
+      "available_options": [
+        {
+          "group": "battery",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "Long-Range",
+              "free": true
+            },
+            {
+              "value": "Standard",
+              "free": true
+            }
+          ]
+        },
+        {
+          "group": "performance",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "Standard Motor & Battery +$0",
+              "free": true
+            },
+            {
+              "value": "Upgraded Motor & Battery +$300 50% more power, 30% more range",
+              "free": true
+            },
+            {
+              "value": "Standard Motor & Battery -$300",
+              "free": true
+            },
+            {
+              "value": "Upgraded Motor & Battery +$0 50% more power, 30% more range",
+              "free": true
+            }
+          ]
+        },
+        {
+          "group": "Included accessories",
+          "type": "accessory",
+          "choices": [
+            {
+              "value": "Rear Rack",
+              "price": 0,
+              "free": true
+            },
+            {
+              "value": "Safety Lights",
+              "price": 0,
+              "free": true
+            }
+          ]
+        },
+        {
+          "group": "Add-on accessories",
+          "type": "accessory",
+          "choices": [
+            {
+              "value": "Mirrors (Pair)",
+              "price": 44,
+              "free": false
+            },
+            {
+              "value": "eBike Bell",
+              "price": 24,
+              "free": false
+            },
+            {
+              "value": "Fast Charger",
+              "price": 149,
+              "free": false
+            },
+            {
+              "value": "Top Tube Bag",
+              "price": 45,
+              "free": false
+            }
+          ]
+        }
+      ],
+      "regular_price": 1954.0
     },
     {
       "model": "Lectric XP4",
@@ -3532,7 +3740,7 @@
           }
         ]
       },
-      "warranty": null,
+      "warranty": "1-Year Warranty",
       "geometry": {
         "Bike Unfolded": "66\"L x 18.5\"W x 47\"H",
         "Stand Over Height": {
@@ -3570,7 +3778,102 @@
           "free": true,
           "detail": "An integrated safety system, featuring a new bright 90-lumen headlamp with side amber lights and a brake-activated rear light powered by the internal battery, allows you to be seen at any time of day."
         }
-      ]
+      ],
+      "available_options": [
+        {
+          "group": "frame_styles",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "High-Step",
+              "free": true
+            },
+            {
+              "value": "Step-Thru",
+              "free": true
+            }
+          ]
+        },
+        {
+          "group": "battery",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "Long-Range",
+              "free": true
+            },
+            {
+              "value": "Standard",
+              "free": true
+            }
+          ]
+        },
+        {
+          "group": "performance",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "Standard Motor & Battery +$0",
+              "free": true
+            },
+            {
+              "value": "Upgraded Motor & Battery +$300 50% more power, 68% more range",
+              "free": true
+            },
+            {
+              "value": "Standard Motor & Battery -$300",
+              "free": true
+            },
+            {
+              "value": "Upgraded Motor & Battery +$0 50% more power, 68% more range",
+              "free": true
+            }
+          ]
+        },
+        {
+          "group": "Included accessories",
+          "type": "accessory",
+          "choices": [
+            {
+              "value": "Safety Lights",
+              "price": 0,
+              "free": true
+            }
+          ]
+        },
+        {
+          "group": "Add-on accessories",
+          "type": "accessory",
+          "choices": [
+            {
+              "value": "Fast Charger",
+              "price": 149,
+              "free": false
+            },
+            {
+              "value": "Cargo Package",
+              "price": 198,
+              "free": false
+            },
+            {
+              "value": "Bottle Holder with Mounting Adapter",
+              "price": 29,
+              "free": false
+            },
+            {
+              "value": "Comfort Seat",
+              "price": 59,
+              "free": false
+            },
+            {
+              "value": "eBike Bell",
+              "price": 24,
+              "free": false
+            }
+          ]
+        }
+      ],
+      "regular_price": 1078.0
     },
     {
       "model": "Lectric XPeak2",
@@ -4891,7 +5194,7 @@
           }
         ]
       },
-      "warranty": null,
+      "warranty": "1-Year Warranty",
       "geometry": {
         "Bike Dimensions": "75\"L x 18\"W x 43\"H",
         "Bike Dimensions with Front Wheel removed": "60\"L x 10\"W x 32\"H",
@@ -4939,7 +5242,97 @@
           "free": true,
           "detail": "An integrated safety system, featuring a headlamp and tail light powered by the battery allows you to be seen at any time of day."
         }
-      ]
+      ],
+      "available_options": [
+        {
+          "group": "frame_styles",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "High-Step",
+              "free": true
+            },
+            {
+              "value": "Step-Thru",
+              "free": true
+            }
+          ]
+        },
+        {
+          "group": "battery",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "Long-Range",
+              "free": true
+            },
+            {
+              "value": "Standard",
+              "free": true
+            }
+          ]
+        },
+        {
+          "group": "performance",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "Standard Battery +$0",
+              "free": true
+            },
+            {
+              "value": "Long-Range Battery +$200 33% more range",
+              "free": true
+            },
+            {
+              "value": "Standard Battery -$200",
+              "free": true
+            },
+            {
+              "value": "Long-Range Battery +$0 33% more range",
+              "free": true
+            }
+          ]
+        },
+        {
+          "group": "Included accessories",
+          "type": "accessory",
+          "choices": [
+            {
+              "value": "Safety Lights",
+              "price": 0,
+              "free": true
+            }
+          ]
+        },
+        {
+          "group": "Add-on accessories",
+          "type": "accessory",
+          "choices": [
+            {
+              "value": "Bike Discount: $100",
+              "price": 100,
+              "free": false
+            },
+            {
+              "value": "Fast Charger",
+              "price": 149,
+              "free": false
+            },
+            {
+              "value": "Bottle Holder & Mounting Adapter",
+              "price": 29,
+              "free": false
+            },
+            {
+              "value": "Comfort Seat",
+              "price": 59,
+              "free": false
+            }
+          ]
+        }
+      ],
+      "regular_price": 1899.0
     },
     {
       "model": "Lectric XPedition2",
@@ -6090,7 +6483,7 @@
           }
         ]
       },
-      "warranty": null,
+      "warranty": "1-Year Warranty",
       "geometry": {
         "Bike Unfolded": "77\"L x 17\"W x 46\"H",
         "Stand Over Height": "21\"",
@@ -6130,7 +6523,122 @@
           "free": true,
           "detail": "Polypropolene Fenders protect you and your ride from debris. The rear fender features an integrated side-pane wheel shroud to shield cargo and passengers from the eBikes rotating components."
         }
-      ]
+      ],
+      "available_options": [
+        {
+          "group": "battery",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "Dual-Battery",
+              "free": true
+            },
+            {
+              "value": "Dual-Battery Long-Range",
+              "free": true
+            },
+            {
+              "value": "Standard",
+              "free": true
+            }
+          ]
+        },
+        {
+          "group": "performance",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "Single Battery +$0",
+              "free": true
+            },
+            {
+              "value": "Dual Battery +$400",
+              "free": true
+            },
+            {
+              "value": "Dual Long-Range Battery +$600",
+              "free": true
+            },
+            {
+              "value": "Single Battery -$400",
+              "free": true
+            },
+            {
+              "value": "Dual Battery +$0",
+              "free": true
+            },
+            {
+              "value": "Dual Long-Range Battery +$200",
+              "free": true
+            },
+            {
+              "value": "Single Battery -$600",
+              "free": true
+            },
+            {
+              "value": "Dual Battery -$200",
+              "free": true
+            },
+            {
+              "value": "Dual Long-Range Battery +$0",
+              "free": true
+            }
+          ]
+        },
+        {
+          "group": "Included accessories",
+          "type": "accessory",
+          "choices": [
+            {
+              "value": "Rear Rack",
+              "price": 0,
+              "free": true
+            },
+            {
+              "value": "Safety Lights",
+              "price": 0,
+              "free": true
+            },
+            {
+              "value": "Fenders",
+              "price": 0,
+              "free": true
+            }
+          ]
+        },
+        {
+          "group": "Add-on accessories",
+          "type": "accessory",
+          "choices": [
+            {
+              "value": "Orbitor + Extra Cushion",
+              "price": 199,
+              "free": false
+            },
+            {
+              "value": "Fast Charger",
+              "price": 149,
+              "free": false
+            },
+            {
+              "value": "Comfort Seat",
+              "price": 59,
+              "free": false
+            },
+            {
+              "value": "Bike Lock",
+              "price": 59,
+              "free": false
+            },
+            {
+              "value": "Mirrors",
+              "price": 44,
+              "free": false
+            }
+          ]
+        }
+      ],
+      "regular_price": 1745.0
     },
     {
       "model": "Lectric XPress1",
@@ -6528,7 +7036,7 @@
           }
         ]
       },
-      "warranty": null,
+      "warranty": "1-Year Warranty",
       "geometry": {
         "Bike Dimensions": "72\"L x 17\"W x 43\"H",
         "Bike Dimensions with Front Tire removed": "59\"L x 10\"W x 31\"H",
@@ -6556,7 +7064,47 @@
           "free": true,
           "detail": "An integrated safety system, featuring a headlamp and taillight powered by the battery allows you to be seen at any time of day."
         }
-      ]
+      ],
+      "available_options": [
+        {
+          "group": "Included accessories",
+          "type": "accessory",
+          "choices": [
+            {
+              "value": "Safety Lights",
+              "price": 0,
+              "free": true
+            }
+          ]
+        },
+        {
+          "group": "Add-on accessories",
+          "type": "accessory",
+          "choices": [
+            {
+              "value": "Bike Discount: $100",
+              "price": 100,
+              "free": false
+            },
+            {
+              "value": "Comfort Package",
+              "price": 148,
+              "free": false
+            },
+            {
+              "value": "Bottle Holder",
+              "price": 29,
+              "free": false
+            },
+            {
+              "value": "Mirrors",
+              "price": 44,
+              "free": false
+            }
+          ]
+        }
+      ],
+      "regular_price": 1147.0
     },
     {
       "model": "Lectric XPress2",
@@ -7317,7 +7865,7 @@
           }
         ]
       },
-      "warranty": null,
+      "warranty": "1-Year Warranty",
       "geometry": {
         "Bike Dimensions": "72\"L x 17\"W x 43\"H",
         "Bike Dimensions with Front Tire removed": "59\"L x 10\"W x 31\"H",
@@ -7360,7 +7908,56 @@
           "free": true,
           "detail": "An integrated safety system, featuring a new bright 90-lumen headlamp with side amber lights and a brake-activated rear light powered by the internal battery, allows you to be seen at any time of day."
         }
-      ]
+      ],
+      "available_options": [
+        {
+          "group": "frame_styles",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "High-Step",
+              "free": true
+            },
+            {
+              "value": "Step-Thru",
+              "free": true
+            }
+          ]
+        },
+        {
+          "group": "Included accessories",
+          "type": "accessory",
+          "choices": [
+            {
+              "value": "Safety Lights",
+              "price": 0,
+              "free": true
+            }
+          ]
+        },
+        {
+          "group": "Add-on accessories",
+          "type": "accessory",
+          "choices": [
+            {
+              "value": "Comfort Seat",
+              "price": 59,
+              "free": false
+            },
+            {
+              "value": "Bottle Holder",
+              "price": 29,
+              "free": false
+            },
+            {
+              "value": "Waterproof Pannier Bag",
+              "price": 79,
+              "free": false
+            }
+          ]
+        }
+      ],
+      "regular_price": 1685.0
     }
   ],
   "available_accessories": [

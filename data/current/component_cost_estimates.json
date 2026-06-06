@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-06T02:04:52.415898+00:00",
+  "generated_at": "2026-06-06T03:00:36.884908+00:00",
   "disclaimer": "Rough wholesale/BOM cost ESTIMATES derived heuristically from each bike's published specs. For comparison only; not actual manufacturer costs.",
   "model_count": 189,
   "models": [
@@ -1448,6 +1448,7 @@
         "drivetrain": 93,
         "tires": 55,
         "fork_suspension": 45,
+        "cockpit": 40,
         "sensor": 35,
         "charger": 35,
         "lights": 30,
@@ -1464,12 +1465,13 @@
         "lights": "lights",
         "sensor": "torque/cadence sensor",
         "charger": "charger",
+        "cockpit": "handlebar/stem/grips",
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 985,
+      "estimated_component_total": 1025,
       "retail_price": 1299.0,
-      "bom_pct_of_retail": 0.758
+      "bom_pct_of_retail": 0.789
     },
     {
       "brand": "heybike",
@@ -1654,8 +1656,8 @@
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
       "estimated_component_total": 1409,
-      "retail_price": 1499.0,
-      "bom_pct_of_retail": 0.94
+      "retail_price": 1399.0,
+      "bom_pct_of_retail": 1.007
     },
     {
       "brand": "heybike",
@@ -1671,6 +1673,7 @@
         "drivetrain": 87,
         "tires": 80,
         "display": 65,
+        "cockpit": 40,
         "rack": 35,
         "charger": 35,
         "lights": 30,
@@ -1688,24 +1691,25 @@
         "fenders": "fenders",
         "rack": "rear rack",
         "charger": "charger",
+        "cockpit": "handlebar/stem/grips",
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1449,
+      "estimated_component_total": 1489,
       "retail_price": 999.0,
-      "bom_pct_of_retail": 1.45
+      "bom_pct_of_retail": 1.49
     },
     {
       "brand": "heybike",
       "model": "Venus",
       "warranty": "2-Year Warranty",
       "component_costs": {
+        "drivetrain": 320,
         "battery": 286,
         "frame": 200,
         "motor": 152,
         "assembly_misc": 120,
         "brakes": 95,
-        "drivetrain": 93,
         "display": 65,
         "tires": 55,
         "fork_suspension": 45,
@@ -1718,7 +1722,7 @@
         "battery": "680Wh @ ~$0.42/Wh",
         "motor": "hub motor",
         "brakes": "hydraulic disc",
-        "drivetrain": "8-speed derailleur",
+        "drivetrain": "belt / internally-geared / CVT",
         "fork_suspension": "rigid fork",
         "display": "color/TFT display",
         "tires": "tires",
@@ -1729,9 +1733,9 @@
         "frame": "aluminum frame",
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
-      "estimated_component_total": 1236,
+      "estimated_component_total": 1463,
       "retail_price": 1499.0,
-      "bom_pct_of_retail": 0.825
+      "bom_pct_of_retail": 0.976
     },
     {
       "brand": "himiway",
@@ -2964,8 +2968,8 @@
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
       "estimated_component_total": 1708,
-      "retail_price": 1499.0,
-      "bom_pct_of_retail": 1.139
+      "retail_price": 1399.0,
+      "bom_pct_of_retail": 1.221
     },
     {
       "brand": "lectric",
@@ -3056,8 +3060,8 @@
         "assembly_misc": "cables, bolts, assembly, packaging"
       },
       "estimated_component_total": 1567,
-      "retail_price": 999.0,
-      "bom_pct_of_retail": 1.569
+      "retail_price": 899.0,
+      "bom_pct_of_retail": 1.743
     },
     {
       "brand": "lectric",
