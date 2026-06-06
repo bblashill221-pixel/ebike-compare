@@ -169,12 +169,18 @@ def group_specs(all_specs: dict, geometry: dict | None = None,
     geo_labels = set(geometry)
     snaked = {snake(k): v for k, v in (all_specs or {}).items()}  # for sibling lookup
     buckets: dict[str, "OrderedDict"] = {}
+    horn_present = False
     for label, value in (all_specs or {}).items():
         if label in geo_labels:
             continue
         low = " ".join(label.split()).lower()
         if _is_junk(low):
             continue
+        # A horn is a safety item in its own right; note it wherever it is mentioned
+        # (often buried in a light spec like "White Light with Horn") so it can be
+        # emitted as a standalone Safety field below rather than inside the light.
+        if re.search(r"\bhorn\b", f"{label} {value}", re.I):
+            horn_present = True
         # classify on the original (spaced) label; emit a snake_case field name.
         field = snake(label)
         group = buckets.setdefault(classify(low), OrderedDict())
@@ -190,6 +196,10 @@ def group_specs(all_specs: dict, geometry: dict | None = None,
                 group.update(uf)
             else:
                 group[field] = value
+    if horn_present:
+        safety = buckets.setdefault("Safety", OrderedDict())
+        if not any("horn" in k for k in safety):   # skip if a dedicated horn field exists
+            safety["horn"] = True
     if geometry:
         buckets["Geometry"] = OrderedDict((snake(k), v) for k, v in geometry.items())
     out: "OrderedDict" = OrderedDict()

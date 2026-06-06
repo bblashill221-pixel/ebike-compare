@@ -840,7 +840,8 @@ def _light(v, brand):
         out["lux"] = int(ml.group(1))
     out["brake_light"] = bool(re.search(r"brake\s*(?:signal|light)|braking\s*indicator", low))
     out["turn_signal"] = bool(re.search(r"turn\s*signal|blinker", low))
-    out["horn"] = "horn" in low
+    # A horn is a separate safety item, not a property of the light — group_specs
+    # surfaces it as its own `horn` field under Safety, so it is not parsed here.
     out["integrated"] = "integrated" in low
     rest = re.sub(r"\d{2,4}\s*lux|\d{2,4}\s*[-]?\s*(?:lm\b|lumens?)", " ", v, flags=re.I)
     out["details"] = _clean(rest)
