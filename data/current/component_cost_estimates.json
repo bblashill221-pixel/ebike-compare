@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-05T18:40:16.532308+00:00",
+  "generated_at": "2026-06-06T02:04:52.415898+00:00",
   "disclaimer": "Rough wholesale/BOM cost ESTIMATES derived heuristically from each bike's published specs. For comparison only; not actual manufacturer costs.",
-  "model_count": 185,
+  "model_count": 189,
   "models": [
     {
       "brand": "aventon",
@@ -3834,6 +3834,148 @@
       "estimated_component_total": 1477,
       "retail_price": 1699.99,
       "bom_pct_of_retail": 0.869
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY CURRENT PLUS E-BIKE",
+      "warranty": null,
+      "component_costs": {
+        "motor": 330,
+        "battery": 302,
+        "frame": 200,
+        "wheels": 130,
+        "assembly_misc": 120,
+        "brakes": 95,
+        "tires": 55,
+        "fork_suspension": 45,
+        "cockpit": 40,
+        "lights": 30,
+        "display": 28,
+        "fenders": 25,
+        "kickstand": 12
+      },
+      "notes": {
+        "battery": "720Wh @ ~$0.42/Wh",
+        "motor": "mid-drive",
+        "brakes": "hydraulic disc",
+        "fork_suspension": "rigid fork",
+        "display": "LCD display",
+        "tires": "tires (assumed)",
+        "lights": "lights",
+        "fenders": "fenders",
+        "kickstand": "kickstand",
+        "cockpit": "handlebar/stem/grips",
+        "wheels": "wheelset",
+        "frame": "aluminum frame",
+        "assembly_misc": "cables, bolts, assembly, packaging"
+      },
+      "estimated_component_total": 1412,
+      "retail_price": 3299.0,
+      "bom_pct_of_retail": 0.428
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY E-COAST",
+      "warranty": null,
+      "component_costs": {
+        "frame": 200,
+        "wheels": 130,
+        "assembly_misc": 120,
+        "drivetrain": 87,
+        "tires": 55
+      },
+      "notes": {
+        "drivetrain": "~7-speed derailleur",
+        "tires": "tires (assumed)",
+        "wheels": "wheelset",
+        "frame": "aluminum frame",
+        "assembly_misc": "cables, bolts, assembly, packaging"
+      },
+      "estimated_component_total": 592,
+      "retail_price": 1999.0,
+      "bom_pct_of_retail": 0.296
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY GLIDE E-BIKE",
+      "warranty": null,
+      "component_costs": {
+        "frame": 200,
+        "battery": 157,
+        "wheels": 130,
+        "assembly_misc": 120,
+        "brakes": 95,
+        "drivetrain": 87,
+        "tires": 55,
+        "fork_suspension": 45,
+        "saddle_seatpost": 45,
+        "cockpit": 40,
+        "rack": 35,
+        "lights": 30,
+        "fenders": 25,
+        "kickstand": 12
+      },
+      "notes": {
+        "battery": "374Wh @ ~$0.42/Wh",
+        "brakes": "hydraulic disc",
+        "drivetrain": "~7-speed derailleur",
+        "fork_suspension": "rigid fork",
+        "tires": "tires",
+        "lights": "lights",
+        "fenders": "fenders",
+        "rack": "rear rack",
+        "kickstand": "kickstand",
+        "saddle_seatpost": "saddle/seatpost",
+        "cockpit": "handlebar/stem/grips",
+        "wheels": "wheelset",
+        "frame": "aluminum frame",
+        "assembly_misc": "cables, bolts, assembly, packaging"
+      },
+      "estimated_component_total": 1076,
+      "retail_price": 1799.0,
+      "bom_pct_of_retail": 0.598
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY SKYLINE SMART.SHIFT E-BIKE",
+      "warranty": null,
+      "component_costs": {
+        "battery": 302,
+        "frame": 200,
+        "wheels": 130,
+        "assembly_misc": 120,
+        "brakes": 95,
+        "drivetrain": 87,
+        "tires": 55,
+        "fork_suspension": 45,
+        "saddle_seatpost": 45,
+        "cockpit": 40,
+        "rack": 35,
+        "lights": 30,
+        "display": 28,
+        "fenders": 25,
+        "kickstand": 12
+      },
+      "notes": {
+        "battery": "720Wh @ ~$0.42/Wh",
+        "brakes": "hydraulic disc",
+        "drivetrain": "~7-speed derailleur",
+        "fork_suspension": "rigid fork",
+        "display": "LCD display",
+        "tires": "tires",
+        "lights": "lights",
+        "fenders": "fenders",
+        "rack": "rear rack",
+        "kickstand": "kickstand",
+        "saddle_seatpost": "saddle/seatpost",
+        "cockpit": "handlebar/stem/grips",
+        "wheels": "wheelset",
+        "frame": "aluminum frame",
+        "assembly_misc": "cables, bolts, assembly, packaging"
+      },
+      "estimated_component_total": 1249,
+      "retail_price": 3999.0,
+      "bom_pct_of_retail": 0.312
     },
     {
       "brand": "ride1up",
