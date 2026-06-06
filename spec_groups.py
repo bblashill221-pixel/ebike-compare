@@ -200,6 +200,20 @@ def group_specs(all_specs: dict, geometry: dict | None = None,
         safety = buckets.setdefault("Safety", OrderedDict())
         if not any("horn" in k for k in safety):   # skip if a dedicated horn field exists
             safety["horn"] = True
+    # The battery's own weight belongs inside the battery component, not as a
+    # sibling field. Fold battery_weight[_lb/_kg] (and primary_/secondary_ for
+    # dual-battery bikes) into specs.ebike_system.battery as weight[_lb/_kg]. The
+    # "battery_weight" anchor naturally excludes bike weights like
+    # "bike_weight_without_battery_lb".
+    sys_bucket = buckets.get("Ebike System")
+    if isinstance(sys_bucket, dict) and isinstance(sys_bucket.get("battery"), dict):
+        bat = sys_bucket["battery"]
+        for fld in [f for f in sys_bucket
+                    if re.match(r"(?:(primary|secondary)_)?battery_weight(?:_(lb|kg))?$", f)]:
+            m = re.match(r"(?:(primary|secondary)_)?battery_weight(?:_(lb|kg))?$", fld)
+            prefix = (m.group(1) + "_") if m.group(1) else ""
+            unit = ("_" + m.group(2)) if m.group(2) else ""
+            bat[f"{prefix}weight{unit}"] = sys_bucket.pop(fld)
     if geometry:
         buckets["Geometry"] = OrderedDict((snake(k), v) for k, v in geometry.items())
     out: "OrderedDict" = OrderedDict()
