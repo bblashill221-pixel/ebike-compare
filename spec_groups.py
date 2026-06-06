@@ -27,7 +27,8 @@ def snake(label: str) -> str:
 
 _UNIT_SUFFIX = {"_kwh": "kWh", "_wh": "Wh", "_nm": "Nm", "_ah": "Ah",
                 "_mm": "mm", "_mph": "mph", "_lb": "lb", "_mi": "mi",
-                "_in": "in", "_deg": "deg", "_w": "W", "_v": "V"}
+                "_in": "in", "_deg": "deg", "_w": "W", "_v": "V",
+                "_kg": "kg", "_kph": "kph", "_km": "km", "_cm": "cm"}
 
 
 def _stringify(d: dict) -> str:
@@ -181,11 +182,12 @@ def group_specs(all_specs: dict, geometry: dict | None = None,
         if parsed:
             group[field] = parsed
         else:
-            # unitize a standalone measurement (top_speed -> top_speed_mph: 28) or
-            # keep the original string.
+            # unitize a standalone measurement (top_speed -> top_speed_mph +
+            # top_speed_kph) or keep the original string. unitize returns a dict of
+            # one or more suffixed fields (toggle-able dims carry both units).
             uf = unitize(field, value)
             if uf:
-                group[uf[0]] = uf[1]
+                group.update(uf)
             else:
                 group[field] = value
     if geometry:

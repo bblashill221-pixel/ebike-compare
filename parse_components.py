@@ -335,7 +335,17 @@ def _battery(v, brand):
     m = re.search(r"\b(21700|18650|20700)\b", v)
     if m:
         out["cell_format"] = m.group(1)
-    out["removable"] = bool(re.search(r"removable", v, re.I))
+    # Only assert removability when the source explicitly says so: an explicit
+    # negation -> False; a bare "removable"/"detachable" -> True; silence (most
+    # marketing blurbs) -> omit, so we never falsely claim a battery is fixed.
+    # NB "integrated"/"internal" describe an in-frame battery, NOT a fixed one
+    # ("integrated & removable", "Removable integrated downtube battery"), so they
+    # are deliberately not treated as non-removable.
+    if re.search(r"non[-\s]?removable|not\s+removable|non[-\s]?detachable"
+                 r"|fixed\s+battery", v, re.I):
+        out["removable"] = False
+    elif re.search(r"removable|detachable", v, re.I):
+        out["removable"] = True
     # leftover details: drop the numbers/cell brand we captured
     if cell:
         rest = re.sub(r"(?<![A-Za-z])" + re.escape(cell) + r"(?![A-Za-z])", "", rest, flags=re.I)
@@ -909,31 +919,96 @@ def _resolver(field: str):
 
 # ------------------------- unitized scalar measurements -------------------------
 # Standalone measurement fields (not components) -> a bare number with the unit in
-# the field name, e.g. "top_speed": "28 mph" -> ("top_speed_mph", 28). kph->mph
-# and kg->lb are converted so values are comparable.
+# the field name. The four rider-facing "toggle-able" dimensions (length/geometry,
+# speed, weight, range) are emitted in BOTH units (e.g. weight_lb + weight_kg): the
+# unit(s) present in the source are parsed natively and the missing counterpart is
+# converted here, at build time, so the site can render either mode with no math.
+# Torque (_nm) and power (_w) are pinned to their standard unit (no imperial dual).
 
-def _u_mph(v):
-    vals = []
-    for m in re.finditer(r"(\d+(?:\.\d+)?)\s*(mph|km/?h|kph|kmh)", v, re.I):
-        n = float(m.group(1))
-        if m.group(2).lower() != "mph":
-            n *= 0.621371
-        vals.append(n)
-    return round(max(vals)) if vals else None
-
-
-def _u_lb(v):
-    m = re.search(r"(\d+(?:\.\d+)?)\s*(?:lbs?|pounds?)\b", v, re.I)
-    if m:
-        n = float(m.group(1))
-        return int(n) if n == int(n) else round(n, 1)
-    m = re.search(r"(\d+(?:\.\d+)?)\s*kg", v, re.I)
-    return round(float(m.group(1)) * 2.20462, 1) if m else None
-
-
-def _u_mi(v):
-    vals = [int(x) for x in re.findall(r"(\d{2,3})\s*(?:miles?|mi\b)", v, re.I)]
+def _maxnum(v, pat):
+    vals = [float(m.group(1)) for m in re.finditer(pat, v, re.I)]
     return max(vals) if vals else None
+
+
+def _n1(x):
+    """Round to 1 decimal, dropping a trailing .0 (so 62.0 -> 62, 28.06 -> 28.1)."""
+    x = round(x, 1)
+    return int(x) if x == int(x) else x
+
+
+def _key(field, suffix):
+    return field if field.endswith(suffix) else field + suffix
+
+
+# Per-unit number tokens. Inch/feet marks come straight and curly; handle both.
+_RE_MPH = r"(\d+(?:\.\d+)?)\s*mph"
+_RE_KPH = r"(\d+(?:\.\d+)?)\s*(?:km/?h|kph|kmh)"
+_RE_LB = r"(\d+(?:\.\d+)?)\s*(?:lbs?|pounds?)\b"
+_RE_KG = r"(\d+(?:\.\d+)?)\s*kg"
+_RE_MI = r"(\d{2,3})\s*(?:miles?|mi\b)"
+_RE_KM = r"(\d{2,3})\s*(?:km\b|kilometers?)"
+_RE_IN = r'(\d+(?:\.\d+)?)\s*(?:in\b|inch(?:es)?|["”])'
+_RE_MM = r"(\d+(?:\.\d+)?)\s*mm"
+_RE_CM = r"(\d+(?:\.\d+)?)\s*cm"
+
+# Length values we can't reduce to one scalar -> leave as the original string:
+# multi-size ("S2: …|S3: …"), L×W×H composites, feet-inch ranges.
+_LEN_SKIP = re.compile(r"""[|×*]|['’]|\bx\b|["”]\s*[lwh]\b""", re.I)
+
+# Geometry/length fields to dual-unitize (components are handled by parse_component
+# first, so they never reach here and stay metric).
+_LEN_KEYS = ("wheelbase", "reach", "stack", "standover", "stand_over",
+             "step_over", "chainstay", "chain_stay", "head_tube", "seat_tube",
+             "top_tube", "rider_height", "total_length", "handlebar_height",
+             "handlebar_width")
+
+
+def _speed(field, v):
+    mph, kph = _maxnum(v, _RE_MPH), _maxnum(v, _RE_KPH)
+    if mph is None and kph is None:
+        return None
+    if mph is None:
+        mph = kph * 0.621371
+    if kph is None:
+        kph = mph * 1.60934
+    return {_key(field, "_mph"): round(mph), _key(field, "_kph"): round(kph)}
+
+
+def _weight(field, v):
+    lb, kg = _maxnum(v, _RE_LB), _maxnum(v, _RE_KG)
+    if lb is None and kg is None:
+        return None
+    if lb is None:
+        lb = kg * 2.20462
+    if kg is None:
+        kg = lb / 2.20462
+    return {_key(field, "_lb"): _n1(lb), _key(field, "_kg"): _n1(kg)}
+
+
+def _range(field, v):
+    mi, km = _maxnum(v, _RE_MI), _maxnum(v, _RE_KM)
+    if mi is None and km is None:
+        return None
+    if mi is None:
+        mi = km * 0.621371
+    if km is None:
+        km = mi * 1.60934
+    return {_key(field, "_mi"): round(mi), _key(field, "_km"): round(km)}
+
+
+def _length(field, v):
+    if _LEN_SKIP.search(v):
+        return None
+    inch, mm, cm = _maxnum(v, _RE_IN), _maxnum(v, _RE_MM), _maxnum(v, _RE_CM)
+    if mm is None and cm is not None:
+        mm = cm * 10                      # cm -> mm is exact, stays metric
+    if inch is None and mm is None:
+        return None
+    if inch is None:
+        inch = mm / 25.4
+    if mm is None:
+        mm = inch * 25.4
+    return {_key(field, "_in"): _n1(inch), _key(field, "_mm"): round(mm)}
 
 
 def _u_nm(v):
@@ -947,25 +1022,29 @@ def _u_w(v):
 
 
 def unitize(field: str, value):
-    """(new_field, number) for a recognized standalone measurement field, else None.
-    Leaves the field untouched when no number is present (e.g. weight_size 'One Size')."""
+    """A dict {suffixed_field: number} for a recognized standalone measurement, else
+    None. Toggle-able dimensions (length/speed/weight/range) emit BOTH units (native
+    value parsed, counterpart converted at build time); torque/power emit their one
+    pinned unit. Returns None when the field matches but no number parses (e.g.
+    weight_size 'One Size') so the original string is kept untouched."""
     if not isinstance(value, str):
         return None
     f = field.lower()
 
-    def out(suffix, n):
-        return (f if f.endswith(suffix) else f + suffix, n) if n is not None else None
-
     if "speed" in f and "speeds" not in f and "gear" not in f:
-        return out("_mph", _u_mph(value))
+        return _speed(f, value)
     if any(t in f for t in ("weight", "payload", "load", "capacity")) and "size" not in f:
-        return out("_lb", _u_lb(value))
+        return _weight(f, value)
     if "range" in f and "height" not in f and "speed" not in f and "adjustable" not in f:
-        return out("_mi", _u_mi(value))
+        return _range(f, value)
     if "torque" in f:
-        return out("_nm", _u_nm(value))
+        n = _u_nm(value)
+        return {_key(f, "_nm"): n} if n is not None else None
     if ("power" in f or "wattage" in f) and "speed" not in f:
-        return out("_w", _u_w(value))
+        n = _u_w(value)
+        return {_key(f, "_w"): n} if n is not None else None
+    if "angle" not in f and any(k in f for k in _LEN_KEYS):
+        return _length(f, value)
     return None
 
 
