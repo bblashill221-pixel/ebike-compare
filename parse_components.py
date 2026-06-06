@@ -19,7 +19,8 @@ SHIFTING = ("Shimano", "SRAM", "microSHIFT", "MicroShift", "Enviolo", "NuVinci",
             "Sturmey Archer", "Sturmey-Archer", "Pinion", "LTWOO", "Sensah",
             "Box", "Gates", "KMC", "Sunrace", "Sun Race")
 BRAKES = ("Tektro", "Shimano", "SRAM", "Magura", "TRP", "Hayes", "Bengal", "Zoom",
-          "Nutt", "Promax", "Logan", "Dorado", "Juin Tech", "Clarks", "Apse")
+          "Nutt", "Promax", "Logan", "Dorado", "Juin Tech", "Clarks", "Apse",
+          "Star Union", "Star-Union")
 SUSPENSION = ("RockShox", "Rock Shox", "SR Suntour", "Suntour", "Fox", "Manitou",
               "X-Fusion", "DNM", "Mozo", "RST", "Marzocchi", "Mastodon", "Zoom")
 MOTORS = ("Bosch", "Bafang", "Shengyi", "Ananda", "Das-Kit", "DAS-KIT", "Dapu",
@@ -250,12 +251,26 @@ def _shock(v, brand):
     return out
 
 
+_PISTON_WORD = {"single": 1, "one": 1, "dual": 2, "twin": 2, "two": 2,
+                "triple": 3, "three": 3, "quad": 4, "four": 4, "six": 6}
+
+
 def _brake(v, brand, rotor_text=""):
     rest = v
     out = {}
     man, rest = _find_brand(rest, _brands_for(BRAKES, brand))
     if man:
         out["manufacturer"] = man
+        # Model = the code-bearing token(s) right after the manufacturer, e.g.
+        # "Star Union Talon P4" -> "Talon P4", "Tektro HD-T535" -> "HD-T535". Require
+        # a digit or an all-caps hyphenated code so descriptors ("Hydraulic Disc")
+        # are not mistaken for a model.
+        mm = re.search(re.escape(man) + r"\s+([A-Z][\w.\-]*(?:[\s,]+[A-Z][\w.\-]*){0,2})", v)
+        if mm:
+            cand = mm.group(1).strip().rstrip(".,;")
+            if re.search(r"\d|[A-Z]{2,}-", cand):
+                out["model"] = cand
+                rest = rest.replace(cand, "", 1)
     low = v.lower()
     if "hydraulic" in low:
         out["actuation"] = "hydraulic"
@@ -265,9 +280,17 @@ def _brake(v, brand, rotor_text=""):
         out["kind"] = "disc"
     elif re.search(r"\brim\b|\bv-?brake", low):
         out["kind"] = "rim"
+    # piston count: digit ("4-piston") or word ("quad-/dual-/single-piston").
     m, rest = _consume(rest, r"(\d)\s*[-\s]?piston")
     if m:
         out["pistons"] = int(m.group(1))
+    else:
+        mw = re.search(r"\b(single|one|dual|twin|two|triple|three|quad|four|six)"
+                       r"[-\s]?piston", rest, re.I)
+        if mw:
+            out["pistons"] = _PISTON_WORD[mw.group(1).lower()]
+            rest = re.sub(r"\b(?:single|one|dual|twin|two|triple|three|quad|four|six)"
+                          r"[-\s]?piston", "", rest, count=1, flags=re.I)
     blob = v + " " + (rotor_text or "")
     md = re.search(r"(\d{3})\s*mm", blob)            # rotor diameter (160/180/203)
     if md:
