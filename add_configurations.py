@@ -23,6 +23,7 @@ COLLECTION = {
     "aventon": "ebikes", "velotric": "electric-bikes", "heybike": "electric-bike",
     "mokwheel": "electric-bikes", "himiway": "ebikes", "euphree": "electric-bikes",
     "vvolt": "e-bikes", "evelo": "evelo-bikes", "blix": "all",
+    "monarc": "marker-bikes",
 }
 SKIP = {"lectric", "ride1up", "specialized"}  # already have per-config prices
 
