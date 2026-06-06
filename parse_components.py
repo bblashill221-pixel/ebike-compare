@@ -314,6 +314,62 @@ def _motor(v, brand):
     return out
 
 
+_BATT_NUMWORD = {"two": 2, "twin": 2, "double": 2, "three": 3, "triple": 3, "four": 4}
+_BATT_WH_RE = r"(\d{3,4}(?:\.\d+)?)\s*wh"
+# Phrases that mean a second/extra battery is OPTIONAL or capacity-capable, not
+# shipped standard — so the bike's standard config is a single pack.
+_BATT_OPTIONAL = re.compile(
+    r"optional|\bready\b|capable|expandable|max(?:imum)?\s+capacity|up\s+to"
+    r"|\bbay\b|version|\bver\.|range\s+extender|second\s+batter|additional\s+batter"
+    r"|swappable", re.I)
+
+
+def battery_pack_count(v: str) -> int:
+    """How many battery packs the STANDARD config ships with (default 1). Recognises
+    "dual", "(2) … batteries", "2x", "two/three/four … batteries"; returns 1 when the
+    extra pack is qualified as optional/ready/version (e.g. Tern "optional 2 x 500 Wh",
+    Heybike "Dual Battery Ver."). Used by both the normalized parser and the BOM
+    estimator so a genuine standard dual (Monarc) is counted, but a dual-*capable*
+    bike is not."""
+    if _BATT_OPTIONAL.search(v):
+        return 1
+    if re.search(r"\bdual\b", v, re.I):
+        return 2
+    m = re.search(r"\b(two|twin|double|three|triple|four)\b", v, re.I)
+    if m and re.search(r"batter", v, re.I):
+        return _BATT_NUMWORD[m.group(1).lower()]
+    m = re.search(r"\b([2-4])\s*[x×]\b", v, re.I)
+    if m:
+        return int(m.group(1))
+    # "(N)" quantity prefix sitting just before a battery/lithium/cell word, e.g.
+    # "(2) Lithium-ion … batteries" — anywhere in the (possibly concatenated) blob.
+    m = re.search(r"\(([2-4])\)\s*(?:[\w.,-]+\s+){0,3}(?:lithium|li[-\s]?ion|batter|cell)",
+                  v, re.I)
+    if m:
+        return int(m.group(1))
+    m = re.search(r"\b([2-4])[)\s-]+(?:lithium|li[-\s]?ion|batter)", v, re.I)
+    if m:
+        return int(m.group(1))
+    return 1
+
+
+def battery_system_wh(v: str):
+    """(per_pack_wh, total_wh, pack_count) for the standard config, or (None, None,
+    count) when no Wh figure is present. An explicit "combined"/"total" Wh is used as
+    the system total verbatim (it already sums the packs); otherwise the smallest Wh
+    figure is the per-pack value and the total is per_pack × pack_count."""
+    whs = [float(x) for x in re.findall(_BATT_WH_RE, v, re.I)]
+    count = battery_pack_count(v)
+    if not whs:
+        return None, None, count
+    per_pack = min(whs)
+    if re.search(r"combined|total", v, re.I):
+        total = max(whs)
+    else:
+        total = per_pack * count
+    return per_pack, total, count
+
+
 def _battery(v, brand):
     rest = v
     out = {}
@@ -323,9 +379,15 @@ def _battery(v, brand):
     man, rest = _find_brand(rest, _brands_for(("Bosch",), brand))
     if man:
         out["manufacturer"] = man
-    m = re.search(r"(\d{3,4})\s*wh", v, re.I)
-    if m:
-        out["capacity_wh"] = int(m.group(1))
+    # capacity_wh is the per-pack value; multi-pack bikes also expose pack_count and
+    # the combined total_capacity_wh (see battery_system_wh for the standard-config
+    # rules around optional/combined batteries).
+    per_pack, total_wh, count = battery_system_wh(v)
+    if per_pack is not None:
+        out["capacity_wh"] = int(per_pack) if per_pack == int(per_pack) else round(per_pack, 1)
+        if total_wh and total_wh != per_pack:
+            out["pack_count"] = count
+            out["total_capacity_wh"] = int(total_wh) if total_wh == int(total_wh) else round(total_wh, 1)
     m = re.search(r"(\d{2,3})\s*v\b", v, re.I)
     if m:
         out["voltage_v"] = int(m.group(1))

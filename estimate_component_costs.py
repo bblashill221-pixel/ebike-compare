@@ -22,6 +22,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from spec_groups import flatten_grouped
+from parse_components import battery_system_wh
 
 HERE = Path(__file__).parent
 DATA = HERE / "data"
@@ -46,18 +47,22 @@ def find_spec(specs: dict, *keywords) -> str:
 
 def cost_battery(specs):
     blob = find_spec(specs, "battery", "cell")
-    wh = num(r"(\d{3,4}(?:\.\d+)?)\s*wh", blob)
-    if wh is None:
+    per_pack, total_wh, count = battery_system_wh(blob)
+    if total_wh is None:                          # no Wh figure -> derive from V·Ah
         v = num(r"(\d{2,3}(?:\.\d+)?)\s*v", blob)
         ah = num(r"(\d{1,2}(?:\.\d+)?)\s*ah", blob)
         if v and ah:
-            wh = v * ah
-    if wh is None:
+            per_pack = v * ah
+            total_wh = per_pack * count
+    if total_wh is None:
         return None, "no battery spec"
-    base = round(wh * 0.42)                      # ~$0.42/Wh wholesale cell+pack
+    base = round(total_wh * 0.42)                # ~$0.42/Wh wholesale cell+pack
     if re.search(r"samsung|lg|panasonic|21700", blob, re.I):
         base = round(base * 1.1)
-    return base, f"{round(wh)}Wh @ ~$0.42/Wh"
+    note = f"{round(total_wh)}Wh @ ~$0.42/Wh"
+    if count > 1 and per_pack and total_wh != per_pack:
+        note += f" ({count}×{round(per_pack)}Wh)"
+    return base, note
 
 
 def cost_motor(specs):

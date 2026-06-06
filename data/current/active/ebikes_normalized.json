@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-06-06T04:46:54.965348+00:00",
+  "generated_at": "2026-06-06T04:56:11.913775+00:00",
   "brand_count": 15,
   "model_count": 193,
   "brands": [
@@ -12995,6 +12995,7 @@
           },
           "battery": {
             "cell_brand": "LG",
+            "capacity_wh": 345.6,
             "voltage_v": 36,
             "amphours_ah": 9.6,
             "removable": true,
@@ -13543,6 +13544,7 @@
             "model": "BC147"
           },
           "battery": {
+            "capacity_wh": 366.8,
             "amphours_ah": 94.0,
             "details": "Integrated Lithium-ion 36.9V, 9., 366.8Wh"
           },
@@ -14145,6 +14147,7 @@
         },
         "ebike_system": {
           "battery": {
+            "capacity_wh": 614.4,
             "voltage_v": 48,
             "details": "614.4Wh"
           },
@@ -14920,6 +14923,7 @@
         },
         "ebike_system": {
           "battery": {
+            "capacity_wh": 614.4,
             "voltage_v": 48,
             "details": "614.4Wh"
           },
@@ -15294,6 +15298,7 @@
         },
         "ebike_system": {
           "battery": {
+            "capacity_wh": 614.4,
             "voltage_v": 48,
             "details": "614.4Wh"
           },
@@ -19286,7 +19291,7 @@
           "security": 15,
           "tech": 32,
           "warranty": 45,
-          "value": 80.0
+          "value": 76.9
         },
         "highlights": [
           "hydraulic brakes"
@@ -19764,6 +19769,7 @@
             "details": "Cadence"
           },
           "battery": {
+            "capacity_wh": 956.8,
             "details": "956.8Wh (Single Battery Ver.)1913.6Wh (Dual Battery Ver.)"
           },
           "charger": {
@@ -41866,6 +41872,8 @@
           "battery": {
             "cell_brand": "LG",
             "capacity_wh": 720,
+            "pack_count": 2,
+            "total_capacity_wh": 1440,
             "voltage_v": 48,
             "amphours_ah": 15.0,
             "removable": true,
@@ -42184,7 +42192,7 @@
           "security": 15,
           "tech": 45,
           "warranty": 100,
-          "value": 79.6
+          "value": 91.3
         },
         "highlights": [
           "torque sensor",
@@ -42244,6 +42252,8 @@
           "battery": {
             "cell_brand": "LG",
             "capacity_wh": 720,
+            "pack_count": 2,
+            "total_capacity_wh": 1440,
             "voltage_v": 48,
             "amphours_ah": 15.0,
             "removable": true,
@@ -42562,7 +42572,7 @@
           "security": 15,
           "tech": 45,
           "warranty": 100,
-          "value": 79.6
+          "value": 91.3
         },
         "highlights": [
           "torque sensor",
@@ -42622,6 +42632,8 @@
           "battery": {
             "cell_brand": "LG",
             "capacity_wh": 720,
+            "pack_count": 2,
+            "total_capacity_wh": 1440,
             "voltage_v": 48,
             "amphours_ah": 15.0,
             "removable": true,
@@ -42940,7 +42952,7 @@
           "security": 15,
           "tech": 45,
           "warranty": 100,
-          "value": 79.6
+          "value": 91.3
         },
         "highlights": [
           "torque sensor",
@@ -43000,6 +43012,8 @@
           "battery": {
             "cell_brand": "LG",
             "capacity_wh": 720,
+            "pack_count": 2,
+            "total_capacity_wh": 1440,
             "voltage_v": 48,
             "amphours_ah": 15.0,
             "removable": true,
@@ -43318,7 +43332,7 @@
           "security": 15,
           "tech": 45,
           "warranty": 100,
-          "value": 79.6
+          "value": 91.3
         },
         "highlights": [
           "torque sensor",
@@ -48709,13 +48723,13 @@
         },
         "drivetrain": {
           "shift_levers": {
-            "manufacturer": "MicroShift",
+            "manufacturer": "microSHIFT",
             "speeds": 9,
             "details": "",
             "model": "Advent"
           },
           "rear_derailleur": {
-            "manufacturer": "MicroShift",
+            "manufacturer": "microSHIFT",
             "speeds": 9,
             "details": "",
             "model": "short cage"
@@ -49066,13 +49080,13 @@
         },
         "drivetrain": {
           "shift_levers": {
-            "manufacturer": "MicroShift",
+            "manufacturer": "microSHIFT",
             "speeds": 9,
             "details": "",
             "model": "Advent"
           },
           "rear_derailleur": {
-            "manufacturer": "MicroShift",
+            "manufacturer": "microSHIFT",
             "speeds": 9,
             "details": "",
             "model": "short cage"
@@ -49510,7 +49524,7 @@
             "details": "Bridge Comp, Hollow Cr-mo rails 155/143"
           },
           "seatpost": {
-            "manufacturer": "Xfusion",
+            "manufacturer": "XFusion",
             "type": "dropper",
             "diameter_mm": 34.9,
             "travel_mm": 190,
@@ -59476,7 +59490,7 @@
             "details": "Bridge Comp, Hollow Cr-mo rails"
           },
           "seatpost": {
-            "manufacturer": "Xfusion",
+            "manufacturer": "XFusion",
             "type": "dropper",
             "diameter_mm": 34.9,
             "travel_mm": 190,
@@ -82106,6 +82120,7 @@
             "details": "Power"
           },
           "battery": {
+            "capacity_wh": 801.6,
             "voltage_v": 48,
             "amphours_ah": 16.7,
             "details": "(801.6Wh), IPX7, Certificated by UL 2271"
@@ -83457,6 +83472,7 @@
             "details": "( Power)"
           },
           "battery": {
+            "capacity_wh": 801.6,
             "voltage_v": 48,
             "amphours_ah": 16.7,
             "details": "(801.6Wh), IPX7, Certificated by UL2271"
@@ -84041,6 +84057,7 @@
             "details": ""
           },
           "battery": {
+            "capacity_wh": 705.6,
             "voltage_v": 48,
             "amphours_ah": 14.7,
             "removable": true,
@@ -84601,6 +84618,7 @@
             "details": ""
           },
           "battery": {
+            "capacity_wh": 801.6,
             "voltage_v": 48,
             "amphours_ah": 16.7,
             "details": "(801.6Wh), IPX7, Certificated by UL2271"
@@ -85157,6 +85175,7 @@
             "details": ""
           },
           "battery": {
+            "capacity_wh": 705.6,
             "voltage_v": 48,
             "details": "705.6Wh, IPX7, Certificated by UL 2271"
           },
@@ -85627,6 +85646,7 @@
             "details": "( Power)"
           },
           "battery": {
+            "capacity_wh": 801.6,
             "voltage_v": 48,
             "amphours_ah": 16.7,
             "details": "(801.6Wh), IPX7, Certificated by UL2271"
@@ -86117,6 +86137,7 @@
             "details": ""
           },
           "battery": {
+            "capacity_wh": 352.8,
             "voltage_v": 36,
             "details": "352.8Wh, IPX7, Certificated by UL 2271"
           },
