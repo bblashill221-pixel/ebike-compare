@@ -16,14 +16,25 @@ export function primaryImage(m: Model): string | null {
   return m.colors?.find((c) => c.image)?.image ?? null;
 }
 
-function Spec({ icon, label, value }: { icon?: React.ReactNode; label: string; value: string }) {
+function Spec({
+  icon,
+  label,
+  value,
+  tint,
+}: {
+  icon: React.ReactNode;
+  label: string;
+  value: string;
+  tint: string;
+}) {
+  // Large colorful icon + value; the metric name appears only on hover.
   return (
-    <div className="flex flex-col">
-      <span className="flex items-center gap-1 text-[11px] uppercase tracking-wide text-slate-400">
-        {icon}
+    <div className="group relative flex flex-col items-center gap-1 text-center">
+      <span className={`rounded-xl p-1.5 ${tint}`}>{icon}</span>
+      <span className="text-sm font-semibold text-slate-800">{value}</span>
+      <span className="pointer-events-none absolute -top-6 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded bg-slate-800 px-1.5 py-0.5 text-[10px] font-medium text-white opacity-0 transition-opacity duration-150 group-hover:opacity-100">
         {label}
       </span>
-      <span className="text-sm font-semibold text-slate-800">{value}</span>
     </div>
   );
 }
@@ -62,22 +73,22 @@ export function BikeCard({ model }: { model: Model }) {
 
         <div className="grid grid-cols-3 gap-2">
           {t.battery_wh != null && (
-            <Spec icon={<BatteryIcon className="h-3.5 w-3.5" />} label="Battery" value={`${formatNumber(t.battery_wh)} Wh`} />
+            <Spec icon={<BatteryIcon className="h-9 w-9" />} tint="bg-emerald-50" label="Battery" value={`${formatNumber(t.battery_wh)} Wh`} />
           )}
           {t.motor_w != null && (
-            <Spec icon={<MotorIcon className="h-3.5 w-3.5" />} label="Motor" value={`${formatNumber(t.motor_w)} W`} />
+            <Spec icon={<MotorIcon className="h-9 w-9" />} tint="bg-amber-50" label="Motor" value={`${formatNumber(t.motor_w)} W`} />
           )}
           {t.range_mi != null && (
-            <Spec icon={<RangeIcon className="h-3.5 w-3.5" />} label="Range" value={`${formatNumber(t.range_mi)} mi`} />
+            <Spec icon={<RangeIcon className="h-9 w-9" />} tint="bg-sky-50" label="Range" value={`${formatNumber(t.range_mi)} mi`} />
           )}
           {t.torque_nm != null && (
-            <Spec icon={<TorqueIcon className="h-3.5 w-3.5" />} label="Torque" value={`${formatNumber(t.torque_nm)} Nm`} />
+            <Spec icon={<TorqueIcon className="h-9 w-9" />} tint="bg-rose-50" label="Torque" value={`${formatNumber(t.torque_nm)} Nm`} />
           )}
           {t.weight_lb != null && (
-            <Spec icon={<WeightIcon className="h-3.5 w-3.5" />} label="Weight" value={`${formatNumber(t.weight_lb)} lb`} />
+            <Spec icon={<WeightIcon className="h-9 w-9" />} tint="bg-violet-50" label="Weight" value={`${formatNumber(t.weight_lb)} lb`} />
           )}
           {t.gears != null && (
-            <Spec icon={<GearsIcon className="h-3.5 w-3.5" />} label="Gears" value={`${formatNumber(t.gears)}`} />
+            <Spec icon={<GearsIcon className="h-9 w-9" />} tint="bg-indigo-50" label="Gears" value={`${formatNumber(t.gears)}`} />
           )}
         </div>
 
