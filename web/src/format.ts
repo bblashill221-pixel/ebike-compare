@@ -1,6 +1,11 @@
 // Small presentation helpers shared across components.
 import type { SpecValue } from "./types";
 
+/** Capitalize only the first letter, leaving the rest untouched ("ride1up" -> "Ride1up"). */
+export function capitalize(s: string): string {
+  return s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
+}
+
 export function titleCase(s: string): string {
   return s
     .replace(/[_-]+/g, " ")

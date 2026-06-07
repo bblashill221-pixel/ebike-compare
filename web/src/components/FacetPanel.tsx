@@ -1,6 +1,6 @@
 import type { EnumField, Filters, RangeField } from "../search/orama";
 import { BOOL_FIELDS, type BoolField } from "../search/orama";
-import { labelize, titleCase } from "../format";
+import { capitalize, labelize, titleCase } from "../format";
 
 interface Props {
   facetOptions: Record<EnumField, string[]>;
@@ -96,7 +96,9 @@ export function FacetPanel({ facetOptions, rangeBounds, facetCounts, filters, se
                     onChange={() => toggleEnum(field, opt)}
                     className="rounded border-slate-300 text-brand-600 focus:ring-brand-500"
                   />
-                  <span className="flex-1 truncate">{field === "brand" ? opt : titleCase(opt)}</span>
+                  <span className="flex-1 truncate">
+                    {field === "brand" ? capitalize(opt) : titleCase(opt)}
+                  </span>
                   <span className="text-xs tabular-nums text-slate-400">{counts[opt] ?? 0}</span>
                 </label>
               ))}
