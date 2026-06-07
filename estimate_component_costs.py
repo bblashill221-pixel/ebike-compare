@@ -94,7 +94,7 @@ def cost_brakes(specs):
         c, note = 38, "mechanical disc"
     else:
         c, note = 60, "disc brakes"
-    if re.search(r"4[- ]?piston|four[- ]?piston", blob, re.I):
+    if re.search(r"(?:4|four|quad)[- ]?piston", blob, re.I):
         c += 35; note += ", 4-piston"
     return c, note
 
