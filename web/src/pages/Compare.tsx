@@ -3,7 +3,8 @@ import { Link, useSearchParams } from "react-router-dom";
 import { useData } from "../data/DataProvider";
 import { useCompare } from "../compare/CompareContext";
 import type { Model } from "../types";
-import { formatPrice, titleCase } from "../format";
+import { titleCase } from "../format";
+import { Price } from "../components/Price";
 import { SCORE_ORDER } from "../components/ScoreBars";
 import { CompareTable } from "../components/CompareTable";
 import { AffiliateLink } from "../components/AffiliateLink";
@@ -66,7 +67,7 @@ export function Compare() {
                 <Link to={`/bike/${encodeURIComponent(m.id)}`} className="font-semibold text-slate-900 hover:text-brand-700">
                   {m.model}
                 </Link>
-                <div className="mt-1 font-bold">{formatPrice(m.price ?? m.price_min, m.currency)}</div>
+                <div className="mt-1"><Price model={m} /></div>
                 <div className="mt-2 flex flex-col gap-1">
                   <AffiliateLink brand={m.brand} url={m.url} className="text-sm font-medium text-brand-700 hover:underline">
                     View at {titleCase(m.brand)} →

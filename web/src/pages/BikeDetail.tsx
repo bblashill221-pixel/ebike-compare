@@ -4,6 +4,7 @@ import { useData } from "../data/DataProvider";
 import { ColorSwatches } from "../components/ColorSwatches";
 import { useCompare } from "../compare/CompareContext";
 import { formatPrice, titleCase } from "../format";
+import { Price } from "../components/Price";
 import { ScorePanel } from "../components/ScorePanel";
 import { SpecTable } from "../components/SpecTable";
 import { DistributionPlot } from "../components/DistributionPlot";
@@ -109,8 +110,7 @@ export function BikeDetail() {
           </div>
 
           <div className="flex flex-wrap items-center gap-3">
-            <span className="text-2xl font-bold">{formatPrice(model.price ?? model.price_min, model.currency)}</span>
-            {model.pricing?.on_sale && <span className="chip bg-rose-100 text-rose-700">On sale</span>}
+            <Price model={model} size="lg" />
             {model.warranty && <span className="chip">{model.warranty}</span>}
             {model.shipping_free && <span className="chip bg-emerald-50 text-emerald-700">Free shipping</span>}
           </div>

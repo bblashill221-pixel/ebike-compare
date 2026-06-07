@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import type { Model } from "../types";
-import { formatPrice, formatNumber } from "../format";
+import { formatNumber } from "../format";
 import { useCompare } from "../compare/CompareContext";
+import { Price } from "./Price";
 import { AffiliateLink } from "./AffiliateLink";
 import { ColorSwatches } from "./ColorSwatches";
 import {
@@ -53,8 +54,6 @@ export function BikeCard({ model }: { model: Model }) {
   // first listed color is the default; the selected color drives the photo
   const [color, setColor] = useState(0);
   const img = model.colors?.[color]?.image ?? primaryImage(model);
-  const price = model.price ?? model.price_min;
-  const onSale = model.pricing?.on_sale;
 
   return (
     <div className="card flex flex-col overflow-hidden transition-shadow hover:shadow-md">
@@ -81,10 +80,7 @@ export function BikeCard({ model }: { model: Model }) {
           )}
         </div>
 
-        <div className="flex items-baseline gap-2">
-          <span className="text-lg font-bold text-slate-900">{formatPrice(price, model.currency)}</span>
-          {onSale && <span className="chip bg-rose-100 text-rose-700">On sale</span>}
-        </div>
+        <Price model={model} />
 
         <div className="grid grid-cols-3 gap-2">
           {t.battery_wh != null && (
