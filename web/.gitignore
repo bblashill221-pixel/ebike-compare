@@ -1,0 +1,8 @@
+node_modules
+dist
+dist-ssr
+*.local
+.DS_Store
+
+# Data is copied in at build time from ../data; don't commit the copy.
+public/ebikes_normalized.json
