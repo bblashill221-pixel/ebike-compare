@@ -431,8 +431,8 @@ def _highlights(typed: dict) -> list:
     out = list(typed.get("notable_tech", []))
     if typed.get("sensor_type") == "torque" and "torque sensor" not in out:
         out.append("torque sensor")
-    if typed.get("brake_type") == "hydraulic_disc":
-        out.append("hydraulic brakes")
+    # NB hydraulic disc brakes are deliberately NOT a highlight: ~80% of tracked
+    # e-bikes have them, so they don't differentiate.
     if typed.get("frame_material") == "carbon":
         out.append("carbon frame")
     # de-dup, keep order
