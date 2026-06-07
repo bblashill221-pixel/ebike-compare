@@ -1,8 +1,8 @@
 // Hand-drawn spec icons. Each icon pairs a neutral outline with a colored
 // "highlight" element that signals what the metric represents:
-//   battery -> charge bolt (emerald), motor -> power bolt in the hub (amber),
-//   weight  -> load band (violet),    range -> route to a destination pin (sky),
-//   torque  -> rotation arrow around a nut (rose).
+//   battery -> 3/4-charged cells (emerald), motor -> electric motor w/ power bolt
+//   (amber), weight -> dumbbell plates (violet), range -> route to a destination
+//   pin (sky), torque -> cyclist climbing a steep hill (rose), gears -> tooth ring.
 
 interface IconProps {
   className?: string;
@@ -27,14 +27,25 @@ export function BatteryIcon({ className }: IconProps) {
   return (
     <Svg className={className}>
       <g className="text-slate-400" {...base}>
-        <rect x="2" y="7.5" width="17" height="9" rx="2" />
-        <path d="M21.7 10.7v2.6" strokeWidth={2.4} />
+        <rect x="2" y="7" width="17" height="10" rx="2" />
+        <path d="M21.7 10.6v2.8" strokeWidth={2.4} />
       </g>
-      {/* highlight: charge bolt */}
-      <path
-        className="text-emerald-500"
-        fill="currentColor"
-        d="M11.6 8.6 8.2 12.7h2.5l-1.3 2.7 3.9-4.3h-2.5l0.8-2.5Z"
+      {/* highlight: 3 of 4 cells charged */}
+      <g className="text-emerald-500" fill="currentColor">
+        <rect x="4.1" y="9.1" width="2.7" height="5.8" rx="0.6" />
+        <rect x="7.5" y="9.1" width="2.7" height="5.8" rx="0.6" />
+        <rect x="10.9" y="9.1" width="2.7" height="5.8" rx="0.6" />
+      </g>
+      {/* empty fourth cell */}
+      <rect
+        className="text-slate-300"
+        x="14.5"
+        y="9.3"
+        width="2.3"
+        height="5.4"
+        rx="0.5"
+        stroke="currentColor"
+        strokeWidth="1"
       />
     </Svg>
   );
@@ -44,14 +55,19 @@ export function MotorIcon({ className }: IconProps) {
   return (
     <Svg className={className}>
       <g className="text-slate-400" {...base}>
-        <circle cx="12" cy="12" r="8" />
-        <path d="M12 4v1.6M12 18.4V20M4 12h1.6M18.4 12H20" strokeWidth={1.4} />
+        {/* finned motor housing */}
+        <rect x="3" y="8" width="12.5" height="8" rx="1.8" />
+        <path d="M6 9.9v4.2M12.6 9.9v4.2" strokeWidth={1.3} />
+        {/* drive shaft */}
+        <path d="M15.5 12h4.3" strokeWidth={2.2} />
+        {/* mounting feet */}
+        <path d="M5.6 16l-1.3 2.2M13 16l1.3 2.2" strokeWidth={1.4} />
       </g>
-      {/* highlight: power bolt in the hub */}
+      {/* highlight: power bolt on the housing */}
       <path
         className="text-amber-500"
         fill="currentColor"
-        d="M13 7.4 9.4 12.4h2.4l-1.2 4.2 3.9-5.4h-2.4l0.9-3.8Z"
+        d="M10.1 9.4 7.8 12.4h1.7l-0.9 2.3 2.7-3.1H9.6l0.5-2.2Z"
       />
     </Svg>
   );
@@ -60,12 +76,18 @@ export function MotorIcon({ className }: IconProps) {
 export function WeightIcon({ className }: IconProps) {
   return (
     <Svg className={className}>
-      <g className="text-slate-400" {...base}>
-        <path d="M9 7.5a3 3 0 0 1 6 0" />
-        <path d="M6.8 7.5h10.4l1.7 9.4a1.6 1.6 0 0 1-1.6 1.9H6.7a1.6 1.6 0 0 1-1.6-1.9l1.7-9.4Z" />
+      {/* bar */}
+      <path className="text-slate-400" {...base} d="M8.6 12h6.8" strokeWidth={1.9} />
+      {/* outer plates */}
+      <g className="text-slate-400" {...base} strokeWidth={1.5}>
+        <rect x="3.9" y="10" width="1.9" height="4" rx="0.6" />
+        <rect x="18.2" y="10" width="1.9" height="4" rx="0.6" />
       </g>
-      {/* highlight: load band */}
-      <path className="text-violet-500" {...base} stroke="currentColor" strokeWidth={2} d="M6.2 13.4h11.6" />
+      {/* highlight: inner plates */}
+      <g className="text-violet-500" fill="currentColor">
+        <rect x="6.2" y="8.6" width="2.2" height="6.8" rx="0.7" />
+        <rect x="15.6" y="8.6" width="2.2" height="6.8" rx="0.7" />
+      </g>
     </Svg>
   );
 }
@@ -92,17 +114,16 @@ export function RangeIcon({ className }: IconProps) {
 export function TorqueIcon({ className }: IconProps) {
   return (
     <Svg className={className}>
-      {/* nut */}
-      <path
-        className="text-slate-400"
-        {...base}
-        d="M12 8.8l2.8 1.6v3.2L12 15.2l-2.8-1.6v-3.2L12 8.8Z"
-      />
-      {/* highlight: rotation arrow */}
-      <g className="text-rose-500" {...base}>
-        <path d="M18.9 9.1A7.4 7.4 0 1 0 19.4 13" />
-        <path d="M19.4 13l2-2.4M19.4 13l-2.9-.9" />
+      {/* steep hill */}
+      <path className="text-slate-400" {...base} d="M2.5 19.5h19V9.5l-19 10Z" />
+      {/* highlight: cyclist grinding up the slope */}
+      <g className="text-rose-500" {...base} strokeWidth={1.5}>
+        <circle cx="8.3" cy="14.3" r="1.9" />
+        <circle cx="13.6" cy="11.5" r="1.9" />
+        <path d="M8.3 14.3l5.3-2.8" />
+        <path d="M11 12.9l1.1-4.6" />
       </g>
+      <circle className="text-rose-500" cx="12.4" cy="7" r="1.2" fill="currentColor" />
     </Svg>
   );
 }
@@ -110,11 +131,13 @@ export function TorqueIcon({ className }: IconProps) {
 export function GearsIcon({ className }: IconProps) {
   return (
     <Svg className={className}>
-      <g className="text-slate-400" {...base}>
-        <circle cx="9" cy="12" r="5.5" />
-        <circle cx="17.5" cy="12" r="3" />
+      <g className="text-slate-400" {...base} strokeWidth={1.6}>
+        {/* tooth ring */}
+        <circle cx="12" cy="12" r="4.6" />
+        <path d="M16.6 12h1.8M15.25 15.25l1.28 1.28M12 16.6v1.8M8.75 15.25l-1.28 1.28M7.4 12H5.6M8.75 8.75 7.47 7.47M12 7.4V5.6M15.25 8.75l1.28-1.28" />
       </g>
-      <circle className="text-slate-500" cx="9" cy="12" r="1.4" fill="currentColor" />
+      {/* hub */}
+      <circle className="text-slate-500" cx="12" cy="12" r="1.8" stroke="currentColor" strokeWidth="1.6" />
     </Svg>
   );
 }
