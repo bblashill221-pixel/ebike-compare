@@ -1,5 +1,4 @@
 import { Link, NavLink } from "react-router-dom";
-import { useCompare } from "../compare/CompareContext";
 
 function navClass({ isActive }: { isActive: boolean }) {
   return `rounded-lg px-3 py-1.5 text-sm font-medium ${
@@ -8,7 +7,6 @@ function navClass({ isActive }: { isActive: boolean }) {
 }
 
 export function Header() {
-  const { ids } = useCompare();
   return (
     <header className="sticky top-0 z-30 border-b border-slate-200 bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center gap-4 px-4 py-3">
@@ -22,9 +20,6 @@ export function Header() {
           </NavLink>
           <NavLink to="/analysis" className={navClass}>
             Analysis
-          </NavLink>
-          <NavLink to="/compare" className={navClass}>
-            Compare{ids.length ? ` (${ids.length})` : ""}
           </NavLink>
         </nav>
       </div>

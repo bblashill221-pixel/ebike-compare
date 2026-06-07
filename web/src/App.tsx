@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
-import { CompareTray } from "./components/CompareTray";
+import { CompareDrawer } from "./components/CompareDrawer";
 import { Browse } from "./pages/Browse";
 import { BikeDetail } from "./pages/BikeDetail";
 import { Compare } from "./pages/Compare";
@@ -22,7 +22,7 @@ export default function App() {
           <Route path="*" element={<Browse />} />
         </Routes>
       </main>
-      <CompareTray />
+      <CompareDrawer />
       <Footer />
     </div>
   );
