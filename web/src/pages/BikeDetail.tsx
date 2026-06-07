@@ -7,6 +7,7 @@ import { SpecTable } from "../components/SpecTable";
 import { DistributionPlot } from "../components/DistributionPlot";
 import { AffiliateLink } from "../components/AffiliateLink";
 import { primaryImage } from "../components/BikeCard";
+import { BatteryIcon, MotorIcon, RangeIcon, TorqueIcon, WeightIcon } from "../components/icons";
 
 const GROUP_ORDER = [
   "general_info",
@@ -23,13 +24,18 @@ const GROUP_ORDER = [
   "included_accessories",
 ];
 
-const PERCENTILE_FIELDS: { field: string; label: string; unit?: string; typed?: string }[] = [
+const PERCENTILE_FIELDS: {
+  field: string;
+  label: string;
+  unit?: string;
+  icon?: React.ReactNode;
+}[] = [
   { field: "price", label: "Price", unit: "$" },
-  { field: "battery_wh", label: "Battery", unit: " Wh" },
-  { field: "motor_w", label: "Motor", unit: " W" },
-  { field: "torque_nm", label: "Torque", unit: " Nm" },
-  { field: "range_mi", label: "Range", unit: " mi" },
-  { field: "weight_lb", label: "Weight", unit: " lb" },
+  { field: "battery_wh", label: "Battery", unit: " Wh", icon: <BatteryIcon /> },
+  { field: "motor_w", label: "Motor", unit: " W", icon: <MotorIcon /> },
+  { field: "torque_nm", label: "Torque", unit: " Nm", icon: <TorqueIcon /> },
+  { field: "range_mi", label: "Range", unit: " mi", icon: <RangeIcon /> },
+  { field: "weight_lb", label: "Weight", unit: " lb", icon: <WeightIcon /> },
 ];
 
 export function BikeDetail() {
@@ -123,14 +129,17 @@ export function BikeDetail() {
       <section className="mt-6 card p-4">
         <h2 className="mb-3 font-semibold text-slate-800">How it compares to the fleet</h2>
         <div className="grid gap-x-8 gap-y-4 sm:grid-cols-2">
-          {PERCENTILE_FIELDS.map(({ field, label, unit }) => {
+          {PERCENTILE_FIELDS.map(({ field, label, unit, icon }) => {
             const stat = analysisStats[field];
             const v = valueOf(field);
             if (!stat) return null;
             return (
               <div key={field}>
                 <div className="mb-1 flex justify-between text-sm">
-                  <span className="font-medium text-slate-700">{label}</span>
+                  <span className="flex items-center gap-1.5 font-medium text-slate-700">
+                    {icon}
+                    {label}
+                  </span>
                   <span className="text-slate-500">{v != null ? `${v}${unit ?? ""}` : "—"}</span>
                 </div>
                 <DistributionPlot stat={stat} value={v} unit={unit} />

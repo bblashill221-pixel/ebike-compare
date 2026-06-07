@@ -3,15 +3,26 @@ import type { Model } from "../types";
 import { formatPrice, formatNumber } from "../format";
 import { useCompare } from "../compare/CompareContext";
 import { AffiliateLink } from "./AffiliateLink";
+import {
+  BatteryIcon,
+  GearsIcon,
+  MotorIcon,
+  RangeIcon,
+  TorqueIcon,
+  WeightIcon,
+} from "./icons";
 
 export function primaryImage(m: Model): string | null {
   return m.colors?.find((c) => c.image)?.image ?? null;
 }
 
-function Spec({ label, value }: { label: string; value: string }) {
+function Spec({ icon, label, value }: { icon?: React.ReactNode; label: string; value: string }) {
   return (
     <div className="flex flex-col">
-      <span className="text-[11px] uppercase tracking-wide text-slate-400">{label}</span>
+      <span className="flex items-center gap-1 text-[11px] uppercase tracking-wide text-slate-400">
+        {icon}
+        {label}
+      </span>
       <span className="text-sm font-semibold text-slate-800">{value}</span>
     </div>
   );
@@ -50,12 +61,24 @@ export function BikeCard({ model }: { model: Model }) {
         </div>
 
         <div className="grid grid-cols-3 gap-2">
-          {t.battery_wh != null && <Spec label="Battery" value={`${formatNumber(t.battery_wh)} Wh`} />}
-          {t.motor_w != null && <Spec label="Motor" value={`${formatNumber(t.motor_w)} W`} />}
-          {t.range_mi != null && <Spec label="Range" value={`${formatNumber(t.range_mi)} mi`} />}
-          {t.torque_nm != null && <Spec label="Torque" value={`${formatNumber(t.torque_nm)} Nm`} />}
-          {t.weight_lb != null && <Spec label="Weight" value={`${formatNumber(t.weight_lb)} lb`} />}
-          {t.gears != null && <Spec label="Gears" value={`${formatNumber(t.gears)}`} />}
+          {t.battery_wh != null && (
+            <Spec icon={<BatteryIcon className="h-3.5 w-3.5" />} label="Battery" value={`${formatNumber(t.battery_wh)} Wh`} />
+          )}
+          {t.motor_w != null && (
+            <Spec icon={<MotorIcon className="h-3.5 w-3.5" />} label="Motor" value={`${formatNumber(t.motor_w)} W`} />
+          )}
+          {t.range_mi != null && (
+            <Spec icon={<RangeIcon className="h-3.5 w-3.5" />} label="Range" value={`${formatNumber(t.range_mi)} mi`} />
+          )}
+          {t.torque_nm != null && (
+            <Spec icon={<TorqueIcon className="h-3.5 w-3.5" />} label="Torque" value={`${formatNumber(t.torque_nm)} Nm`} />
+          )}
+          {t.weight_lb != null && (
+            <Spec icon={<WeightIcon className="h-3.5 w-3.5" />} label="Weight" value={`${formatNumber(t.weight_lb)} lb`} />
+          )}
+          {t.gears != null && (
+            <Spec icon={<GearsIcon className="h-3.5 w-3.5" />} label="Gears" value={`${formatNumber(t.gears)}`} />
+          )}
         </div>
 
         {model.analysis?.highlights?.length > 0 && (
