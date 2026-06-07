@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import type { Model } from "../types";
 import { formatPrice, formatNumber } from "../format";
 import { useCompare } from "../compare/CompareContext";
 import { AffiliateLink } from "./AffiliateLink";
+import { ColorSwatches } from "./ColorSwatches";
 import {
   BatteryIcon,
   GearsIcon,
@@ -43,7 +45,9 @@ export function BikeCard({ model }: { model: Model }) {
   const { has, toggle, isFull } = useCompare();
   const selected = has(model.id);
   const t = model.analysis?.specs_typed ?? {};
-  const img = primaryImage(model);
+  // first listed color is the default; the selected color drives the photo
+  const [color, setColor] = useState(0);
+  const img = model.colors?.[color]?.image ?? primaryImage(model);
   const price = model.price ?? model.price_min;
   const onSale = model.pricing?.on_sale;
 
@@ -52,18 +56,21 @@ export function BikeCard({ model }: { model: Model }) {
       <Link to={`/bike/${encodeURIComponent(model.id)}`} className="block">
         <div className="aspect-[4/3] w-full overflow-hidden bg-slate-100">
           {img ? (
-            <img src={img} alt={model.model} loading="lazy" className="h-full w-full object-contain" />
+            <img src={img} alt={`${model.model} — ${model.colors?.[color]?.name ?? ""}`} loading="lazy" className="h-full w-full object-contain" />
           ) : (
             <div className="flex h-full w-full items-center justify-center text-slate-300">no image</div>
           )}
         </div>
       </Link>
       <div className="flex flex-1 flex-col gap-3 p-4">
-        <div>
+        <div className="space-y-1.5">
           <div className="text-xs font-medium uppercase tracking-wide text-brand-600">{model.brand}</div>
           <Link to={`/bike/${encodeURIComponent(model.id)}`} className="line-clamp-2 font-semibold text-slate-900 hover:text-brand-700">
             {model.model}
           </Link>
+          {model.colors && model.colors.length > 0 && (
+            <ColorSwatches colors={model.colors} selected={color} onSelect={setColor} size="h-4 w-4" />
+          )}
         </div>
 
         <div className="flex items-baseline gap-2">

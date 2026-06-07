@@ -1,5 +1,7 @@
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useData } from "../data/DataProvider";
+import { ColorSwatches } from "../components/ColorSwatches";
 import { useCompare } from "../compare/CompareContext";
 import { formatPrice, titleCase } from "../format";
 import { ScorePanel } from "../components/ScorePanel";
@@ -42,9 +44,12 @@ export function BikeDetail() {
   const { id } = useParams();
   const { byId, analysisStats, status } = useData();
   const { has, toggle, isFull } = useCompare();
+  const model = id ? byId.get(decodeURIComponent(id)) : undefined;
+  // first listed color is the default; selection drives the photo
+  const [color, setColor] = useState(0);
+  useEffect(() => setColor(0), [model?.id]);
 
   if (status === "loading") return <Center>Loading…</Center>;
-  const model = id ? byId.get(decodeURIComponent(id)) : undefined;
   if (!model) {
     return (
       <Center>
@@ -56,7 +61,7 @@ export function BikeDetail() {
     );
   }
 
-  const img = primaryImage(model);
+  const img = model.colors?.[color]?.image ?? primaryImage(model);
   const selected = has(model.id);
   const t = model.analysis?.specs_typed ?? {};
   const valueOf = (field: string) =>
@@ -72,30 +77,27 @@ export function BikeDetail() {
         <div className="card overflow-hidden">
           <div className="aspect-[4/3] w-full bg-slate-100">
             {img ? (
-              <img src={img} alt={model.model} className="h-full w-full object-contain" />
+              <img
+                src={img}
+                alt={`${model.model} — ${model.colors?.[color]?.name ?? ""}`}
+                className="h-full w-full object-contain"
+              />
             ) : (
               <div className="flex h-full items-center justify-center text-slate-300">no image</div>
             )}
           </div>
-          {model.colors && model.colors.length > 0 && (
-            <div className="flex flex-wrap gap-2 p-4">
-              {model.colors.map((c) => (
-                <span key={c.name} className="chip">
-                  {c.hex && (
-                    <span className="h-3 w-3 rounded-full border border-slate-300" style={{ background: c.hex }} />
-                  )}
-                  {c.name}
-                </span>
-              ))}
-            </div>
-          )}
         </div>
 
         <div className="space-y-4">
           <div>
             <div className="text-sm font-medium uppercase tracking-wide text-brand-600">{model.brand}</div>
             <h1 className="text-2xl font-bold text-slate-900">{model.model}</h1>
-            {model.product_type && <div className="text-sm text-slate-500">{model.product_type}</div>}
+            {model.colors && model.colors.length > 0 && (
+              <div className="mt-2">
+                <ColorSwatches colors={model.colors} selected={color} onSelect={setColor} size="h-6 w-6" />
+              </div>
+            )}
+            {model.product_type && <div className="mt-1.5 text-sm text-slate-500">{model.product_type}</div>}
           </div>
 
           <div className="flex flex-wrap items-center gap-3">
