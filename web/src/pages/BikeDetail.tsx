@@ -8,7 +8,7 @@ import { ScorePanel } from "../components/ScorePanel";
 import { SpecTable } from "../components/SpecTable";
 import { DistributionPlot } from "../components/DistributionPlot";
 import { AffiliateLink } from "../components/AffiliateLink";
-import { primaryImage } from "../components/BikeCard";
+import { displayName, primaryImage } from "../components/BikeCard";
 import { BatteryIcon, MotorIcon, RangeIcon, TorqueIcon, WeightIcon } from "../components/icons";
 
 const GROUP_ORDER = [
@@ -42,7 +42,7 @@ const PERCENTILE_FIELDS: {
 
 export function BikeDetail() {
   const { id } = useParams();
-  const { byId, analysisStats, status } = useData();
+  const { byId, models, analysisStats, status } = useData();
   const { has, toggle, isFull } = useCompare();
   const model = id ? byId.get(decodeURIComponent(id)) : undefined;
   // first listed color is the default; selection drives the photo
@@ -63,6 +63,9 @@ export function BikeDetail() {
 
   const img = model.colors?.[color]?.image ?? primaryImage(model);
   const selected = has(model.id);
+  const siblings = model.family_id
+    ? models.filter((x) => x.family_id === model.family_id && x.id !== model.id)
+    : [];
   const t = model.analysis?.specs_typed ?? {};
   const valueOf = (field: string) =>
     field === "price" ? model.price ?? model.price_min : (t[field] as number | undefined);
@@ -91,7 +94,12 @@ export function BikeDetail() {
         <div className="space-y-4">
           <div>
             <div className="text-sm font-medium uppercase tracking-wide text-brand-600">{model.brand}</div>
-            <h1 className="text-2xl font-bold text-slate-900">{model.model}</h1>
+            <h1 className="text-2xl font-bold text-slate-900">
+              {displayName(model)}
+              {model.tier && (
+                <span className="chip ml-2 bg-amber-100 align-middle text-amber-800">{model.tier}</span>
+              )}
+            </h1>
             {model.colors && model.colors.length > 0 && (
               <div className="mt-2">
                 <ColorSwatches colors={model.colors} selected={color} onSelect={setColor} size="h-6 w-6" />
@@ -120,6 +128,25 @@ export function BikeDetail() {
               {selected ? "✓ Comparing" : "Add to compare"}
             </button>
           </div>
+
+          {siblings.length > 0 && (
+            <div className="card p-4">
+              <h3 className="mb-2 font-semibold text-slate-800">Other versions of this bike</h3>
+              <ul className="space-y-1.5">
+                {siblings.map((s) => (
+                  <li key={s.id} className="flex items-baseline justify-between gap-3 text-sm">
+                    <Link
+                      to={`/bike/${encodeURIComponent(s.id)}`}
+                      className="font-medium text-brand-700 hover:underline"
+                    >
+                      {s.tier ?? s.model}
+                    </Link>
+                    <span className="text-slate-500">{formatPrice(s.price ?? s.price_min, s.currency)}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           <div className="card p-4">
             <ScorePanel analysis={model.analysis} />

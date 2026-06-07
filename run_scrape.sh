@@ -86,6 +86,9 @@ print((json.load(open(f[0])).get('generated_at','') or '')[:10]) if f else print
     "$PY" "$PROJECT_DIR/add_config_colors.py" || true
     "$PY" "$PROJECT_DIR/add_available_options.py" || true
     "$PY" "$PROJECT_DIR/add_pricing.py" || true
+    # Split spec-bearing price tiers (battery size / version / Lectric configs)
+    # into sibling model entries so downstream metrics are per-tier accurate.
+    "$PY" "$PROJECT_DIR/expand_tiers.py" || true
     # Normalize unifies all brands AND does the detailed spec grouping + component
     # parsing into ebikes_normalized.json (the single transform step).
     "$PY" "$PROJECT_DIR/normalize.py" || true

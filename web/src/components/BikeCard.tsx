@@ -18,6 +18,11 @@ export function primaryImage(m: Model): string | null {
   return m.colors?.find((c) => c.image)?.image ?? null;
 }
 
+/** Model name without the redundant tier suffix (the tier badge carries it). */
+export function displayName(m: Model): string {
+  return m.tier ? m.model.replace(` — ${m.tier}`, "") : m.model;
+}
+
 function Spec({
   icon,
   label,
@@ -66,8 +71,11 @@ export function BikeCard({ model }: { model: Model }) {
         <div className="space-y-1.5">
           <div className="text-xs font-medium uppercase tracking-wide text-brand-600">{model.brand}</div>
           <Link to={`/bike/${encodeURIComponent(model.id)}`} className="line-clamp-2 font-semibold text-slate-900 hover:text-brand-700">
-            {model.model}
+            {displayName(model)}
           </Link>
+          {model.tier && (
+            <span className="chip bg-amber-100 text-amber-800">{model.tier}</span>
+          )}
           {model.colors && model.colors.length > 0 && (
             <ColorSwatches colors={model.colors} selected={color} onSelect={setColor} size="h-4 w-4" />
           )}

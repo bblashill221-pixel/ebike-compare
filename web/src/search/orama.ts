@@ -56,6 +56,7 @@ function toDoc(m: Model): Record<string, unknown> {
   const t = m.analysis?.specs_typed ?? {};
   const text = [
     m.model,
+    m.tier ?? "",
     m.brand,
     m.product_type ?? "",
     ...(t.notable_tech ?? []),

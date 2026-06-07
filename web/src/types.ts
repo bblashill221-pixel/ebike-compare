@@ -77,6 +77,10 @@ export interface Model {
   id: string;
   brand: string;
   model: string;
+  /** Spec/build tier label when this entry is one price tier of a family. */
+  tier?: string | null;
+  /** Shared id linking sibling tier entries of the same bike family. */
+  family_id?: string | null;
   url: string;
   product_type?: string;
   price: number | null;

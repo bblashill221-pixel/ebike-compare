@@ -30,7 +30,7 @@ _MAPPED = {
     "price_from", "price_range", "currency", "warranty", "shipping", "specs",
     "spec_count", "geometry", "options", "available_options", "configurations",
     "free_accessories", "scrape_error", "configs", "regular_price",
-    "compare_at_price", "accessories",
+    "compare_at_price", "accessories", "tier", "family_id",
 }
 
 
@@ -110,6 +110,8 @@ def normalize_model(brand: str, m: dict) -> dict:
         "id": f"{brand}__{source_id}",
         "brand": brand,
         "model": name,
+        "tier": m.get("tier"),
+        "family_id": m.get("family_id"),
         "url": m.get("url"),
         "source_id": source_id,
         "product_type": m.get("product_type"),

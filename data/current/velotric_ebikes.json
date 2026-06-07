@@ -3,7 +3,7 @@
   "logo": "https://www.velotricbike.com/cdn/shop/files/20230607-183010.png?v=1686133833&width=256",
   "collection": "electric-bikes",
   "scraped_at": "2026-06-04T09:14:04.818800+00:00",
-  "model_count": 13,
+  "model_count": 15,
   "models": [
     {
       "model": "Velotric Breeze 1 Cruiser Ebike",
@@ -1465,51 +1465,6 @@
       "configurations": [
         {
           "options": {
-            "Package": "GoMad + Young Passenger Kit",
-            "Color": "Dark Amber"
-          },
-          "price": 2198.49,
-          "sku": "GOMADYKIT",
-          "available": true,
-          "color": {
-            "name": "Dark Amber",
-            "hex": "#A9220D",
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/GoMad_DarkAmber_rightside1_1.png?v=1775123655"
-          }
-        },
-        {
-          "options": {
-            "Package": "GoMad + Young Passenger Kit",
-            "Color": "Obsidian"
-          },
-          "price": 2198.49,
-          "sku": "GOMADYKIT2",
-          "available": true,
-          "color": {
-            "name": "Obsidian",
-            "hex": "#1C1C1F",
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/GoMad_Obsidian_rightside1_1.png?v=1775123655"
-          }
-        },
-        {
-          "options": {
-            "Package": "GoMad + Young Passenger Kit",
-            "Color": "Sage"
-          },
-          "price": 2198.49,
-          "sku": "GOMADYKIT3",
-          "available": true,
-          "color": {
-            "name": "Sage",
-            "hex": "#6A6C49",
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/GoMad_Sage_rightside1_1.png?v=1775123655"
-          }
-        },
-        {
-          "options": {
             "Package": "GoMad Only",
             "Color": "Dark Amber"
           },
@@ -1545,51 +1500,6 @@
           },
           "price": 1999.0,
           "sku": "VGM10003A",
-          "available": true,
-          "color": {
-            "name": "Sage",
-            "hex": "#6A6C49",
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/GoMad_Sage_rightside1_1.png?v=1775123655"
-          }
-        },
-        {
-          "options": {
-            "Package": "GoMad + Passenger Kit",
-            "Color": "Dark Amber"
-          },
-          "price": 2124.99,
-          "sku": "GOMADKIT",
-          "available": true,
-          "color": {
-            "name": "Dark Amber",
-            "hex": "#A9220D",
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/GoMad_DarkAmber_rightside1_1.png?v=1775123655"
-          }
-        },
-        {
-          "options": {
-            "Package": "GoMad + Passenger Kit",
-            "Color": "Obsidian"
-          },
-          "price": 2124.99,
-          "sku": "GOMADKIT2",
-          "available": true,
-          "color": {
-            "name": "Obsidian",
-            "hex": "#1C1C1F",
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/GoMad_Obsidian_rightside1_1.png?v=1775123655"
-          }
-        },
-        {
-          "options": {
-            "Package": "GoMad + Passenger Kit",
-            "Color": "Sage"
-          },
-          "price": 2124.99,
-          "sku": "GOMADKIT3",
           "available": true,
           "color": {
             "name": "Sage",
@@ -1655,7 +1565,427 @@
             }
           ]
         }
-      ]
+      ],
+      "tier": "GoMad Only",
+      "family_id": "velotric__velotric-gomad-utility-ebike"
+    },
+    {
+      "model": "Velotric GoMad Ebike — GoMad + Passenger Kit",
+      "handle": "velotric-gomad-utility-ebike--gomad-passenger-kit",
+      "url": "https://www.velotricbike.com/products/velotric-gomad-utility-ebike",
+      "product_type": "Electric cargo bike",
+      "price_from": 2124.99,
+      "currency": "USD",
+      "options": {
+        "Package": [
+          "GoMad + Young Passenger Kit",
+          "GoMad Only",
+          "GoMad + Passenger Kit"
+        ],
+        "colors": [
+          {
+            "name": "Dark Amber",
+            "hex": "#A9220D",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/GoMad_DarkAmber_rightside1_1.png?v=1775123655"
+          },
+          {
+            "name": "Obsidian",
+            "hex": "#1C1C1F",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/GoMad_Obsidian_rightside1_1.png?v=1775123655"
+          },
+          {
+            "name": "Sage",
+            "hex": "#6A6C49",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/GoMad_Sage_rightside1_1.png?v=1775123655"
+          }
+        ]
+      },
+      "warranty": "2-Year Warranty",
+      "specs": {
+        "all": {
+          "Bike Size": "One Size",
+          "User Height Range": "5'0'' ~ 6'3''",
+          "Frame": "Triple-Butted Aluminum Alloy",
+          "Fork": "RST Hydraulic Suspension 100mm Travel with Lock-out, 36mm Inner Tube",
+          "Motor": "48V, 750W, (1300W Peak Power), 85Nm",
+          "Battery": "48V, 16.7Ah (801.6Wh), IPX7, Certificated by UL2271",
+          "Cell": "Samsung/LG 21700 cell, Certificated by UL2580",
+          "Charger": "48V, 3A Fast Charger",
+          "Sensor": "Torque and Cadence Sensor",
+          "Display": "3.5\" Full Color, High Brightness, Bluetooth, NFC, Adjustable Angle",
+          "USB Port": "USB Type-C phone Charge",
+          "Throttle": "Trigger-control, Removable",
+          "Pedal Assist": "5 Riding Modes+Stealth Mode /Ride Tuning",
+          "Walk Mode": "2.9MPH/ Walk & Hold",
+          "Front Light": "500LM High-output Integrated LED, Adjustable Angle",
+          "Rear Light": "Braking Indicator, Turn Signal, Rear Light Steady/Flash, Integrated with Rear Rack",
+          "Water Resistant": "IPX6",
+          "App": "App OTA",
+          "Anti-theft": "Apple Find My & Google's Find Hub，NFC Card Unlock",
+          "Max Speed (Default）": "20MPH",
+          "Max Speed Adjustable Range": "12~28MPH",
+          "Ebike Class": "1/2/3",
+          "Pedal Assist Range": "75 Miles",
+          "Throttle Range": "50 Miles",
+          "Chainrings": "52T Narrow-Wide Chainring",
+          "Crankset": "Aluminum Alloy, 165mm",
+          "Freewheel": "8-speed,11-34T",
+          "Rear Derailleur": "SHIMANO 8-speed",
+          "Shift Lever": "SHIMANO 8-speed",
+          "Chain": "KMC 8-speed",
+          "Brake": "Tektro Hydraulic Disc Brake",
+          "Rotors": "203mm Front/180mm Rear",
+          "Brake Levers": "Aluminum Alloy, with Power Cutoff",
+          "Rims": "Aluminum Alloy",
+          "Front Hub": "NOVATEC Aluminum Alloy, 15x135mm Thru-axle",
+          "Tire": "KENDA 20x4.0\" eBike Puncture Resistant Tires",
+          "Handlebar": "BMX Style, 31.8mm Bar Clamp, 700mm",
+          "Grips": "Durable Ergonomic Grips, Lockable",
+          "Stem": "Quill Stem, 31.8mm Clamp, 30mm Length, 140mm Vertical Adjustment Range",
+          "Saddle": "VELOTRIC Comfort Ergonomic Seat",
+          "Seatpost": "Aluminum Alloy, Ф30.9mm",
+          "Clamp": "Aluminum Alloy, Quick Release",
+          "Fenders": "Plastic, Front and Rear Full Coverage",
+          "Rear Rack": "MIK HD Compatible，Integrated with Frame",
+          "Pedals": "Plastic",
+          "Kickstand": "Aluminum Alloy, Included, Rear Mount",
+          "Rear Rack Bag": "Included as Standard Equipment",
+          "Bike Weight": "77 lbs",
+          "Bike Weight (Without Battery)": "67 lbs",
+          "Rear Rack Load Capacity": "176 lbs",
+          "Max Bike Load Capacity": "500 lbs",
+          "UL Certification": "UL2849 & UL2271",
+          "ISO Standard": "ISO 4210",
+          "Height": "5'0\" – 6'3\"",
+          "Reach": "420mm",
+          "Handlebar Height": "1040-1180mm",
+          "Wheelbase": "1171mm",
+          "Stand-Over Height": "500mm",
+          "Min Saddle Height": "720mm",
+          "Max Saddle Height": "930mm",
+          "Total Length": "1811mm"
+        }
+      },
+      "spec_count": 61,
+      "scrape_error": null,
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": [
+        {
+          "name": "Front Light",
+          "price": 0,
+          "free": true,
+          "detail": "500LM High-output Integrated LED, Adjustable Angle"
+        },
+        {
+          "name": "Rear Light",
+          "price": 0,
+          "free": true,
+          "detail": "Braking Indicator, Turn Signal, Rear Light Steady/Flash, Integrated with Rear Rack"
+        },
+        {
+          "name": "Rear Rack",
+          "price": 0,
+          "free": true,
+          "detail": "MIK HD Compatible，Integrated with Frame"
+        },
+        {
+          "name": "Kickstand",
+          "price": 0,
+          "free": true,
+          "detail": "Aluminum Alloy, Included, Rear Mount"
+        },
+        {
+          "name": "Rear Rack Bag",
+          "price": 0,
+          "free": true,
+          "detail": "Included as Standard Equipment"
+        }
+      ],
+      "geometry": {
+        "Bike Size": "One Size",
+        "User Height Range": "5'0'' ~ 6'3''",
+        "Reach": "420mm",
+        "Wheelbase": "1171mm",
+        "Min Saddle Height": "720mm",
+        "Max Saddle Height": "930mm",
+        "Stand-Over Height": "500mm"
+      },
+      "configurations": [],
+      "available_options": [
+        {
+          "group": "Package",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "GoMad + Young Passenger Kit",
+              "price": 2198.49,
+              "price_delta": 199.49,
+              "free": false
+            },
+            {
+              "value": "GoMad Only",
+              "price": 1999.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "GoMad + Passenger Kit",
+              "price": 2124.99,
+              "price_delta": 125.99,
+              "free": false
+            }
+          ]
+        },
+        {
+          "group": "Included accessories",
+          "type": "accessory",
+          "choices": [
+            {
+              "value": "Front Light",
+              "price": 0,
+              "free": true
+            },
+            {
+              "value": "Rear Light",
+              "price": 0,
+              "free": true
+            },
+            {
+              "value": "Rear Rack",
+              "price": 0,
+              "free": true
+            },
+            {
+              "value": "Kickstand",
+              "price": 0,
+              "free": true
+            },
+            {
+              "value": "Rear Rack Bag",
+              "price": 0,
+              "free": true
+            }
+          ]
+        }
+      ],
+      "tier": "GoMad + Passenger Kit",
+      "family_id": "velotric__velotric-gomad-utility-ebike",
+      "regular_price": null
+    },
+    {
+      "model": "Velotric GoMad Ebike — GoMad + Young Passenger Kit",
+      "handle": "velotric-gomad-utility-ebike--gomad-young-passenger-kit",
+      "url": "https://www.velotricbike.com/products/velotric-gomad-utility-ebike",
+      "product_type": "Electric cargo bike",
+      "price_from": 2198.49,
+      "currency": "USD",
+      "options": {
+        "Package": [
+          "GoMad + Young Passenger Kit",
+          "GoMad Only",
+          "GoMad + Passenger Kit"
+        ],
+        "colors": [
+          {
+            "name": "Dark Amber",
+            "hex": "#A9220D",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/GoMad_DarkAmber_rightside1_1.png?v=1775123655"
+          },
+          {
+            "name": "Obsidian",
+            "hex": "#1C1C1F",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/GoMad_Obsidian_rightside1_1.png?v=1775123655"
+          },
+          {
+            "name": "Sage",
+            "hex": "#6A6C49",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/GoMad_Sage_rightside1_1.png?v=1775123655"
+          }
+        ]
+      },
+      "warranty": "2-Year Warranty",
+      "specs": {
+        "all": {
+          "Bike Size": "One Size",
+          "User Height Range": "5'0'' ~ 6'3''",
+          "Frame": "Triple-Butted Aluminum Alloy",
+          "Fork": "RST Hydraulic Suspension 100mm Travel with Lock-out, 36mm Inner Tube",
+          "Motor": "48V, 750W, (1300W Peak Power), 85Nm",
+          "Battery": "48V, 16.7Ah (801.6Wh), IPX7, Certificated by UL2271",
+          "Cell": "Samsung/LG 21700 cell, Certificated by UL2580",
+          "Charger": "48V, 3A Fast Charger",
+          "Sensor": "Torque and Cadence Sensor",
+          "Display": "3.5\" Full Color, High Brightness, Bluetooth, NFC, Adjustable Angle",
+          "USB Port": "USB Type-C phone Charge",
+          "Throttle": "Trigger-control, Removable",
+          "Pedal Assist": "5 Riding Modes+Stealth Mode /Ride Tuning",
+          "Walk Mode": "2.9MPH/ Walk & Hold",
+          "Front Light": "500LM High-output Integrated LED, Adjustable Angle",
+          "Rear Light": "Braking Indicator, Turn Signal, Rear Light Steady/Flash, Integrated with Rear Rack",
+          "Water Resistant": "IPX6",
+          "App": "App OTA",
+          "Anti-theft": "Apple Find My & Google's Find Hub，NFC Card Unlock",
+          "Max Speed (Default）": "20MPH",
+          "Max Speed Adjustable Range": "12~28MPH",
+          "Ebike Class": "1/2/3",
+          "Pedal Assist Range": "75 Miles",
+          "Throttle Range": "50 Miles",
+          "Chainrings": "52T Narrow-Wide Chainring",
+          "Crankset": "Aluminum Alloy, 165mm",
+          "Freewheel": "8-speed,11-34T",
+          "Rear Derailleur": "SHIMANO 8-speed",
+          "Shift Lever": "SHIMANO 8-speed",
+          "Chain": "KMC 8-speed",
+          "Brake": "Tektro Hydraulic Disc Brake",
+          "Rotors": "203mm Front/180mm Rear",
+          "Brake Levers": "Aluminum Alloy, with Power Cutoff",
+          "Rims": "Aluminum Alloy",
+          "Front Hub": "NOVATEC Aluminum Alloy, 15x135mm Thru-axle",
+          "Tire": "KENDA 20x4.0\" eBike Puncture Resistant Tires",
+          "Handlebar": "BMX Style, 31.8mm Bar Clamp, 700mm",
+          "Grips": "Durable Ergonomic Grips, Lockable",
+          "Stem": "Quill Stem, 31.8mm Clamp, 30mm Length, 140mm Vertical Adjustment Range",
+          "Saddle": "VELOTRIC Comfort Ergonomic Seat",
+          "Seatpost": "Aluminum Alloy, Ф30.9mm",
+          "Clamp": "Aluminum Alloy, Quick Release",
+          "Fenders": "Plastic, Front and Rear Full Coverage",
+          "Rear Rack": "MIK HD Compatible，Integrated with Frame",
+          "Pedals": "Plastic",
+          "Kickstand": "Aluminum Alloy, Included, Rear Mount",
+          "Rear Rack Bag": "Included as Standard Equipment",
+          "Bike Weight": "77 lbs",
+          "Bike Weight (Without Battery)": "67 lbs",
+          "Rear Rack Load Capacity": "176 lbs",
+          "Max Bike Load Capacity": "500 lbs",
+          "UL Certification": "UL2849 & UL2271",
+          "ISO Standard": "ISO 4210",
+          "Height": "5'0\" – 6'3\"",
+          "Reach": "420mm",
+          "Handlebar Height": "1040-1180mm",
+          "Wheelbase": "1171mm",
+          "Stand-Over Height": "500mm",
+          "Min Saddle Height": "720mm",
+          "Max Saddle Height": "930mm",
+          "Total Length": "1811mm"
+        }
+      },
+      "spec_count": 61,
+      "scrape_error": null,
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": [
+        {
+          "name": "Front Light",
+          "price": 0,
+          "free": true,
+          "detail": "500LM High-output Integrated LED, Adjustable Angle"
+        },
+        {
+          "name": "Rear Light",
+          "price": 0,
+          "free": true,
+          "detail": "Braking Indicator, Turn Signal, Rear Light Steady/Flash, Integrated with Rear Rack"
+        },
+        {
+          "name": "Rear Rack",
+          "price": 0,
+          "free": true,
+          "detail": "MIK HD Compatible，Integrated with Frame"
+        },
+        {
+          "name": "Kickstand",
+          "price": 0,
+          "free": true,
+          "detail": "Aluminum Alloy, Included, Rear Mount"
+        },
+        {
+          "name": "Rear Rack Bag",
+          "price": 0,
+          "free": true,
+          "detail": "Included as Standard Equipment"
+        }
+      ],
+      "geometry": {
+        "Bike Size": "One Size",
+        "User Height Range": "5'0'' ~ 6'3''",
+        "Reach": "420mm",
+        "Wheelbase": "1171mm",
+        "Min Saddle Height": "720mm",
+        "Max Saddle Height": "930mm",
+        "Stand-Over Height": "500mm"
+      },
+      "configurations": [],
+      "available_options": [
+        {
+          "group": "Package",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "GoMad + Young Passenger Kit",
+              "price": 2198.49,
+              "price_delta": 199.49,
+              "free": false
+            },
+            {
+              "value": "GoMad Only",
+              "price": 1999.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "GoMad + Passenger Kit",
+              "price": 2124.99,
+              "price_delta": 125.99,
+              "free": false
+            }
+          ]
+        },
+        {
+          "group": "Included accessories",
+          "type": "accessory",
+          "choices": [
+            {
+              "value": "Front Light",
+              "price": 0,
+              "free": true
+            },
+            {
+              "value": "Rear Light",
+              "price": 0,
+              "free": true
+            },
+            {
+              "value": "Rear Rack",
+              "price": 0,
+              "free": true
+            },
+            {
+              "value": "Kickstand",
+              "price": 0,
+              "free": true
+            },
+            {
+              "value": "Rear Rack Bag",
+              "price": 0,
+              "free": true
+            }
+          ]
+        }
+      ],
+      "tier": "GoMad + Young Passenger Kit",
+      "family_id": "velotric__velotric-gomad-utility-ebike",
+      "regular_price": null
     },
     {
       "model": "Velotric Nomad 2 Fat Tire Ebike",
