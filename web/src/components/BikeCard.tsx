@@ -72,6 +72,11 @@ export function BikeCard({ model }: { model: Model }) {
   const cPrices = colorPrices(model);
   const colorUp = upchargeText(cPrices, null, model.currency, color);
 
+  // Free shipping sits on the price line; when on sale that line already carries
+  // the strikethrough + discount badge, so it drops to its own line below.
+  const onSale = !!model.pricing?.on_sale;
+  const freeShipping = model.shipping_free === true || model.shipping_cost === 0;
+
   // Show whichever motor ratings the source page stated — nominal, peak, or
   // both — never a placeholder for the missing half.
   const hasNom = t.motor_w != null;
@@ -157,11 +162,21 @@ export function BikeCard({ model }: { model: Model }) {
           </div>
         </div>
 
-        <Price
-          model={model}
-          price={variantPrice(model, model.colors?.[color]?.name)}
-          soldOut={model.availability?.status === "sold_out" || colorSoldOut(model, color)}
-        />
+        <div className="space-y-0.5">
+          <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
+            <Price
+              model={model}
+              price={variantPrice(model, model.colors?.[color]?.name)}
+              soldOut={model.availability?.status === "sold_out" || colorSoldOut(model, color)}
+            />
+            {freeShipping && !onSale && (
+              <span className="text-xs font-semibold text-emerald-700">Free Shipping</span>
+            )}
+          </div>
+          {freeShipping && onSale && (
+            <span className="text-xs font-semibold text-emerald-700">Free Shipping</span>
+          )}
+        </div>
 
         {/* TEMP: data-collection triage — lists expected typed fields missing on
             this model (from audit.py / model.data_audit). Remove when done. */}
