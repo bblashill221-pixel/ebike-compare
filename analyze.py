@@ -30,8 +30,9 @@ import re
 from datetime import datetime, timezone
 from pathlib import Path
 
-from spec_parse import num, find_spec, blob, kg_to_lb, percentile_rank
+from spec_parse import num, find_spec, blob, kg_to_lb, percentile_rank, height_range_in
 from spec_groups import flatten_grouped
+from component_catalog import iter_components
 
 HERE = Path(__file__).parent
 DATA = HERE / "data"
@@ -50,7 +51,9 @@ WARRANTY_SCORE = {1: 20, 2: 45, 3: 65, 4: 80}   # >=5 or Lifetime -> 100
 # ----------------------------- TIER 1: typed specs -----------------------------
 
 def _battery_wh(specs):
-    txt = find_spec(specs, "battery", "cell")
+    # "nominal_energy" covers brands whose battery rows never say "battery"
+    # (Segway: "Nominal Energy: 722 Wh")
+    txt = find_spec(specs, "battery", "cell", "nominal_energy", "nominal energy")
     wh = num(r"(\d{3,4}(?:\.\d+)?)\s*wh", txt)
     if wh is None:
         v = num(r"(\d{2,3}(?:\.\d+)?)\s*v\b", txt)
@@ -69,13 +72,32 @@ def _cell_brand(specs):
 
 
 def _motor_w(specs):
-    txt = find_spec(specs, "motor", "drive", "hub")
-    if not txt:
+    def dethousand(s):
+        # "1,200W" must read 1200, not 200
+        return re.sub(r"(?<=\d),(?=\d{3})", "", s)
+    txt = dethousand(find_spec(specs, "motor", "drive", "hub"))
+    # Some brands put the rating in the LABEL, not the value (Segway:
+    # "Rated Power: 500W" / "Peak Power: 1500W" rows) — fold those rows into
+    # the text with their qualifier re-attached so the parse below sees them.
+    rated_row = dethousand(find_spec(specs, "rated_power", "rated power"))
+    peak_row = dethousand(find_spec(specs, "peak_power", "peak power"))
+    if rated_row:
+        txt = f"{txt} {rated_row}"
+    if peak_row:
+        mw = re.search(r"(\d{3,4})\s*w\b", peak_row, re.I)
+        if mw:
+            txt = f"{txt} {mw.group(1)}W peak"
+    if not txt.strip():
         return None, None
-    # Pull peak first, then strip those mentions so they don't read as continuous.
-    peak = num(r"(\d{3,4})\s*w\s*peak", txt) or num(r"peak[^0-9]{0,18}(\d{3,4})\s*w", txt)
+    # Boost-mode figures are neither the continuous nor the stated-peak rating.
+    txt = re.sub(r"\([^)]*boost[^)]*\)", " ", txt, flags=re.I)
+    # The motor rows reaching this point are flatten_grouped() renderings of the
+    # parsed component ("1188W peak 750W 80Nm"), so the number-adjacent "NNNW
+    # peak" form binds first; the "peak NNNW" form covers unparsed free text.
+    # Pull peak, then strip every peak mention so none reads as continuous.
+    peak = num(r"(\d{3,4})\s*w\s*peak", txt) or num(r"peak[^0-9,()/]{0,14}(\d{3,4})\s*w", txt)
     cont_txt = re.sub(r"\d{3,4}\s*w\s*peak", " ", txt, flags=re.I)
-    cont_txt = re.sub(r"peak[^0-9]{0,18}\d{3,4}\s*w", " ", cont_txt, flags=re.I)
+    cont_txt = re.sub(r"peak[^0-9,()/]{0,14}\d{3,4}\s*w", " ", cont_txt, flags=re.I)
     cont = num(r"(\d{3,4})\s*w\b", cont_txt)
     return (round(cont) if cont else None), (round(peak) if peak else None)
 
@@ -119,15 +141,19 @@ def _brake_type(specs):
     txt = find_spec(specs, "brake").lower()
     if not txt:
         return None
+    # Genuine rim brakes are near-extinct on e-bikes, so only call it when the
+    # text says so explicitly — never as a fallback for an unrecognized brake.
+    if re.search(r"\brim brake|v[-\s]?brake|cantilever|linear[-\s]?pull|coaster", txt):
+        return "rim"
     if "hydraulic" in txt:
-        base = "hydraulic_disc"
-    elif re.search(r"mechanical|cable", txt):
-        base = "mechanical_disc"
-    elif "disc" in txt:
-        base = "disc"
-    else:
-        base = "rim"
-    return base
+        return "hydraulic_disc"
+    if re.search(r"mechanical|cable", txt):
+        return "mechanical_disc"
+    # disc when stated or implied by a disc-only feature (rotor mm / piston count)
+    if re.search(r"\bdisc\b|\brotor\b|\d{3}\s*mm|piston", txt):
+        return "disc"
+    # a brake we couldn't type; on e-bikes that's overwhelmingly a disc brake
+    return "disc"
 
 
 def _drivetrain_type(specs):
@@ -145,6 +171,8 @@ def _drivetrain_type(specs):
 
 
 def _gears(specs):
+    # flatten_grouped stringifies parsed components with speeds as "10-speed",
+    # so this also catches derailleurs that never say "speed" in words.
     txt = blob(specs)
     sp = num(r"(\d{1,2})[- ]?speed", txt)
     return int(sp) if sp else None
@@ -239,6 +267,12 @@ def _notable_tech(specs):
         (r"fingerprint", "fingerprint unlock"),
         (r"torque sensor", "torque sensor"),
         (r"mid[- ]?drive", "mid-drive motor"),
+        # uncommon premium kit
+        (r"dropper", "dropper post"),
+        (r"quad[- ]?piston|four[- ]?piston|4[- ]?piston", "4-piston brakes"),
+        (r"\bdi2\b|\baxs\b|electronic shift", "electronic shifting"),
+        (r"deore xt|\bxtr\b|\bslx\b|\bx01\b|\bxx1\b|gx eagle", "high-end drivetrain"),
+        (r"enviolo|nuvinci|internal[- ]?gear|\bigh\b", "internal gear hub"),
     ]
     for pat, label in checks:
         if re.search(pat, b):
@@ -246,11 +280,29 @@ def _notable_tech(specs):
     return out
 
 
+def _fit_height(model: dict) -> tuple[int | None, int | None]:
+    """(min_in, max_in) the bike can fit, enveloped across every published
+    rider-height range and frame size, or (None, None). Reads the GROUPED geometry
+    (model.specs.geometry) where a per-size dict is preserved -- the flattened specs
+    would stringify it -- so "any frame size that fits" is captured."""
+    geo = (model.get("specs") or {}).get("geometry") or {}
+    lo = hi = None
+    for k, v in geo.items():
+        kl = k.lower()
+        if "rider" in kl and "height" in kl:
+            r = height_range_in(v)
+            if r:
+                lo = r[0] if lo is None else min(lo, r[0])
+                hi = r[1] if hi is None else max(hi, r[1])
+    return (round(lo), round(hi)) if lo is not None else (None, None)
+
+
 def extract_typed_specs(model: dict) -> dict:
     # `specs` is the grouped map (group -> {field: value|parsed component});
     # flatten it back to a flat label->text map for the typed-fact regexes.
     specs = flatten_grouped(model.get("specs") or {})
     motor_w, motor_peak_w = _motor_w(specs)
+    fit_min_in, fit_max_in = _fit_height(model)
     return {
         "battery_wh": _battery_wh(specs),
         "cell_brand": _cell_brand(specs),
@@ -273,6 +325,9 @@ def extract_typed_specs(model: dict) -> dict:
         "warranty_years": _warranty_years(model),
         "connectivity": _connectivity(specs),
         "notable_tech": _notable_tech(specs),
+        # rider-height fit envelope (inches) for the "fits my height" filter
+        "fit_height_min_in": fit_min_in,
+        "fit_height_max_in": fit_max_in,
     }
 
 
@@ -427,6 +482,25 @@ def compute_scores(typed: dict, stats: dict, bom_pct, price_pct) -> dict:
     return s
 
 
+def component_quality(model: dict, part_prices: dict) -> dict:
+    """Join the component catalog's aftermarket lookups back onto one bike:
+    how many parsed parts were identified, how many have a known aftermarket
+    price, and what those parts add up to. Facts only — no blended score."""
+    identified = priced = 0
+    total = 0.0
+    for key, _cat, _part in iter_components(model):
+        identified += 1
+        p = part_prices.get(key)
+        if p is not None:
+            priced += 1
+            total += p
+    return {
+        "parts_identified": identified,
+        "parts_priced": priced,
+        "aftermarket_value_usd": round(total, 2) if priced else None,
+    }
+
+
 def _highlights(typed: dict) -> list:
     out = list(typed.get("notable_tech", []))
     if typed.get("sensor_type") == "torque" and "torque sensor" not in out:
@@ -435,6 +509,8 @@ def _highlights(typed: dict) -> list:
     # e-bikes have them, so they don't differentiate.
     if typed.get("frame_material") == "carbon":
         out.append("carbon frame")
+    if typed.get("suspension") == "full":
+        out.append("full suspension")
     # de-dup, keep order
     seen, dedup = set(), []
     for h in out:
@@ -450,10 +526,22 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("-i", "--input", default=str(DATA / "current" / "active" / "ebikes_normalized.json"))
     ap.add_argument("-c", "--costs", default=str(DATA / "current" / "component_cost_estimates.json"))
+    ap.add_argument("--catalog", default=str(DATA / "component_catalog.json"))
     args = ap.parse_args()
 
     doc = json.load(open(args.input))
     models = doc.get("models", [])
+
+    # Aftermarket part prices from the component catalog (key -> price_usd).
+    part_prices = {}
+    try:
+        cat = json.load(open(args.catalog))
+        for key, e in (cat.get("components") or {}).items():
+            p = (e.get("aftermarket") or {}).get("price_usd")
+            if p is not None:
+                part_prices[key] = p
+    except FileNotFoundError:
+        pass
 
     # BOM lookup keyed by (brand, model name).
     bom = {}
@@ -494,6 +582,7 @@ def main():
             "percentiles": pct,
             "scores": compute_scores(t, stats, bom_pct, price_pct),
             "highlights": _highlights(t),
+            "component_quality": component_quality(m, part_prices),
         }
 
     doc["analysis_stats"] = stats

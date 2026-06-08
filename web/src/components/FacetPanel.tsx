@@ -1,6 +1,9 @@
+import { useState, type ReactNode } from "react";
 import type { EnumField, Filters, RangeField } from "../search/orama";
 import { BOOL_FIELDS, type BoolField } from "../search/orama";
 import { capitalize, labelize, titleCase } from "../format";
+import { useShowSoldOut } from "../soldOut";
+import { useUnits, inToMm, mmToIn, heightUnit, type UnitSystem } from "../units";
 
 interface Props {
   facetOptions: Record<EnumField, string[]>;
@@ -11,8 +14,9 @@ interface Props {
 }
 
 const ENUM_SECTIONS: { field: EnumField; label: string }[] = [
+  { field: "product_types", label: "Type" },
   { field: "brand", label: "Brand" },
-  { field: "product_type", label: "Type" },
+  { field: "frame_style", label: "Frame style" },
   { field: "drive_type", label: "Drive" },
   { field: "brake_type", label: "Brakes" },
   { field: "frame_material", label: "Frame" },
@@ -31,11 +35,55 @@ const RANGE_SECTIONS: { field: RangeField; label: string }[] = [
 
 const BOOL_LABELS: Record<BoolField, string> = {
   on_sale: "On sale",
-  removable_battery: "Removable battery",
   ul_listed: "UL listed",
 };
 
+/** Collapsible filter section: clickable header with a chevron, open by default. */
+function Section({
+  label,
+  open,
+  onToggle,
+  children,
+}: {
+  label: string;
+  open: boolean;
+  onToggle: () => void;
+  children: ReactNode;
+}) {
+  return (
+    <section>
+      <button
+        type="button"
+        onClick={onToggle}
+        aria-expanded={open}
+        className="flex w-full cursor-pointer items-center justify-between text-left"
+      >
+        <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">{label}</span>
+        <svg
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          className={`h-4 w-4 text-slate-400 transition-transform ${open ? "" : "-rotate-90"}`}
+          aria-hidden="true"
+        >
+          <path
+            fillRule="evenodd"
+            d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z"
+            clipRule="evenodd"
+          />
+        </svg>
+      </button>
+      {open && <div className="mt-1.5">{children}</div>}
+    </section>
+  );
+}
+
 export function FacetPanel({ facetOptions, rangeBounds, facetCounts, filters, setFilters }: Props) {
+  const [showSoldOut, setShowSoldOut] = useShowSoldOut();
+  const [units, setUnits] = useUnits();
+  // sections the user has collapsed (everything starts expanded)
+  const [collapsed, setCollapsed] = useState<Record<string, boolean>>({});
+  const toggleSection = (key: string) => setCollapsed({ ...collapsed, [key]: !collapsed[key] });
+
   const toggleEnum = (field: EnumField, value: string) => {
     const cur = filters.enums[field] ?? [];
     const next = cur.includes(value) ? cur.filter((v) => v !== value) : [...cur, value];
@@ -51,30 +99,103 @@ export function FacetPanel({ facetOptions, rangeBounds, facetCounts, filters, se
     else ranges[field] = [lo, hi];
     setFilters({ ...filters, ranges });
   };
-  const reset = () => setFilters({ enums: {}, bools: {}, ranges: {} });
+  // Rider height is stored canonically in inches; the input is shown in the active
+  // unit (in / mm). Empty input clears the filter (null).
+  const heightDisplay =
+    filters.riderHeightIn == null
+      ? ""
+      : units === "metric"
+        ? inToMm(filters.riderHeightIn)
+        : filters.riderHeightIn;
+  const setHeight = (raw: string) => {
+    const v = raw.trim();
+    if (v === "") return setFilters({ ...filters, riderHeightIn: null });
+    const n = Number(v);
+    if (Number.isNaN(n)) return;
+    const inches = units === "metric" ? mmToIn(n) : n;
+    setFilters({ ...filters, riderHeightIn: Math.round(inches) });
+  };
+  const reset = () => {
+    setFilters({ enums: {}, bools: {}, ranges: {}, riderHeightIn: null });
+    setShowSoldOut(true);
+  };
 
   return (
     <div className="space-y-5">
       <div className="flex items-center justify-between">
         <h2 className="text-sm font-semibold text-slate-700">Filters</h2>
-        <button type="button" onClick={reset} className="text-xs text-brand-600 hover:underline">
-          Reset
-        </button>
+        <div className="flex items-center gap-3">
+          <div className="flex overflow-hidden rounded border border-slate-300 text-xs" role="group" aria-label="Units">
+            {(["imperial", "metric"] as UnitSystem[]).map((sys) => (
+              <button
+                key={sys}
+                type="button"
+                onClick={() => setUnits(sys)}
+                aria-pressed={units === sys}
+                className={`cursor-pointer px-2 py-0.5 ${units === sys ? "bg-brand-600 text-white" : "text-slate-600"}`}
+              >
+                {sys === "imperial" ? "in" : "mm"}
+              </button>
+            ))}
+          </div>
+          <button type="button" onClick={reset} className="text-xs text-brand-600 hover:underline">
+            Reset
+          </button>
+        </div>
       </div>
 
       {/* booleans */}
-      <div className="flex flex-wrap gap-2">
-        {BOOL_FIELDS.map((f) => (
+      <Section label="Features" open={!collapsed.features} onToggle={() => toggleSection("features")}>
+        <div className="flex flex-wrap gap-2">
+          {BOOL_FIELDS.map((f) => (
+            <button
+              key={f}
+              type="button"
+              onClick={() => toggleBool(f)}
+              className={`chip cursor-pointer ${filters.bools[f] ? "bg-brand-600 text-white" : ""}`}
+            >
+              {BOOL_LABELS[f]}
+            </button>
+          ))}
+          {/* selected = include sold-out bikes (the default); deselect to hide
+              unavailable models and their unavailable colors */}
           <button
-            key={f}
             type="button"
-            onClick={() => toggleBool(f)}
-            className={`chip cursor-pointer ${filters.bools[f] ? "bg-brand-600 text-white" : ""}`}
+            onClick={() => setShowSoldOut(!showSoldOut)}
+            className={`chip cursor-pointer ${showSoldOut ? "bg-brand-600 text-white" : ""}`}
           >
-            {BOOL_LABELS[f]}
+            Sold out
           </button>
-        ))}
-      </div>
+        </div>
+      </Section>
+
+      {/* rider height: keep bikes whose fit range (any frame size) includes the
+          rider; bikes with no published range are kept (lenient) */}
+      <Section label="Rider height" open={!collapsed.height} onToggle={() => toggleSection("height")}>
+        <div className="flex items-center gap-2">
+          <input
+            type="number"
+            inputMode="numeric"
+            value={heightDisplay}
+            min={0}
+            onChange={(e) => setHeight(e.target.value)}
+            placeholder={units === "metric" ? "e.g. 1780" : "e.g. 70"}
+            className="w-full rounded border-slate-300 text-sm"
+            aria-label={`Rider height (${heightUnit(units)})`}
+          />
+          <span className="text-xs text-slate-400">{heightUnit(units)}</span>
+          {filters.riderHeightIn != null && (
+            <button
+              type="button"
+              onClick={() => setFilters({ ...filters, riderHeightIn: null })}
+              className="text-xs text-brand-600 hover:underline"
+            >
+              Clear
+            </button>
+          )}
+        </div>
+        <p className="mt-1 text-xs text-slate-400">Bikes without a listed fit range are kept.</p>
+      </Section>
 
       {/* enum facets */}
       {ENUM_SECTIONS.map(({ field, label }) => {
@@ -83,11 +204,8 @@ export function FacetPanel({ facetOptions, rangeBounds, facetCounts, filters, se
         const counts = facetCounts[field] ?? {};
         const selected = filters.enums[field] ?? [];
         return (
-          <fieldset key={field}>
-            <legend className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-slate-500">
-              {label}
-            </legend>
-            <div className="max-h-44 space-y-1 overflow-auto pr-1">
+          <Section key={field} label={label} open={!collapsed[field]} onToggle={() => toggleSection(field)}>
+            <div className="space-y-1">
               {options.map((opt) => (
                 <label key={opt} className="flex cursor-pointer items-center gap-2 text-sm text-slate-700">
                   <input
@@ -97,13 +215,14 @@ export function FacetPanel({ facetOptions, rangeBounds, facetCounts, filters, se
                     className="rounded border-slate-300 text-brand-600 focus:ring-brand-500"
                   />
                   <span className="flex-1 truncate">
-                    {field === "brand" ? capitalize(opt) : titleCase(opt)}
+                    {/* product_types values are already display-formatted ("Mountain (eMTB)") */}
+                    {field === "brand" ? capitalize(opt) : field === "product_types" ? opt : titleCase(opt)}
                   </span>
                   <span className="text-xs tabular-nums text-slate-400">{counts[opt] ?? 0}</span>
                 </label>
               ))}
             </div>
-          </fieldset>
+          </Section>
         );
       })}
 
@@ -113,10 +232,7 @@ export function FacetPanel({ facetOptions, rangeBounds, facetCounts, filters, se
         if (bHi <= bLo) return null;
         const [lo, hi] = filters.ranges[field] ?? [bLo, bHi];
         return (
-          <div key={field}>
-            <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-slate-500">
-              {label}
-            </div>
+          <Section key={field} label={label} open={!collapsed[field]} onToggle={() => toggleSection(field)}>
             <div className="flex items-center gap-2">
               <input
                 type="number"
@@ -138,7 +254,7 @@ export function FacetPanel({ facetOptions, rangeBounds, facetCounts, filters, se
                 aria-label={`${labelize(field)} max`}
               />
             </div>
-          </div>
+          </Section>
         );
       })}
     </div>

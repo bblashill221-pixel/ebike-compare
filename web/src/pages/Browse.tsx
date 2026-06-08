@@ -1,13 +1,19 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useData } from "../data/DataProvider";
 import { runSearch, type Filters } from "../search/orama";
 import type { Model } from "../types";
+import { lowestPrice } from "../pricing";
 import { SearchBar } from "../components/SearchBar";
 import { FacetPanel } from "../components/FacetPanel";
 import { ResultsGrid } from "../components/ResultsGrid";
+import { useShowSoldOut } from "../soldOut";
 
-const EMPTY_FILTERS: Filters = { enums: {}, bools: {}, ranges: {} };
+const EMPTY_FILTERS: Filters = { enums: {}, bools: {}, ranges: {}, riderHeightIn: null };
+
+// Scroll position to restore when the user comes back from a detail page.
+// Session-scoped so a fresh visit always starts at the top.
+const SCROLL_KEY = "browse-scroll-y";
 
 type SortKey =
   | "relevance"
@@ -47,9 +53,9 @@ function sortModels(models: Model[], key: SortKey): Model[] {
     arr.sort((a, b) => (f(b) ?? last) - (f(a) ?? last));
   switch (key) {
     case "price_asc":
-      return arr.sort((a, b) => (a.price ?? Infinity) - (b.price ?? Infinity));
+      return arr.sort((a, b) => (lowestPrice(a) ?? Infinity) - (lowestPrice(b) ?? Infinity));
     case "price_desc":
-      return arr.sort((a, b) => (b.price ?? last) - (a.price ?? last));
+      return arr.sort((a, b) => (lowestPrice(b) ?? last) - (lowestPrice(a) ?? last));
     case "battery_desc":
       return byDesc((m) => typed(m, "battery_wh"));
     case "range_desc":
@@ -76,6 +82,7 @@ export function Browse() {
   const [term, setTerm] = useState(params.get("q") ?? "");
   const [debounced, setDebounced] = useState(term);
   const [filters, setFilters] = useState<Filters>(EMPTY_FILTERS);
+  const [showSoldOut] = useShowSoldOut();
   const [sort, setSort] = useState<SortKey>((params.get("sort") as SortKey) ?? "relevance");
   const [ids, setIds] = useState<string[]>([]);
   const [facetCounts, setFacetCounts] = useState<Record<string, Record<string, number>>>({});
@@ -100,7 +107,7 @@ export function Browse() {
   useEffect(() => {
     if (!db) return;
     let alive = true;
-    runSearch(db, debounced, filters, models.length).then((res) => {
+    runSearch(db, debounced, filters, models.length, showSoldOut).then((res) => {
       if (!alive) return;
       setIds(res.ids);
       setFacetCounts(res.facets);
@@ -108,12 +115,28 @@ export function Browse() {
     return () => {
       alive = false;
     };
-  }, [db, debounced, filters, models.length]);
+  }, [db, debounced, filters, models.length, showSoldOut]);
 
   const results = useMemo(() => {
     const list = ids.map((id) => byId.get(id)).filter((m): m is Model => !!m);
     return sortModels(list, sort);
   }, [ids, byId, sort]);
+
+  // Capture the position saved by the previous visit at first render — the
+  // unmount save below also fires during StrictMode's simulated remount (with
+  // scrollY 0), so storage can't be trusted by the time results arrive.
+  const savedScroll = useRef(Number(sessionStorage.getItem(SCROLL_KEY)) || 0);
+  // remember where the user was when leaving (e.g. into a bike detail page)...
+  useEffect(() => {
+    return () => sessionStorage.setItem(SCROLL_KEY, String(window.scrollY));
+  }, []);
+  // ...and jump back there once, as soon as the grid is tall enough again
+  const restoredScroll = useRef(false);
+  useEffect(() => {
+    if (restoredScroll.current || !results.length) return;
+    restoredScroll.current = true;
+    if (savedScroll.current > 0) window.scrollTo(0, savedScroll.current);
+  }, [results]);
 
   if (status === "loading") return <CenterMsg>Loading e-bikes…</CenterMsg>;
   if (status === "error") return <CenterMsg>Failed to load data: {error}</CenterMsg>;
@@ -153,7 +176,8 @@ export function Browse() {
 
       <div className="flex gap-6">
         <aside className="hidden w-64 shrink-0 lg:block">
-          <div className="card sticky top-20 p-4">{facetPanel}</div>
+          {/* cap at the viewport (below the sticky header) so the panel scrolls internally */}
+          <div className="card sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto p-4">{facetPanel}</div>
         </aside>
 
         <div className="min-w-0 flex-1">

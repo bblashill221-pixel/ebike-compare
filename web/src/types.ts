@@ -1,5 +1,12 @@
 // Types for data/current/active/ebikes_normalized.json (schema_version 1.0).
 
+export interface Availability {
+  status: "in_stock" | "sold_out" | "unknown";
+  in_stock: boolean | null;
+  /** Per-axis option values that are sold out ({ Color: ["Black"], Size: [...] }). */
+  sold_out_options: Record<string, string[]>;
+}
+
 export interface Accessory {
   name: string;
   price: number | null;
@@ -41,6 +48,15 @@ export interface ColorOption {
   image: string | null;
 }
 
+/** A purchasable variant (size/color/battery combo) with its own price. */
+export interface Configuration {
+  options?: Record<string, string>;
+  price: number | null;
+  sku?: string;
+  available?: boolean;
+  color?: ColorOption | null;
+}
+
 export interface SpecsTyped {
   battery_wh?: number;
   cell_brand?: string;
@@ -63,6 +79,9 @@ export interface SpecsTyped {
   warranty_years?: number;
   connectivity?: string[];
   notable_tech?: string[];
+  /** Rider-height fit envelope (inches) across all frame sizes; either both set or neither. */
+  fit_height_min_in?: number;
+  fit_height_max_in?: number;
   [k: string]: unknown;
 }
 
@@ -71,6 +90,12 @@ export interface Analysis {
   percentiles: Record<string, number>;
   scores: Record<string, number>;
   highlights: string[];
+  /** Aftermarket part-price facts joined from the component catalog. */
+  component_quality?: {
+    parts_identified: number;
+    parts_priced: number;
+    aftermarket_value_usd: number | null;
+  };
 }
 
 export interface Model {
@@ -82,7 +107,12 @@ export interface Model {
   /** Shared id linking sibling tier entries of the same bike family. */
   family_id?: string | null;
   url: string;
+  /** Primary use category (first of product_types). */
   product_type?: string;
+  /** Every matching use category, primary first ("Cargo", "Folding", ...). */
+  product_types?: string[];
+  /** "Step-Thru" | "Step-Over (Mid-Step)" when the frame style is known. */
+  frame_style?: string | null;
   price: number | null;
   price_min: number | null;
   price_max: number | null;
@@ -95,7 +125,11 @@ export interface Model {
   specs: SpecGroups;
   colors?: ColorOption[];
   color_names?: string[];
-  configurations?: unknown[];
+  configurations?: Configuration[];
+  /** Stock summary from per-configuration availability flags. */
+  availability?: Availability;
+  /** The $0 items bundled with the bike (lights, fenders, racks, ...). */
+  included_accessories?: { name: string; price: number }[];
   analysis: Analysis;
 }
 

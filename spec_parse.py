@@ -46,6 +46,36 @@ def kg_to_lb(kg: float) -> float:
     return round(kg * 2.2046226, 1)
 
 
+# Rider-height ranges are free text ("4'11\" - 6'3\"", curly quotes, cm, or a
+# per-size dict {"R": "...", "L": "..."}). For the "does any frame size fit me?"
+# filter we only need the overall min/max, so we collect EVERY height token in the
+# value and take the envelope -- no need to model individual sizes.
+_FEET_INCH = re.compile(r"(\d)\s*['′]\s*(\d{1,2})?")   # 5'10", 5'10, 5' (straight/curly ')
+_CM = re.compile(r"(\d{2,3})\s*(?:[-–~]\s*(\d{2,3}))?\s*cm")   # "200cm" or "150 - 200 cm"
+_DEC_FT = re.compile(r"(\d(?:\.\d)?)\s*(?:ft\b|feet\b)")
+
+
+def height_tokens_in(text: str) -> list[float]:
+    """Every height mentioned in `text`, in inches. Prefers feet-inch notation;
+    falls back to centimetres, then decimal feet. Returns [] when none parse."""
+    t = str(text).replace("″", '"').replace("′", "'")   # curly ″ ′ -> " '
+    feet_inch = [int(f) * 12 + (int(i) if i else 0) for f, i in _FEET_INCH.findall(t)]
+    if feet_inch:
+        return [float(v) for v in feet_inch]
+    if "cm" in t.lower():
+        return [round(float(c) / 2.54, 1)
+                for lo, hi in _CM.findall(t) for c in (lo, hi) if c]
+    return [round(float(f) * 12, 1) for f in _DEC_FT.findall(t)]
+
+
+def height_range_in(value) -> tuple[float, float] | None:
+    """(min_in, max_in) across a rider-height value -- a range string or a
+    per-frame-size dict of range strings -- or None when no height parses."""
+    parts = value.values() if isinstance(value, dict) else [value]
+    toks = [tk for p in parts for tk in height_tokens_in(p)]
+    return (min(toks), max(toks)) if toks else None
+
+
 def percentile_rank(value: float, sorted_values: list[float]) -> float:
     """
     Fraction of the field this value is >= (0..1), via the midpoint method so
