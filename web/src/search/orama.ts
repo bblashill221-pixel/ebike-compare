@@ -29,7 +29,7 @@ export const ENUM_FIELDS = [
   "sensor_type",
 ] as const;
 
-export const BOOL_FIELDS = ["on_sale", "ul_listed"] as const;
+export const BOOL_FIELDS = ["on_sale", "ul_listed", "kids"] as const;
 
 export const RANGE_FIELDS = [
   "price",
@@ -59,6 +59,7 @@ const schema = {
   sensor_type: "enum",
   on_sale: "boolean",
   ul_listed: "boolean",
+  kids: "boolean",
   available: "boolean",
   price: "number",
   battery_wh: "number",
@@ -105,6 +106,7 @@ function toDoc(m: Model): Record<string, unknown> {
     sensor_type: t.sensor_type || "unknown",
     on_sale: !!m.pricing?.on_sale,
     ul_listed: !!t.ul_listed,
+    kids: !!t.kids,
     available: isAvailable(m),
     // lowest purchasable price across colors/configurations
     price: lowestPrice(m) ?? 0,

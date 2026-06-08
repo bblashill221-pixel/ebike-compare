@@ -79,6 +79,8 @@ export interface SpecsTyped {
   warranty_years?: number;
   connectivity?: string[];
   notable_tech?: string[];
+  /** True for kids-only models. */
+  kids?: boolean;
   /** Rider-height fit envelope across all frame sizes, in inches and mm; set together. */
   fit_height_min_in?: number;
   fit_height_max_in?: number;

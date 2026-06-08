@@ -36,6 +36,7 @@ const RANGE_SECTIONS: { field: RangeField; label: string }[] = [
 const BOOL_LABELS: Record<BoolField, string> = {
   on_sale: "On sale",
   ul_listed: "UL listed",
+  kids: "Kids",
 };
 
 /** Collapsible filter section: clickable header with a chevron, open by default. */
@@ -150,10 +151,21 @@ export function FacetPanel({ facetOptions, rangeBounds, facetCounts, filters, se
         </div>
       </div>
 
+      {/* kids-only models — top-level filter */}
+      <Section label="Kids" open={!collapsed.kids} onToggle={() => toggleSection("kids")}>
+        <button
+          type="button"
+          onClick={() => toggleBool("kids")}
+          className={`chip cursor-pointer ${filters.bools.kids ? "bg-brand-600 text-white" : ""}`}
+        >
+          Kids bikes only
+        </button>
+      </Section>
+
       {/* booleans */}
       <Section label="Features" open={!collapsed.features} onToggle={() => toggleSection("features")}>
         <div className="flex flex-wrap gap-2">
-          {BOOL_FIELDS.map((f) => (
+          {BOOL_FIELDS.filter((f) => f !== "kids").map((f) => (
             <button
               key={f}
               type="button"

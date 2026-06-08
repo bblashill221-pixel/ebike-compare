@@ -282,6 +282,16 @@ def _notable_tech(specs):
     return out
 
 
+_KIDS_RE = re.compile(r"\b(kids?|youth|junior|children'?s?)\b", re.I)
+
+
+def _kids(model: dict) -> bool | None:
+    """True for a kids-only model. Keyed off the model name (the reliable signal,
+    e.g. "Himiway C1 Kids eBike"); a broad spec scan false-matches "child seat",
+    payload "age" substrings, etc."""
+    return True if _KIDS_RE.search(model.get("model") or "") else None
+
+
 def _fit_height(model: dict) -> tuple[float | None, float | None]:
     """(min_in, max_in) the bike can fit, enveloped across every published
     rider-height range and frame size, or (None, None) -- unrounded inches, so the
@@ -335,6 +345,7 @@ def extract_typed_specs(model: dict) -> dict:
         "warranty_years": _warranty_years(model),
         "connectivity": _connectivity(specs),
         "notable_tech": _notable_tech(specs),
+        "kids": _kids(model),
         # rider-height fit envelope for the "fits my height" filter, in both units
         "fit_height_min_in": fit_min_in,
         "fit_height_max_in": fit_max_in,
