@@ -25,6 +25,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -52,6 +53,23 @@ EXPECTED_FIELDS: list[tuple[str, str]] = [
 ]
 
 
+def _has_rear_rack(model: dict) -> bool:
+    """The bike ships with / is built around a rear rack (so a rack load capacity
+    should be published): a rack in the included accessories, or a cargo bike."""
+    accs = " ".join(a.get("name", "") for a in (model.get("included_accessories") or []))
+    if re.search(r"rack", accs, re.I):
+        return True
+    return any("Cargo" in p for p in (model.get("product_types") or []))
+
+
+# Expected only when the predicate holds for a model: (key, label, predicate).
+# Bike payload (max_load_lb) is deliberately NOT required (often unlisted); a rear
+# rack's capacity is, but only for bikes that actually have a rear rack.
+CONDITIONAL_FIELDS = [
+    ("rack_load_lb", "Rear-rack load (lb)", _has_rear_rack),
+]
+
+
 def _present(v) -> bool:
     """A typed value counts as present unless it's null or an empty string/list/dict."""
     return v not in (None, "", [], {})
@@ -64,6 +82,7 @@ def _typed(model: dict) -> dict:
 def audit(models: list[dict]) -> dict:
     n = len(models)
     expected_keys = [k for k, _ in EXPECTED_FIELDS]
+    labels = {**dict(EXPECTED_FIELDS), **{k: lbl for k, lbl, _ in CONDITIONAL_FIELDS}}
 
     # coverage over EVERY typed key seen anywhere (the full field list)
     cov: dict[str, int] = {}
@@ -85,19 +104,21 @@ def audit(models: list[dict]) -> dict:
     for m in models:
         t = _typed(m)
         gaps = [k for k in expected_keys if not _present(t.get(k))]
+        gaps += [k for k, _, pred in CONDITIONAL_FIELDS
+                 if pred(m) and not _present(t.get(k))]
         m["data_audit"] = {"missing": gaps}      # annotate every model (empty when clean)
         brand, name = m.get("brand", ""), m.get("model", "")
-        label = dict(EXPECTED_FIELDS)
         for k in gaps:
-            missing.append({"brand": brand, "model": name, "field": k, "label": label[k]})
+            missing.append({"brand": brand, "model": name, "field": k, "label": labels[k]})
     missing.sort(key=lambda r: (r["brand"], r["model"], r["field"]))
 
-    by_field = {k: sum(1 for r in missing if r["field"] == k) for k, _ in EXPECTED_FIELDS}
+    flag_keys = expected_keys + [k for k, _, _ in CONDITIONAL_FIELDS]
+    by_field = {k: sum(1 for r in missing if r["field"] == k) for k in flag_keys}
     flagged_models = sum(1 for m in models if m["data_audit"]["missing"])
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "total_models": n,
-        "expected_fields": [k for k, _ in EXPECTED_FIELDS],
+        "expected_fields": flag_keys,
         "coverage": coverage,
         "missing": missing,
         "summary": {

@@ -67,6 +67,10 @@ export interface SpecsTyped {
   drive_type?: string;
   range_mi?: number;
   weight_lb?: number;
+  /** The bike's max payload / total-weight limit (lb). */
+  max_load_lb?: number;
+  /** Rear-rack max load capacity (lb). */
+  rack_load_lb?: number;
   brake_type?: string;
   drivetrain_type?: string;
   gears?: number;

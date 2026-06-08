@@ -137,6 +137,46 @@ def _weight_lb(specs):
     return kg_to_lb(kg) if kg else None
 
 
+# The BIKE's max payload and a REAR RACK's capacity are different max-weight specs
+# (a bike's own payload is often unlisted; a rack's capacity should be), so keep
+# them separate. Both appear under ~50 label variants.
+_BIKE_LOAD_RE = re.compile(
+    r"payload|load.?capac|weight.?limit|carry.?capac|max.?load"
+    r"|(?:rider|system|total).*weight|gross.?vehicle.*weight|max.?rider.?weight", re.I)
+_RACK_LOAD_RE = re.compile(r"rack.*(?:load|capac|weight|payload)", re.I)
+# NOT the bike's payload: rack/basket sub-limits, the fork, or the bike's OWN
+# (gross/curb/net/unladen) weight.
+_LOAD_NOT_BIKE = ("rack", "basket", "fork", "gross_weight", "curb", "net_weight", "unladen")
+
+
+def _lbs_from(specs, label_re, bad=()):
+    """Largest lb figure across spec rows whose label matches `label_re` (and not
+    `bad`); falls back to converting the largest kg figure."""
+    lbs, kgs = [], []
+    for k, v in specs.items():
+        kl = k.lower()
+        if not label_re.search(kl) or any(b in kl for b in bad):
+            continue
+        s = str(v)
+        lbs += [float(x) for x in re.findall(r"(\d{2,4}(?:\.\d+)?)\s*lb", s, re.I)]
+        kgs += [float(x) for x in re.findall(r"(\d{2,4}(?:\.\d+)?)\s*kg", s, re.I)]
+    if lbs:
+        return round(max(lbs))
+    if kgs:
+        return round(kg_to_lb(max(kgs)))
+    return None
+
+
+def _max_load_lb(specs):
+    """The BIKE's max payload / total-weight limit (lb) -- not a rack/basket/own weight."""
+    return _lbs_from(specs, _BIKE_LOAD_RE, _LOAD_NOT_BIKE)
+
+
+def _rack_load_lb(specs):
+    """Rear-rack max load capacity (lb)."""
+    return _lbs_from(specs, _RACK_LOAD_RE)
+
+
 def _brake_type(specs):
     txt = find_spec(specs, "brake").lower()
     if not txt:
@@ -333,6 +373,8 @@ def extract_typed_specs(model: dict) -> dict:
         "drive_type": _drive_type(specs),
         "range_mi": _range_mi(specs),
         "weight_lb": _weight_lb(specs),
+        "max_load_lb": _max_load_lb(specs),
+        "rack_load_lb": _rack_load_lb(specs),
         "brake_type": _brake_type(specs),
         "drivetrain_type": _drivetrain_type(specs),
         "gears": _gears(specs),

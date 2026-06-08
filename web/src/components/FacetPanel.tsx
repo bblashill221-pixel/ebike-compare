@@ -30,6 +30,7 @@ const RANGE_SECTIONS: { field: RangeField; label: string }[] = [
   { field: "torque_nm", label: "Torque (Nm)" },
   { field: "range_mi", label: "Range (mi)" },
   { field: "weight_lb", label: "Weight (lb)" },
+  { field: "max_load_lb", label: "Max load (lb)" },
   { field: "gears", label: "Gears" },
 ];
 

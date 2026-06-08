@@ -39,6 +39,7 @@ export const RANGE_FIELDS = [
   "torque_nm",
   "range_mi",
   "weight_lb",
+  "max_load_lb",
   "gears",
 ] as const;
 
@@ -68,6 +69,7 @@ const schema = {
   torque_nm: "number",
   range_mi: "number",
   weight_lb: "number",
+  max_load_lb: "number",
   gears: "number",
   // rider-height fit envelope in both units; see the riderHeightIn filter below
   fit_height_min_in: "number",
@@ -116,6 +118,7 @@ function toDoc(m: Model): Record<string, unknown> {
     torque_nm: t.torque_nm ?? 0,
     range_mi: t.range_mi ?? 0,
     weight_lb: t.weight_lb ?? 0,
+    max_load_lb: t.max_load_lb ?? 0,
     gears: t.gears ?? 0,
     // No published height range -> sentinels that match no rider height, so these
     // bikes are excluded whenever the height filter is active (and unaffected when
