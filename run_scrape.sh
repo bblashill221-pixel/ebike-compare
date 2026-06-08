@@ -87,6 +87,9 @@ print((json.load(open(f[0])).get('generated_at','') or '')[:10]) if f else print
     echo "--- $(date -Is) : fill_warranty + shipping/accessories + component costs ---"
     "$PY" "$PROJECT_DIR/fill_warranty.py" || true
     "$PY" "$PROJECT_DIR/enrich_shipping_accessories.py" || true
+    # Fill each bike's rear-rack max load from the brand's rack accessory pages
+    # (the bike's own sheet often omits it). Needs available_accessories above.
+    "$PY" "$PROJECT_DIR/enrich_rack_load.py" || true
     "$PY" "$PROJECT_DIR/add_geometry.py" || true
     "$PY" "$PROJECT_DIR/add_configurations.py" || true
     "$PY" "$PROJECT_DIR/add_config_colors.py" || true
