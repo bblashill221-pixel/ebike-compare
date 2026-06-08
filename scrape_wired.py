@@ -19,6 +19,7 @@ import html
 import json
 import re
 import sys
+import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -28,6 +29,25 @@ from bike_taxonomy import classify_product_types
 BASE = "https://wiredebikes.com"
 LOGO = "https://wiredebikes.com/cdn/shop/files/Wired_1200_600.png?v=1739722992"
 COLLECTION = "wired-ebikes"
+
+
+def detect_shipping() -> dict:
+    """Infer shipping from the storefront -- free shipping is only claimed when the
+    site says so. WIRED advertises a flat fee ("Flat rate $275 shipping"), so it is
+    NOT free; a "free shipping" claim -> free; otherwise leave it unknown."""
+    try:
+        req = urllib.request.Request(BASE + "/", headers={"User-Agent": "Mozilla/5.0"})
+        page = urllib.request.urlopen(req, timeout=20).read().decode("utf-8", "ignore")
+    except Exception:
+        return {"cost": None, "free": None}
+    m = (re.search(r"flat[\s-]?rate[^$]{0,15}\$\s*(\d{2,4})\s*shipping", page, re.I)
+         or re.search(r"\$\s*(\d{2,4})\s*flat[\s-]?rate\s*shipping", page, re.I))
+    if m:
+        cost = int(m.group(1))
+        return {"cost": cost, "free": cost == 0}
+    if re.search(r"free\s+shipping", page, re.I):
+        return {"cost": 0, "free": True}
+    return {"cost": None, "free": None}
 
 
 def _li_pairs(block: str) -> dict:
@@ -58,6 +78,7 @@ def parse_specs(body_html: str) -> dict:
 
 def discover_models() -> list[dict]:
     data = fetch_json(f"{BASE}/collections/{COLLECTION}/products.json?limit=250")
+    shipping = detect_shipping()
     models = []
     for p in data.get("products", []):
         variants = p.get("variants", [])
@@ -90,6 +111,7 @@ def discover_models() -> list[dict]:
             "specs": {"all": specs},
             "spec_count": len(specs),
             "warranty": None,
+            "shipping": shipping,   # found on the site, not assumed free
             "scrape_error": None if specs else "no specs in description",
         })
     return models

@@ -90,7 +90,10 @@ def main():
         d["available_accessories_count"] = len(catalog)
         for m in d.get("models", []):
             brand_override = NON_FREE_SHIPPING.get(brand)
-            m["shipping"] = brand_override or {"cost": 0, "free": True}
+            # A scraper that determined shipping from the site (e.g. WIRED's flat
+            # $275 fee) wins; otherwise a brand override, else the DTC free default.
+            scraped = m.get("shipping") if (m.get("shipping") or {}).get("free") is not None else None
+            m["shipping"] = scraped or brand_override or {"cost": 0, "free": True}
             m["free_accessories"] = free_accessories_from_specs(m)
         json.dump(d, open(f, "w"), indent=2, ensure_ascii=False)
         nfree = sum(len(m.get("free_accessories", [])) for m in d.get("models", []))
