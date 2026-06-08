@@ -31,6 +31,7 @@ ACC_COLLECTION = {
     "heybike": "accessories", "mokwheel": "all-accessories", "himiway": "accessories",
     "vvolt": "accessories", "evelo": "must-have-accessories", "blix": "accessories",
     "euphree": None, "ride1up": None, "specialized": None,
+    "wired": None, "magician": None,
 }
 # Brands/models that are not free shipping (none known; placeholder for overrides).
 NON_FREE_SHIPPING: dict = {}

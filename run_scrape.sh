@@ -50,6 +50,8 @@ SCRAPERS=(
     "scrape_juiced.py|juiced_ebikes|"
     "scrape_vivi.py|vivi_ebikes|"
     "scrape_cemoto.py|cemoto_ebikes|"
+    "scrape_wired.py|wired_ebikes|"
+    "scrape_magician.py|magician_ebikes|"
 )
 
 run_all() {
