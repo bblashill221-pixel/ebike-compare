@@ -163,8 +163,11 @@ export async function runSearch(
     if (vals && vals.length) where[f] = f === "product_types" ? { containsAny: vals } : { in: vals };
   }
   for (const f of BOOL_FIELDS) {
+    if (f === "kids") continue; // inverted filter, handled below
     if (filters.bools[f]) where[f] = { eq: true };
   }
+  // "Exclude Kids Ebikes" toggle on -> hide kids-only models (default off)
+  if (filters.bools.kids) where.kids = { eq: false };
   // "Sold out" toggle off -> only in-stock models
   if (!includeSoldOut) where.available = { eq: true };
   for (const f of RANGE_FIELDS) {
