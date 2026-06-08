@@ -231,7 +231,7 @@ export function FacetPanel({ facetOptions, rangeBounds, facetCounts, filters, se
             </button>
           )}
         </div>
-        <p className="mt-1 text-xs text-slate-400">Bikes without a listed fit range are kept.</p>
+        <p className="mt-1 text-xs text-slate-400">Bikes without a listed fit range are hidden.</p>
       </Section>
 
       {/* enum facets */}

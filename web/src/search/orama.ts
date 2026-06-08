@@ -115,13 +115,13 @@ function toDoc(m: Model): Record<string, unknown> {
     range_mi: t.range_mi ?? 0,
     weight_lb: t.weight_lb ?? 0,
     gears: t.gears ?? 0,
-    // Lenient sentinels: a bike with no published height range gets [0, huge] so
-    // it always satisfies the "fits my height" filter (we never hide a bike just
-    // for lacking the data); see runSearch.
-    fit_height_min_in: t.fit_height_min_in ?? 0,
-    fit_height_max_in: t.fit_height_max_in ?? 9999,
-    fit_height_min_mm: t.fit_height_min_mm ?? 0,
-    fit_height_max_mm: t.fit_height_max_mm ?? 999999,
+    // No published height range -> sentinels that match no rider height, so these
+    // bikes are excluded whenever the height filter is active (and unaffected when
+    // it isn't, since the field is only queried then). See runSearch.
+    fit_height_min_in: t.fit_height_min_in ?? 99999,
+    fit_height_max_in: t.fit_height_max_in ?? 0,
+    fit_height_min_mm: t.fit_height_min_mm ?? 99999,
+    fit_height_max_mm: t.fit_height_max_mm ?? 0,
   };
 }
 
@@ -173,7 +173,8 @@ export async function runSearch(
   // expressed with `between` (min in [0, H] and max in [H, huge]). The query runs in
   // the active unit -- whole inches for imperial, mm for metric -- against the
   // matching indexed envelope, so neither mode loses precision to cross-unit
-  // rounding. Data-less bikes index as [0, huge] so they always pass.
+  // rounding. Bikes with no published range index as non-matching sentinels, so
+  // they're excluded here (only when a height is set).
   if (filters.riderHeightIn != null) {
     if (system === "metric") {
       const mm = Math.round(filters.riderHeightIn * 25.4);
