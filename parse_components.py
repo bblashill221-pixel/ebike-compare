@@ -21,6 +21,21 @@ SHIFTING = ("Shimano", "SRAM", "microSHIFT", "MicroShift", "Enviolo", "NuVinci",
 BRAKES = ("Tektro", "Shimano", "SRAM", "Magura", "TRP", "Hayes", "Bengal", "Zoom",
           "Nutt", "Promax", "Logan", "Dorado", "Juin Tech", "Clarks", "Apse",
           "Star Union", "Star-Union")
+
+# Brake series that are hydraulic disc even when the spec omits "hydraulic": the
+# SRAM disc-brake line (DB/Maven/Code/Guide/Level/G2/RED E1), Shimano's hydraulic
+# groups, Magura MT, TRP/Trickstuff, and Tektro's HD-/named hydraulic calipers.
+# The leading alternation also tolerates the common "hydralic"/"hyrdaulic" typos.
+_HYDRAULIC_BRAKE = re.compile(
+    r"hydr\w{0,3}lic|hyrd\w{0,3}lic"
+    r"|\bDB\s?\d|\bDB\b|\bMaven\b|\bCode\b|\bGuide\b|\bLevel\b|\bG2\b|RED\s*E1"
+    r"|\bMT[-\s]?\d|deore|\bSLX\b|\bXT\b|\bXTR\b|\bCUES\b|\bGRX\b|\bRX\d{3}"
+    r"|DH-?R|Trickstuff|Quadiem|\bSlate\b"
+    r"|\bHD[-\s]?[A-Z]?\d|Orion|Auriga|Gemini|Juin",
+    re.I)
+
+# Mechanical (cable-actuated) disc brake signals, incl. Tektro's MD- series.
+_MECHANICAL_BRAKE = re.compile(r"mechanical|cable|\bMD[-\s]?[A-Z]?\d", re.I)
 SUSPENSION = ("RockShox", "Rock Shox", "SR Suntour", "Suntour", "Fox", "Manitou",
               "X-Fusion", "DNM", "Mozo", "RST", "Marzocchi", "Mastodon", "Zoom")
 MOTORS = ("Bosch", "Bafang", "Shengyi", "Ananda", "Das-Kit", "DAS-KIT", "Dapu",
@@ -131,6 +146,45 @@ def _speeds(text: str):
 
 
 _CVT = r"enviolo|nuvinci|\bcvt\b|continuously[\s-]?variable|infinitely[\s-]?geared|stepless|automatiq"
+
+
+# ------------------------ shared field extractors ------------------------
+# Sub-logic shared by several component parsers, centralized so a fix lands in
+# every parser at once instead of in N copy-pasted blocks.
+
+# Material classification, in global priority order. The key correctness point:
+# "carbon" means carbon *fiber*; a "(high) carbon steel" alloy is STEEL — the
+# negative lookahead keeps the carbon rule from firing on it (the bug that made
+# VIVI's "High Carbon Steel" frame read as a carbon-fiber frame).
+_MATERIAL_RULES = [
+    ("carbon",    r"carbon(?![\s-]*steel)"),
+    ("stainless", r"stainless"),
+    ("aluminum",  r"6061|6063|alumin|alloy"),
+    ("steel",     r"cro-?mo|chromoly|\bsteel\b"),
+    ("magnesium", r"magnesium"),
+    ("composite", r"composite|nylon|plastic|resin"),
+    ("leather",   r"leather"),
+    ("rubber",    r"rubber"),
+    ("foam",      r"foam"),
+]
+
+
+def material(text: str, *allowed: str) -> str | None:
+    """First material (in global priority order) whose pattern matches `text`, limited
+    to the `allowed` vocabulary the calling parser recognizes, e.g.
+    `material(low, "carbon", "aluminum", "steel")`. Returns None when nothing matches
+    (callers only set out["material"] on a hit, preserving "omit when unknown")."""
+    low = text.lower()
+    for name, pat in _MATERIAL_RULES:
+        if name in allowed and re.search(pat, low):
+            return name
+    return None
+
+
+def voltage_v(text: str) -> int | None:
+    """System voltage like "48V" — shared by the motor and battery parsers."""
+    m = re.search(r"(\d{2,3})\s*v\b", text, re.I)
+    return int(m.group(1)) if m else None
 
 
 # --------------------------------- parsers -----------------------------------
@@ -272,9 +326,9 @@ def _brake(v, brand, rotor_text=""):
                 out["model"] = cand
                 rest = rest.replace(cand, "", 1)
     low = v.lower()
-    if "hydraulic" in low:
+    if _HYDRAULIC_BRAKE.search(v):
         out["actuation"] = "hydraulic"
-    elif re.search(r"mechanical|cable", low):
+    elif _MECHANICAL_BRAKE.search(v):
         out["actuation"] = "mechanical"
     if "disc" in low:
         out["kind"] = "disc"
@@ -299,6 +353,20 @@ def _brake(v, brand, rotor_text=""):
     mt = re.search(r"(\d(?:\.\d)?)\s*mm\s*(?:thick|thickness)|x\s*(\d(?:\.\d)?)\s*mm", blob, re.I)
     if mt:
         out["rotor_thickness_mm"] = float(mt.group(1) or mt.group(2))
+    # Many vendors list only the brake model ("SRAM DB8 Stealth 200mm", "Tektro
+    # Orion HD-M745 Quad-Piston"); infer the disc/hydraulic kind they omit so it
+    # doesn't read as a rim brake downstream. A rotor, a piston caliper, or a
+    # known hydraulic series each implies a disc brake.
+    blob_l = (v + " " + (rotor_text or "")).lower()
+    if "kind" not in out and (out.get("rotor_mm") or out.get("pistons")
+                              or "piston" in blob_l or _HYDRAULIC_BRAKE.search(v)):
+        out["kind"] = "disc"
+    if out.get("kind") == "disc" and "actuation" not in out:
+        # hydraulic when a known hydraulic series or a (multi-)piston caliper —
+        # mechanical disc brakes don't advertise piston counts
+        if (_HYDRAULIC_BRAKE.search(v) or "piston" in blob_l
+                or (out.get("pistons") or 0) >= 2):
+            out["actuation"] = "hydraulic"
     out["details"] = _clean(rest)
     return out
 
@@ -310,25 +378,38 @@ def _motor(v, brand):
     if man:
         out["manufacturer"] = man
     low = v.lower()
+    # Boost-mode figures ("80Nm (96Nm in Boost Mode)", "(1440W in Boost Mode)")
+    # are a special unlock, not the continuous or stated-peak rating — drop them
+    # so they can't be read as either.
+    low = re.sub(r"\([^)]*boost[^)]*\)", " ", low)
     if re.search(r"mid[\s-]?drive|mid[\s-]?motor", low):
         out["placement"] = "mid"
     elif re.search(r"\bhub\b", low):
         out["placement"] = "hub"
-    mp = re.search(r"(\d{3,4})\s*w[^.]{0,14}peak|peak[^0-9]{0,14}(\d{3,4})\s*w", low)
+    # Peak first. "Peak <n>W" ("Rated 750W, Peak 1200W") binds tighter than
+    # "<n>W ... Peak" ("1188W Peak"), and neither gap may cross another number
+    # ("750W (1188W Peak)" peaks at 1188), a comma/paren ("1000W Peak, Rated
+    # 500W" must not read 500), or a slash ("1764W Peak Hub Motor / 750W
+    # Nominal" peaks at 1764, not the post-slash 750).
+    mp = (re.search(r"peak[^0-9,()/]{0,14}(\d{3,4})\s*w", low)
+          or re.search(r"(\d{3,4})\s*w[^.\d]{0,14}peak", low))
     if mp:
-        out["peak_w"] = int(mp.group(1) or mp.group(2))
-    cont = re.sub(r"(\d{3,4})\s*w[^.]{0,14}peak|peak[^0-9]{0,14}\d{3,4}\s*w", " ", low)
+        out["peak_w"] = int(mp.group(1))
+        cont = low[:mp.start()] + " " + low[mp.end():]
+    else:
+        cont = low
     m, _ = _consume(cont, r"(\d{3,4})\s*w\b")
     if m:
         out["power_w"] = int(m.group(1))
     m = re.search(r"(\d{2,3})\s*n[·.\s]?m", low)
     if m:
         out["torque_nm"] = int(m.group(1))
-    m = re.search(r"(\d{2,3})\s*v\b", low)
-    if m:
-        out["voltage_v"] = int(m.group(1))
+    volt = voltage_v(low)
+    if volt is not None:
+        out["voltage_v"] = volt
     # strip the matched numbers (and their orphaned qualifiers) from details
-    for pat in (r"\d{3,4}\s*w\s*\(?\s*peak\)?", r"peak[^0-9]{0,14}\d{3,4}\s*w",
+    for pat in (r"\([^)]*boost[^)]*\)",
+                r"\d{3,4}\s*w\s*\(?\s*peak\)?", r"peak[^0-9]{0,14}\d{3,4}\s*w",
                 r"\d{3,4}\s*w", r"\d{2,3}\s*n[·.\s]?m", r"\d{2,3}\s*v\b",
                 r"\((?:sustained|continuous|nominal|rated|peak|max\.?\s*power|cont\.?)\)",
                 r"\btorque\b"):
@@ -411,9 +492,9 @@ def _battery(v, brand):
         if total_wh and total_wh != per_pack:
             out["pack_count"] = count
             out["total_capacity_wh"] = int(total_wh) if total_wh == int(total_wh) else round(total_wh, 1)
-    m = re.search(r"(\d{2,3})\s*v\b", v, re.I)
-    if m:
-        out["voltage_v"] = int(m.group(1))
+    volt = voltage_v(v)
+    if volt is not None:
+        out["voltage_v"] = volt
     m = re.search(r"(\d{1,2}(?:\.\d)?)\s*ah", v, re.I)
     if m:
         out["amphours_ah"] = float(m.group(1))
@@ -473,12 +554,9 @@ def _stem(v, brand):
     if man:
         out["manufacturer"] = man
     low = v.lower()
-    if "carbon" in low:
-        out["material"] = "carbon"
-    elif re.search(r"alloy|alumin", low):
-        out["material"] = "aluminum"
-    elif "steel" in low:
-        out["material"] = "steel"
+    mat = material(low, "carbon", "aluminum", "steel")
+    if mat:
+        out["material"] = mat
     if "quill" in low:
         out["type"] = "quill"
     elif re.search(r"thread\s*less|ahead", low):
@@ -532,10 +610,9 @@ def _seatpost(v, brand):
         out["type"] = "dropper"
     elif re.search(r"suspension|travel", low):
         out["type"] = "suspension"
-    if "carbon" in low:
-        out["material"] = "carbon"
-    elif re.search(r"alloy|alumin", low):
-        out["material"] = "aluminum"
+    mat = material(low, "carbon", "aluminum")
+    if mat:
+        out["material"] = mat
     md = re.search(r"(?:Φ|ø|Ø)?\s*(27\.2|28\.6|30\.4|30\.9|31\.6|33\.9|34\.9)(?![\d.])", v)
     if md:
         out["diameter_mm"] = float(md.group(1))
@@ -571,12 +648,9 @@ def _handlebars(v, brand):
     if man:
         out["manufacturer"] = man
     low = v.lower()
-    if "carbon" in low:
-        out["material"] = "carbon"
-    elif re.search(r"alloy|alumin", low):
-        out["material"] = "aluminum"
-    elif "steel" in low:
-        out["material"] = "steel"
+    mat = material(low, "carbon", "aluminum", "steel")
+    if mat:
+        out["material"] = mat
     if "bmx" in low:
         out["type"] = "bmx"
     elif re.search(r"riser|rise", low):
@@ -692,12 +766,9 @@ def _pedals(v, brand):
     if mt:
         out["thread"] = mt.group(1) + '"'
         rest = rest.replace(mt.group(0), " ", 1)
-    if "carbon" in low:
-        out["material"] = "carbon"
-    elif re.search(r"alloy|alumin", low):
-        out["material"] = "aluminum"
-    elif re.search(r"composite|nylon|plastic|resin", low):
-        out["material"] = "composite"
+    mat = material(low, "carbon", "aluminum", "composite")
+    if mat:
+        out["material"] = mat
     if "fold" in low:
         out["type"] = "folding"
     elif "platform" in low:
@@ -711,10 +782,9 @@ def _spokes(v, brand):
     mg = re.search(r"(\d{1,2})\s*g\b", v, re.I)
     if mg:
         out["gauge"] = int(mg.group(1))
-    if "stainless" in low:
-        out["material"] = "stainless"
-    elif re.search(r"alloy|alumin", low):
-        out["material"] = "aluminum"
+    mat = material(low, "stainless", "aluminum")
+    if mat:
+        out["material"] = mat
     out["details"] = _clean(v)
     return out
 
@@ -740,8 +810,9 @@ def _seat_binder(v, brand):
     if md:
         out["diameter_mm"] = float(md.group(1))
         rest = re.sub(r"\d{2}(?:\.\d)?\s*mm", " ", rest, count=1)
-    if re.search(r"alloy|alumin", low):
-        out["material"] = "aluminum"
+    mat = material(low, "aluminum")
+    if mat:
+        out["material"] = mat
     if re.search(r"quick.?release|\bqr\b", low):
         out["type"] = "quick_release"
     elif "bolt" in low:
@@ -765,14 +836,9 @@ def _tubes(v, brand):
 
 def _frame(v, brand):
     out, low = {}, v.lower()
-    if "carbon" in low:
-        out["material"] = "carbon"
-    elif re.search(r"6061|6063|alumin|alloy", low):
-        out["material"] = "aluminum"
-    elif re.search(r"cro-?mo|chromoly|steel", low):
-        out["material"] = "steel"
-    elif "magnesium" in low:
-        out["material"] = "magnesium"
+    mat = material(low, "carbon", "aluminum", "steel", "magnesium")
+    if mat:
+        out["material"] = mat
     out["integrated_battery"] = bool(re.search(r"intern(al)? battery|integrated battery|in[\s-]?frame batter", low))
     out["folding"] = bool(re.search(r"fold", low))
     out["details"] = _clean(v)
@@ -781,10 +847,9 @@ def _frame(v, brand):
 
 def _rims(v, brand):
     out, low = {}, v.lower()
-    if re.search(r"alloy|alumin", low):
-        out["material"] = "aluminum"
-    elif "steel" in low:
-        out["material"] = "steel"
+    mat = material(low, "aluminum", "steel")
+    if mat:
+        out["material"] = mat
     out["double_wall"] = bool(re.search(r"double.?wall", low))
     ms = re.search(r"\b(\d{2}(?:\.\d)?)\s*(?:\"|in\b|inch)", low)
     if ms:
@@ -842,12 +907,9 @@ def _grips(v, brand):
         out["manufacturer"] = man
     out["lock_on"] = bool(re.search(r"lock[\s-]?on|locking|lockable", low))
     out["ergonomic"] = "ergonomic" in low
-    if "leather" in low:
-        out["material"] = "leather"
-    elif "rubber" in low:
-        out["material"] = "rubber"
-    elif "foam" in low:
-        out["material"] = "foam"
+    mat = material(low, "leather", "rubber", "foam")
+    if mat:
+        out["material"] = mat
     out["details"] = _clean(rest)
     return out
 
@@ -895,8 +957,9 @@ def _wheel(v, brand):
         out["valve"] = "schrader"
     out["double_wall"] = bool(re.search(r"double.?wall", low))
     out["tubeless"] = "tubeless" in low
-    if re.search(r"alloy|alumin", low):
-        out["material"] = "aluminum"
+    mat = material(low, "aluminum")
+    if mat:
+        out["material"] = mat
     for pat in (r"\d{2}(?:\.\d)?\s*(?:\"|in\b|inch)", r"\d{2}\s*(?:hole|h\b)", r"\d{2}\s*g\b",
                 r"\d{1,2}x\d{2,3}\s*mm?", r"thru[\s-]?axle|nutted\s*axle|quick[\s-]?release",
                 r"presta|schrader", r"double.?wall", r"tubeless(?:\s*(?:ready|compatible))?",
@@ -1107,6 +1170,11 @@ def _u_w(v):
     return int(m.group(1)) if m else None
 
 
+def _dethousand(s: str) -> str:
+    """Strip thousands separators so "1,200W" reads 1200, not 200."""
+    return re.sub(r"(?<=\d),(?=\d{3})", "", s)
+
+
 def unitize(field: str, value):
     """A dict {suffixed_field: number} for a recognized standalone measurement, else
     None. Toggle-able dimensions (length/speed/weight/range) emit BOTH units (native
@@ -1115,6 +1183,7 @@ def unitize(field: str, value):
     weight_size 'One Size') so the original string is kept untouched."""
     if not isinstance(value, str):
         return None
+    value = _dethousand(value)
     f = field.lower()
 
     if "speed" in f and "speeds" not in f and "gear" not in f:
@@ -1141,6 +1210,7 @@ def parse_component(field: str, value, brand: str | None = None,
     fn = _resolver(field)
     if fn is None or not isinstance(value, str) or not value.strip():
         return None
+    value = _dethousand(value)   # "1,200W" must parse as 1200, not 200
     if fn is _brake:
         rotor = ""
         for k, sv in (siblings or {}).items():
