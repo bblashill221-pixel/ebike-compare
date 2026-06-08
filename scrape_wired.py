@@ -3,14 +3,15 @@
 WIRED Ebikes (wiredebikes.com) spec scraper (Shopify + Playwright).
 
 The model list, colors and price come from the `wired-ebikes` collection feed.
-WIRED builds product pages with GemPages: the user-facing specs are a RENDERED
-stat grid (PEAK POWER / TOP SPEED / TORQUE / RANGE) plus a "Total weight of
-bike …" callout — not the product's body_html, whose hidden "Specifications"
-block is often stale (e.g. the Cruiser page shows 3200W / 90 mi / 153Nm / 35+ mph
-and 115 lb, while its feed body_html says 3000W / 100 mi). So each page is
-rendered and the displayed stats are read; body_html only fills descriptive specs
-the grid lacks (battery, brakes, suspension, frame, display). Shipping is read
-from the storefront (WIRED charges a flat fee — not free).
+WIRED builds product pages with GemPages. The full per-model spec sheet is a
+rendered "DETAILED SPECS" section (categories -> spec label -> value: motor,
+battery V/Ah, drivetrain, frame, fork, tires, display, range, top speed, …) plus
+a "Total weight of bike …" callout. That section is authoritative; the product's
+body_html "Specifications" block is stale (e.g. the Cruiser page lists a 60V
+1500W motor peaking at 3200W, while body_html says 3000W). So each page is
+rendered and the DETAILED SPECS read; body_html only fills anything still missing
+(brakes, certifications). Shipping is read from the storefront (WIRED charges a
+flat fee — not free).
 
 Usage:
     python scrape_wired.py [-o out.json] [--limit N] [--concurrency N] [--headed]
@@ -76,31 +77,49 @@ def parse_body_specs(body_html: str) -> dict:
     return _li_pairs(m.group(1)) if m else _li_pairs(body_html)
 
 
-# Rendered hero stat grid: a big value with a small label. Read the label/value
-# pairs; _STAT_LABEL maps each to the spec field the pipeline expects.
-JS_STATS = r"""() => {
-    const norm = s => (s || '').replace(/\s+/g, ' ').trim();
-    const LAB = /^(peak power|top speed|max speed|torque|range|motor|battery|voltage)\b/i;
-    const out = [];
-    for (const lab of document.querySelectorAll('p,span,div,h4,h5')) {
-        const L = norm(lab.textContent);
-        if (!LAB.test(L) || L.length > 24) continue;
-        let val = '';
-        const par = lab.parentElement;
-        const h = par && par.querySelector('h1,h2,h3,h4,[class*=gp-text-instant]');
-        if (h) val = norm(h.textContent);
-        if ((!val || val === L) && lab.previousElementSibling) val = norm(lab.previousElementSibling.textContent);
-        if (val && val !== L && val.length < 40 && /\d/.test(val)) out.push([L, val]);
-    }
-    return out;
-}"""
+# Each product page has a "DETAILED SPECS" section: category headers, then a spec
+# label (uppercase) followed by its value sentence(s). Comprehensive and per-model
+# accurate (motor, battery V/Ah, drivetrain, frame, fork, tires, display, range),
+# unlike the stale body_html. Parsed from the rendered page text.
+_SPEC_CATEGORIES = {"MOTOR & PERFORMANCE", "BATTERY & ELECTRONICS", "FRAME & COMPONENTS",
+                    "SAFETY & EXTRAS", "WARRANTY & SUPPORT", "GEOMETRY", "DETAILED SPECS"}
+_SPEC_LABELS = {"MOTOR", "TOP SPEED", "RIDE MODES", "BATTERIES", "BATTERY", "CONTROLLER",
+                "DISPLAY", "PEDAL ASSIST", "THROTTLE", "RANGE", "DRIVETRAIN", "FRAME",
+                "FORK", "SHOCK", "TIRES", "TIRE", "BRAKES", "BRAKE", "SUSPENSION",
+                "WHEELS", "WHEEL", "WARRANTY", "WEIGHT", "SENSOR", "CHARGER", "LIGHTS",
+                "LIGHTING", "RACK", "FENDERS", "SADDLE", "STEM", "HANDLEBARS", "HORN",
+                "KICKSTAND", "GEARING"}
+_SPEC_END = ("HELP VIDEOS", "TERMS OF SERVICE", "EBIKE LAWS", "FREQUENTLY ASKED",
+             "REVIEWS", "YOU MAY ALSO LIKE", "NEWSLETTER", "RETURNS")
+_LABEL_FIX = {"BATTERIES": "Battery", "TIRE": "Tires", "BRAKE": "Brakes", "WHEEL": "Wheels"}
 
-_STAT_LABEL = {
-    "peak power": "Motor",   # "3200W" -> peak motor power
-    "top speed": "Top Speed", "max speed": "Top Speed",
-    "torque": "Torque", "range": "Range",
-    "motor": "Motor", "battery": "Battery", "voltage": "Voltage",
-}
+
+def parse_detailed_specs(body_text: str) -> dict:
+    """Read the DETAILED SPECS list from the rendered page text into {label: value}."""
+    lines = [l.strip() for l in body_text.split("\n") if l.strip()]
+    try:
+        start = next(i for i, l in enumerate(lines) if l.upper() == "DETAILED SPECS")
+    except StopIteration:
+        return {}
+    out: dict[str, str] = {}
+    cur, buf = None, []
+
+    def flush():
+        if cur and buf:
+            out.setdefault(cur, " ".join(buf)[:200].strip())
+
+    for l in lines[start + 1:]:
+        u = l.upper()
+        if any(u.startswith(e) for e in _SPEC_END):
+            break
+        if u in _SPEC_CATEGORIES:
+            flush(); cur, buf = None, []
+        elif u in _SPEC_LABELS and len(l) < 24:
+            flush(); cur, buf = _LABEL_FIX.get(u, l.title()), []
+        elif cur:
+            buf.append(l)
+    flush()
+    return out
 
 
 def discover_models() -> list[dict]:
@@ -140,23 +159,23 @@ def discover_models() -> list[dict]:
     return models
 
 
-def _stats_to_specs(stats: list, body_text: str, body_html: str) -> dict:
-    """Merge the rendered hero stats (authoritative — what the page shows) + the
-    weight callout, then fill remaining descriptive specs from the feed body_html."""
-    specs: dict[str, str] = {}
-    for label, value in stats:
-        key = _STAT_LABEL.get(re.sub(r"\s*\(.*?\)", "", label).strip().lower())
-        if not key or key in specs:
-            continue
-        if key == "Motor" and re.search(r"\d\s*w", value, re.I) and "peak" not in value.lower():
-            value = f"{value} peak"
-        specs[key] = value
+def _merge_specs(body_text: str, body_html: str) -> dict:
+    """DETAILED SPECS section (primary, comprehensive) + the weight callout, then
+    fill anything still missing (brakes, certs) from the feed body_html."""
+    specs = parse_detailed_specs(body_text)
     mw = (re.search(r"total weight[^=:\n]*both batteries\s*[=:]\s*([\d.]+)\s*lb", body_text, re.I)
           or re.search(r"\bweight[^=:\n]{0,30}[=:]\s*([\d.]+)\s*lb", body_text, re.I))
     if mw:
         specs.setdefault("Weight", f"{mw.group(1)} lbs")
     for label, value in parse_body_specs(body_html).items():
         specs.setdefault(label, value)
+    # Brakes are quoted in a feature callout, not the DETAILED SPECS list, on the
+    # high-power models -- grab the brake phrase if nothing else supplied one.
+    if "Brakes" not in specs:
+        mb = re.search(r"((?:dual\s+)?\d[\s-]?piston[\w\s-]{0,30}?brakes?"
+                       r"|[\w-]{0,20}\s*hydraulic\s+(?:disc\s+)?brakes?)", body_text, re.I)
+        if mb:
+            specs["Brakes"] = " ".join(mb.group(1).split())[:80]
     return specs
 
 
@@ -175,11 +194,10 @@ async def scrape_model(context, model: dict, retries: int = 3) -> dict:
             for _ in range(22):
                 await page.mouse.wheel(0, 2500)
                 await page.wait_for_timeout(150)
-            stats = await page.evaluate(JS_STATS)
             body_text = await page.evaluate("() => document.body.innerText")
             await page.close()
 
-            specs = _stats_to_specs(stats, body_text, body_html)
+            specs = _merge_specs(body_text, body_html)
             if not specs:
                 raise RuntimeError("no specs extracted")
             result["specs"] = {"all": specs}
