@@ -166,8 +166,10 @@ export async function runSearch(
     if (f === "kids") continue; // inverted filter, handled below
     if (filters.bools[f]) where[f] = { eq: true };
   }
-  // "Exclude Kids Ebikes" toggle on -> hide kids-only models (default off)
-  if (filters.bools.kids) where.kids = { eq: false };
+  // "Exclude Kids Ebikes" toggle on -> hide kids-only models (default off). Uses
+  // the raw-boolean form: Orama's { eq: false } on a boolean field matches the
+  // TRUE docs (same as eq:true), so { kids: false } is required to get non-kids.
+  if (filters.bools.kids) where.kids = false;
   // "Sold out" toggle off -> only in-stock models
   if (!includeSoldOut) where.available = { eq: true };
   for (const f of RANGE_FIELDS) {

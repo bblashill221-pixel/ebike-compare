@@ -151,21 +151,10 @@ export function FacetPanel({ facetOptions, rangeBounds, facetCounts, filters, se
         </div>
       </div>
 
-      {/* kids — top-level filter; off by default, on = hide kids-only models */}
-      <Section label="Kids" open={!collapsed.kids} onToggle={() => toggleSection("kids")}>
-        <button
-          type="button"
-          onClick={() => toggleBool("kids")}
-          className={`chip cursor-pointer ${filters.bools.kids ? "bg-brand-600 text-white" : ""}`}
-        >
-          Exclude Kids Ebikes
-        </button>
-      </Section>
-
-      {/* booleans */}
+      {/* booleans (incl. "Exclude Kids Ebikes") */}
       <Section label="Features" open={!collapsed.features} onToggle={() => toggleSection("features")}>
         <div className="flex flex-wrap gap-2">
-          {BOOL_FIELDS.filter((f) => f !== "kids").map((f) => (
+          {BOOL_FIELDS.map((f) => (
             <button
               key={f}
               type="button"
