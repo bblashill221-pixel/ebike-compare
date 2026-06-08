@@ -2,7 +2,7 @@
 #
 # Cron-friendly wrapper for the e-bike scrapers (Aventon + Lectric + Ride1Up +
 # Specialized + Velotric + Heybike + Mokwheel + EVELO + Himiway + Euphree + Vvolt
-# + Blix + Tern + Priority + Monarc + Velowave).
+# + Blix + Tern + Priority + Monarc + Velowave + Segway + Juiced + VIVI + CEMOTO).
 # It archives the previous build (scrape returns + normalized) to
 # data/legacy/<date>/, then runs each scraper with the project's venv writing to
 # data/current/<brand>_ebikes.json, then enrich -> normalize
@@ -46,6 +46,10 @@ SCRAPERS=(
     "scrape_priority.py|priority_ebikes|"
     "scrape_monarc.py|monarc_ebikes|"
     "scrape_velowave.py|velowave_ebikes|"
+    "scrape_segway.py|segway_ebikes|"
+    "scrape_juiced.py|juiced_ebikes|"
+    "scrape_vivi.py|vivi_ebikes|"
+    "scrape_cemoto.py|cemoto_ebikes|"
 )
 
 run_all() {
@@ -86,16 +90,28 @@ print((json.load(open(f[0])).get('generated_at','') or '')[:10]) if f else print
     "$PY" "$PROJECT_DIR/add_config_colors.py" || true
     "$PY" "$PROJECT_DIR/add_available_options.py" || true
     "$PY" "$PROJECT_DIR/add_pricing.py" || true
-    # Split spec-bearing price tiers (battery size / version / Lectric configs)
-    # into sibling model entries so downstream metrics are per-tier accurate.
+    # Merge per-color duplicate products (Monarc) and family-link frame-style
+    # variants, then split spec-bearing tiers (battery size / version / frame
+    # style / Lectric configs) into sibling model entries so downstream metrics
+    # are per-configuration accurate.
+    "$PY" "$PROJECT_DIR/merge_color_siblings.py" || true
     "$PY" "$PROJECT_DIR/expand_tiers.py" || true
+    # Each tiered sibling gets a URL that preselects its configuration on the
+    # brand site, where the platform supports it (best effort).
+    "$PY" "$PROJECT_DIR/add_deep_links.py" || true
     # Normalize unifies all brands AND does the detailed spec grouping + component
     # parsing into ebikes_normalized.json (the single transform step).
     "$PY" "$PROJECT_DIR/normalize.py" || true
+    # Aggregate the fleet-wide part catalog (manufacturer + model number per
+    # component) used for aftermarket price lookups; prior lookups are preserved.
+    "$PY" "$PROJECT_DIR/component_catalog.py" || true
     # Metrics last: BOM cost estimates, then the typed-fact + scoring analysis layer.
     "$PY" "$PROJECT_DIR/estimate_component_costs.py" \
         -o "$CURRENT_DIR/component_cost_estimates.json" || true
     "$PY" "$PROJECT_DIR/analyze.py" || true
+    # Data audit last: flag models missing expected spec values (report + CSV +
+    # per-model annotation). Reads typed specs only; safe to re-run.
+    "$PY" "$PROJECT_DIR/audit.py" || true
     echo "===== $(date -Is) : run complete (rc=$rc) ====="
     echo
     return $rc
