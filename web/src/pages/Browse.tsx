@@ -8,6 +8,7 @@ import { SearchBar } from "../components/SearchBar";
 import { FacetPanel } from "../components/FacetPanel";
 import { ResultsGrid } from "../components/ResultsGrid";
 import { useShowSoldOut } from "../soldOut";
+import { useUnits } from "../units";
 
 const EMPTY_FILTERS: Filters = { enums: {}, bools: {}, ranges: {}, riderHeightIn: null };
 
@@ -83,6 +84,7 @@ export function Browse() {
   const [debounced, setDebounced] = useState(term);
   const [filters, setFilters] = useState<Filters>(EMPTY_FILTERS);
   const [showSoldOut] = useShowSoldOut();
+  const [units] = useUnits();
   const [sort, setSort] = useState<SortKey>((params.get("sort") as SortKey) ?? "relevance");
   const [ids, setIds] = useState<string[]>([]);
   const [facetCounts, setFacetCounts] = useState<Record<string, Record<string, number>>>({});
@@ -107,7 +109,7 @@ export function Browse() {
   useEffect(() => {
     if (!db) return;
     let alive = true;
-    runSearch(db, debounced, filters, models.length, showSoldOut).then((res) => {
+    runSearch(db, debounced, filters, models.length, showSoldOut, units).then((res) => {
       if (!alive) return;
       setIds(res.ids);
       setFacetCounts(res.facets);
@@ -115,7 +117,7 @@ export function Browse() {
     return () => {
       alive = false;
     };
-  }, [db, debounced, filters, models.length, showSoldOut]);
+  }, [db, debounced, filters, models.length, showSoldOut, units]);
 
   const results = useMemo(() => {
     const list = ids.map((id) => byId.get(id)).filter((m): m is Model => !!m);

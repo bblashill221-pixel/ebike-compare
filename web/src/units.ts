@@ -41,9 +41,13 @@ export function useUnits(): [UnitSystem, (v: UnitSystem) => void] {
 // ----------------------------- height conversions -----------------------------
 // Canonical unit is inches everywhere except the input/display boundary.
 
-export const inToMm = (inches: number): number => Math.round(inches * 25.4);
-export const mmToIn = (mm: number): number => mm / 25.4;
+export const inToCm = (inches: number): number => Math.round(inches * 2.54);
+export const cmToIn = (cm: number): number => cm / 2.54;
 
-/** Short unit label for the active system's length input. */
-export const heightUnit = (system: UnitSystem): string =>
-  system === "metric" ? "mm" : "in";
+/** inches -> whole feet + remaining inches, e.g. 70 -> { ft: 5, in: 10 }. */
+export function inToFtIn(inches: number): { ft: number; in: number } {
+  const total = Math.round(inches);
+  return { ft: Math.floor(total / 12), in: total % 12 };
+}
+
+export const ftInToIn = (ft: number, inch: number): number => ft * 12 + inch;

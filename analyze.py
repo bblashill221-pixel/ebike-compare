@@ -195,7 +195,9 @@ def _frame_material(specs):
     txt = find_spec(specs, "frame").lower()
     if not txt:
         return None
-    if "carbon" in txt:
+    # "carbon" means carbon *fiber*; a "(high) carbon steel" alloy is steel, so the
+    # carbon rule must not fire on it (matches parse_components.material).
+    if re.search(r"carbon(?![\s-]*steel)", txt):
         return "carbon"
     if re.search(r"steel|cr-?mo|chromoly", txt):
         return "steel"
@@ -280,11 +282,12 @@ def _notable_tech(specs):
     return out
 
 
-def _fit_height(model: dict) -> tuple[int | None, int | None]:
+def _fit_height(model: dict) -> tuple[float | None, float | None]:
     """(min_in, max_in) the bike can fit, enveloped across every published
-    rider-height range and frame size, or (None, None). Reads the GROUPED geometry
-    (model.specs.geometry) where a per-size dict is preserved -- the flattened specs
-    would stringify it -- so "any frame size that fits" is captured."""
+    rider-height range and frame size, or (None, None) -- unrounded inches, so the
+    caller can derive precise mm bounds for the metric search. Reads the GROUPED
+    geometry (model.specs.geometry) where a per-size dict is preserved -- the
+    flattened specs would stringify it -- so "any frame size that fits" is captured."""
     geo = (model.get("specs") or {}).get("geometry") or {}
     lo = hi = None
     for k, v in geo.items():
@@ -294,7 +297,7 @@ def _fit_height(model: dict) -> tuple[int | None, int | None]:
             if r:
                 lo = r[0] if lo is None else min(lo, r[0])
                 hi = r[1] if hi is None else max(hi, r[1])
-    return (round(lo), round(hi)) if lo is not None else (None, None)
+    return (lo, hi) if lo is not None else (None, None)
 
 
 def extract_typed_specs(model: dict) -> dict:
@@ -302,7 +305,14 @@ def extract_typed_specs(model: dict) -> dict:
     # flatten it back to a flat label->text map for the typed-fact regexes.
     specs = flatten_grouped(model.get("specs") or {})
     motor_w, motor_peak_w = _motor_w(specs)
-    fit_min_in, fit_max_in = _fit_height(model)
+    # Fit envelope emitted in BOTH inches and millimetres so the search can run in
+    # the active unit (whole inches for imperial, mm for metric) without lossy
+    # cross-unit rounding at query time.
+    fit_lo_in, fit_hi_in = _fit_height(model)
+    fit_min_in = round(fit_lo_in) if fit_lo_in is not None else None
+    fit_max_in = round(fit_hi_in) if fit_hi_in is not None else None
+    fit_min_mm = round(fit_lo_in * 25.4) if fit_lo_in is not None else None
+    fit_max_mm = round(fit_hi_in * 25.4) if fit_hi_in is not None else None
     return {
         "battery_wh": _battery_wh(specs),
         "cell_brand": _cell_brand(specs),
@@ -325,9 +335,11 @@ def extract_typed_specs(model: dict) -> dict:
         "warranty_years": _warranty_years(model),
         "connectivity": _connectivity(specs),
         "notable_tech": _notable_tech(specs),
-        # rider-height fit envelope (inches) for the "fits my height" filter
+        # rider-height fit envelope for the "fits my height" filter, in both units
         "fit_height_min_in": fit_min_in,
         "fit_height_max_in": fit_max_in,
+        "fit_height_min_mm": fit_min_mm,
+        "fit_height_max_mm": fit_max_mm,
     }
 
 

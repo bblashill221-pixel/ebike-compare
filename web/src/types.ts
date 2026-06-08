@@ -79,9 +79,11 @@ export interface SpecsTyped {
   warranty_years?: number;
   connectivity?: string[];
   notable_tech?: string[];
-  /** Rider-height fit envelope (inches) across all frame sizes; either both set or neither. */
+  /** Rider-height fit envelope across all frame sizes, in inches and mm; set together. */
   fit_height_min_in?: number;
   fit_height_max_in?: number;
+  fit_height_min_mm?: number;
+  fit_height_max_mm?: number;
   [k: string]: unknown;
 }
 

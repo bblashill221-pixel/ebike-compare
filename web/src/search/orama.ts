@@ -3,6 +3,7 @@ import { create, insertMultiple, search, type AnyOrama } from "@orama/orama";
 import type { Model } from "../types";
 import { lowestPrice } from "../pricing";
 import { isAvailable } from "../soldOut";
+import type { UnitSystem } from "../units";
 
 // Canonical product-type order, mirroring PRODUCT_TYPES in bike_taxonomy.py.
 export const PRODUCT_TYPE_ORDER = [
@@ -67,9 +68,11 @@ const schema = {
   range_mi: "number",
   weight_lb: "number",
   gears: "number",
-  // rider-height fit envelope (inches); see the riderHeightIn filter below
+  // rider-height fit envelope in both units; see the riderHeightIn filter below
   fit_height_min_in: "number",
   fit_height_max_in: "number",
+  fit_height_min_mm: "number",
+  fit_height_max_mm: "number",
 } as const;
 
 function toDoc(m: Model): Record<string, unknown> {
@@ -112,11 +115,13 @@ function toDoc(m: Model): Record<string, unknown> {
     range_mi: t.range_mi ?? 0,
     weight_lb: t.weight_lb ?? 0,
     gears: t.gears ?? 0,
-    // Lenient sentinels: a bike with no published height range gets [0, 9999] so
+    // Lenient sentinels: a bike with no published height range gets [0, huge] so
     // it always satisfies the "fits my height" filter (we never hide a bike just
     // for lacking the data); see runSearch.
     fit_height_min_in: t.fit_height_min_in ?? 0,
     fit_height_max_in: t.fit_height_max_in ?? 9999,
+    fit_height_min_mm: t.fit_height_min_mm ?? 0,
+    fit_height_max_mm: t.fit_height_max_mm ?? 999999,
   };
 }
 
@@ -146,6 +151,7 @@ export async function runSearch(
   filters: Filters,
   total: number,
   includeSoldOut = true,
+  system: UnitSystem = "imperial",
 ): Promise<SearchResult> {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const where: Record<string, any> = {};
@@ -163,13 +169,21 @@ export async function runSearch(
     const r = filters.ranges[f];
     if (r) where[f] = { between: r };
   }
-  // "Fits my height": keep models whose envelope contains H, i.e. min <= H <= max.
-  // Expressed with `between` (the operator already used above): min in [0, H] and
-  // max in [H, 9999]. Data-less bikes index as [0, 9999] so they always pass.
+  // "Fits my height": keep models whose envelope contains H, i.e. min <= H <= max,
+  // expressed with `between` (min in [0, H] and max in [H, huge]). The query runs in
+  // the active unit -- whole inches for imperial, mm for metric -- against the
+  // matching indexed envelope, so neither mode loses precision to cross-unit
+  // rounding. Data-less bikes index as [0, huge] so they always pass.
   if (filters.riderHeightIn != null) {
-    const h = filters.riderHeightIn;
-    where.fit_height_min_in = { between: [0, h] };
-    where.fit_height_max_in = { between: [h, 9999] };
+    if (system === "metric") {
+      const mm = Math.round(filters.riderHeightIn * 25.4);
+      where.fit_height_min_mm = { between: [0, mm] };
+      where.fit_height_max_mm = { between: [mm, 999999] };
+    } else {
+      const inch = Math.round(filters.riderHeightIn);
+      where.fit_height_min_in = { between: [0, inch] };
+      where.fit_height_max_in = { between: [inch, 9999] };
+    }
   }
 
   const res = await search(db, {

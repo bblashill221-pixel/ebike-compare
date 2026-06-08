@@ -3,7 +3,7 @@ import type { EnumField, Filters, RangeField } from "../search/orama";
 import { BOOL_FIELDS, type BoolField } from "../search/orama";
 import { capitalize, labelize, titleCase } from "../format";
 import { useShowSoldOut } from "../soldOut";
-import { useUnits, inToMm, mmToIn, heightUnit, type UnitSystem } from "../units";
+import { useUnits, inToCm, cmToIn, inToFtIn, ftInToIn, type UnitSystem } from "../units";
 
 interface Props {
   facetOptions: Record<EnumField, string[]>;
@@ -99,21 +99,27 @@ export function FacetPanel({ facetOptions, rangeBounds, facetCounts, filters, se
     else ranges[field] = [lo, hi];
     setFilters({ ...filters, ranges });
   };
-  // Rider height is stored canonically in inches; the input is shown in the active
-  // unit (in / mm). Empty input clears the filter (null).
-  const heightDisplay =
-    filters.riderHeightIn == null
-      ? ""
-      : units === "metric"
-        ? inToMm(filters.riderHeightIn)
-        : filters.riderHeightIn;
-  const setHeight = (raw: string) => {
-    const v = raw.trim();
-    if (v === "") return setFilters({ ...filters, riderHeightIn: null });
-    const n = Number(v);
+  // Rider height is stored canonically in inches; shown as feet+inches (imperial)
+  // or centimetres (metric). Empty input clears the filter (null).
+  const setHeightIn = (inches: number | null) =>
+    setFilters({ ...filters, riderHeightIn: inches });
+  const ftin = filters.riderHeightIn == null ? null : inToFtIn(filters.riderHeightIn);
+  const clamp = (n: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, n));
+  const setFtIn = (feet: string, inch: string) => {
+    // feet drives the filter (1-7); clearing it clears the filter. Inches are
+    // optional, 0-11. Both are clamped so out-of-range entries can't slip through.
+    if (feet.trim() === "") return setHeightIn(null);
+    const ft = clamp(Math.floor(Number(feet) || 1), 1, 7);
+    const inch2 = inch.trim() === "" ? 0 : clamp(Math.floor(Number(inch) || 0), 0, 11);
+    setHeightIn(ftInToIn(ft, inch2));
+  };
+  const cmValue = filters.riderHeightIn == null ? "" : inToCm(filters.riderHeightIn);
+  const setCm = (raw: string) => {
+    if (raw.trim() === "") return setHeightIn(null);
+    const n = Number(raw);
     if (Number.isNaN(n)) return;
-    const inches = units === "metric" ? mmToIn(n) : n;
-    setFilters({ ...filters, riderHeightIn: Math.round(inches) });
+    // keep canonical inches unrounded so the metric search stays mm-precise
+    setHeightIn(cmToIn(n));
   };
   const reset = () => {
     setFilters({ enums: {}, bools: {}, ranges: {}, riderHeightIn: null });
@@ -134,7 +140,7 @@ export function FacetPanel({ facetOptions, rangeBounds, facetCounts, filters, se
                 aria-pressed={units === sys}
                 className={`cursor-pointer px-2 py-0.5 ${units === sys ? "bg-brand-600 text-white" : "text-slate-600"}`}
               >
-                {sys === "imperial" ? "in" : "mm"}
+                {sys === "imperial" ? "ft/in" : "cm"}
               </button>
             ))}
           </div>
@@ -173,21 +179,52 @@ export function FacetPanel({ facetOptions, rangeBounds, facetCounts, filters, se
           rider; bikes with no published range are kept (lenient) */}
       <Section label="Rider height" open={!collapsed.height} onToggle={() => toggleSection("height")}>
         <div className="flex items-center gap-2">
-          <input
-            type="number"
-            inputMode="numeric"
-            value={heightDisplay}
-            min={0}
-            onChange={(e) => setHeight(e.target.value)}
-            placeholder={units === "metric" ? "e.g. 1780" : "e.g. 70"}
-            className="w-full rounded border-slate-300 text-sm"
-            aria-label={`Rider height (${heightUnit(units)})`}
-          />
-          <span className="text-xs text-slate-400">{heightUnit(units)}</span>
+          {units === "metric" ? (
+            <>
+              <input
+                type="number"
+                inputMode="numeric"
+                value={cmValue}
+                min={0}
+                onChange={(e) => setCm(e.target.value)}
+                placeholder="e.g. 178"
+                className="w-full rounded border-slate-300 text-sm"
+                aria-label="Rider height (cm)"
+              />
+              <span className="text-xs text-slate-400">cm</span>
+            </>
+          ) : (
+            <>
+              <input
+                type="number"
+                inputMode="numeric"
+                value={ftin ? ftin.ft : ""}
+                min={1}
+                max={7}
+                onChange={(e) => setFtIn(e.target.value, ftin ? String(ftin.in) : "")}
+                placeholder="ft"
+                className="w-full rounded border-slate-300 text-sm"
+                aria-label="Rider height (feet)"
+              />
+              <span className="text-xs text-slate-400">ft</span>
+              <input
+                type="number"
+                inputMode="numeric"
+                value={ftin ? ftin.in : ""}
+                min={0}
+                max={11}
+                onChange={(e) => setFtIn(ftin ? String(ftin.ft) : "", e.target.value)}
+                placeholder="in"
+                className="w-full rounded border-slate-300 text-sm"
+                aria-label="Rider height (inches)"
+              />
+              <span className="text-xs text-slate-400">in</span>
+            </>
+          )}
           {filters.riderHeightIn != null && (
             <button
               type="button"
-              onClick={() => setFilters({ ...filters, riderHeightIn: null })}
+              onClick={() => setHeightIn(null)}
               className="text-xs text-brand-600 hover:underline"
             >
               Clear
