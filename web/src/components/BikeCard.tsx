@@ -1,19 +1,15 @@
-import { useState } from "react";
+import { useEffect } from "react";
+import { useColorSelection, defaultColorIndex, colorSoldOut, soldOutColors } from "../colorSelection";
+import { useShowSoldOut } from "../soldOut";
 import { Link } from "react-router-dom";
 import type { Model } from "../types";
 import { formatNumber } from "../format";
+import { colorPrices, variantPrice } from "../pricing";
 import { useCompare } from "../compare/CompareContext";
 import { Price } from "./Price";
 import { AffiliateLink } from "./AffiliateLink";
-import { ColorSwatches } from "./ColorSwatches";
-import {
-  BatteryIcon,
-  GearsIcon,
-  MotorIcon,
-  RangeIcon,
-  TorqueIcon,
-  WeightIcon,
-} from "./icons";
+import { ColorSwatches, upchargeText } from "./ColorSwatches";
+import { BatteryIcon, MotorIcon, TorqueIcon, WeightIcon } from "./icons";
 
 export function primaryImage(m: Model): string | null {
   return m.colors?.find((c) => c.image)?.image ?? null;
@@ -38,9 +34,9 @@ function Spec({
   // Large colorful icon + value; the metric name appears only on hover.
   return (
     <div className="group relative flex flex-col items-center gap-1 text-center">
-      <span className={`rounded-xl p-1.5 ${tint}`}>{icon}</span>
-      <span className="text-sm font-semibold text-slate-800">{value}</span>
-      <span className="pointer-events-none absolute -top-6 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded bg-slate-800 px-1.5 py-0.5 text-[10px] font-medium text-white opacity-0 transition-opacity duration-150 group-hover:opacity-100">
+      <span className={`rounded-xl border p-1.5 ${tint}`}>{icon}</span>
+      <span className="whitespace-nowrap text-[11px] font-semibold tracking-tight text-slate-800">{value}</span>
+      <span className="pointer-events-none absolute -top-6 left-1/2 z-50 -translate-x-1/2 whitespace-nowrap rounded bg-slate-800 px-1.5 py-0.5 text-[10px] font-medium text-white opacity-0 transition-opacity duration-150 group-hover:opacity-100">
         {label}
       </span>
     </div>
@@ -51,83 +47,197 @@ export function BikeCard({ model }: { model: Model }) {
   const { has, toggle, isFull } = useCompare();
   const selected = has(model.id);
   const t = model.analysis?.specs_typed ?? {};
-  // first listed color is the default; the selected color drives the photo
-  const [color, setColor] = useState(0);
+  // selection is shared with the detail page (and persists for the session);
+  // a fresh visit defaults to the first in-stock colorway
+  const [showSoldOut] = useShowSoldOut();
+  const [color, setColor] = useColorSelection(
+    model.id,
+    model.colors?.length ?? 0,
+    defaultColorIndex(model),
+  );
+  // when sold-out colors are hidden, never sit on one of them
+  const sold = soldOutColors(model);
+  const availCount = (model.colors ?? []).filter(
+    (c) => !sold.has((c.name ?? "").toLowerCase()),
+  ).length;
+  const hiddenColors = !showSoldOut && availCount > 0 ? sold : undefined;
+  useEffect(() => {
+    if (hiddenColors && colorSoldOut(model, color)) setColor(defaultColorIndex(model));
+  }, [hiddenColors, color, model, setColor]);
   const img = model.colors?.[color]?.image ?? primaryImage(model);
 
+  // spec-tile numbers are shown without thousands separators ("1250", not "1,250")
+  const tile = (n: number) => formatNumber(n, 0, false);
+
+  const cPrices = colorPrices(model);
+  const colorUp = upchargeText(cPrices, null, model.currency, color);
+
+  // Show whichever motor ratings the source page stated — nominal, peak, or
+  // both — never a placeholder for the missing half.
+  const hasNom = t.motor_w != null;
+  const hasPeak = t.motor_peak_w != null;
+  const motorLabel =
+    hasNom && hasPeak ? "Motor (nominal/peak)" : hasPeak ? "Motor (peak)" : "Motor";
+  const motorValue =
+    hasNom && hasPeak
+      ? `${tile(t.motor_w!)}/${tile(t.motor_peak_w!)} W`
+      : hasNom
+        ? `${tile(t.motor_w!)} W`
+        : hasPeak
+          ? `${tile(t.motor_peak_w!)} W`
+          : "—";
+
   return (
-    <div className="card flex flex-col overflow-hidden transition-shadow hover:shadow-md">
-      <Link to={`/bike/${encodeURIComponent(model.id)}`} className="block">
-        <div className="aspect-[4/3] w-full overflow-hidden bg-slate-100">
-          {img ? (
-            <img src={img} alt={`${model.model} — ${model.colors?.[color]?.name ?? ""}`} loading="lazy" className="h-full w-full object-contain" />
-          ) : (
-            <div className="flex h-full w-full items-center justify-center text-slate-300">no image</div>
-          )}
-        </div>
-      </Link>
+    // No overflow-hidden on the card root: hover tooltips (color names, spec
+    // labels) must be able to escape the card bounds; the image wrapper rounds
+    // and clips itself instead.
+    <div className="card flex flex-col transition-shadow hover:shadow-md">
+      <div className="relative">
+        <Link to={`/bike/${encodeURIComponent(model.id)}`} className="block">
+          <div className="aspect-[4/3] w-full overflow-hidden rounded-t-xl bg-slate-100">
+            {img ? (
+              <img src={img} alt={`${model.model} — ${model.colors?.[color]?.name ?? ""}`} loading="lazy" className="h-full w-full object-contain" />
+            ) : (
+              <div className="flex h-full w-full items-center justify-center text-slate-300">no image</div>
+            )}
+          </div>
+        </Link>
+        {/* color choice overlays the image's top-left corner */}
+        {model.colors && model.colors.length > 0 && (
+          <div className="absolute left-2 top-2 rounded-full bg-white/75 px-2 py-1.5 shadow-sm backdrop-blur-sm">
+            <ColorSwatches
+              colors={model.colors}
+              selected={color}
+              onSelect={setColor}
+              size="h-4 w-4"
+              prices={cPrices}
+              currency={model.currency}
+              showLabel={false}
+              hidden={hiddenColors}
+            />
+          </div>
+        )}
+        {/* current color, over the bottom middle of the image */}
+        {model.colors?.[color]?.name && (
+          <div className="pointer-events-none absolute bottom-2 left-1/2 max-w-[90%] -translate-x-1/2 truncate rounded-full bg-white/75 px-2.5 py-0.5 text-xs text-slate-600 shadow-sm backdrop-blur-sm">
+            [{model.colors[color].name}
+            {colorUp && <span className="font-semibold text-rose-600">{colorUp}</span>}]
+          </div>
+        )}
+      </div>
       <div className="flex flex-1 flex-col gap-3 p-4">
         <div className="space-y-1.5">
-          <div className="text-xs font-medium uppercase tracking-wide text-brand-600">{model.brand}</div>
+          <div className="flex items-baseline justify-between gap-2">
+            <div className="text-xs font-medium uppercase tracking-wide text-brand-600">{model.brand}</div>
+            <AffiliateLink
+              brand={model.brand}
+              url={model.url}
+              className="whitespace-nowrap text-xs font-medium text-brand-700 hover:underline"
+            >
+              View at {model.brand} →
+            </AffiliateLink>
+          </div>
           <Link to={`/bike/${encodeURIComponent(model.id)}`} className="line-clamp-2 font-semibold text-slate-900 hover:text-brand-700">
             {displayName(model)}
           </Link>
           {model.tier && (
             <span className="chip bg-amber-100 text-amber-800">{model.tier}</span>
           )}
-          {model.colors && model.colors.length > 0 && (
-            <ColorSwatches colors={model.colors} selected={color} onSelect={setColor} size="h-4 w-4" />
-          )}
+          {/* TEMP: classification inspection — remove when done. Primary type
+              first; extra categories follow. */}
+          <div className="flex flex-wrap gap-1 border border-dashed border-fuchsia-300 bg-fuchsia-50 p-1">
+            {(model.product_types ?? (model.product_type ? [model.product_type] : ["—"])).map((pt, i) => (
+              <span
+                key={pt}
+                className={`chip ${i === 0 ? "bg-fuchsia-600 text-white" : "bg-fuchsia-100 text-fuchsia-800"}`}
+              >
+                {pt}
+              </span>
+            ))}
+          </div>
         </div>
 
-        <Price model={model} />
+        <Price
+          model={model}
+          price={variantPrice(model, model.colors?.[color]?.name)}
+          soldOut={model.availability?.status === "sold_out" || colorSoldOut(model, color)}
+        />
 
-        <div className="grid grid-cols-3 gap-2">
-          {t.battery_wh != null && (
-            <Spec icon={<BatteryIcon className="h-9 w-9" />} tint="bg-emerald-50" label="Battery" value={`${formatNumber(t.battery_wh)} Wh`} />
-          )}
-          {t.motor_w != null && (
-            <Spec icon={<MotorIcon className="h-9 w-9" />} tint="bg-amber-50" label="Motor" value={`${formatNumber(t.motor_w)} W`} />
-          )}
-          {t.range_mi != null && (
-            <Spec icon={<RangeIcon className="h-9 w-9" />} tint="bg-sky-50" label="Range" value={`${formatNumber(t.range_mi)} mi`} />
-          )}
-          {t.torque_nm != null && (
-            <Spec icon={<TorqueIcon className="h-9 w-9" />} tint="bg-rose-50" label="Torque" value={`${formatNumber(t.torque_nm)} Nm`} />
-          )}
-          {t.weight_lb != null && (
-            <Spec icon={<WeightIcon className="h-9 w-9" />} tint="bg-violet-50" label="Weight" value={`${formatNumber(t.weight_lb)} lb`} />
-          )}
-          {t.gears != null && (
-            <Spec icon={<GearsIcon className="h-9 w-9" />} tint="bg-indigo-50" label="Gears" value={`${formatNumber(t.gears)}`} />
-          )}
+        {/* TEMP: data-collection triage — lists expected typed fields missing on
+            this model (from audit.py / model.data_audit). Remove when done. */}
+        {model.data_audit && (
+          <div className="rounded border border-dashed border-red-300 bg-red-50 p-1 text-[11px]">
+            {model.data_audit.missing.length > 0 ? (
+              <div className="flex flex-wrap items-center gap-1">
+                <span className="font-semibold text-red-700">⚠ missing:</span>
+                {model.data_audit.missing.map((f) => (
+                  <span key={f} className="chip bg-red-100 text-red-800">{f}</span>
+                ))}
+              </div>
+            ) : (
+              <span className="font-medium text-emerald-700">✓ audit complete</span>
+            )}
+          </div>
+        )}
+
+        {/* the four core specs, always shown ("—" when unknown) */}
+        <div className="grid grid-cols-4 gap-2">
+          <Spec
+            icon={<BatteryIcon className="h-7 w-7" />}
+            tint="bg-emerald-50 border-emerald-200"
+            label="Battery"
+            value={t.battery_wh != null ? `${tile(t.battery_wh)} Wh` : "—"}
+          />
+          <Spec
+            icon={<MotorIcon className="h-7 w-7" />}
+            tint="bg-amber-50 border-amber-200"
+            label={motorLabel}
+            value={motorValue}
+          />
+          <Spec
+            icon={<TorqueIcon className="h-7 w-7" />}
+            tint="bg-rose-50 border-rose-200"
+            label="Torque"
+            value={t.torque_nm != null ? `${tile(t.torque_nm)} Nm` : "—"}
+          />
+          <Spec
+            icon={<WeightIcon className="h-7 w-7" />}
+            tint="bg-violet-50 border-violet-200"
+            label="Weight"
+            value={t.weight_lb != null ? `${tile(t.weight_lb)} lb` : "—"}
+          />
         </div>
 
+        {/* uncommon/premium features (regen braking, dropper post, ...) */}
         {model.analysis?.highlights?.length > 0 && (
           <div className="flex flex-wrap gap-1">
-            {model.analysis.highlights.slice(0, 3).map((h) => (
+            {model.analysis.highlights.map((h) => (
               <span key={h} className="chip">{h}</span>
             ))}
           </div>
         )}
 
-        <div className="mt-auto flex items-center justify-between gap-2 pt-1">
+        {/* free accessories bundled with the bike */}
+        {model.included_accessories && model.included_accessories.length > 0 && (
+          <div
+            className="line-clamp-1 text-xs text-slate-500"
+            title={model.included_accessories.map((a) => a.name).join(", ")}
+          >
+            <span className="font-medium text-emerald-700">Includes:</span>{" "}
+            {model.included_accessories.map((a) => a.name).join(" · ")}
+          </div>
+        )}
+
+        <div className="mt-auto flex justify-center pt-1">
           <button
             type="button"
             onClick={() => toggle(model.id)}
             disabled={!selected && isFull}
-            className={selected ? "btn-primary" : "btn-ghost"}
+            className={`${selected ? "btn-primary" : "btn-ghost"} !px-2.5 !py-1 !text-xs`}
             title={!selected && isFull ? "Compare list is full (max 4)" : undefined}
           >
             {selected ? "✓ Comparing" : "Compare"}
           </button>
-          <AffiliateLink
-            brand={model.brand}
-            url={model.url}
-            className="text-sm font-medium text-brand-700 hover:underline"
-          >
-            View at {model.brand} →
-          </AffiliateLink>
         </div>
       </div>
     </div>

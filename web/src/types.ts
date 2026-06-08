@@ -135,6 +135,8 @@ export interface Model {
   /** The $0 items bundled with the bike (lights, fenders, racks, ...). */
   included_accessories?: { name: string; price: number }[];
   analysis: Analysis;
+  /** TEMP data-triage: expected typed fields missing on this model (from audit.py). */
+  data_audit?: { missing: string[] };
 }
 
 export interface StatDist {
