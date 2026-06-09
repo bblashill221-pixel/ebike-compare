@@ -4,8 +4,7 @@ Aventon e-bike spec scraper.
 
 Discovers every e-bike model from Aventon's Shopify catalog, then uses Playwright
 to open each product page, open the "Technical Specifications" drawer, and extract
-the full label/value spec table. Specs are split into `physical` and `technical`
-groups (and a flat `all` map) and written to JSON.
+the full label/value spec table (a flat `specs.all` map) written to JSON.
 
 Usage:
     python scrape_aventon.py                  # scrape all models -> aventon_ebikes.json
@@ -25,9 +24,11 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
-from scraper_common import make_classifier  # noqa: E402  (import also sets LD_LIBRARY_PATH for bundled chromium)
+import scraper_common  # noqa: E402,F401  (sets LD_LIBRARY_PATH for bundled chromium)
 from playwright.async_api import async_playwright, TimeoutError as PWTimeout  # noqa: E402
 from warranty_js import JS_WARRANTY
+
+from bike_taxonomy import classify_product_types
 
 BASE = "https://www.aventon.com"
 LOGO = "https://aventon.imgix.net/aventon_favicon_72.png?w=256"
@@ -39,27 +40,6 @@ SPEC_TRIGGERS = [
     "Full Specs",
     "Specs",
 ]
-
-# Label keywords used to classify each spec into a physical vs technical bucket.
-# Matching is case-insensitive substring on the spec label. First match wins;
-# anything unmatched falls through to TECHNICAL_KEYWORDS, then to "physical".
-TECHNICAL_KEYWORDS = (
-    "motor", "battery", "range", "charger", "charging", "controller", "throttle",
-    "display", "sensor", "pedal assist", "speed", "class", "watt", "voltage",
-    "wireless", "connectivity", "gps", "app", "certification", "water resistance",
-    "torque", "power",
-)
-PHYSICAL_KEYWORDS = (
-    "weight", "limit", "height", "frame", "fork", "spacing", "wheel", "tire",
-    "tyre", "brake", "rotor", "derailleur", "shifter", "chain", "cassette",
-    "chainring", "crank", "bottom bracket", "pedal", "saddle", "seatpost",
-    "seat post", "handlebar", "grip", "headset", "kickstand", "rack", "fender",
-    "light", "stem", "spoke", "hub", "dimension", "length", "width", "color",
-    "size", "style", "geometry",
-)
-
-
-classify = make_classifier(TECHNICAL_KEYWORDS, PHYSICAL_KEYWORDS)
 
 
 # Fallback curated brand-color approximations, keyed by Aventon's (often
@@ -161,7 +141,9 @@ def discover_models() -> list[dict]:
                 "title": p.get("title"),
                 "handle": p.get("handle"),
                 "url": f"{BASE}/products/{p.get('handle')}",
-                "product_type": p.get("product_type"),
+                "product_types": classify_product_types(
+                    p.get("title") or "", p.get("product_type") or "",
+                    " ".join(p.get("tags") or [])),
                 "vendor": p.get("vendor"),
                 "tags": p.get("tags", []),
                 "price_from": min(prices) if prices else None,
@@ -285,17 +267,12 @@ async def scrape_model(context, model: dict, retries: int = 2) -> dict:
                 if c.get("hex"):
                     c["swatch_image"] = None
 
-            physical, technical, all_specs = {}, {}, {}
+            all_specs = {}
             for label, value in pairs:
                 key = " ".join(label.split())  # normalise whitespace
                 all_specs[key] = value
-                (physical if classify(key) == "physical" else technical)[key] = value
 
-            result["specs"] = {
-                "physical": physical,
-                "technical": technical,
-                "all": all_specs,
-            }
+            result["specs"] = {"all": all_specs}
             result["spec_count"] = len(all_specs)
             result["scrape_error"] = None
             result["warranty"] = await page.evaluate(JS_WARRANTY)
@@ -304,7 +281,7 @@ async def scrape_model(context, model: dict, retries: int = 2) -> dict:
         except Exception as e:  # noqa: BLE001
             await page.close()
             if attempt == retries:
-                result["specs"] = {"physical": {}, "technical": {}, "all": {}}
+                result["specs"] = {"all": {}}
                 result["spec_count"] = 0
                 result["warranty"] = None
                 result["scrape_error"] = f"{type(e).__name__}: {e}"

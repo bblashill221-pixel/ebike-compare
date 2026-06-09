@@ -2,14 +2,16 @@
   "source": "https://www.heybike.com",
   "logo": "https://www.heybike.com/cdn/shop/files/heybike-logo_c0d69677-ad00-41d8-940c-f1aeac5cee34.svg?v=1745923766&width=500",
   "collection": "electric-bike",
-  "scraped_at": "2026-06-06T02:39:27.887914+00:00",
-  "model_count": 11,
+  "scraped_at": "2026-06-07T22:35:11.810701+00:00",
+  "model_count": 14,
   "models": [
     {
       "model": "ALPHA",
       "handle": "alpha",
-      "url": "https://www.heybike.com/products/alpha",
-      "product_type": "Electric Bike",
+      "url": "https://www.heybike.com/products/alpha?variant=46477313048795",
+      "product_types": [
+        "Fat tire"
+      ],
       "price_from": 1299.0,
       "currency": "USD",
       "options": {
@@ -17,12 +19,6 @@
           "500W (Peak 1000W)"
         ],
         "colors": [
-          {
-            "name": "Step-Through (Pearl White)",
-            "hex": "#ffffff",
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Alpha_2198a2f3-72dd-4e72-9478-b561e7acba07.png?v=1779793053"
-          },
           {
             "name": "Step-Over (Galaxy Black)",
             "hex": "#000000",
@@ -33,25 +29,6 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "Frame": "6061 Aluminum Alloy Frame; removable lithium-ion battery; rear rack and fenders included; hydraulic disc brakes; kickstand mount",
-          "Fork": "Hydraulic front suspension fork",
-          "Spokes": "6061 Aluminum alloy",
-          "Tire": "Puncture protection, 26\"x4.0\" fat tires",
-          "Rear Derailleur": "Shimano Altus 8 speed",
-          "Light": "LED headlight with auto-on feature, and integrated taillight with brake light.",
-          "Kickstand": "Alloy",
-          "Weight": "32.5 kg / 71.6lbs",
-          "Weight limit": "This bike has a maximum total weight limit (combined weight of rider and cargo) of 400 pounds (181.4kg).",
-          "Ebike Dimensions": "76.77\" × 27.56\" × 46.46\""
-        },
-        "technical": {
-          "Motor": "Mivice 500W mid drive motor, 105 N·m torque",
-          "Battery": "UL 2271 certified, 680Wh, removable lithium-ion battery",
-          "Charger": "2A, 54.6V output, 100V-220V AC input",
-          "Display Type": "LCD Display",
-          "Throttle": "Half-Twist (Activated in Natural Pedal Start Mode)"
-        },
         "all": {
           "Frame": "6061 Aluminum Alloy Frame; removable lithium-ion battery; rear rack and fenders included; hydraulic disc brakes; kickstand mount",
           "Fork": "Hydraulic front suspension fork",
@@ -67,10 +44,100 @@
           "Kickstand": "Alloy",
           "Weight": "32.5 kg / 71.6lbs",
           "Weight limit": "This bike has a maximum total weight limit (combined weight of rider and cargo) of 400 pounds (181.4kg).",
-          "Ebike Dimensions": "76.77\" × 27.56\" × 46.46\""
+          "Ebike Dimensions": "76.77\" × 27.56\" × 46.46\"",
+          "Range": "Up to 60 miles"
         }
       },
-      "spec_count": 15,
+      "spec_count": 16,
+      "scrape_error": null,
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": [
+        {
+          "name": "Light",
+          "price": 0,
+          "free": true,
+          "detail": "LED headlight with auto-on feature, and integrated taillight with brake light."
+        }
+      ],
+      "geometry": {},
+      "configurations": [
+        {
+          "options": {
+            "Version": "500W (Peak 1000W)",
+            "Colors": "Step-Over (Galaxy Black)"
+          },
+          "price": 1299.0,
+          "sku": "HB1ALPHAHUSBK1A",
+          "variant_id": 46477313048795,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Alpha_2965d2b0-d904-4ef1-a73b-313e2abc3963.png?v=1779793053"
+        }
+      ],
+      "available_options": [
+        {
+          "group": "Included accessories",
+          "type": "accessory",
+          "choices": [
+            {
+              "value": "Light",
+              "price": 0,
+              "free": true
+            }
+          ]
+        }
+      ],
+      "regular_price": 1699.0,
+      "tier": "Step-Over",
+      "family_id": "heybike__alpha",
+      "frame_style": "Step-Over (Mid-Step)"
+    },
+    {
+      "model": "ALPHA — Step-Thru",
+      "handle": "alpha--step-thru",
+      "url": "https://www.heybike.com/products/alpha?variant=46477313016027",
+      "product_types": [
+        "Fat tire"
+      ],
+      "price_from": 1299.0,
+      "currency": "USD",
+      "options": {
+        "Version": [
+          "500W (Peak 1000W)"
+        ],
+        "colors": [
+          {
+            "name": "Step-Through (Pearl White)",
+            "hex": "#ffffff",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Alpha_2198a2f3-72dd-4e72-9478-b561e7acba07.png?v=1779793053"
+          }
+        ]
+      },
+      "warranty": "2-Year Warranty",
+      "specs": {
+        "all": {
+          "Frame": "6061 Aluminum Alloy Frame; removable lithium-ion battery; rear rack and fenders included; hydraulic disc brakes; kickstand mount",
+          "Fork": "Hydraulic front suspension fork",
+          "Spokes": "6061 Aluminum alloy",
+          "Tire": "Puncture protection, 26\"x4.0\" fat tires",
+          "Motor": "Mivice 500W mid drive motor, 105 N·m torque",
+          "Battery": "UL 2271 certified, 680Wh, removable lithium-ion battery",
+          "Charger": "2A, 54.6V output, 100V-220V AC input",
+          "Display Type": "LCD Display",
+          "Rear Derailleur": "Shimano Altus 8 speed",
+          "Throttle": "Half-Twist (Activated in Natural Pedal Start Mode)",
+          "Light": "LED headlight with auto-on feature, and integrated taillight with brake light.",
+          "Kickstand": "Alloy",
+          "Weight": "32.5 kg / 71.6lbs",
+          "Weight limit": "This bike has a maximum total weight limit (combined weight of rider and cargo) of 400 pounds (181.4kg).",
+          "Ebike Dimensions": "76.77\" × 27.56\" × 46.46\"",
+          "Range": "Up to 60 miles"
+        }
+      },
+      "spec_count": 16,
       "scrape_error": null,
       "shipping": {
         "cost": 0,
@@ -93,16 +160,9 @@
           },
           "price": 1299.0,
           "sku": "HB1ALPHALUSWH1A",
-          "available": true
-        },
-        {
-          "options": {
-            "Version": "500W (Peak 1000W)",
-            "Colors": "Step-Over (Galaxy Black)"
-          },
-          "price": 1299.0,
-          "sku": "HB1ALPHAHUSBK1A",
-          "available": true
+          "variant_id": 46477313016027,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Alpha_2198a2f3-72dd-4e72-9478-b561e7acba07.png?v=1779793053"
         }
       ],
       "available_options": [
@@ -118,13 +178,19 @@
           ]
         }
       ],
-      "regular_price": 1699.0
+      "regular_price": null,
+      "tier": "Step-Thru",
+      "family_id": "heybike__alpha",
+      "frame_style": "Step-Thru"
     },
     {
       "model": "Helio F",
       "handle": "helio-f",
       "url": "https://www.heybike.com/products/helio-f",
-      "product_type": "Electric Bike",
+      "product_types": [
+        "Folding",
+        "Commuter / Urban"
+      ],
       "price_from": 1299.0,
       "currency": "USD",
       "options": {
@@ -166,35 +232,6 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "🚲": "Double the Fun: Buy 2 E-bikes, Save $200. ➔",
-          "$99.00": "away from Free Shipping!",
-          "Tiny when folded, mighty when riding.": "Helio F sneaks into your RV or yacht without fuss, then unfolds to take you places bigger vehicles will never do. Small, compact, and light — your secret key to explore the world in half-hour escapes.",
-          "Lights": "Front: LED / Rear: LED with Braking Light",
-          "Frame": "Aluminum Alloy 6061",
-          "Tyres": "Schwalbe Billy Bonkers 20'' × 2.0''",
-          "Brake": "TEKTRO Hydraulic Disc Brakes HD-T275",
-          "Front Fork": "Hydroformed Rigid Fork with Thru Axle",
-          "Recharging Time": "4–6 hours",
-          "Weight": "18 kg",
-          "80–120 km": ", depending on riding style, terrain, and level of assistance. With its removable design, you can easily charge it at home or at the office.",
-          "18 kg": ", it’s ultra-light. Thanks to the patented",
-          "X-Fold System": ", it folds in seconds and fits effortlessly into trains, offices, or compact city apartments.",
-          "Schwalbe tires": ", it’s built for urban rides and commuting. Comfort, efficiency, and fun are guaranteed."
-        },
-        "technical": {
-          "Motor": "36V 250W Rear Hub Motor",
-          "Sensor Type": "Torque Sensor",
-          "Display": "LCD Left Mounted",
-          "Battery": "360Wh Lithium Battery",
-          "Charger": "42V 100-240V 2A",
-          "Speed Gears": "Shimano 8-Speed Gear",
-          "Max Speed": "25 km/h",
-          "Max Torque": "40 N·m",
-          "Range": "Up to 80–120 km with PAS Mode",
-          "Shimano 8-speed gear system": ",",
-          "torque sensor": ", and"
-        },
         "all": {
           "🚲": "Double the Fun: Buy 2 E-bikes, Save $200. ➔",
           "$99.00": "away from Free Shipping!",
@@ -239,7 +276,9 @@
           },
           "price": 1299.0,
           "sku": "HB1HelioFFGUSGN1A",
-          "available": true
+          "variant_id": 47627897929947,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/HelioFVintageGN.png?v=1776132985"
         },
         {
           "options": {
@@ -248,7 +287,9 @@
           },
           "price": 1299.0,
           "sku": "HB1HelioFFGUSRD1A",
-          "available": true
+          "variant_id": 47627897897179,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/HelioFVintageRD.png?v=1776132985"
         },
         {
           "options": {
@@ -257,7 +298,9 @@
           },
           "price": 1399.0,
           "sku": "HB1HelioFCGUSAr1A",
-          "available": false
+          "variant_id": 47677661577435,
+          "available": false,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Heybike_Helio_F_Commuter_Ebike_U.png?v=1766743142"
         },
         {
           "options": {
@@ -266,7 +309,9 @@
           },
           "price": 1399.0,
           "sku": "HB1HelioFCGUSAr2A",
-          "available": true
+          "variant_id": 47677661610203,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Heybike_Helio_F_Commuter_Ebike_B.png?v=1776132985"
         },
         {
           "options": {
@@ -275,7 +320,9 @@
           },
           "price": 1399.0,
           "sku": "HB1HelioFCGUSAr3A",
-          "available": true
+          "variant_id": 47677661642971,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Heybike_Helio_F_Commuter_Ebike_Y.png?v=1776132985"
         }
       ],
       "available_options": [
@@ -319,10 +366,12 @@
       "regular_price": 2099.0
     },
     {
-      "model": "Hero",
+      "model": "Hero — 1000W Rear Hub · Step-Over",
       "handle": "hero",
-      "url": "https://www.heybike.com/products/hero",
-      "product_type": "Electric Bike",
+      "url": "https://www.heybike.com/products/hero?variant=46956178079963",
+      "product_types": [
+        "Fat tire"
+      ],
       "price_from": 1899.0,
       "currency": "USD",
       "options": {
@@ -331,24 +380,6 @@
           "750W Mid-Drive"
         ],
         "colors": [
-          {
-            "name": "Tangerine",
-            "hex": null,
-            "swatch_image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/2_5f8e1576-ae90-45f1-98c3-f44bfb6c5a6e.jpg?v=1713350398",
-            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/lQLPJxD-3uO-2h_NBQXNCACw9K_W_Jkjjq0Gu46hmqZYAA_2048_1285.png?v=1766738319"
-          },
-          {
-            "name": "Lime Yellow",
-            "hex": "#ffff00",
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Hero_Green.png?v=1766738319"
-          },
-          {
-            "name": "Limited Edition (Step-Thru)",
-            "hex": null,
-            "swatch_image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/asdwq.jpg?v=1750239141",
-            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/hero-Limited_Color-Step_Thru.png?v=1765354599"
-          },
           {
             "name": "Limited Edition (Step-Over)",
             "hex": null,
@@ -359,24 +390,6 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "Frame": "T800 carbon fiber mainframe, Intergrated Handlebar, Shock-Absorbing Saddle, Removable lithium-ion battery, Fender mounts, Rear Rack mounts, Hydraulic disc, Kickstand mount",
-          "Full Suspension": "Horst-link suspension and hydraulic front suspension",
-          "Spokes": "Aluminum alloy",
-          "Tire": "Puncture protection, 26\"x4.0\"-max tire size without fenders",
-          "Rear Derailleur": "Shimano 9 speed",
-          "Light": "Integrated headlight",
-          "Kickstand": "Alloy",
-          "Weight": "34 kg / 75 lbs",
-          "Weight limit": "This bike has a maximum total weight limit (combined weight of rider and cargo) of 400 pounds (181.4kg).",
-          "Overall Dimensions": "2035mm*735mm*1125mm"
-        },
-        "technical": {
-          "Motor": "750W Mid-Drive Motor Version: 160 N·m of torque, 1400W Peak",
-          "Battery": "864Wh, removable lithium-ion battery",
-          "Charger": "4A, 54.6V output, 100V-220V AC input",
-          "Display Type": "Build-in LCD Display"
-        },
         "all": {
           "Frame": "T800 carbon fiber mainframe, Intergrated Handlebar, Shock-Absorbing Saddle, Removable lithium-ion battery, Fender mounts, Rear Rack mounts, Hydraulic disc, Kickstand mount",
           "Full Suspension": "Horst-link suspension and hydraulic front suspension",
@@ -413,56 +426,13 @@
         {
           "options": {
             "Version": "1000W Rear Hub",
-            "Color": "Tangerine"
-          },
-          "price": 1899.0,
-          "sku": "HBK-Hero-L-B-O-RR",
-          "available": true,
-          "color": {
-            "name": "Tangerine",
-            "hex": null,
-            "swatch_image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/2_5f8e1576-ae90-45f1-98c3-f44bfb6c5a6e.jpg?v=1713350398",
-            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/lQLPJxD-3uO-2h_NBQXNCACw9K_W_Jkjjq0Gu46hmqZYAA_2048_1285.png?v=1766738319"
-          }
-        },
-        {
-          "options": {
-            "Version": "1000W Rear Hub",
-            "Color": "Lime Yellow"
-          },
-          "price": 1899.0,
-          "sku": "HBK-Hero-H-B-GN",
-          "available": false,
-          "color": {
-            "name": "Lime Yellow",
-            "hex": "#ffff00",
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Hero_Green.png?v=1766738319"
-          }
-        },
-        {
-          "options": {
-            "Version": "1000W Rear Hub",
-            "Color": "Limited Edition (Step-Thru)"
-          },
-          "price": 1899.0,
-          "sku": "HBK-Hero-L-B-IGG",
-          "available": false,
-          "color": {
-            "name": "Limited Edition (Step-Thru)",
-            "hex": null,
-            "swatch_image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/asdwq.jpg?v=1750239141",
-            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/hero-Limited_Color-Step_Thru.png?v=1765354599"
-          }
-        },
-        {
-          "options": {
-            "Version": "1000W Rear Hub",
             "Color": "Limited Edition (Step-Over)"
           },
           "price": 1899.0,
           "sku": "HBK-Hero-H-B-IGG",
+          "variant_id": 46956178079963,
           "available": false,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/hero-Limited_Color-Middle_Frame.png?v=1765354599",
           "color": {
             "name": "Limited Edition (Step-Over)",
             "hex": null,
@@ -503,15 +473,18 @@
         }
       ],
       "regular_price": 2699.0,
-      "tier": "1000W Rear Hub",
-      "family_id": "heybike__hero"
+      "tier": "1000W Rear Hub · Step-Over",
+      "family_id": "heybike__hero",
+      "frame_style": "Step-Over (Mid-Step)"
     },
     {
-      "model": "Hero — 750W Mid-Drive",
-      "handle": "hero--750w-mid-drive",
-      "url": "https://www.heybike.com/products/hero",
-      "product_type": "Electric Bike",
-      "price_from": 2099.0,
+      "model": "Hero — 1000W Rear Hub · Step-Thru",
+      "handle": "hero--step-thru",
+      "url": "https://www.heybike.com/products/hero?variant=46956178047195",
+      "product_types": [
+        "Fat tire"
+      ],
+      "price_from": 1899.0,
       "currency": "USD",
       "options": {
         "Version": [
@@ -520,51 +493,15 @@
         ],
         "colors": [
           {
-            "name": "Tangerine",
-            "hex": null,
-            "swatch_image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/2_5f8e1576-ae90-45f1-98c3-f44bfb6c5a6e.jpg?v=1713350398",
-            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/lQLPJxD-3uO-2h_NBQXNCACw9K_W_Jkjjq0Gu46hmqZYAA_2048_1285.png?v=1766738319"
-          },
-          {
-            "name": "Lime Yellow",
-            "hex": "#ffff00",
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Hero_Green.png?v=1766738319"
-          },
-          {
             "name": "Limited Edition (Step-Thru)",
             "hex": null,
             "swatch_image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/asdwq.jpg?v=1750239141",
             "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/hero-Limited_Color-Step_Thru.png?v=1765354599"
-          },
-          {
-            "name": "Limited Edition (Step-Over)",
-            "hex": null,
-            "swatch_image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/b6f6afdffa1e206773e6bb00878328e4.jpg?v=1750239141",
-            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/hero-Limited_Color-Middle_Frame.png?v=1765354599"
           }
         ]
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "Frame": "T800 carbon fiber mainframe, Intergrated Handlebar, Shock-Absorbing Saddle, Removable lithium-ion battery, Fender mounts, Rear Rack mounts, Hydraulic disc, Kickstand mount",
-          "Full Suspension": "Horst-link suspension and hydraulic front suspension",
-          "Spokes": "Aluminum alloy",
-          "Tire": "Puncture protection, 26\"x4.0\"-max tire size without fenders",
-          "Rear Derailleur": "Shimano 9 speed",
-          "Light": "Integrated headlight",
-          "Kickstand": "Alloy",
-          "Weight": "34 kg / 75 lbs",
-          "Weight limit": "This bike has a maximum total weight limit (combined weight of rider and cargo) of 400 pounds (181.4kg).",
-          "Overall Dimensions": "2035mm*735mm*1125mm"
-        },
-        "technical": {
-          "Motor": "750W Mid-Drive Motor Version: 160 N·m of torque, 1400W Peak",
-          "Battery": "864Wh, removable lithium-ion battery",
-          "Charger": "4A, 54.6V output, 100V-220V AC input",
-          "Display Type": "Build-in LCD Display"
-        },
         "all": {
           "Frame": "T800 carbon fiber mainframe, Intergrated Handlebar, Shock-Absorbing Saddle, Removable lithium-ion battery, Fender mounts, Rear Rack mounts, Hydraulic disc, Kickstand mount",
           "Full Suspension": "Horst-link suspension and hydraulic front suspension",
@@ -597,7 +534,25 @@
         }
       ],
       "geometry": {},
-      "configurations": [],
+      "configurations": [
+        {
+          "options": {
+            "Version": "1000W Rear Hub",
+            "Color": "Limited Edition (Step-Thru)"
+          },
+          "price": 1899.0,
+          "sku": "HBK-Hero-L-B-IGG",
+          "variant_id": 46956178047195,
+          "available": false,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/hero-Limited_Color-Step_Thru.png?v=1765354599",
+          "color": {
+            "name": "Limited Edition (Step-Thru)",
+            "hex": null,
+            "swatch_image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/asdwq.jpg?v=1750239141",
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/hero-Limited_Color-Step_Thru.png?v=1765354599"
+          }
+        }
+      ],
       "available_options": [
         {
           "group": "Version",
@@ -630,14 +585,242 @@
         }
       ],
       "regular_price": null,
-      "tier": "750W Mid-Drive",
-      "family_id": "heybike__hero"
+      "tier": "1000W Rear Hub · Step-Thru",
+      "family_id": "heybike__hero",
+      "frame_style": "Step-Thru"
+    },
+    {
+      "model": "Hero — 750W Mid-Drive · Step-Over",
+      "handle": "hero--750w-mid-drive",
+      "url": "https://www.heybike.com/products/hero?variant=46956178014427",
+      "product_types": [
+        "Fat tire"
+      ],
+      "price_from": 2099.0,
+      "currency": "USD",
+      "options": {
+        "Version": [
+          "1000W Rear Hub",
+          "750W Mid-Drive"
+        ],
+        "colors": [
+          {
+            "name": "Limited Edition (Step-Over)",
+            "hex": null,
+            "swatch_image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/b6f6afdffa1e206773e6bb00878328e4.jpg?v=1750239141",
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/hero-Limited_Color-Middle_Frame.png?v=1765354599"
+          }
+        ]
+      },
+      "warranty": "2-Year Warranty",
+      "specs": {
+        "all": {
+          "Frame": "T800 carbon fiber mainframe, Intergrated Handlebar, Shock-Absorbing Saddle, Removable lithium-ion battery, Fender mounts, Rear Rack mounts, Hydraulic disc, Kickstand mount",
+          "Full Suspension": "Horst-link suspension and hydraulic front suspension",
+          "Motor": "750W Mid-Drive Motor Version: 160 N·m of torque, 1400W Peak",
+          "Spokes": "Aluminum alloy",
+          "Tire": "Puncture protection, 26\"x4.0\"-max tire size without fenders",
+          "Battery": "864Wh, removable lithium-ion battery",
+          "Charger": "4A, 54.6V output, 100V-220V AC input",
+          "Display Type": "Build-in LCD Display",
+          "Rear Derailleur": "Shimano 9 speed",
+          "Light": "Integrated headlight",
+          "Kickstand": "Alloy",
+          "Weight": "34 kg / 75 lbs",
+          "Weight limit": "This bike has a maximum total weight limit (combined weight of rider and cargo) of 400 pounds (181.4kg).",
+          "Overall Dimensions": "2035mm*735mm*1125mm"
+        }
+      },
+      "spec_count": 14,
+      "scrape_error": null,
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": [
+        {
+          "name": "Light",
+          "price": 0,
+          "free": true,
+          "detail": "Integrated headlight"
+        }
+      ],
+      "geometry": {},
+      "configurations": [
+        {
+          "options": {
+            "Version": "750W Mid-Drive",
+            "Color": "Limited Edition (Step-Over)"
+          },
+          "price": 2099.0,
+          "sku": "HBK-Hero-H-M-IGG",
+          "variant_id": 46956178014427,
+          "available": false,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/hero-Limited_Color-Middle_Frame.png?v=1765354599",
+          "color": {
+            "name": "Limited Edition (Step-Over)",
+            "hex": null,
+            "swatch_image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/b6f6afdffa1e206773e6bb00878328e4.jpg?v=1750239141",
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/hero-Limited_Color-Middle_Frame.png?v=1765354599"
+          }
+        }
+      ],
+      "available_options": [
+        {
+          "group": "Version",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "1000W Rear Hub",
+              "price": 1899.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "750W Mid-Drive",
+              "price": 2099.0,
+              "price_delta": 200.0,
+              "free": false
+            }
+          ]
+        },
+        {
+          "group": "Included accessories",
+          "type": "accessory",
+          "choices": [
+            {
+              "value": "Light",
+              "price": 0,
+              "free": true
+            }
+          ]
+        }
+      ],
+      "regular_price": null,
+      "tier": "750W Mid-Drive · Step-Over",
+      "family_id": "heybike__hero",
+      "frame_style": "Step-Over (Mid-Step)"
+    },
+    {
+      "model": "Hero — 750W Mid-Drive · Step-Thru",
+      "handle": "hero--750w-mid-drive--step-thru",
+      "url": "https://www.heybike.com/products/hero?variant=46956177981659",
+      "product_types": [
+        "Fat tire"
+      ],
+      "price_from": 2099.0,
+      "currency": "USD",
+      "options": {
+        "Version": [
+          "1000W Rear Hub",
+          "750W Mid-Drive"
+        ],
+        "colors": [
+          {
+            "name": "Limited Edition (Step-Thru)",
+            "hex": null,
+            "swatch_image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/asdwq.jpg?v=1750239141",
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/hero-Limited_Color-Step_Thru.png?v=1765354599"
+          }
+        ]
+      },
+      "warranty": "2-Year Warranty",
+      "specs": {
+        "all": {
+          "Frame": "T800 carbon fiber mainframe, Intergrated Handlebar, Shock-Absorbing Saddle, Removable lithium-ion battery, Fender mounts, Rear Rack mounts, Hydraulic disc, Kickstand mount",
+          "Full Suspension": "Horst-link suspension and hydraulic front suspension",
+          "Motor": "750W Mid-Drive Motor Version: 160 N·m of torque, 1400W Peak",
+          "Spokes": "Aluminum alloy",
+          "Tire": "Puncture protection, 26\"x4.0\"-max tire size without fenders",
+          "Battery": "864Wh, removable lithium-ion battery",
+          "Charger": "4A, 54.6V output, 100V-220V AC input",
+          "Display Type": "Build-in LCD Display",
+          "Rear Derailleur": "Shimano 9 speed",
+          "Light": "Integrated headlight",
+          "Kickstand": "Alloy",
+          "Weight": "34 kg / 75 lbs",
+          "Weight limit": "This bike has a maximum total weight limit (combined weight of rider and cargo) of 400 pounds (181.4kg).",
+          "Overall Dimensions": "2035mm*735mm*1125mm"
+        }
+      },
+      "spec_count": 14,
+      "scrape_error": null,
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": [
+        {
+          "name": "Light",
+          "price": 0,
+          "free": true,
+          "detail": "Integrated headlight"
+        }
+      ],
+      "geometry": {},
+      "configurations": [
+        {
+          "options": {
+            "Version": "750W Mid-Drive",
+            "Color": "Limited Edition (Step-Thru)"
+          },
+          "price": 2099.0,
+          "sku": "HBK-Hero-L-M-IGG",
+          "variant_id": 46956177981659,
+          "available": false,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/hero-Limited_Color-Step_Thru.png?v=1765354599",
+          "color": {
+            "name": "Limited Edition (Step-Thru)",
+            "hex": null,
+            "swatch_image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/asdwq.jpg?v=1750239141",
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/hero-Limited_Color-Step_Thru.png?v=1765354599"
+          }
+        }
+      ],
+      "available_options": [
+        {
+          "group": "Version",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "1000W Rear Hub",
+              "price": 1899.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "750W Mid-Drive",
+              "price": 2099.0,
+              "price_delta": 200.0,
+              "free": false
+            }
+          ]
+        },
+        {
+          "group": "Included accessories",
+          "type": "accessory",
+          "choices": [
+            {
+              "value": "Light",
+              "price": 0,
+              "free": true
+            }
+          ]
+        }
+      ],
+      "regular_price": null,
+      "tier": "750W Mid-Drive · Step-Thru",
+      "family_id": "heybike__hero",
+      "frame_style": "Step-Thru"
     },
     {
       "model": "Horizon",
       "handle": "horizon",
       "url": "https://www.heybike.com/products/horizon",
-      "product_type": "Electric Bike",
+      "product_types": [
+        "Folding",
+        "Fat tire"
+      ],
       "price_from": 1399.0,
       "currency": "USD",
       "options": {
@@ -673,25 +856,6 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "Frame": "Aluminum Alloy, removable lithium-ion battery, rear rack included, fender mounts, front & rear mount mechanical disc, kickstand mount",
-          "Full Suspension": "Horst-link suspension and hydraulic front suspension",
-          "Spokes": "Aluminum alloy",
-          "Tire": "Puncture protection, 24\"x4.0\"-max tire size without fenders",
-          "Rear Derailleur": "Shimano 7 speed",
-          "Light": "LED headlight with auto-on feature, and integrated taillight with brake light.",
-          "Kickstand": "Alloy",
-          "Weight": "36 kg / 79.4 lbs",
-          "Weight limit": "Maximum total weight limit (combined weight of rider and cargo) of 330 pounds (149.7kg).",
-          "Folded Dimensions": "49.2*23.6*31.5 inch",
-          "Unfolded Dimensions": "75.6*24.4*46.5 inch"
-        },
-        "technical": {
-          "Hub rear": "Brushless geared hub motor, 80Nm, 1400W",
-          "Battery": "692Wh, removable lithium-ion battery",
-          "Charger": "4A, 54.6V output, 100V-220V AC input",
-          "Display Type": "LCD Display"
-        },
         "all": {
           "Frame": "Aluminum Alloy, removable lithium-ion battery, rear rack included, fender mounts, front & rear mount mechanical disc, kickstand mount",
           "Full Suspension": "Horst-link suspension and hydraulic front suspension",
@@ -733,7 +897,9 @@
           },
           "price": 1399.0,
           "sku": "HBK-Horizon-WG",
+          "variant_id": 44339204227291,
           "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/8C5D47D9-D125-4E16-BEE4-E638B1470DC4.png?v=1780388249",
           "color": {
             "name": "Cyan and Pearl",
             "hex": null,
@@ -748,7 +914,9 @@
           },
           "price": 1399.0,
           "sku": "HBK-Horizon-UB",
+          "variant_id": 45181458972891,
           "available": false,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/34d7106ad5033d4875fb9a93052c02cc.png?v=1771929127",
           "color": {
             "name": "Black and Blue",
             "hex": "#0000ff",
@@ -763,7 +931,9 @@
           },
           "price": 1399.0,
           "sku": "HBK-Horizon-BG",
+          "variant_id": 45181458940123,
           "available": false,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/52880b67cf4f56e0ff4f3596c21ba110.png?v=1771929127",
           "color": {
             "name": "Gradient Cynical Black",
             "hex": "#000000",
@@ -778,7 +948,9 @@
           },
           "price": 1399.0,
           "sku": "",
+          "variant_id": 45182528651483,
           "available": false,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Horizon_1a58de77-58a3-4290-a5de-eb0c485aba8e.webp?v=1771929127",
           "color": {
             "name": "Sunset",
             "hex": null,
@@ -806,7 +978,12 @@
       "model": "Hybrid",
       "handle": "hybrid",
       "url": "https://www.heybike.com/products/hybrid",
-      "product_type": "Electric Bike",
+      "product_types": [
+        "Mountain (eMTB)",
+        "Road / Gravel",
+        "Hybrid / Fitness",
+        "Commuter / Urban"
+      ],
       "price_from": 1699.0,
       "currency": "USD",
       "options": {
@@ -836,45 +1013,6 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "🚲": "Double the Fun: Buy 2 E-bikes, Save $200. ➔",
-          "$99.00": "away from Free Shipping!",
-          "up to 66 lbs": ". Compatible with child seats for added versatility.",
-          "Frame": "6061 Aluminum Alloy",
-          "Fork": "Hydraulic Front Fork, T: 100mm",
-          "Tires": "KENDA 27.5 x 2.4\"",
-          "Brakes": "Tektro Hydraulic Disc Brakes",
-          "Rotor": "180 × 1.9 mm",
-          "Chainring": "48T",
-          "Front Light": "White Light with Horn",
-          "Rear Light": "Taillight with Brake & Turn Signals",
-          "Rack Capacity": "66 lb",
-          "Payload Capacity": "440 lb",
-          "Fenders & Rear Rack": "Included",
-          "Bike Weight": "69 lb",
-          "Dimension": "75.8×27.6×42.1–44.9\"",
-          "Venus": "is lighter, requires a lower inseam, and feels more nimble, which isideal for riders with a smaller build or those who prefer agile city cruising.",
-          "Hybrid": "offers a more grounded, stable ride with a higher",
-          "440 lb payload": "capacity (vs. 350 lb on Venus). It also features a larger",
-          "adjustable suspension stiffness": "and",
-          "a lockout function": ", controlled by knobs on the top of the fork."
-        },
-        "technical": {
-          "Motor": "750W Hub Motor (Galaxy eDrive System)",
-          "Torque": "75 Nm",
-          "Drivetrain": "Shimano Altus 8-Speed (12–32T)",
-          "Pedal Assist": "Dual Sensor (Torque + Cadence)",
-          "Battery": "864Wh",
-          "Certification": "UL 2849 (Whole Bike), UL 2271 (Battery)",
-          "Charger": "54.6V / 3A",
-          "Max Speed": "28 MPH",
-          "Max Range": "Up to 100 Miles (Tested with a 155 lb rider using PAS 1)",
-          "Display": "LCD Color Display",
-          "App": "Heybike Smart App (iOS & Android)",
-          "864Wh battery": "for extended range, while Venus is equipped with a 680Wh battery. In addition, Hybrid comes with a hydraulic suspension fork, whereas Venus uses a rigid aluminum fork.In short:- Choose",
-          "- Via the Heybike app": "On the home screen, choose from three riding profiles: Eco, Sport, or Custom. Eco = Class 2 Sport = Class 3 Speed settings for PAS and throttle can be adjusted under Personalize → Speed Settings.",
-          "- Via the display settings": "On the display, the change can be made through manual adjustment of top speed."
-        },
         "all": {
           "🚲": "Double the Fun: Buy 2 E-bikes, Save $200. ➔",
           "$99.00": "away from Free Shipping!",
@@ -936,7 +1074,9 @@
           },
           "price": 1699.0,
           "sku": "HB1HybridUSBK1A",
+          "variant_id": 48321479213275,
           "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Hybird.png?v=1777544910",
           "color": {
             "name": "Onyx Black",
             "hex": "#000000",
@@ -951,7 +1091,9 @@
           },
           "price": 1699.0,
           "sku": "HB1HybridUSRD1A",
+          "variant_id": 48321479246043,
           "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Hybird_4cd05823-537c-46c7-b197-e06c4ffc3d26.png?v=1777544910",
           "color": {
             "name": "Ruby Red",
             "hex": "#ff0000",
@@ -966,7 +1108,9 @@
           },
           "price": 1699.0,
           "sku": "HB1HybridUSGN1A",
+          "variant_id": 48321479278811,
           "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Hybird_c17d9634-93d5-4992-b800-0e35c456b6e7.png?v=1777544910",
           "color": {
             "name": "Emerald Green",
             "hex": "#52794b",
@@ -993,7 +1137,10 @@
       "model": "Mars 3.0",
       "handle": "mars-3-0",
       "url": "https://www.heybike.com/products/mars-3-0",
-      "product_type": "Electric Bike",
+      "product_types": [
+        "Folding",
+        "Fat tire"
+      ],
       "price_from": 1199.0,
       "currency": "USD",
       "options": {
@@ -1023,27 +1170,6 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "Frame": "6061 Aluminum Alloy Frame; removable lithium-ion battery; rear rack and fenders included; kickstand mount;",
-          "Suspension": "Front: Hydraulic Suspension Fork, 65mm Travel Rear: Horst Link Suspension",
-          "Spokes": "Aluminum alloy",
-          "Tire": "Puncture protection, 20\"x4.0\" fat tires",
-          "Charging Time": "5-7 hrs for full charge",
-          "Rear Derailleur": "Shimano Altus 8 speed",
-          "Light": "Frontlight with Horn, Taillight with Brake & Turn Signals",
-          "Kickstand": "Alloy",
-          "Weight": "32 kg / 70 lbs",
-          "Weight limit": "Maximum total weight limit (combined weight of rider and cargo): 440lbs",
-          "Folded Dimensions": "38.2x19.7x 33.1 inch",
-          "Unfolded Dimensions": "66.9x25.6x52.0 inch"
-        },
-        "technical": {
-          "Rear Hub Motor": "750W (sustained), 1400W (peak) 95 N·m torque",
-          "Battery": "624Wh",
-          "Charger": "2A, 54.6V output, 100V-220V AC input",
-          "Display Type": "TFT Display&NFC Start-up",
-          "Throttle": "Half-Twist"
-        },
         "all": {
           "Frame": "6061 Aluminum Alloy Frame; removable lithium-ion battery; rear rack and fenders included; kickstand mount;",
           "Suspension": "Front: Hydraulic Suspension Fork, 65mm Travel Rear: Horst Link Suspension",
@@ -1061,10 +1187,11 @@
           "Weight": "32 kg / 70 lbs",
           "Weight limit": "Maximum total weight limit (combined weight of rider and cargo): 440lbs",
           "Folded Dimensions": "38.2x19.7x 33.1 inch",
-          "Unfolded Dimensions": "66.9x25.6x52.0 inch"
+          "Unfolded Dimensions": "66.9x25.6x52.0 inch",
+          "Range": "Up to 65 miles"
         }
       },
-      "spec_count": 17,
+      "spec_count": 18,
       "scrape_error": null,
       "shipping": {
         "cost": 0,
@@ -1080,7 +1207,9 @@
           },
           "price": 1199.0,
           "sku": "HB1Mars3USOG1A",
-          "available": true
+          "variant_id": 47386426409179,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Mars3.0_d5b10726-8d9a-4e2c-ab66-86f1a8d3782d.png?v=1779793120"
         },
         {
           "options": {
@@ -1089,7 +1218,9 @@
           },
           "price": 1199.0,
           "sku": "HB1Mars3USBP1A",
-          "available": true
+          "variant_id": 47386426441947,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Mars3.0_af48ed56-9ede-4690-8571-9ad07d246c8f.png?v=1779793120"
         },
         {
           "options": {
@@ -1098,7 +1229,9 @@
           },
           "price": 1199.0,
           "sku": "HB1Mars3USBK1A",
-          "available": true
+          "variant_id": 47386426474715,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Mars3.0_14a8344f-ea00-4b3d-9d75-4845b041e449.png?v=1779793120"
         }
       ],
       "available_options": [],
@@ -1108,7 +1241,10 @@
       "model": "Ranger 3.0 Pro",
       "handle": "ranger-3-0-pro",
       "url": "https://www.heybike.com/products/ranger-3-0-pro",
-      "product_type": "Electric Bike",
+      "product_types": [
+        "Folding",
+        "Fat tire"
+      ],
       "price_from": 1399.0,
       "currency": "USD",
       "options": {
@@ -1138,27 +1274,6 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "Frame": "Hydroformed 6061 Aluminum Alloy Frame; removable lithium-ion battery; rear rack and fenders included; kickstand mount;",
-          "Suspension": "Front: Hydraulic Suspension Fork, 65mm Travel Rear: Adjustable Air Shock, Up to 174 PSI",
-          "Spokes": "Aluminum alloy",
-          "Tire": "Puncture protection, Kenda 20\"x4.0\" fat tires",
-          "Charging Time": "6–8 hrs for full charge",
-          "Rear Derailleur": "Shimano Altus 8 speed",
-          "Light": "Frontlight with Horn, Taillight with Brake & Turn Signals",
-          "Kickstand": "Alloy",
-          "Weight": "34 kg / 75 lbs",
-          "Weight limit": "Maximum total weight limit (combined weight of rider and cargo): 440lbs",
-          "Folded Dimensions": "41.7x20.5x32.7 inch",
-          "Unfolded Dimensions": "69.7x25.6x52.0 inch"
-        },
-        "technical": {
-          "Rear Hub Motor": "750W (sustained), 1400W (peak) 80 N·m torque",
-          "Battery": "720Wh",
-          "Charger": "2A, 54.6V output, 100V-220V AC input",
-          "Display Type": "TFT Display&NFC Start-up",
-          "Throttle": "Half-Twist"
-        },
         "all": {
           "Frame": "Hydroformed 6061 Aluminum Alloy Frame; removable lithium-ion battery; rear rack and fenders included; kickstand mount;",
           "Suspension": "Front: Hydraulic Suspension Fork, 65mm Travel Rear: Adjustable Air Shock, Up to 174 PSI",
@@ -1195,7 +1310,9 @@
           },
           "price": 1399.0,
           "sku": "HB1Ran3PUSRD1A",
-          "available": true
+          "variant_id": 47386428047579,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Ranger3.0Pro.png?v=1779793198"
         },
         {
           "options": {
@@ -1204,7 +1321,9 @@
           },
           "price": 1399.0,
           "sku": "HB1Ran3PUSBU1A",
-          "available": true
+          "variant_id": 47386428080347,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Ranger3.0Pro_ff7827f9-84d3-410f-8b22-450b6c5f1b2e.png?v=1779793199"
         },
         {
           "options": {
@@ -1213,7 +1332,9 @@
           },
           "price": 1399.0,
           "sku": "HB1Ran3PUSGN1A",
-          "available": true
+          "variant_id": 47386428113115,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Ranger3.0Pro_8ca14934-f38b-49fb-bd08-20d21222bdc3.png?v=1779793199"
         }
       ],
       "available_options": [],
@@ -1222,8 +1343,10 @@
     {
       "model": "Saturn",
       "handle": "saturn",
-      "url": "https://www.heybike.com/products/saturn",
-      "product_type": "Electric Bike",
+      "url": "https://www.heybike.com/products/saturn?variant=48751967437019",
+      "product_types": [
+        "Fat tire"
+      ],
       "price_from": 999.0,
       "currency": "USD",
       "options": {
@@ -1242,45 +1365,6 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "🚲": "Double the Fun: Buy 2 E-bikes, Save $200. ➔",
-          "$99.00": "away from Free Shipping!",
-          "330 lb": "payload and an extendable rear rack. Add optional accessories to expand your cargo capacity for more potential.",
-          "full lighting system": ", turn signals, and an",
-          "electric horn": ". Designed for confident riding in any condition.",
-          "IPX6": "-rated electrical components and",
-          "IPX5": "-rated whole bike help protect against rain and splashes. So your ride is unstoppable even when the weather turns.",
-          "Smooth and intuitive control": "that brings a familiar moped-style riding feel.",
-          "Fork": "Hydraulic Front Fork, T: 140mm",
-          "Rear": "Rear Spring Suspension. T: 55mm",
-          "Tires": "20 x 4.0\"",
-          "Brakes": "2-Piston Hydraulic Disc Brakes with",
-          "Rotor": "180 × 2.0 mm",
-          "Chainring": "48T",
-          "Certification": "UL 2849",
-          "Front Light": "White Light with Horn",
-          "Rear Light": "Taillight with Brake & Turn Signals",
-          "Payload Capacity": "330 lb",
-          "Fenders & Rear Rack & Rear Mirrors": "Included",
-          "Bike Weight": "103 lb (Single Battery Ver.)115 lb (Dual Battery Ver.)",
-          "Dimension": "70.9×26.8×48–48.8\"",
-          "front fender": "and",
-          "rear rack": "are included in the box and requires installation.",
-          "two ways": ":"
-        },
-        "technical": {
-          "Motor": "1000W Hub Motor",
-          "Torque": "95 N.m",
-          "Pedal Assist": "Cadence",
-          "Battery": "956.8Wh (Single Battery Ver.)1913.6Wh (Dual Battery Ver.)",
-          "Charger": "58.8V / 3A",
-          "Max Speed": "28 MPH+",
-          "Max Range": "30-50 Miles (Single Battery Ver.)55-90 Miles (Dual Battery Ver.)",
-          "Display": "TFT",
-          "App": "Heybike Smart App (iOS & Android)",
-          "- Via the Heybike app": "Speed settings for PAS and throttle can be adjusted under Personalize → Speed Settings.",
-          "- Via the display settings": "On the display, the change can be made through manual adjustment of top speed."
-        },
         "all": {
           "🚲": "Double the Fun: Buy 2 E-bikes, Save $200. ➔",
           "$99.00": "away from Free Shipping!",
@@ -1299,18 +1383,18 @@
           "Torque": "95 N.m",
           "Chainring": "48T",
           "Pedal Assist": "Cadence",
-          "Battery": "956.8Wh (Single Battery Ver.)1913.6Wh (Dual Battery Ver.)",
+          "Battery": "956.8Wh (Single Battery Ver.)",
           "Certification": "UL 2849",
           "Charger": "58.8V / 3A",
           "Max Speed": "28 MPH+",
-          "Max Range": "30-50 Miles (Single Battery Ver.)55-90 Miles (Dual Battery Ver.)",
+          "Max Range": "30-50 Miles (Single Battery Ver.)",
           "Display": "TFT",
           "App": "Heybike Smart App (iOS & Android)",
           "Front Light": "White Light with Horn",
           "Rear Light": "Taillight with Brake & Turn Signals",
           "Payload Capacity": "330 lb",
           "Fenders & Rear Rack & Rear Mirrors": "Included",
-          "Bike Weight": "103 lb (Single Battery Ver.)115 lb (Dual Battery Ver.)",
+          "Bike Weight": "103 lb (Single Battery Ver.)",
           "Dimension": "70.9×26.8×48–48.8\"",
           "front fender": "and",
           "rear rack": "are included in the box and requires installation.",
@@ -1348,7 +1432,9 @@
           },
           "price": 999.0,
           "sku": "HB1SaturnUSBK1A",
+          "variant_id": 48751967437019,
           "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Saturn_73228100-95df-4a78-b8af-d9ee649a9199.png?v=1779159679",
           "color": {
             "name": "Leather Black",
             "hex": "#000000",
@@ -1400,8 +1486,10 @@
     {
       "model": "Saturn — Dual Battery (55-90 Miles)",
       "handle": "saturn--dual-battery-55-90-miles",
-      "url": "https://www.heybike.com/products/saturn",
-      "product_type": "Electric Bike",
+      "url": "https://www.heybike.com/products/saturn?variant=48751977529563",
+      "product_types": [
+        "Fat tire"
+      ],
       "price_from": 1299.0,
       "currency": "USD",
       "options": {
@@ -1420,45 +1508,6 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "🚲": "Double the Fun: Buy 2 E-bikes, Save $200. ➔",
-          "$99.00": "away from Free Shipping!",
-          "330 lb": "payload and an extendable rear rack. Add optional accessories to expand your cargo capacity for more potential.",
-          "full lighting system": ", turn signals, and an",
-          "electric horn": ". Designed for confident riding in any condition.",
-          "IPX6": "-rated electrical components and",
-          "IPX5": "-rated whole bike help protect against rain and splashes. So your ride is unstoppable even when the weather turns.",
-          "Smooth and intuitive control": "that brings a familiar moped-style riding feel.",
-          "Fork": "Hydraulic Front Fork, T: 140mm",
-          "Rear": "Rear Spring Suspension. T: 55mm",
-          "Tires": "20 x 4.0\"",
-          "Brakes": "2-Piston Hydraulic Disc Brakes with",
-          "Rotor": "180 × 2.0 mm",
-          "Chainring": "48T",
-          "Certification": "UL 2849",
-          "Front Light": "White Light with Horn",
-          "Rear Light": "Taillight with Brake & Turn Signals",
-          "Payload Capacity": "330 lb",
-          "Fenders & Rear Rack & Rear Mirrors": "Included",
-          "Bike Weight": "103 lb (Single Battery Ver.)115 lb (Dual Battery Ver.)",
-          "Dimension": "70.9×26.8×48–48.8\"",
-          "front fender": "and",
-          "rear rack": "are included in the box and requires installation.",
-          "two ways": ":"
-        },
-        "technical": {
-          "Motor": "1000W Hub Motor",
-          "Torque": "95 N.m",
-          "Pedal Assist": "Cadence",
-          "Battery": "956.8Wh (Single Battery Ver.)1913.6Wh (Dual Battery Ver.)",
-          "Charger": "58.8V / 3A",
-          "Max Speed": "28 MPH+",
-          "Max Range": "30-50 Miles (Single Battery Ver.)55-90 Miles (Dual Battery Ver.)",
-          "Display": "TFT",
-          "App": "Heybike Smart App (iOS & Android)",
-          "- Via the Heybike app": "Speed settings for PAS and throttle can be adjusted under Personalize → Speed Settings.",
-          "- Via the display settings": "On the display, the change can be made through manual adjustment of top speed."
-        },
         "all": {
           "🚲": "Double the Fun: Buy 2 E-bikes, Save $200. ➔",
           "$99.00": "away from Free Shipping!",
@@ -1477,18 +1526,18 @@
           "Torque": "95 N.m",
           "Chainring": "48T",
           "Pedal Assist": "Cadence",
-          "Battery": "956.8Wh (Single Battery Ver.)1913.6Wh (Dual Battery Ver.)",
+          "Battery": "1913.6Wh (Dual Battery Ver.)",
           "Certification": "UL 2849",
           "Charger": "58.8V / 3A",
           "Max Speed": "28 MPH+",
-          "Max Range": "30-50 Miles (Single Battery Ver.)55-90 Miles (Dual Battery Ver.)",
+          "Max Range": "55-90 Miles (Dual Battery Ver.)",
           "Display": "TFT",
           "App": "Heybike Smart App (iOS & Android)",
           "Front Light": "White Light with Horn",
           "Rear Light": "Taillight with Brake & Turn Signals",
           "Payload Capacity": "330 lb",
           "Fenders & Rear Rack & Rear Mirrors": "Included",
-          "Bike Weight": "103 lb (Single Battery Ver.)115 lb (Dual Battery Ver.)",
+          "Bike Weight": "115 lb (Dual Battery Ver.)",
           "Dimension": "70.9×26.8×48–48.8\"",
           "front fender": "and",
           "rear rack": "are included in the box and requires installation.",
@@ -1518,7 +1567,25 @@
         }
       ],
       "geometry": {},
-      "configurations": [],
+      "configurations": [
+        {
+          "options": {
+            "Version": "Dual Battery (55-90 Miles)",
+            "Color": "Leather Black"
+          },
+          "price": 1299.0,
+          "sku": "HB1SaturnUSBK2A",
+          "variant_id": 48751977529563,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Saturn_aa30b1c7-bfe6-431d-a5db-98bc07c7ee72.png?v=1779159679",
+          "color": {
+            "name": "Leather Black",
+            "hex": "#000000",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Saturn_73228100-95df-4a78-b8af-d9ee649a9199.png?v=1779159679"
+          }
+        }
+      ],
       "available_options": [
         {
           "group": "Version",
@@ -1563,7 +1630,9 @@
       "model": "Venus",
       "handle": "venus",
       "url": "https://www.heybike.com/products/venus",
-      "product_type": "Electric Bike",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_from": 1499.0,
       "currency": "USD",
       "options": {
@@ -1593,45 +1662,6 @@
       },
       "warranty": "2-Year Warranty",
       "specs": {
-        "physical": {
-          "🚲": "Double the Fun: Buy 2 E-bikes, Save $200. ➔",
-          "$99.00": "away from Free Shipping!",
-          "0.3s quick": "assist and easy",
-          "Shimano Altus 8-SP shifting": "help you sprint through lights and climb with no fuss — so commuting feels fast, relaxed, and effortless.",
-          "built-in turn signals": "help you see and be seen for safer city riding and low-light trips.",
-          "UL 2849": "and",
-          "Frame": "6061 Aluminum Alloy",
-          "Fork": "Aluminum Rigid Fork",
-          "Tires": "KENDA 27.5 x 2.2\"",
-          "Brakes": "Hydraulic Disc Brakes",
-          "Rotor": "180 × 1.9 mm",
-          "Chainring": "48T",
-          "Front Light": "White Light with Horn",
-          "Rear Light": "Integrated Turn Signal, Rear Red LED (optional)",
-          "Rack Capacity": "66 lb",
-          "Fenders & Rear Rack": "Optional",
-          "Bike Weight": "50 lb",
-          "Dimensions": "72.8\" × 29.5\" × 40.9\"/43.7\"",
-          "Metric": "1850×750×1040/1100 mm"
-        },
-        "technical": {
-          "85-mile long range": "and confident",
-          "28 mph top speed": "let you take longer loops and day trips without charging anxiety. More freedom, more routes, less planning.",
-          "45 lb": "without battery plus strong",
-          "70 N·m": "torque motor delivers nimble handling and confident hill power, without the heavy-lift hassle at home or in transport.",
-          "UL 2271": "certified, covering the electrical system and battery for trusted, tested safety you can rely on.",
-          "Motor": "750W Hub Motor (Galaxy eDrive System)",
-          "Torque": "70 Nm",
-          "Drivetrain": "Shimano Altus 8-Speed (11–32T)",
-          "Pedal Assist": "Dual Sensor (Torque + Cadence)",
-          "Battery": "680Wh",
-          "Certification": "UL 2849 (Whole Bike), UL 2271 (Battery)",
-          "Charger": "54.6V / 2A",
-          "Max Speed": "28 MPH",
-          "Max Range": "Up to 85 Miles (tested with a 155 lb rider in PAS1, no throttle applied)",
-          "Display": "LCD Color Display",
-          "App": "Heybike Smart App (iOS & Android)"
-        },
         "all": {
           "🚲": "Double the Fun: Buy 2 E-bikes, Save $200. ➔",
           "$99.00": "away from Free Shipping!",
@@ -1686,7 +1716,9 @@
           },
           "price": 1499.0,
           "sku": "HB1VenusUSPK1A",
-          "available": true
+          "variant_id": 48308109148379,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/VENUS_22e50900-d541-4767-9ce5-d12fa1dd4610.png?v=1779786723"
         },
         {
           "options": {
@@ -1695,7 +1727,9 @@
           },
           "price": 1499.0,
           "sku": "HB1VenusUSWH1A",
-          "available": true
+          "variant_id": 48308109181147,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/VENUS_b4da7355-84cc-4990-9d36-b0a7dd353996.png?v=1779786723"
         },
         {
           "options": {
@@ -1704,7 +1738,9 @@
           },
           "price": 1499.0,
           "sku": "HB1VenusUSGY1A",
-          "available": true
+          "variant_id": 48308109213915,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/VENUS_5df1cbf5-9f05-482c-96a8-efd4ce31fd71.png?v=1779786723"
         }
       ],
       "available_options": [],

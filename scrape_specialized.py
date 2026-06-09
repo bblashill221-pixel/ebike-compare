@@ -6,7 +6,7 @@ Specialized runs a Next.js / Salesforce Commerce Cloud site. The current e-bike
 lineup is discovered from the e-bikes category page (/shop/ebikes); each product
 page is then rendered with Playwright to extract:
 
-  * physical + technical specifications (the `SpecContainer` sections:
+  * specifications (the `SpecContainer` sections:
     E-Bike, Frameset, Brakes, Drivetrain, Wheels & Tires, Cockpit, ...),
   * colors as {name, hex, image} -- the hex is read from each color swatch's
     inline background-color, and the image is that color's hero photo (captured
@@ -35,6 +35,7 @@ from pathlib import Path
 
 
 import scraper_common  # noqa: E402,F401  (import sets LD_LIBRARY_PATH for bundled chromium)
+from bike_taxonomy import classify_product_types  # noqa: E402
 from playwright.async_api import async_playwright  # noqa: E402
 from warranty_js import JS_WARRANTY
 
@@ -43,22 +44,6 @@ LOGO = "assets/logos/specialized.svg"   # self-hosted wordmark (Specialized rend
 PLP_URL = f"{BASE}/us/en/shop/ebikes"
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/124.0 Safari/537.36")
-
-# Spec-section categories that are electronic/technical; everything else (frame,
-# brakes, drivetrain, wheels, cockpit, accessories, weight) is physical.
-TECH_CATEGORIES = {"e-bike", "ebike", "electronics", "motor", "battery", "electric"}
-TECHNICAL_KEYWORDS = ("motor", "battery", "charger", "display", "remote", "ui",
-                      "range", "controller", "sensor", "watt", "voltage", "torque")
-
-
-def classify(category: str, label: str) -> str:
-    if category.strip().lower() in TECH_CATEGORIES:
-        return "technical"
-    low = label.lower()
-    if any(kw in low for kw in TECHNICAL_KEYWORDS):
-        return "technical"
-    return "physical"
-
 
 def titlecase(s: str) -> str:
     return " ".join(w.capitalize() if w.isupper() or w.islower() else w
@@ -283,15 +268,15 @@ async def scrape_model(context, model: dict, retries: int = 3) -> dict:
             result["warranty"] = await page.evaluate(JS_WARRANTY)
             await page.close()
 
-            physical, technical, all_specs = {}, {}, {}
-            for cat, label, value in rows:
+            all_specs = {}
+            for _cat, label, value in rows:
                 key = " ".join(label.split())
                 all_specs[key] = value
-                (technical if classify(cat, key) == "technical" else physical)[key] = value
 
             offers = pr.get("prices") or []
             pvals = [o["price"] for o in offers]
             result["model"] = name
+            result["product_types"] = classify_product_types(name, "", model.get("url") or "")
             result["price_range"] = {
                 "min": min(pvals) if pvals else None,
                 "max": max(pvals) if pvals else None,
@@ -304,7 +289,7 @@ async def scrape_model(context, model: dict, retries: int = 3) -> dict:
             ]
             result["options"] = {"sizes": sizes, "colors": colors}
             result["geometry"] = geometry
-            result["specs"] = {"physical": physical, "technical": technical, "all": all_specs}
+            result["specs"] = {"all": all_specs}
             result["spec_count"] = len(all_specs)
             result["scrape_error"] = None
             return result
@@ -315,7 +300,7 @@ async def scrape_model(context, model: dict, retries: int = 3) -> dict:
                 result["price_range"] = {"min": None, "max": None, "currency": "USD"}
                 result["configurations"] = []
                 result["options"] = {"sizes": [], "colors": []}
-                result["specs"] = {"physical": {}, "technical": {}, "all": {}}
+                result["specs"] = {"all": {}}
                 result["spec_count"] = 0
                 result["warranty"] = None
                 result["scrape_error"] = f"{type(e).__name__}: {e}"

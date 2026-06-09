@@ -2,7 +2,7 @@
   "source": "https://www.specialized.com",
   "logo": "assets/logos/specialized.svg",
   "category": "ebikes",
-  "scraped_at": "2026-06-04T17:20:38.161814+00:00",
+  "scraped_at": "2026-06-07T22:36:29.077838+00:00",
   "model_count": 53,
   "models": [
     {
@@ -11,6 +11,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Haul LT",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 3799.99,
         "max": 3799.99,
@@ -131,6 +134,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Haul ST",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 2699.99,
         "max": 2699.99,
@@ -242,7 +248,8 @@
         "free": true
       },
       "free_accessories": [],
-      "available_options": []
+      "available_options": [],
+      "frame_style": "Step-Thru"
     },
     {
       "slug": "levo-4-evo-comp",
@@ -250,6 +257,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Levo 4 EVO Comp",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 8499.99,
         "max": 8499.99,
@@ -579,6 +589,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Levo 4 EVO Pro",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 10499.99,
         "max": 10499.99,
@@ -906,6 +919,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "S-Works Turbo Creo 2",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 14399.99,
         "max": 14399.99,
@@ -1247,6 +1263,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "S-Works Turbo Kenevo SL 2 Frameset",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 6099.99,
         "max": 6099.99,
@@ -1449,6 +1468,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "S-Works Turbo Levo 4",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 11499.99,
         "max": 11499.99,
@@ -1745,6 +1767,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "S-Works Turbo Levo 4 Frameset",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 5999.99,
         "max": 5999.99,
@@ -2024,6 +2049,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "S-Works Turbo Levo 4 LTD",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 19999.99,
         "max": 19999.99,
@@ -2320,6 +2348,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "S-Works Turbo Levo R",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 11499.99,
         "max": 11499.99,
@@ -2468,6 +2499,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "S-Works Turbo Levo SL 2 Di2",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 11999.99,
         "max": 11999.99,
@@ -2810,6 +2844,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "S-Works Turbo Levo SL 2 Frameset",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 6099.99,
         "max": 6099.99,
@@ -3058,6 +3095,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Como 4.0",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 4499.99,
         "max": 4499.99,
@@ -3317,6 +3357,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Como 4.0 IGH",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 2999.99,
         "max": 4599.99,
@@ -3555,6 +3598,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Como 5.0 IGH",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 6499.99,
         "max": 6499.99,
@@ -3792,6 +3838,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Creo 2 Comp",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 6999.99,
         "max": 6999.99,
@@ -4055,35 +4104,35 @@
       },
       "specs": {
         "all": {
-          "Motor": "New Specialized 1.2 SL Custom Lightweight Motor",
+          "Motor": "Specialized 1.2 SL Custom Lightweight Motor",
           "Battery": "Specialized SL1-320, fully integrated, 320Wh",
           "UI/Remote": "Specialized MasterMind TCU, percentage of remaining charge, 120 possible display configurations, MicroTune assist adjustment, over-the-air updates, ANT+/Bluetooth®, w/Handlebar remote",
           "Charger": "Custom charger, 48V System w/ SL system charger plug",
-          "Wiring Harness": "Custom Specialized wiring harness w/ charge port",
+          "Wiring Harness": "Custom Specialized wiring harness w/ chargeport",
           "Frame": "FACT 11r carbon, front/rear thru-axles, fully integrated down tube battery, internal cable routing, fender/rack mounts, 12x142mm",
           "Seat Binder": "Specialized Alloy, 31.8",
           "Fork": "Future Shock 3.2 w/ Smooth Boot, 12x100mm thru-axle, flat-mount disc",
-          "Front Brake": "SRAM APEX, hydraulic disc, 180mm",
-          "Rear Brake": "SRAM APEX, hydraulic disc, 160mm",
-          "Shift Levers": "SRAM Apex eTap AXS",
-          "Rear Derailleur": "SRAM X1 Eagle AXS",
-          "Cassette": "SRAM PG1210, 12-Speed, 11-50t",
-          "Chain": "SRAM NX Eagle, 12-Speed",
-          "Crankset": "SRAM Alloy DUB Crank Arms",
-          "Chainrings": "SRAM X-Sync Eagle, 107 BCD, 44T",
+          "Front Brake": "Shimano GRX RX410, hyrdaulic disc",
+          "Rear Brake": "Shimano GRX RX410, hyrdaulic disc",
+          "Shift Levers": "Shimano GRX Di2 RX715/717",
+          "Rear Derailleur": "Shimano GRX Di2 RD-RX717 12-speed",
+          "Cassette": "Shimano Deore M6100, 12-speed w/ Hyperglide+, 10-51t",
+          "Chain": "Shimano Deore M6100, 12-speed w/quick link",
+          "Crankset": "SRAM Alloy Crankset, DUB interface",
+          "Chainrings": "SRAM X-Sync Eagle, 107 BCD, 44t",
+          "Front Tire": "Tracer TLR All Terrain Gravel Tire, 700x50c, Tubeless Ready",
           "Front Wheel": "DT Swiss G540 rim, 24mm internal width, tubeless ready, 24h, Specialized full sealed bearing thru axle hub, centerlock disc, DT Swiss Champion 14G stainless steel spokes, DT Swiss brass nipples",
-          "Front Tire": "Tracer Pro, 700x42c",
-          "Rear Tire": "Tracer Pro, 700x42c",
+          "Rear Tire": "Tracer TLR All Terrain Gravel Tire, 700x50c, Tubeless Ready",
           "Rear Wheel": "DT Swiss G540 rim, 24mm internal width, tubeless ready, 24h, Specialized full sealed bearing thru axle hub, centerlock disc, DT Swiss Champion 14G stainless steel spokes, DT Swiss brass nipples",
-          "Inner Tubes": "700x32/50mm, 48mm Presta valve",
-          "Stem": "Future Stem Comp",
+          "Inner Tubes": "700x32-50mm, 40mm Presta valve",
+          "Stem": "Future Stem, Comp",
           "Handlebars": "Specialized Adventure Gear Hover, 103mm drop x 70mm reach x 12º flare",
-          "Tape": "Supacaz Super Sticky Kush",
-          "Saddle": "Body Geometry Power Sport",
-          "SeatPost": "Trans-X Dropper, 50mm Travel",
-          "Product ID": "277467",
+          "Grips": "Supacaz Super Sticky Kush",
+          "Saddle": "Body Geometry Power Sport, steel rails",
+          "SeatPost": "X-Fusion Manic Dropper, 50mm travel",
+          "Product ID": "263260",
           "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
-          "Weight": "14.55kg (32 lb, 1.2 oz)",
+          "Weight": "14.65 kg (32 lb, 4.8 oz)",
           "Weight Size": "56"
         }
       },
@@ -4133,6 +4182,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Creo 2 Comp",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 6999.99,
         "max": 6999.99,
@@ -4474,6 +4526,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Creo 2 Comp E5",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 5099.99,
         "max": 5099.99,
@@ -4814,6 +4869,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Creo 2 Expert",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 9499.99,
         "max": 9499.99,
@@ -5155,6 +5213,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Kenevo SL 2 Comp",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 5999.99,
         "max": 5999.99,
@@ -5431,6 +5492,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Kenevo SL 2 Expert",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 6999.99,
         "max": 6999.99,
@@ -5670,6 +5734,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Kenevo SL 2 Öhlins Coil",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 9999.99,
         "max": 9999.99,
@@ -5910,6 +5977,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Levo 4 Alloy",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 4999.99,
         "max": 4999.99,
@@ -6314,6 +6384,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Levo 4 Comp",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 7999.99,
         "max": 7999.99,
@@ -6643,6 +6716,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Levo 4 Comp Alloy",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 6699.99,
         "max": 6699.99,
@@ -7047,6 +7123,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Levo 4 Expert",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 8499.99,
         "max": 8499.99,
@@ -7374,6 +7453,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Levo 4 Pro",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 9999.99,
         "max": 9999.99,
@@ -7701,6 +7783,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Levo R Comp",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 7999.99,
         "max": 7999.99,
@@ -8069,6 +8154,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Levo R Comp Alloy",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 6699.99,
         "max": 7199.99,
@@ -8437,6 +8525,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Levo R Expert",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 8999.99,
         "max": 8999.99,
@@ -8597,6 +8688,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Levo SL 2 Comp",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 7699.99,
         "max": 8699.99,
@@ -8942,6 +9036,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Levo SL 2 Comp Alloy",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 7099.99,
         "max": 7099.99,
@@ -9286,6 +9383,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Levo SL 2 Expert",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 8999.99,
         "max": 8999.99,
@@ -9629,6 +9729,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Levo SL 2 Expert Di2",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 8499.99,
         "max": 8499.99,
@@ -9971,6 +10074,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Levo SL 2 Pro",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 9999.99,
         "max": 9999.99,
@@ -10278,6 +10384,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Vado 3 EVO 4.0",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 4499.99,
         "max": 4499.99,
@@ -10602,6 +10711,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Vado 3 EVO 5.0",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 5199.99,
         "max": 5199.99,
@@ -10905,6 +11017,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Vado 3 EVO 6.0",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 6999.99,
         "max": 6999.99,
@@ -11183,6 +11298,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Vado 3 X 4.0",
+      "product_types": [
+        "Fat tire"
+      ],
       "price_range": {
         "min": 5499.99,
         "max": 5499.99,
@@ -11486,6 +11604,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Vado 3 X 6.0",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 7999.99,
         "max": 7999.99,
@@ -11795,6 +11916,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Vado 4.0",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 2799.99,
         "max": 4099.99,
@@ -12066,7 +12190,10 @@
             }
           ]
         }
-      ]
+      ],
+      "family_id": "specialized__turbo-vado-4-0",
+      "tier": "Step-Over",
+      "frame_style": "Step-Over (Mid-Step)"
     },
     {
       "slug": "turbo-vado-40-step-through",
@@ -12074,6 +12201,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Vado 4.0 Step-Through",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 2799.99,
         "max": 4099.99,
@@ -12346,7 +12476,10 @@
             }
           ]
         }
-      ]
+      ],
+      "family_id": "specialized__turbo-vado-4-0",
+      "tier": "Step-Thru",
+      "frame_style": "Step-Thru"
     },
     {
       "slug": "turbo-vado-50-igh",
@@ -12354,6 +12487,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Vado 5.0 IGH",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 5249.99,
         "max": 5249.99,
@@ -12626,7 +12762,10 @@
             }
           ]
         }
-      ]
+      ],
+      "family_id": "specialized__turbo-vado-5-0-igh",
+      "tier": "Step-Over",
+      "frame_style": "Step-Over (Mid-Step)"
     },
     {
       "slug": "turbo-vado-50-igh-step-through",
@@ -12634,6 +12773,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Vado 5.0 IGH Step-Through",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 5249.99,
         "max": 5249.99,
@@ -12906,7 +13048,10 @@
             }
           ]
         }
-      ]
+      ],
+      "family_id": "specialized__turbo-vado-5-0-igh",
+      "tier": "Step-Thru",
+      "frame_style": "Step-Thru"
     },
     {
       "slug": "turbo-vado-sl-2-40",
@@ -12914,6 +13059,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Vado SL 2 4.0",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 3599.99,
         "max": 3599.99,
@@ -13181,7 +13329,10 @@
             }
           ]
         }
-      ]
+      ],
+      "family_id": "specialized__turbo-vado-sl-2-4-0",
+      "tier": "Step-Over",
+      "frame_style": "Step-Over (Mid-Step)"
     },
     {
       "slug": "turbo-vado-sl-2-40-eq",
@@ -13189,6 +13340,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Vado SL 2 4.0 EQ",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 3299.99,
         "max": 3299.99,
@@ -13478,7 +13632,10 @@
             }
           ]
         }
-      ]
+      ],
+      "family_id": "specialized__turbo-vado-sl-2-4-0-eq",
+      "tier": "Step-Over",
+      "frame_style": "Step-Over (Mid-Step)"
     },
     {
       "slug": "turbo-vado-sl-2-40-step-through-",
@@ -13486,6 +13643,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Vado SL 2 4.0 Step-Through",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 3999.99,
         "max": 3999.99,
@@ -13717,7 +13877,10 @@
             }
           ]
         }
-      ]
+      ],
+      "family_id": "specialized__turbo-vado-sl-2-4-0",
+      "tier": "Step-Thru",
+      "frame_style": "Step-Thru"
     },
     {
       "slug": "turbo-vado-sl-2-40-step-through-eq",
@@ -13725,6 +13888,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Vado SL 2 4.0 Step-Through  EQ",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 3299.99,
         "max": 3299.99,
@@ -13978,7 +14144,10 @@
             }
           ]
         }
-      ]
+      ],
+      "family_id": "specialized__turbo-vado-sl-2-4-0-eq",
+      "tier": "Step-Thru",
+      "frame_style": "Step-Thru"
     },
     {
       "slug": "turbo-vado-sl-2-50-eq",
@@ -13986,6 +14155,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Vado SL 2 5.0 EQ",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 3599.99,
         "max": 3599.99,
@@ -14286,7 +14458,10 @@
             }
           ]
         }
-      ]
+      ],
+      "family_id": "specialized__turbo-vado-sl-2-5-0-eq",
+      "tier": "Step-Over",
+      "frame_style": "Step-Over (Mid-Step)"
     },
     {
       "slug": "turbo-vado-sl-2-50-step-through-eq",
@@ -14294,6 +14469,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Vado SL 2 5.0 Step-Through EQ",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 3599.99,
         "max": 3599.99,
@@ -14558,7 +14736,10 @@
             }
           ]
         }
-      ]
+      ],
+      "family_id": "specialized__turbo-vado-sl-2-5-0-eq",
+      "tier": "Step-Thru",
+      "frame_style": "Step-Thru"
     },
     {
       "slug": "turbo-vado-sl-2-60-carbon",
@@ -14566,6 +14747,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Vado SL 2 6.0 Carbon",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 6399.99,
         "max": 6399.99,
@@ -14829,6 +15013,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Turbo Vado SL 2 6.0 EQ Carbon",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 6999.99,
         "max": 6999.99,
@@ -15095,6 +15282,9 @@
       "name": "",
       "warranty": "Lifetime Warranty",
       "model": "Vado SL 2 LTD",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_range": {
         "min": 9999.99,
         "max": 9999.99,

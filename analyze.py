@@ -115,12 +115,27 @@ def _drive_type(specs):
     return "mid" if re.search(r"mid[- ]?drive|bottom bracket", txt) else "hub"
 
 
-def _range_mi(specs):
+def _range_vals(specs):
     txt = find_spec(specs, "range")
     vals = [float(g) for g in re.findall(r"(\d{2,3})\s*(?:mile|mi\b)", txt, re.I)]
     if not vals:                                   # bare numbers in a range row
         vals = [float(g) for g in re.findall(r"\b(\d{2,3})\b", txt)]
+    return vals
+
+
+def _range_mi(specs):
+    vals = _range_vals(specs)
     return round(max(vals)) if vals else None
+
+
+def _range_min_mi(specs):
+    """Low end of a stated range span (e.g. "45-90 miles" -> 45); None when only a
+    single figure is given, so the card can show "low/high" like motor W."""
+    vals = _range_vals(specs)
+    if len(vals) < 2:
+        return None
+    lo, hi = round(min(vals)), round(max(vals))
+    return lo if lo != hi else None
 
 
 def _weight_lb(specs):
@@ -372,6 +387,7 @@ def extract_typed_specs(model: dict) -> dict:
         "torque_nm": _torque_nm(specs),
         "drive_type": _drive_type(specs),
         "range_mi": _range_mi(specs),
+        "range_min_mi": _range_min_mi(specs),
         "weight_lb": _weight_lb(specs),
         "max_load_lb": _max_load_lb(specs),
         "rack_load_lb": _rack_load_lb(specs),

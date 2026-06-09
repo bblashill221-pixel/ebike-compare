@@ -24,32 +24,16 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-from scraper_common import fetch_json, clean_title, build_colors, make_classifier  # noqa: E402  (import also sets LD_LIBRARY_PATH for bundled chromium)
+from scraper_common import fetch_json, clean_title, build_colors  # noqa: E402  (import also sets LD_LIBRARY_PATH for bundled chromium)
 from playwright.async_api import async_playwright  # noqa: E402
 from warranty_js import JS_WARRANTY
+
+from bike_taxonomy import classify_product_types
 
 BASE = "https://velowave.com"
 LOGO = "https://cdn.shopify.com/s/files/1/0554/8294/1627/files/15.svg?v=1734405074"
 COLLECTION = "all-ebikes"
 EBIKE_TYPE = "Electric_Bicycles"
-
-TECHNICAL_KEYWORDS = (
-    "motor", "battery", "cell", "charger", "charging", "range", "controller",
-    "throttle", "display", "sensor", "pedal assist", "pas", "speed", "class",
-    "watt", "voltage", "torque", "power", "app", "connectivity", "wireless",
-    "gps", "ip", "certif",
-)
-PHYSICAL_KEYWORDS = (
-    "frame", "fork", "suspension", "wheel", "tire", "tyre", "brake", "rotor",
-    "derailleur", "shift", "chain", "cassette", "gear", "crank", "chainring",
-    "pedal", "saddle", "seat", "handlebar", "stem", "grip", "headset",
-    "kickstand", "rack", "fender", "light", "spoke", "hub", "rim", "weight",
-    "payload", "load", "capacity", "height", "size", "color", "colour",
-    "dimension", "axle", "tube", "reach", "stack", "wheelbase", "standover",
-    "step over", "step-over", "inseam",
-)
-
-classify = make_classifier(TECHNICAL_KEYWORDS, PHYSICAL_KEYWORDS)
 
 
 def discover_models() -> list[dict]:
@@ -76,7 +60,9 @@ def discover_models() -> list[dict]:
             "model": clean_title(p.get("title")),
             "handle": p.get("handle"),
             "url": f"{BASE}/products/{p['handle']}",
-            "product_type": p.get("product_type"),
+            "product_types": classify_product_types(
+                p.get("title") or "", p.get("product_type") or "",
+                " ".join(p.get("tags") or [])),
             "price_from": min(prices) if prices else None,
             "currency": "USD",
             "options": options,
@@ -155,20 +141,19 @@ async def scrape_model(context, model: dict, retries: int = 3) -> dict:
             if not pairs:
                 raise RuntimeError("no specs extracted")
 
-            physical, technical, all_specs = {}, {}, {}
+            all_specs = {}
             for label, value in pairs:
                 key = " ".join(label.split())
                 all_specs[key] = value
-                (physical if classify(key) == "physical" else technical)[key] = value
 
-            result["specs"] = {"physical": physical, "technical": technical, "all": all_specs}
+            result["specs"] = {"all": all_specs}
             result["spec_count"] = len(all_specs)
             result["scrape_error"] = None
             return result
         except Exception as e:  # noqa: BLE001
             await page.close()
             if attempt == retries:
-                result["specs"] = {"physical": {}, "technical": {}, "all": {}}
+                result["specs"] = {"all": {}}
                 result["spec_count"] = 0
                 result["warranty"] = None
                 result["scrape_error"] = f"{type(e).__name__}: {e}"

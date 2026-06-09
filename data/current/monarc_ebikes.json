@@ -2,14 +2,16 @@
   "source": "https://monarcbike.com",
   "logo": "https://monarcbikes.com/cdn/shop/files/logo-lectric-brand.svg?v=1776703367",
   "collection": "marker-bikes",
-  "scraped_at": "2026-06-06T04:44:15.261887+00:00",
-  "model_count": 4,
+  "scraped_at": "2026-06-07T22:39:43.799318+00:00",
+  "model_count": 2,
   "models": [
     {
-      "model": "Marker High-Step Cedar Ebike",
-      "handle": "marker-high-step-cedar-ebike",
-      "url": "https://monarcbike.com/products/marker-high-step-cedar-ebike",
-      "product_type": "Bike",
+      "model": "Marker High-Step Ebike",
+      "handle": "marker-high-step-ebike",
+      "url": "https://monarcbike.com/products/marker-high-step-cedar-ebike?variant=51910720159876",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_from": 1999.0,
       "currency": "USD",
       "options": {
@@ -21,71 +23,20 @@
             "name": "Cedar",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0980/9110/6436/files/Marker-Brown-side-1.png?v=1780308137"
+            "image": "https://cdn.shopify.com/s/files/1/0980/9110/6436/files/Marker-Brown-side-1.png?v=1780308137",
+            "href": "https://monarcbike.com/products/marker-high-step-cedar-ebike"
+          },
+          {
+            "name": "Taconite",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0980/9110/6436/files/Marker-Taconite-side-1.png?v=1780308115",
+            "href": "https://monarcbike.com/products/marker-high-step-taconite-ebike"
           }
         ]
       },
       "warranty": "5-Year Warranty",
       "specs": {
-        "physical": {
-          "Pedal Assist Sensor": "Toggle between torque and cadence sensor (default torque sensor)",
-          "Fork": "Gneiss reverse-arch suspension fork. 80mm of travel with lockout and preload adjustments",
-          "Tires": "Custom Kenda all-terrain 26x4 inch tires",
-          "Front Brake": "Hydraulic, quad-piston. Star Union Talon P4",
-          "Rear Brake": "Hydraulic, quad-piston. Star Union Talon P4",
-          "Front Rotor": "203mm 6 bolt",
-          "Rear Rotor": "180mm 6 bolt",
-          "Rear Derailleur": "Shimano Cues, 9 speed",
-          "Shifter": "Cues 9Spd",
-          "Cassette": "11-36 tooth",
-          "Chainring": "Prowheel, 48 tooth",
-          "Chain": "KMC",
-          "Front Axle": "Thru-axle",
-          "Rear Axle": "Solid, bolt-on axle",
-          "Saddle": "Monarc plush comfort saddle paired with a 2-bolt seat post",
-          "Kickstand": "Heavy-duty steel side-sweeping kickstand",
-          "Fenders": "Flexible, damage-resistant polypropylene fenders",
-          "Rear Rack": "Included MIK lightweight rear rack, equipped with slots for various carrying capabilities. 66lbs (30kg) capacity",
-          "Front Light": "Integrated, 494 Lumens",
-          "Rear Light": "Integrated into rear rack, functions as a rear light, brake light, and turn signals. Compatible with Smart Helmet light system",
-          "Grips": "Ergonomic, full-length lock-on Monarc grips",
-          "Rim Type": "Aluminum",
-          "Frame": "Aluminum 6061 frame, hydroformed with smooth welding",
-          "Bike Weight": "87lbs",
-          "Gross Payload Capacity": "420lbs",
-          "Rear Rack Capacity": "66lbs (30kg)",
-          "Max Rider Weight": "330lbs",
-          "Seat Tube Length": "435mm",
-          "Top Tube Length": "565mm",
-          "Bottom Bracket Drop": "60mm",
-          "Head Tube Angle": "67 Degrees",
-          "Seat Tube Angle": "73 Degrees",
-          "Rear Chainstay Length": "515mm",
-          "Wheelbase": "1185mm",
-          "Reach": "363mm",
-          "Rider Height": "High-Step: 5’4”-6’5” Step-Thru: 5’2”-6’3”",
-          "Stack": "660mm",
-          "Standover Height": "High-Step: 798mmStep-Thru: 573mm",
-          "Wheel Size in Inches": "26\"x4\""
-        },
-        "technical": {
-          "Ebike Class": "Class 1/2/3 (Default: Class 2)",
-          "Range": "Up to 60 miles per battery (120 miles)",
-          "Top Speed": "28mph",
-          "Riding Modes": "5 modes: Cruise, Breeze, Explore, Sport, Boost",
-          "Waterproof Rating": "Marker ebike is rated to IPX6. Monarc battery is rated to IPX7.",
-          "Bike Safety Certification": "UL2849, ISO 4210",
-          "Battery Certification": "UL2271",
-          "Motor": "Bafang B750 rear hub motor. 1638W peak motor power, 750W nominal",
-          "Motor Torque": "85Nm",
-          "Battery": "(2) Lithium-ion 48V, 15Ah (720Wh) batteries with LG cells, semi-integrated and removable in one easy motion",
-          "Controller": "30A internal controller",
-          "Charger": "48V, 5A Fast Charger. Equipped with smart charging functionality that allows riders to preset a maximum charge percentage, automatically stopping charging once reached to help extend battery lifespan. (Tip: By limiting your charge to 80% during charge cycles, you can triple your battery lifespan)",
-          "Charging time from 0% to 100%": "3 hours (per battery)",
-          "Display Type": "Custom Monarc 3.5-inch TouchDisplay (touch screen)",
-          "Display Features": "Monarc app connectivity/ Bluetooth connectivity/ USB charging/ Display Lock (via app)/ Over-the-air updates/ Smart accessory connectivity (Smart Helmet, Radar, TPMS, Camera, Heart Rate, Phone)/ Full ride customization/ Customizable color themeSept '26: Turn-by-turn navigation connection (via bluetooth)",
-          "Throttle": "Left-side thumb throttle"
-        },
         "all": {
           "Ebike Class": "Class 1/2/3 (Default: Class 2)",
           "Range": "Up to 60 miles per battery (120 miles)",
@@ -190,217 +141,16 @@
           },
           "price": 1999.0,
           "sku": "601-01801-C201",
+          "variant_id": 51910720159876,
           "available": true,
+          "image": null,
           "color": {
             "name": "Cedar",
             "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0980/9110/6436/files/Marker-Brown-side-1.png?v=1780308137"
           }
-        }
-      ],
-      "available_options": [
-        {
-          "group": "Included accessories",
-          "type": "accessory",
-          "choices": [
-            {
-              "value": "Rear Rack",
-              "price": 0,
-              "free": true
-            },
-            {
-              "value": "Front Light",
-              "price": 0,
-              "free": true
-            },
-            {
-              "value": "Rear Light",
-              "price": 0,
-              "free": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "model": "Marker High-Step Taconite Ebike",
-      "handle": "marker-high-step-taconite-ebike",
-      "url": "https://monarcbike.com/products/marker-high-step-taconite-ebike",
-      "product_type": "Bike",
-      "price_from": 1999.0,
-      "currency": "USD",
-      "options": {
-        "Frame": [
-          "High-Step"
-        ],
-        "colors": [
-          {
-            "name": "Taconite",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0980/9110/6436/files/Marker-Taconite-side-1.png?v=1780308115"
-          }
-        ]
-      },
-      "warranty": "5-Year Warranty",
-      "specs": {
-        "physical": {
-          "Pedal Assist Sensor": "Toggle between torque and cadence sensor (default torque sensor)",
-          "Fork": "Gneiss reverse-arch suspension fork. 80mm of travel with lockout and preload adjustments",
-          "Tires": "Custom Kenda all-terrain 26x4 inch tires",
-          "Front Brake": "Hydraulic, quad-piston. Star Union Talon P4",
-          "Rear Brake": "Hydraulic, quad-piston. Star Union Talon P4",
-          "Front Rotor": "203mm 6 bolt",
-          "Rear Rotor": "180mm 6 bolt",
-          "Rear Derailleur": "Shimano Cues, 9 speed",
-          "Shifter": "Cues 9Spd",
-          "Cassette": "11-36 tooth",
-          "Chainring": "Prowheel, 48 tooth",
-          "Chain": "KMC",
-          "Front Axle": "Thru-axle",
-          "Rear Axle": "Solid, bolt-on axle",
-          "Saddle": "Monarc plush comfort saddle paired with a 2-bolt seat post",
-          "Kickstand": "Heavy-duty steel side-sweeping kickstand",
-          "Fenders": "Flexible, damage-resistant polypropylene fenders",
-          "Rear Rack": "Included MIK lightweight rear rack, equipped with slots for various carrying capabilities. 66lbs (30kg) capacity",
-          "Front Light": "Integrated, 494 Lumens",
-          "Rear Light": "Integrated into rear rack, functions as a rear light, brake light, and turn signals. Compatible with Smart Helmet light system",
-          "Grips": "Ergonomic, full-length lock-on Monarc grips",
-          "Rim Type": "Aluminum",
-          "Frame": "Aluminum 6061 frame, hydroformed with smooth welding",
-          "Bike Weight": "87lbs",
-          "Gross Payload Capacity": "420lbs",
-          "Rear Rack Capacity": "66lbs (30kg)",
-          "Max Rider Weight": "330lbs",
-          "Seat Tube Length": "435mm",
-          "Top Tube Length": "565mm",
-          "Bottom Bracket Drop": "60mm",
-          "Head Tube Angle": "67 Degrees",
-          "Seat Tube Angle": "73 Degrees",
-          "Rear Chainstay Length": "515mm",
-          "Wheelbase": "1185mm",
-          "Reach": "363mm",
-          "Rider Height": "High-Step: 5’4”-6’5” Step-Thru: 5’2”-6’3”",
-          "Stack": "660mm",
-          "Standover Height": "High-Step: 798mmStep-Thru: 573mm",
-          "Wheel Size in Inches": "26\"x4\""
         },
-        "technical": {
-          "Ebike Class": "Class 1/2/3 (Default: Class 2)",
-          "Range": "Up to 60 miles per battery (120 miles)",
-          "Top Speed": "28mph",
-          "Riding Modes": "5 modes: Cruise, Breeze, Explore, Sport, Boost",
-          "Waterproof Rating": "Marker ebike is rated to IPX6. Monarc battery is rated to IPX7.",
-          "Bike Safety Certification": "UL2849, ISO 4210",
-          "Battery Certification": "UL2271",
-          "Motor": "Bafang B750 rear hub motor. 1638W peak motor power, 750W nominal",
-          "Motor Torque": "85Nm",
-          "Battery": "(2) Lithium-ion 48V, 15Ah (720Wh) batteries with LG cells, semi-integrated and removable in one easy motion",
-          "Controller": "30A internal controller",
-          "Charger": "48V, 5A Fast Charger. Equipped with smart charging functionality that allows riders to preset a maximum charge percentage, automatically stopping charging once reached to help extend battery lifespan. (Tip: By limiting your charge to 80% during charge cycles, you can triple your battery lifespan)",
-          "Charging time from 0% to 100%": "3 hours (per battery)",
-          "Display Type": "Custom Monarc 3.5-inch TouchDisplay (touch screen)",
-          "Display Features": "Monarc app connectivity/ Bluetooth connectivity/ USB charging/ Display Lock (via app)/ Over-the-air updates/ Smart accessory connectivity (Smart Helmet, Radar, TPMS, Camera, Heart Rate, Phone)/ Full ride customization/ Customizable color themeSept '26: Turn-by-turn navigation connection (via bluetooth)",
-          "Throttle": "Left-side thumb throttle"
-        },
-        "all": {
-          "Ebike Class": "Class 1/2/3 (Default: Class 2)",
-          "Range": "Up to 60 miles per battery (120 miles)",
-          "Top Speed": "28mph",
-          "Riding Modes": "5 modes: Cruise, Breeze, Explore, Sport, Boost",
-          "Waterproof Rating": "Marker ebike is rated to IPX6. Monarc battery is rated to IPX7.",
-          "Bike Safety Certification": "UL2849, ISO 4210",
-          "Battery Certification": "UL2271",
-          "Motor": "Bafang B750 rear hub motor. 1638W peak motor power, 750W nominal",
-          "Motor Torque": "85Nm",
-          "Battery": "(2) Lithium-ion 48V, 15Ah (720Wh) batteries with LG cells, semi-integrated and removable in one easy motion",
-          "Controller": "30A internal controller",
-          "Charger": "48V, 5A Fast Charger. Equipped with smart charging functionality that allows riders to preset a maximum charge percentage, automatically stopping charging once reached to help extend battery lifespan. (Tip: By limiting your charge to 80% during charge cycles, you can triple your battery lifespan)",
-          "Charging time from 0% to 100%": "3 hours (per battery)",
-          "Display Type": "Custom Monarc 3.5-inch TouchDisplay (touch screen)",
-          "Display Features": "Monarc app connectivity/ Bluetooth connectivity/ USB charging/ Display Lock (via app)/ Over-the-air updates/ Smart accessory connectivity (Smart Helmet, Radar, TPMS, Camera, Heart Rate, Phone)/ Full ride customization/ Customizable color themeSept '26: Turn-by-turn navigation connection (via bluetooth)",
-          "Pedal Assist Sensor": "Toggle between torque and cadence sensor (default torque sensor)",
-          "Throttle": "Left-side thumb throttle",
-          "Fork": "Gneiss reverse-arch suspension fork. 80mm of travel with lockout and preload adjustments",
-          "Tires": "Custom Kenda all-terrain 26x4 inch tires",
-          "Front Brake": "Hydraulic, quad-piston. Star Union Talon P4",
-          "Rear Brake": "Hydraulic, quad-piston. Star Union Talon P4",
-          "Front Rotor": "203mm 6 bolt",
-          "Rear Rotor": "180mm 6 bolt",
-          "Rear Derailleur": "Shimano Cues, 9 speed",
-          "Shifter": "Cues 9Spd",
-          "Cassette": "11-36 tooth",
-          "Chainring": "Prowheel, 48 tooth",
-          "Chain": "KMC",
-          "Front Axle": "Thru-axle",
-          "Rear Axle": "Solid, bolt-on axle",
-          "Saddle": "Monarc plush comfort saddle paired with a 2-bolt seat post",
-          "Kickstand": "Heavy-duty steel side-sweeping kickstand",
-          "Fenders": "Flexible, damage-resistant polypropylene fenders",
-          "Rear Rack": "Included MIK lightweight rear rack, equipped with slots for various carrying capabilities. 66lbs (30kg) capacity",
-          "Front Light": "Integrated, 494 Lumens",
-          "Rear Light": "Integrated into rear rack, functions as a rear light, brake light, and turn signals. Compatible with Smart Helmet light system",
-          "Grips": "Ergonomic, full-length lock-on Monarc grips",
-          "Rim Type": "Aluminum",
-          "Frame": "Aluminum 6061 frame, hydroformed with smooth welding",
-          "Bike Weight": "87lbs",
-          "Gross Payload Capacity": "420lbs",
-          "Rear Rack Capacity": "66lbs (30kg)",
-          "Max Rider Weight": "330lbs",
-          "Seat Tube Length": "435mm",
-          "Top Tube Length": "565mm",
-          "Bottom Bracket Drop": "60mm",
-          "Head Tube Angle": "67 Degrees",
-          "Seat Tube Angle": "73 Degrees",
-          "Rear Chainstay Length": "515mm",
-          "Wheelbase": "1185mm",
-          "Reach": "363mm",
-          "Rider Height": "High-Step: 5’4”-6’5” Step-Thru: 5’2”-6’3”",
-          "Stack": "660mm",
-          "Standover Height": "High-Step: 798mmStep-Thru: 573mm",
-          "Wheel Size in Inches": "26\"x4\""
-        }
-      },
-      "spec_count": 55,
-      "scrape_error": null,
-      "shipping": {
-        "cost": 0,
-        "free": true
-      },
-      "free_accessories": [
-        {
-          "name": "Rear Rack",
-          "price": 0,
-          "free": true,
-          "detail": "Included MIK lightweight rear rack, equipped with slots for various carrying capabilities. 66lbs (30kg) capacity"
-        },
-        {
-          "name": "Front Light",
-          "price": 0,
-          "free": true,
-          "detail": "Integrated, 494 Lumens"
-        },
-        {
-          "name": "Rear Light",
-          "price": 0,
-          "free": true,
-          "detail": "Integrated into rear rack, functions as a rear light, brake light, and turn signals. Compatible with Smart Helmet light system"
-        }
-      ],
-      "geometry": {
-        "Seat Tube Length": "435mm",
-        "Top Tube Length": "565mm",
-        "Head Tube Angle": "67 Degrees",
-        "Seat Tube Angle": "73 Degrees",
-        "Rear Chainstay Length": "515mm",
-        "Wheelbase": "1185mm",
-        "Reach": "363mm",
-        "Rider Height": "High-Step: 5’4”-6’5” Step-Thru: 5’2”-6’3”",
-        "Stack": "660mm",
-        "Standover Height": "High-Step: 798mmStep-Thru: 573mm"
-      },
-      "configurations": [
         {
           "options": {
             "Frame": "High-Step",
@@ -408,7 +158,9 @@
           },
           "price": 1999.0,
           "sku": "601-01801-B201",
+          "variant_id": 51910749061252,
           "available": true,
+          "image": null,
           "color": {
             "name": "Taconite",
             "hex": null,
@@ -439,13 +191,18 @@
             }
           ]
         }
-      ]
+      ],
+      "family_id": "monarc__marker-ebike",
+      "tier": "Step-Over",
+      "frame_style": "Step-Over (Mid-Step)"
     },
     {
-      "model": "Marker Step-Thru Birchwood Ebike",
-      "handle": "marker-step-thru-birchwood-ebike",
-      "url": "https://monarcbike.com/products/marker-step-thru-birchwood-ebike",
-      "product_type": "Bike",
+      "model": "Marker Step-Thru Ebike",
+      "handle": "marker-step-thru-ebike",
+      "url": "https://monarcbike.com/products/marker-step-thru-birchwood-ebike?variant=51910742016132",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_from": 1999.0,
       "currency": "USD",
       "options": {
@@ -457,71 +214,20 @@
             "name": "Birchwood",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0980/9110/6436/files/Marker-White-side-1.png?v=1780308133"
+            "image": "https://cdn.shopify.com/s/files/1/0980/9110/6436/files/Marker-White-side-1.png?v=1780308133",
+            "href": "https://monarcbike.com/products/marker-step-thru-birchwood-ebike"
+          },
+          {
+            "name": "Greenway",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0980/9110/6436/files/Marker-Green-side-1.png?v=1780308128",
+            "href": "https://monarcbike.com/products/marker-step-thru-greenway-ebike"
           }
         ]
       },
       "warranty": "5-Year Warranty",
       "specs": {
-        "physical": {
-          "Pedal Assist Sensor": "Toggle between torque and cadence sensor (default torque sensor)",
-          "Fork": "Gneiss reverse-arch suspension fork. 80mm of travel with lockout and preload adjustments",
-          "Tires": "Custom Kenda all-terrain 26x4 inch tires",
-          "Front Brake": "Hydraulic, quad-piston. Star Union Talon P4",
-          "Rear Brake": "Hydraulic, quad-piston. Star Union Talon P4",
-          "Front Rotor": "203mm 6 bolt",
-          "Rear Rotor": "180mm 6 bolt",
-          "Rear Derailleur": "Shimano Cues, 9 speed",
-          "Shifter": "Cues 9Spd",
-          "Cassette": "11-36 tooth",
-          "Chainring": "Prowheel, 48 tooth",
-          "Chain": "KMC",
-          "Front Axle": "Thru-axle",
-          "Rear Axle": "Solid, bolt-on axle",
-          "Saddle": "Monarc plush comfort saddle paired with a 2-bolt seat post",
-          "Kickstand": "Heavy-duty steel side-sweeping kickstand",
-          "Fenders": "Flexible, damage-resistant polypropylene fenders",
-          "Rear Rack": "Included MIK lightweight rear rack, equipped with slots for various carrying capabilities. 66lbs (30kg) capacity",
-          "Front Light": "Integrated, 494 Lumens",
-          "Rear Light": "Integrated into rear rack, functions as a rear light, brake light, and turn signals. Compatible with Smart Helmet light system",
-          "Grips": "Ergonomic, full-length lock-on Monarc grips",
-          "Rim Type": "Aluminum",
-          "Frame": "Aluminum 6061 frame, hydroformed with smooth welding",
-          "Bike Weight": "87lbs",
-          "Gross Payload Capacity": "420lbs",
-          "Rear Rack Capacity": "66lbs (30kg)",
-          "Max Rider Weight": "330lbs",
-          "Seat Tube Length": "435mm",
-          "Top Tube Length": "565mm",
-          "Bottom Bracket Drop": "60mm",
-          "Head Tube Angle": "67 Degrees",
-          "Seat Tube Angle": "73 Degrees",
-          "Rear Chainstay Length": "515mm",
-          "Wheelbase": "1185mm",
-          "Reach": "363mm",
-          "Rider Height": "High-Step: 5’4”-6’5” Step-Thru: 5’2”-6’3”",
-          "Stack": "660mm",
-          "Standover Height": "High-Step: 798mmStep-Thru: 573mm",
-          "Wheel Size in Inches": "26\"x4\""
-        },
-        "technical": {
-          "Ebike Class": "Class 1/2/3 (Default: Class 2)",
-          "Range": "Up to 60 miles per battery (120 miles)",
-          "Top Speed": "28mph",
-          "Riding Modes": "5 modes: Cruise, Breeze, Explore, Sport, Boost",
-          "Waterproof Rating": "Marker ebike is rated to IPX6. Monarc battery is rated to IPX7.",
-          "Bike Safety Certification": "UL2849, ISO 4210",
-          "Battery Certification": "UL2271",
-          "Motor": "Bafang B750 rear hub motor. 1638W peak motor power, 750W nominal",
-          "Motor Torque": "85Nm",
-          "Battery": "(2) Lithium-ion 48V, 15Ah (720Wh) batteries with LG cells, semi-integrated and removable in one easy motion",
-          "Controller": "30A internal controller",
-          "Charger": "48V, 5A Fast Charger. Equipped with smart charging functionality that allows riders to preset a maximum charge percentage, automatically stopping charging once reached to help extend battery lifespan. (Tip: By limiting your charge to 80% during charge cycles, you can triple your battery lifespan)",
-          "Charging time from 0% to 100%": "3 hours (per battery)",
-          "Display Type": "Custom Monarc 3.5-inch TouchDisplay (touch screen)",
-          "Display Features": "Monarc app connectivity/ Bluetooth connectivity/ USB charging/ Display Lock (via app)/ Over-the-air updates/ Smart accessory connectivity (Smart Helmet, Radar, TPMS, Camera, Heart Rate, Phone)/ Full ride customization/ Customizable color themeSept '26: Turn-by-turn navigation connection (via bluetooth)",
-          "Throttle": "Left-side thumb throttle"
-        },
         "all": {
           "Ebike Class": "Class 1/2/3 (Default: Class 2)",
           "Range": "Up to 60 miles per battery (120 miles)",
@@ -626,217 +332,16 @@
           },
           "price": 1999.0,
           "sku": "601-01802-W201",
+          "variant_id": 51910742016132,
           "available": true,
+          "image": null,
           "color": {
             "name": "Birchwood",
             "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0980/9110/6436/files/Marker-White-side-1.png?v=1780308133"
           }
-        }
-      ],
-      "available_options": [
-        {
-          "group": "Included accessories",
-          "type": "accessory",
-          "choices": [
-            {
-              "value": "Rear Rack",
-              "price": 0,
-              "free": true
-            },
-            {
-              "value": "Front Light",
-              "price": 0,
-              "free": true
-            },
-            {
-              "value": "Rear Light",
-              "price": 0,
-              "free": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "model": "Marker Step-Thru Greenway Ebike",
-      "handle": "marker-step-thru-greenway-ebike",
-      "url": "https://monarcbike.com/products/marker-step-thru-greenway-ebike",
-      "product_type": "Bike",
-      "price_from": 1999.0,
-      "currency": "USD",
-      "options": {
-        "Frame": [
-          "Step-Thru"
-        ],
-        "colors": [
-          {
-            "name": "Greenway",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0980/9110/6436/files/Marker-Green-side-1.png?v=1780308128"
-          }
-        ]
-      },
-      "warranty": "5-Year Warranty",
-      "specs": {
-        "physical": {
-          "Pedal Assist Sensor": "Toggle between torque and cadence sensor (default torque sensor)",
-          "Fork": "Gneiss reverse-arch suspension fork. 80mm of travel with lockout and preload adjustments",
-          "Tires": "Custom Kenda all-terrain 26x4 inch tires",
-          "Front Brake": "Hydraulic, quad-piston. Star Union Talon P4",
-          "Rear Brake": "Hydraulic, quad-piston. Star Union Talon P4",
-          "Front Rotor": "203mm 6 bolt",
-          "Rear Rotor": "180mm 6 bolt",
-          "Rear Derailleur": "Shimano Cues, 9 speed",
-          "Shifter": "Cues 9Spd",
-          "Cassette": "11-36 tooth",
-          "Chainring": "Prowheel, 48 tooth",
-          "Chain": "KMC",
-          "Front Axle": "Thru-axle",
-          "Rear Axle": "Solid, bolt-on axle",
-          "Saddle": "Monarc plush comfort saddle paired with a 2-bolt seat post",
-          "Kickstand": "Heavy-duty steel side-sweeping kickstand",
-          "Fenders": "Flexible, damage-resistant polypropylene fenders",
-          "Rear Rack": "Included MIK lightweight rear rack, equipped with slots for various carrying capabilities. 66lbs (30kg) capacity",
-          "Front Light": "Integrated, 494 Lumens",
-          "Rear Light": "Integrated into rear rack, functions as a rear light, brake light, and turn signals. Compatible with Smart Helmet light system",
-          "Grips": "Ergonomic, full-length lock-on Monarc grips",
-          "Rim Type": "Aluminum",
-          "Frame": "Aluminum 6061 frame, hydroformed with smooth welding",
-          "Bike Weight": "87lbs",
-          "Gross Payload Capacity": "420lbs",
-          "Rear Rack Capacity": "66lbs (30kg)",
-          "Max Rider Weight": "330lbs",
-          "Seat Tube Length": "435mm",
-          "Top Tube Length": "565mm",
-          "Bottom Bracket Drop": "60mm",
-          "Head Tube Angle": "67 Degrees",
-          "Seat Tube Angle": "73 Degrees",
-          "Rear Chainstay Length": "515mm",
-          "Wheelbase": "1185mm",
-          "Reach": "363mm",
-          "Rider Height": "High-Step: 5’4”-6’5” Step-Thru: 5’2”-6’3”",
-          "Stack": "660mm",
-          "Standover Height": "High-Step: 798mmStep-Thru: 573mm",
-          "Wheel Size in Inches": "26\"x4\""
         },
-        "technical": {
-          "Ebike Class": "Class 1/2/3 (Default: Class 2)",
-          "Range": "Up to 60 miles per battery (120 miles)",
-          "Top Speed": "28mph",
-          "Riding Modes": "5 modes: Cruise, Breeze, Explore, Sport, Boost",
-          "Waterproof Rating": "Marker ebike is rated to IPX6. Monarc battery is rated to IPX7.",
-          "Bike Safety Certification": "UL2849, ISO 4210",
-          "Battery Certification": "UL2271",
-          "Motor": "Bafang B750 rear hub motor. 1638W peak motor power, 750W nominal",
-          "Motor Torque": "85Nm",
-          "Battery": "(2) Lithium-ion 48V, 15Ah (720Wh) batteries with LG cells, semi-integrated and removable in one easy motion",
-          "Controller": "30A internal controller",
-          "Charger": "48V, 5A Fast Charger. Equipped with smart charging functionality that allows riders to preset a maximum charge percentage, automatically stopping charging once reached to help extend battery lifespan. (Tip: By limiting your charge to 80% during charge cycles, you can triple your battery lifespan)",
-          "Charging time from 0% to 100%": "3 hours (per battery)",
-          "Display Type": "Custom Monarc 3.5-inch TouchDisplay (touch screen)",
-          "Display Features": "Monarc app connectivity/ Bluetooth connectivity/ USB charging/ Display Lock (via app)/ Over-the-air updates/ Smart accessory connectivity (Smart Helmet, Radar, TPMS, Camera, Heart Rate, Phone)/ Full ride customization/ Customizable color themeSept '26: Turn-by-turn navigation connection (via bluetooth)",
-          "Throttle": "Left-side thumb throttle"
-        },
-        "all": {
-          "Ebike Class": "Class 1/2/3 (Default: Class 2)",
-          "Range": "Up to 60 miles per battery (120 miles)",
-          "Top Speed": "28mph",
-          "Riding Modes": "5 modes: Cruise, Breeze, Explore, Sport, Boost",
-          "Waterproof Rating": "Marker ebike is rated to IPX6. Monarc battery is rated to IPX7.",
-          "Bike Safety Certification": "UL2849, ISO 4210",
-          "Battery Certification": "UL2271",
-          "Motor": "Bafang B750 rear hub motor. 1638W peak motor power, 750W nominal",
-          "Motor Torque": "85Nm",
-          "Battery": "(2) Lithium-ion 48V, 15Ah (720Wh) batteries with LG cells, semi-integrated and removable in one easy motion",
-          "Controller": "30A internal controller",
-          "Charger": "48V, 5A Fast Charger. Equipped with smart charging functionality that allows riders to preset a maximum charge percentage, automatically stopping charging once reached to help extend battery lifespan. (Tip: By limiting your charge to 80% during charge cycles, you can triple your battery lifespan)",
-          "Charging time from 0% to 100%": "3 hours (per battery)",
-          "Display Type": "Custom Monarc 3.5-inch TouchDisplay (touch screen)",
-          "Display Features": "Monarc app connectivity/ Bluetooth connectivity/ USB charging/ Display Lock (via app)/ Over-the-air updates/ Smart accessory connectivity (Smart Helmet, Radar, TPMS, Camera, Heart Rate, Phone)/ Full ride customization/ Customizable color themeSept '26: Turn-by-turn navigation connection (via bluetooth)",
-          "Pedal Assist Sensor": "Toggle between torque and cadence sensor (default torque sensor)",
-          "Throttle": "Left-side thumb throttle",
-          "Fork": "Gneiss reverse-arch suspension fork. 80mm of travel with lockout and preload adjustments",
-          "Tires": "Custom Kenda all-terrain 26x4 inch tires",
-          "Front Brake": "Hydraulic, quad-piston. Star Union Talon P4",
-          "Rear Brake": "Hydraulic, quad-piston. Star Union Talon P4",
-          "Front Rotor": "203mm 6 bolt",
-          "Rear Rotor": "180mm 6 bolt",
-          "Rear Derailleur": "Shimano Cues, 9 speed",
-          "Shifter": "Cues 9Spd",
-          "Cassette": "11-36 tooth",
-          "Chainring": "Prowheel, 48 tooth",
-          "Chain": "KMC",
-          "Front Axle": "Thru-axle",
-          "Rear Axle": "Solid, bolt-on axle",
-          "Saddle": "Monarc plush comfort saddle paired with a 2-bolt seat post",
-          "Kickstand": "Heavy-duty steel side-sweeping kickstand",
-          "Fenders": "Flexible, damage-resistant polypropylene fenders",
-          "Rear Rack": "Included MIK lightweight rear rack, equipped with slots for various carrying capabilities. 66lbs (30kg) capacity",
-          "Front Light": "Integrated, 494 Lumens",
-          "Rear Light": "Integrated into rear rack, functions as a rear light, brake light, and turn signals. Compatible with Smart Helmet light system",
-          "Grips": "Ergonomic, full-length lock-on Monarc grips",
-          "Rim Type": "Aluminum",
-          "Frame": "Aluminum 6061 frame, hydroformed with smooth welding",
-          "Bike Weight": "87lbs",
-          "Gross Payload Capacity": "420lbs",
-          "Rear Rack Capacity": "66lbs (30kg)",
-          "Max Rider Weight": "330lbs",
-          "Seat Tube Length": "435mm",
-          "Top Tube Length": "565mm",
-          "Bottom Bracket Drop": "60mm",
-          "Head Tube Angle": "67 Degrees",
-          "Seat Tube Angle": "73 Degrees",
-          "Rear Chainstay Length": "515mm",
-          "Wheelbase": "1185mm",
-          "Reach": "363mm",
-          "Rider Height": "High-Step: 5’4”-6’5” Step-Thru: 5’2”-6’3”",
-          "Stack": "660mm",
-          "Standover Height": "High-Step: 798mmStep-Thru: 573mm",
-          "Wheel Size in Inches": "26\"x4\""
-        }
-      },
-      "spec_count": 55,
-      "scrape_error": null,
-      "shipping": {
-        "cost": 0,
-        "free": true
-      },
-      "free_accessories": [
-        {
-          "name": "Rear Rack",
-          "price": 0,
-          "free": true,
-          "detail": "Included MIK lightweight rear rack, equipped with slots for various carrying capabilities. 66lbs (30kg) capacity"
-        },
-        {
-          "name": "Front Light",
-          "price": 0,
-          "free": true,
-          "detail": "Integrated, 494 Lumens"
-        },
-        {
-          "name": "Rear Light",
-          "price": 0,
-          "free": true,
-          "detail": "Integrated into rear rack, functions as a rear light, brake light, and turn signals. Compatible with Smart Helmet light system"
-        }
-      ],
-      "geometry": {
-        "Seat Tube Length": "435mm",
-        "Top Tube Length": "565mm",
-        "Head Tube Angle": "67 Degrees",
-        "Seat Tube Angle": "73 Degrees",
-        "Rear Chainstay Length": "515mm",
-        "Wheelbase": "1185mm",
-        "Reach": "363mm",
-        "Rider Height": "High-Step: 5’4”-6’5” Step-Thru: 5’2”-6’3”",
-        "Stack": "660mm",
-        "Standover Height": "High-Step: 798mmStep-Thru: 573mm"
-      },
-      "configurations": [
         {
           "options": {
             "Frame": "Step-Thru",
@@ -844,7 +349,9 @@
           },
           "price": 1999.0,
           "sku": "601-01802-G201",
+          "variant_id": 51910744801412,
           "available": true,
+          "image": null,
           "color": {
             "name": "Greenway",
             "hex": null,
@@ -875,7 +382,10 @@
             }
           ]
         }
-      ]
+      ],
+      "family_id": "monarc__marker-ebike",
+      "tier": "Step-Thru",
+      "frame_style": "Step-Thru"
     }
   ],
   "available_accessories": [],

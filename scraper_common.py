@@ -4,8 +4,7 @@ Shared helpers for the e-bike scrapers.
 
 Centralizes the boilerplate every scraper repeated verbatim so a change here is
 global to all of them: the bundled-Chromium library path, Shopify JSON fetching,
-product-title cleaning, the physical/technical spec classifier, and Shopify
-colour-swatch assembly.
+product-title cleaning, and Shopify colour-swatch assembly.
 
 IMPORTANT: importing this module also sets LD_LIBRARY_PATH for the bundled
 Chromium, which Playwright reads at import time -- so each scraper imports
@@ -42,26 +41,16 @@ def clean_title(t: str) -> str:
     return html.unescape(re.sub(r"<[^>]+>", "", t or "")).replace("  ", " ").strip()
 
 
-def make_classifier(technical, physical, default: str = "physical"):
-    """Build a label -> 'physical'/'technical' classifier bound to the given keyword
-    tuples. Physical keywords are checked first (they win ties); `default` is the
-    fallback when no keyword matches. Keyword tuples stay per-scraper (each site
-    tunes them to its own spec labels); only the algorithm is shared."""
-    def classify(label: str) -> str:
-        low = label.lower()
-        for kw in physical:
-            if kw in low:
-                return "physical"
-        for kw in technical:
-            if kw in low:
-                return "technical"
-        return default
-    return classify
-
-
 def build_colors(color_values, color_idx, variants, fallback_image):
     """Assemble {name, hex, swatch_image, image} colour entries from Shopify option
-    values, using each colour variant's featured image when available."""
+    values, using each colour variant's featured image when available. Products
+    sold without a Color option still get one "Default" entry carrying the
+    catalog photo — every model must surface at least one image."""
+    if not color_values:
+        if fallback_image:
+            return [{"name": "Default", "hex": None, "swatch_image": None,
+                     "image": fallback_image}]
+        return []
     colors = []
     for name in color_values:
         img = None

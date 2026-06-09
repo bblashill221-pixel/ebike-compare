@@ -2,14 +2,16 @@
   "source": "https://www.evelo.com",
   "logo": "assets/logos/evelo.svg",
   "collection": "evelo-bikes",
-  "scraped_at": "2026-06-04T09:25:15.688292+00:00",
+  "scraped_at": "2026-06-07T22:35:36.395743+00:00",
   "model_count": 4,
   "models": [
     {
       "model": "EVELO Atlas Electric Bike",
       "handle": "atlas",
       "url": "https://www.evelo.com/products/atlas",
-      "product_type": "EVELO Electric Bicycles",
+      "product_types": [
+        "Cargo"
+      ],
       "price_from": 3899,
       "currency": "USD",
       "options": {
@@ -85,7 +87,9 @@
           "options": {},
           "price": 3899.0,
           "sku": "ATL-600-MECH-BLUE-AIG51",
-          "available": true
+          "variant_id": 39870831820911,
+          "available": true,
+          "image": null
         }
       ],
       "available_options": [
@@ -107,7 +111,9 @@
       "model": "EVELO Compass Electric Trike",
       "handle": "compass",
       "url": "https://www.evelo.com/products/compass",
-      "product_type": "EVELO Electric Bicycles",
+      "product_types": [
+        "Cargo"
+      ],
       "price_from": 3599,
       "currency": "USD",
       "options": {
@@ -189,7 +195,9 @@
           "options": {},
           "price": 3599.0,
           "sku": "CMPS-FAS-WHT-AIG51",
-          "available": true
+          "variant_id": 32084061978735,
+          "available": true,
+          "image": null
         }
       ],
       "available_options": [
@@ -216,7 +224,9 @@
       "model": "EVELO Galaxy Lux Electric Bike",
       "handle": "galaxy-lux",
       "url": "https://www.evelo.com/products/galaxy-lux",
-      "product_type": "EVELO Electric Bicycles",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_from": 3399,
       "currency": "USD",
       "options": {
@@ -291,7 +301,9 @@
           "options": {},
           "price": 3399.0,
           "sku": "G500-LUX-MATTEBLUE-AIG51",
-          "available": true
+          "variant_id": 40783519842415,
+          "available": true,
+          "image": null
         }
       ],
       "available_options": [
@@ -313,7 +325,9 @@
       "model": "EVELO Omega Electric Bike",
       "handle": "omega",
       "url": "https://www.evelo.com/products/omega",
-      "product_type": "EVELO Electric Bicycles",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_from": 3899,
       "currency": "USD",
       "options": {
@@ -395,7 +409,9 @@
           "options": {},
           "price": 3899.0,
           "sku": "OMEG-750-AUT-TAN-AIG51",
-          "available": true
+          "variant_id": 40614278561903,
+          "available": true,
+          "image": null
         }
       ],
       "available_options": [

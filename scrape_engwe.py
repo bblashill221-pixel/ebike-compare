@@ -28,12 +28,13 @@ BASE = "https://engwe-bikes.com"
 LOGO = "https://us.engwe.com/cdn/shop/files/ENGWE_LOGO.png"
 COLLECTIONS = ["all-ebikes", "feature-ebikes"]
 
-_SPEC_LABEL = re.compile(
-    r"motor|battery|range|brake|tire|tyre|frame|display|charger|torque|speed"
-    r"|weight|load|payload|controller|gear|suspension|sensor|throttle|light"
-    r"|wheel|rider|fork|drivetrain|shifter|cassette|chain|pedal|saddle|stem"
-    r"|handlebar|rim|hub|grip|kickstand|fender|rack|cell|voltage|certif", re.I)
 _SKIP = re.compile(r"combo|warranty|gift|accessor|bundle", re.I)
+# normalize a few vendor labels so the pipeline's parsers recognise them
+_LABEL_FIX = {
+    "material": "Frame Material", "max mileage": "Max Range", "mileage": "Max Range",
+    "transmission system": "Drivetrain", "transmission": "Drivetrain",
+    "tires size": "Tires", "tire size": "Tires", "tyres": "Tires",
+}
 
 
 def fetch_html(url: str) -> str:
@@ -54,15 +55,42 @@ def parse_specs(page: str) -> dict:
         if len(cells) < 2:
             continue
         label = cells[0].rstrip(" :：：").strip()   # drop trailing colon (ascii + fullwidth)
+        label = _LABEL_FIX.get(label.lower(), label)
         value = cells[1].strip()
-        # skip QC/photo-checklist rows ("1. Full Ebike photo …", "×1", "… photo")
-        if re.match(r"\d+\.\s|×\s*\d", value) or re.search(r"\bphoto\b", value, re.I):
+        # skip box-content rows ("×1", "*2") and QC/photo checklists ("1. … photo")
+        if re.fullmatch(r"[×x*]?\s*\d+", value) or re.match(r"\d+\.\s", value) \
+                or re.search(r"\bphoto\b", value, re.I):
             continue
-        if (_SPEC_LABEL.search(label) and len(label) < 26 and value
-                and len(value) < 160 and label.lower() not in {k.lower() for k in out}
+        if (label and len(label) < 30 and value and len(value) < 200
+                and label.lower() not in {k.lower() for k in out}
                 and label.lower() != value.lower()):
             out[label] = value
     return out
+
+
+def enrich_from_text(specs: dict, title: str, page: str) -> dict:
+    """Fill range / torque from the product title or marketing copy when the spec
+    table omits them (Wallke lists these in the title -- "… 180+ Miles | 150Nm
+    Torque" -- not the table). Only fills a field that's genuinely absent."""
+    have = [k.lower() for k in specs]
+    txt = " ".join(html.unescape(re.sub(r"<[^>]+>", " ", page)).split())
+    if not any(("range" in k or "mileage" in k) for k in have):
+        m = (re.search(r"(\d{2,3})\s*\+?\s*Miles?\b", title, re.I)
+             or re.search(r"up\s*to\s*(\d{2,3})\s*\+?\s*Miles?\b", txt, re.I))
+        # else the largest mileage figure quoted on the page (its "up to" range)
+        val = (int(m.group(1)) if m
+               else max((int(x) for x in re.findall(r"(\d{2,3})\s*\+?\s*Miles?\b", txt, re.I)),
+                        default=0))
+        if val:
+            specs["Max Range"] = f"Up to {val} miles"
+    if not any("torque" in k for k in have):
+        m = re.search(r"(\d{2,3})\s*N[.\s]?m\b", title, re.I)
+        val = (int(m.group(1)) if m
+               else max((int(x) for x in re.findall(r"(\d{2,3})\s*N[.\s]?m\b", txt, re.I)),
+                        default=0))
+        if val:
+            specs["Torque"] = f"{val} Nm"
+    return specs
 
 
 def discover_models() -> list[dict]:
@@ -80,6 +108,14 @@ def discover_models() -> list[dict]:
     for p in seen.values():
         variants = p.get("variants", [])
         prices = [float(v["price"]) for v in variants if v.get("price")]
+        # sale price: compare_at of the cheapest variant, when it's a real markdown
+        cheapest = min((v for v in variants if v.get("price")),
+                       key=lambda v: float(v["price"]), default=None)
+        regular = None
+        if cheapest and cheapest.get("compare_at_price"):
+            c = float(cheapest["compare_at_price"])
+            if c > float(cheapest["price"]):
+                regular = c
         images = [img.get("src") for img in p.get("images", []) if img.get("src")]
         fallback = images[0] if images else None
         options, color_values, color_idx = {}, [], None
@@ -92,7 +128,29 @@ def discover_models() -> list[dict]:
             else:
                 options[o["name"]] = o.get("values", [])
         options["colors"] = build_colors(color_values, color_idx, variants, fallback)
-        specs = parse_specs(fetch_html(f"{BASE}/products/{p['handle']}"))
+        # per-variant configurations -> drives stock (availability) + per-config
+        # pricing downstream (normalize summarizes sold-out from these flags).
+        opt_names = [o.get("name") for o in p.get("options", [])]
+        configurations = []
+        for v in variants:
+            vopts = {}
+            for i, nm in enumerate(opt_names):
+                val = v.get(f"option{i + 1}")
+                if nm and val:
+                    vopts[nm] = val
+            vprice = float(v["price"]) if v.get("price") else None
+            vcmp = float(v["compare_at_price"]) if v.get("compare_at_price") else None
+            configurations.append({
+                "options": vopts,
+                "price": vprice,
+                "regular_price": vcmp if (vcmp and vprice and vcmp > vprice) else None,
+                "available": v.get("available"),
+                "sku": v.get("sku"),
+                "variant_id": v.get("id"),
+            })
+        page_html = fetch_html(f"{BASE}/products/{p['handle']}")
+        specs = enrich_from_text(parse_specs(page_html),
+                                 clean_title(p.get("title")) or "", page_html)
         out.append({
             "model": clean_title(p.get("title")),
             "handle": p.get("handle"),
@@ -101,8 +159,10 @@ def discover_models() -> list[dict]:
                 p.get("title") or "", p.get("product_type") or "",
                 " ".join(p.get("tags") or [])),
             "price_from": min(prices) if prices else None,
+            "regular_price": regular,
             "currency": "USD",
             "options": options,
+            "configurations": configurations,
             "specs": {"all": specs},
             "spec_count": len(specs),
             "warranty": None,

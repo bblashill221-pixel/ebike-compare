@@ -25,7 +25,9 @@ COLLECTION = {
     "vvolt": "e-bikes", "evelo": "evelo-bikes", "blix": "all",
     "monarc": "marker-bikes", "velowave": "all-ebikes",
 }
-SKIP = {"lectric", "ride1up", "specialized"}  # already have per-config prices
+# brands whose scraper already builds per-config prices (so don't re-fetch a
+# Shopify collection feed they don't expose under one handle)
+SKIP = {"lectric", "ride1up", "specialized", "juiced", "segway"}
 
 
 def fetch_products(base: str, handle: str) -> dict:
@@ -49,8 +51,14 @@ def configs_for(product: dict) -> list[dict]:
             if name and val and val != "Default Title":
                 opts[name] = val
         price = float(v["price"]) if v.get("price") else None
+        # this variant's own photo: lets normalize pick the right image when a
+        # product matrixes Color against another axis (Velotric GoMad's
+        # Package×Color), where the model-level color image is mis-keyed.
+        fi = (v.get("featured_image") or {}).get("src")
+        # variant_id powers per-configuration deep links (add_deep_links.py)
         out.append({"options": opts, "price": price, "sku": v.get("sku"),
-                    "available": v.get("available")})
+                    "variant_id": v.get("id"), "available": v.get("available"),
+                    "image": fi})
     return out
 
 

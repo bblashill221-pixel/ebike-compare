@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { memo, useEffect } from "react";
 import { useColorSelection, defaultColorIndex, colorSoldOut, soldOutColors } from "../colorSelection";
 import { useShowSoldOut } from "../soldOut";
 import { Link } from "react-router-dom";
@@ -43,7 +43,7 @@ function Spec({
   );
 }
 
-export function BikeCard({ model }: { model: Model }) {
+function BikeCardImpl({ model }: { model: Model }) {
   const { has, toggle, isFull } = useCompare();
   const selected = has(model.id);
   const t = model.analysis?.specs_typed ?? {};
@@ -275,3 +275,7 @@ export function BikeCard({ model }: { model: Model }) {
     </div>
   );
 }
+
+// Cards are static for a given model; memoizing lets the grid skip re-rendering
+// survivors when the result set changes (e.g. toggling a brand facet).
+export const BikeCard = memo(BikeCardImpl);

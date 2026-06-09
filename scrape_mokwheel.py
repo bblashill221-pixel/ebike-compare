@@ -36,38 +36,11 @@ from scraper_common import fetch_json  # noqa: E402  (import also sets LD_LIBRAR
 from playwright.async_api import async_playwright  # noqa: E402
 from warranty_js import JS_WARRANTY
 
+from bike_taxonomy import classify_product_types
+
 BASE = "https://www.mokwheel.com"
 LOGO = "https://www.mokwheel.com/cdn/shop/files/mokwheel_logo.png?v=1737345448"
 COLLECTION = "electric-bikes"
-
-TECHNICAL_KEYWORDS = (
-    "motor", "battery", "charger", "range", "controller", "throttle", "display",
-    "sensor", "pedal assist", "speed", "class", "watt", "voltage", "torque",
-    "power", "waterproof", "app", "connectivity", "wireless", "gps", "ip",
-)
-PHYSICAL_KEYWORDS = (
-    "frame", "fork", "suspension", "wheel", "tire", "tyre", "brake", "rotor",
-    "derailleur", "shift", "chain", "cassette", "gear", "crank", "pedal", "saddle",
-    "seat", "handlebar", "stem", "grip", "headset", "kickstand", "rack", "fender",
-    "light", "spoke", "hub", "rim", "weight", "payload", "height", "reach", "tube",
-    "wheelbase", "standover", "geometry", "size", "color", "dimension",
-)
-
-
-def classify(label: str, value: str) -> str:
-    low_l, low_v = label.lower(), value.lower()
-    if "motor" in low_v:
-        return "technical"
-    for kw in TECHNICAL_KEYWORDS:
-        if kw in low_l:
-            return "technical"
-    for kw in PHYSICAL_KEYWORDS:
-        if kw in low_l:
-            return "physical"
-    for kw in TECHNICAL_KEYWORDS:
-        if kw in low_v:
-            return "technical"
-    return "physical"
 
 
 # ----------------------------- catalog discovery -----------------------------
@@ -114,7 +87,9 @@ def discover_models() -> list[dict]:
             "model": p.get("title"),
             "handle": p.get("handle"),
             "url": f"{BASE}/products/{p['handle']}",
-            "product_type": p.get("product_type"),
+            "product_types": classify_product_types(
+                p.get("title") or "", p.get("product_type") or "",
+                " ".join(p.get("tags") or [])),
             "price_from": min(prices) if prices else None,
             "currency": "USD",
             "options": options,
@@ -228,20 +203,19 @@ async def scrape_model(context, model: dict, retries: int = 3) -> dict:
                 if c.get("hex"):
                     c["swatch_image"] = None
 
-            physical, technical, all_specs = {}, {}, {}
+            all_specs = {}
             for label, value in pairs:
                 key = " ".join(label.split())
                 all_specs[key] = value
-                (technical if classify(key, value) == "technical" else physical)[key] = value
 
-            result["specs"] = {"physical": physical, "technical": technical, "all": all_specs}
+            result["specs"] = {"all": all_specs}
             result["spec_count"] = len(all_specs)
             result["scrape_error"] = None
             return result
         except Exception as e:  # noqa: BLE001
             await page.close()
             if attempt == retries:
-                result["specs"] = {"physical": {}, "technical": {}, "all": {}}
+                result["specs"] = {"all": {}}
                 result["spec_count"] = 0
                 result["warranty"] = None
                 result["scrape_error"] = f"{type(e).__name__}: {e}"

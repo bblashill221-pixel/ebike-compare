@@ -5,7 +5,7 @@ Ride1Up e-bike spec scraper.
 Ride1Up runs on WooCommerce (not Shopify). Models are discovered from the
 "bikes" category grid, then Playwright opens each product page to extract:
 
-  * physical + technical specifications (the "Components & Tech Specs" list),
+  * specifications (the "Components & Tech Specs" list),
   * available options (the WooCommerce variation attributes: frame type,
     drivetrain, color, ...),
   * colors as {name, hex, image} -- the hex is sampled from the swatch image's
@@ -35,29 +35,14 @@ from pathlib import Path
 
 # --- Make the locally-extracted Chromium system libs discoverable, if present. ---
 
-from scraper_common import make_classifier  # noqa: E402  (import also sets LD_LIBRARY_PATH for bundled chromium)
+import scraper_common  # noqa: E402,F401  (sets LD_LIBRARY_PATH for bundled chromium)
+from bike_taxonomy import classify_product_types
 from playwright.async_api import async_playwright  # noqa: E402
 from warranty_js import JS_WARRANTY
 
 BASE = "https://ride1up.com"
 LOGO = "https://ride1up.com/wp-content/uploads/2021/01/ride1up.svg"
 BIKES_CATEGORY = f"{BASE}/product-category/bikes/?per_page=50"
-
-TECHNICAL_KEYWORDS = (
-    "motor", "battery", "range", "charger", "charging", "controller", "throttle",
-    "display", "sensor", "pas", "pedal assist", "speed", "class", "watt", "voltage",
-    "wireless", "connectivity", "gps", "app", "torque", "power", "drive", "assist",
-)
-PHYSICAL_KEYWORDS = (
-    "weight", "payload", "rating", "frame", "fork", "wheel", "tire", "tyre", "brake",
-    "rotor", "derailleur", "shifter", "chain", "cassette", "gear", "drivetrain",
-    "crank", "pedal", "saddle", "seat", "handlebar", "stem", "grip", "headset",
-    "kickstand", "rack", "fender", "light", "headlight", "spoke", "hub", "dimension",
-    "suspension", "color", "size",
-)
-
-
-classify = make_classifier(TECHNICAL_KEYWORDS, PHYSICAL_KEYWORDS, default="technical")
 
 
 # ----------------------------- catalog discovery -----------------------------
@@ -252,11 +237,10 @@ async def scrape_model(context, model: dict, retries: int = 3) -> dict:
             await page.close()
 
             variations = var.get("variations") or []
-            physical, technical, all_specs = {}, {}, {}
+            all_specs = {}
             for label, value in raw["components"]:
                 key = " ".join(label.split())
                 all_specs[key] = value
-                (physical if classify(key) == "physical" else technical)[key] = value
             # Add headline highlights that aren't already covered (case-insensitive).
             lower = {k.lower() for k in all_specs}
             for label, value in raw["highlights"]:
@@ -264,7 +248,6 @@ async def scrape_model(context, model: dict, retries: int = 3) -> dict:
                 if key.lower() in lower:
                     continue
                 all_specs[key] = value
-                (physical if classify(key) == "physical" else technical)[key] = value
 
             if not all_specs:
                 raise RuntimeError("no specs extracted")
@@ -273,6 +256,7 @@ async def scrape_model(context, model: dict, retries: int = 3) -> dict:
                       if v.get("display_price") is not None]
             attrs = var.get("attributes", {})
             result["model"] = name
+            result["product_types"] = classify_product_types(name, "", model["url"])
             result["price_range"] = {
                 "min": min(prices) if prices else None,
                 "max": max(prices) if prices else None,
@@ -292,7 +276,7 @@ async def scrape_model(context, model: dict, retries: int = 3) -> dict:
             result["options"] = build_options(var.get("attributes", {}), color_hex,
                                                variations, fallback_image)
             result["geometry"] = geometry
-            result["specs"] = {"physical": physical, "technical": technical, "all": all_specs}
+            result["specs"] = {"all": all_specs}
             result["spec_count"] = len(all_specs)
             result["scrape_error"] = None
             return result
@@ -302,7 +286,7 @@ async def scrape_model(context, model: dict, retries: int = 3) -> dict:
                 result.setdefault("model", model["slug"])
                 result["price_range"] = {"min": None, "max": None, "currency": "USD"}
                 result["options"] = {"colors": []}
-                result["specs"] = {"physical": {}, "technical": {}, "all": {}}
+                result["specs"] = {"all": {}}
                 result["configurations"] = []
                 result["spec_count"] = 0
                 result["warranty"] = None

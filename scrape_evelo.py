@@ -29,29 +29,15 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-from scraper_common import fetch_json, make_classifier  # noqa: E402  (import also sets LD_LIBRARY_PATH for bundled chromium)
+from scraper_common import fetch_json  # noqa: E402  (import also sets LD_LIBRARY_PATH for bundled chromium)
 from playwright.async_api import async_playwright  # noqa: E402
 from warranty_js import JS_WARRANTY
+
+from bike_taxonomy import classify_product_types
 
 BASE = "https://www.evelo.com"
 LOGO = "assets/logos/evelo.svg"   # self-hosted wordmark (EVELO renders its logo as inline SVG; no CDN asset)
 COLLECTION = "evelo-bikes"
-
-TECHNICAL_KEYWORDS = (
-    "motor", "battery", "charger", "range", "controller", "throttle", "display",
-    "sensor", "assist", "speed", "class", "watt", "voltage", "torque", "power",
-    "electric", "connectivity", "app", "wireless",
-)
-PHYSICAL_KEYWORDS = (
-    "frame", "fork", "suspension", "wheel", "tire", "tyre", "brake", "rotor",
-    "derailleur", "shift", "transmission", "drivetrain", "chain", "cassette",
-    "gear", "crank", "pedal", "saddle", "seat", "handlebar", "stem", "grip",
-    "headset", "kickstand", "rack", "fender", "light", "spoke", "hub", "rim",
-    "weight", "payload", "height", "dimension", "size", "color",
-)
-
-
-classify = make_classifier(TECHNICAL_KEYWORDS, PHYSICAL_KEYWORDS)
 
 
 # ----------------------------- catalog discovery -----------------------------
@@ -71,7 +57,9 @@ def discover_models() -> list[dict]:
             "model": p.get("title"),
             "handle": p.get("handle"),
             "url": f"{BASE}/products/{p['handle']}",
-            "product_type": p.get("product_type"),
+            "product_types": classify_product_types(
+                p.get("title") or "", p.get("product_type") or "",
+                " ".join(p.get("tags") or [])),
             "price_from": min(prices) if prices else None,
             "currency": "USD",
             "options": {"colors": colors},
@@ -146,22 +134,21 @@ async def scrape_model(context, model: dict, retries: int = 3) -> dict:
             if price is not None:
                 result["price_from"] = price
 
-            physical, technical, all_specs = {}, {}, {}
+            all_specs = {}
             for label, value in pairs:
                 key = " ".join(label.split())
                 if key in all_specs:
                     continue
                 all_specs[key] = value
-                (physical if classify(key) == "physical" else technical)[key] = value
 
-            result["specs"] = {"physical": physical, "technical": technical, "all": all_specs}
+            result["specs"] = {"all": all_specs}
             result["spec_count"] = len(all_specs)
             result["scrape_error"] = None
             return result
         except Exception as e:  # noqa: BLE001
             await page.close()
             if attempt == retries:
-                result["specs"] = {"physical": {}, "technical": {}, "all": {}}
+                result["specs"] = {"all": {}}
                 result["spec_count"] = 0
                 result["warranty"] = None
                 result["scrape_error"] = f"{type(e).__name__}: {e}"

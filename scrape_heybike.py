@@ -37,38 +37,11 @@ from scraper_common import fetch_json  # noqa: E402  (import also sets LD_LIBRAR
 from playwright.async_api import async_playwright  # noqa: E402
 from warranty_js import JS_WARRANTY
 
+from bike_taxonomy import classify_product_types
+
 BASE = "https://www.heybike.com"
 LOGO = "https://www.heybike.com/cdn/shop/files/heybike-logo_c0d69677-ad00-41d8-940c-f1aeac5cee34.svg?v=1745923766&width=500"
 COLLECTION = "electric-bike"
-
-TECHNICAL_KEYWORDS = (
-    "motor", "battery", "charger", "display", "range", "controller", "throttle",
-    "sensor", "pedal assist", "speed", "class", "watt", "voltage", "torque",
-    "power", "app", "connectivity", "wireless", "gps",
-)
-PHYSICAL_KEYWORDS = (
-    "frame", "fork", "suspension", "wheel", "tire", "tyre", "brake", "rotor",
-    "derailleur", "shift", "chain", "cassette", "gear", "crank", "pedal", "saddle",
-    "seat", "handlebar", "stem", "grip", "headset", "kickstand", "rack", "fender",
-    "light", "spoke", "hub", "rim", "dimension", "weight", "size", "color", "fold",
-)
-
-
-def classify(label: str, value: str) -> str:
-    low_l, low_v = label.lower(), value.lower()
-    # "Hub rear" etc. is the motor -> trust the value for the motor signal first.
-    if "motor" in low_v:
-        return "technical"
-    for kw in TECHNICAL_KEYWORDS:
-        if kw in low_l:
-            return "technical"
-    for kw in PHYSICAL_KEYWORDS:
-        if kw in low_l:
-            return "physical"
-    for kw in TECHNICAL_KEYWORDS:
-        if kw in low_v:
-            return "technical"
-    return "physical"
 
 
 # ----------------------------- catalog discovery -----------------------------
@@ -115,7 +88,9 @@ def discover_models() -> list[dict]:
             "model": p.get("title"),
             "handle": p.get("handle"),
             "url": f"{BASE}/products/{p['handle']}",
-            "product_type": p.get("product_type"),
+            "product_types": classify_product_types(
+                p.get("title") or "", p.get("product_type") or "",
+                " ".join(p.get("tags") or [])),
             "price_from": min(prices) if prices else None,
             "currency": "USD",
             "options": options,
@@ -162,6 +137,45 @@ JS_SPECS = r"""() => {
         if (value) { seen.add(label); out.push([label, value]); }
     }
     return out;
+}"""
+
+# Range fallback: many Heybike spec tables omit a Range row and only state it
+# in marketing copy. Sources, most structured first: the "introduce" highlight
+# strip ('55 Miles' / 'Max Range' title+remark pairs), then feature cards
+# ("60 Miles of Range") and description prose ("up to 60 miles"). Never review
+# widgets, where riders quote their own mileage. Returns "Up to N miles" or null.
+JS_RANGE_CLAIM = r"""() => {
+    const norm = s => (s || '').replace(/\s+/g, ' ').trim();
+    const inReviews = el =>
+        !!el.closest('[class*="review"], [id*="review"], [class*="jdgm"]');
+    const milesOf = text => {
+        const m = text.match(/\b(\d{2,3})\s*\+?\s*miles?\b/i);
+        const mi = m && parseInt(m[1], 10);
+        return (mi && mi >= 15 && mi <= 200) ? mi : null;
+    };
+    for (const el of document.querySelectorAll('.introduce-info')) {
+        const text = norm(el.textContent);          // "55 Miles Max Range"
+        if (/range/i.test(text)) {
+            const mi = milesOf(text);
+            if (mi) return `Up to ${mi} miles`;
+        }
+    }
+    const PATS = [
+        /up\s+to\s+(\d{2,3})\s*\+?\s*miles?\b/i,           // "up to 60 miles"
+        /\b(\d{2,3})\s*\+?\s*miles?\s+(?:of\s+)?range\b/i,  // "90 Miles Range"
+    ];
+    for (const sel of ['.feature-heading', '.feature-desc', '[class*="description"]']) {
+        for (const el of document.querySelectorAll(sel)) {
+            if (inReviews(el)) continue;
+            const text = norm(el.textContent);
+            for (const rx of PATS) {
+                const m = text.match(rx);
+                const mi = m && parseInt(m[1], 10);
+                if (mi && mi >= 15 && mi <= 200) return `Up to ${mi} miles`;
+            }
+        }
+    }
+    return null;
 }"""
 
 # Resolve each swatch's --swatch-background keyword to a hex (valid CSS colours
@@ -226,6 +240,11 @@ async def scrape_model(context, model: dict, retries: int = 3) -> dict:
                     break
                 await page.mouse.wheel(0, 2000)
                 await page.wait_for_timeout(1000)
+            # No Range row in the spec table -> fall back to the marketing claim.
+            if pairs and not any("range" in label.lower() for label, _ in pairs):
+                claim = await page.evaluate(JS_RANGE_CLAIM)
+                if claim:
+                    pairs.append(["Range", claim])
             swatch_hex = await page.evaluate(JS_SWATCH_HEX)
             result["warranty"] = await page.evaluate(JS_WARRANTY)
             await page.close()
@@ -244,20 +263,19 @@ async def scrape_model(context, model: dict, retries: int = 3) -> dict:
                 if c.get("hex"):
                     c["swatch_image"] = None
 
-            physical, technical, all_specs = {}, {}, {}
+            all_specs = {}
             for label, value in pairs:
                 key = " ".join(label.split())
                 all_specs[key] = value
-                (technical if classify(key, value) == "technical" else physical)[key] = value
 
-            result["specs"] = {"physical": physical, "technical": technical, "all": all_specs}
+            result["specs"] = {"all": all_specs}
             result["spec_count"] = len(all_specs)
             result["scrape_error"] = None
             return result
         except Exception as e:  # noqa: BLE001
             await page.close()
             if attempt == retries:
-                result["specs"] = {"physical": {}, "technical": {}, "all": {}}
+                result["specs"] = {"all": {}}
                 result["spec_count"] = 0
                 result["warranty"] = None
                 result["scrape_error"] = f"{type(e).__name__}: {e}"

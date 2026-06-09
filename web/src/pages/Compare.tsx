@@ -50,7 +50,8 @@ export function Compare() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-6">
-      <h1 className="mb-4 text-xl font-bold text-slate-900">Compare {models.length} e-bikes</h1>
+      <h1 className="text-xl font-bold text-slate-900">Compare {models.length} e-bikes</h1>
+      <Link to="/" className="mb-4 mt-1 inline-block text-sm text-brand-600 hover:underline">← Back to browse</Link>
 
       {/* header + scores */}
       <div className="card mb-6 overflow-x-auto">

@@ -24,29 +24,15 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-from scraper_common import fetch_json, clean_title, build_colors, make_classifier  # noqa: E402  (import also sets LD_LIBRARY_PATH for bundled chromium)
+from scraper_common import fetch_json, clean_title, build_colors  # noqa: E402  (import also sets LD_LIBRARY_PATH for bundled chromium)
 from playwright.async_api import async_playwright  # noqa: E402
 from warranty_js import JS_WARRANTY
+
+from bike_taxonomy import classify_product_types
 
 BASE = "https://euphree.com"
 LOGO = "https://euphree.com/cdn/shop/files/euphree-logo-black.svg?v=1755201362&width=310"
 COLLECTION = "electric-bikes"
-
-TECHNICAL_KEYWORDS = (
-    "motor", "battery", "cell", "charger", "range", "controller", "throttle",
-    "display", "sensor", "pedal assist", "pas", "speed", "class", "watt",
-    "voltage", "torque", "power", "app", "connectivity", "wireless", "gps", "ip",
-)
-PHYSICAL_KEYWORDS = (
-    "frame", "fork", "suspension", "wheel", "tire", "tyre", "brake", "rotor",
-    "derailleur", "shift", "chain", "cassette", "gear", "crank", "pedal", "saddle",
-    "seat", "handlebar", "stem", "grip", "headset", "kickstand", "rack", "fender",
-    "light", "spoke", "hub", "rim", "weight", "payload", "load", "height", "size",
-    "color", "dimension",
-)
-
-
-classify = make_classifier(TECHNICAL_KEYWORDS, PHYSICAL_KEYWORDS)
 
 
 def discover_models() -> list[dict]:
@@ -71,7 +57,9 @@ def discover_models() -> list[dict]:
             "model": clean_title(p.get("title")),
             "handle": p.get("handle"),
             "url": f"{BASE}/products/{p['handle']}",
-            "product_type": p.get("product_type"),
+            "product_types": classify_product_types(
+                p.get("title") or "", p.get("product_type") or "",
+                " ".join(p.get("tags") or [])),
             "price_from": min(prices) if prices else None,
             "currency": "USD",
             "options": options,
@@ -92,6 +80,22 @@ JS_SPECS = r"""() => {
     for (const li of document.querySelectorAll('.icon-title')) {
         const sub = li.parentElement?.querySelector('.icon-subtitle');
         push(norm(li.textContent), norm(sub?.textContent).replace(/^✅\s*/, ''));
+    }
+    // Fallback: collapsible-tabs disclosures (Solar Sparrow spec tabs). Each
+    // <details> carries a section summary ("Weight & Capacity") and <li> rows,
+    // usually "Label: value"; label-less rows aggregate under the section name.
+    for (const det of document.querySelectorAll('.collapsible-tabs__tab details')) {
+        const title = norm(det.querySelector('summary')?.textContent);
+        if (!title || /shipping|return|faq|review|warranty/i.test(title)) continue;
+        const extras = [];
+        for (const li of det.querySelectorAll('li')) {
+            const t = norm(li.textContent);
+            if (!t || t.length > 300) continue;
+            const m = t.match(/^([^:]{2,40}):\s*(.+)$/);
+            if (m) push(m[1], m[2]);
+            else extras.push(t);
+        }
+        if (extras.length) push(title, extras.join('; '));
     }
     return out;
 }"""
@@ -176,20 +180,19 @@ async def scrape_model(context, model: dict, retries: int = 3) -> dict:
                 if c.get("hex"):
                     c["swatch_image"] = None  # swatch_image is a fallback only
 
-            physical, technical, all_specs = {}, {}, {}
+            all_specs = {}
             for label, value in pairs:
                 key = " ".join(label.split())
                 all_specs[key] = value
-                (physical if classify(key) == "physical" else technical)[key] = value
 
-            result["specs"] = {"physical": physical, "technical": technical, "all": all_specs}
+            result["specs"] = {"all": all_specs}
             result["spec_count"] = len(all_specs)
             result["scrape_error"] = None
             return result
         except Exception as e:  # noqa: BLE001
             await page.close()
             if attempt == retries:
-                result["specs"] = {"physical": {}, "technical": {}, "all": {}}
+                result["specs"] = {"all": {}}
                 result["spec_count"] = 0
                 result["warranty"] = None
                 result["scrape_error"] = f"{type(e).__name__}: {e}"

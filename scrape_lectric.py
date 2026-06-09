@@ -6,7 +6,7 @@ Lectric's Shopify catalog lists each color/config as a *separate* product (~39
 SKUs). This scraper groups those SKUs into ~8 model families (by product_type),
 then uses Playwright to open one product page per spec-distinct config and pull:
 
-  * physical + technical specifications (headline tiles + feature cards),
+  * specifications (headline tiles + feature cards),
   * the "included" free-with-purchase accessory bundle and paid add-on upgrades,
 
 and merges everything to the model level (keeping the most specific value on
@@ -35,7 +35,8 @@ from pathlib import Path
 
 # --- Make the locally-extracted Chromium system libs discoverable, if present. ---
 
-from scraper_common import fetch_json, make_classifier  # noqa: E402  (import also sets LD_LIBRARY_PATH for bundled chromium)
+from scraper_common import fetch_json  # noqa: E402  (import also sets LD_LIBRARY_PATH for bundled chromium)
+from bike_taxonomy import classify_product_types  # noqa: E402
 from playwright.async_api import async_playwright  # noqa: E402
 from warranty_js import JS_WARRANTY
 
@@ -75,25 +76,6 @@ COLOR_HEX = {
 }
 # Longest names first so "Arctic White" wins over a hypothetical "White".
 COLOR_NAMES = sorted(COLOR_HEX, key=len, reverse=True)
-
-# Spec-label classification (shared approach with scrape_aventon.py).
-TECHNICAL_KEYWORDS = (
-    "motor", "battery", "range", "charger", "charging", "controller", "throttle",
-    "display", "sensor", "pedal assist", "riding mode", "speed", "class", "watt",
-    "voltage", "wireless", "connectivity", "gps", "app", "certification",
-    "torque", "power", "assist", "keyless",
-)
-PHYSICAL_KEYWORDS = (
-    "weight", "payload", "capacity", "limit", "height", "frame", "fork", "wheel",
-    "tire", "tyre", "brake", "rotor", "derailleur", "shifter", "chain", "cassette",
-    "gear", "crank", "pedal", "saddle", "seat", "handlebar", "grip", "headset",
-    "kickstand", "rack", "fender", "light", "headlight", "stem", "spoke", "hub",
-    "dimension", "length", "width", "fold", "foldable", "color", "size", "step",
-    "assembly", "rider",
-)
-
-
-classify = make_classifier(TECHNICAL_KEYWORDS, PHYSICAL_KEYWORDS)
 
 
 # ----------------------------- catalog discovery -----------------------------
@@ -344,22 +326,19 @@ async def scrape_config(context, sku: dict, retries: int = 3) -> dict:
             cfg["warranty"] = await page.evaluate(JS_WARRANTY)
             await page.close()
 
-            physical, technical, all_specs, features = {}, {}, {}, []
+            all_specs, features = {}, []
             for label, value in raw["tiles"]:
                 key = " ".join(label.split())
                 all_specs[key] = value
-                (physical if classify(key) == "physical" else technical)[key] = value
             for name, detail in raw["cards"]:
                 key = " ".join(name.split())
                 features.append({"name": key, "detail": detail})
                 all_specs.setdefault(key, detail)
-                (physical if classify(key) == "physical" else technical).setdefault(key, detail)
 
             if not all_specs:
                 raise RuntimeError("no specs extracted")
 
-            cfg["specs"] = {"physical": physical, "technical": technical,
-                            "all": all_specs, "features": features}
+            cfg["specs"] = {"all": all_specs, "features": features}
             cfg["accessories"] = {
                 "included": [{"name": a["name"], "price": a["price"]}
                              for a in accessories if a["free"]],
@@ -373,7 +352,7 @@ async def scrape_config(context, sku: dict, retries: int = 3) -> dict:
         except Exception as e:  # noqa: BLE001
             await page.close()
             if attempt == retries:
-                cfg["specs"] = {"physical": {}, "technical": {}, "all": {}, "features": []}
+                cfg["specs"] = {"all": {}, "features": []}
                 cfg["accessories"] = {"included": [], "add_ons": []}
                 cfg["performance_options"] = []
                 cfg["colors"] = []
@@ -387,14 +366,12 @@ async def scrape_config(context, sku: dict, retries: int = 3) -> dict:
 
 def merge_specs(configs: list[dict]) -> dict:
     """Merge config specs; on collision keep the most specific (longest) value."""
-    physical, technical, all_specs = {}, {}, {}
+    all_specs = {}
     for cfg in configs:
-        for bucket_name, bucket in (("physical", physical), ("technical", technical),
-                                    ("all", all_specs)):
-            for k, v in cfg["specs"].get(bucket_name, {}).items():
-                if k not in bucket or len(str(v)) > len(str(bucket[k])):
-                    bucket[k] = v
-    return {"physical": physical, "technical": technical, "all": all_specs}
+        for k, v in cfg["specs"].get("all", {}).items():
+            if k not in all_specs or len(str(v)) > len(str(all_specs[k])):
+                all_specs[k] = v
+    return {"all": all_specs}
 
 
 def merge_accessories(configs: list[dict]) -> dict:
@@ -443,6 +420,11 @@ def build_colors(skus: list[dict], configs: list[dict], handle_img: dict) -> lis
             "swatch_image": None,
             "image": img or fallback_img,
         })
+    if not colors and fallback_img:
+        # single-colorway page with no configurator buttons (Lectric ONE):
+        # still carry the catalog photo so the card has an image
+        colors.append({"name": "Default", "hex": None,
+                       "swatch_image": None, "image": fallback_img})
     return colors
 
 
@@ -473,6 +455,8 @@ def build_model(fam: dict, configs: list[dict], handle_img: dict) -> dict:
         "model": fam["model"],
         "family_code": fam["family_code"],
         "vehicle_type": fam["vehicle_type"],
+        "product_types": classify_product_types(
+            fam["model"], fam.get("vehicle_type") or ""),
         "urls": [c["url"] for c in configs],
         "price_range": {
             "min": min(prices) if prices else None,

@@ -2,14 +2,16 @@
   "source": "https://www.prioritybicycles.com",
   "logo": "https://cdn.shopify.com/s/files/1/1245/1481/files/Priority_Bicycles_Logo.png?v=1736454354",
   "collection": "all",
-  "scraped_at": "2026-06-06T02:04:28.706721+00:00",
+  "scraped_at": "2026-06-07T22:39:23.642550+00:00",
   "model_count": 4,
   "models": [
     {
       "model": "PRIORITY CURRENT PLUS E-BIKE",
       "handle": "currentplus",
       "url": "https://www.prioritybicycles.com/products/currentplus",
-      "product_type": "Bicycle",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_from": 3299.0,
       "currency": "USD",
       "options": {
@@ -39,31 +41,6 @@
       },
       "warranty": null,
       "specs": {
-        "physical": {
-          "Belt Drive": "Gates Carbon Drive CDX belt",
-          "Rear Hub": "E-bike specific Shimano Inter-5 internal hub to maximize responsiveness or enviolo Heavy Duty CVT hub for all-season riding",
-          "Brakes": "Dual piston hydraulic disc brakes, 180mm rotors, integrated with an electric motor cut-off switch for safer stopping and enhanced control",
-          "Frame & Fork": "Accessible & comfortable mid-step 6061 aluminum frame & fork",
-          "Fenders & Mounts": "Composite fenders and braze ons for front and rear accessories",
-          "Lights": "Automatic front and rear lights, Ultra-bright 600lm front",
-          "Seat": "Gel-padded comfort saddle",
-          "Stem/Grips": "Height adjustable stem with ergonomic support grips",
-          "Kickstand": "Frame-mounted rear kickstand",
-          "Bicycle Weight": "55-56.5 lbs. (with battery, pedals, and fenders installed)",
-          "Approx. Inseam and Height": "Small: 26.0\" - 29.0\" 5'0 - 5'6 | Medium: 29.0\" - 32.0\" 5'6 - 5'10 | Large: 32.0\" - 35.0\" 5'10 - 6'3",
-          "(A) Reach": "Small: 15.74\" (400mm) | Medium: 16.14\" (410mm) | Large: 16.33\" (415mm)",
-          "(B) Stack": "Small: 23.62\" (600mm) | Medium: 23.62\" (600mm) | Large: 25.19\" (640mm)",
-          "(C) Min Seat Height (from ground)": "Small: 30.5\" | Medium: 32.5\" | Large: 34.5\"",
-          "(D) Max Seat Height (from ground)": "Small: 36.5\" | Medium: 40.5\" | Large: 42.5\"",
-          "(E) Stepover height (from ground)": "Small: 22.5\" | Medium: 23.5\" | Large: 24.5\""
-        },
-        "technical": {
-          "Battery": "A large 720Wh battery delivers extended ride times, ensuring riders can enjoy extended trips without worrying about recharging",
-          "Motor": "500w mid-drive torque sensing motor with class leading 140NM of max torque",
-          "Range": "20-75 miles based on pedal assist mode and throttle usage (lower pedal assist levels and less frequent throttle usage will naturally result in longer range)",
-          "Top Speed": "Ships as a Class 2, 20MPH setting, but can increase to Class 3, 28MPH setting. (Please note local laws)",
-          "Display": "Backlit display with 5 assist modes, speedometer, trip distance, and odometer"
-        },
         "all": {
           "Battery": "A large 720Wh battery delivers extended ride times, ensuring riders can enjoy extended trips without worrying about recharging",
           "Motor": "500w mid-drive torque sensing motor with class leading 140NM of max torque",
@@ -166,7 +143,9 @@
       "model": "PRIORITY E-COAST",
       "handle": "ecoast",
       "url": "https://www.prioritybicycles.com/products/ecoast",
-      "product_type": "Bicycle",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_from": 1999.0,
       "currency": "USD",
       "options": {
@@ -203,18 +182,6 @@
       },
       "warranty": null,
       "specs": {
-        "physical": {
-          "Approx. Inseam": "DIAMOND: 32 - 35\" | STEP-THROUGH: 26 - 32\"",
-          "Approx. Height": "DIAMOND: 5'6 - 6'4\" | STEP-THROUGH: 5'0 - 6'0\"",
-          "Seat Tube Length": "DIAMOND: 18\" | STEP-THROUGH: 17\"",
-          "Effective Top Tube": "DIAMOND: 658mm | STEP-THROUGH: 620mm",
-          "Head Tube Length": "DIAMOND: 165mm | STEP-THROUGH: 150mm",
-          "Head Tube Angle": "DIAMOND: 70 degrees | STEP-THROUGH: 68 degrees",
-          "Seat Tube Angle": "DIAMOND: 70 degrees | STEP-THROUGH: 69 degrees",
-          "Wheelbase": "DIAMOND: 1165mm | STEP-THROUGH: 1127mm",
-          "Chainstay Length": "DIAMOND: 473mm | STEP-THROUGH: 473mm"
-        },
-        "technical": {},
         "all": {
           "Approx. Inseam": "DIAMOND: 32 - 35\" | STEP-THROUGH: 26 - 32\"",
           "Approx. Height": "DIAMOND: 5'6 - 6'4\" | STEP-THROUGH: 5'0 - 6'0\"",
@@ -265,7 +232,9 @@
       "model": "PRIORITY GLIDE E-BIKE",
       "handle": "priority-glide-e-bike",
       "url": "https://www.prioritybicycles.com/products/priority-glide-e-bike",
-      "product_type": "Bicycle",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_from": 1799.0,
       "currency": "USD",
       "options": {
@@ -296,47 +265,6 @@
       },
       "warranty": null,
       "specs": {
-        "physical": {
-          "Frame": "6061 Aluminum Alloy",
-          "Fork": "High Tensile Steel",
-          "Front Wheel": "36V 350W Hub Motor, 36 13g Spokes, Double Wall Rim",
-          "Rear Wheel": "Shimano Nexus SG-3D55 3-Speed Disc Brake Hub, Silent Clutch, 36 13g Spokes, Double Wall Rim",
-          "Front Sprocket": "Gates Sidetrack 46t",
-          "Belt": "Gates Sidetrack 115t",
-          "Rear Cog": "Gates Sidetrack 22t",
-          "Brakes": "174HUDSON Full Hydraulic Disc with Brake Sensing Motor Cutoff",
-          "Rotors": "180mm Front and Rear",
-          "Handlebar": "Backswept Aluminum Cruiser Bar",
-          "Seatpost": "Aluminum 27.2mm",
-          "Saddle": "Priority Cruiser Saddle",
-          "Grips": "Lock-On Rubber",
-          "Kickstand": "Alloy Double-Leg Center Mount",
-          "Lights": "Priority 6V Front and Rear",
-          "Fenders": "Color-Matched Composite Blades, Stainless Struts",
-          "Sizing": "Unisex frame style, 2 sizes with wide fit range (5'2\"-6'2\")",
-          "Tires": "700c x 38mm, Puncture Protection Layer",
-          "Weight": "49lbs (Including Battery, Pedals, Fenders, Double-Leg Kickstand)",
-          "Weight Limit": "300 lbs max combined weight (rider, bicycle, and any cargo)",
-          "Minimum Inseam": "small/medium: 26.5\" | medium/large: 30\"",
-          "Rider Height": "small/medium: 5'2\" - 5'10\" | medium/large: 5'9\" - 6'2\"",
-          "Standover Height": "small/medium: 25\" | medium/large: 27\"",
-          "Stepover Height": "small/medium: 24.5\" | medium/large: 25\"",
-          "(A) Seat Tube Length": "small/medium: 440mm | medium/large: 510mm",
-          "(B) Seat Tube Angle": "small/medium: 73.5 degrees | medium/large: 74 degrees",
-          "(C) Head Tube Length": "small/medium: 170mm | medium/large: 190mm",
-          "(D) Head Tube Angle": "small/medium: 70 degrees | medium/large: 70 degrees",
-          "(E) Stack": "small/medium: 598mm | medium/large: 617mm",
-          "(F) Reach": "small/medium: 400mm | medium/large: 430mm",
-          "(G) Effective Top Tube": "small/medium: 580mm | medium/large: 610mm",
-          "(H) Chain Stay": "small/medium: 444mm in Stock Position | medium/large: 444mm in Stock Position",
-          "(I) Wheelbase": "small/medium: 1081mm | medium/large: 1116mm",
-          "(J) Bottom Bracket Drop": "small/medium: 70mm | medium/large: 70mm",
-          "(K) Crank Arm Length": "small/medium: 170mm | medium/large: 170mm",
-          "(L) Fork Offset": "small/medium: 45mm | medium/large: 45mm"
-        },
-        "technical": {
-          "Battery": "374Wh, 36V, 10.4Ah, Downtube-Integrated, Key-Operated Lock/Release"
-        },
         "all": {
           "Frame": "6061 Aluminum Alloy",
           "Fork": "High Tensile Steel",
@@ -420,7 +348,9 @@
       "model": "PRIORITY SKYLINE SMART.SHIFT E-BIKE",
       "handle": "priority-skyline-smart-shift-e-bike",
       "url": "https://www.prioritybicycles.com/products/priority-skyline-smart-shift-e-bike",
-      "product_type": "Bicycle",
+      "product_types": [
+        "Commuter / Urban"
+      ],
       "price_from": 3999.0,
       "currency": "USD",
       "options": {
@@ -429,57 +359,17 @@
           "Medium",
           "Large"
         ],
-        "colors": []
+        "colors": [
+          {
+            "name": "Default",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/1245/1481/files/Skyline_Hero_June2025_1of1.jpg?v=1754423481"
+          }
+        ]
       },
       "warranty": null,
       "specs": {
-        "physical": {
-          "Frame": "6061 aluminum, Pinion gearbox node, integrated downtube battery",
-          "Fork": "SR Suntour XCM 32, 80mm travel",
-          "Gearbox": "Pinion C1.12i Smart.Shift - 600% gear range, fully sealed",
-          "Brakes": "Tektro HD-E350 Hydraulic disc brakes, 180mm rotor front, 180mm rotor rear, cut-off sensors",
-          "Shifters": "Pinion Smart.Shift trigger shifter",
-          "Handlebar": "740mm width, 17-degree backsweep",
-          "Stem": "75mm length, adjustable rise, faceplate light mount, internal cable routing",
-          "Grips": "Priority ergonomic grips",
-          "Front Wheel": "WTB STi23 rim, 27.5\" diameter, 36 13g spokes, alloy 15mm thru axle, 100mm hub spacing, 6-bolt",
-          "Rear Wheel": "WTB STi23 rim, 27.5\" diameter, 36 12g spokes, Priority 750w torque-sensing hub motor, 142mm hub spacing, 12mm axle",
-          "Tires": "Maxxis Metropass 27.5 x 2.0\", reflective sidewalls",
-          "Belt": "Gates 115t CDX",
-          "Crank": "Pinion-forged crank arms 170mm",
-          "Front Sprocket": "Gates CDX Black 39t Pinion sprocket",
-          "Rear Sprocket": "Gates CDX Black 28t, 9-spline",
-          "Pedals": "Composite body, chromoly spindle",
-          "Seatpost": "Alloy 2-bolt, 31.6mm diameter, 350mm legth",
-          "Saddle": "Selle Royal Comfort Saddle",
-          "Weight": "68 LBS",
-          "Fenders": "Alloy full fenders with integrated rear rack and routing for rear light",
-          "Lights": "Ultra-bright 500lm front light and integrated to the fender rear light",
-          "Kickstand": "Frame-mounted rear kickstand",
-          "Rear Rack": "Integrated with rear fender, 48.5 lbs weight limit",
-          "Weight Limit": "300 lbs max combined weight (rider, bicycle, and cargo)",
-          "Approx. Inseam": "Small: 28.0\" - 31.0\" | Medium: 30.0\" - 33.0\" | Large: 32.0\" - 35.0\"",
-          "Approx. Height": "Small: 5'4 - 5'7 | Medium: 5'7 - 5'10 | Large: 5'10 - 6'3",
-          "Standover": "Small: 27\" | Medium: 29\" | Large: 31\"",
-          "(A) Seat Tube Length": "Small: 432mm | Medium: 480mm | Large: 533mm",
-          "(B) Seat Tube Angle": "Small: 74 degrees | Medium: 74 degrees | Large: 74 degrees",
-          "(C) Effective Top Tube": "Small: 588mm | Medium: 608mm | Large: 640mm",
-          "(D) Chainstay Length": "Small: 447mm | Medium: 447mm | Large: 447mm",
-          "(E) Head Tube Length": "Small: 100mm | Medium: 160mm | Large: 190mm",
-          "(F) Wheelbase": "Small: 1110mm | Medium: 1135mm | Large: 1170mm",
-          "(G) Head Tube Angle": "Small: 68.5 degrees | Medium: 68.5 degrees | Large: 68.5 degrees",
-          "(H) Stack": "Small: 590mm | Medium: 646mm | Large: 674mm",
-          "(I) Reach": "Small: 416mm | Medium: 418mm | Large: 442mm",
-          "(J) Fork A-C": "Small: 480mm | Medium: 480mm | Large: 480mm",
-          "(K) Fork Offset": "Small: 42mm | Medium: 42mm | Large: 42mm",
-          "(L) Crank": "Small: 170mm | Medium: 170mm | Large: 170mm"
-        },
-        "technical": {
-          "Battery": "Removable 720Wh integrated downtube battery with charging port accessible on and off bike",
-          "Range": "Between 20 and 60 miles per charge, depending on your assist level, throttle use, terrain, elevation, rider weight, temperature, and riding speed.",
-          "Top Speed": "Ships as a Class 2, 20MPH setting, but can increase to Class 3, 28MPH setting. (Please note local laws)",
-          "Display": "Backlit display with 5 assist modes, speedometer, trip distance, and odometer"
-        },
         "all": {
           "Frame": "6061 aluminum, Pinion gearbox node, integrated downtube battery",
           "Fork": "SR Suntour XCM 32, 80mm travel",

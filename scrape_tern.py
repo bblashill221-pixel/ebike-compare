@@ -10,7 +10,7 @@ price, and color swatches. Only **electric** models (those with a Motor/Battery
 spec) that actually carry specs are kept; family landing pages and acoustic
 folders are dropped.
 
-Specs are split into `physical` / `technical` groups (plus a flat `all` map), and
+Specs are a flat `all` map, and
 colors are `[{name, hex, swatch_image, image}]` — `hex` read straight from each
 on-page swatch's `background-color` (hex preferred), `image` the model photo.
 
@@ -36,7 +36,8 @@ from pathlib import Path
 # --- Make the locally-extracted Chromium system libs discoverable, if present. ---
 # (This env must be set before Playwright launches the browser subprocess.)
 
-from scraper_common import make_classifier  # noqa: E402  (import also sets LD_LIBRARY_PATH for bundled chromium)
+import scraper_common  # noqa: E402,F401  (sets LD_LIBRARY_PATH for bundled chromium)
+from bike_taxonomy import classify_product_types  # noqa: E402
 from playwright.async_api import async_playwright  # noqa: E402
 from warranty_js import JS_WARRANTY
 
@@ -44,27 +45,6 @@ BASE = "https://www.ternbicycles.com"
 LOGO = "https://www.ternbicycles.com/sites/default/files/2025-06/Tern-Bicycles-cargo-ebikes-logo.png"
 LISTING = "/us/bikes/all"
 COLLECTION = "ebikes"
-
-# Label keywords used to classify each spec into a physical vs technical bucket
-# (shared approach with scrape_aventon.py / scrape_lectric.py). PHYSICAL is
-# checked first; anything unmatched falls to TECHNICAL, then defaults to physical.
-TECHNICAL_KEYWORDS = (
-    "motor", "battery", "range", "charger", "charging", "controller", "throttle",
-    "display", "remote", "sensor", "pedal assist", "assist", "class", "watt",
-    "voltage", "wireless", "connectivity", "gps", "app", "certification",
-    "torque", "power", "drive unit",
-)
-PHYSICAL_KEYWORDS = (
-    "weight", "payload", "capacity", "limit", "rider", "height", "standover",
-    "frame", "fork", "wheel", "tire", "tyre", "brake", "rotor", "derailleur",
-    "shifter", "speeds", "chain", "cassette", "gear", "crank", "bottom bracket",
-    "pedal", "saddle", "seat", "handlebar", "grip", "headset", "kickstand",
-    "rack", "fender", "light", "stem", "spoke", "hub", "dimension", "length",
-    "width", "fold", "size", "color", "generation", "gross vehicle",
-)
-
-
-classify = make_classifier(TECHNICAL_KEYWORDS, PHYSICAL_KEYWORDS)
 
 
 # ----------------------------- catalog discovery -----------------------------
@@ -160,13 +140,12 @@ async def scrape_model(context, model: dict, retries: int = 2) -> dict:
             warranty = await page.evaluate(JS_WARRANTY)
             await page.close()
 
-            physical, technical, all_specs = {}, {}, {}
+            all_specs = {}
             for label, value in data["specs"]:
                 key = " ".join(label.split())   # normalise whitespace
                 if key.lower().startswith("color"):   # colors handled separately
                     continue
                 all_specs[key] = value
-                (physical if classify(key) == "physical" else technical)[key] = value
 
             colors = [{"name": c["name"], "hex": c["hex"],
                        "swatch_image": None, "image": data.get("image")}
@@ -175,11 +154,12 @@ async def scrape_model(context, model: dict, retries: int = 2) -> dict:
             result.update({
                 "title": data["title"] or model["handle"],
                 "url": model["url"],
-                "product_type": None,
+                "product_types": classify_product_types(
+                    data["title"] or model["handle"], "", model["url"]),
                 "price_from": data["price"],
                 "currency": "USD",
                 "options": {"colors": colors},
-                "specs": {"physical": physical, "technical": technical, "all": all_specs},
+                "specs": {"all": all_specs},
                 "spec_count": len(all_specs),
                 "electric": is_electric(all_specs),
                 "warranty": warranty,
@@ -191,9 +171,10 @@ async def scrape_model(context, model: dict, retries: int = 2) -> dict:
             if attempt == retries:
                 result.update({
                     "title": model["handle"],
-                    "product_type": None, "price_from": None, "currency": "USD",
+                    "product_types": classify_product_types(model["handle"]),
+                    "price_from": None, "currency": "USD",
                     "options": {"colors": []},
-                    "specs": {"physical": {}, "technical": {}, "all": {}},
+                    "specs": {"all": {}},
                     "spec_count": 0, "electric": False, "warranty": None,
                     "scrape_error": f"{type(e).__name__}: {e}",
                 })

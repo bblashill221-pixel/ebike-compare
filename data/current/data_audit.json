@@ -1,0 +1,3850 @@
+{
+  "generated_at": "2026-06-09T04:09:55.984199+00:00",
+  "total_models": 314,
+  "expected_fields": [
+    "motor_w",
+    "battery_wh",
+    "weight_lb",
+    "range_mi",
+    "brake_type",
+    "frame_material",
+    "drive_type",
+    "torque_nm",
+    "warranty_years",
+    "display_type",
+    "drivetrain_type",
+    "suspension",
+    "cell_brand",
+    "rack_load_lb"
+  ],
+  "coverage": {
+    "cell_brand": {
+      "count": 308,
+      "pct": 98
+    },
+    "drivetrain_type": {
+      "count": 302,
+      "pct": 96
+    },
+    "drive_type": {
+      "count": 299,
+      "pct": 95
+    },
+    "brake_type": {
+      "count": 295,
+      "pct": 94
+    },
+    "display_type": {
+      "count": 290,
+      "pct": 92
+    },
+    "suspension": {
+      "count": 287,
+      "pct": 91
+    },
+    "battery_wh": {
+      "count": 285,
+      "pct": 91
+    },
+    "weight_lb": {
+      "count": 277,
+      "pct": 88
+    },
+    "frame_material": {
+      "count": 249,
+      "pct": 79
+    },
+    "torque_nm": {
+      "count": 248,
+      "pct": 79
+    },
+    "gears": {
+      "count": 244,
+      "pct": 78
+    },
+    "range_mi": {
+      "count": 236,
+      "pct": 75
+    },
+    "motor_w": {
+      "count": 231,
+      "pct": 74
+    },
+    "warranty_years": {
+      "count": 225,
+      "pct": 72
+    },
+    "max_load_lb": {
+      "count": 207,
+      "pct": 66
+    },
+    "notable_tech": {
+      "count": 164,
+      "pct": 52
+    },
+    "ul_listed": {
+      "count": 163,
+      "pct": 52
+    },
+    "sensor_type": {
+      "count": 162,
+      "pct": 52
+    },
+    "motor_peak_w": {
+      "count": 128,
+      "pct": 41
+    },
+    "fit_height_max_in": {
+      "count": 110,
+      "pct": 35
+    },
+    "fit_height_max_mm": {
+      "count": 110,
+      "pct": 35
+    },
+    "fit_height_min_in": {
+      "count": 110,
+      "pct": 35
+    },
+    "fit_height_min_mm": {
+      "count": 110,
+      "pct": 35
+    },
+    "connectivity": {
+      "count": 107,
+      "pct": 34
+    },
+    "water_resistance": {
+      "count": 89,
+      "pct": 28
+    },
+    "rack_load_lb": {
+      "count": 67,
+      "pct": 21
+    },
+    "removable_battery": {
+      "count": 57,
+      "pct": 18
+    },
+    "range_min_mi": {
+      "count": 50,
+      "pct": 16
+    },
+    "kids": {
+      "count": 1,
+      "pct": 0
+    }
+  },
+  "missing": [
+    {
+      "brand": "aventon",
+      "model": "Current ADV Ebike",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "aventon",
+      "model": "Current EXP Ebike",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "aventon",
+      "model": "Level 4 ADV Ebike",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "aventon",
+      "model": "Level 4 ADV Step-Through Ebike",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "blix",
+      "model": "Packa Genie Cargo eBike",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "blix",
+      "model": "Packa Genie Cargo eBike",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "blix",
+      "model": "Packa Genie Cargo eBike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "blix",
+      "model": "Packa Genie Cargo eBike — Dual Battery",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "blix",
+      "model": "Packa Genie Cargo eBike — Dual Battery",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "blix",
+      "model": "Packa Genie Cargo eBike — Dual Battery",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "cemoto",
+      "model": "CEMOTO B28D | 26\" Fat Tire Mountain Ebike All-Terrain Electric Bike",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "cemoto",
+      "model": "CEMOTO B28D | 26\" Fat Tire Mountain Ebike All-Terrain Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "cemoto",
+      "model": "CEMOTO B28D | 26\" Fat Tire Mountain Ebike All-Terrain Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "cemoto",
+      "model": "CEMOTO D-Series | 3000W–6000W Off-Road Electric Dirt Bike for Teens & Adults",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "cemoto",
+      "model": "CEMOTO D-Series | 3000W–6000W Off-Road Electric Dirt Bike for Teens & Adults",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "cemoto",
+      "model": "CEMOTO D-Series | 3000W–6000W Off-Road Electric Dirt Bike for Teens & Adults",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "cemoto",
+      "model": "CEMOTO D-Series | 3000W–6000W Off-Road Electric Dirt Bike for Teens & Adults",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "cemoto",
+      "model": "CEMOTO D-Series | 3000W–6000W Off-Road Electric Dirt Bike for Teens & Adults",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "cemoto",
+      "model": "CEMOTO D-Series | 3000W–6000W Off-Road Electric Dirt Bike for Teens & Adults",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "cemoto",
+      "model": "CEMOTO D-Series | 3000W–6000W Off-Road Electric Dirt Bike for Teens & Adults",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "cemoto",
+      "model": "CEMOTO EB66 | 750W double battery Harley-Like Hi-Tech Ebike",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "cemoto",
+      "model": "CEMOTO EB66 | 750W double battery Harley-Like Hi-Tech Ebike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "cemoto",
+      "model": "CEMOTO EB66 | 750W double battery Harley-Like Hi-Tech Ebike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "cemoto",
+      "model": "CEMOTO EBIKE B28 | 27.5\" E Mountain Bike",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "cemoto",
+      "model": "CEMOTO EBIKE B28 | 27.5\" E Mountain Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "cemoto",
+      "model": "CEMOTO EBIKE B28 | 27.5\" E Mountain Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "cemoto",
+      "model": "CEMOTO EBIKE B28A | High Step Fat Tire Ebike",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "cemoto",
+      "model": "CEMOTO EBIKE B28A | High Step Fat Tire Ebike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "cemoto",
+      "model": "CEMOTO EBIKE B28A | High Step Fat Tire Ebike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "cemoto",
+      "model": "Cargo Electric Bike |CEMOTO B69 750W Heavy Duty E-Bike 150kg Capacity",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "cemoto",
+      "model": "Cargo Electric Bike |CEMOTO B69 750W Heavy Duty E-Bike 150kg Capacity",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "cemoto",
+      "model": "Cargo Electric Bike |CEMOTO B69 750W Heavy Duty E-Bike 150kg Capacity",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "cemoto",
+      "model": "Cargo Electric Bike |CEMOTO B69 750W Heavy Duty E-Bike 150kg Capacity",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "cemoto",
+      "model": "Cargo Electric Bike |CEMOTO B69 750W Heavy Duty E-Bike 150kg Capacity",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "cemoto",
+      "model": "Cemoto EB40 | Electric City Commuter Bike",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "cemoto",
+      "model": "Cemoto EB40 | Electric City Commuter Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "cemoto",
+      "model": "Cemoto EB40 | Electric City Commuter Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "cyke",
+      "model": "Cheetah Hunting Ebike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "cyke",
+      "model": "Collie Cargo Ebike",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "cyke",
+      "model": "Collie Cargo Ebike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "cyke",
+      "model": "Falcon A Full Suspension Ebike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "cyke",
+      "model": "Falcon S Full Suspension Ebike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "cyke",
+      "model": "Falcon X Full Suspension Ebike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "cyke",
+      "model": "Grizzly Foldable Ebike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "cyke",
+      "model": "Kingfisher Mid-Drive Folding eBike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "cyke",
+      "model": "Kingfisher Mid-Drive Folding eBike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "cyke",
+      "model": "Lynx Commuter Ebike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE E26",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE E26",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE E26",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE E26",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE EP-2 Pro",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE EP-2 Pro",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE L20 2.0",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE L20 2.0",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE L20 2.0",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE LE20",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE LE20",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE LE20",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE M20",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE M20",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE M20",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE M20 2.0",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE M20 2.0",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE M20 2.0",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE M20 2.0",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE M20 3.0",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE X20",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE X20",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE X20",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE X24",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE X24",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE X24",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE X24",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "engwe",
+      "model": "EP-2 3.0",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "engwe",
+      "model": "Engine Pro 2.0",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "engwe",
+      "model": "Engine Pro 2.0",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "engwe",
+      "model": "Engine Pro 2.0",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "engwe",
+      "model": "L20 3.0",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "engwe",
+      "model": "X26/24/X20",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "engwe",
+      "model": "X26/24/X20",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "engwe",
+      "model": "X26/24/X20",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "engwe",
+      "model": "X26/24/X20",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "engwe",
+      "model": "X26/24/X20",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "engwe",
+      "model": "X26/24/X20",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "euphree",
+      "model": "City Robin 3",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "euphree",
+      "model": "City Robin 3",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "euphree",
+      "model": "City Robin 3",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "euphree",
+      "model": "Solar Sparrow",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "euphree",
+      "model": "Solar Sparrow",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "euphree",
+      "model": "Solar Sparrow",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "euphree",
+      "model": "Solar Sparrow Belt",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "euphree",
+      "model": "Solar Sparrow Belt",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "euphree",
+      "model": "Stellar Falcon 2 Mid Step",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "euphree",
+      "model": "Stellar Falcon 2 Mid Step",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "euphree",
+      "model": "Stellar Falcon 2 Step Thru",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "euphree",
+      "model": "Stellar Falcon 2 Step Thru",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "evelo",
+      "model": "EVELO Atlas Electric Bike",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "evelo",
+      "model": "EVELO Atlas Electric Bike",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "evelo",
+      "model": "EVELO Compass Electric Trike",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "heybike",
+      "model": "ALPHA",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "heybike",
+      "model": "ALPHA — Step-Thru",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "heybike",
+      "model": "Hero — 1000W Rear Hub · Step-Over",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "heybike",
+      "model": "Hero — 1000W Rear Hub · Step-Over",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "heybike",
+      "model": "Hero — 1000W Rear Hub · Step-Thru",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "heybike",
+      "model": "Hero — 1000W Rear Hub · Step-Thru",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "heybike",
+      "model": "Hero — 750W Mid-Drive · Step-Over",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "heybike",
+      "model": "Hero — 750W Mid-Drive · Step-Over",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "heybike",
+      "model": "Hero — 750W Mid-Drive · Step-Thru",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "heybike",
+      "model": "Hero — 750W Mid-Drive · Step-Thru",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "heybike",
+      "model": "Horizon",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "heybike",
+      "model": "Horizon",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "heybike",
+      "model": "Horizon",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "heybike",
+      "model": "Horizon",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "heybike",
+      "model": "Mars 3.0",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "heybike",
+      "model": "Ranger 3.0 Pro",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "heybike",
+      "model": "Ranger 3.0 Pro",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "heybike",
+      "model": "Saturn",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "heybike",
+      "model": "Saturn",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "heybike",
+      "model": "Saturn — Dual Battery (55-90 Miles)",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "heybike",
+      "model": "Saturn — Dual Battery (55-90 Miles)",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "himiway",
+      "model": "A3 / Urban Electric Commuter Bike ST",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "himiway",
+      "model": "B3 / Foldable Electric Commuter Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "himiway",
+      "model": "C3 / Cargo Ebike",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "himiway",
+      "model": "C3 / Cargo Ebike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "himiway",
+      "model": "D3 ST(Cruiser ST) / All Terrain Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "himiway",
+      "model": "D3(Cruiser) / Long Range Fat Tire Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "himiway",
+      "model": "D5 Pro / All-terrain Electric Fat Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "himiway",
+      "model": "D5 Pro ST / All-terrain Electric Fat Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "himiway",
+      "model": "D5 ST(Zebra ST) / All-terrain Electric Fat Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "himiway",
+      "model": "D5(Zebra) / All-terrain Electric Fat Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "himiway",
+      "model": "D7 / Full Suspension Electric Hunting Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "himiway",
+      "model": "Escape Pro / Long Range Moped-Style E-Bike ST",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "himiway",
+      "model": "Himiway A7 Pro Commuter eBike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "himiway",
+      "model": "Himiway C1 Kids eBike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "himiway",
+      "model": "Himiway C1 Kids eBike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "himiway",
+      "model": "Himiway D7 Pro Mountain eBike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "juiced",
+      "model": "Scrambler",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "juiced",
+      "model": "Scrambler — Full Suspension",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "lectric",
+      "model": "Lectric ONE",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "lectric",
+      "model": "Lectric XP Lite2 — Long-Range · Step-Over",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "lectric",
+      "model": "Lectric XP Trike2",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "lectric",
+      "model": "Lectric XP Trike2 — Long-Range · Step-Over",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "lectric",
+      "model": "Lectric XPeak2",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "lectric",
+      "model": "Lectric XPeak2 — Long-Range · Step-Over",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "lectric",
+      "model": "Lectric XPeak2 — Long-Range · Step-Thru",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "lectric",
+      "model": "Lectric XPeak2 — Standard · Step-Over",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "lectric",
+      "model": "Lectric XPress1",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "lectric",
+      "model": "Lectric XPress1",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "lectric",
+      "model": "Lectric XPress2",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "lectric",
+      "model": "Lectric XPress2",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "lectric",
+      "model": "Lectric XPress2 — 750 · Step-Over",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "lectric",
+      "model": "Lectric XPress2 — 750 · Step-Over",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Fastron SO Fat Tire Ebike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Fastron SO Fat Tire Ebike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Fastron SO Fat Tire Ebike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Fastron SO Fat Tire Ebike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Fastron SO Fat Tire Ebike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Fastron ST Fat Tire Ebike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Fastron ST Fat Tire Ebike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Fastron ST Fat Tire Ebike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Fastron ST Fat Tire Ebike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Fastron ST Fat Tire Ebike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Sprint Fat Tire Utility Ebike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Sprint Fat Tire Utility Ebike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Sprint Fat Tire Utility Ebike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Sprint Fat Tire Utility Ebike",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Sprint Fat Tire Utility Ebike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Sprint Fat Tire Utility Ebike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Sprint Fat Tire Utility Ebike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Trailblazer Mid-drive Motor EMTB",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Trailblazer Mid-drive Motor EMTB",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Trailblazer Mid-drive Motor EMTB",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Trailblazer Mid-drive Motor EMTB",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Trailblazer Mid-drive Motor EMTB",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Zephyr SO Beach Cruiser Ebike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Zephyr SO Beach Cruiser Ebike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Zephyr SO Beach Cruiser Ebike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Zephyr SO Beach Cruiser Ebike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Zephyr SO Beach Cruiser Ebike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Zephyr ST Beach Cruiser Ebike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Zephyr ST Beach Cruiser Ebike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Zephyr ST Beach Cruiser Ebike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Zephyr ST Beach Cruiser Ebike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Zephyr ST Beach Cruiser Ebike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "magician",
+      "model": "Alpha Mini",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "magician",
+      "model": "Alpha — Step-Over",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "magician",
+      "model": "Alpha — Step-Thru",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "magician",
+      "model": "Atlas",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Asphalt Ebike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Asphalt ST Ebike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Granite E-Trike",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Onyx Ebike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Onyx ST Ebike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY CURRENT PLUS E-BIKE",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY CURRENT PLUS E-BIKE",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY E-COAST",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY E-COAST",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY E-COAST",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY E-COAST",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY E-COAST",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY E-COAST",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY E-COAST",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY E-COAST",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY E-COAST",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY E-COAST",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY E-COAST",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY E-COAST",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY GLIDE E-BIKE",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY GLIDE E-BIKE",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY GLIDE E-BIKE",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY GLIDE E-BIKE",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY GLIDE E-BIKE",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY GLIDE E-BIKE",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY SKYLINE SMART.SHIFT E-BIKE",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY SKYLINE SMART.SHIFT E-BIKE",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY SKYLINE SMART.SHIFT E-BIKE",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY SKYLINE SMART.SHIFT E-BIKE",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY SKYLINE SMART.SHIFT E-BIKE",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "CF RACER1",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "CF RACER1",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "PORTOLA",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "ride1up",
+      "model": "PORTOLA",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "PORTOLA 13.4AH (CLASS 1)",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "ride1up",
+      "model": "PORTOLA 13.4AH (CLASS 1)",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "PORTOLA 13.4AH (CLASS 1)",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "PORTOLA — 13.4ah",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "ride1up",
+      "model": "PORTOLA — 13.4ah",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "PRODIGY V2 — Belt CVT · Step-Over",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "ride1up",
+      "model": "PRODIGY V2 — Belt CVT · Step-Over",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "PRODIGY V2 — Belt CVT · Step-Over",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "PRODIGY V2 — Belt CVT · Step-Over",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "PRODIGY V2 — Belt CVT · Step-Thru",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "ride1up",
+      "model": "PRODIGY V2 — Belt CVT · Step-Thru",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "PRODIGY V2 — Belt CVT · Step-Thru",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "PRODIGY V2 — Belt CVT · Step-Thru",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "PRODIGY V2 — Chain · Step-Over",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "ride1up",
+      "model": "PRODIGY V2 — Chain · Step-Over",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "PRODIGY V2 — Chain · Step-Over",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "PRODIGY V2 — Chain · Step-Over",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "PRODIGY V2 — Chain · Step-Thru",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "ride1up",
+      "model": "PRODIGY V2 — Chain · Step-Thru",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "PRODIGY V2 — Chain · Step-Thru",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "PRODIGY V2 — Chain · Step-Thru",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "ROADSTER V3",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "ride1up",
+      "model": "ROADSTER V3",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "ROADSTER V3",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "ROADSTER V3 — Suspension",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "ride1up",
+      "model": "ROADSTER V3 — Suspension",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "ROADSTER V3 — Suspension",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "Revv1 DRT",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "ride1up",
+      "model": "Revv1 DRT",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "Revv1 DRT",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "Revv1 DRT",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "Revv1 EVO",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "ride1up",
+      "model": "Revv1 EVO",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "Revv1 FS",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "ride1up",
+      "model": "Revv1 FS",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "Revv1 FS",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "Revv1 FS",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "Revv1 HT",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "ride1up",
+      "model": "Revv1 HT",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "Revv1 HT",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "Revv1 HT",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "TRAILRUSH",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "ride1up",
+      "model": "TRAILRUSH",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "TRAILRUSH",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "VORSA — FT · Step-Over",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "VORSA — FT · Step-Over",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "ride1up",
+      "model": "VORSA — FT · Step-Over",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "VORSA — FT · Step-Over",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "VORSA — FT · Step-Thru",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "VORSA — FT · Step-Thru",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "ride1up",
+      "model": "VORSA — FT · Step-Thru",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "VORSA — FT · Step-Thru",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "VORSA — Lite · Step-Over",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "VORSA — Lite · Step-Over",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "ride1up",
+      "model": "VORSA — Lite · Step-Over",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "VORSA — Lite · Step-Over",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "VORSA — Lite · Step-Thru",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "VORSA — Lite · Step-Thru",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "ride1up",
+      "model": "VORSA — Lite · Step-Thru",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "VORSA — Lite · Step-Thru",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "VORSA — Vorsa · Step-Over",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "VORSA — Vorsa · Step-Over",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "ride1up",
+      "model": "VORSA — Vorsa · Step-Over",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "VORSA — Vorsa · Step-Over",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "VORSA — Vorsa · Step-Thru",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "VORSA — Vorsa · Step-Thru",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "ride1up",
+      "model": "VORSA — Vorsa · Step-Thru",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "VORSA — Vorsa · Step-Thru",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "segway",
+      "model": "Segway MUXI Cargo Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "segway",
+      "model": "Segway MUXI Cargo Electric Bike",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "segway",
+      "model": "Segway MUXI Cargo Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "segway",
+      "model": "Segway MUXI Cargo Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "segway",
+      "model": "Segway Myon Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "segway",
+      "model": "Segway Myon Electric Bike",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "segway",
+      "model": "Segway Myon Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "segway",
+      "model": "Segway Myon Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "segway",
+      "model": "Segway Myon S Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "segway",
+      "model": "Segway Myon S Electric Bike",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "segway",
+      "model": "Segway Myon S Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "segway",
+      "model": "Segway Myon S Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "segway",
+      "model": "Segway Xafari Fat Tire eBike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "segway",
+      "model": "Segway Xafari Fat Tire eBike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "segway",
+      "model": "Segway Xafari Fat Tire eBike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "segway",
+      "model": "Segway Xyber Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "segway",
+      "model": "Segway Xyber Electric Bike",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "segway",
+      "model": "Segway Xyber Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "segway",
+      "model": "Segway Xyber Electric Bike",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "segway",
+      "model": "Segway Xyber Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Haul LT",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Haul LT",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Haul LT",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Haul ST",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Haul ST",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Haul ST",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Levo 4 EVO Comp",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Levo 4 EVO Pro",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Creo 2",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Creo 2",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Creo 2",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Kenevo SL 2 Frameset",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Kenevo SL 2 Frameset",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Kenevo SL 2 Frameset",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Kenevo SL 2 Frameset",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Kenevo SL 2 Frameset",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Levo 4",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Levo 4",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Levo 4 Frameset",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Levo 4 Frameset",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Levo 4 Frameset",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Levo 4 LTD",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Levo R",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Levo SL 2 Di2",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Levo SL 2 Di2",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Levo SL 2 Di2",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Levo SL 2 Frameset",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Levo SL 2 Frameset",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Levo SL 2 Frameset",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Como 4.0",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Como 4.0",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Como 4.0 IGH",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Como 4.0 IGH",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Como 5.0 IGH",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Como 5.0 IGH",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Creo 2 Comp",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Creo 2 Comp",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Creo 2 Comp",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Creo 2 Comp",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Creo 2 Comp",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Creo 2 Comp",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Creo 2 Comp E5",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Creo 2 Comp E5",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Creo 2 Comp E5",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Creo 2 Expert",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Creo 2 Expert",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Creo 2 Expert",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Kenevo SL 2 Comp",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Kenevo SL 2 Comp",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Kenevo SL 2 Comp",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Kenevo SL 2 Expert",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Kenevo SL 2 Expert",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Kenevo SL 2 Expert",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Kenevo SL 2 Öhlins Coil",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Kenevo SL 2 Öhlins Coil",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Kenevo SL 2 Öhlins Coil",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo 4 Alloy",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo 4 Comp",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo 4 Comp Alloy",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo 4 Expert",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo 4 Pro",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo R Comp",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo R Comp Alloy",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo R Expert",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo SL 2 Comp",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo SL 2 Comp",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo SL 2 Comp",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo SL 2 Comp Alloy",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo SL 2 Expert",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo SL 2 Expert Di2",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo SL 2 Expert Di2",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo SL 2 Expert Di2",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo SL 2 Pro",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado 3 EVO 4.0",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado 3 EVO 4.0",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado 3 EVO 5.0",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado 3 EVO 5.0",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado 3 EVO 6.0",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado 3 EVO 6.0",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado 3 X 4.0",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado 3 X 4.0",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado 3 X 4.0",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado 3 X 6.0",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado 3 X 6.0",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado 3 X 6.0",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado 4.0",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado 4.0 Step-Through",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado 5.0 IGH",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado 5.0 IGH Step-Through",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 4.0",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 4.0",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 4.0",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 4.0",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 4.0 EQ",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 4.0 EQ",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 4.0 EQ",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 4.0 EQ",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 4.0 Step-Through",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 4.0 Step-Through",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 4.0 Step-Through",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 4.0 Step-Through",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 4.0 Step-Through  EQ",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 4.0 Step-Through  EQ",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 4.0 Step-Through  EQ",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 4.0 Step-Through  EQ",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 5.0 EQ",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 5.0 EQ",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 5.0 EQ",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 5.0 EQ",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 5.0 Step-Through EQ",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 5.0 Step-Through EQ",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 5.0 Step-Through EQ",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 5.0 Step-Through EQ",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 6.0 Carbon",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 6.0 Carbon",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 6.0 Carbon",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 6.0 Carbon",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 6.0 EQ Carbon",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 6.0 EQ Carbon",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 6.0 EQ Carbon",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 6.0 EQ Carbon",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Vado SL 2 LTD",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "specialized",
+      "model": "Vado SL 2 LTD",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Vado SL 2 LTD",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Vado SL 2 LTD",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "tern",
+      "model": "GSD P00",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "tern",
+      "model": "GSD P00",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "tern",
+      "model": "GSD P00",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "tern",
+      "model": "GSD P10",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "tern",
+      "model": "GSD P10",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "tern",
+      "model": "GSD P10",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "tern",
+      "model": "GSD R14",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "tern",
+      "model": "GSD R14",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "tern",
+      "model": "GSD S10",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "tern",
+      "model": "GSD S10",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "tern",
+      "model": "GSD S10",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "tern",
+      "model": "HSD P10",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "tern",
+      "model": "HSD P10",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "tern",
+      "model": "HSD P10",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "tern",
+      "model": "HSD P10",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "tern",
+      "model": "HSD P5i",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "tern",
+      "model": "HSD P5i",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "tern",
+      "model": "HSD P5i",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "tern",
+      "model": "HSD P5i",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "tern",
+      "model": "HSD S00",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "tern",
+      "model": "HSD S00",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "tern",
+      "model": "HSD S00",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "tern",
+      "model": "HSD S00",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "tern",
+      "model": "HSD S11",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "tern",
+      "model": "HSD S11",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "tern",
+      "model": "HSD S11",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "tern",
+      "model": "HSD S11",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "tern",
+      "model": "NBD P8i",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "tern",
+      "model": "NBD P8i",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "tern",
+      "model": "NBD P8i",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "tern",
+      "model": "NBD S5i",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "tern",
+      "model": "NBD S5i",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "tern",
+      "model": "NBD S5i",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "tern",
+      "model": "Orox R14 (27.5\")",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "tern",
+      "model": "Orox R14 (27.5\")",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "tern",
+      "model": "Orox R14 (27.5\")",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "tern",
+      "model": "Orox R14 (27.5\")",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "tern",
+      "model": "Orox S12 (27.5\")",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "tern",
+      "model": "Orox S12 (27.5\")",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "tern",
+      "model": "Orox S12 (27.5\")",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "tern",
+      "model": "Orox S12 (27.5\")",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "tern",
+      "model": "Quick Haul D8",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "tern",
+      "model": "Quick Haul D8",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "tern",
+      "model": "Quick Haul D8",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "tern",
+      "model": "Quick Haul D8",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "tern",
+      "model": "Quick Haul Long D9",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "tern",
+      "model": "Quick Haul Long D9",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "tern",
+      "model": "Quick Haul Long D9",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "tern",
+      "model": "Quick Haul Long D9",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "tern",
+      "model": "Quick Haul P9 Sport",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "tern",
+      "model": "Quick Haul P9 Sport",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "tern",
+      "model": "Quick Haul P9 Sport",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "tern",
+      "model": "Quick Haul P9 Sport",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "tern",
+      "model": "Vektron P10",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "tern",
+      "model": "Vektron P10",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "tern",
+      "model": "Vektron P10",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "tern",
+      "model": "Vektron P10",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "tern",
+      "model": "Vektron P5i",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "tern",
+      "model": "Vektron P5i",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "tern",
+      "model": "Vektron P5i",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "tern",
+      "model": "Vektron P5i",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "tern",
+      "model": "Vektron Q9",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "tern",
+      "model": "Vektron Q9",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "tern",
+      "model": "Vektron Q9",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "tern",
+      "model": "Vektron Q9",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "tern",
+      "model": "Vektron S10",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "tern",
+      "model": "Vektron S10",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "tern",
+      "model": "Vektron S10",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "tern",
+      "model": "Vektron S10",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "velotric",
+      "model": "Velotric Triker Electric Tricycle",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "velowave",
+      "model": "Pony Compact Step-Thru Electric Bike",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "velowave",
+      "model": "Prado S Commuter Electric Bike",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "velowave",
+      "model": "Ranger Step-Thru 2.0 Electric Bike",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "velowave",
+      "model": "Ranger Step-Thru 3.0 Torque Sensor Electric Bike",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "velowave",
+      "model": "Swift M Mid-Drive Electric Bike",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI ACE01 Electric Bike All Terrain Fat Tire Electric Bike SGS Certified to UL2849",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI ACE01 Electric Bike All Terrain Fat Tire Electric Bike SGS Certified to UL2849",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI ACE01 Electric Bike All Terrain Fat Tire Electric Bike SGS Certified to UL2849",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI ACE01 Pro Electric Bike Torque Sensor Fat Tire Electric Bike with App Control",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI ACE01 Pro Electric Bike Torque Sensor Fat Tire Electric Bike with App Control",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI ACE01 Pro Electric Bike Torque Sensor Fat Tire Electric Bike with App Control",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI ACE07 Electric Bike Commuter Fat Tire Electric Bike SGS Certified to UL2849",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI ACE07 Electric Bike Commuter Fat Tire Electric Bike SGS Certified to UL2849",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI ACE07 Electric Bike Commuter Fat Tire Electric Bike SGS Certified to UL2849",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI C26UL Electric Bike Cruiser Electric Commuter Bike SGS Certified to UL2849",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI C26UL Electric Bike Cruiser Electric Commuter Bike SGS Certified to UL2849",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI C26UL Electric Bike Cruiser Electric Commuter Bike SGS Certified to UL2849",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI F26FUL Electric Bike Long Range Fat Tire Electric Bike SGS Certified to UL2849",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI F26FUL Electric Bike Long Range Fat Tire Electric Bike SGS Certified to UL2849",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI FM20UL Electric Bike 2.4\" Fat Tire Folding Electric Bike SGS Certified to UL2849",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI FM20UL Electric Bike 2.4\" Fat Tire Folding Electric Bike SGS Certified to UL2849",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI FM20UL Electric Bike 2.4\" Fat Tire Folding Electric Bike SGS Certified to UL2849",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI Gopina Electric Bike 3.0\" Fat Tire Folding Electric Bike SGS Certified to UL2849",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI Gopina Electric Bike 3.0\" Fat Tire Folding Electric Bike SGS Certified to UL2849",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI Gopina Electric Bike 3.0\" Fat Tire Folding Electric Bike SGS Certified to UL2849",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI H7UL Electric Bike 27.5\" Off Road Electric Mountain Bike SGS Certified to UL2849",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI H7UL Electric Bike 27.5\" Off Road Electric Mountain Bike SGS Certified to UL2849",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI M026SHUL Electric Bike Hardtail Electric Mountain Bike SGS Certified to UL2849",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI M026SHUL Electric Bike Hardtail Electric Mountain Bike SGS Certified to UL2849",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI M026TGBUL Electric Bike Foldable Full Suspension Electric Mountain Bike SGS Certified to UL2849",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI M026TGBUL Electric Bike Foldable Full Suspension Electric Mountain Bike SGS Certified to UL2849",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI MT20UL Electric Bike 3.0\" Fat Tire Folding Electric Bike SGS Certified to UL2849",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI MT20UL Electric Bike 3.0\" Fat Tire Folding Electric Bike SGS Certified to UL2849",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI MT20UL Electric Bike 3.0\" Fat Tire Folding Electric Bike SGS Certified to UL2849",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI MT26GUL Electric Bike Rambler Electric Commuter Bike SGS Certified to UL2849",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI MT26GUL Electric Bike Rambler Electric Commuter Bike SGS Certified to UL2849",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI MT26GUL Electric Bike Rambler Electric Commuter Bike SGS Certified to UL2849",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI PONY01 Electric Bike Commuter Mini Electric Bike SGS Certified to UL2849",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI PONY01 Electric Bike Commuter Mini Electric Bike SGS Certified to UL2849",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI T01 Electric Trike Folding Cargo Electric Tricycle SGS Certified to UL2849",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI T01 Electric Trike Folding Cargo Electric Tricycle SGS Certified to UL2849",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "vivi",
+      "model": "VIVI T01 Electric Trike Folding Cargo Electric Tricycle SGS Certified to UL2849",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Alpha 2.1",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Alpha 2.1",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Alpha 2.1",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Alpha 2.1",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Alpha 2.1",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Alpha 2.1",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Alpha 2.1",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Alpha 2.1",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Alpha 2.1",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Alpha 2.1",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Alpha II",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Alpha II",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Alpha II",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Alpha II",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Alpha II",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Alpha II",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Alpha II",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Alpha II",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Alpha II",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Alpha II",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Centauri II",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Centauri II",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Centauri II",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Centauri II",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Centauri II",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Centauri II",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Centauri II",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Centauri II",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Centauri II",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Centauri II",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Centauri SE",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Centauri SE",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Centauri SE",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Centauri SE",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Centauri SE",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Centauri SE",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Centauri SE",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Centauri SE",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Centauri SE",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Centauri SE",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "wallke",
+      "model": "2026 WALLKE H7 Ultra Step-Thru | 4000W Off-Grid Power Station E-Bike with Torque Sensor, 37mph Speed",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "wallke",
+      "model": "2026 WALLKE H7 Ultra Step-Thru | 4000W Off-Grid Power Station E-Bike with Torque Sensor, 37mph Speed",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "wallke",
+      "model": "2026 WALLKE H7 Ultra Step-Thru | 4000W Off-Grid Power Station E-Bike with Torque Sensor, 37mph Speed",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "wallke",
+      "model": "2026 WALLKE H9 Ultra Folding | Off-Grid Power Station E-Bike with Torque Sensor, 37mph Speed, 55/77Ah Battery Options",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "wallke",
+      "model": "2026 WALLKE H9 Ultra Folding | Off-Grid Power Station E-Bike with Torque Sensor, 37mph Speed, 55/77Ah Battery Options",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "wallke",
+      "model": "2026 WALLKE H9 Ultra Folding | Off-Grid Power Station E-Bike with Torque Sensor, 37mph Speed, 55/77Ah Battery Options",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "wallke",
+      "model": "2026 WALLKE Ultra Series | Off-grid Power Station E-Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "wallke",
+      "model": "2026 WALLKE Ultra Series | Off-grid Power Station E-Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "wallke",
+      "model": "2026 WALLKE Ultra Series | Off-grid Power Station E-Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "wallke",
+      "model": "2026 Wallke H7 AWD Step-Thru | 3200W Ebike 40Ah Battery",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "wallke",
+      "model": "2026 Wallke H7 AWD Step-Thru | 3200W Ebike 40Ah Battery",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "wallke",
+      "model": "2026 Wallke H7 AWD Step-Thru | 3200W Ebike 40Ah Battery",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "wallke",
+      "model": "2026 Wallke Ravager 60V Series | 60V 70Ah Long-Range Electric Bike | Up to 180+ Miles | 150Nm Torque",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "wallke",
+      "model": "2026 Wallke Ravager 60V Series | 60V 70Ah Long-Range Electric Bike | Up to 180+ Miles | 150Nm Torque",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "wallke",
+      "model": "2026 Wallke Ravager 60V Series | 60V 70Ah Long-Range Electric Bike | Up to 180+ Miles | 150Nm Torque",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "wallke",
+      "model": "WALLKE Titan X1 Carbon Fiber Frame | 3800W Cruiser Ebike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "wallke",
+      "model": "WALLKE Titan X1 Carbon Fiber Frame | 3800W Cruiser Ebike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "wallke",
+      "model": "Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "wallke",
+      "model": "Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "wallke",
+      "model": "Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Cruiser",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Freedom",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Predator",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Raven",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Viper",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Scout",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Warrior",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    }
+  ],
+  "summary": {
+    "models_flagged": 234,
+    "missing_rows": 615,
+    "missing_by_field": {
+      "motor_w": 83,
+      "battery_wh": 29,
+      "weight_lb": 37,
+      "range_mi": 78,
+      "brake_type": 19,
+      "frame_material": 65,
+      "drive_type": 15,
+      "torque_nm": 66,
+      "warranty_years": 89,
+      "display_type": 24,
+      "drivetrain_type": 12,
+      "suspension": 27,
+      "cell_brand": 6,
+      "rack_load_lb": 65
+    }
+  }
+}

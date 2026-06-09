@@ -13,6 +13,9 @@ export function DistributionPlot({ stat, value, unit }: Props) {
   const { min, p10, p50, p90, max } = stat;
   const span = max - min || 1;
   const pct = (v: number) => `${((Math.max(min, Math.min(max, v)) - min) / span) * 100}%`;
+  // currency units prefix ("$1,095"); everything else suffixes ("500 Wh")
+  const fmt = (v: number) =>
+    unit === "$" ? `$${formatNumber(v)}` : `${formatNumber(v)}${unit ?? ""}`;
   return (
     <div>
       <div className="relative h-6">
@@ -35,9 +38,9 @@ export function DistributionPlot({ stat, value, unit }: Props) {
         )}
       </div>
       <div className="mt-1 flex justify-between text-[11px] text-slate-400">
-        <span>{formatNumber(min)}{unit}</span>
-        <span>median {formatNumber(p50)}{unit}</span>
-        <span>{formatNumber(max)}{unit}</span>
+        <span>{fmt(min)}</span>
+        <span>median {fmt(p50)}</span>
+        <span>{fmt(max)}</span>
       </div>
     </div>
   );

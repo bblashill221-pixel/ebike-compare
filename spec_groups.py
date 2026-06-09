@@ -46,6 +46,10 @@ def _stringify(d: dict) -> str:
         token = f"{v}{unit}"
         if k == "peak_w":
             token += " peak"
+        elif k == "speeds":
+            # "speeds: 10" -> "10-speed" so the gear-count regexes can see it
+            # (a "Deore M6000" derailleur never says "speed" in words).
+            token = f"{v}-speed"
         parts.append(token)
     if d.get("details"):
         parts.append(d["details"])

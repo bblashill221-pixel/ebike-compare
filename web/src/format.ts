@@ -41,9 +41,15 @@ export function formatPrice(n: number | null | undefined, currency = "USD"): str
   }
 }
 
-export function formatNumber(n: number, digits = 0): string {
-  return new Intl.NumberFormat("en-US", { maximumFractionDigits: digits }).format(n);
+export function formatNumber(n: number, digits = 0, grouping = true): string {
+  return new Intl.NumberFormat("en-US", {
+    maximumFractionDigits: digits,
+    useGrouping: grouping,
+  }).format(n);
 }
+
+/** Fields whose key IS the unit: render "800 lumens" / "70 lux", not "Lumens: 800". */
+const VALUE_UNIT: Record<string, string> = { lumens: "lumens", lux: "lux" };
 
 /** Render a parsed spec value (string / number / dict / list) to readable text. */
 export function formatSpecValue(value: SpecValue): string {
@@ -59,6 +65,8 @@ export function formatSpecValue(value: SpecValue): string {
     if (v == null || v === "") continue;
     if (k === "details") {
       parts.push(formatSpecValue(v));
+    } else if (VALUE_UNIT[k] && (typeof v === "number" || typeof v === "string")) {
+      parts.push(`${formatSpecValue(v)} ${VALUE_UNIT[k]}`);
     } else {
       parts.push(`${labelize(k)}: ${formatSpecValue(v)}`);
     }

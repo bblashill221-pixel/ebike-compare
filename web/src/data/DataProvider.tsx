@@ -8,7 +8,7 @@ import {
 } from "react";
 import type { AnyOrama } from "@orama/orama";
 import type { Brand, Model, RawData, AnalysisStats } from "../types";
-import { buildIndex, ENUM_FIELDS, RANGE_FIELDS, type EnumField, type RangeField } from "../search/orama";
+import { buildIndex, ENUM_FIELDS, PRODUCT_TYPE_ORDER, RANGE_FIELDS, type EnumField, type RangeField } from "../search/orama";
 
 interface DataState {
   status: "loading" | "ready" | "error";
@@ -56,13 +56,18 @@ function computeFacetOptions(models: Model[]): Record<EnumField, string[]> {
   for (const m of models) {
     const t = m.analysis?.specs_typed ?? {};
     sets.brand.add(m.brand);
-    if (m.product_type) sets.product_type.add(m.product_type);
+    for (const pt of m.product_types ?? (m.product_type ? [m.product_type] : [])) {
+      sets.product_types.add(pt);
+    }
+    if (m.frame_style) sets.frame_style.add(m.frame_style);
     for (const f of ["drive_type", "brake_type", "frame_material", "suspension", "sensor_type"] as EnumField[]) {
       const v = t[f] as string | undefined;
       if (v) sets[f].add(v);
     }
   }
   for (const f of ENUM_FIELDS) out[f] = [...sets[f]].sort();
+  // Types read best in the canonical taxonomy order, not alphabetically.
+  out.product_types = PRODUCT_TYPE_ORDER.filter((t) => sets.product_types.has(t));
   return out;
 }
 
