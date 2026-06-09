@@ -68,6 +68,9 @@ function BikeCardImpl({ model }: { model: Model }) {
 
   // spec-tile numbers are shown without thousands separators ("1250", not "1,250")
   const tile = (n: number) => formatNumber(n, 0, false);
+  // watts compacted to save room: 1000+ becomes "K" (1100 -> 1.1K, 1500 -> 1.5K,
+  // 2000 -> 2K), trailing zeros trimmed; under 1000 shown as-is (750).
+  const watt = (n: number) => (n >= 1000 ? `${+(n / 1000).toFixed(2)}K` : tile(n));
 
   const cPrices = colorPrices(model);
   const colorUp = upchargeText(cPrices, null, model.currency, color);
@@ -85,11 +88,11 @@ function BikeCardImpl({ model }: { model: Model }) {
     hasNom && hasPeak ? "Motor (nominal/peak)" : hasPeak ? "Motor (peak)" : "Motor";
   const motorValue =
     hasNom && hasPeak
-      ? `${tile(t.motor_w!)}/${tile(t.motor_peak_w!)} W`
+      ? `${watt(t.motor_w!)}/${watt(t.motor_peak_w!)} W`
       : hasNom
-        ? `${tile(t.motor_w!)} W`
+        ? `${watt(t.motor_w!)} W`
         : hasPeak
-          ? `${tile(t.motor_peak_w!)} W`
+          ? `${watt(t.motor_peak_w!)} W`
           : "—";
 
   // range shown as "low/high" when a span is stated, else the single figure
