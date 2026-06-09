@@ -184,8 +184,10 @@ export function Browse() {
         </aside>
 
         <div className="min-w-0 flex-1">
-          <div className="mb-3 text-sm text-slate-500">{results.length} results</div>
-          <ActiveFilters filters={filters} setFilters={setFilters} />
+          <div className="mb-3 flex flex-wrap items-center gap-2 text-sm text-slate-500">
+            <span className="shrink-0">{results.length} results</span>
+            <ActiveFilters filters={filters} setFilters={setFilters} />
+          </div>
           <ResultsGrid models={results} />
         </div>
       </div>

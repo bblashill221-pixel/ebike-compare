@@ -89,8 +89,10 @@ export function ActiveFilters({
     setShowSoldOut(true);
   };
 
+  // No wrapper element: pills flow inline within the parent's flex row (next to
+  // the result count), wrapping as needed.
   return (
-    <div className="mb-3 flex flex-wrap items-center gap-2">
+    <>
       {pills.map((p) => (
         <button
           key={p.key}
@@ -110,6 +112,6 @@ export function ActiveFilters({
           Clear all
         </button>
       )}
-    </div>
+    </>
   );
 }
