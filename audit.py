@@ -115,16 +115,27 @@ def audit(models: list[dict]) -> dict:
     flag_keys = expected_keys + [k for k, _, _ in CONDITIONAL_FIELDS]
     by_field = {k: sum(1 for r in missing if r["field"] == k) for k in flag_keys}
     flagged_models = sum(1 for m in models if m["data_audit"]["missing"])
+
+    # Frame-style review queue: models the pipeline couldn't resolve from page
+    # text OR the curated image-inferred override. These are the ONLY ones an
+    # update needs a human/vision glance for -- existing verdicts are cached in
+    # data/frame_style_overrides.json (a dict lookup), never re-derived here. So
+    # on a routine update this list is just the new/unresolved bikes.
+    frame_review = [{"brand": m.get("brand", ""), "model": m.get("model", ""), "id": m.get("id", "")}
+                    for m in models if not m.get("frame_style")]
+    frame_review.sort(key=lambda r: (r["brand"], r["model"]))
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "total_models": n,
         "expected_fields": flag_keys,
         "coverage": coverage,
         "missing": missing,
+        "frame_style_review": frame_review,
         "summary": {
             "models_flagged": flagged_models,
             "missing_rows": len(missing),
             "missing_by_field": by_field,
+            "frame_style_review": len(frame_review),
         },
     }
 
@@ -144,6 +155,9 @@ def print_report(report: dict) -> None:
     for field, cnt in sorted(s["missing_by_field"].items(), key=lambda kv: -kv[1]):
         if cnt:
             print(f"    {field:24} missing on {cnt} models")
+    fr = s.get("frame_style_review", 0)
+    print(f"\n  FRAME-STYLE REVIEW QUEUE  —  {fr} models need a glance "
+          f"(no site text + no cached override)")
     print()
 
 
@@ -168,7 +182,13 @@ def main() -> int:
         w.writerow(["brand", "model", "field"])
         for r in report["missing"]:
             w.writerow([r["brand"], r["model"], r["field"]])
-    # 4) per-model annotation written back into the normalized file
+    # 4) frame-style review queue (the bounded "needs a glance" delta per update)
+    with open(DATA / "current" / "frame_style_review.csv", "w", newline="", encoding="utf-8") as fh:
+        w = csv.writer(fh)
+        w.writerow(["brand", "model", "id"])
+        for r in report["frame_style_review"]:
+            w.writerow([r["brand"], r["model"], r["id"]])
+    # 5) per-model annotation written back into the normalized file
     Path(args.input).write_text(json.dumps(doc, indent=2, ensure_ascii=False))
 
     print(f"[*] Wrote {args.json}, {args.csv}; annotated {len(models)} models in {args.input}")
