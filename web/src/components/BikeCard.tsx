@@ -3,13 +3,13 @@ import { useColorSelection, defaultColorIndex, colorSoldOut, soldOutColors } fro
 import { useShowSoldOut } from "../soldOut";
 import { Link } from "react-router-dom";
 import type { Model } from "../types";
-import { formatNumber } from "../format";
+import { capitalize, formatNumber } from "../format";
 import { colorPrices, variantPrice } from "../pricing";
 import { useCompare } from "../compare/CompareContext";
 import { Price } from "./Price";
 import { AffiliateLink } from "./AffiliateLink";
 import { ColorSwatches, upchargeText } from "./ColorSwatches";
-import { BatteryIcon, MotorIcon, TorqueIcon, WeightIcon } from "./icons";
+import { BatteryIcon, MotorIcon, RangeIcon, TorqueIcon, WeightIcon } from "./icons";
 
 export function primaryImage(m: Model): string | null {
   return m.colors?.find((c) => c.image)?.image ?? null;
@@ -34,8 +34,8 @@ function Spec({
   // Large colorful icon + value; the metric name appears only on hover.
   return (
     <div className="group relative flex flex-col items-center gap-1 text-center">
-      <span className={`rounded-xl border p-1.5 ${tint}`}>{icon}</span>
-      <span className="whitespace-nowrap text-[11px] font-semibold tracking-tight text-slate-800">{value}</span>
+      <span className={`rounded-xl border p-1 ${tint}`}>{icon}</span>
+      <span className="whitespace-nowrap text-[10px] font-semibold tracking-tight text-slate-800">{value}</span>
       <span className="pointer-events-none absolute -top-6 left-1/2 z-50 -translate-x-1/2 whitespace-nowrap rounded bg-slate-800 px-1.5 py-0.5 text-[10px] font-medium text-white opacity-0 transition-opacity duration-150 group-hover:opacity-100">
         {label}
       </span>
@@ -92,6 +92,17 @@ export function BikeCard({ model }: { model: Model }) {
           ? `${tile(t.motor_peak_w!)} W`
           : "—";
 
+  // range shown as "low/high" when a span is stated, else the single figure
+  const hasRange = t.range_mi != null;
+  const hasRangeLo = t.range_min_mi != null;
+  const rangeLabel = hasRangeLo ? "Range (low/high)" : "Range";
+  const rangeValue =
+    hasRange && hasRangeLo
+      ? `${tile(t.range_min_mi!)}/${tile(t.range_mi!)} mi`
+      : hasRange
+        ? `${tile(t.range_mi!)} mi`
+        : "—";
+
   return (
     // No overflow-hidden on the card root: hover tooltips (color names, spec
     // labels) must be able to escape the card bounds; the image wrapper rounds
@@ -139,7 +150,7 @@ export function BikeCard({ model }: { model: Model }) {
               url={model.url}
               className="whitespace-nowrap text-xs font-medium text-brand-700 hover:underline"
             >
-              View at {model.brand} →
+              View at {capitalize(model.brand)} →
             </AffiliateLink>
           </div>
           <Link to={`/bike/${encodeURIComponent(model.id)}`} className="line-clamp-2 font-semibold text-slate-900 hover:text-brand-700">
@@ -195,28 +206,34 @@ export function BikeCard({ model }: { model: Model }) {
           </div>
         )}
 
-        {/* the four core specs, always shown ("—" when unknown) */}
-        <div className="grid grid-cols-4 gap-2">
+        {/* the five core specs, always shown ("—" when unknown) */}
+        <div className="grid grid-cols-5 gap-2">
           <Spec
-            icon={<BatteryIcon className="h-7 w-7" />}
+            icon={<BatteryIcon className="h-[21px] w-[21px]" />}
             tint="bg-emerald-50 border-emerald-200"
             label="Battery"
             value={t.battery_wh != null ? `${tile(t.battery_wh)} Wh` : "—"}
           />
           <Spec
-            icon={<MotorIcon className="h-7 w-7" />}
+            icon={<MotorIcon className="h-[21px] w-[21px]" />}
             tint="bg-amber-50 border-amber-200"
             label={motorLabel}
             value={motorValue}
           />
           <Spec
-            icon={<TorqueIcon className="h-7 w-7" />}
+            icon={<TorqueIcon className="h-[21px] w-[21px]" />}
             tint="bg-rose-50 border-rose-200"
             label="Torque"
             value={t.torque_nm != null ? `${tile(t.torque_nm)} Nm` : "—"}
           />
           <Spec
-            icon={<WeightIcon className="h-7 w-7" />}
+            icon={<RangeIcon className="h-[21px] w-[21px]" />}
+            tint="bg-sky-50 border-sky-200"
+            label={rangeLabel}
+            value={rangeValue}
+          />
+          <Spec
+            icon={<WeightIcon className="h-[21px] w-[21px]" />}
             tint="bg-violet-50 border-violet-200"
             label="Weight"
             value={t.weight_lb != null ? `${tile(t.weight_lb)} lb` : "—"}

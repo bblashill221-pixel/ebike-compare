@@ -66,6 +66,8 @@ export interface SpecsTyped {
   torque_nm?: number;
   drive_type?: string;
   range_mi?: number;
+  /** Low end of a stated range span; shown as "low/high" with range_mi when set. */
+  range_min_mi?: number;
   weight_lb?: number;
   /** The bike's max payload / total-weight limit (lb). */
   max_load_lb?: number;
