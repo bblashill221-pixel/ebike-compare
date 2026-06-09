@@ -23,6 +23,16 @@ import urllib.request
 from pathlib import Path
 
 DATA = Path(__file__).parent / "data"
+# Persistent cache of rack-page -> load lookups (rack ratings are static), keyed
+# by accessory URL. Lives in data/curated/ so it survives daily re-scrapes: a run
+# reuses cached loads (no re-fetch) and a transient fetch failure falls back to
+# the cached value instead of dropping the spec (which would be a false "change").
+_CACHE_PATH = DATA / "curated" / "rack_load.json"
+try:
+    _RACK_CACHE: dict = json.loads(_CACHE_PATH.read_text())
+except (FileNotFoundError, ValueError):
+    _RACK_CACHE = {}
+_CACHE_DIRTY = False
 
 _REAR_RACK = re.compile(r"rear\s*rack|\brack\b", re.I)
 _NOT_RACK = re.compile(r"front|hitch|pannier|\bbag\b|basket|trailer|surf|phone|cup|\bmount\b", re.I)
@@ -34,18 +44,25 @@ _STOP = {"ebike", "ebikes", "electric", "bike", "bikes", "step", "thru", "throug
 
 
 def _load_from_page(url: str) -> int | None:
+    global _CACHE_DIRTY
+    if not url:
+        return None
+    if url in _RACK_CACHE:                 # static rating: reuse, never re-fetch
+        return _RACK_CACHE[url]
     try:
         raw = urllib.request.urlopen(
             urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"}), timeout=20
         ).read().decode("utf-8", "ignore")
     except Exception:
-        return None
+        return _RACK_CACHE.get(url)        # transient failure -> last-known (may be None)
     txt = " ".join(html.unescape(re.sub(r"<[^>]+>", " ", raw)).split())
     m = _LOAD_RE.search(txt)
-    if not m:
-        return None
-    val = int(m.group(1))
-    return round(val * 2.2046) if m.group(2).lower() == "kg" else val
+    val = (round(int(m.group(1)) * 2.2046) if m.group(2).lower() == "kg"
+           else int(m.group(1))) if m else None
+    if val is not None:                    # only cache successful reads
+        _RACK_CACHE[url] = val
+        _CACHE_DIRTY = True
+    return val
 
 
 def _tokens(name: str) -> set:
@@ -94,6 +111,9 @@ def main():
         if added:
             Path(f).write_text(json.dumps(d, indent=2, ensure_ascii=False))
             print(f"{brand:<12} rear-rack load added to {added} models")
+    if _CACHE_DIRTY:
+        _CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+        _CACHE_PATH.write_text(json.dumps(_RACK_CACHE, indent=2, ensure_ascii=False))
 
 
 if __name__ == "__main__":

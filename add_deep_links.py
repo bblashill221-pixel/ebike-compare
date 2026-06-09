@@ -29,6 +29,17 @@ from add_configurations import COLLECTION, fetch_products
 HERE = Path(__file__).parent
 DATA = HERE / "data"
 
+# Persistent sku -> variant_id cache (variant ids are stable), in data/curated/
+# so it survives daily re-scrapes. Lets the deep-link backfill fall back to the
+# last-known id when the live collection feed is unreachable or the variant is
+# momentarily absent, instead of dropping the preselect link.
+_VID_CACHE_PATH = DATA / "curated" / "variant_ids.json"
+try:
+    _VID_CACHE: dict = json.loads(_VID_CACHE_PATH.read_text())
+except (FileNotFoundError, ValueError):
+    _VID_CACHE = {}
+_VID_DIRTY = False
+
 
 def cheapest_config(m: dict):
     cfgs = [c for c in m.get("configurations") or [] if isinstance(c, dict)]
@@ -54,18 +65,28 @@ def shopify_links(d: dict) -> int:
 
     def resolve(m, cfg):
         nonlocal prods
-        if cfg.get("variant_id"):
-            return cfg["variant_id"]
-        if not cfg.get("sku"):
-            return None
-        if prods is None:
-            base = (d.get("source") or "").rstrip("/")
-            prods = fetch_products(base, COLLECTION[d["_brand"]])
-        handle = (m.get("handle") or "").split("--", 1)[0]
-        for v in (prods.get(handle) or {}).get("variants", []):
-            if v.get("sku") == cfg["sku"] and v.get("id"):
-                return v["id"]
-        return None
+        global _VID_DIRTY
+        sku = cfg.get("sku")
+        vid = cfg.get("variant_id")
+        if not vid and sku:
+            if prods is None:
+                base = (d.get("source") or "").rstrip("/")
+                try:
+                    prods = fetch_products(base, COLLECTION[d["_brand"]])
+                except Exception:
+                    prods = {}
+            handle = (m.get("handle") or "").split("--", 1)[0]
+            for v in (prods.get(handle) or {}).get("variants", []):
+                if v.get("sku") == sku and v.get("id"):
+                    vid = v["id"]
+                    break
+        if vid and sku:
+            if _VID_CACHE.get(sku) != vid:
+                _VID_CACHE[sku] = vid
+                _VID_DIRTY = True
+        elif not vid and sku:
+            vid = _VID_CACHE.get(sku)       # fall back to last-known id
+        return vid
 
     n = 0
     for m in d.get("models", []):
@@ -113,6 +134,9 @@ def main():
             json.dump(d, open(f, "w"), indent=2, ensure_ascii=False)
         if n:
             print(f"{brand:<10} deep-linked {n} tiered entries")
+    if _VID_DIRTY:
+        _VID_CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+        _VID_CACHE_PATH.write_text(json.dumps(_VID_CACHE, indent=2, ensure_ascii=False))
 
 
 if __name__ == "__main__":
