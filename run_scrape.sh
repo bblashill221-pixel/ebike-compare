@@ -52,6 +52,10 @@ SCRAPERS=(
     "scrape_cemoto.py|cemoto_ebikes|"
     "scrape_wired.py|wired_ebikes|"
     "scrape_magician.py|magician_ebikes|"
+    "scrape_engwe.py|engwe_ebikes|"
+    "scrape_wallke.py|wallke_ebikes|"
+    "scrape_cyke.py|cyke_ebikes|"
+    "scrape_leoguar.py|leoguar_ebikes|"
 )
 
 run_all() {

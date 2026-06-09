@@ -32,6 +32,7 @@ ACC_COLLECTION = {
     "vvolt": "accessories", "evelo": "must-have-accessories", "blix": "accessories",
     "euphree": None, "ride1up": None, "specialized": None,
     "wired": None, "magician": None,
+    "engwe": None, "wallke": None, "cyke": None, "leoguar": None,
 }
 # Brands/models that are not free shipping (none known; placeholder for overrides).
 NON_FREE_SHIPPING: dict = {}
