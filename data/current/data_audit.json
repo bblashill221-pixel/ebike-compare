@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-09T15:36:03.956746+00:00",
-  "total_models": 314,
+  "generated_at": "2026-06-09T15:51:44.525423+00:00",
+  "total_models": 315,
   "expected_fields": [
     "motor_w",
     "battery_wh",
@@ -19,15 +19,15 @@
   ],
   "coverage": {
     "cell_brand": {
-      "count": 308,
+      "count": 309,
       "pct": 98
     },
     "drive_type": {
-      "count": 302,
+      "count": 303,
       "pct": 96
     },
     "drivetrain_type": {
-      "count": 302,
+      "count": 303,
       "pct": 96
     },
     "brake_type": {
@@ -43,7 +43,7 @@
       "pct": 91
     },
     "battery_wh": {
-      "count": 285,
+      "count": 286,
       "pct": 91
     },
     "weight_lb": {
@@ -55,19 +55,19 @@
       "pct": 79
     },
     "torque_nm": {
-      "count": 248,
+      "count": 249,
       "pct": 79
     },
     "gears": {
-      "count": 244,
+      "count": 245,
       "pct": 78
     },
     "range_mi": {
-      "count": 236,
+      "count": 237,
       "pct": 75
     },
     "motor_w": {
-      "count": 235,
+      "count": 236,
       "pct": 75
     },
     "warranty_years": {
@@ -88,7 +88,7 @@
     },
     "sensor_type": {
       "count": 162,
-      "pct": 52
+      "pct": 51
     },
     "motor_peak_w": {
       "count": 131,
@@ -1099,6 +1099,42 @@
     {
       "brand": "leoguar",
       "model": "Fastron ST Fat Tire Ebike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Flippo Folding Ebike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Flippo Folding Ebike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Flippo Folding Ebike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Flippo Folding Ebike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Flippo Folding Ebike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "leoguar",
+      "model": "Flippo Folding Ebike",
       "field": "weight_lb",
       "label": "Weight (lb)"
     },
@@ -3780,21 +3816,21 @@
     }
   ],
   "summary": {
-    "models_flagged": 232,
-    "missing_rows": 607,
+    "models_flagged": 233,
+    "missing_rows": 613,
     "missing_by_field": {
       "motor_w": 79,
       "battery_wh": 29,
-      "weight_lb": 37,
+      "weight_lb": 38,
       "range_mi": 78,
-      "brake_type": 19,
-      "frame_material": 65,
+      "brake_type": 20,
+      "frame_material": 66,
       "drive_type": 12,
       "torque_nm": 66,
-      "warranty_years": 87,
-      "display_type": 24,
+      "warranty_years": 88,
+      "display_type": 25,
       "drivetrain_type": 12,
-      "suspension": 27,
+      "suspension": 28,
       "cell_brand": 6,
       "rack_load_lb": 66
     }

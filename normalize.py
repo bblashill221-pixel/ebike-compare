@@ -15,6 +15,14 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from bike_taxonomy import classify_product_types, pick_frame_style
+
+# Curated frame-style verdicts (image-inferred) for bikes that don't state one,
+# keyed by "<brand>__<source_id>". Applied only as a fallback in _frame_style.
+try:
+    FRAME_OVERRIDES = json.loads(
+        (Path(__file__).parent / "data" / "frame_style_overrides.json").read_text())
+except (FileNotFoundError, ValueError):
+    FRAME_OVERRIDES = {}
 from spec_groups import group_specs
 
 
@@ -299,7 +307,10 @@ def normalize_model(brand: str, m: dict) -> dict:
         "source_id": source_id,
         "product_type": product_types[0],
         "product_types": product_types,
-        "frame_style": _frame_style(m, name, raw_specs),
+        # text-derived style wins; else a curated image-inferred override (for
+        # bikes the vendor never labels). Keyed by model id.
+        "frame_style": _frame_style(m, name, raw_specs)
+        or FRAME_OVERRIDES.get(f"{brand}__{source_id}"),
         "price": lo,
         "price_min": lo,
         "price_max": hi,

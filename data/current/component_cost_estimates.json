@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-09T15:36:03.509150+00:00",
+  "generated_at": "2026-06-09T15:51:44.077738+00:00",
   "disclaimer": "Rough wholesale/BOM cost ESTIMATES derived heuristically from each bike's published specs. For comparison only; not actual manufacturer costs.",
-  "model_count": 314,
+  "model_count": 315,
   "models": [
     {
       "brand": "aventon",
@@ -5360,6 +5360,30 @@
       "estimated_component_total": 1042,
       "retail_price": 1489.0,
       "bom_pct_of_retail": 0.7
+    },
+    {
+      "brand": "leoguar",
+      "model": "Flippo Folding Ebike",
+      "warranty": null,
+      "component_costs": {
+        "battery": 202,
+        "frame": 200,
+        "motor": 125,
+        "assembly_misc": 120,
+        "drivetrain": 87,
+        "tires": 55
+      },
+      "notes": {
+        "battery": "480Wh @ ~$0.42/Wh",
+        "motor": "hub motor",
+        "drivetrain": "7-speed derailleur",
+        "tires": "tires (assumed)",
+        "frame": "aluminum frame",
+        "assembly_misc": "cables, bolts, assembly, packaging"
+      },
+      "estimated_component_total": 789,
+      "retail_price": 1289.0,
+      "bom_pct_of_retail": 0.612
     },
     {
       "brand": "leoguar",
