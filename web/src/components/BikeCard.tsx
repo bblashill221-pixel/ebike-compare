@@ -86,8 +86,13 @@ function BikeCardImpl({ model }: { model: Model }) {
   const hasPeak = t.motor_peak_w != null;
   const motorLabel =
     hasNom && hasPeak ? "Motor (nominal/peak)" : hasPeak ? "Motor (peak)" : "Motor";
-  const motorValue =
-    hasNom && hasPeak
+  // when both ratings are 1000W+, share one "kW" unit (1000/1500 -> "1/1.5 kW",
+  // 1100/14000 -> "1.1/14 kW"); otherwise keep the per-value compaction in W.
+  const kv = (n: number) => `${+(n / 1000).toFixed(2)}`;
+  const bothKW = hasNom && hasPeak && t.motor_w! >= 1000 && t.motor_peak_w! >= 1000;
+  const motorValue = bothKW
+    ? `${kv(t.motor_w!)}/${kv(t.motor_peak_w!)} kW`
+    : hasNom && hasPeak
       ? `${watt(t.motor_w!)}/${watt(t.motor_peak_w!)} W`
       : hasNom
         ? `${watt(t.motor_w!)} W`
