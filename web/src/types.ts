@@ -125,6 +125,8 @@ export interface Model {
   product_types?: string[];
   /** "Step-Thru" | "Step-Over (Mid-Step)" when the frame style is known. */
   frame_style?: string | null;
+  /** True only when the brand's site explicitly tags it a new arrival. */
+  is_new?: boolean;
   price: number | null;
   price_min: number | null;
   price_max: number | null;

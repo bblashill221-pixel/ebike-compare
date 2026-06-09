@@ -9,7 +9,9 @@ build in `data/legacy/<date>/ebikes_normalized.json` (run_scrape.sh archives the
 prior build there before each run). Models are matched by their stable `id`
 (`brand__handle`). Tracked changes:
 
-  * new / removed   -- a model id appeared / disappeared
+  * added / removed -- a model id appeared / disappeared in our catalog (logged
+    for history only; the shopper-facing "New" badge is driven separately by an
+    explicit site new-arrival tag, model.is_new, NOT by catalog additions)
   * price           -- the headline price moved (from/to/delta/pct)
   * sale            -- on-sale started / ended / deepened (discount % grew)
   * free_feature    -- a $0 bundled feature/accessory (or free shipping) added/removed
@@ -37,10 +39,10 @@ HERE = Path(__file__).parent
 DATA = HERE / "data"
 ACTIVE = DATA / "current" / "active" / "ebikes_normalized.json"
 
-# If more than this fraction of the fleet reads as "new", the baseline is
+# If more than this fraction of the fleet reads as "added", the baseline is
 # stale/partial (a very old archive, or the first run after a big import) rather
-# than a real day-over-day reference — so don't flood the UI with "New" badges.
-NEW_FLOOD_FRACTION = 0.25
+# than a real day-over-day reference — so drop the "added" flood from the log.
+ADDED_FLOOD_FRACTION = 0.25
 
 
 # ----------------------------- field accessors ------------------------------
@@ -130,10 +132,10 @@ def build_changes(current: list, baseline: list) -> tuple[list, list]:
         cur_ids.add(mid)
         base = base_by_id.get(mid)
         if base is None:
-            entry = {"id": mid, "brand": m.get("brand"), "model": m.get("model"),
-                     "types": ["new"], "detail": {}}
-            m["changed_today"] = {"types": ["new"], "detail": {}}
-            rows.append(entry)
+            # catalog addition: logged for history, but NOT stamped/badged — the
+            # "New" badge is reserved for an explicit site tag (model.is_new).
+            rows.append({"id": mid, "brand": m.get("brand"), "model": m.get("model"),
+                         "types": ["added"], "detail": {}})
             continue
         ch = diff_model(m, base)
         if ch:
@@ -181,23 +183,12 @@ def main() -> int:
 
     rows, removed = build_changes(models, baseline)
 
-    # Stale/partial-baseline guard: drop the "new" flood (keep real per-field
-    # changes on surviving models, and the removed list).
-    new_count = sum(1 for r in rows if "new" in r["types"])
-    suppressed_new = bool(baseline) and new_count > NEW_FLOOD_FRACTION * max(len(models), 1)
-    if suppressed_new:
-        kept: list = []
-        for r in rows:
-            r["types"] = [t for t in r["types"] if t != "new"]
-            if r["types"]:
-                kept.append(r)
-        rows = kept
-        for m in models:
-            ct = m.get("changed_today")
-            if ct and "new" in ct["types"]:
-                ct["types"] = [t for t in ct["types"] if t != "new"]
-                if not ct["types"]:
-                    m.pop("changed_today", None)
+    # Stale/partial-baseline guard: drop the "added" flood from the log (keep the
+    # real per-field changes on surviving models, and the removed list).
+    added_count = sum(1 for r in rows if "added" in r["types"])
+    suppressed_added = bool(baseline) and added_count > ADDED_FLOOD_FRACTION * max(len(models), 1)
+    if suppressed_added:
+        rows = [r for r in rows if "added" not in r["types"]]
 
     by_type: dict = {}
     for r in rows + removed:
@@ -212,7 +203,7 @@ def main() -> int:
             "models_changed": len(rows),
             "removed": len(removed),
             "by_type": by_type,
-            "new_suppressed": suppressed_new,
+            "added_suppressed": suppressed_added,
         },
         "changes": rows + removed,
     }
@@ -227,7 +218,7 @@ def main() -> int:
     if baseline_date is None:
         print("[*] diff_changes: no prior build to compare against (first run) — empty change-log.")
     else:
-        note = f"  (baseline stale/partial — {new_count} 'new' suppressed)" if suppressed_new else ""
+        note = f"  (baseline stale/partial — {added_count} 'added' suppressed)" if suppressed_added else ""
         print(f"[*] diff_changes vs {baseline_date}: {len(rows)} models changed, "
               f"{len(removed)} removed.  by_type={by_type}{note}")
     return 0

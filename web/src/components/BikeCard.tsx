@@ -52,7 +52,6 @@ function changeBadges(model: Model): ChangeBadge[] {
   if (!c) return [];
   const d = c.detail ?? {};
   const out: ChangeBadge[] = [];
-  if (c.types.includes("new")) out.push({ key: "new", label: "New", cls: "bg-brand-600" });
   if (d.stock?.event === "back_in_stock")
     out.push({ key: "stock", label: "Back in stock", cls: "bg-emerald-600" });
   if (d.price?.direction === "drop")
@@ -162,9 +161,13 @@ function BikeCardImpl({ model }: { model: Model }) {
             />
           </div>
         )}
-        {/* "what changed today" badges in the top-right corner */}
+        {/* corner badges: an explicit "New" (site new-arrival tag) first, then
+            up to one "what changed today" badge */}
         {(() => {
-          const badges = changeBadges(model);
+          const newBadge: ChangeBadge[] = model.is_new
+            ? [{ key: "new", label: "New", cls: "bg-brand-600" }]
+            : [];
+          const badges = [...newBadge, ...changeBadges(model)].slice(0, 2);
           return badges.length > 0 ? (
             <div className="pointer-events-none absolute right-2 top-2 flex flex-col items-end gap-1">
               {badges.map((b) => (

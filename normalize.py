@@ -34,6 +34,15 @@ except (FileNotFoundError, ValueError):
     MODEL_OVERRIDES = {}
 
 
+# A model is "new" only when the brand's site explicitly says so (a new-arrival
+# product tag), never inferred from when it showed up in our catalog.
+_NEW_TAG = re.compile(r"new[\s_-]?arrival|just[\s_-]?(?:dropped|launched|released)|^new$", re.I)
+
+
+def _is_new(m: dict) -> bool:
+    return any(_NEW_TAG.search(str(t)) for t in (m.get("tags") or []))
+
+
 def _apply_overrides(nm: dict) -> dict:
     """Stamp curated field corrections onto a normalized model (authoritative).
     Records the touched fields under `curated_overrides` for transparency."""
@@ -331,6 +340,8 @@ def normalize_model(brand: str, m: dict) -> dict:
         # bikes the vendor never labels). Keyed by model id.
         "frame_style": _frame_style(m, name, raw_specs)
         or FRAME_OVERRIDES.get(f"{brand}__{source_id}"),
+        # explicit "new" from a site new-arrival tag (not a catalog-diff guess)
+        "is_new": _is_new(m),
         "price": lo,
         "price_min": lo,
         "price_max": hi,
