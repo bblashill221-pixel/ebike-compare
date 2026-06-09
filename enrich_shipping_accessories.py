@@ -51,11 +51,21 @@ def fetch_accessories(base: str, handle: str) -> list[dict]:
         return []
     out = []
     for p in data.get("products", []):
-        prices = [float(v["price"]) for v in p.get("variants", []) if v.get("price")]
-        price = min(prices) if prices else None
+        priced = [v for v in p.get("variants", []) if v.get("price")]
+        price = min((float(v["price"]) for v in priced), default=None)
+        # sale detection, same rule as the bikes: the compare-at price of the
+        # cheapest variant, when it's a genuine markdown over the sale price.
+        regular = None
+        cheapest = min(priced, key=lambda v: float(v["price"]), default=None)
+        if cheapest and cheapest.get("compare_at_price"):
+            c = float(cheapest["compare_at_price"])
+            if price is not None and c > price:
+                regular = c
         out.append({
             "name": re.sub(r"<[^>]+>", "", p.get("title", "")).strip(),
             "price": price,
+            "regular_price": regular,
+            "on_sale": regular is not None,
             "free": price == 0,
             "url": f"{base}/products/{p.get('handle')}",
         })

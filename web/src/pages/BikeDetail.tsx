@@ -304,7 +304,17 @@ export function BikeDetail() {
                   ) : (
                     <span className="truncate text-slate-700">{a.name}</span>
                   )}
-                  <span className="shrink-0 tabular-nums text-slate-500">{formatPrice(a.price, model.currency)}</span>
+                  {a.on_sale && a.regular_price != null && a.price != null ? (
+                    <span className="inline-flex shrink-0 items-baseline gap-1.5 tabular-nums">
+                      <span className="text-slate-400 line-through">{formatPrice(a.regular_price, model.currency)}</span>
+                      <span className="font-medium text-rose-600">{formatPrice(a.price, model.currency)}</span>
+                      <span className="text-xs font-semibold text-rose-700">
+                        -{Math.round(((a.regular_price - a.price) / a.regular_price) * 100)}%
+                      </span>
+                    </span>
+                  ) : (
+                    <span className="shrink-0 tabular-nums text-slate-500">{formatPrice(a.price, model.currency)}</span>
+                  )}
                 </li>
               ))}
             </ul>

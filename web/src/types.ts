@@ -10,6 +10,8 @@ export interface Availability {
 export interface Accessory {
   name: string;
   price: number | null;
+  regular_price?: number | null;
+  on_sale?: boolean;
   free: boolean;
   url: string;
 }

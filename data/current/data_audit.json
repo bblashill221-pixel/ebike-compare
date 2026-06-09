@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-09T04:24:24.872072+00:00",
+  "generated_at": "2026-06-09T15:23:28.931550+00:00",
   "total_models": 314,
   "expected_fields": [
     "motor_w",
@@ -22,13 +22,13 @@
       "count": 308,
       "pct": 98
     },
-    "drivetrain_type": {
+    "drive_type": {
       "count": 302,
       "pct": 96
     },
-    "drive_type": {
-      "count": 299,
-      "pct": 95
+    "drivetrain_type": {
+      "count": 302,
+      "pct": 96
     },
     "brake_type": {
       "count": 295,
@@ -67,8 +67,8 @@
       "pct": 75
     },
     "motor_w": {
-      "count": 231,
-      "pct": 74
+      "count": 235,
+      "pct": 75
     },
     "warranty_years": {
       "count": 227,
@@ -91,8 +91,8 @@
       "pct": 52
     },
     "motor_peak_w": {
-      "count": 128,
-      "pct": 41
+      "count": 131,
+      "pct": 42
     },
     "fit_height_max_in": {
       "count": 110,
@@ -397,6 +397,12 @@
     {
       "brand": "cyke",
       "model": "Grizzly Foldable Ebike",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "cyke",
+      "model": "Grizzly Foldable Ebike",
       "field": "warranty_years",
       "label": "Warranty (years)"
     },
@@ -441,12 +447,6 @@
       "model": "ENGWE E26",
       "field": "warranty_years",
       "label": "Warranty (years)"
-    },
-    {
-      "brand": "engwe",
-      "model": "ENGWE EP-2 Pro",
-      "field": "motor_w",
-      "label": "Motor power (W)"
     },
     {
       "brand": "engwe",
@@ -3655,32 +3655,8 @@
     {
       "brand": "wallke",
       "model": "2026 WALLKE H7 Ultra Step-Thru | 4000W Off-Grid Power Station E-Bike with Torque Sensor, 37mph Speed",
-      "field": "drive_type",
-      "label": "Motor placement"
-    },
-    {
-      "brand": "wallke",
-      "model": "2026 WALLKE H7 Ultra Step-Thru | 4000W Off-Grid Power Station E-Bike with Torque Sensor, 37mph Speed",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "wallke",
-      "model": "2026 WALLKE H7 Ultra Step-Thru | 4000W Off-Grid Power Station E-Bike with Torque Sensor, 37mph Speed",
       "field": "warranty_years",
       "label": "Warranty (years)"
-    },
-    {
-      "brand": "wallke",
-      "model": "2026 WALLKE H9 Ultra Folding | Off-Grid Power Station E-Bike with Torque Sensor, 37mph Speed, 55/77Ah Battery Options",
-      "field": "drive_type",
-      "label": "Motor placement"
-    },
-    {
-      "brand": "wallke",
-      "model": "2026 WALLKE H9 Ultra Folding | Off-Grid Power Station E-Bike with Torque Sensor, 37mph Speed, 55/77Ah Battery Options",
-      "field": "motor_w",
-      "label": "Motor power (W)"
     },
     {
       "brand": "wallke",
@@ -3723,18 +3699,6 @@
       "model": "2026 Wallke H7 AWD Step-Thru | 3200W Ebike 40Ah Battery",
       "field": "warranty_years",
       "label": "Warranty (years)"
-    },
-    {
-      "brand": "wallke",
-      "model": "2026 Wallke Ravager 60V Series | 60V 70Ah Long-Range Electric Bike | Up to 180+ Miles | 150Nm Torque",
-      "field": "drive_type",
-      "label": "Motor placement"
-    },
-    {
-      "brand": "wallke",
-      "model": "2026 Wallke Ravager 60V Series | 60V 70Ah Long-Range Electric Bike | Up to 180+ Miles | 150Nm Torque",
-      "field": "motor_w",
-      "label": "Motor power (W)"
     },
     {
       "brand": "wallke",
@@ -3817,22 +3781,22 @@
   ],
   "summary": {
     "models_flagged": 232,
-    "missing_rows": 613,
+    "missing_rows": 607,
     "missing_by_field": {
-      "motor_w": 83,
+      "motor_w": 79,
       "battery_wh": 29,
       "weight_lb": 37,
       "range_mi": 78,
       "brake_type": 19,
       "frame_material": 65,
-      "drive_type": 15,
+      "drive_type": 12,
       "torque_nm": 66,
       "warranty_years": 87,
       "display_type": 24,
       "drivetrain_type": 12,
       "suspension": 27,
       "cell_brand": 6,
-      "rack_load_lb": 65
+      "rack_load_lb": 66
     }
   }
 }
