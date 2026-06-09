@@ -121,6 +121,13 @@ print((json.load(open(f[0])).get('generated_at','') or '')[:10]) if f else print
     # Data audit: flag models missing expected spec values (report + CSV +
     # per-model annotation). Reads typed specs only; safe to re-run.
     "$PY" "$PROJECT_DIR/audit.py" || true
+    # Sanity gate: fail the run (rc=1) if the new build looks broken vs the prior
+    # one (model count crash, a brand at 0, fleet-wide coverage regression), so a
+    # bad scrape/normalize can be caught before it's published.
+    if ! "$PY" "$PROJECT_DIR/validate_build.py"; then
+        echo "$(date -Is) : BUILD VALIDATION FAILED — review before publishing"
+        rc=1
+    fi
     # Daily change-log: diff this build against the previous archived build and
     # record price/sale/free-feature/stock/new/removed changes (+ changed_today
     # stamp). Pure-compute, idempotent against a fixed baseline.
