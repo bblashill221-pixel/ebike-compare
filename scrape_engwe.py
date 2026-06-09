@@ -69,9 +69,10 @@ def parse_specs(page: str) -> dict:
 
 
 def enrich_from_text(specs: dict, title: str, page: str) -> dict:
-    """Fill range / torque from the product title or marketing copy when the spec
-    table omits them (Wallke lists these in the title -- "… 180+ Miles | 150Nm
-    Torque" -- not the table). Only fills a field that's genuinely absent."""
+    """Fill range / torque / motor from the product title or marketing copy when
+    the spec table omits them (Wallke lists range+torque in the title -- "… 180+
+    Miles | 150Nm Torque" -- and the motor only in prose). Fills only absent
+    fields."""
     have = [k.lower() for k in specs]
     txt = " ".join(html.unescape(re.sub(r"<[^>]+>", " ", page)).split())
     if not any(("range" in k or "mileage" in k) for k in have):
@@ -90,6 +91,24 @@ def enrich_from_text(specs: dict, title: str, page: str) -> dict:
                         default=0))
         if val:
             specs["Torque"] = f"{val} Nm"
+    if not any("motor" in k for k in have):
+        # nominal: "NNNNW … <rear/hub/mid> motor" or "motor: <48V> NNNNW";
+        # peak: "peak <power:> NNNNW" / "NNNNW peak motor". The "motor" adjacency
+        # avoids grabbing an off-grid power-station's rated output (e.g. 600W).
+        nom = (re.search(r"(\d{3,4})\s*W[\s\S]{0,18}?(?:rear|front|mid|hub|spoke)[\w\s-]{0,10}?motor", txt, re.I)
+               or re.search(r"motor[：:\s-]{0,8}(?:\d{2,3}\s*V\s*)?(\d{3,4})\s*W", txt, re.I))
+        # peak must sit next to "motor" so an off-grid station's peak inverter
+        # output (e.g. "Peak Power: 3800W") isn't mistaken for the motor peak.
+        pk = (re.search(r"(\d{3,4})\s*W\s*peak\s*motor", txt, re.I)
+              or re.search(r"peak\s*(\d{3,4})\s*W\s*motor", txt, re.I))
+        nv = nom.group(1) if nom else None
+        pv = pk.group(1) if pk else None
+        if nv and pv:
+            specs["Motor"] = f"{nv}W ({pv}W peak)"
+        elif nv:
+            specs["Motor"] = f"{nv}W"
+        elif pv:
+            specs["Motor"] = f"{pv}W peak"
     return specs
 
 
