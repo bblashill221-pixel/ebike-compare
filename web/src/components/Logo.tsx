@@ -20,16 +20,16 @@ function MagnifierO({ className = "" }: Props) {
 }
 
 /**
- * "EBike Compare" wordmark — the "o" in Compare is a magnifying glass.
+ * "eBike Compare" wordmark — the "o" in Compare is a magnifying glass.
  * Inherits font weight/size from the caller; the lens picks up the brand color.
  */
 export function Logo({ className = "" }: Props) {
   return (
     <span
       className={`inline-flex items-center whitespace-nowrap font-extrabold tracking-tight text-slate-900 ${className}`}
-      aria-label="EBike Compare"
+      aria-label="eBike Compare"
     >
-      EBike&nbsp;C<MagnifierO className="mx-[0.02em] text-brand-600" />mpare
+      eBike&nbsp;C<MagnifierO className="mx-[0.02em] text-brand-600" />mpare
     </span>
   );
 }
