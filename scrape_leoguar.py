@@ -86,16 +86,23 @@ def parse_specs(page: str) -> dict:
 
 
 def discover_models() -> list[dict]:
+    # Discover from the full catalog rather than a fixed set of collections, so
+    # models in other collections (e.g. the Flippo folder) aren't missed. A real
+    # bike is typed "Electric bike" and priced like one (>= $800); the many
+    # accessories -- some mistyped "Electric bike" -- are cheap and filtered out.
     seen: dict = {}
-    for coll in COLLECTIONS:
-        try:
-            data = fetch_json(f"{BASE}/collections/{coll}/products.json?limit=250")
-        except Exception:
+    try:
+        data = fetch_json(f"{BASE}/products.json?limit=250")
+    except Exception:
+        data = {}
+    for p in data.get("products", []):
+        h = p.get("handle")
+        if not h or h in seen or _SKIP.search(p.get("title", "")):
             continue
-        for p in data.get("products", []):
-            h = p.get("handle")
-            if h and h not in seen and not _SKIP.search(p.get("title", "")):
-                seen[h] = p
+        ptype = (p.get("product_type") or "").lower()
+        prices = [float(v["price"]) for v in p.get("variants", []) if v.get("price")]
+        if ("electric bike" in ptype or "e-bike" in ptype) and (max(prices) if prices else 0) >= 800:
+            seen[h] = p
     out = []
     for p in seen.values():
         variants = p.get("variants", [])
