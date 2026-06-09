@@ -118,9 +118,13 @@ print((json.load(open(f[0])).get('generated_at','') or '')[:10]) if f else print
     "$PY" "$PROJECT_DIR/estimate_component_costs.py" \
         -o "$CURRENT_DIR/component_cost_estimates.json" || true
     "$PY" "$PROJECT_DIR/analyze.py" || true
-    # Data audit last: flag models missing expected spec values (report + CSV +
+    # Data audit: flag models missing expected spec values (report + CSV +
     # per-model annotation). Reads typed specs only; safe to re-run.
     "$PY" "$PROJECT_DIR/audit.py" || true
+    # Daily change-log: diff this build against the previous archived build and
+    # record price/sale/free-feature/stock/new/removed changes (+ changed_today
+    # stamp). Pure-compute, idempotent against a fixed baseline.
+    "$PY" "$PROJECT_DIR/diff_changes.py" || true
     echo "===== $(date -Is) : run complete (rc=$rc) ====="
     echo
     return $rc
