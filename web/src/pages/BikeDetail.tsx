@@ -6,6 +6,7 @@ import { useColorSelection, defaultColorIndex, colorSoldOut, soldOutColors } fro
 import { useShowSoldOut } from "../soldOut";
 import { useCompare } from "../compare/CompareContext";
 import { formatPrice, titleCase } from "../format";
+import { useUnits, inToFtIn } from "../units";
 import { colorPrices, defaultDims, lowestPrice, variantPrice } from "../pricing";
 import { VariantPicker } from "../components/VariantPicker";
 import { Price } from "../components/Price";
@@ -55,6 +56,7 @@ export function BikeDetail() {
   // selection is shared with the browse cards (and persists for the session);
   // a fresh visit defaults to the first in-stock colorway
   const [showSoldOut] = useShowSoldOut();
+  const [units] = useUnits();
   const [color, setColor] = useColorSelection(
     model?.id,
     model?.colors?.length ?? 0,
@@ -106,6 +108,14 @@ export function BikeDetail() {
     ? models.filter((x) => x.family_id === model.family_id && x.id !== model.id)
     : [];
   const t = model.analysis?.specs_typed ?? {};
+  // manufacturer's recommended rider-height range, shown in the active unit
+  const ftIn = (inch: number) => `${inToFtIn(inch).ft}'${inToFtIn(inch).in}"`;
+  const riderFit =
+    t.fit_height_min_in != null && t.fit_height_max_in != null
+      ? units === "metric" && t.fit_height_min_mm != null && t.fit_height_max_mm != null
+        ? `${Math.round(t.fit_height_min_mm / 10)}–${Math.round(t.fit_height_max_mm / 10)} cm`
+        : `${ftIn(t.fit_height_min_in)} – ${ftIn(t.fit_height_max_in)}`
+      : null;
   const valueOf = (field: string) =>
     field === "price" ? model.price ?? model.price_min : (t[field] as number | undefined);
 
@@ -199,6 +209,12 @@ export function BikeDetail() {
             {model.warranty && <span className="chip">{model.warranty}</span>}
             {model.shipping_free && <span className="chip bg-emerald-50 text-emerald-700">Free shipping</span>}
           </div>
+
+          {riderFit && (
+            <div className="text-sm text-slate-600">
+              <span className="font-medium text-slate-700">Fits riders</span> {riderFit}
+            </div>
+          )}
 
           {/* partial stock: list the option values that are unavailable */}
           {model.availability?.status === "in_stock" &&
