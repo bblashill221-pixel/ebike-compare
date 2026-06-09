@@ -14,7 +14,7 @@ export const PRODUCT_TYPE_ORDER = [
   "Folding",
   "Cruiser",
   "eMoto",
-  "Fat tire",
+  "Fat Tire",
   "Hybrid / Fitness",
 ] as const;
 

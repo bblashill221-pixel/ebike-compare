@@ -26,7 +26,7 @@ PRODUCT_TYPES = [
     "Folding",
     "Cruiser",
     "eMoto",
-    "Fat tire",
+    "Fat Tire",
     "Hybrid / Fitness",
 ]
 
@@ -46,14 +46,14 @@ _TYPE_RULES = [
     ("eMoto", re.compile(
         r"\be-?moto\b|motorcycle|motor[\s-]?bike|moped|scrambler|chopper|harley"
         r"|dirt[\s-]?bike|caf[eé][\s-]?racer", re.I)),
-    ("Fat tire", re.compile(r"\bfat\b", re.I)),
+    ("Fat Tire", re.compile(r"\bfat\b", re.I)),
     ("Mountain (eMTB)", re.compile(
         r"\bmtb\b|\bemtb\b|mountain|enduro|downhill|hard[\s-]?tail"
         r"|full[\s-]?sus|all[\s-]?terrain|off[\s-]?road|\btrail\b|\bdirt\b", re.I)),
     ("Road / Gravel", re.compile(r"\broad\b|gravel|\bracer\b|all[\s-]?road", re.I)),
     ("Cruiser", re.compile(r"cruiser|beach", re.I)),
     ("Hybrid / Fitness", re.compile(r"hybrid|fitness", re.I)),
-    ("Fat tire", re.compile(r"[2-9]\d?\s*[\"”']?\s*[x×]\s*4(?:\.\d)?\b", re.I)),
+    ("Fat Tire", re.compile(r"[2-9]\d?\s*[\"”']?\s*[x×]\s*4(?:\.\d)?\b", re.I)),
     # NB: no step-thru pattern here — that's a frame style, not a use category,
     # and step-thru-with-no-other-signal already lands here via the fallback.
     ("Commuter / Urban", re.compile(r"commut|urban|city", re.I)),
