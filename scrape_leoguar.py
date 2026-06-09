@@ -40,49 +40,28 @@ def fetch_html(url: str) -> str:
 
 
 def parse_specs(page: str) -> dict:
-    """Leoguar's specs are graphics; pull the figures that survive in the static
-    page text + the motor/drivetrain encoded in an image filename."""
-    txt = " ".join(html.unescape(re.sub(r"<[^>]+>", " ", page)).split())
+    """Leoguar serves a full spec sheet as <b>Label</b><span class="text-right">
+    Value</span> pairs (weight, frame, fork, display, brakes, drivetrain,
+    geometry, rider height, …). Read those directly -- far richer than the few
+    figures the old graphic-text regexes recovered."""
+    # relabel payload-type rows so they don't shadow the bike's own weight
+    # (analyze takes the first "weight" row; "Total Weight Limit" must not win)
+    fix = {"total weight limit": "Max Load", "rear basket load capacity": "Basket Load"}
     out: dict = {}
-
-    bat = []
-    m = re.search(r"(\d{2,3})\s*V\s*(\d{1,2})\s*Ah", txt, re.I)
-    if m:
-        bat.append(f"{m.group(1)}V {m.group(2)}Ah")
-    m = re.search(r"(\d{3,4})\s*Wh", txt, re.I)
-    if m:
-        bat.append(f"{m.group(1)}Wh")
-    if bat:
-        out["Battery"] = " ".join(bat)
-
-    m = re.search(r"(\d{3,4})\s*W[_\s]*(Rear[_\s]?Hub|Front[_\s]?Hub|Mid[_\s-]?drive)?[_\s]*Motor", page, re.I)
-    if m:
-        kind = (m.group(2) or "").replace("_", " ").strip()
-        out["Motor"] = f"{m.group(1)}W {kind} motor".replace("  ", " ").strip()
-    elif re.search(r"mid[\s-]?drive", txt, re.I):
-        out["Motor"] = "Mid-drive motor"
-
-    m = re.search(r"(\d{2,3})\s*Nm", txt, re.I)
-    if m:
-        out["Torque"] = f"{m.group(1)}Nm"
-    m = re.search(r"(\d{2})\s*MPH", txt, re.I)
-    if m:
-        out["Top Speed"] = f"{m.group(1)} MPH"
-    m = re.search(r"(\d{2,3})\s*Miles?\b", txt, re.I)
-    if m:
-        out["Range"] = f"Up to {m.group(1)} miles"
-    m = re.search(r"Shimano[_\s]*(\d{1,2})[_\s-]?Speed", page, re.I)
-    if m:
-        out["Drivetrain"] = f"Shimano {m.group(1)}-speed"
-    m = re.search(r"(Tektro|Shimano)[\s_]*(?:Hydraulic[\s_]*)?Disc[\s_]*Brakes?[\s_]*(\d{3})?", page, re.I)
-    if m:
-        out["Brakes"] = f"{m.group(1)} hydraulic disc{(' ' + m.group(2) + 'mm') if m.group(2) else ''}"
-    elif re.search(r"hydraulic\s*disc", txt, re.I):
-        out["Brakes"] = "Hydraulic disc brakes"
-    m = re.search(r"(\d{2}(?:\.\d)?)\s*[\"”]?\s*[x×*]\s*(\d(?:\.\d)?)\s*[\"”]?\s*(?:fat\s*)?tire", txt, re.I)
-    if m:
-        out["Tires"] = f"{m.group(1)}\" x {m.group(2)}\" tires"
+    for label, value in re.findall(
+            r'<b>([^<]{2,40})</b>\s*<span class="text-right">([^<]{1,160})</span>', page):
+        label = html.unescape(label).strip().rstrip(":：").strip()
+        label = fix.get(label.lower(), label)
+        value = html.unescape(value).strip()
+        if label and value and label.lower() not in {k.lower() for k in out}:
+            out[label] = value
     return out
+
+
+def parse_warranty(page: str) -> str | None:
+    """Warranty is shown as a badge ("2-Year Warranty"), not in the spec list."""
+    m = re.search(r"(\d)\s*-\s*Year\s+Warranty", page, re.I)
+    return f"{m.group(1)}-Year Warranty" if m else None
 
 
 def discover_models() -> list[dict]:
@@ -119,7 +98,8 @@ def discover_models() -> list[dict]:
             else:
                 options[o["name"]] = o.get("values", [])
         options["colors"] = build_colors(color_values, color_idx, variants, fallback)
-        specs = parse_specs(fetch_html(f"{BASE}/products/{p['handle']}"))
+        page = fetch_html(f"{BASE}/products/{p['handle']}")
+        specs = parse_specs(page)
         out.append({
             "model": clean_title(p.get("title")),
             "handle": p.get("handle"),
@@ -132,7 +112,7 @@ def discover_models() -> list[dict]:
             "options": options,
             "specs": {"all": specs},
             "spec_count": len(specs),
-            "warranty": None,
+            "warranty": parse_warranty(page),
             "scrape_error": None if specs else "no specs extracted",
         })
     return out

@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-09T15:51:43.970140+00:00",
-  "component_count": 607,
+  "generated_at": "2026-06-09T16:03:42.613331+00:00",
+  "component_count": 632,
   "priced_count": 0,
   "components": {
     "battery|aventon|": {
@@ -598,12 +598,12 @@
       "model": null,
       "attributes": {
         "actuation": "hydraulic",
-        "kind": "disc"
+        "kind": "disc",
+        "rotor_mm": 180
       },
-      "sample_details": "hydraulic disc",
-      "usage_count": 24,
+      "sample_details": "hydraulic disc, rotor",
+      "usage_count": 23,
       "used_by": [
-        "leoguar__trailblazer-mid-drive-motor-ebike",
         "tern__hsd-p5i",
         "tern__nbd-p8i",
         "tern__quick-haul-d8",
@@ -612,6 +612,28 @@
         "velotric__velotric-summit-1",
         "velotric__velotric-tempo-city-ebike",
         "velowave__swift-m-mid-drive-mountain-electric-bike"
+      ],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
+    "brakes|shimano|bl-mt401": {
+      "category": "brakes",
+      "manufacturer": "Shimano",
+      "model": "BL-MT401",
+      "attributes": {
+        "actuation": "hydraulic",
+        "rotor_mm": 203,
+        "kind": "disc"
+      },
+      "sample_details": "(L), BL-MT401(R) Black Lever",
+      "usage_count": 1,
+      "used_by": [
+        "leoguar__trailblazer-mid-drive-motor-ebike"
       ],
       "aftermarket": {
         "price_usd": null,
@@ -636,6 +658,29 @@
         "specialized__turbo-vado-3-evo-40",
         "specialized__turbo-vado-40",
         "specialized__turbo-vado-40-step-through"
+      ],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
+    "brakes|shimano|br-mt420": {
+      "category": "brakes",
+      "manufacturer": "Shimano",
+      "model": "BR-MT420",
+      "attributes": {
+        "actuation": "hydraulic",
+        "kind": "disc",
+        "pistons": 4,
+        "rotor_mm": 203
+      },
+      "sample_details": "Disc Brake",
+      "usage_count": 1,
+      "used_by": [
+        "leoguar__trailblazer-mid-drive-motor-ebike"
       ],
       "aftermarket": {
         "price_usd": null,
@@ -1243,7 +1288,7 @@
         "kind": "disc"
       },
       "sample_details": "Hydraulic w/ E-Cutoff",
-      "usage_count": 50,
+      "usage_count": 56,
       "used_by": [
         "aventon__pace-4-step-through-ebike",
         "cemoto__eb66-harley-like-hi-tech-ebike",
@@ -1267,6 +1312,7 @@
         "himiway__himiway-d5--15ah-20ah",
         "leoguar__fastron-so-fat-tire-ebike",
         "leoguar__fastron-st-fat-tire-ebike",
+        "leoguar__flippo-folding-ebike",
         "leoguar__zephyr-so-beach-cruiser-ebike",
         "leoguar__zephyr-st-beach-cruiser-ebike",
         "segway__segway-ebike-xafari",
@@ -2203,6 +2249,50 @@
         "notes": null
       }
     },
+    "cassette|shimano|cs-hg20-7": {
+      "category": "cassette",
+      "manufacturer": "Shimano",
+      "model": "CS-HG20-7",
+      "attributes": {
+        "cog_range": "12-32T",
+        "speeds": 7
+      },
+      "sample_details": "Cassette",
+      "usage_count": 2,
+      "used_by": [
+        "leoguar__zephyr-so-beach-cruiser-ebike",
+        "leoguar__zephyr-st-beach-cruiser-ebike"
+      ],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
+    "cassette|shimano|cs-hg20-8": {
+      "category": "cassette",
+      "manufacturer": "Shimano",
+      "model": "CS-HG20-8",
+      "attributes": {
+        "cog_range": "12-32T",
+        "speeds": 8
+      },
+      "sample_details": "cassette",
+      "usage_count": 2,
+      "used_by": [
+        "leoguar__fastron-so-fat-tire-ebike",
+        "leoguar__fastron-st-fat-tire-ebike"
+      ],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
     "cassette|shimano|cs-hg200-8": {
       "category": "cassette",
       "manufacturer": "Shimano",
@@ -2387,6 +2477,27 @@
         "notes": null
       }
     },
+    "cassette|shimano|deore kcshg5010136": {
+      "category": "cassette",
+      "manufacturer": "Shimano",
+      "model": "Deore KCSHG5010136",
+      "attributes": {
+        "cog_range": "11-36T",
+        "speeds": 10
+      },
+      "sample_details": null,
+      "usage_count": 1,
+      "used_by": [
+        "leoguar__trailblazer-mid-drive-motor-ebike"
+      ],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
     "cassette|shimano|deore m6100 w hyperglide+": {
       "category": "cassette",
       "manufacturer": "Shimano",
@@ -2466,6 +2577,26 @@
         "himiway__himiway-electric-fat-bike",
         "himiway__premium-all-terrain-electric-bike",
         "himiway__escape-pro-moped-style-ebike"
+      ],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
+    "cassette|shimano|mf-tz500-7 threaded": {
+      "category": "cassette",
+      "manufacturer": "Shimano",
+      "model": "MF-TZ500-7 threaded",
+      "attributes": {
+        "cog_range": "14-28T"
+      },
+      "sample_details": "MF-TZ500-7, threaded",
+      "usage_count": 1,
+      "used_by": [
+        "leoguar__flippo-folding-ebike"
       ],
       "aftermarket": {
         "price_usd": null,
@@ -3413,6 +3544,27 @@
         "notes": null
       }
     },
+    "chain|kmc|hg40 7sp s": {
+      "category": "chain",
+      "manufacturer": "KMC",
+      "model": "HG40 7sp s",
+      "attributes": {
+        "links": 122
+      },
+      "sample_details": "HG40, 7sp, s",
+      "usage_count": 2,
+      "used_by": [
+        "leoguar__zephyr-so-beach-cruiser-ebike",
+        "leoguar__zephyr-st-beach-cruiser-ebike"
+      ],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
     "chain|kmc|pro": {
       "category": "chain",
       "manufacturer": "KMC",
@@ -3444,6 +3596,87 @@
         "ride1up__portola",
         "ride1up__portola--13-4ah",
         "ride1up__portola-c1"
+      ],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
+    "chain|kmc|rust-proof ept s": {
+      "category": "chain",
+      "manufacturer": "KMC",
+      "model": "Rust-Proof EPT s",
+      "attributes": {
+        "links": 108
+      },
+      "sample_details": "Rust-Proof EPT, s",
+      "usage_count": 1,
+      "used_by": [
+        "leoguar__sprint-fat-tire-utility-ebike"
+      ],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
+    "chain|kmc|s 7sp rust-proof": {
+      "category": "chain",
+      "manufacturer": "KMC",
+      "model": "s 7sp Rust-proof",
+      "attributes": {
+        "links": 114
+      },
+      "sample_details": "s, 7sp, Rust-proof",
+      "usage_count": 1,
+      "used_by": [
+        "leoguar__flippo-folding-ebike"
+      ],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
+    "chain|kmc|s 8sp rust-proof": {
+      "category": "chain",
+      "manufacturer": "KMC",
+      "model": "s 8sp Rust-proof",
+      "attributes": {
+        "links": 128
+      },
+      "sample_details": "s, 8sp, Rust-proof",
+      "usage_count": 2,
+      "used_by": [
+        "leoguar__fastron-so-fat-tire-ebike",
+        "leoguar__fastron-st-fat-tire-ebike"
+      ],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
+    "chain|kmc|s11-s2 11s": {
+      "category": "chain",
+      "manufacturer": "KMC",
+      "model": "S11-S2 11S",
+      "attributes": {
+        "links": 118
+      },
+      "sample_details": null,
+      "usage_count": 1,
+      "used_by": [
+        "leoguar__trailblazer-mid-drive-motor-ebike"
       ],
       "aftermarket": {
         "price_usd": null,
@@ -4874,7 +5107,7 @@
         "speeds": 9
       },
       "sample_details": null,
-      "usage_count": 45,
+      "usage_count": 46,
       "used_by": [
         "heybike__hero",
         "heybike__hero--step-thru",
@@ -4891,6 +5124,7 @@
         "himiway__d5-2--step-thru",
         "himiway__himiway-d5",
         "himiway__himiway-d5--15ah-20ah",
+        "leoguar__sprint-fat-tire-utility-ebike",
         "mokwheel__asphalt",
         "mokwheel__asphalt-st",
         "mokwheel__basalt-2-0",
@@ -5160,6 +5394,24 @@
         "notes": null
       }
     },
+    "derailleur|shimano|ardty500d/altus": {
+      "category": "derailleur",
+      "manufacturer": "Shimano",
+      "model": "ARDTY500D/Altus",
+      "attributes": {},
+      "sample_details": null,
+      "usage_count": 1,
+      "used_by": [
+        "leoguar__flippo-folding-ebike"
+      ],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
     "derailleur|shimano|cues": {
       "category": "derailleur",
       "manufacturer": "Shimano",
@@ -5267,6 +5519,26 @@
         "specialized__turbo-vado-3-x-40",
         "specialized__turbo-vado-sl-2-40",
         "specialized__turbo-vado-sl-2-40-step-through-"
+      ],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
+    "derailleur|shimano|deore krdm6000sgs": {
+      "category": "derailleur",
+      "manufacturer": "Shimano",
+      "model": "Deore KRDM6000SGS",
+      "attributes": {
+        "speeds": 10
+      },
+      "sample_details": null,
+      "usage_count": 1,
+      "used_by": [
+        "leoguar__trailblazer-mid-drive-motor-ebike"
       ],
       "aftermarket": {
         "price_usd": null,
@@ -5432,6 +5704,46 @@
         "velowave__pony-step-thru-electric-bike",
         "velowave__prado-s-commuter-electric-bike",
         "velowave__velowave-rover-step-thru-electric-bike"
+      ],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
+    "derailleur|shimano|rd-m310": {
+      "category": "derailleur",
+      "manufacturer": "Shimano",
+      "model": "RD-M310",
+      "attributes": {
+        "speeds": 7
+      },
+      "sample_details": null,
+      "usage_count": 2,
+      "used_by": [
+        "leoguar__zephyr-so-beach-cruiser-ebike",
+        "leoguar__zephyr-st-beach-cruiser-ebike"
+      ],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
+    "derailleur|shimano|rd-m360/acera": {
+      "category": "derailleur",
+      "manufacturer": "Shimano",
+      "model": "RD-M360/acera",
+      "attributes": {},
+      "sample_details": null,
+      "usage_count": 2,
+      "used_by": [
+        "leoguar__fastron-so-fat-tire-ebike",
+        "leoguar__fastron-st-fat-tire-ebike"
       ],
       "aftermarket": {
         "price_usd": null,
@@ -6772,6 +7084,29 @@
         "notes": null
       }
     },
+    "fork|rockshox|": {
+      "category": "fork",
+      "manufacturer": "RockShox",
+      "model": null,
+      "attributes": {
+        "type": "coil",
+        "travel_mm": 140,
+        "lockout": false,
+        "thru_axle": false
+      },
+      "sample_details": "Suspension, 15*110 mm, 44 mm Offset, Black",
+      "usage_count": 1,
+      "used_by": [
+        "leoguar__trailblazer-mid-drive-motor-ebike"
+      ],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
     "fork|rockshox|fs rcns rl pneumatic": {
       "category": "fork",
       "manufacturer": "RockShox",
@@ -7402,6 +7737,50 @@
       "used_by": [
         "specialized__haul-lt",
         "specialized__haul-st"
+      ],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
+    "grips|leoguar|": {
+      "category": "grips",
+      "manufacturer": "Leoguar",
+      "model": null,
+      "attributes": {
+        "lock_on": false,
+        "ergonomic": false,
+        "material": "leather"
+      },
+      "sample_details": "Cruiser Style Leather Grips",
+      "usage_count": 2,
+      "used_by": [
+        "leoguar__zephyr-so-beach-cruiser-ebike",
+        "leoguar__zephyr-st-beach-cruiser-ebike"
+      ],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
+    "grips|leoguar|mtb": {
+      "category": "grips",
+      "manufacturer": "Leoguar",
+      "model": "MTB",
+      "attributes": {
+        "lock_on": false,
+        "ergonomic": false
+      },
+      "sample_details": "Grips",
+      "usage_count": 1,
+      "used_by": [
+        "leoguar__trailblazer-mid-drive-motor-ebike"
       ],
       "aftermarket": {
         "price_usd": null,
@@ -9356,6 +9735,26 @@
         "notes": null
       }
     },
+    "saddle|leoguar|": {
+      "category": "saddle",
+      "manufacturer": "Leoguar",
+      "model": null,
+      "attributes": {},
+      "sample_details": "Custom Made",
+      "usage_count": 3,
+      "used_by": [
+        "leoguar__sprint-fat-tire-utility-ebike",
+        "leoguar__zephyr-so-beach-cruiser-ebike",
+        "leoguar__zephyr-st-beach-cruiser-ebike"
+      ],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
     "saddle|monarc|plush": {
       "category": "saddle",
       "manufacturer": "Monarc",
@@ -9878,6 +10277,24 @@
         "cyke__falcon-a-full-suspension-ebike",
         "cyke__falcon-s-full-suspension-ebike",
         "cyke__falcon-x-full-suspension-ebike"
+      ],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
+    "saddle|velo|comfy leather": {
+      "category": "saddle",
+      "manufacturer": "Velo",
+      "model": "comfy leather",
+      "attributes": {},
+      "sample_details": "seat",
+      "usage_count": 1,
+      "used_by": [
+        "leoguar__flippo-folding-ebike"
       ],
       "aftermarket": {
         "price_usd": null,
@@ -10490,7 +10907,7 @@
     },
     "seatpost|xfusion|manic infinite": {
       "category": "seatpost",
-      "manufacturer": "Xfusion",
+      "manufacturer": "XFusion",
       "model": "Manic infinite",
       "attributes": {
         "type": "dropper",
@@ -10513,7 +10930,7 @@
     },
     "seatpost|xfusion|mm manic": {
       "category": "seatpost",
-      "manufacturer": "XFusion",
+      "manufacturer": "Xfusion",
       "model": "mm Manic",
       "attributes": {
         "type": "dropper",
@@ -10951,6 +11368,26 @@
         "tern__orox-s12-275",
         "tern__vektron-p10",
         "tern__vektron-s10"
+      ],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
+    "shifter|shimano|deore kslm6000rc": {
+      "category": "shifter",
+      "manufacturer": "Shimano",
+      "model": "Deore KSLM6000RC",
+      "attributes": {
+        "speeds": 10
+      },
+      "sample_details": null,
+      "usage_count": 1,
+      "used_by": [
+        "leoguar__trailblazer-mid-drive-motor-ebike"
       ],
       "aftermarket": {
         "price_usd": null,
@@ -13228,6 +13665,26 @@
         "notes": null
       }
     },
+    "tire|maxxis|rekon 27.5\"*2.6 f&r wire": {
+      "category": "tire",
+      "manufacturer": "Maxxis",
+      "model": "Rekon 27.5\"*2.6 F&R Wire",
+      "attributes": {
+        "tubeless": false
+      },
+      "sample_details": "Rekon 27.5\"*2.6 F&R, Wire Bead, TPI60 EXO",
+      "usage_count": 1,
+      "used_by": [
+        "leoguar__trailblazer-mid-drive-motor-ebike"
+      ],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
     "tire|maxxis|rekon 29\"x2.4": {
       "category": "tire",
       "manufacturer": "Maxxis",
@@ -13264,6 +13721,26 @@
         "ride1up__prodigy-v2--step-over",
         "ride1up__prodigy-v2--belt-cvt",
         "ride1up__prodigy-v2--belt-cvt--step-over"
+      ],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
+    "tire|schwalbe|20*2.15": {
+      "category": "tire",
+      "manufacturer": "Schwalbe",
+      "model": "20*2.15",
+      "attributes": {
+        "tubeless": false
+      },
+      "sample_details": "\" or CST 20''*2.125",
+      "usage_count": 1,
+      "used_by": [
+        "leoguar__flippo-folding-ebike"
       ],
       "aftermarket": {
         "price_usd": null,
@@ -13374,6 +13851,27 @@
       "used_by": [
         "tern__gsd-p00",
         "tern__gsd-p10"
+      ],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
+    "tire|schwalbe|fat frank black 26’’*2.35": {
+      "category": "tire",
+      "manufacturer": "Schwalbe",
+      "model": "Fat Frank Black 26’’*2.35",
+      "attributes": {
+        "tubeless": false
+      },
+      "sample_details": null,
+      "usage_count": 2,
+      "used_by": [
+        "leoguar__zephyr-so-beach-cruiser-ebike",
+        "leoguar__zephyr-st-beach-cruiser-ebike"
       ],
       "aftermarket": {
         "price_usd": null,
@@ -13672,6 +14170,27 @@
       "usage_count": 1,
       "used_by": [
         "ride1up__revv1-evo"
+      ],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
+    "tire|vee|26''*4.0 72tpi": {
+      "category": "tire",
+      "manufacturer": "Vee",
+      "model": "26''*4.0 72TPI",
+      "attributes": {
+        "tubeless": false
+      },
+      "sample_details": "26''*4.0, 72TPI",
+      "usage_count": 2,
+      "used_by": [
+        "leoguar__fastron-so-fat-tire-ebike",
+        "leoguar__fastron-st-fat-tire-ebike"
       ],
       "aftermarket": {
         "price_usd": null,
