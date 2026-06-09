@@ -145,6 +145,16 @@ export interface Model {
   analysis: Analysis;
   /** TEMP data-triage: expected typed fields missing on this model (from audit.py). */
   data_audit?: { missing: string[] };
+  /** What changed vs the previous daily build (from diff_changes.py). */
+  changed_today?: {
+    types: string[];
+    detail?: {
+      price?: { from: number; to: number; delta: number; pct: number | null; direction: "drop" | "rise" };
+      sale?: { event: "started" | "ended" | "deepened" | "reduced"; from_pct?: number; to_pct?: number; discount_pct?: number | null };
+      stock?: { event: "back_in_stock" | "sold_out" };
+      free_feature?: { added: string[]; removed: string[] };
+    };
+  };
 }
 
 export interface StatDist {

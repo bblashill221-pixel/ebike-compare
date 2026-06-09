@@ -43,6 +43,27 @@ function Spec({
   );
 }
 
+type ChangeBadge = { key: string; label: string; cls: string };
+
+/** Up to two "what changed today" badges (from diff_changes.py's changed_today),
+ * highest-signal first, for the image corner. */
+function changeBadges(model: Model): ChangeBadge[] {
+  const c = model.changed_today;
+  if (!c) return [];
+  const d = c.detail ?? {};
+  const out: ChangeBadge[] = [];
+  if (c.types.includes("new")) out.push({ key: "new", label: "New", cls: "bg-brand-600" });
+  if (d.stock?.event === "back_in_stock")
+    out.push({ key: "stock", label: "Back in stock", cls: "bg-emerald-600" });
+  if (d.price?.direction === "drop")
+    out.push({ key: "price", label: d.price.pct != null ? `↓ ${Math.abs(d.price.pct)}%` : "Price drop", cls: "bg-rose-600" });
+  if (d.sale?.event === "started") out.push({ key: "sale", label: "Now on sale", cls: "bg-amber-500" });
+  else if (d.sale?.event === "deepened") out.push({ key: "sale", label: "Bigger deal", cls: "bg-amber-500" });
+  if (d.free_feature && d.free_feature.added.length)
+    out.push({ key: "free", label: "New freebie", cls: "bg-violet-600" });
+  return out.slice(0, 2);
+}
+
 function BikeCardImpl({ model }: { model: Model }) {
   const { has, toggle, isFull } = useCompare();
   const selected = has(model.id);
@@ -141,6 +162,22 @@ function BikeCardImpl({ model }: { model: Model }) {
             />
           </div>
         )}
+        {/* "what changed today" badges in the top-right corner */}
+        {(() => {
+          const badges = changeBadges(model);
+          return badges.length > 0 ? (
+            <div className="pointer-events-none absolute right-2 top-2 flex flex-col items-end gap-1">
+              {badges.map((b) => (
+                <span
+                  key={b.key}
+                  className={`rounded-full px-2 py-0.5 text-[10px] font-semibold text-white shadow-sm ${b.cls}`}
+                >
+                  {b.label}
+                </span>
+              ))}
+            </div>
+          ) : null;
+        })()}
         {/* current color, over the bottom middle of the image */}
         {model.colors?.[color]?.name && (
           <div className="pointer-events-none absolute bottom-2 left-1/2 max-w-[90%] -translate-x-1/2 truncate rounded-full bg-white/75 px-2.5 py-0.5 text-xs text-slate-600 shadow-sm backdrop-blur-sm">
