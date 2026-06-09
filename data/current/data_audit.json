@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-09T04:09:55.984199+00:00",
+  "generated_at": "2026-06-09T04:24:24.872072+00:00",
   "total_models": 314,
   "expected_fields": [
     "motor_w",
@@ -71,7 +71,7 @@
       "pct": 74
     },
     "warranty_years": {
-      "count": 225,
+      "count": 227,
       "pct": 72
     },
     "max_load_lb": {
@@ -957,18 +957,6 @@
       "model": "Himiway D7 Pro Mountain eBike",
       "field": "torque_nm",
       "label": "Motor torque (Nm)"
-    },
-    {
-      "brand": "juiced",
-      "model": "Scrambler",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "juiced",
-      "model": "Scrambler — Full Suspension",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
     },
     {
       "brand": "lectric",
@@ -3828,8 +3816,8 @@
     }
   ],
   "summary": {
-    "models_flagged": 234,
-    "missing_rows": 615,
+    "models_flagged": 232,
+    "missing_rows": 613,
     "missing_by_field": {
       "motor_w": 83,
       "battery_wh": 29,
@@ -3839,7 +3827,7 @@
       "frame_material": 65,
       "drive_type": 15,
       "torque_nm": 66,
-      "warranty_years": 89,
+      "warranty_years": 87,
       "display_type": 24,
       "drivetrain_type": 12,
       "suspension": 27,

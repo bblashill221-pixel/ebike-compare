@@ -188,9 +188,17 @@ def scrape_model(handle: str) -> dict:
         "configurations": configs,
         "specs": {"all": specs},
         "spec_count": len(specs),
-        "warranty": None,
+        "warranty": _warranty(page_html),
         "scrape_error": None if specs else "no specs extracted",
     }
+
+
+def _warranty(page_html: str) -> str | None:
+    """Juiced states the policy on every PDP ("3-year manufacturer warranty")."""
+    txt = re.sub(r"<[^>]+>", " ", page_html)
+    m = re.search(r"(\d+)\s*[- ]\s*year\s*(?:manufacturer'?s?\s*)?(?:limited\s*)?warranty",
+                  txt, re.I)
+    return f"{m.group(1)}-Year Warranty" if m else None
 
 
 # ----------------------------------- main ------------------------------------
