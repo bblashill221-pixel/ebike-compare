@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-09T17:21:34.587355+00:00",
+  "generated_at": "2026-06-09T17:27:27.344415+00:00",
   "total_models": 315,
   "expected_fields": [
     "motor_w",
@@ -50,6 +50,10 @@
       "count": 284,
       "pct": 90
     },
+    "warranty_years": {
+      "count": 280,
+      "pct": 89
+    },
     "frame_material": {
       "count": 256,
       "pct": 81
@@ -69,10 +73,6 @@
     "motor_w": {
       "count": 236,
       "pct": 75
-    },
-    "warranty_years": {
-      "count": 234,
-      "pct": 74
     },
     "max_load_lb": {
       "count": 214,
@@ -360,69 +360,21 @@
     },
     {
       "brand": "cyke",
-      "model": "Cheetah Hunting Ebike",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "cyke",
       "model": "Collie Cargo Ebike",
       "field": "rack_load_lb",
       "label": "Rear-rack load (lb)"
     },
     {
       "brand": "cyke",
-      "model": "Collie Cargo Ebike",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "cyke",
-      "model": "Falcon A Full Suspension Ebike",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "cyke",
-      "model": "Falcon S Full Suspension Ebike",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "cyke",
-      "model": "Falcon X Full Suspension Ebike",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "cyke",
       "model": "Grizzly Foldable Ebike",
       "field": "rack_load_lb",
       "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "cyke",
-      "model": "Grizzly Foldable Ebike",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
     },
     {
       "brand": "cyke",
       "model": "Kingfisher Mid-Drive Folding eBike",
       "field": "suspension",
       "label": "Suspension"
-    },
-    {
-      "brand": "cyke",
-      "model": "Kingfisher Mid-Drive Folding eBike",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "cyke",
-      "model": "Lynx Commuter Ebike",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
     },
     {
       "brand": "engwe",
@@ -444,18 +396,6 @@
     },
     {
       "brand": "engwe",
-      "model": "ENGWE E26",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "engwe",
-      "model": "ENGWE EP-2 Pro",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "engwe",
       "model": "ENGWE L20 2.0",
       "field": "display_type",
       "label": "Display type"
@@ -468,12 +408,6 @@
     },
     {
       "brand": "engwe",
-      "model": "ENGWE L20 2.0",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "engwe",
       "model": "ENGWE LE20",
       "field": "battery_wh",
       "label": "Battery capacity (Wh)"
@@ -486,12 +420,6 @@
     },
     {
       "brand": "engwe",
-      "model": "ENGWE LE20",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "engwe",
       "model": "ENGWE M20",
       "field": "battery_wh",
       "label": "Battery capacity (Wh)"
@@ -501,12 +429,6 @@
       "model": "ENGWE M20",
       "field": "suspension",
       "label": "Suspension"
-    },
-    {
-      "brand": "engwe",
-      "model": "ENGWE M20",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
     },
     {
       "brand": "engwe",
@@ -528,18 +450,6 @@
     },
     {
       "brand": "engwe",
-      "model": "ENGWE M20 2.0",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "engwe",
-      "model": "ENGWE M20 3.0",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "engwe",
       "model": "ENGWE X20",
       "field": "display_type",
       "label": "Display type"
@@ -549,12 +459,6 @@
       "model": "ENGWE X20",
       "field": "suspension",
       "label": "Suspension"
-    },
-    {
-      "brand": "engwe",
-      "model": "ENGWE X20",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
     },
     {
       "brand": "engwe",
@@ -576,18 +480,6 @@
     },
     {
       "brand": "engwe",
-      "model": "ENGWE X24",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "engwe",
-      "model": "EP-2 3.0",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "engwe",
       "model": "Engine Pro 2.0",
       "field": "display_type",
       "label": "Display type"
@@ -597,18 +489,6 @@
       "model": "Engine Pro 2.0",
       "field": "suspension",
       "label": "Suspension"
-    },
-    {
-      "brand": "engwe",
-      "model": "Engine Pro 2.0",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "engwe",
-      "model": "L20 3.0",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
     },
     {
       "brand": "engwe",
@@ -639,12 +519,6 @@
       "model": "X26/24/X20",
       "field": "suspension",
       "label": "Suspension"
-    },
-    {
-      "brand": "engwe",
-      "model": "X26/24/X20",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
     },
     {
       "brand": "euphree",
@@ -1053,30 +927,6 @@
       "model": "Sprint Fat Tire Utility Ebike",
       "field": "torque_nm",
       "label": "Motor torque (Nm)"
-    },
-    {
-      "brand": "magician",
-      "model": "Alpha Mini",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "magician",
-      "model": "Alpha — Step-Over",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "magician",
-      "model": "Alpha — Step-Thru",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "magician",
-      "model": "Atlas",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
     },
     {
       "brand": "mokwheel",
@@ -3024,12 +2874,6 @@
     },
     {
       "brand": "vivi",
-      "model": "VIVI ACE01 Electric Bike All Terrain Fat Tire Electric Bike SGS Certified to UL2849",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "vivi",
       "model": "VIVI ACE01 Pro Electric Bike Torque Sensor Fat Tire Electric Bike with App Control",
       "field": "motor_w",
       "label": "Motor power (W)"
@@ -3039,12 +2883,6 @@
       "model": "VIVI ACE01 Pro Electric Bike Torque Sensor Fat Tire Electric Bike with App Control",
       "field": "rack_load_lb",
       "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "vivi",
-      "model": "VIVI ACE01 Pro Electric Bike Torque Sensor Fat Tire Electric Bike with App Control",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
     },
     {
       "brand": "vivi",
@@ -3060,12 +2898,6 @@
     },
     {
       "brand": "vivi",
-      "model": "VIVI ACE07 Electric Bike Commuter Fat Tire Electric Bike SGS Certified to UL2849",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "vivi",
       "model": "VIVI C26UL Electric Bike Cruiser Electric Commuter Bike SGS Certified to UL2849",
       "field": "motor_w",
       "label": "Motor power (W)"
@@ -3075,12 +2907,6 @@
       "model": "VIVI C26UL Electric Bike Cruiser Electric Commuter Bike SGS Certified to UL2849",
       "field": "rack_load_lb",
       "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "vivi",
-      "model": "VIVI C26UL Electric Bike Cruiser Electric Commuter Bike SGS Certified to UL2849",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
     },
     {
       "brand": "vivi",
@@ -3090,12 +2916,6 @@
     },
     {
       "brand": "vivi",
-      "model": "VIVI F26FUL Electric Bike Long Range Fat Tire Electric Bike SGS Certified to UL2849",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "vivi",
       "model": "VIVI FM20UL Electric Bike 2.4\" Fat Tire Folding Electric Bike SGS Certified to UL2849",
       "field": "motor_w",
       "label": "Motor power (W)"
@@ -3108,12 +2928,6 @@
     },
     {
       "brand": "vivi",
-      "model": "VIVI FM20UL Electric Bike 2.4\" Fat Tire Folding Electric Bike SGS Certified to UL2849",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "vivi",
       "model": "VIVI Gopina Electric Bike 3.0\" Fat Tire Folding Electric Bike SGS Certified to UL2849",
       "field": "motor_w",
       "label": "Motor power (W)"
@@ -3123,12 +2937,6 @@
       "model": "VIVI Gopina Electric Bike 3.0\" Fat Tire Folding Electric Bike SGS Certified to UL2849",
       "field": "rack_load_lb",
       "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "vivi",
-      "model": "VIVI Gopina Electric Bike 3.0\" Fat Tire Folding Electric Bike SGS Certified to UL2849",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
     },
     {
       "brand": "vivi",
@@ -3138,21 +2946,9 @@
     },
     {
       "brand": "vivi",
-      "model": "VIVI H7UL Electric Bike 27.5\" Off Road Electric Mountain Bike SGS Certified to UL2849",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "vivi",
       "model": "VIVI M026SHUL Electric Bike Hardtail Electric Mountain Bike SGS Certified to UL2849",
       "field": "motor_w",
       "label": "Motor power (W)"
-    },
-    {
-      "brand": "vivi",
-      "model": "VIVI M026SHUL Electric Bike Hardtail Electric Mountain Bike SGS Certified to UL2849",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
     },
     {
       "brand": "vivi",
@@ -3162,12 +2958,6 @@
     },
     {
       "brand": "vivi",
-      "model": "VIVI M026TGBUL Electric Bike Foldable Full Suspension Electric Mountain Bike SGS Certified to UL2849",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "vivi",
       "model": "VIVI MT20UL Electric Bike 3.0\" Fat Tire Folding Electric Bike SGS Certified to UL2849",
       "field": "motor_w",
       "label": "Motor power (W)"
@@ -3180,12 +2970,6 @@
     },
     {
       "brand": "vivi",
-      "model": "VIVI MT20UL Electric Bike 3.0\" Fat Tire Folding Electric Bike SGS Certified to UL2849",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "vivi",
       "model": "VIVI MT26GUL Electric Bike Rambler Electric Commuter Bike SGS Certified to UL2849",
       "field": "motor_w",
       "label": "Motor power (W)"
@@ -3195,12 +2979,6 @@
       "model": "VIVI MT26GUL Electric Bike Rambler Electric Commuter Bike SGS Certified to UL2849",
       "field": "rack_load_lb",
       "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "vivi",
-      "model": "VIVI MT26GUL Electric Bike Rambler Electric Commuter Bike SGS Certified to UL2849",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
     },
     {
       "brand": "vivi",
@@ -3210,12 +2988,6 @@
     },
     {
       "brand": "vivi",
-      "model": "VIVI PONY01 Electric Bike Commuter Mini Electric Bike SGS Certified to UL2849",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "vivi",
       "model": "VIVI T01 Electric Trike Folding Cargo Electric Tricycle SGS Certified to UL2849",
       "field": "motor_w",
       "label": "Motor power (W)"
@@ -3227,12 +2999,6 @@
       "label": "Rear-rack load (lb)"
     },
     {
-      "brand": "vivi",
-      "model": "VIVI T01 Electric Trike Folding Cargo Electric Tricycle SGS Certified to UL2849",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
       "brand": "vvolt",
       "model": "Alpha 2.1",
       "field": "battery_wh",
@@ -3471,30 +3237,12 @@
       "model": "Centauri SE",
       "field": "torque_nm",
       "label": "Motor torque (Nm)"
-    },
-    {
-      "brand": "wallke",
-      "model": "2026 WALLKE H7 Ultra Step-Thru | 4000W Off-Grid Power Station E-Bike with Torque Sensor, 37mph Speed",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "wallke",
-      "model": "2026 WALLKE H9 Ultra Folding | Off-Grid Power Station E-Bike with Torque Sensor, 37mph Speed, 55/77Ah Battery Options",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
     },
     {
       "brand": "wallke",
       "model": "2026 WALLKE Ultra Series | Off-grid Power Station E-Bike",
       "field": "drivetrain_type",
       "label": "Drivetrain type"
-    },
-    {
-      "brand": "wallke",
-      "model": "2026 WALLKE Ultra Series | Off-grid Power Station E-Bike",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
     },
     {
       "brand": "wallke",
@@ -3516,27 +3264,9 @@
     },
     {
       "brand": "wallke",
-      "model": "2026 Wallke H7 AWD Step-Thru | 3200W Ebike 40Ah Battery",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "wallke",
-      "model": "2026 Wallke Ravager 60V Series | 60V 70Ah Long-Range Electric Bike | Up to 180+ Miles | 150Nm Torque",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "wallke",
       "model": "WALLKE Titan X1 Carbon Fiber Frame | 3800W Cruiser Ebike",
       "field": "drivetrain_type",
       "label": "Drivetrain type"
-    },
-    {
-      "brand": "wallke",
-      "model": "WALLKE Titan X1 Carbon Fiber Frame | 3800W Cruiser Ebike",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
     },
     {
       "brand": "wallke",
@@ -3549,12 +3279,6 @@
       "model": "Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery",
       "field": "suspension",
       "label": "Suspension"
-    },
-    {
-      "brand": "wallke",
-      "model": "Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
     },
     {
       "brand": "wired",
@@ -3600,8 +3324,8 @@
     }
   ],
   "summary": {
-    "models_flagged": 227,
-    "missing_rows": 577,
+    "models_flagged": 211,
+    "missing_rows": 531,
     "missing_by_field": {
       "motor_w": 79,
       "battery_wh": 29,
@@ -3611,7 +3335,7 @@
       "frame_material": 59,
       "drive_type": 12,
       "torque_nm": 67,
-      "warranty_years": 81,
+      "warranty_years": 35,
       "display_type": 18,
       "drivetrain_type": 12,
       "suspension": 21,

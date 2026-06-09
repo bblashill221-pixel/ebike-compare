@@ -13,8 +13,16 @@ from collections import Counter
 from pathlib import Path
 
 # Brands whose PDPs don't surface warranty text in the page body (verified on
-# the brand's own warranty page/site).
-KNOWN_FALLBACK = {"lectric": "1-Year Warranty"}
+# the brand's own warranty page/site (verified there: the whole-bike / original-
+# owner term, not the longer battery/frame component tiers).
+KNOWN_FALLBACK = {
+    "lectric": "1-Year Warranty",
+    "engwe": "2-Year Warranty",
+    "cyke": "2-Year Warranty",
+    "magician": "3-Year Warranty",
+    "vivi": "1-Year Warranty",
+    "wallke": "1-Year Warranty",
+}
 
 HERE = Path(__file__).parent
 DATA = HERE / "data"
