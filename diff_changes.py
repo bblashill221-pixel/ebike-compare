@@ -37,6 +37,11 @@ HERE = Path(__file__).parent
 DATA = HERE / "data"
 ACTIVE = DATA / "current" / "active" / "ebikes_normalized.json"
 
+# If more than this fraction of the fleet reads as "new", the baseline is
+# stale/partial (a very old archive, or the first run after a big import) rather
+# than a real day-over-day reference — so don't flood the UI with "New" badges.
+NEW_FLOOD_FRACTION = 0.25
+
 
 # ----------------------------- field accessors ------------------------------
 
@@ -176,6 +181,24 @@ def main() -> int:
 
     rows, removed = build_changes(models, baseline)
 
+    # Stale/partial-baseline guard: drop the "new" flood (keep real per-field
+    # changes on surviving models, and the removed list).
+    new_count = sum(1 for r in rows if "new" in r["types"])
+    suppressed_new = bool(baseline) and new_count > NEW_FLOOD_FRACTION * max(len(models), 1)
+    if suppressed_new:
+        kept: list = []
+        for r in rows:
+            r["types"] = [t for t in r["types"] if t != "new"]
+            if r["types"]:
+                kept.append(r)
+        rows = kept
+        for m in models:
+            ct = m.get("changed_today")
+            if ct and "new" in ct["types"]:
+                ct["types"] = [t for t in ct["types"] if t != "new"]
+                if not ct["types"]:
+                    m.pop("changed_today", None)
+
     by_type: dict = {}
     for r in rows + removed:
         for t in r["types"]:
@@ -189,6 +212,7 @@ def main() -> int:
             "models_changed": len(rows),
             "removed": len(removed),
             "by_type": by_type,
+            "new_suppressed": suppressed_new,
         },
         "changes": rows + removed,
     }
@@ -203,8 +227,9 @@ def main() -> int:
     if baseline_date is None:
         print("[*] diff_changes: no prior build to compare against (first run) — empty change-log.")
     else:
+        note = f"  (baseline stale/partial — {new_count} 'new' suppressed)" if suppressed_new else ""
         print(f"[*] diff_changes vs {baseline_date}: {len(rows)} models changed, "
-              f"{len(removed)} removed.  by_type={by_type}")
+              f"{len(removed)} removed.  by_type={by_type}{note}")
     return 0
 
 
