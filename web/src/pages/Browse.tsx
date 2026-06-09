@@ -7,6 +7,7 @@ import { lowestPrice } from "../pricing";
 import { SearchBar } from "../components/SearchBar";
 import { FacetPanel } from "../components/FacetPanel";
 import { ResultsGrid } from "../components/ResultsGrid";
+import { ActiveFilters } from "../components/ActiveFilters";
 import { useShowSoldOut } from "../soldOut";
 import { useUnits } from "../units";
 
@@ -184,6 +185,7 @@ export function Browse() {
 
         <div className="min-w-0 flex-1">
           <div className="mb-3 text-sm text-slate-500">{results.length} results</div>
+          <ActiveFilters filters={filters} setFilters={setFilters} />
           <ResultsGrid models={results} />
         </div>
       </div>
