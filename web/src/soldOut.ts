@@ -1,13 +1,13 @@
 import { useSyncExternalStore } from "react";
 import type { Model } from "./types";
 
-// Global "show sold out" preference, toggled from the Features filter. Always
-// starts ON (selected by default) on each app load; when OFF, Browse hides
-// unavailable models and every view hides unavailable color options. Kept in an
-// in-memory store (not persisted) so it's shared live between the Browse list
-// and the separate-route detail page during a session, but resets to the
-// default on a fresh load.
-let value = true;
+// Global "show sold out" preference, toggled from the Features filter. Starts
+// OFF (unselected) on each app load, so only available models are shown by
+// default; when OFF, Browse hides unavailable models and every view hides
+// unavailable color options. Kept in an in-memory store (not persisted) so it's
+// shared live between the Browse list and the separate-route detail page during
+// a session, but resets to the default on a fresh load.
+let value = false;
 const listeners = new Set<() => void>();
 
 function emit() {

@@ -99,7 +99,7 @@ export function FacetPanel({ facetOptions, rangeBounds, facetCounts, filters, se
   };
   const reset = () => {
     setFilters({ enums: {}, bools: {}, ranges: {}, riderHeightIn: null });
-    setShowSoldOut(true);
+    setShowSoldOut(false); // back to the default: available-only
   };
 
   return (

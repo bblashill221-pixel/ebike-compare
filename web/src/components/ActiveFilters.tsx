@@ -86,7 +86,7 @@ export function ActiveFilters({
 
   const clearAll = () => {
     setFilters({ enums: {}, bools: {}, ranges: {}, riderHeightIn: null });
-    setShowSoldOut(true);
+    setShowSoldOut(false); // default: available-only
   };
 
   // No wrapper element: pills flow inline within the parent's flex row (next to
