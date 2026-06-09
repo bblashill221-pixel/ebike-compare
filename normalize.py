@@ -23,6 +23,26 @@ try:
         (Path(__file__).parent / "data" / "frame_style_overrides.json").read_text())
 except (FileNotFoundError, ValueError):
     FRAME_OVERRIDES = {}
+
+# Curated per-model field overrides (authoritative: a human correction wins over
+# the scrape), keyed by model id -> {field: value}. Survives daily re-scrapes
+# because it lives outside the archived data/current/ dir. See _apply_overrides.
+try:
+    MODEL_OVERRIDES = json.loads(
+        (Path(__file__).parent / "data" / "curated" / "model_overrides.json").read_text())
+except (FileNotFoundError, ValueError):
+    MODEL_OVERRIDES = {}
+
+
+def _apply_overrides(nm: dict) -> dict:
+    """Stamp curated field corrections onto a normalized model (authoritative).
+    Records the touched fields under `curated_overrides` for transparency."""
+    ov = MODEL_OVERRIDES.get(nm.get("id"))
+    if ov:
+        for k, v in ov.items():
+            nm[k] = v
+        nm["curated_overrides"] = sorted(ov.keys())
+    return nm
 from spec_groups import group_specs
 
 
@@ -352,7 +372,7 @@ def main():
         })
         for m in d.get("models", []):
             if m.get("spec_count"):
-                models.append(normalize_model(brand, m))
+                models.append(_apply_overrides(normalize_model(brand, m)))
 
     out = {
         "schema_version": SCHEMA_VERSION,
