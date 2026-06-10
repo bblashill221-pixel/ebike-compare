@@ -293,7 +293,7 @@ function BikeCardImpl({ model }: { model: Model }) {
             <Spec
               icon={<RiderHeightIcon className="h-[26px] w-[26px]" />}
               tint="bg-teal-50 border-teal-200"
-              label="Rider height"
+              label="Rider height range"
               value={riderFit}
             />
           )}
