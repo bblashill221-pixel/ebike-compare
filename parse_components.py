@@ -1001,6 +1001,13 @@ def _display(v, brand):
         out["type"] = "color"
     elif re.search(r"\blcd\b|\bled\b|monochrome", low):
         out["type"] = "lcd"
+    m = re.search(r'(\d(?:\.\d)?)\s*(?:inch(?:es)?|["”])', v)
+    if m:
+        out["size_in"] = float(m.group(1))
+        rest = re.sub(r'\d(?:\.\d)?\s*(?:inch(?:es)?|["”])', " ", rest)
+    if "bluetooth" in low:
+        out["bluetooth"] = True
+        rest = re.sub(r"bluetooth", " ", rest, flags=re.I)
     out["details"] = _clean(rest)
     return out
 

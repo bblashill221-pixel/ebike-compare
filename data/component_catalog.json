@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-10T06:21:10.385567+00:00",
-  "component_count": 643,
+  "generated_at": "2026-06-10T06:25:53.255307+00:00",
+  "component_count": 645,
   "priced_count": 0,
   "components": {
     "battery|aventon|": {
@@ -6824,9 +6824,10 @@
       "model": "C-010 Full-Color",
       "attributes": {
         "type": "color",
+        "size_in": 4.7,
         "_kind": "display"
       },
-      "sample_details": "4.7\" Display",
+      "sample_details": "Display",
       "usage_count": 3,
       "used_by": [
         "evelo__atlas",
@@ -6993,6 +6994,27 @@
         "_kind": "display"
       },
       "sample_details": "3.5\" LCD Color Display, -Designed, Mid-Position, with Bluetooth",
+      "usage_count": 0,
+      "used_by": [],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
+    "display|engwe|lcd color": {
+      "category": "display",
+      "manufacturer": "Engwe",
+      "model": "LCD Color",
+      "attributes": {
+        "type": "color",
+        "size_in": 3.5,
+        "bluetooth": true,
+        "_kind": "display"
+      },
+      "sample_details": "Display, -Designed, Mid-Position, with",
       "usage_count": 2,
       "used_by": [
         "engwe__electric-commuter-bike-fast-electric-bike-engwe-ep-2-3-0",
@@ -7100,6 +7122,26 @@
         "_kind": "display"
       },
       "sample_details": "app connectivity/ Bluetooth connectivity/ USB charging/ Display Lock (via app)/ Over-the-air updates/ Smart accessory connectivity (Smart Helmet, Radar, TPMS, Camera, Heart Rate, Phone)/ Full ride customization/ Customizable color themeSept '26: Turn-by-turn navigation connection (via bluetooth)",
+      "usage_count": 0,
+      "used_by": [],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
+    "display|monarc|app connectivity connectivity usb": {
+      "category": "display",
+      "manufacturer": "Monarc",
+      "model": "app connectivity connectivity USB",
+      "attributes": {
+        "type": "color",
+        "bluetooth": true,
+        "_kind": "display"
+      },
+      "sample_details": "app connectivity/ connectivity/ USB charging/ Display Lock (via app)/ Over-the-air updates/ Smart accessory connectivity (Smart Helmet, Radar, TPMS, Camera, Heart Rate, Phone)/ Full ride customization/ Customizable color themeSept '26: Turn-by-turn navigation connection (via)",
       "usage_count": 2,
       "used_by": [
         "monarc__marker-high-step-ebike",
@@ -11759,7 +11801,7 @@
     },
     "seatpost|xfusion|manic infinite": {
       "category": "seatpost",
-      "manufacturer": "XFusion",
+      "manufacturer": "Xfusion",
       "model": "Manic infinite",
       "attributes": {
         "type": "dropper",

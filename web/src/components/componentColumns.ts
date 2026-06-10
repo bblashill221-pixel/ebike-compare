@@ -31,7 +31,7 @@ export const COLUMN_CONFIG: Record<string, Column[]> = {
   controller: [c("voltage_v", "Voltage", " V"), c("amps_a", "Amps", " A"), EXTRA],
   sensor: [c("type", "Type"), c("magnets", "Magnets"), EXTRA],
   pedal_assist: [c("levels", "Levels"), c("boost", "Boost"), EXTRA],
-  display: [c("type", "Type"), MAKE, EXTRA],
+  display: [c("type", "Type"), c("size_in", "Size", "″"), c("bluetooth", "Bluetooth"), MAKE, EXTRA],
   throttle: [c("type", "Type"), c("side", "Side"), MAKE, EXTRA],
 
   frame: [c("material", "Material"), c("integrated_battery", "Integrated battery"),
