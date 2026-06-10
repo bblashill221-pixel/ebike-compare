@@ -389,6 +389,14 @@ def main():
             if m.get("spec_count"):
                 models.append(_apply_overrides(normalize_model(brand, m)))
 
+    # Carry "new" across a bike's frame-style siblings: if either the step-thru
+    # or the step-over variant is a site-declared new arrival, both are (they're
+    # the same bike, linked by family_id).
+    new_families = {m["family_id"] for m in models if m.get("family_id") and m.get("is_new")}
+    for m in models:
+        if m.get("family_id") in new_families:
+            m["is_new"] = True
+
     out = {
         "schema_version": SCHEMA_VERSION,
         "generated_at": datetime.now(timezone.utc).isoformat(),
