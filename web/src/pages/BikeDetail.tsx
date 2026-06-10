@@ -119,7 +119,11 @@ export function BikeDetail() {
   const valueOf = (field: string) =>
     field === "price" ? model.price ?? model.price_min : (t[field] as number | undefined);
 
-  const groups = GROUP_ORDER.filter((g) => model.specs?.[g] && Object.keys(model.specs[g]).length);
+  const hasGroup = (g: string) => !!model.specs?.[g] && Object.keys(model.specs[g]).length > 0;
+  // these sit under the image (left column) instead of the main spec flow
+  const SIDE_GROUPS = ["general_info", "geometry"];
+  const sideGroups = SIDE_GROUPS.filter(hasGroup);
+  const groups = GROUP_ORDER.filter((g) => !SIDE_GROUPS.includes(g) && hasGroup(g));
 
   // Accessories: the bike's free/bundled items first, then the brand's paid
   // add-ons (deduped against the free list) cheapest first.
@@ -139,6 +143,7 @@ export function BikeDetail() {
             The overlays anchor to this inner relative wrapper (which hugs the
             image), NOT the card — the grid stretches the card taller than the
             image, which would push a card-anchored pill below the photo. */}
+        <div className="space-y-4">
         <div className="card">
           <div className="relative">
             <div className="aspect-[4/3] w-full overflow-hidden rounded-xl bg-slate-100">
@@ -176,6 +181,13 @@ export function BikeDetail() {
               </div>
             )}
           </div>
+        </div>
+        {sideGroups.map((g) => (
+          <div key={g} className="card p-4">
+            <h2 className="mb-2 font-semibold text-slate-800">{titleCase(g)}</h2>
+            <SpecTable group={model.specs[g]} />
+          </div>
+        ))}
         </div>
 
         <div className="space-y-4">
