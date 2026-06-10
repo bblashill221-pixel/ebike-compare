@@ -55,6 +55,25 @@ const VALUE_UNIT: Record<string, string> = { lumens: "lumens", lux: "lux" };
 const IMPERIAL_UNITS = new Set(["lb", "mph", "mi", "in"]);
 const METRIC_UNITS = new Set(["kg", "kph", "km", "mm", "cm"]);
 
+const IMP_TOKEN = /(?:inch(?:es)?|\bin\b|″|"|\blbs?\b|\bmph\b|\bmiles?\b|\bmi\b)/i;
+const MET_TOKEN = /\b(?:cm|mm|kg|km\/?h|kph|km)\b/i;
+
+/** Many scraped strings carry the same measurement in both systems, usually
+ *  "<imperial> (<metric>)" or "<metric> (<imperial>)" (e.g. "45.2 inches (115
+ *  cm)"). Keep only the active system's side; leave non-unit parentheticals and
+ *  single-system strings alone. */
+function preferUnitInString(s: string, system: UnitSystem): string {
+  return s.replace(/^(.*?)\s*\(([^)]+)\)(.*)$/, (full, before, paren, after) => {
+    const bImp = IMP_TOKEN.test(before), bMet = MET_TOKEN.test(before);
+    const pImp = IMP_TOKEN.test(paren), pMet = MET_TOKEN.test(paren);
+    let keep: string | null = null;
+    if (bImp && pMet && !bMet && !pImp) keep = system === "metric" ? paren : before;
+    else if (bMet && pImp && !bImp && !pMet) keep = system === "metric" ? before : paren;
+    if (keep == null) return full; // not a clean imperial/metric pair
+    return (keep.trim() + after).trim();
+  });
+}
+
 /** Of paired imperial/metric fields of one measurement (weight_lb + weight_kg),
  *  the keys to hide so only the active unit system is shown. Single-unit fields
  *  are always kept. */
@@ -85,7 +104,7 @@ export function formatSpecValue(value: SpecValue, system: UnitSystem = "imperial
   if (value == null) return "—";
   if (typeof value === "boolean") return value ? "Yes" : "No";
   if (typeof value === "number") return formatNumber(value, 2);
-  if (typeof value === "string") return value;
+  if (typeof value === "string") return preferUnitInString(value, system);
   if (Array.isArray(value)) return value.map((x) => formatSpecValue(x, system)).join(", ");
   // object: prefer a "details" key, then join the rest as "Label: value".
   const obj = value as Record<string, SpecValue>;
