@@ -74,10 +74,11 @@ function preferUnitInString(s: string, system: UnitSystem): string {
   });
 }
 
-/** Of paired imperial/metric fields of one measurement (weight_lb + weight_kg),
- *  the keys to hide so only the active unit system is shown. Single-unit fields
- *  are always kept. */
-function hiddenUnitKeys(keys: string[], system: UnitSystem): Set<string> {
+/** Of paired imperial/metric fields of one measurement (weight_lb + weight_kg,
+ *  range_mi + range_km), the keys to hide so only the active unit system is
+ *  shown. Single-unit fields are always kept. Used both within a parsed
+ *  component object and across a spec group's sibling rows (SpecTable). */
+export function hiddenUnitKeys(keys: string[], system: UnitSystem): Set<string> {
   const suffix = (k: string) => k.slice(k.lastIndexOf("_") + 1);
   const hide = new Set<string>();
   for (const k of keys) {

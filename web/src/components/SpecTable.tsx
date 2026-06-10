@@ -1,5 +1,5 @@
 import type { SpecGroup } from "../types";
-import { formatSpecValue, labelize } from "../format";
+import { formatSpecValue, hiddenUnitKeys, labelize } from "../format";
 import { useUnits } from "../units";
 
 function isEmpty(v: unknown): boolean {
@@ -11,7 +11,10 @@ function isEmpty(v: unknown): boolean {
 
 export function SpecTable({ group }: { group: SpecGroup }) {
   const [units] = useUnits();
-  const rows = Object.entries(group).filter(([, v]) => !isEmpty(v));
+  // drop the non-selected side of paired imperial/metric rows (weight_lb +
+  // weight_kg, range_mi + range_km) so only the active system shows.
+  const hide = hiddenUnitKeys(Object.keys(group), units);
+  const rows = Object.entries(group).filter(([k, v]) => !isEmpty(v) && !hide.has(k));
   if (!rows.length) return null;
   return (
     <table className="w-full text-sm">
