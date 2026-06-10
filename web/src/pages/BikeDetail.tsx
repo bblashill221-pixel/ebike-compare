@@ -15,7 +15,7 @@ import { SpecTable } from "../components/SpecTable";
 import { DistributionPlot } from "../components/DistributionPlot";
 import { AffiliateLink } from "../components/AffiliateLink";
 import { displayName, primaryImage } from "../components/BikeCard";
-import { BatteryIcon, MotorIcon, RangeIcon, TorqueIcon, WeightIcon } from "../components/icons";
+import { BatteryIcon, MotorIcon, RangeIcon, RiderHeightIcon, TorqueIcon, WeightIcon } from "../components/icons";
 
 const GROUP_ORDER = [
   "general_info",
@@ -223,7 +223,8 @@ export function BikeDetail() {
           </div>
 
           {riderFit && (
-            <div className="text-sm text-slate-600">
+            <div className="flex items-center gap-1.5 text-sm text-slate-600">
+              <RiderHeightIcon className="h-5 w-5" />
               <span className="font-medium text-slate-700">Fits riders</span> {riderFit}
             </div>
           )}

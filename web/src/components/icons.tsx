@@ -224,3 +224,22 @@ export function WeightCapacityIcon({ className }: IconProps) {
     </Svg>
   );
 }
+
+export function RiderHeightIcon({ className }: IconProps) {
+  return (
+    <Svg className={className}>
+      <g className="text-sky-600" {...base}>
+        {/* short rider (left) */}
+        <circle cx="7" cy="10" r="1.7" />
+        <path d="M7 11.7V16" />
+        <path d="M4.9 13.2H9.1" />
+        <path d="M7 16l-1.4 4M7 16l1.4 4" />
+        {/* tall rider (right) */}
+        <circle cx="16.6" cy="4.9" r="1.9" />
+        <path d="M16.6 6.8V16" />
+        <path d="M14.3 8.9H18.9" />
+        <path d="M16.6 16l-1.5 4M16.6 16l1.5 4" />
+      </g>
+    </Svg>
+  );
+}
