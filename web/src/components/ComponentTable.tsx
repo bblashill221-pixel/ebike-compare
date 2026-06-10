@@ -40,40 +40,36 @@ export function ComponentTable({ kind, instances }: { kind: string; instances: C
   // keep only columns that carry a value on at least one instance
   const cols = config.filter((col) => instances.some((inst) => !isEmpty(rawValue(col, inst.obj))));
   if (!cols.length) return null;
-  const showPos = instances.length > 1;
+  const showPos = instances.length > 1; // front/rear -> a value column per instance
   return (
     <div className="mb-3">
       <h3 className="mb-1 text-xs font-semibold uppercase tracking-wide text-slate-500">
         {KIND_LABEL[kind] ?? titleCase(kind)}
       </h3>
-      <div className="overflow-x-auto">
-        <table className="min-w-full text-sm">
+      <table className="w-full text-sm">
+        {showPos && (
           <thead>
-            <tr className="border-b border-slate-200 text-left text-xs font-medium text-slate-500">
-              {showPos && <th className="py-1 pr-3" />}
-              {cols.map((col) => (
-                <th key={col.key} className="whitespace-nowrap py-1 pr-3">{col.header}</th>
+            <tr className="text-left text-xs font-medium text-slate-400">
+              <th className="w-2/5 py-1 pr-3" />
+              {instances.map((inst, i) => (
+                <th key={i} className="py-1 pr-3">{inst.position ?? ""}</th>
               ))}
             </tr>
           </thead>
-          <tbody className="divide-y divide-slate-100">
-            {instances.map((inst, i) => (
-              <tr key={i} className="align-top">
-                {showPos && (
-                  <td className="whitespace-nowrap py-1 pr-3 font-medium text-slate-500">
-                    {inst.position ?? ""}
-                  </td>
-                )}
-                {cols.map((col) => (
-                  <td key={col.key} className="py-1 pr-3 text-slate-800">
-                    {renderCell(col, inst.obj, units)}
-                  </td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+        )}
+        <tbody className="divide-y divide-slate-100">
+          {cols.map((col) => (
+            <tr key={col.key} className="align-top">
+              <th className="w-2/5 py-1.5 pr-3 text-left font-medium text-slate-500">{col.header}</th>
+              {instances.map((inst, i) => (
+                <td key={i} className="py-1.5 pr-3 text-slate-800">
+                  {renderCell(col, inst.obj, units)}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
