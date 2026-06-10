@@ -178,6 +178,29 @@ JS_RANGE_CLAIM = r"""() => {
     return null;
 }"""
 
+# Brake fallback: like Range, many Heybike spec tables omit the brake row but the
+# marketing copy states it ("2.0mm Thickened Hydraulic Disc Brakes"). Require an
+# explicit brake context so "hydraulic suspension fork" can't be mistaken for it.
+JS_BRAKE_CLAIM = r"""() => {
+    const norm = s => (s || '').replace(/\s+/g, ' ').trim();
+    const inReviews = el =>
+        !!el.closest('[class*="review"], [id*="review"], [class*="jdgm"]');
+    const classify = text => {
+        if (/hydraulic[\w\s-]{0,20}disc\s*brake|hydraulic\s*brake/i.test(text))
+            return 'Hydraulic Disc Brakes';
+        if (/mechanical[\w\s-]{0,20}disc\s*brake|mechanical\s*brake/i.test(text))
+            return 'Mechanical Disc Brakes';
+        return null;
+    };
+    for (const el of document.querySelectorAll(
+            '.introduce-info, .feature-heading, .feature-desc, [class*="description"]')) {
+        if (inReviews(el)) continue;
+        const r = classify(norm(el.textContent));
+        if (r) return r;
+    }
+    return null;
+}"""
+
 # Resolve each swatch's --swatch-background keyword to a hex (valid CSS colours
 # only; image-swatch keywords like "pearl"/"sunset" resolve to null).
 JS_SWATCH_HEX = r"""() => {
@@ -245,6 +268,11 @@ async def scrape_model(context, model: dict, retries: int = 3) -> dict:
                 claim = await page.evaluate(JS_RANGE_CLAIM)
                 if claim:
                     pairs.append(["Range", claim])
+            # Likewise for brakes (the table often omits them).
+            if pairs and not any("brake" in label.lower() for label, _ in pairs):
+                brake = await page.evaluate(JS_BRAKE_CLAIM)
+                if brake:
+                    pairs.append(["Brakes", brake])
             swatch_hex = await page.evaluate(JS_SWATCH_HEX)
             result["warranty"] = await page.evaluate(JS_WARRANTY)
             await page.close()

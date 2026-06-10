@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-10T03:58:45.611324+00:00",
+  "generated_at": "2026-06-10T04:07:42.802698+00:00",
   "total_models": 315,
   "expected_fields": [
     "motor_w",
@@ -22,6 +22,10 @@
       "count": 309,
       "pct": 98
     },
+    "brake_type": {
+      "count": 306,
+      "pct": 97
+    },
     "drive_type": {
       "count": 303,
       "pct": 96
@@ -29,10 +33,6 @@
     "drivetrain_type": {
       "count": 303,
       "pct": 96
-    },
-    "brake_type": {
-      "count": 297,
-      "pct": 94
     },
     "display_type": {
       "count": 297,
@@ -612,33 +612,9 @@
     },
     {
       "brand": "heybike",
-      "model": "ALPHA",
-      "field": "brake_type",
-      "label": "Brake type"
-    },
-    {
-      "brand": "heybike",
-      "model": "ALPHA — Step-Thru",
-      "field": "brake_type",
-      "label": "Brake type"
-    },
-    {
-      "brand": "heybike",
-      "model": "Hero — 1000W Rear Hub · Step-Over",
-      "field": "brake_type",
-      "label": "Brake type"
-    },
-    {
-      "brand": "heybike",
       "model": "Hero — 1000W Rear Hub · Step-Over",
       "field": "range_mi",
       "label": "Range (mi)"
-    },
-    {
-      "brand": "heybike",
-      "model": "Hero — 1000W Rear Hub · Step-Thru",
-      "field": "brake_type",
-      "label": "Brake type"
     },
     {
       "brand": "heybike",
@@ -649,32 +625,14 @@
     {
       "brand": "heybike",
       "model": "Hero — 750W Mid-Drive · Step-Over",
-      "field": "brake_type",
-      "label": "Brake type"
-    },
-    {
-      "brand": "heybike",
-      "model": "Hero — 750W Mid-Drive · Step-Over",
       "field": "range_mi",
       "label": "Range (mi)"
     },
     {
       "brand": "heybike",
       "model": "Hero — 750W Mid-Drive · Step-Thru",
-      "field": "brake_type",
-      "label": "Brake type"
-    },
-    {
-      "brand": "heybike",
-      "model": "Hero — 750W Mid-Drive · Step-Thru",
       "field": "range_mi",
       "label": "Range (mi)"
-    },
-    {
-      "brand": "heybike",
-      "model": "Horizon",
-      "field": "brake_type",
-      "label": "Brake type"
     },
     {
       "brand": "heybike",
@@ -693,18 +651,6 @@
       "model": "Horizon",
       "field": "torque_nm",
       "label": "Motor torque (Nm)"
-    },
-    {
-      "brand": "heybike",
-      "model": "Mars 3.0",
-      "field": "brake_type",
-      "label": "Brake type"
-    },
-    {
-      "brand": "heybike",
-      "model": "Ranger 3.0 Pro",
-      "field": "brake_type",
-      "label": "Brake type"
     },
     {
       "brand": "heybike",
@@ -3821,14 +3767,14 @@
     }
   ],
   "summary": {
-    "models_flagged": 211,
-    "missing_rows": 531,
+    "models_flagged": 208,
+    "missing_rows": 522,
     "missing_by_field": {
       "motor_w": 79,
       "battery_wh": 29,
       "weight_lb": 31,
       "range_mi": 78,
-      "brake_type": 18,
+      "brake_type": 9,
       "frame_material": 59,
       "drive_type": 12,
       "torque_nm": 67,
