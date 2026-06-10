@@ -219,21 +219,36 @@ export function FacetPanel({ facetOptions, rangeBounds, facetCounts, filters, se
         return (
           <Section key={field} label={label} open={!collapsed[field]} onToggle={() => toggleSection(field)}>
             <div className="space-y-1">
-              {options.map((opt) => (
-                <label key={opt} className="flex cursor-pointer items-center gap-2 text-sm text-slate-700">
-                  <input
-                    type="checkbox"
-                    checked={selected.includes(opt)}
-                    onChange={() => toggleEnum(field, opt)}
-                    className="rounded border-slate-300 text-brand-600 focus:ring-brand-500"
-                  />
-                  <span className="flex-1 truncate">
-                    {/* product_types values are already display-formatted ("Mountain (eMTB)") */}
-                    {field === "brand" ? capitalize(opt) : field === "product_types" ? opt : titleCase(opt)}
-                  </span>
-                  <span className="text-xs tabular-nums text-slate-400">{counts[opt] ?? 0}</span>
-                </label>
-              ))}
+              {options.map((opt) => {
+                const count = counts[opt] ?? 0;
+                const isSel = selected.includes(opt);
+                // a zero-count option can't add results -> disable it (unless it's
+                // currently selected, so it can still be toggled off)
+                const disabled = count === 0 && !isSel;
+                return (
+                  <label
+                    key={opt}
+                    className={`flex items-center gap-2 text-sm ${
+                      disabled ? "cursor-not-allowed text-slate-300" : "cursor-pointer text-slate-700"
+                    }`}
+                  >
+                    <input
+                      type="checkbox"
+                      checked={isSel}
+                      disabled={disabled}
+                      onChange={() => toggleEnum(field, opt)}
+                      className="rounded border-slate-300 text-brand-600 focus:ring-brand-500 disabled:opacity-40"
+                    />
+                    <span className="flex-1 truncate">
+                      {/* product_types values are already display-formatted ("Mountain (eMTB)") */}
+                      {field === "brand" ? capitalize(opt) : field === "product_types" ? opt : titleCase(opt)}
+                    </span>
+                    <span className={`text-xs tabular-nums ${disabled ? "text-slate-300" : "text-slate-400"}`}>
+                      {count}
+                    </span>
+                  </label>
+                );
+              })}
             </div>
           </Section>
         );
