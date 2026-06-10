@@ -255,7 +255,16 @@
           ]
         }
       ],
-      "is_new": true
+      "is_new": true,
+      "frame_sizes": [
+        {
+          "size": "One Size",
+          "height_min": "4'11\"",
+          "height_max": "6'3\"",
+          "inseam_min": "24",
+          "inseam_max": "34"
+        }
+      ]
     },
     {
       "title": "Abound SR Ebike",
@@ -517,7 +526,16 @@
           ]
         }
       ],
-      "is_new": true
+      "is_new": true,
+      "frame_sizes": [
+        {
+          "size": "One Size",
+          "height_min": "4'11\"",
+          "height_max": "6'3\"",
+          "inseam_min": "24",
+          "inseam_max": "34"
+        }
+      ]
     },
     {
       "title": "Aventure 3 Ebike",
@@ -627,7 +645,7 @@
           "MODEL": "Aventure 3 Ebike",
           "WEIGHT": "76 lbs",
           "TOTAL WEIGHT LIMIT": "400 lbs",
-          "RIDER HEIGHT": "R: 5'3\" -5'10\" | L: 5'10\" - 6'4\"",
+          "RIDER HEIGHT": "5'3\" - 6'4\"",
           "EBIKE CLASS": "Class 2 Ebike",
           "RANGE": "Up to 65 miles",
           "BATTERY SAFETY CERTIFICATIONS": "Certified to UL 2271",
@@ -715,10 +733,7 @@
         }
       ],
       "geometry": {
-        "RIDER HEIGHT": {
-          "R": "5'3\" -5'10\"",
-          "L": "5'10\" - 6'4\""
-        }
+        "RIDER HEIGHT": "5'3\" - 6'4\""
       },
       "configurations": [
         {
@@ -839,7 +854,23 @@
       "family_id": "aventon__aventure-3-ebike",
       "tier": "Step-Over",
       "frame_style": "Step-Over (Mid-Step)",
-      "is_new": true
+      "is_new": true,
+      "frame_sizes": [
+        {
+          "size": "Regular",
+          "height_min": "5'3\"",
+          "height_max": "5'10\"",
+          "inseam_min": "26",
+          "inseam_max": "31"
+        },
+        {
+          "size": "Large",
+          "height_min": "5'10\"",
+          "height_max": "6'4\"",
+          "inseam_min": "31",
+          "inseam_max": "35"
+        }
+      ]
     },
     {
       "title": "Aventure 3 Step-Through Ebike",
@@ -952,7 +983,7 @@
           "MODEL": "Aventure 3 Step-Through Ebike",
           "WEIGHT": "77 lbs",
           "TOTAL WEIGHT LIMIT": "400 lbs",
-          "RIDER HEIGHT": "R: 4'11\" -5'7\" | L: 5'7\" - 6'1\"",
+          "RIDER HEIGHT": "4'11\" - 6'1\"",
           "EBIKE CLASS": "Class 2 Ebike",
           "RANGE": "Up to 65 miles",
           "BATTERY SAFETY CERTIFICATIONS": "Certified to UL 2271",
@@ -1040,10 +1071,7 @@
         }
       ],
       "geometry": {
-        "RIDER HEIGHT": {
-          "R": "4'11\" -5'7\"",
-          "L": "5'7\" - 6'1\""
-        }
+        "RIDER HEIGHT": "4'11\" - 6'1\""
       },
       "configurations": [
         {
@@ -1164,7 +1192,23 @@
       "family_id": "aventon__aventure-3-ebike",
       "tier": "Step-Thru",
       "frame_style": "Step-Thru",
-      "is_new": true
+      "is_new": true,
+      "frame_sizes": [
+        {
+          "size": "Regular",
+          "height_min": "4'11\"",
+          "height_max": "5'7\"",
+          "inseam_min": "24",
+          "inseam_max": "29"
+        },
+        {
+          "size": "Large",
+          "height_min": "5'7\"",
+          "height_max": "6'1\"",
+          "inseam_min": "29",
+          "inseam_max": "33"
+        }
+      ]
     },
     {
       "title": "Aventure M Ebike",
@@ -1261,7 +1305,7 @@
           "IDEAL USE": "4\" All-Terrain Fat Tires",
           "WEIGHT": "73 lbs",
           "TOTAL WEIGHT LIMIT": "400 lbs",
-          "RIDER HEIGHT": "R: 5'3\" -5'10\" | L: 5'10\" - 6'4\"",
+          "RIDER HEIGHT": "5'3\" - 6'4\"",
           "EBIKE CLASS": "Class 1 (Aftermarket Throttle Available for Class 2 Conversion. Can also be converted to Class 3)",
           "RANGE": "Up to 85 Miles",
           "WATER RESISTANCE": "Bike - IPX6 // Motor - IP67",
@@ -1344,10 +1388,7 @@
         }
       ],
       "geometry": {
-        "RIDER HEIGHT": {
-          "R": "5'3\" -5'10\"",
-          "L": "5'10\" - 6'4\""
-        }
+        "RIDER HEIGHT": "5'3\" - 6'4\""
       },
       "configurations": [
         {
@@ -1499,7 +1540,23 @@
           ]
         }
       ],
-      "is_new": true
+      "is_new": true,
+      "frame_sizes": [
+        {
+          "size": "Regular",
+          "height_min": "5'3\"",
+          "height_max": "5'10\"",
+          "inseam_min": "26",
+          "inseam_max": "31"
+        },
+        {
+          "size": "Large",
+          "height_min": "5'10\"",
+          "height_max": "6'4\"",
+          "inseam_min": "31",
+          "inseam_max": "35"
+        }
+      ]
     },
     {
       "title": "Current ADV Ebike",
@@ -1585,7 +1642,7 @@
         "all": {
           "WEIGHT": "56lbs",
           "TOTAL WEIGHT LIMIT": "330 lbs",
-          "RIDER HEIGHT": "5'3\" - 6'1\"",
+          "RIDER HEIGHT": "5'1\" - 6'4\"",
           "SPEED": "Class 1 (Convertible to Class 3)",
           "WATER RESISTANCE": "Bike - IPX6 // Motor - IP67",
           "RANGE": "Up To 105 Miles",
@@ -1640,7 +1697,7 @@
       },
       "free_accessories": [],
       "geometry": {
-        "RIDER HEIGHT": "5'3\" - 6'1\""
+        "RIDER HEIGHT": "5'1\" - 6'4\""
       },
       "configurations": [
         {
@@ -1812,7 +1869,37 @@
           ]
         }
       ],
-      "is_new": true
+      "is_new": true,
+      "frame_sizes": [
+        {
+          "size": "Small",
+          "height_min": "5'1\"",
+          "height_max": "5'3\"",
+          "inseam_min": "27",
+          "inseam_max": "29"
+        },
+        {
+          "size": "Medium",
+          "height_min": "5'3\"",
+          "height_max": "5'7\"",
+          "inseam_min": "27.5",
+          "inseam_max": "29.5"
+        },
+        {
+          "size": "Large",
+          "height_min": "5'7\"",
+          "height_max": "6'1\"",
+          "inseam_min": "29",
+          "inseam_max": "32"
+        },
+        {
+          "size": "Extra Large",
+          "height_min": "6'1\"",
+          "height_max": "6'4\"",
+          "inseam_min": "31",
+          "inseam_max": "34"
+        }
+      ]
     },
     {
       "title": "Current EXP Ebike",
@@ -1896,7 +1983,7 @@
         "all": {
           "WEIGHT": "53 lbs",
           "TOTAL WEIGHT LIMIT": "330 lbs",
-          "RIDER HEIGHT": "5'1\" - 6'3\"",
+          "RIDER HEIGHT": "5'1\" - 6'4\"",
           "SPEED": "Class 1 (Convertible to Class 3)",
           "RANGE": "Up To 105 Miles",
           "WATER RESISTANCE": "Bike - IPX6 // Motor - IP67",
@@ -1951,7 +2038,7 @@
       },
       "free_accessories": [],
       "geometry": {
-        "RIDER HEIGHT": "5'1\" - 6'3\""
+        "RIDER HEIGHT": "5'1\" - 6'4\""
       },
       "configurations": [
         {
@@ -2123,7 +2210,37 @@
           ]
         }
       ],
-      "is_new": true
+      "is_new": true,
+      "frame_sizes": [
+        {
+          "size": "Small",
+          "height_min": "5'1\"",
+          "height_max": "5'3\"",
+          "inseam_min": "27",
+          "inseam_max": "29"
+        },
+        {
+          "size": "Medium",
+          "height_min": "5'3\"",
+          "height_max": "5'7\"",
+          "inseam_min": "27.5",
+          "inseam_max": "29.5"
+        },
+        {
+          "size": "Large",
+          "height_min": "5'7\"",
+          "height_max": "6'1\"",
+          "inseam_min": "29",
+          "inseam_max": "32"
+        },
+        {
+          "size": "Extra Large",
+          "height_min": "6'1\"",
+          "height_max": "6'4\"",
+          "inseam_min": "31",
+          "inseam_max": "34"
+        }
+      ]
     },
     {
       "title": "Level 3 Ebike",
@@ -2416,7 +2533,23 @@
       "family_id": "aventon__level-3-ebike",
       "tier": "Step-Over",
       "frame_style": "Step-Over (Mid-Step)",
-      "is_new": true
+      "is_new": true,
+      "frame_sizes": [
+        {
+          "size": "Regular",
+          "height_min": "5'3\"",
+          "height_max": "5'10\"",
+          "inseam_min": "26",
+          "inseam_max": "31"
+        },
+        {
+          "size": "Large",
+          "height_min": "5'10\"",
+          "height_max": "6'4\"",
+          "inseam_min": "31",
+          "inseam_max": "35"
+        }
+      ]
     },
     {
       "title": "Level 3 Step-Through Ebike",
@@ -2687,7 +2820,23 @@
       "family_id": "aventon__level-3-ebike",
       "tier": "Step-Thru",
       "frame_style": "Step-Thru",
-      "is_new": true
+      "is_new": true,
+      "frame_sizes": [
+        {
+          "size": "Regular",
+          "height_min": "4'11\"",
+          "height_max": "5'7\"",
+          "inseam_min": "24",
+          "inseam_max": "29"
+        },
+        {
+          "size": "Large",
+          "height_min": "5'7\"",
+          "height_max": "6'1\"",
+          "inseam_min": "29",
+          "inseam_max": "33"
+        }
+      ]
     },
     {
       "title": "Level 4 ADV Ebike",
@@ -2781,7 +2930,7 @@
         "all": {
           "WEIGHT": "61lbs",
           "TOTAL WEIGHT LIMIT": "330 lbs",
-          "RIDER HEIGHT": "Medium - 5'3\"-5'10\". || Large - 5'10\"-6'4\". || Extra Large - 6'4\"-6'7\"",
+          "RIDER HEIGHT": "5'3\" - 6'7\"",
           "EBIKE CLASS": "Class 1 (Convertible to Class 2 and/or Class 3)",
           "WATER RESISTANCE": "Bike - IPX6 // Motor - IP67",
           "RANGE": "Up to 110 Miles",
@@ -2864,7 +3013,7 @@
         }
       ],
       "geometry": {
-        "RIDER HEIGHT": "Medium - 5'3\"-5'10\". || Large - 5'10\"-6'4\". || Extra Large - 6'4\"-6'7\""
+        "RIDER HEIGHT": "5'3\" - 6'7\""
       },
       "configurations": [
         {
@@ -3025,7 +3174,30 @@
       "family_id": "aventon__level-4-adv-ebike",
       "tier": "Step-Over",
       "frame_style": "Step-Over (Mid-Step)",
-      "is_new": false
+      "is_new": false,
+      "frame_sizes": [
+        {
+          "size": "Medium",
+          "height_min": "5'3\"",
+          "height_max": "5'10\"",
+          "inseam_min": "26",
+          "inseam_max": "31"
+        },
+        {
+          "size": "Large",
+          "height_min": "5'10\"",
+          "height_max": "6'4\"",
+          "inseam_min": "31",
+          "inseam_max": "36"
+        },
+        {
+          "size": "Extra Large",
+          "height_min": "6'4\"",
+          "height_max": "6'7\"",
+          "inseam_min": "36",
+          "inseam_max": "39"
+        }
+      ]
     },
     {
       "title": "Level 4 ADV Step-Through Ebike",
@@ -3117,7 +3289,7 @@
         "all": {
           "WEIGHT": "61lbs",
           "TOTAL WEIGHT LIMIT": "330 lbs",
-          "RIDER HEIGHT": "Regular - 4'11\"-5'7\". || Large - 5'7\"-6'1\"",
+          "RIDER HEIGHT": "4'11\" - 6'1\"",
           "EBIKE CLASS": "Class 1 (Convertible to Class 2 and/or Class 3)",
           "WATER RESISTANCE": "Bike - IPX6 // Motor - IP67",
           "RANGE": "Up to 110 Miles",
@@ -3200,7 +3372,7 @@
         }
       ],
       "geometry": {
-        "RIDER HEIGHT": "Regular - 4'11\"-5'7\". || Large - 5'7\"-6'1\""
+        "RIDER HEIGHT": "4'11\" - 6'1\""
       },
       "configurations": [
         {
@@ -3321,7 +3493,23 @@
       "family_id": "aventon__level-4-adv-ebike",
       "tier": "Step-Thru",
       "frame_style": "Step-Thru",
-      "is_new": false
+      "is_new": false,
+      "frame_sizes": [
+        {
+          "size": "Regular",
+          "height_min": "4'11\"",
+          "height_max": "5'7\"",
+          "inseam_min": "24",
+          "inseam_max": "29"
+        },
+        {
+          "size": "Large",
+          "height_min": "5'7\"",
+          "height_max": "6'1\"",
+          "inseam_min": "29",
+          "inseam_max": "33"
+        }
+      ]
     },
     {
       "title": "Level 4 REC Ebike",
@@ -3410,7 +3598,7 @@
         "all": {
           "WEIGHT": "68.5lbs",
           "TOTAL WEIGHT LIMIT": "330 lbs",
-          "RIDER HEIGHT": "Regular - 5'3\"-5'10\". || Large - 5'10\"-6'4\"",
+          "RIDER HEIGHT": "5'3\" - 6'4\"",
           "EBIKE CLASS": "Class 2 (Convertible to Class 3)",
           "WATER RESISTANCE": "Bike - IPX5 // Components - IPX6",
           "RANGE": "Up to 75 Miles",
@@ -3495,7 +3683,7 @@
         }
       ],
       "geometry": {
-        "RIDER HEIGHT": "Regular - 5'3\"-5'10\". || Large - 5'10\"-6'4\""
+        "RIDER HEIGHT": "5'3\" - 6'4\""
       },
       "configurations": [
         {
@@ -3616,7 +3804,23 @@
       "family_id": "aventon__level-4-rec-ebike",
       "tier": "Step-Over",
       "frame_style": "Step-Over (Mid-Step)",
-      "is_new": false
+      "is_new": false,
+      "frame_sizes": [
+        {
+          "size": "Regular",
+          "height_min": "5'3\"",
+          "height_max": "5'10\"",
+          "inseam_min": "26",
+          "inseam_max": "31"
+        },
+        {
+          "size": "Large",
+          "height_min": "5'10\"",
+          "height_max": "6'4\"",
+          "inseam_min": "31",
+          "inseam_max": "36"
+        }
+      ]
     },
     {
       "title": "Level 4 REC Step-Through Ebike",
@@ -3706,7 +3910,7 @@
         "all": {
           "WEIGHT": "68.5lbs",
           "TOTAL WEIGHT LIMIT": "330 lbs",
-          "RIDER HEIGHT": "Regular - 4'11\"-5'7\". || Large - 5'7\"-6'1\"",
+          "RIDER HEIGHT": "4'11\" - 6'1\"",
           "EBIKE CLASS": "Class 2 (Convertible to Class 3)",
           "WATER RESISTANCE": "Bike - IPX5 // Components - IPX6",
           "RANGE": "Up to 75 Miles",
@@ -3791,7 +3995,7 @@
         }
       ],
       "geometry": {
-        "RIDER HEIGHT": "Regular - 4'11\"-5'7\". || Large - 5'7\"-6'1\""
+        "RIDER HEIGHT": "4'11\" - 6'1\""
       },
       "configurations": [
         {
@@ -3912,7 +4116,23 @@
       "family_id": "aventon__level-4-rec-ebike",
       "tier": "Step-Thru",
       "frame_style": "Step-Thru",
-      "is_new": false
+      "is_new": false,
+      "frame_sizes": [
+        {
+          "size": "Regular",
+          "height_min": "4'11\"",
+          "height_max": "5'7\"",
+          "inseam_min": "24",
+          "inseam_max": "29"
+        },
+        {
+          "size": "Large",
+          "height_min": "5'7\"",
+          "height_max": "6'1\"",
+          "inseam_min": "29",
+          "inseam_max": "33"
+        }
+      ]
     },
     {
       "title": "Pace 4 Step-Through Ebike",
@@ -4020,7 +4240,7 @@
           "MODEL": "Pace 4 Step-Through Ebike",
           "WEIGHT": "58.2 lbs",
           "TOTAL WEIGHT LIMIT": "330 lbs",
-          "RIDER HEIGHT": "R: 4'11\" -5'7\" | L: 5'7\" - 6'1\"",
+          "RIDER HEIGHT": "4'11\" - 6'1\"",
           "RANGE": "Up to 70 Miles",
           "EBIKE CLASS": "Class 2 (Can be converted to Class 3 if local laws and regulations allow)",
           "BATTERY SAFETY CERTIFICATIONS": "Certified to UL 2271",
@@ -4095,10 +4315,7 @@
         }
       ],
       "geometry": {
-        "RIDER HEIGHT": {
-          "R": "4'11\" -5'7\"",
-          "L": "5'7\" - 6'1\""
-        }
+        "RIDER HEIGHT": "4'11\" - 6'1\""
       },
       "configurations": [
         {
@@ -4241,7 +4458,23 @@
         }
       ],
       "regular_price": 1799.0,
-      "is_new": true
+      "is_new": true,
+      "frame_sizes": [
+        {
+          "size": "Regular",
+          "height_min": "4'11\"",
+          "height_max": "5'7\"",
+          "inseam_min": "24",
+          "inseam_max": "29"
+        },
+        {
+          "size": "Large",
+          "height_min": "5'7\"",
+          "height_max": "6'1\"",
+          "inseam_min": "29",
+          "inseam_max": "33"
+        }
+      ]
     },
     {
       "title": "Pace 5 REC Step-Through Ebike",
@@ -4354,7 +4587,7 @@
           "RANGE": "Up to 75 Miles",
           "SAFETY CERTIFICATIONS": "UL Safety Certified  UL 2849",
           "BATTERY SAFETY CERTIFICATIONS": "Certified to UL 2271",
-          "RIDER HEIGHT": "R: 5'0\" -5'9\" | L: 5'9\" - 6'3\"",
+          "RIDER HEIGHT": "5'0\" - 6'3\"",
           "SPEED": "Max: 28 MPH",
           "SADDLE": "Aventon 250mm wide Saddle",
           "SEATPOST": "Aventon Seatpost, 30.9Ø, Length: 300 mm (Size R) / 350 mm (Size L)",
@@ -4416,10 +4649,7 @@
         }
       ],
       "geometry": {
-        "RIDER HEIGHT": {
-          "R": "5'0\" -5'9\"",
-          "L": "5'9\" - 6'3\""
-        }
+        "RIDER HEIGHT": "5'0\" - 6'3\""
       },
       "configurations": [
         {
@@ -4624,7 +4854,23 @@
           ]
         }
       ],
-      "is_new": false
+      "is_new": false,
+      "frame_sizes": [
+        {
+          "size": "Regular",
+          "height_min": "5'0\"",
+          "height_max": "5'9\"",
+          "inseam_min": "24",
+          "inseam_max": "31"
+        },
+        {
+          "size": "Large",
+          "height_min": "5'9\"",
+          "height_max": "6'3\"",
+          "inseam_min": "30",
+          "inseam_max": "36"
+        }
+      ]
     },
     {
       "title": "Ramblas ADV Ebike",
@@ -4986,7 +5232,30 @@
           ]
         }
       ],
-      "is_new": false
+      "is_new": false,
+      "frame_sizes": [
+        {
+          "size": "Medium",
+          "height_min": "5'5\"",
+          "height_max": "5'9\"",
+          "inseam_min": "28",
+          "inseam_max": "31"
+        },
+        {
+          "size": "Large",
+          "height_min": "5'10\"",
+          "height_max": "6'2\"",
+          "inseam_min": "31",
+          "inseam_max": "34"
+        },
+        {
+          "size": "Extra Large",
+          "height_min": "6'2\"",
+          "height_max": "6'5\"",
+          "inseam_min": "33",
+          "inseam_max": "36"
+        }
+      ]
     },
     {
       "title": "Soltera 2.5 Ebike",
@@ -5078,7 +5347,7 @@
           "MODEL": "Soltera 2.5 Ebike",
           "WEIGHT": "46 lbs",
           "TOTAL WEIGHT LIMIT": "330 lbs",
-          "RIDER HEIGHT": "S 5'1\"-5'5\", M 5'5\"-5'9\", L 5'10\"-6'2\"",
+          "RIDER HEIGHT": "5'1\" - 6'2\"",
           "BOX SIZE": "59 x 11 x 33",
           "EBIKE CLASS": "Class 2 Ebike",
           "SAFETY CERTIFICATIONS": "UL and TUV Safety Certified  UL 2849 / UL 2271",
@@ -5152,7 +5421,7 @@
         }
       ],
       "geometry": {
-        "RIDER HEIGHT": "S 5'1\"-5'5\", M 5'5\"-5'9\", L 5'10\"-6'2\""
+        "RIDER HEIGHT": "5'1\" - 6'2\""
       },
       "configurations": [
         {
@@ -5300,7 +5569,30 @@
           ]
         }
       ],
-      "is_new": true
+      "is_new": true,
+      "frame_sizes": [
+        {
+          "size": "Small",
+          "height_min": "5'1\"",
+          "height_max": "5'5\"",
+          "inseam_min": "29",
+          "inseam_max": "31"
+        },
+        {
+          "size": "Medium",
+          "height_min": "5'5\"",
+          "height_max": "5'9\"",
+          "inseam_min": "31",
+          "inseam_max": "33"
+        },
+        {
+          "size": "Large",
+          "height_min": "5'10\"",
+          "height_max": "6'2\"",
+          "inseam_min": "33",
+          "inseam_max": "35"
+        }
+      ]
     },
     {
       "title": "Soltera 3 ADV Ebike",
@@ -5390,7 +5682,7 @@
           "MODEL": "Soltera 3 ADV Ebike",
           "WEIGHT": "37lbs",
           "TOTAL WEIGHT LIMIT": "330 lbs",
-          "RIDER HEIGHT": "S 5'1\"-5'5\", M 5'5\"-5'9\", L 5'9\"-6'1\", XL 5'1\"-6'4\"",
+          "RIDER HEIGHT": "5'1\" - 6'4\"",
           "WATER RESISTANCE": "IPX6",
           "RANGE": "Up to 70 Miles",
           "BIKE SAFETY CERTIFICATIONS": "TUV Certified",
@@ -5461,7 +5753,7 @@
         }
       ],
       "geometry": {
-        "RIDER HEIGHT": "S 5'1\"-5'5\", M 5'5\"-5'9\", L 5'9\"-6'1\", XL 5'1\"-6'4\""
+        "RIDER HEIGHT": "5'1\" - 6'4\""
       },
       "configurations": [
         {
@@ -5717,7 +6009,37 @@
           ]
         }
       ],
-      "is_new": true
+      "is_new": true,
+      "frame_sizes": [
+        {
+          "size": "Small",
+          "height_min": "5'1\"",
+          "height_max": "5'5\"",
+          "inseam_min": "25",
+          "inseam_max": "28"
+        },
+        {
+          "size": "Medium",
+          "height_min": "5'5\"",
+          "height_max": "5'9\"",
+          "inseam_min": "28",
+          "inseam_max": "31"
+        },
+        {
+          "size": "Large",
+          "height_min": "5'9\"",
+          "height_max": "6'1\"",
+          "inseam_min": "31",
+          "inseam_max": "33"
+        },
+        {
+          "size": "Extra Large",
+          "height_min": "6'1\"",
+          "height_max": "6'4\"",
+          "inseam_min": "33",
+          "inseam_max": "36"
+        }
+      ]
     }
   ],
   "available_accessories": [

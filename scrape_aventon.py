@@ -17,8 +17,10 @@ from __future__ import annotations
 
 import argparse
 import asyncio
+import html
 import json
 import os
+import re
 import sys
 import urllib.request
 from datetime import datetime, timezone
@@ -239,6 +241,41 @@ async def extract_swatch_hex(page) -> dict:
     )
 
 
+def _ht_to_in(s: str):
+    m = re.match(r"(\d+)'\s*(\d+)", (s or "").replace('"', "").strip())
+    return int(m.group(1)) * 12 + int(m.group(2)) if m else None
+
+
+def parse_frame_sizes(page_html: str) -> list[dict]:
+    """Per-frame-size rows from Aventon's embedded size-chart JSON objects
+    ({size_full_name, height_min, height_max, inseam_min, inseam_max})."""
+    out, seen = [], set()
+    for mo in re.finditer(r'\{[^{}]*"height_max"[^{}]*\}', page_html):
+        b = (html.unescape(mo.group(0)).replace("”", '"').replace("“", '"')
+             .replace("’", "'"))
+
+        def g(k):
+            mm = re.search(r'"' + k + r'"\s*:\s*"([^"]*)"', b)
+            return mm.group(1).strip() if mm else None
+        name, hmin, hmax = g("size_full_name") or g("bike_size_label"), g("height_min"), g("height_max")
+        if not (name and hmin and hmax) or (name, hmin, hmax) in seen:
+            continue
+        seen.add((name, hmin, hmax))
+        out.append({"size": name, "height_min": hmin, "height_max": hmax,
+                    "inseam_min": g("inseam_min"), "inseam_max": g("inseam_max")})
+    return out
+
+
+def rider_height_envelope(sizes: list[dict]):
+    """min of the smallest frame, max of the largest frame -> 'A'B" - C'D"'."""
+    mins = [v for s in sizes if (v := _ht_to_in(s.get("height_min")))]
+    maxs = [v for s in sizes if (v := _ht_to_in(s.get("height_max")))]
+    if mins and maxs:
+        lo, hi = min(mins), max(maxs)
+        return f"{lo // 12}'{lo % 12}\" - {hi // 12}'{hi % 12}\""
+    return None
+
+
 async def scrape_model(context, model: dict, retries: int = 2) -> dict:
     result = dict(model)
     for attempt in range(1, retries + 1):
@@ -271,6 +308,16 @@ async def scrape_model(context, model: dict, retries: int = 2) -> dict:
             for label, value in pairs:
                 key = " ".join(label.split())  # normalise whitespace
                 all_specs[key] = value
+
+            # Per-frame-size chart -> count + each size's rider-height range, and
+            # set the bike's rider-height to the full envelope (smallest frame's
+            # min .. largest frame's max).
+            sizes = parse_frame_sizes(await page.content())
+            if sizes:
+                result["frame_sizes"] = sizes
+                env = rider_height_envelope(sizes)
+                if env:
+                    all_specs["RIDER HEIGHT"] = env
 
             result["specs"] = {"all": all_specs}
             result["spec_count"] = len(all_specs)
