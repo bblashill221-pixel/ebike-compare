@@ -62,7 +62,8 @@
           "(B) Stack": "Small: 23.62\" (600mm) | Medium: 23.62\" (600mm) | Large: 25.19\" (640mm)",
           "(C) Min Seat Height (from ground)": "Small: 30.5\" | Medium: 32.5\" | Large: 34.5\"",
           "(D) Max Seat Height (from ground)": "Small: 36.5\" | Medium: 40.5\" | Large: 42.5\"",
-          "(E) Stepover height (from ground)": "Small: 22.5\" | Medium: 23.5\" | Large: 24.5\""
+          "(E) Stepover height (from ground)": "Small: 22.5\" | Medium: 23.5\" | Large: 24.5\"",
+          "Rider Height": "5'0\" - 6'3\""
         }
       },
       "spec_count": 21,
@@ -138,7 +139,24 @@
           ]
         }
       ],
-      "is_new": false
+      "is_new": false,
+      "frame_sizes": [
+        {
+          "size": "Small",
+          "height_min": "5'0\"",
+          "height_max": "5'6\""
+        },
+        {
+          "size": "Medium",
+          "height_min": "5'6\"",
+          "height_max": "5'10\""
+        },
+        {
+          "size": "Large",
+          "height_min": "5'10\"",
+          "height_max": "6'3\""
+        }
+      ]
     },
     {
       "model": "PRIORITY E-COAST",

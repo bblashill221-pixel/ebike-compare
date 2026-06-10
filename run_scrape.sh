@@ -97,6 +97,9 @@ print((json.load(open(f[0])).get('generated_at','') or '')[:10]) if f else print
     # Fill each bike's rear-rack max load from the brand's rack accessory pages
     # (the bike's own sheet often omits it). Needs available_accessories above.
     "$PY" "$PROJECT_DIR/enrich_rack_load.py" || true
+    # Per-frame-size rider-height charts (multi-size brands) -> model.frame_sizes
+    # + the full rider-height envelope. Single-size brands are unaffected.
+    "$PY" "$PROJECT_DIR/enrich_frame_sizes.py" || true
     "$PY" "$PROJECT_DIR/add_geometry.py" || true
     "$PY" "$PROJECT_DIR/add_configurations.py" || true
     "$PY" "$PROJECT_DIR/add_config_colors.py" || true

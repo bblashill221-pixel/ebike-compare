@@ -346,6 +346,10 @@ def normalize_model(brand: str, m: dict) -> dict:
         or FRAME_OVERRIDES.get(f"{brand}__{source_id}"),
         # explicit "new" from a site new-arrival tag (not a catalog-diff guess)
         "is_new": _is_new(m),
+        # per-frame-size rider-height chart (enrich_frame_sizes / aventon scraper);
+        # bikes without one are a single frame size.
+        "frame_sizes": m.get("frame_sizes") or None,
+        "frame_size_count": len(m["frame_sizes"]) if m.get("frame_sizes") else 1,
         "price": lo,
         "price_min": lo,
         "price_max": hi,
