@@ -257,8 +257,8 @@ function BikeCardImpl({ model }: { model: Model }) {
           </div>
         )}
 
-        {/* core spec tiles (+ a rider-height tile when the bike publishes a range) */}
-        <div className={`grid gap-2 ${riderFit ? "grid-cols-3" : "grid-cols-5"}`}>
+        {/* six spec tiles (2x3), always shown ("—" when unknown) */}
+        <div className="grid grid-cols-3 gap-2">
           <Spec
             icon={<BatteryIcon className="h-[26px] w-[26px]" />}
             tint="bg-emerald-50 border-emerald-200"
@@ -289,14 +289,12 @@ function BikeCardImpl({ model }: { model: Model }) {
             label="Weight"
             value={t.weight_lb != null ? `${tile(t.weight_lb)} lb` : "—"}
           />
-          {riderFit && (
-            <Spec
-              icon={<RiderHeightIcon className="h-[26px] w-[26px]" />}
-              tint="bg-teal-50 border-teal-200"
-              label="Rider height range"
-              value={riderFit}
-            />
-          )}
+          <Spec
+            icon={<RiderHeightIcon className="h-[26px] w-[26px]" />}
+            tint="bg-teal-50 border-teal-200"
+            label="Rider height range"
+            value={riderFit ?? "—"}
+          />
         </div>
 
         {/* uncommon/premium features (regen braking, dropper post, ...) */}
