@@ -228,7 +228,7 @@ export function WeightCapacityIcon({ className }: IconProps) {
 export function RiderHeightIcon({ className }: IconProps) {
   return (
     <Svg className={className}>
-      <g className="text-sky-600" {...base}>
+      <g className="text-teal-600" {...base}>
         {/* short rider (left) */}
         <circle cx="7" cy="10" r="1.7" />
         <path d="M7 11.7V16" />
