@@ -378,9 +378,13 @@ def _motor(v, brand):
     if man:
         out["manufacturer"] = man
     low = v.lower()
-    # Boost-mode figures ("80Nm (96Nm in Boost Mode)", "(1440W in Boost Mode)")
-    # are a special unlock, not the continuous or stated-peak rating — drop them
-    # so they can't be read as either.
+    # A "boost mode" wattage is the in-boost peak the brand advertises (Aventon:
+    # "750W (1440W in Boost Mode)"). Capture it as a peak fallback, then drop the
+    # boost parenthetical so it can't read as the continuous rating. An explicit
+    # "Peak <n>W" below still wins. (The torque-in-boost figure is left dropped.)
+    bm = (re.search(r"(\d{3,4})\s*w[^)0-9]{0,12}boost", low)
+          or re.search(r"boost[^)0-9]{0,15}(\d{3,4})\s*w", low))
+    boost_w = int(bm.group(1)) if bm else None
     low = re.sub(r"\([^)]*boost[^)]*\)", " ", low)
     if re.search(r"mid[\s-]?drive|mid[\s-]?motor", low):
         out["placement"] = "mid"
@@ -401,6 +405,9 @@ def _motor(v, brand):
     m, _ = _consume(cont, r"(\d{3,4})\s*w\b")
     if m:
         out["power_w"] = int(m.group(1))
+    # boost figure stands in as peak when the spec stated no explicit peak
+    if boost_w and "peak_w" not in out:
+        out["peak_w"] = boost_w
     m = re.search(r"(\d{2,3})\s*n[·.\s]?m", low)
     if m:
         out["torque_nm"] = int(m.group(1))
