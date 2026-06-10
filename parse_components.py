@@ -1235,4 +1235,8 @@ def parse_component(field: str, value, brand: str | None = None,
             result["model"] = mdl
             tail = det[len(mdl):] if det[:len(mdl)].lower() == mdl.lower() else det.replace(mdl, "", 1)
             result["details"] = _clean(tail)
+    # Stamp the canonical component kind (the parser's name) so the UI can pick
+    # the right feature columns without re-deriving the type from noisy labels.
+    if result:
+        result["_kind"] = fn.__name__.lstrip("_")
     return result
