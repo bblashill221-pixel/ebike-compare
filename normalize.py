@@ -40,6 +40,10 @@ _NEW_TAG = re.compile(r"new[\s_-]?arrival|just[\s_-]?(?:dropped|launched|release
 
 
 def _is_new(m: dict) -> bool:
+    # enrich_new_flag.py sets this explicitly from the brand's product tags;
+    # fall back to deriving it from any raw tags the scraper kept.
+    if isinstance(m.get("is_new"), bool):
+        return m["is_new"]
     return any(_NEW_TAG.search(str(t)) for t in (m.get("tags") or []))
 
 

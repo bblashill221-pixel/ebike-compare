@@ -90,6 +90,9 @@ print((json.load(open(f[0])).get('generated_at','') or '')[:10]) if f else print
     # component cost estimates from the final data.
     echo "--- $(date -Is) : fill_warranty + shipping/accessories + component costs ---"
     "$PY" "$PROJECT_DIR/fill_warranty.py" || true
+    # Flag new arrivals from each brand's own product tags (drives the "New"
+    # badge + filter); brands that don't tag new arrivals are left as not-new.
+    "$PY" "$PROJECT_DIR/enrich_new_flag.py" || true
     "$PY" "$PROJECT_DIR/enrich_shipping_accessories.py" || true
     # Fill each bike's rear-rack max load from the brand's rack accessory pages
     # (the bike's own sheet often omits it). Needs available_accessories above.
