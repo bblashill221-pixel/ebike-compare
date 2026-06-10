@@ -98,9 +98,6 @@ function BikeCardImpl({ model }: { model: Model }) {
 
   // spec-tile numbers are shown without thousands separators ("1250", not "1,250")
   const tile = (n: number) => formatNumber(n, 0, false);
-  // watts compacted to save room: 1000+ becomes "K" (1100 -> 1.1K, 1500 -> 1.5K,
-  // 2000 -> 2K), trailing zeros trimmed; under 1000 shown as-is (750).
-  const watt = (n: number) => (n >= 1000 ? `${+(n / 1000).toFixed(2)}K` : tile(n));
 
   const cPrices = colorPrices(model);
   const colorUp = upchargeText(cPrices, null, model.currency, color);
@@ -116,18 +113,14 @@ function BikeCardImpl({ model }: { model: Model }) {
   const hasPeak = t.motor_peak_w != null;
   const motorLabel =
     hasNom && hasPeak ? "Motor (nominal/peak)" : hasPeak ? "Motor (peak)" : "Motor";
-  // when both ratings are 1000W+, share one "kW" unit (1000/1500 -> "1/1.5 kW",
-  // 1100/14000 -> "1.1/14 kW"); otherwise keep the per-value compaction in W.
-  const kv = (n: number) => `${+(n / 1000).toFixed(2)}`;
-  const bothKW = hasNom && hasPeak && t.motor_w! >= 1000 && t.motor_peak_w! >= 1000;
-  const motorValue = bothKW
-    ? `${kv(t.motor_w!)}/${kv(t.motor_peak_w!)} kW`
-    : hasNom && hasPeak
-      ? `${watt(t.motor_w!)}/${watt(t.motor_peak_w!)} W`
+  // full wattage, no thousands separators (e.g. "750/1000 W", "1500 W")
+  const motorValue =
+    hasNom && hasPeak
+      ? `${tile(t.motor_w!)}/${tile(t.motor_peak_w!)} W`
       : hasNom
-        ? `${watt(t.motor_w!)} W`
+        ? `${tile(t.motor_w!)} W`
         : hasPeak
-          ? `${watt(t.motor_peak_w!)} W`
+          ? `${tile(t.motor_peak_w!)} W`
           : "—";
 
   // range shown as "low/high" when a span is stated, else the single figure
