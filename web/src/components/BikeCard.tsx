@@ -257,31 +257,31 @@ function BikeCardImpl({ model }: { model: Model }) {
         {/* the five core specs, always shown ("—" when unknown) */}
         <div className="grid grid-cols-5 gap-2">
           <Spec
-            icon={<BatteryIcon className="h-[24px] w-[24px]" />}
+            icon={<BatteryIcon className="h-[26px] w-[26px]" />}
             tint="bg-emerald-50 border-emerald-200"
             label="Battery"
             value={t.battery_wh != null ? `${tile(t.battery_wh)} Wh` : "—"}
           />
           <Spec
-            icon={<MotorIcon className="h-[24px] w-[24px]" />}
+            icon={<MotorIcon className="h-[26px] w-[26px]" />}
             tint="bg-amber-50 border-amber-200"
             label={motorLabel}
             value={motorValue}
           />
           <Spec
-            icon={<TorqueIcon className="h-[24px] w-[24px]" />}
+            icon={<TorqueIcon className="h-[26px] w-[26px]" />}
             tint="bg-rose-50 border-rose-200"
             label="Torque"
             value={t.torque_nm != null ? `${tile(t.torque_nm)} Nm` : "—"}
           />
           <Spec
-            icon={<RangeIcon className="h-[24px] w-[24px]" />}
+            icon={<RangeIcon className="h-[26px] w-[26px]" />}
             tint="bg-sky-50 border-sky-200"
             label={rangeLabel}
             value={rangeValue}
           />
           <Spec
-            icon={<WeightIcon className="h-[24px] w-[24px]" />}
+            icon={<WeightIcon className="h-[26px] w-[26px]" />}
             tint="bg-violet-50 border-violet-200"
             label="Weight"
             value={t.weight_lb != null ? `${tile(t.weight_lb)} lb` : "—"}
