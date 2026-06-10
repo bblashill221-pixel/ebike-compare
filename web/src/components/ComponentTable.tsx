@@ -20,8 +20,8 @@ function isEmpty(v: SpecValue): boolean {
 
 function renderCell(col: Column, obj: Record<string, SpecValue>, units: UnitSystem): string {
   const v = rawValue(col, obj);
-  if (isEmpty(v)) return "—";
-  if (typeof v === "boolean") return v ? "✓" : "—";
+  if (isEmpty(v)) return "";
+  if (typeof v === "boolean") return v ? "✓" : "";
   if (Array.isArray(v)) return v.map(String).join(", ");
   if (typeof v === "number") return formatNumber(v, 2, false) + (col.unit ?? "");
   if (typeof v !== "string") return formatSpecValue(v, units); // nested object fallback
@@ -61,7 +61,7 @@ export function ComponentTable({ kind, instances }: { kind: string; instances: C
               <tr key={i} className="align-top">
                 {showPos && (
                   <td className="whitespace-nowrap py-1 pr-3 font-medium text-slate-500">
-                    {inst.position ?? "—"}
+                    {inst.position ?? ""}
                   </td>
                 )}
                 {cols.map((col) => (
