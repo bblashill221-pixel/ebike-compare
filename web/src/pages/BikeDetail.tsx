@@ -182,12 +182,20 @@ export function BikeDetail() {
             )}
           </div>
         </div>
-        {sideGroups.map((g) => (
-          <div key={g} className="card p-4">
-            <h2 className="mb-2 font-semibold text-slate-800">{titleCase(g)}</h2>
-            <SpecTable group={model.specs[g]} />
-          </div>
-        ))}
+        {sideGroups.map((g) => {
+          const isGeneral = g === "general_info";
+          // "Key Aspects" leads with the rider-height fit range
+          const groupData =
+            isGeneral && riderFit ? { rider_height: riderFit, ...model.specs[g] } : model.specs[g];
+          return (
+            <div key={g} className="card p-4">
+              <h2 className="mb-2 font-semibold text-slate-800">
+                {isGeneral ? "Key Aspects" : titleCase(g)}
+              </h2>
+              <SpecTable group={groupData} />
+            </div>
+          );
+        })}
         </div>
 
         <div className="space-y-4">
