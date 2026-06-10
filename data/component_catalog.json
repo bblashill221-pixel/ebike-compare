@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-10T04:58:57.885291+00:00",
-  "component_count": 632,
+  "generated_at": "2026-06-10T05:10:11.201326+00:00",
+  "component_count": 643,
   "priced_count": 0,
   "components": {
     "battery|aventon|": {
@@ -8819,7 +8819,7 @@
         "torque_nm": 95,
         "_kind": "motor"
       },
-      "sample_details": "hub motor with of - our strongest hill-climbing motor",
+      "sample_details": "with of - our strongest hill-climbing",
       "usage_count": 6,
       "used_by": [
         "ride1up__vorsa",
@@ -8828,6 +8828,29 @@
         "ride1up__vorsa--vorsa--step-thru",
         "ride1up__vorsa--ft",
         "ride1up__vorsa--ft--step-thru"
+      ],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
+    "motor|ananda|m100": {
+      "category": "motor",
+      "manufacturer": "Ananda",
+      "model": "M100",
+      "attributes": {
+        "placement": "mid",
+        "power_w": 500,
+        "voltage_v": 48,
+        "_kind": "motor"
+      },
+      "sample_details": null,
+      "usage_count": 1,
+      "used_by": [
+        "himiway__himiway-a7pro-commuter-ebike"
       ],
       "aftermarket": {
         "price_usd": null,
@@ -8848,10 +8871,8 @@
         "_kind": "motor"
       },
       "sample_details": "motor",
-      "usage_count": 1,
-      "used_by": [
-        "himiway__himiway-a7pro-commuter-ebike"
-      ],
+      "usage_count": 0,
+      "used_by": [],
       "aftermarket": {
         "price_usd": null,
         "currency": "USD",
@@ -8860,10 +8881,10 @@
         "notes": null
       }
     },
-    "motor|aventon|a100 mid-drive": {
+    "motor|aventon|a100": {
       "category": "motor",
       "manufacturer": "Aventon",
-      "model": "a100 mid-drive",
+      "model": "a100",
       "attributes": {
         "placement": "mid",
         "peak_w": 750,
@@ -8886,6 +8907,29 @@
         "notes": null
       }
     },
+    "motor|aventon|a100 mid-drive": {
+      "category": "motor",
+      "manufacturer": "Aventon",
+      "model": "a100 mid-drive",
+      "attributes": {
+        "placement": "mid",
+        "peak_w": 750,
+        "power_w": 250,
+        "torque_nm": 100,
+        "voltage_v": 36,
+        "_kind": "motor"
+      },
+      "sample_details": "IP67 rating",
+      "usage_count": 0,
+      "used_by": [],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
     "motor|aventon|ultro s mid-drive": {
       "category": "motor",
       "manufacturer": "Aventon",
@@ -8897,6 +8941,27 @@
         "_kind": "motor"
       },
       "sample_details": "Motor, Motor, Power",
+      "usage_count": 0,
+      "used_by": [],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
+    "motor|aventon|ultro s power": {
+      "category": "motor",
+      "manufacturer": "Aventon",
+      "model": "Ultro S Power",
+      "attributes": {
+        "placement": "mid",
+        "peak_w": 750,
+        "torque_nm": 100,
+        "_kind": "motor"
+      },
+      "sample_details": "Ultro S, Power",
       "usage_count": 2,
       "used_by": [
         "aventon__level-4-adv-ebike",
@@ -8940,7 +9005,7 @@
         "power_w": 750,
         "_kind": "motor"
       },
-      "sample_details": "Hub Motor",
+      "sample_details": null,
       "usage_count": 2,
       "used_by": [
         "euphree__solar-sparrow-chain",
@@ -8964,11 +9029,35 @@
         "power_w": 750,
         "_kind": "motor"
       },
-      "sample_details": "rear hub motor. motor power, nominal",
+      "sample_details": "rear. power, nominal",
       "usage_count": 2,
       "used_by": [
         "monarc__marker-high-step-ebike",
         "monarc__marker-step-thru-ebike"
+      ],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
+    "motor|bafang|bbs02 brushless w": {
+      "category": "motor",
+      "manufacturer": "Bafang",
+      "model": "BBS02 Brushless w",
+      "attributes": {
+        "placement": "mid",
+        "power_w": 500,
+        "torque_nm": 105,
+        "voltage_v": 48,
+        "_kind": "motor"
+      },
+      "sample_details": null,
+      "usage_count": 1,
+      "used_by": [
+        "evelo__compass"
       ],
       "aftermarket": {
         "price_usd": null,
@@ -8990,10 +9079,8 @@
         "_kind": "motor"
       },
       "sample_details": "Motor w",
-      "usage_count": 1,
-      "used_by": [
-        "evelo__compass"
-      ],
+      "usage_count": 0,
+      "used_by": [],
       "aftermarket": {
         "price_usd": null,
         "currency": "USD",
@@ -9014,10 +9101,35 @@
         "voltage_v": 72,
         "_kind": "motor"
       },
-      "sample_details": "20 inch Rear-hub motor, peak - CANBUS SYSTEM",
+      "sample_details": "20 inch Rear-, peak - CANBUS SYSTEM",
       "usage_count": 1,
       "used_by": [
         "magician__alpha-mini"
+      ],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
+    "motor|bafang|g510 max": {
+      "category": "motor",
+      "manufacturer": "Bafang",
+      "model": "G510 Max",
+      "attributes": {
+        "placement": "mid",
+        "peak_w": 1500,
+        "power_w": 1000,
+        "torque_nm": 160,
+        "voltage_v": 52,
+        "_kind": "motor"
+      },
+      "sample_details": "G510, Max : CANBUS SYSTEM",
+      "usage_count": 1,
+      "used_by": [
+        "magician__atlas"
       ],
       "aftermarket": {
         "price_usd": null,
@@ -9040,10 +9152,8 @@
         "_kind": "motor"
       },
       "sample_details": "Drive, Max : CANBUS SYSTEM",
-      "usage_count": 1,
-      "used_by": [
-        "magician__atlas"
-      ],
+      "usage_count": 0,
+      "used_by": [],
       "aftermarket": {
         "price_usd": null,
         "currency": "USD",
@@ -9064,6 +9174,28 @@
         "_kind": "motor"
       },
       "sample_details": "Hub Motor, Rated, Max",
+      "usage_count": 0,
+      "used_by": [],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
+    "motor|bafang|geared rated max": {
+      "category": "motor",
+      "manufacturer": "Bafang",
+      "model": "Geared Rated Max",
+      "attributes": {
+        "placement": "hub",
+        "peak_w": 1000,
+        "power_w": 750,
+        "torque_nm": 80,
+        "_kind": "motor"
+      },
+      "sample_details": "Geared, Rated, Max",
       "usage_count": 4,
       "used_by": [
         "velowave__grace-step-thru-electric-bike",
@@ -9088,7 +9220,7 @@
         "power_w": 750,
         "_kind": "motor"
       },
-      "sample_details": "Hub Motor",
+      "sample_details": null,
       "usage_count": 3,
       "used_by": [
         "euphree__city-robin",
@@ -9150,6 +9282,28 @@
         "notes": null
       }
     },
+    "motor|bafang|m620": {
+      "category": "motor",
+      "manufacturer": "Bafang",
+      "model": "M620",
+      "attributes": {
+        "placement": "mid",
+        "power_w": 1000,
+        "_kind": "motor"
+      },
+      "sample_details": null,
+      "usage_count": 1,
+      "used_by": [
+        "himiway__himiway-d7-pro-cobra-electric-hunting-bike"
+      ],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
     "motor|bafang|m620 mid-drive": {
       "category": "motor",
       "manufacturer": "Bafang",
@@ -9160,10 +9314,8 @@
         "_kind": "motor"
       },
       "sample_details": "motor",
-      "usage_count": 1,
-      "used_by": [
-        "himiway__himiway-d7-pro-cobra-electric-hunting-bike"
-      ],
+      "usage_count": 0,
+      "used_by": [],
       "aftermarket": {
         "price_usd": null,
         "currency": "USD",
@@ -9185,11 +9337,60 @@
         "_kind": "motor"
       },
       "sample_details": "Mid-drive, rated power, power, of, based on CAN6.3 protocol",
+      "usage_count": 0,
+      "used_by": [],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
+    "motor|bafang|rated power power": {
+      "category": "motor",
+      "manufacturer": "Bafang",
+      "model": "rated power power",
+      "attributes": {
+        "placement": "mid",
+        "peak_w": 750,
+        "power_w": 500,
+        "torque_nm": 130,
+        "voltage_v": 48,
+        "_kind": "motor"
+      },
+      "sample_details": "rated power, power, of, based on CAN6.3 protocol",
       "usage_count": 3,
       "used_by": [
         "cyke__falcon-a-full-suspension-ebike",
         "cyke__falcon-s-full-suspension-ebike",
         "cyke__falcon-x-full-suspension-ebike"
+      ],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
+    "motor|bafang|rear- peak - canbus": {
+      "category": "motor",
+      "manufacturer": "Bafang",
+      "model": "Rear- peak - CANBUS",
+      "attributes": {
+        "placement": "hub",
+        "peak_w": 5000,
+        "power_w": 3000,
+        "torque_nm": 200,
+        "voltage_v": 72,
+        "_kind": "motor"
+      },
+      "sample_details": "Rear-, peak - CANBUS SYSTEM",
+      "usage_count": 2,
+      "used_by": [
+        "magician__alpha",
+        "magician__alpha--step-over"
       ],
       "aftermarket": {
         "price_usd": null,
@@ -9212,11 +9413,8 @@
         "_kind": "motor"
       },
       "sample_details": "motor, peak - CANBUS SYSTEM",
-      "usage_count": 2,
-      "used_by": [
-        "magician__alpha",
-        "magician__alpha--step-over"
-      ],
+      "usage_count": 0,
+      "used_by": [],
       "aftermarket": {
         "price_usd": null,
         "currency": "USD",
@@ -9258,7 +9456,7 @@
         "torque_nm": 85,
         "_kind": "motor"
       },
-      "sample_details": "rear hub motor, of",
+      "sample_details": "rear, of",
       "usage_count": 4,
       "used_by": [
         "cyke__cheetah-hunting-ebike",
@@ -9440,6 +9638,25 @@
         "_kind": "motor"
       },
       "sample_details": "Motor, gen2, 28mph",
+      "usage_count": 0,
+      "used_by": [],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
+    "motor|brose|gen2 28mph": {
+      "category": "motor",
+      "manufacturer": "Brose",
+      "model": "gen2 28mph",
+      "attributes": {
+        "torque_nm": 70,
+        "_kind": "motor"
+      },
+      "sample_details": "gen2, 28mph",
       "usage_count": 2,
       "used_by": [
         "specialized__turbo-como-40",
@@ -9462,7 +9679,7 @@
         "torque_nm": 90,
         "_kind": "motor"
       },
-      "sample_details": "mid-drive motor with",
+      "sample_details": "with",
       "usage_count": 5,
       "used_by": [
         "ride1up__prodigy-v2",
@@ -9486,7 +9703,7 @@
       "attributes": {
         "_kind": "motor"
       },
-      "sample_details": "custom tuned motor, alloy, 6-bolt disc, 9 speed freehub, bolt on, 36h",
+      "sample_details": "custom tuned, alloy, 6-bolt disc, 9 speed freehub, bolt on, 36h",
       "usage_count": 2,
       "used_by": [
         "specialized__haul-lt",
@@ -9508,11 +9725,35 @@
         "power_w": 500,
         "_kind": "motor"
       },
-      "sample_details": "motor",
+      "sample_details": null,
       "usage_count": 2,
       "used_by": [
         "himiway__electric-commuter-bike-a3",
         "himiway__folding-electric-bike-b3"
+      ],
+      "aftermarket": {
+        "price_usd": null,
+        "currency": "USD",
+        "url": null,
+        "checked_at": null,
+        "notes": null
+      }
+    },
+    "motor|mivice|": {
+      "category": "motor",
+      "manufacturer": "Mivice",
+      "model": null,
+      "attributes": {
+        "placement": "mid",
+        "power_w": 500,
+        "torque_nm": 105,
+        "_kind": "motor"
+      },
+      "sample_details": null,
+      "usage_count": 2,
+      "used_by": [
+        "heybike__alpha",
+        "heybike__alpha--step-thru"
       ],
       "aftermarket": {
         "price_usd": null,
@@ -9532,7 +9773,7 @@
         "torque_nm": 50,
         "_kind": "motor"
       },
-      "sample_details": "hub motor with of",
+      "sample_details": "with of",
       "usage_count": 2,
       "used_by": [
         "ride1up__roadster-v3",
@@ -9557,11 +9798,8 @@
         "_kind": "motor"
       },
       "sample_details": "drive motor",
-      "usage_count": 2,
-      "used_by": [
-        "heybike__alpha",
-        "heybike__alpha--step-thru"
-      ],
+      "usage_count": 0,
+      "used_by": [],
       "aftermarket": {
         "price_usd": null,
         "currency": "USD",
@@ -9581,7 +9819,7 @@
         "voltage_v": 36,
         "_kind": "motor"
       },
-      "sample_details": "Hub Drive with 6 speed sensors",
+      "sample_details": "with 6 speed sensors",
       "usage_count": 2,
       "used_by": [
         "aventon__abound-lr-ebike",
@@ -9604,7 +9842,7 @@
         "torque_nm": 105,
         "_kind": "motor"
       },
-      "sample_details": "3.1 Motor, power",
+      "sample_details": "3.1, power",
       "usage_count": 38,
       "used_by": [
         "specialized__levo-4-evo-comp",
@@ -9661,7 +9899,7 @@
       "attributes": {
         "_kind": "motor"
       },
-      "sample_details": "1.2 SL Custom Lightweight Motor",
+      "sample_details": "1.2 SL Custom Lightweight",
       "usage_count": 1,
       "used_by": [
         "specialized__turbo-creo-2-comp-sram-apex--x1-eagle-axs"
@@ -9681,7 +9919,7 @@
       "attributes": {
         "_kind": "motor"
       },
-      "sample_details": "1.2 Custom Rx Trail Tuned Motor",
+      "sample_details": "1.2 Custom Rx Trail Tuned",
       "usage_count": 10,
       "used_by": [
         "specialized__s-works-turbo-kenevo-sl-2-frameset",
@@ -9715,7 +9953,7 @@
         "voltage_v": 72,
         "_kind": "motor"
       },
-      "sample_details": "Dual motor (AWD). Combined and ~ of. Rear Hentach steel plated geared hub motor ( nominal). Front Hentach steel plated geared hub motor ( nominal)",
+      "sample_details": "Dual (AWD). Combined and ~ of. Rear Hentach steel plated geared ( nominal). Front Hentach steel plated geared ( nominal)",
       "usage_count": 3,
       "used_by": [
         "wired__wired-predator",
@@ -9741,7 +9979,7 @@
         "voltage_v": 72,
         "_kind": "motor"
       },
-      "sample_details": "hub motor that produces a peak output of over and of for incredible acceleration and climbing ability. Ebikes has earned sole exclus",
+      "sample_details": "that produces a peak output of over and of for incredible acceleration and climbing ability. Ebikes has earned sole exclus",
       "usage_count": 2,
       "used_by": [
         "wired__wired-scout",

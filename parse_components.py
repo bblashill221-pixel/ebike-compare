@@ -419,7 +419,10 @@ def _motor(v, brand):
                 r"\d{3,4}\s*w\s*\(?\s*peak\)?", r"peak[^0-9]{0,14}\d{3,4}\s*w",
                 r"\d{3,4}\s*w", r"\d{2,3}\s*n[·.\s]?m", r"\d{2,3}\s*v\b",
                 r"\((?:sustained|continuous|nominal|rated|peak|max\.?\s*power|cont\.?)\)",
-                r"\btorque\b"):
+                r"\btorque\b",
+                # placement words are already shown in the Drive column — drop
+                # them (and the bare "motor"/"drive") so Extra isn't redundant
+                r"mid[\s-]?drive", r"\bhub\b", r"\bdrive\b", r"\bmotor\b"):
         rest = re.sub(pat, "", rest, flags=re.I)
     out["details"] = _clean(rest)
     return out
