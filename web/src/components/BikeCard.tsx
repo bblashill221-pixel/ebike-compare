@@ -9,7 +9,8 @@ import { useCompare } from "../compare/CompareContext";
 import { Price } from "./Price";
 import { AffiliateLink } from "./AffiliateLink";
 import { ColorSwatches, upchargeText } from "./ColorSwatches";
-import { BatteryIcon, MotorIcon, RangeIcon, TorqueIcon, WeightIcon } from "./icons";
+import { BatteryIcon, MotorIcon, RangeIcon, RiderHeightIcon, TorqueIcon, WeightIcon } from "./icons";
+import { useUnits, inToFtIn } from "../units";
 
 export function primaryImage(m: Model): string | null {
   return m.colors?.find((c) => c.image)?.image ?? null;
@@ -67,6 +68,15 @@ function BikeCardImpl({ model }: { model: Model }) {
   const { has, toggle, isFull } = useCompare();
   const selected = has(model.id);
   const t = model.analysis?.specs_typed ?? {};
+  const [units] = useUnits();
+  // rider-height fit range (enveloped across all frame sizes), in the active unit
+  const ftIn = (inch: number) => `${inToFtIn(inch).ft}'${inToFtIn(inch).in}"`;
+  const riderFit =
+    t.fit_height_min_in != null && t.fit_height_max_in != null
+      ? units === "metric" && t.fit_height_min_mm != null && t.fit_height_max_mm != null
+        ? `${Math.round(t.fit_height_min_mm / 10)}–${Math.round(t.fit_height_max_mm / 10)} cm`
+        : `${ftIn(t.fit_height_min_in)}–${ftIn(t.fit_height_max_in)}`
+      : null;
   // selection is shared with the detail page (and persists for the session);
   // a fresh visit defaults to the first in-stock colorway
   const [showSoldOut] = useShowSoldOut();
@@ -287,6 +297,14 @@ function BikeCardImpl({ model }: { model: Model }) {
             value={t.weight_lb != null ? `${tile(t.weight_lb)} lb` : "—"}
           />
         </div>
+
+        {/* rider-height fit range, when the bike publishes one */}
+        {riderFit && (
+          <div className="flex items-center justify-center gap-1.5 text-xs text-slate-500">
+            <RiderHeightIcon className="h-4 w-4" />
+            <span>Fits {riderFit}</span>
+          </div>
+        )}
 
         {/* uncommon/premium features (regen braking, dropper post, ...) */}
         {model.analysis?.highlights?.length > 0 && (
