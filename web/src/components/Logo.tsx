@@ -43,7 +43,7 @@ export function Logo({ className = "" }: Props) {
       className={`inline-flex items-center whitespace-nowrap font-extrabold tracking-tight text-slate-900 ${className}`}
       aria-label="eBike Compare"
     >
-      <Bolt className="mr-[0.12em] text-brand-600" />
+      <Bolt className="mr-[0.12em] text-amber-400" />
       eBike&nbsp;C<MagnifierO className="mx-[0.02em] text-brand-600" />mpare
     </span>
   );
