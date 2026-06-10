@@ -1,5 +1,6 @@
 import type { SpecGroup } from "../types";
 import { formatSpecValue, labelize } from "../format";
+import { useUnits } from "../units";
 
 function isEmpty(v: unknown): boolean {
   if (v == null || v === "") return true;
@@ -9,6 +10,7 @@ function isEmpty(v: unknown): boolean {
 }
 
 export function SpecTable({ group }: { group: SpecGroup }) {
+  const [units] = useUnits();
   const rows = Object.entries(group).filter(([, v]) => !isEmpty(v));
   if (!rows.length) return null;
   return (
@@ -19,7 +21,7 @@ export function SpecTable({ group }: { group: SpecGroup }) {
             <th className="w-2/5 py-1.5 pr-3 text-left font-medium text-slate-500">
               {labelize(k)}
             </th>
-            <td className="py-1.5 text-slate-800">{formatSpecValue(v)}</td>
+            <td className="py-1.5 text-slate-800">{formatSpecValue(v, units)}</td>
           </tr>
         ))}
       </tbody>

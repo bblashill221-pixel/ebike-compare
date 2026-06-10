@@ -1,5 +1,6 @@
 // Small presentation helpers shared across components.
 import type { SpecValue } from "./types";
+import type { UnitSystem } from "./units";
 
 /** Capitalize only the first letter, leaving the rest untouched ("ride1up" -> "Ride1up"). */
 export function capitalize(s: string): string {
@@ -51,24 +52,53 @@ export function formatNumber(n: number, digits = 0, grouping = true): string {
 /** Fields whose key IS the unit: render "800 lumens" / "70 lux", not "Lumens: 800". */
 const VALUE_UNIT: Record<string, string> = { lumens: "lumens", lux: "lux" };
 
-/** Render a parsed spec value (string / number / dict / list) to readable text. */
-export function formatSpecValue(value: SpecValue): string {
+const IMPERIAL_UNITS = new Set(["lb", "mph", "mi", "in"]);
+const METRIC_UNITS = new Set(["kg", "kph", "km", "mm", "cm"]);
+
+/** Of paired imperial/metric fields of one measurement (weight_lb + weight_kg),
+ *  the keys to hide so only the active unit system is shown. Single-unit fields
+ *  are always kept. */
+function hiddenUnitKeys(keys: string[], system: UnitSystem): Set<string> {
+  const suffix = (k: string) => k.slice(k.lastIndexOf("_") + 1);
+  const hide = new Set<string>();
+  for (const k of keys) {
+    const suf = suffix(k);
+    const isImp = IMPERIAL_UNITS.has(suf);
+    const isMet = METRIC_UNITS.has(suf);
+    if (!isImp && !isMet) continue;
+    const prefix = k.slice(0, k.length - suf.length); // includes trailing "_"
+    const paired = keys.some((j) => {
+      if (j === k || !j.startsWith(prefix)) return false;
+      const s = suffix(j);
+      return isImp ? METRIC_UNITS.has(s) : IMPERIAL_UNITS.has(s);
+    });
+    if (paired && ((system === "imperial" && isMet) || (system === "metric" && isImp))) {
+      hide.add(k);
+    }
+  }
+  return hide;
+}
+
+/** Render a parsed spec value (string / number / dict / list) to readable text.
+ *  `system` picks which side of any paired imperial/metric field to show. */
+export function formatSpecValue(value: SpecValue, system: UnitSystem = "imperial"): string {
   if (value == null) return "—";
   if (typeof value === "boolean") return value ? "Yes" : "No";
   if (typeof value === "number") return formatNumber(value, 2);
   if (typeof value === "string") return value;
-  if (Array.isArray(value)) return value.map(formatSpecValue).join(", ");
+  if (Array.isArray(value)) return value.map((x) => formatSpecValue(x, system)).join(", ");
   // object: prefer a "details" key, then join the rest as "Label: value".
   const obj = value as Record<string, SpecValue>;
+  const hide = hiddenUnitKeys(Object.keys(obj), system);
   const parts: string[] = [];
   for (const [k, v] of Object.entries(obj)) {
-    if (v == null || v === "") continue;
+    if (v == null || v === "" || hide.has(k)) continue;
     if (k === "details") {
-      parts.push(formatSpecValue(v));
+      parts.push(formatSpecValue(v, system));
     } else if (VALUE_UNIT[k] && (typeof v === "number" || typeof v === "string")) {
-      parts.push(`${formatSpecValue(v)} ${VALUE_UNIT[k]}`);
+      parts.push(`${formatSpecValue(v, system)} ${VALUE_UNIT[k]}`);
     } else {
-      parts.push(`${labelize(k)}: ${formatSpecValue(v)}`);
+      parts.push(`${labelize(k)}: ${formatSpecValue(v, system)}`);
     }
   }
   return parts.join(" · ") || "—";

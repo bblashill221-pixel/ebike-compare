@@ -271,9 +271,21 @@ export function BikeDetail() {
         <h2 className="mb-3 font-semibold text-slate-800">How it compares to the fleet</h2>
         <div className="grid gap-x-8 gap-y-4 sm:grid-cols-2">
           {PERCENTILE_FIELDS.map(({ field, label, unit, icon }) => {
-            const stat = analysisStats[field];
-            const v = valueOf(field);
+            let stat = analysisStats[field];
+            let v = valueOf(field);
+            let u = unit;
             if (!stat) return null;
+            // show the unit-dependent fields in the selected system (scaling the
+            // value and the whole distribution keeps the percentile position).
+            if (units === "metric") {
+              const conv = field === "range_mi" ? 1.60934 : field === "weight_lb" ? 0.453592 : null;
+              if (conv) {
+                const sc = (n: number) => n * conv;
+                stat = { ...stat, min: sc(stat.min), p10: sc(stat.p10), p50: sc(stat.p50), p90: sc(stat.p90), max: sc(stat.max) };
+                if (v != null) v = Math.round(sc(v));
+                u = field === "range_mi" ? " km" : " kg";
+              }
+            }
             return (
               <div key={field}>
                 <div className="mb-1 flex justify-between text-sm">
@@ -282,10 +294,10 @@ export function BikeDetail() {
                     {label}
                   </span>
                   <span className="text-slate-500">
-                    {v == null ? "—" : unit === "$" ? `$${v}` : `${v}${unit ?? ""}`}
+                    {v == null ? "—" : u === "$" ? `$${v}` : `${v}${u ?? ""}`}
                   </span>
                 </div>
-                <DistributionPlot stat={stat} value={v} unit={unit} />
+                <DistributionPlot stat={stat} value={v} unit={u} />
               </div>
             );
           })}
