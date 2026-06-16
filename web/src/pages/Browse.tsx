@@ -30,7 +30,9 @@ type SortKey =
   | "weight_asc"
   | "value_desc"
   | "range_score_desc"
-  | "power_desc";
+  | "power_desc"
+  | "parts_retail_desc"
+  | "parts_wholesale_desc";
 
 const SORTS: { key: SortKey; label: string }[] = [
   { key: "relevance", label: "Relevance" },
@@ -44,11 +46,15 @@ const SORTS: { key: SortKey; label: string }[] = [
   { key: "value_desc", label: "Value score ↓" },
   { key: "range_score_desc", label: "Range score ↓" },
   { key: "power_desc", label: "Power score ↓" },
+  { key: "parts_retail_desc", label: "Parts value (retail $) ↓" },
+  { key: "parts_wholesale_desc", label: "Parts cost (OEM $) ↓" },
 ];
 
 const last = Number.NEGATIVE_INFINITY;
 const typed = (m: Model, k: string) => (m.analysis?.specs_typed?.[k] as number | undefined);
 const score = (m: Model, k: string) => m.analysis?.scores?.[k];
+const cq = (m: Model, k: string) =>
+  (m.analysis?.component_quality?.[k as keyof NonNullable<Model["analysis"]["component_quality"]>] as number | null | undefined) ?? undefined;
 
 function sortModels(models: Model[], key: SortKey): Model[] {
   if (key === "relevance") return models;
@@ -76,6 +82,10 @@ function sortModels(models: Model[], key: SortKey): Model[] {
       return byDesc((m) => score(m, "range"));
     case "power_desc":
       return byDesc((m) => score(m, "power"));
+    case "parts_retail_desc":
+      return byDesc((m) => cq(m, "component_retail_value_usd"));
+    case "parts_wholesale_desc":
+      return byDesc((m) => cq(m, "component_wholesale_value_usd"));
   }
 }
 

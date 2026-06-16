@@ -110,11 +110,14 @@ export interface Analysis {
   percentiles: Record<string, number>;
   scores: Record<string, number>;
   highlights: string[];
-  /** Aftermarket part-price facts joined from the component catalog. */
+  /** Part-price facts joined from the component catalog. The two value roll-ups
+   *  are independent estimates (retail = aftermarket street value; wholesale =
+   *  OEM cost proxy) — never blend them into one score. */
   component_quality?: {
     parts_identified: number;
     parts_priced: number;
-    aftermarket_value_usd: number | null;
+    component_retail_value_usd: number | null;
+    component_wholesale_value_usd: number | null;
   };
 }
 

@@ -12,9 +12,15 @@ const FIELD_META: Record<string, { label: string; unit?: string; price?: boolean
   weight_lb: { label: "Weight", unit: " lb" },
   gears: { label: "Gears" },
   bom_pct: { label: "Est. component cost (% of retail)" },
+  component_retail_value_usd: { label: "Est. parts value (aftermarket retail)", price: true },
+  component_wholesale_value_usd: { label: "Est. parts cost (OEM wholesale)", price: true },
 };
 
-const ORDER = ["price", "battery_wh", "motor_w", "motor_peak_w", "torque_nm", "range_mi", "weight_lb", "gears", "bom_pct"];
+const ORDER = [
+  "price", "battery_wh", "motor_w", "motor_peak_w", "torque_nm", "range_mi",
+  "weight_lb", "gears", "bom_pct",
+  "component_retail_value_usd", "component_wholesale_value_usd",
+];
 
 export function Analysis() {
   const { analysisStats, disclaimer, models, status } = useData();

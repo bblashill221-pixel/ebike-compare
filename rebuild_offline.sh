@@ -21,6 +21,10 @@ run() { echo "--- $(date -Is) : $1"; "$PY" "$PROJECT_DIR/$1" "${@:2}"; }
 
 run normalize.py
 run component_catalog.py
+# Offline: fold the cached component prices (retail + wholesale) into the freshly
+# rebuilt catalog so analyze.py's value roll-ups pick them up. No network — the
+# actual price refresh (resolve_component_prices.py run) only happens in run_scrape.sh.
+run resolve_component_prices.py write-catalog
 run estimate_component_costs.py -o "$PROJECT_DIR/data/current/component_cost_estimates.json"
 run analyze.py
 run audit.py

@@ -603,7 +603,8 @@ def _stem(v, brand):
     rest = v
     out = {}
     man, rest = _find_brand(rest, _brands_for(
-        ("Zoom", "Promax", "Kalloy", "UNO", "Satori", "Aerozine", "Brose"), brand))
+        ("Zoom", "Promax", "Kalloy", "UNO", "Satori", "Aerozine", "Brose",
+         "RaceFace", "Race Face", "FSA", "Ritchey", "Truvativ", "Renthal"), brand))
     if man:
         out["manufacturer"] = man
     low = v.lower()
@@ -697,7 +698,8 @@ def _handlebars(v, brand):
     rest = v
     out = {}
     man, rest = _find_brand(rest, _brands_for(
-        ("Zoom", "Promax", "Kalloy", "UNO", "Satori", "Aerozine"), brand))
+        ("Zoom", "Promax", "Kalloy", "UNO", "Satori", "Aerozine",
+         "RaceFace", "Race Face", "FSA", "Ritchey", "Truvativ", "Renthal"), brand))
     if man:
         out["manufacturer"] = man
     low = v.lower()
@@ -735,7 +737,7 @@ def _handlebars(v, brand):
     for pat in (r"\d{3}\s*mm\s*(?:width|wide)?", r"\b(?:width|w)\s*:?\s*\d{3}",
                 r"[x*]\s*\d{3}\s*mm?", r"(31\.8|35|25\.4|22\.2)\s*mm?\s*(?:bar\s*)?clamp",
                 r"[x*]\s*(?:31\.8|35|25\.4|22\.2)", r"(?:Φ|ø|Ø)?\s*(?:31\.8|35)\s*mm",
-                r"\d{1,3}\s*mm\s*rise", r"rise\s*:?",
+                r"\d{1,3}\s*mm\s*rise", r"\brise\b\s*:?",
                 r"\d{1,2}\s*[°*]\s*(?:up|back)\s*sweep", r"\bclamp\b", r"\bwidth\b|\bwide\b"):
         rest = re.sub(pat, " ", rest, flags=re.I)
     out["details"] = _clean(rest)
@@ -815,6 +817,11 @@ def _chainring(v, brand):
 def _pedals(v, brand):
     rest, low = v, v.lower()
     out = {}
+    man, rest = _find_brand(rest, _brands_for(
+        ("Wellgo", "MKS", "RaceFace", "Race Face", "VP Components", "Crankbrothers",
+         "Crank Brothers"), brand))
+    if man:
+        out["manufacturer"] = man
     mt = re.search(r"(9/16|1/2)\s*\"?", v)
     if mt:
         out["thread"] = mt.group(1) + '"'
@@ -1022,7 +1029,9 @@ def _throttle(v, brand):
 def _grips(v, brand):
     rest, low = v, v.lower()
     out = {}
-    man, rest = _find_brand(rest, _brands_for(("Ergon", "Velo"), brand))
+    man, rest = _find_brand(rest, _brands_for(
+        ("Ergon", "Velo", "ODI", "Lizard Skins", "Wittkop", "SQlab", "Selle Royal",
+         "Herrmans"), brand))
     if man:
         out["manufacturer"] = man
     out["lock_on"] = bool(re.search(r"lock[\s-]?on|locking|lockable", low))
@@ -1035,7 +1044,13 @@ def _grips(v, brand):
 
 
 def _light(v, brand):
-    out, low = {}, v.lower()
+    rest, low = v, v.lower()
+    out = {}
+    man, rest = _find_brand(rest, _brands_for(
+        ("Spanninga", "Herrmans", "Lezyne", "Roxim", "Supernova", "Busch & Müller",
+         "Busch and Müller"), brand))
+    if man:
+        out["manufacturer"] = man
     # lumens = total light output (the light's "power"); capture it robustly.
     mlm = re.search(r"(\d{2,4})\s*[-]?\s*(?:lm\b|lumens?)", low)
     if mlm:
@@ -1048,7 +1063,7 @@ def _light(v, brand):
     # A horn is a separate safety item, not a property of the light — group_specs
     # surfaces it as its own `horn` field under Safety, so it is not parsed here.
     out["integrated"] = "integrated" in low
-    rest = re.sub(r"\d{2,4}\s*lux|\d{2,4}\s*[-]?\s*(?:lm\b|lumens?)", " ", v, flags=re.I)
+    rest = re.sub(r"\d{2,4}\s*lux|\d{2,4}\s*[-]?\s*(?:lm\b|lumens?)", " ", rest, flags=re.I)
     out["details"] = _clean(rest)
     return out
 
@@ -1056,6 +1071,11 @@ def _light(v, brand):
 def _wheel(v, brand):
     rest, low = v, v.lower()
     out = {}
+    man, rest = _find_brand(rest, _brands_for(
+        ("DT Swiss", "Mavic", "Sun Ringle", "Sun Ringlé", "WTB", "Alex Rims",
+         "Alexrims", "Jalco", "Rodi", "Novatec", "Mach1", "Formula"), brand))
+    if man:
+        out["manufacturer"] = man
     ms = re.search(r"\b(\d{2}(?:\.\d)?)\s*(?:\"|in\b|inch)", low)
     if ms:
         out["size_in"] = float(ms.group(1))

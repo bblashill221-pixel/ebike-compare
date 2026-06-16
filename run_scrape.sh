@@ -126,8 +126,14 @@ print((json.load(open(f[0])).get('generated_at','') or '')[:10]) if f else print
     # parsing into ebikes_normalized.json (the single transform step).
     "$PY" "$PROJECT_DIR/normalize.py" || true
     # Aggregate the fleet-wide part catalog (manufacturer + model number per
-    # component) used for aftermarket price lookups; prior lookups are preserved.
+    # component) used for price lookups; prior lookups are preserved.
     "$PY" "$PROJECT_DIR/component_catalog.py" || true
+    # Refresh per-part prices (retail + wholesale) only for parts that are new or
+    # whose lookup is >30 days old (cheap + idempotent); then fold the cache into
+    # the catalog. `run` needs ANTHROPIC_API_KEY; if absent/failed, write-catalog
+    # still applies whatever prices are already cached.
+    "$PY" "$PROJECT_DIR/resolve_component_prices.py" run --max-age-days 30 || true
+    "$PY" "$PROJECT_DIR/resolve_component_prices.py" write-catalog || true
     # Metrics last: BOM cost estimates, then the typed-fact + scoring analysis layer.
     "$PY" "$PROJECT_DIR/estimate_component_costs.py" \
         -o "$CURRENT_DIR/component_cost_estimates.json" || true

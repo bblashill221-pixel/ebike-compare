@@ -725,7 +725,8 @@ def _quantile(sorted_vals: list[float], q: float) -> float:
 def build_stats(typed_by_id: dict) -> dict:
     """Per-numeric-field {min,p10,p50,p90,max,count} across the whole field."""
     stats = {}
-    fields = NUMERIC_FIELDS + ["price", "bom_pct"]
+    fields = NUMERIC_FIELDS + ["price", "bom_pct",
+                               "component_retail_value_usd", "component_wholesale_value_usd"]
     for field in fields:
         vals = sorted(v for v in (t.get(field) for t in typed_by_id.values())
                       if isinstance(v, (int, float)))
@@ -868,21 +869,29 @@ def compute_scores(typed: dict, stats: dict, bom_pct, price_pct, pct: dict) -> d
 
 
 def component_quality(model: dict, part_prices: dict) -> dict:
-    """Join the component catalog's aftermarket lookups back onto one bike:
-    how many parsed parts were identified, how many have a known aftermarket
-    price, and what those parts add up to. Facts only — no blended score."""
-    identified = priced = 0
-    total = 0.0
+    """Join the component catalog's price lookups back onto one bike: how many
+    parsed parts were identified/priced, and TWO independent value roll-ups —
+    aftermarket retail value and OEM wholesale value (each summed across the
+    bike's part instances). Facts only — the two stand alone, never blended."""
+    identified = priced = retail_n = wholesale_n = 0
+    retail_total = wholesale_total = 0.0
     for key, _cat, _part in iter_components(model):
         identified += 1
-        p = part_prices.get(key)
-        if p is not None:
+        p = part_prices.get(key) or {}
+        r, w = p.get("retail"), p.get("wholesale")
+        if r is not None:
+            retail_n += 1
+            retail_total += r
+        if w is not None:
+            wholesale_n += 1
+            wholesale_total += w
+        if r is not None or w is not None:
             priced += 1
-            total += p
     return {
         "parts_identified": identified,
         "parts_priced": priced,
-        "aftermarket_value_usd": round(total, 2) if priced else None,
+        "component_retail_value_usd": round(retail_total, 2) if retail_n else None,
+        "component_wholesale_value_usd": round(wholesale_total, 2) if wholesale_n else None,
     }
 
 
@@ -917,14 +926,15 @@ def main():
     doc = json.load(open(args.input))
     models = doc.get("models", [])
 
-    # Aftermarket part prices from the component catalog (key -> price_usd).
+    # Part prices from the component catalog (key -> {retail, wholesale}).
     part_prices = {}
     try:
         cat = json.load(open(args.catalog))
         for key, e in (cat.get("components") or {}).items():
-            p = (e.get("aftermarket") or {}).get("price_usd")
-            if p is not None:
-                part_prices[key] = p
+            am = e.get("aftermarket") or {}
+            r, w = am.get("retail_usd"), am.get("wholesale_usd")
+            if r is not None or w is not None:
+                part_prices[key] = {"retail": r, "wholesale": w}
     except FileNotFoundError:
         pass
 
@@ -937,8 +947,10 @@ def main():
     except FileNotFoundError:
         print(f"[!] {args.costs} not found; value scores will be null.")
 
-    # Pass 1 - typed specs, plus price + bom folded in for the distributions.
+    # Pass 1 - typed specs, plus price + bom + component values folded in for
+    # the fleet distributions.
     typed_by_id = {}
+    cq_by_id = {}
     for m in models:
         t = extract_typed_specs(m)
         # frame_sizes is always a non-empty array (single-size = collection of one)
@@ -946,6 +958,10 @@ def main():
         m["frame_size_count"] = len(m["frame_sizes"])
         t["price"] = m.get("price")
         t["bom_pct"] = bom.get((m.get("brand"), m.get("model")))
+        cq = component_quality(m, part_prices)
+        cq_by_id[m["id"]] = cq
+        t["component_retail_value_usd"] = cq["component_retail_value_usd"]
+        t["component_wholesale_value_usd"] = cq["component_wholesale_value_usd"]
         typed_by_id[m["id"]] = t
 
     # Field distributions + the sorted value lists used for ranking.
@@ -961,6 +977,9 @@ def main():
         t = typed_by_id[m["id"]]
         bom_pct = t.pop("bom_pct")
         t.pop("price")                       # price already lives at model top level
+        # component values are reported under component_quality, not specs_typed
+        t.pop("component_retail_value_usd", None)
+        t.pop("component_wholesale_value_usd", None)
         pct = compute_percentiles({**t, "price": m.get("price")}, sorted_field)
         bom_rank = (percentile_rank(bom_pct, sorted_field["bom_pct"])
                     if bom_pct is not None and sorted_field["bom_pct"] else None)
@@ -970,7 +989,7 @@ def main():
             "percentiles": pct,
             "scores": compute_scores(t, stats, bom_pct, price_pct, pct),
             "highlights": _highlights(t),
-            "component_quality": component_quality(m, part_prices),
+            "component_quality": cq_by_id[m["id"]],
         }
 
     doc["analysis_stats"] = stats
