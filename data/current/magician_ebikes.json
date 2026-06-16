@@ -2,11 +2,11 @@
   "source": "https://magicianebikes.com",
   "logo": "https://magicianebikes.com/cdn/shop/files/295f76d0-2bd0-4eff-93de-70ba6fb24942.png?v=1746688187",
   "collection": "all-product",
-  "scraped_at": "2026-06-08T21:31:37.621924+00:00",
-  "model_count": 4,
+  "scraped_at": "2026-06-11T00:01:05.164573+00:00",
+  "model_count": 3,
   "models": [
     {
-      "model": "Alpha — Step-Thru",
+      "model": "Alpha",
       "handle": "alpha",
       "url": "https://magicianebikes.com/products/alpha",
       "product_types": [
@@ -15,36 +15,40 @@
       "price_from": 2499.0,
       "currency": "USD",
       "options": {
+        "Model": [
+          "Step-Thru",
+          "Step-Over"
+        ],
         "colors": [
           {
             "name": "Gloss Lime Green",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0746/6165/8849/files/20250523161322.png"
+            "image": "https://cdn.shopify.com/s/files/1/0746/6165/8849/files/alpha_7ec21725-d6f1-4529-a6ed-b3dc5499030f.png?v=1780819333"
           },
           {
             "name": "Matte Grey",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0746/6165/8849/files/20250523161322.png"
+            "image": "https://cdn.shopify.com/s/files/1/0746/6165/8849/files/20250523161322.png?v=1756883312"
           },
           {
             "name": "Gloss Electric Blue",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0746/6165/8849/files/B69149.png"
+            "image": "https://cdn.shopify.com/s/files/1/0746/6165/8849/files/B69149.png?v=1756883312"
           },
           {
             "name": "Gloss Red",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0746/6165/8849/files/B69173.png"
+            "image": "https://cdn.shopify.com/s/files/1/0746/6165/8849/files/B69173.png?v=1756883312"
           },
           {
             "name": "Gloss white",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0746/6165/8849/files/white_alpha_st.png"
+            "image": "https://cdn.shopify.com/s/files/1/0746/6165/8849/files/white_alpha_st.png?v=1756802645"
           }
         ]
       },
@@ -89,109 +93,32 @@
       "spec_count": 34,
       "warranty": "3-Year Warranty",
       "scrape_error": null,
+      "is_new": false,
       "shipping": {
         "cost": 0,
         "free": true
       },
       "free_accessories": [],
-      "tier": "Step-Thru",
-      "frame_style": "Step-Thru",
-      "family_id": "magician__alpha",
-      "is_new": false
-    },
-    {
-      "model": "Alpha — Step-Over",
-      "handle": "alpha--step-over",
-      "url": "https://magicianebikes.com/products/alpha",
-      "product_types": [
-        "Commuter / Urban"
+      "geometry": {
+        "Rider Height": "5'5''-6'5''"
+      },
+      "available_options": [
+        {
+          "group": "Model",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "Step-Thru",
+              "free": true
+            },
+            {
+              "value": "Step-Over",
+              "free": true
+            }
+          ]
+        }
       ],
-      "price_from": 2499.0,
-      "currency": "USD",
-      "options": {
-        "colors": [
-          {
-            "name": "Gloss Lime Green",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0746/6165/8849/files/20250718160123.png"
-          },
-          {
-            "name": "Matte Grey",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0746/6165/8849/files/20250718160123.png"
-          },
-          {
-            "name": "Gloss Electric Blue",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0746/6165/8849/files/20250718160123.png"
-          },
-          {
-            "name": "Gloss Red",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0746/6165/8849/files/20250718160123.png"
-          },
-          {
-            "name": "Gloss white",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0746/6165/8849/files/1_4d254fc1-d3c4-4069-b612-dfece1651c7f.png"
-          }
-        ]
-      },
-      "specs": {
-        "all": {
-          "Motor": "Bafang 72v 3000w Rear-hub motor, peak 5000w, peak torque 200 N.M- CANBUS SYSTEM",
-          "Battery": "Samsung high power cells, total capacity of 72v 30ah 2160wh: 72v 20ah 1440wh (Front battery) + 72v 10ah 720wh- UL2271 certified,CANBUS SYSTEM",
-          "Controller": "Bafang 72v 60a 18 mosfets high performance controller- CANBUS SYSTEM",
-          "Display": "Bafang DP C010 center-mounted colour LCD diaplay- CANBUS SYSTEM",
-          "Lights": "12v 9w 180LUX",
-          "Bottom Bracket": "Bafang Torque sensor, 120mm",
-          "Assist Type": "Cadence/Torque optional",
-          "Assist Levels": "0-5",
-          "Throttle": "Right-hand twist throttle with on/off button",
-          "Rear Derailleur": "Shimano Acera 7 speed, thumb shifter",
-          "Cassette": "11-34T DNP Cassette",
-          "Chain": "KMC Z8.3 EPT 130 links",
-          "Crankset": "Dual chain guard 56T/170mm arms",
-          "Fork": "Exsho Suspension hydraulic fork, 120mm travel, 38mm reinforced inner tube, lockout and preload",
-          "Rear Shock": "DNM 38RC air shock, 190*51mm",
-          "Frame": "6061 Full suspension aluminum",
-          "Front hub": "135mm thru axle",
-          "Front axle": "15mm thru-axle",
-          "Rims": "Thickened double-layer aluminum alloy, rear 36H*10G, Front 36H*13G",
-          "Tires": "Innova puncutre resistant 26*4.0 tire, the custom tire is capable of withstanding high speeds of 80-100 km/h",
-          "Headset": "Ginyea bearings headset",
-          "Brakes": "Star Union quad-piston hydraulic w/203mm rotors Integrated brake cutoffs",
-          "Handlebar": "740mm wide BMX style, carbon steel material",
-          "Stem": "110mm*25.4mm",
-          "Grips": "Bolt-on MTB grips",
-          "Saddle": "DDK 123MF wide padded saddle",
-          "Seatpost": "30.9*300mm",
-          "Seat post clamp": "38.1mm quick release",
-          "Max Load": "450 lbs",
-          "Weight": "135 lbs",
-          "Rider Height": "5'5''-6'5''",
-          "Torque": "200Nm",
-          "Range": "Up to 80 miles",
-          "Suspension": "Full suspension"
-        }
-      },
-      "spec_count": 34,
-      "warranty": "3-Year Warranty",
-      "scrape_error": null,
-      "shipping": {
-        "cost": 0,
-        "free": true
-      },
-      "free_accessories": [],
-      "tier": "Step-Over",
-      "frame_style": "Step-Over (Mid-Step)",
-      "family_id": "magician__alpha",
-      "is_new": false
+      "regular_price": 2599.0
     },
     {
       "model": "Alpha Mini",
@@ -278,12 +205,16 @@
       "spec_count": 35,
       "warranty": "3-Year Warranty",
       "scrape_error": null,
+      "is_new": false,
       "shipping": {
         "cost": 0,
         "free": true
       },
       "free_accessories": [],
-      "is_new": false
+      "geometry": {
+        "Rider Height": "5'-6'3''"
+      },
+      "available_options": []
     },
     {
       "model": "Atlas",
@@ -346,14 +277,91 @@
       "spec_count": 25,
       "warranty": "3-Year Warranty",
       "scrape_error": null,
+      "is_new": false,
       "shipping": {
         "cost": 0,
         "free": true
       },
       "free_accessories": [],
-      "is_new": false
+      "geometry": {
+        "Rider Height": "17inch-5'3''-6'1'' 19 inch-higher than 5'11''"
+      },
+      "available_options": [
+        {
+          "group": "Size",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "17'' Inch",
+              "free": true
+            },
+            {
+              "value": "19'' Inch",
+              "free": true
+            }
+          ]
+        }
+      ],
+      "regular_price": 2799.0
     }
   ],
-  "available_accessories": [],
-  "available_accessories_count": 0
+  "available_accessories": [
+    {
+      "name": "Atlas-Accessories Set",
+      "price": 199.0,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://magicianebikes.com/products/atlas-accessories-set-rear-rack-fenders-and-front-light"
+    },
+    {
+      "name": "Alpha ST&SO-Front Basket",
+      "price": 169.0,
+      "regular_price": 199.0,
+      "on_sale": true,
+      "free": false,
+      "url": "https://magicianebikes.com/products/front-basket-2"
+    },
+    {
+      "name": "Atlas-Innova 29*3.0 Wheelset",
+      "price": 399.0,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://magicianebikes.com/products/cst-29-3-0-wheelset-for-atlas"
+    },
+    {
+      "name": "Atlas Dropper Seat post",
+      "price": 159.0,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://magicianebikes.com/products/atlas-dropper-seat-post"
+    },
+    {
+      "name": "Alpha-Rear rack battery",
+      "price": 549.0,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://magicianebikes.com/products/battery-for-alpha-st-so-rear-rack-battery"
+    },
+    {
+      "name": "Atlas-Battery",
+      "price": 499.0,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://magicianebikes.com/products/atlas-battery"
+    },
+    {
+      "name": "Alpha-Down tube battery",
+      "price": 699.0,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://magicianebikes.com/products/battery-for-alpha-st-so-down-tube-battery"
+    }
+  ],
+  "available_accessories_count": 7
 }

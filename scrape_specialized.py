@@ -133,6 +133,15 @@ JS_SPECS = r"""() => {
     return out;
 }"""
 
+# "Key Features" bullets (CompareCard_keyFeatureItem): the only place SL models
+# state peak watts / torque / battery Wh ("Up to 320W peak power & 50 NM
+# torque", "320 Wh battery + optional 160Wh range extender").
+JS_KEY_FEATURES = r"""() => {
+    const norm = s => (s||'').replace(/\s+/g,' ').trim();
+    return [...document.querySelectorAll('[class*=keyFeatureItem]')]
+        .map(e => norm(e.innerText)).filter(Boolean);
+}"""
+
 JS_SWATCHES = r"""() => {
     const rgb2hex = s => {
         const m = s && s.match(/\d+(\.\d+)?/g);
@@ -238,6 +247,7 @@ async def scrape_model(context, model: dict, retries: int = 3) -> dict:
             rows = await page.evaluate(JS_SPECS)
             if not rows:
                 raise RuntimeError("no specs extracted")
+            key_features = await page.evaluate(JS_KEY_FEATURES)
             swatches = await page.evaluate(JS_SWATCHES)
             sizes = await page.evaluate(JS_SIZES)
             geometry = await page.evaluate(JS_GEOMETRY)
@@ -272,6 +282,25 @@ async def scrape_model(context, model: dict, retries: int = 3) -> dict:
             for _cat, label, value in rows:
                 key = " ".join(label.split())
                 all_specs[key] = value
+            # Mine the Key Features bullets for facts the component sheet
+            # never states (discrete parseable rows -- never one long blob).
+            kf = " ".join(key_features)
+            have = {k.lower() for k in all_specs}
+            corpus = " ".join(str(v) for v in all_specs.values())
+            m = re.search(r"(\d{3,4})\s*W\s*peak", kf, re.I)
+            # (?!h): a battery's "520Wh" must not read as a watts rating
+            if m and not re.search(r"\d{3,4}\s*W\b(?!h)", corpus, re.I):
+                all_specs["Peak Power"] = f"{m.group(1)}W Peak"
+            m = re.search(r"(\d{2,3})\s*N\s?M\b", kf, re.I)
+            if m and not any("torque" in k for k in have) \
+                    and not re.search(r"\d{2,3}\s*N\s?m\b", corpus, re.I):
+                all_specs["Motor Torque"] = f"{m.group(1)} Nm"
+            m = re.search(r"(\d{3,4})\s*Wh\b", kf, re.I)
+            if m and not re.search(r"\d{3,4}\s*Wh", corpus, re.I):
+                all_specs["Battery Capacity"] = f"{m.group(1)}Wh"
+            m = re.search(r"(?:up to|of)\s*(\d{2,3})\s*mi", kf, re.I)
+            if m and not any("range" in k for k in have):
+                all_specs["Range"] = f"Up to {m.group(1)} miles"
 
             offers = pr.get("prices") or []
             pvals = [o["price"] for o in offers]

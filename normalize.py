@@ -14,7 +14,7 @@ import re
 from datetime import datetime, timezone
 from pathlib import Path
 
-from bike_taxonomy import classify_product_types, pick_frame_style
+from bike_taxonomy import classify_product_types, pick_frame_style, STEP_OVER
 
 # Curated frame-style verdicts (image-inferred) for bikes that don't state one,
 # keyed by "<brand>__<source_id>". Applied only as a fallback in _frame_style.
@@ -33,6 +33,15 @@ try:
 except (FileNotFoundError, ValueError):
     MODEL_OVERRIDES = {}
 
+# Per-size rider heights read from a size-guide IMAGE via Claude vision
+# (resolve_image_heights.py), keyed by model id -> {"frame_sizes": [...]}. These
+# are authoritative for the rider-height gap that text can't fill.
+try:
+    IMAGE_HEIGHTS = json.loads(
+        (Path(__file__).parent / "data" / "curated" / "image_heights.json").read_text())
+except (FileNotFoundError, ValueError):
+    IMAGE_HEIGHTS = {}
+
 
 # A model is "new" only when the brand's site explicitly says so (a new-arrival
 # product tag), never inferred from when it showed up in our catalog.
@@ -49,14 +58,22 @@ def _is_new(m: dict) -> bool:
 
 def _apply_overrides(nm: dict) -> dict:
     """Stamp curated field corrections onto a normalized model (authoritative).
-    Records the touched fields under `curated_overrides` for transparency."""
+    Records the touched fields under `curated_overrides` for transparency. A
+    `geometry` dict is MERGED into specs.geometry (so curated geometry / rider-height
+    rows -- e.g. read off a spec image -- join the grouped specs the page renders and
+    that analyze reads); every other key is set at the top level."""
     ov = MODEL_OVERRIDES.get(nm.get("id"))
     if ov:
         for k, v in ov.items():
-            nm[k] = v
+            if k == "geometry" and isinstance(v, dict):
+                geo = nm.setdefault("specs", {}).setdefault("geometry", {})
+                geo.update(v)
+            else:
+                nm[k] = v
         nm["curated_overrides"] = sorted(ov.keys())
     return nm
 from spec_groups import group_specs
+from spec_parse import height_range_in
 
 
 def slugify(s: str) -> str:
@@ -77,9 +94,151 @@ _MAPPED = {
 }
 
 
+_AWD_RE = re.compile(r"dual[\s-]?motor|all[\s-]?wheel[\s-]?drive|\bawd\b|two motors|\b2wd\b", re.I)
+
+
+# A "Size" variant option value that looks like a frame size: the S/M/L/XL family,
+# or a numeric size that carries a LENGTH unit (26", 27.5", 20 inch) -- the unit
+# requirement keeps battery "15Ah"/"10.4ah" options from reading as sizes. Excludes
+# step-thru/over (handled as frame styles).
+_SIZE_LIKE = re.compile(
+    r'^(?:xx?s|s|sm|m|md|l|lg|xx?l|xl|small|medium|large'
+    r'|regular|standard|compact|tall)\b'   # word sizes (Velotric: Regular/Large)
+    r'|^\d{2}(?:\.\d)?\s*(?:"|in\b|inch|cm)', re.I)
+
+
+def _frame_sizes_from_options(variant_options: dict) -> list | None:
+    """Frame sizes from a multi-valued "Size"/"Frame Size" variant option, for
+    bikes with no per-size rider-height chart (heights left null). Skips
+    frame-TYPE/style options (step-thru/over) and single-value options."""
+    for k, vals in (variant_options or {}).items():
+        if not re.search(r"\bsize\b", k, re.I) or not isinstance(vals, list) or len(vals) < 2:
+            continue
+        labels = [str(v).replace("''", '"').strip() for v in vals]
+        if all(_SIZE_LIKE.match(v) for v in labels):
+            return [{"size": v, "height_min": None, "height_max": None} for v in labels]
+    return None
+
+
+def _split_geometry_by_size(grouped: dict, frame_sizes: list | None) -> None:
+    """Geometry usually differs per frame size; the scrape bundles one figure per
+    size into a space-separated value ("432mm 470mm" for the 17"/19" frames).
+    Split each such value into a {size_label: value} map so the per-size geometry
+    is structured data, not a blob. Single-figure values stay as strings; a stray
+    chart-header row ("Rider Height Inseam") is dropped."""
+    geo = grouped.get("geometry")
+    sizes = [s.get("size") for s in (frame_sizes or []) if s.get("size")]
+    if not isinstance(geo, dict) or len(sizes) < 2:
+        return
+    for k in list(geo):
+        v = geo[k]
+        if not isinstance(v, str):
+            continue
+        s = v.strip()
+        if not re.search(r"\d", s):
+            if re.search(r"rider|height|inseam", s, re.I):   # chart header captured as a row
+                geo.pop(k, None)
+            continue
+        toks = s.split()
+        if len(toks) == len(sizes):
+            geo[k] = {sz: tok for sz, tok in zip(sizes, toks)}
+
+
+def _style_bucket(s: str) -> str | None:
+    """Coarse frame-style bucket for matching a rider-height dict key to a model's
+    frame style. Ride1Up codes its frame tabs ST (step-thru) / XR (high-step)."""
+    s = (s or "").strip().lower()
+    if s == "st" or "thru" in s:
+        return "thru"
+    if s in ("xr", "hs") or "over" in s or "high" in s or "mid-step" in s or "diamond" in s:
+        return "over"
+    return None
+
+
+def _collapse_rider_height(grouped: dict, frame_style: str) -> None:
+    """A geometry rider-height value can arrive as a per-frame dict. Collapse it to
+    a single string so it never displays as a bundled "ST: … · XR: …" blob:
+      - keyed by FRAME STYLE (ST/XR on a style-split model): keep this model's own
+        style's range;
+      - keyed by SIZE (SM/MD/LG…) or a single variant: reduce to the overall
+        rider-height envelope (the per-size detail is shown via frame_sizes)."""
+    geo = grouped.get("geometry")
+    if not isinstance(geo, dict):
+        return
+    key = next((k for k in geo if "rider" in k.lower() and "height" in k.lower()), None)
+    if not key or not isinstance(geo[key], dict):
+        return
+    val = geo[key]
+    if len(val) > 1:
+        bucket = _style_bucket(frame_style)
+        if bucket:
+            for dk, dv in val.items():
+                if _style_bucket(dk) == bucket:
+                    geo[key] = dv
+                    return
+    if len(val) == 1:
+        geo[key] = next(iter(val.values()))
+        return
+    r = height_range_in(val)
+    if r:
+        fmt = lambda i: f"{int(i) // 12}'{int(i) % 12}\""
+        geo[key] = f"{fmt(r[0])} - {fmt(r[1])}"
+
+
+def _awd_motor_rows(rows: dict, name: str = "") -> None:
+    """For an all-wheel-drive (dual-motor) bike, split the motor specs into
+    'Front Motor' / 'Rear Motor' rows so the detail page shows both instances
+    (the same front/rear treatment brakes get), and drop the now-redundant
+    combined 'Motor' row. Mutates the flat label->value spec map in place; a
+    no-op for single-motor bikes."""
+    motor_keys = [k for k, v in rows.items() if isinstance(v, str) and "motor" in k.lower()]
+    if not motor_keys:
+        return
+    has_front = any(re.match(r"\s*front\s+motor\b", k, re.I) for k in rows)
+    has_rear = any(re.match(r"\s*rear\s+motor\b", k, re.I) for k in rows)
+    controllers = " ".join(v for k, v in rows.items()
+                           if isinstance(v, str) and "controller" in k.lower())
+    combined_key = next((k for k in motor_keys if k.strip().lower() == "motor"), None)
+    combined = rows.get(combined_key) or " ".join(rows[k] for k in motor_keys)
+    # a per-side controller ("Front 18A + Rear 22A") is itself a dual-motor tell
+    dual_controller = bool(re.search(r"front\s*\d{1,3}\s*a\b", controllers, re.I)
+                           and re.search(r"rear\s*\d{1,3}\s*a\b", controllers, re.I))
+    if not ((has_front and has_rear) or dual_controller
+            or _AWD_RE.search(f"{combined} {controllers} {name}")):
+        return
+
+    # (A) the scraper already provides Front/Rear Motor rows -> drop the summary.
+    if has_front and has_rear:
+        if combined_key:
+            rows.pop(combined_key, None)
+        return
+
+    # (B) one combined string names each side's motor ("Rear ... 2000W ... Front ... 1500W").
+    rear_seg = re.search(r"rear\b[^.]*?\(?\d{3,4}\s*w[^.]*", combined, re.I)
+    front_seg = re.search(r"front\b[^.]*?\(?\d{3,4}\s*w[^.]*", combined, re.I)
+    if rear_seg and front_seg:
+        rows["Rear Motor"] = rear_seg.group(0).strip()
+        rows["Front Motor"] = front_seg.group(0).strip()
+        if combined_key:
+            rows.pop(combined_key, None)
+        return
+
+    # (C) no per-side power published (shared rating) -> carry the system rating on
+    # both, differentiated by the per-side controller current where stated.
+    fa = re.search(r"front\s*(\d{1,3})\s*a\b", controllers, re.I)
+    ra = re.search(r"rear\s*(\d{1,3})\s*a\b", controllers, re.I)
+    base = combined.strip() or "Hub motor"
+    rows["Front Motor"] = base + (f"; {fa.group(1)}A controller" if fa else "")
+    rows["Rear Motor"] = base + (f"; {ra.group(1)}A controller" if ra else "")
+    if combined_key:
+        rows.pop(combined_key, None)
+
+
 def _frame_style(m: dict, name: str, raw_specs: dict) -> str | None:
     """Step-Thru vs Step-Over (Mid-Step): explicit field from the pipeline, else
-    derived from tier/name/option values/frame spec rows via the shared taxonomy."""
+    derived from tier/name/option values/frame spec rows via the shared taxonomy.
+    Returns None when nothing signals a style, so the caller can fall back to a
+    curated override and then the conventional Step-Over default."""
     if m.get("frame_style"):
         return m["frame_style"]
     option_vals = [str(v) for c in m.get("configurations") or []
@@ -147,6 +306,29 @@ def _emtb_qualifies(rows: dict) -> bool:
     return _is_mid_drive(rows) and w is not None and w >= 27.5
 
 
+def _fork_travel_mm(rows: dict) -> int:
+    """Largest front-fork travel (mm) from the raw fork spec rows, else 0. Used to
+    tell a trail-grade suspension fork (>=120mm) from a commuter/comfort one."""
+    best = 0
+    for k, v in rows.items():
+        if not isinstance(v, str):
+            continue
+        if "fork" in k.lower() or "fork" in v.lower():
+            for n in re.findall(r"(\d{2,3})\s*mm", v):
+                if 60 <= int(n) <= 220:
+                    best = max(best, int(n))
+    return best
+
+
+# A bike the brand explicitly names as one of these is NOT an eMTB, even with a
+# mid-drive + big wheel + long fork (e.g. Himiway "A7 Pro Commuter" -- a 27.5"
+# mid-drive with a 120mm fork but street Super Moto-X tires). Blocks structural
+# eMTB promotion; a real eMTB never carries these words.
+_NOT_EMTB_NAME = re.compile(
+    r"commuter|urban|\bcity\b|cargo|trike|moped|touring|cruiser|\bgravel\b|\broad\b"
+    r"|hybrid|fitness|step[-\s]?thr", re.I)
+
+
 def _product_types(m: dict, name: str, raw_specs: dict) -> list[str]:
     """Vendor product_type strings are marketing junk; classify onto the shared
     taxonomy (every matching label, primary first) from the name + scraper
@@ -177,6 +359,14 @@ def _product_types(m: dict, name: str, raw_specs: dict) -> list[str]:
     # that don't qualify (hub-drive "all-terrain"/fat bikes, small-wheel bikes).
     if "Mountain (eMTB)" in types and not _emtb_qualifies(rows):
         types = [t for t in types if t != "Mountain (eMTB)"] or ["Commuter / Urban"]
+    # Structural promotion: a mid-drive on >= 27.5" wheels with a trail-grade
+    # suspension fork (>= 120mm) is an eMTB even when the name/tags/description
+    # don't say so (e.g. Ride1Up "TrailRush", Cyke "Falcon X" -- glued/keyword-less
+    # names whose mountain signal is only in geometry/components).
+    elif ("Mountain (eMTB)" not in types and _emtb_qualifies(rows)
+          and _fork_travel_mm(rows) >= 120
+          and not _NOT_EMTB_NAME.search(name or "")):
+        types = ["Mountain (eMTB)"] + [t for t in types if t != "Commuter / Urban"]
     return types
 
 
@@ -207,11 +397,52 @@ def _configurations(brand: str, m: dict) -> list:
     return out
 
 
+# Bundled-equipment spec fields -> a canonical accessory name. Only the value-add
+# gear a buyer thinks of as "comes with it" (not standard small parts like
+# kickstand/bell). Many scrapers list these only as descriptive spec strings
+# rather than in free_accessories, so we derive them so every brand's Accessories
+# card is populated, not just the ones whose scraper builds free_accessories.
+_ACC_SPEC_MAP = [
+    ("Fenders",      re.compile(r"^fenders?(?:_|\b)")),
+    ("Front Rack",   re.compile(r"^front_rack")),
+    ("Rear Rack",    re.compile(r"^(?:rear_)?rack(?:_|\b)")),
+    ("Lights",       re.compile(r"^(?:head_?light|tail_?light|lights?)(?:_|\b)")),
+    ("Turn Signals", re.compile(r"^turn_?signals?")),
+    ("Basket",       re.compile(r"^basket(?:_|\b)")),
+    ("Phone Mount",  re.compile(r"^phone_?mount")),
+]
+# Value indicates the item is NOT bundled (absent, optional, or a paid add-on).
+_ACC_NEG_VAL = re.compile(
+    r"^\s*(?:n/?a|none|no\b|not\s+(?:included|available|equipped|standard)|optional|"
+    r"\$|tbd|—|–|-|\bsold separately\b)", re.I)
+
+
+def _included_from_specs(m: dict) -> list:
+    """Bundled gear derived from descriptive spec rows (fenders/rack/lights/...),
+    for scrapers that don't emit free_accessories. Deduped to canonical names;
+    skips rows whose value says optional/absent/priced (a paid add-on)."""
+    allspecs = (m.get("specs") or {}).get("all") or {}
+    found = {}
+    for k, v in allspecs.items():
+        if not isinstance(v, str) or not v.strip() or _ACC_NEG_VAL.match(v):
+            continue
+        if re.search(r"\b(optional|sold separately|separate purchase|additional purchase)\b", v, re.I):
+            continue
+        kl = k.lower().replace(" ", "_")
+        for name, pat in _ACC_SPEC_MAP:
+            if pat.match(kl):
+                found.setdefault(name, {"name": name, "price": 0})
+                break
+    return list(found.values())
+
+
 def _included_accessories(m: dict) -> list:
-    """The $0 items bundled with the bike: per-model free_accessories plus any
-    Lectric-style accessories.included. Deduped by name."""
+    """The $0 items bundled with the bike: per-model free_accessories, any
+    Lectric-style accessories.included, plus gear inferred from spec rows.
+    Deduped by name (explicit free_accessories win over spec-derived)."""
     src = list(m.get("free_accessories") or [])
     src += ((m.get("accessories") or {}).get("included")) or []
+    src += _included_from_specs(m)
     out, seen = [], set()
     for a in src:
         n = a.get("name")
@@ -309,6 +540,51 @@ def _resolve_colors(colors: list, configs: list) -> list:
             for c in colors]
 
 
+# ENGWE-style single/dual battery spec rows: several redundant per-version rows and
+# a combined-capacity row, with no clean "Battery" row — so no battery component is
+# parsed and a battery-split card can't tell which pack it ships.
+_BATT_VER_KEY = re.compile(r"(?:single|dual|\d+\s*ah)[\s_-]*batter\w*[\s_-]*version"
+                           r"|batter\w*[\s_-]*version", re.I)
+_BATT_CAP_KEY = re.compile(r"^\s*battery\s*capacity\s*$", re.I)
+_WH_VAH = re.compile(r"(\d+(?:\.\d+)?)\s*wh\s*\(\s*(\d+(?:\.\d+)?)\s*v\s*[,\s]*"
+                     r"(\d+(?:\.\d+)?)\s*ah", re.I)
+
+
+def _consolidate_battery_versions(rows: dict, tier, name: str = "") -> None:
+    """Collapse redundant per-version battery rows into one canonical "Battery" row
+    for THIS battery tier's pack, so a clean battery component is parsed and the
+    single/dual card reports its own capacity. Only fires when per-version rows are
+    present (the ENGWE M20 family), so ordinary "Battery Capacity" rows are untouched.
+
+    Packs are gathered as (total_wh, volts, total_ah) from a combined-capacity row
+    ("1200Wh (60V 20Ah) 2400Wh (60V 40Ah)") AND from each per-version row, where the
+    pack count comes from a "*N"/"xN" suffix ("48V13Ah ... *2" => 2 x 13Ah at 48V).
+    The smallest pack is the single-battery card, the largest the dual."""
+    ver_keys = [k for k in rows if _BATT_VER_KEY.search(k)]
+    if not ver_keys:
+        return
+    cap_keys = [k for k in rows if _BATT_CAP_KEY.search(k)]
+    packs = {(float(wh), float(v), float(ah))
+             for ck in cap_keys for wh, v, ah in _WH_VAH.findall(str(rows[ck]))}
+    for k in ver_keys:
+        val = str(rows[k])
+        mv, ma = re.search(r"(\d+(?:\.\d+)?)\s*v", val, re.I), re.search(r"(\d+(?:\.\d+)?)\s*ah", val, re.I)
+        if mv and ma:
+            v, ah = float(mv.group(1)), float(ma.group(1))
+            n = int(m.group(1)) if (m := re.search(r"[x*]\s*(\d+)", val)) else 1
+            packs.add((round(v * ah * n, 1), v, round(ah * n, 1)))
+    is_dual = "dual" in f"{tier or ''} {name}".lower()
+    ordered = sorted(packs)
+    if ordered:
+        wh, v, ah = ordered[-1] if is_dual else ordered[0]
+        clean = f"{v:g}V {ah:g}Ah Lithium-Ion Battery, {wh:g}Wh"
+    else:                                        # unparseable -> keep a verbatim row
+        clean = str(rows[ver_keys[0]])
+    for k in ver_keys + cap_keys:
+        rows.pop(k, None)
+    rows["Battery"] = clean
+
+
 def normalize_model(brand: str, m: dict) -> dict:
     name = m.get("model") or m.get("title") or m.get("name") or m.get("handle")
     source_id = (m.get("handle") or m.get("slug") or m.get("sku")
@@ -317,17 +593,32 @@ def normalize_model(brand: str, m: dict) -> dict:
     lo, hi, currency = _prices(m, configs)
     shipping = m.get("shipping") or {}
     options = m.get("options") or {}
+    raw_specs = m.get("specs") or {}
     colors = _resolve_colors(options.get("colors") or [], configs)
+    # text-derived style wins; else a curated image-inferred override (for bikes
+    # the vendor never labels); else the conventional Step-Over default (every
+    # ebike is step-thru or step-over). Override keyed by brand+source_id.
+    frame_style = (_frame_style(m, name, raw_specs)
+                   or FRAME_OVERRIDES.get(f"{brand}__{source_id}")
+                   or STEP_OVER)
     variant_options = {k: v for k, v in options.items() if k != "colors"}
     brand_extra = {k: v for k, v in m.items() if k not in _MAPPED}
     if m.get("configs"):
         brand_extra["configs"] = m["configs"]
-    raw_specs = m.get("specs") or {}
     # The detailed grouping + component parsing happens here, during normalization,
     # from each scraper's verbatim flat `specs.all`. Geometry becomes one of the
     # groups (`specs.geometry`) — not a separate top-level field.
+    _consolidate_battery_versions(raw_specs.get("all") or {}, m.get("tier"), name)
+    _awd_motor_rows(raw_specs.get("all") or {}, name)
     grouped = group_specs(raw_specs.get("all") or {}, m.get("geometry") or {}, brand)
+    _collapse_rider_height(grouped, frame_style)
     product_types = _product_types(m, name, raw_specs)
+    # per-frame-size chart (enrich/scraper) wins; else derive sizes from a multi-
+    # valued "Size" variant option (heights left null when no per-size chart).
+    # rider heights read from a size-guide image win for the rider-height gap
+    img_h = (IMAGE_HEIGHTS.get(f"{brand}__{source_id}") or {}).get("frame_sizes")
+    frame_sizes = img_h or m.get("frame_sizes") or _frame_sizes_from_options(variant_options)
+    _split_geometry_by_size(grouped, frame_sizes)
     return {
         "id": f"{brand}__{source_id}",
         "brand": brand,
@@ -340,16 +631,13 @@ def normalize_model(brand: str, m: dict) -> dict:
         "source_id": source_id,
         "product_type": product_types[0],
         "product_types": product_types,
-        # text-derived style wins; else a curated image-inferred override (for
-        # bikes the vendor never labels). Keyed by model id.
-        "frame_style": _frame_style(m, name, raw_specs)
-        or FRAME_OVERRIDES.get(f"{brand}__{source_id}"),
+        "frame_style": frame_style,
         # explicit "new" from a site new-arrival tag (not a catalog-diff guess)
         "is_new": _is_new(m),
         # per-frame-size rider-height chart (enrich_frame_sizes / aventon scraper);
         # bikes without one are a single frame size.
-        "frame_sizes": m.get("frame_sizes") or None,
-        "frame_size_count": len(m["frame_sizes"]) if m.get("frame_sizes") else 1,
+        "frame_sizes": frame_sizes or None,
+        "frame_size_count": len(frame_sizes) if frame_sizes else 1,
         "price": lo,
         "price_min": lo,
         "price_max": hi,

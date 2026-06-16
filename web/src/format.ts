@@ -7,6 +7,25 @@ export function capitalize(s: string): string {
   return s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
 }
 
+/** The frame's colour for rendering the colour name (and its pill border) in the
+ *  colour itself -- but ONLY for dark colours, which stay legible on a light product
+ *  photo. Light colours wash out, so they return null and the caller renders the
+ *  neutral default pill, exactly as for a bike with no hex. */
+export function colorChipStyle(hex: string | null | undefined): { color: string } | null {
+  if (!hex) return null;
+  const m = /^#?([0-9a-f]{3}|[0-9a-f]{6})$/i.exec(hex.trim());
+  if (!m) return null;
+  const h = m[1].length === 3 ? m[1].replace(/(.)/g, "$1$1") : m[1];
+  const [r, g, b] = [0, 2, 4].map((i) => parseInt(h.slice(i, i + 2), 16));
+  const lin = (c: number) => {
+    const s = c / 255;
+    return s <= 0.03928 ? s / 12.92 : Math.pow((s + 0.055) / 1.055, 2.4);
+  };
+  const lum = 0.2126 * lin(r) + 0.7152 * lin(g) + 0.0722 * lin(b);
+  if (lum > 0.179) return null; // light colour -> neutral pill, like a no-hex bike
+  return { color: `#${h}` };
+}
+
 export function titleCase(s: string): string {
   return s
     .replace(/[_-]+/g, " ")
@@ -27,6 +46,29 @@ export function labelize(field: string): string {
     return titleCase(parts.slice(0, -1).join(" ")) + ` (${UNIT_LABEL[last]})`;
   }
   return titleCase(field);
+}
+
+// System-dependent weight/distance units that flip with the unit toggle: shown
+// as a value suffix ("45 mi") rather than a label suffix ("Range (mi)"). Fixed
+// units (Wh, W, Nm, $, …) stay in the label via labelize().
+const VALUE_SUFFIX_UNITS = new Set(["lb", "mi", "kg", "km"]);
+
+/** A field's display label plus, for a value-suffix unit, the unit to append to
+ *  its value: "range_mi" -> { label: "Range", unit: "mi" }; "battery_wh" ->
+ *  { label: "Battery (Wh)", unit: null }. */
+export function fieldLabel(field: string): { label: string; unit: string | null } {
+  const parts = field.split("_");
+  const last = parts[parts.length - 1];
+  if (parts.length > 1 && VALUE_SUFFIX_UNITS.has(last)) {
+    return { label: titleCase(parts.slice(0, -1).join(" ")), unit: UNIT_LABEL[last] };
+  }
+  return { label: labelize(field), unit: null };
+}
+
+/** Append a value-suffix unit to an already-formatted value, leaving the
+ *  em-dash placeholder (and unitless values) untouched. */
+export function withUnit(formatted: string, unit: string | null): string {
+  return unit && formatted !== "—" ? `${formatted} ${unit}` : formatted;
 }
 
 export function formatPrice(n: number | null | undefined, currency = "USD"): string {
@@ -115,10 +157,18 @@ export function formatSpecValue(value: SpecValue, system: UnitSystem = "imperial
     if (v == null || v === "" || hide.has(k)) continue;
     if (k === "details") {
       parts.push(formatSpecValue(v, system));
+    } else if (k === "by_size" && v && typeof v === "object" && !Array.isArray(v)) {
+      // per-frame-size attributes -> "S/M: Width 780 mm, Rise 20 mm; L/XL: …"
+      parts.push(
+        Object.entries(v as Record<string, SpecValue>)
+          .map(([size, attrs]) => `${size}: ${formatSpecValue(attrs, system)}`)
+          .join("; "),
+      );
     } else if (VALUE_UNIT[k] && (typeof v === "number" || typeof v === "string")) {
       parts.push(`${formatSpecValue(v, system)} ${VALUE_UNIT[k]}`);
     } else {
-      parts.push(`${labelize(k)}: ${formatSpecValue(v, system)}`);
+      const { label, unit } = fieldLabel(k);
+      parts.push(`${label}: ${withUnit(formatSpecValue(v, system), unit)}`);
     }
   }
   return parts.join(" · ") || "—";

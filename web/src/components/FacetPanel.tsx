@@ -1,10 +1,12 @@
-import { useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import type { EnumField, Filters, RangeField } from "../search/orama";
 import { BOOL_FIELDS, type BoolField } from "../search/orama";
-import { capitalize, labelize, titleCase } from "../format";
+import { capitalize, fieldLabel, labelize, titleCase } from "../format";
 import { useShowSoldOut } from "../soldOut";
 import { useUnits, inToCm, cmToIn, inToFtIn, ftInToIn, type UnitSystem } from "../units";
 import { ENUM_SECTIONS, RANGE_SECTIONS, BOOL_LABELS } from "../filterMeta";
+import { PRICE_TIERS, priceTierRange, priceTierRangeText, SENSOR_OPTIONS } from "../filterMeta";
+import { usePriceTier } from "../priceTier";
 
 interface Props {
   facetOptions: Record<EnumField, string[]>;
@@ -53,12 +55,101 @@ function Section({
   );
 }
 
+/** Dual-handle range slider. Shows the live values while dragging but only
+ *  commits the filter on release (pointer/touch/key up), so the result list
+ *  isn't re-filtered on every intermediate value. */
+function RangeSlider({
+  bLo,
+  bHi,
+  value,
+  unit,
+  prefix,
+  label,
+  onCommit,
+}: {
+  bLo: number;
+  bHi: number;
+  value: [number, number];
+  unit?: string | null;
+  prefix?: string;
+  label: string;
+  onCommit: (lo: number, hi: number) => void;
+}) {
+  const [draft, setDraft] = useState<[number, number]>(value);
+  // The range inputs' change events are CONTINUOUS (React batches them without a
+  // synchronous flush), but pointer/touch-up is DISCRETE -- so a commit() that read
+  // `draft` from the closure could fire with a stale value (e.g. the tier's $2000
+  // instead of the just-dragged $1500). Mirror the live value into a ref, updated
+  // synchronously on every change, and commit FROM the ref.
+  const draftRef = useRef<[number, number]>(value);
+  const update = (d: [number, number]) => { draftRef.current = d; setDraft(d); };
+  // resync the handles when the committed value changes externally (Reset, etc.)
+  useEffect(() => { draftRef.current = value; setDraft(value); }, [value[0], value[1]]);
+  const [lo, hi] = draft;
+  const span = bHi - bLo;
+  const pct = (v: number) => (span > 0 ? ((v - bLo) / span) * 100 : 0);
+  const commit = () => onCommit(draftRef.current[0], draftRef.current[1]);
+  const fmt = (v: number) => `${prefix ?? ""}${v.toLocaleString()}${unit ? ` ${unit}` : ""}`;
+  return (
+    <div className="px-1">
+      {/* live readout of the CURRENT selection (updates while dragging) */}
+      <div className="mb-2 text-center text-xs font-semibold tabular-nums text-slate-700">
+        {fmt(lo)} – {fmt(hi)}
+      </div>
+      <div className="relative h-4">
+        <div className="absolute top-1/2 h-1 w-full -translate-y-1/2 rounded-full bg-slate-200" />
+        <div
+          className="absolute top-1/2 h-1 -translate-y-1/2 rounded-full bg-brand-500"
+          style={{ left: `${pct(lo)}%`, right: `${100 - pct(hi)}%` }}
+        />
+        <input
+          type="range"
+          className="range-dual"
+          min={bLo}
+          max={bHi}
+          step={1}
+          value={lo}
+          aria-label={`${label} minimum`}
+          onChange={(e) => update([Math.min(Number(e.target.value), draftRef.current[1]), draftRef.current[1]])}
+          onPointerUp={commit}
+          onKeyUp={commit}
+          onTouchEnd={commit}
+        />
+        <input
+          type="range"
+          className="range-dual"
+          min={bLo}
+          max={bHi}
+          step={1}
+          value={hi}
+          aria-label={`${label} maximum`}
+          onChange={(e) => update([draftRef.current[0], Math.max(Number(e.target.value), draftRef.current[0])])}
+          onPointerUp={commit}
+          onKeyUp={commit}
+          onTouchEnd={commit}
+        />
+      </div>
+      {/* fixed reference: the slider's true low/high (the full catalog range), so
+          a selected sub-range never reads as if it were the whole scale */}
+      <div className="mt-1 flex justify-between text-[10px] tabular-nums text-slate-400">
+        <span>{fmt(bLo)}</span>
+        <span>{fmt(bHi)}</span>
+      </div>
+    </div>
+  );
+}
+
 export function FacetPanel({ facetOptions, rangeBounds, facetCounts, filters, setFilters }: Props) {
   const [showSoldOut, setShowSoldOut] = useShowSoldOut();
   const [units, setUnits] = useUnits();
   // sections the user has collapsed (everything starts expanded)
   const [collapsed, setCollapsed] = useState<Record<string, boolean>>({});
   const toggleSection = (key: string) => setCollapsed({ ...collapsed, [key]: !collapsed[key] });
+  // The price dropdown scopes the price slider to a tier: its min/max become the
+  // slider's endpoints. Tracked explicitly (and persisted to sessionStorage) so
+  // narrowing within the tier doesn't lose the tier scope, and the choice survives
+  // navigation/reload within the session. "All" = the full catalog range.
+  const [priceTier, setPriceTier] = usePriceTier();
 
   const toggleEnum = (field: EnumField, value: string) => {
     const cur = filters.enums[field] ?? [];
@@ -98,8 +189,10 @@ export function FacetPanel({ facetOptions, rangeBounds, facetCounts, filters, se
     setHeightIn(cmToIn(n));
   };
   const reset = () => {
+    setPriceTier("All");
     setFilters({ enums: {}, bools: {}, ranges: {}, riderHeightIn: null });
     setShowSoldOut(false); // back to the default: available-only
+    setPriceTier("All"); // price slider back to the full catalog range
   };
 
   return (
@@ -222,30 +315,22 @@ export function FacetPanel({ facetOptions, rangeBounds, facetCounts, filters, se
               {options.map((opt) => {
                 const count = counts[opt] ?? 0;
                 const isSel = selected.includes(opt);
-                // a zero-count option can't add results -> disable it (unless it's
-                // currently selected, so it can still be toggled off)
-                const disabled = count === 0 && !isSel;
                 return (
                   <label
                     key={opt}
-                    className={`flex items-center gap-2 text-sm ${
-                      disabled ? "cursor-not-allowed text-slate-300" : "cursor-pointer text-slate-700"
-                    }`}
+                    className="flex cursor-pointer items-center gap-2 text-sm text-slate-700"
                   >
                     <input
                       type="checkbox"
                       checked={isSel}
-                      disabled={disabled}
                       onChange={() => toggleEnum(field, opt)}
-                      className="rounded border-slate-300 text-brand-600 focus:ring-brand-500 disabled:opacity-40"
+                      className="rounded border-slate-300 text-brand-600 focus:ring-brand-500"
                     />
                     <span className="flex-1 truncate">
                       {/* product_types values are already display-formatted ("Mountain (eMTB)") */}
                       {field === "brand" ? capitalize(opt) : field === "product_types" ? opt : titleCase(opt)}
                     </span>
-                    <span className={`text-xs tabular-nums ${disabled ? "text-slate-300" : "text-slate-400"}`}>
-                      {count}
-                    </span>
+                    <span className="text-xs tabular-nums text-slate-400">{count}</span>
                   </label>
                 );
               })}
@@ -254,34 +339,69 @@ export function FacetPanel({ facetOptions, rangeBounds, facetCounts, filters, se
         );
       })}
 
+      {/* pedal-assist sensor: single-select (No Preference = unset) */}
+      <Section label="Sensor" open={!collapsed.sensor_type} onToggle={() => toggleSection("sensor_type")}>
+        <select
+          value={filters.enums.sensor_type?.[0] ?? ""}
+          onChange={(e) => {
+            const v = e.target.value;
+            setFilters({ ...filters, enums: { ...filters.enums, sensor_type: v ? [v] : [] } });
+          }}
+          aria-label="Pedal-assist sensor type"
+          className="w-full rounded border-slate-300 text-sm"
+        >
+          {SENSOR_OPTIONS.map((o) => (
+            <option key={o.value} value={o.value}>{o.label}</option>
+          ))}
+        </select>
+      </Section>
+
       {/* numeric ranges */}
       {RANGE_SECTIONS.map(({ field, label }) => {
-        const [bLo, bHi] = rangeBounds[field] ?? [0, 0];
-        if (bHi <= bLo) return null;
+        const [catLo, catHi] = rangeBounds[field] ?? [0, 0];
+        if (catHi <= catLo) return null;
+        const { unit } = fieldLabel(field);
+        // Price is scoped to the selected tier: its min/max become the slider's
+        // endpoints. Other ranges always span the full catalog bounds.
+        let bLo = catLo;
+        let bHi = catHi;
+        if (field === "price" && priceTier !== "All") {
+          const t = PRICE_TIERS.find((x) => x.label === priceTier);
+          if (t) [bLo, bHi] = priceTierRange(t, catLo, catHi);
+        }
         const [lo, hi] = filters.ranges[field] ?? [bLo, bHi];
         return (
           <Section key={field} label={label} open={!collapsed[field]} onToggle={() => toggleSection(field)}>
-            <div className="flex items-center gap-2">
-              <input
-                type="number"
-                value={lo}
-                min={bLo}
-                max={bHi}
-                onChange={(e) => setRange(field, Number(e.target.value), hi)}
-                className="w-full rounded border-slate-300 text-sm"
-                aria-label={`${labelize(field)} min`}
-              />
-              <span className="text-slate-400">–</span>
-              <input
-                type="number"
-                value={hi}
-                min={bLo}
-                max={bHi}
-                onChange={(e) => setRange(field, lo, Number(e.target.value))}
-                className="w-full rounded border-slate-300 text-sm"
-                aria-label={`${labelize(field)} max`}
-              />
-            </div>
+            {field === "price" && (
+              <select
+                value={priceTier}
+                onChange={(e) => {
+                  const t = PRICE_TIERS.find((x) => x.label === e.target.value);
+                  if (!t) return;
+                  setPriceTier(t.label);
+                  // initialize the slider to the tier's full range AND filter now
+                  const [nlo, nhi] = priceTierRange(t, catLo, catHi);
+                  setRange(field, nlo, nhi);
+                }}
+                aria-label="Price range preset"
+                className="mb-3 w-full rounded border-slate-300 text-sm"
+              >
+                {PRICE_TIERS.map((t) => (
+                  <option key={t.label} value={t.label}>
+                    {t.label === "All" ? "All prices" : `${t.label} (${priceTierRangeText(t, catLo, catHi)})`}
+                  </option>
+                ))}
+              </select>
+            )}
+            <RangeSlider
+              bLo={bLo}
+              bHi={bHi}
+              value={[lo, hi]}
+              unit={unit}
+              prefix={field === "price" ? "$" : undefined}
+              label={labelize(field)}
+              onCommit={(nlo, nhi) => setRange(field, nlo, nhi)}
+            />
           </Section>
         );
       })}

@@ -27,6 +27,7 @@ import argparse
 import asyncio
 import json
 import os
+import re
 import sys
 import urllib.request
 from datetime import datetime, timezone
@@ -178,6 +179,39 @@ JS_RANGE_CLAIM = r"""() => {
     return null;
 }"""
 
+# Top-speed fallback: Heybike spec tables rarely carry a top-speed row, but the
+# "introduce" highlight strip ("28 MPH Top Speed") and feature/description copy
+# ("Go up to 28mph") state it. Take the LARGEST plausible mph in a speed context
+# -- that's the unlocked top speed (regardless of class), what we want to show.
+JS_SPEED_CLAIM = r"""() => {
+    const norm = s => (s || '').replace(/\s+/g, ' ').trim();
+    const inReviews = el =>
+        !!el.closest('[class*="review"], [id*="review"], [class*="jdgm"]');
+    const mphOf = text => {
+        let best = null;
+        for (const m of text.matchAll(/\b(\d{2}(?:\.\d)?)\s*mph\b/ig)) {
+            const v = parseFloat(m[1]);
+            if (v >= 12 && v <= 40) best = Math.max(best || 0, v);
+        }
+        return best;
+    };
+    for (const el of document.querySelectorAll('.introduce-info')) {
+        const t = norm(el.textContent);            // "28 MPH Top Speed"
+        if (/speed/i.test(t)) { const v = mphOf(t); if (v) return `${v} mph`; }
+    }
+    for (const sel of ['.feature-heading', '.feature-desc', '[class*="description"]']) {
+        for (const el of document.querySelectorAll(sel)) {
+            if (inReviews(el)) continue;
+            const t = norm(el.textContent);
+            if (/top\s*speed|speed.{0,6}up\s*to|up\s*to\s*\d+\s*mph/i.test(t)) {
+                const v = mphOf(t);
+                if (v) return `${v} mph`;
+            }
+        }
+    }
+    return null;
+}"""
+
 # Brake fallback: like Range, many Heybike spec tables omit the brake row but the
 # marketing copy states it ("2.0mm Thickened Hydraulic Disc Brakes"). Require an
 # explicit brake context so "hydraulic suspension fork" can't be mistaken for it.
@@ -273,6 +307,12 @@ async def scrape_model(context, model: dict, retries: int = 3) -> dict:
                 brake = await page.evaluate(JS_BRAKE_CLAIM)
                 if brake:
                     pairs.append(["Brakes", brake])
+            # And top speed (rarely a spec row; stated in the highlight strip).
+            if pairs and not any(re.search(r"(?:top|max)\s*speed", label, re.I)
+                                 for label, _ in pairs):
+                speed = await page.evaluate(JS_SPEED_CLAIM)
+                if speed:
+                    pairs.append(["Top Speed", speed])
             swatch_hex = await page.evaluate(JS_SWATCH_HEX)
             result["warranty"] = await page.evaluate(JS_WARRANTY)
             await page.close()

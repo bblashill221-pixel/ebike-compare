@@ -1,9 +1,11 @@
 import type { Filters } from "../search/orama";
 import { BOOL_FIELDS } from "../search/orama";
-import { ENUM_SECTIONS, RANGE_SECTIONS, BOOL_LABELS } from "../filterMeta";
-import { capitalize, formatNumber, titleCase } from "../format";
+import { ENUM_SECTIONS, RANGE_SECTIONS, BOOL_LABELS, sensorLabel } from "../filterMeta";
+import { matchPriceTier, priceTierRangeText } from "../filterMeta";
+import { capitalize, fieldLabel, formatNumber, titleCase } from "../format";
 import { useUnits, inToCm, inToFtIn } from "../units";
 import { useShowSoldOut } from "../soldOut";
+import { useData } from "../data/DataProvider";
 
 type Pill = { key: string; label: string; onRemove: () => void };
 
@@ -19,6 +21,7 @@ export function ActiveFilters({
 }) {
   const [units] = useUnits();
   const [showSoldOut, setShowSoldOut] = useShowSoldOut();
+  const { rangeBounds } = useData();
   const pills: Pill[] = [];
 
   // enum facets — one pill per selected value (brands, types, …)
@@ -38,13 +41,35 @@ export function ActiveFilters({
     }
   }
 
+  // sensor: single-select on the sensor_type enum slot (not in ENUM_SECTIONS)
+  const sensorVal = filters.enums.sensor_type?.[0];
+  if (sensorVal) {
+    pills.push({
+      key: "sensor",
+      label: `Sensor: ${sensorLabel(sensorVal)}`,
+      onRemove: () => setFilters({ ...filters, enums: { ...filters.enums, sensor_type: [] } }),
+    });
+  }
+
   // numeric ranges — present only when narrowed from the full bounds
   for (const { field, label } of RANGE_SECTIONS) {
     const r = filters.ranges[field];
     if (!r) continue;
     const [lo, hi] = r;
-    const val = field === "price" ? `$${formatNumber(lo)}–$${formatNumber(hi)}` : `${formatNumber(lo)}–${formatNumber(hi)}`;
+    const { unit } = fieldLabel(field);
     const name = label.replace(/\s*\(.*\)$/, "");
+    let val: string;
+    if (field === "price") {
+      const [bLo, bHi] = rangeBounds.price ?? [lo, hi];
+      const tier = matchPriceTier(lo, hi, bLo, bHi);
+      // show both the preset name and its dollar range; bare range when custom
+      val = tier
+        ? `${tier.label} (${priceTierRangeText(tier, bLo, bHi)})`
+        : `$${formatNumber(lo)}–$${formatNumber(hi)}`;
+    } else {
+      const base = `${formatNumber(lo)}–${formatNumber(hi)}`;
+      val = unit ? `${base} ${unit}` : base;
+    }
     pills.push({
       key: `range:${field}`,
       label: `${name}: ${val}`,

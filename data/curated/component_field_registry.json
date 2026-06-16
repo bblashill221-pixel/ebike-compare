@@ -1,0 +1,258 @@
+{
+ "battery": {
+  "amphours_ah": "number",
+  "capacity_wh": "number",
+  "cell_brand": "string",
+  "cell_format": "string",
+  "details": "string",
+  "manufacturer": "string",
+  "model": "string",
+  "pack_count": "number",
+  "primary_weight_kg": "number",
+  "primary_weight_lb": "number",
+  "removable": "bool",
+  "secondary_weight_kg": "number",
+  "secondary_weight_lb": "number",
+  "total_capacity_wh": "number",
+  "voltage_v": "number",
+  "weight_kg": "number",
+  "weight_lb": "number"
+ },
+ "bottom_bracket": {
+  "details": "string",
+  "sealed": "bool",
+  "torque_sensor": "bool",
+  "type": "string",
+  "width_mm": "number"
+ },
+ "brake": {
+  "actuation": "string",
+  "details": "string",
+  "kind": "string",
+  "manufacturer": "string",
+  "model": "string",
+  "pistons": "number",
+  "rotor_mm": "number",
+  "rotor_thickness_mm": "number"
+ },
+ "cassette": {
+  "cog_range": "string",
+  "details": "string",
+  "gearing": "string",
+  "manufacturer": "string",
+  "model": "string",
+  "speeds": "number"
+ },
+ "cert": {
+  "details": "string",
+  "standards": "list"
+ },
+ "chain": {
+  "details": "string",
+  "links": "number",
+  "manufacturer": "string",
+  "model": "string"
+ },
+ "chainring": {
+  "details": "string",
+  "manufacturer": "string",
+  "model": "string",
+  "narrow_wide": "bool",
+  "teeth": "number"
+ },
+ "charger": {
+  "amps_a": "number",
+  "details": "string",
+  "manufacturer": "string",
+  "model": "string",
+  "output_v": "number"
+ },
+ "controller": {
+  "amps_a": "number",
+  "details": "string",
+  "voltage_v": "number"
+ },
+ "crankset": {
+  "chainring_t": "number",
+  "details": "string",
+  "length_mm": "number",
+  "manufacturer": "string",
+  "model": "string"
+ },
+ "derailleur": {
+  "details": "string",
+  "gearing": "string",
+  "manufacturer": "string",
+  "model": "string",
+  "speeds": "number"
+ },
+ "display": {
+  "bluetooth": "bool",
+  "details": "string",
+  "manufacturer": "string",
+  "model": "string",
+  "size_in": "number",
+  "type": "string"
+ },
+ "fork": {
+  "details": "string",
+  "lockout": "bool",
+  "manufacturer": "string",
+  "model": "string",
+  "thru_axle": "bool",
+  "travel_mm": "number",
+  "type": "string"
+ },
+ "frame": {
+  "battery_position": "string",
+  "brake_mount": "string",
+  "cable_routing": "string",
+  "details": "string",
+  "folding": "bool",
+  "headtube": "string",
+  "integrated_battery": "bool",
+  "material": "string",
+  "mounts": "list",
+  "removable_battery": "bool",
+  "style": "string"
+ },
+ "grips": {
+  "details": "string",
+  "ergonomic": "bool",
+  "lock_on": "bool",
+  "manufacturer": "string",
+  "material": "string",
+  "model": "string"
+ },
+ "handlebars": {
+  "backsweep_deg": "number",
+  "clamp_mm": "number",
+  "details": "string",
+  "manufacturer": "string",
+  "material": "string",
+  "model": "string",
+  "rise_mm": "number",
+  "type": "string",
+  "upsweep_deg": "number",
+  "width_mm": "number"
+ },
+ "light": {
+  "brake_light": "bool",
+  "details": "string",
+  "integrated": "bool",
+  "lumens": "number",
+  "lux": "number",
+  "turn_signal": "bool"
+ },
+ "motor": {
+  "details": "string",
+  "manufacturer": "string",
+  "model": "string",
+  "peak_w": "number",
+  "placement": "string",
+  "power_w": "number",
+  "torque_nm": "number",
+  "voltage_v": "number"
+ },
+ "pedal_assist": {
+  "boost": "bool",
+  "details": "string",
+  "levels": "number"
+ },
+ "pedals": {
+  "details": "string",
+  "material": "string",
+  "thread": "string",
+  "type": "string"
+ },
+ "rims": {
+  "details": "string",
+  "double_wall": "bool",
+  "material": "string",
+  "size_in": "number"
+ },
+ "saddle": {
+  "details": "string",
+  "manufacturer": "string",
+  "model": "string",
+  "width_mm": "number"
+ },
+ "seat_binder": {
+  "details": "string",
+  "diameter_mm": "number",
+  "material": "string",
+  "type": "string"
+ },
+ "seatpost": {
+  "details": "string",
+  "diameter_mm": "number",
+  "length_mm": "number",
+  "manufacturer": "string",
+  "material": "string",
+  "model": "string",
+  "offset_mm": "number",
+  "travel_mm": "number",
+  "type": "string"
+ },
+ "sensor": {
+  "details": "string",
+  "magnets": "number",
+  "type": "string"
+ },
+ "shock": {
+  "details": "string",
+  "manufacturer": "string",
+  "model": "string",
+  "size": "string",
+  "type": "string"
+ },
+ "spokes": {
+  "details": "string",
+  "gauge": "number",
+  "material": "string"
+ },
+ "stem": {
+  "adjustable": "bool",
+  "angle_deg": "number",
+  "clamp_mm": "number",
+  "details": "string",
+  "length_mm": "number",
+  "manufacturer": "string",
+  "material": "string",
+  "model": "string",
+  "type": "string"
+ },
+ "throttle": {
+  "details": "string",
+  "manufacturer": "string",
+  "model": "string",
+  "side": "string",
+  "type": "string"
+ },
+ "tire": {
+  "details": "string",
+  "diameter_in": "number",
+  "manufacturer": "string",
+  "model": "string",
+  "size": "string",
+  "tubeless": "bool",
+  "width_in": "number",
+  "width_mm": "number"
+ },
+ "tubes": {
+  "details": "string",
+  "valve": "string",
+  "valve_mm": "number"
+ },
+ "wheel": {
+  "axle": "string",
+  "details": "string",
+  "double_wall": "bool",
+  "gauge": "number",
+  "holes": "number",
+  "material": "string",
+  "size_in": "number",
+  "tubeless": "bool",
+  "valve": "string"
+ }
+}

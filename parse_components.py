@@ -40,7 +40,7 @@ SUSPENSION = ("RockShox", "Rock Shox", "SR Suntour", "Suntour", "Fox", "Manitou"
               "X-Fusion", "DNM", "Mozo", "RST", "Marzocchi", "Mastodon", "Zoom")
 MOTORS = ("Bosch", "Bafang", "Shengyi", "Ananda", "Das-Kit", "DAS-KIT", "Dapu",
           "Mivice", "Yamaha", "Brose", "Mahle", "Hyena", "Aikema", "AKM", "MPF",
-          "TranzX", "Ultro", "Globe")
+          "TranzX", "Ultro", "Globe", "Shimano", "Fazua", "TQ")
 CELLS = ("Samsung", "LG", "Panasonic", "Molicel", "Sony", "BAK", "EVE", "CATL",
          "Lishen")
 TIRES = ("Maxxis", "Kenda", "CST", "Innova", "Schwalbe", "Vee", "WTB",
@@ -53,11 +53,19 @@ HOUSE = {"specialized": ("Globe", "Roval", "Specialized")}
 
 
 def _brands_for(brands: tuple, brand: str | None) -> list:
-    """Category brands + the bike's own/house brand, longest first."""
+    """Category brands + the bike's own/house brand, longest first. Dedupe is
+    case-insensitive keeping the tuple's first spelling (the canonical one),
+    and the sort is stable -- set() here made equal-length ties depend on hash
+    randomization, flipping e.g. microSHIFT/MicroShift between runs."""
     cand = list(brands)
     if brand:
         cand += list(HOUSE.get(brand, ())) + [brand.title()]
-    return sorted(set(cand), key=len, reverse=True)
+    seen, ordered = set(), []
+    for b in cand:
+        if b.lower() not in seen:
+            seen.add(b.lower())
+            ordered.append(b)
+    return sorted(ordered, key=lambda b: -len(b))
 
 
 def _find_brand(text: str, brands: list):
@@ -157,10 +165,15 @@ _CVT = r"enviolo|nuvinci|\bcvt\b|continuously[\s-]?variable|infinitely[\s-]?gear
 # negative lookahead keeps the carbon rule from firing on it (the bug that made
 # VIVI's "High Carbon Steel" frame read as a carbon-fiber frame).
 _MATERIAL_RULES = [
-    ("carbon",    r"carbon(?![\s-]*steel)"),
+    # carbon = carbon *fibre* only. "carbon steel"/"high|low|mid|mild carbon" are
+    # steel; a "carbon drive/belt" is a drivetrain. The lookbehinds drop the steel
+    # qualifiers, the lookahead drops "carbon steel/drive/belt". (aluminum stays
+    # ahead of steel so a named alloy wins.)
+    ("carbon",    r"(?<!high )(?<!high-)(?<!low )(?<!low-)(?<!mid )(?<!mid-)"
+                  r"(?<!medium )(?<!medium-)(?<!mild )(?<!mild-)carbon(?![\s-]*(?:steel|drive|belt))"),
     ("stainless", r"stainless"),
-    ("aluminum",  r"6061|6063|alumin|alloy"),
-    ("steel",     r"cro-?mo|chromoly|\bsteel\b"),
+    ("aluminum",  r"6061|6063|7005|\ba3\d{2}\b|\ba380\b|alumin|alloy"),
+    ("steel",     r"carbon[\s-]*steel|(?:high|low|mid|medium|mild)[\s-]*carbon|\bq\d{3}\b|cro-?mo|chromoly|\bsteel\b"),
     ("magnesium", r"magnesium"),
     ("composite", r"composite|nylon|plastic|resin"),
     ("leather",   r"leather"),
@@ -322,6 +335,11 @@ def _brake(v, brand, rotor_text=""):
         mm = re.search(re.escape(man) + r"\s+([A-Z][\w.\-]*(?:[\s,]+[A-Z][\w.\-]*){0,2})", v)
         if mm:
             cand = mm.group(1).strip().rstrip(".,;")
+            # A piston descriptor ("Quad-Piston", "4-Piston") is a caliper attribute,
+            # not part of the model — strip it so it falls through to the piston parse
+            # below (and "Orion HD-M745 Quad-Piston" normalizes to "Orion HD-M745").
+            cand = re.sub(r"[\s,]*(?:\d|single|one|dual|twin|two|triple|three|quad"
+                          r"|four|six)[-\s]*piston\b.*$", "", cand, flags=re.I).strip()
             if re.search(r"\d|[A-Z]{2,}-", cand):
                 out["model"] = cand
                 rest = rest.replace(cand, "", 1)
@@ -334,25 +352,35 @@ def _brake(v, brand, rotor_text=""):
         out["kind"] = "disc"
     elif re.search(r"\brim\b|\bv-?brake", low):
         out["kind"] = "rim"
-    # piston count: digit ("4-piston") or word ("quad-/dual-/single-piston").
-    m, rest = _consume(rest, r"(\d)\s*[-\s]?piston")
+    # piston count: digit ("4-piston") or word ("quad-/dual-/single-piston"). The
+    # separator is [-\s]* so spacing variants all read the same ("4-piston",
+    # "4 piston", "4- Piston").
+    m, rest = _consume(rest, r"(\d)\s*[-\s]*piston")
     if m:
         out["pistons"] = int(m.group(1))
     else:
         mw = re.search(r"\b(single|one|dual|twin|two|triple|three|quad|four|six)"
-                       r"[-\s]?piston", rest, re.I)
+                       r"[-\s]*piston", rest, re.I)
         if mw:
             out["pistons"] = _PISTON_WORD[mw.group(1).lower()]
             rest = re.sub(r"\b(?:single|one|dual|twin|two|triple|three|quad|four|six)"
-                          r"[-\s]?piston", "", rest, count=1, flags=re.I)
+                          r"[-\s]*piston", "", rest, count=1, flags=re.I)
     blob = v + " " + (rotor_text or "")
-    md = re.search(r"(\d{3})\s*mm", blob)            # rotor diameter (160/180/203)
-    if md:
-        out["rotor_mm"] = int(md.group(1))
-        rest = re.sub(r"\d{3}\s*mm", "", rest, count=1)
-    mt = re.search(r"(\d(?:\.\d)?)\s*mm\s*(?:thick|thickness)|x\s*(\d(?:\.\d)?)\s*mm", blob, re.I)
-    if mt:
-        out["rotor_thickness_mm"] = float(mt.group(1) or mt.group(2))
+    # Combined "diameter × thickness" written with any of *, x, × ("160*1.8mm",
+    # "203x2mm", "180 × 1.9 mm") — capture both in one pass.
+    mc = re.search(r"(\d{3})\s*[*x×]\s*(\d(?:\.\d)?)\s*mm", blob, re.I)
+    if mc:
+        out["rotor_mm"] = int(mc.group(1))
+        out["rotor_thickness_mm"] = float(mc.group(2))
+        rest = re.sub(r"\d{3}\s*[*x×]\s*\d(?:\.\d)?\s*mm", "", rest, count=1, flags=re.I)
+    else:
+        md = re.search(r"(\d{3})\s*mm", blob)        # rotor diameter (160/180/203)
+        if md:
+            out["rotor_mm"] = int(md.group(1))
+            rest = re.sub(r"\d{3}\s*mm", "", rest, count=1)
+        mt = re.search(r"(\d(?:\.\d)?)\s*mm\s*(?:thick|thickness)|x\s*(\d(?:\.\d)?)\s*mm", blob, re.I)
+        if mt:
+            out["rotor_thickness_mm"] = float(mt.group(1) or mt.group(2))
     # Many vendors list only the brake model ("SRAM DB8 Stealth 200mm", "Tektro
     # Orion HD-M745 Quad-Piston"); infer the disc/hydraulic kind they omit so it
     # doesn't read as a rim brake downstream. A rotor, a piston caliper, or a
@@ -378,18 +406,28 @@ def _motor(v, brand):
     if man:
         out["manufacturer"] = man
     low = v.lower()
-    # A "boost mode" wattage is the in-boost peak the brand advertises (Aventon:
-    # "750W (1440W in Boost Mode)"). Capture it as a peak fallback, then drop the
-    # boost parenthetical so it can't read as the continuous rating. An explicit
-    # "Peak <n>W" below still wins. (The torque-in-boost figure is left dropped.)
-    bm = (re.search(r"(\d{3,4})\s*w[^)0-9]{0,12}boost", low)
+    # A "boost mode" wattage is the bike's true peak -- the highest output a
+    # shipped mode delivers (Aventon: "750W Peak (850W Peak in BOOST Mode)").
+    # Capture it, then drop the boost parenthetical so it can't read as the
+    # continuous rating; it's folded back in as peak_w below. (The
+    # torque-in-boost figure is left dropped.)
+    bm = (re.search(r"(\d{3,4})\s*w(?:att)?s?[^)0-9]{0,12}boost", low)
           or re.search(r"boost[^)0-9]{0,15}(\d{3,4})\s*w", low))
     boost_w = int(bm.group(1)) if bm else None
+    # "850W Peak in BOOST Mode": the vendor calls the boost figure the peak,
+    # so a "Peak"-labeled standard figure beside it is really the nominal
+    # ("750W Peak (850W Peak in BOOST Mode)"). Without that wording ("1188W
+    # Peak (1440W in Boost Mode)") the standard peak stays a peak.
+    boost_is_peak = bool(re.search(r"\d\s*w(?:att)?s?\s*peak[^)0-9]{0,10}boost", low))
     low = re.sub(r"\([^)]*boost[^)]*\)", " ", low)
     if re.search(r"mid[\s-]?drive|mid[\s-]?motor", low):
         out["placement"] = "mid"
     elif re.search(r"\bhub\b", low):
         out["placement"] = "hub"
+    elif man in ("Bosch", "Brose", "Specialized", "Shimano", "Yamaha", "TQ", "Fazua"):
+        # these makers build only mid-drive e-bike motors, and their spec rows
+        # rarely say so ("Bosch Performance Line CX")
+        out["placement"] = "mid"
     # Peak first. "Peak <n>W" ("Rated 750W, Peak 1200W") binds tighter than
     # "<n>W ... Peak" ("1188W Peak"), and neither gap may cross another number
     # ("750W (1188W Peak)" peaks at 1188), a comma/paren ("1000W Peak, Rated
@@ -405,9 +443,14 @@ def _motor(v, brand):
     m, _ = _consume(cont, r"(\d{3,4})\s*w\b")
     if m:
         out["power_w"] = int(m.group(1))
-    # boost figure stands in as peak when the spec stated no explicit peak
-    if boost_w and "peak_w" not in out:
-        out["peak_w"] = boost_w
+    # The boost figure is the true peak (highest shipped-mode output). When the
+    # vendor's boost wording itself says "peak", the standard "Peak"-labeled
+    # figure demotes to the nominal rating.
+    if boost_w:
+        explicit = out.get("peak_w")
+        if boost_is_peak and explicit and explicit != boost_w and "power_w" not in out:
+            out["power_w"] = explicit
+        out["peak_w"] = max(boost_w, explicit or 0)
     m = re.search(r"(\d{2,3})\s*n[·.\s]?m", low)
     if m:
         out["torque_nm"] = int(m.group(1))
@@ -845,13 +888,80 @@ def _tubes(v, brand):
 
 
 def _frame(v, brand):
+    """Clause-based: split the frame description on commas and classify each
+    clause into a structured field; only unclassified clauses stay as details
+    ("SmartForm C3 Alloy frame, low step-thru, removable downtube battery,
+    semi-internal cable routing, tapered 1-1/8\"-1.5\" headtube, post mount
+    disc, waterbottle and headtube rack mounts")."""
     out, low = {}, v.lower()
     mat = material(low, "carbon", "aluminum", "steel", "magnesium")
     if mat:
         out["material"] = mat
-    out["integrated_battery"] = bool(re.search(r"intern(al)? battery|integrated battery|in[\s-]?frame batter", low))
+    out["integrated_battery"] = bool(re.search(
+        r"(?:intern\w*|integrated)[^,;]{0,24}batter"
+        r"|(?:in[\s-]?(?:frame|tube)|down\s?tube)[^,;]{0,16}batter", low))
     out["folding"] = bool(re.search(r"fold", low))
-    out["details"] = _clean(v)
+
+    leftover = []
+    for clause in re.split(r"\s*[,;]\s*", v):
+        cl = clause.lower()
+        if not cl.strip():
+            continue
+        if "batter" in cl:
+            if re.search(r"removable", cl):
+                out["removable_battery"] = True
+            pos = re.search(r"down\s?tube|in[\s-]?tube|in[\s-]?frame|seat\s?tube|rear\s?rack", cl)
+            if pos:
+                out["battery_position"] = re.sub(r"[\s-]+", "_", pos.group(0))
+            # strip just the battery phrase -- a comma-less description may
+            # carry frame info in the same clause ("Gravity Cast 6061
+            # Single-Butted Aluminum Alloy with Internal Battery")
+            rem = re.sub(r"(?:removable|integrated|internal|external)?[\s]*"
+                         r"(?:\d+\s*v\s*)?"
+                         r"(?:down\s?tube|in[\s-]?tube|in[\s-]?frame|seat\s?tube|rear\s?rack)?"
+                         r"[\s]*batter\w*", " ", clause, flags=re.I)
+            rem = re.sub(r"\b(?:with|w/|featuring|and)\s*$", "", rem.strip(), flags=re.I)
+            if re.search(r"[a-z0-9]", rem, re.I):
+                leftover.append(rem)
+            continue
+        if re.search(r"cable|routing|cabling|wiring", cl):
+            out["cable_routing"] = ("semi_internal" if re.search(r"semi", cl)
+                                    else "external" if re.search(r"external", cl)
+                                    else "internal" if re.search(r"intern|hidden|conceal", cl)
+                                    else None) or out.get("cable_routing")
+            if out.get("cable_routing"):
+                continue
+        if re.search(r"head\s?tube", cl) and re.search(r"tapered|\d", cl):
+            ht = _clean(re.sub(r"head\s?tube", " ", clause, flags=re.I))
+            if ht:
+                out["headtube"] = ht
+            continue
+        if re.search(r"(post|flat|is)[\s-]?mount", cl):
+            m = re.search(r"(post|flat|is)[\s-]?mount(\s+disc)?", cl)
+            out["brake_mount"] = re.sub(r"[\s-]+", "_", m.group(0))
+            continue
+        if re.search(r"mounts?\b|bosses", cl):
+            mounts = []
+            for pat, name in ((r"water\s?bottle|bottle\s?cage", "water bottle"),
+                              (r"\brack\b", "rack"), (r"fender", "fender"),
+                              (r"kickstand", "kickstand"), (r"trailer", "trailer"),
+                              (r"basket", "basket")):
+                if re.search(pat, cl):
+                    mounts.append(name)
+            if mounts:
+                out["mounts"] = sorted(set(mounts + (out.get("mounts") or [])))
+                continue
+        if re.search(r"step[\s-]?(thru|through)|low[\s-]?step|easy[\s-]?entry", cl):
+            out["style"] = "step_thru"
+            continue
+        if re.search(r"step[\s-]?over|high[\s-]?step|mid[\s-]?step", cl):
+            out["style"] = "step_over"
+            continue
+        leftover.append(clause)
+    det = ", ".join(leftover)
+    if out["folding"]:
+        det = re.sub(r"\bfold(?:ing|able)?\b", " ", det, flags=re.I)
+    out["details"] = _clean(det)
     return out
 
 
@@ -1032,7 +1142,10 @@ def _resolver(field: str):
         return _fork
     if "shock" in f or f == "rear_suspension":
         return _shock
-    if "brake" in f and "rotor" not in f:
+    # Brakes and standalone rotor specs (Rotors, Brake Rotor, Front/Rear Rotor,
+    # Disc Rotor) both go to _brake; the rotor's diameter/thickness merge into the
+    # brake card downstream (SpecTable buckets same-kind instances by position).
+    if "brake" in f or "rotor" in f:
         return _brake
     if "charger" in f:
         return _charger
@@ -1137,7 +1250,19 @@ def _speed(field, v):
         mph = kph * 0.621371
     if kph is None:
         kph = mph * 1.60934
-    return {_key(field, "_mph"): round(mph), _key(field, "_kph"): round(kph)}
+    out = {_key(field, "_mph"): round(mph), _key(field, "_kph"): round(kph)}
+    # Keep e-bike class info the unit extraction would otherwise discard:
+    # explicit "Class 3" mentions in the value ("Speed: Class 3 electric bike,
+    # with 28mph pedal assist"), or bare digit lists when the field itself is a
+    # class row ("CLASS & SPEED: 1-3 & 28mph"). Lookarounds keep "28mph" out.
+    m = re.search(r"class(?:es)?\s*[-:]?\s*([123](?:\s*(?:[/,&+]|or|and|to|-)\s*[123])*)",
+                  str(v), re.I)
+    if not m and "class" in str(field).lower():
+        m = re.search(r"(?<!\d)([123](?:\s*[-/,&+]\s*[123])*)(?!\d)(?!\s*(?:mph|kph))",
+                      str(v))
+    if m:
+        out["ebike_classes"] = m.group(1)
+    return out
 
 
 def _weight(field, v):
@@ -1220,6 +1345,130 @@ def unitize(field: str, value):
     return None
 
 
+# A frame-size segment: "S/M:", "L/XL:", "Size S:", "M/L/XL :" — one or more
+# size tokens (XS..XXL) joined by "/", optionally led by the word "Size", and
+# terminated by a colon. The colon + token shape keeps this off ordinary text.
+_SIZE_SEG = re.compile(r"(?:\bsize\s+)?\b((?:X{0,2}[SML])(?:\s*/\s*X{0,2}[SML])*)\s*:", re.I)
+
+
+def _is_size_label(m: "re.Match") -> bool:
+    # Only trust a match that's unambiguously a size: a multi-size group ("S/M")
+    # or one explicitly introduced by "Size" — a bare "M:"/"L:" is too risky
+    # (could be a left/right or other colon-delimited note).
+    return "/" in m.group(1) or m.group(0).lstrip().lower().startswith("size")
+
+
+def _split_by_size(value: str):
+    """Split "common. S/M: …. L/XL: …" into (common_text, {SIZE: segment}), or
+    None when fewer than two size segments are present."""
+    matches = [m for m in _SIZE_SEG.finditer(value) if _is_size_label(m)]
+    if len(matches) < 2:
+        return None
+    common = value[:matches[0].start()].strip(" .,;-")
+    segs: dict[str, str] = {}
+    for i, m in enumerate(matches):
+        label = re.sub(r"\s*/\s*", "/", m.group(1).upper())
+        end = matches[i + 1].start() if i + 1 < len(matches) else len(value)
+        segs[label] = value[m.end():end].strip(" .,;-")
+    return common, segs
+
+
+def _parse_sized(fn, common: str, segs: dict, brand):
+    """Parse each "common + per-size segment" with `fn`, then fold attributes that
+    are identical across every size up to the top level and keep the rest in a
+    `by_size` map keyed by the frame-size label."""
+    per = {lbl: (fn(_dethousand(f"{common} {seg}".strip()), brand) or {})
+           for lbl, seg in segs.items()}
+    base = fn(_dethousand(common.strip()), brand) if common.strip() else {}
+    keys = {k for d in per.values() for k in d if k != "details"}
+    result: dict = {}
+    by_size: dict[str, dict] = {lbl: {} for lbl in segs}
+    for k in keys:
+        vals = {lbl: per[lbl].get(k) for lbl in segs}
+        present = [v for v in vals.values() if v is not None]
+        if len(present) == len(segs) and all(v == present[0] for v in present):
+            result[k] = present[0]                       # same on every size
+        else:
+            for lbl, v in vals.items():
+                if v is not None:
+                    by_size[lbl][k] = v
+    if base.get("details"):
+        result["details"] = base["details"]
+    by_size = {lbl: a for lbl, a in by_size.items() if a}
+    if by_size:
+        result["by_size"] = by_size
+    return result
+
+
+# Unit spellings per structured-field suffix, so a parsed number's textual form
+# ("180mm", "750 watts", '27.5"') can be located in the leftover details text.
+_DETAIL_UNITS = [
+    ("_wh", r"\s*wh\b"), ("_w", r"\s*w(?:att)?s?\b"), ("_nm", r"\s*n[·.\s]?m\b"),
+    ("_v", r"\s*v(?:olts?)?\b"), ("_mm", r"\s*mm\b"), ("_cm", r"\s*cm\b"),
+    ("_in", r"\s*(?:\"|''|in(?:ch(?:es)?)?\b)"), ("_lb", r"\s*(?:lbs?|pounds)\b"),
+    ("_kg", r"\s*kgs?\b"), ("_deg", r"\s*(?:°|deg(?:rees?)?\b)"), ("_ah", r"\s*ah\b"),
+]
+
+
+def _strip_parsed_from_details(result: dict) -> None:
+    """Remove every parsed-out value's textual form from `details`, so the UI's
+    "Extra" column never repeats what the structured columns already show.
+    Empty leftovers drop the key entirely (the UI hides absent columns)."""
+    det = result.get("details")
+    if not isinstance(det, str) or not det:
+        if det == "":
+            result.pop("details", None)
+        return
+    def strip_token(text: str, tok: str) -> str:
+        # enum-ish tokens may be stored snake_case ("square_taper") and the page
+        # may write compounds solid ("waterbottle") -- separators are optional
+        pat = r"\b" + re.escape(tok).replace(r"\ ", r"[\s_-]*").replace("_", r"[\s_-]*") + r"\b"
+        return re.sub(pat, " ", text, flags=re.I)
+
+    for k, v in result.items():
+        if k in ("details", "_kind", "by_size") or isinstance(v, bool) or v is None:
+            continue
+        if isinstance(v, list):
+            for item in v:
+                if isinstance(item, str) and len(item) >= 3:
+                    det = strip_token(det, item)
+        elif isinstance(v, str) and len(v) >= 3:
+            det = strip_token(det, v)
+        elif isinstance(v, (int, float)):
+            n = int(v) if float(v).is_integer() else v
+            num = re.escape(str(n)) + (r"(?:\.0)?" if isinstance(n, int) else "")
+            if k in ("speeds", "gears"):
+                det = re.sub(rf"\b{num}[\s-]*speeds?\b", " ", det, flags=re.I)
+                continue
+            for suf, unit in _DETAIL_UNITS:
+                if k.endswith(suf):
+                    det = re.sub(rf"\b{num}{unit}", " ", det, flags=re.I)
+                    break
+    # orphaned unit tokens left behind by earlier per-parser stripping ("…, mm")
+    det = re.sub(r"(?<![\w.])(?:mm|cm|wh|n[·.]?m|kgs?|lbs?)\b(?!\s*[\d])", " ", det, flags=re.I)
+    # a dimensions connector whose numbers were both removed ("350mm x 31.6mm" -> "x")
+    det = re.sub(r"(?<![0-9\"\w])x(?![0-9\w])", " ", det, flags=re.I)
+    det = _clean(det)
+    if re.search(r"[a-z0-9]", det, re.I):
+        result["details"] = det
+    else:
+        result.pop("details", None)
+
+
+# LLM-extracted component parses (llm_parse_components.py), keyed by
+# sha256(kind|brand|text)[:20]. When the cache exists, it is the primary
+# engine; the regex parsers below handle cache misses (new text between
+# extraction runs), so the pipeline stays offline-safe.
+try:
+    import hashlib as _hashlib
+    import json as _json
+    from pathlib import Path as _Path
+    _LLM_COMPONENTS = _json.loads(
+        (_Path(__file__).parent / "data" / "curated" / "llm_components.json").read_text())
+except (FileNotFoundError, ValueError):
+    _LLM_COMPONENTS = {}
+
+
 def parse_component(field: str, value, brand: str | None = None,
                     siblings: dict | None = None):
     """Structured dict for a known component field, else None. `siblings` lets the
@@ -1227,13 +1476,24 @@ def parse_component(field: str, value, brand: str | None = None,
     fn = _resolver(field)
     if fn is None or not isinstance(value, str) or not value.strip():
         return None
+    if _LLM_COMPONENTS:
+        kind = fn.__name__.lstrip("_")
+        key = _hashlib.sha256(f"{kind}|{brand}|{value}".encode()).hexdigest()[:20]
+        hit = _LLM_COMPONENTS.get(key)
+        if hit:
+            return _json.loads(_json.dumps(hit["parsed"]))  # fresh copy per call
     value = _dethousand(value)   # "1,200W" must parse as 1200, not 200
+    sized = None if fn is _brake else _split_by_size(value)
     if fn is _brake:
         rotor = ""
         for k, sv in (siblings or {}).items():
             if "rotor" in k and isinstance(sv, str):
                 rotor += " " + sv
         result = _brake(value, brand, rotor)
+    elif sized:
+        # attributes that vary by frame size (e.g. handlebar width/rise) are kept
+        # under by_size; shared attributes stay at the top level.
+        result = _parse_sized(fn, sized[0], sized[1], brand)
     else:
         result = fn(value, brand)
     # When a manufacturer was found, pull the model/series out of the leftover
@@ -1249,4 +1509,5 @@ def parse_component(field: str, value, brand: str | None = None,
     # the right feature columns without re-deriving the type from noisy labels.
     if result:
         result["_kind"] = fn.__name__.lstrip("_")
+        _strip_parsed_from_details(result)
     return result

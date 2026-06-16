@@ -28,3 +28,47 @@
     @apply btn border border-slate-300 bg-white text-slate-700 hover:bg-slate-100;
   }
 }
+
+/* Dual-handle range slider: two range inputs overlaid on one track. The inputs
+   themselves are transparent and pass pointer events THROUGH (so the lower one
+   isn't blocked); only the thumbs are interactive and draggable. */
+.range-dual {
+  -webkit-appearance: none;
+  appearance: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: transparent;
+  pointer-events: none;
+}
+.range-dual:focus {
+  outline: none;
+}
+.range-dual::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  pointer-events: auto;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 9999px;
+  background: #fff;
+  border: 2px solid theme("colors.brand.600");
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.15);
+  cursor: pointer;
+}
+.range-dual::-moz-range-thumb {
+  pointer-events: auto;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 9999px;
+  background: #fff;
+  border: 2px solid theme("colors.brand.600");
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.15);
+  cursor: pointer;
+}
+.range-dual::-moz-range-track {
+  background: transparent;
+}

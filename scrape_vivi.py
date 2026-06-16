@@ -69,8 +69,33 @@ def discover_models() -> list[dict]:
             "price_from": min(prices) if prices else None,
             "currency": "USD",
             "options": options,
+            # VIVI states nominal motor power only in a product tag ("750W
+            # Electric Bike"); the Motor spec row lists peak only. Keep tags so
+            # scrape_model can fold the nominal back into the Motor row.
+            "tags": p.get("tags") or [],
         })
     return models
+
+
+_TAG_W = re.compile(r"\b(\d{3,4})\s*w\b", re.I)
+
+
+def _fold_nominal_from_tags(all_specs: dict, tags: list) -> None:
+    """When the Motor row gives only a peak wattage but a product tag names a
+    lower (nominal) wattage, prepend the nominal so the parser reads both."""
+    watts = [int(m.group(1)) for t in (tags or []) if (m := _TAG_W.search(str(t)))]
+    if not watts:
+        return
+    nominal = min(watts)
+    mkey = next((k for k in all_specs if "motor" in k.lower()), None)
+    if not mkey:
+        return
+    val = all_specs[mkey]
+    if not re.search(r"peak", val, re.I):
+        return  # already carries a plain/nominal wattage — don't touch it
+    peak = re.search(r"(\d{3,4})\s*w", val, re.I)
+    if peak and nominal < int(peak.group(1)) and f"{nominal}w" not in val.replace(" ", "").lower():
+        all_specs[mkey] = f"{nominal}W {val}"
 
 
 # Read the Shogun spec grid (label cell .shg-c-lg-4 + value cell .shg-c-lg-8),
@@ -139,6 +164,7 @@ async def scrape_model(context, model: dict, retries: int = 3) -> dict:
                 key = " ".join(label.split())
                 all_specs[key] = _EMOJI.sub("", value).strip()
 
+            _fold_nominal_from_tags(all_specs, model.get("tags"))
             result["specs"] = {"all": all_specs}
             result["spec_count"] = len(all_specs)
             result["scrape_error"] = None

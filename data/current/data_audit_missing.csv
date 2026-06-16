@@ -1,523 +1,607 @@
 brand,model,field
-aventon,Current ADV Ebike,motor_w
-aventon,Current EXP Ebike,motor_w
+aventon,Current ADV Ebike,sensor_type
+aventon,Current EXP Ebike,sensor_type
 aventon,Level 4 ADV Ebike,motor_w
+aventon,Level 4 ADV Ebike,sensor_type
 aventon,Level 4 ADV Step-Through Ebike,motor_w
-blix,Packa Genie Cargo eBike,rack_load_lb
-blix,Packa Genie Cargo eBike,range_mi
+aventon,Level 4 ADV Step-Through Ebike,sensor_type
+aventon,Ramblas ADV Ebike,rack_load_lb
+blix,Packa Genie Cargo eBike,max_speed_mph
 blix,Packa Genie Cargo eBike,torque_nm
-blix,Packa Genie Cargo eBike — Dual Battery,rack_load_lb
-blix,Packa Genie Cargo eBike — Dual Battery,range_mi
+blix,Packa Genie Cargo eBike — Dual Battery,max_speed_mph
 blix,Packa Genie Cargo eBike — Dual Battery,torque_nm
-cemoto,"CEMOTO B28D | 26"" Fat Tire Mountain Ebike All-Terrain Electric Bike",range_mi
+buzz,Beekeeper Cargo Ebike,frame_material
+buzz,Beekeeper Cargo Ebike,sensor_type
+buzz,Beekeeper Cargo Ebike,suspension
+buzz,Centris 2 Folding Ebike,frame_material
+buzz,Centris 2 Folding Ebike,rack_load_lb
+buzz,Centris 2 Folding Ebike,sensor_type
+buzz,Cerana 2 Commuter Ebike,frame_material
+buzz,Cerana 2 Commuter Ebike,rack_load_lb
+buzz,Cerana 2 Commuter Ebike,torque_nm
+buzz,Cerana T2 Etrike,frame_material
+buzz,Cerana T2 Etrike,rack_load_lb
+buzz,Cerana T2 Etrike,sensor_type
+buzz,Cerana T2 Etrike,suspension
+buzz,Cerana T2 Etrike,weight_lb
+cannondale,Adventure Neo 4,max_load_lb
+cannondale,Adventure Neo 4,sensor_type
+cannondale,Adventure Neo Allroad,max_load_lb
+cannondale,Adventure Neo Allroad,sensor_type
+cannondale,Adventure Neo Allroad,torque_nm
+cannondale,Adventure Neo Allroad EQ,max_load_lb
+cannondale,Adventure Neo Allroad EQ,torque_nm
+cannondale,Adventure Neo Allroad EQ Low StepThru,max_load_lb
+cannondale,Adventure Neo Allroad EQ Low StepThru,torque_nm
+cannondale,Adventure Neo Allroad Low StepThru,max_load_lb
+cannondale,Adventure Neo Allroad Low StepThru,sensor_type
+cannondale,Adventure Neo Allroad Low StepThru,torque_nm
+cannondale,Adventure Neo Allroad Speed,max_load_lb
+cannondale,Adventure Neo Allroad Speed,torque_nm
+cannondale,Adventure Neo Allroad Speed Low StepThru,max_load_lb
+cannondale,Adventure Neo Allroad Speed Low StepThru,torque_nm
+cannondale,Cargowagen Neo,sensor_type
+cannondale,Cargowagen Neo,torque_nm
+cannondale,FlyingV,max_load_lb
+cannondale,FlyingV,range_mi
+cannondale,FlyingV,sensor_type
+cannondale,Mavaro Neo 1 Low StepThru,max_load_lb
+cannondale,Mavaro Neo 1 Low StepThru,sensor_type
+cannondale,Mavaro Neo 1 Low StepThru,torque_nm
+cannondale,Mavaro Neo 2 Low StepThru,max_load_lb
+cannondale,Mavaro Neo 2 Low StepThru,sensor_type
+cannondale,Mavaro Neo 2 Low StepThru,torque_nm
+cannondale,Mavaro Neo 3 Low StepThru,max_load_lb
+cannondale,Mavaro Neo 3 Low StepThru,sensor_type
+cannondale,Moterra 1,max_load_lb
+cannondale,Moterra 1,max_speed_mph
+cannondale,Moterra 1,range_mi
+cannondale,Moterra 1,sensor_type
+cannondale,Moterra 2,max_load_lb
+cannondale,Moterra 2,max_speed_mph
+cannondale,Moterra 2,range_mi
+cannondale,Moterra 2,sensor_type
+cannondale,Moterra 3,max_load_lb
+cannondale,Moterra 3,max_speed_mph
+cannondale,Moterra 3,range_mi
+cannondale,Moterra 3,sensor_type
+cannondale,Moterra 4,max_load_lb
+cannondale,Moterra 4,max_speed_mph
+cannondale,Moterra 4,range_mi
+cannondale,Moterra 4,sensor_type
+cannondale,Moterra 4 Plus,max_load_lb
+cannondale,Moterra 4 Plus,max_speed_mph
+cannondale,Moterra 4 Plus,range_mi
+cannondale,Moterra 4 Plus,sensor_type
+cannondale,Moterra LT 1,max_load_lb
+cannondale,Moterra LT 1,max_speed_mph
+cannondale,Moterra LT 1,range_mi
+cannondale,Moterra LT 1,sensor_type
+cannondale,Moterra Neo Carbon 2,max_load_lb
+cannondale,Moterra Neo Carbon 2,max_speed_mph
+cannondale,Moterra Neo Carbon 2,range_mi
+cannondale,Moterra Neo Carbon 2,sensor_type
+cannondale,Moterra SL 1,max_load_lb
+cannondale,Moterra SL 1,max_speed_mph
+cannondale,Moterra SL 1,range_mi
+cannondale,Moterra SL 1,sensor_type
+cannondale,Moterra SL 2,max_load_lb
+cannondale,Moterra SL 2,max_speed_mph
+cannondale,Moterra SL 2,range_mi
+cannondale,Moterra SL 2,sensor_type
+cannondale,Moterra SL LAB71,max_load_lb
+cannondale,Moterra SL LAB71,max_speed_mph
+cannondale,Moterra SL LAB71,range_mi
+cannondale,Moterra SL LAB71,sensor_type
+cannondale,Synapse Neo,max_load_lb
+cannondale,Synapse Neo,range_mi
+cannondale,Synapse Neo,sensor_type
+cannondale,Synapse Neo Allroad 1,max_load_lb
+cannondale,Synapse Neo Allroad 1,range_mi
+cannondale,Synapse Neo Allroad 1,sensor_type
+cannondale,Synapse Neo Allroad 2,max_load_lb
+cannondale,Synapse Neo Allroad 2,range_mi
+cannondale,Synapse Neo Allroad 2,sensor_type
+cannondale,Tesoro Neo Carbon 1,max_load_lb
+cannondale,Tesoro Neo Carbon 1,range_mi
+cannondale,Tesoro Neo Carbon 1,sensor_type
+cannondale,Tesoro Neo Carbon 1,torque_nm
+cannondale,Tesoro Neo Carbon 2,max_load_lb
+cannondale,Tesoro Neo Carbon 2,range_mi
+cannondale,Tesoro Neo Carbon 2,sensor_type
+cannondale,Tesoro Neo Carbon 2,torque_nm
+cannondale,Tesoro Neo X 1,max_load_lb
+cannondale,Tesoro Neo X 1,sensor_type
+cannondale,Tesoro Neo X 1,torque_nm
+cannondale,Tesoro Neo X 1 StepThru,max_load_lb
+cannondale,Tesoro Neo X 1 StepThru,sensor_type
+cannondale,Tesoro Neo X 1 StepThru,torque_nm
+cannondale,Tesoro Neo X 2,max_load_lb
+cannondale,Tesoro Neo X 2,sensor_type
+cannondale,Tesoro Neo X 2 StepThru,max_load_lb
+cannondale,Tesoro Neo X 2 StepThru,sensor_type
+cannondale,Tesoro Neo X 3,max_load_lb
+cannondale,Tesoro Neo X 3,sensor_type
+cannondale,Treadwell Neo 2,max_load_lb
+cannondale,Treadwell Neo 2,max_speed_mph
+cannondale,Treadwell Neo 2,torque_nm
+cannondale,Treadwell Neo 2 EQ,max_load_lb
+cannondale,Treadwell Neo 2 EQ,max_speed_mph
+cannondale,Treadwell Neo 2 EQ,torque_nm
+cannondale,Treadwell Neo 2 Remixte,max_load_lb
+cannondale,Treadwell Neo 2 Remixte,max_speed_mph
+cannondale,Treadwell Neo 2 Remixte,torque_nm
+cemoto,"CEMOTO B28D | 26"" Fat Tire Mountain Ebike All-Terrain Electric Bike",fit_height_min_in
+cemoto,"CEMOTO B28D | 26"" Fat Tire Mountain Ebike All-Terrain Electric Bike",frame_size_rider_range
+cemoto,"CEMOTO B28D | 26"" Fat Tire Mountain Ebike All-Terrain Electric Bike",sensor_type
 cemoto,"CEMOTO B28D | 26"" Fat Tire Mountain Ebike All-Terrain Electric Bike",torque_nm
-cemoto,"CEMOTO B28D | 26"" Fat Tire Mountain Ebike All-Terrain Electric Bike",weight_lb
-cemoto,CEMOTO D-Series | 3000W–6000W Off-Road Electric Dirt Bike for Teens & Adults,brake_type
-cemoto,CEMOTO D-Series | 3000W–6000W Off-Road Electric Dirt Bike for Teens & Adults,display_type
-cemoto,CEMOTO D-Series | 3000W–6000W Off-Road Electric Dirt Bike for Teens & Adults,drivetrain_type
+cemoto,CEMOTO D-Series | 3000W–6000W Off-Road Electric Dirt Bike for Teens & Adults,fit_height_min_in
 cemoto,CEMOTO D-Series | 3000W–6000W Off-Road Electric Dirt Bike for Teens & Adults,frame_material
-cemoto,CEMOTO D-Series | 3000W–6000W Off-Road Electric Dirt Bike for Teens & Adults,suspension
+cemoto,CEMOTO D-Series | 3000W–6000W Off-Road Electric Dirt Bike for Teens & Adults,frame_size_rider_range
+cemoto,CEMOTO D-Series | 3000W–6000W Off-Road Electric Dirt Bike for Teens & Adults,sensor_type
 cemoto,CEMOTO D-Series | 3000W–6000W Off-Road Electric Dirt Bike for Teens & Adults,torque_nm
 cemoto,CEMOTO D-Series | 3000W–6000W Off-Road Electric Dirt Bike for Teens & Adults,weight_lb
-cemoto,CEMOTO EB66 | 750W double battery Harley-Like Hi-Tech Ebike,range_mi
+cemoto,CEMOTO EB66 | 750W double battery Harley-Like Hi-Tech Ebike,fit_height_min_in
+cemoto,CEMOTO EB66 | 750W double battery Harley-Like Hi-Tech Ebike,frame_size_rider_range
+cemoto,CEMOTO EB66 | 750W double battery Harley-Like Hi-Tech Ebike,sensor_type
 cemoto,CEMOTO EB66 | 750W double battery Harley-Like Hi-Tech Ebike,torque_nm
-cemoto,CEMOTO EB66 | 750W double battery Harley-Like Hi-Tech Ebike,weight_lb
-cemoto,"CEMOTO EBIKE B28 | 27.5"" E Mountain Bike",range_mi
+cemoto,"CEMOTO EBIKE B28 | 27.5"" E Mountain Bike",fit_height_min_in
+cemoto,"CEMOTO EBIKE B28 | 27.5"" E Mountain Bike",frame_size_rider_range
+cemoto,"CEMOTO EBIKE B28 | 27.5"" E Mountain Bike",sensor_type
 cemoto,"CEMOTO EBIKE B28 | 27.5"" E Mountain Bike",torque_nm
-cemoto,"CEMOTO EBIKE B28 | 27.5"" E Mountain Bike",weight_lb
+cemoto,CEMOTO EBIKE B28A | High Step Fat Tire Ebike,fit_height_min_in
+cemoto,CEMOTO EBIKE B28A | High Step Fat Tire Ebike,frame_size_rider_range
 cemoto,CEMOTO EBIKE B28A | High Step Fat Tire Ebike,range_mi
+cemoto,CEMOTO EBIKE B28A | High Step Fat Tire Ebike,sensor_type
 cemoto,CEMOTO EBIKE B28A | High Step Fat Tire Ebike,torque_nm
-cemoto,CEMOTO EBIKE B28A | High Step Fat Tire Ebike,weight_lb
 cemoto,Cargo Electric Bike |CEMOTO B69 750W Heavy Duty E-Bike 150kg Capacity,drivetrain_type
-cemoto,Cargo Electric Bike |CEMOTO B69 750W Heavy Duty E-Bike 150kg Capacity,rack_load_lb
-cemoto,Cargo Electric Bike |CEMOTO B69 750W Heavy Duty E-Bike 150kg Capacity,range_mi
+cemoto,Cargo Electric Bike |CEMOTO B69 750W Heavy Duty E-Bike 150kg Capacity,fit_height_min_in
+cemoto,Cargo Electric Bike |CEMOTO B69 750W Heavy Duty E-Bike 150kg Capacity,frame_size_rider_range
+cemoto,Cargo Electric Bike |CEMOTO B69 750W Heavy Duty E-Bike 150kg Capacity,sensor_type
 cemoto,Cargo Electric Bike |CEMOTO B69 750W Heavy Duty E-Bike 150kg Capacity,torque_nm
-cemoto,Cargo Electric Bike |CEMOTO B69 750W Heavy Duty E-Bike 150kg Capacity,weight_lb
-cemoto,Cemoto EB40 | Electric City Commuter Bike,range_mi
+cemoto,Cemoto EB40 | Electric City Commuter Bike,sensor_type
 cemoto,Cemoto EB40 | Electric City Commuter Bike,torque_nm
-cemoto,Cemoto EB40 | Electric City Commuter Bike,weight_lb
 cyke,Collie Cargo Ebike,rack_load_lb
 cyke,Grizzly Foldable Ebike,rack_load_lb
+cyke,Kingfisher Mid-Drive Folding eBike,fit_height_min_in
+cyke,Kingfisher Mid-Drive Folding eBike,frame_size_rider_range
 cyke,Kingfisher Mid-Drive Folding eBike,suspension
 engwe,ENGWE E26,display_type
 engwe,ENGWE E26,motor_w
-engwe,ENGWE E26,suspension
-engwe,ENGWE L20 2.0,display_type
-engwe,ENGWE L20 2.0,suspension
-engwe,ENGWE LE20,battery_wh
-engwe,ENGWE LE20,suspension
-engwe,ENGWE M20,battery_wh
-engwe,ENGWE M20,suspension
-engwe,ENGWE M20 2.0,battery_wh
-engwe,ENGWE M20 2.0,frame_material
-engwe,ENGWE M20 2.0,suspension
+engwe,ENGWE E26,sensor_type
+engwe,ENGWE E26 — Step-Thru,display_type
+engwe,ENGWE E26 — Step-Thru,motor_w
+engwe,ENGWE E26 — Step-Thru,sensor_type
+engwe,ENGWE EP-2 Pro,fit_height_min_in
+engwe,ENGWE EP-2 Pro,frame_size_rider_range
+engwe,ENGWE L20 2.0,sensor_type
+engwe,ENGWE M20,sensor_type
+engwe,ENGWE M20 2.0,fit_height_min_in
+engwe,ENGWE M20 2.0,frame_size_rider_range
+engwe,ENGWE M20 2.0,max_load_lb
+engwe,ENGWE M20 2.0,sensor_type
+engwe,ENGWE M20 2.0 — Dual Battery,fit_height_min_in
+engwe,ENGWE M20 2.0 — Dual Battery,frame_size_rider_range
+engwe,ENGWE M20 2.0 — Dual Battery,max_load_lb
+engwe,ENGWE M20 2.0 — Dual Battery,sensor_type
+engwe,ENGWE M20 3.0,sensor_type
+engwe,ENGWE M20 3.0 — Dual Battery,sensor_type
+engwe,ENGWE M20 — Dual Battery,sensor_type
 engwe,ENGWE X20,display_type
-engwe,ENGWE X20,suspension
-engwe,ENGWE X24,battery_wh
+engwe,ENGWE X20,sensor_type
+engwe,ENGWE X20 — Dual Battery,display_type
+engwe,ENGWE X20 — Dual Battery,sensor_type
 engwe,ENGWE X24,display_type
-engwe,ENGWE X24,suspension
-engwe,Engine Pro 2.0,display_type
-engwe,Engine Pro 2.0,suspension
-engwe,X26/24/X20,battery_wh
+engwe,ENGWE X24,sensor_type
+engwe,L20 3.0,frame_size_rider_range
 engwe,X26/24/X20,cell_brand
 engwe,X26/24/X20,display_type
-engwe,X26/24/X20,motor_w
+engwe,X26/24/X20,fit_height_min_in
+engwe,X26/24/X20,frame_size_rider_range
+engwe,X26/24/X20,sensor_type
 engwe,X26/24/X20,suspension
-euphree,City Robin 3,frame_material
-euphree,City Robin 3,rack_load_lb
+engwe,X26/24/X20 — Dual Battery,cell_brand
+engwe,X26/24/X20 — Dual Battery,display_type
+engwe,X26/24/X20 — Dual Battery,fit_height_min_in
+engwe,X26/24/X20 — Dual Battery,frame_size_rider_range
+engwe,X26/24/X20 — Dual Battery,sensor_type
+engwe,X26/24/X20 — Dual Battery,suspension
 euphree,City Robin 3,torque_nm
-euphree,Solar Sparrow,frame_material
-euphree,Solar Sparrow,rack_load_lb
-euphree,Solar Sparrow,torque_nm
-euphree,Solar Sparrow Belt,frame_material
+euphree,Solar Sparrow Belt,sensor_type
 euphree,Solar Sparrow Belt,torque_nm
-euphree,Stellar Falcon 2 Mid Step,frame_material
 euphree,Stellar Falcon 2 Mid Step,torque_nm
-euphree,Stellar Falcon 2 Step Thru,frame_material
 euphree,Stellar Falcon 2 Step Thru,torque_nm
-evelo,EVELO Atlas Electric Bike,rack_load_lb
 evelo,EVELO Atlas Electric Bike,range_mi
+evelo,EVELO Atlas Electric Bike,sensor_type
 evelo,EVELO Compass Electric Trike,rack_load_lb
-heybike,Hero — 1000W Rear Hub · Step-Over,range_mi
-heybike,Hero — 1000W Rear Hub · Step-Thru,range_mi
-heybike,Hero — 750W Mid-Drive · Step-Over,range_mi
-heybike,Hero — 750W Mid-Drive · Step-Thru,range_mi
-heybike,Horizon,drive_type
-heybike,Horizon,range_mi
-heybike,Horizon,torque_nm
-heybike,Ranger 3.0 Pro,range_mi
+evelo,EVELO Compass Electric Trike,sensor_type
+evelo,EVELO Galaxy Lux Electric Bike,rack_load_lb
+evelo,EVELO Galaxy Lux Electric Bike,sensor_type
+evelo,EVELO Omega Electric Bike,sensor_type
+heybike,ALPHA,fit_height_min_in
+heybike,ALPHA,frame_size_rider_range
+heybike,ALPHA,sensor_type
+heybike,ALPHA — Step-Thru,fit_height_min_in
+heybike,ALPHA — Step-Thru,frame_size_rider_range
+heybike,ALPHA — Step-Thru,sensor_type
+heybike,Helio F,fit_height_min_in
+heybike,Helio F,frame_size_rider_range
+heybike,Horizon,sensor_type
+heybike,Hybrid,fit_height_min_in
+heybike,Hybrid,frame_size_rider_range
+heybike,Mars 3.0,fit_height_min_in
+heybike,Mars 3.0,frame_size_rider_range
+heybike,Mars 3.0,sensor_type
+heybike,Ranger 3.0 Pro,sensor_type
+heybike,Saturn,fit_height_min_in
 heybike,Saturn,frame_material
-heybike,Saturn,rack_load_lb
+heybike,Saturn,frame_size_rider_range
+heybike,Saturn — Dual Battery (55-90 Miles),fit_height_min_in
 heybike,Saturn — Dual Battery (55-90 Miles),frame_material
-heybike,Saturn — Dual Battery (55-90 Miles),rack_load_lb
-himiway,A3 / Urban Electric Commuter Bike ST,torque_nm
+heybike,Saturn — Dual Battery (55-90 Miles),frame_size_rider_range
+himiway,A3 / Urban Electric Commuter Bike ST,max_speed_mph
+himiway,B3 / Foldable Electric Commuter Bike,max_speed_mph
 himiway,B3 / Foldable Electric Commuter Bike,torque_nm
+himiway,C3 / Cargo Ebike,max_speed_mph
 himiway,C3 / Cargo Ebike,rack_load_lb
-himiway,C3 / Cargo Ebike,torque_nm
 himiway,D3 ST(Cruiser ST) / All Terrain Electric Bike,torque_nm
 himiway,D3(Cruiser) / Long Range Fat Tire Electric Bike,torque_nm
-himiway,D5 Pro / All-terrain Electric Fat Bike,torque_nm
-himiway,D5 Pro ST / All-terrain Electric Fat Bike,torque_nm
-himiway,D5 ST(Zebra ST) / All-terrain Electric Fat Bike,torque_nm
-himiway,D5(Zebra) / All-terrain Electric Fat Bike,torque_nm
-himiway,D7 / Full Suspension Electric Hunting Bike,torque_nm
-himiway,Escape Pro / Long Range Moped-Style E-Bike ST,torque_nm
-himiway,Himiway A7 Pro Commuter eBike,torque_nm
+himiway,D5 ST(Zebra ST) / All-terrain Electric Fat Bike,max_speed_mph
+himiway,D7 / Full Suspension Electric Hunting Bike,max_speed_mph
+himiway,Escape Pro / Long Range Moped-Style E-Bike ST,max_speed_mph
+himiway,Himiway A7 Pro Commuter eBike,max_speed_mph
 himiway,Himiway C1 Kids eBike,drivetrain_type
+himiway,Himiway C1 Kids eBike,sensor_type
 himiway,Himiway C1 Kids eBike,torque_nm
-himiway,Himiway D7 Pro Mountain eBike,torque_nm
-lectric,Lectric ONE,rack_load_lb
-lectric,Lectric XP Lite2 — Long-Range · Step-Over,rack_load_lb
-lectric,Lectric XP Trike2,rack_load_lb
-lectric,Lectric XP Trike2 — Long-Range · Step-Over,rack_load_lb
-lectric,Lectric XPeak2,rack_load_lb
-lectric,Lectric XPeak2 — Long-Range · Step-Over,rack_load_lb
-lectric,Lectric XPeak2 — Long-Range · Step-Thru,rack_load_lb
-lectric,Lectric XPeak2 — Standard · Step-Over,rack_load_lb
+himiway,Himiway C5 Electric Motorbike,max_speed_mph
+himiway,Himiway C5 Electric Motorbike — Ultra,max_speed_mph
+himiway,Himiway D5 2.0 Series eBike,fit_height_min_in
+himiway,Himiway D5 2.0 Series eBike,frame_size_rider_range
+himiway,Himiway D5 2.0 Series eBike — Step-Thru,fit_height_min_in
+himiway,Himiway D5 2.0 Series eBike — Step-Thru,frame_size_rider_range
+juiced,Scrambler,sensor_type
+juiced,Scrambler — Full Suspension,sensor_type
 lectric,Lectric XPress1,frame_material
-lectric,Lectric XPress1,rack_load_lb
 lectric,Lectric XPress2,frame_material
-lectric,Lectric XPress2,rack_load_lb
 lectric,Lectric XPress2 — 750 · Step-Over,frame_material
-lectric,Lectric XPress2 — 750 · Step-Over,rack_load_lb
+leoguar,Flippo Folding Ebike,rack_load_lb
 leoguar,Sprint Fat Tire Utility Ebike,rack_load_lb
-leoguar,Sprint Fat Tire Utility Ebike,torque_nm
-mokwheel,Asphalt Ebike,battery_wh
-mokwheel,Asphalt ST Ebike,battery_wh
+leoguar,Trailblazer Mid-drive Motor EMTB,rack_load_lb
+magician,Alpha,max_speed_mph
+magician,Alpha,sensor_type
+magician,Alpha Mini,sensor_type
+magician,Atlas,max_load_lb
+magician,Atlas,max_speed_mph
+magician,Atlas,sensor_type
+magicycle,Magicycle CT-1 Commuter Torque Sensor Ebike,torque_nm
 mokwheel,Granite E-Trike,rack_load_lb
-mokwheel,Onyx Ebike,battery_wh
-mokwheel,Onyx ST Ebike,battery_wh
-priority,PRIORITY CURRENT PLUS E-BIKE,drivetrain_type
+priority,PRIORITY CURRENT PLUS E-BIKE,max_load_lb
+priority,PRIORITY CURRENT PLUS E-BIKE,sensor_type
 priority,PRIORITY CURRENT PLUS E-BIKE,warranty_years
 priority,PRIORITY E-COAST,battery_wh
-priority,PRIORITY E-COAST,brake_type
 priority,PRIORITY E-COAST,cell_brand
 priority,PRIORITY E-COAST,display_type
 priority,PRIORITY E-COAST,drive_type
-priority,PRIORITY E-COAST,frame_material
-priority,PRIORITY E-COAST,motor_w
-priority,PRIORITY E-COAST,range_mi
-priority,PRIORITY E-COAST,suspension
+priority,PRIORITY E-COAST,fit_height_min_in
+priority,PRIORITY E-COAST,frame_size_rider_range
+priority,PRIORITY E-COAST,max_load_lb
 priority,PRIORITY E-COAST,torque_nm
 priority,PRIORITY E-COAST,warranty_years
 priority,PRIORITY E-COAST,weight_lb
 priority,PRIORITY GLIDE E-BIKE,display_type
-priority,PRIORITY GLIDE E-BIKE,drive_type
-priority,PRIORITY GLIDE E-BIKE,motor_w
-priority,PRIORITY GLIDE E-BIKE,range_mi
+priority,PRIORITY GLIDE E-BIKE,max_speed_mph
+priority,PRIORITY GLIDE E-BIKE,sensor_type
 priority,PRIORITY GLIDE E-BIKE,torque_nm
 priority,PRIORITY GLIDE E-BIKE,warranty_years
-priority,PRIORITY SKYLINE SMART.SHIFT E-BIKE,drive_type
-priority,PRIORITY SKYLINE SMART.SHIFT E-BIKE,motor_w
-priority,PRIORITY SKYLINE SMART.SHIFT E-BIKE,rack_load_lb
-priority,PRIORITY SKYLINE SMART.SHIFT E-BIKE,torque_nm
+priority,PRIORITY SKYLINE SMART.SHIFT E-BIKE,fit_height_min_in
+priority,PRIORITY SKYLINE SMART.SHIFT E-BIKE,frame_size_rider_range
 priority,PRIORITY SKYLINE SMART.SHIFT E-BIKE,warranty_years
-ride1up,CF RACER1,range_mi
-ride1up,CF RACER1,weight_lb
-ride1up,PORTOLA,frame_material
-ride1up,PORTOLA,weight_lb
-ride1up,PORTOLA 13.4AH (CLASS 1),frame_material
-ride1up,PORTOLA 13.4AH (CLASS 1),range_mi
-ride1up,PORTOLA 13.4AH (CLASS 1),weight_lb
-ride1up,PORTOLA — 13.4ah,frame_material
-ride1up,PORTOLA — 13.4ah,weight_lb
-ride1up,PRODIGY V2 — Belt CVT · Step-Over,frame_material
-ride1up,PRODIGY V2 — Belt CVT · Step-Over,motor_w
-ride1up,PRODIGY V2 — Belt CVT · Step-Over,range_mi
-ride1up,PRODIGY V2 — Belt CVT · Step-Over,weight_lb
-ride1up,PRODIGY V2 — Belt CVT · Step-Thru,frame_material
-ride1up,PRODIGY V2 — Belt CVT · Step-Thru,motor_w
-ride1up,PRODIGY V2 — Belt CVT · Step-Thru,range_mi
-ride1up,PRODIGY V2 — Belt CVT · Step-Thru,weight_lb
-ride1up,PRODIGY V2 — Chain · Step-Over,frame_material
-ride1up,PRODIGY V2 — Chain · Step-Over,motor_w
-ride1up,PRODIGY V2 — Chain · Step-Over,range_mi
-ride1up,PRODIGY V2 — Chain · Step-Over,weight_lb
-ride1up,PRODIGY V2 — Chain · Step-Thru,frame_material
-ride1up,PRODIGY V2 — Chain · Step-Thru,motor_w
-ride1up,PRODIGY V2 — Chain · Step-Thru,range_mi
-ride1up,PRODIGY V2 — Chain · Step-Thru,weight_lb
-ride1up,ROADSTER V3,frame_material
-ride1up,ROADSTER V3,range_mi
-ride1up,ROADSTER V3,weight_lb
-ride1up,ROADSTER V3 — Suspension,frame_material
-ride1up,ROADSTER V3 — Suspension,range_mi
-ride1up,ROADSTER V3 — Suspension,weight_lb
-ride1up,Revv1 DRT,frame_material
+ride1up,CF RACER1,frame_size_rider_range
+ride1up,Revv1 DRT,drivetrain_type
 ride1up,Revv1 DRT,motor_w
-ride1up,Revv1 DRT,torque_nm
-ride1up,Revv1 DRT,weight_lb
+ride1up,Revv1 EVO,drivetrain_type
 ride1up,Revv1 EVO,frame_material
-ride1up,Revv1 EVO,weight_lb
-ride1up,Revv1 FS,frame_material
+ride1up,Revv1 FS,drivetrain_type
 ride1up,Revv1 FS,motor_w
-ride1up,Revv1 FS,torque_nm
-ride1up,Revv1 FS,weight_lb
-ride1up,Revv1 HT,frame_material
+ride1up,Revv1 HT,drivetrain_type
+ride1up,Revv1 HT,frame_size_rider_range
 ride1up,Revv1 HT,motor_w
-ride1up,Revv1 HT,torque_nm
-ride1up,Revv1 HT,weight_lb
-ride1up,TRAILRUSH,frame_material
-ride1up,TRAILRUSH,motor_w
-ride1up,TRAILRUSH,weight_lb
-ride1up,VORSA — FT · Step-Over,battery_wh
 ride1up,VORSA — FT · Step-Over,frame_material
-ride1up,VORSA — FT · Step-Over,rack_load_lb
-ride1up,VORSA — FT · Step-Over,weight_lb
-ride1up,VORSA — FT · Step-Thru,battery_wh
 ride1up,VORSA — FT · Step-Thru,frame_material
-ride1up,VORSA — FT · Step-Thru,rack_load_lb
-ride1up,VORSA — FT · Step-Thru,weight_lb
-ride1up,VORSA — Lite · Step-Over,battery_wh
 ride1up,VORSA — Lite · Step-Over,frame_material
-ride1up,VORSA — Lite · Step-Over,rack_load_lb
-ride1up,VORSA — Lite · Step-Over,weight_lb
-ride1up,VORSA — Lite · Step-Thru,battery_wh
 ride1up,VORSA — Lite · Step-Thru,frame_material
-ride1up,VORSA — Lite · Step-Thru,rack_load_lb
-ride1up,VORSA — Lite · Step-Thru,weight_lb
-ride1up,VORSA — Vorsa · Step-Over,battery_wh
 ride1up,VORSA — Vorsa · Step-Over,frame_material
-ride1up,VORSA — Vorsa · Step-Over,rack_load_lb
-ride1up,VORSA — Vorsa · Step-Over,weight_lb
-ride1up,VORSA — Vorsa · Step-Thru,battery_wh
 ride1up,VORSA — Vorsa · Step-Thru,frame_material
-ride1up,VORSA — Vorsa · Step-Thru,rack_load_lb
-ride1up,VORSA — Vorsa · Step-Thru,weight_lb
-segway,Segway MUXI Cargo Electric Bike,display_type
-segway,Segway MUXI Cargo Electric Bike,drive_type
+segway,Segway MUXI Cargo Electric Bike,fit_height_min_in
 segway,Segway MUXI Cargo Electric Bike,frame_material
+segway,Segway MUXI Cargo Electric Bike,frame_size_rider_range
 segway,Segway MUXI Cargo Electric Bike,warranty_years
-segway,Segway Myon Electric Bike,display_type
-segway,Segway Myon Electric Bike,drive_type
 segway,Segway Myon Electric Bike,frame_material
+segway,Segway Myon Electric Bike,sensor_type
 segway,Segway Myon Electric Bike,warranty_years
-segway,Segway Myon S Electric Bike,display_type
-segway,Segway Myon S Electric Bike,drive_type
 segway,Segway Myon S Electric Bike,frame_material
+segway,Segway Myon S Electric Bike,sensor_type
 segway,Segway Myon S Electric Bike,warranty_years
 segway,Segway Xafari Fat Tire eBike,display_type
 segway,Segway Xafari Fat Tire eBike,frame_material
-segway,Segway Xafari Fat Tire eBike,warranty_years
+segway,Segway Xafari Fat Tire eBike,sensor_type
 segway,Segway Xyber Electric Bike,display_type
 segway,Segway Xyber Electric Bike,drive_type
-segway,Segway Xyber Electric Bike,frame_material
-segway,Segway Xyber Electric Bike,motor_w
-segway,Segway Xyber Electric Bike,warranty_years
-specialized,Haul LT,motor_w
-specialized,Haul LT,range_mi
+segway,Segway Xyber Electric Bike,fit_height_min_in
+segway,Segway Xyber Electric Bike,frame_size_rider_range
+segway,Segway Xyber Electric Bike,sensor_type
+specialized,Haul LT,fit_height_min_in
+specialized,Haul LT,frame_size_rider_range
 specialized,Haul LT,torque_nm
-specialized,Haul ST,motor_w
-specialized,Haul ST,range_mi
+specialized,Haul ST,fit_height_min_in
+specialized,Haul ST,frame_size_rider_range
+specialized,Haul ST,max_load_lb
 specialized,Haul ST,torque_nm
+specialized,Levo 4 EVO Comp,max_load_lb
+specialized,Levo 4 EVO Comp,max_speed_mph
 specialized,Levo 4 EVO Comp,range_mi
+specialized,Levo 4 EVO Comp,sensor_type
+specialized,Levo 4 EVO Pro,max_load_lb
+specialized,Levo 4 EVO Pro,max_speed_mph
 specialized,Levo 4 EVO Pro,range_mi
-specialized,S-Works Turbo Creo 2,motor_w
+specialized,Levo 4 EVO Pro,sensor_type
+specialized,S-Works Levo 4 X,max_speed_mph
+specialized,S-Works Levo 4 X,range_mi
+specialized,S-Works Levo 4 X,sensor_type
+specialized,S-Works Turbo Creo 2,max_load_lb
+specialized,S-Works Turbo Creo 2,max_speed_mph
 specialized,S-Works Turbo Creo 2,range_mi
-specialized,S-Works Turbo Creo 2,torque_nm
+specialized,S-Works Turbo Creo 2,sensor_type
 specialized,S-Works Turbo Kenevo SL 2 Frameset,brake_type
-specialized,S-Works Turbo Kenevo SL 2 Frameset,motor_w
+specialized,S-Works Turbo Kenevo SL 2 Frameset,max_load_lb
 specialized,S-Works Turbo Kenevo SL 2 Frameset,range_mi
-specialized,S-Works Turbo Kenevo SL 2 Frameset,suspension
-specialized,S-Works Turbo Kenevo SL 2 Frameset,torque_nm
-specialized,S-Works Turbo Levo 4,frame_material
+specialized,S-Works Turbo Kenevo SL 2 Frameset,sensor_type
+specialized,S-Works Turbo Levo 4,max_load_lb
+specialized,S-Works Turbo Levo 4,max_speed_mph
 specialized,S-Works Turbo Levo 4,range_mi
+specialized,S-Works Turbo Levo 4,sensor_type
 specialized,S-Works Turbo Levo 4 Frameset,brake_type
+specialized,S-Works Turbo Levo 4 Frameset,max_load_lb
+specialized,S-Works Turbo Levo 4 Frameset,max_speed_mph
 specialized,S-Works Turbo Levo 4 Frameset,range_mi
+specialized,S-Works Turbo Levo 4 Frameset,sensor_type
 specialized,S-Works Turbo Levo 4 Frameset,suspension
+specialized,S-Works Turbo Levo 4 LTD,max_load_lb
+specialized,S-Works Turbo Levo 4 LTD,max_speed_mph
 specialized,S-Works Turbo Levo 4 LTD,range_mi
+specialized,S-Works Turbo Levo 4 LTD,sensor_type
+specialized,S-Works Turbo Levo R,max_load_lb
+specialized,S-Works Turbo Levo R,max_speed_mph
 specialized,S-Works Turbo Levo R,range_mi
-specialized,S-Works Turbo Levo SL 2 Di2,motor_w
+specialized,S-Works Turbo Levo R,sensor_type
+specialized,S-Works Turbo Levo SL 2 Di2,max_load_lb
+specialized,S-Works Turbo Levo SL 2 Di2,max_speed_mph
 specialized,S-Works Turbo Levo SL 2 Di2,range_mi
-specialized,S-Works Turbo Levo SL 2 Di2,torque_nm
+specialized,S-Works Turbo Levo SL 2 Di2,sensor_type
 specialized,S-Works Turbo Levo SL 2 Frameset,brake_type
+specialized,S-Works Turbo Levo SL 2 Frameset,max_load_lb
+specialized,S-Works Turbo Levo SL 2 Frameset,max_speed_mph
 specialized,S-Works Turbo Levo SL 2 Frameset,range_mi
+specialized,S-Works Turbo Levo SL 2 Frameset,sensor_type
 specialized,S-Works Turbo Levo SL 2 Frameset,suspension
+specialized,Turbo Como 4.0,max_load_lb
 specialized,Turbo Como 4.0,motor_w
-specialized,Turbo Como 4.0,range_mi
-specialized,Turbo Como 4.0 IGH,range_mi
+specialized,Turbo Como 4.0,sensor_type
+specialized,Turbo Como 4.0 IGH,max_load_lb
+specialized,Turbo Como 4.0 IGH,sensor_type
 specialized,Turbo Como 4.0 IGH,weight_lb
+specialized,Turbo Como 5.0 IGH,max_load_lb
 specialized,Turbo Como 5.0 IGH,motor_w
-specialized,Turbo Como 5.0 IGH,range_mi
-specialized,Turbo Creo 2 Comp,motor_w
-specialized,Turbo Creo 2 Comp,motor_w
+specialized,Turbo Como 5.0 IGH,sensor_type
+specialized,Turbo Creo 2 Comp,max_load_lb
+specialized,Turbo Creo 2 Comp,max_load_lb
+specialized,Turbo Creo 2 Comp,max_speed_mph
+specialized,Turbo Creo 2 Comp,max_speed_mph
 specialized,Turbo Creo 2 Comp,range_mi
 specialized,Turbo Creo 2 Comp,range_mi
-specialized,Turbo Creo 2 Comp,torque_nm
-specialized,Turbo Creo 2 Comp,torque_nm
-specialized,Turbo Creo 2 Comp E5,motor_w
+specialized,Turbo Creo 2 Comp,sensor_type
+specialized,Turbo Creo 2 Comp,sensor_type
+specialized,Turbo Creo 2 Comp E5,max_load_lb
+specialized,Turbo Creo 2 Comp E5,max_speed_mph
 specialized,Turbo Creo 2 Comp E5,range_mi
-specialized,Turbo Creo 2 Comp E5,torque_nm
-specialized,Turbo Creo 2 Expert,motor_w
+specialized,Turbo Creo 2 Comp E5,sensor_type
+specialized,Turbo Creo 2 Expert,max_load_lb
+specialized,Turbo Creo 2 Expert,max_speed_mph
 specialized,Turbo Creo 2 Expert,range_mi
-specialized,Turbo Creo 2 Expert,torque_nm
-specialized,Turbo Kenevo SL 2 Comp,motor_w
+specialized,Turbo Creo 2 Expert,sensor_type
+specialized,Turbo Kenevo SL 2 Comp,max_load_lb
 specialized,Turbo Kenevo SL 2 Comp,range_mi
-specialized,Turbo Kenevo SL 2 Comp,torque_nm
-specialized,Turbo Kenevo SL 2 Expert,motor_w
+specialized,Turbo Kenevo SL 2 Comp,sensor_type
+specialized,Turbo Kenevo SL 2 Expert,max_load_lb
 specialized,Turbo Kenevo SL 2 Expert,range_mi
-specialized,Turbo Kenevo SL 2 Expert,torque_nm
-specialized,Turbo Kenevo SL 2 Öhlins Coil,motor_w
+specialized,Turbo Kenevo SL 2 Expert,sensor_type
+specialized,Turbo Kenevo SL 2 Öhlins Coil,max_load_lb
 specialized,Turbo Kenevo SL 2 Öhlins Coil,range_mi
-specialized,Turbo Kenevo SL 2 Öhlins Coil,torque_nm
+specialized,Turbo Kenevo SL 2 Öhlins Coil,sensor_type
+specialized,Turbo Levo 4 Alloy,max_load_lb
+specialized,Turbo Levo 4 Alloy,max_speed_mph
 specialized,Turbo Levo 4 Alloy,range_mi
+specialized,Turbo Levo 4 Alloy,sensor_type
+specialized,Turbo Levo 4 Comp,max_load_lb
+specialized,Turbo Levo 4 Comp,max_speed_mph
 specialized,Turbo Levo 4 Comp,range_mi
+specialized,Turbo Levo 4 Comp,sensor_type
+specialized,Turbo Levo 4 Comp Alloy,max_load_lb
+specialized,Turbo Levo 4 Comp Alloy,max_speed_mph
 specialized,Turbo Levo 4 Comp Alloy,range_mi
+specialized,Turbo Levo 4 Comp Alloy,sensor_type
+specialized,Turbo Levo 4 Expert,max_load_lb
+specialized,Turbo Levo 4 Expert,max_speed_mph
 specialized,Turbo Levo 4 Expert,range_mi
+specialized,Turbo Levo 4 Expert,sensor_type
+specialized,Turbo Levo 4 Pro,max_load_lb
+specialized,Turbo Levo 4 Pro,max_speed_mph
 specialized,Turbo Levo 4 Pro,range_mi
+specialized,Turbo Levo 4 Pro,sensor_type
+specialized,Turbo Levo R Comp,max_load_lb
+specialized,Turbo Levo R Comp,max_speed_mph
 specialized,Turbo Levo R Comp,range_mi
+specialized,Turbo Levo R Comp,sensor_type
+specialized,Turbo Levo R Comp Alloy,max_load_lb
+specialized,Turbo Levo R Comp Alloy,max_speed_mph
 specialized,Turbo Levo R Comp Alloy,range_mi
+specialized,Turbo Levo R Comp Alloy,sensor_type
+specialized,Turbo Levo R Expert,max_load_lb
+specialized,Turbo Levo R Expert,max_speed_mph
 specialized,Turbo Levo R Expert,range_mi
-specialized,Turbo Levo SL 2 Comp,motor_w
+specialized,Turbo Levo R Expert,sensor_type
+specialized,Turbo Levo SL 2 Comp,max_load_lb
+specialized,Turbo Levo SL 2 Comp,max_speed_mph
 specialized,Turbo Levo SL 2 Comp,range_mi
-specialized,Turbo Levo SL 2 Comp,torque_nm
+specialized,Turbo Levo SL 2 Comp,sensor_type
+specialized,Turbo Levo SL 2 Comp Alloy,max_load_lb
+specialized,Turbo Levo SL 2 Comp Alloy,max_speed_mph
 specialized,Turbo Levo SL 2 Comp Alloy,range_mi
+specialized,Turbo Levo SL 2 Comp Alloy,sensor_type
+specialized,Turbo Levo SL 2 Expert,max_load_lb
+specialized,Turbo Levo SL 2 Expert,max_speed_mph
 specialized,Turbo Levo SL 2 Expert,range_mi
-specialized,Turbo Levo SL 2 Expert Di2,motor_w
+specialized,Turbo Levo SL 2 Expert,sensor_type
+specialized,Turbo Levo SL 2 Expert Di2,max_load_lb
+specialized,Turbo Levo SL 2 Expert Di2,max_speed_mph
 specialized,Turbo Levo SL 2 Expert Di2,range_mi
-specialized,Turbo Levo SL 2 Expert Di2,torque_nm
+specialized,Turbo Levo SL 2 Expert Di2,sensor_type
+specialized,Turbo Levo SL 2 Pro,max_load_lb
+specialized,Turbo Levo SL 2 Pro,max_speed_mph
 specialized,Turbo Levo SL 2 Pro,range_mi
+specialized,Turbo Levo SL 2 Pro,sensor_type
 specialized,Turbo Vado 3 EVO 4.0,frame_material
+specialized,Turbo Vado 3 EVO 4.0,max_load_lb
+specialized,Turbo Vado 3 EVO 4.0,max_speed_mph
 specialized,Turbo Vado 3 EVO 4.0,range_mi
+specialized,Turbo Vado 3 EVO 4.0,sensor_type
 specialized,Turbo Vado 3 EVO 5.0,frame_material
+specialized,Turbo Vado 3 EVO 5.0,max_load_lb
+specialized,Turbo Vado 3 EVO 5.0,max_speed_mph
 specialized,Turbo Vado 3 EVO 5.0,range_mi
+specialized,Turbo Vado 3 EVO 5.0,sensor_type
 specialized,Turbo Vado 3 EVO 6.0,frame_material
+specialized,Turbo Vado 3 EVO 6.0,max_load_lb
+specialized,Turbo Vado 3 EVO 6.0,max_speed_mph
 specialized,Turbo Vado 3 EVO 6.0,range_mi
+specialized,Turbo Vado 3 EVO 6.0,sensor_type
 specialized,Turbo Vado 3 X 4.0,frame_material
-specialized,Turbo Vado 3 X 4.0,rack_load_lb
+specialized,Turbo Vado 3 X 4.0,max_load_lb
+specialized,Turbo Vado 3 X 4.0,max_speed_mph
 specialized,Turbo Vado 3 X 4.0,range_mi
+specialized,Turbo Vado 3 X 4.0,sensor_type
 specialized,Turbo Vado 3 X 6.0,frame_material
-specialized,Turbo Vado 3 X 6.0,rack_load_lb
+specialized,Turbo Vado 3 X 6.0,max_load_lb
+specialized,Turbo Vado 3 X 6.0,max_speed_mph
 specialized,Turbo Vado 3 X 6.0,range_mi
-specialized,Turbo Vado 4.0,range_mi
-specialized,Turbo Vado 4.0 Step-Through,range_mi
-specialized,Turbo Vado 5.0 IGH,range_mi
-specialized,Turbo Vado 5.0 IGH Step-Through,range_mi
-specialized,Turbo Vado SL 2 4.0,frame_material
-specialized,Turbo Vado SL 2 4.0,motor_w
+specialized,Turbo Vado 3 X 6.0,sensor_type
+specialized,Turbo Vado 4.0,max_load_lb
+specialized,Turbo Vado 4.0,sensor_type
+specialized,Turbo Vado 4.0 Step-Through,max_load_lb
+specialized,Turbo Vado 4.0 Step-Through,sensor_type
+specialized,Turbo Vado 5.0 IGH,max_load_lb
+specialized,Turbo Vado 5.0 IGH,sensor_type
+specialized,Turbo Vado 5.0 IGH Step-Through,max_load_lb
+specialized,Turbo Vado 5.0 IGH Step-Through,sensor_type
+specialized,Turbo Vado SL 2 4.0,max_load_lb
 specialized,Turbo Vado SL 2 4.0,range_mi
-specialized,Turbo Vado SL 2 4.0,torque_nm
-specialized,Turbo Vado SL 2 4.0 EQ,frame_material
-specialized,Turbo Vado SL 2 4.0 EQ,motor_w
-specialized,Turbo Vado SL 2 4.0 EQ,range_mi
-specialized,Turbo Vado SL 2 4.0 EQ,torque_nm
-specialized,Turbo Vado SL 2 4.0 Step-Through,frame_material
-specialized,Turbo Vado SL 2 4.0 Step-Through,motor_w
+specialized,Turbo Vado SL 2 4.0,sensor_type
+specialized,Turbo Vado SL 2 4.0 EQ,max_load_lb
+specialized,Turbo Vado SL 2 4.0 EQ,sensor_type
+specialized,Turbo Vado SL 2 4.0 Step-Through,max_load_lb
 specialized,Turbo Vado SL 2 4.0 Step-Through,range_mi
-specialized,Turbo Vado SL 2 4.0 Step-Through,torque_nm
-specialized,Turbo Vado SL 2 4.0 Step-Through  EQ,frame_material
-specialized,Turbo Vado SL 2 4.0 Step-Through  EQ,motor_w
+specialized,Turbo Vado SL 2 4.0 Step-Through,sensor_type
+specialized,Turbo Vado SL 2 4.0 Step-Through  EQ,max_load_lb
 specialized,Turbo Vado SL 2 4.0 Step-Through  EQ,range_mi
-specialized,Turbo Vado SL 2 4.0 Step-Through  EQ,torque_nm
-specialized,Turbo Vado SL 2 5.0 EQ,frame_material
-specialized,Turbo Vado SL 2 5.0 EQ,motor_w
+specialized,Turbo Vado SL 2 4.0 Step-Through  EQ,sensor_type
+specialized,Turbo Vado SL 2 5.0 EQ,max_load_lb
 specialized,Turbo Vado SL 2 5.0 EQ,range_mi
-specialized,Turbo Vado SL 2 5.0 EQ,torque_nm
-specialized,Turbo Vado SL 2 5.0 Step-Through EQ,frame_material
-specialized,Turbo Vado SL 2 5.0 Step-Through EQ,motor_w
+specialized,Turbo Vado SL 2 5.0 EQ,sensor_type
+specialized,Turbo Vado SL 2 5.0 Step-Through EQ,max_load_lb
 specialized,Turbo Vado SL 2 5.0 Step-Through EQ,range_mi
-specialized,Turbo Vado SL 2 5.0 Step-Through EQ,torque_nm
-specialized,Turbo Vado SL 2 6.0 Carbon,frame_material
-specialized,Turbo Vado SL 2 6.0 Carbon,motor_w
+specialized,Turbo Vado SL 2 5.0 Step-Through EQ,sensor_type
+specialized,Turbo Vado SL 2 6.0 Carbon,max_load_lb
 specialized,Turbo Vado SL 2 6.0 Carbon,range_mi
-specialized,Turbo Vado SL 2 6.0 Carbon,torque_nm
-specialized,Turbo Vado SL 2 6.0 EQ Carbon,frame_material
-specialized,Turbo Vado SL 2 6.0 EQ Carbon,motor_w
+specialized,Turbo Vado SL 2 6.0 Carbon,sensor_type
+specialized,Turbo Vado SL 2 6.0 EQ Carbon,max_load_lb
 specialized,Turbo Vado SL 2 6.0 EQ Carbon,range_mi
-specialized,Turbo Vado SL 2 6.0 EQ Carbon,torque_nm
-specialized,Vado SL 2 LTD,frame_material
-specialized,Vado SL 2 LTD,motor_w
+specialized,Turbo Vado SL 2 6.0 EQ Carbon,sensor_type
+specialized,Vado SL 2 LTD,max_load_lb
+specialized,Vado SL 2 LTD,max_speed_mph
 specialized,Vado SL 2 LTD,range_mi
-specialized,Vado SL 2 LTD,torque_nm
-tern,GSD P00,motor_w
-tern,GSD P00,rack_load_lb
-tern,GSD P00,warranty_years
-tern,GSD P10,motor_w
-tern,GSD P10,rack_load_lb
-tern,GSD P10,warranty_years
-tern,GSD R14,rack_load_lb
-tern,GSD R14,warranty_years
-tern,GSD S10,motor_w
-tern,GSD S10,rack_load_lb
-tern,GSD S10,warranty_years
-tern,HSD P10,battery_wh
-tern,HSD P10,motor_w
-tern,HSD P10,rack_load_lb
-tern,HSD P10,warranty_years
-tern,HSD P5i,battery_wh
-tern,HSD P5i,motor_w
-tern,HSD P5i,rack_load_lb
-tern,HSD P5i,warranty_years
-tern,HSD S00,battery_wh
-tern,HSD S00,motor_w
-tern,HSD S00,rack_load_lb
-tern,HSD S00,warranty_years
-tern,HSD S11,battery_wh
-tern,HSD S11,motor_w
-tern,HSD S11,rack_load_lb
-tern,HSD S11,warranty_years
-tern,NBD P8i,battery_wh
-tern,NBD P8i,motor_w
-tern,NBD P8i,warranty_years
-tern,NBD S5i,battery_wh
-tern,NBD S5i,motor_w
-tern,NBD S5i,warranty_years
-tern,"Orox R14 (27.5"")",motor_w
-tern,"Orox R14 (27.5"")",rack_load_lb
-tern,"Orox R14 (27.5"")",torque_nm
-tern,"Orox R14 (27.5"")",warranty_years
-tern,"Orox S12 (27.5"")",motor_w
-tern,"Orox S12 (27.5"")",rack_load_lb
-tern,"Orox S12 (27.5"")",torque_nm
-tern,"Orox S12 (27.5"")",warranty_years
-tern,Quick Haul D8,battery_wh
-tern,Quick Haul D8,motor_w
-tern,Quick Haul D8,rack_load_lb
-tern,Quick Haul D8,warranty_years
-tern,Quick Haul Long D9,battery_wh
-tern,Quick Haul Long D9,motor_w
-tern,Quick Haul Long D9,rack_load_lb
-tern,Quick Haul Long D9,warranty_years
-tern,Quick Haul P9 Sport,battery_wh
-tern,Quick Haul P9 Sport,motor_w
-tern,Quick Haul P9 Sport,rack_load_lb
-tern,Quick Haul P9 Sport,warranty_years
-tern,Vektron P10,motor_w
-tern,Vektron P10,rack_load_lb
-tern,Vektron P10,torque_nm
-tern,Vektron P10,warranty_years
-tern,Vektron P5i,motor_w
-tern,Vektron P5i,rack_load_lb
-tern,Vektron P5i,torque_nm
-tern,Vektron P5i,warranty_years
-tern,Vektron Q9,frame_material
-tern,Vektron Q9,motor_w
-tern,Vektron Q9,rack_load_lb
-tern,Vektron Q9,warranty_years
-tern,Vektron S10,frame_material
-tern,Vektron S10,motor_w
-tern,Vektron S10,rack_load_lb
-tern,Vektron S10,warranty_years
-velotric,Velotric Triker Electric Tricycle,rack_load_lb
+specialized,Vado SL 2 LTD,sensor_type
+tern,GSD P00,sensor_type
+tern,GSD P10,sensor_type
+tern,GSD R14,sensor_type
+tern,GSD S10,sensor_type
+tern,HSD P10,sensor_type
+tern,HSD P5i,sensor_type
+tern,HSD S00,sensor_type
+tern,HSD S11,sensor_type
+tern,NBD P8i,sensor_type
+tern,NBD S5i,sensor_type
+tern,"Orox R14 (27.5"")",sensor_type
+tern,"Orox S12 (27.5"")",sensor_type
+tern,Quick Haul D8,sensor_type
+tern,Quick Haul Long D9,sensor_type
+tern,Quick Haul P9 Sport,sensor_type
+tern,Vektron P10,sensor_type
+tern,Vektron P5i,sensor_type
+tern,Vektron Q9,sensor_type
+tern,Vektron S10,sensor_type
+urtopia,Carbon 1 Step-Thru E-Bike,suspension
+urtopia,Carbon Classic E-Bike,suspension
+urtopia,Carbon Classic Step-Thru E-Bike,suspension
+urtopia,Carbon Fold 1 E-Bike,suspension
+urtopia,Carbon Fold 2 E-Bike,suspension
+urtopia,Carbon Fold Step-Thru E-Bike,suspension
+urtopia,Carbon Fusion GT E-Bike,suspension
 velowave,Pony Compact Step-Thru Electric Bike,rack_load_lb
 velowave,Prado S Commuter Electric Bike,rack_load_lb
+velowave,Ranger 2.0 Fat Tire All-Terrain Electric Bike,rack_load_lb
+velowave,Ranger 2.0 Fat Tire All-Terrain Electric Bike,sensor_type
+velowave,Ranger 3.0 Fat Tire All-Terrain Electric Bike,rack_load_lb
 velowave,Ranger Step-Thru 2.0 Electric Bike,rack_load_lb
-velowave,Ranger Step-Thru 3.0 Torque Sensor Electric Bike,rack_load_lb
 velowave,Swift M Mid-Drive Electric Bike,rack_load_lb
-vivi,VIVI ACE01 Electric Bike All Terrain Fat Tire Electric Bike SGS Certified to UL2849,motor_w
-vivi,VIVI ACE01 Electric Bike All Terrain Fat Tire Electric Bike SGS Certified to UL2849,rack_load_lb
-vivi,VIVI ACE01 Pro Electric Bike Torque Sensor Fat Tire Electric Bike with App Control,motor_w
-vivi,VIVI ACE01 Pro Electric Bike Torque Sensor Fat Tire Electric Bike with App Control,rack_load_lb
-vivi,VIVI ACE07 Electric Bike Commuter Fat Tire Electric Bike SGS Certified to UL2849,motor_w
-vivi,VIVI ACE07 Electric Bike Commuter Fat Tire Electric Bike SGS Certified to UL2849,rack_load_lb
-vivi,VIVI C26UL Electric Bike Cruiser Electric Commuter Bike SGS Certified to UL2849,motor_w
-vivi,VIVI C26UL Electric Bike Cruiser Electric Commuter Bike SGS Certified to UL2849,rack_load_lb
-vivi,VIVI F26FUL Electric Bike Long Range Fat Tire Electric Bike SGS Certified to UL2849,motor_w
-vivi,"VIVI FM20UL Electric Bike 2.4"" Fat Tire Folding Electric Bike SGS Certified to UL2849",motor_w
-vivi,"VIVI FM20UL Electric Bike 2.4"" Fat Tire Folding Electric Bike SGS Certified to UL2849",rack_load_lb
-vivi,"VIVI Gopina Electric Bike 3.0"" Fat Tire Folding Electric Bike SGS Certified to UL2849",motor_w
-vivi,"VIVI Gopina Electric Bike 3.0"" Fat Tire Folding Electric Bike SGS Certified to UL2849",rack_load_lb
-vivi,"VIVI H7UL Electric Bike 27.5"" Off Road Electric Mountain Bike SGS Certified to UL2849",motor_w
-vivi,VIVI M026SHUL Electric Bike Hardtail Electric Mountain Bike SGS Certified to UL2849,motor_w
-vivi,VIVI M026TGBUL Electric Bike Foldable Full Suspension Electric Mountain Bike SGS Certified to UL2849,motor_w
-vivi,"VIVI MT20UL Electric Bike 3.0"" Fat Tire Folding Electric Bike SGS Certified to UL2849",motor_w
-vivi,"VIVI MT20UL Electric Bike 3.0"" Fat Tire Folding Electric Bike SGS Certified to UL2849",rack_load_lb
-vivi,VIVI MT26GUL Electric Bike Rambler Electric Commuter Bike SGS Certified to UL2849,motor_w
-vivi,VIVI MT26GUL Electric Bike Rambler Electric Commuter Bike SGS Certified to UL2849,rack_load_lb
-vivi,VIVI PONY01 Electric Bike Commuter Mini Electric Bike SGS Certified to UL2849,motor_w
-vivi,VIVI T01 Electric Trike Folding Cargo Electric Tricycle SGS Certified to UL2849,motor_w
-vivi,VIVI T01 Electric Trike Folding Cargo Electric Tricycle SGS Certified to UL2849,rack_load_lb
-vvolt,Alpha 2.1,battery_wh
-vvolt,Alpha 2.1,brake_type
 vvolt,Alpha 2.1,cell_brand
 vvolt,Alpha 2.1,display_type
-vvolt,Alpha 2.1,drive_type
-vvolt,Alpha 2.1,drivetrain_type
 vvolt,Alpha 2.1,frame_material
-vvolt,Alpha 2.1,motor_w
+vvolt,Alpha 2.1,max_load_lb
+vvolt,Alpha 2.1,sensor_type
 vvolt,Alpha 2.1,suspension
-vvolt,Alpha 2.1,torque_nm
 vvolt,Alpha II,battery_wh
-vvolt,Alpha II,brake_type
 vvolt,Alpha II,cell_brand
 vvolt,Alpha II,display_type
-vvolt,Alpha II,drive_type
-vvolt,Alpha II,drivetrain_type
 vvolt,Alpha II,frame_material
-vvolt,Alpha II,motor_w
+vvolt,Alpha II,max_load_lb
+vvolt,Alpha II,sensor_type
 vvolt,Alpha II,suspension
-vvolt,Alpha II,torque_nm
-vvolt,Centauri II,battery_wh
-vvolt,Centauri II,brake_type
 vvolt,Centauri II,cell_brand
 vvolt,Centauri II,display_type
-vvolt,Centauri II,drive_type
-vvolt,Centauri II,drivetrain_type
 vvolt,Centauri II,frame_material
-vvolt,Centauri II,motor_w
-vvolt,Centauri II,suspension
-vvolt,Centauri II,torque_nm
-vvolt,Centauri SE,battery_wh
-vvolt,Centauri SE,brake_type
+vvolt,Centauri II,max_load_lb
+vvolt,Centauri II,sensor_type
 vvolt,Centauri SE,cell_brand
-vvolt,Centauri SE,display_type
-vvolt,Centauri SE,drive_type
-vvolt,Centauri SE,drivetrain_type
 vvolt,Centauri SE,frame_material
-vvolt,Centauri SE,motor_w
+vvolt,Centauri SE,max_load_lb
+vvolt,Centauri SE,sensor_type
 vvolt,Centauri SE,suspension
-vvolt,Centauri SE,torque_nm
-wallke,2026 WALLKE Ultra Series | Off-grid Power Station E-Bike,drivetrain_type
-wallke,2026 WALLKE Ultra Series | Off-grid Power Station E-Bike,weight_lb
-wallke,2026 Wallke H7 AWD Step-Thru | 3200W Ebike 40Ah Battery,drivetrain_type
-wallke,2026 Wallke H7 AWD Step-Thru | 3200W Ebike 40Ah Battery,suspension
-wallke,WALLKE Titan X1 Carbon Fiber Frame | 3800W Cruiser Ebike,drivetrain_type
-wallke,Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery,drivetrain_type
-wallke,Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery,suspension
-wired,WIRED Cruiser,warranty_years
-wired,WIRED Freedom,warranty_years
-wired,WIRED Predator,warranty_years
-wired,WIRED Raven,warranty_years
-wired,WIRED Viper,warranty_years
-wired,Wired Scout,warranty_years
-wired,Wired Warrior,warranty_years
+wallke,"2026 WALLKE H7 Ultra Step-Thru | 4000W Off-Grid Power Station E-Bike with Torque Sensor, 37mph Speed",drivetrain_type
+wallke,"2026 WALLKE H9 Ultra Folding | Off-Grid Power Station E-Bike with Torque Sensor, 37mph Speed, 55/77Ah Battery Options",drivetrain_type
+wallke,"2026 WALLKE H9 Ultra Folding | Off-Grid Power Station E-Bike with Torque Sensor, 37mph Speed, 55/77Ah Battery Options — 77Ah",drivetrain_type
+wallke,2026 WALLKE Ultra Series | Off-grid Power Station E-Bike — 55Ah · Step-Over,weight_lb
+wallke,2026 WALLKE Ultra Series | Off-grid Power Station E-Bike — 55Ah · Step-Thru,weight_lb
+wallke,2026 WALLKE Ultra Series | Off-grid Power Station E-Bike — 77Ah,weight_lb
+wallke,2026 Wallke H7 AWD Step-Thru | 3200W Ebike 40Ah Battery,sensor_type
+wallke,2026 Wallke H7 AWD Step-Thru | 3200W Ebike 40Ah Battery — 60Ah,sensor_type
+wallke,2026 Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery,sensor_type
+wallke,2026 Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery — 60Ah,sensor_type
+wallke,2026 Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery — 62Ah,sensor_type
+wallke,2026 Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery — 82Ah,sensor_type
+wallke,WALLKE Titan X1 Carbon Fiber Frame | 3800W Cruiser Ebike,sensor_type
+wired,WIRED Raven,fit_height_min_in
+wired,WIRED Raven,frame_size_rider_range
+wired,WIRED Raven,max_load_lb
+wired,WIRED Viper,fit_height_min_in
+wired,WIRED Viper,frame_size_rider_range
+wired,WIRED Viper,max_load_lb

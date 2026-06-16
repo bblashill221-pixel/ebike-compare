@@ -3,13 +3,13 @@ import { useColorSelection, defaultColorIndex, colorSoldOut, soldOutColors } fro
 import { useShowSoldOut } from "../soldOut";
 import { Link } from "react-router-dom";
 import type { Model } from "../types";
-import { capitalize, formatNumber } from "../format";
+import { capitalize, formatNumber, colorChipStyle } from "../format";
 import { colorPrices, variantPrice } from "../pricing";
 import { useCompare } from "../compare/CompareContext";
 import { Price } from "./Price";
 import { AffiliateLink } from "./AffiliateLink";
 import { ColorSwatches, upchargeText } from "./ColorSwatches";
-import { BatteryIcon, MotorIcon, RangeIcon, RiderHeightIcon, TorqueIcon, WeightIcon } from "./icons";
+import { BatteryIcon, MotorIcon, PayloadIcon, RangeIcon, RiderHeightIcon, SensorIcon, SpeedIcon, TorqueIcon, WeightIcon } from "./icons";
 import { useUnits, inToFtIn } from "../units";
 
 export function primaryImage(m: Model): string | null {
@@ -184,13 +184,20 @@ function BikeCardImpl({ model }: { model: Model }) {
             </div>
           ) : null;
         })()}
-        {/* current color, over the bottom middle of the image */}
-        {model.colors?.[color]?.name && (
-          <div className="pointer-events-none absolute bottom-2 left-1/2 max-w-[90%] -translate-x-1/2 truncate rounded-full bg-white/75 px-2.5 py-0.5 text-xs text-slate-600 shadow-sm backdrop-blur-sm">
-            [{model.colors[color].name}
-            {colorUp && <span className="font-semibold text-rose-600">{colorUp}</span>}]
-          </div>
-        )}
+        {/* current color, over the bottom middle of the image; when a hex is known
+            the name is shown in that colour on a contrasting (black/white) chip */}
+        {model.colors?.[color]?.name && (() => {
+          const chip = colorChipStyle(model.colors[color].hex);
+          return (
+            <div
+              className={`pointer-events-none absolute bottom-2 left-1/2 max-w-[90%] -translate-x-1/2 truncate rounded-full border px-2.5 py-0.5 text-xs shadow-sm ${chip ? "" : "border-slate-300 bg-white/75 text-slate-600 backdrop-blur-sm"}`}
+              style={chip ? { color: chip.color, borderColor: chip.color } : undefined}
+            >
+              {model.colors[color].name}
+              {colorUp && <span className="font-semibold text-rose-600">{colorUp}</span>}
+            </div>
+          );
+        })()}
       </div>
       <div className="flex flex-1 flex-col gap-3 p-4">
         <div className="space-y-1.5">
@@ -257,7 +264,7 @@ function BikeCardImpl({ model }: { model: Model }) {
           </div>
         )}
 
-        {/* six spec tiles (2x3), always shown ("—" when unknown) */}
+        {/* spec tiles (3-col grid), always shown ("—" when unknown) */}
         <div className="grid grid-cols-3 gap-2">
           <Spec
             icon={<BatteryIcon className="h-[26px] w-[26px]" />}
@@ -278,6 +285,12 @@ function BikeCardImpl({ model }: { model: Model }) {
             value={t.torque_nm != null ? `${tile(t.torque_nm)} Nm` : "—"}
           />
           <Spec
+            icon={<SpeedIcon className="h-[26px] w-[26px]" />}
+            tint="bg-blue-50 border-blue-200"
+            label="Top speed"
+            value={t.max_speed_mph != null ? `${tile(t.max_speed_mph)} mph` : "—"}
+          />
+          <Spec
             icon={<RangeIcon className="h-[26px] w-[26px]" />}
             tint="bg-sky-50 border-sky-200"
             label={rangeLabel}
@@ -294,6 +307,23 @@ function BikeCardImpl({ model }: { model: Model }) {
             tint="bg-teal-50 border-teal-200"
             label="Rider height range"
             value={riderFit ?? "—"}
+          />
+          <Spec
+            icon={<PayloadIcon className="h-[26px] w-[26px]" />}
+            tint="bg-orange-50 border-orange-200"
+            label="Payload"
+            value={t.max_load_lb != null ? `${tile(t.max_load_lb)} lb` : "—"}
+          />
+          <Spec
+            icon={<SensorIcon type={t.sensor_type} className="h-[26px] w-[26px]" />}
+            tint="bg-slate-50 border-slate-200"
+            label="Sensor"
+            value={
+              t.sensor_type === "torque + cadence" ? "Both"
+                : t.sensor_type === "torque" ? "Torque"
+                : t.sensor_type === "cadence" ? "Cadence"
+                : "—"
+            }
           />
         </div>
 

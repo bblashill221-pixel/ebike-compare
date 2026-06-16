@@ -81,6 +81,14 @@ export interface SpecsTyped {
   suspension?: string;
   frame_material?: string;
   sensor_type?: string;
+  /** All-wheel drive: two drive motors (front + rear). */
+  awd?: boolean | null;
+  /** Supported e-bike classes incl. convertible modes (e.g. [1, 2, 3]). */
+  classes?: number[] | null;
+  /** Top assisted speed: site-stated, else class-implied (C3 28, C1/2 20). */
+  max_speed_mph?: number | null;
+  /** True when the bike advertises a custom/user-adjustable speed mode. */
+  custom_speed_mode?: boolean | null;
   display_type?: string;
   water_resistance?: string;
   ul_listed?: boolean;
@@ -110,6 +118,15 @@ export interface Analysis {
   };
 }
 
+/** A published frame size and the rider range it fits (strings, as scraped). */
+export interface FrameSize {
+  size?: string;
+  height_min?: string;
+  height_max?: string;
+  inseam_min?: string;
+  inseam_max?: string;
+}
+
 export interface Model {
   id: string;
   brand: string;
@@ -127,6 +144,9 @@ export interface Model {
   frame_style?: string | null;
   /** True only when the brand's site explicitly tags it a new arrival. */
   is_new?: boolean;
+  /** Published frame sizes and the count, when the brand offers more than one. */
+  frame_sizes?: FrameSize[];
+  frame_size_count?: number;
   price: number | null;
   price_min: number | null;
   price_max: number | null;

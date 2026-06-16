@@ -31,8 +31,8 @@ ACC_COLLECTION = {
     "heybike": "accessories", "mokwheel": "all-accessories", "himiway": "accessories",
     "vvolt": "accessories", "evelo": "must-have-accessories", "blix": "accessories",
     "euphree": None, "ride1up": None, "specialized": None,
-    "wired": None, "magician": None,
-    "engwe": None, "wallke": None, "cyke": None, "leoguar": None,
+    "wired": "accessories", "magician": "accessories",
+    "engwe": None, "wallke": None, "cyke": "ebike-gear", "leoguar": None,
 }
 # Brands/models that are not free shipping (none known; placeholder for overrides).
 NON_FREE_SHIPPING: dict = {}
@@ -41,10 +41,20 @@ INCLUDED_RE = re.compile(r"\b(included|comes with|standard|integrated)\b", re.I)
 NOT_INCLUDED_RE = re.compile(r"not included|sold separately|optional|n/?a\b", re.I)
 
 
+# Some stores (e.g. cykebikes.com, Cloudflare-fronted) 403 a bare "Mozilla/5.0";
+# a full browser UA + Accept headers gets the products.json.
+_ACC_HDRS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                  "(KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+    "Accept": "application/json,text/plain,*/*",
+    "Accept-Language": "en-US,en;q=0.9",
+}
+
+
 def fetch_accessories(base: str, handle: str) -> list[dict]:
     url = f"{base}/collections/{handle}/products.json?limit=250"
     try:
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        req = urllib.request.Request(url, headers=_ACC_HDRS)
         with urllib.request.urlopen(req, timeout=30) as r:
             data = json.load(r)
     except Exception:
@@ -96,9 +106,17 @@ def main():
         d = json.load(open(f))
         base = (d.get("source") or "").rstrip("/")
         handle = ACC_COLLECTION.get(brand)
-        catalog = fetch_accessories(base, handle) if handle else []
-        d["available_accessories"] = catalog
-        d["available_accessories_count"] = len(catalog)
+        # Shopify-collection brands: (re)fetch the catalog here. Non-Shopify brands
+        # (handle None) get their catalog from a dedicated scraper instead (e.g.
+        # scrape_specialized_accessories.py) -- so DON'T wipe an already-populated
+        # available_accessories; only default an absent one to [].
+        if handle:
+            catalog = fetch_accessories(base, handle)
+            d["available_accessories"] = catalog
+            d["available_accessories_count"] = len(catalog)
+        else:
+            catalog = d.setdefault("available_accessories", [])
+            d["available_accessories_count"] = len(catalog)
         for m in d.get("models", []):
             brand_override = NON_FREE_SHIPPING.get(brand)
             # A scraper that determined shipping from the site (e.g. WIRED's flat

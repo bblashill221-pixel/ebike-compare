@@ -51,7 +51,47 @@ def envelope(sizes: list[dict]):
 def _ranges(text: str) -> list[tuple[str, str]]:
     """All "A'B - C'D" rider-height ranges in a blob -> [(min, max), ...]."""
     return [(f"{a}'{b}\"", f"{c}'{d}\"")
-            for a, b, c, d in re.findall(r"(\d+)'\s*(\d+)\"?\s*[-–]\s*(\d+)'\s*(\d+)", text)]
+            for a, b, c, d in re.findall(r"(\d+)'\s*(\d+)\"?\s*[-–~]\s*(\d+)'\s*(\d+)", text)]
+
+
+_H_LABEL = re.compile(r"(?:rider|recommended|suitable|user|fit)\s*heights?\s*[:：]?", re.I)
+
+
+def _cm_to_ftin(cm: float) -> str:
+    inch = round(cm / 2.54)
+    return f"{inch // 12}'{inch % 12}\""
+
+
+def _decft_to_ftin(ft: float) -> str:
+    inch = round(ft * 12)
+    return f"{inch // 12}'{inch % 12}\""
+
+
+def _generic(page: str) -> list[dict]:
+    """Single rider-height range published on a product page (most bikes are sold
+    in one frame size). Anchored on a "Rider/Recommended/Suitable/User Height"
+    label, then the first range in any supported notation -- preferring the brand's
+    own imperial feet-inches, then centimetres, then decimal feet -- emitted as a
+    one-size collection. Returns [] when no labelled range is in the static HTML."""
+    txt = " ".join(html.unescape(re.sub(r"<[^>]+>", " ", page)).split())
+    segs = [txt[m.end():m.end() + 70] for m in _H_LABEL.finditer(txt)]
+    if not segs:
+        return []
+    one = lambda lo, hi: [{"size": None, "height_min": lo, "height_max": hi}]
+    for seg in segs:                                   # feet-inches (high inches optional: 5'1"~6')
+        mo = re.search(r"(\d+)['’]\s*(\d+)?\s*[\"”'’]{0,2}\s*[-~–]\s*(\d+)['’]\s*(\d+)?", seg)
+        if mo:
+            a, b, c, d = mo.groups()
+            return one(f"{a}'{int(b or 0)}\"", f"{c}'{int(d or 0)}\"")
+    for seg in segs:                                   # centimetres
+        mo = re.search(r"(\d{3})\s*[-~–]\s*(\d{3})\s*cm", seg)
+        if mo:
+            return one(_cm_to_ftin(int(mo.group(1))), _cm_to_ftin(int(mo.group(2))))
+    for seg in segs:                                   # decimal feet (e.g. 5.6~6.5ft)
+        mo = re.search(r"(\d\.\d)\s*[-~–]\s*(\d\.\d)\s*ft", seg)
+        if mo:
+            return one(_decft_to_ftin(float(mo.group(1))), _decft_to_ftin(float(mo.group(2))))
+    return []
 
 
 # ------------------------------ brand extractors ----------------------------
@@ -86,22 +126,100 @@ def _velowave(page: str) -> list[dict]:
     m = re.search(r"Frame\s*size\s*Rider\s*Height\s*Inseam(.{0,400})", txt, re.I)
     if not m:
         return []
-    return [{"size": None, "height_min": lo, "height_max": hi} for lo, hi in _ranges(m.group(1))]
+    seg = m.group(1)
+    # Each chart row is "<size>"  <rider-height range>  <inseam...>, e.g.
+    # '17" 5\'5" - 6\'4" ...'. Capture the size label that precedes each range.
+    out = [{"size": " ".join(sz.split()), "height_min": f"{a}'{b}\"", "height_max": f"{c}'{d}\""}
+           for sz, a, b, c, d in re.findall(
+               r'(\d{1,2}(?:\.\d)?\s*["”″])\s*(\d+)\'\s*(\d+)"?\s*[-–]\s*(\d+)\'\s*(\d+)', seg)]
+    if out:
+        return out
+    # older layout with no size column: keep just the ranges
+    return [{"size": None, "height_min": lo, "height_max": hi} for lo, hi in _ranges(seg)]
 
 
-def _velotric(page: str, name: str) -> list[dict]:
-    """Velotric embeds per-product JSON with a user_height_range that is either a
-    single range or labelled per-variant ranges ("HS/R: 4'11" - 5'8" …")."""
+def _velotric_geometry(page: str) -> list[dict]:
+    """Velotric's own product page carries a per-size GEOMETRY table whose first
+    row per size is that size's rider height ("Regular Height 4'11'' ~ 5'9'' Seat
+    Tube Length 380mm ... Large Height 5'6'' ~ 6'4'' ..."). This is authoritative
+    for the product, so it's preferred over the cross-product comparison widget
+    (which omits the product's own entry). Parsed from the static page."""
+    txt = " ".join(html.unescape(re.sub(r"<[^>]+>", " ", page)).split())
+    m = re.search(r"GEOMETRY(.{0,2000})", txt)
+    if not m:
+        return []
+    out, seen = [], set()
+    for lbl, a, b, c, d in re.findall(
+            r"([A-Za-z]+)\s+Height\s*(\d+)'\s*(\d+)['\"]*\s*[~\-–]\s*(\d+)'\s*(\d+)",
+            m.group(1)):
+        size = lbl.strip()
+        if size in seen:                  # first (authoritative) block per size wins
+            continue
+        seen.add(size)
+        out.append({"size": size, "height_min": f"{a}'{b}\"", "height_max": f"{c}'{d}\""})
+    return out
+
+
+def _velotric_user_height(page: str) -> list[dict]:
+    """The product's own "User Height Range" spec row carries its per-size fit,
+    with explicit size labels across all current templates:
+      - "R: 5'2'' ~ 5'11''  L: 5'9'' ~ 6'7''"          (Discover 3; R/L)
+      - "Regular: 4'11'' ~ 5'9'' / Large: 5'6'' ~ 6'4''" (Discover 2)
+      - style-prefixed "ST (...): Regular: 5'2'' ~ 5'11'' Large: 5'10'' ~ 6'5''"
+        (Nomad 2 -- first range per size wins, i.e. the default build), or
+      - a single "5'0'' ~ 6'3''" envelope (GoMad -- one unlabelled size).
+    The cross-product comparison widget lives in JSON, not after this text label,
+    so it is never matched here."""
+    txt = " ".join(html.unescape(re.sub(r"<[^>]+>", " ", page)).split())
+    norm = {"R": "Regular", "L": "Large"}
+    rng = r"(\d+)'\s*(\d+)['\"]*\s*[~\-–]\s*(\d+)'\s*(\d+)"
+    for mo in re.finditer(r"User Height Range(.{0,220})", txt):
+        seg = mo.group(1)
+        out = []
+        for lab, a, b, c, d in re.findall(
+                r"\b(Regular|Large|Small|Medium|R|L)\s*[:：]\s*" + rng, seg):
+            size = norm.get(lab, lab)
+            if any(s["size"] == size for s in out):     # first (default-build) pair wins
+                continue
+            out.append({"size": size, "height_min": f"{a}'{b}\"", "height_max": f"{c}'{d}\""})
+        if out:
+            return out
+        env = re.findall(rng, seg)                       # unlabelled single envelope
+        if len(env) == 1:
+            a, b, c, d = env[0]
+            return [{"size": None, "height_min": f"{a}'{b}\"", "height_max": f"{c}'{d}\""}]
+    return []
+
+
+def _velotric(page: str, name: str, model: dict) -> list[dict]:
+    """Prefer the product's own per-size data (authoritative, per-URL): the
+    explicitly-labelled "User Height Range" spec row, else the GEOMETRY table.
+    Fallback: the `data-product-spec-json` comparison block listing EVERY Velotric
+    bike (price + type + user_height_range), matched by the product's from-price
+    and only when that price is unique on the page (otherwise ambiguous, so left
+    missing rather than guessed). Older pages keyed entries by "title"."""
+    geo = _velotric_user_height(page) or _velotric_geometry(page)
+    if geo:
+        return geo
     best = None
-    for mo in re.finditer(r'"title":"([^"]*)","user_height_range":"((?:[^"\\]|\\.)*)"', page):
-        title, rng = html.unescape(mo.group(1)), mo.group(2)
-        rng = re.sub(r"\\u003c[^\\]*\\u003e|<[^>]+>", " ", rng).replace("''", '"').replace("’", "'")
-        if name and name.lower() in title.lower():
-            best = rng
-            break
-        best = best or rng
+    price = model.get("price_from") or model.get("price")
+    entries = re.findall(r'"price":"([^"]*)"[^}]*?"user_height_range":"((?:[^"\\]|\\.)*)"', page, re.S)
+    if price is not None and entries:
+        target = round(float(price))
+        matches = [h for pstr, h in entries
+                   if (nums := [int(x.replace(",", "")) for x in re.findall(r"([\d,]{3,7})", pstr)])
+                   and min(nums) == target]
+        if len(matches) == 1:
+            best = matches[0]
+    if best is None:                                   # legacy "title" format
+        for mo in re.finditer(r'"title":"([^"]*)","user_height_range":"((?:[^"\\]|\\.)*)"', page):
+            title, rng = html.unescape(mo.group(1)), mo.group(2)
+            if name and name.lower() in title.lower():
+                best = rng
+                break
     if not best:
         return []
+    best = re.sub(r"\\u003c[^\\]*\\u003e|<[^>]+>", " ", best).replace("''", '"').replace("’", "'")
     labelled = re.findall(r"([A-Za-z/ ]{1,18}):\s*(\d+'\s*\d+\"?\s*[-–]\s*\d+'\s*\d+)", best)
     if labelled:
         return [{"size": lbl.strip(" :/"), "height_min": r[0], "height_max": r[1]}
@@ -109,12 +227,20 @@ def _velotric(page: str, name: str) -> list[dict]:
     return [{"size": None, "height_min": lo, "height_max": hi} for lo, hi in _ranges(best)]
 
 
-EXTRACTORS = {
-    "aventon": lambda p, n: _aventon(p),
-    "priority": lambda p, n: _priority(p),
-    "velowave": lambda p, n: _velowave(p),
-    "velotric": lambda p, n: _velotric(p, n),
+# Brands with a per-size size-chart extractor; generic single-size capture backs
+# them up (and covers every other brand) when no chart is present on the page.
+_CHART = {
+    "aventon": lambda p, n, m: _aventon(p),
+    "priority": lambda p, n, m: _priority(p),
+    "velowave": lambda p, n, m: _velowave(p),
+    "velotric": lambda p, n, m: _velotric(p, n, m),
 }
+# Every brand we scrape runs the enricher: its chart extractor first (if any),
+# then the generic labelled-range fallback.
+_ALL_BRANDS = [Path(f).stem.replace("_ebikes", "")
+               for f in glob.glob(str(DATA / "current" / "*_ebikes.json"))]
+EXTRACTORS = {b: (lambda p, n, m, _c=_CHART.get(b): (_c(p, n, m) if _c else []) or _generic(p))
+              for b in _ALL_BRANDS}
 
 
 def _set_rider_height(m: dict, env: str):
@@ -139,12 +265,31 @@ def main():
         d = json.load(open(f))
         changed = 0
         for m in d.get("models", []):
-            if m.get("frame_sizes"):       # already captured (e.g. Aventon scraper)
-                continue
-            sizes = EXTRACTORS[brand](fetch(m.get("url", "")), m.get("model") or m.get("title", ""))
+            existing = m.get("frame_sizes")
+            if existing and any(s.get("height_min") for s in existing):
+                continue               # already has per-size rider heights
+            sizes = EXTRACTORS[brand](fetch(m.get("url", "")), m.get("model") or m.get("title", ""), m)
             if not sizes:
                 continue
-            m["frame_sizes"] = sizes
+            if existing:
+                # Scraper captured size LABELS but no heights (e.g. Urtopia S/M/L).
+                # Merge in any per-size heights by matching label; always set the
+                # model's rider-height envelope so the "fits me" filter works even
+                # when the page only publishes a single envelope (no per-size rows).
+                by_lbl = {s["size"]: s for s in sizes if s.get("size") and s.get("height_min")}
+                for s in existing:
+                    src = by_lbl.get(s.get("size"))
+                    if src:
+                        s["height_min"], s["height_max"] = src["height_min"], src["height_max"]
+                # one-size bike: the page envelope IS that size's range
+                if len(existing) == 1 and not existing[0].get("height_min"):
+                    los = [v for s in sizes if (v := _to_in(s.get("height_min")))]
+                    his = [v for s in sizes if (v := _to_in(s.get("height_max")))]
+                    if los and his:
+                        existing[0]["height_min"] = _fmt(min(los))
+                        existing[0]["height_max"] = _fmt(max(his))
+            else:
+                m["frame_sizes"] = sizes
             env = envelope(sizes)
             if env:
                 _set_rider_height(m, env)

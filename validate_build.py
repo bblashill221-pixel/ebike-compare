@@ -29,6 +29,30 @@ MAX_COUNT_DROP = 0.20      # fail if today's count < (1 - this) * baseline count
 MAX_COVERAGE_DROP = 15     # fail if a core field's % coverage drops > this many points
 CORE_FIELDS = ["motor_w", "battery_wh", "weight_lb", "range_mi", "brake_type",
                "frame_material", "drive_type"]
+COMPONENT_FIELD_MIN = 15        # gate only (kind, field) pairs this widespread
+MAX_COMPONENT_FIELD_DROP = 0.4  # fail if such a pair loses > this fraction of models
+# Reviewed, intended coverage drops ("kind.field"). Entries only matter until the
+# next promotion makes the new build the baseline; prune them after that.
+DROPS_OK = DATA / "curated" / "component_field_drops_ok.json"
+
+
+def _component_fields(models: list) -> dict:
+    """(kind, field) -> number of models carrying a real value."""
+    out: dict = {}
+    for m in models:
+        seen = set()
+        for rows in (m.get("specs") or {}).values():
+            for v in rows.values():
+                if not (isinstance(v, dict) and v.get("_kind")):
+                    continue
+                for fk, fv in v.items():
+                    key = (v["_kind"], fk)
+                    if fk in ("_kind", "details") or fv in (None, "", [], False):
+                        continue
+                    if key not in seen:
+                        seen.add(key)
+                        out[key] = out.get(key, 0) + 1
+    return out
 
 
 def _by_brand(models: list) -> dict:
@@ -67,6 +91,29 @@ def validate(cur: list, base: list) -> list[str]:
     for f in CORE_FIELDS:
         if bc[f] - cc[f] > MAX_COVERAGE_DROP:
             problems.append(f"{f} coverage {bc[f]}% -> {cc[f]}% (drop > {MAX_COVERAGE_DROP} pts)")
+    # Component-field coverage: a parser change must not silently wipe a
+    # structured field fleet-wide (e.g. every brake losing rotor_mm) even when
+    # the typed CORE_FIELDS above stay healthy.
+    cf, bf = _component_fields(cur), _component_fields(base)
+    try:
+        drops_ok = set(json.load(open(DROPS_OK)))
+    except (OSError, ValueError):
+        drops_ok = set()
+    for key, bn in sorted(bf.items()):
+        kind, field = key
+        if f"{kind}.{field}" in drops_ok:
+            continue
+        if bn >= COMPONENT_FIELD_MIN and cf.get(key, 0) < bn * (1 - MAX_COMPONENT_FIELD_DROP):
+            problems.append(f"component {kind}.{field} models {bn} -> {cf.get(key, 0)} "
+                            f"(drop > {int(MAX_COMPONENT_FIELD_DROP * 100)}%)")
+    # Golden parse corpus: any change to a recorded (raw text -> parsed dict)
+    # case fails the gate; run `golden_parse.py --update` after INTENDED parser
+    # changes and review the corpus diff.
+    try:
+        from golden_parse import golden_problems
+        problems += golden_problems()
+    except Exception as e:  # noqa: BLE001
+        problems.append(f"golden corpus check unavailable: {e}")
     return problems
 
 

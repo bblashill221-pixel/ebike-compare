@@ -2,7 +2,7 @@
   "source": "https://wiredebikes.com",
   "logo": "https://wiredebikes.com/cdn/shop/files/Wired_1200_600.png?v=1739722992",
   "collection": "wired-ebikes",
-  "scraped_at": "2026-06-08T20:47:54.043969+00:00",
+  "scraped_at": "2026-06-11T00:01:03.714366+00:00",
   "model_count": 7,
   "models": [
     {
@@ -83,8 +83,10 @@
       "spec_count": 17,
       "warranty": null,
       "scrape_error": null,
+      "is_new": false,
       "free_accessories": [],
-      "is_new": false
+      "geometry": {},
+      "available_options": []
     },
     {
       "model": "WIRED Freedom",
@@ -163,8 +165,10 @@
       "spec_count": 17,
       "warranty": null,
       "scrape_error": null,
+      "is_new": false,
       "free_accessories": [],
-      "is_new": false
+      "geometry": {},
+      "available_options": []
     },
     {
       "model": "WIRED Predator",
@@ -239,8 +243,10 @@
       "spec_count": 19,
       "warranty": null,
       "scrape_error": null,
+      "is_new": false,
       "free_accessories": [],
-      "is_new": false
+      "geometry": {},
+      "available_options": []
     },
     {
       "model": "WIRED Raven",
@@ -304,8 +310,11 @@
       "spec_count": 20,
       "warranty": null,
       "scrape_error": null,
+      "is_new": false,
       "free_accessories": [],
-      "is_new": false
+      "geometry": {},
+      "available_options": [],
+      "regular_price": 2799.0
     },
     {
       "model": "WIRED Viper",
@@ -313,7 +322,7 @@
       "url": "https://wiredebikes.com/products/wired-viper",
       "product_types": [
         "eMoto",
-        "Fat tire",
+        "Fat Tire",
         "Mountain (eMTB)"
       ],
       "price_from": 3699.0,
@@ -370,8 +379,10 @@
       "spec_count": 19,
       "warranty": null,
       "scrape_error": null,
+      "is_new": false,
       "free_accessories": [],
-      "is_new": false
+      "geometry": {},
+      "available_options": []
     },
     {
       "model": "Wired Scout",
@@ -445,8 +456,10 @@
       "spec_count": 18,
       "warranty": null,
       "scrape_error": null,
+      "is_new": false,
       "free_accessories": [],
-      "is_new": false
+      "geometry": {},
+      "available_options": []
     },
     {
       "model": "Wired Warrior",
@@ -522,10 +535,101 @@
       "spec_count": 19,
       "warranty": null,
       "scrape_error": null,
+      "is_new": false,
       "free_accessories": [],
-      "is_new": false
+      "geometry": {},
+      "available_options": []
     }
   ],
-  "available_accessories": [],
-  "available_accessories_count": 0
+  "available_accessories": [
+    {
+      "name": "Phone Holder",
+      "price": 25.0,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://wiredebikes.com/products/phone-holder"
+    },
+    {
+      "name": "Rear Pannier Bag (Waterproof)",
+      "price": 45.0,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://wiredebikes.com/products/bag"
+    },
+    {
+      "name": "WIRED Mirror",
+      "price": 25.0,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://wiredebikes.com/products/wired-mirror"
+    },
+    {
+      "name": "Cup Holder",
+      "price": 29.0,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://wiredebikes.com/products/cup-holder"
+    },
+    {
+      "name": "Detachable Handlebar Basket",
+      "price": 35.0,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://wiredebikes.com/products/detachable-handlebar-basket"
+    },
+    {
+      "name": "Tire Valve Stem Light (single)",
+      "price": 10.0,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://wiredebikes.com/products/valve-light"
+    },
+    {
+      "name": "WIRED Air Pump for Rear Shock",
+      "price": 30.0,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://wiredebikes.com/products/wired-air-pump-for-rear-shock"
+    },
+    {
+      "name": "Front Mounted Cargo Basket",
+      "price": 110.0,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://wiredebikes.com/products/front-mounted-basket"
+    },
+    {
+      "name": "Gemma Brake Pads",
+      "price": 35.0,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://wiredebikes.com/products/gemma-brake-pad"
+    },
+    {
+      "name": "Bluetooth Speaker",
+      "price": 29.0,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://wiredebikes.com/products/bluetooth-speaker"
+    },
+    {
+      "name": "Front Mounted Rack",
+      "price": 125.0,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://wiredebikes.com/products/front-mounted-rack"
+    }
+  ],
+  "available_accessories_count": 11
 }

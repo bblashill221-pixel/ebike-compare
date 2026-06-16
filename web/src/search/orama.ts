@@ -29,7 +29,7 @@ export const ENUM_FIELDS = [
   "sensor_type",
 ] as const;
 
-export const BOOL_FIELDS = ["is_new", "on_sale", "ul_listed", "kids"] as const;
+export const BOOL_FIELDS = ["is_new", "on_sale", "ul_listed", "awd", "kids"] as const;
 
 export const RANGE_FIELDS = [
   "price",
@@ -61,6 +61,7 @@ const schema = {
   is_new: "boolean",
   on_sale: "boolean",
   ul_listed: "boolean",
+  awd: "boolean",
   kids: "boolean",
   available: "boolean",
   price: "number",
@@ -110,6 +111,7 @@ function toDoc(m: Model): Record<string, unknown> {
     is_new: !!m.is_new,
     on_sale: !!m.pricing?.on_sale,
     ul_listed: !!t.ul_listed,
+    awd: !!t.awd,
     kids: !!t.kids,
     available: isAvailable(m),
     // lowest purchasable price across colors/configurations
@@ -215,6 +217,30 @@ export async function runSearch(
   for (const [k, v] of Object.entries(rawFacets)) {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     facets[k] = (v as any).values ?? {};
+  }
+
+  // Disjunctive enum facets: a facet value's count must not change when *other*
+  // values of the same facet are selected. The main query restricts to the
+  // selected values, which collapses the unselected siblings' counts to 0 (e.g.
+  // pick "Step-Thru" and the Step-Over count drops to 0 even though every bike is
+  // one or the other). For each enum facet that has a selection we recompute its
+  // counts against the same query with *its own* filter removed (all other
+  // filters still applied), so the siblings keep their true counts.
+  for (const f of ENUM_FIELDS) {
+    const sel = filters.enums[f];
+    if (!sel || !sel.length) continue; // no selection -> main counts already right
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { [f]: _omit, ...whereWithout } = where;
+    const fres = await search(db, {
+      term: term.trim(),
+      where: whereWithout,
+      limit: 1,
+      facets: { [f]: {} },
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    } as any);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const vals = (fres as any).facets?.[f]?.values;
+    if (vals) facets[f] = vals;
   }
 
   return {

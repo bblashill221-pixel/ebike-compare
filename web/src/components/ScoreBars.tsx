@@ -4,6 +4,7 @@ import { titleCase } from "../format";
 // deliberately no composite/overall score (project rule), so never sum/average them.
 export const SCORE_ORDER = [
   "power",
+  "torque",
   "range",
   "battery",
   "components",
@@ -12,6 +13,7 @@ export const SCORE_ORDER = [
   "tech",
   "warranty",
   "value",
+  "price",
 ];
 
 function barColor(v: number): string {
@@ -22,7 +24,7 @@ function barColor(v: number): string {
 }
 
 export function ScoreBars({ scores }: { scores: Record<string, number> }) {
-  const keys = SCORE_ORDER.filter((k) => k in scores);
+  const keys = SCORE_ORDER.filter((k) => scores[k] != null);
   return (
     <div className="space-y-2">
       {keys.map((k) => {

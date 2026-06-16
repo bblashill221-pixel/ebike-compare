@@ -89,6 +89,17 @@ JS_SPECS = r"""() => {
 # name -> {hex, swatch_image} from the colour radio swatches.
 JS_SWATCHES = r"""() => ({})"""
 
+# FAQ accordion text: the only place Blix states bike weight, e-bike class,
+# and the app-unlocked top speed ("The Vika X is a class 2 ebike that can be
+# changed to a class 3 ... from 20 mph to 28 mph", "weighs 61 lbs ...").
+JS_FAQ = r"""() => {
+    const norm = s => (s || '').replace(/\s+/g, ' ').trim();
+    // textContent, not innerText: the accordions are collapsed <details>, and
+    // innerText of hidden elements is empty
+    return [...document.querySelectorAll('.accordion__content')]
+        .map(e => norm(e.textContent)).filter(Boolean).join(' | ');
+}"""
+
 
 async def scrape_model(context, model: dict, retries: int = 3) -> dict:
     result = dict(model)
@@ -116,6 +127,7 @@ async def scrape_model(context, model: dict, retries: int = 3) -> dict:
                 await page.mouse.wheel(0, 2000)
                 await page.wait_for_timeout(1000)
             swatches = await page.evaluate(JS_SWATCHES)
+            faq = await page.evaluate(JS_FAQ)
             result["warranty"] = await page.evaluate(JS_WARRANTY)
             await page.close()
 
@@ -136,6 +148,28 @@ async def scrape_model(context, model: dict, retries: int = 3) -> dict:
             for label, value in pairs:
                 key = " ".join(label.split())
                 all_specs[key] = value
+
+            # Mine the FAQ for facts the spec table omits, as discrete
+            # parseable rows (weight / class / app-unlocked top speed).
+            have = {k.lower() for k in all_specs}
+            corpus = " ".join(str(v) for v in all_specs.values())
+            m = re.search(r"weighs\s+(\d{2,3})\s*lbs(?:[^.]*?and\s+(\d{2,3})\s*lbs?"
+                          r"\s*without)?", faq, re.I)
+            if m and not any("weight" in k for k in have):
+                w = f"{m.group(1)} lbs"
+                if m.group(2):
+                    w += f" ({m.group(2)} lbs without battery)"
+                all_specs["Bike Weight"] = w
+            m = re.search(r"class\s*([123])\s*ebike(?:[^.|]*?changed to a class\s*([123]))?",
+                          faq, re.I)
+            if m and not re.search(r"class\s*[123]", corpus, re.I):
+                cls = f"Class {m.group(1)}"
+                if m.group(2):
+                    cls += f" (changeable to Class {m.group(2)} via the Blix app)"
+                all_specs["Class"] = cls
+            m = re.search(r"from\s+(\d{2})\s*mph\s+to\s+(\d{2})\s*mph", faq, re.I)
+            if m and not any("speed" in k for k in have):
+                all_specs["Max Speed"] = f"{m.group(2)} mph (app-unlocked; {m.group(1)} mph default)"
 
             result["specs"] = {"all": all_specs}
             result["spec_count"] = len(all_specs)

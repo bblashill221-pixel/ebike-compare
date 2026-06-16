@@ -10,6 +10,8 @@ import { ResultsGrid } from "../components/ResultsGrid";
 import { ActiveFilters } from "../components/ActiveFilters";
 import { useShowSoldOut } from "../soldOut";
 import { useUnits } from "../units";
+import { filtersFromParams, hasQuizParams, QUIZ_PARAM_KEYS } from "../findMyEbike";
+import { loadStoredFilters, saveStoredFilters, sanitizeFilters } from "../filterStorage";
 
 const EMPTY_FILTERS: Filters = { enums: {}, bools: {}, ranges: {}, riderHeightIn: null };
 
@@ -83,13 +85,57 @@ export function Browse() {
 
   const [term, setTerm] = useState(params.get("q") ?? "");
   const [debounced, setDebounced] = useState(term);
-  const [filters, setFilters] = useState<Filters>(EMPTY_FILTERS);
+  // filter panel state survives detail-page round-trips and fresh visits;
+  // a query-param link overrides it (and the override is persisted below)
+  const [filters, setFiltersState] = useState<Filters>(
+    () => loadStoredFilters() ?? EMPTY_FILTERS,
+  );
+  const setFilters = (f: Filters) => {
+    setFiltersState(f);
+    saveStoredFilters(f);
+  };
   const [showSoldOut] = useShowSoldOut();
   const [units] = useUnits();
-  const [sort, setSort] = useState<SortKey>((params.get("sort") as SortKey) ?? "relevance");
+  // sort persists independently (explicitly set; never touched by query params);
+  // an explicit ?sort= in a shared link still wins for that visit
+  const [sort, setSortState] = useState<SortKey>(
+    (params.get("sort") as SortKey) ??
+      ((localStorage.getItem("browse-sort") as SortKey) || "relevance"),
+  );
+  const setSort = (s: SortKey) => {
+    setSortState(s);
+    try {
+      localStorage.setItem("browse-sort", s);
+    } catch {
+      /* storage blocked */
+    }
+  };
   const [ids, setIds] = useState<string[]>([]);
   const [facetCounts, setFacetCounts] = useState<Record<string, Record<string, number>>>({});
   const [drawer, setDrawer] = useState(false);
+
+  // Once the catalog is ready: a "Find My eBike" link (?type=…&price_max=…)
+  // OVERRIDES the stored filter panel (and the override is persisted), then the
+  // params are stripped so they don't linger as the user edits filters. Without
+  // params, the stored filters just get sanitized against the live catalog.
+  // Sort / sold-out / units are never touched by this — separate persistence.
+  // Reactive to `params`, not run-once: a quiz link can arrive as a hash-only
+  // navigation while Browse is already mounted (no remount), and must still
+  // override. The ref only gates the one-time sanitize of stored filters.
+  const hydrated = useRef(false);
+  useEffect(() => {
+    if (status !== "ready") return;
+    if (hasQuizParams(params)) {
+      setFilters(filtersFromParams(params, rangeBounds));
+      const next = new URLSearchParams(params);
+      for (const k of QUIZ_PARAM_KEYS) next.delete(k);
+      setParams(next, { replace: true });
+    } else if (!hydrated.current) {
+      setFiltersState((f) => sanitizeFilters(f, facetOptions));
+    }
+    hydrated.current = true;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [status, params]);
 
   // debounce term -> mirror q+sort to the URL
   useEffect(() => {

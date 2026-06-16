@@ -18,6 +18,9 @@ export function Header() {
           <NavLink to="/" end className={navClass}>
             Browse
           </NavLink>
+          <NavLink to="/find" className={navClass}>
+            Find My eBike
+          </NavLink>
           <NavLink to="/analysis" className={navClass}>
             Analysis
           </NavLink>

@@ -14,25 +14,34 @@ Runs after the scrapers (the wrapper calls it); one network fetch per brand.
 """
 import glob
 import json
+import re
 import urllib.request
 from pathlib import Path
 
 HERE = Path(__file__).parent
 DATA = HERE / "data"
 
-# brand -> (base, collection) for the Shopify catalogs (mirrors each scraper).
-SHOPIFY = {
-    "aventon": ("https://www.aventon.com", "ebikes"),
-    "lectric": ("https://lectricebikes.com", "ebikes"),
-    "velotric": ("https://www.velotricbike.com", "electric-bikes"),
-    "heybike": ("https://www.heybike.com", "electric-bike"),
-    "mokwheel": ("https://www.mokwheel.com", "electric-bikes"),
-    "evelo": ("https://www.evelo.com", "evelo-bikes"),
-    "himiway": ("https://himiwaybike.com", "ebikes"),
-    "euphree": ("https://euphree.com", "electric-bikes"),
-    "vvolt": ("https://vvolt.com", "e-bikes"),
-    "blix": ("https://blixbike.com", "all"),
-}
+
+def _discover_shopify() -> dict:
+    """brand -> (base, collection), DERIVED from each scrape_<brand>.py that
+    declares module-level BASE + COLLECTION constants (the Shopify-style scrapers).
+    Auto-keeps this in sync with the scrapers so a new Shopify brand is enrolled in
+    sale detection automatically. Brands whose feed isn't actually a Shopify
+    products.json (e.g. Tern) just error out in sale_map() and are skipped."""
+    out: dict[str, tuple[str, str]] = {}
+    for f in glob.glob(str(HERE / "scrape_*.py")):
+        brand = Path(f).stem.replace("scrape_", "")
+        src = Path(f).read_text()
+        b = re.search(r'^BASE\s*=\s*["\']([^"\']+)["\']', src, re.M)
+        c = re.search(r'^COLLECTION\s*=\s*["\']([^"\']+)["\']', src, re.M)
+        if b and c:
+            out[brand] = (b.group(1), c.group(1))
+    return out
+
+
+# brand -> (base, collection) for the Shopify catalogs, kept in sync with the
+# scrapers (was a hand-maintained allowlist that silently drifted out of date).
+SHOPIFY = _discover_shopify()
 
 
 def sale_map(base: str, collection: str) -> dict:

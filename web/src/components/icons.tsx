@@ -1,6 +1,6 @@
 // Hand-drawn spec icons, fully colored per metric:
 //   battery -> 3/4-charged cells (emerald), motor -> electric motor w/ power bolt
-//   (amber), weight -> dumbbell (violet), range -> route to a destination pin (sky),
+//   (amber), weight -> hanging cast weight w/ ring (violet), range -> route pin (sky),
 //   torque -> cyclist climbing a steep hill (rose), gears -> tooth ring (indigo),
 //   front light -> headlamp w/ forward beam (yellow), tail light -> rear lamp w/
 //   backward glow (rose), turn signal -> indicator arrow w/ blink ticks (orange).
@@ -77,17 +77,66 @@ export function MotorIcon({ className }: IconProps) {
 export function WeightIcon({ className }: IconProps) {
   return (
     <Svg className={className}>
-      {/* bar */}
-      <path className="text-violet-600" {...base} d="M8.6 12h6.8" strokeWidth={1.9} />
-      {/* outer plates */}
-      <g className="text-violet-400" {...base} strokeWidth={1.5}>
-        <rect x="3.9" y="10" width="1.9" height="4" rx="0.6" />
-        <rect x="18.2" y="10" width="1.9" height="4" rx="0.6" />
+      {/* ring / loop handle */}
+      <circle className="text-violet-600" cx="12" cy="5" r="2.5" stroke="currentColor"
+        strokeWidth={2} fill="none" />
+      {/* flared cast-weight body */}
+      <path className="text-violet-400" stroke="currentColor" strokeWidth={1.2} strokeLinejoin="round"
+        fill="currentColor"
+        d="M9.4 7.2 C10.2 8 13.8 8 14.6 7.2 C16 7.2 16.6 8.6 17 10.4 L18.6 17.4
+           C18.9 18.6 18.1 19.6 16.9 19.6 L7.1 19.6 C5.9 19.6 5.1 18.6 5.4 17.4
+           L7 10.4 C7.4 8.6 8 7.2 9.4 7.2 Z" />
+    </Svg>
+  );
+}
+
+export function PayloadIcon({ className }: IconProps) {
+  return (
+    <Svg className={className}>
+      {/* upper arm + forearm: thick bent tube */}
+      <path className="text-orange-300" stroke="currentColor" strokeWidth={3.6}
+        strokeLinecap="round" strokeLinejoin="round" fill="none"
+        d="M5.5 17 H12.2 C14.5 17 15.6 15.6 15.6 13.2 V9.5" />
+      {/* bicep bulge on top of the upper arm */}
+      <path className="text-orange-300" stroke="currentColor" strokeWidth={1.2} strokeLinejoin="round"
+        fill="currentColor"
+        d="M5.6 15.6 C5 11.4 8.4 9 11.8 10.6 C13.3 11.3 13.8 13 13.5 14.6 L13 15.6 Z" />
+      {/* fist */}
+      <circle className="text-orange-300" cx="15.6" cy="6.2" r="3" stroke="currentColor"
+        strokeWidth={1.2} fill="currentColor" />
+      {/* bicep contour */}
+      <path className="text-orange-600" stroke="currentColor" strokeWidth={1.4} strokeLinecap="round"
+        fill="none" d="M7.2 13.8 C7.2 11.6 8.8 10.6 10.8 11.2" />
+      {/* fist knuckles */}
+      <path className="text-orange-600" stroke="currentColor" strokeWidth={1.2} strokeLinecap="round"
+        fill="none" d="M14.4 4.6 L14.4 7.2 M16.6 4.6 L16.6 7.2" />
+    </Svg>
+  );
+}
+
+export function SpeedIcon({ className }: IconProps) {
+  // a man running flat-out: forward-leaning sprinter mid-stride, with speed
+  // streaks trailing behind. Represents a model's top speed.
+  return (
+    <Svg className={className}>
+      {/* speed streaks behind the runner */}
+      <g className="text-blue-300" {...base} strokeWidth={1.7}>
+        <path d="M2 6.5h3.4" />
+        <path d="M1.3 10h4" />
+        <path d="M2.4 13.6h2.8" />
       </g>
-      {/* highlight: inner plates */}
-      <g className="text-violet-500" fill="currentColor">
-        <rect x="6.2" y="8.6" width="2.2" height="6.8" rx="0.7" />
-        <rect x="15.6" y="8.6" width="2.2" height="6.8" rx="0.7" />
+      {/* head */}
+      <circle className="text-blue-600" cx="15" cy="4.8" r="2" fill="currentColor" />
+      {/* torso + limbs of the sprinter */}
+      <g className="text-blue-600" {...base} strokeWidth={1.8}>
+        {/* leaning torso */}
+        <path d="M14.4 7 11.2 12.6" />
+        {/* leading arm pumping forward, trailing arm swung back */}
+        <path d="M13.4 8.2 16.9 9.5 18.1 7.4" />
+        <path d="M12.8 8.7 9.2 7.3" />
+        {/* driving front leg + trailing back leg */}
+        <path d="M11.2 12.6 14.4 14.6 15.2 19.2" />
+        <path d="M11.2 12.6 8.3 15.7 5.4 16.2" />
       </g>
     </Svg>
   );
@@ -240,6 +289,56 @@ export function RiderHeightIcon({ className }: IconProps) {
         <path d="M14.3 8.9H18.9" />
         <path d="M16.6 16l-1.5 4M16.6 16l1.5 4" />
       </g>
+    </Svg>
+  );
+}
+
+// Pedal-assist sensor type. Torque -> capital "T" (rose); cadence -> capital "C"
+// (sky); both -> a small "T" top-left, a split from the bottom-left corner up to
+// the top-right corner, and a small "C" bottom-right. Unknown/absent -> the dual
+// layout muted in slate.
+export function SensorIcon({ className, type }: IconProps & { type?: string | null }) {
+  const t = (type || "").toLowerCase();
+  const hasT = t.includes("torque");
+  const hasC = t.includes("cadence");
+  const both = hasT && hasC;
+  const known = hasT || hasC;
+  const letter = (ch: string, x: number, y: number, size: number, color: string) => (
+    <text
+      x={x}
+      y={y}
+      textAnchor="middle"
+      dominantBaseline="central"
+      className={color}
+      fill="currentColor"
+      fontFamily="ui-sans-serif, system-ui, sans-serif"
+      fontWeight={700}
+      fontSize={size}
+    >
+      {ch}
+    </text>
+  );
+  // both, or unknown (shown muted) -> split layout with cornered letters
+  if (both || !known) {
+    const tT = known ? "text-rose-600" : "text-slate-300";
+    const tC = known ? "text-sky-600" : "text-slate-300";
+    return (
+      <Svg className={className}>
+        <line
+          x1="4" y1="20" x2="20" y2="4"
+          stroke="currentColor" className="text-slate-300"
+          strokeWidth={1.5} strokeLinecap="round"
+        />
+        {letter("T", 7, 7, 10, tT)}
+        {letter("C", 17, 17, 10, tC)}
+      </Svg>
+    );
+  }
+  // single sensor -> one centered letter
+  return (
+    <Svg className={className}>
+      {hasT ? letter("T", 12, 12.5, 17, "text-rose-600")
+            : letter("C", 12, 12.5, 17, "text-sky-600")}
     </Svg>
   );
 }

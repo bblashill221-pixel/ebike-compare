@@ -88,6 +88,37 @@ JS_GEOMETRY = r"""() => {
     return Object.keys(byFrame).length ? {"Rider Height Range": byFrame} : {};
 }"""
 
+# Newer Ride1Up product layout (e.g. TrailRush): the per-size dimensions live in
+# a text table `.bike-dimensions-table`, NOT the `.frame-size-section` blocks the
+# extractor above reads. The header lists the size names (LARGE / MED), the
+# `.big-col-holder` lists the row labels (Rider Height range, A-O dims, ...), and
+# each `.small-col-holder` is one size's value column (in header order). We pull
+# the whole table so frame sizes, rider-height ranges, and geometry are all
+# captured as text -- the only thing in the diagram image is the letter callouts.
+JS_DIM_TABLE = r"""() => {
+    const norm = s => (s || '').replace(/\s+/g, ' ').trim();
+    const t = document.querySelector('.bike-dimensions-table');
+    if (!t) return null;
+    const sizes = [...t.querySelectorAll('.bike-dimensions-table-head .small-col')]
+        .map(e => norm(e.innerText)).filter(Boolean);
+    const labels = [...t.querySelectorAll('.big-col-holder .big-col-item')]
+        .map(e => norm(e.innerText));
+    const cols = [...t.querySelectorAll('.small-col-holder')].map(col =>
+        [...col.querySelectorAll('.small-col-item')]
+            .map(it => norm((it.querySelector('.shown-value') || it).innerText)));
+    if (!sizes.length || !labels.length || !cols.length) return null;
+    const out = {};
+    sizes.forEach((sz, ci) => {
+        const vals = cols[ci] || [];
+        const row = {};
+        labels.forEach((lab, ri) => {
+            if (vals[ri] !== undefined && vals[ri] !== '') row[lab] = vals[ri];
+        });
+        out[sz] = row;
+    });
+    return out;
+}"""
+
 JS_VARIATIONS = r"""() => {
     const form = document.querySelector('form.variations_form');
     const out = {variations: [], attributes: {}};
@@ -125,7 +156,62 @@ JS_SPECS = r"""() => {
         }
         if (v) highlights.push([head, v]);
     }
-    return {components, highlights};
+    // "At A Glance" feature tiles (Range / Motor / Speed ...): mixed-case
+    // titles, so the uppercase-h3 loop above skips them on layouts that use
+    // this section instead of highlight chips (e.g. Prodigy v2).
+    const glance = [];
+    for (const it of document.querySelectorAll('.bike-features-item')) {
+        const t = norm(it.querySelector('.feature-title')?.innerText);
+        const v = norm(it.querySelector('.feature-subtitle')?.innerText);
+        if (t && v) glance.push([t, v]);
+    }
+    // Dimensions table: the only place the bike's own weight and payload
+    // ("Bike Weight" / "Weight Capacity") are stated. Multi-frame models have
+    // one value column per frame tab; join differing values with their
+    // column headers.
+    const dims = [];
+    const tbl = document.querySelector('.bike-dimensions-table');
+    if (tbl) {
+        // Two nesting schemes exist: stacked sub-tables, each opened by its own
+        // table-head (Prodigy: CHAIN/CVT weight table above the XR/ST geometry
+        // table), and variant tabs sharing one head (Vorsa: tab-a/b/c). So:
+        // segment on table-head boundaries in DOM order, then pair labels with
+        // value columns per tab *within* a segment -- never across.
+        const tabOf = el => ([...el.classList].find(c => /^tab-/.test(c)) || 'tab-a');
+        const segs = [];
+        let cur = null;
+        for (const el of tbl.querySelectorAll(
+                '.bike-dimensions-table-head, .big-col-holder, .small-col-holder')) {
+            if (el.classList.contains('bike-dimensions-table-head')) {
+                cur = {headEls: [...el.querySelectorAll('.small-col')], labelEls: [], holderEls: []};
+                segs.push(cur);
+            } else if (!cur) {
+                continue;
+            } else if (el.classList.contains('big-col-holder')) {
+                cur.labelEls.push(...el.querySelectorAll('.big-col-item'));
+            } else {
+                cur.holderEls.push(el);
+            }
+        }
+        for (const seg of segs) {
+            for (const tab of [...new Set(seg.labelEls.map(tabOf))]) {
+                const labels = seg.labelEls.filter(e => tabOf(e) === tab).map(e => norm(e.innerText));
+                const heads = seg.headEls.filter(e => tabOf(e) === tab).map(e => norm(e.innerText));
+                const cols = seg.holderEls.filter(e => tabOf(e) === tab).map(h =>
+                    [...h.querySelectorAll('.small-col-item')].map(e =>
+                        norm(e.querySelector('.shown-value')?.innerText || e.innerText)));
+                labels.forEach((lab, i) => {
+                    if (!/weight/i.test(lab)) return;
+                    const vals = cols.map(c => c[i]).filter(Boolean);
+                    if (!vals.length) return;
+                    const v = new Set(vals).size === 1 ? vals[0]
+                        : vals.map((x, j) => (heads[j] ? heads[j] + ': ' : '') + x).join(' / ');
+                    dims.push([lab, v]);
+                });
+            }
+        }
+    }
+    return {components, highlights, glance, dims};
 }"""
 
 # Color swatch -> hex. Ride1Up swatches are background images, so we sample the
@@ -206,6 +292,80 @@ def build_options(attributes: dict, color_hex: dict, variations: list[dict],
     return options
 
 
+# Map a frame-size abbreviation/word to a canonical name. Full words (LARGE) fall
+# through to title-case; abbreviations (MED, LG, XL) are expanded explicitly.
+_SIZE_NAMES = {
+    "XXS": "XX-Small", "XS": "X-Small", "S": "Small", "SM": "Small", "SML": "Small",
+    "M": "Medium", "MD": "Medium", "MED": "Medium", "L": "Large", "LG": "Large",
+    "LRG": "Large", "XL": "X-Large", "XXL": "XX-Large", "XXXL": "XXX-Large",
+}
+_RH_RE = re.compile(r"(\d+'\s*\d+\"?)\s*[-–—]\s*(\d+'\s*\d+\"?)")
+
+
+def _norm_size(s: str) -> str:
+    s = (s or "").strip()
+    key = re.sub(r"[^A-Za-z]", "", s).upper()
+    if key in _SIZE_NAMES:
+        return _SIZE_NAMES[key]
+    return s.title() if s else s
+
+
+def _to_in(h: str | None):
+    m = re.match(r"\s*(\d+)'\s*(\d+)", h or "")
+    return int(m.group(1)) * 12 + int(m.group(2)) if m else None
+
+
+def _parse_height_range(v: str):
+    """('5'5"', '5'10"') from a rider-height-range cell, or (None, None)."""
+    v = (v or "").replace("”", '"').replace("’", "'")
+    m = _RH_RE.search(v)
+    if not m:
+        return (None, None)
+    clean = lambda x: (x.replace(" ", "") + ('' if x.strip().endswith('"') else '"'))
+    return (clean(m.group(1)), clean(m.group(2)))
+
+
+def _frame_sizes_from_table(table) -> list | None:
+    """Build [{size, height_min, height_max}, ...] from the dim-table dict,
+    smallest frame first. Returns None when no per-size rider height is present."""
+    if not isinstance(table, dict) or not table:
+        return None
+    out = []
+    for size, rows in table.items():
+        rh_key = next((k for k in rows if "rider" in k.lower() and "height" in k.lower()), None)
+        lo, hi = _parse_height_range(rows.get(rh_key, "")) if rh_key else (None, None)
+        out.append({"size": _norm_size(size), "height_min": lo, "height_max": hi})
+    if not any(s["height_min"] for s in out):
+        return None
+    out.sort(key=lambda s: _to_in(s["height_min"]) if s["height_min"] else 999)
+    return out
+
+
+def _merge_dim_geometry(geometry: dict, table: dict) -> dict:
+    """Fold the per-size dim table into the geometry dict as readable rows
+    ("A - Maximum Seat Height" -> "Large: 31in | Medium: 29in")."""
+    geometry = dict(geometry or {})
+    labels: list[str] = []
+    for rows in table.values():
+        for k in rows:
+            if k not in labels:
+                labels.append(k)
+    for lab in labels:
+        parts = [f"{_norm_size(sz)}: {rows[lab]}" for sz, rows in table.items() if lab in rows]
+        if parts:
+            geometry.setdefault(lab, " | ".join(parts))
+    return geometry
+
+
+def _rider_height_envelope(frame_sizes: list) -> str | None:
+    mins = [v for s in frame_sizes if (v := _to_in(s.get("height_min")))]
+    maxs = [v for s in frame_sizes if (v := _to_in(s.get("height_max")))]
+    if not (mins and maxs):
+        return None
+    fmt = lambda i: f"{i // 12}'{i % 12}\""
+    return f"{fmt(min(mins))} - {fmt(max(maxs))}"
+
+
 async def scrape_model(context, model: dict, retries: int = 3) -> dict:
     result = dict(model)
     for attempt in range(1, retries + 1):
@@ -228,6 +388,7 @@ async def scrape_model(context, model: dict, retries: int = 3) -> dict:
             var = await page.evaluate(JS_VARIATIONS)
             raw = await page.evaluate(JS_SPECS)
             geometry = await page.evaluate(JS_GEOMETRY)
+            dim_table = await page.evaluate(JS_DIM_TABLE)
             color_hex = await page.evaluate(JS_COLOR_HEX)
             fallback_image = await page.evaluate(
                 "() => document.querySelector('meta[property=\"og:image\"]')?.content "
@@ -241,13 +402,22 @@ async def scrape_model(context, model: dict, retries: int = 3) -> dict:
             for label, value in raw["components"]:
                 key = " ".join(label.split())
                 all_specs[key] = value
-            # Add headline highlights that aren't already covered (case-insensitive).
-            lower = {k.lower() for k in all_specs}
-            for label, value in raw["highlights"]:
+            # Add headline highlights, at-a-glance tiles, and dimension-table
+            # rows. The component list stays authoritative for duplicate keys --
+            # except when the duplicate strictly contains the existing text,
+            # i.e. it is the same fact with more detail (Revv1 DRT: component
+            # "Motor: 52V Bafang RM G0F4" vs glance "Powerful 52V Bafang RM
+            # G0F4 ... with 100nm torque") -- then upgrade to the richer row.
+            for label, value in (raw["highlights"]
+                                 + raw.get("glance", [])
+                                 + raw.get("dims", [])):
                 key = " ".join(label.split())
-                if key.lower() in lower:
-                    continue
-                all_specs[key] = value
+                existing = next((k for k in all_specs if k.lower() == key.lower()), None)
+                if existing is None:
+                    all_specs[key] = value
+                elif (len(str(value)) > len(str(all_specs[existing]))
+                      and str(all_specs[existing]).lower() in str(value).lower()):
+                    all_specs[existing] = value
 
             if not all_specs:
                 raise RuntimeError("no specs extracted")
@@ -270,11 +440,27 @@ async def scrape_model(context, model: dict, retries: int = 3) -> dict:
                                 for a, slug in v.get("attributes", {}).items()},
                     "price": float(v["display_price"]) if v.get("display_price") is not None else None,
                     "sku": v.get("sku"),
+                    # keep each variation's own photo so frame siblings get the
+                    # right per-frame image (the colors list collapses to one
+                    # photo per color; the frame split + _resolve_colors restore
+                    # the correct one from these per-config images)
+                    "image": (v.get("image") or {}).get("full_src") or (v.get("image") or {}).get("src"),
                 }
                 for v in variations
             ]
             result["options"] = build_options(var.get("attributes", {}), color_hex,
                                                variations, fallback_image)
+            # Newer dim-table layout: capture frame sizes + per-size geometry as
+            # text (older `.frame-size-section` models leave dim_table null).
+            frame_sizes = _frame_sizes_from_table(dim_table)
+            if frame_sizes:
+                result["frame_sizes"] = frame_sizes
+                geometry = _merge_dim_geometry(geometry, dim_table)
+                env = _rider_height_envelope(frame_sizes)
+                if env:
+                    rh = next((k for k in all_specs if "rider" in k.lower()
+                               and "height" in k.lower()), "Rider Height")
+                    all_specs[rh] = env
             result["geometry"] = geometry
             result["specs"] = {"all": all_specs}
             result["spec_count"] = len(all_specs)

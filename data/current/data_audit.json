@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-10T06:25:53.856786+00:00",
-  "total_models": 315,
+  "generated_at": "2026-06-16T20:37:28.493053+00:00",
+  "total_models": 389,
   "expected_fields": [
     "motor_w",
     "battery_wh",
@@ -15,120 +15,150 @@
     "drivetrain_type",
     "suspension",
     "cell_brand",
-    "rack_load_lb"
+    "fit_height_min_in",
+    "max_speed_mph",
+    "max_load_lb",
+    "sensor_type",
+    "rack_load_lb",
+    "frame_size_count",
+    "frame_size_rider_range"
   ],
   "coverage": {
-    "cell_brand": {
-      "count": 309,
-      "pct": 98
-    },
-    "brake_type": {
-      "count": 306,
-      "pct": 97
-    },
-    "drive_type": {
-      "count": 303,
-      "pct": 96
-    },
-    "drivetrain_type": {
-      "count": 303,
-      "pct": 96
-    },
-    "display_type": {
-      "count": 297,
-      "pct": 94
-    },
-    "suspension": {
-      "count": 294,
-      "pct": 93
+    "frame_size_count": {
+      "count": 389,
+      "pct": 100
     },
     "battery_wh": {
-      "count": 286,
-      "pct": 91
+      "count": 387,
+      "pct": 99
     },
-    "weight_lb": {
-      "count": 284,
-      "pct": 90
+    "drive_type": {
+      "count": 387,
+      "pct": 99
     },
-    "warranty_years": {
-      "count": 280,
-      "pct": 89
+    "brake_type": {
+      "count": 386,
+      "pct": 99
     },
-    "frame_material": {
-      "count": 256,
-      "pct": 81
+    "cell_brand": {
+      "count": 382,
+      "pct": 98
     },
-    "torque_nm": {
-      "count": 248,
-      "pct": 79
-    },
-    "gears": {
-      "count": 245,
-      "pct": 78
-    },
-    "range_mi": {
-      "count": 237,
-      "pct": 75
+    "drivetrain_type": {
+      "count": 380,
+      "pct": 98
     },
     "motor_w": {
-      "count": 236,
-      "pct": 75
+      "count": 380,
+      "pct": 98
     },
-    "max_load_lb": {
-      "count": 214,
-      "pct": 68
+    "display_type": {
+      "count": 375,
+      "pct": 96
     },
-    "sensor_type": {
-      "count": 169,
-      "pct": 54
+    "warranty_years": {
+      "count": 375,
+      "pct": 96
     },
-    "ul_listed": {
-      "count": 168,
-      "pct": 53
-    },
-    "notable_tech": {
-      "count": 155,
-      "pct": 49
-    },
-    "motor_peak_w": {
-      "count": 135,
-      "pct": 43
-    },
-    "fit_height_max_in": {
-      "count": 110,
-      "pct": 35
-    },
-    "fit_height_max_mm": {
-      "count": 110,
-      "pct": 35
+    "suspension": {
+      "count": 372,
+      "pct": 96
     },
     "fit_height_min_in": {
-      "count": 110,
-      "pct": 35
+      "count": 360,
+      "pct": 93
     },
     "fit_height_min_mm": {
-      "count": 110,
-      "pct": 35
+      "count": 360,
+      "pct": 93
     },
-    "connectivity": {
-      "count": 108,
-      "pct": 34
+    "frame_material": {
+      "count": 359,
+      "pct": 92
     },
-    "water_resistance": {
-      "count": 89,
-      "pct": 28
+    "fit_height_max_in": {
+      "count": 357,
+      "pct": 92
+    },
+    "fit_height_max_mm": {
+      "count": 357,
+      "pct": 92
+    },
+    "frame_size_rider_range": {
+      "count": 357,
+      "pct": 92
+    },
+    "torque_nm": {
+      "count": 350,
+      "pct": 90
+    },
+    "weight_lb": {
+      "count": 347,
+      "pct": 89
+    },
+    "max_speed_mph": {
+      "count": 329,
+      "pct": 85
+    },
+    "range_mi": {
+      "count": 327,
+      "pct": 84
+    },
+    "gears": {
+      "count": 310,
+      "pct": 80
+    },
+    "max_load_lb": {
+      "count": 292,
+      "pct": 75
+    },
+    "ul_listed": {
+      "count": 285,
+      "pct": 73
+    },
+    "sensor_type": {
+      "count": 228,
+      "pct": 59
+    },
+    "motor_peak_w": {
+      "count": 201,
+      "pct": 52
+    },
+    "notable_tech": {
+      "count": 195,
+      "pct": 50
     },
     "rack_load_lb": {
-      "count": 67,
-      "pct": 21
+      "count": 159,
+      "pct": 41
+    },
+    "classes": {
+      "count": 148,
+      "pct": 38
+    },
+    "connectivity": {
+      "count": 121,
+      "pct": 31
+    },
+    "water_resistance": {
+      "count": 108,
+      "pct": 28
     },
     "removable_battery": {
-      "count": 57,
+      "count": 70,
       "pct": 18
     },
     "range_min_mi": {
-      "count": 50,
-      "pct": 16
+      "count": 35,
+      "pct": 9
+    },
+    "awd": {
+      "count": 8,
+      "pct": 2
+    },
+    "custom_speed_mode": {
+      "count": 2,
+      "pct": 1
     },
     "kids": {
       "count": 1,
@@ -139,14 +169,14 @@
     {
       "brand": "aventon",
       "model": "Current ADV Ebike",
-      "field": "motor_w",
-      "label": "Motor power (W)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "aventon",
       "model": "Current EXP Ebike",
-      "field": "motor_w",
-      "label": "Motor power (W)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "aventon",
@@ -156,21 +186,33 @@
     },
     {
       "brand": "aventon",
+      "model": "Level 4 ADV Ebike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "aventon",
       "model": "Level 4 ADV Step-Through Ebike",
       "field": "motor_w",
       "label": "Motor power (W)"
     },
     {
-      "brand": "blix",
-      "model": "Packa Genie Cargo eBike",
+      "brand": "aventon",
+      "model": "Level 4 ADV Step-Through Ebike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "aventon",
+      "model": "Ramblas ADV Ebike",
       "field": "rack_load_lb",
       "label": "Rear-rack load (lb)"
     },
     {
       "brand": "blix",
       "model": "Packa Genie Cargo eBike",
-      "field": "range_mi",
-      "label": "Range (mi)"
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
     },
     {
       "brand": "blix",
@@ -181,56 +223,770 @@
     {
       "brand": "blix",
       "model": "Packa Genie Cargo eBike — Dual Battery",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "blix",
+      "model": "Packa Genie Cargo eBike — Dual Battery",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "buzz",
+      "model": "Beekeeper Cargo Ebike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "buzz",
+      "model": "Beekeeper Cargo Ebike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "buzz",
+      "model": "Beekeeper Cargo Ebike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "buzz",
+      "model": "Centris 2 Folding Ebike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "buzz",
+      "model": "Centris 2 Folding Ebike",
       "field": "rack_load_lb",
       "label": "Rear-rack load (lb)"
     },
     {
-      "brand": "blix",
-      "model": "Packa Genie Cargo eBike — Dual Battery",
-      "field": "range_mi",
-      "label": "Range (mi)"
+      "brand": "buzz",
+      "model": "Centris 2 Folding Ebike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
-      "brand": "blix",
-      "model": "Packa Genie Cargo eBike — Dual Battery",
+      "brand": "buzz",
+      "model": "Cerana 2 Commuter Ebike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "buzz",
+      "model": "Cerana 2 Commuter Ebike",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "buzz",
+      "model": "Cerana 2 Commuter Ebike",
       "field": "torque_nm",
       "label": "Motor torque (Nm)"
     },
     {
-      "brand": "cemoto",
-      "model": "CEMOTO B28D | 26\" Fat Tire Mountain Ebike All-Terrain Electric Bike",
-      "field": "range_mi",
-      "label": "Range (mi)"
+      "brand": "buzz",
+      "model": "Cerana T2 Etrike",
+      "field": "frame_material",
+      "label": "Frame material"
     },
     {
-      "brand": "cemoto",
-      "model": "CEMOTO B28D | 26\" Fat Tire Mountain Ebike All-Terrain Electric Bike",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
+      "brand": "buzz",
+      "model": "Cerana T2 Etrike",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
     },
     {
-      "brand": "cemoto",
-      "model": "CEMOTO B28D | 26\" Fat Tire Mountain Ebike All-Terrain Electric Bike",
+      "brand": "buzz",
+      "model": "Cerana T2 Etrike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "buzz",
+      "model": "Cerana T2 Etrike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "buzz",
+      "model": "Cerana T2 Etrike",
       "field": "weight_lb",
       "label": "Weight (lb)"
     },
     {
+      "brand": "cannondale",
+      "model": "Adventure Neo 4",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Adventure Neo 4",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Adventure Neo Allroad",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Adventure Neo Allroad",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Adventure Neo Allroad",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Adventure Neo Allroad EQ",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Adventure Neo Allroad EQ",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Adventure Neo Allroad EQ Low StepThru",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Adventure Neo Allroad EQ Low StepThru",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Adventure Neo Allroad Low StepThru",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Adventure Neo Allroad Low StepThru",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Adventure Neo Allroad Low StepThru",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Adventure Neo Allroad Speed",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Adventure Neo Allroad Speed",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Adventure Neo Allroad Speed Low StepThru",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Adventure Neo Allroad Speed Low StepThru",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Cargowagen Neo",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Cargowagen Neo",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "FlyingV",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "FlyingV",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "FlyingV",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Mavaro Neo 1 Low StepThru",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Mavaro Neo 1 Low StepThru",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Mavaro Neo 1 Low StepThru",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Mavaro Neo 2 Low StepThru",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Mavaro Neo 2 Low StepThru",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Mavaro Neo 2 Low StepThru",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Mavaro Neo 3 Low StepThru",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Mavaro Neo 3 Low StepThru",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra 1",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra 1",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra 1",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra 1",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra 2",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra 2",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra 2",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra 2",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra 3",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra 3",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra 3",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra 3",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra 4",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra 4",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra 4",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra 4",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra 4 Plus",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra 4 Plus",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra 4 Plus",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra 4 Plus",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra LT 1",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra LT 1",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra LT 1",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra LT 1",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra Neo Carbon 2",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra Neo Carbon 2",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra Neo Carbon 2",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra Neo Carbon 2",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra SL 1",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra SL 1",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra SL 1",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra SL 1",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra SL 2",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra SL 2",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra SL 2",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra SL 2",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra SL LAB71",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra SL LAB71",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra SL LAB71",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Moterra SL LAB71",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Synapse Neo",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Synapse Neo",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Synapse Neo",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Synapse Neo Allroad 1",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Synapse Neo Allroad 1",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Synapse Neo Allroad 1",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Synapse Neo Allroad 2",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Synapse Neo Allroad 2",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Synapse Neo Allroad 2",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Tesoro Neo Carbon 1",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Tesoro Neo Carbon 1",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Tesoro Neo Carbon 1",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Tesoro Neo Carbon 1",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Tesoro Neo Carbon 2",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Tesoro Neo Carbon 2",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Tesoro Neo Carbon 2",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Tesoro Neo Carbon 2",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Tesoro Neo X 1",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Tesoro Neo X 1",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Tesoro Neo X 1",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Tesoro Neo X 1 StepThru",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Tesoro Neo X 1 StepThru",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Tesoro Neo X 1 StepThru",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Tesoro Neo X 2",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Tesoro Neo X 2",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Tesoro Neo X 2 StepThru",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Tesoro Neo X 2 StepThru",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Tesoro Neo X 3",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Tesoro Neo X 3",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Treadwell Neo 2",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Treadwell Neo 2",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Treadwell Neo 2",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Treadwell Neo 2 EQ",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Treadwell Neo 2 EQ",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Treadwell Neo 2 EQ",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Treadwell Neo 2 Remixte",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Treadwell Neo 2 Remixte",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Treadwell Neo 2 Remixte",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
       "brand": "cemoto",
-      "model": "CEMOTO D-Series | 3000W–6000W Off-Road Electric Dirt Bike for Teens & Adults",
-      "field": "brake_type",
-      "label": "Brake type"
+      "model": "CEMOTO B28D | 26\" Fat Tire Mountain Ebike All-Terrain Electric Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "cemoto",
+      "model": "CEMOTO B28D | 26\" Fat Tire Mountain Ebike All-Terrain Electric Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "cemoto",
+      "model": "CEMOTO B28D | 26\" Fat Tire Mountain Ebike All-Terrain Electric Bike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "cemoto",
+      "model": "CEMOTO B28D | 26\" Fat Tire Mountain Ebike All-Terrain Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
     },
     {
       "brand": "cemoto",
       "model": "CEMOTO D-Series | 3000W–6000W Off-Road Electric Dirt Bike for Teens & Adults",
-      "field": "display_type",
-      "label": "Display type"
-    },
-    {
-      "brand": "cemoto",
-      "model": "CEMOTO D-Series | 3000W–6000W Off-Road Electric Dirt Bike for Teens & Adults",
-      "field": "drivetrain_type",
-      "label": "Drivetrain type"
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
     },
     {
       "brand": "cemoto",
@@ -241,8 +997,14 @@
     {
       "brand": "cemoto",
       "model": "CEMOTO D-Series | 3000W–6000W Off-Road Electric Dirt Bike for Teens & Adults",
-      "field": "suspension",
-      "label": "Suspension"
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "cemoto",
+      "model": "CEMOTO D-Series | 3000W–6000W Off-Road Electric Dirt Bike for Teens & Adults",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "cemoto",
@@ -259,8 +1021,20 @@
     {
       "brand": "cemoto",
       "model": "CEMOTO EB66 | 750W double battery Harley-Like Hi-Tech Ebike",
-      "field": "range_mi",
-      "label": "Range (mi)"
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "cemoto",
+      "model": "CEMOTO EB66 | 750W double battery Harley-Like Hi-Tech Ebike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "cemoto",
+      "model": "CEMOTO EB66 | 750W double battery Harley-Like Hi-Tech Ebike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "cemoto",
@@ -270,15 +1044,21 @@
     },
     {
       "brand": "cemoto",
-      "model": "CEMOTO EB66 | 750W double battery Harley-Like Hi-Tech Ebike",
-      "field": "weight_lb",
-      "label": "Weight (lb)"
+      "model": "CEMOTO EBIKE B28 | 27.5\" E Mountain Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
     },
     {
       "brand": "cemoto",
       "model": "CEMOTO EBIKE B28 | 27.5\" E Mountain Bike",
-      "field": "range_mi",
-      "label": "Range (mi)"
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "cemoto",
+      "model": "CEMOTO EBIKE B28 | 27.5\" E Mountain Bike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "cemoto",
@@ -288,9 +1068,15 @@
     },
     {
       "brand": "cemoto",
-      "model": "CEMOTO EBIKE B28 | 27.5\" E Mountain Bike",
-      "field": "weight_lb",
-      "label": "Weight (lb)"
+      "model": "CEMOTO EBIKE B28A | High Step Fat Tire Ebike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "cemoto",
+      "model": "CEMOTO EBIKE B28A | High Step Fat Tire Ebike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
     },
     {
       "brand": "cemoto",
@@ -301,14 +1087,14 @@
     {
       "brand": "cemoto",
       "model": "CEMOTO EBIKE B28A | High Step Fat Tire Ebike",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "cemoto",
       "model": "CEMOTO EBIKE B28A | High Step Fat Tire Ebike",
-      "field": "weight_lb",
-      "label": "Weight (lb)"
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
     },
     {
       "brand": "cemoto",
@@ -319,14 +1105,20 @@
     {
       "brand": "cemoto",
       "model": "Cargo Electric Bike |CEMOTO B69 750W Heavy Duty E-Bike 150kg Capacity",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
     },
     {
       "brand": "cemoto",
       "model": "Cargo Electric Bike |CEMOTO B69 750W Heavy Duty E-Bike 150kg Capacity",
-      "field": "range_mi",
-      "label": "Range (mi)"
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "cemoto",
+      "model": "Cargo Electric Bike |CEMOTO B69 750W Heavy Duty E-Bike 150kg Capacity",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "cemoto",
@@ -336,27 +1128,15 @@
     },
     {
       "brand": "cemoto",
-      "model": "Cargo Electric Bike |CEMOTO B69 750W Heavy Duty E-Bike 150kg Capacity",
-      "field": "weight_lb",
-      "label": "Weight (lb)"
-    },
-    {
-      "brand": "cemoto",
       "model": "Cemoto EB40 | Electric City Commuter Bike",
-      "field": "range_mi",
-      "label": "Range (mi)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "cemoto",
       "model": "Cemoto EB40 | Electric City Commuter Bike",
       "field": "torque_nm",
       "label": "Motor torque (Nm)"
-    },
-    {
-      "brand": "cemoto",
-      "model": "Cemoto EB40 | Electric City Commuter Bike",
-      "field": "weight_lb",
-      "label": "Weight (lb)"
     },
     {
       "brand": "cyke",
@@ -369,6 +1149,18 @@
       "model": "Grizzly Foldable Ebike",
       "field": "rack_load_lb",
       "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "cyke",
+      "model": "Kingfisher Mid-Drive Folding eBike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "cyke",
+      "model": "Kingfisher Mid-Drive Folding eBike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
     },
     {
       "brand": "cyke",
@@ -391,62 +1183,116 @@
     {
       "brand": "engwe",
       "model": "ENGWE E26",
-      "field": "suspension",
-      "label": "Suspension"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "engwe",
-      "model": "ENGWE L20 2.0",
+      "model": "ENGWE E26 — Step-Thru",
       "field": "display_type",
       "label": "Display type"
     },
     {
       "brand": "engwe",
+      "model": "ENGWE E26 — Step-Thru",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE E26 — Step-Thru",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE EP-2 Pro",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE EP-2 Pro",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "engwe",
       "model": "ENGWE L20 2.0",
-      "field": "suspension",
-      "label": "Suspension"
-    },
-    {
-      "brand": "engwe",
-      "model": "ENGWE LE20",
-      "field": "battery_wh",
-      "label": "Battery capacity (Wh)"
-    },
-    {
-      "brand": "engwe",
-      "model": "ENGWE LE20",
-      "field": "suspension",
-      "label": "Suspension"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "engwe",
       "model": "ENGWE M20",
-      "field": "battery_wh",
-      "label": "Battery capacity (Wh)"
-    },
-    {
-      "brand": "engwe",
-      "model": "ENGWE M20",
-      "field": "suspension",
-      "label": "Suspension"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "engwe",
       "model": "ENGWE M20 2.0",
-      "field": "battery_wh",
-      "label": "Battery capacity (Wh)"
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
     },
     {
       "brand": "engwe",
       "model": "ENGWE M20 2.0",
-      "field": "frame_material",
-      "label": "Frame material"
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
     },
     {
       "brand": "engwe",
       "model": "ENGWE M20 2.0",
-      "field": "suspension",
-      "label": "Suspension"
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE M20 2.0",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE M20 2.0 — Dual Battery",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE M20 2.0 — Dual Battery",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE M20 2.0 — Dual Battery",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE M20 2.0 — Dual Battery",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE M20 3.0",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE M20 3.0 — Dual Battery",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE M20 — Dual Battery",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "engwe",
@@ -457,14 +1303,20 @@
     {
       "brand": "engwe",
       "model": "ENGWE X20",
-      "field": "suspension",
-      "label": "Suspension"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "engwe",
-      "model": "ENGWE X24",
-      "field": "battery_wh",
-      "label": "Battery capacity (Wh)"
+      "model": "ENGWE X20 — Dual Battery",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE X20 — Dual Battery",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "engwe",
@@ -475,26 +1327,14 @@
     {
       "brand": "engwe",
       "model": "ENGWE X24",
-      "field": "suspension",
-      "label": "Suspension"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "engwe",
-      "model": "Engine Pro 2.0",
-      "field": "display_type",
-      "label": "Display type"
-    },
-    {
-      "brand": "engwe",
-      "model": "Engine Pro 2.0",
-      "field": "suspension",
-      "label": "Suspension"
-    },
-    {
-      "brand": "engwe",
-      "model": "X26/24/X20",
-      "field": "battery_wh",
-      "label": "Battery capacity (Wh)"
+      "model": "L20 3.0",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
     },
     {
       "brand": "engwe",
@@ -511,8 +1351,20 @@
     {
       "brand": "engwe",
       "model": "X26/24/X20",
-      "field": "motor_w",
-      "label": "Motor power (W)"
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "engwe",
+      "model": "X26/24/X20",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "engwe",
+      "model": "X26/24/X20",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "engwe",
@@ -521,46 +1373,52 @@
       "label": "Suspension"
     },
     {
-      "brand": "euphree",
-      "model": "City Robin 3",
-      "field": "frame_material",
-      "label": "Frame material"
+      "brand": "engwe",
+      "model": "X26/24/X20 — Dual Battery",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "engwe",
+      "model": "X26/24/X20 — Dual Battery",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "engwe",
+      "model": "X26/24/X20 — Dual Battery",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "engwe",
+      "model": "X26/24/X20 — Dual Battery",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "engwe",
+      "model": "X26/24/X20 — Dual Battery",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "engwe",
+      "model": "X26/24/X20 — Dual Battery",
+      "field": "suspension",
+      "label": "Suspension"
     },
     {
       "brand": "euphree",
       "model": "City Robin 3",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "euphree",
-      "model": "City Robin 3",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
-    },
-    {
-      "brand": "euphree",
-      "model": "Solar Sparrow",
-      "field": "frame_material",
-      "label": "Frame material"
-    },
-    {
-      "brand": "euphree",
-      "model": "Solar Sparrow",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "euphree",
-      "model": "Solar Sparrow",
       "field": "torque_nm",
       "label": "Motor torque (Nm)"
     },
     {
       "brand": "euphree",
       "model": "Solar Sparrow Belt",
-      "field": "frame_material",
-      "label": "Frame material"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "euphree",
@@ -571,38 +1429,26 @@
     {
       "brand": "euphree",
       "model": "Stellar Falcon 2 Mid Step",
-      "field": "frame_material",
-      "label": "Frame material"
-    },
-    {
-      "brand": "euphree",
-      "model": "Stellar Falcon 2 Mid Step",
       "field": "torque_nm",
       "label": "Motor torque (Nm)"
     },
     {
       "brand": "euphree",
       "model": "Stellar Falcon 2 Step Thru",
-      "field": "frame_material",
-      "label": "Frame material"
-    },
-    {
-      "brand": "euphree",
-      "model": "Stellar Falcon 2 Step Thru",
       "field": "torque_nm",
       "label": "Motor torque (Nm)"
-    },
-    {
-      "brand": "evelo",
-      "model": "EVELO Atlas Electric Bike",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
     },
     {
       "brand": "evelo",
       "model": "EVELO Atlas Electric Bike",
       "field": "range_mi",
       "label": "Range (mi)"
+    },
+    {
+      "brand": "evelo",
+      "model": "EVELO Atlas Electric Bike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "evelo",
@@ -611,52 +1457,124 @@
       "label": "Rear-rack load (lb)"
     },
     {
-      "brand": "heybike",
-      "model": "Hero — 1000W Rear Hub · Step-Over",
-      "field": "range_mi",
-      "label": "Range (mi)"
+      "brand": "evelo",
+      "model": "EVELO Compass Electric Trike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "evelo",
+      "model": "EVELO Galaxy Lux Electric Bike",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "evelo",
+      "model": "EVELO Galaxy Lux Electric Bike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "evelo",
+      "model": "EVELO Omega Electric Bike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "heybike",
-      "model": "Hero — 1000W Rear Hub · Step-Thru",
-      "field": "range_mi",
-      "label": "Range (mi)"
+      "model": "ALPHA",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
     },
     {
       "brand": "heybike",
-      "model": "Hero — 750W Mid-Drive · Step-Over",
-      "field": "range_mi",
-      "label": "Range (mi)"
+      "model": "ALPHA",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
     },
     {
       "brand": "heybike",
-      "model": "Hero — 750W Mid-Drive · Step-Thru",
-      "field": "range_mi",
-      "label": "Range (mi)"
+      "model": "ALPHA",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "heybike",
+      "model": "ALPHA — Step-Thru",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "heybike",
+      "model": "ALPHA — Step-Thru",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "heybike",
+      "model": "ALPHA — Step-Thru",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "heybike",
+      "model": "Helio F",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "heybike",
+      "model": "Helio F",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
     },
     {
       "brand": "heybike",
       "model": "Horizon",
-      "field": "drive_type",
-      "label": "Motor placement"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "heybike",
-      "model": "Horizon",
-      "field": "range_mi",
-      "label": "Range (mi)"
+      "model": "Hybrid",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
     },
     {
       "brand": "heybike",
-      "model": "Horizon",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
+      "model": "Hybrid",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "heybike",
+      "model": "Mars 3.0",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "heybike",
+      "model": "Mars 3.0",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "heybike",
+      "model": "Mars 3.0",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "heybike",
       "model": "Ranger 3.0 Pro",
-      "field": "range_mi",
-      "label": "Range (mi)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "heybike",
+      "model": "Saturn",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
     },
     {
       "brand": "heybike",
@@ -667,8 +1585,14 @@
     {
       "brand": "heybike",
       "model": "Saturn",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "heybike",
+      "model": "Saturn — Dual Battery (55-90 Miles)",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
     },
     {
       "brand": "heybike",
@@ -679,14 +1603,20 @@
     {
       "brand": "heybike",
       "model": "Saturn — Dual Battery (55-90 Miles)",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
     },
     {
       "brand": "himiway",
       "model": "A3 / Urban Electric Commuter Bike ST",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "himiway",
+      "model": "B3 / Foldable Electric Commuter Bike",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
     },
     {
       "brand": "himiway",
@@ -697,14 +1627,14 @@
     {
       "brand": "himiway",
       "model": "C3 / Cargo Ebike",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
     },
     {
       "brand": "himiway",
       "model": "C3 / Cargo Ebike",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
     },
     {
       "brand": "himiway",
@@ -720,45 +1650,27 @@
     },
     {
       "brand": "himiway",
-      "model": "D5 Pro / All-terrain Electric Fat Bike",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
-    },
-    {
-      "brand": "himiway",
-      "model": "D5 Pro ST / All-terrain Electric Fat Bike",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
-    },
-    {
-      "brand": "himiway",
       "model": "D5 ST(Zebra ST) / All-terrain Electric Fat Bike",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
-    },
-    {
-      "brand": "himiway",
-      "model": "D5(Zebra) / All-terrain Electric Fat Bike",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
     },
     {
       "brand": "himiway",
       "model": "D7 / Full Suspension Electric Hunting Bike",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
     },
     {
       "brand": "himiway",
       "model": "Escape Pro / Long Range Moped-Style E-Bike ST",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
     },
     {
       "brand": "himiway",
       "model": "Himiway A7 Pro Commuter eBike",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
     },
     {
       "brand": "himiway",
@@ -769,62 +1681,62 @@
     {
       "brand": "himiway",
       "model": "Himiway C1 Kids eBike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "himiway",
+      "model": "Himiway C1 Kids eBike",
       "field": "torque_nm",
       "label": "Motor torque (Nm)"
     },
     {
       "brand": "himiway",
-      "model": "Himiway D7 Pro Mountain eBike",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
+      "model": "Himiway C5 Electric Motorbike",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
     },
     {
-      "brand": "lectric",
-      "model": "Lectric ONE",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
+      "brand": "himiway",
+      "model": "Himiway C5 Electric Motorbike — Ultra",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
     },
     {
-      "brand": "lectric",
-      "model": "Lectric XP Lite2 — Long-Range · Step-Over",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
+      "brand": "himiway",
+      "model": "Himiway D5 2.0 Series eBike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
     },
     {
-      "brand": "lectric",
-      "model": "Lectric XP Trike2",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
+      "brand": "himiway",
+      "model": "Himiway D5 2.0 Series eBike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
     },
     {
-      "brand": "lectric",
-      "model": "Lectric XP Trike2 — Long-Range · Step-Over",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
+      "brand": "himiway",
+      "model": "Himiway D5 2.0 Series eBike — Step-Thru",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
     },
     {
-      "brand": "lectric",
-      "model": "Lectric XPeak2",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
+      "brand": "himiway",
+      "model": "Himiway D5 2.0 Series eBike — Step-Thru",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
     },
     {
-      "brand": "lectric",
-      "model": "Lectric XPeak2 — Long-Range · Step-Over",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
+      "brand": "juiced",
+      "model": "Scrambler",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
-      "brand": "lectric",
-      "model": "Lectric XPeak2 — Long-Range · Step-Thru",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "lectric",
-      "model": "Lectric XPeak2 — Standard · Step-Over",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
+      "brand": "juiced",
+      "model": "Scrambler — Full Suspension",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "lectric",
@@ -834,21 +1746,9 @@
     },
     {
       "brand": "lectric",
-      "model": "Lectric XPress1",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "lectric",
       "model": "Lectric XPress2",
       "field": "frame_material",
       "label": "Frame material"
-    },
-    {
-      "brand": "lectric",
-      "model": "Lectric XPress2",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
     },
     {
       "brand": "lectric",
@@ -857,8 +1757,8 @@
       "label": "Frame material"
     },
     {
-      "brand": "lectric",
-      "model": "Lectric XPress2 — 750 · Step-Over",
+      "brand": "leoguar",
+      "model": "Flippo Folding Ebike",
       "field": "rack_load_lb",
       "label": "Rear-rack load (lb)"
     },
@@ -870,21 +1770,51 @@
     },
     {
       "brand": "leoguar",
-      "model": "Sprint Fat Tire Utility Ebike",
+      "model": "Trailblazer Mid-drive Motor EMTB",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "magician",
+      "model": "Alpha",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "magician",
+      "model": "Alpha",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "magician",
+      "model": "Alpha Mini",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "magician",
+      "model": "Atlas",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "magician",
+      "model": "Atlas",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "magician",
+      "model": "Atlas",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "magicycle",
+      "model": "Magicycle CT-1 Commuter Torque Sensor Ebike",
       "field": "torque_nm",
       "label": "Motor torque (Nm)"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Asphalt Ebike",
-      "field": "battery_wh",
-      "label": "Battery capacity (Wh)"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Asphalt ST Ebike",
-      "field": "battery_wh",
-      "label": "Battery capacity (Wh)"
     },
     {
       "brand": "mokwheel",
@@ -893,22 +1823,16 @@
       "label": "Rear-rack load (lb)"
     },
     {
-      "brand": "mokwheel",
-      "model": "Onyx Ebike",
-      "field": "battery_wh",
-      "label": "Battery capacity (Wh)"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Onyx ST Ebike",
-      "field": "battery_wh",
-      "label": "Battery capacity (Wh)"
+      "brand": "priority",
+      "model": "PRIORITY CURRENT PLUS E-BIKE",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
     },
     {
       "brand": "priority",
       "model": "PRIORITY CURRENT PLUS E-BIKE",
-      "field": "drivetrain_type",
-      "label": "Drivetrain type"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "priority",
@@ -921,12 +1845,6 @@
       "model": "PRIORITY E-COAST",
       "field": "battery_wh",
       "label": "Battery capacity (Wh)"
-    },
-    {
-      "brand": "priority",
-      "model": "PRIORITY E-COAST",
-      "field": "brake_type",
-      "label": "Brake type"
     },
     {
       "brand": "priority",
@@ -949,26 +1867,20 @@
     {
       "brand": "priority",
       "model": "PRIORITY E-COAST",
-      "field": "frame_material",
-      "label": "Frame material"
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
     },
     {
       "brand": "priority",
       "model": "PRIORITY E-COAST",
-      "field": "motor_w",
-      "label": "Motor power (W)"
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
     },
     {
       "brand": "priority",
       "model": "PRIORITY E-COAST",
-      "field": "range_mi",
-      "label": "Range (mi)"
-    },
-    {
-      "brand": "priority",
-      "model": "PRIORITY E-COAST",
-      "field": "suspension",
-      "label": "Suspension"
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
     },
     {
       "brand": "priority",
@@ -997,20 +1909,14 @@
     {
       "brand": "priority",
       "model": "PRIORITY GLIDE E-BIKE",
-      "field": "drive_type",
-      "label": "Motor placement"
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
     },
     {
       "brand": "priority",
       "model": "PRIORITY GLIDE E-BIKE",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "priority",
-      "model": "PRIORITY GLIDE E-BIKE",
-      "field": "range_mi",
-      "label": "Range (mi)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "priority",
@@ -1027,26 +1933,14 @@
     {
       "brand": "priority",
       "model": "PRIORITY SKYLINE SMART.SHIFT E-BIKE",
-      "field": "drive_type",
-      "label": "Motor placement"
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
     },
     {
       "brand": "priority",
       "model": "PRIORITY SKYLINE SMART.SHIFT E-BIKE",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "priority",
-      "model": "PRIORITY SKYLINE SMART.SHIFT E-BIKE",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "priority",
-      "model": "PRIORITY SKYLINE SMART.SHIFT E-BIKE",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
     },
     {
       "brand": "priority",
@@ -1057,194 +1951,14 @@
     {
       "brand": "ride1up",
       "model": "CF RACER1",
-      "field": "range_mi",
-      "label": "Range (mi)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "CF RACER1",
-      "field": "weight_lb",
-      "label": "Weight (lb)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "PORTOLA",
-      "field": "frame_material",
-      "label": "Frame material"
-    },
-    {
-      "brand": "ride1up",
-      "model": "PORTOLA",
-      "field": "weight_lb",
-      "label": "Weight (lb)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "PORTOLA 13.4AH (CLASS 1)",
-      "field": "frame_material",
-      "label": "Frame material"
-    },
-    {
-      "brand": "ride1up",
-      "model": "PORTOLA 13.4AH (CLASS 1)",
-      "field": "range_mi",
-      "label": "Range (mi)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "PORTOLA 13.4AH (CLASS 1)",
-      "field": "weight_lb",
-      "label": "Weight (lb)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "PORTOLA — 13.4ah",
-      "field": "frame_material",
-      "label": "Frame material"
-    },
-    {
-      "brand": "ride1up",
-      "model": "PORTOLA — 13.4ah",
-      "field": "weight_lb",
-      "label": "Weight (lb)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "PRODIGY V2 — Belt CVT · Step-Over",
-      "field": "frame_material",
-      "label": "Frame material"
-    },
-    {
-      "brand": "ride1up",
-      "model": "PRODIGY V2 — Belt CVT · Step-Over",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "PRODIGY V2 — Belt CVT · Step-Over",
-      "field": "range_mi",
-      "label": "Range (mi)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "PRODIGY V2 — Belt CVT · Step-Over",
-      "field": "weight_lb",
-      "label": "Weight (lb)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "PRODIGY V2 — Belt CVT · Step-Thru",
-      "field": "frame_material",
-      "label": "Frame material"
-    },
-    {
-      "brand": "ride1up",
-      "model": "PRODIGY V2 — Belt CVT · Step-Thru",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "PRODIGY V2 — Belt CVT · Step-Thru",
-      "field": "range_mi",
-      "label": "Range (mi)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "PRODIGY V2 — Belt CVT · Step-Thru",
-      "field": "weight_lb",
-      "label": "Weight (lb)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "PRODIGY V2 — Chain · Step-Over",
-      "field": "frame_material",
-      "label": "Frame material"
-    },
-    {
-      "brand": "ride1up",
-      "model": "PRODIGY V2 — Chain · Step-Over",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "PRODIGY V2 — Chain · Step-Over",
-      "field": "range_mi",
-      "label": "Range (mi)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "PRODIGY V2 — Chain · Step-Over",
-      "field": "weight_lb",
-      "label": "Weight (lb)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "PRODIGY V2 — Chain · Step-Thru",
-      "field": "frame_material",
-      "label": "Frame material"
-    },
-    {
-      "brand": "ride1up",
-      "model": "PRODIGY V2 — Chain · Step-Thru",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "PRODIGY V2 — Chain · Step-Thru",
-      "field": "range_mi",
-      "label": "Range (mi)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "PRODIGY V2 — Chain · Step-Thru",
-      "field": "weight_lb",
-      "label": "Weight (lb)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "ROADSTER V3",
-      "field": "frame_material",
-      "label": "Frame material"
-    },
-    {
-      "brand": "ride1up",
-      "model": "ROADSTER V3",
-      "field": "range_mi",
-      "label": "Range (mi)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "ROADSTER V3",
-      "field": "weight_lb",
-      "label": "Weight (lb)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "ROADSTER V3 — Suspension",
-      "field": "frame_material",
-      "label": "Frame material"
-    },
-    {
-      "brand": "ride1up",
-      "model": "ROADSTER V3 — Suspension",
-      "field": "range_mi",
-      "label": "Range (mi)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "ROADSTER V3 — Suspension",
-      "field": "weight_lb",
-      "label": "Weight (lb)"
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
     },
     {
       "brand": "ride1up",
       "model": "Revv1 DRT",
-      "field": "frame_material",
-      "label": "Frame material"
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
     },
     {
       "brand": "ride1up",
@@ -1254,15 +1968,9 @@
     },
     {
       "brand": "ride1up",
-      "model": "Revv1 DRT",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "Revv1 DRT",
-      "field": "weight_lb",
-      "label": "Weight (lb)"
+      "model": "Revv1 EVO",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
     },
     {
       "brand": "ride1up",
@@ -1272,15 +1980,9 @@
     },
     {
       "brand": "ride1up",
-      "model": "Revv1 EVO",
-      "field": "weight_lb",
-      "label": "Weight (lb)"
-    },
-    {
-      "brand": "ride1up",
       "model": "Revv1 FS",
-      "field": "frame_material",
-      "label": "Frame material"
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
     },
     {
       "brand": "ride1up",
@@ -1290,21 +1992,15 @@
     },
     {
       "brand": "ride1up",
-      "model": "Revv1 FS",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "Revv1 FS",
-      "field": "weight_lb",
-      "label": "Weight (lb)"
+      "model": "Revv1 HT",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
     },
     {
       "brand": "ride1up",
       "model": "Revv1 HT",
-      "field": "frame_material",
-      "label": "Frame material"
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
     },
     {
       "brand": "ride1up",
@@ -1314,63 +2010,9 @@
     },
     {
       "brand": "ride1up",
-      "model": "Revv1 HT",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "Revv1 HT",
-      "field": "weight_lb",
-      "label": "Weight (lb)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "TRAILRUSH",
-      "field": "frame_material",
-      "label": "Frame material"
-    },
-    {
-      "brand": "ride1up",
-      "model": "TRAILRUSH",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "TRAILRUSH",
-      "field": "weight_lb",
-      "label": "Weight (lb)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "VORSA — FT · Step-Over",
-      "field": "battery_wh",
-      "label": "Battery capacity (Wh)"
-    },
-    {
-      "brand": "ride1up",
       "model": "VORSA — FT · Step-Over",
       "field": "frame_material",
       "label": "Frame material"
-    },
-    {
-      "brand": "ride1up",
-      "model": "VORSA — FT · Step-Over",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "VORSA — FT · Step-Over",
-      "field": "weight_lb",
-      "label": "Weight (lb)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "VORSA — FT · Step-Thru",
-      "field": "battery_wh",
-      "label": "Battery capacity (Wh)"
     },
     {
       "brand": "ride1up",
@@ -1380,45 +2022,9 @@
     },
     {
       "brand": "ride1up",
-      "model": "VORSA — FT · Step-Thru",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "VORSA — FT · Step-Thru",
-      "field": "weight_lb",
-      "label": "Weight (lb)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "VORSA — Lite · Step-Over",
-      "field": "battery_wh",
-      "label": "Battery capacity (Wh)"
-    },
-    {
-      "brand": "ride1up",
       "model": "VORSA — Lite · Step-Over",
       "field": "frame_material",
       "label": "Frame material"
-    },
-    {
-      "brand": "ride1up",
-      "model": "VORSA — Lite · Step-Over",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "VORSA — Lite · Step-Over",
-      "field": "weight_lb",
-      "label": "Weight (lb)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "VORSA — Lite · Step-Thru",
-      "field": "battery_wh",
-      "label": "Battery capacity (Wh)"
     },
     {
       "brand": "ride1up",
@@ -1428,81 +2034,33 @@
     },
     {
       "brand": "ride1up",
-      "model": "VORSA — Lite · Step-Thru",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "VORSA — Lite · Step-Thru",
-      "field": "weight_lb",
-      "label": "Weight (lb)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "VORSA — Vorsa · Step-Over",
-      "field": "battery_wh",
-      "label": "Battery capacity (Wh)"
-    },
-    {
-      "brand": "ride1up",
       "model": "VORSA — Vorsa · Step-Over",
       "field": "frame_material",
       "label": "Frame material"
     },
     {
       "brand": "ride1up",
-      "model": "VORSA — Vorsa · Step-Over",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "VORSA — Vorsa · Step-Over",
-      "field": "weight_lb",
-      "label": "Weight (lb)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "VORSA — Vorsa · Step-Thru",
-      "field": "battery_wh",
-      "label": "Battery capacity (Wh)"
-    },
-    {
-      "brand": "ride1up",
       "model": "VORSA — Vorsa · Step-Thru",
       "field": "frame_material",
       "label": "Frame material"
-    },
-    {
-      "brand": "ride1up",
-      "model": "VORSA — Vorsa · Step-Thru",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "VORSA — Vorsa · Step-Thru",
-      "field": "weight_lb",
-      "label": "Weight (lb)"
     },
     {
       "brand": "segway",
       "model": "Segway MUXI Cargo Electric Bike",
-      "field": "display_type",
-      "label": "Display type"
-    },
-    {
-      "brand": "segway",
-      "model": "Segway MUXI Cargo Electric Bike",
-      "field": "drive_type",
-      "label": "Motor placement"
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
     },
     {
       "brand": "segway",
       "model": "Segway MUXI Cargo Electric Bike",
       "field": "frame_material",
       "label": "Frame material"
+    },
+    {
+      "brand": "segway",
+      "model": "Segway MUXI Cargo Electric Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
     },
     {
       "brand": "segway",
@@ -1513,20 +2071,14 @@
     {
       "brand": "segway",
       "model": "Segway Myon Electric Bike",
-      "field": "display_type",
-      "label": "Display type"
-    },
-    {
-      "brand": "segway",
-      "model": "Segway Myon Electric Bike",
-      "field": "drive_type",
-      "label": "Motor placement"
-    },
-    {
-      "brand": "segway",
-      "model": "Segway Myon Electric Bike",
       "field": "frame_material",
       "label": "Frame material"
+    },
+    {
+      "brand": "segway",
+      "model": "Segway Myon Electric Bike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "segway",
@@ -1537,20 +2089,14 @@
     {
       "brand": "segway",
       "model": "Segway Myon S Electric Bike",
-      "field": "display_type",
-      "label": "Display type"
-    },
-    {
-      "brand": "segway",
-      "model": "Segway Myon S Electric Bike",
-      "field": "drive_type",
-      "label": "Motor placement"
-    },
-    {
-      "brand": "segway",
-      "model": "Segway Myon S Electric Bike",
       "field": "frame_material",
       "label": "Frame material"
+    },
+    {
+      "brand": "segway",
+      "model": "Segway Myon S Electric Bike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "segway",
@@ -1573,8 +2119,8 @@
     {
       "brand": "segway",
       "model": "Segway Xafari Fat Tire eBike",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "segway",
@@ -1591,32 +2137,32 @@
     {
       "brand": "segway",
       "model": "Segway Xyber Electric Bike",
-      "field": "frame_material",
-      "label": "Frame material"
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
     },
     {
       "brand": "segway",
       "model": "Segway Xyber Electric Bike",
-      "field": "motor_w",
-      "label": "Motor power (W)"
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
     },
     {
       "brand": "segway",
       "model": "Segway Xyber Electric Bike",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
       "model": "Haul LT",
-      "field": "motor_w",
-      "label": "Motor power (W)"
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
     },
     {
       "brand": "specialized",
       "model": "Haul LT",
-      "field": "range_mi",
-      "label": "Range (mi)"
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
     },
     {
       "brand": "specialized",
@@ -1627,14 +2173,20 @@
     {
       "brand": "specialized",
       "model": "Haul ST",
-      "field": "motor_w",
-      "label": "Motor power (W)"
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
     },
     {
       "brand": "specialized",
       "model": "Haul ST",
-      "field": "range_mi",
-      "label": "Range (mi)"
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "specialized",
+      "model": "Haul ST",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
     },
     {
       "brand": "specialized",
@@ -1645,8 +2197,38 @@
     {
       "brand": "specialized",
       "model": "Levo 4 EVO Comp",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Levo 4 EVO Comp",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Levo 4 EVO Comp",
       "field": "range_mi",
       "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Levo 4 EVO Comp",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "specialized",
+      "model": "Levo 4 EVO Pro",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Levo 4 EVO Pro",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
     },
     {
       "brand": "specialized",
@@ -1656,9 +2238,39 @@
     },
     {
       "brand": "specialized",
+      "model": "Levo 4 EVO Pro",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Levo 4 X",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Levo 4 X",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Levo 4 X",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "specialized",
       "model": "S-Works Turbo Creo 2",
-      "field": "motor_w",
-      "label": "Motor power (W)"
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Creo 2",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
     },
     {
       "brand": "specialized",
@@ -1669,8 +2281,8 @@
     {
       "brand": "specialized",
       "model": "S-Works Turbo Creo 2",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
@@ -1681,8 +2293,8 @@
     {
       "brand": "specialized",
       "model": "S-Works Turbo Kenevo SL 2 Frameset",
-      "field": "motor_w",
-      "label": "Motor power (W)"
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
     },
     {
       "brand": "specialized",
@@ -1693,26 +2305,32 @@
     {
       "brand": "specialized",
       "model": "S-Works Turbo Kenevo SL 2 Frameset",
-      "field": "suspension",
-      "label": "Suspension"
-    },
-    {
-      "brand": "specialized",
-      "model": "S-Works Turbo Kenevo SL 2 Frameset",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
       "model": "S-Works Turbo Levo 4",
-      "field": "frame_material",
-      "label": "Frame material"
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Levo 4",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
     },
     {
       "brand": "specialized",
       "model": "S-Works Turbo Levo 4",
       "field": "range_mi",
       "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Levo 4",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
@@ -1723,8 +2341,26 @@
     {
       "brand": "specialized",
       "model": "S-Works Turbo Levo 4 Frameset",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Levo 4 Frameset",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Levo 4 Frameset",
       "field": "range_mi",
       "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Levo 4 Frameset",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
@@ -1735,8 +2371,38 @@
     {
       "brand": "specialized",
       "model": "S-Works Turbo Levo 4 LTD",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Levo 4 LTD",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Levo 4 LTD",
       "field": "range_mi",
       "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Levo 4 LTD",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Levo R",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Levo R",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
     },
     {
       "brand": "specialized",
@@ -1746,9 +2412,21 @@
     },
     {
       "brand": "specialized",
+      "model": "S-Works Turbo Levo R",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "specialized",
       "model": "S-Works Turbo Levo SL 2 Di2",
-      "field": "motor_w",
-      "label": "Motor power (W)"
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Levo SL 2 Di2",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
     },
     {
       "brand": "specialized",
@@ -1759,8 +2437,8 @@
     {
       "brand": "specialized",
       "model": "S-Works Turbo Levo SL 2 Di2",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
@@ -1771,8 +2449,26 @@
     {
       "brand": "specialized",
       "model": "S-Works Turbo Levo SL 2 Frameset",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Levo SL 2 Frameset",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Levo SL 2 Frameset",
       "field": "range_mi",
       "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "S-Works Turbo Levo SL 2 Frameset",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
@@ -1783,20 +2479,32 @@
     {
       "brand": "specialized",
       "model": "Turbo Como 4.0",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Como 4.0",
       "field": "motor_w",
       "label": "Motor power (W)"
     },
     {
       "brand": "specialized",
       "model": "Turbo Como 4.0",
-      "field": "range_mi",
-      "label": "Range (mi)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
       "model": "Turbo Como 4.0 IGH",
-      "field": "range_mi",
-      "label": "Range (mi)"
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Como 4.0 IGH",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
@@ -1807,56 +2515,80 @@
     {
       "brand": "specialized",
       "model": "Turbo Como 5.0 IGH",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Como 5.0 IGH",
       "field": "motor_w",
       "label": "Motor power (W)"
     },
     {
       "brand": "specialized",
       "model": "Turbo Como 5.0 IGH",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Creo 2 Comp",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Creo 2 Comp",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Creo 2 Comp",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Creo 2 Comp",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Creo 2 Comp",
       "field": "range_mi",
       "label": "Range (mi)"
     },
     {
       "brand": "specialized",
       "model": "Turbo Creo 2 Comp",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Creo 2 Comp",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Creo 2 Comp",
       "field": "range_mi",
       "label": "Range (mi)"
     },
     {
       "brand": "specialized",
       "model": "Turbo Creo 2 Comp",
-      "field": "range_mi",
-      "label": "Range (mi)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
       "model": "Turbo Creo 2 Comp",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Creo 2 Comp",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
       "model": "Turbo Creo 2 Comp E5",
-      "field": "motor_w",
-      "label": "Motor power (W)"
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Creo 2 Comp E5",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
     },
     {
       "brand": "specialized",
@@ -1867,14 +2599,20 @@
     {
       "brand": "specialized",
       "model": "Turbo Creo 2 Comp E5",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
       "model": "Turbo Creo 2 Expert",
-      "field": "motor_w",
-      "label": "Motor power (W)"
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Creo 2 Expert",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
     },
     {
       "brand": "specialized",
@@ -1885,14 +2623,14 @@
     {
       "brand": "specialized",
       "model": "Turbo Creo 2 Expert",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
       "model": "Turbo Kenevo SL 2 Comp",
-      "field": "motor_w",
-      "label": "Motor power (W)"
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
     },
     {
       "brand": "specialized",
@@ -1903,14 +2641,14 @@
     {
       "brand": "specialized",
       "model": "Turbo Kenevo SL 2 Comp",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
       "model": "Turbo Kenevo SL 2 Expert",
-      "field": "motor_w",
-      "label": "Motor power (W)"
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
     },
     {
       "brand": "specialized",
@@ -1921,14 +2659,14 @@
     {
       "brand": "specialized",
       "model": "Turbo Kenevo SL 2 Expert",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
       "model": "Turbo Kenevo SL 2 Öhlins Coil",
-      "field": "motor_w",
-      "label": "Motor power (W)"
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
     },
     {
       "brand": "specialized",
@@ -1939,8 +2677,20 @@
     {
       "brand": "specialized",
       "model": "Turbo Kenevo SL 2 Öhlins Coil",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo 4 Alloy",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo 4 Alloy",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
     },
     {
       "brand": "specialized",
@@ -1950,9 +2700,45 @@
     },
     {
       "brand": "specialized",
+      "model": "Turbo Levo 4 Alloy",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo 4 Comp",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo 4 Comp",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "specialized",
       "model": "Turbo Levo 4 Comp",
       "field": "range_mi",
       "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo 4 Comp",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo 4 Comp Alloy",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo 4 Comp Alloy",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
     },
     {
       "brand": "specialized",
@@ -1962,9 +2748,45 @@
     },
     {
       "brand": "specialized",
+      "model": "Turbo Levo 4 Comp Alloy",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo 4 Expert",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo 4 Expert",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "specialized",
       "model": "Turbo Levo 4 Expert",
       "field": "range_mi",
       "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo 4 Expert",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo 4 Pro",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo 4 Pro",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
     },
     {
       "brand": "specialized",
@@ -1974,9 +2796,45 @@
     },
     {
       "brand": "specialized",
+      "model": "Turbo Levo 4 Pro",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo R Comp",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo R Comp",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "specialized",
       "model": "Turbo Levo R Comp",
       "field": "range_mi",
       "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo R Comp",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo R Comp Alloy",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo R Comp Alloy",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
     },
     {
       "brand": "specialized",
@@ -1986,15 +2844,45 @@
     },
     {
       "brand": "specialized",
+      "model": "Turbo Levo R Comp Alloy",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo R Expert",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo R Expert",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "specialized",
       "model": "Turbo Levo R Expert",
       "field": "range_mi",
       "label": "Range (mi)"
     },
     {
       "brand": "specialized",
+      "model": "Turbo Levo R Expert",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "specialized",
       "model": "Turbo Levo SL 2 Comp",
-      "field": "motor_w",
-      "label": "Motor power (W)"
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo SL 2 Comp",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
     },
     {
       "brand": "specialized",
@@ -2005,8 +2893,20 @@
     {
       "brand": "specialized",
       "model": "Turbo Levo SL 2 Comp",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo SL 2 Comp Alloy",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo SL 2 Comp Alloy",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
     },
     {
       "brand": "specialized",
@@ -2016,15 +2916,45 @@
     },
     {
       "brand": "specialized",
+      "model": "Turbo Levo SL 2 Comp Alloy",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo SL 2 Expert",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo SL 2 Expert",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "specialized",
       "model": "Turbo Levo SL 2 Expert",
       "field": "range_mi",
       "label": "Range (mi)"
     },
     {
       "brand": "specialized",
+      "model": "Turbo Levo SL 2 Expert",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "specialized",
       "model": "Turbo Levo SL 2 Expert Di2",
-      "field": "motor_w",
-      "label": "Motor power (W)"
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo SL 2 Expert Di2",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
     },
     {
       "brand": "specialized",
@@ -2035,8 +2965,20 @@
     {
       "brand": "specialized",
       "model": "Turbo Levo SL 2 Expert Di2",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo SL 2 Pro",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Levo SL 2 Pro",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
     },
     {
       "brand": "specialized",
@@ -2046,6 +2988,12 @@
     },
     {
       "brand": "specialized",
+      "model": "Turbo Levo SL 2 Pro",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "specialized",
       "model": "Turbo Vado 3 EVO 4.0",
       "field": "frame_material",
       "label": "Frame material"
@@ -2053,8 +3001,26 @@
     {
       "brand": "specialized",
       "model": "Turbo Vado 3 EVO 4.0",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado 3 EVO 4.0",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado 3 EVO 4.0",
       "field": "range_mi",
       "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado 3 EVO 4.0",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
@@ -2065,8 +3031,26 @@
     {
       "brand": "specialized",
       "model": "Turbo Vado 3 EVO 5.0",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado 3 EVO 5.0",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado 3 EVO 5.0",
       "field": "range_mi",
       "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado 3 EVO 5.0",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
@@ -2077,8 +3061,26 @@
     {
       "brand": "specialized",
       "model": "Turbo Vado 3 EVO 6.0",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado 3 EVO 6.0",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado 3 EVO 6.0",
       "field": "range_mi",
       "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado 3 EVO 6.0",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
@@ -2089,14 +3091,26 @@
     {
       "brand": "specialized",
       "model": "Turbo Vado 3 X 4.0",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado 3 X 4.0",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
     },
     {
       "brand": "specialized",
       "model": "Turbo Vado 3 X 4.0",
       "field": "range_mi",
       "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado 3 X 4.0",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
@@ -2107,98 +3121,110 @@
     {
       "brand": "specialized",
       "model": "Turbo Vado 3 X 6.0",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado 3 X 6.0",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
     },
     {
       "brand": "specialized",
       "model": "Turbo Vado 3 X 6.0",
       "field": "range_mi",
       "label": "Range (mi)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado 3 X 6.0",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
       "model": "Turbo Vado 4.0",
-      "field": "range_mi",
-      "label": "Range (mi)"
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado 4.0",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
       "model": "Turbo Vado 4.0 Step-Through",
-      "field": "range_mi",
-      "label": "Range (mi)"
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado 4.0 Step-Through",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
       "model": "Turbo Vado 5.0 IGH",
-      "field": "range_mi",
-      "label": "Range (mi)"
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado 5.0 IGH",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
       "model": "Turbo Vado 5.0 IGH Step-Through",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado 5.0 IGH Step-Through",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 4.0",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 4.0",
       "field": "range_mi",
       "label": "Range (mi)"
     },
     {
       "brand": "specialized",
       "model": "Turbo Vado SL 2 4.0",
-      "field": "frame_material",
-      "label": "Frame material"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 4.0",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 4.0",
-      "field": "range_mi",
-      "label": "Range (mi)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 4.0",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
       "model": "Turbo Vado SL 2 4.0 EQ",
-      "field": "frame_material",
-      "label": "Frame material"
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
     },
     {
       "brand": "specialized",
       "model": "Turbo Vado SL 2 4.0 EQ",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 4.0 EQ",
-      "field": "range_mi",
-      "label": "Range (mi)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 4.0 EQ",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
       "model": "Turbo Vado SL 2 4.0 Step-Through",
-      "field": "frame_material",
-      "label": "Frame material"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 4.0 Step-Through",
-      "field": "motor_w",
-      "label": "Motor power (W)"
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
     },
     {
       "brand": "specialized",
@@ -2209,20 +3235,14 @@
     {
       "brand": "specialized",
       "model": "Turbo Vado SL 2 4.0 Step-Through",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
       "model": "Turbo Vado SL 2 4.0 Step-Through  EQ",
-      "field": "frame_material",
-      "label": "Frame material"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 4.0 Step-Through  EQ",
-      "field": "motor_w",
-      "label": "Motor power (W)"
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
     },
     {
       "brand": "specialized",
@@ -2233,20 +3253,14 @@
     {
       "brand": "specialized",
       "model": "Turbo Vado SL 2 4.0 Step-Through  EQ",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
       "model": "Turbo Vado SL 2 5.0 EQ",
-      "field": "frame_material",
-      "label": "Frame material"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 5.0 EQ",
-      "field": "motor_w",
-      "label": "Motor power (W)"
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
     },
     {
       "brand": "specialized",
@@ -2257,20 +3271,14 @@
     {
       "brand": "specialized",
       "model": "Turbo Vado SL 2 5.0 EQ",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
       "model": "Turbo Vado SL 2 5.0 Step-Through EQ",
-      "field": "frame_material",
-      "label": "Frame material"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 5.0 Step-Through EQ",
-      "field": "motor_w",
-      "label": "Motor power (W)"
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
     },
     {
       "brand": "specialized",
@@ -2281,20 +3289,14 @@
     {
       "brand": "specialized",
       "model": "Turbo Vado SL 2 5.0 Step-Through EQ",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
       "model": "Turbo Vado SL 2 6.0 Carbon",
-      "field": "frame_material",
-      "label": "Frame material"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 6.0 Carbon",
-      "field": "motor_w",
-      "label": "Motor power (W)"
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
     },
     {
       "brand": "specialized",
@@ -2305,20 +3307,14 @@
     {
       "brand": "specialized",
       "model": "Turbo Vado SL 2 6.0 Carbon",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
       "model": "Turbo Vado SL 2 6.0 EQ Carbon",
-      "field": "frame_material",
-      "label": "Frame material"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 6.0 EQ Carbon",
-      "field": "motor_w",
-      "label": "Motor power (W)"
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
     },
     {
       "brand": "specialized",
@@ -2329,20 +3325,20 @@
     {
       "brand": "specialized",
       "model": "Turbo Vado SL 2 6.0 EQ Carbon",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
       "model": "Vado SL 2 LTD",
-      "field": "frame_material",
-      "label": "Frame material"
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
     },
     {
       "brand": "specialized",
       "model": "Vado SL 2 LTD",
-      "field": "motor_w",
-      "label": "Motor power (W)"
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
     },
     {
       "brand": "specialized",
@@ -2353,428 +3349,164 @@
     {
       "brand": "specialized",
       "model": "Vado SL 2 LTD",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "tern",
       "model": "GSD P00",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "tern",
-      "model": "GSD P00",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "tern",
-      "model": "GSD P00",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "tern",
       "model": "GSD P10",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "tern",
-      "model": "GSD P10",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "tern",
-      "model": "GSD P10",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "tern",
       "model": "GSD R14",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "tern",
-      "model": "GSD R14",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "tern",
       "model": "GSD S10",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "tern",
-      "model": "GSD S10",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "tern",
-      "model": "GSD S10",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "tern",
       "model": "HSD P10",
-      "field": "battery_wh",
-      "label": "Battery capacity (Wh)"
-    },
-    {
-      "brand": "tern",
-      "model": "HSD P10",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "tern",
-      "model": "HSD P10",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "tern",
-      "model": "HSD P10",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "tern",
       "model": "HSD P5i",
-      "field": "battery_wh",
-      "label": "Battery capacity (Wh)"
-    },
-    {
-      "brand": "tern",
-      "model": "HSD P5i",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "tern",
-      "model": "HSD P5i",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "tern",
-      "model": "HSD P5i",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "tern",
       "model": "HSD S00",
-      "field": "battery_wh",
-      "label": "Battery capacity (Wh)"
-    },
-    {
-      "brand": "tern",
-      "model": "HSD S00",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "tern",
-      "model": "HSD S00",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "tern",
-      "model": "HSD S00",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "tern",
       "model": "HSD S11",
-      "field": "battery_wh",
-      "label": "Battery capacity (Wh)"
-    },
-    {
-      "brand": "tern",
-      "model": "HSD S11",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "tern",
-      "model": "HSD S11",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "tern",
-      "model": "HSD S11",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "tern",
       "model": "NBD P8i",
-      "field": "battery_wh",
-      "label": "Battery capacity (Wh)"
-    },
-    {
-      "brand": "tern",
-      "model": "NBD P8i",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "tern",
-      "model": "NBD P8i",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "tern",
       "model": "NBD S5i",
-      "field": "battery_wh",
-      "label": "Battery capacity (Wh)"
-    },
-    {
-      "brand": "tern",
-      "model": "NBD S5i",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "tern",
-      "model": "NBD S5i",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "tern",
       "model": "Orox R14 (27.5\")",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "tern",
-      "model": "Orox R14 (27.5\")",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "tern",
-      "model": "Orox R14 (27.5\")",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
-    },
-    {
-      "brand": "tern",
-      "model": "Orox R14 (27.5\")",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "tern",
       "model": "Orox S12 (27.5\")",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "tern",
-      "model": "Orox S12 (27.5\")",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "tern",
-      "model": "Orox S12 (27.5\")",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
-    },
-    {
-      "brand": "tern",
-      "model": "Orox S12 (27.5\")",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "tern",
       "model": "Quick Haul D8",
-      "field": "battery_wh",
-      "label": "Battery capacity (Wh)"
-    },
-    {
-      "brand": "tern",
-      "model": "Quick Haul D8",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "tern",
-      "model": "Quick Haul D8",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "tern",
-      "model": "Quick Haul D8",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "tern",
       "model": "Quick Haul Long D9",
-      "field": "battery_wh",
-      "label": "Battery capacity (Wh)"
-    },
-    {
-      "brand": "tern",
-      "model": "Quick Haul Long D9",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "tern",
-      "model": "Quick Haul Long D9",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "tern",
-      "model": "Quick Haul Long D9",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "tern",
       "model": "Quick Haul P9 Sport",
-      "field": "battery_wh",
-      "label": "Battery capacity (Wh)"
-    },
-    {
-      "brand": "tern",
-      "model": "Quick Haul P9 Sport",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "tern",
-      "model": "Quick Haul P9 Sport",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "tern",
-      "model": "Quick Haul P9 Sport",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "tern",
       "model": "Vektron P10",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "tern",
-      "model": "Vektron P10",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "tern",
-      "model": "Vektron P10",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
-    },
-    {
-      "brand": "tern",
-      "model": "Vektron P10",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "tern",
       "model": "Vektron P5i",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "tern",
-      "model": "Vektron P5i",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "tern",
-      "model": "Vektron P5i",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
-    },
-    {
-      "brand": "tern",
-      "model": "Vektron P5i",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "tern",
       "model": "Vektron Q9",
-      "field": "frame_material",
-      "label": "Frame material"
-    },
-    {
-      "brand": "tern",
-      "model": "Vektron Q9",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "tern",
-      "model": "Vektron Q9",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "tern",
-      "model": "Vektron Q9",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "tern",
       "model": "Vektron S10",
-      "field": "frame_material",
-      "label": "Frame material"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
-      "brand": "tern",
-      "model": "Vektron S10",
-      "field": "motor_w",
-      "label": "Motor power (W)"
+      "brand": "urtopia",
+      "model": "Carbon 1 Step-Thru E-Bike",
+      "field": "suspension",
+      "label": "Suspension"
     },
     {
-      "brand": "tern",
-      "model": "Vektron S10",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
+      "brand": "urtopia",
+      "model": "Carbon Classic E-Bike",
+      "field": "suspension",
+      "label": "Suspension"
     },
     {
-      "brand": "tern",
-      "model": "Vektron S10",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
+      "brand": "urtopia",
+      "model": "Carbon Classic Step-Thru E-Bike",
+      "field": "suspension",
+      "label": "Suspension"
     },
     {
-      "brand": "velotric",
-      "model": "Velotric Triker Electric Tricycle",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
+      "brand": "urtopia",
+      "model": "Carbon Fold 1 E-Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "urtopia",
+      "model": "Carbon Fold 2 E-Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "urtopia",
+      "model": "Carbon Fold Step-Thru E-Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "urtopia",
+      "model": "Carbon Fusion GT E-Bike",
+      "field": "suspension",
+      "label": "Suspension"
     },
     {
       "brand": "velowave",
@@ -2790,13 +3522,25 @@
     },
     {
       "brand": "velowave",
-      "model": "Ranger Step-Thru 2.0 Electric Bike",
+      "model": "Ranger 2.0 Fat Tire All-Terrain Electric Bike",
       "field": "rack_load_lb",
       "label": "Rear-rack load (lb)"
     },
     {
       "brand": "velowave",
-      "model": "Ranger Step-Thru 3.0 Torque Sensor Electric Bike",
+      "model": "Ranger 2.0 Fat Tire All-Terrain Electric Bike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "velowave",
+      "model": "Ranger 3.0 Fat Tire All-Terrain Electric Bike",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "velowave",
+      "model": "Ranger Step-Thru 2.0 Electric Bike",
       "field": "rack_load_lb",
       "label": "Rear-rack load (lb)"
     },
@@ -2807,156 +3551,6 @@
       "label": "Rear-rack load (lb)"
     },
     {
-      "brand": "vivi",
-      "model": "VIVI ACE01 Electric Bike All Terrain Fat Tire Electric Bike SGS Certified to UL2849",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "vivi",
-      "model": "VIVI ACE01 Electric Bike All Terrain Fat Tire Electric Bike SGS Certified to UL2849",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "vivi",
-      "model": "VIVI ACE01 Pro Electric Bike Torque Sensor Fat Tire Electric Bike with App Control",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "vivi",
-      "model": "VIVI ACE01 Pro Electric Bike Torque Sensor Fat Tire Electric Bike with App Control",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "vivi",
-      "model": "VIVI ACE07 Electric Bike Commuter Fat Tire Electric Bike SGS Certified to UL2849",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "vivi",
-      "model": "VIVI ACE07 Electric Bike Commuter Fat Tire Electric Bike SGS Certified to UL2849",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "vivi",
-      "model": "VIVI C26UL Electric Bike Cruiser Electric Commuter Bike SGS Certified to UL2849",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "vivi",
-      "model": "VIVI C26UL Electric Bike Cruiser Electric Commuter Bike SGS Certified to UL2849",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "vivi",
-      "model": "VIVI F26FUL Electric Bike Long Range Fat Tire Electric Bike SGS Certified to UL2849",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "vivi",
-      "model": "VIVI FM20UL Electric Bike 2.4\" Fat Tire Folding Electric Bike SGS Certified to UL2849",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "vivi",
-      "model": "VIVI FM20UL Electric Bike 2.4\" Fat Tire Folding Electric Bike SGS Certified to UL2849",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "vivi",
-      "model": "VIVI Gopina Electric Bike 3.0\" Fat Tire Folding Electric Bike SGS Certified to UL2849",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "vivi",
-      "model": "VIVI Gopina Electric Bike 3.0\" Fat Tire Folding Electric Bike SGS Certified to UL2849",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "vivi",
-      "model": "VIVI H7UL Electric Bike 27.5\" Off Road Electric Mountain Bike SGS Certified to UL2849",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "vivi",
-      "model": "VIVI M026SHUL Electric Bike Hardtail Electric Mountain Bike SGS Certified to UL2849",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "vivi",
-      "model": "VIVI M026TGBUL Electric Bike Foldable Full Suspension Electric Mountain Bike SGS Certified to UL2849",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "vivi",
-      "model": "VIVI MT20UL Electric Bike 3.0\" Fat Tire Folding Electric Bike SGS Certified to UL2849",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "vivi",
-      "model": "VIVI MT20UL Electric Bike 3.0\" Fat Tire Folding Electric Bike SGS Certified to UL2849",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "vivi",
-      "model": "VIVI MT26GUL Electric Bike Rambler Electric Commuter Bike SGS Certified to UL2849",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "vivi",
-      "model": "VIVI MT26GUL Electric Bike Rambler Electric Commuter Bike SGS Certified to UL2849",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "vivi",
-      "model": "VIVI PONY01 Electric Bike Commuter Mini Electric Bike SGS Certified to UL2849",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "vivi",
-      "model": "VIVI T01 Electric Trike Folding Cargo Electric Tricycle SGS Certified to UL2849",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "vivi",
-      "model": "VIVI T01 Electric Trike Folding Cargo Electric Tricycle SGS Certified to UL2849",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "vvolt",
-      "model": "Alpha 2.1",
-      "field": "battery_wh",
-      "label": "Battery capacity (Wh)"
-    },
-    {
-      "brand": "vvolt",
-      "model": "Alpha 2.1",
-      "field": "brake_type",
-      "label": "Brake type"
-    },
-    {
       "brand": "vvolt",
       "model": "Alpha 2.1",
       "field": "cell_brand",
@@ -2971,26 +3565,20 @@
     {
       "brand": "vvolt",
       "model": "Alpha 2.1",
-      "field": "drive_type",
-      "label": "Motor placement"
-    },
-    {
-      "brand": "vvolt",
-      "model": "Alpha 2.1",
-      "field": "drivetrain_type",
-      "label": "Drivetrain type"
-    },
-    {
-      "brand": "vvolt",
-      "model": "Alpha 2.1",
       "field": "frame_material",
       "label": "Frame material"
     },
     {
       "brand": "vvolt",
       "model": "Alpha 2.1",
-      "field": "motor_w",
-      "label": "Motor power (W)"
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Alpha 2.1",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "vvolt",
@@ -3000,21 +3588,9 @@
     },
     {
       "brand": "vvolt",
-      "model": "Alpha 2.1",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
-    },
-    {
-      "brand": "vvolt",
       "model": "Alpha II",
       "field": "battery_wh",
       "label": "Battery capacity (Wh)"
-    },
-    {
-      "brand": "vvolt",
-      "model": "Alpha II",
-      "field": "brake_type",
-      "label": "Brake type"
     },
     {
       "brand": "vvolt",
@@ -3031,50 +3607,26 @@
     {
       "brand": "vvolt",
       "model": "Alpha II",
-      "field": "drive_type",
-      "label": "Motor placement"
-    },
-    {
-      "brand": "vvolt",
-      "model": "Alpha II",
-      "field": "drivetrain_type",
-      "label": "Drivetrain type"
-    },
-    {
-      "brand": "vvolt",
-      "model": "Alpha II",
       "field": "frame_material",
       "label": "Frame material"
     },
     {
       "brand": "vvolt",
       "model": "Alpha II",
-      "field": "motor_w",
-      "label": "Motor power (W)"
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Alpha II",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "vvolt",
       "model": "Alpha II",
       "field": "suspension",
       "label": "Suspension"
-    },
-    {
-      "brand": "vvolt",
-      "model": "Alpha II",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
-    },
-    {
-      "brand": "vvolt",
-      "model": "Centauri II",
-      "field": "battery_wh",
-      "label": "Battery capacity (Wh)"
-    },
-    {
-      "brand": "vvolt",
-      "model": "Centauri II",
-      "field": "brake_type",
-      "label": "Brake type"
     },
     {
       "brand": "vvolt",
@@ -3091,50 +3643,20 @@
     {
       "brand": "vvolt",
       "model": "Centauri II",
-      "field": "drive_type",
-      "label": "Motor placement"
-    },
-    {
-      "brand": "vvolt",
-      "model": "Centauri II",
-      "field": "drivetrain_type",
-      "label": "Drivetrain type"
-    },
-    {
-      "brand": "vvolt",
-      "model": "Centauri II",
       "field": "frame_material",
       "label": "Frame material"
     },
     {
       "brand": "vvolt",
       "model": "Centauri II",
-      "field": "motor_w",
-      "label": "Motor power (W)"
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
     },
     {
       "brand": "vvolt",
       "model": "Centauri II",
-      "field": "suspension",
-      "label": "Suspension"
-    },
-    {
-      "brand": "vvolt",
-      "model": "Centauri II",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
-    },
-    {
-      "brand": "vvolt",
-      "model": "Centauri SE",
-      "field": "battery_wh",
-      "label": "Battery capacity (Wh)"
-    },
-    {
-      "brand": "vvolt",
-      "model": "Centauri SE",
-      "field": "brake_type",
-      "label": "Brake type"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "vvolt",
@@ -3145,646 +3667,168 @@
     {
       "brand": "vvolt",
       "model": "Centauri SE",
-      "field": "display_type",
-      "label": "Display type"
-    },
-    {
-      "brand": "vvolt",
-      "model": "Centauri SE",
-      "field": "drive_type",
-      "label": "Motor placement"
-    },
-    {
-      "brand": "vvolt",
-      "model": "Centauri SE",
-      "field": "drivetrain_type",
-      "label": "Drivetrain type"
-    },
-    {
-      "brand": "vvolt",
-      "model": "Centauri SE",
       "field": "frame_material",
       "label": "Frame material"
     },
     {
       "brand": "vvolt",
       "model": "Centauri SE",
-      "field": "motor_w",
-      "label": "Motor power (W)"
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "vvolt",
+      "model": "Centauri SE",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "vvolt",
       "model": "Centauri SE",
       "field": "suspension",
       "label": "Suspension"
-    },
-    {
-      "brand": "vvolt",
-      "model": "Centauri SE",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
     },
     {
       "brand": "wallke",
-      "model": "2026 WALLKE Ultra Series | Off-grid Power Station E-Bike",
+      "model": "2026 WALLKE H7 Ultra Step-Thru | 4000W Off-Grid Power Station E-Bike with Torque Sensor, 37mph Speed",
       "field": "drivetrain_type",
       "label": "Drivetrain type"
     },
     {
       "brand": "wallke",
-      "model": "2026 WALLKE Ultra Series | Off-grid Power Station E-Bike",
+      "model": "2026 WALLKE H9 Ultra Folding | Off-Grid Power Station E-Bike with Torque Sensor, 37mph Speed, 55/77Ah Battery Options",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "wallke",
+      "model": "2026 WALLKE H9 Ultra Folding | Off-Grid Power Station E-Bike with Torque Sensor, 37mph Speed, 55/77Ah Battery Options — 77Ah",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "wallke",
+      "model": "2026 WALLKE Ultra Series | Off-grid Power Station E-Bike — 55Ah · Step-Over",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "wallke",
+      "model": "2026 WALLKE Ultra Series | Off-grid Power Station E-Bike — 55Ah · Step-Thru",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "wallke",
+      "model": "2026 WALLKE Ultra Series | Off-grid Power Station E-Bike — 77Ah",
       "field": "weight_lb",
       "label": "Weight (lb)"
     },
     {
       "brand": "wallke",
       "model": "2026 Wallke H7 AWD Step-Thru | 3200W Ebike 40Ah Battery",
-      "field": "drivetrain_type",
-      "label": "Drivetrain type"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "wallke",
-      "model": "2026 Wallke H7 AWD Step-Thru | 3200W Ebike 40Ah Battery",
-      "field": "suspension",
-      "label": "Suspension"
+      "model": "2026 Wallke H7 AWD Step-Thru | 3200W Ebike 40Ah Battery — 60Ah",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "wallke",
+      "model": "2026 Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "wallke",
+      "model": "2026 Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery — 60Ah",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "wallke",
+      "model": "2026 Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery — 62Ah",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "wallke",
+      "model": "2026 Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery — 82Ah",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "wallke",
       "model": "WALLKE Titan X1 Carbon Fiber Frame | 3800W Cruiser Ebike",
-      "field": "drivetrain_type",
-      "label": "Drivetrain type"
-    },
-    {
-      "brand": "wallke",
-      "model": "Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery",
-      "field": "drivetrain_type",
-      "label": "Drivetrain type"
-    },
-    {
-      "brand": "wallke",
-      "model": "Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery",
-      "field": "suspension",
-      "label": "Suspension"
-    },
-    {
-      "brand": "wired",
-      "model": "WIRED Cruiser",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "wired",
-      "model": "WIRED Freedom",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "wired",
-      "model": "WIRED Predator",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "wired",
       "model": "WIRED Raven",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Raven",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Raven",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
     },
     {
       "brand": "wired",
       "model": "WIRED Viper",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
     },
     {
       "brand": "wired",
-      "model": "Wired Scout",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
+      "model": "WIRED Viper",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
     },
     {
       "brand": "wired",
-      "model": "Wired Warrior",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
+      "model": "WIRED Viper",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
     }
   ],
-  "frame_style_review": [
-    {
-      "brand": "cemoto",
-      "model": "CEMOTO D-Series | 3000W–6000W Off-Road Electric Dirt Bike for Teens & Adults",
-      "id": "cemoto__off-road-electric-dirt-bike-for-adults-teens"
-    },
-    {
-      "brand": "himiway",
-      "model": "D3(Cruiser) / Long Range Fat Tire Electric Bike",
-      "id": "himiway__himiway-electric-fat-bike"
-    },
-    {
-      "brand": "himiway",
-      "model": "D5(Zebra) / All-terrain Electric Fat Bike",
-      "id": "himiway__premium-all-terrain-electric-bike"
-    },
-    {
-      "brand": "himiway",
-      "model": "Himiway D5 2.0 20\" eBike",
-      "id": "himiway__d5-2-20"
-    },
-    {
-      "brand": "himiway",
-      "model": "Himiway D5 2.0 20\" eBike — 15Ah+20Ah",
-      "id": "himiway__d5-2-20--15ah-20ah"
-    },
-    {
-      "brand": "himiway",
-      "model": "Himiway D5 2.0 Camo eBike",
-      "id": "himiway__himiway-d5-st-camo"
-    },
-    {
-      "brand": "juiced",
-      "model": "Scrambler",
-      "id": "juiced__scrambler"
-    },
-    {
-      "brand": "juiced",
-      "model": "Scrambler — Full Suspension",
-      "id": "juiced__scrambler--full-suspension"
-    },
-    {
-      "brand": "leoguar",
-      "model": "Fastron SO Fat Tire Ebike",
-      "id": "leoguar__fastron-so-fat-tire-ebike"
-    },
-    {
-      "brand": "leoguar",
-      "model": "Flippo Folding Ebike",
-      "id": "leoguar__flippo-folding-ebike"
-    },
-    {
-      "brand": "leoguar",
-      "model": "Zephyr SO Beach Cruiser Ebike",
-      "id": "leoguar__zephyr-so-beach-cruiser-ebike"
-    },
-    {
-      "brand": "magician",
-      "model": "Alpha Mini",
-      "id": "magician__alpha-mini"
-    },
-    {
-      "brand": "magician",
-      "model": "Atlas",
-      "id": "magician__atlas"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Granite E-Trike",
-      "id": "mokwheel__granite"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Scoria 2.0 Ebike",
-      "id": "mokwheel__scoria"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Slate Ebike",
-      "id": "mokwheel__slate"
-    },
-    {
-      "brand": "priority",
-      "model": "PRIORITY E-COAST",
-      "id": "priority__ecoast"
-    },
-    {
-      "brand": "priority",
-      "model": "PRIORITY GLIDE E-BIKE",
-      "id": "priority__priority-glide-e-bike"
-    },
-    {
-      "brand": "priority",
-      "model": "PRIORITY SKYLINE SMART.SHIFT E-BIKE",
-      "id": "priority__priority-skyline-smart-shift-e-bike"
-    },
-    {
-      "brand": "ride1up",
-      "model": "Revv1 DRT",
-      "id": "ride1up__revv-1-drt"
-    },
-    {
-      "brand": "ride1up",
-      "model": "Revv1 EVO",
-      "id": "ride1up__revv1-evo"
-    },
-    {
-      "brand": "ride1up",
-      "model": "Revv1 FS",
-      "id": "ride1up__revv-1"
-    },
-    {
-      "brand": "ride1up",
-      "model": "Revv1 HT",
-      "id": "ride1up__revv-1-ht"
-    },
-    {
-      "brand": "segway",
-      "model": "Segway Myon Electric Bike",
-      "id": "segway__segway-ebike-myon"
-    },
-    {
-      "brand": "segway",
-      "model": "Segway Myon S Electric Bike",
-      "id": "segway__segway-ebike-myon-s"
-    },
-    {
-      "brand": "segway",
-      "model": "Segway Xafari Fat Tire eBike",
-      "id": "segway__segway-ebike-xafari"
-    },
-    {
-      "brand": "segway",
-      "model": "Segway Xyber Electric Bike",
-      "id": "segway__segway-ebike-xyber"
-    },
-    {
-      "brand": "specialized",
-      "model": "Haul LT",
-      "id": "specialized__haul-lt"
-    },
-    {
-      "brand": "specialized",
-      "model": "Levo 4 EVO Comp",
-      "id": "specialized__levo-4-evo-comp"
-    },
-    {
-      "brand": "specialized",
-      "model": "Levo 4 EVO Pro",
-      "id": "specialized__levo-4-evo-pro"
-    },
-    {
-      "brand": "specialized",
-      "model": "S-Works Turbo Creo 2",
-      "id": "specialized__s-works-turbo-creo-2-sram-red--xx1-eagle-axs"
-    },
-    {
-      "brand": "specialized",
-      "model": "S-Works Turbo Kenevo SL 2 Frameset",
-      "id": "specialized__s-works-turbo-kenevo-sl-2-frameset"
-    },
-    {
-      "brand": "specialized",
-      "model": "S-Works Turbo Levo 4",
-      "id": "specialized__s-works-turbo-levo-4"
-    },
-    {
-      "brand": "specialized",
-      "model": "S-Works Turbo Levo 4 Frameset",
-      "id": "specialized__s-works-turbo-levo-4-frameset"
-    },
-    {
-      "brand": "specialized",
-      "model": "S-Works Turbo Levo 4 LTD",
-      "id": "specialized__s-works-turbo-levo-4-ltd"
-    },
-    {
-      "brand": "specialized",
-      "model": "S-Works Turbo Levo R",
-      "id": "specialized__s-works-turbo-levo-r"
-    },
-    {
-      "brand": "specialized",
-      "model": "S-Works Turbo Levo SL 2 Di2",
-      "id": "specialized__s-works-turbo-levo-sl-2-di2"
-    },
-    {
-      "brand": "specialized",
-      "model": "S-Works Turbo Levo SL 2 Frameset",
-      "id": "specialized__s-works-turbo-levo-sl-2-framesetset"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Creo 2 Comp",
-      "id": "specialized__turbo-creo-2-comp-shimano-grx-di2"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Creo 2 Comp",
-      "id": "specialized__turbo-creo-2-comp-sram-apex--x1-eagle-axs"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Creo 2 Comp E5",
-      "id": "specialized__turbo-creo-2-comp-e5-sram-apex-eagle"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Creo 2 Expert",
-      "id": "specialized__turbo-creo-2-expert-shimano-grx-di2"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Kenevo SL 2 Comp",
-      "id": "specialized__turbo-kenevo-sl-2-comp"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Kenevo SL 2 Expert",
-      "id": "specialized__turbo-kenevo-sl-2-expert"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Kenevo SL 2 Öhlins Coil",
-      "id": "specialized__turbo-kenevo-sl-2-ohlins-coil"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Levo 4 Alloy",
-      "id": "specialized__turbo-levo-4-alloy"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Levo 4 Comp",
-      "id": "specialized__turbo-levo-4-comp"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Levo 4 Comp Alloy",
-      "id": "specialized__turbo-levo-4-comp-alloy"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Levo 4 Expert",
-      "id": "specialized__turbo-levo-4-expert"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Levo 4 Pro",
-      "id": "specialized__turbo-levo-4-pro"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Levo R Comp",
-      "id": "specialized__turbo-levo-r-comp"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Levo R Comp Alloy",
-      "id": "specialized__turbo-levo-r-comp-alloy"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Levo R Expert",
-      "id": "specialized__turbo-levo-r-expert"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Levo SL 2 Comp",
-      "id": "specialized__turbo-levo-sl-2-comp"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Levo SL 2 Comp Alloy",
-      "id": "specialized__turbo-levo-sl-2-comp-alloy"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Levo SL 2 Expert",
-      "id": "specialized__turbo-levo-sl-2-expert"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Levo SL 2 Expert Di2",
-      "id": "specialized__turbo-levo-sl-2-expert-di2"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Vado 3 EVO 4.0",
-      "id": "specialized__turbo-vado-3-evo-40"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Vado 3 EVO 5.0",
-      "id": "specialized__turbo-vado-3-evo-50"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Vado 3 EVO 6.0",
-      "id": "specialized__turbo-vado-3-evo-60"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Vado 3 X 4.0",
-      "id": "specialized__turbo-vado-3-x-40"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Vado 3 X 6.0",
-      "id": "specialized__turbo-vado-3-x-60"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 6.0 Carbon",
-      "id": "specialized__turbo-vado-sl-2-60-carbon"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 6.0 EQ Carbon",
-      "id": "specialized__turbo-vado-sl-2-60-eq-carbon"
-    },
-    {
-      "brand": "specialized",
-      "model": "Vado SL 2 LTD",
-      "id": "specialized__vado-sl-2-ltd-s-racing"
-    },
-    {
-      "brand": "tern",
-      "model": "GSD P00",
-      "id": "tern__gsd-p00"
-    },
-    {
-      "brand": "tern",
-      "model": "GSD P10",
-      "id": "tern__gsd-p10"
-    },
-    {
-      "brand": "tern",
-      "model": "GSD R14",
-      "id": "tern__gsd-r14"
-    },
-    {
-      "brand": "tern",
-      "model": "GSD S10",
-      "id": "tern__gsd-s10"
-    },
-    {
-      "brand": "tern",
-      "model": "HSD P10",
-      "id": "tern__hsd-p10"
-    },
-    {
-      "brand": "tern",
-      "model": "HSD P5i",
-      "id": "tern__hsd-p5i"
-    },
-    {
-      "brand": "tern",
-      "model": "HSD S00",
-      "id": "tern__hsd-s00"
-    },
-    {
-      "brand": "tern",
-      "model": "HSD S11",
-      "id": "tern__hsd-s11"
-    },
-    {
-      "brand": "tern",
-      "model": "Orox R14 (27.5\")",
-      "id": "tern__orox-r14-275"
-    },
-    {
-      "brand": "tern",
-      "model": "Orox S12 (27.5\")",
-      "id": "tern__orox-s12-275"
-    },
-    {
-      "brand": "tern",
-      "model": "Quick Haul D8",
-      "id": "tern__quick-haul-d8"
-    },
-    {
-      "brand": "tern",
-      "model": "Quick Haul Long D9",
-      "id": "tern__quick-haul-long-d9"
-    },
-    {
-      "brand": "tern",
-      "model": "Quick Haul P9 Sport",
-      "id": "tern__quick-haul-p9-sport"
-    },
-    {
-      "brand": "tern",
-      "model": "Vektron P10",
-      "id": "tern__vektron-p10"
-    },
-    {
-      "brand": "tern",
-      "model": "Vektron P5i",
-      "id": "tern__vektron-p5i"
-    },
-    {
-      "brand": "tern",
-      "model": "Vektron Q9",
-      "id": "tern__vektron-q9"
-    },
-    {
-      "brand": "tern",
-      "model": "Vektron S10",
-      "id": "tern__vektron-s10"
-    },
-    {
-      "brand": "velotric",
-      "model": "Velotric Breeze 1 Cruiser Ebike",
-      "id": "velotric__velotric-breeze-1"
-    },
-    {
-      "brand": "velotric",
-      "model": "Velotric Discover 3 Ebike",
-      "id": "velotric__velotric-discover-3-commuter-ebike"
-    },
-    {
-      "brand": "velotric",
-      "model": "Velotric Discover M Ebike",
-      "id": "velotric__velotric-discover-m-mid-drive-ebike"
-    },
-    {
-      "brand": "velotric",
-      "model": "Velotric Fold 1 Ebike",
-      "id": "velotric__velotric-fold-1"
-    },
-    {
-      "brand": "velotric",
-      "model": "Velotric Fold 1 Plus Ebike",
-      "id": "velotric__velotric-fold-1-plus"
-    },
-    {
-      "brand": "velotric",
-      "model": "Velotric GoMad Ebike",
-      "id": "velotric__velotric-gomad-utility-ebike"
-    },
-    {
-      "brand": "velotric",
-      "model": "Velotric GoMad Ebike — GoMad + Passenger Kit",
-      "id": "velotric__velotric-gomad-utility-ebike--gomad-passenger-kit"
-    },
-    {
-      "brand": "velotric",
-      "model": "Velotric GoMad Ebike — GoMad + Young Passenger Kit",
-      "id": "velotric__velotric-gomad-utility-ebike--gomad-young-passenger-kit"
-    },
-    {
-      "brand": "velotric",
-      "model": "Velotric Summit 1 Ebike",
-      "id": "velotric__velotric-summit-1"
-    },
-    {
-      "brand": "velotric",
-      "model": "Velotric Summit 2 Ebike",
-      "id": "velotric__velotric-summit-2-hybrid-ebike"
-    },
-    {
-      "brand": "velotric",
-      "model": "Velotric Triker Electric Tricycle",
-      "id": "velotric__velotric-triker"
-    },
-    {
-      "brand": "velowave",
-      "model": "Ranger 2.0 Fat Tire All-Terrain Electric Bike",
-      "id": "velowave__ranger-fat-tire-electric-bike"
-    },
-    {
-      "brand": "velowave",
-      "model": "Ranger 3.0 Fat Tire All-Terrain Electric Bike",
-      "id": "velowave__ranger-3-0-fat-tire-all-terrain-electric-bike"
-    },
-    {
-      "brand": "vvolt",
-      "model": "Centauri II",
-      "id": "vvolt__centauri-ii"
-    },
-    {
-      "brand": "vvolt",
-      "model": "Centauri SE",
-      "id": "vvolt__centauri-se"
-    },
-    {
-      "brand": "wallke",
-      "model": "2026 WALLKE H9 Ultra Folding | Off-Grid Power Station E-Bike with Torque Sensor, 37mph Speed, 55/77Ah Battery Options",
-      "id": "wallke__wallke-h9-ultra-folding-off-grid-powerstorage-e-bike"
-    },
-    {
-      "brand": "wallke",
-      "model": "2026 Wallke Ravager 60V Series | 60V 70Ah Long-Range Electric Bike | Up to 180+ Miles | 150Nm Torque",
-      "id": "wallke__2026-wallke-ravager-r60-series"
-    }
-  ],
+  "frame_style_review": [],
   "summary": {
-    "models_flagged": 208,
-    "missing_rows": 522,
+    "models_flagged": 241,
+    "missing_rows": 606,
     "missing_by_field": {
-      "motor_w": 79,
-      "battery_wh": 29,
-      "weight_lb": 31,
-      "range_mi": 78,
-      "brake_type": 9,
-      "frame_material": 59,
-      "drive_type": 12,
-      "torque_nm": 67,
-      "warranty_years": 35,
-      "display_type": 18,
-      "drivetrain_type": 12,
-      "suspension": 21,
-      "cell_brand": 6,
-      "rack_load_lb": 66
+      "motor_w": 9,
+      "battery_wh": 2,
+      "weight_lb": 7,
+      "range_mi": 62,
+      "brake_type": 3,
+      "frame_material": 30,
+      "drive_type": 2,
+      "torque_nm": 39,
+      "warranty_years": 7,
+      "display_type": 14,
+      "drivetrain_type": 9,
+      "suspension": 17,
+      "cell_brand": 7,
+      "fit_height_min_in": 29,
+      "max_speed_mph": 60,
+      "max_load_lb": 97,
+      "sensor_type": 161,
+      "rack_load_lb": 19,
+      "frame_size_count": 0,
+      "frame_size_rider_range": 32
     },
-    "frame_style_review": 99
+    "frame_style_review": 0
   }
 }

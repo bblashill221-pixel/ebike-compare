@@ -50,6 +50,14 @@ EXPECTED_FIELDS: list[tuple[str, str]] = [
     ("drivetrain_type", "Drivetrain type"),
     ("suspension", "Suspension"),
     ("cell_brand", "Battery cell brand"),
+    # commonly published but often only in a size-guide / geometry image -- flagged
+    # here so the missing list is the worklist for image-sourced curated overrides.
+    ("fit_height_min_in", "Rider height range"),
+    # card-icon metrics -- every one is its own tile on the bike card, so all are
+    # audited for all bikes (resolver + image fallback try to fill any gaps).
+    ("max_speed_mph", "Top speed (mph)"),
+    ("max_load_lb", "Max load / payload (lb)"),
+    ("sensor_type", "Pedal-assist sensor type"),
 ]
 
 
@@ -63,16 +71,49 @@ def _has_rear_rack(model: dict) -> bool:
 
 
 # Expected only when the predicate holds for a model: (key, label, predicate).
-# Bike payload (max_load_lb) is deliberately NOT required (often unlisted); a rear
-# rack's capacity is, but only for bikes that actually have a rear rack.
+# A rear rack's load capacity is expected, but only for bikes that have a rear rack.
 CONDITIONAL_FIELDS = [
     ("rack_load_lb", "Rear-rack load (lb)", _has_rear_rack),
+]
+
+
+def _frame_sizes_have_ranges(model: dict):
+    """Present only when the bike has frame sizes AND every one carries a rider-
+    height range (height_min + height_max). Catches the silent partial where the
+    size labels are captured but a per-size range is missing."""
+    fs = model.get("frame_sizes") or []
+    if not fs:
+        return None
+    return True if all(s.get("height_min") and s.get("height_max") for s in fs) else None
+
+
+# Expected values pulled from the MODEL itself (not specs_typed) -- a top-level
+# field or a structural check across frame_sizes. Same "flag when absent" rule.
+# (key, label, value_fn) where value_fn(model) returns the value to presence-test.
+MODEL_FIELDS = [
+    ("frame_size_count", "Frame size count", lambda m: m.get("frame_size_count")),
+    ("frame_size_rider_range", "Rider height range per frame size", _frame_sizes_have_ranges),
 ]
 
 
 def _present(v) -> bool:
     """A typed value counts as present unless it's null or an empty string/list/dict."""
     return v not in (None, "", [], {})
+
+
+# Fields a brand (or specific model) genuinely doesn't publish anywhere -- text OR
+# image -- verified by hand. These are excluded from the "missing" worklist so it
+# reflects only actionable gaps, not perpetual chasing. Keyed by brand or model id.
+try:
+    KNOWN_ABSENT = json.loads(
+        (Path(__file__).parent / "data" / "curated" / "known_absent.json").read_text())
+except (FileNotFoundError, ValueError):
+    KNOWN_ABSENT = {}
+
+
+def _absent(model: dict) -> set:
+    return set(KNOWN_ABSENT.get(model.get("brand", ""), [])) | set(
+        KNOWN_ABSENT.get(model.get("id", ""), []))
 
 
 def _typed(model: dict) -> dict:
@@ -82,7 +123,8 @@ def _typed(model: dict) -> dict:
 def audit(models: list[dict]) -> dict:
     n = len(models)
     expected_keys = [k for k, _ in EXPECTED_FIELDS]
-    labels = {**dict(EXPECTED_FIELDS), **{k: lbl for k, lbl, _ in CONDITIONAL_FIELDS}}
+    labels = {**dict(EXPECTED_FIELDS), **{k: lbl for k, lbl, _ in CONDITIONAL_FIELDS},
+              **{k: lbl for k, lbl, _ in MODEL_FIELDS}}
 
     # coverage over EVERY typed key seen anywhere (the full field list)
     cov: dict[str, int] = {}
@@ -90,6 +132,11 @@ def audit(models: list[dict]) -> dict:
         for k, v in _typed(m).items():
             cov.setdefault(k, 0)
             if _present(v):
+                cov[k] += 1
+        # model-level / structural expected values
+        for k, _, fn in MODEL_FIELDS:
+            cov.setdefault(k, 0)
+            if _present(fn(m)):
                 cov[k] += 1
     # make sure expected keys appear even if absent everywhere
     for k in expected_keys:
@@ -106,13 +153,15 @@ def audit(models: list[dict]) -> dict:
         gaps = [k for k in expected_keys if not _present(t.get(k))]
         gaps += [k for k, _, pred in CONDITIONAL_FIELDS
                  if pred(m) and not _present(t.get(k))]
+        gaps += [k for k, _, fn in MODEL_FIELDS if not _present(fn(m))]
+        gaps = [k for k in gaps if k not in _absent(m)]   # drop verified-unpublished
         m["data_audit"] = {"missing": gaps}      # annotate every model (empty when clean)
         brand, name = m.get("brand", ""), m.get("model", "")
         for k in gaps:
             missing.append({"brand": brand, "model": name, "field": k, "label": labels[k]})
     missing.sort(key=lambda r: (r["brand"], r["model"], r["field"]))
 
-    flag_keys = expected_keys + [k for k, _, _ in CONDITIONAL_FIELDS]
+    flag_keys = expected_keys + [k for k, _, _ in CONDITIONAL_FIELDS] + [k for k, _, _ in MODEL_FIELDS]
     by_field = {k: sum(1 for r in missing if r["field"] == k) for k in flag_keys}
     flagged_models = sum(1 for m in models if m["data_audit"]["missing"])
 

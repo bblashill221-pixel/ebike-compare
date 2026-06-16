@@ -58,6 +58,12 @@ def _battery_wh(specs):
     if wh is None:
         v = num(r"(\d{2,3}(?:\.\d+)?)\s*v\b", txt)
         ah = num(r"(\d{1,2}(?:\.\d+)?)\s*ah", txt)
+        if ah and not v:
+            # The pack voltage sometimes lives on the controller row instead
+            # (Ride1Up Vorsa: battery "15Ah ...", controller "48V 25A ...").
+            # Controller voltage is the pack's nominal voltage; the charger's
+            # is the (higher) charge voltage, so it is deliberately not used.
+            v = num(r"(\d{2,3}(?:\.\d+)?)\s*v\b", find_spec(specs, "controller"))
         if v and ah:
             wh = v * ah
     return round(wh) if wh else None
@@ -69,6 +75,24 @@ def _cell_brand(specs):
         if b in txt:
             return b
     return "generic" if txt else None
+
+
+# Nominal ratings for motors whose spec rows never state watts (the maker
+# publishes torque only, e.g. Brose quotes the TF Sprinter at 250W nominal
+# off-page). Curated facts, matched against the motor row text.
+_KNOWN_MOTOR_W = [
+    # match the model name alone: the component parser may reorder the row
+    # ("Brose mid 90Nm TF Sprinter German made motor with")
+    (re.compile(r"tf[\s-]*sprinter", re.I), 250),
+    # every Bosch e-bike drive unit (Active/Performance/Cargo Line, CX, ...)
+    # is 250W nominal; Bosch publishes torque, never watts
+    (re.compile(r"\bbosch\b", re.I), 250),
+    # Shimano EP/STePS drive units are likewise 250W nominal, torque-only specs.
+    # EP model numbers (EP801...) match standalone: the flattened component may
+    # reorder tokens away from "Shimano"; bare "shimano" would false-match
+    # drivetrain rows (find_spec's "drive" keys include drivetrain).
+    (re.compile(r"shimano\s*(?:ep\d|steps)|\bep[5-8]\d{2}\b", re.I), 250),
+]
 
 
 def _motor_w(specs):
@@ -89,30 +113,77 @@ def _motor_w(specs):
             txt = f"{txt} {mw.group(1)}W peak"
     if not txt.strip():
         return None, None
-    # Boost-mode figures are neither the continuous nor the stated-peak rating.
+    # The boost wattage is the bike's true peak (highest shipped-mode output);
+    # pull it before stripping the parenthetical so it can't read as continuous.
+    bm = (re.search(r"(\d{3,4})\s*w(?:att)?s?[^)0-9]{0,12}boost", txt, re.I)
+          or re.search(r"boost[^)0-9]{0,15}(\d{3,4})\s*w", txt, re.I))
+    boost = float(bm.group(1)) if bm else None
+    # vendor wording "NNNW Peak in BOOST" marks the boost figure as THE peak,
+    # which demotes a "Peak"-labeled standard figure to nominal (see below)
+    boost_is_peak = bool(re.search(r"\d\s*w(?:att)?s?\s*peak[^)0-9]{0,10}boost", txt, re.I))
     txt = re.sub(r"\([^)]*boost[^)]*\)", " ", txt, flags=re.I)
     # The motor rows reaching this point are flatten_grouped() renderings of the
     # parsed component ("1188W peak 750W 80Nm"), so the number-adjacent "NNNW
     # peak" form binds first; the "peak NNNW" form covers unparsed free text.
     # Pull peak, then strip every peak mention so none reads as continuous.
-    peak = num(r"(\d{3,4})\s*w\s*peak", txt) or num(r"peak[^0-9,()/]{0,14}(\d{3,4})\s*w", txt)
-    cont_txt = re.sub(r"\d{3,4}\s*w\s*peak", " ", txt, flags=re.I)
-    cont_txt = re.sub(r"peak[^0-9,()/]{0,14}\d{3,4}\s*w", " ", cont_txt, flags=re.I)
-    cont = num(r"(\d{3,4})\s*w\b", cont_txt)
+    # w(?:att)?s? : "350 watts (550w peak)" must read nominal 350 / peak 550.
+    # (?!h)(?![\s-]*hours?) : "520Wh" / "601 watt-hours" are battery capacity.
+    _W = r"w(?:att)?s?\b(?!h)(?![\s-]*hours?)"
+    peak = (num(rf"(\d{{3,4}})\s*{_W}\s*peak", txt)
+            or num(rf"peak[^0-9,()/]{{0,14}}(\d{{3,4}})\s*{_W}", txt))
+    cont_txt = re.sub(rf"\d{{3,4}}\s*{_W}\s*peak", " ", txt, flags=re.I)
+    cont_txt = re.sub(rf"peak[^0-9,()/]{{0,14}}\d{{3,4}}\s*{_W}", " ", cont_txt, flags=re.I)
+    cont = num(rf"(\d{{3,4}})\s*{_W}", cont_txt)
+    # With a boost figure present it is the true peak; when its wording says
+    # "peak", the standard "Peak"-labeled figure is really the nominal.
+    if boost:
+        if boost_is_peak and peak and peak != boost and cont is None:
+            cont = peak
+        peak = max(boost, peak or 0)
+    if cont is None:
+        for rx, w in _KNOWN_MOTOR_W:
+            if rx.search(txt):
+                cont = w
+                break
     return (round(cont) if cont else None), (round(peak) if peak else None)
 
 
 def _torque_nm(specs):
-    txt = find_spec(specs, "torque", "motor")
+    # torque is often quoted in a motor/hub/power row rather than a "torque" row
+    # (e.g. hub_rear "…hub motor, 80Nm, 1400W" or power "550 peak watts, 45nm peak")
+    txt = find_spec(specs, "torque", "motor", "hub", "drive", "power")
     nm = num(r"(\d{2,3})\s*n\W{0,2}m", txt)        # 80Nm | 105 N·m | 42nm
     return round(nm) if nm else None
+
+
+_AWD_RE = re.compile(r"dual[\s-]?motor|all[\s-]?wheel[\s-]?drive|\bawd\b|two motors|\b2wd\b", re.I)
+
+
+def _awd(model, specs):
+    """All-wheel drive (two drive motors): true when the bike has both a front and
+    a rear motor component, or any spec/name text states dual-motor/AWD."""
+    has_front = has_rear = False
+    for rows in (model.get("specs") or {}).values():
+        for k, v in rows.items():
+            if isinstance(v, dict) and v.get("_kind") == "motor":
+                if k.startswith("front"):
+                    has_front = True
+                elif k.startswith("rear"):
+                    has_rear = True
+    if has_front and has_rear:
+        return True
+    return bool(_AWD_RE.search(f"{blob(specs)} {model.get('model') or ''}")) or None
 
 
 def _drive_type(specs):
     txt = find_spec(specs, "motor", "drive").lower()
     if not txt:
         return None
-    return "mid" if re.search(r"mid[- ]?drive|bottom bracket", txt) else "hub"
+    # \bmid\b: the parsed component's placement renders as the bare token "mid"
+    # in the flattened text ("Brose mid 90Nm ..."); the lookahead keeps frame
+    # wording like "mid-step" from false-matching.
+    return ("mid" if re.search(r"mid[- ]?(drive|motor)|bottom bracket|\bmid\b(?![\s-]?step)", txt)
+            else "hub")
 
 
 def _range_vals(specs):
@@ -140,8 +211,11 @@ def _range_min_mi(specs):
 
 def _weight_lb(specs):
     # Only the bike's own weight -- skip rider/payload/cargo/capacity rows, which
-    # also quote pounds (e.g. "Recommended Rider Weight: <250lbs").
-    bad = ("rider", "payload", "cargo", "recommended", "capacity", "load", "max")
+    # also quote pounds (e.g. "Recommended Rider Weight: <250lbs", "Weight Limit:
+    # 450 lbs"). "gross" weight is bike + packaging/load, not the bike's own; the
+    # bike's bare weight is "Net Weight" / "Curb Weight" / a plain "Weight".
+    bad = ("rider", "payload", "cargo", "recommended", "capacity", "load", "max",
+           "limit", "gross")
     rows = {k: v for k, v in specs.items()
             if "weight" in k.lower() and not any(b in k.lower() for b in bad)}
     txt = find_spec(rows, "weight")
@@ -149,16 +223,30 @@ def _weight_lb(specs):
     if lb is not None:
         return round(lb, 1)
     kg = num(r"(\d{2,3}(?:\.\d+)?)\s*kg", txt)
-    return kg_to_lb(kg) if kg else None
+    if kg:
+        return kg_to_lb(kg)
+    # "N.W/G.W" net/gross rows (CEMOTO: "27kg/132kg" = net 27 / gross 132): the
+    # bike's own weight is the NET (first) figure; gross includes packaging.
+    for k, v in specs.items():
+        if re.search(r"n[._\s]*w.*g[._\s]*w|net[._\s]*weight", k, re.I):
+            mm = re.match(r"\s*(\d{2,3}(?:\.\d+)?)\s*(lb|kg)?", str(v))
+            if mm:
+                val = float(mm.group(1))
+                return round(val if (mm.group(2) or "").lower() == "lb" else kg_to_lb(val), 1)
+    return None
 
 
 # The BIKE's max payload and a REAR RACK's capacity are different max-weight specs
 # (a bike's own payload is often unlisted; a rack's capacity should be), so keep
 # them separate. Both appear under ~50 label variants.
 _BIKE_LOAD_RE = re.compile(
-    r"payload|load.?capac|weight.?limit|carry.?capac|max.?load"
+    r"payload|load.?capac|weight.?limit|weight.?capac|carry.?capac"
+    r"|max[\s_\w]{0,15}load"   # "max load", "max bike load", "maximum load"
     r"|(?:rider|system|total).*weight|gross.?vehicle.*weight|max.?rider.?weight", re.I)
-_RACK_LOAD_RE = re.compile(r"rack.*(?:load|capac|weight|payload)", re.I)
+# A rack row's label is usually just "rack"/"rear_rack" with the capacity in the
+# value ("…, 100 lb capacity"), so match the label on "rack" alone — the lb/kg
+# pull below supplies the number. (?<![bt]) keeps "bracket"/"track" out.
+_RACK_LOAD_RE = re.compile(r"(?<![bt])rack", re.I)
 # NOT the bike's payload: rack/basket sub-limits, the fork, or the bike's OWN
 # (gross/curb/net/unladen) weight.
 _LOAD_NOT_BIKE = ("rack", "basket", "fork", "gross_weight", "curb", "net_weight", "unladen")
@@ -192,6 +280,22 @@ def _rack_load_lb(specs):
     return _lbs_from(specs, _RACK_LOAD_RE)
 
 
+# Brake make/model families that are exclusively hydraulic disc, used to type a
+# brake whose spec text never spells out "hydraulic". Matched within brake-
+# labelled text only, so brand words can't leak in from elsewhere.
+_HYDRAULIC_MODEL = re.compile(
+    r"\bhd[-\s]?[a-z]?\d"            # Tektro/Shimano part nos: HD-T5040, HD-M745
+    r"|\bdb[68]\b"                   # SRAM DB6 / DB8
+    r"|maven|trickstuff|magura|hayes|\bhope\b|formula"   # hydraulic-only brands
+    r"|\bcode\b|\bguide\b|\blevel\b|\bg2\b"              # SRAM MTB hydraulic
+    r"|br[-\s]?mt|bl[-\s]?mt|bl[-\s]?u"                  # Shimano hydraulic levers/calipers
+    r"|deore|\bslx\b|\bxtr?\b|cues"                      # Shimano groups (hydraulic here)
+    r"|dh[-\s]?r|orion"                                 # TRP DH-R, Tektro Orion
+    r"|(?:force|rival|red|apex)\s*(?:e?tap\s*)?(?:axs|e1)|sram\s+red\b",  # SRAM road hydraulic
+    re.I,
+)
+
+
 def _brake_type(specs):
     txt = find_spec(specs, "brake").lower()
     if not txt:
@@ -204,6 +308,11 @@ def _brake_type(specs):
         return "hydraulic_disc"
     if re.search(r"mechanical|cable", txt):
         return "mechanical_disc"
+    # The word "hydraulic" is often missing, but the brake make/model gives it
+    # away: these families/prefixes are hydraulic-only. (Checked after the
+    # explicit mechanical/cable test so a stated mechanical brake still wins.)
+    if _HYDRAULIC_MODEL.search(txt):
+        return "hydraulic_disc"
     # disc when stated or implied by a disc-only feature (rotor mm / piston count)
     if re.search(r"\bdisc\b|\brotor\b|\d{3}\s*mm|piston", txt):
         return "disc"
@@ -212,17 +321,24 @@ def _brake_type(specs):
 
 
 def _drivetrain_type(specs):
-    txt = find_spec(specs, "derailleur", "cassette", "chain", "drivetrain",
+    txt = find_spec(specs, "derailleur", "cassette", "freewheel", "chain", "drivetrain",
                     "shift", "gear", "transmission").lower()
     if not txt:
         return None
     if re.search(r"belt|gates|carbon drive", txt):
         return "belt"
-    if re.search(r"enviolo|cvt|nuvinci|internal gear|igh|auto[- ]?shift", txt):
+    if re.search(r"enviolo|cvt|nuvinci|internal gear|igh|auto[- ]?shift"
+                 r"|rohloff|nexus|alfine|hub gear", txt):
         return "internal_gear"
-    if re.search(r"single[- ]?speed", txt):
+    if re.search(r"single[- ]?speed|singlespeed|\b1[- ]?speed", txt):
         return "single_speed"
-    return "derailleur"
+    # "derailleur" only with real gearing evidence -- otherwise an incidental
+    # match (e.g. the "chainstay" geometry row matching the "chain" keyword) would
+    # wrongly assume a derailleur on a single-speed/belt bike.
+    if re.search(r"derailleur|cassette|freewheel|sprocket|\bcog\b|shimano|sram"
+                 r"|microshift|sunrace|l-?twoo|\d{1,2}\s*-?\s*(?:speed|spd)\b", txt):
+        return "derailleur"
+    return None
 
 
 def _gears(specs):
@@ -250,22 +366,96 @@ def _frame_material(specs):
     txt = find_spec(specs, "frame").lower()
     if not txt:
         return None
-    # "carbon" means carbon *fiber*; a "(high) carbon steel" alloy is steel, so the
-    # carbon rule must not fire on it (matches parse_components.material).
-    if re.search(r"carbon(?![\s-]*steel)", txt):
+    # "carbon" means carbon *fiber* ONLY. "carbon steel" / "high|low|mid|mild
+    # carbon" are STEEL, and a "Gates Carbon Drive" belt is a DRIVETRAIN, not a
+    # frame -- the lookbehinds drop the steel qualifiers and the lookahead drops
+    # "carbon steel/drive/belt".
+    if re.search(r"(?<!high )(?<!high-)(?<!low )(?<!low-)(?<!mid )(?<!mid-)"
+                 r"(?<!medium )(?<!medium-)(?<!mild )(?<!mild-)"
+                 r"carbon(?![\s-]*(?:steel|drive|belt))", txt):
         return "carbon"
-    if re.search(r"steel|cr-?mo|chromoly", txt):
-        return "steel"
-    if re.search(r"alum|alloy|6061|aluminium", txt):
+    # A named aluminium alloy (6061/6063/7005; A356/A380 castings) means the frame
+    # is aluminium even when the text also says "steel" (a mislabelled casting or a
+    # mixed front/rear), so it's checked before the steel rule.
+    if re.search(r"alum|aluminium|\balloy\b|6061|6063|7005"
+                 r"|\ba3\d{2}\b|\ba380\b|\b\d{4}\s*-?\s*al\b|\bal[-\s]?\d{4}\b", txt):
         return "aluminum"
+    # carbon steel / high-carbon / Q-grade steel / chromoly all land here as steel
+    if re.search(r"carbon[\s-]*steel|(?:high|low|mid|medium|mild)[\s-]*carbon"
+                 r"|\bq\d{3}\b|steel|cr-?mo|chromoly|\biron\b", txt):
+        return "steel"
     return None
 
 
+# ----------------------- e-bike class & top speed -----------------------
+# Rows worth reading for class/speed signal. Key-gated so "8-speed derailleur",
+# walk-mode speeds, and "best-in-class ... fork" marketing can't false-match.
+_CLASS_KEY = re.compile(
+    r"class|speed|ride.?mode|riding.?mode|classification|\bpas\b|pedal.?assist|motor|app", re.I)
+_CLASS_KEY_NOT = re.compile(
+    r"walk|suspension|fork|battery|charger|derailleur|shifter|cassette|drivetrain", re.I)
+# "Class 2", "Class 1/2/3", "Class 1, 2, or 3", "CLASS & SPEED: 1-3", "Class 1
+# (Convertible to Class 2 and/or Class 3)" -- every digit reachable from a
+# "class" mention counts as a supported/configurable mode.
+_CLASS_LIST = re.compile(
+    r"class(?:es|ification)?[\s_]*(?:&[\s_]*speed)?[\s_:-]*"
+    r"([123](?:(?:\s*(?:[/,&+]|or|and|to|-)\s*)+[123])*)", re.I)
+_MPH = re.compile(r"(\d{2}(?:\.\d)?)\s*-?\s*(?:mph|miles?\s+per\s+hour)", re.I)
+_KPH = re.compile(r"(\d{2}(?:\.\d)?)\s*-?\s*(?:kph|km/?h)", re.I)
+_CUSTOM_MODE = re.compile(
+    r"custom\s+(?:mode|riding|profile)|riding\s+profiles?[^.]*custom|adjustable\s+top\s+speed"
+    r"|user\s+adjustable", re.I)
+
+
+def _class_speed_rows(specs):
+    return [f"{k} {v}" for k, v in specs.items()
+            if _CLASS_KEY.search(k) and not _CLASS_KEY_NOT.search(k)]
+
+
+def _classes(rows):
+    """Supported e-bike classes ([1], [1,2,3], ...), incl. convertible modes."""
+    out = set()
+    for t in rows:
+        for grp in _CLASS_LIST.findall(t):
+            nums = [int(x) for x in re.findall(r"[123]", grp)]
+            if "-" in grp and len(nums) == 2:  # "1-3" span form
+                nums = list(range(nums[0], nums[1] + 1))
+            out.update(nums)
+    return sorted(out) or None
+
+
+def _max_speed_mph(rows, classes):
+    """Top assisted speed: the site's own figure wins (largest stated mph,
+    converting kph-only rows); else the class-implied legal maximum
+    (Class 3 -> 28 mph, Class 1/2 -> 20 mph)."""
+    mph = [float(v) for t in rows for v in _MPH.findall(t) if 10 <= float(v) <= 60]
+    if mph:
+        return round(max(mph))
+    kph = [float(v) for t in rows for v in _KPH.findall(t) if 16 <= float(v) <= 96]
+    if kph:
+        return round(max(kph) * 0.621371)
+    if classes:
+        return 28 if 3 in classes else 20
+    return None
+
+
+def _custom_speed_mode(rows):
+    """True when the bike advertises a custom/user-adjustable speed mode."""
+    return True if any(_CUSTOM_MODE.search(t) for t in rows) else None
+
+
 def _sensor_type(specs):
-    txt = find_spec(specs, "sensor", "motor").lower()
-    if "torque" in txt:
+    # read the sensor / pedal-assist rows only -- NOT the motor row, whose torque
+    # RATING ("Max Torque 80Nm") is not a torque SENSOR. A "speed sensor" is the
+    # same thing as a cadence sensor.
+    txt = find_spec(specs, "sensor", "pedal").lower()
+    has_t = "torque" in txt
+    has_c = "cadence" in txt or bool(re.search(r"speed[\s-]?sensor", txt))
+    if has_t and has_c:
+        return "torque + cadence"
+    if has_t:
         return "torque"
-    if "cadence" in txt:
+    if has_c:
         return "cadence"
     return None
 
@@ -287,7 +477,10 @@ def _water_resistance(specs):
 
 
 def _ul_listed(specs):
-    return True if re.search(r"ul\s*-?\s*(2271|2849|2580)", blob(specs), re.I) else None
+    # safety certification: UL 2849/2271/2580 (US) or the equivalent EN 15194 (EU,
+    # e.g. Tern). Surfaced as one "UL / EN certified" filter.
+    return True if re.search(r"ul\s*-?\s*(2271|2849|2580)|en\s*-?\s*15194",
+                             blob(specs), re.I) else None
 
 
 def _warranty_years(model):
@@ -347,6 +540,27 @@ def _kids(model: dict) -> bool | None:
     return True if _KIDS_RE.search(model.get("model") or "") else None
 
 
+_FRAME_LBL = r"high[\s-]?step|step[\s-]?thr(?:u|ough)|step[\s-]?over|mid[\s-]?step"
+
+
+def _height_for_frame(value, frame_style):
+    """When a rider-height string bundles a range per frame style (Monarc:
+    "High-Step: 5'4"-6'5" Step-Thru: 5'2"-6'3""), return only the segment matching
+    this model's frame style; otherwise return the value unchanged (so a single
+    range or per-size dict is enveloped as before)."""
+    if not isinstance(value, str):
+        return value
+    pairs = re.findall(rf"({_FRAME_LBL})\s*:?\s*(.*?)(?=(?:{_FRAME_LBL})|$)",
+                       value, re.I | re.S)
+    if not pairs:
+        return value
+    thru = bool(re.search(r"thr(?:u|ough)", frame_style or "", re.I))
+    for label, body in pairs:
+        if bool(re.search(r"thr(?:u|ough)", label, re.I)) == thru:
+            return body
+    return value
+
+
 def _fit_height(model: dict) -> tuple[float | None, float | None]:
     """(min_in, max_in) the bike can fit, enveloped across every published
     rider-height range and frame size, or (None, None) -- unrounded inches, so the
@@ -358,11 +572,71 @@ def _fit_height(model: dict) -> tuple[float | None, float | None]:
     for k, v in geo.items():
         kl = k.lower()
         if "rider" in kl and "height" in kl:
-            r = height_range_in(v)
+            r = height_range_in(_height_for_frame(v, model.get("frame_style")))
+            if r:
+                lo = r[0] if lo is None else min(lo, r[0])
+                hi = r[1] if hi is None else max(hi, r[1])
+    # A rider-height row can also land outside the geometry group (some brands list
+    # "Recommended Rider Height" among general specs), so scan every other group's
+    # string values too.
+    for group, rows in (model.get("specs") or {}).items():
+        if group == "geometry":
+            continue
+        for k, v in (rows or {}).items():
+            kl = k.lower()
+            if "rider" in kl and "height" in kl and isinstance(v, str):
+                r = height_range_in(_height_for_frame(v, model.get("frame_style")))
+                if r:
+                    lo = r[0] if lo is None else min(lo, r[0])
+                    hi = r[1] if hi is None else max(hi, r[1])
+    # Also envelope across per-frame-size heights when frame_sizes carries them.
+    # Some size charts list a rider range per frame only (e.g. a size-guide image
+    # captured into a curated override), with no geometry rider_height_range.
+    for fs in model.get("frame_sizes") or []:
+        lo_s, hi_s = fs.get("height_min"), fs.get("height_max")
+        if lo_s and hi_s:
+            r = height_range_in(f"{lo_s} - {hi_s}")
             if r:
                 lo = r[0] if lo is None else min(lo, r[0])
                 hi = r[1] if hi is None else max(hi, r[1])
     return (lo, hi) if lo is not None else (None, None)
+
+
+# Whole-page HTML extractions (resolve_missing_fields.py): fallback values for
+# typed fields the spec sheet doesn't yield, with provenance (snippet + URL) in
+# the curated file. Applied ONLY when the parsed value is absent.
+try:
+    HTML_EXTRACTED = json.loads(
+        (Path(__file__).parent / "data" / "curated" / "html_extracted.json").read_text())
+except (FileNotFoundError, ValueError):
+    HTML_EXTRACTED = {}
+
+
+def _listed_frame_size(specs):
+    """A single stated frame-size label (e.g. '18\"') from a 'Frame Size' row -- not
+    a wheel/tire size, not a chart header. None when the bike doesn't name one."""
+    for k, v in specs.items():
+        kl = k.lower()
+        if "frame" in kl and "size" in kl and isinstance(v, str):
+            val = v.replace("''", '"').strip()
+            if val and len(val) <= 12 and not re.search(r"rider|height|inseam", val, re.I):
+                return val
+    return None
+
+
+def _ensure_frame_sizes(model: dict, typed: dict) -> list:
+    """frame_sizes is always a non-empty array. Multi-size bikes already carry one
+    (from the size-chart enrichment); a single-size bike becomes a collection of
+    one holding its rider-height range and listed frame size (if any). Heights come
+    from the already-computed (frame-style-correct) fit envelope; null when the
+    range couldn't be parsed."""
+    fs = model.get("frame_sizes")
+    if fs:
+        return fs
+    lo, hi = typed.get("fit_height_min_in"), typed.get("fit_height_max_in")
+    fmt = lambda i: f"{int(i) // 12}'{int(i) % 12}\"" if i is not None else None
+    return [{"size": _listed_frame_size(flatten_grouped(model.get("specs") or {})),
+             "height_min": fmt(lo), "height_max": fmt(hi)}]
 
 
 def extract_typed_specs(model: dict) -> dict:
@@ -378,7 +652,9 @@ def extract_typed_specs(model: dict) -> dict:
     fit_max_in = round(fit_hi_in) if fit_hi_in is not None else None
     fit_min_mm = round(fit_lo_in * 25.4) if fit_lo_in is not None else None
     fit_max_mm = round(fit_hi_in * 25.4) if fit_hi_in is not None else None
-    return {
+    class_rows = _class_speed_rows(specs)
+    bike_classes = _classes(class_rows)
+    typed = {
         "battery_wh": _battery_wh(specs),
         "cell_brand": _cell_brand(specs),
         "removable_battery": True if re.search(r"removable", find_spec(specs, "battery"), re.I) else None,
@@ -386,6 +662,7 @@ def extract_typed_specs(model: dict) -> dict:
         "motor_peak_w": motor_peak_w,
         "torque_nm": _torque_nm(specs),
         "drive_type": _drive_type(specs),
+        "awd": _awd(model, specs),
         "range_mi": _range_mi(specs),
         "range_min_mi": _range_min_mi(specs),
         "weight_lb": _weight_lb(specs),
@@ -397,6 +674,9 @@ def extract_typed_specs(model: dict) -> dict:
         "suspension": _suspension(specs),
         "frame_material": _frame_material(specs),
         "sensor_type": _sensor_type(specs),
+        "classes": bike_classes,
+        "max_speed_mph": _max_speed_mph(class_rows, bike_classes),
+        "custom_speed_mode": _custom_speed_mode(class_rows),
         "display_type": _display_type(specs),
         "water_resistance": _water_resistance(specs),
         "ul_listed": _ul_listed(specs),
@@ -410,6 +690,22 @@ def extract_typed_specs(model: dict) -> dict:
         "fit_height_min_mm": fit_min_mm,
         "fit_height_max_mm": fit_max_mm,
     }
+    # html-extracted fallbacks: fill only absent fields; tag the model for
+    # transparency (mirrors curated_overrides)
+    ext = HTML_EXTRACTED.get(model.get("id")) or {}
+    applied = []
+    for f, e in ext.items():
+        if typed.get(f) in (None, "", []):
+            typed[f] = e.get("value")
+            applied.append(f)
+    if applied:
+        model["html_extracted"] = sorted(applied)
+    # an html-extracted rider-height (inches) implies the mm bounds too
+    if typed.get("fit_height_min_in") and not typed.get("fit_height_min_mm"):
+        typed["fit_height_min_mm"] = round(typed["fit_height_min_in"] * 25.4)
+    if typed.get("fit_height_max_in") and not typed.get("fit_height_max_mm"):
+        typed["fit_height_max_mm"] = round(typed["fit_height_max_in"] * 25.4)
+    return typed
 
 
 # ------------------------ field distributions / stats ------------------------
@@ -474,14 +770,22 @@ def _avg(*vals):
     return round(sum(have) / len(have), 1) if have else None
 
 
-def compute_scores(typed: dict, stats: dict, bom_pct, price_pct) -> dict:
+def compute_scores(typed: dict, stats: dict, bom_pct, price_pct, pct: dict) -> dict:
     s = {}
 
-    # --- numeric dimensions: the field-relative position, 0-100 ---
-    s["power"] = _avg(_scale(typed.get("motor_w"), stats.get("motor_w")),
-                      _scale(typed.get("torque_nm"), stats.get("torque_nm")))
-    s["range"] = _scale(typed.get("range_mi"), stats.get("range_mi"))
-    s["battery"] = _scale(typed.get("battery_wh"), stats.get("battery_wh"))
+    # --- numeric dimensions: field-relative RANK percentile (0-100) ---
+    # Rank, not magnitude, so a handful of extreme bikes (e.g. eMoto peak/wheel
+    # torque of 200-430 Nm) don't compress everyone else's score. power = motor
+    # wattage; torque is its own dimension (was folded into power).
+    def _rank(field):
+        p = pct.get(f"{field}_pct")
+        return round(p * 100, 1) if p is not None else None
+    s["power"] = _rank("motor_w")
+    s["torque"] = _rank("torque_nm")
+    s["range"] = _rank("range_mi")
+    s["battery"] = _rank("battery_wh")
+    # price as affordability: cheaper ranks higher (price_pct is already inverted).
+    s["price"] = round(price_pct * 100, 1) if price_pct is not None else None
 
     # --- categorical dimensions: transparent additive rubrics (capped 100) ---
     comp = 0
@@ -493,7 +797,7 @@ def compute_scores(typed: dict, stats: dict, bom_pct, price_pct) -> dict:
     comp += {"full": 25, "air_fork": 20, "coil_fork": 10, "rigid": 0}.get(susp, 0)
     fm = typed.get("frame_material")
     comp += {"carbon": 15, "aluminum": 8, "steel": 5}.get(fm, 0)
-    if typed.get("sensor_type") == "torque":
+    if typed.get("sensor_type") in ("torque", "torque + cadence"):
         comp += 15
     if typed.get("display_type") == "color_tft":
         comp += 10
@@ -507,7 +811,7 @@ def compute_scores(typed: dict, stats: dict, bom_pct, price_pct) -> dict:
         safety += 18
     if typed.get("water_resistance"):
         safety += 12
-    if typed.get("sensor_type") == "torque":
+    if typed.get("sensor_type") in ("torque", "torque + cadence"):
         safety += 8
     s["safety"] = min(safety, 100) if (bt or typed.get("ul_listed")) else None
 
@@ -535,7 +839,7 @@ def compute_scores(typed: dict, stats: dict, bom_pct, price_pct) -> dict:
         tech += 20
     if typed.get("display_type") == "color_tft":
         tech += 12
-    if typed.get("sensor_type") == "torque":
+    if typed.get("sensor_type") in ("torque", "torque + cadence"):
         tech += 13
     if "belt drive" in nt:
         tech += 10
@@ -584,7 +888,7 @@ def component_quality(model: dict, part_prices: dict) -> dict:
 
 def _highlights(typed: dict) -> list:
     out = list(typed.get("notable_tech", []))
-    if typed.get("sensor_type") == "torque" and "torque sensor" not in out:
+    if typed.get("sensor_type") in ("torque", "torque + cadence") and "torque sensor" not in out:
         out.append("torque sensor")
     # NB hydraulic disc brakes are deliberately NOT a highlight: ~80% of tracked
     # e-bikes have them, so they don't differentiate.
@@ -637,6 +941,9 @@ def main():
     typed_by_id = {}
     for m in models:
         t = extract_typed_specs(m)
+        # frame_sizes is always a non-empty array (single-size = collection of one)
+        m["frame_sizes"] = _ensure_frame_sizes(m, t)
+        m["frame_size_count"] = len(m["frame_sizes"])
         t["price"] = m.get("price")
         t["bom_pct"] = bom.get((m.get("brand"), m.get("model")))
         typed_by_id[m["id"]] = t
@@ -661,7 +968,7 @@ def main():
         m["analysis"] = {
             "specs_typed": t,
             "percentiles": pct,
-            "scores": compute_scores(t, stats, bom_pct, price_pct),
+            "scores": compute_scores(t, stats, bom_pct, price_pct, pct),
             "highlights": _highlights(t),
             "component_quality": component_quality(m, part_prices),
         }

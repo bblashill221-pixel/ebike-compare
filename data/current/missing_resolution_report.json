@@ -1,0 +1,3013 @@
+{
+ "generated_at": "2026-06-16T00:30:35.108040+00:00",
+ "resolved_per_pass": [
+  36,
+  46,
+  5
+ ],
+ "resolved_by_field": {
+  "max_speed_mph": 35,
+  "sensor_type": 33,
+  "max_load_lb": 9,
+  "range_mi": 2,
+  "rack_load_lb": 2,
+  "motor_w": 6
+ },
+ "unresolved": [
+  {
+   "url": "https://www.buzzbicycles.com/buzz-beekeeper-electric-cargo-bike-e4023/",
+   "field": "frame_material",
+   "reason": "ambiguous: ['aluminum', 'steel']"
+  },
+  {
+   "url": "https://www.buzzbicycles.com/buzz-centris/",
+   "field": "frame_material",
+   "reason": "ambiguous: ['aluminum', 'steel']"
+  },
+  {
+   "url": "https://www.buzzbicycles.com/buzz-cerana2/",
+   "field": "frame_material",
+   "reason": "ambiguous: ['aluminum', 'steel']"
+  },
+  {
+   "url": "https://www.buzzbicycles.com/buzz-e-trike/",
+   "field": "frame_material",
+   "reason": "ambiguous: ['aluminum', 'steel']"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/haul-st/p/277759",
+   "field": "max_load_lb",
+   "reason": "ambiguous: ['132', '419']"
+  },
+  {
+   "url": "https://www.aventon.com/products/current-adv-ebike",
+   "field": "sensor_type",
+   "reason": "ambiguous: ['cadence', 'torque + cadence']"
+  },
+  {
+   "url": "https://www.aventon.com/products/current-exp-ebike",
+   "field": "sensor_type",
+   "reason": "ambiguous: ['cadence', 'torque + cadence']"
+  },
+  {
+   "url": "https://www.aventon.com/products/level-4-adv-ebike?variant=45028427169987",
+   "field": "motor_w",
+   "reason": "ambiguous: ['100', '1074', '116', '1246']"
+  },
+  {
+   "url": "https://www.aventon.com/products/level-4-adv-ebike?variant=45028427169987",
+   "field": "sensor_type",
+   "reason": "ambiguous: ['cadence', 'torque + cadence']"
+  },
+  {
+   "url": "https://www.aventon.com/products/level-4-adv-step-through-ebike?variant=45028427366595",
+   "field": "motor_w",
+   "reason": "ambiguous: ['100', '1074', '116', '1246']"
+  },
+  {
+   "url": "https://www.aventon.com/products/level-4-adv-step-through-ebike?variant=45028427366595",
+   "field": "sensor_type",
+   "reason": "ambiguous: ['cadence', 'torque + cadence']"
+  },
+  {
+   "url": "https://cemotoride.com/products/cemoto-fat-tire-ebike-eb28a",
+   "field": "range_mi",
+   "reason": "ambiguous: ['55', '60']"
+  },
+  {
+   "url": "https://cykebikes.com/products/collie-cargo-ebike",
+   "field": "rack_load_lb",
+   "reason": "ambiguous: ['200', '300', '450']"
+  },
+  {
+   "url": "https://cykebikes.com/products/grizzly-folding-ebike",
+   "field": "rack_load_lb",
+   "reason": "ambiguous: ['200', '300']"
+  },
+  {
+   "url": "https://engwe-bikes.com/products/engwe-e26",
+   "field": "motor_w",
+   "reason": "ambiguous: ['1000', '750']"
+  },
+  {
+   "url": "https://www.evelo.com/products/atlas",
+   "field": "range_mi",
+   "reason": "ambiguous: ['100', '60']"
+  },
+  {
+   "url": "https://www.heybike.com/products/alpha?variant=46477313048795",
+   "field": "sensor_type",
+   "reason": "ambiguous: ['torque', 'torque + cadence']"
+  },
+  {
+   "url": "https://www.heybike.com/products/alpha?variant=46477313016027",
+   "field": "sensor_type",
+   "reason": "ambiguous: ['torque', 'torque + cadence']"
+  },
+  {
+   "url": "https://www.heybike.com/products/mars-3-0",
+   "field": "sensor_type",
+   "reason": "ambiguous: ['cadence', 'torque', 'torque + cadence']"
+  },
+  {
+   "url": "https://www.heybike.com/products/ranger-3-0-pro",
+   "field": "sensor_type",
+   "reason": "ambiguous: ['cadence', 'torque', 'torque + cadence']"
+  },
+  {
+   "url": "https://himiwaybike.com/products/himiway-electric-fat-bike",
+   "field": "torque_nm",
+   "reason": "ambiguous: ['80', '85']"
+  },
+  {
+   "url": "https://himiwaybike.com/products/escape-pro-moped-style-ebike",
+   "field": "max_speed_mph",
+   "reason": "ambiguous: ['20', '23']"
+  },
+  {
+   "url": "https://himiwaybike.com/products/c5-electric-motorbike?variant=40862972772427",
+   "field": "max_speed_mph",
+   "reason": "ambiguous: ['20', '28']"
+  },
+  {
+   "url": "https://himiwaybike.com/products/c5-electric-motorbike?variant=40327224066123",
+   "field": "max_speed_mph",
+   "reason": "ambiguous: ['20', '28']"
+  },
+  {
+   "url": "https://himiwaybike.com/products/d5-2?variant=42167472619595",
+   "field": "fit_height_min_in",
+   "reason": "ambiguous: ['59', '61']"
+  },
+  {
+   "url": "https://himiwaybike.com/products/d5-2?variant=42167473995851",
+   "field": "fit_height_min_in",
+   "reason": "ambiguous: ['59', '61']"
+  },
+  {
+   "url": "https://magicyclebike.com/products/magicycle-20-deer-step-thru-full-suspension-ebike-suv",
+   "field": "sensor_type",
+   "reason": "ambiguous: ['cadence', 'torque']"
+  },
+  {
+   "url": "https://magicyclebike.com/products/magicycle-52v-20ah-cruiser-pro-step-over-mountain-electric-bike-midnight-blue",
+   "field": "sensor_type",
+   "reason": "ambiguous: ['cadence', 'torque']"
+  },
+  {
+   "url": "https://magicyclebike.com/products/magicycle-52v-20ah-cruiser-pro-mid-step-thru-mountain-electric-bike-pearl-white",
+   "field": "sensor_type",
+   "reason": "ambiguous: ['cadence', 'torque']"
+  },
+  {
+   "url": "https://magicyclebike.com/products/magicycle-ocelot-pro-long-range-step-thru-fat-tire-electric-bike",
+   "field": "sensor_type",
+   "reason": "ambiguous: ['cadence', 'torque']"
+  },
+  {
+   "url": "https://www.prioritybicycles.com/products/ecoast",
+   "field": "drive_type",
+   "reason": "ambiguous: ['hub', 'mid']"
+  },
+  {
+   "url": "https://www.prioritybicycles.com/products/priority-glide-e-bike",
+   "field": "max_speed_mph",
+   "reason": "ambiguous: ['20', '28']"
+  },
+  {
+   "url": "https://newurtopia.com/products/urtopia-carbon-fusion-gt",
+   "field": "suspension",
+   "reason": "ambiguous: ['air_fork', 'coil_fork']"
+  },
+  {
+   "url": "https://velowave.com/products/prado-s-commuter-electric-bike",
+   "field": "sensor_type",
+   "reason": "ambiguous: ['cadence', 'torque']"
+  },
+  {
+   "url": "https://velowave.com/products/ranger-fat-tire-electric-bike",
+   "field": "sensor_type",
+   "reason": "ambiguous: ['cadence', 'torque']"
+  },
+  {
+   "url": "https://velowave.com/products/velowave-rover-step-thru-electric-bike",
+   "field": "sensor_type",
+   "reason": "ambiguous: ['cadence', 'torque']"
+  },
+  {
+   "url": "https://vvolt.com/products/alpha-ii",
+   "field": "battery_wh",
+   "reason": "ambiguous: ['374', '490']"
+  },
+  {
+   "url": "https://wallkeebike.com/products/wallke-h7-ultra-step-thru-off-grid-powerstorage-e-bike",
+   "field": "drivetrain_type",
+   "reason": "ambiguous: ['derailleur', 'internal_gear']"
+  },
+  {
+   "url": "https://wallkeebike.com/products/wallke-h9-ultra-folding-off-grid-powerstorage-e-bike",
+   "field": "drivetrain_type",
+   "reason": "ambiguous: ['derailleur', 'internal_gear']"
+  },
+  {
+   "url": "https://wallkeebike.com/products/wallke-h7-step-thru",
+   "field": "sensor_type",
+   "reason": "ambiguous: ['cadence', 'torque + cadence']"
+  },
+  {
+   "url": "https://wallkeebike.com/products/h9awd",
+   "field": "sensor_type",
+   "reason": "ambiguous: ['cadence', 'torque + cadence']"
+  },
+  {
+   "url": "https://wallkeebike.com/products/wallke-titan-x1",
+   "field": "sensor_type",
+   "reason": "ambiguous: ['cadence', 'torque']"
+  },
+  {
+   "url": "https://www.aventon.com/products/ramblas-adv-ebike",
+   "field": "rack_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://blixbike.com/products/packa-electric-cargo-bike?variant=49144481054997",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://blixbike.com/products/packa-electric-cargo-bike?variant=49144481054997",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://blixbike.com/products/packa-electric-cargo-bike?variant=49144481153301",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://blixbike.com/products/packa-electric-cargo-bike?variant=49144481153301",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.buzzbicycles.com/buzz-beekeeper-electric-cargo-bike-e4023/",
+   "field": "suspension",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.buzzbicycles.com/buzz-beekeeper-electric-cargo-bike-e4023/",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.buzzbicycles.com/buzz-centris/",
+   "field": "rack_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.buzzbicycles.com/buzz-centris/",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.buzzbicycles.com/buzz-cerana2/",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.buzzbicycles.com/buzz-cerana2/",
+   "field": "rack_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.buzzbicycles.com/buzz-e-trike/",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.buzzbicycles.com/buzz-e-trike/",
+   "field": "suspension",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.buzzbicycles.com/buzz-e-trike/",
+   "field": "rack_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.buzzbicycles.com/buzz-e-trike/",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/adventure-neo/adventure-neo-4",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/adventure-neo/adventure-neo-4",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/adventure-neo/adventure-neo-4",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/adventure-neo-allroad/adventure-neo-allroad-c68524m",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/adventure-neo-allroad/adventure-neo-allroad-c68524m",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/adventure-neo-allroad/adventure-neo-allroad-c68524m",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/adventure-neo-allroad/adventure-neo-allroad-c68524m",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/adventure-neo-allroad/adventure-neo-allroad-eq-c68564m",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/adventure-neo-allroad/adventure-neo-allroad-eq-c68564m",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/adventure-neo-allroad/adventure-neo-allroad-eq-c68564m",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/adventure-neo-allroad/adventure-neo-allroad-eq-low-stepthru-c68544u",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/adventure-neo-allroad/adventure-neo-allroad-eq-low-stepthru-c68544u",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/adventure-neo-allroad/adventure-neo-allroad-eq-low-stepthru-c68544u",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/adventure-neo-allroad/adventure-neo-allroad-low-stepthru-c68514u",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/adventure-neo-allroad/adventure-neo-allroad-low-stepthru-c68514u",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/adventure-neo-allroad/adventure-neo-allroad-low-stepthru-c68514u",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/adventure-neo-allroad/adventure-neo-allroad-low-stepthru-c68514u",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/adventure-neo-allroad/adventure-neo-allroad-speed-c68554m",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/adventure-neo-allroad/adventure-neo-allroad-speed-c68554m",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/adventure-neo-allroad/adventure-neo-allroad-speed-c68554m",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/adventure-neo-allroad/adventure-neo-allroad-speed-low-stepthru-c68534u",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/adventure-neo-allroad/adventure-neo-allroad-speed-low-stepthru-c68534u",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/adventure-neo-allroad/adventure-neo-allroad-speed-low-stepthru-c68534u",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-cargo/cargowagen-neo/cargowagen-neo",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-cargo/cargowagen-neo/cargowagen-neo",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-cargo/cargowagen-neo/cargowagen-neo",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/flyingv/flyingv",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/flyingv/flyingv",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/flyingv/flyingv",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/flyingv/flyingv",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/mavaro-neo/mavaro-neo-1-low-stepthru",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/mavaro-neo/mavaro-neo-1-low-stepthru",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/mavaro-neo/mavaro-neo-1-low-stepthru",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/mavaro-neo/mavaro-neo-1-low-stepthru",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/mavaro-neo/mavaro-neo-2-low-stepthru",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/mavaro-neo/mavaro-neo-2-low-stepthru",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/mavaro-neo/mavaro-neo-2-low-stepthru",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/mavaro-neo/mavaro-neo-2-low-stepthru",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/mavaro-neo/mavaro-neo-3-low-stepthru",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/mavaro-neo/mavaro-neo-3-low-stepthru",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/mavaro-neo/mavaro-neo-3-low-stepthru",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-neo/moterra-1",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-neo/moterra-1",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-neo/moterra-1",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-neo/moterra-1",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-neo/moterra-1",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-neo/moterra-2",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-neo/moterra-2",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-neo/moterra-2",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-neo/moterra-2",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-neo/moterra-2",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-neo/moterra-3-smu",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-neo/moterra-3-smu",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-neo/moterra-3-smu",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-neo/moterra-3-smu",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-neo/moterra-3-smu",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-neo/moterra-4-smu",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-neo/moterra-4-smu",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-neo/moterra-4-smu",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-neo/moterra-4-smu",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-neo/moterra-4-smu",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-neo/moterra-4-plus-smu",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-neo/moterra-4-plus-smu",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-neo/moterra-4-plus-smu",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-neo/moterra-4-plus-smu",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-neo/moterra-4-plus-smu",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-neo-lt/moterra-lt-1-c65144u",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-neo-lt/moterra-lt-1-c65144u",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-neo-lt/moterra-lt-1-c65144u",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-neo-lt/moterra-lt-1-c65144u",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-neo-lt/moterra-lt-1-c65144u",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-neo/moterra-neo-carbon-2-c25272u",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-neo/moterra-neo-carbon-2-c25272u",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-neo/moterra-neo-carbon-2-c25272u",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-neo/moterra-neo-carbon-2-c25272u",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-neo/moterra-neo-carbon-2-c25272u",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-sl/moterra-sl-1",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-sl/moterra-sl-1",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-sl/moterra-sl-1",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-sl/moterra-sl-1",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-sl/moterra-sl-1",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-sl/moterra-sl-2",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-sl/moterra-sl-2",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-sl/moterra-sl-2",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-sl/moterra-sl-2",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-sl/moterra-sl-2",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-sl/moterra-sl-lab71-c65114u",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-sl/moterra-sl-lab71-c65114u",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-sl/moterra-sl-lab71-c65114u",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-sl/moterra-sl-lab71-c65114u",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/moterra-sl/moterra-sl-lab71-c65114u",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-road/synapse-neo/synapse-neo-c67114u",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-road/synapse-neo/synapse-neo-c67114u",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-road/synapse-neo/synapse-neo-c67114u",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-road/synapse-neo/synapse-neo-c67114u",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-road/synapse-neo-allroad/synapse-neo-allroad-1-c67124u",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-road/synapse-neo-allroad/synapse-neo-allroad-1-c67124u",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-road/synapse-neo-allroad/synapse-neo-allroad-1-c67124u",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-road/synapse-neo-allroad/synapse-neo-allroad-1-c67124u",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-road/synapse-neo-allroad/synapse-neo-allroad-2-c67134u",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-road/synapse-neo-allroad/synapse-neo-allroad-2-c67134u",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-road/synapse-neo-allroad/synapse-neo-allroad-2-c67134u",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-road/synapse-neo-allroad/synapse-neo-allroad-2-c67134u",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/tesoro-neo-carbon/tesoro-neo-carbon-1-c66124u",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/tesoro-neo-carbon/tesoro-neo-carbon-1-c66124u",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/tesoro-neo-carbon/tesoro-neo-carbon-1-c66124u",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/tesoro-neo-carbon/tesoro-neo-carbon-1-c66124u",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/tesoro-neo-carbon/tesoro-neo-carbon-1-c66124u",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/tesoro-neo-carbon/tesoro-neo-carbon-2-c66114u",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/tesoro-neo-carbon/tesoro-neo-carbon-2-c66114u",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/tesoro-neo-carbon/tesoro-neo-carbon-2-c66114u",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/tesoro-neo-carbon/tesoro-neo-carbon-2-c66114u",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/tesoro-neo-carbon/tesoro-neo-carbon-2-c66114u",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-touring/tesoro-neo-x/tesoro-neo-x-1",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-touring/tesoro-neo-x/tesoro-neo-x-1",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-touring/tesoro-neo-x/tesoro-neo-x-1",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-touring/tesoro-neo-x/tesoro-neo-x-1",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-touring/tesoro-neo-x/tesoro-neo-x-1-stepthru",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-touring/tesoro-neo-x/tesoro-neo-x-1-stepthru",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-touring/tesoro-neo-x/tesoro-neo-x-1-stepthru",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-touring/tesoro-neo-x/tesoro-neo-x-1-stepthru",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-touring/tesoro-neo-x/tesoro-neo-x-2-c66242u",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-touring/tesoro-neo-x/tesoro-neo-x-2-c66242u",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-touring/tesoro-neo-x/tesoro-neo-x-2-c66242u",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-touring/tesoro-neo-x/tesoro-neo-x-2-stepthru-c66262u",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-touring/tesoro-neo-x/tesoro-neo-x-2-stepthru-c66262u",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-touring/tesoro-neo-x/tesoro-neo-x-2-stepthru-c66262u",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-touring/tesoro-neo-x/tesoro-neo-x-3-c66014u",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-touring/tesoro-neo-x/tesoro-neo-x-3-c66014u",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-touring/tesoro-neo-x/tesoro-neo-x-3-c66014u",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-fitness/treadwell-neo/treadwell-neo-2",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-fitness/treadwell-neo/treadwell-neo-2",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-fitness/treadwell-neo/treadwell-neo-2",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-fitness/treadwell-neo/treadwell-neo-2",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-fitness/treadwell-neo/treadwell-neo-2-eq",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-fitness/treadwell-neo/treadwell-neo-2-eq",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-fitness/treadwell-neo/treadwell-neo-2-eq",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-fitness/treadwell-neo/treadwell-neo-2-eq",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-fitness/treadwell-neo/treadwell-neo-2-remixte",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-fitness/treadwell-neo/treadwell-neo-2-remixte",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-fitness/treadwell-neo/treadwell-neo-2-remixte",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.cannondale.com/en-us/bikes/electric/e-fitness/treadwell-neo/treadwell-neo-2-remixte",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://cemotoride.com/products/fat-tire-mountain-ebike",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://cemotoride.com/products/fat-tire-mountain-ebike",
+   "field": "fit_height_min_in",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://cemotoride.com/products/fat-tire-mountain-ebike",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://cemotoride.com/products/off-road-electric-dirt-bike-for-adults-teens",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://cemotoride.com/products/off-road-electric-dirt-bike-for-adults-teens",
+   "field": "frame_material",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://cemotoride.com/products/off-road-electric-dirt-bike-for-adults-teens",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://cemotoride.com/products/off-road-electric-dirt-bike-for-adults-teens",
+   "field": "fit_height_min_in",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://cemotoride.com/products/off-road-electric-dirt-bike-for-adults-teens",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://cemotoride.com/products/eb66-harley-like-hi-tech-ebike",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://cemotoride.com/products/eb66-harley-like-hi-tech-ebike",
+   "field": "fit_height_min_in",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://cemotoride.com/products/eb66-harley-like-hi-tech-ebike",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://cemotoride.com/products/cemoto-eb28a-emountain-bike",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://cemotoride.com/products/cemoto-eb28a-emountain-bike",
+   "field": "fit_height_min_in",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://cemotoride.com/products/cemoto-eb28a-emountain-bike",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://cemotoride.com/products/cemoto-fat-tire-ebike-eb28a",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://cemotoride.com/products/cemoto-fat-tire-ebike-eb28a",
+   "field": "fit_height_min_in",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://cemotoride.com/products/cemoto-fat-tire-ebike-eb28a",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://cemotoride.com/products/premium-cargo-electric-bike-aeb69",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://cemotoride.com/products/premium-cargo-electric-bike-aeb69",
+   "field": "drivetrain_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://cemotoride.com/products/premium-cargo-electric-bike-aeb69",
+   "field": "fit_height_min_in",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://cemotoride.com/products/premium-cargo-electric-bike-aeb69",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://cemotoride.com/products/cemoto-eb40-electric-city-commuter-bike",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://cemotoride.com/products/cemoto-eb40-electric-city-commuter-bike",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://cykebikes.com/products/kingfisher-mid-drive-folding-ebike",
+   "field": "suspension",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://cykebikes.com/products/kingfisher-mid-drive-folding-ebike",
+   "field": "fit_height_min_in",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://engwe-bikes.com/products/engwe-e26",
+   "field": "display_type",
+   "reason": "no candidate (2 models)"
+  },
+  {
+   "url": "https://engwe-bikes.com/products/engwe-e26",
+   "field": "sensor_type",
+   "reason": "no candidate (2 models)"
+  },
+  {
+   "url": "https://engwe-bikes.com/products/engwe-ep-2-pro-750w-folding-electric-mountain-bike",
+   "field": "fit_height_min_in",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://engwe-bikes.com/products/l20-2-0",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://engwe-bikes.com/products/m20",
+   "field": "sensor_type",
+   "reason": "no candidate (2 models)"
+  },
+  {
+   "url": "https://engwe-bikes.com/products/m20-2-0",
+   "field": "fit_height_min_in",
+   "reason": "no candidate (2 models)"
+  },
+  {
+   "url": "https://engwe-bikes.com/products/m20-2-0",
+   "field": "max_load_lb",
+   "reason": "no candidate (2 models)"
+  },
+  {
+   "url": "https://engwe-bikes.com/products/m20-2-0",
+   "field": "sensor_type",
+   "reason": "no candidate (2 models)"
+  },
+  {
+   "url": "https://engwe-bikes.com/products/3300-w-electric-bike-motor-engwe-m20-3-0-moped-style-ebike",
+   "field": "sensor_type",
+   "reason": "no candidate (2 models)"
+  },
+  {
+   "url": "https://engwe-bikes.com/products/engwe-x20",
+   "field": "display_type",
+   "reason": "no candidate (2 models)"
+  },
+  {
+   "url": "https://engwe-bikes.com/products/engwe-x20",
+   "field": "sensor_type",
+   "reason": "no candidate (2 models)"
+  },
+  {
+   "url": "https://engwe-bikes.com/products/engwe-x24",
+   "field": "display_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://engwe-bikes.com/products/engwe-x24",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://engwe-bikes.com/products/engwe-x26-x24-x20",
+   "field": "display_type",
+   "reason": "no candidate (2 models)"
+  },
+  {
+   "url": "https://engwe-bikes.com/products/engwe-x26-x24-x20",
+   "field": "suspension",
+   "reason": "no candidate (2 models)"
+  },
+  {
+   "url": "https://engwe-bikes.com/products/engwe-x26-x24-x20",
+   "field": "cell_brand",
+   "reason": "no candidate (2 models)"
+  },
+  {
+   "url": "https://engwe-bikes.com/products/engwe-x26-x24-x20",
+   "field": "fit_height_min_in",
+   "reason": "no candidate (2 models)"
+  },
+  {
+   "url": "https://engwe-bikes.com/products/engwe-x26-x24-x20",
+   "field": "sensor_type",
+   "reason": "no candidate (2 models)"
+  },
+  {
+   "url": "https://euphree.com/products/city-robin",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://euphree.com/products/solar-sparrow",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://euphree.com/products/stellar-falcon-2-mid-step?variant=47566786298068",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://euphree.com/products/stellar-falcon-2-step-thru?variant=47566790394068",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.evelo.com/products/compass",
+   "field": "rack_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.evelo.com/products/compass",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.evelo.com/products/galaxy-lux",
+   "field": "rack_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.heybike.com/products/alpha?variant=46477313048795",
+   "field": "fit_height_min_in",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.heybike.com/products/alpha?variant=46477313016027",
+   "field": "fit_height_min_in",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.heybike.com/products/helio-f",
+   "field": "fit_height_min_in",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.heybike.com/products/horizon",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.heybike.com/products/hybrid",
+   "field": "fit_height_min_in",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.heybike.com/products/mars-3-0",
+   "field": "fit_height_min_in",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.heybike.com/products/ranger-3-0-pro",
+   "field": "fit_height_min_in",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.heybike.com/products/saturn?variant=48751967437019",
+   "field": "frame_material",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.heybike.com/products/saturn?variant=48751967437019",
+   "field": "fit_height_min_in",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.heybike.com/products/saturn?variant=48751967437019",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.heybike.com/products/saturn?variant=48751977529563",
+   "field": "frame_material",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.heybike.com/products/saturn?variant=48751977529563",
+   "field": "fit_height_min_in",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.heybike.com/products/saturn?variant=48751977529563",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://himiwaybike.com/products/electric-commuter-bike-a3",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://himiwaybike.com/products/folding-electric-bike-b3",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://himiwaybike.com/products/folding-electric-bike-b3",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://himiwaybike.com/products/c3cargo-ebike",
+   "field": "rack_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://himiwaybike.com/products/c3cargo-ebike",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://himiwaybike.com/products/all-terrain-step-thru-electric-bike",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://himiwaybike.com/products/premium-all-terrain-electric-bike-st",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://himiwaybike.com/products/himiway-d7-cobra-electric-hunting-bike",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://himiwaybike.com/products/himiway-a7pro-commuter-ebike",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://himiwaybike.com/products/kids-electric-bike",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://himiwaybike.com/products/kids-electric-bike",
+   "field": "drivetrain_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://himiwaybike.com/products/kids-electric-bike",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://juicedbikes.com/products/scrambler",
+   "field": "sensor_type",
+   "reason": "no candidate (2 models)"
+  },
+  {
+   "url": "https://lectricebikes.com/products/xpress-high-step-ebike",
+   "field": "frame_material",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://lectricebikes.com/products/xpress-750-step-thru-white-ebike",
+   "field": "frame_material",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://lectricebikes.com/products/xpress-750-high-step-black-ebike",
+   "field": "frame_material",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://leoguarbikes.com/products/flippo-folding-ebike",
+   "field": "rack_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://leoguarbikes.com/products/sprint-fat-tire-utility-ebike",
+   "field": "rack_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://leoguarbikes.com/products/trailblazer-mid-drive-motor-ebike",
+   "field": "rack_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://magicianebikes.com/products/alpha",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://magicianebikes.com/products/atlas",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://magicianebikes.com/products/atlas",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://magicianebikes.com/products/atlas",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://magicyclebike.com/products/magicycle-ct-1-commuter-torque-sensor-electric-bike",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.mokwheel.com/products/granite",
+   "field": "rack_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.prioritybicycles.com/products/currentplus",
+   "field": "warranty_years",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.prioritybicycles.com/products/currentplus",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.prioritybicycles.com/products/ecoast",
+   "field": "battery_wh",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.prioritybicycles.com/products/ecoast",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.prioritybicycles.com/products/ecoast",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.prioritybicycles.com/products/ecoast",
+   "field": "warranty_years",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.prioritybicycles.com/products/ecoast",
+   "field": "display_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.prioritybicycles.com/products/ecoast",
+   "field": "cell_brand",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.prioritybicycles.com/products/ecoast",
+   "field": "fit_height_min_in",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.prioritybicycles.com/products/ecoast",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.prioritybicycles.com/products/priority-glide-e-bike",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.prioritybicycles.com/products/priority-glide-e-bike",
+   "field": "warranty_years",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.prioritybicycles.com/products/priority-glide-e-bike",
+   "field": "display_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.prioritybicycles.com/products/priority-glide-e-bike",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.prioritybicycles.com/products/priority-skyline-smart-shift-e-bike",
+   "field": "warranty_years",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.prioritybicycles.com/products/priority-skyline-smart-shift-e-bike",
+   "field": "fit_height_min_in",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://ride1up.com/product/revv-1-drt/",
+   "field": "motor_w",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://ride1up.com/product/revv-1-drt/",
+   "field": "drivetrain_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://ride1up.com/product/revv1-evo/",
+   "field": "frame_material",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://ride1up.com/product/revv1-evo/",
+   "field": "drivetrain_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://ride1up.com/product/revv-1/",
+   "field": "motor_w",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://ride1up.com/product/revv-1/",
+   "field": "drivetrain_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://ride1up.com/product/revv-1-ht/",
+   "field": "motor_w",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://ride1up.com/product/revv-1-ht/",
+   "field": "drivetrain_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://ride1up.com/product/vorsa/?attribute_pa_bike-type=lite&attribute_pa_frame2=xr",
+   "field": "frame_material",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://ride1up.com/product/vorsa/?attribute_pa_bike-type=lite&attribute_pa_frame2=st",
+   "field": "frame_material",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://ride1up.com/product/vorsa/?attribute_pa_bike-type=vorsa&attribute_pa_frame2=xr",
+   "field": "frame_material",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://ride1up.com/product/vorsa/?attribute_pa_bike-type=vorsa&attribute_pa_frame2=st",
+   "field": "frame_material",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://ride1up.com/product/vorsa/?attribute_pa_bike-type=ft&attribute_pa_frame2=xr",
+   "field": "frame_material",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://ride1up.com/product/vorsa/?attribute_pa_bike-type=ft&attribute_pa_frame2=st",
+   "field": "frame_material",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://store.segway.com/muxi-electric-bike",
+   "field": "frame_material",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://store.segway.com/muxi-electric-bike",
+   "field": "warranty_years",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://store.segway.com/muxi-electric-bike",
+   "field": "fit_height_min_in",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://store.segway.com/segway-ebike-myon",
+   "field": "frame_material",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://store.segway.com/segway-ebike-myon",
+   "field": "warranty_years",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://store.segway.com/segway-ebike-myon",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://store.segway.com/segway-ebike-myon-s",
+   "field": "frame_material",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://store.segway.com/segway-ebike-myon-s",
+   "field": "warranty_years",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://store.segway.com/segway-ebike-myon-s",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://store.segway.com/segway-ebike-xafari",
+   "field": "frame_material",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://store.segway.com/segway-ebike-xafari",
+   "field": "display_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://store.segway.com/segway-ebike-xafari",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://store.segway.com/segway-ebike-xyber",
+   "field": "drive_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://store.segway.com/segway-ebike-xyber",
+   "field": "display_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://store.segway.com/segway-ebike-xyber",
+   "field": "fit_height_min_in",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://store.segway.com/segway-ebike-xyber",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/haul-lt/p/277758",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/haul-lt/p/277758",
+   "field": "fit_height_min_in",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/haul-st/p/277759",
+   "field": "torque_nm",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/haul-st/p/277759",
+   "field": "fit_height_min_in",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/levo-4-evo-comp/p/4294787",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/levo-4-evo-comp/p/4294787",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/levo-4-evo-comp/p/4294787",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/levo-4-evo-comp/p/4294787",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/levo-4-evo-pro/p/4294785",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/levo-4-evo-pro/p/4294785",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/levo-4-evo-pro/p/4294785",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/levo-4-evo-pro/p/4294785",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-levo-4-x/p/4292994",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-levo-4-x/p/4292994",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-levo-4-x/p/4292994",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-creo-2-sram-red--xx1-eagle-axs/p/4221805",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-creo-2-sram-red--xx1-eagle-axs/p/4221805",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-creo-2-sram-red--xx1-eagle-axs/p/4221805",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-creo-2-sram-red--xx1-eagle-axs/p/4221805",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-kenevo-sl-2-frameset/p/4221331",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-kenevo-sl-2-frameset/p/4221331",
+   "field": "brake_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-kenevo-sl-2-frameset/p/4221331",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-kenevo-sl-2-frameset/p/4221331",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-levo-4/p/4291509",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-levo-4/p/4291509",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-levo-4/p/4291509",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-levo-4/p/4291509",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-levo-4-frameset/p/4218700",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-levo-4-frameset/p/4218700",
+   "field": "brake_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-levo-4-frameset/p/4218700",
+   "field": "suspension",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-levo-4-frameset/p/4218700",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-levo-4-frameset/p/4218700",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-levo-4-frameset/p/4218700",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-levo-4-ltd/p/4260592",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-levo-4-ltd/p/4260592",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-levo-4-ltd/p/4260592",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-levo-4-ltd/p/4260592",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-levo-r/p/4223520",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-levo-r/p/4223520",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-levo-r/p/4223520",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-levo-r/p/4223520",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-levo-sl-2-di2/p/4221349",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-levo-sl-2-di2/p/4221349",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-levo-sl-2-di2/p/4221349",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-levo-sl-2-di2/p/4221349",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-levo-sl-2-framesetset/p/4277413",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-levo-sl-2-framesetset/p/4277413",
+   "field": "brake_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-levo-sl-2-framesetset/p/4277413",
+   "field": "suspension",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-levo-sl-2-framesetset/p/4277413",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-levo-sl-2-framesetset/p/4277413",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/s-works-turbo-levo-sl-2-framesetset/p/4277413",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-como-40/p/4222077",
+   "field": "motor_w",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-como-40/p/4222077",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-como-40/p/4222077",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-como-40-igh/p/4277418",
+   "field": "weight_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-como-40-igh/p/4277418",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-como-40-igh/p/4277418",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-como-50-igh/p/4222075",
+   "field": "motor_w",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-como-50-igh/p/4222075",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-como-50-igh/p/4222075",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-creo-2-comp-shimano-grx-di2/p/4263260",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-creo-2-comp-shimano-grx-di2/p/4263260",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-creo-2-comp-shimano-grx-di2/p/4263260",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-creo-2-comp-shimano-grx-di2/p/4263260",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-creo-2-comp-sram-apex--x1-eagle-axs/p/4277467",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-creo-2-comp-sram-apex--x1-eagle-axs/p/4277467",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-creo-2-comp-sram-apex--x1-eagle-axs/p/4277467",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-creo-2-comp-sram-apex--x1-eagle-axs/p/4277467",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-creo-2-comp-e5-sram-apex-eagle/p/4221861",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-creo-2-comp-e5-sram-apex-eagle/p/4221861",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-creo-2-comp-e5-sram-apex-eagle/p/4221861",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-creo-2-comp-e5-sram-apex-eagle/p/4221861",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-creo-2-expert-shimano-grx-di2/p/4221806",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-creo-2-expert-shimano-grx-di2/p/4221806",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-creo-2-expert-shimano-grx-di2/p/4221806",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-creo-2-expert-shimano-grx-di2/p/4221806",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-kenevo-sl-2-comp/p/4221334",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-kenevo-sl-2-comp/p/4221334",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-kenevo-sl-2-comp/p/4221334",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-kenevo-sl-2-expert/p/4277407",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-kenevo-sl-2-expert/p/4277407",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-kenevo-sl-2-expert/p/4277407",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-kenevo-sl-2-ohlins-coil/p/4277428",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-kenevo-sl-2-ohlins-coil/p/4277428",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-kenevo-sl-2-ohlins-coil/p/4277428",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-4-alloy/p/4221347",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-4-alloy/p/4221347",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-4-alloy/p/4221347",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-4-alloy/p/4221347",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-4-comp/p/4218708",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-4-comp/p/4218708",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-4-comp/p/4218708",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-4-comp/p/4218708",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-4-comp-alloy/p/4221343",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-4-comp-alloy/p/4221343",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-4-comp-alloy/p/4221343",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-4-comp-alloy/p/4221343",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-4-expert/p/4218704",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-4-expert/p/4218704",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-4-expert/p/4218704",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-4-expert/p/4218704",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-4-pro/p/4218702",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-4-pro/p/4218702",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-4-pro/p/4218702",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-4-pro/p/4218702",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-r-comp/p/4223523",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-r-comp/p/4223523",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-r-comp/p/4223523",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-r-comp/p/4223523",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-r-comp-alloy/p/4229898",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-r-comp-alloy/p/4229898",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-r-comp-alloy/p/4229898",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-r-comp-alloy/p/4229898",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-r-expert/p/4223522",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-r-expert/p/4223522",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-r-expert/p/4223522",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-r-expert/p/4223522",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-sl-2-comp/p/4221352",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-sl-2-comp/p/4221352",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-sl-2-comp/p/4221352",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-sl-2-comp/p/4221352",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-sl-2-comp-alloy/p/4221354",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-sl-2-comp-alloy/p/4221354",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-sl-2-comp-alloy/p/4221354",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-sl-2-comp-alloy/p/4221354",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-sl-2-expert/p/4277412",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-sl-2-expert/p/4277412",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-sl-2-expert/p/4277412",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-sl-2-expert/p/4277412",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-sl-2-expert-di2/p/4221351",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-sl-2-expert-di2/p/4221351",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-sl-2-expert-di2/p/4221351",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-sl-2-expert-di2/p/4221351",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-sl-2-pro/p/4277411",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-sl-2-pro/p/4277411",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-sl-2-pro/p/4277411",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-levo-sl-2-pro/p/4277411",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-3-evo-40/p/4279840",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-3-evo-40/p/4279840",
+   "field": "frame_material",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-3-evo-40/p/4279840",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-3-evo-40/p/4279840",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-3-evo-40/p/4279840",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-3-evo-50/p/4279838",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-3-evo-50/p/4279838",
+   "field": "frame_material",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-3-evo-50/p/4279838",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-3-evo-50/p/4279838",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-3-evo-50/p/4279838",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-3-evo-60/p/4293013",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-3-evo-60/p/4293013",
+   "field": "frame_material",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-3-evo-60/p/4293013",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-3-evo-60/p/4293013",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-3-evo-60/p/4293013",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-3-x-40/p/4293140",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-3-x-40/p/4293140",
+   "field": "frame_material",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-3-x-40/p/4293140",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-3-x-40/p/4293140",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-3-x-40/p/4293140",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-3-x-60/p/4293142",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-3-x-60/p/4293142",
+   "field": "frame_material",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-3-x-60/p/4293142",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-3-x-60/p/4293142",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-3-x-60/p/4293142",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-40/p/4277441",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-40/p/4277441",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-40-step-through/p/4277442",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-40-step-through/p/4277442",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-50-igh/p/4263673",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-50-igh/p/4263673",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-50-igh-step-through/p/4263675",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-50-igh-step-through/p/4263675",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-sl-2-40/p/4295057",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-sl-2-40/p/4295057",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-sl-2-40/p/4295057",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-sl-2-40-eq/p/4278243",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-sl-2-40-eq/p/4278243",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-sl-2-40-step-through-/p/4295569",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-sl-2-40-step-through-/p/4295569",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-sl-2-40-step-through-/p/4295569",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-sl-2-40-step-through-eq/p/4278245",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-sl-2-40-step-through-eq/p/4278245",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-sl-2-40-step-through-eq/p/4278245",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-sl-2-50-eq/p/4278244",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-sl-2-50-eq/p/4278244",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-sl-2-50-eq/p/4278244",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-sl-2-50-step-through-eq/p/4278246",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-sl-2-50-step-through-eq/p/4278246",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-sl-2-50-step-through-eq/p/4278246",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-sl-2-60-carbon/p/4295053",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-sl-2-60-carbon/p/4295053",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-sl-2-60-carbon/p/4295053",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-sl-2-60-eq-carbon/p/4295054",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-sl-2-60-eq-carbon/p/4295054",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/turbo-vado-sl-2-60-eq-carbon/p/4295054",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/vado-sl-2-ltd-s-racing/p/4293307",
+   "field": "range_mi",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/vado-sl-2-ltd-s-racing/p/4293307",
+   "field": "max_speed_mph",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/vado-sl-2-ltd-s-racing/p/4293307",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.specialized.com/us/en/vado-sl-2-ltd-s-racing/p/4293307",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.ternbicycles.com/us/bikes/473/gsd-p00",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.ternbicycles.com/us/bikes/473/gsd-p10",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.ternbicycles.com/us/bikes/473/gsd-r14",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.ternbicycles.com/us/bikes/473/gsd-s10",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.ternbicycles.com/us/bikes/472/hsd-p10",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.ternbicycles.com/us/bikes/472/hsd-p5i",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.ternbicycles.com/us/bikes/472/hsd-s00",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.ternbicycles.com/us/bikes/472/hsd-s11",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.ternbicycles.com/us/bikes/471/nbd-p8i",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.ternbicycles.com/us/bikes/471/nbd-s5i",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.ternbicycles.com/us/bikes/471/orox-r14-275",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.ternbicycles.com/us/bikes/471/orox-s12-275",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.ternbicycles.com/us/bikes/471/quick-haul-d8",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.ternbicycles.com/us/bikes/471/quick-haul-long-d9",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.ternbicycles.com/us/bikes/471/quick-haul-p9-sport",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.ternbicycles.com/us/bikes/474/vektron-p10",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.ternbicycles.com/us/bikes/474/vektron-p5i",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.ternbicycles.com/us/bikes/473/vektron-q9",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://www.ternbicycles.com/us/bikes/473/vektron-s10",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://newurtopia.com/products/urtopia-carbon-1-step-thru-ebike",
+   "field": "suspension",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://newurtopia.com/products/urtopia-carbon-classic-ebike",
+   "field": "suspension",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://newurtopia.com/products/urtopia-carbon-classic-step-thru-ebike",
+   "field": "suspension",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://newurtopia.com/products/urtopia-carbon-fold",
+   "field": "suspension",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://newurtopia.com/products/urtopia-carbon-fold-2-ebike",
+   "field": "suspension",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://newurtopia.com/products/urtopia-carbon-fold-step-thru-ebike",
+   "field": "suspension",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://velowave.com/products/pony-step-thru-electric-bike",
+   "field": "rack_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://velowave.com/products/prado-s-commuter-electric-bike",
+   "field": "rack_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://velowave.com/products/ranger-fat-tire-electric-bike",
+   "field": "rack_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://velowave.com/products/ranger-3-0-fat-tire-all-terrain-electric-bike",
+   "field": "rack_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://velowave.com/products/ranger-step-thru-electric-bike",
+   "field": "rack_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://velowave.com/products/swift-m-mid-drive-mountain-electric-bike",
+   "field": "rack_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://vvolt.com/products/alpha-2-1",
+   "field": "frame_material",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://vvolt.com/products/alpha-2-1",
+   "field": "display_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://vvolt.com/products/alpha-2-1",
+   "field": "suspension",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://vvolt.com/products/alpha-2-1",
+   "field": "cell_brand",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://vvolt.com/products/alpha-2-1",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://vvolt.com/products/alpha-2-1",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://vvolt.com/products/alpha-ii",
+   "field": "frame_material",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://vvolt.com/products/alpha-ii",
+   "field": "display_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://vvolt.com/products/alpha-ii",
+   "field": "suspension",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://vvolt.com/products/alpha-ii",
+   "field": "cell_brand",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://vvolt.com/products/alpha-ii",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://vvolt.com/products/alpha-ii",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://vvolt.com/products/centauri-ii",
+   "field": "frame_material",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://vvolt.com/products/centauri-ii",
+   "field": "display_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://vvolt.com/products/centauri-ii",
+   "field": "cell_brand",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://vvolt.com/products/centauri-ii",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://vvolt.com/products/centauri-ii",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://vvolt.com/products/centauri-se",
+   "field": "frame_material",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://vvolt.com/products/centauri-se",
+   "field": "suspension",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://vvolt.com/products/centauri-se",
+   "field": "cell_brand",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://vvolt.com/products/centauri-se",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://vvolt.com/products/centauri-se",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://wallkeebike.com/products/ultra-series",
+   "field": "weight_lb",
+   "reason": "no candidate (3 models)"
+  },
+  {
+   "url": "https://wiredebikes.com/products/wired-cruiser",
+   "field": "warranty_years",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://wiredebikes.com/products/wired-freedom",
+   "field": "warranty_years",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://wiredebikes.com/products/wired-predator",
+   "field": "warranty_years",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://wiredebikes.com/products/wired-predator",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://wiredebikes.com/products/wired-raven",
+   "field": "warranty_years",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://wiredebikes.com/products/wired-raven",
+   "field": "fit_height_min_in",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://wiredebikes.com/products/wired-raven",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://wiredebikes.com/products/wired-viper",
+   "field": "warranty_years",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://wiredebikes.com/products/wired-viper",
+   "field": "fit_height_min_in",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://wiredebikes.com/products/wired-viper",
+   "field": "max_load_lb",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://wiredebikes.com/products/wired-viper",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://wiredebikes.com/products/wired-scout",
+   "field": "warranty_years",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://wiredebikes.com/products/wired-scout",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://wiredebikes.com/products/wired-warrior",
+   "field": "warranty_years",
+   "reason": "no candidate (1 models)"
+  },
+  {
+   "url": "https://wiredebikes.com/products/wired-warrior",
+   "field": "sensor_type",
+   "reason": "no candidate (1 models)"
+  }
+ ]
+}

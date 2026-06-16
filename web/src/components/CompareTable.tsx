@@ -1,5 +1,5 @@
 import type { Model, SpecValue } from "../types";
-import { formatSpecValue, labelize, titleCase } from "../format";
+import { fieldLabel, formatSpecValue, titleCase, withUnit } from "../format";
 
 const GROUP_ORDER = [
   "general_info",
@@ -46,12 +46,13 @@ export function CompareTable({ models }: { models: Model[] }) {
             <table className="w-full text-sm">
               <tbody className="divide-y divide-slate-100">
                 {keys.map((field) => {
-                  const values = models.map((m) => cell(m, group, field));
+                  const { label, unit } = fieldLabel(field);
+                  const values = models.map((m) => withUnit(cell(m, group, field), unit));
                   const differ = new Set(values.filter((v) => v !== "—")).size > 1;
                   return (
                     <tr key={field} className="align-top">
                       <th className="w-40 bg-slate-50/50 px-4 py-2 text-left font-medium text-slate-500">
-                        {labelize(field)}
+                        {label}
                       </th>
                       {values.map((v, i) => (
                         <td

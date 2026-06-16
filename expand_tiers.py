@@ -470,6 +470,52 @@ def select_version_segments(model: dict) -> None:
                 sec[k] = f"{val.strip()} ({label} Ver.)"
 
 
+# A trailing "(<qualifier>)" on a spec label, e.g. "Fork (Suspension Frame)".
+_TIER_QUAL = re.compile(r"\s*\(([^)]*)\)\s*$")
+# qualifier/tier words that don't identify a tier on their own
+_QUAL_GENERIC = {"frame", "model", "ver", "version", "edition"}
+
+
+def _qual_words(text: str) -> set:
+    return {w for w in re.findall(r"[a-z]+", (text or "").lower())
+            if w not in _QUAL_GENERIC}
+
+
+def select_tier_qualified_rows(entries: list) -> None:
+    """For a family split into tiers, a spec row labelled "<base> (<qualifier>)"
+    belongs only to the tier its qualifier names. Drop rows whose qualifier names
+    a SIBLING tier, and rename a row matching this entry's own tier to "<base>"
+    (overriding any unqualified base row). Fixes Ride1Up Roadster V3, whose page
+    lists "Fork (Rigid)" + "Fork (Suspension Frame)" against both tier entries so
+    the rigid bike wrongly inherits the suspension fork. Idempotent: once a row is
+    renamed to its base it has no qualifier and is skipped."""
+    fam_words = set()
+    for m in entries:
+        fam_words |= _qual_words(m.get("tier"))
+    if len(fam_words) < 2:
+        return
+    for m in entries:
+        own = _qual_words(m.get("tier"))
+        sibling = fam_words - own
+        if not own:
+            continue
+        specs = m.get("specs") or {}
+        for section in ("all", "physical", "technical"):
+            sec = specs.get(section)
+            if not isinstance(sec, dict):
+                continue
+            for k in list(sec.keys()):
+                mq = _TIER_QUAL.search(k)
+                if not mq:
+                    continue
+                qual = _qual_words(mq.group(1))
+                base = _TIER_QUAL.sub("", k).strip()
+                if qual & own:
+                    sec[base] = sec.pop(k)          # this tier's row -> canonical
+                elif qual & sibling:
+                    sec.pop(k, None)                # a sibling tier's row
+
+
 def _entry_wh(model: dict):
     specs = model.get("specs") or {}
     for section in ("all", "physical", "technical"):
@@ -554,6 +600,7 @@ def main():
             if m.get("family_id"):
                 fams.setdefault(m["family_id"], []).append(m)
         for entries in fams.values():
+            select_tier_qualified_rows(entries)
             scale_family_ranges(entries)
         d["models"] = out
         d["model_count"] = len(out)

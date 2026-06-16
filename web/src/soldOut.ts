@@ -1,13 +1,21 @@
 import { useSyncExternalStore } from "react";
 import type { Model } from "./types";
 
-// Global "show sold out" preference, toggled from the Features filter. Starts
-// OFF (unselected) on each app load, so only available models are shown by
-// default; when OFF, Browse hides unavailable models and every view hides
-// unavailable color options. Kept in an in-memory store (not persisted) so it's
-// shared live between the Browse list and the separate-route detail page during
-// a session, but resets to the default on a fresh load.
-let value = false;
+// Global "show sold out" preference, toggled from the Features filter (default
+// OFF: only available models are shown, and every view hides unavailable color
+// options). Persisted to localStorage: it is explicitly set and unset by the
+// user, and never affected by query-param (quiz link) changes.
+const KEY = "show-sold-out";
+
+function load(): boolean {
+  try {
+    return localStorage.getItem(KEY) === "true";
+  } catch {
+    return false;
+  }
+}
+
+let value = load();
 const listeners = new Set<() => void>();
 
 function emit() {
@@ -16,6 +24,11 @@ function emit() {
 
 export function setShowSoldOut(v: boolean) {
   value = v;
+  try {
+    localStorage.setItem(KEY, String(v));
+  } catch {
+    /* storage blocked: still works for this session */
+  }
   emit();
 }
 

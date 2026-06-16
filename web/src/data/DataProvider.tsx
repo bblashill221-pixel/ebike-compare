@@ -62,7 +62,11 @@ function computeFacetOptions(models: Model[]): Record<EnumField, string[]> {
     if (m.frame_style) sets.frame_style.add(m.frame_style);
     for (const f of ["drive_type", "brake_type", "frame_material", "suspension", "sensor_type"] as EnumField[]) {
       const v = t[f] as string | undefined;
-      if (v) sets[f].add(v);
+      if (!v) continue;
+      // bare "disc" = a disc brake whose actuation (hydraulic/mechanical) is
+      // unknown; not a useful filter option since every brake is a disc brake.
+      if (f === "brake_type" && v === "disc") continue;
+      sets[f].add(v);
     }
   }
   for (const f of ENUM_FIELDS) out[f] = [...sets[f]].sort();

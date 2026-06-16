@@ -25,6 +25,48 @@ def snake(label: str) -> str:
     return re.sub(r"[^a-z0-9]+", "_", (label or "").lower()).strip("_")
 
 
+# A geometry/measurement diagram numbers its callouts "A – Total Length", "B--Reach",
+# "(C) Wheelbase", "D. Stack", ... — a single letter + separator before the name. These
+# leading letters are ordering artifacts, not part of the spec name. We strip them, but
+# only when a model carries a real legend (>=4 distinct such letters), so isolated
+# compounds like "E-bike Class", "X-Fold System", "B.B. Drop", "N.W./G.W.", "L × W × H"
+# (joined forms / no separating space / non-dash separators) are never touched.
+_DIAGRAM_LABEL = re.compile(
+    r"^(?:"
+    r"\(\s*([A-Za-z])\s*\)\s*"          # (A)  ( A )
+    r"|([A-Za-z])\s*(?:--|[-–—])\s*"    # A--  A-  A –  A -
+    r"|([A-Za-z])[.):：]\s+"            # A.  A)  A:   (separator then a space)
+    r")(?=[A-Za-z])")
+_LABEL_KEEP = re.compile(r"^[A-Za-z][-–—](?:bike|fold)\b", re.I)
+
+
+def _label_letter(k: str):
+    """The diagram-label letter at the start of a key, or None (compounds excluded)."""
+    m = _DIAGRAM_LABEL.match(k or "")
+    if not m or _LABEL_KEEP.match(k):
+        return None
+    return (m.group(1) or m.group(2) or m.group(3)).upper()
+
+
+def _legend_letters(*keysets) -> set:
+    """The set of diagram-label letters when a model has a real legend, else empty."""
+    letters = {L for keys in keysets for k in keys if (L := _label_letter(k))}
+    return letters if len(letters) >= 4 else set()
+
+
+def _strip_diagram_labels(specs: dict, legend: set) -> dict:
+    """Drop the leading "A – "/"B--"/"(C) "/"D. " ordering label from legend keys."""
+    if not specs or not legend:
+        return specs
+    out = OrderedDict()
+    for k, v in specs.items():
+        if _label_letter(k) in legend:
+            out[_DIAGRAM_LABEL.sub("", k, 1).strip() or k] = v
+        else:
+            out[k] = v
+    return out
+
+
 _UNIT_SUFFIX = {"_kwh": "kWh", "_wh": "Wh", "_nm": "Nm", "_ah": "Ah",
                 "_mm": "mm", "_mph": "mph", "_lb": "lb", "_mi": "mi",
                 "_in": "in", "_deg": "deg", "_w": "W", "_v": "V",
@@ -65,7 +107,8 @@ def flatten_grouped(grouped: dict) -> dict:
         for k, v in fields.items():
             if isinstance(v, str):
                 out[k] = v
-            elif isinstance(v, dict) and "details" in v:   # parsed component
+            elif isinstance(v, dict) and ("_kind" in v or "details" in v):
+                # parsed component (fully-parsed ones carry no details key)
                 out[k] = _stringify(v)
             elif isinstance(v, (int, float)) and not isinstance(v, bool):
                 # unitized scalar (top_speed_mph: 28) -> re-attach unit for regexes
@@ -169,7 +212,10 @@ def group_specs(all_specs: dict, geometry: dict | None = None,
     Recognized component values are parsed into structured dicts (manufacturer,
     speeds, travel, …) with a `details` remainder. Empty groups are omitted.
     """
-    geometry = geometry or {}
+    # strip "A – "/"B--"/"C. " diagram ordering labels from both spec sources first
+    legend = _legend_letters(all_specs or {}, geometry or {})
+    all_specs = _strip_diagram_labels(all_specs or {}, legend)
+    geometry = _strip_diagram_labels(geometry or {}, legend)
     geo_labels = set(geometry)
     snaked = {snake(k): v for k, v in (all_specs or {}).items()}  # for sibling lookup
     buckets: dict[str, "OrderedDict"] = {}

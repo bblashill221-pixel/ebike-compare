@@ -58,7 +58,10 @@ _DEC_FT = re.compile(r"(\d(?:\.\d)?)\s*(?:ft\b|feet\b)")
 def height_tokens_in(text: str) -> list[float]:
     """Every height mentioned in `text`, in inches. Prefers feet-inch notation;
     falls back to centimetres, then decimal feet. Returns [] when none parse."""
-    t = str(text).replace("″", '"').replace("′", "'")   # curly ″ ′ -> " '
+    # normalise prime + curly-quote + en/em-dash variants to ASCII ' " -
+    t = (str(text).replace("″", '"').replace("′", "'")
+         .replace("’", "'").replace("‘", "'").replace("”", '"').replace("“", '"')
+         .replace("–", "-").replace("—", "-"))
     feet_inch = [int(f) * 12 + (int(i) if i else 0) for f, i in _FEET_INCH.findall(t)]
     if feet_inch:
         return [float(v) for v in feet_inch]

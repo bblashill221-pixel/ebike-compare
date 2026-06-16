@@ -1,0 +1,6854 @@
+[
+ {
+  "brand": "aventon",
+  "field": "battery_safety_certifications",
+  "kind": "cert",
+  "text": "Certified to UL 2271",
+  "siblings": {
+   "front_brake_rotor": "180mm 6 bolt",
+   "rear_brake_rotor": "203mm 6-bolt"
+  },
+  "expected": {
+   "standards": [
+    "UL 2271"
+   ],
+   "_kind": "cert"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "safety_certifications",
+  "kind": "cert",
+  "text": "UL and TUV Safety Certified  UL 2849",
+  "siblings": {
+   "front_brake_rotor": "180mm 6 bolt",
+   "rear_brake_rotor": "203mm 6-bolt"
+  },
+  "expected": {
+   "standards": [
+    "TUV",
+    "UL 2849"
+   ],
+   "_kind": "cert"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "pedal_assist",
+  "kind": "pedal_assist",
+  "text": "3 Levels (with Ride Tune Customization)",
+  "siblings": {
+   "front_brake_rotor": "180mm 6 bolt",
+   "rear_brake_rotor": "203mm 6-bolt"
+  },
+  "expected": {
+   "levels": 3,
+   "details": "Ride Tune Customization",
+   "_kind": "pedal_assist"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "frame",
+  "kind": "frame",
+  "text": "Gravity Cast 6061 Single-Butted Aluminum Alloy with Internal Battery",
+  "siblings": {
+   "front_brake_rotor": "180mm 6 bolt",
+   "rear_brake_rotor": "203mm 6-bolt"
+  },
+  "expected": {
+   "material": "aluminum",
+   "integrated_battery": true,
+   "details": "Gravity cast 6061 single-butted; internal battery",
+   "_kind": "frame"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "fork",
+  "kind": "fork",
+  "text": "Threaded Steerer Tube for Quill Stem 15x110 spacing, 51mm travel, adjustable lockout black stanchions",
+  "siblings": {
+   "front_brake_rotor": "180mm 6 bolt",
+   "rear_brake_rotor": "203mm 6-bolt"
+  },
+  "expected": {
+   "type": "suspension",
+   "travel_mm": 51,
+   "lockout": true,
+   "details": "Threaded steerer for quill stem; 15x110 spacing; black stanchions",
+   "_kind": "fork"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "fork_spacing",
+  "kind": "fork",
+  "text": "110mm",
+  "siblings": {
+   "front_brake_rotor": "180mm 6 bolt",
+   "rear_brake_rotor": "203mm 6-bolt"
+  },
+  "expected": {
+   "details": "110mm",
+   "_kind": "fork"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "front_wheel",
+  "kind": "wheel",
+  "text": "Double Wall Aluminum, 20in, 36hole, 13g, 20x110 Thru Axle, Schrader Valve",
+  "siblings": {
+   "front_brake_rotor": "180mm 6 bolt",
+   "rear_brake_rotor": "203mm 6-bolt"
+  },
+  "expected": {
+   "double_wall": true,
+   "material": "aluminum",
+   "size_in": 20,
+   "holes": 36,
+   "gauge": 13,
+   "axle": "20x110mm",
+   "valve": "schrader",
+   "_kind": "wheel"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "rear_wheel",
+  "kind": "wheel",
+  "text": "Double Wall Aluminum, 20in, 36hole, 12g, Nutted Hub Drive Motor, Scharder Valve",
+  "siblings": {
+   "front_brake_rotor": "180mm 6 bolt",
+   "rear_brake_rotor": "203mm 6-bolt"
+  },
+  "expected": {
+   "double_wall": true,
+   "material": "aluminum",
+   "size_in": 20,
+   "holes": 36,
+   "gauge": 12,
+   "valve": "schrader",
+   "details": "Nutted hub drive motor",
+   "_kind": "wheel"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "tires",
+  "kind": "tire",
+  "text": "20x3.0 Innova IA-2131 Urban Tire Refective Sidewalls",
+  "siblings": {
+   "front_brake_rotor": "180mm 6 bolt",
+   "rear_brake_rotor": "203mm 6-bolt"
+  },
+  "expected": {
+   "manufacturer": "Innova",
+   "model": "IA-2131",
+   "diameter_in": 20,
+   "width_in": 3,
+   "details": "Urban; reflective sidewalls",
+   "_kind": "tire"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "motor",
+  "kind": "motor",
+  "text": "Shengyi 36V 750w Hub Drive with 6 speed sensors (1188W peak)",
+  "siblings": {
+   "front_brake_rotor": "180mm 6 bolt",
+   "rear_brake_rotor": "203mm 6-bolt"
+  },
+  "expected": {
+   "manufacturer": "Shengyi",
+   "voltage_v": 36,
+   "power_w": 750,
+   "peak_w": 1188,
+   "placement": "hub",
+   "details": "6 speed sensors",
+   "_kind": "motor"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "motor_torque",
+  "kind": "motor",
+  "text": "80Nm",
+  "siblings": {
+   "front_brake_rotor": "180mm 6 bolt",
+   "rear_brake_rotor": "203mm 6-bolt"
+  },
+  "expected": {
+   "torque_nm": 80,
+   "_kind": "motor"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "display",
+  "kind": "display",
+  "text": "Aventon BC147",
+  "siblings": {
+   "front_brake_rotor": "180mm 6 bolt",
+   "rear_brake_rotor": "203mm 6-bolt"
+  },
+  "expected": {
+   "manufacturer": "Aventon",
+   "model": "BC147",
+   "_kind": "display"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "battery",
+  "kind": "battery",
+  "text": "Removable Internal Lithium-ion. 36V, 20Ah, 733Wh, LG 21700 cells",
+  "siblings": {
+   "front_brake_rotor": "180mm 6 bolt",
+   "rear_brake_rotor": "203mm 6-bolt"
+  },
+  "expected": {
+   "voltage_v": 36,
+   "amphours_ah": 20,
+   "capacity_wh": 733,
+   "removable": true,
+   "cell_brand": "LG",
+   "cell_format": "21700",
+   "details": "Internal; lithium-ion",
+   "_kind": "battery"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "controller",
+  "kind": "controller",
+  "text": "36V, 33A",
+  "siblings": {
+   "front_brake_rotor": "180mm 6 bolt",
+   "rear_brake_rotor": "203mm 6-bolt"
+  },
+  "expected": {
+   "voltage_v": 36,
+   "amps_a": 33,
+   "_kind": "controller"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "throttle",
+  "kind": "throttle",
+  "text": "Aventon LH Handlebar Mounted",
+  "siblings": {
+   "front_brake_rotor": "180mm 6 bolt",
+   "rear_brake_rotor": "203mm 6-bolt"
+  },
+  "expected": {
+   "manufacturer": "Aventon",
+   "side": "left",
+   "details": "Handlebar mounted",
+   "_kind": "throttle"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "sensors",
+  "kind": "sensor",
+  "text": "Double Sided Bottom Bracket Torque Sensor",
+  "siblings": {
+   "front_brake_rotor": "180mm 6 bolt",
+   "rear_brake_rotor": "203mm 6-bolt"
+  },
+  "expected": {
+   "type": "torque",
+   "details": "Double-sided, bottom bracket",
+   "_kind": "sensor"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "charger",
+  "kind": "charger",
+  "text": "36V Output: 42V/ 4A",
+  "siblings": {
+   "front_brake_rotor": "180mm 6 bolt",
+   "rear_brake_rotor": "203mm 6-bolt"
+  },
+  "expected": {
+   "output_v": 42,
+   "amps_a": 4,
+   "details": "For 36V battery",
+   "_kind": "charger"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "lights",
+  "kind": "light",
+  "text": "Front and Rear Lights Integrated w/ Turn Signals",
+  "siblings": {
+   "front_brake_rotor": "180mm 6 bolt",
+   "rear_brake_rotor": "203mm 6-bolt"
+  },
+  "expected": {
+   "integrated": true,
+   "turn_signal": true,
+   "details": "Front and rear",
+   "_kind": "light"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "front_brake",
+  "kind": "brake",
+  "text": "Tektro HD-E3520 hydraulic disc brakes w/ EJ1 quick disconnect wire",
+  "siblings": {
+   "front_brake_rotor": "180mm 6 bolt",
+   "rear_brake_rotor": "203mm 6-bolt"
+  },
+  "expected": {
+   "manufacturer": "Tektro",
+   "model": "HD-E3520",
+   "kind": "disc",
+   "actuation": "hydraulic",
+   "details": "EJ1 quick-disconnect wire",
+   "_kind": "brake"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "front_brake_rotor",
+  "kind": "brake",
+  "text": "180mm 6 bolt",
+  "siblings": {
+   "front_brake_rotor": "180mm 6 bolt",
+   "rear_brake_rotor": "203mm 6-bolt"
+  },
+  "expected": {
+   "rotor_mm": 180,
+   "details": "6-bolt",
+   "_kind": "brake"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "rear_derailleur",
+  "kind": "derailleur",
+  "text": "Shimano Altus RD-M310 8 Speed",
+  "siblings": {
+   "front_brake_rotor": "180mm 6 bolt",
+   "rear_brake_rotor": "203mm 6-bolt"
+  },
+  "expected": {
+   "manufacturer": "Shimano",
+   "model": "Altus RD-M310",
+   "speeds": 8,
+   "_kind": "derailleur"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "shifter",
+  "kind": "derailleur",
+  "text": "Shimano 8 Speed Trigger SL-M315-8R",
+  "siblings": {
+   "front_brake_rotor": "180mm 6 bolt",
+   "rear_brake_rotor": "203mm 6-bolt"
+  },
+  "expected": {
+   "manufacturer": "Shimano",
+   "model": "SL-M315-8R",
+   "speeds": 8,
+   "details": "Trigger shifter",
+   "_kind": "derailleur"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "chain",
+  "kind": "chain",
+  "text": "7/8 speed 154L",
+  "siblings": {
+   "front_brake_rotor": "180mm 6 bolt",
+   "rear_brake_rotor": "203mm 6-bolt"
+  },
+  "expected": {
+   "links": 154,
+   "details": "7/8 speed",
+   "_kind": "chain"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "cassette",
+  "kind": "cassette",
+  "text": "12-32T / 8 Speed Shimano CS HG200-8",
+  "siblings": {
+   "front_brake_rotor": "180mm 6 bolt",
+   "rear_brake_rotor": "203mm 6-bolt"
+  },
+  "expected": {
+   "manufacturer": "Shimano",
+   "model": "CS-HG200-8",
+   "cog_range": "12-32T",
+   "speeds": 8,
+   "_kind": "cassette"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "chainring",
+  "kind": "chainring",
+  "text": "52 tooth",
+  "siblings": {
+   "front_brake_rotor": "180mm 6 bolt",
+   "rear_brake_rotor": "203mm 6-bolt"
+  },
+  "expected": {
+   "teeth": 52,
+   "_kind": "chainring"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "crankset",
+  "kind": "crankset",
+  "text": "3pc, 165mm crank arm",
+  "siblings": {
+   "front_brake_rotor": "180mm 6 bolt",
+   "rear_brake_rotor": "203mm 6-bolt"
+  },
+  "expected": {
+   "length_mm": 165,
+   "details": "3pc",
+   "_kind": "crankset"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "bottom_bracket",
+  "kind": "bottom_bracket",
+  "text": "Square Taper, Sealed, Dual-Sided Torque Sensor",
+  "siblings": {
+   "front_brake_rotor": "180mm 6 bolt",
+   "rear_brake_rotor": "203mm 6-bolt"
+  },
+  "expected": {
+   "type": "square_taper",
+   "sealed": true,
+   "torque_sensor": true,
+   "details": "Dual-sided",
+   "_kind": "bottom_bracket"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "pedals",
+  "kind": "pedals",
+  "text": "9/16\" Composite Platform",
+  "siblings": {
+   "front_brake_rotor": "180mm 6 bolt",
+   "rear_brake_rotor": "203mm 6-bolt"
+  },
+  "expected": {
+   "thread": "9/16\"",
+   "material": "composite",
+   "type": "platform",
+   "_kind": "pedals"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "saddle",
+  "kind": "saddle",
+  "text": "Aventon Saddle w/ grab handle by Selle Royal",
+  "siblings": {
+   "front_brake_rotor": "180mm 6 bolt",
+   "rear_brake_rotor": "203mm 6-bolt"
+  },
+  "expected": {
+   "manufacturer": "Selle Royal",
+   "details": "Aventon saddle with grab handle",
+   "_kind": "saddle"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "seatpost",
+  "kind": "seatpost",
+  "text": "Aventon Suspension Seatpost, Ø 30.9mm, 350mm Length. 50mm travel",
+  "siblings": {
+   "front_brake_rotor": "180mm 6 bolt",
+   "rear_brake_rotor": "203mm 6-bolt"
+  },
+  "expected": {
+   "manufacturer": "Aventon",
+   "type": "suspension",
+   "diameter_mm": 30.9,
+   "length_mm": 350,
+   "travel_mm": 50,
+   "_kind": "seatpost"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "handlebars",
+  "kind": "handlebars",
+  "text": "BMX Style Aluminum 31.8mm, 720mm",
+  "siblings": {
+   "front_brake_rotor": "180mm 6 bolt",
+   "rear_brake_rotor": "203mm 6-bolt"
+  },
+  "expected": {
+   "type": "bmx",
+   "material": "aluminum",
+   "clamp_mm": 31.8,
+   "width_mm": 720,
+   "_kind": "handlebars"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "grips",
+  "kind": "grips",
+  "text": "Aventon Ergonomic Comfort lock on grips",
+  "siblings": {
+   "front_brake_rotor": "180mm 6 bolt",
+   "rear_brake_rotor": "203mm 6-bolt"
+  },
+  "expected": {
+   "manufacturer": "Aventon",
+   "ergonomic": true,
+   "lock_on": true,
+   "details": "Comfort",
+   "_kind": "grips"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "frame",
+  "kind": "frame",
+  "text": "6061 Aluminum Alloy with Internal Battery. One piece - Diecast aluminum front triangle",
+  "siblings": {
+   "rear_brake_rotor": "Tektro 203mm 6 bolt",
+   "front_brake_rotor": "Tektro 180mm 6 bolt"
+  },
+  "expected": {
+   "material": "aluminum",
+   "integrated_battery": true,
+   "details": "6061; internal battery; one-piece diecast front triangle",
+   "_kind": "frame"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "tires",
+  "kind": "tire",
+  "text": "20 x 3.0 urban tire with reflective sidewalls",
+  "siblings": {
+   "rear_brake_rotor": "Tektro 203mm 6 bolt",
+   "front_brake_rotor": "Tektro 180mm 6 bolt"
+  },
+  "expected": {
+   "diameter_in": 20,
+   "width_in": 3,
+   "details": "Urban, reflective sidewalls",
+   "_kind": "tire"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "charger",
+  "kind": "charger",
+  "text": "Aventon 4A 42V",
+  "siblings": {
+   "rear_brake_rotor": "Tektro 203mm 6 bolt",
+   "front_brake_rotor": "Tektro 180mm 6 bolt"
+  },
+  "expected": {
+   "manufacturer": "Aventon",
+   "amps_a": 4,
+   "output_v": 42,
+   "_kind": "charger"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "battery",
+  "kind": "battery",
+  "text": "Aventon 36V, 20Ah, 733Wh, LG 21700 cells",
+  "siblings": {
+   "rear_brake_rotor": "Tektro 203mm 6 bolt",
+   "front_brake_rotor": "Tektro 180mm 6 bolt"
+  },
+  "expected": {
+   "manufacturer": "Aventon",
+   "voltage_v": 36,
+   "amphours_ah": 20,
+   "capacity_wh": 733,
+   "cell_brand": "LG",
+   "cell_format": "21700",
+   "_kind": "battery"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "chain",
+  "kind": "chain",
+  "text": "122 Link, 8 Speed",
+  "siblings": {
+   "rear_brake_rotor": "Tektro 203mm 6 bolt",
+   "front_brake_rotor": "Tektro 180mm 6 bolt"
+  },
+  "expected": {
+   "links": 122,
+   "details": "8 speed",
+   "_kind": "chain"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "cassette",
+  "kind": "cassette",
+  "text": "Shimano CS-HG200-8 8 speed Cassette, 12-32T",
+  "siblings": {
+   "rear_brake_rotor": "Tektro 203mm 6 bolt",
+   "front_brake_rotor": "Tektro 180mm 6 bolt"
+  },
+  "expected": {
+   "manufacturer": "Shimano",
+   "model": "CS-HG200-8",
+   "speeds": 8,
+   "cog_range": "12-32T",
+   "_kind": "cassette"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "chainring_bcd",
+  "kind": "chainring",
+  "text": "130",
+  "siblings": {
+   "rear_brake_rotor": "Tektro 203mm 6 bolt",
+   "front_brake_rotor": "Tektro 180mm 6 bolt"
+  },
+  "expected": {
+   "details": "130",
+   "_kind": "chainring"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "saddle",
+  "kind": "saddle",
+  "text": "Aventon by SelleRoyal",
+  "siblings": {
+   "rear_brake_rotor": "Tektro 203mm 6 bolt",
+   "front_brake_rotor": "Tektro 180mm 6 bolt"
+  },
+  "expected": {
+   "manufacturer": "Selle Royal",
+   "details": "Aventon",
+   "_kind": "saddle"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "seatpost",
+  "kind": "seatpost",
+  "text": "30.9mm Aventon Suspension Seatpost with 50mm travel",
+  "siblings": {
+   "rear_brake_rotor": "Tektro 203mm 6 bolt",
+   "front_brake_rotor": "Tektro 180mm 6 bolt"
+  },
+  "expected": {
+   "manufacturer": "Aventon",
+   "type": "suspension",
+   "diameter_mm": 30.9,
+   "travel_mm": 50,
+   "_kind": "seatpost"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "handlebars",
+  "kind": "handlebars",
+  "text": "BMX Style, 31.8mm bar clamp, 680mm width",
+  "siblings": {
+   "rear_brake_rotor": "Tektro 203mm 6 bolt",
+   "front_brake_rotor": "Tektro 180mm 6 bolt"
+  },
+  "expected": {
+   "type": "bmx",
+   "clamp_mm": 31.8,
+   "width_mm": 680,
+   "_kind": "handlebars"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "stem",
+  "kind": "stem",
+  "text": "Quill Stem with 31.8mm bar clamp diameter, 40mm length, and 140mm of vertical adjustment",
+  "siblings": {
+   "rear_brake_rotor": "Tektro 203mm 6 bolt",
+   "front_brake_rotor": "Tektro 180mm 6 bolt"
+  },
+  "expected": {
+   "type": "quill",
+   "clamp_mm": 31.8,
+   "length_mm": 40,
+   "adjustable": true,
+   "details": "140mm vertical adjustment",
+   "_kind": "stem"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "grips",
+  "kind": "grips",
+  "text": "Lock-on ergonomic",
+  "siblings": {
+   "rear_brake_rotor": "Tektro 203mm 6 bolt",
+   "front_brake_rotor": "Tektro 180mm 6 bolt"
+  },
+  "expected": {
+   "lock_on": true,
+   "ergonomic": true,
+   "_kind": "grips"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "pedal_assist",
+  "kind": "pedal_assist",
+  "text": "3 Levels + Boost Mode (with Ride Tune Customization)",
+  "siblings": {
+   "front_brake_rotor": "Tektro 180mm 6 bolt",
+   "rear_brake_rotor": "Tektro 180mm 6 bolt"
+  },
+  "expected": {
+   "levels": 3,
+   "boost": true,
+   "details": "Ride Tune Customization",
+   "_kind": "pedal_assist"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "display",
+  "kind": "display",
+  "text": "Aventon BC280",
+  "siblings": {
+   "front_brake_rotor": "Tektro 180mm 6 bolt",
+   "rear_brake_rotor": "Tektro 180mm 6 bolt"
+  },
+  "expected": {
+   "manufacturer": "Aventon",
+   "model": "BC280",
+   "_kind": "display"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "lights",
+  "kind": "light",
+  "text": "Front and rear lights integrated",
+  "siblings": {
+   "front_brake_rotor": "Tektro 180mm 6 bolt",
+   "rear_brake_rotor": "Tektro 180mm 6 bolt"
+  },
+  "expected": {
+   "integrated": true,
+   "details": "Front and rear",
+   "_kind": "light"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "crankset",
+  "kind": "crankset",
+  "text": "3pc, 170mm crank arm",
+  "siblings": {
+   "front_brake_rotor": "Tektro 180mm 6 bolt",
+   "rear_brake_rotor": "Tektro 180mm 6 bolt"
+  },
+  "expected": {
+   "length_mm": 170,
+   "details": "3pc",
+   "_kind": "crankset"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "bottom_bracket",
+  "kind": "bottom_bracket",
+  "text": "100x177 Square Taper, Double Sided Torque sensor bottom bracket",
+  "siblings": {
+   "front_brake_rotor": "Tektro 180mm 6 bolt",
+   "rear_brake_rotor": "Tektro 180mm 6 bolt"
+  },
+  "expected": {
+   "type": "square_taper",
+   "torque_sensor": true,
+   "details": "100x177, double-sided",
+   "_kind": "bottom_bracket"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "pedals",
+  "kind": "pedals",
+  "text": "9/16\" Alloy Platform",
+  "siblings": {
+   "front_brake_rotor": "Tektro 180mm 6 bolt",
+   "rear_brake_rotor": "Tektro 180mm 6 bolt"
+  },
+  "expected": {
+   "thread": "9/16\"",
+   "material": "aluminum",
+   "type": "platform",
+   "_kind": "pedals"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "controller",
+  "kind": "controller",
+  "text": "Integrated in Motor",
+  "siblings": {
+   "front_brake_rotor": "Sram G2 200mm 6-Bolt",
+   "rear_brake_rotor": "SRAM G2 180mm 6-Bolt"
+  },
+  "expected": {
+   "details": "Integrated in Motor",
+   "_kind": "controller"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "throttle",
+  "kind": "throttle",
+  "text": "Aftermarket Throttle Available for Purchase",
+  "siblings": {
+   "front_brake_rotor": "Sram G2 200mm 6-Bolt",
+   "rear_brake_rotor": "SRAM G2 180mm 6-Bolt"
+  },
+  "expected": {
+   "details": "Aftermarket Throttle Available for Purchase",
+   "_kind": "throttle"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "sensors",
+  "kind": "sensor",
+  "text": "Double Sided Torque Sensor Integrated in Motor",
+  "siblings": {
+   "front_brake_rotor": "Sram G2 200mm 6-Bolt",
+   "rear_brake_rotor": "SRAM G2 180mm 6-Bolt"
+  },
+  "expected": {
+   "type": "torque",
+   "details": "Double-sided, integrated in motor",
+   "_kind": "sensor"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "shock",
+  "kind": "shock",
+  "text": "Rockshox Deluxe Select+ (210x55)",
+  "siblings": {
+   "front_brake_rotor": "SRAM Centerline 200mm 6-Bolt",
+   "rear_brake_rotor": "SRAM Centerline 200mm 6-Bolt"
+  },
+  "expected": {
+   "manufacturer": "RockShox",
+   "model": "Deluxe Select+",
+   "size": "210x55",
+   "_kind": "shock"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "stem",
+  "kind": "stem",
+  "text": "50mm Length, 35mm Clamp",
+  "siblings": {
+   "front_brake_rotor": "SRAM Centerline 200mm 6-Bolt",
+   "rear_brake_rotor": "SRAM Centerline 200mm 6-Bolt"
+  },
+  "expected": {
+   "length_mm": 50,
+   "clamp_mm": 35,
+   "_kind": "stem"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "shock",
+  "kind": "shock",
+  "text": "Rockshox Super Deluxe Select+ (210x55)",
+  "siblings": {
+   "front_brake_rotor": "SRAM Centerline 200mm 6-Bolt",
+   "rear_brake_rotor": "SRAM Centerline 200mm 6-Bolt"
+  },
+  "expected": {
+   "manufacturer": "RockShox",
+   "model": "Super Deluxe Select+",
+   "size": "210x55",
+   "_kind": "shock"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "battery",
+  "kind": "battery",
+  "text": "614.4Wh (48V)",
+  "siblings": null,
+  "expected": {
+   "capacity_wh": 614.4,
+   "voltage_v": 48,
+   "_kind": "battery"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "motor",
+  "kind": "motor",
+  "text": "Rear Hub, Geared, 750W, 70Nm Torque",
+  "siblings": null,
+  "expected": {
+   "placement": "hub",
+   "power_w": 750,
+   "torque_nm": 70,
+   "details": "Rear, geared",
+   "_kind": "motor"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "display",
+  "kind": "display",
+  "text": "Color LCD",
+  "siblings": null,
+  "expected": {
+   "type": "lcd",
+   "details": "Color",
+   "_kind": "display"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "throttle",
+  "kind": "throttle",
+  "text": "Yes",
+  "siblings": null,
+  "expected": {
+   "details": "Yes",
+   "_kind": "throttle"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "pedal_assist",
+  "kind": "pedal_assist",
+  "text": "3 Levels + Auto Function",
+  "siblings": null,
+  "expected": {
+   "levels": 3,
+   "details": "Auto Function",
+   "_kind": "pedal_assist"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "sensor",
+  "kind": "sensor",
+  "text": "Torque sensor",
+  "siblings": null,
+  "expected": {
+   "type": "torque",
+   "_kind": "sensor"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "charger",
+  "kind": "charger",
+  "text": "2A, AC 120V - 240V",
+  "siblings": null,
+  "expected": {
+   "amps_a": 2,
+   "details": "AC 120-240V input",
+   "_kind": "charger"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "shifter",
+  "kind": "derailleur",
+  "text": "Electric, Auto Function, 8-speed",
+  "siblings": null,
+  "expected": {
+   "speeds": 8,
+   "details": "Electric, auto function",
+   "_kind": "derailleur"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "rear_derailleur",
+  "kind": "derailleur",
+  "text": "Microshift 8-speed",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "microSHIFT",
+   "speeds": 8,
+   "_kind": "derailleur"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "chain",
+  "kind": "chain",
+  "text": "KMC 8spd",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "KMC",
+   "details": "8 spd",
+   "_kind": "chain"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "brakes",
+  "kind": "brake",
+  "text": "Hydraulic Disc, 180mm Rotors",
+  "siblings": null,
+  "expected": {
+   "kind": "disc",
+   "actuation": "hydraulic",
+   "rotor_mm": 180,
+   "_kind": "brake"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "frame",
+  "kind": "frame",
+  "text": "Aluminum Alloy",
+  "siblings": null,
+  "expected": {
+   "material": "aluminum",
+   "_kind": "frame"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "fork",
+  "kind": "fork",
+  "text": "Steel",
+  "siblings": null,
+  "expected": {
+   "details": "Steel",
+   "_kind": "fork"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "wheel_tire",
+  "kind": "tire",
+  "text": "26” x 2.4”, Puncture Resistant, Reflective Strip",
+  "siblings": null,
+  "expected": {
+   "diameter_in": 26,
+   "width_in": 2.4,
+   "details": "Puncture Resistant, Reflective Strip",
+   "_kind": "tire"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "saddle",
+  "kind": "saddle",
+  "text": "Comfort Padded",
+  "siblings": null,
+  "expected": {
+   "details": "Comfort Padded",
+   "_kind": "saddle"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "seatpost",
+  "kind": "seatpost",
+  "text": "27.2mm x 350mm, Alloy",
+  "siblings": null,
+  "expected": {
+   "diameter_mm": 27.2,
+   "length_mm": 350,
+   "material": "aluminum",
+   "_kind": "seatpost"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "stem",
+  "kind": "stem",
+  "text": "Easy Adjust",
+  "siblings": null,
+  "expected": {
+   "adjustable": true,
+   "details": "Easy Adjust",
+   "_kind": "stem"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "handlebar",
+  "kind": "handlebars",
+  "text": "660mm Wide, 25.4mm Clamp",
+  "siblings": null,
+  "expected": {
+   "width_mm": 660,
+   "clamp_mm": 25.4,
+   "_kind": "handlebars"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "grip",
+  "kind": "grips",
+  "text": "Ergonomic, Rubber",
+  "siblings": null,
+  "expected": {
+   "ergonomic": true,
+   "material": "rubber",
+   "_kind": "grips"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "lights",
+  "kind": "light",
+  "text": "Front: Integrated, Low-beam 70 lux, High-beam 120 luxRear: Integrated, Turn Signal, Break Light",
+  "siblings": null,
+  "expected": {
+   "integrated": true,
+   "turn_signal": true,
+   "brake_light": true,
+   "lux": 120,
+   "details": "Front: low-beam 70 lux, high-beam 120 lux; rear integrated",
+   "_kind": "light"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "1_seat_tube_length",
+  "kind": "tubes",
+  "text": "17.8\" (454mm)",
+  "siblings": null,
+  "expected": {
+   "details": "17.8\" (454mm)",
+   "_kind": "tubes"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "2_effective_top_tube",
+  "kind": "tubes",
+  "text": "26\" (660mm)",
+  "siblings": null,
+  "expected": {
+   "details": "26\" (660mm)",
+   "_kind": "tubes"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "handlebar_height_min",
+  "kind": "handlebars",
+  "text": "46.9\" (1190mm)",
+  "siblings": null,
+  "expected": {
+   "details": "46.9\" (1190mm)",
+   "_kind": "handlebars"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "battery",
+  "kind": "battery",
+  "text": "672Wh (48V) 1st battery, front672Wh (48V) 2nd battery, rear",
+  "siblings": null,
+  "expected": {
+   "capacity_wh": 672,
+   "voltage_v": 48,
+   "pack_count": 2,
+   "total_capacity_wh": 1344,
+   "details": "Front + rear packs",
+   "_kind": "battery"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "motor",
+  "kind": "motor",
+  "text": "Rear Hub, Geared, 750W",
+  "siblings": null,
+  "expected": {
+   "placement": "hub",
+   "power_w": 750,
+   "details": "Rear, geared",
+   "_kind": "motor"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "display",
+  "kind": "display",
+  "text": "LCD, with USB Charge Port",
+  "siblings": null,
+  "expected": {
+   "type": "lcd",
+   "details": "USB charge port",
+   "_kind": "display"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "controller",
+  "kind": "controller",
+  "text": "48V",
+  "siblings": null,
+  "expected": {
+   "voltage_v": 48,
+   "_kind": "controller"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "sensor",
+  "kind": "sensor",
+  "text": "12 Magnet Cadence Sensor, BB Mount",
+  "siblings": null,
+  "expected": {
+   "type": "cadence",
+   "magnets": 12,
+   "details": "BB mount",
+   "_kind": "sensor"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "crankset",
+  "kind": "crankset",
+  "text": "170mm, 48t Chainring, Integrated Chain Guide",
+  "siblings": null,
+  "expected": {
+   "length_mm": 170,
+   "chainring_t": 48,
+   "details": "Integrated chain guide",
+   "_kind": "crankset"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "cassette",
+  "kind": "cassette",
+  "text": "Shimano 7spd, 14-34t",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Shimano",
+   "speeds": 7,
+   "cog_range": "14-34T",
+   "_kind": "cassette"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "chain",
+  "kind": "chain",
+  "text": "KMC 7spd",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "KMC",
+   "details": "7 spd",
+   "_kind": "chain"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "brakes",
+  "kind": "brake",
+  "text": "Bengal Hydraulic Disc, 180mm Rotors",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Bengal",
+   "kind": "disc",
+   "actuation": "hydraulic",
+   "rotor_mm": 180,
+   "_kind": "brake"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "frame",
+  "kind": "frame",
+  "text": "6061 Aluminum Alloy",
+  "siblings": null,
+  "expected": {
+   "material": "aluminum",
+   "details": "6061",
+   "_kind": "frame"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "fork",
+  "kind": "fork",
+  "text": "Rigid Steel, 1 1/8\" Threadless",
+  "siblings": null,
+  "expected": {
+   "type": "rigid",
+   "details": "Steel, 1 1/8\" threadless",
+   "_kind": "fork"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "wheel_tire",
+  "kind": "tire",
+  "text": "24” x 2.4”, Puncture Resistant, Reflective Strip",
+  "siblings": null,
+  "expected": {
+   "diameter_in": 24,
+   "width_in": 2.4,
+   "details": "Puncture Resistant, Reflective Strip",
+   "_kind": "tire"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "seatpost",
+  "kind": "seatpost",
+  "text": "27.2 x 300mm, Alloy",
+  "siblings": null,
+  "expected": {
+   "diameter_mm": 27.2,
+   "length_mm": 300,
+   "material": "aluminum",
+   "_kind": "seatpost"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "stem",
+  "kind": "stem",
+  "text": "Adjustable Angle, 1 1/8\" Threadless, 31.8mm Clamp",
+  "siblings": null,
+  "expected": {
+   "adjustable": true,
+   "type": "threadless",
+   "clamp_mm": 31.8,
+   "details": "Adjustable angle, 1 1/8\"",
+   "_kind": "stem"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "grip",
+  "kind": "grips",
+  "text": "Ergonomic",
+  "siblings": null,
+  "expected": {
+   "ergonomic": true,
+   "_kind": "grips"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "lights",
+  "kind": "light",
+  "text": "Front: Integrated, Powered by Main BatteryRear: Included with Brake Light, Powered by Main Battery",
+  "siblings": null,
+  "expected": {
+   "integrated": true,
+   "brake_light": true,
+   "details": "Front and rear, powered by main battery",
+   "_kind": "light"
+  }
+ },
+ {
+  "brand": "blix",
+  "field": "bottom_bracket_drop",
+  "kind": "bottom_bracket",
+  "text": "1\" (25.4mm)",
+  "siblings": null,
+  "expected": {
+   "details": "1\" (25.4mm)",
+   "_kind": "bottom_bracket"
+  }
+ },
+ {
+  "brand": "buzz",
+  "field": "motor",
+  "kind": "motor",
+  "text": "500W Rear Hub Drive, 60 Nm",
+  "siblings": null,
+  "expected": {
+   "power_w": 500,
+   "torque_nm": 60,
+   "placement": "hub",
+   "details": "Rear",
+   "_kind": "motor"
+  }
+ },
+ {
+  "brand": "buzz",
+  "field": "battery",
+  "kind": "battery",
+  "text": "48V, 10.4 amp hours, 500 watt hours",
+  "siblings": null,
+  "expected": {
+   "voltage_v": 48,
+   "amphours_ah": 10.4,
+   "capacity_wh": 500,
+   "_kind": "battery"
+  }
+ },
+ {
+  "brand": "buzz",
+  "field": "charger",
+  "kind": "charger",
+  "text": "4-6 hours",
+  "siblings": null,
+  "expected": {
+   "details": "4-6 hours",
+   "_kind": "charger"
+  }
+ },
+ {
+  "brand": "buzz",
+  "field": "display",
+  "kind": "display",
+  "text": "Center Mounted LCD",
+  "siblings": null,
+  "expected": {
+   "type": "lcd",
+   "details": "Center-mounted",
+   "_kind": "display"
+  }
+ },
+ {
+  "brand": "buzz",
+  "field": "shifters",
+  "kind": "derailleur",
+  "text": "Shimano 7 speed trigger",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Shimano",
+   "speeds": 7,
+   "details": "Trigger shifter",
+   "_kind": "derailleur"
+  }
+ },
+ {
+  "brand": "buzz",
+  "field": "cassette",
+  "kind": "cassette",
+  "text": "Shimano TZ 14-28T",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Shimano",
+   "model": "TZ",
+   "cog_range": "14-28T",
+   "_kind": "cassette"
+  }
+ },
+ {
+  "brand": "buzz",
+  "field": "chainring",
+  "kind": "chainring",
+  "text": "48T",
+  "siblings": null,
+  "expected": {
+   "teeth": 48,
+   "_kind": "chainring"
+  }
+ },
+ {
+  "brand": "buzz",
+  "field": "crank",
+  "kind": "crankset",
+  "text": "Alloy 3pc, 170mm",
+  "siblings": null,
+  "expected": {
+   "length_mm": 170,
+   "details": "Alloy, 3pc",
+   "_kind": "crankset"
+  }
+ },
+ {
+  "brand": "buzz",
+  "field": "brakes",
+  "kind": "brake",
+  "text": "Front/Rear Mechanical Disc Brakes",
+  "siblings": null,
+  "expected": {
+   "kind": "disc",
+   "actuation": "mechanical",
+   "details": "Front & rear",
+   "_kind": "brake"
+  }
+ },
+ {
+  "brand": "buzz",
+  "field": "tire_size",
+  "kind": "tire",
+  "text": "Front: 24\"x3.0\" Rear: 20\"x3.0\"",
+  "siblings": null,
+  "expected": {
+   "diameter_in": 24,
+   "width_in": 3,
+   "details": "24x3.0 front / 20x3.0 rear",
+   "_kind": "tire"
+  }
+ },
+ {
+  "brand": "buzz",
+  "field": "rims",
+  "kind": "rims",
+  "text": "Alloy",
+  "siblings": null,
+  "expected": {
+   "material": "aluminum",
+   "_kind": "rims"
+  }
+ },
+ {
+  "brand": "buzz",
+  "field": "seat_post",
+  "kind": "seatpost",
+  "text": "Manual Dropper",
+  "siblings": null,
+  "expected": {
+   "type": "dropper",
+   "details": "Manual",
+   "_kind": "seatpost"
+  }
+ },
+ {
+  "brand": "buzz",
+  "field": "lights",
+  "kind": "light",
+  "text": "Front and Rear",
+  "siblings": null,
+  "expected": {
+   "details": "Front and rear",
+   "_kind": "light"
+  }
+ },
+ {
+  "brand": "buzz",
+  "field": "motor",
+  "kind": "motor",
+  "text": "500 Watt, 65 Newton Meter, Rear Hub-Drive",
+  "siblings": null,
+  "expected": {
+   "power_w": 500,
+   "torque_nm": 65,
+   "placement": "hub",
+   "details": "Rear",
+   "_kind": "motor"
+  }
+ },
+ {
+  "brand": "buzz",
+  "field": "battery",
+  "kind": "battery",
+  "text": "48 Volt, 10.4 Amp Hours, 500 Watt Hours",
+  "siblings": null,
+  "expected": {
+   "voltage_v": 48,
+   "amphours_ah": 10.4,
+   "capacity_wh": 500,
+   "_kind": "battery"
+  }
+ },
+ {
+  "brand": "buzz",
+  "field": "display",
+  "kind": "display",
+  "text": "LCD",
+  "siblings": null,
+  "expected": {
+   "type": "lcd",
+   "_kind": "display"
+  }
+ },
+ {
+  "brand": "buzz",
+  "field": "shifters",
+  "kind": "derailleur",
+  "text": "Shimano 6 speed twist shift",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Shimano",
+   "speeds": 6,
+   "details": "Twist shifter",
+   "_kind": "derailleur"
+  }
+ },
+ {
+  "brand": "buzz",
+  "field": "crank",
+  "kind": "crankset",
+  "text": "Alloy 3pc, 165mm",
+  "siblings": null,
+  "expected": {
+   "length_mm": 165,
+   "details": "Alloy, 3pc",
+   "_kind": "crankset"
+  }
+ },
+ {
+  "brand": "buzz",
+  "field": "brakes",
+  "kind": "brake",
+  "text": "Front/Rear Hydraulic Disc",
+  "siblings": null,
+  "expected": {
+   "kind": "disc",
+   "actuation": "hydraulic",
+   "details": "Front & rear",
+   "_kind": "brake"
+  }
+ },
+ {
+  "brand": "buzz",
+  "field": "suspension",
+  "kind": "fork",
+  "text": "Front",
+  "siblings": null,
+  "expected": {
+   "details": "Front suspension",
+   "_kind": "fork"
+  }
+ },
+ {
+  "brand": "buzz",
+  "field": "tire_size",
+  "kind": "tire",
+  "text": "20\" x 4\"",
+  "siblings": null,
+  "expected": {
+   "diameter_in": 20,
+   "width_in": 4,
+   "_kind": "tire"
+  }
+ },
+ {
+  "brand": "buzz",
+  "field": "saddle",
+  "kind": "saddle",
+  "text": "Padded ATB",
+  "siblings": null,
+  "expected": {
+   "details": "Padded ATB",
+   "_kind": "saddle"
+  }
+ },
+ {
+  "brand": "buzz",
+  "field": "seat_post",
+  "kind": "seatpost",
+  "text": "Alloy",
+  "siblings": null,
+  "expected": {
+   "material": "aluminum",
+   "_kind": "seatpost"
+  }
+ },
+ {
+  "brand": "buzz",
+  "field": "chainring",
+  "kind": "chainring",
+  "text": "42T",
+  "siblings": null,
+  "expected": {
+   "teeth": 42,
+   "_kind": "chainring"
+  }
+ },
+ {
+  "brand": "buzz",
+  "field": "saddle",
+  "kind": "saddle",
+  "text": "Velo Plush",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Velo",
+   "model": "Plush",
+   "_kind": "saddle"
+  }
+ },
+ {
+  "brand": "buzz",
+  "field": "lights",
+  "kind": "light",
+  "text": "Yes",
+  "siblings": null,
+  "expected": {
+   "_kind": "light"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "frame",
+  "kind": "frame",
+  "text": "SmartForm C3 Alloy step-thru frame, removable downtube battery, fully internal cable routing, post mount disc, dual water bottle headtube mount",
+  "siblings": null,
+  "expected": {
+   "material": "aluminum",
+   "style": "step_thru",
+   "removable_battery": true,
+   "cable_routing": "internal",
+   "brake_mount": "post mount",
+   "details": "SmartForm C3; dual water bottle headtube mounts",
+   "_kind": "frame"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "fork",
+  "kind": "fork",
+  "text": "SmartForm C3 Alloy blades, 1-1/8\" steerer, post mount disc, mid-blade rack/fender mounts, crown accessory mount, 45mm offset",
+  "siblings": null,
+  "expected": {
+   "details": "SmartForm C3 Alloy blades, 1-1/8\" steerer, post mount disc, mid-blade rack/fender mounts, crown accessory mount, 45mm offset",
+   "_kind": "fork"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "drive_unit",
+  "kind": "motor",
+  "text": "Bosch Active Line",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Bosch",
+   "model": "Active Line",
+   "_kind": "motor"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "battery",
+  "kind": "battery",
+  "text": "Bosch PowerTube, 400Wh",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Bosch",
+   "model": "PowerTube",
+   "capacity_wh": 400,
+   "_kind": "battery"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "charger",
+  "kind": "charger",
+  "text": "Bosch 2A",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Bosch",
+   "amps_a": 2,
+   "_kind": "charger"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "display",
+  "kind": "display",
+  "text": "Bosch Purion",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Bosch",
+   "model": "Purion",
+   "_kind": "display"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "certifications",
+  "kind": "cert",
+  "text": "UL 2849",
+  "siblings": null,
+  "expected": {
+   "standards": [
+    "UL 2849"
+   ],
+   "_kind": "cert"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "rear_derailleur",
+  "kind": "derailleur",
+  "text": "microSHIFT Marvo, 9-speed",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "microSHIFT",
+   "model": "Marvo",
+   "speeds": 9,
+   "_kind": "derailleur"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "shifters",
+  "kind": "derailleur",
+  "text": "microSHIFT Marvo XPress M859, trigger style, 9-speed",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "microSHIFT",
+   "model": "Marvo XPress M859",
+   "speeds": 9,
+   "details": "Trigger shifter",
+   "_kind": "derailleur"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "chain",
+  "kind": "chain",
+  "text": "KMC Z9, 9-speed",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "KMC",
+   "model": "Z9",
+   "details": "9-speed",
+   "_kind": "chain"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "crank",
+  "kind": "crankset",
+  "text": "FSA Bosch E-Bike, 38T",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "FSA",
+   "model": "Bosch E-Bike",
+   "chainring_t": 38,
+   "_kind": "crankset"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "brakes",
+  "kind": "brake",
+  "text": "Tektro M275 hydraulic disc, 180/160mm rotors",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Tektro",
+   "model": "M275",
+   "kind": "disc",
+   "actuation": "hydraulic",
+   "details": "180mm front / 160mm rear rotors",
+   "_kind": "brake"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "brake_levers",
+  "kind": "brake",
+  "text": "Tektro hydraulic disc",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Tektro",
+   "kind": "disc",
+   "actuation": "hydraulic",
+   "_kind": "brake"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "rims",
+  "kind": "rims",
+  "text": "Cannondale 2, double wall",
+  "siblings": null,
+  "expected": {
+   "double_wall": true,
+   "details": "Cannondale 2",
+   "_kind": "rims"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "spokes",
+  "kind": "spokes",
+  "text": "Stainless Steel, 14g",
+  "siblings": null,
+  "expected": {
+   "material": "stainless steel",
+   "gauge": 14,
+   "_kind": "spokes"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "tire_size",
+  "kind": "tire",
+  "text": "56",
+  "siblings": null,
+  "expected": {
+   "details": "56",
+   "_kind": "tire"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "tires",
+  "kind": "tire",
+  "text": "Kenda Kwick Seven.5, 27.5x2.20\"",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Kenda",
+   "model": "Kwick Seven.5",
+   "diameter_in": 27.5,
+   "width_in": 2.2,
+   "_kind": "tire"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "handlebar",
+  "kind": "handlebars",
+  "text": "Cannondale Low-Rise Urban, butted 6061 Alloy, 31.8mm, 25mm rise, 35° sweep, 680mm",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Cannondale",
+   "model": "Low-Rise Urban",
+   "material": "aluminum",
+   "clamp_mm": 31.8,
+   "rise_mm": 25,
+   "backsweep_deg": 35,
+   "width_mm": 680,
+   "details": "Butted 6061",
+   "_kind": "handlebars"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "stem",
+  "kind": "stem",
+  "text": "Cannondale 3 with Intellimount, Alloy, 31.8mm clamp",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Cannondale",
+   "model": "3 Intellimount",
+   "material": "aluminum",
+   "clamp_mm": 31.8,
+   "_kind": "stem"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "grips",
+  "kind": "grips",
+  "text": "Cannondale Comfort",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Cannondale",
+   "model": "Comfort",
+   "_kind": "grips"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "saddle",
+  "kind": "saddle",
+  "text": "Cannondale Ergo Comfort",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Cannondale",
+   "model": "Ergo Comfort",
+   "_kind": "saddle"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "seatpost",
+  "kind": "seatpost",
+  "text": "Cannondale 4, 6061 Alloy, 31.6x350mm",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Cannondale",
+   "model": "4",
+   "material": "aluminum",
+   "diameter_mm": 31.6,
+   "length_mm": 350,
+   "details": "6061",
+   "_kind": "seatpost"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "motor_power",
+  "kind": "motor",
+  "text": "250W",
+  "siblings": null,
+  "expected": {
+   "power_w": 250,
+   "_kind": "motor"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "suspension",
+  "kind": "fork",
+  "text": "No suspension",
+  "siblings": null,
+  "expected": {
+   "type": "rigid",
+   "details": "No suspension",
+   "_kind": "fork"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "frame",
+  "kind": "frame",
+  "text": "SmartForm C3 Alloy frame, removable downtube battery, semi-internal cable routing, tapered 1-1/8\"-1.5\" headtube, post mount disc, waterbottle and headtube rack mounts",
+  "siblings": null,
+  "expected": {
+   "material": "aluminum",
+   "removable_battery": true,
+   "brake_mount": "post mount",
+   "details": "SmartForm C3; semi-internal cable routing; tapered 1-1/8\"-1.5\" headtube; water bottle and headtube rack mounts",
+   "_kind": "frame"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "battery",
+  "kind": "battery",
+  "text": "HWT 36V, 418Wh, Taiwan-made",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "HWT",
+   "voltage_v": 36,
+   "capacity_wh": 418,
+   "details": "Taiwan-made",
+   "_kind": "battery"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "charger",
+  "kind": "charger",
+  "text": "HWT 2A",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "HWT",
+   "amps_a": 2,
+   "_kind": "charger"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "display",
+  "kind": "display",
+  "text": "Bafang C11, LCD",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Bafang",
+   "model": "C11",
+   "type": "lcd",
+   "_kind": "display"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "chain",
+  "kind": "chain",
+  "text": "KMC Z7, 7-speed",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "KMC",
+   "model": "Z7",
+   "details": "7-speed",
+   "_kind": "chain"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "crank",
+  "kind": "crankset",
+  "text": "Prowheel, 38T",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Prowheel",
+   "chainring_t": 38,
+   "_kind": "crankset"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "bottom_bracket",
+  "kind": "bottom_bracket",
+  "text": "Bafang SR PA14.32.S Sensor",
+  "siblings": null,
+  "expected": {
+   "details": "Bafang SR PA14.32.S Sensor",
+   "_kind": "bottom_bracket"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "rims",
+  "kind": "rims",
+  "text": "Alloy, double wall, 36h, disc-specific",
+  "siblings": null,
+  "expected": {
+   "material": "aluminum",
+   "double_wall": true,
+   "details": "36h, disc-specific",
+   "_kind": "rims"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "spokes",
+  "kind": "spokes",
+  "text": "Stainless steel, 13g",
+  "siblings": null,
+  "expected": {
+   "material": "stainless steel",
+   "gauge": 13,
+   "_kind": "spokes"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "handlebar",
+  "kind": "handlebars",
+  "text": "Cannondale Riser, 6061 Alloy, 25mm rise, 8° sweep, 6° rise, 740mm",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Cannondale",
+   "type": "riser",
+   "material": "aluminum",
+   "rise_mm": 25,
+   "backsweep_deg": 8,
+   "upsweep_deg": 6,
+   "width_mm": 740,
+   "_kind": "handlebars"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "stem",
+  "kind": "stem",
+  "text": "Cannondale Alloy, 31.8, 7°",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Cannondale",
+   "material": "aluminum",
+   "clamp_mm": 31.8,
+   "angle_deg": 7,
+   "_kind": "stem"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "saddle",
+  "kind": "saddle",
+  "text": "Cannondale Allroad Comfort",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Cannondale",
+   "model": "Allroad Comfort",
+   "_kind": "saddle"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "seatpost",
+  "kind": "seatpost",
+  "text": "6061 Alloy, 30.9x350mm",
+  "siblings": null,
+  "expected": {
+   "material": "aluminum",
+   "diameter_mm": 30.9,
+   "length_mm": 350,
+   "details": "6061",
+   "_kind": "seatpost"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "bottom_bracket",
+  "kind": "bottom_bracket",
+  "text": "Bafang SR PA221.32.ST.C torque sensor",
+  "siblings": null,
+  "expected": {
+   "torque_sensor": true,
+   "details": "Bafang SR PA221.32.ST.C",
+   "_kind": "bottom_bracket"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "grips",
+  "kind": "grips",
+  "text": "Cannondale Ergo Lock-on",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Cannondale",
+   "ergonomic": true,
+   "lock_on": true,
+   "_kind": "grips"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "rear_shock",
+  "kind": "shock",
+  "text": "Fox Float X Factory, Kashima, 2 pos adj, EVOL LV, 230x62.5mm",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "FOX",
+   "model": "Float X Factory",
+   "type": "air",
+   "size": "230x62.5mm",
+   "details": "Kashima coat; 2-position adjust; EVOL LV",
+   "_kind": "shock"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "rear_shock",
+  "kind": "shock",
+  "text": "RockShox Deluxe Select+, DebonAir+, 2-Pos mode adjust, adjustable rebound, 230x62.5mm",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "RockShox",
+   "model": "Deluxe Select+",
+   "type": "air",
+   "size": "230x62.5mm",
+   "details": "DebonAir+; 2-position mode adjust; adjustable rebound",
+   "_kind": "shock"
+  }
+ },
+ {
+  "brand": "cemoto",
+  "field": "motor",
+  "kind": "motor",
+  "text": "750W BLDC",
+  "siblings": null,
+  "expected": {
+   "power_w": 750,
+   "details": "BLDC",
+   "_kind": "motor"
+  }
+ },
+ {
+  "brand": "cemoto",
+  "field": "battery",
+  "kind": "battery",
+  "text": "48V15.6Ah Li-ion",
+  "siblings": null,
+  "expected": {
+   "voltage_v": 48,
+   "amphours_ah": 15.6,
+   "details": "Li-ion",
+   "_kind": "battery"
+  }
+ },
+ {
+  "brand": "cemoto",
+  "field": "charger",
+  "kind": "charger",
+  "text": "54.6V2A UL",
+  "siblings": null,
+  "expected": {
+   "output_v": 54.6,
+   "amps_a": 2,
+   "details": "UL",
+   "_kind": "charger"
+  }
+ },
+ {
+  "brand": "cemoto",
+  "field": "display",
+  "kind": "display",
+  "text": "Color display 4”",
+  "siblings": null,
+  "expected": {
+   "type": "color",
+   "size_in": 4,
+   "_kind": "display"
+  }
+ },
+ {
+  "brand": "cemoto",
+  "field": "frame",
+  "kind": "frame",
+  "text": "6061 al alloy",
+  "siblings": null,
+  "expected": {
+   "material": "aluminum",
+   "details": "6061",
+   "_kind": "frame"
+  }
+ },
+ {
+  "brand": "cemoto",
+  "field": "fork",
+  "kind": "fork",
+  "text": "alloy suspension Lo",
+  "siblings": null,
+  "expected": {
+   "type": "suspension",
+   "details": "Alloy, Lo",
+   "_kind": "fork"
+  }
+ },
+ {
+  "brand": "cemoto",
+  "field": "brakes",
+  "kind": "brake",
+  "text": "Hydraulic Disc XOD",
+  "siblings": null,
+  "expected": {
+   "kind": "disc",
+   "actuation": "hydraulic",
+   "details": "XOD",
+   "_kind": "brake"
+  }
+ },
+ {
+  "brand": "cemoto",
+  "field": "tyres",
+  "kind": "tire",
+  "text": "26*4.0 CST",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "CST",
+   "diameter_in": 26,
+   "width_in": 4,
+   "_kind": "tire"
+  }
+ },
+ {
+  "brand": "cemoto",
+  "field": "motor_peak_power",
+  "kind": "motor",
+  "text": "3000W 3000W 6000W",
+  "siblings": null,
+  "expected": {
+   "details": "3000W 3000W 6000W",
+   "_kind": "motor"
+  }
+ },
+ {
+  "brand": "cemoto",
+  "field": "battery",
+  "kind": "battery",
+  "text": "48V15Ah Li-ion",
+  "siblings": null,
+  "expected": {
+   "voltage_v": 48,
+   "amphours_ah": 15,
+   "details": "Li-ion",
+   "_kind": "battery"
+  }
+ },
+ {
+  "brand": "cemoto",
+  "field": "frame",
+  "kind": "frame",
+  "text": "Carbon Steel",
+  "siblings": null,
+  "expected": {
+   "material": "steel",
+   "details": "Carbon steel",
+   "_kind": "frame"
+  }
+ },
+ {
+  "brand": "cemoto",
+  "field": "brakes",
+  "kind": "brake",
+  "text": "Disc Tektro",
+  "siblings": null,
+  "expected": {
+   "kind": "disc",
+   "manufacturer": "Tektro",
+   "_kind": "brake"
+  }
+ },
+ {
+  "brand": "cemoto",
+  "field": "tyres",
+  "kind": "tire",
+  "text": "20*4.0 KENDA",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Kenda",
+   "diameter_in": 20,
+   "width_in": 4,
+   "_kind": "tire"
+  }
+ },
+ {
+  "brand": "cemoto",
+  "field": "charger",
+  "kind": "charger",
+  "text": "54.6V 2A UL",
+  "siblings": null,
+  "expected": {
+   "output_v": 54.6,
+   "amps_a": 2,
+   "details": "UL",
+   "_kind": "charger"
+  }
+ },
+ {
+  "brand": "cemoto",
+  "field": "display",
+  "kind": "display",
+  "text": "Color LCD 4”",
+  "siblings": null,
+  "expected": {
+   "type": "lcd",
+   "size_in": 4,
+   "details": "Color",
+   "_kind": "display"
+  }
+ },
+ {
+  "brand": "cemoto",
+  "field": "fork",
+  "kind": "fork",
+  "text": "alloy crown suspension fork",
+  "siblings": null,
+  "expected": {
+   "type": "suspension",
+   "details": "Alloy crown",
+   "_kind": "fork"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "battery",
+  "kind": "battery",
+  "text": "48V/20Ah, 960Wh Lithium-ion battery with LG cells",
+  "siblings": {
+   "brake_rotor": "180mm brake rotor"
+  },
+  "expected": {
+   "voltage_v": 48,
+   "amphours_ah": 20,
+   "capacity_wh": 960,
+   "cell_brand": "LG",
+   "details": "Lithium-ion",
+   "_kind": "battery"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "motor",
+  "kind": "motor",
+  "text": "BAFANG SUTTO 750W rear hub motor, 85 Nm of torque",
+  "siblings": {
+   "brake_rotor": "180mm brake rotor"
+  },
+  "expected": {
+   "manufacturer": "Bafang",
+   "model": "Sutto",
+   "power_w": 750,
+   "placement": "hub",
+   "torque_nm": 85,
+   "details": "Rear",
+   "_kind": "motor"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "display",
+  "kind": "display",
+  "text": "3.5\" color matrix HMI display",
+  "siblings": {
+   "brake_rotor": "180mm brake rotor"
+  },
+  "expected": {
+   "type": "color",
+   "size_in": 3.5,
+   "details": "Matrix HMI",
+   "_kind": "display"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "charger",
+  "kind": "charger",
+  "text": "Input: 100-240V AC, 2.0A; Output: 54.6V DC, 3.0A.",
+  "siblings": {
+   "brake_rotor": "180mm brake rotor"
+  },
+  "expected": {
+   "output_v": 54.6,
+   "amps_a": 3,
+   "details": "Input: 100-240V AC, 2.0A",
+   "_kind": "charger"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "pedal_sensor",
+  "kind": "sensor",
+  "text": "Cadence sensor",
+  "siblings": {
+   "brake_rotor": "180mm brake rotor"
+  },
+  "expected": {
+   "type": "cadence",
+   "_kind": "sensor"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "throttle",
+  "kind": "throttle",
+  "text": "Thumb throttle",
+  "siblings": {
+   "brake_rotor": "180mm brake rotor"
+  },
+  "expected": {
+   "type": "thumb",
+   "_kind": "throttle"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "frame",
+  "kind": "frame",
+  "text": "Aluminum alloy",
+  "siblings": {
+   "brake_rotor": "180mm brake rotor"
+  },
+  "expected": {
+   "material": "aluminum",
+   "_kind": "frame"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "fork",
+  "kind": "fork",
+  "text": "RST front suspension fork, 95mm travel",
+  "siblings": {
+   "brake_rotor": "180mm brake rotor"
+  },
+  "expected": {
+   "manufacturer": "RST",
+   "type": "suspension",
+   "travel_mm": 95,
+   "_kind": "fork"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "rim",
+  "kind": "rims",
+  "text": "Aluminum ring, 12G 36H AV, 585 x 85mm",
+  "siblings": {
+   "brake_rotor": "180mm brake rotor"
+  },
+  "expected": {
+   "material": "aluminum",
+   "details": "12G 36H AV, 585 x 85mm",
+   "_kind": "rims"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "tire",
+  "kind": "tire",
+  "text": "KENDA 26x4.0\" fat tires",
+  "siblings": {
+   "brake_rotor": "180mm brake rotor"
+  },
+  "expected": {
+   "manufacturer": "Kenda",
+   "diameter_in": 26,
+   "width_in": 4,
+   "details": "Fat",
+   "_kind": "tire"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "spoke",
+  "kind": "spokes",
+  "text": "Black stainless 12G, 250mm Front, 190mm Rear",
+  "siblings": {
+   "brake_rotor": "180mm brake rotor"
+  },
+  "expected": {
+   "material": "stainless steel",
+   "gauge": 12,
+   "details": "Black; 250mm front, 190mm rear",
+   "_kind": "spokes"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "shifter",
+  "kind": "derailleur",
+  "text": "Shimano 8-speed",
+  "siblings": {
+   "brake_rotor": "180mm brake rotor"
+  },
+  "expected": {
+   "manufacturer": "Shimano",
+   "speeds": 8,
+   "_kind": "derailleur"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "rear_derailleur",
+  "kind": "derailleur",
+  "text": "SHIMANO ALTUS 8-speed",
+  "siblings": {
+   "brake_rotor": "180mm brake rotor"
+  },
+  "expected": {
+   "manufacturer": "Shimano",
+   "model": "Altus",
+   "speeds": 8,
+   "_kind": "derailleur"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "cassette",
+  "kind": "cassette",
+  "text": "SHIMANO HYPERGLIDE",
+  "siblings": {
+   "brake_rotor": "180mm brake rotor"
+  },
+  "expected": {
+   "manufacturer": "Shimano",
+   "model": "Hyperglide",
+   "_kind": "cassette"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "crank_arm",
+  "kind": "crankset",
+  "text": "42ED, 170mm",
+  "siblings": {
+   "brake_rotor": "180mm brake rotor"
+  },
+  "expected": {
+   "length_mm": 170,
+   "details": "42ED",
+   "_kind": "crankset"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "pedal",
+  "kind": "pedals",
+  "text": "Aluminum alloy",
+  "siblings": {
+   "brake_rotor": "180mm brake rotor"
+  },
+  "expected": {
+   "material": "aluminum",
+   "_kind": "pedals"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "saddle",
+  "kind": "saddle",
+  "text": "Black nubuck leather",
+  "siblings": {
+   "brake_rotor": "180mm brake rotor"
+  },
+  "expected": {
+   "details": "Black nubuck leather",
+   "_kind": "saddle"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "seat_post",
+  "kind": "seatpost",
+  "text": "Forged Alloy, Ø30.4*350mm",
+  "siblings": {
+   "brake_rotor": "180mm brake rotor"
+  },
+  "expected": {
+   "material": "aluminum",
+   "diameter_mm": 30.4,
+   "length_mm": 350,
+   "details": "Forged",
+   "_kind": "seatpost"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "stem",
+  "kind": "stem",
+  "text": "Bar bore: Ø31.8mm; Clamp I.D.: Ø28.6mm",
+  "siblings": {
+   "brake_rotor": "180mm brake rotor"
+  },
+  "expected": {
+   "clamp_mm": 31.8,
+   "details": "Steerer clamp Ø28.6mm",
+   "_kind": "stem"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "handlebar",
+  "kind": "handlebars",
+  "text": "Flat Bar, Aluminum Alloy Ø31.8mm, Width 780mm",
+  "siblings": {
+   "brake_rotor": "180mm brake rotor"
+  },
+  "expected": {
+   "type": "flat",
+   "material": "aluminum",
+   "clamp_mm": 31.8,
+   "width_mm": 780,
+   "_kind": "handlebars"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "grips",
+  "kind": "grips",
+  "text": "140mm black grips",
+  "siblings": {
+   "brake_rotor": "180mm brake rotor"
+  },
+  "expected": {
+   "details": "140mm black",
+   "_kind": "grips"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "brakes",
+  "kind": "brake",
+  "text": "TEKTRO hydraulic disc brake",
+  "siblings": {
+   "brake_rotor": "180mm brake rotor"
+  },
+  "expected": {
+   "manufacturer": "Tektro",
+   "kind": "disc",
+   "actuation": "hydraulic",
+   "_kind": "brake"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "brake_rotor",
+  "kind": "brake",
+  "text": "180mm brake rotor",
+  "siblings": {
+   "brake_rotor": "180mm brake rotor"
+  },
+  "expected": {
+   "rotor_mm": 180,
+   "_kind": "brake"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "front_light",
+  "kind": "light",
+  "text": "40 LUX headlight",
+  "siblings": {
+   "brake_rotor": "180mm brake rotor"
+  },
+  "expected": {
+   "lux": 40,
+   "details": "Headlight",
+   "_kind": "light"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "tail_light",
+  "kind": "light",
+  "text": "Brake light",
+  "siblings": {
+   "brake_rotor": "180mm brake rotor"
+  },
+  "expected": {
+   "brake_light": true,
+   "_kind": "light"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "display",
+  "kind": "display",
+  "text": "2.0\" color matrix HMI display",
+  "siblings": {
+   "brake_rotor": "180mm brake rotor"
+  },
+  "expected": {
+   "type": "color",
+   "size_in": 2,
+   "details": "Matrix HMI",
+   "_kind": "display"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "fork",
+  "kind": "fork",
+  "text": "RST front suspension fork, 60mm travel",
+  "siblings": {
+   "brake_rotor": "180mm brake rotor"
+  },
+  "expected": {
+   "manufacturer": "RST",
+   "type": "suspension",
+   "travel_mm": 60,
+   "_kind": "fork"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "rim",
+  "kind": "rims",
+  "text": "Aluminum ring, 12G 36H AV, 422*85mm",
+  "siblings": {
+   "brake_rotor": "180mm brake rotor"
+  },
+  "expected": {
+   "material": "aluminum",
+   "details": "12G 36H AV, 422*85mm",
+   "_kind": "rims"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "tire",
+  "kind": "tire",
+  "text": "KENDA 20x4.0\" fat tires",
+  "siblings": {
+   "brake_rotor": "180mm brake rotor"
+  },
+  "expected": {
+   "manufacturer": "Kenda",
+   "diameter_in": 20,
+   "width_in": 4,
+   "details": "Fat",
+   "_kind": "tire"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "freewheel",
+  "kind": "cassette",
+  "text": "SHIMANO 7-speed",
+  "siblings": {
+   "brake_rotor": "180mm brake rotor"
+  },
+  "expected": {
+   "manufacturer": "Shimano",
+   "speeds": 7,
+   "_kind": "cassette"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "crank_arm",
+  "kind": "crankset",
+  "text": "52ED, 170mm",
+  "siblings": {
+   "brake_rotor": "180mm brake rotor"
+  },
+  "expected": {
+   "length_mm": 170,
+   "details": "52ED",
+   "_kind": "crankset"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "handlebar",
+  "kind": "handlebars",
+  "text": "Cruiser Bars, Aluminum Alloy Ø31.8mm, Width 780mm",
+  "siblings": {
+   "brake_rotor": "180mm brake rotor"
+  },
+  "expected": {
+   "type": "cruiser",
+   "material": "aluminum",
+   "clamp_mm": 31.8,
+   "width_mm": 780,
+   "_kind": "handlebars"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "battery",
+  "kind": "battery",
+  "text": "48V/15Ah, 720Wh Lithium-ion battery with LG 21700 cells",
+  "siblings": {
+   "brake_rotor": "TEKTRO HD-E730, 3T, 203x2mm"
+  },
+  "expected": {
+   "voltage_v": 48,
+   "amphours_ah": 15,
+   "capacity_wh": 720,
+   "cell_brand": "LG",
+   "cell_format": "21700",
+   "details": "Lithium-ion",
+   "_kind": "battery"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "motor",
+  "kind": "motor",
+  "text": "BAFANG Mid-drive, 500W rated power, 750W peak power, 48V, 130 Nm of torque, based on CAN6.3 protocol",
+  "siblings": {
+   "brake_rotor": "TEKTRO HD-E730, 3T, 203x2mm"
+  },
+  "expected": {
+   "manufacturer": "Bafang",
+   "placement": "mid",
+   "power_w": 500,
+   "peak_w": 750,
+   "voltage_v": 48,
+   "torque_nm": 130,
+   "details": "CAN 6.3 protocol",
+   "_kind": "motor"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "frame",
+  "kind": "frame",
+  "text": "Aluminum alloy, 17\"/19\"Size, 150mm travel",
+  "siblings": {
+   "brake_rotor": "TEKTRO HD-E730, 3T, 203x2mm"
+  },
+  "expected": {
+   "material": "aluminum",
+   "details": "17\"/19\" sizes, 150mm travel",
+   "_kind": "frame"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "shock",
+  "kind": "shock",
+  "text": "ROCKSHOX RS-DELUXE SELECT-C1, 190mmx45mm, iDebonAir+ air spring, Maxima Plush dynamic suspension lubricant",
+  "siblings": {
+   "brake_rotor": "TEKTRO HD-E730, 3T, 203x2mm"
+  },
+  "expected": {
+   "manufacturer": "RockShox",
+   "model": "Deluxe Select C1",
+   "type": "air",
+   "size": "190x45mm",
+   "details": "DebonAir+ air spring; Maxima Plush lubricant",
+   "_kind": "shock"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "spoke",
+  "kind": "spokes",
+  "text": "Black stainless, 12G, 247mm",
+  "siblings": {
+   "brake_rotor": "TEKTRO HD-E730, 3T, 203x2mm"
+  },
+  "expected": {
+   "material": "stainless steel",
+   "gauge": 12,
+   "details": "Black, 247mm",
+   "_kind": "spokes"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "chainring",
+  "kind": "chainring",
+  "text": "BAFANG MM G520, 34T",
+  "siblings": {
+   "brake_rotor": "TEKTRO HD-E730, 3T, 203x2mm"
+  },
+  "expected": {
+   "manufacturer": "Bafang",
+   "model": "MM G520",
+   "teeth": 34,
+   "_kind": "chainring"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "chain",
+  "kind": "chain",
+  "text": "KMC E10S for e-bikes",
+  "siblings": {
+   "brake_rotor": "TEKTRO HD-E730, 3T, 203x2mm"
+  },
+  "expected": {
+   "manufacturer": "KMC",
+   "model": "E10S",
+   "details": "For e-bikes",
+   "_kind": "chain"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "saddle",
+  "kind": "saddle",
+  "text": "VELO, boron steel, 160mm width",
+  "siblings": {
+   "brake_rotor": "TEKTRO HD-E730, 3T, 203x2mm"
+  },
+  "expected": {
+   "manufacturer": "Velo",
+   "width_mm": 160,
+   "details": "Boron steel rails",
+   "_kind": "saddle"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "seat_post",
+  "kind": "seatpost",
+  "text": "Aluminum alloy, Ø31.6*264mm",
+  "siblings": {
+   "brake_rotor": "TEKTRO HD-E730, 3T, 203x2mm"
+  },
+  "expected": {
+   "material": "aluminum",
+   "diameter_mm": 31.6,
+   "length_mm": 264,
+   "_kind": "seatpost"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "grips",
+  "kind": "grips",
+  "text": "VELO, trail grip",
+  "siblings": {
+   "brake_rotor": "TEKTRO HD-E730, 3T, 203x2mm"
+  },
+  "expected": {
+   "manufacturer": "Velo",
+   "details": "Trail grip",
+   "_kind": "grips"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "chainring",
+  "kind": "chainring",
+  "text": "BAFANG MM G510, 40T",
+  "siblings": {
+   "brake_rotor": "TEKTRO HD-E730, 3T, 203x2mm"
+  },
+  "expected": {
+   "manufacturer": "Bafang",
+   "model": "MM G510",
+   "teeth": 40,
+   "_kind": "chainring"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "stem",
+  "kind": "stem",
+  "text": "Bar bore: Ø25.4mm; Clamp I.D.: Ø28.6mm",
+  "siblings": {
+   "brake_rotor": "180mm brake rotor"
+  },
+  "expected": {
+   "clamp_mm": 25.4,
+   "details": "Steerer clamp Ø28.6mm",
+   "_kind": "stem"
+  }
+ },
+ {
+  "brand": "cyke",
+  "field": "charger",
+  "kind": "charger",
+  "text": "36V 5A",
+  "siblings": {
+   "brake_rotor": "160*1.8mm brake rotor"
+  },
+  "expected": {
+   "output_v": 36,
+   "amps_a": 5,
+   "_kind": "charger"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "tires",
+  "kind": "tire",
+  "text": "26 x 4.0 Fat Tires",
+  "siblings": null,
+  "expected": {
+   "diameter_in": 26,
+   "width_in": 4,
+   "details": "Fat",
+   "_kind": "tire"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "motor",
+  "kind": "motor",
+  "text": "1000W(PEAK) high-speed brushless motor",
+  "siblings": null,
+  "expected": {
+   "peak_w": 1000,
+   "details": "High-speed brushless",
+   "_kind": "motor"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "battery",
+  "kind": "battery",
+  "text": "48V 16Ah Lithium-Ion Battery",
+  "siblings": null,
+  "expected": {
+   "voltage_v": 48,
+   "amphours_ah": 16,
+   "details": "Lithium-ion",
+   "_kind": "battery"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "brakes",
+  "kind": "brake",
+  "text": "Hydraulic front & rear brakes",
+  "siblings": null,
+  "expected": {
+   "actuation": "hydraulic",
+   "details": "Front & rear",
+   "_kind": "brake"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "g_minimum_handlebar_height",
+  "kind": "handlebars",
+  "text": "118 cm",
+  "siblings": null,
+  "expected": {
+   "details": "118 cm",
+   "_kind": "handlebars"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "h_maximum_handlebar_height",
+  "kind": "handlebars",
+  "text": "120 cm",
+  "siblings": null,
+  "expected": {
+   "details": "120 cm",
+   "_kind": "handlebars"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "battery",
+  "kind": "battery",
+  "text": "48V13Ah Lithium Removable Battery",
+  "siblings": null,
+  "expected": {
+   "voltage_v": 48,
+   "amphours_ah": 13,
+   "removable": true,
+   "details": "Lithium",
+   "_kind": "battery"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "frame",
+  "kind": "frame",
+  "text": "3 Step Alloy Foldable Frame",
+  "siblings": null,
+  "expected": {
+   "material": "aluminum",
+   "folding": true,
+   "details": "3-step",
+   "_kind": "frame"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "tire",
+  "kind": "tire",
+  "text": "20 x 4.0 All Terrain Fat Tires",
+  "siblings": null,
+  "expected": {
+   "diameter_in": 20,
+   "width_in": 4,
+   "details": "All-terrain, fat",
+   "_kind": "tire"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "brakes",
+  "kind": "brake",
+  "text": "160mm Mechanical Disc Brake",
+  "siblings": null,
+  "expected": {
+   "kind": "disc",
+   "actuation": "mechanical",
+   "rotor_mm": 160,
+   "_kind": "brake"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "display",
+  "kind": "display",
+  "text": "48V Centered LCD Display",
+  "siblings": null,
+  "expected": {
+   "type": "lcd",
+   "details": "48V, centered",
+   "_kind": "display"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "pedal_assist",
+  "kind": "pedal_assist",
+  "text": "Intelligent 0~5 Level Pedal Assist",
+  "siblings": null,
+  "expected": {
+   "levels": 5,
+   "details": "Intelligent, 0~5",
+   "_kind": "pedal_assist"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "pedals",
+  "kind": "pedals",
+  "text": "Black/Silver, Half Aluminum Folding Pedals",
+  "siblings": null,
+  "expected": {
+   "material": "aluminum",
+   "details": "Black/silver, half-aluminum, folding",
+   "_kind": "pedals"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "sensor",
+  "kind": "sensor",
+  "text": "36-48V12Magnetic Steel Sensor",
+  "siblings": null,
+  "expected": {
+   "type": "cadence",
+   "magnets": 12,
+   "details": "36-48V, magnetic steel",
+   "_kind": "sensor"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "charger",
+  "kind": "charger",
+  "text": "48V 2A Charger",
+  "siblings": null,
+  "expected": {
+   "output_v": 48,
+   "amps_a": 2,
+   "_kind": "charger"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "motor",
+  "kind": "motor",
+  "text": "960W",
+  "siblings": null,
+  "expected": {
+   "power_w": 960,
+   "_kind": "motor"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "display",
+  "kind": "display",
+  "text": "LCD Color Display",
+  "siblings": null,
+  "expected": {
+   "type": "lcd",
+   "details": "Color",
+   "_kind": "display"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "suspension",
+  "kind": "fork",
+  "text": "Full Suspension/ Front 100mm Adjustable / Rear DNM 55mm Adjustable Travel",
+  "siblings": null,
+  "expected": {
+   "travel_mm": 100,
+   "details": "Full suspension; front 100mm adjustable; rear DNM 55mm adjustable",
+   "_kind": "fork"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "range_throttle_only",
+  "kind": "throttle",
+  "text": "40-85 Miles",
+  "siblings": null,
+  "expected": {
+   "details": "40-85 Miles",
+   "_kind": "throttle"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "pedal_assist",
+  "kind": "pedal_assist",
+  "text": "5 Levels",
+  "siblings": {
+   "disc_rotor": "180mm Front & Rear Drivetrain"
+  },
+  "expected": {
+   "levels": 5,
+   "_kind": "pedal_assist"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "certification",
+  "kind": "cert",
+  "text": "UL 2849 Certified by Tüv Rheinland",
+  "siblings": {
+   "disc_rotor": "180mm Front & Rear Drivetrain"
+  },
+  "expected": {
+   "standards": [
+    "TUV",
+    "UL 2849"
+   ],
+   "_kind": "cert"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "fork",
+  "kind": "fork",
+  "text": "Hydraulic, Adjustable Lockout, Aluminum & Steel Construction",
+  "siblings": {
+   "disc_rotor": "180mm Front & Rear Drivetrain"
+  },
+  "expected": {
+   "type": "suspension",
+   "lockout": true,
+   "details": "Hydraulic; aluminum & steel construction",
+   "_kind": "fork"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "wheels",
+  "kind": "wheel",
+  "text": "20-inch, Double-Wall Aluminum, 36-Hole, 12-Gauge Spokes, Black",
+  "siblings": {
+   "disc_rotor": "180mm Front & Rear Drivetrain"
+  },
+  "expected": {
+   "size_in": 20,
+   "double_wall": true,
+   "material": "aluminum",
+   "holes": 36,
+   "gauge": 12,
+   "details": "Black",
+   "_kind": "wheel"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "charger",
+  "kind": "charger",
+  "text": "54.6V 8A Output",
+  "siblings": {
+   "disc_rotor": "180mm Front & Rear Drivetrain"
+  },
+  "expected": {
+   "output_v": 54.6,
+   "amps_a": 8,
+   "_kind": "charger"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "front_light",
+  "kind": "light",
+  "text": "30 Lux with Integrated E-Horn",
+  "siblings": {
+   "disc_rotor": "180mm Front & Rear Drivetrain"
+  },
+  "expected": {
+   "lux": 30,
+   "details": "Integrated e-horn",
+   "_kind": "light"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "rear_light",
+  "kind": "light",
+  "text": "Automatically brightens When Braking or Shaking",
+  "siblings": {
+   "disc_rotor": "180mm Front & Rear Drivetrain"
+  },
+  "expected": {
+   "brake_light": true,
+   "details": "Automatically brightens When Braking or Shaking",
+   "_kind": "light"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "chain",
+  "kind": "chain",
+  "text": "Anti-Rust Bicycle Chain, 1/2\" x 3/32\", 124 Links",
+  "siblings": {
+   "disc_rotor": "180mm Front & Rear Drivetrain"
+  },
+  "expected": {
+   "links": 124,
+   "details": "Anti-rust, 1/2\" x 3/32\"",
+   "_kind": "chain"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "crank",
+  "kind": "crankset",
+  "text": "170mm",
+  "siblings": {
+   "disc_rotor": "180mm Front & Rear Drivetrain"
+  },
+  "expected": {
+   "length_mm": 170,
+   "_kind": "crankset"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "rear_derailleur",
+  "kind": "derailleur",
+  "text": "Shimano Tourney RD-TY300, 7-Speed",
+  "siblings": {
+   "disc_rotor": "180mm Front & Rear Drivetrain"
+  },
+  "expected": {
+   "manufacturer": "Shimano",
+   "model": "Tourney RD-TY300",
+   "speeds": 7,
+   "_kind": "derailleur"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "shifter",
+  "kind": "derailleur",
+  "text": "Shimano SL-M315-7R",
+  "siblings": {
+   "disc_rotor": "180mm Front & Rear Drivetrain"
+  },
+  "expected": {
+   "manufacturer": "Shimano",
+   "model": "SL-M315-7R",
+   "speeds": 7,
+   "details": "Shifter",
+   "_kind": "derailleur"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "cassette",
+  "kind": "cassette",
+  "text": "7-Speed, 14T-28T",
+  "siblings": {
+   "disc_rotor": "180mm Front & Rear Drivetrain"
+  },
+  "expected": {
+   "speeds": 7,
+   "cog_range": "14-28T",
+   "_kind": "cassette"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "pedals",
+  "kind": "pedals",
+  "text": "Boron Steel, Non-Foldable",
+  "siblings": {
+   "disc_rotor": "180mm Front & Rear Drivetrain"
+  },
+  "expected": {
+   "material": "steel",
+   "details": "Boron steel, non-foldable",
+   "_kind": "pedals"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "saddle",
+  "kind": "saddle",
+  "text": "ENGWE Soft Saddle",
+  "siblings": {
+   "disc_rotor": "180mm Front & Rear Drivetrain"
+  },
+  "expected": {
+   "manufacturer": "Engwe",
+   "details": "Soft",
+   "_kind": "saddle"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "seat_post",
+  "kind": "seatpost",
+  "text": "10-Level Adjustable",
+  "siblings": {
+   "disc_rotor": "180mm Front & Rear Drivetrain"
+  },
+  "expected": {
+   "details": "10-Level Adjustable",
+   "_kind": "seatpost"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "stem",
+  "kind": "stem",
+  "text": "Foldable",
+  "siblings": {
+   "disc_rotor": "180mm Front & Rear Drivetrain"
+  },
+  "expected": {
+   "type": "folding",
+   "_kind": "stem"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "sensor",
+  "kind": "sensor",
+  "text": "Torque/Cadence",
+  "siblings": {
+   "disc_rotor": "180mm Front & Rear Drivetrain"
+  },
+  "expected": {
+   "type": "torque+cadence",
+   "_kind": "sensor"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "throttle",
+  "kind": "throttle",
+  "text": "Ergonomic Thumb Throttle",
+  "siblings": {
+   "disc_rotor": "203mm Front & Rear Drivetrain"
+  },
+  "expected": {
+   "type": "thumb",
+   "details": "Ergonomic",
+   "_kind": "throttle"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "rear_suspension",
+  "kind": "shock",
+  "text": "30mm Travel Wheel Set",
+  "siblings": {
+   "disc_rotor": "203mm Front & Rear Drivetrain"
+  },
+  "expected": {
+   "details": "30mm Travel Wheel Set",
+   "_kind": "shock"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "wheels",
+  "kind": "wheel",
+  "text": "20-inch, 12-gauge Spokes, 36-hole, Double-Wall Aluminum, Black",
+  "siblings": {
+   "disc_rotor": "203mm Front & Rear Drivetrain"
+  },
+  "expected": {
+   "size_in": 20,
+   "gauge": 12,
+   "holes": 36,
+   "double_wall": true,
+   "material": "aluminum",
+   "details": "Black",
+   "_kind": "wheel"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "chain",
+  "kind": "chain",
+  "text": "C8R8 Anti-Rust, 116 Links",
+  "siblings": {
+   "disc_rotor": "203mm Front & Rear Drivetrain"
+  },
+  "expected": {
+   "model": "C8R8",
+   "links": 116,
+   "details": "Anti-rust",
+   "_kind": "chain"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "chainring",
+  "kind": "chainring",
+  "text": "52T",
+  "siblings": {
+   "disc_rotor": "203mm Front & Rear Drivetrain"
+  },
+  "expected": {
+   "teeth": 52,
+   "_kind": "chainring"
+  }
+ },
+ {
+  "brand": "engwe",
+  "field": "cassette",
+  "kind": "cassette",
+  "text": "8-Speed, 13T-28T",
+  "siblings": {
+   "disc_rotor": "203mm Front & Rear Drivetrain"
+  },
+  "expected": {
+   "speeds": 8,
+   "cog_range": "13-28T",
+   "_kind": "cassette"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "sensors",
+  "kind": "sensor",
+  "text": "Torque & Cadence",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "type": "torque+cadence",
+   "_kind": "sensor"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "certification",
+  "kind": "cert",
+  "text": "SGS certified to meet UL 2271 (battery) & UL 2849 (system)",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "standards": [
+    "SGS",
+    "UL 2271",
+    "UL 2849"
+   ],
+   "_kind": "cert"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "motor",
+  "kind": "motor",
+  "text": "750W Bafang H560 Geared Hub Motor",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "manufacturer": "Bafang",
+   "model": "H560",
+   "power_w": 750,
+   "placement": "hub",
+   "details": "Geared",
+   "_kind": "motor"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "battery",
+  "kind": "battery",
+  "text": "48V, 15Ah (720Wh)",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "voltage_v": 48,
+   "amphours_ah": 15,
+   "capacity_wh": 720,
+   "_kind": "battery"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "controller",
+  "kind": "controller",
+  "text": "Custom 48V / 25A in-frame",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "voltage_v": 48,
+   "amps_a": 25,
+   "details": "Custom, in-frame",
+   "_kind": "controller"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "display",
+  "kind": "display",
+  "text": "Left-Side Color LCD",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "type": "lcd",
+   "details": "Left-side, color",
+   "_kind": "display"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "headlight",
+  "kind": "light",
+  "text": "200 lumens Dual Beam LED",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "lumens": 200,
+   "details": "Dual beam LED",
+   "_kind": "light"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "rear_light",
+  "kind": "light",
+  "text": "Brake Signal, 220° Visibility",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "brake_light": true,
+   "details": "220° visibility",
+   "_kind": "light"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "throttle",
+  "kind": "throttle",
+  "text": "Left Thumb Throttle",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "type": "thumb",
+   "side": "left",
+   "_kind": "throttle"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "charger",
+  "kind": "charger",
+  "text": "48V, 2 Amp",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "output_v": 48,
+   "amps_a": 2,
+   "_kind": "charger"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "derailleur",
+  "kind": "derailleur",
+  "text": "Shimano Altus, 8-speed",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "manufacturer": "Shimano",
+   "model": "Altus",
+   "speeds": 8,
+   "_kind": "derailleur"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "freewheel",
+  "kind": "cassette",
+  "text": "10–32T, 8-speed",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "cog_range": "10-32T",
+   "speeds": 8,
+   "_kind": "cassette"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "chain",
+  "kind": "chain",
+  "text": "KMC Z7 Stainless Steel",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "manufacturer": "KMC",
+   "model": "Z7",
+   "details": "Stainless steel",
+   "_kind": "chain"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "crankset",
+  "kind": "crankset",
+  "text": "170mm Alloy",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "length_mm": 170,
+   "details": "Alloy",
+   "_kind": "crankset"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "chainring",
+  "kind": "chainring",
+  "text": "50T Double-Sided",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "teeth": 50,
+   "details": "Double-sided",
+   "_kind": "chainring"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "pedals",
+  "kind": "pedals",
+  "text": "Alloy w/ rubber grip",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "material": "aluminum",
+   "details": "Rubber grip",
+   "_kind": "pedals"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "brakes",
+  "kind": "brake",
+  "text": "Tektro E350 Hydraulic",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "manufacturer": "Tektro",
+   "model": "E350",
+   "actuation": "hydraulic",
+   "_kind": "brake"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "brake_levers",
+  "kind": "brake",
+  "text": "Adjustable w/ motor cut-off",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "details": "Adjustable w/ motor cut-off",
+   "_kind": "brake"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "handlebar",
+  "kind": "handlebars",
+  "text": "Aluminum Alloy, Curved Back w/ Rise",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "material": "aluminum",
+   "details": "Curved back, with rise",
+   "_kind": "handlebars"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "grips",
+  "kind": "grips",
+  "text": "Ergonomic Locking Grips",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "ergonomic": true,
+   "lock_on": true,
+   "_kind": "grips"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "stem",
+  "kind": "stem",
+  "text": "90mm",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "length_mm": 90,
+   "_kind": "stem"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "shifter",
+  "kind": "derailleur",
+  "text": "Shimano 8 Speed Trigger Shifter",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "manufacturer": "Shimano",
+   "speeds": 8,
+   "details": "Trigger shifter",
+   "_kind": "derailleur"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "front_fork",
+  "kind": "fork",
+  "text": "SR Suntour XCM Mechanical, 120mm travel",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "manufacturer": "SR Suntour",
+   "model": "XCM",
+   "type": "coil",
+   "travel_mm": 120,
+   "details": "Mechanical",
+   "_kind": "fork"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "seatpost",
+  "kind": "seatpost",
+  "text": "SR Suntour NCX Suspension, 50mm travel",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "manufacturer": "SR Suntour",
+   "model": "NCX",
+   "type": "suspension",
+   "travel_mm": 50,
+   "_kind": "seatpost"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "saddle",
+  "kind": "saddle",
+  "text": "Velo Plush Comfort",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "manufacturer": "Velo",
+   "model": "Plush Comfort",
+   "_kind": "saddle"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "tires",
+  "kind": "tire",
+  "text": "City Comfort Tread 27.5 x 2.4\"",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "diameter_in": 27.5,
+   "width_in": 2.4,
+   "details": "City comfort tread",
+   "_kind": "tire"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "rims",
+  "kind": "rims",
+  "text": "Double-Walled Aluminum",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "double_wall": true,
+   "material": "aluminum",
+   "_kind": "rims"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "spokes",
+  "kind": "spokes",
+  "text": "13G Front / 12G Rear",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "details": "13G front / 12G rear",
+   "_kind": "spokes"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "motor",
+  "kind": "motor",
+  "text": "750 W Bafang Hub Motor",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "manufacturer": "Bafang",
+   "power_w": 750,
+   "placement": "hub",
+   "_kind": "motor"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "battery",
+  "kind": "battery",
+  "text": "48V, 10.5Ah (504Wh) Removable",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "voltage_v": 48,
+   "amphours_ah": 10.5,
+   "capacity_wh": 504,
+   "removable": true,
+   "_kind": "battery"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "controller",
+  "kind": "controller",
+  "text": "48V / 25A",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "voltage_v": 48,
+   "amps_a": 25,
+   "_kind": "controller"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "freewheel",
+  "kind": "cassette",
+  "text": "10-32T, 8 Speed",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "cog_range": "10-32T",
+   "speeds": 8,
+   "_kind": "cassette"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "crankset",
+  "kind": "crankset",
+  "text": "160mm Alloy",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "length_mm": 160,
+   "details": "Alloy",
+   "_kind": "crankset"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "chainring",
+  "kind": "chainring",
+  "text": "50T",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "teeth": 50,
+   "_kind": "chainring"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "stem",
+  "kind": "stem",
+  "text": "90mm Adjustable",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "length_mm": 90,
+   "adjustable": true,
+   "_kind": "stem"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "front_fork",
+  "kind": "fork",
+  "text": "Aluminum Rigid Fork",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "type": "rigid",
+   "details": "Aluminum",
+   "_kind": "fork"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "tires",
+  "kind": "tire",
+  "text": "Kenda 26 x 2.0\"",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "manufacturer": "Kenda",
+   "diameter_in": 26,
+   "width_in": 2,
+   "_kind": "tire"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "display",
+  "kind": "display",
+  "text": "Left-mounted color LCD",
+  "siblings": null,
+  "expected": {
+   "type": "lcd",
+   "details": "Left-mounted, color",
+   "_kind": "display"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "throttle",
+  "kind": "throttle",
+  "text": "Left thumb throttle",
+  "siblings": null,
+  "expected": {
+   "type": "thumb",
+   "side": "left",
+   "_kind": "throttle"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "seat_tube",
+  "kind": "tubes",
+  "text": "13”",
+  "siblings": null,
+  "expected": {
+   "details": "13\"",
+   "_kind": "tubes"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "pedals",
+  "kind": "pedals",
+  "text": "Alloy w/ Rubber Grip",
+  "siblings": {
+   "rotors": "203mm Front & Rear"
+  },
+  "expected": {
+   "material": "aluminum",
+   "details": "Rubber grip",
+   "_kind": "pedals"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "handlebar",
+  "kind": "handlebars",
+  "text": "Aluminum Alloy, Straight w/ Rise",
+  "siblings": {
+   "rotors": "203mm Front & Rear"
+  },
+  "expected": {
+   "material": "aluminum",
+   "details": "Straight, with rise",
+   "_kind": "handlebars"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "grips",
+  "kind": "grips",
+  "text": "Ergonomic Rubber Locking Grips",
+  "siblings": {
+   "rotors": "203mm Front & Rear"
+  },
+  "expected": {
+   "ergonomic": true,
+   "lock_on": true,
+   "material": "rubber",
+   "_kind": "grips"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "saddle",
+  "kind": "saddle",
+  "text": "Selle Royal Athletic Comfort Saddle",
+  "siblings": {
+   "rotors": "203mm Front & Rear"
+  },
+  "expected": {
+   "manufacturer": "Selle Royal",
+   "model": "Athletic Comfort",
+   "_kind": "saddle"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "certification",
+  "kind": "cert",
+  "text": "SGS Certified to meet UL2271 (battery) & UL2849 (system)",
+  "siblings": {
+   "rotors": "203mm Front & Rear"
+  },
+  "expected": {
+   "standards": [
+    "SGS",
+    "UL 2271",
+    "UL 2849"
+   ],
+   "_kind": "cert"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "seatpost",
+  "kind": "seatpost",
+  "text": "SR Suntour NCX Suspension, 50 mm Travel",
+  "siblings": {
+   "rotors": "203mm Front & Rear"
+  },
+  "expected": {
+   "manufacturer": "SR Suntour",
+   "model": "NCX",
+   "type": "suspension",
+   "travel_mm": 50,
+   "_kind": "seatpost"
+  }
+ },
+ {
+  "brand": "evelo",
+  "field": "motor",
+  "kind": "motor",
+  "text": "Bafang M600 600 W, 1200 W Peak, 120 Nm Cadence and Torque Sensors",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Bafang",
+   "model": "M600",
+   "power_w": 600,
+   "peak_w": 1200,
+   "torque_nm": 120,
+   "details": "Cadence and torque sensors",
+   "_kind": "motor"
+  }
+ },
+ {
+  "brand": "evelo",
+  "field": "battery",
+  "kind": "battery",
+  "text": "48V 15AH Samsung In Frame Battery - Optional 14.5AH Rear Rack Battery Add-On",
+  "siblings": null,
+  "expected": {
+   "voltage_v": 48,
+   "amphours_ah": 15,
+   "cell_brand": "Samsung",
+   "details": "In-frame; optional 14.5Ah rear rack battery add-on",
+   "_kind": "battery"
+  }
+ },
+ {
+  "brand": "evelo",
+  "field": "charger",
+  "kind": "charger",
+  "text": "48V 3A Charger",
+  "siblings": null,
+  "expected": {
+   "output_v": 48,
+   "amps_a": 3,
+   "_kind": "charger"
+  }
+ },
+ {
+  "brand": "evelo",
+  "field": "maximum_motor_assisted_speed",
+  "kind": "motor",
+  "text": "Up to 20 MPH - Can be raised for areas that allow higher speeds",
+  "siblings": null,
+  "expected": {
+   "details": "Up to 20 MPH - Can be raised for areas that allow higher speeds",
+   "_kind": "motor"
+  }
+ },
+ {
+  "brand": "evelo",
+  "field": "frame",
+  "kind": "frame",
+  "text": "Hydroformed Aluminum 6061 T6",
+  "siblings": null,
+  "expected": {
+   "material": "aluminum",
+   "details": "Hydroformed 6061 T6",
+   "_kind": "frame"
+  }
+ },
+ {
+  "brand": "evelo",
+  "field": "fork",
+  "kind": "fork",
+  "text": "SR Suntour XCM Suspension Fork",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "SR Suntour",
+   "model": "XCM",
+   "type": "suspension",
+   "_kind": "fork"
+  }
+ },
+ {
+  "brand": "evelo",
+  "field": "wheels",
+  "kind": "wheel",
+  "text": "27.5\" Extra Wide Rims with Heavy Duty 13-gauge Spokes - Tubeless Compatible",
+  "siblings": null,
+  "expected": {
+   "size_in": 27.5,
+   "gauge": 13,
+   "tubeless": true,
+   "details": "Extra wide rims, heavy duty spokes",
+   "_kind": "wheel"
+  }
+ },
+ {
+  "brand": "evelo",
+  "field": "tires",
+  "kind": "tire",
+  "text": "Schwalbe Moto X 27.5 x 2.8\" with Greenguard flat protection",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Schwalbe",
+   "model": "Moto X",
+   "diameter_in": 27.5,
+   "width_in": 2.8,
+   "details": "Greenguard flat protection",
+   "_kind": "tire"
+  }
+ },
+ {
+  "brand": "evelo",
+  "field": "brakes",
+  "kind": "brake",
+  "text": "Tektro Auriga E-Comp Hydraulic Brakes",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Tektro",
+   "model": "Auriga E-Comp",
+   "actuation": "hydraulic",
+   "_kind": "brake"
+  }
+ },
+ {
+  "brand": "evelo",
+  "field": "stem",
+  "kind": "stem",
+  "text": "Forged Alloy 4 bolt stem",
+  "siblings": null,
+  "expected": {
+   "material": "aluminum",
+   "details": "Forged, 4-bolt",
+   "_kind": "stem"
+  }
+ },
+ {
+  "brand": "evelo",
+  "field": "shifters",
+  "kind": "derailleur",
+  "text": "Enviolo Mechanical Twist Shifter",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Enviolo",
+   "details": "Mechanical twist shifter",
+   "_kind": "derailleur"
+  }
+ },
+ {
+  "brand": "evelo",
+  "field": "pedals",
+  "kind": "pedals",
+  "text": "Wellgo Comfort Pedal",
+  "siblings": null,
+  "expected": {
+   "details": "Wellgo Comfort",
+   "_kind": "pedals"
+  }
+ },
+ {
+  "brand": "evelo",
+  "field": "lights",
+  "kind": "light",
+  "text": "Fully integrated high-power CREE LED headlght and integrated LED trail light",
+  "siblings": null,
+  "expected": {
+   "integrated": true,
+   "details": "High-power CREE LED headlight and LED tail light",
+   "_kind": "light"
+  }
+ },
+ {
+  "brand": "evelo",
+  "field": "display",
+  "kind": "display",
+  "text": "Bafang C-010 Full-Color 4.7\" Display",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Bafang",
+   "model": "C-010",
+   "type": "color",
+   "size_in": 4.7,
+   "_kind": "display"
+  }
+ },
+ {
+  "brand": "evelo",
+  "field": "reach_saddle_to_handlebar",
+  "kind": "handlebars",
+  "text": "21\"",
+  "siblings": null,
+  "expected": {
+   "details": "21\"",
+   "_kind": "handlebars"
+  }
+ },
+ {
+  "brand": "evelo",
+  "field": "total_length_tire_to_tire",
+  "kind": "tire",
+  "text": "75\"",
+  "siblings": null,
+  "expected": {
+   "details": "75\"",
+   "_kind": "tire"
+  }
+ },
+ {
+  "brand": "evelo",
+  "field": "handlebar_height",
+  "kind": "handlebars",
+  "text": "42.5\"",
+  "siblings": null,
+  "expected": {
+   "details": "42.5\"",
+   "_kind": "handlebars"
+  }
+ },
+ {
+  "brand": "evelo",
+  "field": "battery",
+  "kind": "battery",
+  "text": "Panasonic Lithium-Ion 48V 10.5Ah with Advanced Battery Management Software",
+  "siblings": null,
+  "expected": {
+   "cell_brand": "Panasonic",
+   "voltage_v": 48,
+   "amphours_ah": 10.5,
+   "details": "Lithium-ion; advanced battery management software",
+   "_kind": "battery"
+  }
+ },
+ {
+  "brand": "evelo",
+  "field": "charger",
+  "kind": "charger",
+  "text": "48V Smart Charger",
+  "siblings": null,
+  "expected": {
+   "output_v": 48,
+   "details": "Smart charger",
+   "_kind": "charger"
+  }
+ },
+ {
+  "brand": "evelo",
+  "field": "frame",
+  "kind": "frame",
+  "text": "6061 High-Strength Aluminum Alloy",
+  "siblings": null,
+  "expected": {
+   "material": "aluminum",
+   "details": "6061 high-strength",
+   "_kind": "frame"
+  }
+ },
+ {
+  "brand": "evelo",
+  "field": "fork",
+  "kind": "fork",
+  "text": "Custom 6061 Alloy with Steel Steerer Tube, Designed for Fenders",
+  "siblings": null,
+  "expected": {
+   "details": "Custom 6061 Alloy with Steel Steerer Tube, Designed for Fenders",
+   "_kind": "fork"
+  }
+ },
+ {
+  "brand": "evelo",
+  "field": "wheel",
+  "kind": "wheel",
+  "text": "24\" Extra Wide Rims with Heavy Duty 13-gauge Spokes",
+  "siblings": null,
+  "expected": {
+   "size_in": 24,
+   "gauge": 13,
+   "details": "Extra wide rims, heavy duty spokes",
+   "_kind": "wheel"
+  }
+ },
+ {
+  "brand": "evelo",
+  "field": "brakes",
+  "kind": "brake",
+  "text": "Tektro MD-M300 Disc Brakes. 180mm rotor front and rear. Integrated brake sensors.",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Tektro",
+   "model": "MD-M300",
+   "kind": "disc",
+   "actuation": "mechanical",
+   "rotor_mm": 180,
+   "details": "Integrated brake sensors",
+   "_kind": "brake"
+  }
+ },
+ {
+  "brand": "evelo",
+  "field": "shifters",
+  "kind": "derailleur",
+  "text": "Shimano Grip Shifter, 3 Speeds",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Shimano",
+   "speeds": 3,
+   "details": "Grip shifter",
+   "_kind": "derailleur"
+  }
+ },
+ {
+  "brand": "evelo",
+  "field": "pedals",
+  "kind": "pedals",
+  "text": "Wellgo Comfort",
+  "siblings": null,
+  "expected": {
+   "details": "Wellgo Comfort",
+   "_kind": "pedals"
+  }
+ },
+ {
+  "brand": "evelo",
+  "field": "lights",
+  "kind": "light",
+  "text": "Fully integrated LED headlight and tail light",
+  "siblings": null,
+  "expected": {
+   "integrated": true,
+   "details": "LED headlight and tail light",
+   "_kind": "light"
+  }
+ },
+ {
+  "brand": "evelo",
+  "field": "display",
+  "kind": "display",
+  "text": "Multi-Color 3.2” IPS Display with USB Charger (DPC-18)",
+  "siblings": null,
+  "expected": {
+   "model": "DPC-18",
+   "type": "lcd",
+   "size_in": 3.2,
+   "details": "Multi-color IPS; USB charger",
+   "_kind": "display"
+  }
+ },
+ {
+  "brand": "evelo",
+  "field": "stem",
+  "kind": "stem",
+  "text": "EVELO Stargazer High-Rise",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "EVELO",
+   "model": "Stargazer",
+   "details": "High-rise",
+   "_kind": "stem"
+  }
+ },
+ {
+  "brand": "heybike",
+  "field": "frame",
+  "kind": "frame",
+  "text": "6061 Aluminum Alloy Frame; removable lithium-ion battery; rear rack and fenders included; hydraulic disc brakes; kickstand mount",
+  "siblings": null,
+  "expected": {
+   "material": "aluminum",
+   "removable_battery": true,
+   "details": "6061; rear rack and fenders included; hydraulic disc; kickstand mount",
+   "_kind": "frame"
+  }
+ },
+ {
+  "brand": "heybike",
+  "field": "fork",
+  "kind": "fork",
+  "text": "Hydraulic front suspension fork",
+  "siblings": null,
+  "expected": {
+   "type": "suspension",
+   "details": "Hydraulic",
+   "_kind": "fork"
+  }
+ },
+ {
+  "brand": "heybike",
+  "field": "spokes",
+  "kind": "spokes",
+  "text": "6061 Aluminum alloy",
+  "siblings": null,
+  "expected": {
+   "material": "aluminum",
+   "details": "6061",
+   "_kind": "spokes"
+  }
+ },
+ {
+  "brand": "heybike",
+  "field": "tire",
+  "kind": "tire",
+  "text": "Puncture protection, 26\"x4.0\" fat tires",
+  "siblings": null,
+  "expected": {
+   "diameter_in": 26,
+   "width_in": 4,
+   "details": "Puncture protection, fat",
+   "_kind": "tire"
+  }
+ },
+ {
+  "brand": "heybike",
+  "field": "motor",
+  "kind": "motor",
+  "text": "Mivice 500W mid drive motor, 105 N·m torque",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Mivice",
+   "power_w": 500,
+   "placement": "mid",
+   "torque_nm": 105,
+   "_kind": "motor"
+  }
+ },
+ {
+  "brand": "heybike",
+  "field": "battery",
+  "kind": "battery",
+  "text": "UL 2271 certified, 680Wh, removable lithium-ion battery",
+  "siblings": null,
+  "expected": {
+   "capacity_wh": 680,
+   "removable": true,
+   "details": "UL 2271 certified, lithium-ion",
+   "_kind": "battery"
+  }
+ },
+ {
+  "brand": "heybike",
+  "field": "charger",
+  "kind": "charger",
+  "text": "2A, 54.6V output, 100V-220V AC input",
+  "siblings": null,
+  "expected": {
+   "amps_a": 2,
+   "output_v": 54.6,
+   "details": "100-220V AC input",
+   "_kind": "charger"
+  }
+ },
+ {
+  "brand": "heybike",
+  "field": "display_type",
+  "kind": "display",
+  "text": "LCD Display",
+  "siblings": null,
+  "expected": {
+   "type": "lcd",
+   "_kind": "display"
+  }
+ },
+ {
+  "brand": "heybike",
+  "field": "rear_derailleur",
+  "kind": "derailleur",
+  "text": "Shimano Altus 8 speed",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Shimano",
+   "model": "Altus",
+   "speeds": 8,
+   "_kind": "derailleur"
+  }
+ },
+ {
+  "brand": "heybike",
+  "field": "throttle",
+  "kind": "throttle",
+  "text": "Half-Twist (Activated in Natural Pedal Start Mode)",
+  "siblings": null,
+  "expected": {
+   "type": "half_twist",
+   "details": "Activated in Natural Pedal Start Mode",
+   "_kind": "throttle"
+  }
+ },
+ {
+  "brand": "heybike",
+  "field": "light",
+  "kind": "light",
+  "text": "LED headlight with auto-on feature, and integrated taillight with brake light.",
+  "siblings": null,
+  "expected": {
+   "integrated": true,
+   "brake_light": true,
+   "details": "LED headlight with auto-on; integrated taillight",
+   "_kind": "light"
+  }
+ },
+ {
+  "brand": "heybike",
+  "field": "brakes",
+  "kind": "brake",
+  "text": "Hydraulic Disc Brakes",
+  "siblings": null,
+  "expected": {
+   "kind": "disc",
+   "actuation": "hydraulic",
+   "_kind": "brake"
+  }
+ },
+ {
+  "brand": "heybike",
+  "field": "motor",
+  "kind": "motor",
+  "text": "36V 250W Rear Hub Motor",
+  "siblings": null,
+  "expected": {
+   "voltage_v": 36,
+   "power_w": 250,
+   "placement": "hub",
+   "details": "Rear",
+   "_kind": "motor"
+  }
+ },
+ {
+  "brand": "heybike",
+  "field": "sensor_type",
+  "kind": "sensor",
+  "text": "Torque Sensor",
+  "siblings": null,
+  "expected": {
+   "type": "torque",
+   "_kind": "sensor"
+  }
+ },
+ {
+  "brand": "heybike",
+  "field": "display",
+  "kind": "display",
+  "text": "LCD Left Mounted",
+  "siblings": null,
+  "expected": {
+   "type": "lcd",
+   "details": "Left mounted",
+   "_kind": "display"
+  }
+ },
+ {
+  "brand": "heybike",
+  "field": "battery",
+  "kind": "battery",
+  "text": "360Wh Lithium Battery",
+  "siblings": null,
+  "expected": {
+   "capacity_wh": 360,
+   "details": "Lithium",
+   "_kind": "battery"
+  }
+ },
+ {
+  "brand": "heybike",
+  "field": "charger",
+  "kind": "charger",
+  "text": "42V 100-240V 2A",
+  "siblings": null,
+  "expected": {
+   "output_v": 42,
+   "amps_a": 2,
+   "details": "100-240V AC input",
+   "_kind": "charger"
+  }
+ },
+ {
+  "brand": "heybike",
+  "field": "lights",
+  "kind": "light",
+  "text": "Front: LED / Rear: LED with Braking Light",
+  "siblings": null,
+  "expected": {
+   "brake_light": true,
+   "details": "Front: LED / Rear: LED",
+   "_kind": "light"
+  }
+ },
+ {
+  "brand": "heybike",
+  "field": "frame",
+  "kind": "frame",
+  "text": "Aluminum Alloy 6061",
+  "siblings": null,
+  "expected": {
+   "material": "aluminum",
+   "details": "6061",
+   "_kind": "frame"
+  }
+ },
+ {
+  "brand": "heybike",
+  "field": "tyres",
+  "kind": "tire",
+  "text": "Schwalbe Billy Bonkers 20'' × 2.0''",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Schwalbe",
+   "model": "Billy Bonkers",
+   "diameter_in": 20,
+   "width_in": 2,
+   "_kind": "tire"
+  }
+ },
+ {
+  "brand": "heybike",
+  "field": "brake",
+  "kind": "brake",
+  "text": "TEKTRO Hydraulic Disc Brakes HD-T275",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Tektro",
+   "model": "HD-T275",
+   "kind": "disc",
+   "actuation": "hydraulic",
+   "_kind": "brake"
+  }
+ },
+ {
+  "brand": "heybike",
+  "field": "front_fork",
+  "kind": "fork",
+  "text": "Hydroformed Rigid Fork with Thru Axle",
+  "siblings": null,
+  "expected": {
+   "type": "rigid",
+   "thru_axle": true,
+   "details": "Hydroformed",
+   "_kind": "fork"
+  }
+ },
+ {
+  "brand": "heybike",
+  "field": "torque_sensor",
+  "kind": "sensor",
+  "text": ", and",
+  "siblings": null,
+  "expected": {
+   "_kind": "sensor"
+  }
+ },
+ {
+  "brand": "heybike",
+  "field": "spokes",
+  "kind": "spokes",
+  "text": "Aluminum alloy",
+  "siblings": null,
+  "expected": {
+   "material": "aluminum",
+   "_kind": "spokes"
+  }
+ },
+ {
+  "brand": "heybike",
+  "field": "rear_derailleur",
+  "kind": "derailleur",
+  "text": "Shimano 9 speed",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Shimano",
+   "speeds": 9,
+   "_kind": "derailleur"
+  }
+ },
+ {
+  "brand": "heybike",
+  "field": "pedal_assist",
+  "kind": "pedal_assist",
+  "text": "Dual Sensor (Torque + Cadence)",
+  "siblings": {
+   "rotor": "180 × 1.9 mm"
+  },
+  "expected": {
+   "details": "Dual Sensor (Torque + Cadence)",
+   "_kind": "pedal_assist"
+  }
+ },
+ {
+  "brand": "heybike",
+  "field": "certification",
+  "kind": "cert",
+  "text": "UL 2849 (Whole Bike), UL 2271 (Battery)",
+  "siblings": {
+   "rotor": "180 × 1.9 mm"
+  },
+  "expected": {
+   "standards": [
+    "UL 2271",
+    "UL 2849"
+   ],
+   "_kind": "cert"
+  }
+ },
+ {
+  "brand": "heybike",
+  "field": "throttle",
+  "kind": "throttle",
+  "text": "Half-Twist",
+  "siblings": null,
+  "expected": {
+   "type": "half_twist",
+   "_kind": "throttle"
+  }
+ },
+ {
+  "brand": "heybike",
+  "field": "pedal_assist",
+  "kind": "pedal_assist",
+  "text": "Cadence",
+  "siblings": {
+   "rotor": "180 × 2.0 mm"
+  },
+  "expected": {
+   "details": "Cadence",
+   "_kind": "pedal_assist"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "b_handlebar_height",
+  "kind": "handlebars",
+  "text": "45.3",
+  "siblings": {
+   "rotors": "F:160mm R:160mm"
+  },
+  "expected": {
+   "details": "45.3",
+   "_kind": "handlebars"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "h_effective_top_tube_length",
+  "kind": "tubes",
+  "text": "21.1",
+  "siblings": {
+   "rotors": "F:160mm R:160mm"
+  },
+  "expected": {
+   "details": "21.1",
+   "_kind": "tubes"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "j_head_tube_length",
+  "kind": "tubes",
+  "text": "8.5",
+  "siblings": {
+   "rotors": "F:160mm R:160mm"
+  },
+  "expected": {
+   "details": "8.5",
+   "_kind": "tubes"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "k_handlebar_length",
+  "kind": "handlebars",
+  "text": "26.7",
+  "siblings": {
+   "rotors": "F:160mm R:160mm"
+  },
+  "expected": {
+   "details": "26.7",
+   "_kind": "handlebars"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "frame",
+  "kind": "frame",
+  "text": "Front: 6061 aluminum Rear:A356 Steel",
+  "siblings": {
+   "rotors": "F:160mm R:160mm"
+  },
+  "expected": {
+   "details": "Front: 6061 aluminum, Rear: A356 steel",
+   "_kind": "frame",
+   "material": "aluminum"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "fork",
+  "kind": "fork",
+  "text": "6061 aluminum 100*12mm thru axle, rack mounts, fender mounts, post disc mount",
+  "siblings": {
+   "rotors": "F:160mm R:160mm"
+  },
+  "expected": {
+   "thru_axle": true,
+   "details": "6061 aluminum; 100x12mm; rack/fender mounts; post disc mount",
+   "_kind": "fork"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "front_wheel",
+  "kind": "wheel",
+  "text": "Rim: 26\"\"*1.75*36H*13G A/V | Spoke: 13G*257.5MM/259.5MM | Hub: R303F-12 12g*36H 12*100mm",
+  "siblings": {
+   "rotors": "F:160mm R:160mm"
+  },
+  "expected": {
+   "size_in": 26,
+   "gauge": 13,
+   "holes": 36,
+   "valve": "schrader",
+   "details": "Rim 26x1.75; spokes 257.5-259.5mm; hub R303F-12 12x100mm",
+   "_kind": "wheel"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "rear_wheel",
+  "kind": "wheel",
+  "text": "Rim: 26\"\"*1.75*36H*13G A/V | Spoke: 13G*225.5MM/226.5MM | Hub: 48v 500w Himiway Hub Motor",
+  "siblings": {
+   "rotors": "F:160mm R:160mm"
+  },
+  "expected": {
+   "size_in": 26,
+   "gauge": 13,
+   "holes": 36,
+   "valve": "schrader",
+   "details": "Rim 26x1.75; spokes 225.5-226.5mm; hub: 48V 500W Himiway hub motor",
+   "_kind": "wheel"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "tires",
+  "kind": "tire",
+  "text": "Innova IA-2128 26*2.2 25-60PSI",
+  "siblings": {
+   "rotors": "F:160mm R:160mm"
+  },
+  "expected": {
+   "manufacturer": "Innova",
+   "model": "IA-2128",
+   "diameter_in": 26,
+   "width_in": 2.2,
+   "details": "25-60 PSI",
+   "_kind": "tire"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "battery",
+  "kind": "battery",
+  "text": "48V15AH LG 21700 IP65 720Wh",
+  "siblings": {
+   "rotors": "F:160mm R:160mm"
+  },
+  "expected": {
+   "voltage_v": 48,
+   "amphours_ah": 15,
+   "capacity_wh": 720,
+   "cell_brand": "LG",
+   "cell_format": "21700",
+   "details": "IP65",
+   "_kind": "battery"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "motor",
+  "kind": "motor",
+  "text": "500w Himiway brushless gear motor",
+  "siblings": {
+   "rotors": "F:160mm R:160mm"
+  },
+  "expected": {
+   "manufacturer": "Himiway",
+   "power_w": 500,
+   "details": "Brushless gear",
+   "_kind": "motor"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "display",
+  "kind": "display",
+  "text": "Himiway LED Display",
+  "siblings": {
+   "rotors": "F:160mm R:160mm"
+  },
+  "expected": {
+   "manufacturer": "Himiway",
+   "type": "led",
+   "_kind": "display"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "sensors",
+  "kind": "sensor",
+  "text": "Torque sensor丨speed sensor丨brake sensor",
+  "siblings": {
+   "rotors": "F:160mm R:160mm"
+  },
+  "expected": {
+   "type": "torque",
+   "details": "speed sensor, brake sensor",
+   "_kind": "sensor"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "crankset",
+  "kind": "crankset",
+  "text": "Crank arm:J6061-T6 170mm | Chain ring: 38T narrow wide steel chainring BCD104",
+  "siblings": {
+   "rotors": "F:160mm R:160mm"
+  },
+  "expected": {
+   "length_mm": 170,
+   "chainring_t": 38,
+   "details": "J6061-T6 arm; narrow-wide steel chainring, 104 BCD",
+   "_kind": "crankset"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "freewheel",
+  "kind": "cassette",
+  "text": "Shimano MF-TZ500-7 14-28T",
+  "siblings": {
+   "rotors": "F:160mm R:160mm"
+  },
+  "expected": {
+   "manufacturer": "Shimano",
+   "model": "MF-TZ500-7",
+   "cog_range": "14-28T",
+   "speeds": 7,
+   "_kind": "cassette"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "chain",
+  "kind": "chain",
+  "text": "KMC Z8.3 EPT 112L",
+  "siblings": {
+   "rotors": "F:160mm R:160mm"
+  },
+  "expected": {
+   "manufacturer": "KMC",
+   "model": "Z8.3 EPT",
+   "links": 112,
+   "_kind": "chain"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "front_brake",
+  "kind": "brake",
+  "text": "Tektro HD-E3520 hydraulic brake",
+  "siblings": {
+   "rotors": "F:160mm R:160mm"
+  },
+  "expected": {
+   "manufacturer": "Tektro",
+   "model": "HD-E3520",
+   "actuation": "hydraulic",
+   "_kind": "brake"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "rotors",
+  "kind": "brake",
+  "text": "F:160mm R:160mm",
+  "siblings": {
+   "rotors": "F:160mm R:160mm"
+  },
+  "expected": {
+   "rotor_mm": 160,
+   "details": "Front & rear",
+   "_kind": "brake"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "seatpost",
+  "kind": "seatpost",
+  "text": "Himiway flip seatpost 27.2*300",
+  "siblings": {
+   "rotors": "F:160mm R:160mm"
+  },
+  "expected": {
+   "manufacturer": "Himiway",
+   "diameter_mm": 27.2,
+   "length_mm": 300,
+   "details": "Flip seatpost",
+   "_kind": "seatpost"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "saddle",
+  "kind": "saddle",
+  "text": "TTZ032X",
+  "siblings": {
+   "rotors": "F:160mm R:160mm"
+  },
+  "expected": {
+   "model": "TTZ032X",
+   "_kind": "saddle"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "pedal",
+  "kind": "pedals",
+  "text": "Aluminum pedal",
+  "siblings": {
+   "rotors": "F:160mm R:160mm"
+  },
+  "expected": {
+   "material": "aluminum",
+   "_kind": "pedals"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "lights",
+  "kind": "light",
+  "text": "48V LED light",
+  "siblings": {
+   "rotors": "F:160mm R:160mm"
+  },
+  "expected": {
+   "details": "48V LED",
+   "_kind": "light"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "controller",
+  "kind": "controller",
+  "text": "48V/18A",
+  "siblings": {
+   "rotors": "F:160mm R:160mm"
+  },
+  "expected": {
+   "voltage_v": 48,
+   "amps_a": 18,
+   "_kind": "controller"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "charger",
+  "kind": "charger",
+  "text": "US standard 2.0 A smart charger",
+  "siblings": {
+   "rotors": "F:160mm R:160mm"
+  },
+  "expected": {
+   "amps_a": 2,
+   "details": "US standard, smart",
+   "_kind": "charger"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "fork",
+  "kind": "fork",
+  "text": "Coil suspention fork, 40mm travel, is disc mount",
+  "siblings": {
+   "rotors": "F:160mm R:160mm"
+  },
+  "expected": {
+   "type": "coil",
+   "travel_mm": 40,
+   "details": "Disc mount",
+   "_kind": "fork"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "tires",
+  "kind": "tire",
+  "text": "Innova 20x2.40 lA-1283",
+  "siblings": {
+   "rotors": "F:160mm R:160mm"
+  },
+  "expected": {
+   "manufacturer": "Innova",
+   "model": "IA-1283",
+   "diameter_in": 20,
+   "width_in": 2.4,
+   "_kind": "tire"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "display",
+  "kind": "display",
+  "text": "Himiway LCD Display",
+  "siblings": {
+   "rotors": "F:160mm R:160mm"
+  },
+  "expected": {
+   "manufacturer": "Himiway",
+   "type": "lcd",
+   "_kind": "display"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "crankset",
+  "kind": "crankset",
+  "text": "Crank arm:6061-T6 145mm | Chain ring: 44T narrow wide steel chainring BCD104",
+  "siblings": {
+   "rotors": "F:160mm R:160mm"
+  },
+  "expected": {
+   "length_mm": 145,
+   "chainring_t": 44,
+   "details": "6061-T6 arm; narrow-wide steel chainring, 104 BCD",
+   "_kind": "crankset"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "chain",
+  "kind": "chain",
+  "text": "KMC Z8.3 EPT 100L",
+  "siblings": {
+   "rotors": "F:160mm R:160mm"
+  },
+  "expected": {
+   "manufacturer": "KMC",
+   "model": "Z8.3 EPT",
+   "links": 100,
+   "_kind": "chain"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "stem",
+  "kind": "stem",
+  "text": "Folding stem, riser length: 360mm",
+  "siblings": {
+   "rotors": "F:160mm R:160mm"
+  },
+  "expected": {
+   "type": "folding",
+   "details": "Riser length 360mm",
+   "_kind": "stem"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "saddle",
+  "kind": "saddle",
+  "text": "Himiway TTZ032X",
+  "siblings": {
+   "rotors": "F:160mm R:160mm"
+  },
+  "expected": {
+   "manufacturer": "Himiway",
+   "model": "TTZ032X",
+   "_kind": "saddle"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "frame",
+  "kind": "frame",
+  "text": "6061 Aluminum frame",
+  "siblings": {
+   "rotors": "F:180mm R:180mm"
+  },
+  "expected": {
+   "material": "aluminum",
+   "details": "6061",
+   "_kind": "frame"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "battery",
+  "kind": "battery",
+  "text": "Samsung/LG 48V 20Ah",
+  "siblings": {
+   "rotors": "F:180mm R:180mm"
+  },
+  "expected": {
+   "cell_brand": "Samsung/LG",
+   "voltage_v": 48,
+   "amphours_ah": 20,
+   "_kind": "battery"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "motor",
+  "kind": "motor",
+  "text": "750W brushless gear motor",
+  "siblings": {
+   "rotors": "F:180mm R:180mm"
+  },
+  "expected": {
+   "power_w": 750,
+   "details": "Brushless gear",
+   "_kind": "motor"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "stem",
+  "kind": "stem",
+  "text": "3D forged alloy Ext:40mm",
+  "siblings": {
+   "rotors": "F:180mm R:180mm"
+  },
+  "expected": {
+   "length_mm": 40,
+   "material": "aluminum",
+   "details": "3D forged",
+   "_kind": "stem"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "controller",
+  "kind": "controller",
+  "text": "48V/22A",
+  "siblings": {
+   "rotors": "F:180mm R:180mm"
+  },
+  "expected": {
+   "voltage_v": 48,
+   "amps_a": 22,
+   "_kind": "controller"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "charger",
+  "kind": "charger",
+  "text": "U.S. standard 3.0 A fast charger",
+  "siblings": {
+   "rotors": "F:180mm R:180mm"
+  },
+  "expected": {
+   "amps_a": 3,
+   "details": "US standard, fast",
+   "_kind": "charger"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "shock",
+  "kind": "shock",
+  "text": "Alloy front suspension fork with lockout and adjustment",
+  "siblings": {
+   "rotors": "Tektro TR180-24 F:180mm R:180mm"
+  },
+  "expected": {
+   "details": "Alloy front suspension fork with lockout and adjustment",
+   "_kind": "shock"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "throttle",
+  "kind": "throttle",
+  "text": "Half twist throttle",
+  "siblings": {
+   "rotors": "Tektro TR180-24 F:180mm R:180mm"
+  },
+  "expected": {
+   "type": "half_twist",
+   "_kind": "throttle"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "sensors",
+  "kind": "sensor",
+  "text": "Cadence sensor丨speed sensor丨brake sensor",
+  "siblings": {
+   "rotors": "Tektro TR180-24 F:180mm R:180mm"
+  },
+  "expected": {
+   "type": "cadence",
+   "details": "speed sensor, brake sensor",
+   "_kind": "sensor"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "seatpost",
+  "kind": "seatpost",
+  "text": "H202211DJ ISO-M 30.4*350mm",
+  "siblings": {
+   "rotors": "Tektro TR180-24 F:180mm R:180mm"
+  },
+  "expected": {
+   "model": "H202211DJ",
+   "diameter_mm": 30.4,
+   "length_mm": 350,
+   "details": "ISO-M",
+   "_kind": "seatpost"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "freewheel",
+  "kind": "cassette",
+  "text": "Shimano CS-HG201-9 11-36T",
+  "siblings": {
+   "rotors": "Tektro TR180-52 F:180mm R:180mm"
+  },
+  "expected": {
+   "manufacturer": "Shimano",
+   "model": "CS-HG201-9",
+   "cog_range": "11-36T",
+   "speeds": 9,
+   "_kind": "cassette"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "shock",
+  "kind": "shock",
+  "text": "DNM A0-38RC rear shock 190*45mm",
+  "siblings": {
+   "rotors": "F:TR-203-52 R:TR-180-52"
+  },
+  "expected": {
+   "manufacturer": "DNM",
+   "model": "A0-38RC",
+   "size": "190x45mm",
+   "details": "Rear",
+   "_kind": "shock"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "pedal_assist",
+  "kind": "pedal_assist",
+  "text": "Auto Pedal Assistant + 5 PAS Levels",
+  "siblings": {
+   "rotors": "180mm front and rear"
+  },
+  "expected": {
+   "levels": 5,
+   "details": "Auto pedal assistant",
+   "_kind": "pedal_assist"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "front_light",
+  "kind": "light",
+  "text": "120 Lux high-output integrated LED, adjustable angle",
+  "siblings": {
+   "rotors": "180mm front and rear"
+  },
+  "expected": {
+   "lux": 120,
+   "integrated": true,
+   "details": "High-output LED, adjustable angle",
+   "_kind": "light"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "throttle_range",
+  "kind": "throttle",
+  "text": "40 Miles",
+  "siblings": {
+   "rotors": "180mm front and rear"
+  },
+  "expected": {
+   "details": "40 Miles",
+   "_kind": "throttle"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "chainrings",
+  "kind": "chainring",
+  "text": "44T",
+  "siblings": {
+   "rotors": "180mm front and rear"
+  },
+  "expected": {
+   "teeth": 44,
+   "_kind": "chainring"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "rear_derailleur",
+  "kind": "derailleur",
+  "text": "SHIMANO 8-speed",
+  "siblings": {
+   "rotors": "180mm front and rear"
+  },
+  "expected": {
+   "manufacturer": "Shimano",
+   "speeds": 8,
+   "_kind": "derailleur"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "rims",
+  "kind": "rims",
+  "text": "Double-wall Aluminum Alloy",
+  "siblings": {
+   "rotors": "180mm front and rear"
+  },
+  "expected": {
+   "double_wall": true,
+   "material": "aluminum",
+   "_kind": "rims"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "grips",
+  "kind": "grips",
+  "text": "Durable ergonomic grips, lockable",
+  "siblings": {
+   "rotors": "180mm front and rear"
+  },
+  "expected": {
+   "ergonomic": true,
+   "lock_on": true,
+   "details": "Durable",
+   "_kind": "grips"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "pedal",
+  "kind": "pedals",
+  "text": "0~5 Level Pedal Assist",
+  "siblings": {
+   "rotors": "Tektro TR180-52 F:180mm R:180mm"
+  },
+  "expected": {
+   "details": "0~5 Level Pedal Assist",
+   "_kind": "pedals"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "chainrings",
+  "kind": "chainring",
+  "text": "52T Narrow Wide Chainring",
+  "siblings": {
+   "rotors": "203mm Front/180mm Rear"
+  },
+  "expected": {
+   "teeth": 52,
+   "narrow_wide": true,
+   "_kind": "chainring"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "rims",
+  "kind": "rims",
+  "text": "Aluminum alloy",
+  "siblings": {
+   "rotors": "203mm Front/180mm Rear"
+  },
+  "expected": {
+   "material": "aluminum",
+   "_kind": "rims"
+  }
+ },
+ {
+  "brand": "juiced",
+  "field": "motor",
+  "kind": "motor",
+  "text": "1764W Peak Hub Motor / 750W Nominal / 90Nm of Torque",
+  "siblings": null,
+  "expected": {
+   "peak_w": 1764,
+   "power_w": 750,
+   "torque_nm": 90,
+   "placement": "hub",
+   "_kind": "motor"
+  }
+ },
+ {
+  "brand": "juiced",
+  "field": "battery",
+  "kind": "battery",
+  "text": "52V 19.2 Ah",
+  "siblings": null,
+  "expected": {
+   "voltage_v": 52,
+   "amphours_ah": 19.2,
+   "_kind": "battery"
+  }
+ },
+ {
+  "brand": "juiced",
+  "field": "throttle",
+  "kind": "throttle",
+  "text": "Right thumb throttle / 20 mph max speed",
+  "siblings": null,
+  "expected": {
+   "type": "thumb",
+   "side": "right",
+   "details": "20 mph max speed",
+   "_kind": "throttle"
+  }
+ },
+ {
+  "brand": "juiced",
+  "field": "tires",
+  "kind": "tire",
+  "text": "FS: Knobby CST BFT ADV 20x4.5 in. HT: Chaoyang 20x4 in.",
+  "siblings": null,
+  "expected": {
+   "diameter_in": 20,
+   "details": "FS: CST BFT ADV 20x4.5 knobby; HT: Chaoyang 20x4",
+   "_kind": "tire"
+  }
+ },
+ {
+  "brand": "juiced",
+  "field": "brakes",
+  "kind": "brake",
+  "text": "Talon 4-Piston",
+  "siblings": null,
+  "expected": {
+   "pistons": 4,
+   "details": "Talon",
+   "_kind": "brake"
+  }
+ },
+ {
+  "brand": "juiced",
+  "field": "frame",
+  "kind": "frame",
+  "text": "6061 Aluminum",
+  "siblings": null,
+  "expected": {
+   "material": "aluminum",
+   "details": "6061",
+   "_kind": "frame"
+  }
+ },
+ {
+  "brand": "juiced",
+  "field": "suspension",
+  "kind": "fork",
+  "text": "KKE inverted front fork 140mm travel FS: KKE Rear shock",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "KKE",
+   "type": "suspension",
+   "travel_mm": 140,
+   "details": "Inverted; FS version: KKE rear shock",
+   "_kind": "fork"
+  }
+ },
+ {
+  "brand": "juiced",
+  "field": "display",
+  "kind": "display",
+  "text": "Integrated TFT",
+  "siblings": null,
+  "expected": {
+   "type": "tft",
+   "details": "Integrated",
+   "_kind": "display"
+  }
+ },
+ {
+  "brand": "juiced",
+  "field": "lights",
+  "kind": "light",
+  "text": "Front Headlight Rear Tailight & Brake Light Turn Signals",
+  "siblings": null,
+  "expected": {
+   "brake_light": true,
+   "turn_signal": true,
+   "details": "Front headlight, rear taillight",
+   "_kind": "light"
+  }
+ },
+ {
+  "brand": "juiced",
+  "field": "controller",
+  "kind": "controller",
+  "text": "30-amp peak",
+  "siblings": null,
+  "expected": {
+   "amps_a": 30,
+   "details": "peak",
+   "_kind": "controller"
+  }
+ },
+ {
+  "brand": "juiced",
+  "field": "peak_motor_power",
+  "kind": "motor",
+  "text": "1764 W",
+  "siblings": null,
+  "expected": {
+   "power_w": 1764,
+   "_kind": "motor"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "motor_power",
+  "kind": "motor",
+  "text": "1310W peak",
+  "siblings": null,
+  "expected": {
+   "peak_w": 1310,
+   "_kind": "motor"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "pedal_assist",
+  "kind": "pedal_assist",
+  "text": "Five levels of pedal-assist and an ergonomic thumb throttle deliver the speed and power to own the road as a Class 1, 2, or 3 eBike.**",
+  "siblings": null,
+  "expected": {
+   "levels": 5,
+   "details": "Ergonomic thumb throttle; Class 1, 2, or 3 eBike",
+   "_kind": "pedal_assist"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "thumb_throttle",
+  "kind": "throttle",
+  "text": "An ergonomic below-the-bar trigger throttle on the left hand side is easily engaged with your thumb while simultaneously eliminating joint fatigue.",
+  "siblings": null,
+  "expected": {
+   "type": "trigger",
+   "side": "left",
+   "details": "Below-the-bar, thumb-operated, ergonomic",
+   "_kind": "throttle"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "color_lcd_display",
+  "kind": "display",
+  "text": "A backlit, heads-up color LCD display with a USB-A port provides trip and battery intelligence on the go. IP-65 rated electrical components ensure greater water and dust resistance.",
+  "siblings": null,
+  "expected": {
+   "type": "lcd",
+   "details": "Backlit, heads-up, color; USB-A port; IP-65 rated components",
+   "_kind": "display"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "motor_controller",
+  "kind": "controller",
+  "text": "24 amp controller is IP-65 rated and potted for weather proofing and thermal management.",
+  "siblings": null,
+  "expected": {
+   "amps_a": 24,
+   "details": "IP-65 rated and potted for weather proofing and thermal management",
+   "_kind": "controller"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "motor",
+  "kind": "motor",
+  "text": "A Sutto 750W rear hub-motor (1310W Peak) with 85Nm of torque delivers power and speed quicker than ever before. New Stealth M24 technology is 400% quieter*, delivering a hushed motor experience without sacrificing power.",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Sutto",
+   "power_w": 750,
+   "peak_w": 1310,
+   "torque_nm": 85,
+   "placement": "hub",
+   "details": "Rear; Stealth M24 quiet technology",
+   "_kind": "motor"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "battery",
+  "kind": "battery",
+  "text": "Available with a Long-Range 48V 14ah (672 Wh) lithium-ion battery certified to UL 2271 to power your ride for up to 60 miles, respectively.†‡ The Lectric ONE is also certified to UL 2849.",
+  "siblings": null,
+  "expected": {
+   "voltage_v": 48,
+   "amphours_ah": 14,
+   "capacity_wh": 672,
+   "details": "Long-range; lithium-ion; UL 2271 certified; up to 60 miles",
+   "_kind": "battery"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "city_tires",
+  "kind": "tire",
+  "text": "20x2.5'' city tires featuring a reflective strip are equipped with 3mm Hippo Skin with an Aramid Floc Breaker. Shark Skin Protection on the sidewall offers pinch flat protection and all-weather reliability. Slime is installed to prevent flat tires at no additional cost.",
+  "siblings": null,
+  "expected": {
+   "diameter_in": 20,
+   "width_in": 2.5,
+   "details": "City; reflective strip; 3mm Hippo Skin with Aramid Floc Breaker; Shark Skin sidewall protection; Slime installed",
+   "_kind": "tire"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "front_fork",
+  "kind": "fork",
+  "text": "This rigid fork is fully aluminum and ultra lightweight, featuring a thru axle dropout.",
+  "siblings": null,
+  "expected": {
+   "type": "rigid",
+   "thru_axle": true,
+   "details": "Fully aluminum, ultra lightweight",
+   "_kind": "fork"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "cranks",
+  "kind": "crankset",
+  "text": "Pinion aluminum cranks are 165mm in length.",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Pinion",
+   "length_mm": 165,
+   "details": "Aluminum",
+   "_kind": "crankset"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "brakes",
+  "kind": "brake",
+  "text": "Hydraulic mineral oil brakes and 180mm rotors (1.8mm thick) offer ultimate stopping power and peace of mind in wet or dry conditions.",
+  "siblings": null,
+  "expected": {
+   "actuation": "hydraulic",
+   "rotor_mm": 180,
+   "rotor_thickness_mm": 1.8,
+   "details": "Mineral oil",
+   "_kind": "brake"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "pas_sensor",
+  "kind": "sensor",
+  "text": "Lectric's PWR™ allows the rider to control the eBike's output with no additional effort so that a torque sensor is not necessary for smooth rides. Instead, the Lectric ONE has a simply designed and affordable cadence sensor with 96 magnets simulated so you can reach high speeds with ease.",
+  "siblings": null,
+  "expected": {
+   "type": "cadence",
+   "details": "96 simulated magnets; Lectric PWR programming",
+   "_kind": "sensor"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "safety_lights",
+  "kind": "light",
+  "text": "An integrated safety system, featuring a headlamp and a brake-activated taillight powered by the battery allows you to be seen at any time of day.",
+  "siblings": null,
+  "expected": {
+   "integrated": true,
+   "brake_light": true,
+   "details": "Headlamp and brake-activated taillight, battery powered",
+   "_kind": "light"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "adjustable_handlebar_stem",
+  "kind": "handlebars",
+  "text": "Easily adjustable handlebar stem riser includes a quick-release lever to comfortably adjust your handlebar reach to your liking; bring your handlebars toward you or push them further back.",
+  "siblings": null,
+  "expected": {
+   "details": "Adjustable stem riser with quick-release lever for handlebar reach",
+   "_kind": "handlebars"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "lock_on_grips",
+  "kind": "grips",
+  "text": "Ergonomic lock-on grips add comfort so you can ride longer. The plastic sleeve inside helps lock the grips into place and also allows the grips to be easily removed.",
+  "siblings": null,
+  "expected": {
+   "ergonomic": true,
+   "lock_on": true,
+   "details": "Plastic locking sleeve, easily removable",
+   "_kind": "grips"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "saddle",
+  "kind": "saddle",
+  "text": "A custom-designed saddle compliments a sportier look while adding comfort so you can ride longer.",
+  "siblings": null,
+  "expected": {
+   "details": "Custom-designed",
+   "_kind": "saddle"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "frame",
+  "kind": "frame",
+  "text": "6000-series-aluminum frame is sturdy yet lightweight. The chainstays feature vertical dropouts and speciality designed splits on each side for easy access to the belt drive.",
+  "siblings": null,
+  "expected": {
+   "material": "aluminum",
+   "details": "6000 series; chainstay vertical dropouts with splits for easy belt-drive access",
+   "_kind": "frame"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "safety_certified",
+  "kind": "cert",
+  "text": "The Lectric ONE is certified to UL 2849. Additionally, the ONE's lithium-ion battery is certified to UL 2271.",
+  "siblings": null,
+  "expected": {
+   "standards": [
+    "UL 2271",
+    "UL 2849"
+   ],
+   "_kind": "cert"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "pedal_assist",
+  "kind": "pedal_assist",
+  "text": "Five levels of pedal-assist and a twist throttle deliver the speed and power to own the road as a Class 1 or 2 eBike.**",
+  "siblings": null,
+  "expected": {
+   "levels": 5,
+   "details": "Twist throttle; Class 1 or 2 eBike",
+   "_kind": "pedal_assist"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "twist_grip_throttle",
+  "kind": "throttle",
+  "text": "A half-twist throttle is easily engaged with a flick of the wrist to deliver pure power on demand.",
+  "siblings": null,
+  "expected": {
+   "type": "half_twist",
+   "_kind": "throttle"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "color_lcd_display",
+  "kind": "display",
+  "text": "A backlit, color LCD display with a USB-A port provides trip and battery intelligence on the go. IP-65 rated electrical components ensure greater water and dust resistance.",
+  "siblings": null,
+  "expected": {
+   "type": "lcd",
+   "details": "Backlit, color; USB-A port; IP-65 rated components",
+   "_kind": "display"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "battery",
+  "kind": "battery",
+  "text": "Available with a Standard or Long-Range 48V lithium-ion battery (375Wh or 672Wh) certified to UL 2271 to power your ride for up to 80 miles, respectively.*† The Lectric XP Lite is also certified to UL 2849.",
+  "siblings": null,
+  "expected": {
+   "voltage_v": 48,
+   "details": "375Wh standard or 672Wh long-range options; lithium-ion; UL 2271 certified; up to 80 miles",
+   "_kind": "battery"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "motor_controller",
+  "kind": "controller",
+  "text": "15 amp controller is IP-65 rated with built in thermal sensors to eliminate burn-out.",
+  "siblings": null,
+  "expected": {
+   "amps_a": 15,
+   "details": "IP-65 rated with built-in thermal sensors",
+   "_kind": "controller"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "tires",
+  "kind": "tire",
+  "text": "20x2.5'' slick tires featuring a reflective strip are equipped with 3mm Hippo Skin with an Aramid Floc Breaker. Slime is installed to prevent flat tires at no additional cost.",
+  "siblings": null,
+  "expected": {
+   "diameter_in": 20,
+   "width_in": 2.5,
+   "details": "Slick; reflective strip; 3mm Hippo Skin with Aramid Floc Breaker; Slime installed",
+   "_kind": "tire"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "crankset",
+  "kind": "crankset",
+  "text": "Forged aluminum, 52-tooth chainring is the perfect ratio for effortless 20-inch wheel pedaling.",
+  "siblings": null,
+  "expected": {
+   "chainring_t": 52,
+   "details": "Forged aluminum",
+   "_kind": "crankset"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "chain",
+  "kind": "chain",
+  "text": "KMC Z1 steel chain offers consistent tension and secure performance throughout your ride.",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "KMC",
+   "model": "Z1",
+   "details": "Steel",
+   "_kind": "chain"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "pas_sensor",
+  "kind": "sensor",
+  "text": "Lectric's PWR™ allows the rider to control the eBike's output with no additional effort so that a torque sensor is not necessary for smooth rides. Instead, the Lectric XP Lite has a simply designed and affordable cadence sensor.",
+  "siblings": null,
+  "expected": {
+   "type": "cadence",
+   "details": "Lectric PWR wattage-regulation programming",
+   "_kind": "sensor"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "safety_lights",
+  "kind": "light",
+  "text": "An integrated safety system, featuring a headlamp and taillight powered by the battery allows you to be seen at any time of day.",
+  "siblings": null,
+  "expected": {
+   "integrated": true,
+   "details": "Headlamp and taillight, battery powered",
+   "_kind": "light"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "grips",
+  "kind": "grips",
+  "text": "Soft durometer ergonomic grips add comfort so you can ride longer. Removable caps on the end allow for various accessory add-on.",
+  "siblings": null,
+  "expected": {
+   "ergonomic": true,
+   "details": "Soft durometer; removable end caps for accessories",
+   "_kind": "grips"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "handlebars",
+  "kind": "handlebars",
+  "text": "Newly added BMX-style handlebars are sturdy, comfortable, and offer more opportunities for customizing your ride with accessories.",
+  "siblings": null,
+  "expected": {
+   "type": "bmx",
+   "details": "Sturdy, accessory-friendly",
+   "_kind": "handlebars"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "saddle",
+  "kind": "saddle",
+  "text": "A custom-designed saddle compliments a sportier look and can be angle adjusted.",
+  "siblings": null,
+  "expected": {
+   "details": "Custom-designed, angle adjustable",
+   "_kind": "saddle"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "front_fork",
+  "kind": "fork",
+  "text": "Rigid Steel Fork with a threadless headset.",
+  "siblings": null,
+  "expected": {
+   "type": "rigid",
+   "details": "Steel, threadless headset",
+   "_kind": "fork"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "frame",
+  "kind": "frame",
+  "text": "6000-series-aluminum frame is sturdy yet lightweight.",
+  "siblings": null,
+  "expected": {
+   "material": "aluminum",
+   "details": "6000 series",
+   "_kind": "frame"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "safety_certified",
+  "kind": "cert",
+  "text": "The Lectric XP Lite is certified to UL 2849. Additionally, the XP Lite's lithium-ion battery is certified to UL 2271.",
+  "siblings": null,
+  "expected": {
+   "standards": [
+    "UL 2271",
+    "UL 2849"
+   ],
+   "_kind": "cert"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "chain",
+  "kind": "chain",
+  "text": "A KMC Z8 steel chain offers consistent tension for a secure performance throughout your ride.",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "KMC",
+   "model": "Z8",
+   "details": "Steel",
+   "_kind": "chain"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "hydraulic_brakes",
+  "kind": "brake",
+  "text": "Get ultimate stopping power with Star Union hydraulic brakes paired with 180mm rotors (2.3mm thick), making it as easy to stop as it is to go, whether in wet or dry conditions. Paired with ergonomically designed aluminum brake levers for durability.",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Star Union",
+   "actuation": "hydraulic",
+   "rotor_mm": 180,
+   "rotor_thickness_mm": 2.3,
+   "details": "Ergonomic aluminum levers",
+   "_kind": "brake"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "pedals",
+  "kind": "pedals",
+  "text": "Custom-designed 6000 Series Aluminum pedals with protruding grip pins improve foot traction for an optimal experience.",
+  "siblings": null,
+  "expected": {
+   "material": "aluminum",
+   "details": "Custom 6000 series, protruding grip pins",
+   "_kind": "pedals"
+  }
+ },
+ {
+  "brand": "leoguar",
+  "field": "brake_levers",
+  "kind": "brake",
+  "text": "Tektro Brake Lever with Power Cut-Off Sensor",
+  "siblings": {
+   "rotors": "180mm Rotor"
+  },
+  "expected": {
+   "manufacturer": "Tektro",
+   "details": "Levers with power cut-off sensor",
+   "_kind": "brake"
+  }
+ },
+ {
+  "brand": "leoguar",
+  "field": "rotors",
+  "kind": "brake",
+  "text": "180mm Rotor",
+  "siblings": {
+   "rotors": "180mm Rotor"
+  },
+  "expected": {
+   "rotor_mm": 180,
+   "_kind": "brake"
+  }
+ },
+ {
+  "brand": "leoguar",
+  "field": "charger",
+  "kind": "charger",
+  "text": "54.6V DC, 3A smart charger, operates on 100V-240V AC power outlets",
+  "siblings": {
+   "rotors": "180mm Rotor"
+  },
+  "expected": {
+   "output_v": 54.6,
+   "amps_a": 3,
+   "details": "Smart; 100-240V AC input",
+   "_kind": "charger"
+  }
+ },
+ {
+  "brand": "leoguar",
+  "field": "headlight",
+  "kind": "light",
+  "text": "48V LED with quick disconnect",
+  "siblings": {
+   "rotors": "180mm Rotor"
+  },
+  "expected": {
+   "details": "48V LED with quick disconnect",
+   "_kind": "light"
+  }
+ },
+ {
+  "brand": "leoguar",
+  "field": "motor_hub",
+  "kind": "motor",
+  "text": "48V 750W 85Nm",
+  "siblings": {
+   "rotors": "180mm Rotor"
+  },
+  "expected": {
+   "voltage_v": 48,
+   "power_w": 750,
+   "torque_nm": 85,
+   "_kind": "motor"
+  }
+ },
+ {
+  "brand": "leoguar",
+  "field": "battery",
+  "kind": "battery",
+  "text": "48V15Ah (720Wh) Canbus Protocol, Certified by UL 2271",
+  "siblings": {
+   "rotors": "180mm Rotor"
+  },
+  "expected": {
+   "voltage_v": 48,
+   "amphours_ah": 15,
+   "capacity_wh": 720,
+   "details": "CANbus protocol; UL 2271 certified",
+   "_kind": "battery"
+  }
+ },
+ {
+  "brand": "leoguar",
+  "field": "sensor",
+  "kind": "sensor",
+  "text": "Cadence Sensor",
+  "siblings": {
+   "rotors": "180mm Rotor"
+  },
+  "expected": {
+   "type": "cadence",
+   "_kind": "sensor"
+  }
+ },
+ {
+  "brand": "leoguar",
+  "field": "display",
+  "kind": "display",
+  "text": "Color Display and 5 Speed Levels, Canbus Protocol",
+  "siblings": {
+   "rotors": "180mm Rotor"
+  },
+  "expected": {
+   "type": "color",
+   "details": "5 speed levels; CANbus protocol",
+   "_kind": "display"
+  }
+ },
+ {
+  "brand": "leoguar",
+  "field": "throttle_assist",
+  "kind": "throttle",
+  "text": "Half Twist Throttle",
+  "siblings": {
+   "rotors": "180mm Rotor"
+  },
+  "expected": {
+   "type": "half_twist",
+   "_kind": "throttle"
+  }
+ },
+ {
+  "brand": "leoguar",
+  "field": "tail_light",
+  "kind": "light",
+  "text": "LED with brake light",
+  "siblings": {
+   "rotors": "180mm Rotor"
+  },
+  "expected": {
+   "brake_light": true,
+   "details": "LED",
+   "_kind": "light"
+  }
+ },
+ {
+  "brand": "leoguar",
+  "field": "chainrings",
+  "kind": "chainring",
+  "text": "52T Alloy Forged",
+  "siblings": {
+   "rotors": "180mm Rotor"
+  },
+  "expected": {
+   "teeth": 52,
+   "details": "Alloy forged",
+   "_kind": "chainring"
+  }
+ },
+ {
+  "brand": "leoguar",
+  "field": "crankset",
+  "kind": "crankset",
+  "text": "Alloy Forged 6.89\"",
+  "siblings": {
+   "rotors": "180mm Rotor"
+  },
+  "expected": {
+   "length_mm": 175,
+   "details": "Alloy Forged",
+   "_kind": "crankset"
+  }
+ },
+ {
+  "brand": "leoguar",
+  "field": "rear_derailleur",
+  "kind": "derailleur",
+  "text": "Shimano RD-M360/acera",
+  "siblings": {
+   "rotors": "180mm Rotor"
+  },
+  "expected": {
+   "manufacturer": "Shimano",
+   "model": "Acera RD-M360",
+   "_kind": "derailleur"
+  }
+ },
+ {
+  "brand": "leoguar",
+  "field": "rims",
+  "kind": "rims",
+  "text": "26'' * 3.15\" 36h,  Alloy Double Wall",
+  "siblings": {
+   "rotors": "180mm Rotor"
+  },
+  "expected": {
+   "size_in": 26,
+   "material": "aluminum",
+   "double_wall": true,
+   "details": "3.15\" wide, 36h",
+   "_kind": "rims"
+  }
+ },
+ {
+  "brand": "leoguar",
+  "field": "tires",
+  "kind": "tire",
+  "text": "Vee 26''*4.0, 72TPI",
+  "siblings": {
+   "rotors": "180mm Rotor"
+  },
+  "expected": {
+   "manufacturer": "Vee",
+   "diameter_in": 26,
+   "width_in": 4,
+   "details": "72 TPI",
+   "_kind": "tire"
+  }
+ },
+ {
+  "brand": "leoguar",
+  "field": "spokes",
+  "kind": "spokes",
+  "text": "Stainless Steel, 13G Front / 12G Rear",
+  "siblings": {
+   "rotors": "180mm Rotor"
+  },
+  "expected": {
+   "material": "stainless steel",
+   "details": "13G front / 12G rear",
+   "_kind": "spokes"
+  }
+ },
+ {
+  "brand": "leoguar",
+  "field": "handlebars",
+  "kind": "handlebars",
+  "text": "Aluminum Alloy, D:1.25\"   W:29.53\"",
+  "siblings": {
+   "rotors": "180mm Rotor"
+  },
+  "expected": {
+   "material": "aluminum",
+   "clamp_mm": 31.8,
+   "width_mm": 750,
+   "_kind": "handlebars"
+  }
+ },
+ {
+  "brand": "leoguar",
+  "field": "stem",
+  "kind": "stem",
+  "text": "Black 3D Forged, 3.15\" Length, 7° Rise, 1.25\" Handlebar Clamp",
+  "siblings": {
+   "rotors": "180mm Rotor"
+  },
+  "expected": {
+   "length_mm": 80,
+   "angle_deg": 7,
+   "clamp_mm": 31.8,
+   "details": "Black, 3D forged",
+   "_kind": "stem"
+  }
+ },
+ {
+  "brand": "leoguar",
+  "field": "saddle",
+  "kind": "saddle",
+  "text": "Custom made comfy Leather Seat (Litchi Texture)",
+  "siblings": {
+   "rotors": "180mm Rotor"
+  },
+  "expected": {
+   "details": "Custom made comfy Leather Seat (Litchi Texture)",
+   "_kind": "saddle"
+  }
+ },
+ {
+  "brand": "leoguar",
+  "field": "seatpost",
+  "kind": "seatpost",
+  "text": "1.21\" 13.78\" length, forged and rigid",
+  "siblings": {
+   "rotors": "180mm Rotor"
+  },
+  "expected": {
+   "diameter_mm": 30.7,
+   "length_mm": 350,
+   "details": "Forged and rigid",
+   "_kind": "seatpost"
+  }
+ },
+ {
+  "brand": "leoguar",
+  "field": "pedals",
+  "kind": "pedals",
+  "text": "Wellgo Brand, Double Bearing and Forged",
+  "siblings": {
+   "rotors": "180mm Rotor"
+  },
+  "expected": {
+   "details": "Wellgo Brand, Double Bearing and Forged",
+   "_kind": "pedals"
+  }
+ },
+ {
+  "brand": "leoguar",
+  "field": "cassette",
+  "kind": "cassette",
+  "text": "Shimano CS-HG20-8/12-32T/8sp cassette",
+  "siblings": {
+   "rotors": "180mm Rotor"
+  },
+  "expected": {
+   "manufacturer": "Shimano",
+   "model": "CS-HG20-8",
+   "cog_range": "12-32T",
+   "speeds": 8,
+   "_kind": "cassette"
+  }
+ },
+ {
+  "brand": "leoguar",
+  "field": "front_fork",
+  "kind": "fork",
+  "text": "Alloy threadless and oil suspension with lockout,  3.14\" travel",
+  "siblings": {
+   "rotors": "180mm Rotor"
+  },
+  "expected": {
+   "type": "suspension",
+   "lockout": true,
+   "travel_mm": 80,
+   "details": "Alloy, threadless, oil suspension",
+   "_kind": "fork"
+  }
+ },
+ {
+  "brand": "leoguar",
+  "field": "shift_lever",
+  "kind": "derailleur",
+  "text": "8sp Trigger Lever",
+  "siblings": {
+   "rotors": "180mm Rotor"
+  },
+  "expected": {
+   "speeds": 8,
+   "details": "Trigger lever shifter",
+   "_kind": "derailleur"
+  }
+ },
+ {
+  "brand": "leoguar",
+  "field": "chain",
+  "kind": "chain",
+  "text": "128 links, 8sp, KMC Rust-proof",
+  "siblings": {
+   "rotors": "180mm Rotor"
+  },
+  "expected": {
+   "manufacturer": "KMC",
+   "links": 128,
+   "details": "8 spd; rust-proof",
+   "_kind": "chain"
+  }
+ },
+ {
+  "brand": "leoguar",
+  "field": "a_head_tube_length",
+  "kind": "tubes",
+  "text": "5.91\"",
+  "siblings": {
+   "rotors": "180mm Rotor"
+  },
+  "expected": {
+   "details": "5.91\"",
+   "_kind": "tubes"
+  }
+ },
+ {
+  "brand": "leoguar",
+  "field": "b_top_tube_length",
+  "kind": "tubes",
+  "text": "24.41\"",
+  "siblings": {
+   "rotors": "180mm Rotor"
+  },
+  "expected": {
+   "details": "24.41\"",
+   "_kind": "tubes"
+  }
+ },
+ {
+  "brand": "leoguar",
+  "field": "cassette",
+  "kind": "cassette",
+  "text": "Shimano MF-TZ500-7, 14-28T, threaded",
+  "siblings": {
+   "rotors": "160mm Rotor"
+  },
+  "expected": {
+   "manufacturer": "Shimano",
+   "model": "MF-TZ500-7",
+   "cog_range": "14-28T",
+   "speeds": 7,
+   "details": "Threaded freewheel",
+   "_kind": "cassette"
+  }
+ },
+ {
+  "brand": "leoguar",
+  "field": "motor_hub",
+  "kind": "motor",
+  "text": "48V, 350W, 45Nm",
+  "siblings": {
+   "rotors": "160mm Rotor"
+  },
+  "expected": {
+   "voltage_v": 48,
+   "power_w": 350,
+   "torque_nm": 45,
+   "_kind": "motor"
+  }
+ },
+ {
+  "brand": "leoguar",
+  "field": "battery",
+  "kind": "battery",
+  "text": "48V 10Ah (480Wh) Canbus Protocol",
+  "siblings": {
+   "rotors": "160mm Rotor"
+  },
+  "expected": {
+   "voltage_v": 48,
+   "amphours_ah": 10,
+   "capacity_wh": 480,
+   "details": "CANbus protocol",
+   "_kind": "battery"
+  }
+ }
+]

@@ -31,6 +31,7 @@ mkdir -p "$ACTIVE_DIR" "$LEGACY_DIR" "$PROJECT_DIR/logs"
 # scraper script | output basename | extra args
 SCRAPERS=(
     "scrape_aventon.py|aventon_ebikes|--concurrency 4"
+    "scrape_cannondale.py|cannondale_ebikes|"
     "scrape_lectric.py|lectric_ebikes|"
     "scrape_ride1up.py|ride1up_ebikes|"
     "scrape_specialized.py|specialized_ebikes|--concurrency 3"
@@ -56,6 +57,9 @@ SCRAPERS=(
     "scrape_wallke.py|wallke_ebikes|"
     "scrape_cyke.py|cyke_ebikes|"
     "scrape_leoguar.py|leoguar_ebikes|"
+    "scrape_buzz.py|buzz_ebikes|"
+    "scrape_magicycle.py|magicycle_ebikes|"
+    "scrape_urtopia.py|urtopia_ebikes|"
 )
 
 run_all() {
@@ -94,6 +98,10 @@ print((json.load(open(f[0])).get('generated_at','') or '')[:10]) if f else print
     # badge + filter); brands that don't tag new arrivals are left as not-new.
     "$PY" "$PROJECT_DIR/enrich_new_flag.py" || true
     "$PY" "$PROJECT_DIR/enrich_shipping_accessories.py" || true
+    # Specialized & Ride1Up are not Shopify, so their accessory catalogs are scraped
+    # separately (enrich_shipping_accessories leaves non-Shopify catalogs untouched).
+    "$PY" "$PROJECT_DIR/scrape_specialized_accessories.py" || true
+    "$PY" "$PROJECT_DIR/scrape_ride1up_accessories.py" || true
     # Fill each bike's rear-rack max load from the brand's rack accessory pages
     # (the bike's own sheet often omits it). Needs available_accessories above.
     "$PY" "$PROJECT_DIR/enrich_rack_load.py" || true

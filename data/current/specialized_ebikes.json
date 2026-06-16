@@ -2,8 +2,8 @@
   "source": "https://www.specialized.com",
   "logo": "assets/logos/specialized.svg",
   "category": "ebikes",
-  "scraped_at": "2026-06-07T22:36:29.077838+00:00",
-  "model_count": 53,
+  "scraped_at": "2026-06-12T03:27:37.896133+00:00",
+  "model_count": 54,
   "models": [
     {
       "slug": "haul-lt",
@@ -874,6 +874,305 @@
           "Product ID": "294785",
           "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
           "Weight": "24.4 kg (53 lb, 12.7 oz)",
+          "Weight Size": "S4"
+        }
+      },
+      "spec_count": 31,
+      "scrape_error": null,
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": [],
+      "available_options": [
+        {
+          "group": "sizes",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "S2",
+              "free": true
+            },
+            {
+              "value": "S3",
+              "free": true
+            },
+            {
+              "value": "S4",
+              "free": true
+            },
+            {
+              "value": "S5",
+              "free": true
+            },
+            {
+              "value": "S6",
+              "free": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "s-works-levo-4-x",
+      "url": "https://www.specialized.com/us/en/s-works-levo-4-x/p/4292994",
+      "name": "",
+      "warranty": "Lifetime Warranty",
+      "model": "S-Works Levo 4 X",
+      "product_types": [
+        "Commuter / Urban"
+      ],
+      "price_range": {
+        "min": 11999.99,
+        "max": 11999.99,
+        "currency": "USD"
+      },
+      "configurations": [
+        {
+          "name": null,
+          "sku": null,
+          "price": 11999.99
+        },
+        {
+          "name": null,
+          "sku": null,
+          "price": 11999.99
+        },
+        {
+          "name": null,
+          "sku": null,
+          "price": 11999.99
+        },
+        {
+          "name": null,
+          "sku": null,
+          "price": 11999.99
+        },
+        {
+          "name": null,
+          "sku": null,
+          "price": 11999.99
+        }
+      ],
+      "options": {
+        "sizes": [
+          "S2",
+          "S3",
+          "S4",
+          "S5",
+          "S6"
+        ],
+        "colors": [
+          {
+            "name": "Fiery Red / Black",
+            "hex": "#fd061f",
+            "swatch_image": null,
+            "image": "https://assets.specialized.com/i/specialized/95226-08_LEVO-X-SW-G4-FRYRED-BLK_HERO-PDP_DARK"
+          }
+        ]
+      },
+      "geometry": {
+        "Crank Length": {
+          "S2": "160mm",
+          "S3": "160mm",
+          "S4": "160mm",
+          "S5": "160mm",
+          "S6": "160mm"
+        },
+        "Handlebar Width": {
+          "S2": "800mm",
+          "S3": "800mm",
+          "S4": "800mm",
+          "S5": "800mm",
+          "S6": "800mm"
+        },
+        "Stem Length": {
+          "S2": "40mm",
+          "S3": "40mm",
+          "S4": "40mm",
+          "S5": "40mm",
+          "S6": "40mm"
+        },
+        "Saddle Width": {
+          "S2": "155mm",
+          "S3": "143mm",
+          "S4": "143mm",
+          "S5": "143mm",
+          "S6": "143mm"
+        },
+        "Seatpost Length": {
+          "S2": "125mm",
+          "S3": "175mm",
+          "S4": "200mm",
+          "S5": "200mm",
+          "S6": "200mm"
+        },
+        "Stack": {
+          "S2": "618mm",
+          "S3": "626mm",
+          "S4": "638mm",
+          "S5": "652mm",
+          "S6": "667mm"
+        },
+        "Reach": {
+          "S2": "435mm",
+          "S3": "455mm",
+          "S4": "480mm",
+          "S5": "505mm",
+          "S6": "535mm"
+        },
+        "Headtube Length": {
+          "S2": "95mm",
+          "S3": "103mm",
+          "S4": "117mm",
+          "S5": "132mm",
+          "S6": "149mm"
+        },
+        "Headtube Angle": {
+          "S2": "64.5°",
+          "S3": "64.5°",
+          "S4": "64.5°",
+          "S5": "64.5°",
+          "S6": "64.5°"
+        },
+        "BB Height": {
+          "S2": "350mm",
+          "S3": "350mm",
+          "S4": "350mm",
+          "S5": "350mm",
+          "S6": "350mm"
+        },
+        "BB Drop": {
+          "S2": "29.5mm",
+          "S3": "29.5mm",
+          "S4": "29.5mm",
+          "S5": "29.5mm",
+          "S6": "29.5mm"
+        },
+        "Trail": {
+          "S2": "132mm",
+          "S3": "132mm",
+          "S4": "132mm",
+          "S5": "132mm",
+          "S6": "132mm"
+        },
+        "Fork Length (full)": {
+          "S2": "577mm",
+          "S3": "577mm",
+          "S4": "577mm",
+          "S5": "577mm",
+          "S6": "577mm"
+        },
+        "Fork Rake/Offset": {
+          "S2": "44mm",
+          "S3": "44mm",
+          "S4": "44mm",
+          "S5": "44mm",
+          "S6": "44mm"
+        },
+        "Front Center": {
+          "S2": "765mm",
+          "S3": "789mm",
+          "S4": "820mm",
+          "S5": "851mm",
+          "S6": "888mm"
+        },
+        "Chainstay Length": {
+          "S2": "435mm",
+          "S3": "435mm",
+          "S4": "435mm",
+          "S5": "435mm",
+          "S6": "435mm"
+        },
+        "Wheelbase": {
+          "S2": "1200mm",
+          "S3": "1223mm",
+          "S4": "1254mm",
+          "S5": "1286mm",
+          "S6": "1323mm"
+        },
+        "Top-tube Length (horizontal)": {
+          "S2": "578mm",
+          "S3": "599mm",
+          "S4": "627mm",
+          "S5": "655mm",
+          "S6": "689mm"
+        },
+        "Bike Standover Height": {
+          "S2": "753mm",
+          "S3": "754mm",
+          "S4": "753mm",
+          "S5": "758mm",
+          "S6": "761mm"
+        },
+        "Seat Tube Length": {
+          "S2": "390mm",
+          "S3": "405mm",
+          "S4": "425mm",
+          "S5": "445mm",
+          "S6": "465mm"
+        },
+        "Seat Tube Angle": {
+          "S2": "77°",
+          "S3": "77°",
+          "S4": "77°",
+          "S5": "77°",
+          "S6": "77°"
+        },
+        "Saddle Height for Effective ST Angle": {
+          "S2": "690mm",
+          "S3": "735mm",
+          "S4": "780mm",
+          "S5": "825mm",
+          "S6": "870mm"
+        },
+        "Max Seatpost Insertion": {
+          "S2": "274mm",
+          "S3": "289mm",
+          "S4": "313mm",
+          "S5": "337mm",
+          "S6": "357mm"
+        },
+        "Min Seatpost Insertion": {
+          "S2": "80mm",
+          "S3": "80mm",
+          "S4": "80mm",
+          "S5": "80mm",
+          "S6": "80mm"
+        }
+      },
+      "specs": {
+        "all": {
+          "Motor": "Specialized 3.1 S-Works motor, 111Nm power, 850W power",
+          "Battery": "840Wh battery",
+          "UI/Remote": "Mastermind TCU, 2.2\" high resolution screen, fully customizeable with Specialized app, works with Apple Find My",
+          "Charger": "Specialized 12amp smart charger, 4 different charge functions including Standard, Fast, Eco, and charge to 80%",
+          "Frame": "Levo 4 carbon frame, 150mm travel, w/SWAT storage, side entry battery, fork travel up to 180mm, adjustable head angle, BB height, chainstay length",
+          "Seat Binder": "Alloy, 38.6mm",
+          "Rear Shock": "Fox Float X Factory with Specialized GENIE Shock Tech, Ride Dynamics Trail Tune, 2-position lever, LSR adjustment, 210x55mm",
+          "Fork": "FOX Factory 38, GRIP X2 damper, high/low speed compression adjust, high/low speed rebound adjust, 15x110mm axle, 44mm offset, 160mm travel",
+          "Front Brake": "SRAM Maven Ultimate, 4-piston caliper, hydraulic disc, 220mm HS2 Rotor",
+          "Rear Brake": "SRAM Maven Ultimate, 4-piston caliper, hydraulic disc, 200mm HS2 Rotor",
+          "Shift Levers": "SRAM AXS Pod Ultimate with Discrete Clamp",
+          "Rear Derailleur": "SRAM XX Eagle Transmission Derailleur",
+          "Cassette": "SRAM XX Transmission, XS 1297, 10-52t",
+          "Chain": "SRAM XX, T-Type",
+          "Crankset": "SRAM XX Carbon crank, 160mm, ISIS interface",
+          "Chainrings": "SRAM 34t T-Type chainring, 104 BCD, steel",
+          "Front Tire": "Butcher, GRID Gravity, T9, TLR, 29x2.4\"",
+          "Front Wheel": "Roval Traverse HD 29\", hookless carbon, 30mm inner width, tubeless ready, DT Swiss 240 Hub, 15 x 110mm, 28h",
+          "Rear Tire": "Eliminator, GRID Gravity casing, Gripton T7/T9 compound, 27.5X2.4",
+          "Rear Wheel": "Roval Traverse HD 27.5\", hookless carbon, 30mm inner width, tubeless ready, DT Swiss 240 Hub, 12 x 148mm, 32h",
+          "Inner Tubes": "Standard, Presta Valve",
+          "Stem": "Industry 9 A35 Mountain stem, 35mm clamp, 40mm length",
+          "Handlebars": "RaceFace Era Carbon Handlebars, 35mm clamp, back-sweep 8-degrees, up-sweep 5 degrees, 800mm width, S1/S2: 40mm rise, S3-S6: 55mm rise",
+          "Grips": "Deity Lockjaw, Lock On, 32mm OD, 133mm Length, Black",
+          "Saddle": "Specialized S-Works Power Mirror, Ti Rails, 143mm/155mm",
+          "SeatPost": "RockShox Reverb AXS, 34.9mm, S2: 125mm, S3: 150mm, S4-6: 200mm",
+          "SWAT": "SWAT Internal downtube storage",
+          "Product ID": "292994",
+          "Compliance Certification": "As applicable, certified to UL 2849 (e-system) and/or UL 2271 (battery) by UL Solutions and/or SGS. For information on lithium-ion battery standards and regulations in New York City, visit: www.nyc.gov/fdny/batteries",
+          "Weight": "27.25 kg (60 lb, 1.2 oz)",
           "Weight Size": "S4"
         }
       },
@@ -11299,7 +11598,7 @@
       "warranty": "Lifetime Warranty",
       "model": "Turbo Vado 3 X 4.0",
       "product_types": [
-        "Fat tire"
+        "Fat Tire"
       ],
       "price_range": {
         "min": 5499.99,
@@ -15518,6 +15817,527 @@
       ]
     }
   ],
-  "available_accessories": [],
-  "available_accessories_count": 0
+  "available_accessories": [
+    {
+      "name": "Levo 4 Full Power Range Extender Cable",
+      "price": 59.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/levo-4-full-power-range-extender-cable/p/4278385"
+    },
+    {
+      "name": "Levo 4 Full Power Range Extender",
+      "price": 699.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/levo-4-full-power-range-extender/p/4292120"
+    },
+    {
+      "name": "Turbo Battery Charger",
+      "price": 199.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/turbo-battery-charger/p/156135"
+    },
+    {
+      "name": "SL Range-Extender Battery",
+      "price": 449.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/sl-range-extender-battery/p/173733"
+    },
+    {
+      "name": "SL Range Extender Cable 220mm Road Creo SL, Vado SL, and Com",
+      "price": 34.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/sl-range-extender-cable-220mm-road/p/173736"
+    },
+    {
+      "name": "Globe + Kryptonite Evolution 1010 Chain Lock",
+      "price": 149.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/globe--kryptonite-evolution-1010-chain-lock/p/243680"
+    },
+    {
+      "name": "Specialized SL Battery Charger",
+      "price": 199.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/specialized-sl-battery-charger/p/173401"
+    },
+    {
+      "name": "MIK Adapter",
+      "price": 39.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/mik-adapter/p/218337"
+    },
+    {
+      "name": "Tero Kickstand",
+      "price": 24.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/tero-kickstand/p/206230"
+    },
+    {
+      "name": "Coolcave Pannier",
+      "price": 89.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/coolcave-pannier/p/205428"
+    },
+    {
+      "name": "Specialized Turbo Connect Display (TCD)",
+      "price": 119.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/specialized-turbo-connect-display-tcd/p/159237"
+    },
+    {
+      "name": "Turbo SL Y Charger Cable",
+      "price": 59.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/turbo-sl-y-charger-cable/p/173737"
+    },
+    {
+      "name": "3.1 Smart Charger",
+      "price": 599.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/31-smart-charger/p/4278499"
+    },
+    {
+      "name": "SL Range Extender Cable 160mm MTB 2020 and 2021 Turbo Levo S",
+      "price": 34.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/sl-range-extender-cable-160mm-mtb/p/173735"
+    },
+    {
+      "name": "SL Range Extender Cable 285mm MTB Kenevo SL Models",
+      "price": 49.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/sl-range-extender-cable-285mm-mtb/p/199063"
+    },
+    {
+      "name": "Front Rack & Adventure Plate",
+      "price": 149.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/front-rack--adventure-plate/p/217462"
+    },
+    {
+      "name": "Tailwind",
+      "price": 149.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/tailwind/p/205459"
+    },
+    {
+      "name": "Specialized M2 & M3 UL/EN Series Battery (No Small Parts)",
+      "price": 1699.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/specialized-m2--m3-ulen-series-battery-no-small-parts/p/4278005"
+    },
+    {
+      "name": "Turbo Tero Equipment Kit",
+      "price": 329.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/turbo-tero-equipment-kit/p/205582"
+    },
+    {
+      "name": "Turbo Connect Display – MTB Mount 35mm",
+      "price": 29.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/turbo-connect-display--mtb-mount-35mm/p/188150"
+    },
+    {
+      "name": "Turbo Connect Display – MTB Mount",
+      "price": 29.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/turbo-connect-display--mtb-mount/p/170525"
+    },
+    {
+      "name": "Turbo Connect Display – Road Mount",
+      "price": 29.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/turbo-connect-display--road-mount/p/170526"
+    },
+    {
+      "name": "Specialized X2 Series Battery Levo 4 & Vado 3 Models - 600Wh",
+      "price": 1299.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/specialized-x2-series-battery/p/4292130"
+    },
+    {
+      "name": "Levo X Rack Starting at",
+      "price": 169.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/levo-x-rack/p/4296816"
+    },
+    {
+      "name": "Specialized U2 Battery",
+      "price": 1199.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/specialized-u2-battery/p/205308"
+    },
+    {
+      "name": "Turbo Basket",
+      "price": 44.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/turbo-basket/p/206227"
+    },
+    {
+      "name": "SL Range Extender Cable 145mm MTB 2nd Gen Turbo Levo SL Comp",
+      "price": 25.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/sl-range-extender-cable-145mm-mtb/p/217488"
+    },
+    {
+      "name": "Specialized M1 Series Battery",
+      "price": 449.95,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/specialized-m1-series-battery/p/156437"
+    },
+    {
+      "name": "Globe Front Rack",
+      "price": 109.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/globe-front-rack/p/218903"
+    },
+    {
+      "name": "Globe Passenger Seat",
+      "price": 64.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/globe-passenger-seat/p/218891"
+    },
+    {
+      "name": "Globe Throttle",
+      "price": 59.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/globe-throttle/p/220823"
+    },
+    {
+      "name": "Globe Pegs",
+      "price": 29.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/globe-pegs/p/218901"
+    },
+    {
+      "name": "Globe Passenger Handlebar",
+      "price": 74.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/globe-passenger-handlebar/p/218890"
+    },
+    {
+      "name": "Globe LT Adjustable Cargo Rail",
+      "price": 319.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/globe-lt-adjustable-cargo-rail/p/218892"
+    },
+    {
+      "name": "Globe LT Running Boards",
+      "price": 249.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/globe-lt-running-boards/p/218902"
+    },
+    {
+      "name": "Globe Pannier Adapters - Front (Pair)",
+      "price": 109.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/globe-pannier-adapters-front-pair/p/218906"
+    },
+    {
+      "name": "Globe Pannier Adapters - Rear (Pair)",
+      "price": 109.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/globe-pannier-adapters-rear-pair/p/218908"
+    },
+    {
+      "name": "Globe ST Rear Wheel Cover",
+      "price": 44.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/globe-st-rear-wheel-cover/p/244229"
+    },
+    {
+      "name": "Roll Mini Basket",
+      "price": 19.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/roll-mini-basket/p/173246"
+    },
+    {
+      "name": "Globe Rack Customization Kit",
+      "price": 49.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/globe-rack-customization-kit/p/218899"
+    },
+    {
+      "name": "Globe LT Cargo Side Bag",
+      "price": 349.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/globe-lt-cargo-side-bag/p/218898"
+    },
+    {
+      "name": "Two-Bolt Mount Kickstand",
+      "price": 19.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/two-bolt-mount-kickstand/p/155718"
+    },
+    {
+      "name": "Roll Fender Set",
+      "price": 49.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/roll-fender-set/p/172530"
+    },
+    {
+      "name": "DRY-TECH Fender Set",
+      "price": 79.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/dry-tech-fender-set/p/171623"
+    },
+    {
+      "name": "Plug + Play Fender Set v2",
+      "price": 29.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/plug--play-fender-set-v2/p/173080"
+    },
+    {
+      "name": "Road Bandit",
+      "price": 29.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/road-bandit/p/156509"
+    },
+    {
+      "name": "Specialized/Fjällräven Handlebar Rain Cover",
+      "price": 17.49,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/specializedfj%C3%A4llr%C3%A4ven-handlebar-rain-cover/p/246390"
+    },
+    {
+      "name": "Air Tool Comp Floor Pump",
+      "price": 69.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/air-tool-comp-floor-pump/p/174143"
+    },
+    {
+      "name": "Air Tool MTB Floor Pump",
+      "price": 89.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/air-tool-mtb-floor-pump/p/156596"
+    },
+    {
+      "name": "Air Tool Sport Floor Pump",
+      "price": 49.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/air-tool-sport-floor-pump/p/172194"
+    },
+    {
+      "name": "Air Tool Shock Pump",
+      "price": 59.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/air-tool-shock-pump/p/172465"
+    },
+    {
+      "name": "CPRO2 Trigger",
+      "price": 29.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/cpro2-trigger/p/172045"
+    },
+    {
+      "name": "Replacement Head & Hose for Comp/HP/MTB Floor Pump",
+      "price": 7.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/replacement-head--hose-for-comphpmtb-floor-pump/p/174108"
+    },
+    {
+      "name": "Air Tool High Pressure Floor Pump",
+      "price": 59.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/air-tool-high-pressure-floor-pump/p/132418"
+    },
+    {
+      "name": "Air Tool MTB Mini Pump",
+      "price": 29.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/air-tool-mtb-mini-pump/p/173607"
+    },
+    {
+      "name": "Air Tool Big Bore Pump",
+      "price": 49.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/air-tool-big-bore-pump/p/171985"
+    },
+    {
+      "name": "CPRO2 Gauge Trigger",
+      "price": 49.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/cpro2-gauge-trigger/p/173329"
+    },
+    {
+      "name": "Air Tool Road Mini Pump",
+      "price": 29.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/air-tool-road-mini-pump/p/173606"
+    },
+    {
+      "name": "Air Tool Road Pump",
+      "price": 34.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/air-tool-road-pump/p/171908"
+    },
+    {
+      "name": "Air Tool MTB Pump",
+      "price": 34.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/air-tool-mtb-pump/p/172103"
+    },
+    {
+      "name": "Air Tool Switch Sport Pump",
+      "price": 24.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/air-tool-switch-sport-pump/p/171675"
+    },
+    {
+      "name": "Air Tool Switch Comp Pump",
+      "price": 34.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/air-tool-switch-comp-pump/p/171897"
+    },
+    {
+      "name": "Replacement Head & Hose for UHP Floor Pump",
+      "price": 29.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/replacement-head--hose-for-uhp-floor-pump/p/155309"
+    },
+    {
+      "name": "Air Tool Flex Pump",
+      "price": 34.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/air-tool-flex-pump/p/172167"
+    },
+    {
+      "name": "Supacaz Quickfix CO2 Inflator",
+      "price": 34.99,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.specialized.com/us/en/supacaz-quickfix-co2-inflator/p/220703"
+    }
+  ],
+  "available_accessories_count": 65
 }
