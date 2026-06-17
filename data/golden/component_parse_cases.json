@@ -57,9 +57,9 @@
    "rear_brake_rotor": "203mm 6-bolt"
   },
   "expected": {
-   "material": "aluminum",
+   "material": "aluminum 6061",
    "integrated_battery": true,
-   "details": "Gravity cast 6061 single-butted; internal battery",
+   "details": "Gravity cast single-butted; internal battery",
    "_kind": "frame"
   }
  },
@@ -535,9 +535,9 @@
    "front_brake_rotor": "Tektro 180mm 6 bolt"
   },
   "expected": {
-   "material": "aluminum",
+   "material": "aluminum 6061",
    "integrated_battery": true,
-   "details": "6061; internal battery; one-piece diecast front triangle",
+   "details": "internal battery; one-piece diecast front triangle",
    "_kind": "frame"
   }
  },
@@ -1301,8 +1301,7 @@
   "text": "6061 Aluminum Alloy",
   "siblings": null,
   "expected": {
-   "material": "aluminum",
-   "details": "6061",
+   "material": "aluminum 6061",
    "_kind": "frame"
   }
  },
@@ -1934,12 +1933,12 @@
   "expected": {
    "manufacturer": "Cannondale",
    "model": "Low-Rise Urban",
-   "material": "aluminum",
+   "material": "aluminum 6061",
    "clamp_mm": 31.8,
    "rise_mm": 25,
    "backsweep_deg": 35,
    "width_mm": 680,
-   "details": "Butted 6061",
+   "details": "Butted",
    "_kind": "handlebars"
   }
  },
@@ -1990,10 +1989,9 @@
   "expected": {
    "manufacturer": "Cannondale",
    "model": "4",
-   "material": "aluminum",
+   "material": "aluminum 6061",
    "diameter_mm": 31.6,
    "length_mm": 350,
-   "details": "6061",
    "_kind": "seatpost"
   }
  },
@@ -2184,10 +2182,9 @@
   "text": "6061 Alloy, 30.9x350mm",
   "siblings": null,
   "expected": {
-   "material": "aluminum",
+   "material": "aluminum 6061",
    "diameter_mm": 30.9,
    "length_mm": 350,
-   "details": "6061",
    "_kind": "seatpost"
   }
  },
@@ -2303,8 +2300,7 @@
   "text": "6061 al alloy",
   "siblings": null,
   "expected": {
-   "material": "aluminum",
-   "details": "6061",
+   "material": "aluminum 6061",
    "_kind": "frame"
   }
  },
@@ -4392,8 +4388,8 @@
   "text": "Hydroformed Aluminum 6061 T6",
   "siblings": null,
   "expected": {
-   "material": "aluminum",
-   "details": "Hydroformed 6061 T6",
+   "material": "aluminum 6061",
+   "details": "Hydroformed T6",
    "_kind": "frame"
   }
  },
@@ -4579,8 +4575,8 @@
   "text": "6061 High-Strength Aluminum Alloy",
   "siblings": null,
   "expected": {
-   "material": "aluminum",
-   "details": "6061 high-strength",
+   "material": "aluminum 6061",
+   "details": "high-strength",
    "_kind": "frame"
   }
  },
@@ -4694,9 +4690,9 @@
   "text": "6061 Aluminum Alloy Frame; removable lithium-ion battery; rear rack and fenders included; hydraulic disc brakes; kickstand mount",
   "siblings": null,
   "expected": {
-   "material": "aluminum",
+   "material": "aluminum 6061",
    "removable_battery": true,
-   "details": "6061; rear rack and fenders included; hydraulic disc; kickstand mount",
+   "details": "rear rack and fenders included; hydraulic disc; kickstand mount",
    "_kind": "frame"
   }
  },
@@ -4719,8 +4715,7 @@
   "text": "6061 Aluminum alloy",
   "siblings": null,
   "expected": {
-   "material": "aluminum",
-   "details": "6061",
+   "material": "aluminum 6061",
    "_kind": "spokes"
   }
  },
@@ -4919,8 +4914,7 @@
   "text": "Aluminum Alloy 6061",
   "siblings": null,
   "expected": {
-   "material": "aluminum",
-   "details": "6061",
+   "material": "aluminum 6061",
    "_kind": "frame"
   }
  },
@@ -5112,9 +5106,9 @@
    "rotors": "F:160mm R:160mm"
   },
   "expected": {
-   "details": "Front: 6061 aluminum, Rear: A356 steel",
+   "details": "Front: aluminum, Rear: A356 steel",
    "_kind": "frame",
-   "material": "aluminum"
+   "material": "aluminum 6061"
   }
  },
  {
@@ -5513,8 +5507,7 @@
    "rotors": "F:180mm R:180mm"
   },
   "expected": {
-   "material": "aluminum",
-   "details": "6061",
+   "material": "aluminum 6061",
    "_kind": "frame"
   }
  },
@@ -5886,8 +5879,7 @@
   "text": "6061 Aluminum",
   "siblings": null,
   "expected": {
-   "material": "aluminum",
-   "details": "6061",
+   "material": "aluminum 6061",
    "_kind": "frame"
   }
  },

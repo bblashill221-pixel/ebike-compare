@@ -22,9 +22,9 @@ const GROUP_ORDER = [
   "ebike_system",
   "water_resistance",
   "frameset",
-  "drivetrain",
-  "brakes",
   "wheelset",
+  "brakes",
+  "drivetrain",
   "cockpit",
   "geometry",
   // NB included_accessories is deliberately not a spec group here — the
@@ -216,6 +216,18 @@ export function BikeDetail() {
   };
   const sideGroups = SIDE_GROUPS.filter((g) => Object.keys(sideGroupData(g)).length > 0);
   const groups = GROUP_ORDER.filter((g) => !SIDE_GROUPS.includes(g) && hasGroup(g));
+  // Frameset, Wheelset, Brakes and Drivetrain share a single combined card; the
+  // card renders at the position of whichever member comes first in GROUP_ORDER.
+  const FRAMESET_CARD = ["frameset", "wheelset", "brakes", "drivetrain"];
+  const framesetCardGroups = FRAMESET_CARD.filter((g) => groups.includes(g));
+  // Sub-sections within the combined card. Frameset is the card body (no
+  // sub-heading); Brakes is folded under the Wheelset sub-heading (no heading
+  // of its own); Drivetrain keeps its heading.
+  const FRAMESET_SUBS: { heading: string | null; groups: string[] }[] = [
+    { heading: null, groups: ["frameset"] },
+    { heading: "Wheelset", groups: ["wheelset", "brakes"] },
+    { heading: "Drivetrain", groups: ["drivetrain"] },
+  ];
 
   // Accessories: the bike's free/bundled items first, then the brand's paid
   // add-ons (deduped against the free list) cheapest first.
@@ -507,14 +519,39 @@ export function BikeDetail() {
         </div>
       </section>
 
-      {/* grouped specs */}
-      <section className="mt-6 grid gap-4 md:grid-cols-2">
-        {groups.map((g) => (
-          <div key={g} className="card p-4">
-            <h2 className="mb-2 font-bold text-slate-800">{titleCase(g)}</h2>
-            <SpecTable group={model.specs[g]} emphasize hideCaptured />
-          </div>
-        ))}
+      {/* grouped specs — single column so the section order reads top-to-bottom */}
+      <section className="mt-6 grid gap-4">
+        {groups.map((g) => {
+          if (FRAMESET_CARD.includes(g)) {
+            // render the shared card once, at the first present member's slot
+            if (g !== framesetCardGroups[0]) return null;
+            return (
+              <div key="frameset-card" className="card p-4">
+                <h2 className="mb-2 font-bold text-slate-800">Frameset</h2>
+                {FRAMESET_SUBS.map((sub, i) => {
+                  const present = sub.groups.filter((cg) => groups.includes(cg));
+                  if (!present.length) return null;
+                  return (
+                    <div key={sub.heading ?? present[0]} className={i > 0 ? "mt-4" : undefined}>
+                      {sub.heading && (
+                        <h3 className="mb-2 font-bold text-slate-800">{sub.heading}</h3>
+                      )}
+                      {present.map((cg) => (
+                        <SpecTable key={cg} group={model.specs[cg]} emphasize hideCaptured />
+                      ))}
+                    </div>
+                  );
+                })}
+              </div>
+            );
+          }
+          return (
+            <div key={g} className="card p-4">
+              <h2 className="mb-2 font-bold text-slate-800">{titleCase(g)}</h2>
+              <SpecTable group={model.specs[g]} emphasize hideCaptured />
+            </div>
+          );
+        })}
 
         {(included.length > 0 || paidAccessories.length > 0) && (
           <div className="card p-4">

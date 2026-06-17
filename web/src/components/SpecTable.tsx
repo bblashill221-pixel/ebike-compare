@@ -142,6 +142,10 @@ export function SpecTable({
 
   // canonical component order (consistent across bikes, not scrape order)
   order.sort((a, b) => kindRank(a) - kindRank(b));
+  // certifications render at the very BOTTOM of the section (below the scalar
+  // rows), not in the component block — they were relocated into Key Aspects.
+  const certKinds = order.filter((k) => k === "cert");
+  const mainKinds = order.filter((k) => k !== "cert");
 
   // remaining scalars render in the simple label/value table (unit-deduped);
   // optionally drop ones already captured as a typed fact (tiles/Speed)
@@ -150,11 +154,11 @@ export function SpecTable({
     (k) => !hide.has(k) && !(hideCaptured && CAPTURED_SCALAR(k)),
   );
 
-  if (!order.length && !scalarRows.length) return null;
+  if (!mainKinds.length && !scalarRows.length && !certKinds.length) return null;
 
   return (
     <div>
-      {order.map((kind) => (
+      {mainKinds.map((kind) => (
         <ComponentTable key={kind} kind={kind} instances={buckets[kind]} emphasize={emphasize} />
       ))}
       {scalarRows.length > 0 && (
@@ -186,6 +190,9 @@ export function SpecTable({
           </tbody>
         </table>
       )}
+      {certKinds.map((kind) => (
+        <ComponentTable key={kind} kind={kind} instances={buckets[kind]} emphasize={emphasize} />
+      ))}
     </div>
   );
 }

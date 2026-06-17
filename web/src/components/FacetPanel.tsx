@@ -82,13 +82,30 @@ function RangeSlider({
   // instead of the just-dragged $1500). Mirror the live value into a ref, updated
   // synchronously on every change, and commit FROM the ref.
   const draftRef = useRef<[number, number]>(value);
-  const update = (d: [number, number]) => { draftRef.current = d; setDraft(d); };
+  const movedRef = useRef(false);   // did a drag change the value since pointer-down?
+  const update = (d: [number, number]) => { movedRef.current = true; draftRef.current = d; setDraft(d); };
   // resync the handles when the committed value changes externally (Reset, etc.)
   useEffect(() => { draftRef.current = value; setDraft(value); }, [value[0], value[1]]);
   const [lo, hi] = draft;
+  // "modified" once narrowed from the full catalog bounds — drives whether the
+  // thumbs (circles) show at all, and whether a bare click resets.
+  const modified = lo > bLo || hi < bHi;
   const span = bHi - bLo;
   const pct = (v: number) => (span > 0 ? ((v - bLo) / span) * 100 : 0);
   const commit = () => onCommit(draftRef.current[0], draftRef.current[1]);
+  // Pointer-up on a thumb with NO drag = a click on the "Reset" circle: snap just
+  // THAT handle back to its bound (low -> bLo, high -> bHi). A drag commits the
+  // new range as usual.
+  const endSide = (side: "lo" | "hi") => {
+    if (modified && !movedRef.current) {
+      const next: [number, number] =
+        side === "lo" ? [bLo, draftRef.current[1]] : [draftRef.current[0], bHi];
+      update(next);
+      onCommit(next[0], next[1]);
+    } else {
+      commit();
+    }
+  };
   const fmt = (v: number) => `${prefix ?? ""}${v.toLocaleString()}${unit ? ` ${unit}` : ""}`;
   return (
     <div className="px-1">
@@ -96,7 +113,7 @@ function RangeSlider({
       <div className="mb-2 text-center text-xs font-semibold tabular-nums text-slate-700">
         {fmt(lo)} – {fmt(hi)}
       </div>
-      <div className="relative h-4">
+      <div className="range-track relative h-4">
         <div className="absolute top-1/2 h-1 w-full -translate-y-1/2 rounded-full bg-slate-200" />
         <div
           className="absolute top-1/2 h-1 -translate-y-1/2 rounded-full bg-brand-500"
@@ -104,29 +121,33 @@ function RangeSlider({
         />
         <input
           type="range"
-          className="range-dual"
+          className={`range-dual${modified ? "" : " range-dual--pristine"}`}
           min={bLo}
           max={bHi}
           step={1}
           value={lo}
           aria-label={`${label} minimum`}
+          title={modified ? "Reset" : undefined}
+          onPointerDown={() => { movedRef.current = false; }}
           onChange={(e) => update([Math.min(Number(e.target.value), draftRef.current[1]), draftRef.current[1]])}
-          onPointerUp={commit}
+          onPointerUp={() => endSide("lo")}
           onKeyUp={commit}
-          onTouchEnd={commit}
+          onTouchEnd={() => endSide("lo")}
         />
         <input
           type="range"
-          className="range-dual"
+          className={`range-dual${modified ? "" : " range-dual--pristine"}`}
           min={bLo}
           max={bHi}
           step={1}
           value={hi}
           aria-label={`${label} maximum`}
+          title={modified ? "Reset" : undefined}
+          onPointerDown={() => { movedRef.current = false; }}
           onChange={(e) => update([draftRef.current[0], Math.max(Number(e.target.value), draftRef.current[0])])}
-          onPointerUp={commit}
+          onPointerUp={() => endSide("hi")}
           onKeyUp={commit}
-          onTouchEnd={commit}
+          onTouchEnd={() => endSide("hi")}
         />
       </div>
       {/* fixed reference: the slider's true low/high (the full catalog range), so

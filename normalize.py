@@ -338,11 +338,14 @@ def _product_types(m: dict, name: str, raw_specs: dict) -> list[str]:
     tires = " ".join(str(v) for k, v in rows.items()
                      if "tire" in k.lower() and isinstance(v, str))
     tires = re.sub(r"fold\w*", " ", tires, flags=re.I)
-    # Tire MODEL NAMES carry terrain words ("Continental Terra Trail", "All
-    # Terrain Gravel Tire") that falsely read as eMTB; drop the Mountain-rule
-    # keywords from the tire text. The tire still contributes fat-tire width and
-    # legit "gravel". A real eMTB carries its mountain signal in name/tags.
+    # Tire MODEL NAMES carry use-category words — terrain ("Continental Terra
+    # Trail", "All Terrain Gravel Tire") that falsely read as eMTB, and "Urban
+    # Hybrid"/"Fitness" tread names that falsely read as Hybrid / Fitness (e.g.
+    # ENGWE L20 3.0's "Urban Hybrid Tires"). Drop those keywords from the tire
+    # text; the tire still contributes fat-tire width and legit "gravel". A real
+    # eMTB / hybrid carries that signal in its name/tags, not the tire tread name.
     tires = _MTB_TERRAIN.sub(" ", tires)
+    tires = re.sub(r"hybrid|fitness", " ", tires, flags=re.I)
     folds = "folding frame" if _is_folding(m, rows) else ""
     raw_type = " ".join(m.get("product_types") or []) or m.get("product_type") or ""
     tags = " ".join(str(t) for t in (m.get("tags") or []))
@@ -367,6 +370,16 @@ def _product_types(m: dict, name: str, raw_specs: dict) -> list[str]:
           and _fork_travel_mm(rows) >= 120
           and not _NOT_EMTB_NAME.search(name or "")):
         types = ["Mountain (eMTB)"] + [t for t in types if t != "Commuter / Urban"]
+    # "Cargo" is a high-confidence category: require an explicit cargo word in the
+    # name or raw signals (tags / url / vendor category / tires), never solely the
+    # prior product_types label fed back into the classifier. This strips spurious
+    # Cargo (stale fed-back labels, trikes, mislabeled step-thrus) while keeping
+    # genuinely-named cargo bikes (Abound, XPedition, Packa Genie, Cargowagen, …).
+    # NB checks name + `extra` (not generic spec rows, where "cargo capacity" would
+    # false-positive, and not the echoed label).
+    if "Cargo" in types and not re.search(
+            r"cargo|hauler|utility|long[\s-]?tail|xpedition", f"{name or ''} {extra}", re.I):
+        types = [t for t in types if t != "Cargo"] or ["Commuter / Urban"]
     return types
 
 

@@ -35,8 +35,10 @@ PRODUCT_TYPES = [
 # trump terrain, an explicit "fat" name trumps all-terrain marketing copy, and
 # the tire-width fallback only catches fat bikes that never say so.
 _TYPE_RULES = [
-    # "xpedition": Lectric's cargo line carries no cargo word in name/specs
-    ("Cargo", re.compile(r"cargo|long[\s-]?tail|utility|hauler|trike|xpedition", re.I)),
+    # "xpedition": Lectric's cargo line carries no cargo word in name/specs.
+    # NB a trike is a wheel configuration, not a use category — a *cargo* trike
+    # still matches "cargo"/"hauler"; a plain trike classifies on its other signals.
+    ("Cargo", re.compile(r"cargo|long[\s-]?tail|utility|hauler|xpedition", re.I)),
     ("Folding", re.compile(r"fold", re.I)),
     # Motorcycle-styled e-bikes (Super73/Sur-Ron/moped-style): the moto identity
     # is more defining than the fat tires they usually ride on, so it outranks

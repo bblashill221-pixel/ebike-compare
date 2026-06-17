@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T01:29:56.264664+00:00",
+  "generated_at": "2026-06-17T16:47:05.751988+00:00",
   "total_models": 389,
   "expected_fields": [
     "motor_w",
@@ -1817,12 +1817,6 @@
       "label": "Motor torque (Nm)"
     },
     {
-      "brand": "mokwheel",
-      "model": "Granite E-Trike",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
       "brand": "priority",
       "model": "PRIORITY CURRENT PLUS E-BIKE",
       "field": "max_load_lb",
@@ -3510,18 +3504,6 @@
     },
     {
       "brand": "velowave",
-      "model": "Pony Compact Step-Thru Electric Bike",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "velowave",
-      "model": "Prado S Commuter Electric Bike",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "velowave",
       "model": "Ranger 2.0 Fat Tire All-Terrain Electric Bike",
       "field": "rack_load_lb",
       "label": "Rear-rack load (lb)"
@@ -3805,8 +3787,8 @@
   ],
   "frame_style_review": [],
   "summary": {
-    "models_flagged": 241,
-    "missing_rows": 606,
+    "models_flagged": 238,
+    "missing_rows": 603,
     "missing_by_field": {
       "motor_w": 9,
       "battery_wh": 2,
@@ -3825,7 +3807,7 @@
       "max_speed_mph": 60,
       "max_load_lb": 97,
       "sensor_type": 161,
-      "rack_load_lb": 19,
+      "rack_load_lb": 16,
       "frame_size_count": 0,
       "frame_size_rider_range": 32
     },

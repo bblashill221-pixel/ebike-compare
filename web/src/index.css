@@ -72,3 +72,20 @@
 .range-dual::-moz-range-track {
   background: transparent;
 }
+/* Pristine (full-range, unmodified) sliders hide their thumbs — the circles only
+   appear once the range has been narrowed. Thumbs stay grabbable (pointer-events
+   auto from above) so a filter can still be started. */
+.range-dual--pristine::-webkit-slider-thumb {
+  opacity: 0;
+}
+.range-dual--pristine::-moz-range-thumb {
+  opacity: 0;
+}
+/* ...but fade them in faintly while hovering the track, so a pristine slider is
+   still discoverable/grabbable to start a filter. */
+.range-track:hover .range-dual--pristine::-webkit-slider-thumb {
+  opacity: 0.4;
+}
+.range-track:hover .range-dual--pristine::-moz-range-thumb {
+  opacity: 0.4;
+}

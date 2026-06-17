@@ -46,6 +46,14 @@ NUMERIC_FIELDS = [
 ]
 INVERTED = {"weight_lb"}
 
+# Lightweight, small-battery bikes ride like fitness/hybrid bikes (more pedaling,
+# less assist) even when nothing in the name says so — e.g. Ride1Up Roadster V3
+# (40 lb / 360 Wh). They get tagged "Hybrid / Fitness" in addition to their other
+# types. Both gates required so heavy or big-battery bikes never qualify.
+HYBRID_FITNESS = "Hybrid / Fitness"
+HYBRID_MAX_WEIGHT_LB = 46
+HYBRID_MAX_BATTERY_WH = 420
+
 WARRANTY_SCORE = {1: 20, 2: 45, 3: 65, 4: 80}   # >=5 or Lifetime -> 100
 
 
@@ -998,6 +1006,17 @@ def main():
         # frame_sizes is always a non-empty array (single-size = collection of one)
         m["frame_sizes"] = _ensure_frame_sizes(m, t)
         m["frame_size_count"] = len(m["frame_sizes"])
+        # tag light + small-battery bikes as Hybrid / Fitness (in addition to their
+        # existing types); primary product_type is left unchanged. Folding bikes
+        # (defined by form factor) and kids bikes are never auto-tagged Hybrid /
+        # Fitness even when their weight/battery would qualify.
+        w, wh = t.get("weight_lb"), t.get("battery_wh")
+        pts = m.get("product_types") or []
+        if (isinstance(w, (int, float)) and w <= HYBRID_MAX_WEIGHT_LB
+                and isinstance(wh, (int, float)) and wh <= HYBRID_MAX_BATTERY_WH
+                and HYBRID_FITNESS not in pts and "Folding" not in pts
+                and not t.get("kids")):
+            m.setdefault("product_types", []).append(HYBRID_FITNESS)
         t["price"] = m.get("price")
         t["bom_pct"] = bom.get((m.get("brand"), m.get("model")))
         cq = component_quality(m, catalog_entries, m.get("price"), t)

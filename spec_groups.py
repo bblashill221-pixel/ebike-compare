@@ -194,8 +194,8 @@ GROUPS = [
 # Order groups appear in the output (nice reading order, distinct from match order).
 DISPLAY_ORDER = [
     "General Info", "Ebike System", "Special Features",
-    "Water Resistance", "Frameset", "Drivetrain", "Brakes",
-    "Wheelset", "Cockpit", "Geometry", "Included Accessories", "General / Other",
+    "Water Resistance", "Frameset", "Wheelset", "Brakes", "Drivetrain",
+    "Cockpit", "Geometry", "Included Accessories", "General / Other",
 ]
 
 

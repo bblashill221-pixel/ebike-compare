@@ -902,6 +902,10 @@ def _frame(v, brand):
     disc, waterbottle and headtube rack mounts")."""
     out, low = {}, v.lower()
     mat = material(low, "carbon", "aluminum", "steel", "magnesium")
+    # keep the aluminium alloy grade with the material so it reads "Aluminum 6061"
+    grade = re.search(r"\b(6061|6063|7005|7046|a356|a380)\b", v, re.I)
+    if mat == "aluminum" and grade:
+        mat = f"aluminum {grade.group(1).upper()}"
     if mat:
         out["material"] = mat
     out["integrated_battery"] = bool(re.search(
@@ -968,6 +972,8 @@ def _frame(v, brand):
     det = ", ".join(leftover)
     if out["folding"]:
         det = re.sub(r"\bfold(?:ing|able)?\b", " ", det, flags=re.I)
+    if grade:   # the grade now lives in `material`; don't repeat it in details
+        det = re.sub(r"\b" + re.escape(grade.group(1)) + r"\b", " ", det, flags=re.I)
     out["details"] = _clean(det)
     return out
 
@@ -1489,6 +1495,33 @@ except (FileNotFoundError, ValueError):
     _LLM_COMPONENTS = {}
 
 
+_ALUMINUM_RE = re.compile(r"6061|6063|7005|\ba3\d{2}\b|\ba380\b|alumin|\balloy\b", re.I)
+_ALU_GRADE_RE = re.compile(r"\b(6061|6063|7005|7046|a3\d{2}|a380)\b", re.I)
+
+
+def _canon_material(result):
+    """Canonicalize aluminum alloys to "aluminum" so "Alloy"/"Aluminum alloy"/the
+    LLM cache's "Aluminum" all group together — but KEEP an explicit alloy grade
+    ("Aluminum 6061") when one is stated, so it displays as the full alloy name.
+    The grade may be in the material string OR stranded in details (LLM parses
+    keep it there); pull it onto the material and drop it from details."""
+    if not (isinstance(result, dict) and isinstance(result.get("material"), str)
+            and _ALUMINUM_RE.search(result["material"])):
+        return result
+    g = _ALU_GRADE_RE.search(result["material"])
+    det = result.get("details")
+    if not g and isinstance(det, str):
+        g = _ALU_GRADE_RE.search(det)
+        if g:
+            det = _clean(re.sub(r"\b" + re.escape(g.group(1)) + r"\b", " ", det, flags=re.I))
+            if det:
+                result["details"] = det
+            else:
+                result.pop("details", None)
+    result["material"] = f"aluminum {g.group(1).upper()}" if g else "aluminum"
+    return result
+
+
 def parse_component(field: str, value, brand: str | None = None,
                     siblings: dict | None = None):
     """Structured dict for a known component field, else None. `siblings` lets the
@@ -1501,7 +1534,7 @@ def parse_component(field: str, value, brand: str | None = None,
         key = _hashlib.sha256(f"{kind}|{brand}|{value}".encode()).hexdigest()[:20]
         hit = _LLM_COMPONENTS.get(key)
         if hit:
-            return _json.loads(_json.dumps(hit["parsed"]))  # fresh copy per call
+            return _canon_material(_json.loads(_json.dumps(hit["parsed"])))  # fresh copy
     value = _dethousand(value)   # "1,200W" must parse as 1200, not 200
     sized = None if fn is _brake else _split_by_size(value)
     if fn is _brake:
@@ -1530,4 +1563,5 @@ def parse_component(field: str, value, brand: str | None = None,
     if result:
         result["_kind"] = fn.__name__.lstrip("_")
         _strip_parsed_from_details(result)
+        _canon_material(result)
     return result
