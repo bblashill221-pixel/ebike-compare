@@ -68,12 +68,17 @@ def _apply_overrides(nm: dict) -> dict:
             if k == "geometry" and isinstance(v, dict):
                 geo = nm.setdefault("specs", {}).setdefault("geometry", {})
                 geo.update(v)
+            elif k == "motor" and isinstance(v, dict):
+                # merge a motor correction into specs.ebike_system.motor (e.g. a
+                # mid-drive whose placement/brand the page never stated)
+                mo = nm.setdefault("specs", {}).setdefault("ebike_system", {}).setdefault("motor", {})
+                mo.update(v)
             else:
                 nm[k] = v
         nm["curated_overrides"] = sorted(ov.keys())
     return nm
 from spec_groups import group_specs
-from spec_parse import height_range_in
+from spec_parse import height_range_in, is_mid_drive
 
 
 def slugify(s: str) -> str:
@@ -284,9 +289,10 @@ _MTB_TERRAIN = re.compile(
 
 
 def _is_mid_drive(rows: dict) -> bool:
-    """Mid-drive (vs hub) from the motor spec text -- mirrors analyze._drive_type."""
+    """Mid-drive (vs hub) from the motor spec text -- mirrors analyze._drive_type
+    (brand/model-aware: Bosch CX, Shimano EP, Bafang M-series, etc.)."""
     motor = " ".join(str(v) for k, v in rows.items() if re.search(r"motor|drive", k, re.I))
-    return bool(re.search(r"mid[\s-]?drive|mid[\s-]?motor|bottom bracket", motor, re.I))
+    return is_mid_drive(motor)
 
 
 def _max_wheel_in(rows: dict):

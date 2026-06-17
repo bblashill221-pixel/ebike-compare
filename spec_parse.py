@@ -18,6 +18,28 @@ def num(pattern: str, text: str) -> float | None:
     return float(m.group(1)) if m else None
 
 
+# Mid-drive vs hub: most premium mid-drives never say "mid-drive" in the spec —
+# they're identified by the motor brand/model. Recognize the known mid-drive
+# systems (Bosch — all e-bike drive units, Brose, Shimano STEPS/EP, Yamaha PW, TQ
+# HPR, DJI Avinox, Bafang M-series/Ultra, Specialized full-power 2.x/3.x) plus the
+# literal wording. Carve-outs for look-alike HUBs: Mahle (Specialized SL / Creo SL
+# rear hub) and Bafang G0xx geared hubs are NOT mid-drive.
+_MID_DRIVE_RE = re.compile(
+    r"mid[\s-]?drive|mid[\s-]?motor|bottom bracket"
+    r"|bosch|brose|yamaha|shimano\s*(?:ep|steps|e\d{4})|\bsteps\b"
+    r"|\btq\b|\bhpr\b|avinox"
+    r"|bafang\s*(?:m\d|ultra|max)|\bm[456]\d{2}\b"
+    r"|specialized\s*[23]\.\d", re.I)
+_HUB_OVERRIDE_RE = re.compile(r"mahle|bafang\s*g0|\bg0\d\d\b", re.I)
+
+
+def is_mid_drive(text) -> bool:
+    """True when the motor text names a mid-drive system (by wording or brand/model);
+    the hub-override patterns (Mahle, Bafang G0xx) win so SL/geared-hub motors stay hub."""
+    t = str(text or "")
+    return bool(_MID_DRIVE_RE.search(t)) and not _HUB_OVERRIDE_RE.search(t)
+
+
 def all_nums(pattern: str, text: str) -> list[float]:
     """Every first-group match of `pattern` in `text`, as floats."""
     return [float(g) for g in re.findall(pattern, text, re.I)]

@@ -30,7 +30,7 @@ import re
 from datetime import datetime, timezone
 from pathlib import Path
 
-from spec_parse import num, find_spec, blob, kg_to_lb, percentile_rank, height_range_in
+from spec_parse import num, find_spec, blob, kg_to_lb, percentile_rank, height_range_in, is_mid_drive
 from spec_groups import flatten_grouped
 from component_catalog import iter_components
 from resolve_component_prices import heuristic_retail, heuristic_wholesale
@@ -190,9 +190,11 @@ def _drive_type(specs):
         return None
     # \bmid\b: the parsed component's placement renders as the bare token "mid"
     # in the flattened text ("Brose mid 90Nm ..."); the lookahead keeps frame
-    # wording like "mid-step" from false-matching.
-    return ("mid" if re.search(r"mid[- ]?(drive|motor)|bottom bracket|\bmid\b(?![\s-]?step)", txt)
-            else "hub")
+    # wording like "mid-step" from false-matching. is_mid_drive() also recognizes
+    # mid-drive motors named only by brand/model (Bosch CX, Shimano EP, etc.).
+    if re.search(r"\bmid\b(?![\s-]?step)", txt) or is_mid_drive(txt):
+        return "mid"
+    return "hub"
 
 
 def _range_vals(specs):

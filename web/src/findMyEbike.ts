@@ -1,4 +1,5 @@
 import type { Filters, RangeField } from "./search/orama";
+import { PRICE_TIERS, priceTierRangeText } from "./filterMeta";
 
 // "Find My eBike" beginner quiz. Each dropdown choice carries the *technical*
 // filter params it should contribute to the Browse URL; the labels stay
@@ -20,31 +21,37 @@ export interface QuizQuestion {
 
 const NONE: QuizChoice = { label: "No preference", params: {} };
 
+// Budget choices mirror the Browse price filter's PRICE_TIERS exactly (same value
+// ranges), each emitting price_min/price_max so the handoff lands on that tier.
+const BUDGET_CHOICES: QuizChoice[] = [
+  NONE,
+  ...PRICE_TIERS.filter((t) => t.label !== "All").map((t) => ({
+    label: priceTierRangeText(t, 0, 0),   // range only (e.g. "$1,000–$2,000"), no tier name
+    params: {
+      ...(t.lo != null ? { price_min: String(t.lo) } : {}),
+      ...(t.hi != null ? { price_max: String(t.hi) } : {}),
+    },
+  })),
+];
+
 // NOTE: numeric thresholds (torque/range/load/price) are first-pass and meant to
 // be tuned against the dataset so no bucket comes back empty.
 export const QUESTIONS: QuizQuestion[] = [
   {
     id: "use",
-    label: "What Will You Use It For?",
+    label: "What Will You Use It For? (determining type)",
     choices: [
       NONE,
       { label: "Getting around town", params: { type: "Commuter / Urban" } },
       { label: "Trails & off-road", params: { type: "Mountain (eMTB)" } },
       { label: "Hauling cargo or kids", params: { type: "Cargo" } },
       { label: "Casual cruising", params: { type: "Cruiser" } },
-      { label: "Fold & store small", params: { type: "Folding" } },
     ],
   },
   {
     id: "budget",
     label: "What's Your Budget?",
-    choices: [
-      NONE,
-      { label: "Under $1,500", params: { price_max: "1500" } },
-      { label: "$1,500 – $2,500", params: { price_max: "2500" } },
-      { label: "$2,500 – $4,000", params: { price_max: "4000" } },
-      { label: "$4,000+", params: { price_min: "4000" } },
-    ],
+    choices: BUDGET_CHOICES,
   },
   {
     id: "height",
@@ -59,24 +66,49 @@ export const QUESTIONS: QuizQuestion[] = [
     ],
   },
   {
+    id: "weight",
+    label: "How Much Do You Weigh?",
+    help: "Shows bikes rated to carry your weight.",
+    choices: [
+      NONE,
+      { label: "Under 150 lbs", params: { load_min: "150" } },
+      { label: "150 – 200 lbs", params: { load_min: "200" } },
+      { label: "200 – 250 lbs", params: { load_min: "250" } },
+      { label: "250 – 300 lbs", params: { load_min: "300" } },
+      { label: "300+ lbs", params: { load_min: "350" } },
+    ],
+  },
+  {
     id: "range",
     label: "What Is the Maximum Distance You Want to Ride?",
     help: "On a single charge.",
     choices: [
       NONE,
-      { label: "Up to ~20 miles", params: { range_min: "20" } },
-      { label: "Up to ~40 miles", params: { range_min: "40" } },
-      { label: "60+ miles", params: { range_min: "60" } },
+      { label: "Up to 25 miles", params: { range_min: "25" } },
+      { label: "Up to 50 miles", params: { range_min: "50" } },
+      { label: "Up to 60 miles", params: { range_min: "60" } },
+      { label: "60+ miles", params: { range_min: "65" } },
     ],
   },
   {
     id: "terrain",
-    label: "What Kind of Terrain?",
+    label: "What Kind of Terrain? (determining torque requirements)",
     choices: [
       NONE,
-      { label: "Flat", params: {} },
-      { label: "Moderate hills", params: { torque_min: "60" } },
-      { label: "Steep hills", params: { torque_min: "80" } },
+      { label: "Mostly flat", params: {} },
+      { label: "Moderate hills", params: { torque_min: "50" } },
+      { label: "Steep hills", params: { torque_min: "65" } },
+    ],
+  },
+  {
+    id: "bikeweight",
+    label: "How Heavy of an eBike Are You Comfortable With? (determining weight constraints)",
+    choices: [
+      NONE, // "N/A" = leave unchecked
+      { label: "30 lb or less", params: { weight_max: "30" } },
+      { label: "30 to 40 lb", params: { weight_max: "40" } },
+      { label: "Up to 50 lb", params: { weight_max: "50" } },
+      { label: "50+ lb", params: { weight_min: "50" } },
     ],
   },
   {
@@ -100,12 +132,11 @@ export const QUESTIONS: QuizQuestion[] = [
     ],
   },
   {
-    id: "cargo",
-    label: "Carrying Cargo or a Passenger?",
+    id: "folding",
+    label: "Do You Need an eBike That Folds?",
     choices: [
-      { label: "Just me", params: {} },
-      { label: "Some cargo", params: { load_min: "300" } },
-      { label: "Cargo + a passenger", params: { load_min: "400" } },
+      NONE,
+      { label: "Yes, it must fold", params: { type: "Folding" } },
     ],
   },
 ];
@@ -121,6 +152,8 @@ export const QUIZ_PARAM_KEYS = [
   "torque_min",
   "load_min",
   "height_in",
+  "weight_min",
+  "weight_max",
 ] as const;
 
 export function hasQuizParams(sp: URLSearchParams): boolean {
@@ -181,6 +214,7 @@ export function filtersFromParams(
   setBand("range_mi", sp.get("range_min"), null);
   setBand("torque_nm", sp.get("torque_min"), null);
   setBand("max_load_lb", sp.get("load_min"), null);
+  setBand("weight_lb", sp.get("weight_min"), sp.get("weight_max"));
 
   const h = Number(sp.get("height_in"));
   if (sp.get("height_in") != null && !Number.isNaN(h)) filters.riderHeightIn = h;
