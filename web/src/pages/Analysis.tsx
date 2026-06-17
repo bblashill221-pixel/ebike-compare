@@ -2,7 +2,7 @@ import { useData } from "../data/DataProvider";
 import { DistributionPlot } from "../components/DistributionPlot";
 import { formatNumber, formatPrice } from "../format";
 
-const FIELD_META: Record<string, { label: string; unit?: string; price?: boolean }> = {
+const FIELD_META: Record<string, { label: string; unit?: string; price?: boolean; ratio?: boolean }> = {
   price: { label: "Price", price: true },
   battery_wh: { label: "Battery", unit: " Wh" },
   motor_w: { label: "Motor (nominal)", unit: " W" },
@@ -12,13 +12,14 @@ const FIELD_META: Record<string, { label: string; unit?: string; price?: boolean
   weight_lb: { label: "Weight", unit: " lb" },
   gears: { label: "Gears" },
   bom_pct: { label: "Est. component cost (% of retail)" },
+  value_ratio: { label: "Price ÷ est. parts cost (lower = better value)", ratio: true },
   component_retail_value_usd: { label: "Est. parts value (aftermarket retail)", price: true },
   component_wholesale_value_usd: { label: "Est. parts cost (OEM wholesale)", price: true },
 };
 
 const ORDER = [
   "price", "battery_wh", "motor_w", "motor_peak_w", "torque_nm", "range_mi",
-  "weight_lb", "gears", "bom_pct",
+  "weight_lb", "gears", "bom_pct", "value_ratio",
   "component_retail_value_usd", "component_wholesale_value_usd",
 ];
 
@@ -31,6 +32,7 @@ export function Analysis() {
   const fmt = (f: string, v: number) => {
     const meta = FIELD_META[f];
     if (meta?.price) return formatPrice(v);
+    if (meta?.ratio) return `${formatNumber(v, 1)}×`;
     if (f === "bom_pct") return `${Math.round(v * 100)}%`;
     return `${formatNumber(v, 1)}${meta?.unit ?? ""}`;
   };

@@ -43,7 +43,7 @@ const SORTS: { key: SortKey; label: string }[] = [
   { key: "torque_desc", label: "Torque (Nm) ↓" },
   { key: "motor_desc", label: "Motor (W) ↓" },
   { key: "weight_asc", label: "Weight (lb) ↑" },
-  { key: "value_desc", label: "Value score ↓" },
+  { key: "value_desc", label: "Value (parts per $) ↓" },
   { key: "range_score_desc", label: "Range score ↓" },
   { key: "power_desc", label: "Power score ↓" },
   { key: "parts_retail_desc", label: "Parts value (retail $) ↓" },

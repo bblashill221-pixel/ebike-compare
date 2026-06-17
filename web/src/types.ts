@@ -116,8 +116,14 @@ export interface Analysis {
   component_quality?: {
     parts_identified: number;
     parts_priced: number;
+    /** Parts contributing to the complete component base (researched or heuristic). */
+    parts_costed: number;
     component_retail_value_usd: number | null;
     component_wholesale_value_usd: number | null;
+    /** Complete est. component cost: per-part avg(retail, wholesale), summed. */
+    component_base_value_usd: number | null;
+    /** price ÷ component_base_value_usd — lower = more parts per dollar. */
+    value_ratio: number | null;
   };
 }
 

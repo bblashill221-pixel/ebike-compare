@@ -33,6 +33,7 @@ from pathlib import Path
 from spec_parse import num, find_spec, blob, kg_to_lb, percentile_rank, height_range_in
 from spec_groups import flatten_grouped
 from component_catalog import iter_components
+from resolve_component_prices import heuristic_retail, heuristic_wholesale
 
 HERE = Path(__file__).parent
 DATA = HERE / "data"
@@ -725,7 +726,7 @@ def _quantile(sorted_vals: list[float], q: float) -> float:
 def build_stats(typed_by_id: dict) -> dict:
     """Per-numeric-field {min,p10,p50,p90,max,count} across the whole field."""
     stats = {}
-    fields = NUMERIC_FIELDS + ["price", "bom_pct",
+    fields = NUMERIC_FIELDS + ["price", "bom_pct", "value_ratio",
                                "component_retail_value_usd", "component_wholesale_value_usd"]
     for field in fields:
         vals = sorted(v for v in (t.get(field) for t in typed_by_id.values())
@@ -771,7 +772,8 @@ def _avg(*vals):
     return round(sum(have) / len(have), 1) if have else None
 
 
-def compute_scores(typed: dict, stats: dict, bom_pct, price_pct, pct: dict) -> dict:
+def compute_scores(typed: dict, stats: dict, bom_pct, price_pct, pct: dict,
+                   value_rank=None) -> dict:
     s = {}
 
     # --- numeric dimensions: field-relative RANK percentile (0-100) ---
@@ -856,29 +858,45 @@ def compute_scores(typed: dict, stats: dict, bom_pct, price_pct, pct: dict) -> d
     else:
         s["warranty"] = WARRANTY_SCORE.get(wy, min(100, wy * 22))
 
-    # --- value: BOM share of retail (rank) blended with cheaper-is-better ---
-    if bom_pct is not None:
-        v = bom_pct * 100
-        if price_pct is not None:
-            v = 0.7 * (bom_pct * 100) + 0.3 * (price_pct * 100)
-        s["value"] = round(min(v, 100), 1)
-    else:
-        s["value"] = None
+    # --- value: price vs estimated component cost. value_rank is the fleet rank
+    # of price/parts-cost (lower ratio = more component per dollar); invert so the
+    # best-value bikes score highest. A single standalone dimension, never blended. ---
+    s["value"] = round((1 - value_rank) * 100, 1) if value_rank is not None else None
 
     return s
 
 
-def component_quality(model: dict, part_prices: dict) -> dict:
-    """Join the component catalog's price lookups back onto one bike: how many
-    parsed parts were identified/priced, and TWO independent value roll-ups —
-    aftermarket retail value and OEM wholesale value (each summed across the
-    bike's part instances). Facts only — the two stand alone, never blended."""
-    identified = priced = retail_n = wholesale_n = 0
-    retail_total = wholesale_total = 0.0
-    for key, _cat, _part in iter_components(model):
+# A value_ratio is only meaningful when the cost-dominant systems are accounted
+# for; below this the small-denominator artifact would read as false "bad value".
+_VALUE_MIN_PARTS = 5
+_VALUE_CORE = {"battery", "motor"}
+
+
+def _avg_cost(entry: dict):
+    """Average of a part's retail & wholesale heuristic estimate (the ones that
+    resolve); None if neither category has a heuristic."""
+    vals = [x for x in (heuristic_retail(entry)[0], heuristic_wholesale(entry)[0])
+            if x is not None]
+    return sum(vals) / len(vals) if vals else None
+
+
+def component_quality(model: dict, catalog_entries: dict, price, typed: dict) -> dict:
+    """Join the component catalog back onto one bike. Reports part counts, the two
+    independent researched roll-ups (aftermarket retail value + OEM wholesale value),
+    and a COMPLETE component base = sum over the bike's parts of the average of each
+    part's retail and wholesale cost (researched where known, spec heuristic
+    otherwise). The dominant systems (battery, motor) are costed from the bike's
+    typed specs when no branded part was parsed, so the base isn't skewed by missing
+    brands. `value_ratio` = price / base (lower = more parts per dollar = better
+    value); gated to bikes with the core systems costed. Facts only — never blended."""
+    identified = priced = retail_n = wholesale_n = costed = 0
+    retail_total = wholesale_total = base_total = 0.0
+    cats_costed = set()
+    for key, cat, part in iter_components(model):
         identified += 1
-        p = part_prices.get(key) or {}
-        r, w = p.get("retail"), p.get("wholesale")
+        e = catalog_entries.get(key) or {"category": cat, "attributes": part}
+        am = e.get("aftermarket") or {}
+        r, w = am.get("retail_usd"), am.get("wholesale_usd")
         if r is not None:
             retail_n += 1
             retail_total += r
@@ -887,11 +905,39 @@ def component_quality(model: dict, part_prices: dict) -> dict:
             wholesale_total += w
         if r is not None or w is not None:
             priced += 1
+        # complete per-part base: researched-or-heuristic retail & wholesale, averaged
+        rp = r if r is not None else heuristic_retail(e)[0]
+        wp = w if w is not None else heuristic_wholesale(e)[0]
+        vals = [x for x in (rp, wp) if x is not None]
+        if vals:
+            base_total += sum(vals) / len(vals)
+            costed += 1
+            cats_costed.add(cat)
+    # Cost the big-ticket systems from typed specs when no branded part was parsed
+    # (most generic batteries/motors carry no manufacturer -> absent from iter_components).
+    if "battery" not in cats_costed and typed.get("battery_wh"):
+        b = _avg_cost({"category": "battery", "attributes": {"capacity_wh": typed["battery_wh"]}})
+        if b:
+            base_total += b; costed += 1; cats_costed.add("battery")
+    if "motor" not in cats_costed and typed.get("motor_w"):
+        place = "mid" if typed.get("drive_type") == "mid" else "hub"
+        b = _avg_cost({"category": "motor",
+                       "attributes": {"power_w": typed["motor_w"], "placement": place}})
+        if b:
+            base_total += b; costed += 1; cats_costed.add("motor")
+    base = round(base_total, 2) if costed else None
+    value_ratio = None
+    if (price and base and costed >= _VALUE_MIN_PARTS
+            and _VALUE_CORE <= cats_costed):
+        value_ratio = round(price / base, 3)
     return {
         "parts_identified": identified,
         "parts_priced": priced,
+        "parts_costed": costed,
         "component_retail_value_usd": round(retail_total, 2) if retail_n else None,
         "component_wholesale_value_usd": round(wholesale_total, 2) if wholesale_n else None,
+        "component_base_value_usd": base,
+        "value_ratio": value_ratio,
     }
 
 
@@ -926,15 +972,11 @@ def main():
     doc = json.load(open(args.input))
     models = doc.get("models", [])
 
-    # Part prices from the component catalog (key -> {retail, wholesale}).
-    part_prices = {}
+    # Full component catalog entries (key -> entry) for the value roll-ups and the
+    # per-part heuristic fallback.
+    catalog_entries = {}
     try:
-        cat = json.load(open(args.catalog))
-        for key, e in (cat.get("components") or {}).items():
-            am = e.get("aftermarket") or {}
-            r, w = am.get("retail_usd"), am.get("wholesale_usd")
-            if r is not None or w is not None:
-                part_prices[key] = {"retail": r, "wholesale": w}
+        catalog_entries = json.load(open(args.catalog)).get("components") or {}
     except FileNotFoundError:
         pass
 
@@ -958,10 +1000,11 @@ def main():
         m["frame_size_count"] = len(m["frame_sizes"])
         t["price"] = m.get("price")
         t["bom_pct"] = bom.get((m.get("brand"), m.get("model")))
-        cq = component_quality(m, part_prices)
+        cq = component_quality(m, catalog_entries, m.get("price"), t)
         cq_by_id[m["id"]] = cq
         t["component_retail_value_usd"] = cq["component_retail_value_usd"]
         t["component_wholesale_value_usd"] = cq["component_wholesale_value_usd"]
+        t["value_ratio"] = cq["value_ratio"]
         typed_by_id[m["id"]] = t
 
     # Field distributions + the sorted value lists used for ranking.
@@ -969,7 +1012,7 @@ def main():
     sorted_field = {
         f: sorted(v for v in (t.get(f) for t in typed_by_id.values())
                   if isinstance(v, (int, float)))
-        for f in NUMERIC_FIELDS + ["price", "bom_pct"]
+        for f in NUMERIC_FIELDS + ["price", "bom_pct", "value_ratio"]
     }
 
     # Pass 2 - percentiles + scores, written back into each model.
@@ -980,14 +1023,16 @@ def main():
         # component values are reported under component_quality, not specs_typed
         t.pop("component_retail_value_usd", None)
         t.pop("component_wholesale_value_usd", None)
+        value_ratio = t.pop("value_ratio", None)
         pct = compute_percentiles({**t, "price": m.get("price")}, sorted_field)
-        bom_rank = (percentile_rank(bom_pct, sorted_field["bom_pct"])
-                    if bom_pct is not None and sorted_field["bom_pct"] else None)
         price_pct = pct.get("price_pct")
+        # value score: rank price/parts-cost low→high, inverted so best value = highest
+        value_rank = (percentile_rank(value_ratio, sorted_field["value_ratio"])
+                      if value_ratio is not None and sorted_field["value_ratio"] else None)
         m["analysis"] = {
             "specs_typed": t,
             "percentiles": pct,
-            "scores": compute_scores(t, stats, bom_pct, price_pct, pct),
+            "scores": compute_scores(t, stats, bom_pct, price_pct, pct, value_rank),
             "highlights": _highlights(t),
             "component_quality": cq_by_id[m["id"]],
         }

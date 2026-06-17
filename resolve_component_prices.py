@@ -54,21 +54,22 @@ RETAIL_SOURCES = ("jensonusa.com", "worldwidecyclery.com", "universalcycles.com"
                   "modernbike.com", "bike-discount.de", "manufacturer MSRP")
 WHOLESALE_SOURCES = ("aliexpress.com", "alibaba.com")
 
-# Catalog category -> spec-cost function from estimate_component_costs.py. Reused
-# (not re-implemented) for the model-less retail fallback.
+# Catalog category -> spec-cost function from estimate_component_costs.py, reused
+# for the per-part retail fallback. NB drivetrain SINGLES (chain/cassette/shifter/
+# derailleur/crankset) are intentionally NOT mapped here — cost_drivetrain prices a
+# whole drivetrain, not one part — they use the per-part flats below instead.
 _FALLBACK_FN = {
     "battery": cost_battery, "motor": cost_motor, "brakes": cost_brakes,
     "fork": cost_fork, "display": cost_display, "tire": cost_tires,
-    "derailleur": cost_drivetrain, "cassette": cost_drivetrain,
-    "chain": cost_drivetrain, "crankset": cost_drivetrain, "shifter": cost_drivetrain,
 }
-# Flat single-part base costs for categories without a spec-cost function (drawn
-# from estimate_component_costs.SPEC_DRIVEN's per-bike numbers, scaled to one part).
+# Flat single-part retail estimates for categories without a per-part spec-cost
+# function (street price of a budget OEM single, grounded in the price research).
 _FALLBACK_FLAT = {
-    "saddle": 45, "seatpost": 45, "seat_post": 45, "stem": 25, "handlebar": 30,
-    "grips_bar_tape": 12, "hub": 40, "pedals": 20, "light": 30, "charger": 35,
-    "controller": 40, "throttle": 15, "sensor": 35, "wheel": 65, "rims": 35,
-    "fenders": 25, "rack": 35, "kickstand": 12,
+    "chain": 14, "shifter": 18, "derailleur": 25, "cassette": 22, "crankset": 45,
+    "saddle": 30, "seatpost": 45, "seat_post": 45, "stem": 25, "handlebar": 30,
+    "handlebars": 30, "grips": 18, "grips_bar_tape": 18, "hub": 50, "pedals": 20,
+    "light": 30, "charger": 40, "controller": 45, "throttle": 18, "sensor": 35,
+    "wheel": 75, "rims": 40, "fenders": 25, "rack": 35, "kickstand": 12,
 }
 
 
@@ -150,6 +151,58 @@ def heuristic_retail(entry: dict) -> tuple[int | None, str | None]:
             return int(c), note
     if cat in _FALLBACK_FLAT:
         return _FALLBACK_FLAT[cat], f"{cat} base estimate"
+    return None, None
+
+
+# Per-type OEM (AliExpress/Alibaba) range-by-spec wholesale rules — the same
+# rules used for the manual price fill, grounded in that research. Returns a
+# representative OEM unit cost in USD for a part with no researched wholesale.
+def heuristic_wholesale(entry: dict) -> tuple[int | None, str | None]:
+    cat = entry.get("category", "")
+    a = entry.get("attributes") or {}
+    sc = (entry.get("spec_class") or "").lower()
+
+    def battery_wh():
+        wh = a.get("capacity_wh")
+        if wh:
+            return wh
+        v, ah = a.get("voltage_v"), a.get("amphours_ah")
+        return v * ah if v and ah else 500
+
+    if cat == "battery":
+        return round(battery_wh() * 0.16), "~$0.16/Wh OEM"
+    if cat == "motor":
+        w = a.get("power_w") or 500
+        if a.get("placement") == "mid" or "mid-drive" in sc:
+            return round(120 + w * 0.18), "OEM mid-drive"
+        return round(w * 0.12), "OEM hub ~$0.12/W"
+    if cat == "brakes":
+        return (30, "OEM hydraulic") if "hydraulic" in sc else (15, "OEM disc")
+    flat = {
+        "chain": 4, "shifter": 9, "derailleur": 13, "crankset": 20, "cassette": 13,
+        "saddle": 10, "grips": 5, "grips_bar_tape": 5, "stem": 8, "handlebar": 10,
+        "handlebars": 10, "seatpost": 12, "seat_post": 12, "charger": 14,
+        "throttle": 6, "pedals": 7, "rear_shock": 35, "hub": 25, "rims": 18,
+    }
+    if cat in flat:
+        return flat[cat], f"OEM {cat}"
+    if cat == "tire":
+        if "x4" in sc or "fat" in sc:
+            return 20, "OEM fat tire"
+        if any(s in sc for s in ("2.4", "1.95", "x2")):
+            return 12, "OEM tire"
+        return 15, "OEM tire"
+    if cat == "display":
+        if "touch" in sc:
+            return 30, "OEM display"
+        if "color" in sc:
+            return 22, "OEM display"
+        if "oled" in sc:
+            return 25, "OEM display"
+        return 12, "OEM display"
+    if cat == "fork":
+        tr = a.get("travel_mm") or 80
+        return round(40 + tr * 0.3), "OEM fork"
     return None, None
 
 
