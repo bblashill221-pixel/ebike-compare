@@ -1,5 +1,5 @@
 import type { Filters, RangeField } from "./search/orama";
-import { PRICE_TIERS, priceTierRangeText } from "./filterMeta";
+import { PRICE_TIERS, priceTierLabel } from "./filterMeta";
 
 // "Find My eBike" beginner quiz. Each dropdown choice carries the *technical*
 // filter params it should contribute to the Browse URL; the labels stay
@@ -21,16 +21,14 @@ export interface QuizQuestion {
 
 const NONE: QuizChoice = { label: "No preference", params: {} };
 
-// Budget choices mirror the Browse price filter's PRICE_TIERS exactly (same value
-// ranges), each emitting price_min/price_max so the handoff lands on that tier.
+// Budget choices mirror the Browse price filter's PRICE_TIERS (max-only): each is a
+// "≤ $X" ceiling emitting price_max (no floor), so the handoff lands on [catalog
+// floor, X] and multi-select widens to the largest ceiling.
 const BUDGET_CHOICES: QuizChoice[] = [
   NONE,
-  ...PRICE_TIERS.filter((t) => t.label !== "All").map((t) => ({
-    label: priceTierRangeText(t, 0, 0),   // range only (e.g. "$1,000–$2,000"), no tier name
-    params: {
-      ...(t.lo != null ? { price_min: String(t.lo) } : {}),
-      ...(t.hi != null ? { price_max: String(t.hi) } : {}),
-    },
+  ...PRICE_TIERS.filter((t) => t.max != null).map((t) => ({
+    label: priceTierLabel(t),             // "≤ $4,000"
+    params: { price_max: String(t.max) },
   })),
 ];
 
@@ -50,7 +48,7 @@ export const QUESTIONS: QuizQuestion[] = [
   },
   {
     id: "budget",
-    label: "What's Your Budget?",
+    label: "What's Your Maximum Budget? (can be adjusted later)",
     choices: BUDGET_CHOICES,
   },
   {
@@ -62,12 +60,13 @@ export const QUESTIONS: QuizQuestion[] = [
       { label: "Under 5'4\"", params: { height_in: "62" } },
       { label: "5'4\" – 5'8\"", params: { height_in: "66" } },
       { label: "5'9\" – 6'0\"", params: { height_in: "70" } },
-      { label: "Over 6'0\"", params: { height_in: "74" } },
+      { label: "6'0\" – 6'2\"", params: { height_in: "73" } },
+      { label: "6'2\"+", params: { height_in: "75" } },
     ],
   },
   {
     id: "weight",
-    label: "How Much Do You Weigh?",
+    label: "What's Your Weight?",
     help: "Shows bikes rated to carry your weight.",
     choices: [
       NONE,

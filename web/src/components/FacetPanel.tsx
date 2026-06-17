@@ -5,8 +5,7 @@ import { capitalize, fieldLabel, labelize, titleCase } from "../format";
 import { useShowSoldOut } from "../soldOut";
 import { useUnits, inToCm, cmToIn, inToFtIn, ftInToIn, type UnitSystem } from "../units";
 import { ENUM_SECTIONS, RANGE_SECTIONS, BOOL_LABELS } from "../filterMeta";
-import { PRICE_TIERS, priceTierRange, priceTierRangeText, SENSOR_OPTIONS } from "../filterMeta";
-import { usePriceTier } from "../priceTier";
+import { PRICE_TIERS, priceTierMax, priceTierLabel, matchPriceTier, SENSOR_OPTIONS } from "../filterMeta";
 
 interface Props {
   facetOptions: Record<EnumField, string[]>;
@@ -164,11 +163,6 @@ export function FacetPanel({ facetOptions, rangeBounds, facetCounts, filters, se
   // sections the user has collapsed (everything starts expanded)
   const [collapsed, setCollapsed] = useState<Record<string, boolean>>({});
   const toggleSection = (key: string) => setCollapsed({ ...collapsed, [key]: !collapsed[key] });
-  // The price dropdown scopes the price slider to a tier: its min/max become the
-  // slider's endpoints. Tracked explicitly (and persisted to sessionStorage) so
-  // narrowing within the tier doesn't lose the tier scope, and the choice survives
-  // navigation/reload within the session. "All" = the full catalog range.
-  const [priceTier, setPriceTier] = usePriceTier();
 
   const toggleEnum = (field: EnumField, value: string) => {
     const cur = filters.enums[field] ?? [];
@@ -208,10 +202,8 @@ export function FacetPanel({ facetOptions, rangeBounds, facetCounts, filters, se
     setHeightIn(cmToIn(n));
   };
   const reset = () => {
-    setPriceTier("All");
     setFilters({ enums: {}, bools: {}, ranges: {}, riderHeightIn: null });
     setShowSoldOut(false); // back to the default: available-only
-    setPriceTier("All"); // price slider back to the full catalog range
   };
 
   return (
@@ -380,34 +372,38 @@ export function FacetPanel({ facetOptions, rangeBounds, facetCounts, filters, se
         const [catLo, catHi] = rangeBounds[field] ?? [0, 0];
         if (catHi <= catLo) return null;
         const { unit } = fieldLabel(field);
-        // Price is scoped to the selected tier: its min/max become the slider's
-        // endpoints. Other ranges always span the full catalog bounds.
-        let bLo = catLo;
-        let bHi = catHi;
-        if (field === "price" && priceTier !== "All") {
-          const t = PRICE_TIERS.find((x) => x.label === priceTier);
-          if (t) [bLo, bHi] = priceTierRange(t, catLo, catHi);
-        }
+        // Every range (price included) spans the full catalog bounds; the price
+        // dropdown only sets the MAX, and the slider's low handle sets an optional min.
+        const bLo = catLo;
+        const bHi = catHi;
         const [lo, hi] = filters.ranges[field] ?? [bLo, bHi];
+        // The price dropdown is derived from the current upper bound: the matching
+        // max preset, or a transient "Custom" when the user dragged the high handle
+        // off a preset value.
+        const maxTier = field === "price" ? matchPriceTier(hi, catHi) : undefined;
+        const priceSel = field === "price" ? (maxTier ? maxTier.label : "__custom") : "";
         return (
           <Section key={field} label={label} open={!collapsed[field]} onToggle={() => toggleSection(field)}>
             {field === "price" && (
               <select
-                value={priceTier}
+                value={priceSel}
                 onChange={(e) => {
                   const t = PRICE_TIERS.find((x) => x.label === e.target.value);
                   if (!t) return;
-                  setPriceTier(t.label);
-                  // initialize the slider to the tier's full range AND filter now
-                  const [nlo, nhi] = priceTierRange(t, catLo, catHi);
-                  setRange(field, nlo, nhi);
+                  // set the MAX only; min resets to the catalog floor (drag to raise it)
+                  setRange(field, catLo, priceTierMax(t, catHi));
                 }}
-                aria-label="Price range preset"
+                aria-label="Maximum budget"
                 className="mb-3 w-full rounded border-slate-300 text-sm"
               >
+                {!maxTier && (
+                  <option value="__custom" disabled>
+                    {`Custom (≤ $${Math.round(hi).toLocaleString()})`}
+                  </option>
+                )}
                 {PRICE_TIERS.map((t) => (
                   <option key={t.label} value={t.label}>
-                    {t.label === "All" ? "All prices" : `${t.label} (${priceTierRangeText(t, catLo, catHi)})`}
+                    {priceTierLabel(t)}
                   </option>
                 ))}
               </select>

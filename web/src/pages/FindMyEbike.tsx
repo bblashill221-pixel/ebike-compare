@@ -89,14 +89,14 @@ export function FindMyEbike() {
       </p>
 
       <div className="mt-6 space-y-4">
-        {QUESTIONS.map((q) => {
+        {QUESTIONS.map((q, i) => {
           // render a trailing "(...)" note (e.g. "(determining type)") in a lighter font
           const paren = q.label.match(/\s*(\([^)]*\))\s*$/);
           const main = paren ? q.label.slice(0, paren.index) : q.label;
           return (
           <fieldset key={q.id}>
             <legend className="block text-sm font-semibold text-slate-700">
-              {main}
+              <span className="text-slate-400">{i + 1}.</span> {main}
               {paren && <span className="ml-1 font-normal text-slate-400">{paren[1]}</span>}
               {q.help && <span className="ml-2 text-xs font-normal text-slate-400">{q.help}</span>}
             </legend>
