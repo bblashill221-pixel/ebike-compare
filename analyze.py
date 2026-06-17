@@ -963,9 +963,9 @@ def component_quality(model: dict, catalog_entries: dict, price, typed: dict) ->
 
 
 def _highlights(typed: dict) -> list:
-    out = list(typed.get("notable_tech", []))
-    if typed.get("sensor_type") in ("torque", "torque + cadence") and "torque sensor" not in out:
-        out.append("torque sensor")
+    # "torque sensor" is intentionally NOT a highlight chip — it's shown as a
+    # dedicated card icon, so listing it here would be redundant.
+    out = [t for t in typed.get("notable_tech", []) if t != "torque sensor"]
     # NB hydraulic disc brakes are deliberately NOT a highlight: ~80% of tracked
     # e-bikes have them, so they don't differentiate.
     if typed.get("frame_material") == "carbon":
