@@ -12,6 +12,7 @@ export const PRODUCT_TYPE_ORDER = [
   "Road / Gravel",
   "Cargo",
   "Folding",
+  "Trike",
   "Cruiser",
   "eMoto",
   "Fat Tire",

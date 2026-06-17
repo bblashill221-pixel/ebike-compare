@@ -24,6 +24,7 @@ PRODUCT_TYPES = [
     "Road / Gravel",
     "Cargo",
     "Folding",
+    "Trike",
     "Cruiser",
     "eMoto",
     "Fat Tire",
@@ -40,6 +41,9 @@ _TYPE_RULES = [
     # still matches "cargo"/"hauler"; a plain trike classifies on its other signals.
     ("Cargo", re.compile(r"cargo|long[\s-]?tail|utility|hauler|xpedition", re.I)),
     ("Folding", re.compile(r"fold", re.I)),
+    # A trike has 3 wheels — identified by name ("trike"/"tricycle"/"e-trike"/
+    # "triker"); no spec carries a wheel count. The (?<!s) keeps "strike" out.
+    ("Trike", re.compile(r"(?<!s)trike|tricycle", re.I)),
     # Motorcycle-styled e-bikes (Super73/Sur-Ron/moped-style): the moto identity
     # is more defining than the fat tires they usually ride on, so it outranks
     # Fat tire and the terrain rules. \be-?moto\b matches "moto"/"e-moto" as whole
