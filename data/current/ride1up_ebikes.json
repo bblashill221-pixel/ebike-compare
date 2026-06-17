@@ -125,7 +125,8 @@
           "Range": "16-40 miles depending on rider weight, terrain, incline, level of assist, etc.",
           "Comfort": "Optimally designed to provide performance-based comfort",
           "Bike Weight": "28.6 lbs",
-          "Weight Capacity": "225 lbs"
+          "Weight Capacity": "225 lbs",
+          "Rider Height": "5'3\" - 6'3\""
         }
       },
       "spec_count": 32,
@@ -171,6 +172,18 @@
               "free": false
             }
           ]
+        }
+      ],
+      "frame_sizes": [
+        {
+          "size": "Small",
+          "height_min": "5'3\"",
+          "height_max": "5'8\""
+        },
+        {
+          "size": "Large",
+          "height_min": "5'8\"",
+          "height_max": "6'3\""
         }
       ]
     },

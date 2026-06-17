@@ -96,6 +96,25 @@ def _generic(page: str) -> list[dict]:
 
 # ------------------------------ brand extractors ----------------------------
 
+def _ride1up(page: str) -> list[dict]:
+    """Ride1Up publishes a per-size geometry chart: column headers (e.g. "SMALL
+    LARGE"), then the row labels (Bike Weight, Weight Capacity, Rider Height
+    Range, A - Maximum Seat Height, …), then the values laid out column-major — so
+    each size's rider-height range appears once, in header order. (CF RACER1 is
+    currently the only multi-size Ride1Up bike.)"""
+    txt = " ".join(html.unescape(re.sub(r"<[^>]+>", " ", page)).split())
+    _SZ = r"X-?Small|Small|Medium|Large|X-?Large"
+    hdr = re.search(rf"((?:\b(?:{_SZ})\b\s+){{2,}})Bike Weight", txt, re.I)
+    if not hdr:
+        return []
+    sizes = [s.title() for s in re.findall(_SZ, hdr.group(1), re.I)]
+    ranges = _ranges(txt[hdr.start():])   # one rider-height range per size column
+    if len(ranges) < len(sizes):
+        return []
+    return [{"size": s, "height_min": lo, "height_max": hi}
+            for s, (lo, hi) in zip(sizes, ranges)]
+
+
 def _aventon(page: str) -> list[dict]:
     out, seen = [], set()
     for mo in re.finditer(r'\{[^{}]*"height_max"[^{}]*\}', page):
@@ -234,6 +253,7 @@ _CHART = {
     "priority": lambda p, n, m: _priority(p),
     "velowave": lambda p, n, m: _velowave(p),
     "velotric": lambda p, n, m: _velotric(p, n, m),
+    "ride1up": lambda p, n, m: _ride1up(p),
 }
 # Every brand we scrape runs the enricher: its chart extractor first (if any),
 # then the generic labelled-range fallback.

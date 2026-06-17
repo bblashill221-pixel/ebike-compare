@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T16:53:49.211632+00:00",
+  "generated_at": "2026-06-17T17:06:00.321917+00:00",
   "total_models": 389,
   "expected_fields": [
     "motor_w",
@@ -77,15 +77,15 @@
       "pct": 92
     },
     "fit_height_max_in": {
-      "count": 357,
+      "count": 358,
       "pct": 92
     },
     "fit_height_max_mm": {
-      "count": 357,
+      "count": 358,
       "pct": 92
     },
     "frame_size_rider_range": {
-      "count": 357,
+      "count": 358,
       "pct": 92
     },
     "torque_nm": {
@@ -1944,12 +1944,6 @@
     },
     {
       "brand": "ride1up",
-      "model": "CF RACER1",
-      "field": "frame_size_rider_range",
-      "label": "Rider height range per frame size"
-    },
-    {
-      "brand": "ride1up",
       "model": "Revv1 DRT",
       "field": "drivetrain_type",
       "label": "Drivetrain type"
@@ -3787,8 +3781,8 @@
   ],
   "frame_style_review": [],
   "summary": {
-    "models_flagged": 238,
-    "missing_rows": 603,
+    "models_flagged": 237,
+    "missing_rows": 602,
     "missing_by_field": {
       "motor_w": 9,
       "battery_wh": 2,
@@ -3809,7 +3803,7 @@
       "sensor_type": 161,
       "rack_load_lb": 16,
       "frame_size_count": 0,
-      "frame_size_rider_range": 32
+      "frame_size_rider_range": 31
     },
     "frame_style_review": 0
   }
