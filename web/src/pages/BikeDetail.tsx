@@ -20,8 +20,6 @@ import { BatteryIcon, MotorIcon, RangeIcon, RiderHeightIcon, TorqueIcon, WeightI
 const GROUP_ORDER = [
   "general_info",
   "ebike_system",
-  "safety",
-  "certifications",
   "water_resistance",
   "frameset",
   "drivetrain",

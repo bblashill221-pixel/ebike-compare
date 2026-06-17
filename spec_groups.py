@@ -136,6 +136,9 @@ def _is_junk(low: str) -> bool:
 # groups (Certifications, Water Resistance, Special Features, Safety) come before
 # the broad component groups so overlaps resolve the way Aventon groups them.
 GROUPS = [
+    # Kept at top priority so a cert label isn't stolen by a component group;
+    # the collected bucket is appended to the END of "General Info" (Key Aspects)
+    # below, so certs render last in that section rather than as their own.
     ("Certifications", (
         "certif", "ul 2271", "ul 2849", "ul 2580", "ul2271", "ul2849",
         "ul listed", "iso standard", "din tested", "din rated", "emtb safety",
@@ -153,11 +156,6 @@ GROUPS = [
         "frame lock", "connect module", "app", "security", "adaptive",
         "traction control", "cloud", "wireless", "digital key", "nfc", "rfid",
         "esim", "self-balancing", "stability control")),
-    ("Safety", (
-        "headlight", "tail light", "taillight", "rear light", "front light",
-        "brake light", "daytime running", "drl", "reflector", "horn", "bell",
-        "mirror", "anti-lock", "antilock", "turn signal", "blinker",
-        "safety light", "lights", "light")),
     ("Drivetrain", (
         "derailleur", "shifter", "shift lever", "cassette", "freewheel",
         "chainring", "crankset", "crank", "bottom bracket", "pedals", "groupset",
@@ -168,7 +166,13 @@ GROUPS = [
         "controller", "throttle", "sensor", "pedal assist", "watt", "voltage",
         "kwh", "ui/remote", "ui ", "remote", "drive unit", "torque", "power",
         "top speed", "max speed", "assist", "wattage", "wiring", "harness",
-        "usb", "ecu", "pwr")),
+        "usb", "ecu", "pwr",
+        # lighting + other electrical safety items (formerly the Safety group)
+        # are consolidated here.
+        "headlight", "tail light", "taillight", "rear light", "front light",
+        "brake light", "daytime running", "drl", "reflector", "horn", "bell",
+        "mirror", "anti-lock", "antilock", "turn signal", "blinker",
+        "safety light", "lights", "light")),
     ("Brakes", ("brake", "rotor", "caliper", "lever")),
     ("Wheelset", (
         "wheel", "rim", "spoke", "tire", "tyre", "tube", "hub", "valve",
@@ -189,8 +193,8 @@ GROUPS = [
 
 # Order groups appear in the output (nice reading order, distinct from match order).
 DISPLAY_ORDER = [
-    "General Info", "Ebike System", "Special Features", "Safety",
-    "Certifications", "Water Resistance", "Frameset", "Drivetrain", "Brakes",
+    "General Info", "Ebike System", "Special Features",
+    "Water Resistance", "Frameset", "Drivetrain", "Brakes",
     "Wheelset", "Cockpit", "Geometry", "Included Accessories", "General / Other",
 ]
 
@@ -226,9 +230,9 @@ def group_specs(all_specs: dict, geometry: dict | None = None,
         low = " ".join(label.split()).lower()
         if _is_junk(low):
             continue
-        # A horn is a safety item in its own right; note it wherever it is mentioned
-        # (often buried in a light spec like "White Light with Horn") so it can be
-        # emitted as a standalone Safety field below rather than inside the light.
+        # A horn is its own item; note it wherever it is mentioned (often buried in
+        # a light spec like "White Light with Horn") so it can be emitted as a
+        # standalone Ebike System field below rather than inside the light.
         if re.search(r"\bhorn\b", f"{label} {value}", re.I):
             horn_present = True
         # classify on the original (spaced) label; emit a snake_case field name.
@@ -247,9 +251,16 @@ def group_specs(all_specs: dict, geometry: dict | None = None,
             else:
                 group[field] = value
     if horn_present:
-        safety = buckets.setdefault("Safety", OrderedDict())
-        if not any("horn" in k for k in safety):   # skip if a dedicated horn field exists
-            safety["horn"] = True
+        esys = buckets.setdefault("Ebike System", OrderedDict())
+        if not any("horn" in k for k in esys):   # skip if a dedicated horn field exists
+            esys["horn"] = True
+    # Relocate Certifications to the BOTTOM of "General Info" (the Key Aspects
+    # section) rather than rendering them as their own section.
+    cert_bucket = buckets.pop("Certifications", None)
+    if cert_bucket:
+        gi = buckets.setdefault("General Info", OrderedDict())
+        for k, v in cert_bucket.items():
+            gi[k] = v
     # The battery's own weight belongs inside the battery component, not as a
     # sibling field. Fold battery_weight[_lb/_kg] (and primary_/secondary_ for
     # dual-battery bikes) into specs.ebike_system.battery as weight[_lb/_kg]. The
