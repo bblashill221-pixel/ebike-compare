@@ -6,4 +6,6 @@ dist-ssr
 
 # Data is copied in at build time from ../data; don't commit the copy.
 public/ebikes_normalized.json
+# Dev-only anomaly report (copied in by `predev`, never shipped to production).
+public/anomalies.json
 *.tsbuildinfo

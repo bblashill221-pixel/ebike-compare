@@ -141,6 +141,9 @@ print((json.load(open(f[0])).get('generated_at','') or '')[:10]) if f else print
     # Data audit: flag models missing expected spec values (report + CSV +
     # per-model annotation). Reads typed specs only; safe to re-run.
     "$PY" "$PROJECT_DIR/audit.py" || true
+    # Correctness triage (advisory): flag likely-misclassified / misparsed bikes
+    # into data/current/anomalies.json for the dev-only QA page.
+    "$PY" "$PROJECT_DIR/audit_anomalies.py" || true
     # Sanity gate: fail the run (rc=1) if the new build looks broken vs the prior
     # one (model count crash, a brand at 0, fleet-wide coverage regression), so a
     # bad scrape/normalize can be caught before it's published.

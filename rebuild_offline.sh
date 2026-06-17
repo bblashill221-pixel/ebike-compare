@@ -28,6 +28,8 @@ run resolve_component_prices.py write-catalog
 run estimate_component_costs.py -o "$PROJECT_DIR/data/current/component_cost_estimates.json"
 run analyze.py
 run audit.py
+# Correctness triage (advisory): flag likely-misclassified / misparsed bikes.
+run audit_anomalies.py
 
 if "$PY" "$PROJECT_DIR/validate_build.py"; then
     run diff_changes.py

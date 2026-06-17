@@ -522,7 +522,16 @@ def _notable_tech(specs):
         (r"\babs\b", "ABS"),
         (r"belt|gates", "belt drive"),
         (r"dual[- ]?battery|second battery|two batteries", "dual-battery"),
-        (r"anti[- ]?theft|gps tracking|alarm", "anti-theft"),
+        # Find My network integration (Apple Find My / iOS Find My, Google Find My
+        # Device / Find Hub) and brand "find my bike" locators -- a locate/anti-theft
+        # security feature; checked on every model.
+        (r"apple find\s*my|ios find\s*my|google'?s? find|find hub|find my device"
+         r"|find my bike|\bfindmy\b", "find my"),
+        # anti-theft / tracking, incl. custom solutions (4G/GPS trackers, GPS/GSM
+        # connect modules, geo-fence/electronic fence, motion alarm, immobilizer).
+        (r"anti[- ]?theft|gps[\s/]?track|gps[\s/]?gsm|4g[\s/]?gps|electronic fence"
+         r"|geo[- ]?fenc|movement alarm|motion alarm|immobili[sz]|\btracker\b"
+         r"|connect module|\balarm\b", "anti-theft"),
         (r"fingerprint", "fingerprint unlock"),
         (r"torque sensor", "torque sensor"),
         (r"mid[- ]?drive", "mid-drive motor"),
@@ -835,6 +844,8 @@ def compute_scores(typed: dict, stats: dict, bom_pct, price_pct, pct: dict,
         sec += 25
     if "anti-theft" in nt:
         sec += 20
+    if "find my" in nt:          # Apple/Google Find My (or a brand find-my-bike)
+        sec += 25
     if "fingerprint unlock" in nt:
         sec += 25
     if "app" in conn:
@@ -1017,6 +1028,17 @@ def main():
                 and HYBRID_FITNESS not in pts and "Folding" not in pts
                 and not t.get("kids")):
             m.setdefault("product_types", []).append(HYBRID_FITNESS)
+        # Conversely, strip a spurious Hybrid / Fitness tag from a clearly-heavy
+        # bike that isn't named hybrid/fitness — it only survived as a fed-back
+        # label (e.g. Velotric Summit, 62 lb). Light or genuinely-named bikes,
+        # and ones with unknown weight (Cannondale's FITNESS-tagged line), are
+        # untouched. Mirrors audit_anomalies' hybrid_heavy check.
+        if (HYBRID_FITNESS in (m.get("product_types") or [])
+                and isinstance(w, (int, float)) and w > HYBRID_MAX_WEIGHT_LB
+                and not re.search(r"hybrid|fitness", m.get("model") or "", re.I)):
+            kept = [x for x in m["product_types"] if x != HYBRID_FITNESS]
+            m["product_types"] = kept or ["Commuter / Urban"]
+            m["product_type"] = m["product_types"][0]
         t["price"] = m.get("price")
         t["bom_pct"] = bom.get((m.get("brand"), m.get("model")))
         cq = component_quality(m, catalog_entries, m.get("price"), t)

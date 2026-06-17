@@ -1,0 +1,42 @@
+{
+  "generated_at": "2026-06-17T17:34:23.547505+00:00",
+  "model_count": 389,
+  "anomaly_count": 3,
+  "by_severity": {
+    "high": 2,
+    "low": 1
+  },
+  "by_rule": {
+    "numeric_implausible": 2,
+    "value_ratio_outlier": 1
+  },
+  "anomalies": [
+    {
+      "id": "engwe__engwe-x24",
+      "brand": "engwe",
+      "model": "ENGWE X24",
+      "url": "https://engwe-bikes.com/products/engwe-x24",
+      "rule": "numeric_implausible",
+      "severity": "high",
+      "detail": "range_mi=600 outside [5, 250]"
+    },
+    {
+      "id": "priority__ecoast",
+      "brand": "priority",
+      "model": "PRIORITY E-COAST",
+      "url": "https://www.prioritybicycles.com/products/ecoast",
+      "rule": "numeric_implausible",
+      "severity": "high",
+      "detail": "range_mi=500 outside [5, 250]"
+    },
+    {
+      "id": "specialized__s-works-turbo-levo-4-ltd",
+      "brand": "specialized",
+      "model": "S-Works Turbo Levo 4 LTD",
+      "url": "https://www.specialized.com/us/en/s-works-turbo-levo-4-ltd/p/4260592",
+      "rule": "value_ratio_outlier",
+      "severity": "low",
+      "detail": "price / parts-cost ratio = 20.09"
+    }
+  ]
+}

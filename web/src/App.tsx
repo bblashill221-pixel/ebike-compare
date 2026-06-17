@@ -10,6 +10,7 @@ import { BikeDetail } from "./pages/BikeDetail";
 import { Compare } from "./pages/Compare";
 import { Analysis } from "./pages/Analysis";
 import { Disclosure } from "./pages/Disclosure";
+import { QaAnomalies } from "./pages/QaAnomalies";
 
 export default function App() {
   const navigate = useNavigate();
@@ -44,6 +45,10 @@ export default function App() {
           <Route path="/compare" element={<Compare />} />
           <Route path="/analysis" element={<Analysis />} />
           <Route path="/disclosure" element={<Disclosure />} />
+          {/* DEV-ONLY: the QA anomalies page is registered only in development
+              (import.meta.env.DEV); it's tree-shaken out of the production build,
+              and its data (anomalies.json) is never copied into production. */}
+          {import.meta.env.DEV && <Route path="/qa" element={<QaAnomalies />} />}
           <Route path="*" element={<Browse />} />
         </Routes>
       </main>
