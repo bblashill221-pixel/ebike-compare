@@ -93,15 +93,13 @@ function RangeSlider({
   const span = bHi - bLo;
   const pct = (v: number) => (span > 0 ? ((v - bLo) / span) * 100 : 0);
   const commit = () => onCommit(draftRef.current[0], draftRef.current[1]);
-  // Pointer-up on a thumb with NO drag = a click on the "Reset" circle: snap just
-  // THAT handle back to its bound (low -> bLo, high -> bHi). A drag commits the
-  // new range as usual.
-  const endSide = (side: "lo" | "hi") => {
+  // Pointer-up on a thumb with NO drag = a click on the "Reset" circle: snap the
+  // WHOLE slider back to full range (clears the filter), so a handle can never get
+  // locked at the absolute min/max. A drag commits the new range as usual.
+  const end = () => {
     if (modified && !movedRef.current) {
-      const next: [number, number] =
-        side === "lo" ? [bLo, draftRef.current[1]] : [draftRef.current[0], bHi];
-      update(next);
-      onCommit(next[0], next[1]);
+      update([bLo, bHi]);
+      onCommit(bLo, bHi);
     } else {
       commit();
     }
@@ -130,9 +128,9 @@ function RangeSlider({
           title={modified ? "Reset" : undefined}
           onPointerDown={() => { movedRef.current = false; }}
           onChange={(e) => update([Math.min(Number(e.target.value), draftRef.current[1]), draftRef.current[1]])}
-          onPointerUp={() => endSide("lo")}
+          onPointerUp={end}
           onKeyUp={commit}
-          onTouchEnd={() => endSide("lo")}
+          onTouchEnd={end}
         />
         <input
           type="range"
@@ -145,9 +143,9 @@ function RangeSlider({
           title={modified ? "Reset" : undefined}
           onPointerDown={() => { movedRef.current = false; }}
           onChange={(e) => update([draftRef.current[0], Math.max(Number(e.target.value), draftRef.current[0])])}
-          onPointerUp={() => endSide("hi")}
+          onPointerUp={end}
           onKeyUp={commit}
-          onTouchEnd={() => endSide("hi")}
+          onTouchEnd={end}
         />
       </div>
       {/* fixed reference: the slider's true low/high (the full catalog range), so

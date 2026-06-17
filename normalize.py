@@ -73,6 +73,12 @@ def _apply_overrides(nm: dict) -> dict:
                 # mid-drive whose placement/brand the page never stated)
                 mo = nm.setdefault("specs", {}).setdefault("ebike_system", {}).setdefault("motor", {})
                 mo.update(v)
+            elif k == "specs" and isinstance(v, dict):
+                # deep-merge a {group: {field: value}} spec patch (e.g. fix a
+                # manufacturer typo like ENGWE X24's "600 mile" range -> 60)
+                for grp, fields in v.items():
+                    if isinstance(fields, dict):
+                        nm.setdefault("specs", {}).setdefault(grp, {}).update(fields)
             else:
                 nm[k] = v
         nm["curated_overrides"] = sorted(ov.keys())
