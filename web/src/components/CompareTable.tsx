@@ -52,7 +52,45 @@ function mergeKind(model: Model, group: string, kind: string): SpecObj | null {
 
 type Row = { label: string; values: string[]; section?: boolean; indent?: boolean };
 
+// Canonical geometry attribute key: strip the leading diagram number ("6_chain_stay…")
+// and fold naming variants so the SAME measurement aligns into one compare row across
+// bikes (and de-dups a bike that lists each attribute twice — numbered + plain).
+function canonGeo(k: string): string {
+  let c = k.toLowerCase().replace(/^\d+[_\s]+/, "");
+  c = c.replace(/chain[_\s]?stay/, "chainstay").replace(/step[_\s]?over/, "standover")
+       .replace(/_min$/, "_minimum").replace(/_max$/, "_maximum");
+  if (c === "effective_top_tube") c = "effective_top_tube_length";
+  return c;
+}
+
+function geometryRowsCompare(models: Model[], units: UnitSystem): Row[] {
+  const order: string[] = [];
+  const seen = new Set<string>();
+  for (const m of models) {
+    for (const k of Object.keys(m.specs?.geometry ?? {})) {
+      const c = canonGeo(k);
+      if (!seen.has(c)) { seen.add(c); order.push(c); }
+    }
+  }
+  const rows: Row[] = [];
+  for (const c of order) {
+    const { label, unit } = fieldLabel(c);
+    const values = models.map((m) => {
+      for (const [k, v] of Object.entries(m.specs?.geometry ?? {})) {
+        if (canonGeo(k) === c && v != null && v !== "" && !(Array.isArray(v) && v.length === 0))
+          return withUnit(formatSpecValue(v, units), unit);
+      }
+      return "—";
+    });
+    if (values.some((v) => !isEmptyCell(v))) rows.push({ label, values });
+  }
+  return rows;
+}
+
 function groupRows(models: Model[], group: string, units: UnitSystem): Row[] {
+  // Geometry has no parsed components — align its attributes by canonical name so the
+  // same measurement is ONE row across bikes (and per-bike duplicates collapse).
+  if (group === "geometry") return geometryRowsCompare(models, units);
   // discover component kinds + scalar field keys present across the models
   const kinds = new Set<string>();
   const scalarKeys: string[] = [];
@@ -66,6 +104,15 @@ function groupRows(models: Model[], group: string, units: UnitSystem): Row[] {
   // Pedal-assist is folded INTO the Motor section (it's a motor/system attribute), not
   // shown as its own block — when a motor is present in this group.
   const foldPA = kinds.has("motor") && kinds.has("pedal_assist");
+  // First non-empty scalar field in this group whose key matches rx (used to re-home a
+  // loose eBike-System value under its component header, e.g. charging time -> Charger).
+  const scalarMatch = (m: Model, rx: RegExp): SpecValue | undefined => {
+    for (const [k, v] of Object.entries(m.specs?.[group] ?? {})) {
+      if (!isComponent(v) && rx.test(k) && v != null && v !== ""
+          && !(Array.isArray(v) && v.length === 0)) return v;
+    }
+    return undefined;
+  };
   // components first, broken into their canonical fields (like the detail page)
   for (const kind of [...kinds].sort((a, b) => (KIND_RANK[a] ?? 99) - (KIND_RANK[b] ?? 99))) {
     if (foldPA && kind === "pedal_assist") continue;     // rendered under Motor below
@@ -85,32 +132,54 @@ function groupRows(models: Model[], group: string, units: UnitSystem): Row[] {
       const values = merged.map((o) => (o ? formatSpecValue(o, units) : "—"));
       if (values.some((v) => !isEmptyCell(v))) sub.push({ label: "Spec", values, indent: true });
     }
-    // append pedal-assist (Assist Modes / Boost) as Motor rows
-    if (kind === "motor" && foldPA) {
-      const pa = models.map((m) => mergeKind(m, group, "pedal_assist"));
-      const paCols: [string, string][] = [["levels", "Assist Modes"], ["boost", "Boost"]];
-      for (const [key, label] of paCols) {
-        const col = { key, header: label };
-        const values = pa.map((o) => (o ? renderCell(col, o, units) : "—"));
-        if (values.some((v) => !isEmptyCell(v))) sub.push({ label, values, indent: true });
-      }
+    // Pedal-assist belongs under Motor: "Assist Modes" from the pedal_assist component's
+    // levels, else a loose assist-modes scalar; plus the component's Boost.
+    if (kind === "motor") {
+      const modeVals = models.map((m) => {
+        const pa = mergeKind(m, group, "pedal_assist");
+        if (pa) {
+          const r = renderCell({ key: "levels", header: "Assist Levels" }, pa, units);
+          if (!isEmptyCell(r)) return r;
+        }
+        const v = scalarMatch(m, /^(pedal_?assist_(modes|levels|type)|assist_(modes|levels))$/i);
+        return v != null ? String(formatSpecValue(v, units)) : "—";
+      });
+      if (modeVals.some((v) => !isEmptyCell(v))) sub.push({ label: "Assist Levels", values: modeVals, indent: true });
+      const boostVals = models.map((m) => {
+        const pa = mergeKind(m, group, "pedal_assist");
+        return pa ? renderCell({ key: "boost", header: "Boost" }, pa, units) : "—";
+      });
+      if (boostVals.some((v) => !isEmptyCell(v))) sub.push({ label: "Boost", values: boostVals, indent: true });
+    }
+    // Charging time belongs under the Charger (it's a loose eBike-System scalar).
+    if (kind === "charger") {
+      const ctVals = models.map((m) => {
+        const v = scalarMatch(m, /^(charging_time|charge_time|recharging_time|duration_of_charging)/i);
+        return v != null ? String(formatSpecValue(v, units)) : "—";
+      });
+      if (ctVals.some((v) => !isEmptyCell(v))) sub.push({ label: "Charge Time", values: ctVals, indent: true });
     }
     if (sub.length) {
       rows.push({ label: KIND_LABEL[kind] ?? titleCase(kind), values: [], section: true });
       rows.push(...sub);
     }
   }
-  // then plain scalar rows (paired off-unit rows hidden)
-  const hide = hiddenUnitKeys(scalarKeys, units);
-  for (const f of scalarKeys) {
-    if (hide.has(f)) continue;
-    const { label, unit } = fieldLabel(f);
-    const values = models.map((m) => {
-      const v = m.specs?.[group]?.[f] as SpecValue | undefined;
-      if (v == null || v === "" || (Array.isArray(v) && v.length === 0)) return "—";
-      return withUnit(formatSpecValue(v, units), unit);
-    });
-    if (values.some((v) => !isEmptyCell(v))) rows.push({ label, values });
+  // Plain scalar rows. SKIPPED for eBike System: every loose value there is either a
+  // duplicate of the key-specs table up top (torque, top speed, power, weight) or
+  // belongs under a component header (charging time -> Charger, cells -> Battery), plus
+  // a long tail of marketing junk -- so the group shows only its component breakdowns.
+  if (group !== "ebike_system") {
+    const hide = hiddenUnitKeys(scalarKeys, units);
+    for (const f of scalarKeys) {
+      if (hide.has(f)) continue;
+      const { label, unit } = fieldLabel(f);
+      const values = models.map((m) => {
+        const v = m.specs?.[group]?.[f] as SpecValue | undefined;
+        if (v == null || v === "" || (Array.isArray(v) && v.length === 0)) return "—";
+        return withUnit(formatSpecValue(v, units), unit);
+      });
+      if (values.some((v) => !isEmptyCell(v))) rows.push({ label, values });
+    }
   }
   return rows;
 }

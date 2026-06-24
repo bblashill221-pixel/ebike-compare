@@ -59,6 +59,12 @@ export function renderCell(col: Column, obj: Record<string, SpecValue>, units: U
   if (typeof v === "number") return formatNumber(v, 2, false) + (col.unit ?? "");
   if (typeof v !== "string") return formatSpecValue(v, units); // nested object fallback
   if (col.key === "details" || col.key === "__make") return formatSpecValue(v, units);
+  // Axle: call out a thru-axle (a locking bolt-through axle) explicitly. Its value is a
+  // diameter×hub-width spec (12×148, 15×110, 20×110 = thru-axle); a quick-release is not.
+  if (col.key === "axle") {
+    if (/\b(12|15|20)\s*[x×]\s*\d{2,3}\s*mm\b/i.test(v)) return `Thru-axle, ${v}`;
+    if (/\bqr\b|quick[\s-]?release/i.test(v)) return v.replace(/\bqr\b/i, "Quick-release");
+  }
   // short enum-ish tokens ("hub", "continuously_variable") get prettified
   const pretty = /^[a-z][a-z_]*$/.test(v) ? titleCase(v) : v;
   return pretty + (col.unit ?? "");

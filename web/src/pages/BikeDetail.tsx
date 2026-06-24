@@ -43,13 +43,15 @@ const PERCENTILE_FIELDS: {
   unit?: string;
   icon: React.ReactNode;
   badge: string;
+  // LOWER is better -> a value below the median is the "good" (green) direction
+  lowerBetter?: boolean;
 }[] = [
-  { field: "price", label: "Price", unit: "$", icon: <TagIcon className="h-4 w-4" />, badge: "bg-blue-50" },
+  { field: "price", label: "Price", unit: "$", icon: <TagIcon className="h-4 w-4" />, badge: "bg-blue-50", lowerBetter: true },
   { field: "battery_wh", label: "Battery", unit: " Wh", icon: <BatteryIcon className="h-4 w-4" />, badge: "bg-emerald-50" },
   { field: "motor_w", label: "Motor", unit: " W", icon: <MotorIcon className="h-4 w-4" />, badge: "bg-amber-50" },
   { field: "torque_nm", label: "Torque", unit: " Nm", icon: <TorqueIcon className="h-4 w-4" />, badge: "bg-rose-50" },
   { field: "range_mi", label: "Range", unit: " mi", icon: <RangeIcon className="h-4 w-4" />, badge: "bg-sky-50" },
-  { field: "weight_lb", label: "Weight", unit: " lb", icon: <WeightIcon className="h-4 w-4" />, badge: "bg-violet-50" },
+  { field: "weight_lb", label: "Weight", unit: " lb", icon: <WeightIcon className="h-4 w-4" />, badge: "bg-violet-50", lowerBetter: true },
 ];
 
 // Per-frame-size geometry: normalize structures each per-size attribute as a
@@ -453,7 +455,9 @@ export function BikeDetail() {
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center gap-3">
+          {/* items-end so the Free shipping (and warranty) chip's bottom aligns to the
+              bottom of the large price, rather than centering against it. */}
+          <div className="flex flex-wrap items-end gap-3">
             <Price
               model={model}
               size="lg"
@@ -545,7 +549,7 @@ export function BikeDetail() {
       <section className="mt-6 card p-4">
         <h2 className="mb-3 font-semibold text-slate-800">{compareHeading}</h2>
         <div className="grid max-w-3xl gap-2.5 sm:grid-cols-2">
-          {PERCENTILE_FIELDS.map(({ field, label, unit, icon, badge }) => {
+          {PERCENTILE_FIELDS.map(({ field, label, unit, icon, badge, lowerBetter }) => {
             let stat = cohortStats[field];
             let v = valueOf(field);
             let u = unit;
@@ -574,7 +578,7 @@ export function BikeDetail() {
                     {v == null ? "—" : u === "$" ? `$${formatNumber(v)}` : `${formatNumber(v)}${u ?? ""}`}
                   </span>
                 </div>
-                <DistributionPlot stat={stat} value={v} unit={u} />
+                <DistributionPlot stat={stat} value={v} unit={u} lowerBetter={lowerBetter} />
               </div>
             );
           })}

@@ -1637,6 +1637,21 @@ def _finalize_motor(result, value):
     return result
 
 
+def _finalize_seatpost(result, value):
+    """Post-process a SEATPOST (after live OR cached/LLM parse): a dropper post's cable
+    routing (internal/stealth vs external) — run on both paths so cached parses get it
+    too. Gated to dropper seatposts; an explicit routing already present always wins."""
+    if not (result and result.get("_kind") == "seatpost"):
+        return result
+    if result.get("type") == "dropper" and "routing" not in result:
+        low = value.lower()
+        if re.search(r"stealth|\binternal\b", low):
+            result["routing"] = "internal"
+        elif re.search(r"\bexternal\b", low):
+            result["routing"] = "external"
+    return result
+
+
 # Kinds whose rule parser now extracts more structured fields (and far shorter Details)
 # than the cached LLM parse — prefer the rule parser for these (skip the LLM cache), so
 # big run-on Details (wheel size / travel / chainline / thru-axle / headtube …) get split out.
@@ -1655,7 +1670,8 @@ def parse_component(field: str, value, brand: str | None = None,
         key = _hashlib.sha256(f"{kind}|{brand}|{value}".encode()).hexdigest()[:20]
         hit = _LLM_COMPONENTS.get(key)
         if hit:
-            return _finalize_motor(_canon_material(_json.loads(_json.dumps(hit["parsed"]))), value)
+            return _finalize_seatpost(
+                _finalize_motor(_canon_material(_json.loads(_json.dumps(hit["parsed"]))), value), value)
     value = _dethousand(value)   # "1,200W" must parse as 1200, not 200
     sized = None if fn is _brake else _split_by_size(value)
     if fn is _brake:
@@ -1685,4 +1701,4 @@ def parse_component(field: str, value, brand: str | None = None,
         result["_kind"] = fn.__name__.lstrip("_")
         _strip_parsed_from_details(result)
         _canon_material(result)
-    return _finalize_motor(result, value)
+    return _finalize_seatpost(_finalize_motor(result, value), value)

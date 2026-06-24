@@ -88,7 +88,7 @@ export const COLUMN_CONFIG: Record<string, Column[]> = {
          c("angle_deg", "Angle", "°"), c("adjustable", "Adjustable"), c("material", "Material"),
          c("by_size", "By size"), MAKE, MODEL, EXTRA],
   seatpost: [c("type", "Type"), c("diameter_mm", "Diameter", " mm"), c("travel_mm", "Travel", " mm"),
-             c("length_mm", "Length", " mm"), c("offset_mm", "Offset", " mm"),
+             c("routing", "Routing"), c("length_mm", "Length", " mm"), c("offset_mm", "Offset", " mm"),
              c("material", "Material"), MAKE, MODEL, EXTRA],
   saddle: [c("width_mm", "Width", " mm"), MAKE, MODEL, EXTRA],
   grips: [c("material", "Material"), c("lock_on", "Lock-on"), c("ergonomic", "Ergonomic"), MAKE, MODEL, EXTRA],
