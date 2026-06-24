@@ -25,22 +25,22 @@ export function DistributionPlot({ stat, value, unit }: Props) {
   );
   return (
     <div>
-      <div className="relative h-5">
-        <div className="absolute top-1/2 h-1.5 w-full -translate-y-1/2 rounded-full bg-slate-100" />
+      <div className="relative h-4">
+        <div className="absolute top-1/2 h-1 w-full -translate-y-1/2 rounded-full bg-slate-100" />
         <div
-          className="absolute top-1/2 h-3 w-0.5 -translate-y-1/2 bg-brand-500"
+          className="absolute top-1/2 h-2.5 w-0.5 -translate-y-1/2 bg-brand-500"
           style={{ left: pct(p50) }}
           title={`median ${formatNumber(p50)}`}
         />
         {value != null && Number.isFinite(value) && (
           <div
-            className="absolute top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white bg-emerald-500 shadow"
+            className="absolute top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white bg-emerald-500 shadow"
             style={{ left: pct(value) }}
             title={`this bike: ${formatNumber(value)}`}
           />
         )}
       </div>
-      <div className="mt-2 flex items-start justify-between text-xs">
+      <div className="mt-1.5 flex items-start justify-between text-[11px]">
         <Stop v={min} label="Min" align="text-left" />
         <Stop v={p50} label="Median" align="text-center" />
         <Stop v={max} label="Max" align="text-right" />

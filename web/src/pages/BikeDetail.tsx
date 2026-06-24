@@ -44,12 +44,12 @@ const PERCENTILE_FIELDS: {
   icon: React.ReactNode;
   badge: string;
 }[] = [
-  { field: "price", label: "Price", unit: "$", icon: <TagIcon className="h-5 w-5" />, badge: "bg-blue-50" },
-  { field: "battery_wh", label: "Battery", unit: " Wh", icon: <BatteryIcon className="h-5 w-5" />, badge: "bg-emerald-50" },
-  { field: "motor_w", label: "Motor", unit: " W", icon: <MotorIcon className="h-5 w-5" />, badge: "bg-amber-50" },
-  { field: "torque_nm", label: "Torque", unit: " Nm", icon: <TorqueIcon className="h-5 w-5" />, badge: "bg-rose-50" },
-  { field: "range_mi", label: "Range", unit: " mi", icon: <RangeIcon className="h-5 w-5" />, badge: "bg-sky-50" },
-  { field: "weight_lb", label: "Weight", unit: " lb", icon: <WeightIcon className="h-5 w-5" />, badge: "bg-violet-50" },
+  { field: "price", label: "Price", unit: "$", icon: <TagIcon className="h-4 w-4" />, badge: "bg-blue-50" },
+  { field: "battery_wh", label: "Battery", unit: " Wh", icon: <BatteryIcon className="h-4 w-4" />, badge: "bg-emerald-50" },
+  { field: "motor_w", label: "Motor", unit: " W", icon: <MotorIcon className="h-4 w-4" />, badge: "bg-amber-50" },
+  { field: "torque_nm", label: "Torque", unit: " Nm", icon: <TorqueIcon className="h-4 w-4" />, badge: "bg-rose-50" },
+  { field: "range_mi", label: "Range", unit: " mi", icon: <RangeIcon className="h-4 w-4" />, badge: "bg-sky-50" },
+  { field: "weight_lb", label: "Weight", unit: " lb", icon: <WeightIcon className="h-4 w-4" />, badge: "bg-violet-50" },
 ];
 
 // Per-frame-size geometry: normalize structures each per-size attribute as a
@@ -544,7 +544,7 @@ export function BikeDetail() {
       {/* percentile context */}
       <section className="mt-6 card p-4">
         <h2 className="mb-3 font-semibold text-slate-800">{compareHeading}</h2>
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid max-w-3xl gap-2.5 sm:grid-cols-2">
           {PERCENTILE_FIELDS.map(({ field, label, unit, icon, badge }) => {
             let stat = cohortStats[field];
             let v = valueOf(field);
@@ -562,15 +562,15 @@ export function BikeDetail() {
               }
             }
             return (
-              <div key={field} className="rounded-xl border border-slate-200 p-4">
-                <div className="mb-3 flex items-center justify-between">
-                  <span className="flex items-center gap-2.5 font-semibold text-slate-800">
-                    <span className={`flex h-10 w-10 items-center justify-center rounded-full ${badge}`}>
+              <div key={field} className="rounded-lg border border-slate-200 p-3">
+                <div className="mb-2 flex items-center justify-between">
+                  <span className="flex items-center gap-2 text-sm font-semibold text-slate-800">
+                    <span className={`flex h-7 w-7 items-center justify-center rounded-full ${badge}`}>
                       {icon}
                     </span>
                     {label}
                   </span>
-                  <span className="text-xl font-bold text-slate-900">
+                  <span className="text-base font-bold text-slate-900">
                     {v == null ? "—" : u === "$" ? `$${formatNumber(v)}` : `${formatNumber(v)}${u ?? ""}`}
                   </span>
                 </div>
