@@ -48,6 +48,13 @@ const SORTS: { key: SortKey; label: string }[] = [
   { key: "parts_retail_desc", label: "Parts value (retail $) ↓" },
 ];
 
+// Cohort-relative sorts: each ranks a bike against its OWN product-type peers, so the
+// number only means something when the list is a single type. Across mixed types the
+// percentiles aren't comparable (a small cohort's leader scores ~100 and floats above
+// a genuinely longer-range bike that's merely mid-pack in a bigger cohort). So these
+// are only offered when exactly one Type facet is selected.
+const WITHIN_TYPE_SORTS = new Set<SortKey>(["value_desc", "range_score_desc", "power_desc"]);
+
 const last = Number.NEGATIVE_INFINITY;
 const typed = (m: Model, k: string) => (m.analysis?.specs_typed?.[k] as number | undefined);
 const score = (m: Model, k: string) => m.analysis?.scores?.[k];
@@ -182,6 +189,16 @@ export function Browse() {
     };
   }, [db, debounced, filters, models.length, showSoldOut, units]);
 
+  // A within-type sort is only meaningful when the list is scoped to one type.
+  const singleType = (filters.enums.product_types ?? []).length === 1;
+  // If such a sort is active but the Type facet isn't a single value (e.g. the user
+  // cleared it, or a stored sort loaded with no type), fall back to relevance so the
+  // grid never shows a misleading cross-cohort order.
+  useEffect(() => {
+    if (!singleType && WITHIN_TYPE_SORTS.has(sort)) setSort("relevance");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [singleType, sort]);
+
   const results = useMemo(() => {
     const list = ids.map((id) => byId.get(id)).filter((m): m is Model => !!m);
     return sortModels(list, sort);
@@ -228,11 +245,15 @@ export function Browse() {
           className="rounded-lg border-slate-300 text-sm shadow-sm focus:border-brand-500 focus:ring-brand-500"
           aria-label="Sort by"
         >
-          {SORTS.map((s) => (
-            <option key={s.key} value={s.key}>
-              {s.label}
-            </option>
-          ))}
+          {SORTS.map((s) => {
+            const locked = WITHIN_TYPE_SORTS.has(s.key) && !singleType;
+            return (
+              <option key={s.key} value={s.key} disabled={locked}>
+                {s.label}
+                {locked ? " — select one Type" : ""}
+              </option>
+            );
+          })}
         </select>
         <button type="button" className="btn-ghost lg:hidden" onClick={() => setDrawer(true)}>
           Filters
