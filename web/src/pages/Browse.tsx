@@ -31,7 +31,8 @@ type SortKey =
   | "value_desc"
   | "range_score_desc"
   | "power_desc"
-  | "parts_retail_desc";
+  | "parts_retail_desc"
+  | "discount_pct_desc";
 
 const SORTS: { key: SortKey; label: string }[] = [
   { key: "relevance", label: "Relevance" },
@@ -46,7 +47,12 @@ const SORTS: { key: SortKey; label: string }[] = [
   { key: "range_score_desc", label: "Range score (within type) ↓" },
   { key: "power_desc", label: "Power score (within type) ↓" },
   { key: "parts_retail_desc", label: "Parts value (retail $) ↓" },
+  { key: "discount_pct_desc", label: "Percent discounted ↓" },
 ];
+
+// Only meaningful when the list is scoped to sale bikes; shown only when the On Sale
+// filter is active (and an active one falls back to relevance if that filter is cleared).
+const SALE_SORTS = new Set<SortKey>(["discount_pct_desc"]);
 
 // Cohort-relative sorts: each ranks a bike against its OWN product-type peers, so the
 // number only means something when the list is a single type. Across mixed types the
@@ -89,6 +95,8 @@ function sortModels(models: Model[], key: SortKey): Model[] {
       return byDesc((m) => score(m, "power"));
     case "parts_retail_desc":
       return byDesc((m) => cq(m, "component_retail_value_usd"));
+    case "discount_pct_desc":
+      return byDesc((m) => m.pricing?.discount_pct ?? undefined);
   }
 }
 
@@ -189,15 +197,18 @@ export function Browse() {
     };
   }, [db, debounced, filters, models.length, showSoldOut, units]);
 
-  // A within-type sort is only meaningful when the list is scoped to one type.
+  // A within-type sort is only meaningful when the list is scoped to one type; the
+  // discount sort only when the list is scoped to sale bikes (the On Sale filter).
   const singleType = (filters.enums.product_types ?? []).length === 1;
-  // If such a sort is active but the Type facet isn't a single value (e.g. the user
-  // cleared it, or a stored sort loaded with no type), fall back to relevance so the
-  // grid never shows a misleading cross-cohort order.
+  const onSale = filters.bools.on_sale === true;
+  // If such a sort is active but its scope is gone (type cleared, On Sale toggled off,
+  // or a stored sort loaded without the scope), fall back to relevance so the grid never
+  // shows a misleading order.
   useEffect(() => {
     if (!singleType && WITHIN_TYPE_SORTS.has(sort)) setSort("relevance");
+    else if (!onSale && SALE_SORTS.has(sort)) setSort("relevance");
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [singleType, sort]);
+  }, [singleType, onSale, sort]);
 
   const results = useMemo(() => {
     const list = ids.map((id) => byId.get(id)).filter((m): m is Model => !!m);
@@ -245,7 +256,11 @@ export function Browse() {
           className="rounded-lg border-slate-300 text-sm shadow-sm focus:border-brand-500 focus:ring-brand-500"
           aria-label="Sort by"
         >
-          {SORTS.filter((s) => singleType || !WITHIN_TYPE_SORTS.has(s.key)).map((s) => (
+          {SORTS.filter(
+            (s) =>
+              (singleType || !WITHIN_TYPE_SORTS.has(s.key)) &&
+              (onSale || !SALE_SORTS.has(s.key)),
+          ).map((s) => (
             <option key={s.key} value={s.key}>
               {s.label}
             </option>

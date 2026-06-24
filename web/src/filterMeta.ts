@@ -26,7 +26,7 @@ export const RANGE_SECTIONS: { field: RangeField; label: string }[] = [
 
 export const BOOL_LABELS: Record<BoolField, string> = {
   is_new: "New",
-  on_sale: "On sale",
+  on_sale: "On Sale",
   ul_listed: "UL / EN certified",
   awd: "AWD (dual motor)",
   folding: "Folding",
