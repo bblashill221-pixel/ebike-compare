@@ -1,7 +1,7 @@
 {
   "brand": "himiway",
   "scraper": "scrape_himiway.py",
-  "generated_at": "2026-06-24T03:31:18.333558+00:00",
+  "generated_at": "2026-06-24T08:06:23.642473+00:00",
   "fields_audited": [
     "motor_w",
     "battery_wh",
@@ -17,10 +17,10 @@
     "drive_type"
   ],
   "summary": {
-    "models": 26,
-    "present": 288,
+    "models": 24,
+    "present": 258,
     "resolved": 8,
-    "open": 16,
+    "open": 22,
     "needs_image": 0,
     "unpublished": 0
   },
@@ -1166,7 +1166,7 @@
         "motor_w": {
           "status": "present",
           "source": "scraped",
-          "value": 500,
+          "value": 750,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
@@ -1220,11 +1220,11 @@
           "resolved_at": null
         },
         "fit_height_min_in": {
-          "status": "present",
-          "source": "scraped",
-          "value": 61,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "sensor_type": {
@@ -1735,11 +1735,11 @@
           "resolved_at": null
         },
         "fit_height_min_in": {
-          "status": "present",
-          "source": "scraped",
-          "value": 59,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "sensor_type": {
@@ -1838,11 +1838,11 @@
           "resolved_at": null
         },
         "fit_height_min_in": {
-          "status": "present",
-          "source": "scraped",
-          "value": 59,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "sensor_type": {
@@ -1941,11 +1941,11 @@
           "resolved_at": null
         },
         "fit_height_min_in": {
-          "status": "present",
-          "source": "scraped",
-          "value": 61,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "sensor_type": {
@@ -2044,11 +2044,11 @@
           "resolved_at": null
         },
         "fit_height_min_in": {
-          "status": "present",
-          "source": "scraped",
-          "value": 61,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "sensor_type": {
@@ -2147,217 +2147,11 @@
           "resolved_at": null
         },
         "fit_height_min_in": {
-          "status": "present",
-          "source": "scraped",
-          "value": 61,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "sensor_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "torque + cadence",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "brake_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hydraulic_disc",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "frame_material": {
-          "status": "present",
-          "source": "scraped",
-          "value": "aluminum",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "drive_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hub",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        }
-      }
-    },
-    {
-      "id": "himiway__d5-2",
-      "model": "Himiway D5 2.0 Series eBike",
-      "url": "https://himiwaybike.com/products/d5-2?variant=42167472619595",
-      "fields": {
-        "motor_w": {
-          "status": "present",
-          "source": "scraped",
-          "value": 750,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "battery_wh": {
-          "status": "present",
-          "source": "scraped",
-          "value": 720,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "torque_nm": {
-          "status": "present",
-          "source": "scraped",
-          "value": 90,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "max_speed_mph": {
-          "status": "present",
-          "source": "scraped",
-          "value": 28,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "range_mi": {
-          "status": "present",
-          "source": "scraped",
-          "value": 70,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "weight_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 92.0,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "max_load_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 400,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "fit_height_min_in": {
           "status": "open",
           "source": null,
           "value": null,
           "note": "",
-          "first_flagged": "2026-06-22",
-          "resolved_at": null
-        },
-        "sensor_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "torque + cadence",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "brake_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hydraulic_disc",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "frame_material": {
-          "status": "present",
-          "source": "scraped",
-          "value": "aluminum",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "drive_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hub",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        }
-      }
-    },
-    {
-      "id": "himiway__d5-2--step-thru",
-      "model": "Himiway D5 2.0 Series eBike — Step-Thru",
-      "url": "https://himiwaybike.com/products/d5-2?variant=42167473995851",
-      "fields": {
-        "motor_w": {
-          "status": "present",
-          "source": "scraped",
-          "value": 750,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "battery_wh": {
-          "status": "present",
-          "source": "scraped",
-          "value": 720,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "torque_nm": {
-          "status": "present",
-          "source": "scraped",
-          "value": 90,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "max_speed_mph": {
-          "status": "present",
-          "source": "scraped",
-          "value": 28,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "range_mi": {
-          "status": "present",
-          "source": "scraped",
-          "value": 70,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "weight_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 92.0,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "max_load_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 400,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "fit_height_min_in": {
-          "status": "open",
-          "source": null,
-          "value": null,
-          "note": "",
-          "first_flagged": "2026-06-22",
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "sensor_type": {
@@ -2456,11 +2250,11 @@
           "resolved_at": null
         },
         "fit_height_min_in": {
-          "status": "present",
-          "source": "scraped",
-          "value": 61,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "sensor_type": {
@@ -2559,11 +2353,11 @@
           "resolved_at": null
         },
         "fit_height_min_in": {
-          "status": "present",
-          "source": "scraped",
-          "value": 61,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "sensor_type": {

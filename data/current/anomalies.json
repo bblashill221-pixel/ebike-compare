@@ -1,14 +1,41 @@
 {
-  "generated_at": "2026-06-24T03:31:18.219047+00:00",
-  "model_count": 466,
-  "anomaly_count": 69,
+  "generated_at": "2026-06-24T08:06:23.551144+00:00",
+  "model_count": 450,
+  "anomaly_count": 66,
   "by_severity": {
-    "low": 69
+    "low": 66
   },
   "by_rule": {
-    "value_ratio_outlier": 69
+    "value_ratio_outlier": 66
   },
   "anomalies": [
+    {
+      "id": "buzz__buzz-beekeeper-electric-cargo-bike-e4023",
+      "brand": "buzz",
+      "model": "Beekeeper Cargo Ebike",
+      "url": "https://www.buzzbicycles.com/buzz-beekeeper-electric-cargo-bike-e4023/",
+      "rule": "value_ratio_outlier",
+      "severity": "low",
+      "detail": "price / parts-cost ratio = 0.988"
+    },
+    {
+      "id": "buzz__buzz-centris",
+      "brand": "buzz",
+      "model": "Centris 2 Folding Ebike",
+      "url": "https://www.buzzbicycles.com/buzz-centris/",
+      "rule": "value_ratio_outlier",
+      "severity": "low",
+      "detail": "price / parts-cost ratio = 0.889"
+    },
+    {
+      "id": "buzz__buzz-cerana2",
+      "brand": "buzz",
+      "model": "Cerana 2 Commuter Ebike",
+      "url": "https://www.buzzbicycles.com/buzz-cerana2/",
+      "rule": "value_ratio_outlier",
+      "severity": "low",
+      "detail": "price / parts-cost ratio = 0.952"
+    },
     {
       "id": "cannondale__adventure-neo-4",
       "brand": "cannondale",
@@ -88,7 +115,7 @@
       "url": "https://himiwaybike.com/products/all-terrain-electric-bike-d5pro?variant=41033767223371",
       "rule": "value_ratio_outlier",
       "severity": "low",
-      "detail": "price / parts-cost ratio = 0.855"
+      "detail": "price / parts-cost ratio = 0.95"
     },
     {
       "id": "himiway__all-terrain-electric-bike-d5prost",
@@ -97,7 +124,7 @@
       "url": "https://himiwaybike.com/products/all-terrain-electric-bike-d5prost?variant=41037280477259",
       "rule": "value_ratio_outlier",
       "severity": "low",
-      "detail": "price / parts-cost ratio = 0.855"
+      "detail": "price / parts-cost ratio = 0.95"
     },
     {
       "id": "himiway__d5-2-20--15ah-20ah",
@@ -106,7 +133,7 @@
       "url": "https://himiwaybike.com/products/d5-2-20?variant=42214515081291",
       "rule": "value_ratio_outlier",
       "severity": "low",
-      "detail": "price / parts-cost ratio = 0.797"
+      "detail": "price / parts-cost ratio = 0.731"
     },
     {
       "id": "himiway__electric-commuter-bike-a3",
@@ -133,7 +160,7 @@
       "url": "https://himiwaybike.com/products/himiway-d5?variant=42214505414731",
       "rule": "value_ratio_outlier",
       "severity": "low",
-      "detail": "price / parts-cost ratio = 0.796"
+      "detail": "price / parts-cost ratio = 0.73"
     },
     {
       "id": "himiway__himiway-d5-st--15ah-20ah",
@@ -142,7 +169,7 @@
       "url": "https://himiwaybike.com/products/himiway-d5-st?variant=42214511542347",
       "rule": "value_ratio_outlier",
       "severity": "low",
-      "detail": "price / parts-cost ratio = 0.796"
+      "detail": "price / parts-cost ratio = 0.73"
     },
     {
       "id": "himiway__kids-electric-bike",
@@ -208,15 +235,6 @@
       "detail": "price / parts-cost ratio = 0.814"
     },
     {
-      "id": "magicycle__magicycle-jaguarundi-48v-folding-step-thru-fat-tire-ebike-space-black",
-      "brand": "magicycle",
-      "model": "Jaguarundi 2.0 Torque Sensor Folding Fat Tire Ebike",
-      "url": "https://magicyclebike.com/products/magicycle-jaguarundi-48v-folding-step-thru-fat-tire-ebike-space-black",
-      "rule": "value_ratio_outlier",
-      "severity": "low",
-      "detail": "price / parts-cost ratio = 0.857"
-    },
-    {
       "id": "monarc__marker-high-step-ebike",
       "brand": "monarc",
       "model": "Marker High-Step Ebike",
@@ -266,24 +284,6 @@
       "brand": "ride1up",
       "model": "PORTOLA",
       "url": "https://ride1up.com/product/portola/?attribute_pa_battery-size=10-4ah",
-      "rule": "value_ratio_outlier",
-      "severity": "low",
-      "detail": "price / parts-cost ratio = 0.913"
-    },
-    {
-      "id": "ride1up__portola--13-4ah",
-      "brand": "ride1up",
-      "model": "PORTOLA — 13.4ah",
-      "url": "https://ride1up.com/product/portola/?attribute_pa_battery-size=13-4ah",
-      "rule": "value_ratio_outlier",
-      "severity": "low",
-      "detail": "price / parts-cost ratio = 0.967"
-    },
-    {
-      "id": "ride1up__portola-c1",
-      "brand": "ride1up",
-      "model": "PORTOLA 13.4AH (CLASS 1)",
-      "url": "https://ride1up.com/product/portola-c1/",
       "rule": "value_ratio_outlier",
       "severity": "low",
       "detail": "price / parts-cost ratio = 0.967"
@@ -602,33 +602,6 @@
       "rule": "value_ratio_outlier",
       "severity": "low",
       "detail": "price / parts-cost ratio = 0.534"
-    },
-    {
-      "id": "wired__wired-predator",
-      "brand": "wired",
-      "model": "WIRED Predator",
-      "url": "https://wiredebikes.com/products/wired-predator",
-      "rule": "value_ratio_outlier",
-      "severity": "low",
-      "detail": "price / parts-cost ratio = 0.876"
-    },
-    {
-      "id": "wired__wired-scout",
-      "brand": "wired",
-      "model": "Wired Scout",
-      "url": "https://wiredebikes.com/products/wired-scout",
-      "rule": "value_ratio_outlier",
-      "severity": "low",
-      "detail": "price / parts-cost ratio = 0.652"
-    },
-    {
-      "id": "wired__wired-warrior",
-      "brand": "wired",
-      "model": "Wired Warrior",
-      "url": "https://wiredebikes.com/products/wired-warrior",
-      "rule": "value_ratio_outlier",
-      "severity": "low",
-      "detail": "price / parts-cost ratio = 0.652"
     }
   ]
 }

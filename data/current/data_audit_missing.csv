@@ -1,7 +1,6 @@
 brand,model,field
 aventon,Level 4 ADV Ebike,motor_w
 aventon,Level 4 ADV Step-Through Ebike,motor_w
-aventon,Ramblas ADV Ebike,rack_load_lb
 blix,Packa Genie Cargo eBike,max_speed_mph
 blix,Packa Genie Cargo eBike,torque_nm
 blix,Packa Genie Cargo eBike — Dual Battery,max_speed_mph
@@ -36,9 +35,37 @@ cannondale,Adventure Neo Allroad Speed Low StepThru,max_load_lb
 cannondale,Adventure Neo Allroad Speed Low StepThru,torque_nm
 cannondale,FlyingV,max_load_lb
 cannondale,FlyingV,range_mi
+cannondale,Habit Neo 1,max_load_lb
+cannondale,Habit Neo 1,max_speed_mph
+cannondale,Habit Neo 1,motor_w
+cannondale,Habit Neo 1,range_mi
+cannondale,Habit Neo 1,warranty_years
+cannondale,Habit Neo 2,max_load_lb
+cannondale,Habit Neo 2,max_speed_mph
+cannondale,Habit Neo 2,motor_w
+cannondale,Habit Neo 2,range_mi
+cannondale,Habit Neo 2,warranty_years
+cannondale,Habit Neo 3,max_load_lb
+cannondale,Habit Neo 3,max_speed_mph
+cannondale,Habit Neo 3,motor_w
+cannondale,Habit Neo 3,range_mi
+cannondale,Habit Neo 3,warranty_years
+cannondale,Mavaro Neo 1 Low StepThru,battery_wh
+cannondale,Mavaro Neo 1 Low StepThru,cell_brand
+cannondale,Mavaro Neo 1 Low StepThru,display_type
+cannondale,Mavaro Neo 1 Low StepThru,drivetrain_type
 cannondale,Mavaro Neo 1 Low StepThru,max_load_lb
+cannondale,Mavaro Neo 2 Low StepThru,battery_wh
+cannondale,Mavaro Neo 2 Low StepThru,cell_brand
+cannondale,Mavaro Neo 2 Low StepThru,display_type
+cannondale,Mavaro Neo 2 Low StepThru,drivetrain_type
 cannondale,Mavaro Neo 2 Low StepThru,max_load_lb
+cannondale,Mavaro Neo 3 Low StepThru,battery_wh
+cannondale,Mavaro Neo 3 Low StepThru,cell_brand
+cannondale,Mavaro Neo 3 Low StepThru,display_type
+cannondale,Mavaro Neo 3 Low StepThru,drivetrain_type
 cannondale,Mavaro Neo 3 Low StepThru,max_load_lb
+cannondale,Mavaro Neo 3 Low StepThru,range_mi
 cannondale,Moterra 1,max_load_lb
 cannondale,Moterra 1,max_speed_mph
 cannondale,Moterra 1,range_mi
@@ -136,6 +163,9 @@ engwe,ENGWE E26 — Step-Thru,motor_w
 engwe,ENGWE E26 — Step-Thru,sensor_type
 engwe,ENGWE EP-2 Pro,fit_height_min_in
 engwe,ENGWE EP-2 Pro,frame_size_rider_range
+engwe,ENGWE L16,fit_height_min_in
+engwe,ENGWE L16,frame_size_rider_range
+engwe,ENGWE L16,sensor_type
 engwe,ENGWE L20 2.0,sensor_type
 engwe,ENGWE M20,sensor_type
 engwe,ENGWE M20 2.0,fit_height_min_in
@@ -169,7 +199,7 @@ engwe,X26/24/X20 — Dual Battery,frame_size_rider_range
 engwe,X26/24/X20 — Dual Battery,sensor_type
 engwe,X26/24/X20 — Dual Battery,suspension
 euphree,City Robin 3,torque_nm
-euphree,Solar Sparrow Belt,sensor_type
+euphree,Solar Sparrow Belt,max_load_lb
 euphree,Solar Sparrow Belt,torque_nm
 euphree,Stellar Falcon 2 Mid Step,torque_nm
 euphree,Stellar Falcon 2 Step Thru,torque_nm
@@ -205,16 +235,40 @@ giant,Talon E+,motor_w
 giant,Talon E+,warranty_years
 heybike,ALPHA,fit_height_min_in
 heybike,ALPHA,frame_size_rider_range
+heybike,ALPHA,max_speed_mph
 heybike,ALPHA — Step-Thru,fit_height_min_in
 heybike,ALPHA — Step-Thru,frame_size_rider_range
+heybike,ALPHA — Step-Thru,max_speed_mph
 heybike,Helio F,fit_height_min_in
 heybike,Helio F,frame_size_rider_range
+heybike,Hero — 1000W Rear Hub · Step-Over,max_speed_mph
+heybike,Hero — 1000W Rear Hub · Step-Thru,max_speed_mph
+heybike,Hero — 750W Mid-Drive · Step-Over,max_speed_mph
+heybike,Hero — 750W Mid-Drive · Step-Thru,max_speed_mph
+heybike,Horizon,max_speed_mph
 heybike,Horizon,sensor_type
 heybike,Hybrid,fit_height_min_in
 heybike,Hybrid,frame_size_rider_range
+heybike,Mars 2.0 750/1000W,drive_type
+heybike,Mars 2.0 750/1000W,max_speed_mph
+heybike,Mars 2.0 750/1000W,sensor_type
+heybike,Mars 2.0 750/1000W（Brad‘s Deal）,drive_type
+heybike,Mars 2.0 750/1000W（Brad‘s Deal）,max_speed_mph
+heybike,Mars 2.0 750/1000W（Brad‘s Deal）,sensor_type
+heybike,Mars 2.0 750/1000W（Brad‘s Deal） — 1000W (Peak 1800W),drive_type
+heybike,Mars 2.0 750/1000W（Brad‘s Deal） — 1000W (Peak 1800W),max_speed_mph
+heybike,Mars 2.0 750/1000W（Brad‘s Deal） — 1000W (Peak 1800W),sensor_type
+heybike,Mars 2.0 750/1000W（Slick deals）,drive_type
+heybike,Mars 2.0 750/1000W（Slick deals）,max_speed_mph
+heybike,Mars 2.0 750/1000W（Slick deals）,sensor_type
+heybike,Mars 2.0 750/1000W（Slick deals） — 1000W (Peak 1800W),drive_type
+heybike,Mars 2.0 750/1000W（Slick deals） — 1000W (Peak 1800W),max_speed_mph
+heybike,Mars 2.0 750/1000W（Slick deals） — 1000W (Peak 1800W),sensor_type
 heybike,Mars 3.0,fit_height_min_in
 heybike,Mars 3.0,frame_size_rider_range
+heybike,Mars 3.0,max_speed_mph
 heybike,Mars 3.0,sensor_type
+heybike,Ranger 3.0 Pro,max_speed_mph
 heybike,Ranger 3.0 Pro,sensor_type
 heybike,Saturn,fit_height_min_in
 heybike,Saturn,frame_material
@@ -232,16 +286,28 @@ himiway,D3(Cruiser) / Long Range Fat Tire Electric Bike,torque_nm
 himiway,D5 ST(Zebra ST) / All-terrain Electric Fat Bike,max_speed_mph
 himiway,D7 / Full Suspension Electric Hunting Bike,max_speed_mph
 himiway,Escape Pro / Long Range Moped-Style E-Bike ST,max_speed_mph
+himiway,Himiway A7 Commuter eBike,fit_height_min_in
+himiway,Himiway A7 Commuter eBike,frame_size_rider_range
 himiway,Himiway A7 Pro Commuter eBike,max_speed_mph
 himiway,Himiway C1 Kids eBike,drivetrain_type
 himiway,Himiway C1 Kids eBike,sensor_type
 himiway,Himiway C1 Kids eBike,torque_nm
 himiway,Himiway C5 Electric Motorbike,max_speed_mph
 himiway,Himiway C5 Electric Motorbike — Ultra,max_speed_mph
-himiway,Himiway D5 2.0 Series eBike,fit_height_min_in
-himiway,Himiway D5 2.0 Series eBike,frame_size_rider_range
-himiway,Himiway D5 2.0 Series eBike — Step-Thru,fit_height_min_in
-himiway,Himiway D5 2.0 Series eBike — Step-Thru,frame_size_rider_range
+himiway,"Himiway D5 2.0 20"" eBike",fit_height_min_in
+himiway,"Himiway D5 2.0 20"" eBike",frame_size_rider_range
+himiway,"Himiway D5 2.0 20"" eBike — 15Ah+20Ah",fit_height_min_in
+himiway,"Himiway D5 2.0 20"" eBike — 15Ah+20Ah",frame_size_rider_range
+himiway,Himiway D5 2.0 Camo eBike,fit_height_min_in
+himiway,Himiway D5 2.0 Camo eBike,frame_size_rider_range
+himiway,Himiway D5 2.0 ST eBike — Step-Thru · 15Ah,fit_height_min_in
+himiway,Himiway D5 2.0 ST eBike — Step-Thru · 15Ah,frame_size_rider_range
+himiway,Himiway D5 2.0 ST eBike — Step-Thru · 15Ah+20Ah,fit_height_min_in
+himiway,Himiway D5 2.0 ST eBike — Step-Thru · 15Ah+20Ah,frame_size_rider_range
+himiway,Himiway D5 2.0 eBike — Step-Over · 15Ah,fit_height_min_in
+himiway,Himiway D5 2.0 eBike — Step-Over · 15Ah,frame_size_rider_range
+himiway,Himiway D5 2.0 eBike — Step-Over · 15Ah+20Ah,fit_height_min_in
+himiway,Himiway D5 2.0 eBike — Step-Over · 15Ah+20Ah,frame_size_rider_range
 juiced,Scrambler,sensor_type
 juiced,Scrambler — Full Suspension,sensor_type
 lectric,Lectric XPress2,frame_material
@@ -253,6 +319,291 @@ magician,Alpha,max_speed_mph
 magician,Alpha — Step-Thru,max_speed_mph
 magician,Atlas,max_load_lb
 magician,Atlas,max_speed_mph
+mokwheel,Asphalt Ebike,battery_wh
+mokwheel,Asphalt Ebike,brake_type
+mokwheel,Asphalt Ebike,cell_brand
+mokwheel,Asphalt Ebike,display_type
+mokwheel,Asphalt Ebike,drive_type
+mokwheel,Asphalt Ebike,drivetrain_type
+mokwheel,Asphalt Ebike,frame_material
+mokwheel,Asphalt Ebike,max_load_lb
+mokwheel,Asphalt Ebike,max_speed_mph
+mokwheel,Asphalt Ebike,motor_w
+mokwheel,Asphalt Ebike,range_mi
+mokwheel,Asphalt Ebike,sensor_type
+mokwheel,Asphalt Ebike,suspension
+mokwheel,Asphalt Ebike,torque_nm
+mokwheel,Asphalt Ebike,weight_lb
+mokwheel,Asphalt ST Ebike,battery_wh
+mokwheel,Asphalt ST Ebike,brake_type
+mokwheel,Asphalt ST Ebike,cell_brand
+mokwheel,Asphalt ST Ebike,display_type
+mokwheel,Asphalt ST Ebike,drive_type
+mokwheel,Asphalt ST Ebike,drivetrain_type
+mokwheel,Asphalt ST Ebike,frame_material
+mokwheel,Asphalt ST Ebike,max_load_lb
+mokwheel,Asphalt ST Ebike,max_speed_mph
+mokwheel,Asphalt ST Ebike,motor_w
+mokwheel,Asphalt ST Ebike,range_mi
+mokwheel,Asphalt ST Ebike,sensor_type
+mokwheel,Asphalt ST Ebike,suspension
+mokwheel,Asphalt ST Ebike,torque_nm
+mokwheel,Asphalt ST Ebike,weight_lb
+mokwheel,Basalt 2.0 Ebike,battery_wh
+mokwheel,Basalt 2.0 Ebike,brake_type
+mokwheel,Basalt 2.0 Ebike,cell_brand
+mokwheel,Basalt 2.0 Ebike,display_type
+mokwheel,Basalt 2.0 Ebike,drive_type
+mokwheel,Basalt 2.0 Ebike,drivetrain_type
+mokwheel,Basalt 2.0 Ebike,frame_material
+mokwheel,Basalt 2.0 Ebike,max_load_lb
+mokwheel,Basalt 2.0 Ebike,max_speed_mph
+mokwheel,Basalt 2.0 Ebike,motor_w
+mokwheel,Basalt 2.0 Ebike,range_mi
+mokwheel,Basalt 2.0 Ebike,sensor_type
+mokwheel,Basalt 2.0 Ebike,suspension
+mokwheel,Basalt 2.0 Ebike,torque_nm
+mokwheel,Basalt 2.0 Ebike,weight_lb
+mokwheel,Basalt ST 2.0 Ebike,battery_wh
+mokwheel,Basalt ST 2.0 Ebike,brake_type
+mokwheel,Basalt ST 2.0 Ebike,cell_brand
+mokwheel,Basalt ST 2.0 Ebike,display_type
+mokwheel,Basalt ST 2.0 Ebike,drive_type
+mokwheel,Basalt ST 2.0 Ebike,drivetrain_type
+mokwheel,Basalt ST 2.0 Ebike,frame_material
+mokwheel,Basalt ST 2.0 Ebike,max_load_lb
+mokwheel,Basalt ST 2.0 Ebike,max_speed_mph
+mokwheel,Basalt ST 2.0 Ebike,motor_w
+mokwheel,Basalt ST 2.0 Ebike,range_mi
+mokwheel,Basalt ST 2.0 Ebike,sensor_type
+mokwheel,Basalt ST 2.0 Ebike,suspension
+mokwheel,Basalt ST 2.0 Ebike,torque_nm
+mokwheel,Basalt ST 2.0 Ebike,weight_lb
+mokwheel,FLINT Ebike,battery_wh
+mokwheel,FLINT Ebike,brake_type
+mokwheel,FLINT Ebike,cell_brand
+mokwheel,FLINT Ebike,display_type
+mokwheel,FLINT Ebike,drive_type
+mokwheel,FLINT Ebike,drivetrain_type
+mokwheel,FLINT Ebike,frame_material
+mokwheel,FLINT Ebike,max_load_lb
+mokwheel,FLINT Ebike,max_speed_mph
+mokwheel,FLINT Ebike,motor_w
+mokwheel,FLINT Ebike,range_mi
+mokwheel,FLINT Ebike,sensor_type
+mokwheel,FLINT Ebike,suspension
+mokwheel,FLINT Ebike,torque_nm
+mokwheel,FLINT Ebike,weight_lb
+mokwheel,FLINT PRO Ebike,battery_wh
+mokwheel,FLINT PRO Ebike,brake_type
+mokwheel,FLINT PRO Ebike,cell_brand
+mokwheel,FLINT PRO Ebike,display_type
+mokwheel,FLINT PRO Ebike,drive_type
+mokwheel,FLINT PRO Ebike,drivetrain_type
+mokwheel,FLINT PRO Ebike,frame_material
+mokwheel,FLINT PRO Ebike,max_load_lb
+mokwheel,FLINT PRO Ebike,max_speed_mph
+mokwheel,FLINT PRO Ebike,motor_w
+mokwheel,FLINT PRO Ebike,range_mi
+mokwheel,FLINT PRO Ebike,sensor_type
+mokwheel,FLINT PRO Ebike,suspension
+mokwheel,FLINT PRO Ebike,torque_nm
+mokwheel,FLINT PRO Ebike,weight_lb
+mokwheel,FLINT PRO ST Ebike,battery_wh
+mokwheel,FLINT PRO ST Ebike,brake_type
+mokwheel,FLINT PRO ST Ebike,cell_brand
+mokwheel,FLINT PRO ST Ebike,display_type
+mokwheel,FLINT PRO ST Ebike,drive_type
+mokwheel,FLINT PRO ST Ebike,drivetrain_type
+mokwheel,FLINT PRO ST Ebike,frame_material
+mokwheel,FLINT PRO ST Ebike,max_load_lb
+mokwheel,FLINT PRO ST Ebike,max_speed_mph
+mokwheel,FLINT PRO ST Ebike,motor_w
+mokwheel,FLINT PRO ST Ebike,range_mi
+mokwheel,FLINT PRO ST Ebike,sensor_type
+mokwheel,FLINT PRO ST Ebike,suspension
+mokwheel,FLINT PRO ST Ebike,torque_nm
+mokwheel,FLINT PRO ST Ebike,weight_lb
+mokwheel,FLINT ST Ebike,battery_wh
+mokwheel,FLINT ST Ebike,brake_type
+mokwheel,FLINT ST Ebike,cell_brand
+mokwheel,FLINT ST Ebike,display_type
+mokwheel,FLINT ST Ebike,drive_type
+mokwheel,FLINT ST Ebike,drivetrain_type
+mokwheel,FLINT ST Ebike,frame_material
+mokwheel,FLINT ST Ebike,max_load_lb
+mokwheel,FLINT ST Ebike,max_speed_mph
+mokwheel,FLINT ST Ebike,motor_w
+mokwheel,FLINT ST Ebike,range_mi
+mokwheel,FLINT ST Ebike,sensor_type
+mokwheel,FLINT ST Ebike,suspension
+mokwheel,FLINT ST Ebike,torque_nm
+mokwheel,FLINT ST Ebike,weight_lb
+mokwheel,Granite E-Trike,battery_wh
+mokwheel,Granite E-Trike,brake_type
+mokwheel,Granite E-Trike,cell_brand
+mokwheel,Granite E-Trike,display_type
+mokwheel,Granite E-Trike,drive_type
+mokwheel,Granite E-Trike,drivetrain_type
+mokwheel,Granite E-Trike,frame_material
+mokwheel,Granite E-Trike,max_load_lb
+mokwheel,Granite E-Trike,max_speed_mph
+mokwheel,Granite E-Trike,motor_w
+mokwheel,Granite E-Trike,range_mi
+mokwheel,Granite E-Trike,sensor_type
+mokwheel,Granite E-Trike,suspension
+mokwheel,Granite E-Trike,torque_nm
+mokwheel,Granite E-Trike,weight_lb
+mokwheel,Mesa Plus ST Ebike,battery_wh
+mokwheel,Mesa Plus ST Ebike,brake_type
+mokwheel,Mesa Plus ST Ebike,cell_brand
+mokwheel,Mesa Plus ST Ebike,display_type
+mokwheel,Mesa Plus ST Ebike,drive_type
+mokwheel,Mesa Plus ST Ebike,drivetrain_type
+mokwheel,Mesa Plus ST Ebike,frame_material
+mokwheel,Mesa Plus ST Ebike,max_load_lb
+mokwheel,Mesa Plus ST Ebike,max_speed_mph
+mokwheel,Mesa Plus ST Ebike,motor_w
+mokwheel,Mesa Plus ST Ebike,range_mi
+mokwheel,Mesa Plus ST Ebike,sensor_type
+mokwheel,Mesa Plus ST Ebike,suspension
+mokwheel,Mesa Plus ST Ebike,torque_nm
+mokwheel,Mesa Plus ST Ebike,weight_lb
+mokwheel,Obsidian 2.0 Ebike,battery_wh
+mokwheel,Obsidian 2.0 Ebike,brake_type
+mokwheel,Obsidian 2.0 Ebike,cell_brand
+mokwheel,Obsidian 2.0 Ebike,display_type
+mokwheel,Obsidian 2.0 Ebike,drive_type
+mokwheel,Obsidian 2.0 Ebike,drivetrain_type
+mokwheel,Obsidian 2.0 Ebike,frame_material
+mokwheel,Obsidian 2.0 Ebike,max_load_lb
+mokwheel,Obsidian 2.0 Ebike,max_speed_mph
+mokwheel,Obsidian 2.0 Ebike,motor_w
+mokwheel,Obsidian 2.0 Ebike,range_mi
+mokwheel,Obsidian 2.0 Ebike,sensor_type
+mokwheel,Obsidian 2.0 Ebike,suspension
+mokwheel,Obsidian 2.0 Ebike,torque_nm
+mokwheel,Obsidian 2.0 Ebike,weight_lb
+mokwheel,Obsidian ST 2.0 Ebike,battery_wh
+mokwheel,Obsidian ST 2.0 Ebike,brake_type
+mokwheel,Obsidian ST 2.0 Ebike,cell_brand
+mokwheel,Obsidian ST 2.0 Ebike,display_type
+mokwheel,Obsidian ST 2.0 Ebike,drive_type
+mokwheel,Obsidian ST 2.0 Ebike,drivetrain_type
+mokwheel,Obsidian ST 2.0 Ebike,frame_material
+mokwheel,Obsidian ST 2.0 Ebike,max_load_lb
+mokwheel,Obsidian ST 2.0 Ebike,max_speed_mph
+mokwheel,Obsidian ST 2.0 Ebike,motor_w
+mokwheel,Obsidian ST 2.0 Ebike,range_mi
+mokwheel,Obsidian ST 2.0 Ebike,sensor_type
+mokwheel,Obsidian ST 2.0 Ebike,suspension
+mokwheel,Obsidian ST 2.0 Ebike,torque_nm
+mokwheel,Obsidian ST 2.0 Ebike,weight_lb
+mokwheel,Onyx Ebike,battery_wh
+mokwheel,Onyx Ebike,brake_type
+mokwheel,Onyx Ebike,cell_brand
+mokwheel,Onyx Ebike,display_type
+mokwheel,Onyx Ebike,drive_type
+mokwheel,Onyx Ebike,drivetrain_type
+mokwheel,Onyx Ebike,frame_material
+mokwheel,Onyx Ebike,max_load_lb
+mokwheel,Onyx Ebike,max_speed_mph
+mokwheel,Onyx Ebike,motor_w
+mokwheel,Onyx Ebike,range_mi
+mokwheel,Onyx Ebike,sensor_type
+mokwheel,Onyx Ebike,suspension
+mokwheel,Onyx Ebike,torque_nm
+mokwheel,Onyx Ebike,weight_lb
+mokwheel,Onyx ST Ebike,battery_wh
+mokwheel,Onyx ST Ebike,brake_type
+mokwheel,Onyx ST Ebike,cell_brand
+mokwheel,Onyx ST Ebike,display_type
+mokwheel,Onyx ST Ebike,drive_type
+mokwheel,Onyx ST Ebike,drivetrain_type
+mokwheel,Onyx ST Ebike,frame_material
+mokwheel,Onyx ST Ebike,max_load_lb
+mokwheel,Onyx ST Ebike,max_speed_mph
+mokwheel,Onyx ST Ebike,motor_w
+mokwheel,Onyx ST Ebike,range_mi
+mokwheel,Onyx ST Ebike,sensor_type
+mokwheel,Onyx ST Ebike,suspension
+mokwheel,Onyx ST Ebike,torque_nm
+mokwheel,Onyx ST Ebike,weight_lb
+mokwheel,Scoria 2.0 Ebike,battery_wh
+mokwheel,Scoria 2.0 Ebike,brake_type
+mokwheel,Scoria 2.0 Ebike,cell_brand
+mokwheel,Scoria 2.0 Ebike,display_type
+mokwheel,Scoria 2.0 Ebike,drive_type
+mokwheel,Scoria 2.0 Ebike,drivetrain_type
+mokwheel,Scoria 2.0 Ebike,frame_material
+mokwheel,Scoria 2.0 Ebike,max_load_lb
+mokwheel,Scoria 2.0 Ebike,max_speed_mph
+mokwheel,Scoria 2.0 Ebike,motor_w
+mokwheel,Scoria 2.0 Ebike,range_mi
+mokwheel,Scoria 2.0 Ebike,sensor_type
+mokwheel,Scoria 2.0 Ebike,suspension
+mokwheel,Scoria 2.0 Ebike,torque_nm
+mokwheel,Scoria 2.0 Ebike,weight_lb
+mokwheel,Slate Ebike,battery_wh
+mokwheel,Slate Ebike,brake_type
+mokwheel,Slate Ebike,cell_brand
+mokwheel,Slate Ebike,display_type
+mokwheel,Slate Ebike,drive_type
+mokwheel,Slate Ebike,drivetrain_type
+mokwheel,Slate Ebike,frame_material
+mokwheel,Slate Ebike,max_load_lb
+mokwheel,Slate Ebike,max_speed_mph
+mokwheel,Slate Ebike,motor_w
+mokwheel,Slate Ebike,range_mi
+mokwheel,Slate Ebike,sensor_type
+mokwheel,Slate Ebike,suspension
+mokwheel,Slate Ebike,torque_nm
+mokwheel,Slate Ebike,weight_lb
+mokwheel,Tarmac Ebike,battery_wh
+mokwheel,Tarmac Ebike,brake_type
+mokwheel,Tarmac Ebike,cell_brand
+mokwheel,Tarmac Ebike,display_type
+mokwheel,Tarmac Ebike,drive_type
+mokwheel,Tarmac Ebike,drivetrain_type
+mokwheel,Tarmac Ebike,frame_material
+mokwheel,Tarmac Ebike,max_load_lb
+mokwheel,Tarmac Ebike,max_speed_mph
+mokwheel,Tarmac Ebike,motor_w
+mokwheel,Tarmac Ebike,range_mi
+mokwheel,Tarmac Ebike,sensor_type
+mokwheel,Tarmac Ebike,suspension
+mokwheel,Tarmac Ebike,torque_nm
+mokwheel,Tarmac Ebike,weight_lb
+mokwheel,Tarmac ST Ebike,battery_wh
+mokwheel,Tarmac ST Ebike,brake_type
+mokwheel,Tarmac ST Ebike,cell_brand
+mokwheel,Tarmac ST Ebike,display_type
+mokwheel,Tarmac ST Ebike,drive_type
+mokwheel,Tarmac ST Ebike,drivetrain_type
+mokwheel,Tarmac ST Ebike,frame_material
+mokwheel,Tarmac ST Ebike,max_load_lb
+mokwheel,Tarmac ST Ebike,max_speed_mph
+mokwheel,Tarmac ST Ebike,motor_w
+mokwheel,Tarmac ST Ebike,range_mi
+mokwheel,Tarmac ST Ebike,sensor_type
+mokwheel,Tarmac ST Ebike,suspension
+mokwheel,Tarmac ST Ebike,torque_nm
+mokwheel,Tarmac ST Ebike,weight_lb
+mokwheel,Tor Plus Ebike,battery_wh
+mokwheel,Tor Plus Ebike,brake_type
+mokwheel,Tor Plus Ebike,cell_brand
+mokwheel,Tor Plus Ebike,display_type
+mokwheel,Tor Plus Ebike,drive_type
+mokwheel,Tor Plus Ebike,drivetrain_type
+mokwheel,Tor Plus Ebike,frame_material
+mokwheel,Tor Plus Ebike,max_load_lb
+mokwheel,Tor Plus Ebike,max_speed_mph
+mokwheel,Tor Plus Ebike,motor_w
+mokwheel,Tor Plus Ebike,range_mi
+mokwheel,Tor Plus Ebike,sensor_type
+mokwheel,Tor Plus Ebike,suspension
+mokwheel,Tor Plus Ebike,torque_nm
+mokwheel,Tor Plus Ebike,weight_lb
 priority,PRIORITY CURRENT PLUS E-BIKE,max_load_lb
 priority,PRIORITY CURRENT PLUS E-BIKE,warranty_years
 priority,PRIORITY CURRENT PLUS E-BIKE — Enviolo,max_load_lb
@@ -277,6 +628,15 @@ priority,PRIORITY GLIDE E-BIKE,sensor_type
 priority,PRIORITY GLIDE E-BIKE,torque_nm
 priority,PRIORITY GLIDE E-BIKE,warranty_years
 priority,PRIORITY SKYLINE SMART.SHIFT E-BIKE,warranty_years
+ride1up,CF RACER1,max_load_lb
+ride1up,CF RACER1,weight_lb
+ride1up,ROADSTER V3,max_load_lb
+ride1up,ROADSTER V3,suspension
+ride1up,ROADSTER V3,weight_lb
+ride1up,ROADSTER V3 — Rigid,max_load_lb
+ride1up,ROADSTER V3 — Rigid,weight_lb
+ride1up,ROADSTER V3 — Suspension,max_load_lb
+ride1up,ROADSTER V3 — Suspension,weight_lb
 ride1up,Revv1 DRT,drivetrain_type
 ride1up,Revv1 DRT,motor_w
 ride1up,Revv1 EVO,drivetrain_type
@@ -284,26 +644,35 @@ ride1up,Revv1 EVO,frame_material
 ride1up,Revv1 FS,drivetrain_type
 ride1up,Revv1 FS,motor_w
 ride1up,Revv1 HT,drivetrain_type
-ride1up,Revv1 HT,frame_size_rider_range
 ride1up,Revv1 HT,motor_w
 ride1up,TRAILRUSH,max_load_lb
 ride1up,TRAILRUSH,weight_lb
 ride1up,VORSA — FT · Step-Over,frame_material
+ride1up,VORSA — FT · Step-Over,max_load_lb
 ride1up,VORSA — FT · Step-Thru,frame_material
+ride1up,VORSA — FT · Step-Thru,max_load_lb
 ride1up,VORSA — Lite · Step-Over,frame_material
+ride1up,VORSA — Lite · Step-Over,max_load_lb
 ride1up,VORSA — Lite · Step-Thru,frame_material
+ride1up,VORSA — Lite · Step-Thru,max_load_lb
 ride1up,VORSA — Standard · Step-Over,frame_material
+ride1up,VORSA — Standard · Step-Over,max_load_lb
 ride1up,VORSA — Standard · Step-Thru,frame_material
+ride1up,VORSA — Standard · Step-Thru,max_load_lb
 segway,Segway MUXI Cargo Electric Bike,fit_height_min_in
 segway,Segway MUXI Cargo Electric Bike,frame_material
 segway,Segway MUXI Cargo Electric Bike,frame_size_rider_range
 segway,Segway MUXI Cargo Electric Bike,warranty_years
-segway,Segway Myon Electric Bike,frame_material
-segway,Segway Myon Electric Bike,sensor_type
-segway,Segway Myon Electric Bike,warranty_years
-segway,Segway Myon S Electric Bike,frame_material
-segway,Segway Myon S Electric Bike,sensor_type
-segway,Segway Myon S Electric Bike,warranty_years
+segway,Segway Myon Electric Bike (M/L),fit_height_min_in
+segway,Segway Myon Electric Bike (M/L),frame_material
+segway,Segway Myon Electric Bike (M/L),frame_size_rider_range
+segway,Segway Myon Electric Bike (M/L),sensor_type
+segway,Segway Myon Electric Bike (M/L),warranty_years
+segway,Segway Myon Electric Bike (XS/S),fit_height_min_in
+segway,Segway Myon Electric Bike (XS/S),frame_material
+segway,Segway Myon Electric Bike (XS/S),frame_size_rider_range
+segway,Segway Myon Electric Bike (XS/S),sensor_type
+segway,Segway Myon Electric Bike (XS/S),warranty_years
 segway,Segway Xafari Fat Tire eBike,display_type
 segway,Segway Xafari Fat Tire eBike,frame_material
 segway,Segway Xafari Fat Tire eBike,sensor_type
@@ -315,22 +684,8 @@ segway,Segway Xyber Electric Bike,sensor_type
 specialized,Haul LT,fit_height_min_in
 specialized,Haul LT,frame_size_rider_range
 specialized,Haul LT,torque_nm
-specialized,Haul ST,fit_height_min_in
-specialized,Haul ST,frame_size_rider_range
-specialized,Haul ST,max_load_lb
-specialized,Haul ST,torque_nm
-specialized,Levo 4 EVO Comp,max_load_lb
-specialized,Levo 4 EVO Comp,max_speed_mph
-specialized,Levo 4 EVO Comp,range_mi
-specialized,Levo 4 EVO Pro,max_load_lb
-specialized,Levo 4 EVO Pro,max_speed_mph
-specialized,Levo 4 EVO Pro,range_mi
 specialized,S-Works Levo 4 X,max_speed_mph
 specialized,S-Works Levo 4 X,range_mi
-specialized,S-Works Turbo Creo 2,max_load_lb
-specialized,S-Works Turbo Creo 2,max_speed_mph
-specialized,S-Works Turbo Creo 2,range_mi
-specialized,S-Works Turbo Creo 2,sensor_type
 specialized,S-Works Turbo Kenevo SL 2 Frameset,brake_type
 specialized,S-Works Turbo Kenevo SL 2 Frameset,max_load_lb
 specialized,S-Works Turbo Kenevo SL 2 Frameset,range_mi
@@ -342,9 +697,6 @@ specialized,S-Works Turbo Levo 4 Frameset,brake_type
 specialized,S-Works Turbo Levo 4 Frameset,max_load_lb
 specialized,S-Works Turbo Levo 4 Frameset,max_speed_mph
 specialized,S-Works Turbo Levo 4 Frameset,range_mi
-specialized,S-Works Turbo Levo 4 LTD,max_load_lb
-specialized,S-Works Turbo Levo 4 LTD,max_speed_mph
-specialized,S-Works Turbo Levo 4 LTD,range_mi
 specialized,S-Works Turbo Levo R,max_load_lb
 specialized,S-Works Turbo Levo R,max_speed_mph
 specialized,S-Works Turbo Levo R,range_mi
@@ -357,24 +709,10 @@ specialized,S-Works Turbo Levo SL 2 Frameset,max_load_lb
 specialized,S-Works Turbo Levo SL 2 Frameset,max_speed_mph
 specialized,S-Works Turbo Levo SL 2 Frameset,range_mi
 specialized,S-Works Turbo Levo SL 2 Frameset,sensor_type
-specialized,Turbo Como 4.0,max_load_lb
-specialized,Turbo Como 4.0,motor_w
-specialized,Turbo Como 4.0 IGH,max_load_lb
-specialized,Turbo Como 4.0 IGH,weight_lb
-specialized,Turbo Como 5.0 IGH,max_load_lb
-specialized,Turbo Como 5.0 IGH,motor_w
-specialized,Turbo Creo 2 Comp,max_load_lb
 specialized,Turbo Creo 2 Comp,max_load_lb
 specialized,Turbo Creo 2 Comp,max_speed_mph
-specialized,Turbo Creo 2 Comp,max_speed_mph
-specialized,Turbo Creo 2 Comp,range_mi
 specialized,Turbo Creo 2 Comp,range_mi
 specialized,Turbo Creo 2 Comp,sensor_type
-specialized,Turbo Creo 2 Comp,sensor_type
-specialized,Turbo Creo 2 Comp E5,max_load_lb
-specialized,Turbo Creo 2 Comp E5,max_speed_mph
-specialized,Turbo Creo 2 Comp E5,range_mi
-specialized,Turbo Creo 2 Comp E5,sensor_type
 specialized,Turbo Creo 2 Expert,max_load_lb
 specialized,Turbo Creo 2 Expert,max_speed_mph
 specialized,Turbo Creo 2 Expert,range_mi
@@ -385,9 +723,6 @@ specialized,Turbo Kenevo SL 2 Comp,sensor_type
 specialized,Turbo Kenevo SL 2 Expert,max_load_lb
 specialized,Turbo Kenevo SL 2 Expert,range_mi
 specialized,Turbo Kenevo SL 2 Expert,sensor_type
-specialized,Turbo Kenevo SL 2 Öhlins Coil,max_load_lb
-specialized,Turbo Kenevo SL 2 Öhlins Coil,range_mi
-specialized,Turbo Kenevo SL 2 Öhlins Coil,sensor_type
 specialized,Turbo Levo 4 Alloy,max_load_lb
 specialized,Turbo Levo 4 Alloy,max_speed_mph
 specialized,Turbo Levo 4 Alloy,range_mi
@@ -412,18 +747,6 @@ specialized,Turbo Levo R Comp Alloy,range_mi
 specialized,Turbo Levo R Expert,max_load_lb
 specialized,Turbo Levo R Expert,max_speed_mph
 specialized,Turbo Levo R Expert,range_mi
-specialized,Turbo Levo SL 2 Comp,max_load_lb
-specialized,Turbo Levo SL 2 Comp,max_speed_mph
-specialized,Turbo Levo SL 2 Comp,range_mi
-specialized,Turbo Levo SL 2 Comp,sensor_type
-specialized,Turbo Levo SL 2 Comp Alloy,max_load_lb
-specialized,Turbo Levo SL 2 Comp Alloy,max_speed_mph
-specialized,Turbo Levo SL 2 Comp Alloy,range_mi
-specialized,Turbo Levo SL 2 Comp Alloy,sensor_type
-specialized,Turbo Levo SL 2 Expert,max_load_lb
-specialized,Turbo Levo SL 2 Expert,max_speed_mph
-specialized,Turbo Levo SL 2 Expert,range_mi
-specialized,Turbo Levo SL 2 Expert,sensor_type
 specialized,Turbo Levo SL 2 Expert Di2,max_load_lb
 specialized,Turbo Levo SL 2 Expert Di2,max_speed_mph
 specialized,Turbo Levo SL 2 Expert Di2,range_mi
@@ -453,17 +776,9 @@ specialized,Turbo Vado 3 X 6.0,max_load_lb
 specialized,Turbo Vado 3 X 6.0,max_speed_mph
 specialized,Turbo Vado 3 X 6.0,range_mi
 specialized,Turbo Vado 4.0,max_load_lb
-specialized,Turbo Vado 4.0 Step-Through,max_load_lb
-specialized,Turbo Vado 5.0 IGH,max_load_lb
 specialized,Turbo Vado 5.0 IGH Step-Through,max_load_lb
-specialized,Turbo Vado SL 2 4.0,max_load_lb
-specialized,Turbo Vado SL 2 4.0,range_mi
-specialized,Turbo Vado SL 2 4.0,sensor_type
 specialized,Turbo Vado SL 2 4.0 EQ,max_load_lb
 specialized,Turbo Vado SL 2 4.0 EQ,sensor_type
-specialized,Turbo Vado SL 2 4.0 Step-Through,max_load_lb
-specialized,Turbo Vado SL 2 4.0 Step-Through,range_mi
-specialized,Turbo Vado SL 2 4.0 Step-Through,sensor_type
 specialized,Turbo Vado SL 2 4.0 Step-Through EQ,max_load_lb
 specialized,Turbo Vado SL 2 4.0 Step-Through EQ,range_mi
 specialized,Turbo Vado SL 2 4.0 Step-Through EQ,sensor_type
@@ -473,16 +788,6 @@ specialized,Turbo Vado SL 2 5.0 EQ,sensor_type
 specialized,Turbo Vado SL 2 5.0 Step-Through EQ,max_load_lb
 specialized,Turbo Vado SL 2 5.0 Step-Through EQ,range_mi
 specialized,Turbo Vado SL 2 5.0 Step-Through EQ,sensor_type
-specialized,Turbo Vado SL 2 6.0 Carbon,max_load_lb
-specialized,Turbo Vado SL 2 6.0 Carbon,range_mi
-specialized,Turbo Vado SL 2 6.0 Carbon,sensor_type
-specialized,Turbo Vado SL 2 6.0 EQ Carbon,max_load_lb
-specialized,Turbo Vado SL 2 6.0 EQ Carbon,range_mi
-specialized,Turbo Vado SL 2 6.0 EQ Carbon,sensor_type
-specialized,Vado SL 2 LTD,max_load_lb
-specialized,Vado SL 2 LTD,max_speed_mph
-specialized,Vado SL 2 LTD,range_mi
-specialized,Vado SL 2 LTD,sensor_type
 trek,Charter+ 4S,max_load_lb
 trek,Charter+ 4S,warranty_years
 trek,Charter+ 4S Lowstep,max_load_lb
@@ -548,9 +853,6 @@ trek,Fuel EXe 8 GX AXS T-Type,weight_lb
 trek,Fuel+ EX 5 Gen 2,max_load_lb
 trek,Fuel+ EX 5 Gen 2,range_mi
 trek,Fuel+ EX 5 Gen 2,warranty_years
-trek,Fuel+ EX 8 Gen 2,max_load_lb
-trek,Fuel+ EX 8 Gen 2,range_mi
-trek,Fuel+ EX 8 Gen 2,warranty_years
 trek,Fuel+ EX 9.7 Gen 2,max_load_lb
 trek,Fuel+ EX 9.7 Gen 2,range_mi
 trek,Fuel+ EX 9.7 Gen 2,warranty_years
@@ -662,7 +964,9 @@ trek,Verve+ 4S Gen 3,max_load_lb
 trek,Verve+ 4S Gen 3,warranty_years
 trek,Verve+ 4S Lowstep Gen 3,max_load_lb
 trek,Verve+ 4S Lowstep Gen 3,warranty_years
+urtopia,Carbon 1 Pro E-Bike,frame_size_rider_range
 urtopia,Carbon 1 Step-Thru E-Bike,suspension
+urtopia,Carbon Classic E-Bike,frame_size_rider_range
 urtopia,Carbon Classic E-Bike,suspension
 urtopia,Carbon Classic Step-Thru E-Bike,suspension
 urtopia,Carbon Fold 1 E-Bike,suspension
@@ -714,6 +1018,54 @@ wallke,2026 Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery — 60Ah,sensor_typ
 wallke,2026 Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery — 62Ah,sensor_type
 wallke,2026 Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery — 82Ah,sensor_type
 wallke,WALLKE Titan X1 Carbon Fiber Frame | 3800W Cruiser Ebike,sensor_type
+wired,WIRED Predator,battery_wh
+wired,WIRED Predator,brake_type
+wired,WIRED Predator,display_type
+wired,WIRED Predator,drivetrain_type
+wired,WIRED Predator,frame_material
+wired,WIRED Predator,max_speed_mph
+wired,WIRED Predator,range_mi
+wired,WIRED Predator,sensor_type
+wired,WIRED Predator,suspension
+wired,WIRED Predator,weight_lb
+wired,WIRED Raven,battery_wh
+wired,WIRED Raven,brake_type
+wired,WIRED Raven,display_type
+wired,WIRED Raven,drivetrain_type
 wired,WIRED Raven,fit_height_min_in
+wired,WIRED Raven,frame_material
 wired,WIRED Raven,frame_size_rider_range
 wired,WIRED Raven,max_load_lb
+wired,WIRED Raven,max_speed_mph
+wired,WIRED Raven,range_mi
+wired,WIRED Raven,suspension
+wired,WIRED Raven,weight_lb
+wired,WIRED Viper,battery_wh
+wired,WIRED Viper,brake_type
+wired,WIRED Viper,display_type
+wired,WIRED Viper,drivetrain_type
+wired,WIRED Viper,frame_material
+wired,WIRED Viper,max_speed_mph
+wired,WIRED Viper,motor_w
+wired,WIRED Viper,sensor_type
+wired,WIRED Viper,suspension
+wired,WIRED Viper,weight_lb
+wired,Wired Scout,battery_wh
+wired,Wired Scout,brake_type
+wired,Wired Scout,display_type
+wired,Wired Scout,drivetrain_type
+wired,Wired Scout,frame_material
+wired,Wired Scout,max_speed_mph
+wired,Wired Scout,range_mi
+wired,Wired Scout,sensor_type
+wired,Wired Scout,torque_nm
+wired,Wired Scout,weight_lb
+wired,Wired Warrior,battery_wh
+wired,Wired Warrior,brake_type
+wired,Wired Warrior,display_type
+wired,Wired Warrior,drivetrain_type
+wired,Wired Warrior,frame_material
+wired,Wired Warrior,max_speed_mph
+wired,Wired Warrior,range_mi
+wired,Wired Warrior,sensor_type
+wired,Wired Warrior,weight_lb

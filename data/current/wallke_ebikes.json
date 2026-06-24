@@ -2,7 +2,7 @@
   "source": "https://wallkeebike.com",
   "logo": "https://wallkeebike.com/cdn/shop/files/wallke-logo.png",
   "collection": "all-e-bike",
-  "scraped_at": "2026-06-11T00:01:17.648940+00:00",
+  "scraped_at": "2026-06-24T04:52:55.424405+00:00",
   "model_count": 14,
   "models": [
     {
@@ -440,7 +440,7 @@
           },
           "price": 1499.0,
           "regular_price": 2299.0,
-          "available": true,
+          "available": false,
           "sku": "H7U-55A-BL",
           "variant_id": 44882489966764,
           "color": {
@@ -738,7 +738,7 @@
           "US": "Upgraded version Bag",
           "Mirror": "$59",
           "Part Type": "Required Photos",
-          "Max Range": "Up to 180 miles",
+          "Max Range": "Up to 130 miles",
           "Torque": "150 Nm",
           "Motor": "2000W (4000W peak)",
           "Rider Height": "5'3\" - 6'5\""
@@ -753,11 +753,19 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'3\"",
+          "height_max": "6'5\""
+        }
+      ],
       "geometry": {
         "Wheelbase": "53.1\" (135cm)",
         "Reach": "44.2\"(112cm)",
         "Minimum Seat Height": "33.9\"(86cm)",
-        "Maximum Seat Height": "44.29\"(112.5cm)"
+        "Maximum Seat Height": "44.29\"(112.5cm)",
+        "Rider Height": "5'3\" - 6'5\""
       },
       "available_options": [
         {
@@ -797,23 +805,16 @@
           ]
         }
       ],
-      "frame_style": "Step-Thru",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'3\"",
-          "height_max": "6'5\""
-        }
-      ]
+      "frame_style": "Step-Thru"
     },
     {
       "model": "2026 WALLKE H9 Ultra Folding | Off-Grid Power Station E-Bike with Torque Sensor, 37mph Speed, 55/77Ah Battery Options",
       "handle": "wallke-h9-ultra-folding-off-grid-powerstorage-e-bike",
       "url": "https://wallkeebike.com/products/wallke-h9-ultra-folding-off-grid-powerstorage-e-bike",
       "product_types": [
-        "Folding"
+        "Commuter / Urban"
       ],
-      "price_from": 1799.0,
+      "price_from": 2399.0,
       "regular_price": 3398.0,
       "currency": "USD",
       "options": {
@@ -822,9 +823,9 @@
           "77Ah（55Ah+22Ah）"
         ],
         "Free Gift": [
+          "(New Bag & Mirrior)",
           "With Trailer",
-          "Free Blue Trailer",
-          "(New Bag & Mirrior)"
+          "Free Blue Trailer"
         ],
         "colors": [
           {
@@ -846,10 +847,28 @@
           "options": {
             "Battery": "55Ah",
             "Color": "Black",
+            "Free Gift": "(New Bag & Mirrior)"
+          },
+          "price": 2399.0,
+          "regular_price": null,
+          "available": false,
+          "sku": "H9U-55A-BK",
+          "variant_id": 46326946332844,
+          "color": {
+            "name": "Black",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/UL-H9Ultra-Black.webp?v=1778064544"
+          }
+        },
+        {
+          "options": {
+            "Battery": "55Ah",
+            "Color": "Black",
             "Free Gift": "With Trailer"
           },
-          "price": 1899.0,
-          "regular_price": 2898.0,
+          "price": 2898.0,
+          "regular_price": null,
           "available": false,
           "sku": "H9U-55A-BK",
           "variant_id": 45027429187756,
@@ -866,7 +885,7 @@
             "Color": "Black",
             "Free Gift": "Free Blue Trailer"
           },
-          "price": 1799.0,
+          "price": 2399.0,
           "regular_price": 3398.0,
           "available": false,
           "sku": "H9U-55A-BK",
@@ -884,9 +903,9 @@
             "Color": "Medium Blue",
             "Free Gift": "(New Bag & Mirrior)"
           },
-          "price": 1899.0,
-          "regular_price": 2399.0,
-          "available": true,
+          "price": 2399.0,
+          "regular_price": null,
+          "available": false,
           "sku": "H9U-55A-BL",
           "variant_id": 44881787060396,
           "color": {
@@ -902,8 +921,8 @@
             "Color": "Medium Blue",
             "Free Gift": "With Trailer"
           },
-          "price": 1899.0,
-          "regular_price": 2898.0,
+          "price": 2898.0,
+          "regular_price": null,
           "available": false,
           "sku": "H9U-55A-BL",
           "variant_id": 45027429220524,
@@ -920,7 +939,7 @@
             "Color": "Medium Blue",
             "Free Gift": "Free Blue Trailer"
           },
-          "price": 1799.0,
+          "price": 2399.0,
           "regular_price": 3398.0,
           "available": false,
           "sku": "H9U-55A-BL",
@@ -930,24 +949,6 @@
             "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/UL-H9Ultra-Blue1.webp?v=1780386028"
-          }
-        },
-        {
-          "options": {
-            "Battery": "55Ah",
-            "Color": "Black",
-            "Free Gift": "(New Bag & Mirrior)"
-          },
-          "price": 1799.0,
-          "regular_price": 2399.0,
-          "available": false,
-          "sku": "H9U-55A-BK",
-          "variant_id": 46326946332844,
-          "color": {
-            "name": "Black",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/UL-H9Ultra-Black.webp?v=1778064544"
           }
         }
       ],
@@ -1001,11 +1002,19 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'3\"",
+          "height_max": "6'5\""
+        }
+      ],
       "geometry": {
         "Wheelbase": "53.1\" (135cm)",
         "Reach": "18.22\"(46.3cm)",
         "Minimum Seat Height": "33.9\"(86cm)",
-        "Maximum Seat Height": "44.29\"(112.5cm)"
+        "Maximum Seat Height": "44.29\"(112.5cm)",
+        "Rider Height": "5'3\" - 6'5\""
       },
       "available_options": [
         {
@@ -1014,14 +1023,14 @@
           "choices": [
             {
               "value": "55Ah",
-              "price": 1799.0,
+              "price": 2399.0,
               "price_delta": 0.0,
               "free": true
             },
             {
               "value": "77Ah（55Ah+22Ah）",
-              "price": 2199.0,
-              "price_delta": 400.0,
+              "price": 2979.0,
+              "price_delta": 580.0,
               "free": false
             }
           ]
@@ -1031,20 +1040,20 @@
           "type": "variant",
           "choices": [
             {
-              "value": "With Trailer",
-              "price": 1899.0,
-              "price_delta": 100.0,
-              "free": false
-            },
-            {
-              "value": "Free Blue Trailer",
-              "price": 1799.0,
+              "value": "(New Bag & Mirrior)",
+              "price": 2399.0,
               "price_delta": 0.0,
               "free": true
             },
             {
-              "value": "(New Bag & Mirrior)",
-              "price": 1799.0,
+              "value": "With Trailer",
+              "price": 2898.0,
+              "price_delta": 499.0,
+              "free": false
+            },
+            {
+              "value": "Free Blue Trailer",
+              "price": 2399.0,
               "price_delta": 0.0,
               "free": true
             }
@@ -1052,23 +1061,16 @@
         }
       ],
       "tier": "55Ah",
-      "family_id": "wallke__wallke-h9-ultra-folding-off-grid-powerstorage-e-bike",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'3\"",
-          "height_max": "6'5\""
-        }
-      ]
+      "family_id": "wallke__wallke-h9-ultra-folding-off-grid-powerstorage-e-bike"
     },
     {
       "model": "2026 WALLKE H9 Ultra Folding | Off-Grid Power Station E-Bike with Torque Sensor, 37mph Speed, 55/77Ah Battery Options — 77Ah",
       "handle": "wallke-h9-ultra-folding-off-grid-powerstorage-e-bike--77ah",
       "url": "https://wallkeebike.com/products/wallke-h9-ultra-folding-off-grid-powerstorage-e-bike",
       "product_types": [
-        "Folding"
+        "Commuter / Urban"
       ],
-      "price_from": 2199.0,
+      "price_from": 2979.0,
       "regular_price": 3479.0,
       "currency": "USD",
       "options": {
@@ -1077,9 +1079,9 @@
           "77Ah（55Ah+22Ah）"
         ],
         "Free Gift": [
+          "(New Bag & Mirrior)",
           "With Trailer",
-          "Free Blue Trailer",
-          "(New Bag & Mirrior)"
+          "Free Blue Trailer"
         ],
         "colors": [
           {
@@ -1103,8 +1105,8 @@
             "Color": "Black",
             "Free Gift": "(New Bag & Mirrior)"
           },
-          "price": 2199.0,
-          "regular_price": 2979.0,
+          "price": 2979.0,
+          "regular_price": null,
           "available": false,
           "sku": "H9U-55A-BK+H9-22ABtyKit",
           "variant_id": 45112944066732,
@@ -1121,8 +1123,8 @@
             "Color": "Black",
             "Free Gift": "With Trailer"
           },
-          "price": 2299.0,
-          "regular_price": 3478.0,
+          "price": 3478.0,
+          "regular_price": null,
           "available": false,
           "sku": "H9U-55A-BK+H9-22ABtyKit",
           "variant_id": 45112944099500,
@@ -1139,7 +1141,7 @@
             "Color": "Black",
             "Free Gift": "Free Blue Trailer"
           },
-          "price": 2199.0,
+          "price": 2979.0,
           "regular_price": 3479.0,
           "available": false,
           "sku": "H9U-55A-BK+H9-22ABtyKit",
@@ -1157,8 +1159,8 @@
             "Color": "Medium Blue",
             "Free Gift": "(New Bag & Mirrior)"
           },
-          "price": 2199.0,
-          "regular_price": 2979.0,
+          "price": 2979.0,
+          "regular_price": null,
           "available": false,
           "sku": "H9U-55A-BL+H9-22ABtyKit",
           "variant_id": 45112944132268,
@@ -1175,8 +1177,8 @@
             "Color": "Medium Blue",
             "Free Gift": "With Trailer"
           },
-          "price": 2299.0,
-          "regular_price": 3478.0,
+          "price": 3478.0,
+          "regular_price": null,
           "available": false,
           "sku": "H9U-55A-BL+H9-22ABtyKit",
           "variant_id": 45112944165036,
@@ -1193,7 +1195,7 @@
             "Color": "Medium Blue",
             "Free Gift": "Free Blue Trailer"
           },
-          "price": 2199.0,
+          "price": 2979.0,
           "regular_price": 3479.0,
           "available": false,
           "sku": "H9U-55A-BL+H9-22ABtyKit",
@@ -1256,11 +1258,19 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'3\"",
+          "height_max": "6'5\""
+        }
+      ],
       "geometry": {
         "Wheelbase": "53.1\" (135cm)",
         "Reach": "18.22\"(46.3cm)",
         "Minimum Seat Height": "33.9\"(86cm)",
-        "Maximum Seat Height": "44.29\"(112.5cm)"
+        "Maximum Seat Height": "44.29\"(112.5cm)",
+        "Rider Height": "5'3\" - 6'5\""
       },
       "available_options": [
         {
@@ -1269,14 +1279,14 @@
           "choices": [
             {
               "value": "55Ah",
-              "price": 1799.0,
+              "price": 2399.0,
               "price_delta": 0.0,
               "free": true
             },
             {
               "value": "77Ah（55Ah+22Ah）",
-              "price": 2199.0,
-              "price_delta": 400.0,
+              "price": 2979.0,
+              "price_delta": 580.0,
               "free": false
             }
           ]
@@ -1286,20 +1296,20 @@
           "type": "variant",
           "choices": [
             {
-              "value": "With Trailer",
-              "price": 1899.0,
-              "price_delta": 100.0,
-              "free": false
-            },
-            {
-              "value": "Free Blue Trailer",
-              "price": 1799.0,
+              "value": "(New Bag & Mirrior)",
+              "price": 2399.0,
               "price_delta": 0.0,
               "free": true
             },
             {
-              "value": "(New Bag & Mirrior)",
-              "price": 1799.0,
+              "value": "With Trailer",
+              "price": 2898.0,
+              "price_delta": 499.0,
+              "free": false
+            },
+            {
+              "value": "Free Blue Trailer",
+              "price": 2399.0,
               "price_delta": 0.0,
               "free": true
             }
@@ -1307,14 +1317,7 @@
         }
       ],
       "tier": "77Ah",
-      "family_id": "wallke__wallke-h9-ultra-folding-off-grid-powerstorage-e-bike",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'3\"",
-          "height_max": "6'5\""
-        }
-      ]
+      "family_id": "wallke__wallke-h9-ultra-folding-off-grid-powerstorage-e-bike"
     },
     {
       "model": "2026 WALLKE Ultra Series | Off-grid Power Station E-Bike — 55Ah · Step-Thru",
@@ -1382,7 +1385,7 @@
             "Color": "Glossy Beige",
             "Upgrade": "With Trailer"
           },
-          "price": 1849.0,
+          "price": 2798.0,
           "regular_price": 3398.0,
           "available": false,
           "sku": "H7U-55A-YL",
@@ -1418,7 +1421,7 @@
             "Color": "Glossy White",
             "Upgrade": "With Trailer"
           },
-          "price": 1899.0,
+          "price": 2798.0,
           "regular_price": 3398.0,
           "available": false,
           "sku": "H7U-55A-WH",
@@ -1438,7 +1441,7 @@
           },
           "price": 1799.0,
           "regular_price": 2799.0,
-          "available": true,
+          "available": false,
           "sku": "H7U-55A-BL",
           "variant_id": 45266875285676,
           "color": {
@@ -1454,7 +1457,7 @@
             "Color": "Matte Blue",
             "Upgrade": "With Trailer"
           },
-          "price": 1899.0,
+          "price": 2798.0,
           "regular_price": 3398.0,
           "available": false,
           "sku": "H7U-55A-BL",
@@ -1490,7 +1493,7 @@
           "US": "Upgraded version Bag",
           "Mirror": "$59",
           "Part Type": "Required Photos",
-          "Max Range": "Up to 180 miles",
+          "Max Range": "Up to 200 miles",
           "Torque": "150 Nm"
         }
       },
@@ -1503,6 +1506,13 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'3\"",
+          "height_max": "6'5\""
+        }
+      ],
       "geometry": {
         "Rider Height": "5'3\" - 6'5\""
       },
@@ -1519,14 +1529,14 @@
             },
             {
               "value": "Step-Over 55Ah",
-              "price": 1799.0,
-              "price_delta": 100.0,
+              "price": 2399.0,
+              "price_delta": 700.0,
               "free": false
             },
             {
               "value": "Step-Over 77Ah（55Ah+22Ah）",
-              "price": 2199.0,
-              "price_delta": 500.0,
+              "price": 2979.0,
+              "price_delta": 1280.0,
               "free": false
             }
           ]
@@ -1555,14 +1565,14 @@
             },
             {
               "value": "Black",
-              "price": 1799.0,
-              "price_delta": 100.0,
+              "price": 2399.0,
+              "price_delta": 700.0,
               "free": false
             },
             {
               "value": "Medium Blue",
-              "price": 1799.0,
-              "price_delta": 100.0,
+              "price": 2399.0,
+              "price_delta": 700.0,
               "free": false
             }
           ]
@@ -1579,8 +1589,8 @@
             },
             {
               "value": "With Trailer",
-              "price": 1849.0,
-              "price_delta": 150.0,
+              "price": 2798.0,
+              "price_delta": 1099.0,
               "free": false
             }
           ]
@@ -1588,14 +1598,7 @@
       ],
       "tier": "55Ah · Step-Thru",
       "family_id": "wallke__ultra-series",
-      "frame_style": "Step-Thru",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'3\"",
-          "height_max": "6'5\""
-        }
-      ]
+      "frame_style": "Step-Thru"
     },
     {
       "model": "2026 WALLKE Ultra Series | Off-grid Power Station E-Bike — 55Ah · Step-Over",
@@ -1604,7 +1607,7 @@
       "product_types": [
         "Commuter / Urban"
       ],
-      "price_from": 1799.0,
+      "price_from": 2399.0,
       "regular_price": 3897.0,
       "currency": "USD",
       "options": {
@@ -1639,7 +1642,7 @@
             "Color": "Black",
             "Upgrade": "(New Bag & Mirrior)"
           },
-          "price": 1799.0,
+          "price": 2399.0,
           "regular_price": 2899.0,
           "available": false,
           "sku": "H9U-55A-BK",
@@ -1657,7 +1660,7 @@
             "Color": "Black",
             "Upgrade": "With Trailer"
           },
-          "price": 1899.0,
+          "price": 2898.0,
           "regular_price": 3897.0,
           "available": false,
           "sku": "H9U-55A-BK",
@@ -1675,9 +1678,9 @@
             "Color": "Medium Blue",
             "Upgrade": "(New Bag & Mirrior)"
           },
-          "price": 1799.0,
+          "price": 2399.0,
           "regular_price": 2899.0,
-          "available": true,
+          "available": false,
           "sku": "H9U-55A-BL",
           "variant_id": 45266875089068,
           "color": {
@@ -1693,7 +1696,7 @@
             "Color": "Medium Blue",
             "Upgrade": "With Trailer"
           },
-          "price": 1899.0,
+          "price": 2898.0,
           "regular_price": 3897.0,
           "available": false,
           "sku": "H9U-55A-BL",
@@ -1729,7 +1732,7 @@
           "US": "Upgraded version Bag",
           "Mirror": "$59",
           "Part Type": "Required Photos",
-          "Max Range": "Up to 180 miles",
+          "Max Range": "Up to 200 miles",
           "Torque": "150 Nm"
         }
       },
@@ -1742,6 +1745,13 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'3\"",
+          "height_max": "6'5\""
+        }
+      ],
       "geometry": {
         "Rider Height": "5'3\" - 6'5\""
       },
@@ -1758,14 +1768,14 @@
             },
             {
               "value": "Step-Over 55Ah",
-              "price": 1799.0,
-              "price_delta": 100.0,
+              "price": 2399.0,
+              "price_delta": 700.0,
               "free": false
             },
             {
               "value": "Step-Over 77Ah（55Ah+22Ah）",
-              "price": 2199.0,
-              "price_delta": 500.0,
+              "price": 2979.0,
+              "price_delta": 1280.0,
               "free": false
             }
           ]
@@ -1794,14 +1804,14 @@
             },
             {
               "value": "Black",
-              "price": 1799.0,
-              "price_delta": 100.0,
+              "price": 2399.0,
+              "price_delta": 700.0,
               "free": false
             },
             {
               "value": "Medium Blue",
-              "price": 1799.0,
-              "price_delta": 100.0,
+              "price": 2399.0,
+              "price_delta": 700.0,
               "free": false
             }
           ]
@@ -1818,8 +1828,8 @@
             },
             {
               "value": "With Trailer",
-              "price": 1849.0,
-              "price_delta": 150.0,
+              "price": 2798.0,
+              "price_delta": 1099.0,
               "free": false
             }
           ]
@@ -1827,14 +1837,7 @@
       ],
       "tier": "55Ah · Step-Over",
       "family_id": "wallke__ultra-series",
-      "frame_style": "Step-Over (Mid-Step)",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'3\"",
-          "height_max": "6'5\""
-        }
-      ]
+      "frame_style": "Step-Over (Mid-Step)"
     },
     {
       "model": "2026 WALLKE Ultra Series | Off-grid Power Station E-Bike — 77Ah",
@@ -1843,7 +1846,7 @@
       "product_types": [
         "Commuter / Urban"
       ],
-      "price_from": 2199.0,
+      "price_from": 2979.0,
       "regular_price": 3978.0,
       "currency": "USD",
       "options": {
@@ -1878,7 +1881,7 @@
             "Color": "Black",
             "Upgrade": "(New Bag & Mirrior)"
           },
-          "price": 2199.0,
+          "price": 2979.0,
           "regular_price": 3479.0,
           "available": false,
           "sku": "H9U-55A-BK+H9-22ABtyKit",
@@ -1896,7 +1899,7 @@
             "Color": "Black",
             "Upgrade": "With Trailer"
           },
-          "price": 2299.0,
+          "price": 3478.0,
           "regular_price": 3978.0,
           "available": false,
           "sku": "H9U-55A-BK+H9-22ABtyKit",
@@ -1914,7 +1917,7 @@
             "Color": "Medium Blue",
             "Upgrade": "(New Bag & Mirrior)"
           },
-          "price": 2199.0,
+          "price": 2979.0,
           "regular_price": 3479.0,
           "available": false,
           "sku": "H9U-55A-BL+H9-22ABtyKit",
@@ -1932,7 +1935,7 @@
             "Color": "Medium Blue",
             "Upgrade": "With Trailer"
           },
-          "price": 2299.0,
+          "price": 3478.0,
           "regular_price": 3978.0,
           "available": false,
           "sku": "H9U-55A-BL+H9-22ABtyKit",
@@ -1967,7 +1970,7 @@
           "US": "Upgraded version Bag",
           "Mirror": "$59",
           "Part Type": "Required Photos",
-          "Max Range": "Up to 180 miles",
+          "Max Range": "Up to 200 miles",
           "Torque": "150 Nm"
         }
       },
@@ -1980,6 +1983,13 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'3\"",
+          "height_max": "6'5\""
+        }
+      ],
       "geometry": {
         "Rider Height": "5'3\" - 6'5\""
       },
@@ -1996,14 +2006,14 @@
             },
             {
               "value": "Step-Over 55Ah",
-              "price": 1799.0,
-              "price_delta": 100.0,
+              "price": 2399.0,
+              "price_delta": 700.0,
               "free": false
             },
             {
               "value": "Step-Over 77Ah（55Ah+22Ah）",
-              "price": 2199.0,
-              "price_delta": 500.0,
+              "price": 2979.0,
+              "price_delta": 1280.0,
               "free": false
             }
           ]
@@ -2032,14 +2042,14 @@
             },
             {
               "value": "Black",
-              "price": 1799.0,
-              "price_delta": 100.0,
+              "price": 2399.0,
+              "price_delta": 700.0,
               "free": false
             },
             {
               "value": "Medium Blue",
-              "price": 1799.0,
-              "price_delta": 100.0,
+              "price": 2399.0,
+              "price_delta": 700.0,
               "free": false
             }
           ]
@@ -2056,8 +2066,8 @@
             },
             {
               "value": "With Trailer",
-              "price": 1849.0,
-              "price_delta": 150.0,
+              "price": 2798.0,
+              "price_delta": 1099.0,
               "free": false
             }
           ]
@@ -2065,14 +2075,7 @@
       ],
       "tier": "77Ah",
       "family_id": "wallke__ultra-series",
-      "frame_style": "Step-Over (Mid-Step)",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'3\"",
-          "height_max": "6'5\""
-        }
-      ]
+      "frame_style": "Step-Over (Mid-Step)"
     },
     {
       "model": "2026 Wallke H7 AWD Step-Thru | 3200W Ebike 40Ah Battery",
@@ -2085,7 +2088,7 @@
       "regular_price": 2798.0,
       "currency": "USD",
       "options": {
-        "Model1": [
+        "Model": [
           "H7AWD (Dual Motor)-40Ah",
           "H7AWD (Dual Motor)-60Ah",
           "H7 (Single Motor)-40Ah"
@@ -2099,25 +2102,25 @@
             "name": "White",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-White-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-White-UL.webp?v=1781776918"
           },
           {
             "name": "Black",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-Black-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-Black-UL.webp?v=1781776918"
           }
         ]
       },
       "configurations": [
         {
           "options": {
-            "Model1": "H7AWD (Dual Motor)-40Ah",
+            "Model": "H7AWD (Dual Motor)-40Ah",
             "Color": "White",
             "Upgrade": "None"
           },
           "price": 1449.0,
-          "regular_price": 2399.0,
+          "regular_price": 2099.0,
           "available": true,
           "sku": "26-H7A-40A-WH",
           "variant_id": 46333453238444,
@@ -2125,17 +2128,17 @@
             "name": "White",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-White-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-White-UL.webp?v=1781776918"
           }
         },
         {
           "options": {
-            "Model1": "H7AWD (Dual Motor)-40Ah",
+            "Model": "H7AWD (Dual Motor)-40Ah",
             "Color": "Black",
             "Upgrade": "None"
           },
           "price": 1449.0,
-          "regular_price": 2399.0,
+          "regular_price": 2099.0,
           "available": true,
           "sku": "26-H7A-40A-BK",
           "variant_id": 46333453303980,
@@ -2143,12 +2146,12 @@
             "name": "Black",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-Black-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-Black-UL.webp?v=1781776918"
           }
         },
         {
           "options": {
-            "Model1": "H7 (Single Motor)-40Ah",
+            "Model": "H7 (Single Motor)-40Ah",
             "Color": "White",
             "Upgrade": "None"
           },
@@ -2161,12 +2164,12 @@
             "name": "White",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-White-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-White-UL.webp?v=1781776918"
           }
         },
         {
           "options": {
-            "Model1": "H7 (Single Motor)-40Ah",
+            "Model": "H7 (Single Motor)-40Ah",
             "Color": "White",
             "Upgrade": "Free Blue Trailer"
           },
@@ -2179,12 +2182,12 @@
             "name": "White",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-White-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-White-UL.webp?v=1781776918"
           }
         },
         {
           "options": {
-            "Model1": "H7 (Single Motor)-40Ah",
+            "Model": "H7 (Single Motor)-40Ah",
             "Color": "Black",
             "Upgrade": "None"
           },
@@ -2197,12 +2200,12 @@
             "name": "Black",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-Black-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-Black-UL.webp?v=1781776918"
           }
         },
         {
           "options": {
-            "Model1": "H7 (Single Motor)-40Ah",
+            "Model": "H7 (Single Motor)-40Ah",
             "Color": "Black",
             "Upgrade": "Free Blue Trailer"
           },
@@ -2215,7 +2218,7 @@
             "name": "Black",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-Black-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-Black-UL.webp?v=1781776918"
           }
         }
       ],
@@ -2231,7 +2234,7 @@
           "Recommended Height": "5'85\" -6'6\"",
           "Max. Load Capacity": "400 LBS",
           "eBike Weight": "130 LBS",
-          "Top Speed": "38 MPH",
+          "Top Speed": "37 MPH",
           "Riding Mode": "Throttle + Pedal Assist (PAS)",
           "Throttle": "Right-Hand Motorcycle-Style Full-Twist Throttle",
           "Battery": "48V 40Ah (1920Wh), 8.15 kg",
@@ -2253,7 +2256,7 @@
           "Keys for Battery": "×2(Tie on the handlebar)",
           "Pedals": "×1 set",
           "Part Type": "Required Photos",
-          "Max Range": "Up to 120 miles (est. for this battery size)",
+          "Max Range": "Up to 29 miles (est. for this battery size)",
           "Torque": "150 Nm",
           "Motor": "750W (3200W peak)",
           "Rider Height": "12'1\" - 6'6\""
@@ -2268,16 +2271,24 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'85\"",
+          "height_max": "6'6\""
+        }
+      ],
       "geometry": {
         "Wheelbase": "55\"",
         "Maximum Seat Height": "44.1\"",
         "Minimum Seat Height": "34.6\"",
         "Standover Height": "19.7\"",
-        "Reach": "24.8\""
+        "Reach": "24.8\"",
+        "Rider Height": "12'1\" - 6'6\""
       },
       "available_options": [
         {
-          "group": "Model1",
+          "group": "Model",
           "type": "variant",
           "choices": [
             {
@@ -2351,14 +2362,7 @@
       ],
       "tier": "40Ah",
       "family_id": "wallke__wallke-h7-step-thru",
-      "frame_style": "Step-Thru",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'85\"",
-          "height_max": "6'6\""
-        }
-      ]
+      "frame_style": "Step-Thru"
     },
     {
       "model": "2026 Wallke H7 AWD Step-Thru | 3200W Ebike 40Ah Battery — 60Ah",
@@ -2371,7 +2375,7 @@
       "regular_price": 3198.0,
       "currency": "USD",
       "options": {
-        "Model1": [
+        "Model": [
           "H7AWD (Dual Motor)-40Ah",
           "H7AWD (Dual Motor)-60Ah",
           "H7 (Single Motor)-40Ah"
@@ -2385,32 +2389,32 @@
             "name": "White",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-White-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-White-UL.webp?v=1781776918"
           },
           {
             "name": "Black",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-Black-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-Black-UL.webp?v=1781776918"
           },
           {
             "name": "Gradient Blue",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-Black-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-White-UL.webp?v=1781776918"
           },
           {
             "name": "Gradient Red",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-Black-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-White-UL.webp?v=1781776918"
           }
         ]
       },
       "configurations": [
         {
           "options": {
-            "Model1": "H7AWD (Dual Motor)-60Ah",
+            "Model": "H7AWD (Dual Motor)-60Ah",
             "Color": "Gradient Blue",
             "Upgrade": "None"
           },
@@ -2423,12 +2427,12 @@
             "name": "Gradient Blue",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-Black-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-White-UL.webp?v=1781776918"
           }
         },
         {
           "options": {
-            "Model1": "H7AWD (Dual Motor)-60Ah",
+            "Model": "H7AWD (Dual Motor)-60Ah",
             "Color": "Gradient Blue",
             "Upgrade": "Free Blue Trailer"
           },
@@ -2441,12 +2445,12 @@
             "name": "Gradient Blue",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-Black-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-White-UL.webp?v=1781776918"
           }
         },
         {
           "options": {
-            "Model1": "H7AWD (Dual Motor)-60Ah",
+            "Model": "H7AWD (Dual Motor)-60Ah",
             "Color": "White",
             "Upgrade": "None"
           },
@@ -2459,12 +2463,12 @@
             "name": "White",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-White-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-White-UL.webp?v=1781776918"
           }
         },
         {
           "options": {
-            "Model1": "H7AWD (Dual Motor)-60Ah",
+            "Model": "H7AWD (Dual Motor)-60Ah",
             "Color": "Black",
             "Upgrade": "None"
           },
@@ -2477,12 +2481,12 @@
             "name": "Black",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-Black-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-Black-UL.webp?v=1781776918"
           }
         },
         {
           "options": {
-            "Model1": "H7AWD (Dual Motor)-60Ah",
+            "Model": "H7AWD (Dual Motor)-60Ah",
             "Color": "Gradient Red",
             "Upgrade": "None"
           },
@@ -2495,7 +2499,7 @@
             "name": "Gradient Red",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-Black-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-White-UL.webp?v=1781776918"
           }
         }
       ],
@@ -2511,7 +2515,7 @@
           "Recommended Height": "5'85\" -6'6\"",
           "Max. Load Capacity": "400 LBS",
           "eBike Weight": "130 LBS",
-          "Top Speed": "38 MPH",
+          "Top Speed": "37 MPH",
           "Riding Mode": "Throttle + Pedal Assist (PAS)",
           "Throttle": "Right-Hand Motorcycle-Style Full-Twist Throttle",
           "Battery": "48V 60Ah (2880Wh), 8.15 kg",
@@ -2533,7 +2537,7 @@
           "Keys for Battery": "×2(Tie on the handlebar)",
           "Pedals": "×1 set",
           "Part Type": "Required Photos",
-          "Max Range": "Up to 180 miles",
+          "Max Range": "Up to 43 miles",
           "Torque": "150 Nm",
           "Motor": "750W (3200W peak)",
           "Rider Height": "12'1\" - 6'6\""
@@ -2548,16 +2552,24 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'85\"",
+          "height_max": "6'6\""
+        }
+      ],
       "geometry": {
         "Wheelbase": "55\"",
         "Maximum Seat Height": "44.1\"",
         "Minimum Seat Height": "34.6\"",
         "Standover Height": "19.7\"",
-        "Reach": "24.8\""
+        "Reach": "24.8\"",
+        "Rider Height": "12'1\" - 6'6\""
       },
       "available_options": [
         {
-          "group": "Model1",
+          "group": "Model",
           "type": "variant",
           "choices": [
             {
@@ -2631,21 +2643,13 @@
       ],
       "tier": "60Ah",
       "family_id": "wallke__wallke-h7-step-thru",
-      "frame_style": "Step-Thru",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'85\"",
-          "height_max": "6'6\""
-        }
-      ]
+      "frame_style": "Step-Thru"
     },
     {
       "model": "2026 Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery",
       "handle": "h9awd",
       "url": "https://wallkeebike.com/products/h9awd",
       "product_types": [
-        "Folding",
         "Fat Tire"
       ],
       "price_from": 1499.0,
@@ -2653,38 +2657,76 @@
       "currency": "USD",
       "options": {
         "Battery": [
+          "40AH",
           "40Ah",
           "60Ah",
           "82Ah",
           "62Ah"
         ],
         "Upgrade": [
+          "None",
           "Bag & Mirrior",
           "Free Blue Trailer",
-          "None"
+          "With 22Ah Front Battery"
         ],
         "colors": [
           {
             "name": "Black",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Black-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Black-UL.webp?v=1781518504"
           },
           {
             "name": "Medium Blue",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781518504"
           },
           {
             "name": "Gray",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781518504"
           }
         ]
       },
       "configurations": [
+        {
+          "options": {
+            "Battery": "40AH",
+            "Color": "Black",
+            "Upgrade": "None"
+          },
+          "price": 1499.0,
+          "regular_price": 2099.0,
+          "available": true,
+          "sku": "26-H9A-40A-BK",
+          "variant_id": 46361356927148,
+          "color": {
+            "name": "Black",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Black-UL.webp?v=1781518504"
+          }
+        },
+        {
+          "options": {
+            "Battery": "40AH",
+            "Color": "Medium Blue",
+            "Upgrade": "None"
+          },
+          "price": 1499.0,
+          "regular_price": 2099.0,
+          "available": true,
+          "sku": "26-H9A-40A-BL",
+          "variant_id": 46361356992684,
+          "color": {
+            "name": "Medium Blue",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781518504"
+          }
+        },
         {
           "options": {
             "Battery": "40Ah",
@@ -2700,7 +2742,7 @@
             "name": "Black",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Black-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Black-UL.webp?v=1781518504"
           }
         },
         {
@@ -2718,7 +2760,7 @@
             "name": "Black",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Black-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Black-UL.webp?v=1781518504"
           }
         },
         {
@@ -2736,7 +2778,7 @@
             "name": "Medium Blue",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781518504"
           }
         },
         {
@@ -2754,7 +2796,7 @@
             "name": "Gray",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781518504"
           }
         },
         {
@@ -2772,43 +2814,43 @@
             "name": "Gray",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781518504"
           }
         },
         {
           "options": {
-            "Battery": "40Ah",
+            "Battery": "40AH",
             "Color": "Black",
-            "Upgrade": "None"
+            "Upgrade": "With 22Ah Front Battery"
           },
-          "price": 1499.0,
-          "regular_price": 2399.0,
+          "price": 1799.0,
+          "regular_price": 2499.0,
           "available": true,
-          "sku": "26-H9A-40A-BK",
-          "variant_id": 46361356927148,
+          "sku": "26-H9A-62A-BK",
+          "variant_id": 46380571689132,
           "color": {
             "name": "Black",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Black-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Black-UL.webp?v=1781518504"
           }
         },
         {
           "options": {
-            "Battery": "40Ah",
+            "Battery": "40AH",
             "Color": "Medium Blue",
-            "Upgrade": "None"
+            "Upgrade": "With 22Ah Front Battery"
           },
-          "price": 1499.0,
-          "regular_price": 2399.0,
+          "price": 1799.0,
+          "regular_price": 2499.0,
           "available": true,
-          "sku": "26-H9A-40A-BL",
-          "variant_id": 46361356992684,
+          "sku": "26-H9A-62A-BL",
+          "variant_id": 46380577325228,
           "color": {
             "name": "Medium Blue",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781518504"
           }
         }
       ],
@@ -2825,7 +2867,7 @@
           "Recommended Height": "5'85\" -6'6\"",
           "Max. Load Capacity": "400 LBS",
           "eBike Weight": "108.03 LBS",
-          "Top Speed": "38 MPH",
+          "Top Speed": "37 MPH",
           "Riding Mode": "Throttle + Pedal Assist (PAS)",
           "Throttle": "Right-Hand Motorcycle-Style Full-Twist Throttle",
           "Battery": "48V 40Ah, 8.15 kg",
@@ -2848,7 +2890,7 @@
           "Keys for Battery": "*2(Tie on the handlebar)",
           "Pedals": "*1 set",
           "Part Type": "Required Photos",
-          "Max Range": "Up to 180 miles",
+          "Max Range": "Up to 80 miles",
           "Torque": "150 Nm",
           "Motor": "3200W peak",
           "Rider Height": "12'1\" - 6'6\""
@@ -2863,12 +2905,20 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'85\"",
+          "height_max": "6'6\""
+        }
+      ],
       "geometry": {
         "Wheelbase": "53.15\" (135cm)",
         "Maximum Seat Height": "35.43\"(90cm)",
         "Minimum Seat Height": "40.55\"(103cm)",
         "Standover Height": "27.56\"(70cm)",
-        "Reach": "23.6\"(60cm)"
+        "Reach": "23.6\"(60cm)",
+        "Rider Height": "12'1\" - 6'6\""
       },
       "available_options": [
         {
@@ -2876,10 +2926,16 @@
           "type": "variant",
           "choices": [
             {
-              "value": "40Ah",
+              "value": "40AH",
               "price": 1499.0,
               "price_delta": 0.0,
               "free": true
+            },
+            {
+              "value": "40Ah",
+              "price": 2399.0,
+              "price_delta": 900.0,
+              "free": false
             },
             {
               "value": "60Ah",
@@ -2930,6 +2986,12 @@
           "type": "variant",
           "choices": [
             {
+              "value": "None",
+              "price": 1499.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
               "value": "Bag & Mirrior",
               "price": 2399.0,
               "price_delta": 900.0,
@@ -2942,30 +3004,22 @@
               "free": false
             },
             {
-              "value": "None",
-              "price": 1499.0,
-              "price_delta": 0.0,
-              "free": true
+              "value": "With 22Ah Front Battery",
+              "price": 1799.0,
+              "price_delta": 300.0,
+              "free": false
             }
           ]
         }
       ],
       "tier": "40Ah",
-      "family_id": "wallke__h9awd",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'85\"",
-          "height_max": "6'6\""
-        }
-      ]
+      "family_id": "wallke__h9awd"
     },
     {
       "model": "2026 Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery — 60Ah",
       "handle": "h9awd--60ah",
       "url": "https://wallkeebike.com/products/h9awd",
       "product_types": [
-        "Folding",
         "Fat Tire"
       ],
       "price_from": 2799.0,
@@ -2973,38 +3027,58 @@
       "currency": "USD",
       "options": {
         "Battery": [
+          "40AH",
           "40Ah",
           "60Ah",
           "82Ah",
           "62Ah"
         ],
         "Upgrade": [
+          "None",
           "Bag & Mirrior",
           "Free Blue Trailer",
-          "None"
+          "With 22Ah Front Battery"
         ],
         "colors": [
           {
             "name": "Black",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Black-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Black-UL.webp?v=1781518504"
           },
           {
             "name": "Medium Blue",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781518504"
           },
           {
             "name": "Gray",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781518504"
           }
         ]
       },
       "configurations": [
+        {
+          "options": {
+            "Battery": "60Ah",
+            "Color": "Black",
+            "Upgrade": "Bag & Mirrior"
+          },
+          "price": 2799.0,
+          "regular_price": null,
+          "available": false,
+          "sku": "H9A-60A-BK",
+          "variant_id": 46251742527660,
+          "color": {
+            "name": "Black",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Black-UL.webp?v=1781518504"
+          }
+        },
         {
           "options": {
             "Battery": "60Ah",
@@ -3020,7 +3094,7 @@
             "name": "Black",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Black-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Black-UL.webp?v=1781518504"
           }
         },
         {
@@ -3038,7 +3112,7 @@
             "name": "Medium Blue",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781518504"
           }
         },
         {
@@ -3056,7 +3130,7 @@
             "name": "Medium Blue",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781518504"
           }
         },
         {
@@ -3074,7 +3148,7 @@
             "name": "Gray",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781518504"
           }
         },
         {
@@ -3092,25 +3166,7 @@
             "name": "Gray",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781054624"
-          }
-        },
-        {
-          "options": {
-            "Battery": "60Ah",
-            "Color": "Black",
-            "Upgrade": "Bag & Mirrior"
-          },
-          "price": 2799.0,
-          "regular_price": null,
-          "available": false,
-          "sku": "H9A-60A-BK",
-          "variant_id": 46251742527660,
-          "color": {
-            "name": "Black",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Black-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781518504"
           }
         }
       ],
@@ -3127,7 +3183,7 @@
           "Recommended Height": "5'85\" -6'6\"",
           "Max. Load Capacity": "400 LBS",
           "eBike Weight": "108.03 LBS",
-          "Top Speed": "38 MPH",
+          "Top Speed": "37 MPH",
           "Riding Mode": "Throttle + Pedal Assist (PAS)",
           "Throttle": "Right-Hand Motorcycle-Style Full-Twist Throttle",
           "Battery": "48V 40Ah, 8.15 kg",
@@ -3150,7 +3206,7 @@
           "Keys for Battery": "*2(Tie on the handlebar)",
           "Pedals": "*1 set",
           "Part Type": "Required Photos",
-          "Max Range": "Up to 180 miles",
+          "Max Range": "Up to 80 miles",
           "Torque": "150 Nm",
           "Motor": "3200W peak",
           "Rider Height": "12'1\" - 6'6\""
@@ -3165,12 +3221,20 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'85\"",
+          "height_max": "6'6\""
+        }
+      ],
       "geometry": {
         "Wheelbase": "53.15\" (135cm)",
         "Maximum Seat Height": "35.43\"(90cm)",
         "Minimum Seat Height": "40.55\"(103cm)",
         "Standover Height": "27.56\"(70cm)",
-        "Reach": "23.6\"(60cm)"
+        "Reach": "23.6\"(60cm)",
+        "Rider Height": "12'1\" - 6'6\""
       },
       "available_options": [
         {
@@ -3178,10 +3242,16 @@
           "type": "variant",
           "choices": [
             {
-              "value": "40Ah",
+              "value": "40AH",
               "price": 1499.0,
               "price_delta": 0.0,
               "free": true
+            },
+            {
+              "value": "40Ah",
+              "price": 2399.0,
+              "price_delta": 900.0,
+              "free": false
             },
             {
               "value": "60Ah",
@@ -3232,6 +3302,12 @@
           "type": "variant",
           "choices": [
             {
+              "value": "None",
+              "price": 1499.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
               "value": "Bag & Mirrior",
               "price": 2399.0,
               "price_delta": 900.0,
@@ -3244,30 +3320,22 @@
               "free": false
             },
             {
-              "value": "None",
-              "price": 1499.0,
-              "price_delta": 0.0,
-              "free": true
+              "value": "With 22Ah Front Battery",
+              "price": 1799.0,
+              "price_delta": 300.0,
+              "free": false
             }
           ]
         }
       ],
       "tier": "60Ah",
-      "family_id": "wallke__h9awd",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'85\"",
-          "height_max": "6'6\""
-        }
-      ]
+      "family_id": "wallke__h9awd"
     },
     {
       "model": "2026 Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery — 62Ah",
       "handle": "h9awd--62ah",
       "url": "https://wallkeebike.com/products/h9awd",
       "product_types": [
-        "Folding",
         "Fat Tire"
       ],
       "price_from": 3179.0,
@@ -3275,34 +3343,36 @@
       "currency": "USD",
       "options": {
         "Battery": [
+          "40AH",
           "40Ah",
           "60Ah",
           "82Ah",
           "62Ah"
         ],
         "Upgrade": [
+          "None",
           "Bag & Mirrior",
           "Free Blue Trailer",
-          "None"
+          "With 22Ah Front Battery"
         ],
         "colors": [
           {
             "name": "Black",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Black-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Black-UL.webp?v=1781518504"
           },
           {
             "name": "Medium Blue",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781518504"
           },
           {
             "name": "Gray",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781518504"
           }
         ]
       },
@@ -3322,7 +3392,7 @@
             "name": "Black",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Black-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Black-UL.webp?v=1781518504"
           }
         },
         {
@@ -3340,7 +3410,7 @@
             "name": "Medium Blue",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781518504"
           }
         },
         {
@@ -3358,7 +3428,7 @@
             "name": "Gray",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781518504"
           }
         }
       ],
@@ -3375,7 +3445,7 @@
           "Recommended Height": "5'85\" -6'6\"",
           "Max. Load Capacity": "400 LBS",
           "eBike Weight": "108.03 LBS",
-          "Top Speed": "38 MPH",
+          "Top Speed": "37 MPH",
           "Riding Mode": "Throttle + Pedal Assist (PAS)",
           "Throttle": "Right-Hand Motorcycle-Style Full-Twist Throttle",
           "Charging Time": "5–6 hours (54.6V6A fast Charging)",
@@ -3397,7 +3467,7 @@
           "Keys for Battery": "*2(Tie on the handlebar)",
           "Pedals": "*1 set",
           "Part Type": "Required Photos",
-          "Max Range": "Up to 180 miles",
+          "Max Range": "Up to 80 miles",
           "Torque": "150 Nm",
           "Motor": "3200W peak",
           "Rider Height": "12'1\" - 6'6\""
@@ -3412,12 +3482,20 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'85\"",
+          "height_max": "6'6\""
+        }
+      ],
       "geometry": {
         "Wheelbase": "53.15\" (135cm)",
         "Maximum Seat Height": "35.43\"(90cm)",
         "Minimum Seat Height": "40.55\"(103cm)",
         "Standover Height": "27.56\"(70cm)",
-        "Reach": "23.6\"(60cm)"
+        "Reach": "23.6\"(60cm)",
+        "Rider Height": "12'1\" - 6'6\""
       },
       "available_options": [
         {
@@ -3425,10 +3503,16 @@
           "type": "variant",
           "choices": [
             {
-              "value": "40Ah",
+              "value": "40AH",
               "price": 1499.0,
               "price_delta": 0.0,
               "free": true
+            },
+            {
+              "value": "40Ah",
+              "price": 2399.0,
+              "price_delta": 900.0,
+              "free": false
             },
             {
               "value": "60Ah",
@@ -3479,6 +3563,12 @@
           "type": "variant",
           "choices": [
             {
+              "value": "None",
+              "price": 1499.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
               "value": "Bag & Mirrior",
               "price": 2399.0,
               "price_delta": 900.0,
@@ -3491,30 +3581,22 @@
               "free": false
             },
             {
-              "value": "None",
-              "price": 1499.0,
-              "price_delta": 0.0,
-              "free": true
+              "value": "With 22Ah Front Battery",
+              "price": 1799.0,
+              "price_delta": 300.0,
+              "free": false
             }
           ]
         }
       ],
       "tier": "62Ah",
-      "family_id": "wallke__h9awd",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'85\"",
-          "height_max": "6'6\""
-        }
-      ]
+      "family_id": "wallke__h9awd"
     },
     {
       "model": "2026 Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery — 82Ah",
       "handle": "h9awd--82ah",
       "url": "https://wallkeebike.com/products/h9awd",
       "product_types": [
-        "Folding",
         "Fat Tire"
       ],
       "price_from": 3529.0,
@@ -3522,34 +3604,36 @@
       "currency": "USD",
       "options": {
         "Battery": [
+          "40AH",
           "40Ah",
           "60Ah",
           "82Ah",
           "62Ah"
         ],
         "Upgrade": [
+          "None",
           "Bag & Mirrior",
           "Free Blue Trailer",
-          "None"
+          "With 22Ah Front Battery"
         ],
         "colors": [
           {
             "name": "Black",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Black-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Black-UL.webp?v=1781518504"
           },
           {
             "name": "Medium Blue",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781518504"
           },
           {
             "name": "Gray",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781518504"
           }
         ]
       },
@@ -3569,7 +3653,7 @@
             "name": "Black",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Black-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Black-UL.webp?v=1781518504"
           }
         },
         {
@@ -3587,7 +3671,7 @@
             "name": "Black",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Black-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Black-UL.webp?v=1781518504"
           }
         },
         {
@@ -3605,7 +3689,7 @@
             "name": "Medium Blue",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781518504"
           }
         },
         {
@@ -3623,7 +3707,7 @@
             "name": "Medium Blue",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781518504"
           }
         },
         {
@@ -3641,7 +3725,7 @@
             "name": "Gray",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781518504"
           }
         },
         {
@@ -3659,7 +3743,7 @@
             "name": "Gray",
             "hex": null,
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781054624"
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H9AWD-Blue-UL.webp?v=1781518504"
           }
         }
       ],
@@ -3676,7 +3760,7 @@
           "Recommended Height": "5'85\" -6'6\"",
           "Max. Load Capacity": "400 LBS",
           "eBike Weight": "108.03 LBS",
-          "Top Speed": "38 MPH",
+          "Top Speed": "37 MPH",
           "Riding Mode": "Throttle + Pedal Assist (PAS)",
           "Throttle": "Right-Hand Motorcycle-Style Full-Twist Throttle",
           "Battery": "48V 40Ah, 8.15 kg",
@@ -3699,7 +3783,7 @@
           "Keys for Battery": "*2(Tie on the handlebar)",
           "Pedals": "*1 set",
           "Part Type": "Required Photos",
-          "Max Range": "Up to 180 miles",
+          "Max Range": "Up to 80 miles",
           "Torque": "150 Nm",
           "Motor": "3200W peak",
           "Rider Height": "12'1\" - 6'6\""
@@ -3714,12 +3798,20 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'85\"",
+          "height_max": "6'6\""
+        }
+      ],
       "geometry": {
         "Wheelbase": "53.15\" (135cm)",
         "Maximum Seat Height": "35.43\"(90cm)",
         "Minimum Seat Height": "40.55\"(103cm)",
         "Standover Height": "27.56\"(70cm)",
-        "Reach": "23.6\"(60cm)"
+        "Reach": "23.6\"(60cm)",
+        "Rider Height": "12'1\" - 6'6\""
       },
       "available_options": [
         {
@@ -3727,10 +3819,16 @@
           "type": "variant",
           "choices": [
             {
-              "value": "40Ah",
+              "value": "40AH",
               "price": 1499.0,
               "price_delta": 0.0,
               "free": true
+            },
+            {
+              "value": "40Ah",
+              "price": 2399.0,
+              "price_delta": 900.0,
+              "free": false
             },
             {
               "value": "60Ah",
@@ -3781,6 +3879,12 @@
           "type": "variant",
           "choices": [
             {
+              "value": "None",
+              "price": 1499.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
               "value": "Bag & Mirrior",
               "price": 2399.0,
               "price_delta": 900.0,
@@ -3793,23 +3897,16 @@
               "free": false
             },
             {
-              "value": "None",
-              "price": 1499.0,
-              "price_delta": 0.0,
-              "free": true
+              "value": "With 22Ah Front Battery",
+              "price": 1799.0,
+              "price_delta": 300.0,
+              "free": false
             }
           ]
         }
       ],
       "tier": "82Ah",
-      "family_id": "wallke__h9awd",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'85\"",
-          "height_max": "6'6\""
-        }
-      ]
+      "family_id": "wallke__h9awd"
     },
     {
       "model": "2026 Wallke Ravager 60V Series | 60V 70Ah Long-Range Electric Bike | Up to 180+ Miles | 150Nm Torque",
@@ -3818,8 +3915,8 @@
       "product_types": [
         "Commuter / Urban"
       ],
-      "price_from": 1999.0,
-      "regular_price": 2299.0,
+      "price_from": 2049.0,
+      "regular_price": 2419.0,
       "currency": "USD",
       "options": {
         "Model": [
@@ -3831,7 +3928,8 @@
           "(Mirrior) & Rear Rack",
           "(Mirrior) & Rear Rack & Basket",
           "Free Rear Rack & Basket & 1-Year Extended Warranty（Pre-sale Only）",
-          "Free Rear Rack & Basket（Pre-sale Only）"
+          "Free Rear Rack & Basket（Pre-sale Only）",
+          "Free Rear Rack（Pre-sale Only）"
         ],
         "colors": [
           {
@@ -3861,8 +3959,8 @@
             "Color": "Black",
             "Upgrade": "(Mirrior)"
           },
-          "price": 1999.0,
-          "regular_price": 2299.0,
+          "price": 2299.0,
+          "regular_price": null,
           "available": false,
           "sku": "R60C-70A-BK",
           "variant_id": 46115298738348,
@@ -3879,8 +3977,8 @@
             "Color": "Black",
             "Upgrade": "(Mirrior) & Rear Rack"
           },
-          "price": 2049.0,
-          "regular_price": 2299.0,
+          "price": 2419.0,
+          "regular_price": null,
           "available": false,
           "sku": "R60C-70A-BK--R",
           "variant_id": 46316053758124,
@@ -3897,9 +3995,9 @@
             "Color": "Black",
             "Upgrade": "(Mirrior) & Rear Rack & Basket"
           },
-          "price": 2099.0,
+          "price": 2529.0,
           "regular_price": 2599.0,
-          "available": true,
+          "available": false,
           "sku": "R60C-70A-BK--RB",
           "variant_id": 46115298771116,
           "color": {
@@ -3915,7 +4013,7 @@
             "Color": "Black",
             "Upgrade": "Free Rear Rack & Basket & 1-Year Extended Warranty（Pre-sale Only）"
           },
-          "price": 1999.0,
+          "price": 2529.0,
           "regular_price": 2599.0,
           "available": false,
           "sku": "R60C-70A-BK--RWB",
@@ -3933,8 +4031,8 @@
             "Color": "Black",
             "Upgrade": "Free Rear Rack & Basket（Pre-sale Only）"
           },
-          "price": 1999.0,
-          "regular_price": 2299.0,
+          "price": 2529.0,
+          "regular_price": null,
           "available": false,
           "sku": "R60C-70A-BK--RB",
           "variant_id": 46307888070828,
@@ -3948,11 +4046,29 @@
         {
           "options": {
             "Model": "R60C(60V70Ah)",
+            "Color": "Black",
+            "Upgrade": "Free Rear Rack（Pre-sale Only）"
+          },
+          "price": 2049.0,
+          "regular_price": 2419.0,
+          "available": true,
+          "sku": "R60C-70A-BK--R-CD",
+          "variant_id": 46649119539372,
+          "color": {
+            "name": "Black",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/R60C-Black1.webp?v=1778203040"
+          }
+        },
+        {
+          "options": {
+            "Model": "R60C(60V70Ah)",
             "Color": "Green",
             "Upgrade": "(Mirrior)"
           },
-          "price": 1999.0,
-          "regular_price": 2299.0,
+          "price": 2299.0,
+          "regular_price": null,
           "available": false,
           "sku": "R60C-70A-GN",
           "variant_id": 46115298803884,
@@ -3969,8 +4085,8 @@
             "Color": "Green",
             "Upgrade": "(Mirrior) & Rear Rack"
           },
-          "price": 2049.0,
-          "regular_price": 2299.0,
+          "price": 2419.0,
+          "regular_price": null,
           "available": false,
           "sku": "R60C-70A-GN--R",
           "variant_id": 46316053790892,
@@ -3987,9 +4103,9 @@
             "Color": "Green",
             "Upgrade": "(Mirrior) & Rear Rack & Basket"
           },
-          "price": 2099.0,
+          "price": 2529.0,
           "regular_price": 2599.0,
-          "available": true,
+          "available": false,
           "sku": "R60C-70A-GN--RB",
           "variant_id": 46115298836652,
           "color": {
@@ -4005,7 +4121,7 @@
             "Color": "Green",
             "Upgrade": "Free Rear Rack & Basket & 1-Year Extended Warranty（Pre-sale Only）"
           },
-          "price": 1999.0,
+          "price": 2529.0,
           "regular_price": 2599.0,
           "available": false,
           "sku": "R60C-70A-GN--RWB",
@@ -4023,8 +4139,8 @@
             "Color": "Green",
             "Upgrade": "Free Rear Rack & Basket（Pre-sale Only）"
           },
-          "price": 1999.0,
-          "regular_price": 2299.0,
+          "price": 2529.0,
+          "regular_price": null,
           "available": false,
           "sku": "R60C-70A-GN--RB",
           "variant_id": 46307888103596,
@@ -4038,11 +4154,29 @@
         {
           "options": {
             "Model": "R60C(60V70Ah)",
+            "Color": "Green",
+            "Upgrade": "Free Rear Rack（Pre-sale Only）"
+          },
+          "price": 2049.0,
+          "regular_price": 2419.0,
+          "available": true,
+          "sku": "R60C-70A-GN--R-CD",
+          "variant_id": 46649119572140,
+          "color": {
+            "name": "Green",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/R60C-Green1.webp?v=1778203040"
+          }
+        },
+        {
+          "options": {
+            "Model": "R60C(60V70Ah)",
             "Color": "Orange",
             "Upgrade": "(Mirrior)"
           },
-          "price": 1999.0,
-          "regular_price": 2299.0,
+          "price": 2299.0,
+          "regular_price": null,
           "available": false,
           "sku": "R60C-70A-OR",
           "variant_id": 46115347431596,
@@ -4059,8 +4193,8 @@
             "Color": "Orange",
             "Upgrade": "(Mirrior) & Rear Rack"
           },
-          "price": 2049.0,
-          "regular_price": 2299.0,
+          "price": 2419.0,
+          "regular_price": null,
           "available": false,
           "sku": "R60C-70A-OR--R",
           "variant_id": 46316053823660,
@@ -4077,7 +4211,7 @@
             "Color": "Orange",
             "Upgrade": "(Mirrior) & Rear Rack & Basket"
           },
-          "price": 2099.0,
+          "price": 2529.0,
           "regular_price": 2599.0,
           "available": false,
           "sku": "R60C-70A-OR--RB",
@@ -4095,7 +4229,7 @@
             "Color": "Orange",
             "Upgrade": "Free Rear Rack & Basket & 1-Year Extended Warranty（Pre-sale Only）"
           },
-          "price": 1999.0,
+          "price": 2529.0,
           "regular_price": 2599.0,
           "available": false,
           "sku": "R60C-70A-OR--RWB",
@@ -4113,11 +4247,29 @@
             "Color": "Orange",
             "Upgrade": "Free Rear Rack & Basket（Pre-sale Only）"
           },
-          "price": 1999.0,
-          "regular_price": 2299.0,
+          "price": 2529.0,
+          "regular_price": null,
           "available": false,
           "sku": "R60C-70A-OR--RB",
           "variant_id": 46307888136364,
+          "color": {
+            "name": "Orange",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/R60C-Orange1.webp?v=1778203040"
+          }
+        },
+        {
+          "options": {
+            "Model": "R60C(60V70Ah)",
+            "Color": "Orange",
+            "Upgrade": "Free Rear Rack（Pre-sale Only）"
+          },
+          "price": 2049.0,
+          "regular_price": 2419.0,
+          "available": true,
+          "sku": "R60C-70A-OR--R-CD",
+          "variant_id": 46649119604908,
           "color": {
             "name": "Orange",
             "hex": null,
@@ -4131,9 +4283,9 @@
             "Color": "Black",
             "Upgrade": "(Mirrior)"
           },
-          "price": 1999.0,
-          "regular_price": 2299.0,
-          "available": true,
+          "price": 2299.0,
+          "regular_price": null,
+          "available": false,
           "sku": "R60S-70A-BK",
           "variant_id": 46115298869420,
           "color": {
@@ -4149,8 +4301,8 @@
             "Color": "Black",
             "Upgrade": "(Mirrior) & Rear Rack"
           },
-          "price": 2049.0,
-          "regular_price": 2299.0,
+          "price": 2419.0,
+          "regular_price": null,
           "available": false,
           "sku": "R60S-70A-BK--R",
           "variant_id": 46316053856428,
@@ -4167,9 +4319,9 @@
             "Color": "Black",
             "Upgrade": "(Mirrior) & Rear Rack & Basket"
           },
-          "price": 2099.0,
+          "price": 2529.0,
           "regular_price": 2599.0,
-          "available": true,
+          "available": false,
           "sku": "R60S-70A-BK--RB",
           "variant_id": 46115298902188,
           "color": {
@@ -4185,7 +4337,7 @@
             "Color": "Black",
             "Upgrade": "Free Rear Rack & Basket & 1-Year Extended Warranty（Pre-sale Only）"
           },
-          "price": 1999.0,
+          "price": 2529.0,
           "regular_price": 2599.0,
           "available": false,
           "sku": "R60S-70A-BK--RWB",
@@ -4203,8 +4355,8 @@
             "Color": "Black",
             "Upgrade": "Free Rear Rack & Basket（Pre-sale Only）"
           },
-          "price": 1999.0,
-          "regular_price": 2299.0,
+          "price": 2529.0,
+          "regular_price": null,
           "available": false,
           "sku": "R60S-70A-BK--RB",
           "variant_id": 46307888169132,
@@ -4218,11 +4370,29 @@
         {
           "options": {
             "Model": "R60S(60V70Ah)",
+            "Color": "Black",
+            "Upgrade": "Free Rear Rack（Pre-sale Only）"
+          },
+          "price": 2419.0,
+          "regular_price": null,
+          "available": false,
+          "sku": "R60S-70A-BK--R-CD",
+          "variant_id": 46649119637676,
+          "color": {
+            "name": "Black",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/R60C-Black1.webp?v=1778203040"
+          }
+        },
+        {
+          "options": {
+            "Model": "R60S(60V70Ah)",
             "Color": "Green",
             "Upgrade": "(Mirrior)"
           },
-          "price": 1999.0,
-          "regular_price": 2299.0,
+          "price": 2299.0,
+          "regular_price": null,
           "available": false,
           "sku": "R60S-70A-GN",
           "variant_id": 46115298934956,
@@ -4239,8 +4409,8 @@
             "Color": "Green",
             "Upgrade": "(Mirrior) & Rear Rack"
           },
-          "price": 2049.0,
-          "regular_price": 2299.0,
+          "price": 2419.0,
+          "regular_price": null,
           "available": false,
           "sku": "R60S-70A-GN--R",
           "variant_id": 46316053889196,
@@ -4257,7 +4427,7 @@
             "Color": "Green",
             "Upgrade": "(Mirrior) & Rear Rack & Basket"
           },
-          "price": 2099.0,
+          "price": 2529.0,
           "regular_price": 2599.0,
           "available": false,
           "sku": "R60S-70A-GN--RB",
@@ -4275,7 +4445,7 @@
             "Color": "Green",
             "Upgrade": "Free Rear Rack & Basket & 1-Year Extended Warranty（Pre-sale Only）"
           },
-          "price": 1999.0,
+          "price": 2529.0,
           "regular_price": 2599.0,
           "available": false,
           "sku": "R60S-70A-GN--RWB",
@@ -4293,8 +4463,8 @@
             "Color": "Green",
             "Upgrade": "Free Rear Rack & Basket（Pre-sale Only）"
           },
-          "price": 1999.0,
-          "regular_price": 2299.0,
+          "price": 2529.0,
+          "regular_price": null,
           "available": false,
           "sku": "R60S-70A-GN--RB",
           "variant_id": 46307888201900,
@@ -4308,11 +4478,29 @@
         {
           "options": {
             "Model": "R60S(60V70Ah)",
+            "Color": "Green",
+            "Upgrade": "Free Rear Rack（Pre-sale Only）"
+          },
+          "price": 2419.0,
+          "regular_price": null,
+          "available": false,
+          "sku": "R60S-70A-GN--R-CD",
+          "variant_id": 46649119670444,
+          "color": {
+            "name": "Green",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/R60C-Green1.webp?v=1778203040"
+          }
+        },
+        {
+          "options": {
+            "Model": "R60S(60V70Ah)",
             "Color": "Orange",
             "Upgrade": "(Mirrior)"
           },
-          "price": 1999.0,
-          "regular_price": 2299.0,
+          "price": 2299.0,
+          "regular_price": null,
           "available": false,
           "sku": "R60S-70A-OR",
           "variant_id": 46115347497132,
@@ -4329,8 +4517,8 @@
             "Color": "Orange",
             "Upgrade": "(Mirrior) & Rear Rack"
           },
-          "price": 2049.0,
-          "regular_price": 2299.0,
+          "price": 2419.0,
+          "regular_price": null,
           "available": false,
           "sku": "R60S-70A-OR--R",
           "variant_id": 46316053921964,
@@ -4347,7 +4535,7 @@
             "Color": "Orange",
             "Upgrade": "(Mirrior) & Rear Rack & Basket"
           },
-          "price": 2099.0,
+          "price": 2529.0,
           "regular_price": 2599.0,
           "available": false,
           "sku": "R60S-70A-OR--RB",
@@ -4365,7 +4553,7 @@
             "Color": "Orange",
             "Upgrade": "Free Rear Rack & Basket & 1-Year Extended Warranty（Pre-sale Only）"
           },
-          "price": 1999.0,
+          "price": 2529.0,
           "regular_price": 2599.0,
           "available": false,
           "sku": "R60S-70A-OR--RWB",
@@ -4383,11 +4571,29 @@
             "Color": "Orange",
             "Upgrade": "Free Rear Rack & Basket（Pre-sale Only）"
           },
-          "price": 1999.0,
-          "regular_price": 2299.0,
+          "price": 2529.0,
+          "regular_price": null,
           "available": false,
           "sku": "R60S-70A-OR--RB",
           "variant_id": 46307888234668,
+          "color": {
+            "name": "Orange",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/R60C-Orange1.webp?v=1778203040"
+          }
+        },
+        {
+          "options": {
+            "Model": "R60S(60V70Ah)",
+            "Color": "Orange",
+            "Upgrade": "Free Rear Rack（Pre-sale Only）"
+          },
+          "price": 2419.0,
+          "regular_price": null,
+          "available": false,
+          "sku": "R60S-70A-OR--R-CD",
+          "variant_id": 46649119703212,
           "color": {
             "name": "Orange",
             "hex": null,
@@ -4447,10 +4653,18 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'5\"",
+          "height_max": "6'7\""
+        }
+      ],
       "geometry": {
         "Wheelbase": "55.7\" (141.5cm)",
         "Reach": "24.4\"(62cm)",
-        "Minimum Seat Height": "32.2\"(82cm)"
+        "Minimum Seat Height": "32.2\"(82cm)",
+        "Rider Height": "5'5\" - 6'7\""
       },
       "available_options": [
         {
@@ -4459,15 +4673,15 @@
           "choices": [
             {
               "value": "R60C(60V70Ah)",
-              "price": 1999.0,
+              "price": 2049.0,
               "price_delta": 0.0,
               "free": true
             },
             {
               "value": "R60S(60V70Ah)",
-              "price": 1999.0,
-              "price_delta": 0.0,
-              "free": true
+              "price": 2299.0,
+              "price_delta": 250.0,
+              "free": false
             }
           ]
         },
@@ -4477,42 +4691,41 @@
           "choices": [
             {
               "value": "(Mirrior)",
-              "price": 1999.0,
-              "price_delta": 0.0,
-              "free": true
+              "price": 2299.0,
+              "price_delta": 250.0,
+              "free": false
             },
             {
               "value": "(Mirrior) & Rear Rack",
-              "price": 2049.0,
-              "price_delta": 50.0,
+              "price": 2419.0,
+              "price_delta": 370.0,
               "free": false
             },
             {
               "value": "(Mirrior) & Rear Rack & Basket",
-              "price": 2099.0,
-              "price_delta": 100.0,
+              "price": 2529.0,
+              "price_delta": 480.0,
               "free": false
             },
             {
               "value": "Free Rear Rack & Basket & 1-Year Extended Warranty（Pre-sale Only）",
-              "price": 1999.0,
-              "price_delta": 0.0,
-              "free": true
+              "price": 2529.0,
+              "price_delta": 480.0,
+              "free": false
             },
             {
               "value": "Free Rear Rack & Basket（Pre-sale Only）",
-              "price": 1999.0,
+              "price": 2529.0,
+              "price_delta": 480.0,
+              "free": false
+            },
+            {
+              "value": "Free Rear Rack（Pre-sale Only）",
+              "price": 2049.0,
               "price_delta": 0.0,
               "free": true
             }
           ]
-        }
-      ],
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'5\"",
-          "height_max": "6'7\""
         }
       ]
     },
@@ -4656,7 +4869,7 @@
           "Mirror": "$59",
           "Electric Air Pump": "$99",
           "Part Type": "Required Photos",
-          "Max Range": "Up to 180 miles",
+          "Max Range": "Up to 80 miles",
           "Torque": "150 Nm"
         }
       },
@@ -4669,6 +4882,13 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'1\"",
+          "height_max": "6'1\""
+        }
+      ],
       "geometry": {
         "Wheelbase": "57.8\" (147cm)",
         "Seat Height": "31.5\"(80cm)",
@@ -4693,13 +4913,6 @@
               "free": true
             }
           ]
-        }
-      ],
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'1\"",
-          "height_max": "6'1\""
         }
       ]
     }

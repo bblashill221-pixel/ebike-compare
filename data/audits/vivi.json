@@ -1,7 +1,7 @@
 {
   "brand": "vivi",
   "scraper": "scrape_vivi.py",
-  "generated_at": "2026-06-24T03:31:18.364231+00:00",
+  "generated_at": "2026-06-24T08:06:23.671161+00:00",
   "fields_audited": [
     "motor_w",
     "battery_wh",
@@ -17,8 +17,8 @@
     "drive_type"
   ],
   "summary": {
-    "models": 14,
-    "present": 168,
+    "models": 13,
+    "present": 156,
     "resolved": 0,
     "open": 0,
     "needs_image": 0,
@@ -1326,109 +1326,6 @@
           "status": "present",
           "source": "scraped",
           "value": 58,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "sensor_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "cadence",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "brake_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "mechanical_disc",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "frame_material": {
-          "status": "present",
-          "source": "scraped",
-          "value": "aluminum",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "drive_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hub",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        }
-      }
-    },
-    {
-      "id": "vivi__vivi-t01-electric-trike-folding-cargo-electric-tricycle",
-      "model": "VIVI T01 Electric Trike Folding Cargo Electric Tricycle SGS Certified to UL2849",
-      "url": "https://viviebikes.com/products/vivi-t01-electric-trike-folding-cargo-electric-tricycle",
-      "fields": {
-        "motor_w": {
-          "status": "present",
-          "source": "scraped",
-          "value": 500,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "battery_wh": {
-          "status": "present",
-          "source": "scraped",
-          "value": 499,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "torque_nm": {
-          "status": "present",
-          "source": "scraped",
-          "value": 75,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "max_speed_mph": {
-          "status": "present",
-          "source": "scraped",
-          "value": 16,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "range_mi": {
-          "status": "present",
-          "source": "scraped",
-          "value": 55,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "weight_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 82.7,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "max_load_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 287,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "fit_height_min_in": {
-          "status": "present",
-          "source": "scraped",
-          "value": 62,
           "note": "",
           "first_flagged": null,
           "resolved_at": null

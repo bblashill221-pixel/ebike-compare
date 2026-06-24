@@ -1377,7 +1377,18 @@ def _weight(field, v):
     return {_key(field, "_lb"): _n1(lb), _key(field, "_kg"): _n1(kg)}
 
 
+# A battery-labeled range segment header, e.g. "800 Wh:" / "1600 Wh :". Dual-battery
+# bikes list each pack's range ("800 Wh: 58-100 mi; 1600 Wh: 115-200 mi"); the base
+# pack is the first segment and the larger pack is an optional upgrade.
+_RE_WH_SEG = re.compile(r"\d+\s*wh\s*:", re.I)
+
+
 def _range(field, v):
+    # When a range is split per battery pack, scope to the FIRST (base) segment so
+    # _maxnum reports the standard-config range, not the optional dual-pack maximum.
+    segs = list(_RE_WH_SEG.finditer(v))
+    if len(segs) >= 2:
+        v = v[segs[0].start():segs[1].start()]
     mi, km = _maxnum(v, _RE_MI), _maxnum(v, _RE_KM)
     if mi is None and km is None:
         return None

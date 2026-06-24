@@ -2,7 +2,7 @@
   "source": "https://www.evelo.com",
   "logo": "assets/logos/evelo.svg",
   "collection": "evelo-bikes",
-  "scraped_at": "2026-06-10T23:41:06.184506+00:00",
+  "scraped_at": "2026-06-24T04:31:25.440002+00:00",
   "model_count": 4,
   "models": [
     {
@@ -12,7 +12,7 @@
       "product_types": [
         "Cargo"
       ],
-      "price_from": 3899,
+      "price_from": 3799,
       "currency": "USD",
       "options": {
         "colors": [
@@ -62,7 +62,7 @@
           "Range": "60 Miles"
         }
       },
-      "spec_count": 32,
+      "spec_count": 33,
       "scrape_error": null,
       "is_new": false,
       "shipping": {
@@ -77,6 +77,13 @@
           "detail": "Fully integrated high-power CREE LED headlght and integrated LED trail light"
         }
       ],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'6\"",
+          "height_max": "6'3\""
+        }
+      ],
       "geometry": {
         "Recommended Rider Heights": "5'6\" - 6'3\"",
         "Seat Height (Minimum / Maximum)": "33.5\" / 42\"",
@@ -87,7 +94,7 @@
       "configurations": [
         {
           "options": {},
-          "price": 3899.0,
+          "price": 3799.0,
           "sku": "ATL-600-MECH-BLUE-AIG51",
           "variant_id": 39870831820911,
           "available": true,
@@ -107,23 +114,16 @@
           ]
         }
       ],
-      "regular_price": 4599.99,
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'6\"",
-          "height_max": "6'3\""
-        }
-      ]
+      "regular_price": 4599.99
     },
     {
       "model": "EVELO Compass Electric Trike",
       "handle": "compass",
       "url": "https://www.evelo.com/products/compass",
       "product_types": [
-        "Cargo"
+        "Trike"
       ],
-      "price_from": 3599,
+      "price_from": 3499,
       "currency": "USD",
       "options": {
         "colors": [
@@ -142,7 +142,7 @@
           "Battery": "Panasonic Lithium-Ion 48V 10.5Ah with Advanced Battery Management Software",
           "Charger": "48V Smart Charger",
           "Maximum Motor-Assisted Speed": "20 Miles Per Hour, User Adjustable",
-          "Range": "60 Miles",
+          "Range": "Up to 40 Miles on Pedal-Assist, 80 Miles with Battery Add-On",
           "Electric Assist": "Five Levels of Pedal Assist, Plus Electric-Only (via Throttle)",
           "Frame": "6061 High-Strength Aluminum Alloy",
           "Fork": "Custom 6061 Alloy with Steel Steerer Tube, Designed for Fenders",
@@ -193,6 +193,13 @@
           "detail": "Wood Lined Cargo Basket Included: Top opening: 23.25x19 Base : 20x15.5 Depth: 10.5"
         }
       ],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "4'10\"",
+          "height_max": "6'2\""
+        }
+      ],
       "geometry": {
         "Recommended Rider Heights": "4'10\" - 6'2\"",
         "Seat Height (Minimum / Maximum)": "28.5\" - 36.5\"",
@@ -203,7 +210,7 @@
       "configurations": [
         {
           "options": {},
-          "price": 3599.0,
+          "price": 3499.0,
           "sku": "CMPS-FAS-WHT-AIG51",
           "variant_id": 32084061978735,
           "available": true,
@@ -228,14 +235,7 @@
           ]
         }
       ],
-      "regular_price": 4299.99,
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "4'10\"",
-          "height_max": "6'2\""
-        }
-      ]
+      "regular_price": 4299.99
     },
     {
       "model": "EVELO Galaxy Lux Electric Bike",
@@ -244,7 +244,7 @@
       "product_types": [
         "Commuter / Urban"
       ],
-      "price_from": 3399,
+      "price_from": 3299,
       "currency": "USD",
       "options": {
         "colors": [
@@ -263,7 +263,7 @@
           "Battery": "48V 11.6Ah Battery with Advanced Battery Management Software",
           "Charger": "48V Smart Charger",
           "Maximum Motor-Assisted Speed": "Up to 20 MPH - Can be raised for areas that allow higher speeds",
-          "Range": "60 Miles",
+          "Range": "Up to 55 Miles on Pedal-Assist or 25 Miles on Electric-Only",
           "Electric Assist": "Multiple Levels, Plus Electric-Only (via Throttle)",
           "Frame": "6061 High-Strength Aluminum Alloy",
           "Fork": "EVELO 4130 Chromoly Fork",
@@ -307,6 +307,13 @@
           "detail": "Fully integrated LED headlight and tail light"
         }
       ],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "4'10\"",
+          "height_max": "5'10\""
+        }
+      ],
       "geometry": {
         "Recommended Rider Height": "4'10\" - 5'10\"",
         "Seat Height (Minimum / Maximum)": "29.5\" / 38\"",
@@ -317,7 +324,7 @@
       "configurations": [
         {
           "options": {},
-          "price": 3399.0,
+          "price": 3299.0,
           "sku": "G500-LUX-MATTEBLUE-AIG51",
           "variant_id": 40783519842415,
           "available": true,
@@ -337,14 +344,7 @@
           ]
         }
       ],
-      "regular_price": 4099.99,
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "4'10\"",
-          "height_max": "5'10\""
-        }
-      ]
+      "regular_price": 4099.99
     },
     {
       "model": "EVELO Omega Electric Bike",
@@ -353,7 +353,7 @@
       "product_types": [
         "Commuter / Urban"
       ],
-      "price_from": 3899,
+      "price_from": 3799,
       "currency": "USD",
       "options": {
         "colors": [
@@ -373,7 +373,7 @@
           "Battery": "48V 15AH Samsung In Frame Battery - Optional 14.5AH Rear Rack Battery Add-On",
           "Charger": "48V 3A Charger",
           "Maximum Motor-Assisted Speed": "Up to 20 MPH - Can be raised for areas that allow higher speeds",
-          "Range": "60 Miles",
+          "Range": "Up to 60 Miles or 100 Miles with optional second battery",
           "Electric Assist": "5 levels of Pedal Assistance + Throttle Standard",
           "Frame": "Hydroformed Aluminum 6061 T6",
           "Fork": "Custom Light Weight Aluminium",
@@ -423,6 +423,13 @@
           "detail": "Composite all weather front and rear fenders included"
         }
       ],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'4\"",
+          "height_max": "6'2\""
+        }
+      ],
       "geometry": {
         "Recommended Rider Heights": "5'4\" - 6'2\"",
         "Seat Height (Minimum / Maximum)": "31\" / 40\"",
@@ -433,7 +440,7 @@
       "configurations": [
         {
           "options": {},
-          "price": 3899.0,
+          "price": 3799.0,
           "sku": "OMEG-750-AUT-TAN-AIG51",
           "variant_id": 40614278561903,
           "available": true,
@@ -458,14 +465,7 @@
           ]
         }
       ],
-      "regular_price": 4399.99,
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'4\"",
-          "height_max": "6'2\""
-        }
-      ]
+      "regular_price": 4399.99
     }
   ],
   "available_accessories": [

@@ -2,8 +2,8 @@
   "source": "https://himiwaybike.com",
   "logo": "https://himiwaybike.com/cdn/shop/files/Logo_0f842c6f-da81-478d-9c7e-4b96492f9009.svg?v=1695112798&width=400",
   "collection": "ebikes",
-  "scraped_at": "2026-06-10T23:46:09.728316+00:00",
-  "model_count": 26,
+  "scraped_at": "2026-06-24T04:36:14.960202+00:00",
+  "model_count": 24,
   "models": [
     {
       "model": "A3 / Urban Electric Commuter Bike ST",
@@ -94,6 +94,13 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'1\"",
+          "height_max": "6'0\""
+        }
+      ],
       "geometry": {
         "C – wheelbase": "43.8",
         "D – minimum seat height": "24",
@@ -159,21 +166,13 @@
       ],
       "available_options": [],
       "regular_price": 1799.0,
-      "frame_style": "Step-Thru",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'1\"",
-          "height_max": "6'0\""
-        }
-      ]
+      "frame_style": "Step-Thru"
     },
     {
       "model": "B3 / Foldable Electric Commuter Bike",
       "handle": "folding-electric-bike-b3",
       "url": "https://himiwaybike.com/products/folding-electric-bike-b3",
       "product_types": [
-        "Folding",
         "Commuter / Urban"
       ],
       "price_from": 999.0,
@@ -259,6 +258,13 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'0\"",
+          "height_max": "6'0\""
+        }
+      ],
       "geometry": {
         "C – wheelbase": "42.5",
         "D – minimum seat height": "31.5",
@@ -296,7 +302,7 @@
           "price": 999.0,
           "sku": "HMW-B3-GB-US",
           "variant_id": 40642907373643,
-          "available": true,
+          "available": false,
           "image": "https://cdn.shopify.com/s/files/1/0255/9528/1483/files/B3-1-2_cb9778b1-405d-44bb-a4e6-d45455a434e3.jpg?v=1751860346",
           "color": {
             "name": "Indigo",
@@ -323,14 +329,7 @@
         }
       ],
       "available_options": [],
-      "regular_price": 1799.0,
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'0\"",
-          "height_max": "6'0\""
-        }
-      ]
+      "regular_price": 1799.0
     },
     {
       "model": "C3 / Cargo Ebike",
@@ -413,6 +412,13 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'2\"",
+          "height_max": "6'3\""
+        }
+      ],
       "geometry": {
         "D – wheelbase": "47.2",
         "F – minimum seat height": "34",
@@ -459,21 +465,14 @@
         }
       ],
       "available_options": [],
-      "regular_price": 1999.0,
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'2\"",
-          "height_max": "6'3\""
-        }
-      ]
+      "regular_price": 1999.0
     },
     {
       "model": "D3 ST(Cruiser ST) / All Terrain Electric Bike",
       "handle": "all-terrain-step-thru-electric-bike",
       "url": "https://himiwaybike.com/products/all-terrain-step-thru-electric-bike",
       "product_types": [
-        "Mountain (eMTB)",
+        "All-Terrain",
         "Cruiser"
       ],
       "price_from": 1699.0,
@@ -548,6 +547,13 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'3\"",
+          "height_max": "6'4\""
+        }
+      ],
       "geometry": {
         "D – wheelbase": "45",
         "F – minimum seat height": "22",
@@ -571,14 +577,7 @@
         }
       ],
       "available_options": [],
-      "frame_style": "Step-Thru",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'3\"",
-          "height_max": "6'4\""
-        }
-      ]
+      "frame_style": "Step-Thru"
     },
     {
       "model": "D3(Cruiser) / Long Range Fat Tire Electric Bike",
@@ -660,6 +659,13 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'3\"",
+          "height_max": "6'5\""
+        }
+      ],
       "geometry": {
         "D – wheelbase": "45",
         "F – minimum seat height": "22",
@@ -682,14 +688,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0255/9528/1483/files/Cruiser1-low.jpg?v=1768467218"
         }
       ],
-      "available_options": [],
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'3\"",
-          "height_max": "6'5\""
-        }
-      ]
+      "available_options": []
     },
     {
       "model": "D5 Pro / All-terrain Electric Fat Bike",
@@ -697,9 +696,9 @@
       "url": "https://himiwaybike.com/products/all-terrain-electric-bike-d5pro?variant=41033767223371",
       "product_types": [
         "Fat Tire",
-        "Mountain (eMTB)"
+        "All-Terrain"
       ],
-      "price_from": 1799.0,
+      "price_from": 1999.0,
       "currency": "USD",
       "options": {
         "colors": [
@@ -785,6 +784,13 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'3\"",
+          "height_max": "6'5\""
+        }
+      ],
       "geometry": {
         "D – wheelbase": "49.2",
         "F – minimum seat height": "20.9",
@@ -803,7 +809,7 @@
           "options": {
             "Color": "Space Grey"
           },
-          "price": 1799.0,
+          "price": 1999.0,
           "sku": "HMW-D5PRO-SO-GY-US",
           "variant_id": 41033767223371,
           "available": true,
@@ -819,7 +825,7 @@
           "options": {
             "Color": "Green"
           },
-          "price": 1799.0,
+          "price": 1999.0,
           "sku": "HMW-D5PRO-SO-MG-US",
           "variant_id": 41033767190603,
           "available": true,
@@ -835,7 +841,7 @@
           "options": {
             "Color": "White"
           },
-          "price": 1799.0,
+          "price": 1999.0,
           "sku": "HMW-D5PRO-SO-WT-US",
           "variant_id": 41033767157835,
           "available": true,
@@ -852,14 +858,7 @@
       "regular_price": 2599.0,
       "family_id": "himiway__d5-pro-all-terrain-electric-fat-bike",
       "tier": "Step-Over",
-      "frame_style": "Step-Over (Mid-Step)",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'3\"",
-          "height_max": "6'5\""
-        }
-      ]
+      "frame_style": "Step-Over (Mid-Step)"
     },
     {
       "model": "D5 Pro ST / All-terrain Electric Fat Bike",
@@ -867,9 +866,9 @@
       "url": "https://himiwaybike.com/products/all-terrain-electric-bike-d5prost?variant=41037280477259",
       "product_types": [
         "Fat Tire",
-        "Mountain (eMTB)"
+        "All-Terrain"
       ],
-      "price_from": 1799.0,
+      "price_from": 1999.0,
       "currency": "USD",
       "options": {
         "colors": [
@@ -955,6 +954,13 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'3\"",
+          "height_max": "6'5\""
+        }
+      ],
       "geometry": {
         "D – wheelbase": "49.2",
         "F – minimum seat height": "20.9",
@@ -973,7 +979,7 @@
           "options": {
             "Color": "Space Grey"
           },
-          "price": 1799.0,
+          "price": 1999.0,
           "sku": "HMW-D5PRO-ST-GY-US",
           "variant_id": 41037280477259,
           "available": false,
@@ -989,7 +995,7 @@
           "options": {
             "Color": "White"
           },
-          "price": 1799.0,
+          "price": 1999.0,
           "sku": "HMW-D5PRO-ST-WT-US",
           "variant_id": 41037280542795,
           "available": true,
@@ -1005,7 +1011,7 @@
           "options": {
             "Color": "Green"
           },
-          "price": 1799.0,
+          "price": 1999.0,
           "sku": "HMW-D5PRO-ST-MG-US",
           "variant_id": 41400881643595,
           "available": true,
@@ -1022,14 +1028,7 @@
       "regular_price": 2599.0,
       "family_id": "himiway__d5-pro-all-terrain-electric-fat-bike",
       "tier": "Step-Thru",
-      "frame_style": "Step-Thru",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'3\"",
-          "height_max": "6'5\""
-        }
-      ]
+      "frame_style": "Step-Thru"
     },
     {
       "model": "D5 ST(Zebra ST) / All-terrain Electric Fat Bike",
@@ -1037,7 +1036,7 @@
       "url": "https://himiwaybike.com/products/premium-all-terrain-electric-bike-st",
       "product_types": [
         "Fat Tire",
-        "Mountain (eMTB)"
+        "All-Terrain"
       ],
       "price_from": 1499.0,
       "currency": "USD",
@@ -1128,6 +1127,13 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'1\"",
+          "height_max": "6'5\""
+        }
+      ],
       "geometry": {
         "D – wheelbase": "49.2",
         "F – minimum seat height": "20.9",
@@ -1193,14 +1199,7 @@
       ],
       "available_options": [],
       "regular_price": 2299.0,
-      "frame_style": "Step-Thru",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'1\"",
-          "height_max": "6'5\""
-        }
-      ]
+      "frame_style": "Step-Thru"
     },
     {
       "model": "D5(Zebra) / All-terrain Electric Fat Bike",
@@ -1208,7 +1207,7 @@
       "url": "https://himiwaybike.com/products/premium-all-terrain-electric-bike",
       "product_types": [
         "Fat Tire",
-        "Mountain (eMTB)"
+        "All-Terrain"
       ],
       "price_from": 1499.0,
       "currency": "USD",
@@ -1298,6 +1297,13 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'3\"",
+          "height_max": "6'5\""
+        }
+      ],
       "geometry": {
         "D – wheelbase": "49.2",
         "F – minimum seat height": "20.9",
@@ -1362,14 +1368,7 @@
         }
       ],
       "available_options": [],
-      "regular_price": 2299.0,
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'3\"",
-          "height_max": "6'5\""
-        }
-      ]
+      "regular_price": 2299.0
     },
     {
       "model": "D7 / Full Suspension Electric Hunting Bike",
@@ -1451,6 +1450,13 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'3\"",
+          "height_max": "6'5\""
+        }
+      ],
       "geometry": {
         "D – wheelbase": "51.1",
         "F – minimum seat height": "30.3",
@@ -1472,14 +1478,7 @@
         }
       ],
       "available_options": [],
-      "regular_price": 2999.0,
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'3\"",
-          "height_max": "6'5\""
-        }
-      ]
+      "regular_price": 2999.0
     },
     {
       "model": "Escape Pro / Long Range Moped-Style E-Bike ST",
@@ -1563,6 +1562,13 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'1\"",
+          "height_max": "6'1\""
+        }
+      ],
       "geometry": {
         "D – wheelbase": "45",
         "F – minimum seat height": "23.8",
@@ -1583,14 +1589,7 @@
       ],
       "available_options": [],
       "regular_price": 1999.0,
-      "frame_style": "Step-Thru",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'1\"",
-          "height_max": "6'1\""
-        }
-      ]
+      "frame_style": "Step-Thru"
     },
     {
       "model": "Himiway A7 Commuter eBike",
@@ -1632,7 +1631,7 @@
         "all": {
           "Frame": "Aluminum Alloy",
           "Fork": "Hydraulic suspension 120mm travel with Lock-out, 15x110mm thru-axle, Rebound adjustable",
-          "Motor": "48V, 500W, 70Nm",
+          "Motor": "48V, 750W, 70Nm",
           "Battery": "48V, 15Ah , IPX6, Certificated by UL 2271",
           "Cell": "Samsung/LG 21700 cell, Certificated by UL 2580",
           "Charger": "48V, 2.0A Fast Charger",
@@ -1672,7 +1671,7 @@
           "Kickstand": "Aluminum Alloy, included, rear mount",
           "Bike weight": "84lbs",
           "Bike load capacity": "400lbs",
-          "Rear rack load capacity": "60lbs",
+          "Rear rack load capacity": "120lbs",
           "Ul certification": "UL 2849",
           "Broadened": "220mm",
           "Adjustable": "60°",
@@ -1858,19 +1857,7 @@
           ]
         }
       ],
-      "regular_price": 1999.0,
-      "frame_sizes": [
-        {
-          "size": "Regular",
-          "height_min": "5'1\"",
-          "height_max": "6'3\""
-        },
-        {
-          "size": "Large",
-          "height_min": "5'3\"",
-          "height_max": "6'1\""
-        }
-      ]
+      "regular_price": 1999.0
     },
     {
       "model": "Himiway A7 Pro Commuter eBike",
@@ -1981,6 +1968,13 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'3\"",
+          "height_max": "6'5\""
+        }
+      ],
       "geometry": {
         "D – wheelbase": "48",
         "F – minimum seat height": "24",
@@ -2000,7 +1994,7 @@
           "price": 2599.0,
           "sku": "HMW-A7PRO-YW-US",
           "variant_id": 40223916490827,
-          "available": true,
+          "available": false,
           "image": "https://cdn.shopify.com/s/files/1/0255/9528/1483/files/A7pro-yellow-2_5cea16ff-0cb0-4559-8039-af72d3fc50db.png?v=1745832981",
           "color": {
             "name": "Darkorange",
@@ -2075,14 +2069,7 @@
         }
       ],
       "available_options": [],
-      "regular_price": 2899.0,
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'3\"",
-          "height_max": "6'5\""
-        }
-      ]
+      "regular_price": 2899.0
     },
     {
       "model": "Himiway C1 Kids eBike",
@@ -2166,6 +2153,13 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "3'3\"",
+          "height_max": "4'9\""
+        }
+      ],
       "geometry": {
         "D – wheelbase": "28.9",
         "F – minimum seat height": "19.7",
@@ -2225,14 +2219,7 @@
         }
       ],
       "available_options": [],
-      "regular_price": 999.0,
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "3'3\"",
-          "height_max": "4'9\""
-        }
-      ]
+      "regular_price": 999.0
     },
     {
       "model": "Himiway C5 Electric Motorbike",
@@ -2338,6 +2325,13 @@
           "detail": "Integrated Taillight"
         }
       ],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'4\"",
+          "height_max": "6'3\""
+        }
+      ],
       "geometry": {
         "C – wheelbase": "47",
         "D - standover height": "31.8",
@@ -2433,14 +2427,7 @@
       ],
       "regular_price": null,
       "tier": "Sport",
-      "family_id": "himiway__c5-electric-motorbike",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'4\"",
-          "height_max": "6'3\""
-        }
-      ]
+      "family_id": "himiway__c5-electric-motorbike"
     },
     {
       "model": "Himiway C5 Electric Motorbike — Ultra",
@@ -2550,6 +2537,13 @@
           "price": 0,
           "free": true,
           "detail": "Integrated Taillight"
+        }
+      ],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'4\"",
+          "height_max": "6'3\""
         }
       ],
       "geometry": {
@@ -2664,14 +2658,7 @@
       ],
       "regular_price": null,
       "tier": "Ultra",
-      "family_id": "himiway__c5-electric-motorbike",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'4\"",
-          "height_max": "6'3\""
-        }
-      ]
+      "family_id": "himiway__c5-electric-motorbike"
     },
     {
       "model": "Himiway D5 2.0 20\" eBike",
@@ -2680,7 +2667,7 @@
       "product_types": [
         "Commuter / Urban"
       ],
-      "price_from": 1999.0,
+      "price_from": 1799.0,
       "currency": "USD",
       "options": {
         "Battery size": [
@@ -2769,6 +2756,7 @@
           "Compact Wheels": "20\"",
           "Peak Motor": "750w / 1300w",
           "Max Torque": "90Nm",
+          "Motor Type": "Rear Hub",
           "Color Display": "LCD",
           "Easy Control": "Thumb",
           "Fork Travel": "90mm",
@@ -2782,7 +2770,7 @@
           "Power Level": "Custom"
         }
       },
-      "spec_count": 60,
+      "spec_count": 61,
       "scrape_error": null,
       "is_new": false,
       "shipping": {
@@ -2819,7 +2807,7 @@
             "Battery size": "15Ah",
             "Size": "Regular / 4'11\" - 6'3\""
           },
-          "price": 1999.0,
+          "price": 1799.0,
           "sku": "HMW-D52.0-20-BU-US",
           "variant_id": 41968842965067,
           "available": true,
@@ -2837,7 +2825,7 @@
             "Battery size": "15Ah",
             "Size": "Regular / 4'11\" - 6'3\""
           },
-          "price": 1999.0,
+          "price": 1799.0,
           "sku": "HMW-D52.0-20-CN-US",
           "variant_id": 41968910565451,
           "available": true,
@@ -2855,7 +2843,7 @@
             "Battery size": "15Ah",
             "Size": "Regular / 4'11\" - 6'3\""
           },
-          "price": 1999.0,
+          "price": 1799.0,
           "sku": "HMW-D52.0-20-PP-US",
           "variant_id": 41968860135499,
           "available": true,
@@ -2873,7 +2861,7 @@
             "Battery size": "15Ah",
             "Size": "Regular / 4'11\" - 6'3\""
           },
-          "price": 1999.0,
+          "price": 1799.0,
           "sku": "HMW-D52.0-20-GY-US",
           "variant_id": 41968842932299,
           "available": true,
@@ -2893,13 +2881,13 @@
           "choices": [
             {
               "value": "15Ah",
-              "price": 1999.0,
+              "price": 1799.0,
               "price_delta": 0.0,
               "free": true
             },
             {
               "value": "15Ah+20Ah",
-              "price": 2399.0,
+              "price": 2199.0,
               "price_delta": 400.0,
               "free": false
             }
@@ -2929,14 +2917,7 @@
       ],
       "regular_price": null,
       "tier": "15Ah",
-      "family_id": "himiway__d5-2-20",
-      "frame_sizes": [
-        {
-          "size": "Regular",
-          "height_min": "4'11\"",
-          "height_max": "6'3\""
-        }
-      ]
+      "family_id": "himiway__d5-2-20"
     },
     {
       "model": "Himiway D5 2.0 20\" eBike — 15Ah+20Ah",
@@ -2945,7 +2926,7 @@
       "product_types": [
         "Commuter / Urban"
       ],
-      "price_from": 2399.0,
+      "price_from": 2199.0,
       "currency": "USD",
       "options": {
         "Battery size": [
@@ -3034,6 +3015,7 @@
           "Compact Wheels": "20\"",
           "Peak Motor": "750w / 1300w",
           "Max Torque": "90Nm",
+          "Motor Type": "Rear Hub",
           "Color Display": "LCD",
           "Easy Control": "Thumb",
           "Fork Travel": "90mm",
@@ -3047,7 +3029,7 @@
           "Power Level": "Custom"
         }
       },
-      "spec_count": 60,
+      "spec_count": 61,
       "scrape_error": null,
       "is_new": false,
       "shipping": {
@@ -3084,7 +3066,7 @@
             "Battery size": "15Ah+20Ah",
             "Size": "Regular / 4'11\" - 6'3\""
           },
-          "price": 2399.0,
+          "price": 2199.0,
           "sku": "HMW-D52.0-20-BU-US-20A",
           "variant_id": 42214515081291,
           "available": true,
@@ -3102,7 +3084,7 @@
             "Battery size": "15Ah+20Ah",
             "Size": "Regular / 4'11\" - 6'3\""
           },
-          "price": 2399.0,
+          "price": 2199.0,
           "sku": "HMW-D52.0-20-CN-US-20A",
           "variant_id": 42214515015755,
           "available": true,
@@ -3120,7 +3102,7 @@
             "Battery size": "15Ah+20Ah",
             "Size": "Regular / 4'11\" - 6'3\""
           },
-          "price": 2399.0,
+          "price": 2199.0,
           "sku": "HMW-D52.0-20-PP-US-20A",
           "variant_id": 42214515048523,
           "available": true,
@@ -3138,7 +3120,7 @@
             "Battery size": "15Ah+20Ah",
             "Size": "Regular / 4'11\" - 6'3\""
           },
-          "price": 2399.0,
+          "price": 2199.0,
           "sku": "HMW-D52.0-20-GY-US-20A",
           "variant_id": 42214515114059,
           "available": true,
@@ -3158,13 +3140,13 @@
           "choices": [
             {
               "value": "15Ah",
-              "price": 1999.0,
+              "price": 1799.0,
               "price_delta": 0.0,
               "free": true
             },
             {
               "value": "15Ah+20Ah",
-              "price": 2399.0,
+              "price": 2199.0,
               "price_delta": 400.0,
               "free": false
             }
@@ -3194,14 +3176,7 @@
       ],
       "regular_price": null,
       "tier": "15Ah+20Ah",
-      "family_id": "himiway__d5-2-20",
-      "frame_sizes": [
-        {
-          "size": "Regular",
-          "height_min": "4'11\"",
-          "height_max": "6'3\""
-        }
-      ]
+      "family_id": "himiway__d5-2-20"
     },
     {
       "model": "Himiway D5 2.0 Camo eBike",
@@ -3210,7 +3185,7 @@
       "product_types": [
         "Commuter / Urban"
       ],
-      "price_from": 2199.0,
+      "price_from": 1999.0,
       "currency": "USD",
       "options": {
         "Size": [
@@ -3271,10 +3246,11 @@
           "Kickstand": "Aluminum Alloy, included, rear mount",
           "Bike weight": "92lbs",
           "Bike load capacity": "400lbs",
-          "Rear rack load capacity": "120lbs",
+          "Rear rack load capacity": "150lbs",
           "Ul certification": "UL 2849",
           "Motor Power": "750W",
           "Torque": "90Nm",
+          "Motor Type": "Rear Hub",
           "Fork Travel": "90mm",
           "Rear Travel": "100mm",
           "EXO sidewall protection": "26x4.0\"",
@@ -3288,7 +3264,7 @@
           "Instant power for hauling gear uphill.": "Torque Mode"
         }
       },
-      "spec_count": 58,
+      "spec_count": 59,
       "scrape_error": null,
       "is_new": false,
       "shipping": {
@@ -3321,7 +3297,7 @@
           "options": {
             "Size": "Regular / 5'1\" - 6'5\""
           },
-          "price": 2199.0,
+          "price": 1999.0,
           "sku": "HMW-D5-ST-CF-US-2.0",
           "variant_id": 41663854411851,
           "available": true,
@@ -3351,14 +3327,7 @@
           ]
         }
       ],
-      "regular_price": 2399.0,
-      "frame_sizes": [
-        {
-          "size": "Regular",
-          "height_min": "5'1\"",
-          "height_max": "6'5\""
-        }
-      ]
+      "regular_price": 2399.0
     },
     {
       "model": "Himiway D5 2.0 ST eBike — Step-Thru · 15Ah",
@@ -3367,7 +3336,7 @@
       "product_types": [
         "Commuter / Urban"
       ],
-      "price_from": 1999.0,
+      "price_from": 1799.0,
       "currency": "USD",
       "options": {
         "Battery size": [
@@ -3438,7 +3407,7 @@
           "Kickstand": "Aluminum Alloy, included, rear mount",
           "Bike weight": "92lbs",
           "Bike load capacity": "400lbs",
-          "Rear rack load capacity": "60lbs",
+          "Rear rack load capacity": "120lbs",
           "Ul certification": "UL 2849",
           "Fork Travel": "90mm",
           "Rear Travel": "100mm",
@@ -3446,6 +3415,7 @@
           "Wide Saddle": "260mm",
           "Peak Motor": "750w / 1300w",
           "Max Torque": "90Nm",
+          "Motor Type": "Rear Hub",
           "Color Display": "LCD",
           "Easy Control": "Thumb",
           "Accessories Available": "1000+",
@@ -3453,7 +3423,7 @@
           "Assist System": "5 Level"
         }
       },
-      "spec_count": 56,
+      "spec_count": 57,
       "scrape_error": null,
       "is_new": false,
       "shipping": {
@@ -3488,7 +3458,7 @@
             "Battery size": "15Ah",
             "Size": "Regular / 5'1\" - 6'5\""
           },
-          "price": 1999.0,
+          "price": 1799.0,
           "sku": "HMW-D5-ST-BU-US-2.0",
           "variant_id": 41643363434571,
           "available": true,
@@ -3506,7 +3476,7 @@
             "Battery size": "15Ah",
             "Size": "Regular / 5'1\" - 6'5\""
           },
-          "price": 1999.0,
+          "price": 1799.0,
           "sku": "HMW-D5-ST-GY-US-2.0",
           "variant_id": 41643363401803,
           "available": true,
@@ -3526,13 +3496,13 @@
           "choices": [
             {
               "value": "15Ah",
-              "price": 1999.0,
+              "price": 1799.0,
               "price_delta": 0.0,
               "free": true
             },
             {
               "value": "15Ah+20Ah",
-              "price": 2399.0,
+              "price": 2199.0,
               "price_delta": 400.0,
               "free": false
             }
@@ -3563,14 +3533,7 @@
       "regular_price": null,
       "family_id": "himiway__himiway-d5-2-0-ebike",
       "tier": "Step-Thru · 15Ah",
-      "frame_style": "Step-Thru",
-      "frame_sizes": [
-        {
-          "size": "Regular",
-          "height_min": "5'1\"",
-          "height_max": "6'5\""
-        }
-      ]
+      "frame_style": "Step-Thru"
     },
     {
       "model": "Himiway D5 2.0 ST eBike — Step-Thru · 15Ah+20Ah",
@@ -3579,7 +3542,7 @@
       "product_types": [
         "Commuter / Urban"
       ],
-      "price_from": 2399.0,
+      "price_from": 2199.0,
       "currency": "USD",
       "options": {
         "Battery size": [
@@ -3650,7 +3613,7 @@
           "Kickstand": "Aluminum Alloy, included, rear mount",
           "Bike weight": "92lbs",
           "Bike load capacity": "400lbs",
-          "Rear rack load capacity": "60lbs",
+          "Rear rack load capacity": "120lbs",
           "Ul certification": "UL 2849",
           "Fork Travel": "90mm",
           "Rear Travel": "100mm",
@@ -3658,6 +3621,7 @@
           "Wide Saddle": "260mm",
           "Peak Motor": "750w / 1300w",
           "Max Torque": "90Nm",
+          "Motor Type": "Rear Hub",
           "Color Display": "LCD",
           "Easy Control": "Thumb",
           "Accessories Available": "1000+",
@@ -3665,7 +3629,7 @@
           "Assist System": "5 Level"
         }
       },
-      "spec_count": 56,
+      "spec_count": 57,
       "scrape_error": null,
       "is_new": false,
       "shipping": {
@@ -3700,7 +3664,7 @@
             "Battery size": "15Ah+20Ah",
             "Size": "Regular / 5'1\" - 6'5\""
           },
-          "price": 2399.0,
+          "price": 2199.0,
           "sku": "HMW-D5-ST-BU-US-2.0-20A",
           "variant_id": 42214511542347,
           "available": true,
@@ -3718,7 +3682,7 @@
             "Battery size": "15Ah+20Ah",
             "Size": "Regular / 5'1\" - 6'5\""
           },
-          "price": 2399.0,
+          "price": 2199.0,
           "sku": "HMW-D5-ST-GY-US-2.0-20A",
           "variant_id": 42214511509579,
           "available": true,
@@ -3738,13 +3702,13 @@
           "choices": [
             {
               "value": "15Ah",
-              "price": 1999.0,
+              "price": 1799.0,
               "price_delta": 0.0,
               "free": true
             },
             {
               "value": "15Ah+20Ah",
-              "price": 2399.0,
+              "price": 2199.0,
               "price_delta": 400.0,
               "free": false
             }
@@ -3775,681 +3739,6 @@
       "regular_price": null,
       "family_id": "himiway__himiway-d5-2-0-ebike",
       "tier": "Step-Thru · 15Ah+20Ah",
-      "frame_style": "Step-Thru",
-      "frame_sizes": [
-        {
-          "size": "Regular",
-          "height_min": "5'1\"",
-          "height_max": "6'5\""
-        }
-      ]
-    },
-    {
-      "model": "Himiway D5 2.0 Series eBike",
-      "handle": "d5-2",
-      "url": "https://himiwaybike.com/products/d5-2?variant=42167472619595",
-      "product_types": [
-        "Commuter / Urban"
-      ],
-      "price_from": 1999.0,
-      "currency": "USD",
-      "options": {
-        "Type": [
-          "Step-thru",
-          "Step-over"
-        ],
-        "Size": [
-          "26 inch / 5'1\" - 6'5\"",
-          "20 inch / 4'11\" - 6'3\""
-        ],
-        "colors": [
-          {
-            "name": "Midnight Blue",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0255/9528/1483/files/D5-st-2-main-5.png?v=1772003593"
-          },
-          {
-            "name": "Space Grey",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0255/9528/1483/files/D5-st-2-main-4.png?v=1772003593"
-          },
-          {
-            "name": "Olive Green",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0255/9528/1483/files/D5-2-main-6.png?v=1772003593"
-          }
-        ]
-      },
-      "warranty": "2-Year Warranty",
-      "specs": {
-        "all": {
-          "Frame": "Aluminum Alloy, Rear Wheel 130mm Travel",
-          "Fork": "RST Hydraulic suspension 100mm travel with Lock-out, Nutted, Rebound adjustable",
-          "Motor": "48V, 750W, 90Nm",
-          "Battery": "48V, 15Ah , IPX6, Certificated by UL 2271",
-          "Cell": "Samsung/LG 21700 cell, Certificated by UL 2580",
-          "Charger": "48V, 3.0A Fast Charger",
-          "Display": "3.5\" Full color, High brightness, Bluetooth, Adjustable angle",
-          "Sensor": "Torque / Cadence Switchable",
-          "Throttle": "Ergonomic Thumb Throttle",
-          "Pedal assist": "Auto Pedal Assistant + 5 PAS Levels",
-          "Walk mode": "1.9~3.7 MPH",
-          "Front light": "120 Lux high-output integrated LED, adjustable angle",
-          "Rear light": "Braking Indicator, turn signal, rear light steady/flash, integrated with the frame",
-          "Waterproof rating": "IPX5 (whole bike), IPX6 (battery)",
-          "Max speed (default)": "20 MPH",
-          "Max speed adjustable range": "4~28 MPH",
-          "Class": "1/2/3",
-          "Throttle range": "40 Miles",
-          "Pedal assist range": "70 Miles",
-          "Chainrings": "52T Narrow Wide Chainring",
-          "Crankset": "Aluminum Alloy, 170mm",
-          "Freewheel": "8-speed, 13-32T",
-          "Rear derailleur": "SHIMANO 8-speed",
-          "Shift lever": "SHIMANO 8-speed",
-          "Chain": "8-speed",
-          "Brake": "Tektro Hydraulic Disc Brake",
-          "Rotors": "203mm Front/180mm Rear",
-          "Brake levers": "Aluminum Alloy, with power cutoff",
-          "Rims": "Aluminum alloy",
-          "Front hub": "Aluminum alloy, nutted",
-          "Tire": "Maxxis Minion FBF / FBR 26 x 4.0, Tubeless ready",
-          "Handlebar": "Aluminum Alloy, Φ31.8mm, 680mm",
-          "Grips": "Durable ergonomic grips, lockable",
-          "Stem": "0-60° Adjustable, Aluminum Alloy, Φ31.8mm, 90mm",
-          "Saddle": "Memory Foam comfort ergonomic seat",
-          "Seatpost": "Aluminum Alloy, Φ33.9mm",
-          "Clamp": "Aluminum Alloy, quick release",
-          "Fenders": "Aluminum Alloy, front and rear full coverage",
-          "Rear rack": "MIK HD Compatible Alloy",
-          "Pedals": "Aluminum alloy",
-          "Kickstand": "Aluminum Alloy, included, rear mount",
-          "Bike weight": "92lbs",
-          "Bike load capacity": "400lbs",
-          "Rear rack load capacity": "60lbs",
-          "Ul certification": "UL 2849",
-          "Wide Saddle": "260mm",
-          "Peak Motor": "750w / 1300w",
-          "Max Torque": "90Nm",
-          "Color Display": "LCD",
-          "Easy Control": "Thumb",
-          "Accessories Available": "1000+",
-          "Switch Accessories": "One Click",
-          "Assist System": "5 Level",
-          "Real-Time Assist": "Auto Mode",
-          "Instant Power": "Torque",
-          "Steady Rhythm": "Cadence",
-          "Power Level": "Custom",
-          "Adjustable": "Speed"
-        }
-      },
-      "spec_count": 58,
-      "scrape_error": null,
-      "is_new": false,
-      "shipping": {
-        "cost": 0,
-        "free": true
-      },
-      "free_accessories": [
-        {
-          "name": "Front Light",
-          "price": 0,
-          "free": true,
-          "detail": "120 Lux high-output integrated LED, adjustable angle"
-        },
-        {
-          "name": "Rear Light",
-          "price": 0,
-          "free": true,
-          "detail": "Braking Indicator, turn signal, rear light steady/flash, integrated with the frame"
-        },
-        {
-          "name": "Kickstand",
-          "price": 0,
-          "free": true,
-          "detail": "Aluminum Alloy, included, rear mount"
-        }
-      ],
-      "geometry": {},
-      "configurations": [
-        {
-          "options": {
-            "Type": "Step-over",
-            "Size": "26 inch / 5'1\" - 6'5\"",
-            "Color": "Midnight Blue"
-          },
-          "price": 1999.0,
-          "sku": "HMW-D5-SO-BU-US-2.0",
-          "variant_id": 42167472619595,
-          "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0255/9528/1483/files/D5-2-main-4.png?v=1772003593",
-          "color": {
-            "name": "Midnight Blue",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0255/9528/1483/files/D5-st-2-main-5.png?v=1772003593"
-          }
-        },
-        {
-          "options": {
-            "Type": "Step-over",
-            "Size": "26 inch / 5'1\" - 6'5\"",
-            "Color": "Space Grey"
-          },
-          "price": 1999.0,
-          "sku": "HMW-D5-SO-GY-US-2.0",
-          "variant_id": 42167472586827,
-          "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0255/9528/1483/files/D5-2-main-5.png?v=1772003593",
-          "color": {
-            "name": "Space Grey",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0255/9528/1483/files/D5-st-2-main-4.png?v=1772003593"
-          }
-        },
-        {
-          "options": {
-            "Type": "Step-over",
-            "Size": "26 inch / 5'1\" - 6'5\"",
-            "Color": "Olive Green"
-          },
-          "price": 1999.0,
-          "sku": "HMW-D5-SO-GR-US-2.0",
-          "variant_id": 42167472652363,
-          "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0255/9528/1483/files/D5-2-main-6.png?v=1772003593",
-          "color": {
-            "name": "Olive Green",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0255/9528/1483/files/D5-2-main-6.png?v=1772003593"
-          }
-        }
-      ],
-      "available_options": [
-        {
-          "group": "Type",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Step-thru",
-              "price": 1999.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Step-over",
-              "price": 1999.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
-          "group": "Size",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "26 inch / 5'1\" - 6'5\"",
-              "price": 1999.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "20 inch / 4'11\" - 6'3\"",
-              "price": 1999.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Midnight Blue",
-              "price": 1999.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Camo",
-              "price": 2199.0,
-              "price_delta": 200.0,
-              "free": false
-            },
-            {
-              "value": "Space Grey",
-              "price": 1999.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Sage",
-              "price": 1999.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Nebula Mist",
-              "price": 1999.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Olive Green",
-              "price": 1999.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
-          "group": "Included accessories",
-          "type": "accessory",
-          "choices": [
-            {
-              "value": "Front Light",
-              "price": 0,
-              "free": true
-            },
-            {
-              "value": "Rear Light",
-              "price": 0,
-              "free": true
-            },
-            {
-              "value": "Kickstand",
-              "price": 0,
-              "free": true
-            }
-          ]
-        }
-      ],
-      "regular_price": null,
-      "tier": "Step-Over",
-      "family_id": "himiway__d5-2",
-      "frame_style": "Step-Over (Mid-Step)"
-    },
-    {
-      "model": "Himiway D5 2.0 Series eBike — Step-Thru",
-      "handle": "d5-2--step-thru",
-      "url": "https://himiwaybike.com/products/d5-2?variant=42167473995851",
-      "product_types": [
-        "Commuter / Urban"
-      ],
-      "price_from": 1999.0,
-      "currency": "USD",
-      "options": {
-        "Type": [
-          "Step-thru",
-          "Step-over"
-        ],
-        "Size": [
-          "26 inch / 5'1\" - 6'5\"",
-          "20 inch / 4'11\" - 6'3\""
-        ],
-        "colors": [
-          {
-            "name": "Midnight Blue",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0255/9528/1483/files/D5-st-2-main-5.png?v=1772003593"
-          },
-          {
-            "name": "Camo",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0255/9528/1483/files/D5-2-camo-2.png?v=1772003593"
-          },
-          {
-            "name": "Space Grey",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0255/9528/1483/files/D5-st-2-main-4.png?v=1772003593"
-          },
-          {
-            "name": "Sage",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0255/9528/1483/files/d5-2.0-20_03.png?v=1772003593"
-          },
-          {
-            "name": "Nebula Mist",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0255/9528/1483/files/d5-2.0-20_18.png?v=1773730188"
-          }
-        ]
-      },
-      "warranty": "2-Year Warranty",
-      "specs": {
-        "all": {
-          "Frame": "Aluminum Alloy, Rear Wheel 130mm Travel",
-          "Fork": "RST Hydraulic suspension 100mm travel with Lock-out, Nutted, Rebound adjustable",
-          "Motor": "48V, 750W, 90Nm",
-          "Battery": "48V, 15Ah , IPX6, Certificated by UL 2271",
-          "Cell": "Samsung/LG 21700 cell, Certificated by UL 2580",
-          "Charger": "48V, 3.0A Fast Charger",
-          "Display": "3.5\" Full color, High brightness, Bluetooth, Adjustable angle",
-          "Sensor": "Torque / Cadence Switchable",
-          "Throttle": "Ergonomic Thumb Throttle",
-          "Pedal assist": "Auto Pedal Assistant + 5 PAS Levels",
-          "Walk mode": "1.9~3.7 MPH",
-          "Front light": "120 Lux high-output integrated LED, adjustable angle",
-          "Rear light": "Braking Indicator, turn signal, rear light steady/flash, integrated with the frame",
-          "Waterproof rating": "IPX5 (whole bike), IPX6 (battery)",
-          "Max speed (default)": "20 MPH",
-          "Max speed adjustable range": "4~28 MPH",
-          "Class": "1/2/3",
-          "Throttle range": "40 Miles",
-          "Pedal assist range": "70 Miles",
-          "Chainrings": "52T Narrow Wide Chainring",
-          "Crankset": "Aluminum Alloy, 170mm",
-          "Freewheel": "8-speed, 13-32T",
-          "Rear derailleur": "SHIMANO 8-speed",
-          "Shift lever": "SHIMANO 8-speed",
-          "Chain": "8-speed",
-          "Brake": "Tektro Hydraulic Disc Brake",
-          "Rotors": "203mm Front/180mm Rear",
-          "Brake levers": "Aluminum Alloy, with power cutoff",
-          "Rims": "Aluminum alloy",
-          "Front hub": "Aluminum alloy, nutted",
-          "Tire": "Maxxis Minion FBF / FBR 26 x 4.0, Tubeless ready",
-          "Handlebar": "Aluminum Alloy, Φ31.8mm, 680mm",
-          "Grips": "Durable ergonomic grips, lockable",
-          "Stem": "0-60° Adjustable, Aluminum Alloy, Φ31.8mm, 90mm",
-          "Saddle": "Memory Foam comfort ergonomic seat",
-          "Seatpost": "Aluminum Alloy, Φ33.9mm",
-          "Clamp": "Aluminum Alloy, quick release",
-          "Fenders": "Aluminum Alloy, front and rear full coverage",
-          "Rear rack": "MIK HD Compatible Alloy",
-          "Pedals": "Aluminum alloy",
-          "Kickstand": "Aluminum Alloy, included, rear mount",
-          "Bike weight": "92lbs",
-          "Bike load capacity": "400lbs",
-          "Rear rack load capacity": "60lbs",
-          "Ul certification": "UL 2849",
-          "Wide Saddle": "260mm",
-          "Peak Motor": "750w / 1300w",
-          "Max Torque": "90Nm",
-          "Color Display": "LCD",
-          "Easy Control": "Thumb",
-          "Accessories Available": "1000+",
-          "Switch Accessories": "One Click",
-          "Assist System": "5 Level",
-          "Real-Time Assist": "Auto Mode",
-          "Instant Power": "Torque",
-          "Steady Rhythm": "Cadence",
-          "Power Level": "Custom",
-          "Adjustable": "Speed"
-        }
-      },
-      "spec_count": 58,
-      "scrape_error": null,
-      "is_new": false,
-      "shipping": {
-        "cost": 0,
-        "free": true
-      },
-      "free_accessories": [
-        {
-          "name": "Front Light",
-          "price": 0,
-          "free": true,
-          "detail": "120 Lux high-output integrated LED, adjustable angle"
-        },
-        {
-          "name": "Rear Light",
-          "price": 0,
-          "free": true,
-          "detail": "Braking Indicator, turn signal, rear light steady/flash, integrated with the frame"
-        },
-        {
-          "name": "Kickstand",
-          "price": 0,
-          "free": true,
-          "detail": "Aluminum Alloy, included, rear mount"
-        }
-      ],
-      "geometry": {},
-      "configurations": [
-        {
-          "options": {
-            "Type": "Step-thru",
-            "Size": "26 inch / 5'1\" - 6'5\"",
-            "Color": "Midnight Blue"
-          },
-          "price": 1999.0,
-          "sku": "HMW-D5-ST-BU-US-2.0",
-          "variant_id": 42167473995851,
-          "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0255/9528/1483/files/D5-st-2-main-5.png?v=1772003593",
-          "color": {
-            "name": "Midnight Blue",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0255/9528/1483/files/D5-st-2-main-5.png?v=1772003593"
-          }
-        },
-        {
-          "options": {
-            "Type": "Step-thru",
-            "Size": "26 inch / 5'1\" - 6'5\"",
-            "Color": "Camo"
-          },
-          "price": 2199.0,
-          "sku": "HMW-D5-ST-CF-US-2.0",
-          "variant_id": 42167477534795,
-          "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0255/9528/1483/files/D5-2-camo-2.png?v=1772003593",
-          "color": {
-            "name": "Camo",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0255/9528/1483/files/D5-2-camo-2.png?v=1772003593"
-          }
-        },
-        {
-          "options": {
-            "Type": "Step-thru",
-            "Size": "26 inch / 5'1\" - 6'5\"",
-            "Color": "Space Grey"
-          },
-          "price": 1999.0,
-          "sku": "HMW-D5-ST-GY-US-2.0",
-          "variant_id": 42167473897547,
-          "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0255/9528/1483/files/D5-st-2-main-4.png?v=1772003593",
-          "color": {
-            "name": "Space Grey",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0255/9528/1483/files/D5-st-2-main-4.png?v=1772003593"
-          }
-        },
-        {
-          "options": {
-            "Type": "Step-thru",
-            "Size": "20 inch / 4'11\" - 6'3\"",
-            "Color": "Midnight Blue"
-          },
-          "price": 1999.0,
-          "sku": "HMW-D52.0-20-BU-US",
-          "variant_id": 42167474028619,
-          "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0255/9528/1483/files/d5-2.0-20_13.png?v=1773730188",
-          "color": {
-            "name": "Midnight Blue",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0255/9528/1483/files/D5-st-2-main-5.png?v=1772003593"
-          }
-        },
-        {
-          "options": {
-            "Type": "Step-thru",
-            "Size": "20 inch / 4'11\" - 6'3\"",
-            "Color": "Space Grey"
-          },
-          "price": 1999.0,
-          "sku": "HMW-D52.0-20-GY-US",
-          "variant_id": 42167473930315,
-          "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0255/9528/1483/files/d5-2.0-20_08.png?v=1773730188",
-          "color": {
-            "name": "Space Grey",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0255/9528/1483/files/D5-st-2-main-4.png?v=1772003593"
-          }
-        },
-        {
-          "options": {
-            "Type": "Step-thru",
-            "Size": "20 inch / 4'11\" - 6'3\"",
-            "Color": "Sage"
-          },
-          "price": 1999.0,
-          "sku": "HMW-D52.0-20-CN-US",
-          "variant_id": 42167477567563,
-          "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0255/9528/1483/files/d5-2.0-20_03.png?v=1772003593",
-          "color": {
-            "name": "Sage",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0255/9528/1483/files/d5-2.0-20_03.png?v=1772003593"
-          }
-        },
-        {
-          "options": {
-            "Type": "Step-thru",
-            "Size": "20 inch / 4'11\" - 6'3\"",
-            "Color": "Nebula Mist"
-          },
-          "price": 1999.0,
-          "sku": "HMW-D52.0-20-PP-US",
-          "variant_id": 42167477600331,
-          "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0255/9528/1483/files/d5-2.0-20_18.png?v=1773730188",
-          "color": {
-            "name": "Nebula Mist",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0255/9528/1483/files/d5-2.0-20_18.png?v=1773730188"
-          }
-        }
-      ],
-      "available_options": [
-        {
-          "group": "Type",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Step-thru",
-              "price": 1999.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Step-over",
-              "price": 1999.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
-          "group": "Size",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "26 inch / 5'1\" - 6'5\"",
-              "price": 1999.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "20 inch / 4'11\" - 6'3\"",
-              "price": 1999.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
-          "group": "Color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Midnight Blue",
-              "price": 1999.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Camo",
-              "price": 2199.0,
-              "price_delta": 200.0,
-              "free": false
-            },
-            {
-              "value": "Space Grey",
-              "price": 1999.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Sage",
-              "price": 1999.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Nebula Mist",
-              "price": 1999.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Olive Green",
-              "price": 1999.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
-          "group": "Included accessories",
-          "type": "accessory",
-          "choices": [
-            {
-              "value": "Front Light",
-              "price": 0,
-              "free": true
-            },
-            {
-              "value": "Rear Light",
-              "price": 0,
-              "free": true
-            },
-            {
-              "value": "Kickstand",
-              "price": 0,
-              "free": true
-            }
-          ]
-        }
-      ],
-      "regular_price": null,
-      "tier": "Step-Thru",
-      "family_id": "himiway__d5-2",
       "frame_style": "Step-Thru"
     },
     {
@@ -4459,7 +3748,7 @@
       "product_types": [
         "Commuter / Urban"
       ],
-      "price_from": 1999.0,
+      "price_from": 1799.0,
       "currency": "USD",
       "options": {
         "Battery size": [
@@ -4536,11 +3825,12 @@
           "Kickstand": "Aluminum Alloy, included, rear mount",
           "Bike weight": "92lbs",
           "Bike load capacity": "400lbs",
-          "Rear rack load capacity": "60lbs",
+          "Rear rack load capacity": "120lbs",
           "Ul certification": "UL 2849",
           "Wide Saddle": "260mm",
           "Peak Motor": "750w / 1300w",
           "Max Torque": "90Nm",
+          "Motor Type": "Rear Hub",
           "Color Display": "LCD",
           "Easy Control": "Thumb",
           "Accessories Available": "1000+",
@@ -4548,7 +3838,7 @@
           "Assist System": "5 Level"
         }
       },
-      "spec_count": 53,
+      "spec_count": 54,
       "scrape_error": null,
       "is_new": false,
       "shipping": {
@@ -4583,7 +3873,7 @@
             "Battery size": "15Ah",
             "Size": "Regular / 5'1\" - 6'5\""
           },
-          "price": 1999.0,
+          "price": 1799.0,
           "sku": "HMW-D5-SO-GY-US-2.0",
           "variant_id": 41642813259851,
           "available": true,
@@ -4601,7 +3891,7 @@
             "Battery size": "15Ah",
             "Size": "Regular / 5'1\" - 6'5\""
           },
-          "price": 1999.0,
+          "price": 1799.0,
           "sku": "HMW-D5-SO-BU-US-2.0",
           "variant_id": 41642813292619,
           "available": true,
@@ -4619,7 +3909,7 @@
             "Battery size": "15Ah",
             "Size": "Regular / 5'1\" - 6'5\""
           },
-          "price": 1999.0,
+          "price": 1799.0,
           "sku": "HMW-D5-SO-GR-US-2.0",
           "variant_id": 41642813325387,
           "available": true,
@@ -4639,13 +3929,13 @@
           "choices": [
             {
               "value": "15Ah",
-              "price": 1999.0,
+              "price": 1799.0,
               "price_delta": 0.0,
               "free": true
             },
             {
               "value": "15Ah+20Ah",
-              "price": 2399.0,
+              "price": 2199.0,
               "price_delta": 400.0,
               "free": false
             }
@@ -4676,14 +3966,7 @@
       "regular_price": null,
       "family_id": "himiway__himiway-d5-2-0-ebike",
       "tier": "Step-Over · 15Ah",
-      "frame_style": "Step-Over (Mid-Step)",
-      "frame_sizes": [
-        {
-          "size": "Regular",
-          "height_min": "5'1\"",
-          "height_max": "6'5\""
-        }
-      ]
+      "frame_style": "Step-Over (Mid-Step)"
     },
     {
       "model": "Himiway D5 2.0 eBike — Step-Over · 15Ah+20Ah",
@@ -4692,7 +3975,7 @@
       "product_types": [
         "Commuter / Urban"
       ],
-      "price_from": 2399.0,
+      "price_from": 2199.0,
       "currency": "USD",
       "options": {
         "Battery size": [
@@ -4769,11 +4052,12 @@
           "Kickstand": "Aluminum Alloy, included, rear mount",
           "Bike weight": "92lbs",
           "Bike load capacity": "400lbs",
-          "Rear rack load capacity": "60lbs",
+          "Rear rack load capacity": "120lbs",
           "Ul certification": "UL 2849",
           "Wide Saddle": "260mm",
           "Peak Motor": "750w / 1300w",
           "Max Torque": "90Nm",
+          "Motor Type": "Rear Hub",
           "Color Display": "LCD",
           "Easy Control": "Thumb",
           "Accessories Available": "1000+",
@@ -4781,7 +4065,7 @@
           "Assist System": "5 Level"
         }
       },
-      "spec_count": 53,
+      "spec_count": 54,
       "scrape_error": null,
       "is_new": false,
       "shipping": {
@@ -4816,7 +4100,7 @@
             "Battery size": "15Ah+20Ah",
             "Size": "Regular / 5'1\" - 6'5\""
           },
-          "price": 2399.0,
+          "price": 2199.0,
           "sku": "HMW-D5-SO-GY-US-2.0-20A",
           "variant_id": 42214505414731,
           "available": true,
@@ -4834,7 +4118,7 @@
             "Battery size": "15Ah+20Ah",
             "Size": "Regular / 5'1\" - 6'5\""
           },
-          "price": 2399.0,
+          "price": 2199.0,
           "sku": "HMW-D5-SO-BU-US-2.0-20A",
           "variant_id": 42214505447499,
           "available": true,
@@ -4852,7 +4136,7 @@
             "Battery size": "15Ah+20Ah",
             "Size": "Regular / 5'1\" - 6'5\""
           },
-          "price": 2399.0,
+          "price": 2199.0,
           "sku": "HMW-D5-SO-GR-US-2.0-20A",
           "variant_id": 42214505480267,
           "available": true,
@@ -4872,13 +4156,13 @@
           "choices": [
             {
               "value": "15Ah",
-              "price": 1999.0,
+              "price": 1799.0,
               "price_delta": 0.0,
               "free": true
             },
             {
               "value": "15Ah+20Ah",
-              "price": 2399.0,
+              "price": 2199.0,
               "price_delta": 400.0,
               "free": false
             }
@@ -4909,14 +4193,7 @@
       "regular_price": null,
       "family_id": "himiway__himiway-d5-2-0-ebike",
       "tier": "Step-Over · 15Ah+20Ah",
-      "frame_style": "Step-Over (Mid-Step)",
-      "frame_sizes": [
-        {
-          "size": "Regular",
-          "height_min": "5'1\"",
-          "height_max": "6'5\""
-        }
-      ]
+      "frame_style": "Step-Over (Mid-Step)"
     },
     {
       "model": "Himiway D7 Pro Mountain eBike",
@@ -5011,6 +4288,13 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'3\"",
+          "height_max": "6'5\""
+        }
+      ],
       "geometry": {
         "D – wheelbase": "52.6",
         "F – minimum seat height": "20.9",
@@ -5058,14 +4342,7 @@
           }
         }
       ],
-      "available_options": [],
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'3\"",
-          "height_max": "6'5\""
-        }
-      ]
+      "available_options": []
     }
   ],
   "available_accessories": [
@@ -5198,8 +4475,8 @@
       "url": "https://himiwaybike.com/products/hd-wide-angle-handlebar-rearview-mirror-a-pair"
     },
     {
-      "name": "Rearview Mirror(A Pair)",
-      "price": 49.0,
+      "name": "Rearview Mirror",
+      "price": 39.0,
       "regular_price": null,
       "on_sale": false,
       "free": false,
@@ -5452,6 +4729,14 @@
       "on_sale": false,
       "free": false,
       "url": "https://himiwaybike.com/products/mik-rear-rack"
+    },
+    {
+      "name": "Saddle Bag",
+      "price": 39.9,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://himiwaybike.com/products/saddle-bag"
     },
     {
       "name": "C5 Large Frame Basket",
@@ -5974,5 +5259,5 @@
       "url": "https://himiwaybike.com/products/adjustable-bike-stem-90mm"
     }
   ],
-  "available_accessories_count": 113
+  "available_accessories_count": 114
 }

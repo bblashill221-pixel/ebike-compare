@@ -1,7 +1,7 @@
 {
   "brand": "mokwheel",
   "scraper": "scrape_mokwheel.py",
-  "generated_at": "2026-06-24T03:31:18.340618+00:00",
+  "generated_at": "2026-06-24T08:06:23.648938+00:00",
   "fields_audited": [
     "motor_w",
     "battery_wh",
@@ -17,10 +17,10 @@
     "drive_type"
   ],
   "summary": {
-    "models": 18,
-    "present": 216,
+    "models": 19,
+    "present": 19,
     "resolved": 0,
-    "open": 0,
+    "open": 209,
     "needs_image": 0,
     "unpublished": 0
   },
@@ -31,99 +31,99 @@
       "url": "https://www.mokwheel.com/products/asphalt?variant=45074499371254",
       "fields": {
         "motor_w": {
-          "status": "present",
-          "source": "scraped",
-          "value": 500,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "battery_wh": {
-          "status": "present",
-          "source": "scraped",
-          "value": 706,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "torque_nm": {
-          "status": "present",
-          "source": "scraped",
-          "value": 70,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_speed_mph": {
-          "status": "present",
-          "source": "scraped",
-          "value": 28,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "range_mi": {
-          "status": "present",
-          "source": "scraped",
-          "value": 60,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "weight_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 64.0,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_load_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 350,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "fit_height_min_in": {
           "status": "present",
           "source": "scraped",
-          "value": 66,
+          "value": 65,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
         },
         "sensor_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "torque + cadence",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "brake_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hydraulic_disc",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "frame_material": {
-          "status": "present",
-          "source": "scraped",
-          "value": "aluminum",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "drive_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hub",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         }
       }
@@ -134,59 +134,59 @@
       "url": "https://www.mokwheel.com/products/asphalt-st?variant=45094120128758",
       "fields": {
         "motor_w": {
-          "status": "present",
-          "source": "scraped",
-          "value": 500,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "battery_wh": {
-          "status": "present",
-          "source": "scraped",
-          "value": 706,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "torque_nm": {
-          "status": "present",
-          "source": "scraped",
-          "value": 70,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_speed_mph": {
-          "status": "present",
-          "source": "scraped",
-          "value": 28,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "range_mi": {
-          "status": "present",
-          "source": "scraped",
-          "value": 60,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "weight_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 63.0,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_load_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 300,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "fit_height_min_in": {
@@ -198,35 +198,35 @@
           "resolved_at": null
         },
         "sensor_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "torque + cadence",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "brake_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hydraulic_disc",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "frame_material": {
-          "status": "present",
-          "source": "scraped",
-          "value": "aluminum",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "drive_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hub",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         }
       }
@@ -237,99 +237,99 @@
       "url": "https://www.mokwheel.com/products/basalt-2-0?variant=48637482729718",
       "fields": {
         "motor_w": {
-          "status": "present",
-          "source": "scraped",
-          "value": 750,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "battery_wh": {
-          "status": "present",
-          "source": "scraped",
-          "value": 941,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "torque_nm": {
-          "status": "present",
-          "source": "scraped",
-          "value": 90,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_speed_mph": {
-          "status": "present",
-          "source": "scraped",
-          "value": 28,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "range_mi": {
-          "status": "present",
-          "source": "scraped",
-          "value": 80,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "weight_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 80.0,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_load_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 450,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "fit_height_min_in": {
           "status": "present",
           "source": "scraped",
-          "value": 67,
+          "value": 65,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
         },
         "sensor_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "torque + cadence",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "brake_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hydraulic_disc",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "frame_material": {
-          "status": "present",
-          "source": "scraped",
-          "value": "aluminum",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "drive_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hub",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         }
       }
@@ -340,99 +340,99 @@
       "url": "https://www.mokwheel.com/products/basalt-st-2-0-s?variant=49224496251126",
       "fields": {
         "motor_w": {
-          "status": "present",
-          "source": "scraped",
-          "value": 750,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "battery_wh": {
-          "status": "present",
-          "source": "scraped",
-          "value": 941,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "torque_nm": {
-          "status": "present",
-          "source": "scraped",
-          "value": 90,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_speed_mph": {
-          "status": "present",
-          "source": "scraped",
-          "value": 28,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "range_mi": {
-          "status": "present",
-          "source": "scraped",
-          "value": 80,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "weight_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 80.0,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_load_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 450,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "fit_height_min_in": {
           "status": "present",
           "source": "scraped",
-          "value": 66,
+          "value": 65,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
         },
         "sensor_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "torque + cadence",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "brake_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hydraulic_disc",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "frame_material": {
-          "status": "present",
-          "source": "scraped",
-          "value": "aluminum",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "drive_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hub",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         }
       }
@@ -443,59 +443,59 @@
       "url": "https://www.mokwheel.com/products/flint?variant=49283295478006",
       "fields": {
         "motor_w": {
-          "status": "present",
-          "source": "scraped",
-          "value": 350,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "battery_wh": {
-          "status": "present",
-          "source": "scraped",
-          "value": 360,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "torque_nm": {
-          "status": "present",
-          "source": "scraped",
-          "value": 40,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_speed_mph": {
-          "status": "present",
-          "source": "scraped",
-          "value": 20,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "range_mi": {
-          "status": "present",
-          "source": "scraped",
-          "value": 70,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "weight_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 36.0,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_load_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 350,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "fit_height_min_in": {
@@ -507,35 +507,35 @@
           "resolved_at": null
         },
         "sensor_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "torque + cadence",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "brake_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hydraulic_disc",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "frame_material": {
-          "status": "present",
-          "source": "scraped",
-          "value": "aluminum",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "drive_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hub",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         }
       }
@@ -543,62 +543,62 @@
     {
       "id": "mokwheel__flint-pro",
       "model": "FLINT PRO Ebike",
-      "url": "https://www.mokwheel.com/products/flint-pro?variant=47809327333622",
+      "url": "https://www.mokwheel.com/products/flint-pro?variant=49283328540918",
       "fields": {
         "motor_w": {
-          "status": "present",
-          "source": "scraped",
-          "value": 250,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "battery_wh": {
-          "status": "present",
-          "source": "scraped",
-          "value": 360,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "torque_nm": {
-          "status": "present",
-          "source": "scraped",
-          "value": 40,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_speed_mph": {
-          "status": "present",
-          "source": "scraped",
-          "value": 20,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "range_mi": {
-          "status": "present",
-          "source": "scraped",
-          "value": 70,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "weight_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 31.0,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_load_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 350,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "fit_height_min_in": {
@@ -610,35 +610,35 @@
           "resolved_at": null
         },
         "sensor_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "torque + cadence",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "brake_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hydraulic_disc",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "frame_material": {
-          "status": "present",
-          "source": "scraped",
-          "value": "aluminum",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "drive_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hub",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         }
       }
@@ -649,59 +649,59 @@
       "url": "https://www.mokwheel.com/products/flint-pro-st?variant=49283333587190",
       "fields": {
         "motor_w": {
-          "status": "present",
-          "source": "scraped",
-          "value": 250,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "battery_wh": {
-          "status": "present",
-          "source": "scraped",
-          "value": 360,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "torque_nm": {
-          "status": "present",
-          "source": "scraped",
-          "value": 40,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_speed_mph": {
-          "status": "present",
-          "source": "scraped",
-          "value": 20,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "range_mi": {
-          "status": "present",
-          "source": "scraped",
-          "value": 70,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "weight_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 35.0,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_load_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 300,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "fit_height_min_in": {
@@ -713,35 +713,35 @@
           "resolved_at": null
         },
         "sensor_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "torque + cadence",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "brake_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hydraulic_disc",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "frame_material": {
-          "status": "present",
-          "source": "scraped",
-          "value": "aluminum",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "drive_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hub",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         }
       }
@@ -752,59 +752,59 @@
       "url": "https://www.mokwheel.com/products/flint-st?variant=47809320190198",
       "fields": {
         "motor_w": {
-          "status": "present",
-          "source": "scraped",
-          "value": 350,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "battery_wh": {
-          "status": "present",
-          "source": "scraped",
-          "value": 360,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "torque_nm": {
-          "status": "present",
-          "source": "scraped",
-          "value": 40,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_speed_mph": {
-          "status": "present",
-          "source": "scraped",
-          "value": 20,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "range_mi": {
-          "status": "present",
-          "source": "scraped",
-          "value": 70,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "weight_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 40.0,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_load_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 300,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "fit_height_min_in": {
@@ -816,35 +816,35 @@
           "resolved_at": null
         },
         "sensor_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "torque + cadence",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "brake_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hydraulic_disc",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "frame_material": {
-          "status": "present",
-          "source": "scraped",
-          "value": "aluminum",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "drive_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hub",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         }
       }
@@ -855,471 +855,59 @@
       "url": "https://www.mokwheel.com/products/granite",
       "fields": {
         "motor_w": {
-          "status": "present",
-          "source": "scraped",
-          "value": 500,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "battery_wh": {
-          "status": "present",
-          "source": "scraped",
-          "value": 720,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "torque_nm": {
-          "status": "present",
-          "source": "scraped",
-          "value": 70,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_speed_mph": {
-          "status": "present",
-          "source": "scraped",
-          "value": 20,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "range_mi": {
-          "status": "present",
-          "source": "scraped",
-          "value": 55,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "weight_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 101.0,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_load_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 350,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "fit_height_min_in": {
-          "status": "present",
-          "source": "scraped",
-          "value": 60,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "sensor_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "cadence",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "brake_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hydraulic_disc",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "frame_material": {
-          "status": "present",
-          "source": "scraped",
-          "value": "aluminum",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "drive_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hub",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        }
-      }
-    },
-    {
-      "id": "mokwheel__obsidian-2-0",
-      "model": "Obsidian 2.0 Ebike",
-      "url": "https://www.mokwheel.com/products/obsidian-2-0?variant=48739951444214",
-      "fields": {
-        "motor_w": {
-          "status": "present",
-          "source": "scraped",
-          "value": 750,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "battery_wh": {
-          "status": "present",
-          "source": "scraped",
-          "value": 941,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "torque_nm": {
-          "status": "present",
-          "source": "scraped",
-          "value": 105,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "max_speed_mph": {
-          "status": "present",
-          "source": "scraped",
-          "value": 28,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "range_mi": {
-          "status": "present",
-          "source": "scraped",
-          "value": 80,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "weight_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 77.0,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "max_load_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 560,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "fit_height_min_in": {
-          "status": "present",
-          "source": "scraped",
-          "value": 66,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "sensor_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "torque + cadence",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "brake_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hydraulic_disc",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "frame_material": {
-          "status": "present",
-          "source": "scraped",
-          "value": "aluminum",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "drive_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hub",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        }
-      }
-    },
-    {
-      "id": "mokwheel__obsidian-st-2-0",
-      "model": "Obsidian ST 2.0 Ebike",
-      "url": "https://www.mokwheel.com/products/obsidian-st-2-0?variant=48741073256694",
-      "fields": {
-        "motor_w": {
-          "status": "present",
-          "source": "scraped",
-          "value": 750,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "battery_wh": {
-          "status": "present",
-          "source": "scraped",
-          "value": 941,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "torque_nm": {
-          "status": "present",
-          "source": "scraped",
-          "value": 105,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "max_speed_mph": {
-          "status": "present",
-          "source": "scraped",
-          "value": 28,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "range_mi": {
-          "status": "present",
-          "source": "scraped",
-          "value": 80,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "weight_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 77.0,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "max_load_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 560,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "fit_height_min_in": {
-          "status": "present",
-          "source": "scraped",
-          "value": 66,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "sensor_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "torque + cadence",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "brake_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hydraulic_disc",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "frame_material": {
-          "status": "present",
-          "source": "scraped",
-          "value": "aluminum",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "drive_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hub",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        }
-      }
-    },
-    {
-      "id": "mokwheel__onyx",
-      "model": "Onyx Ebike",
-      "url": "https://www.mokwheel.com/products/onyx?variant=48618664624374",
-      "fields": {
-        "motor_w": {
-          "status": "present",
-          "source": "scraped",
-          "value": 750,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "battery_wh": {
-          "status": "present",
-          "source": "scraped",
-          "value": 941,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "torque_nm": {
-          "status": "present",
-          "source": "scraped",
-          "value": 210,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "max_speed_mph": {
-          "status": "present",
-          "source": "scraped",
-          "value": 28,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "range_mi": {
-          "status": "present",
-          "source": "scraped",
-          "value": 80,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "weight_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 89.0,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "max_load_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 560,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "fit_height_min_in": {
-          "status": "present",
-          "source": "scraped",
-          "value": 67,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "sensor_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "torque + cadence",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "brake_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hydraulic_disc",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "frame_material": {
-          "status": "present",
-          "source": "scraped",
-          "value": "aluminum",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "drive_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "mid",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        }
-      }
-    },
-    {
-      "id": "mokwheel__onyx-st",
-      "model": "Onyx ST Ebike",
-      "url": "https://www.mokwheel.com/products/onyx-st?variant=47780892279030",
-      "fields": {
-        "motor_w": {
-          "status": "present",
-          "source": "scraped",
-          "value": 750,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "battery_wh": {
-          "status": "present",
-          "source": "scraped",
-          "value": 941,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "torque_nm": {
-          "status": "present",
-          "source": "scraped",
-          "value": 210,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "max_speed_mph": {
-          "status": "present",
-          "source": "scraped",
-          "value": 28,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "range_mi": {
-          "status": "present",
-          "source": "scraped",
-          "value": 80,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "weight_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 88.0,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "max_load_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 560,
-          "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "fit_height_min_in": {
@@ -1331,35 +919,550 @@
           "resolved_at": null
         },
         "sensor_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "torque + cadence",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "brake_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hydraulic_disc",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "mokwheel__mesa-plus-st",
+      "model": "Mesa Plus ST Ebike",
+      "url": "https://www.mokwheel.com/products/mesa-plus-st",
+      "fields": {
+        "motor_w": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
           "status": "present",
           "source": "scraped",
-          "value": "aluminum",
+          "value": 65,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
         },
+        "sensor_type": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
         "drive_type": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "mokwheel__obsidian-2-0",
+      "model": "Obsidian 2.0 Ebike",
+      "url": "https://www.mokwheel.com/products/obsidian-2-0?variant=48739951444214",
+      "fields": {
+        "motor_w": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
           "status": "present",
           "source": "scraped",
-          "value": "mid",
+          "value": 65,
           "note": "",
           "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "mokwheel__obsidian-st-2-0",
+      "model": "Obsidian ST 2.0 Ebike",
+      "url": "https://www.mokwheel.com/products/obsidian-st-2-0?variant=48741073256694",
+      "fields": {
+        "motor_w": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 65,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "mokwheel__onyx",
+      "model": "Onyx Ebike",
+      "url": "https://www.mokwheel.com/products/onyx?variant=48618664624374",
+      "fields": {
+        "motor_w": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 65,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "mokwheel__onyx-st",
+      "model": "Onyx ST Ebike",
+      "url": "https://www.mokwheel.com/products/onyx-st?variant=47780892279030",
+      "fields": {
+        "motor_w": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 65,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         }
       }
@@ -1370,99 +1473,99 @@
       "url": "https://www.mokwheel.com/products/scoria",
       "fields": {
         "motor_w": {
-          "status": "present",
-          "source": "scraped",
-          "value": 750,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "battery_wh": {
-          "status": "present",
-          "source": "scraped",
-          "value": 941,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "torque_nm": {
-          "status": "present",
-          "source": "scraped",
-          "value": 90,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_speed_mph": {
-          "status": "present",
-          "source": "scraped",
-          "value": 28,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "range_mi": {
-          "status": "present",
-          "source": "scraped",
-          "value": 80,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "weight_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 82.0,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_load_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 350,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "fit_height_min_in": {
           "status": "present",
           "source": "scraped",
-          "value": 60,
+          "value": 65,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
         },
         "sensor_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "torque + cadence",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "brake_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hydraulic_disc",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "frame_material": {
-          "status": "present",
-          "source": "scraped",
-          "value": "aluminum",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "drive_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hub",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         }
       }
@@ -1473,99 +1576,99 @@
       "url": "https://www.mokwheel.com/products/slate",
       "fields": {
         "motor_w": {
-          "status": "present",
-          "source": "scraped",
-          "value": 500,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "battery_wh": {
-          "status": "present",
-          "source": "scraped",
-          "value": 720,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "torque_nm": {
-          "status": "present",
-          "source": "scraped",
-          "value": 70,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_speed_mph": {
-          "status": "present",
-          "source": "scraped",
-          "value": 25,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "range_mi": {
-          "status": "present",
-          "source": "scraped",
-          "value": 60,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "weight_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 54.0,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_load_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 350,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "fit_height_min_in": {
           "status": "present",
           "source": "scraped",
-          "value": 60,
+          "value": 65,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
         },
         "sensor_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "torque + cadence",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "brake_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hydraulic_disc",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "frame_material": {
-          "status": "present",
-          "source": "scraped",
-          "value": "aluminum",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "drive_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hub",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         }
       }
@@ -1576,99 +1679,99 @@
       "url": "https://www.mokwheel.com/products/tarmac?variant=47780920197366",
       "fields": {
         "motor_w": {
-          "status": "present",
-          "source": "scraped",
-          "value": 750,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "battery_wh": {
-          "status": "present",
-          "source": "scraped",
-          "value": 720,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "torque_nm": {
-          "status": "present",
-          "source": "scraped",
-          "value": 75,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_speed_mph": {
-          "status": "present",
-          "source": "scraped",
-          "value": 28,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "range_mi": {
-          "status": "present",
-          "source": "scraped",
-          "value": 60,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "weight_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 66.0,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_load_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 350,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "fit_height_min_in": {
           "status": "present",
           "source": "scraped",
-          "value": 67,
+          "value": 65,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
         },
         "sensor_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "torque + cadence",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "brake_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hydraulic_disc",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "frame_material": {
-          "status": "present",
-          "source": "scraped",
-          "value": "aluminum",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "drive_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hub",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         }
       }
@@ -1676,102 +1779,102 @@
     {
       "id": "mokwheel__tarmac-st",
       "model": "Tarmac ST Ebike",
-      "url": "https://www.mokwheel.com/products/tarmac-st?variant=48888485216502",
+      "url": "https://www.mokwheel.com/products/tarmac-st?variant=48888485249270",
       "fields": {
         "motor_w": {
-          "status": "present",
-          "source": "scraped",
-          "value": 750,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "battery_wh": {
-          "status": "present",
-          "source": "scraped",
-          "value": 720,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "torque_nm": {
-          "status": "present",
-          "source": "scraped",
-          "value": 75,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_speed_mph": {
-          "status": "present",
-          "source": "scraped",
-          "value": 28,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "range_mi": {
-          "status": "present",
-          "source": "scraped",
-          "value": 60,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "weight_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 57.0,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_load_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 300,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "fit_height_min_in": {
           "status": "present",
           "source": "scraped",
-          "value": 66,
+          "value": 65,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
         },
         "sensor_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "torque + cadence",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "brake_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hydraulic_disc",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "frame_material": {
-          "status": "present",
-          "source": "scraped",
-          "value": "aluminum",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "drive_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hub",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         }
       }
@@ -1782,99 +1885,99 @@
       "url": "https://www.mokwheel.com/products/tor-plus",
       "fields": {
         "motor_w": {
-          "status": "present",
-          "source": "scraped",
-          "value": 750,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "battery_wh": {
-          "status": "present",
-          "source": "scraped",
-          "value": 720,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "torque_nm": {
-          "status": "present",
-          "source": "scraped",
-          "value": 90,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_speed_mph": {
-          "status": "present",
-          "source": "scraped",
-          "value": 28,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "range_mi": {
-          "status": "present",
-          "source": "scraped",
-          "value": 60,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "weight_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 81.0,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_load_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 450,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "fit_height_min_in": {
           "status": "present",
           "source": "scraped",
-          "value": 66,
+          "value": 65,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
         },
         "sensor_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "cadence",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "brake_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hydraulic_disc",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "frame_material": {
-          "status": "present",
-          "source": "scraped",
-          "value": "aluminum",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "drive_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hub",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         }
       }

@@ -2,8 +2,8 @@
   "source": "https://www.heybike.com",
   "logo": "https://www.heybike.com/cdn/shop/files/heybike-logo_c0d69677-ad00-41d8-940c-f1aeac5cee34.svg?v=1745923766&width=500",
   "collection": "electric-bike",
-  "scraped_at": "2026-06-10T23:32:16.023876+00:00",
-  "model_count": 14,
+  "scraped_at": "2026-06-24T04:15:18.937221+00:00",
+  "model_count": 19,
   "models": [
     {
       "model": "ALPHA",
@@ -12,7 +12,7 @@
       "product_types": [
         "Fat Tire"
       ],
-      "price_from": 1299.0,
+      "price_from": 1799.0,
       "currency": "USD",
       "options": {
         "Version": [
@@ -23,7 +23,7 @@
             "name": "Step-Over (Galaxy Black)",
             "hex": "#000000",
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Alpha_c3bdd4bd-513a-4836-a281-81086500a7b8.png?v=1781086359"
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Heybike_ALPHA_Best_Budget_Mid_Drive_All_Terrain_Ebike_White.png?v=1772617828"
           }
         ]
       },
@@ -45,8 +45,7 @@
           "Weight": "32.5 kg / 71.6lbs",
           "Weight limit": "This bike has a maximum total weight limit (combined weight of rider and cargo) of 400 pounds (181.4kg).",
           "Ebike Dimensions": "76.77\" × 27.56\" × 46.46\"",
-          "Brakes": "Hydraulic Disc Brakes",
-          "Top Speed": "28 mph"
+          "Brakes": "Hydraulic Disc Brakes"
         }
       },
       "spec_count": 16,
@@ -71,11 +70,11 @@
             "Version": "500W (Peak 1000W)",
             "Colors": "Step-Over (Galaxy Black)"
           },
-          "price": 1299.0,
+          "price": 1799.0,
           "sku": "HB1ALPHAHUSBK1A",
           "variant_id": 46477313048795,
           "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Alpha_c3bdd4bd-513a-4836-a281-81086500a7b8.png?v=1781086359"
+          "image": null
         }
       ],
       "available_options": [
@@ -91,10 +90,10 @@
           ]
         }
       ],
-      "regular_price": null,
       "tier": "Step-Over",
       "family_id": "heybike__alpha",
-      "frame_style": "Step-Over (Mid-Step)"
+      "frame_style": "Step-Over (Mid-Step)",
+      "regular_price": null
     },
     {
       "model": "ALPHA — Step-Thru",
@@ -103,7 +102,7 @@
       "product_types": [
         "Fat Tire"
       ],
-      "price_from": 1299.0,
+      "price_from": 1799.0,
       "currency": "USD",
       "options": {
         "Version": [
@@ -114,7 +113,7 @@
             "name": "Step-Through (Pearl White)",
             "hex": "#ffffff",
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Alpha_23f82f54-d60f-4148-b242-4542f7b4b118.png?v=1781086359"
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Heybike_ALPHA_Best_Budget_Mid_Drive_All_Terrain_Ebike_White.png?v=1772617828"
           }
         ]
       },
@@ -136,8 +135,7 @@
           "Weight": "32.5 kg / 71.6lbs",
           "Weight limit": "This bike has a maximum total weight limit (combined weight of rider and cargo) of 400 pounds (181.4kg).",
           "Ebike Dimensions": "76.77\" × 27.56\" × 46.46\"",
-          "Brakes": "Hydraulic Disc Brakes",
-          "Top Speed": "28 mph"
+          "Brakes": "Hydraulic Disc Brakes"
         }
       },
       "spec_count": 16,
@@ -162,11 +160,11 @@
             "Version": "500W (Peak 1000W)",
             "Colors": "Step-Through (Pearl White)"
           },
-          "price": 1299.0,
+          "price": 1799.0,
           "sku": "HB1ALPHALUSWH1A",
           "variant_id": 46477313016027,
           "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Alpha_23f82f54-d60f-4148-b242-4542f7b4b118.png?v=1781086359"
+          "image": null
         }
       ],
       "available_options": [
@@ -192,7 +190,6 @@
       "handle": "helio-f",
       "url": "https://www.heybike.com/products/helio-f",
       "product_types": [
-        "Folding",
         "Commuter / Urban"
       ],
       "price_from": 1299.0,
@@ -203,16 +200,16 @@
         ],
         "colors": [
           {
-            "name": "Racing Green",
-            "hex": "#566237",
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/HelioFVintageGN.png?v=1776132985"
-          },
-          {
             "name": "Anchor Red",
             "hex": "#87565a",
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/HelioFVintageRD.png?v=1776132985"
+          },
+          {
+            "name": "Racing Green",
+            "hex": "#566237",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/HelioFVintageGN.png?v=1776132985"
           },
           {
             "name": "Hedof Edition",
@@ -277,17 +274,6 @@
         {
           "options": {
             "Version": "250W (Peak 500W)",
-            "Colors": "Racing Green"
-          },
-          "price": 1299.0,
-          "sku": "HB1HelioFFGUSGN1A",
-          "variant_id": 47627897929947,
-          "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/HelioFVintageGN.png?v=1776132985"
-        },
-        {
-          "options": {
-            "Version": "250W (Peak 500W)",
             "Colors": "Anchor Red"
           },
           "price": 1299.0,
@@ -295,6 +281,17 @@
           "variant_id": 47627897897179,
           "available": true,
           "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/HelioFVintageRD.png?v=1776132985"
+        },
+        {
+          "options": {
+            "Version": "250W (Peak 500W)",
+            "Colors": "Racing Green"
+          },
+          "price": 1299.0,
+          "sku": "HB1HelioFFGUSGN1A",
+          "variant_id": 47627897929947,
+          "available": false,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/HelioFVintageGN.png?v=1776132985"
         },
         {
           "options": {
@@ -315,7 +312,7 @@
           "price": 1399.0,
           "sku": "HB1HelioFCGUSAr2A",
           "variant_id": 47677661610203,
-          "available": true,
+          "available": false,
           "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Heybike_Helio_F_Commuter_Ebike_B.png?v=1776132985"
         },
         {
@@ -326,7 +323,7 @@
           "price": 1399.0,
           "sku": "HB1HelioFCGUSAr3A",
           "variant_id": 47677661642971,
-          "available": true,
+          "available": false,
           "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Heybike_Helio_F_Commuter_Ebike_Y.png?v=1776132985"
         }
       ],
@@ -336,13 +333,13 @@
           "type": "variant",
           "choices": [
             {
-              "value": "Racing Green",
+              "value": "Anchor Red",
               "price": 1299.0,
               "price_delta": 0.0,
               "free": true
             },
             {
-              "value": "Anchor Red",
+              "value": "Racing Green",
               "price": 1299.0,
               "price_delta": 0.0,
               "free": true
@@ -411,7 +408,6 @@
           "Weight limit": "This bike has a maximum total weight limit (combined weight of rider and cargo) of 400 pounds (181.4kg).",
           "Overall Dimensions": "2035mm*735mm*1125mm",
           "Brakes": "Hydraulic Disc Brakes",
-          "Top Speed": "35 mph",
           "Rider Height": "5'3\" - 6'6\""
         }
       },
@@ -430,7 +426,16 @@
           "detail": "Integrated headlight"
         }
       ],
-      "geometry": {},
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'3\"",
+          "height_max": "6'6\""
+        }
+      ],
+      "geometry": {
+        "Rider Height": "5'3\" - 6'6\""
+      },
       "configurations": [
         {
           "options": {
@@ -484,14 +489,7 @@
       "regular_price": null,
       "tier": "1000W Rear Hub · Step-Over",
       "family_id": "heybike__hero",
-      "frame_style": "Step-Over (Mid-Step)",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'3\"",
-          "height_max": "6'6\""
-        }
-      ]
+      "frame_style": "Step-Over (Mid-Step)"
     },
     {
       "model": "Hero — 1000W Rear Hub · Step-Thru",
@@ -534,7 +532,6 @@
           "Weight limit": "This bike has a maximum total weight limit (combined weight of rider and cargo) of 400 pounds (181.4kg).",
           "Overall Dimensions": "2035mm*735mm*1125mm",
           "Brakes": "Hydraulic Disc Brakes",
-          "Top Speed": "35 mph",
           "Rider Height": "5'3\" - 6'6\""
         }
       },
@@ -553,7 +550,16 @@
           "detail": "Integrated headlight"
         }
       ],
-      "geometry": {},
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'3\"",
+          "height_max": "6'6\""
+        }
+      ],
+      "geometry": {
+        "Rider Height": "5'3\" - 6'6\""
+      },
       "configurations": [
         {
           "options": {
@@ -607,14 +613,7 @@
       "regular_price": null,
       "tier": "1000W Rear Hub · Step-Thru",
       "family_id": "heybike__hero",
-      "frame_style": "Step-Thru",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'3\"",
-          "height_max": "6'6\""
-        }
-      ]
+      "frame_style": "Step-Thru"
     },
     {
       "model": "Hero — 750W Mid-Drive · Step-Over",
@@ -657,7 +656,6 @@
           "Weight limit": "This bike has a maximum total weight limit (combined weight of rider and cargo) of 400 pounds (181.4kg).",
           "Overall Dimensions": "2035mm*735mm*1125mm",
           "Brakes": "Hydraulic Disc Brakes",
-          "Top Speed": "35 mph",
           "Rider Height": "5'3\" - 6'6\""
         }
       },
@@ -676,7 +674,16 @@
           "detail": "Integrated headlight"
         }
       ],
-      "geometry": {},
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'3\"",
+          "height_max": "6'6\""
+        }
+      ],
+      "geometry": {
+        "Rider Height": "5'3\" - 6'6\""
+      },
       "configurations": [
         {
           "options": {
@@ -730,14 +737,7 @@
       "regular_price": null,
       "tier": "750W Mid-Drive · Step-Over",
       "family_id": "heybike__hero",
-      "frame_style": "Step-Over (Mid-Step)",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'3\"",
-          "height_max": "6'6\""
-        }
-      ]
+      "frame_style": "Step-Over (Mid-Step)"
     },
     {
       "model": "Hero — 750W Mid-Drive · Step-Thru",
@@ -780,7 +780,6 @@
           "Weight limit": "This bike has a maximum total weight limit (combined weight of rider and cargo) of 400 pounds (181.4kg).",
           "Overall Dimensions": "2035mm*735mm*1125mm",
           "Brakes": "Hydraulic Disc Brakes",
-          "Top Speed": "35 mph",
           "Rider Height": "5'3\" - 6'6\""
         }
       },
@@ -799,7 +798,16 @@
           "detail": "Integrated headlight"
         }
       ],
-      "geometry": {},
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'3\"",
+          "height_max": "6'6\""
+        }
+      ],
+      "geometry": {
+        "Rider Height": "5'3\" - 6'6\""
+      },
       "configurations": [
         {
           "options": {
@@ -853,21 +861,13 @@
       "regular_price": null,
       "tier": "750W Mid-Drive · Step-Thru",
       "family_id": "heybike__hero",
-      "frame_style": "Step-Thru",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'3\"",
-          "height_max": "6'6\""
-        }
-      ]
+      "frame_style": "Step-Thru"
     },
     {
       "model": "Horizon",
       "handle": "horizon",
       "url": "https://www.heybike.com/products/horizon",
       "product_types": [
-        "Folding",
         "Fat Tire"
       ],
       "price_from": 1399.0,
@@ -881,25 +881,25 @@
             "name": "Cyan and Pearl",
             "hex": null,
             "swatch_image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/HORIZON-01-2.jpg?v=1712053228",
-            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/8C5D47D9-D125-4E16-BEE4-E638B1470DC4.png?v=1780388249"
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Horizon_97d188ed-4997-4c58-af0f-2658cd8d7d45.png?v=1782199046"
           },
           {
             "name": "Black and Blue",
             "hex": "#0000ff",
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/34d7106ad5033d4875fb9a93052c02cc.png?v=1771929127"
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Horizon_100768e5-29ee-49db-a4fa-446da5ac2740.png?v=1782199047"
           },
           {
             "name": "Gradient Cynical Black",
             "hex": "#000000",
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/52880b67cf4f56e0ff4f3596c21ba110.png?v=1771929127"
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Horizon_06a201be-25be-4ac4-ab9f-4e41d40d9508.png?v=1782199046"
           },
           {
             "name": "Sunset",
             "hex": null,
             "swatch_image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/HORIZON_a51208f2-c6e0-47c1-b642-07e741a4b91f.jpg?v=1710383427",
-            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Horizon_1a58de77-58a3-4290-a5de-eb0c485aba8e.webp?v=1771929127"
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Horizon_978471ba-303c-44f9-8664-c96b34edc0e5.png?v=1782199046"
           }
         ]
       },
@@ -922,7 +922,6 @@
           "Folded Dimensions": "49.2*23.6*31.5 inch",
           "Unfolded Dimensions": "75.6*24.4*46.5 inch",
           "Brakes": "Hydraulic Disc Brakes",
-          "Top Speed": "28 mph",
           "Rider Height": "5'5\" - 6'3\""
         }
       },
@@ -941,7 +940,16 @@
           "detail": "LED headlight with auto-on feature, and integrated taillight with brake light."
         }
       ],
-      "geometry": {},
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'5\"",
+          "height_max": "6'3\""
+        }
+      ],
+      "geometry": {
+        "Rider Height": "5'5\" - 6'3\""
+      },
       "configurations": [
         {
           "options": {
@@ -952,12 +960,12 @@
           "sku": "HBK-Horizon-WG",
           "variant_id": 44339204227291,
           "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/8C5D47D9-D125-4E16-BEE4-E638B1470DC4.png?v=1780388249",
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Horizon_97d188ed-4997-4c58-af0f-2658cd8d7d45.png?v=1782199046",
           "color": {
             "name": "Cyan and Pearl",
             "hex": null,
             "swatch_image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/HORIZON-01-2.jpg?v=1712053228",
-            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/8C5D47D9-D125-4E16-BEE4-E638B1470DC4.png?v=1780388249"
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Horizon_97d188ed-4997-4c58-af0f-2658cd8d7d45.png?v=1782199046"
           }
         },
         {
@@ -969,12 +977,12 @@
           "sku": "HBK-Horizon-UB",
           "variant_id": 45181458972891,
           "available": false,
-          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/34d7106ad5033d4875fb9a93052c02cc.png?v=1771929127",
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Horizon_100768e5-29ee-49db-a4fa-446da5ac2740.png?v=1782199047",
           "color": {
             "name": "Black and Blue",
             "hex": "#0000ff",
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/34d7106ad5033d4875fb9a93052c02cc.png?v=1771929127"
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Horizon_100768e5-29ee-49db-a4fa-446da5ac2740.png?v=1782199047"
           }
         },
         {
@@ -986,12 +994,12 @@
           "sku": "HBK-Horizon-BG",
           "variant_id": 45181458940123,
           "available": false,
-          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/52880b67cf4f56e0ff4f3596c21ba110.png?v=1771929127",
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Horizon_06a201be-25be-4ac4-ab9f-4e41d40d9508.png?v=1782199046",
           "color": {
             "name": "Gradient Cynical Black",
             "hex": "#000000",
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/52880b67cf4f56e0ff4f3596c21ba110.png?v=1771929127"
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Horizon_06a201be-25be-4ac4-ab9f-4e41d40d9508.png?v=1782199046"
           }
         },
         {
@@ -1003,12 +1011,12 @@
           "sku": "",
           "variant_id": 45182528651483,
           "available": false,
-          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Horizon_1a58de77-58a3-4290-a5de-eb0c485aba8e.webp?v=1771929127",
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Horizon_978471ba-303c-44f9-8664-c96b34edc0e5.png?v=1782199046",
           "color": {
             "name": "Sunset",
             "hex": null,
             "swatch_image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/HORIZON_a51208f2-c6e0-47c1-b642-07e741a4b91f.jpg?v=1710383427",
-            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Horizon_1a58de77-58a3-4290-a5de-eb0c485aba8e.webp?v=1771929127"
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Horizon_978471ba-303c-44f9-8664-c96b34edc0e5.png?v=1782199046"
           }
         }
       ],
@@ -1025,14 +1033,7 @@
           ]
         }
       ],
-      "regular_price": 1999.0,
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'5\"",
-          "height_max": "6'3\""
-        }
-      ]
+      "regular_price": 1999.0
     },
     {
       "model": "Hybrid",
@@ -1195,11 +1196,956 @@
       ]
     },
     {
+      "model": "Mars 2.0 750/1000W",
+      "handle": "mars-2-0",
+      "url": "https://www.heybike.com/products/mars-2-0",
+      "product_types": [
+        "Fat Tire"
+      ],
+      "price_from": 999.0,
+      "currency": "USD",
+      "options": {
+        "Version": [
+          "750W (Peak 1400W)",
+          "1000W (Peak 1800W)"
+        ],
+        "colors": [
+          {
+            "name": "Pumpkin Orange",
+            "hex": "#e79953",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Orange-Right.png?v=1766738064"
+          },
+          {
+            "name": "Leather Black",
+            "hex": "#000000",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Black-Right.png?v=1774418893"
+          },
+          {
+            "name": "Granite Grey",
+            "hex": "#808080",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Grey-Right.png?v=1774418893"
+          },
+          {
+            "name": "Dusty Blue",
+            "hex": "#96b9cc",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Blue-Right.png?v=1774418893"
+          }
+        ]
+      },
+      "warranty": "2-Year Warranty",
+      "specs": {
+        "all": {
+          "Frame": "Aluminum Alloy; removable lithium-ion battery; rear rack and fenders included; kickstand mount; mechanical brakes (Hydraulic Brakes for 1000W version)",
+          "Fork": "Spring Fork, 65 mm travel with preload adjustment and lock-out",
+          "Hub rear": "750W Version: 80Nm torque, 750W (sustained), 1400W (peak) 1000W Version: 100Nm torque, 1000W (sustained), 1800W (peak)",
+          "Spokes": "Aluminum alloy",
+          "Tire": "Puncture protection, 20\"x4.0\"-max tire size",
+          "Battery": "600Wh, external removable lithium-ion battery",
+          "Charger": "2A, 54.6V output, 100V-220V AC input",
+          "Display Type": "LED Display",
+          "Rear Derailleur": "Shimano 7 speed",
+          "Light": "LED, headlight and taillight",
+          "Kickstand": "Alloy",
+          "Weight": "34 kg / 75 lbs",
+          "Weight limit": "Maximum total weight limit (combined weight of rider and cargo): 330 pounds (149.7 kg)",
+          "Folded Dimensions": "37.4*21.7*27.95 inch",
+          "Unfolded Dimensions": "67*25*49 inch",
+          "Range": "Up to 45 miles",
+          "Brakes": "Hydraulic Disc Brakes",
+          "Rider Height": "5'3\" - 6'1\""
+        }
+      },
+      "spec_count": 17,
+      "scrape_error": null,
+      "is_new": false,
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'3\"",
+          "height_max": "6'1\""
+        }
+      ],
+      "geometry": {
+        "Rider Height": "5'3\" - 6'1\""
+      },
+      "configurations": [
+        {
+          "options": {
+            "Version": "750W (Peak 1400W)",
+            "Color": "Pumpkin Orange"
+          },
+          "price": 999.0,
+          "sku": "HBK-Mars-4-O",
+          "variant_id": 48190717460699,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Orange-Right.png?v=1766738064",
+          "color": {
+            "name": "Pumpkin Orange",
+            "hex": "#e79953",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Orange-Right.png?v=1766738064"
+          }
+        },
+        {
+          "options": {
+            "Version": "750W (Peak 1400W)",
+            "Color": "Leather Black"
+          },
+          "price": 999.0,
+          "sku": "HBK-Mars-4-B",
+          "variant_id": 48190717493467,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Black-Right.png?v=1774418893",
+          "color": {
+            "name": "Leather Black",
+            "hex": "#000000",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Black-Right.png?v=1774418893"
+          }
+        },
+        {
+          "options": {
+            "Version": "750W (Peak 1400W)",
+            "Color": "Granite Grey"
+          },
+          "price": 999.0,
+          "sku": "HBK-Mars-4-G",
+          "variant_id": 48190717559003,
+          "available": false,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Grey-Right.png?v=1774418893",
+          "color": {
+            "name": "Granite Grey",
+            "hex": "#808080",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Grey-Right.png?v=1774418893"
+          }
+        },
+        {
+          "options": {
+            "Version": "750W (Peak 1400W)",
+            "Color": "Dusty Blue"
+          },
+          "price": 999.0,
+          "sku": "HBK-Mars-4-U",
+          "variant_id": 48190717526235,
+          "available": false,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Blue-Right.png?v=1774418893",
+          "color": {
+            "name": "Dusty Blue",
+            "hex": "#96b9cc",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Blue-Right.png?v=1774418893"
+          }
+        },
+        {
+          "options": {
+            "Version": "1000W (Peak 1800W)",
+            "Color": "Pumpkin Orange"
+          },
+          "price": 999.0,
+          "sku": "HBK-Mars-1000-O",
+          "variant_id": 45259134337243,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Orange-Right.png?v=1766738064",
+          "color": {
+            "name": "Pumpkin Orange",
+            "hex": "#e79953",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Orange-Right.png?v=1766738064"
+          }
+        },
+        {
+          "options": {
+            "Version": "1000W (Peak 1800W)",
+            "Color": "Leather Black"
+          },
+          "price": 999.0,
+          "sku": "HBK-Mars-1000-B",
+          "variant_id": 45259134435547,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Black-Right.png?v=1774418893",
+          "color": {
+            "name": "Leather Black",
+            "hex": "#000000",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Black-Right.png?v=1774418893"
+          }
+        },
+        {
+          "options": {
+            "Version": "1000W (Peak 1800W)",
+            "Color": "Granite Grey"
+          },
+          "price": 999.0,
+          "sku": "HBK-Mars-1000-G",
+          "variant_id": 45259134402779,
+          "available": false,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Grey-Right.png?v=1774418893",
+          "color": {
+            "name": "Granite Grey",
+            "hex": "#808080",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Grey-Right.png?v=1774418893"
+          }
+        },
+        {
+          "options": {
+            "Version": "1000W (Peak 1800W)",
+            "Color": "Dusty Blue"
+          },
+          "price": 999.0,
+          "sku": "HBK-Mars-1000-U",
+          "variant_id": 45259134370011,
+          "available": false,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Blue-Right.png?v=1774418893",
+          "color": {
+            "name": "Dusty Blue",
+            "hex": "#96b9cc",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Blue-Right.png?v=1774418893"
+          }
+        }
+      ],
+      "available_options": [
+        {
+          "group": "Version",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "750W (Peak 1400W)",
+              "price": 999.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "1000W (Peak 1800W)",
+              "price": 999.0,
+              "price_delta": 0.0,
+              "free": true
+            }
+          ]
+        }
+      ],
+      "regular_price": 1499.0
+    },
+    {
+      "model": "Mars 2.0 750/1000W（Brad‘s Deal）",
+      "handle": "mars-2-0-750-1000w-deal",
+      "url": "https://www.heybike.com/products/mars-2-0-750-1000w-deal?variant=48900591550683",
+      "product_types": [
+        "Fat Tire"
+      ],
+      "price_from": 899.0,
+      "currency": "USD",
+      "options": {
+        "Version": [
+          "750W (Peak 1400W)",
+          "1000W (Peak 1800W)"
+        ],
+        "colors": [
+          {
+            "name": "Pumpkin Orange",
+            "hex": "#e79953",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Orange-Right.png?v=1766738064"
+          },
+          {
+            "name": "Leather Black",
+            "hex": "#000000",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Black-Right.png?v=1774418893"
+          },
+          {
+            "name": "Granite Grey",
+            "hex": "#808080",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Grey-Right.png?v=1774418893"
+          },
+          {
+            "name": "Dusty Blue",
+            "hex": "#96b9cc",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Blue-Right.png?v=1774418893"
+          }
+        ]
+      },
+      "warranty": "2-Year Warranty",
+      "specs": {
+        "all": {
+          "Frame": "Aluminum Alloy; removable lithium-ion battery; rear rack and fenders included; kickstand mount; mechanical brakes (Hydraulic Brakes for 1000W version)",
+          "Fork": "Spring Fork, 65 mm travel with preload adjustment and lock-out",
+          "Hub rear": "750W Version: 80Nm torque, 750W (sustained), 1400W (peak) 1000W Version: 100Nm torque, 1000W (sustained), 1800W (peak)",
+          "Spokes": "Aluminum alloy",
+          "Tire": "Puncture protection, 20\"x4.0\"-max tire size",
+          "Battery": "600Wh, external removable lithium-ion battery",
+          "Charger": "2A, 54.6V output, 100V-220V AC input",
+          "Display Type": "LED Display",
+          "Rear Derailleur": "Shimano 7 speed",
+          "Light": "LED, headlight and taillight",
+          "Kickstand": "Alloy",
+          "Weight": "34 kg / 75 lbs",
+          "Weight limit": "Maximum total weight limit (combined weight of rider and cargo): 330 pounds (149.7 kg)",
+          "Folded Dimensions": "37.4*21.7*27.95 inch",
+          "Unfolded Dimensions": "67*25*49 inch",
+          "Range": "Up to 45 miles",
+          "Brakes": "Hydraulic Disc Brakes",
+          "Rider Height": "5'3\" - 6'1\""
+        }
+      },
+      "spec_count": 17,
+      "scrape_error": null,
+      "is_new": false,
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'3\"",
+          "height_max": "6'1\""
+        }
+      ],
+      "geometry": {
+        "Rider Height": "5'3\" - 6'1\""
+      },
+      "configurations": [
+        {
+          "options": {
+            "Version": "750W (Peak 1400W)",
+            "Color": "Pumpkin Orange"
+          },
+          "price": 899.0,
+          "sku": "HBK-Mars-4-O",
+          "variant_id": 48900591550683,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Orange-Right.png?v=1766738064",
+          "color": {
+            "name": "Pumpkin Orange",
+            "hex": "#e79953",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Orange-Right.png?v=1766738064"
+          }
+        },
+        {
+          "options": {
+            "Version": "750W (Peak 1400W)",
+            "Color": "Leather Black"
+          },
+          "price": 899.0,
+          "sku": "HBK-Mars-4-B",
+          "variant_id": 48900591583451,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Black-Right.png?v=1774418893",
+          "color": {
+            "name": "Leather Black",
+            "hex": "#000000",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Black-Right.png?v=1774418893"
+          }
+        },
+        {
+          "options": {
+            "Version": "750W (Peak 1400W)",
+            "Color": "Granite Grey"
+          },
+          "price": 899.0,
+          "sku": "HBK-Mars-4-G",
+          "variant_id": 48900591616219,
+          "available": false,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Grey-Right.png?v=1774418893",
+          "color": {
+            "name": "Granite Grey",
+            "hex": "#808080",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Grey-Right.png?v=1774418893"
+          }
+        },
+        {
+          "options": {
+            "Version": "750W (Peak 1400W)",
+            "Color": "Dusty Blue"
+          },
+          "price": 899.0,
+          "sku": "HBK-Mars-4-U",
+          "variant_id": 48900591648987,
+          "available": false,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Blue-Right.png?v=1774418893",
+          "color": {
+            "name": "Dusty Blue",
+            "hex": "#96b9cc",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Blue-Right.png?v=1774418893"
+          }
+        }
+      ],
+      "available_options": [
+        {
+          "group": "Version",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "750W (Peak 1400W)",
+              "price": 899.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "1000W (Peak 1800W)",
+              "price": 999.0,
+              "price_delta": 100.0,
+              "free": false
+            }
+          ]
+        }
+      ],
+      "regular_price": null,
+      "tier": "750W (Peak 1400W)",
+      "family_id": "heybike__mars-2-0-750-1000w-deal"
+    },
+    {
+      "model": "Mars 2.0 750/1000W（Brad‘s Deal） — 1000W (Peak 1800W)",
+      "handle": "mars-2-0-750-1000w-deal--1000w-peak-1800w",
+      "url": "https://www.heybike.com/products/mars-2-0-750-1000w-deal?variant=48900591681755",
+      "product_types": [
+        "Fat Tire"
+      ],
+      "price_from": 999.0,
+      "currency": "USD",
+      "options": {
+        "Version": [
+          "750W (Peak 1400W)",
+          "1000W (Peak 1800W)"
+        ],
+        "colors": [
+          {
+            "name": "Pumpkin Orange",
+            "hex": "#e79953",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Orange-Right.png?v=1766738064"
+          },
+          {
+            "name": "Leather Black",
+            "hex": "#000000",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Black-Right.png?v=1774418893"
+          },
+          {
+            "name": "Granite Grey",
+            "hex": "#808080",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Grey-Right.png?v=1774418893"
+          },
+          {
+            "name": "Dusty Blue",
+            "hex": "#96b9cc",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Blue-Right.png?v=1774418893"
+          }
+        ]
+      },
+      "warranty": "2-Year Warranty",
+      "specs": {
+        "all": {
+          "Frame": "Aluminum Alloy; removable lithium-ion battery; rear rack and fenders included; kickstand mount; mechanical brakes (Hydraulic Brakes for 1000W version)",
+          "Fork": "Spring Fork, 65 mm travel with preload adjustment and lock-out",
+          "Hub rear": "750W Version: 80Nm torque, 750W (sustained), 1400W (peak) 1000W Version: 100Nm torque, 1000W (sustained), 1800W (peak)",
+          "Spokes": "Aluminum alloy",
+          "Tire": "Puncture protection, 20\"x4.0\"-max tire size",
+          "Battery": "600Wh, external removable lithium-ion battery",
+          "Charger": "2A, 54.6V output, 100V-220V AC input",
+          "Display Type": "LED Display",
+          "Rear Derailleur": "Shimano 7 speed",
+          "Light": "LED, headlight and taillight",
+          "Kickstand": "Alloy",
+          "Weight": "34 kg / 75 lbs",
+          "Weight limit": "Maximum total weight limit (combined weight of rider and cargo): 330 pounds (149.7 kg)",
+          "Folded Dimensions": "37.4*21.7*27.95 inch",
+          "Unfolded Dimensions": "67*25*49 inch",
+          "Range": "Up to 45 miles",
+          "Brakes": "Hydraulic Disc Brakes",
+          "Rider Height": "5'3\" - 6'1\""
+        }
+      },
+      "spec_count": 17,
+      "scrape_error": null,
+      "is_new": false,
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'3\"",
+          "height_max": "6'1\""
+        }
+      ],
+      "geometry": {
+        "Rider Height": "5'3\" - 6'1\""
+      },
+      "configurations": [
+        {
+          "options": {
+            "Version": "1000W (Peak 1800W)",
+            "Color": "Pumpkin Orange"
+          },
+          "price": 999.0,
+          "sku": "HBK-Mars-1000-O",
+          "variant_id": 48900591681755,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Orange-Right.png?v=1766738064",
+          "color": {
+            "name": "Pumpkin Orange",
+            "hex": "#e79953",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Orange-Right.png?v=1766738064"
+          }
+        },
+        {
+          "options": {
+            "Version": "1000W (Peak 1800W)",
+            "Color": "Leather Black"
+          },
+          "price": 999.0,
+          "sku": "HBK-Mars-1000-B",
+          "variant_id": 48900591714523,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Black-Right.png?v=1774418893",
+          "color": {
+            "name": "Leather Black",
+            "hex": "#000000",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Black-Right.png?v=1774418893"
+          }
+        },
+        {
+          "options": {
+            "Version": "1000W (Peak 1800W)",
+            "Color": "Granite Grey"
+          },
+          "price": 999.0,
+          "sku": "HBK-Mars-1000-G",
+          "variant_id": 48900591747291,
+          "available": false,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Grey-Right.png?v=1774418893",
+          "color": {
+            "name": "Granite Grey",
+            "hex": "#808080",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Grey-Right.png?v=1774418893"
+          }
+        },
+        {
+          "options": {
+            "Version": "1000W (Peak 1800W)",
+            "Color": "Dusty Blue"
+          },
+          "price": 999.0,
+          "sku": "HBK-Mars-1000-U",
+          "variant_id": 48900591780059,
+          "available": false,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Blue-Right.png?v=1774418893",
+          "color": {
+            "name": "Dusty Blue",
+            "hex": "#96b9cc",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Blue-Right.png?v=1774418893"
+          }
+        }
+      ],
+      "available_options": [
+        {
+          "group": "Version",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "750W (Peak 1400W)",
+              "price": 899.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "1000W (Peak 1800W)",
+              "price": 999.0,
+              "price_delta": 100.0,
+              "free": false
+            }
+          ]
+        }
+      ],
+      "regular_price": null,
+      "tier": "1000W (Peak 1800W)",
+      "family_id": "heybike__mars-2-0-750-1000w-deal"
+    },
+    {
+      "model": "Mars 2.0 750/1000W（Slick deals）",
+      "handle": "mars-2-0-750-1000w-slick-deals",
+      "url": "https://www.heybike.com/products/mars-2-0-750-1000w-slick-deals?variant=48900628119771",
+      "product_types": [
+        "Fat Tire"
+      ],
+      "price_from": 899.0,
+      "currency": "USD",
+      "options": {
+        "Version": [
+          "750W (Peak 1400W)",
+          "1000W (Peak 1800W)"
+        ],
+        "colors": [
+          {
+            "name": "Pumpkin Orange",
+            "hex": "#e79953",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Orange-Right.png?v=1766738064"
+          },
+          {
+            "name": "Leather Black",
+            "hex": "#000000",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Black-Right.png?v=1774418893"
+          },
+          {
+            "name": "Granite Grey",
+            "hex": "#808080",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Grey-Right.png?v=1774418893"
+          },
+          {
+            "name": "Dusty Blue",
+            "hex": "#96b9cc",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Blue-Right.png?v=1774418893"
+          }
+        ]
+      },
+      "warranty": "2-Year Warranty",
+      "specs": {
+        "all": {
+          "Frame": "Aluminum Alloy; removable lithium-ion battery; rear rack and fenders included; kickstand mount; mechanical brakes (Hydraulic Brakes for 1000W version)",
+          "Fork": "Spring Fork, 65 mm travel with preload adjustment and lock-out",
+          "Hub rear": "750W Version: 80Nm torque, 750W (sustained), 1400W (peak) 1000W Version: 100Nm torque, 1000W (sustained), 1800W (peak)",
+          "Spokes": "Aluminum alloy",
+          "Tire": "Puncture protection, 20\"x4.0\"-max tire size",
+          "Battery": "600Wh, external removable lithium-ion battery",
+          "Charger": "2A, 54.6V output, 100V-220V AC input",
+          "Display Type": "LED Display",
+          "Rear Derailleur": "Shimano 7 speed",
+          "Light": "LED, headlight and taillight",
+          "Kickstand": "Alloy",
+          "Weight": "34 kg / 75 lbs",
+          "Weight limit": "Maximum total weight limit (combined weight of rider and cargo): 330 pounds (149.7 kg)",
+          "Folded Dimensions": "37.4*21.7*27.95 inch",
+          "Unfolded Dimensions": "67*25*49 inch",
+          "Range": "Up to 45 miles",
+          "Brakes": "Hydraulic Disc Brakes",
+          "Rider Height": "5'3\" - 6'1\""
+        }
+      },
+      "spec_count": 17,
+      "scrape_error": null,
+      "is_new": false,
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'3\"",
+          "height_max": "6'1\""
+        }
+      ],
+      "geometry": {
+        "Rider Height": "5'3\" - 6'1\""
+      },
+      "configurations": [
+        {
+          "options": {
+            "Version": "750W (Peak 1400W)",
+            "Color": "Pumpkin Orange"
+          },
+          "price": 899.0,
+          "sku": "HBK-Mars-4-O",
+          "variant_id": 48900628119771,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Orange-Right.png?v=1766738064",
+          "color": {
+            "name": "Pumpkin Orange",
+            "hex": "#e79953",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Orange-Right.png?v=1766738064"
+          }
+        },
+        {
+          "options": {
+            "Version": "750W (Peak 1400W)",
+            "Color": "Leather Black"
+          },
+          "price": 899.0,
+          "sku": "HBK-Mars-4-B",
+          "variant_id": 48900628152539,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Black-Right.png?v=1774418893",
+          "color": {
+            "name": "Leather Black",
+            "hex": "#000000",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Black-Right.png?v=1774418893"
+          }
+        },
+        {
+          "options": {
+            "Version": "750W (Peak 1400W)",
+            "Color": "Granite Grey"
+          },
+          "price": 899.0,
+          "sku": "HBK-Mars-4-G",
+          "variant_id": 48900628185307,
+          "available": false,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Grey-Right.png?v=1774418893",
+          "color": {
+            "name": "Granite Grey",
+            "hex": "#808080",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Grey-Right.png?v=1774418893"
+          }
+        },
+        {
+          "options": {
+            "Version": "750W (Peak 1400W)",
+            "Color": "Dusty Blue"
+          },
+          "price": 899.0,
+          "sku": "HBK-Mars-4-U",
+          "variant_id": 48900628218075,
+          "available": false,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Blue-Right.png?v=1774418893",
+          "color": {
+            "name": "Dusty Blue",
+            "hex": "#96b9cc",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Blue-Right.png?v=1774418893"
+          }
+        }
+      ],
+      "available_options": [
+        {
+          "group": "Version",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "750W (Peak 1400W)",
+              "price": 899.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "1000W (Peak 1800W)",
+              "price": 999.0,
+              "price_delta": 100.0,
+              "free": false
+            }
+          ]
+        }
+      ],
+      "regular_price": null,
+      "tier": "750W (Peak 1400W)",
+      "family_id": "heybike__mars-2-0-750-1000w-slick-deals"
+    },
+    {
+      "model": "Mars 2.0 750/1000W（Slick deals） — 1000W (Peak 1800W)",
+      "handle": "mars-2-0-750-1000w-slick-deals--1000w-peak-1800w",
+      "url": "https://www.heybike.com/products/mars-2-0-750-1000w-slick-deals?variant=48900628250843",
+      "product_types": [
+        "Fat Tire"
+      ],
+      "price_from": 999.0,
+      "currency": "USD",
+      "options": {
+        "Version": [
+          "750W (Peak 1400W)",
+          "1000W (Peak 1800W)"
+        ],
+        "colors": [
+          {
+            "name": "Pumpkin Orange",
+            "hex": "#e79953",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Orange-Right.png?v=1766738064"
+          },
+          {
+            "name": "Leather Black",
+            "hex": "#000000",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Black-Right.png?v=1774418893"
+          },
+          {
+            "name": "Granite Grey",
+            "hex": "#808080",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Grey-Right.png?v=1774418893"
+          },
+          {
+            "name": "Dusty Blue",
+            "hex": "#96b9cc",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Blue-Right.png?v=1774418893"
+          }
+        ]
+      },
+      "warranty": "2-Year Warranty",
+      "specs": {
+        "all": {
+          "Frame": "Aluminum Alloy; removable lithium-ion battery; rear rack and fenders included; kickstand mount; mechanical brakes (Hydraulic Brakes for 1000W version)",
+          "Fork": "Spring Fork, 65 mm travel with preload adjustment and lock-out",
+          "Hub rear": "750W Version: 80Nm torque, 750W (sustained), 1400W (peak) 1000W Version: 100Nm torque, 1000W (sustained), 1800W (peak)",
+          "Spokes": "Aluminum alloy",
+          "Tire": "Puncture protection, 20\"x4.0\"-max tire size",
+          "Battery": "600Wh, external removable lithium-ion battery",
+          "Charger": "2A, 54.6V output, 100V-220V AC input",
+          "Display Type": "LED Display",
+          "Rear Derailleur": "Shimano 7 speed",
+          "Light": "LED, headlight and taillight",
+          "Kickstand": "Alloy",
+          "Weight": "34 kg / 75 lbs",
+          "Weight limit": "Maximum total weight limit (combined weight of rider and cargo): 330 pounds (149.7 kg)",
+          "Folded Dimensions": "37.4*21.7*27.95 inch",
+          "Unfolded Dimensions": "67*25*49 inch",
+          "Range": "Up to 45 miles",
+          "Brakes": "Hydraulic Disc Brakes",
+          "Rider Height": "5'3\" - 6'1\""
+        }
+      },
+      "spec_count": 17,
+      "scrape_error": null,
+      "is_new": false,
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'3\"",
+          "height_max": "6'1\""
+        }
+      ],
+      "geometry": {
+        "Rider Height": "5'3\" - 6'1\""
+      },
+      "configurations": [
+        {
+          "options": {
+            "Version": "1000W (Peak 1800W)",
+            "Color": "Pumpkin Orange"
+          },
+          "price": 999.0,
+          "sku": "HBK-Mars-1000-O",
+          "variant_id": 48900628250843,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Orange-Right.png?v=1766738064",
+          "color": {
+            "name": "Pumpkin Orange",
+            "hex": "#e79953",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Orange-Right.png?v=1766738064"
+          }
+        },
+        {
+          "options": {
+            "Version": "1000W (Peak 1800W)",
+            "Color": "Leather Black"
+          },
+          "price": 999.0,
+          "sku": "HBK-Mars-1000-B",
+          "variant_id": 48900628283611,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Black-Right.png?v=1774418893",
+          "color": {
+            "name": "Leather Black",
+            "hex": "#000000",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Black-Right.png?v=1774418893"
+          }
+        },
+        {
+          "options": {
+            "Version": "1000W (Peak 1800W)",
+            "Color": "Granite Grey"
+          },
+          "price": 999.0,
+          "sku": "HBK-Mars-1000-G",
+          "variant_id": 48900628316379,
+          "available": false,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Grey-Right.png?v=1774418893",
+          "color": {
+            "name": "Granite Grey",
+            "hex": "#808080",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Grey-Right.png?v=1774418893"
+          }
+        },
+        {
+          "options": {
+            "Version": "1000W (Peak 1800W)",
+            "Color": "Dusty Blue"
+          },
+          "price": 999.0,
+          "sku": "HBK-Mars-1000-U",
+          "variant_id": 48900628349147,
+          "available": false,
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Blue-Right.png?v=1774418893",
+          "color": {
+            "name": "Dusty Blue",
+            "hex": "#96b9cc",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/MARS2.0_Blue-Right.png?v=1774418893"
+          }
+        }
+      ],
+      "available_options": [
+        {
+          "group": "Version",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "750W (Peak 1400W)",
+              "price": 899.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "1000W (Peak 1800W)",
+              "price": 999.0,
+              "price_delta": 100.0,
+              "free": false
+            }
+          ]
+        }
+      ],
+      "regular_price": null,
+      "tier": "1000W (Peak 1800W)",
+      "family_id": "heybike__mars-2-0-750-1000w-slick-deals"
+    },
+    {
       "model": "Mars 3.0",
       "handle": "mars-3-0",
       "url": "https://www.heybike.com/products/mars-3-0",
       "product_types": [
-        "Folding",
         "Fat Tire"
       ],
       "price_from": 1199.0,
@@ -1213,19 +2159,19 @@
             "name": "Vivid Orange",
             "hex": "#ffa500",
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Mars_3.0_26d70bf5-a90a-4636-9fa1-f892c760d922.png?v=1781086320"
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Mars_3.0_179d3fea-004d-4c71-8266-c50ac44ba831.png?v=1782270934"
           },
           {
             "name": "Stormy Blue",
             "hex": "#0000ff",
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Mars_3.0_c1e05da4-7979-4b0a-af2f-85f455798459.png?v=1781086320"
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Mars_3.0_83131f7a-2df6-46af-b281-da95b7bcb412.png?v=1782270934"
           },
           {
             "name": "Nightrider Black",
             "hex": "#000000",
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Mars_3.0_3908d57f-96a6-433b-af49-667b3c2fe8ea.png?v=1781086321"
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Mars_3.0_d1b03ffc-bcca-4912-8d53-8c9b2f691a9d.png?v=1782270935"
           }
         ]
       },
@@ -1250,8 +2196,7 @@
           "Folded Dimensions": "38.2x19.7x 33.1 inch",
           "Unfolded Dimensions": "66.9x25.6x52.0 inch",
           "Range": "Up to 65 miles",
-          "Brakes": "Hydraulic Disc Brakes",
-          "Top Speed": "28 mph"
+          "Brakes": "Hydraulic Disc Brakes"
         }
       },
       "spec_count": 19,
@@ -1273,7 +2218,7 @@
           "sku": "HB1Mars3USOG1A",
           "variant_id": 47386426409179,
           "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Mars_3.0_26d70bf5-a90a-4636-9fa1-f892c760d922.png?v=1781086320"
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Mars_3.0_179d3fea-004d-4c71-8266-c50ac44ba831.png?v=1782270934"
         },
         {
           "options": {
@@ -1284,7 +2229,7 @@
           "sku": "HB1Mars3USBP1A",
           "variant_id": 47386426441947,
           "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Mars_3.0_c1e05da4-7979-4b0a-af2f-85f455798459.png?v=1781086320"
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Mars_3.0_83131f7a-2df6-46af-b281-da95b7bcb412.png?v=1782270934"
         },
         {
           "options": {
@@ -1295,7 +2240,7 @@
           "sku": "HB1Mars3USBK1A",
           "variant_id": 47386426474715,
           "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Mars_3.0_3908d57f-96a6-433b-af49-667b3c2fe8ea.png?v=1781086321"
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Mars_3.0_d1b03ffc-bcca-4912-8d53-8c9b2f691a9d.png?v=1782270935"
         }
       ],
       "available_options": [],
@@ -1306,10 +2251,9 @@
       "handle": "ranger-3-0-pro",
       "url": "https://www.heybike.com/products/ranger-3-0-pro",
       "product_types": [
-        "Folding",
         "Fat Tire"
       ],
-      "price_from": 1499.0,
+      "price_from": 1399.0,
       "currency": "USD",
       "options": {
         "Version": [
@@ -1320,19 +2264,19 @@
             "name": "Ruby Red",
             "hex": "#ff0000",
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Ranger_3.0_Pro_dbe7d739-b7e3-440f-8929-ad74c267fff3.png?v=1781086277"
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Ranger_3.0_Pro_e0aa74e9-792f-472e-a721-62e8c8cbd673.png?v=1781518227"
           },
           {
             "name": "Sapphire Blue",
             "hex": "#0000ff",
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Ranger_3.0_Pro_c222025d-6b92-4220-9112-f78638635b6b.png?v=1781086277"
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Ranger_3.0_Pro_b7c479d9-7667-4bcf-812f-a7cb27e6baa5.png?v=1781518227"
           },
           {
             "name": "Emerald Green",
             "hex": "#52794b",
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Ranger_3.0_Pro_cf60caea-6608-426c-bd54-5a75169208a1.png?v=1781086277"
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Ranger_3.0_Pro_30b6b0f7-65c8-4dab-b929-bdfea1ecd122.png?v=1781518227"
           }
         ]
       },
@@ -1356,8 +2300,7 @@
           "Weight limit": "Maximum total weight limit (combined weight of rider and cargo): 440lbs",
           "Folded Dimensions": "41.7x20.5x32.7 inch",
           "Unfolded Dimensions": "69.7x25.6x52.0 inch",
-          "Brakes": "Hydraulic Disc Brakes",
-          "Top Speed": "28 mph"
+          "Brakes": "Hydraulic Disc Brakes"
         }
       },
       "spec_count": 18,
@@ -1375,33 +2318,33 @@
             "Version": "750W  (Peak 1400W)",
             "Colors": "Ruby Red"
           },
-          "price": 1499.0,
+          "price": 1399.0,
           "sku": "HB1Ran3PUSRD1A",
           "variant_id": 47386428047579,
           "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Ranger_3.0_Pro_dbe7d739-b7e3-440f-8929-ad74c267fff3.png?v=1781086277"
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Ranger_3.0_Pro_e0aa74e9-792f-472e-a721-62e8c8cbd673.png?v=1781518227"
         },
         {
           "options": {
             "Version": "750W  (Peak 1400W)",
             "Colors": "Sapphire Blue"
           },
-          "price": 1499.0,
+          "price": 1399.0,
           "sku": "HB1Ran3PUSBU1A",
           "variant_id": 47386428080347,
           "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Ranger_3.0_Pro_c222025d-6b92-4220-9112-f78638635b6b.png?v=1781086277"
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Ranger_3.0_Pro_b7c479d9-7667-4bcf-812f-a7cb27e6baa5.png?v=1781518227"
         },
         {
           "options": {
             "Version": "750W  (Peak 1400W)",
             "Colors": "Emerald Green"
           },
-          "price": 1499.0,
+          "price": 1399.0,
           "sku": "HB1Ran3PUSGN1A",
           "variant_id": 47386428113115,
           "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Ranger_3.0_Pro_cf60caea-6608-426c-bd54-5a75169208a1.png?v=1781086277"
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Ranger_3.0_Pro_30b6b0f7-65c8-4dab-b929-bdfea1ecd122.png?v=1781518227"
         }
       ],
       "available_options": [],
@@ -1418,15 +2361,15 @@
       "currency": "USD",
       "options": {
         "Version": [
-          "Single Battery (30-50 Miles)",
-          "Dual Battery (55-90 Miles)"
+          "Dual Battery (55-90 Miles)",
+          "Single Battery (30-50 Miles)"
         ],
         "colors": [
           {
             "name": "Leather Black",
             "hex": "#000000",
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Saturn_66ff0ea7-1402-4c4d-8b61-cafdaf4f9337.png?v=1781086195"
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Saturn_616860d9-427e-470b-beb9-2f219e550d37.png?v=1782198515"
           }
         ]
       },
@@ -1502,12 +2445,12 @@
           "sku": "HB1SaturnUSBK1A",
           "variant_id": 48751967437019,
           "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Saturn_66ff0ea7-1402-4c4d-8b61-cafdaf4f9337.png?v=1781086195",
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Saturn_df51d800-8853-43bc-a2c4-b954146aaefe.png?v=1782198514",
           "color": {
             "name": "Leather Black",
             "hex": "#000000",
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Saturn_66ff0ea7-1402-4c4d-8b61-cafdaf4f9337.png?v=1781086195"
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Saturn_616860d9-427e-470b-beb9-2f219e550d37.png?v=1782198515"
           }
         }
       ],
@@ -1517,16 +2460,16 @@
           "type": "variant",
           "choices": [
             {
-              "value": "Single Battery (30-50 Miles)",
-              "price": 999.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
               "value": "Dual Battery (55-90 Miles)",
               "price": 1299.0,
               "price_delta": 300.0,
               "free": false
+            },
+            {
+              "value": "Single Battery (30-50 Miles)",
+              "price": 999.0,
+              "price_delta": 0.0,
+              "free": true
             }
           ]
         },
@@ -1562,15 +2505,15 @@
       "currency": "USD",
       "options": {
         "Version": [
-          "Single Battery (30-50 Miles)",
-          "Dual Battery (55-90 Miles)"
+          "Dual Battery (55-90 Miles)",
+          "Single Battery (30-50 Miles)"
         ],
         "colors": [
           {
             "name": "Leather Black",
             "hex": "#000000",
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Saturn_66ff0ea7-1402-4c4d-8b61-cafdaf4f9337.png?v=1781086195"
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Saturn_616860d9-427e-470b-beb9-2f219e550d37.png?v=1782198515"
           }
         ]
       },
@@ -1646,12 +2589,12 @@
           "sku": "HB1SaturnUSBK2A",
           "variant_id": 48751977529563,
           "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Saturn_58e1c0f2-3027-45a0-9c1c-4493ca489381.png?v=1781086195",
+          "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Saturn_616860d9-427e-470b-beb9-2f219e550d37.png?v=1782198515",
           "color": {
             "name": "Leather Black",
             "hex": "#000000",
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Saturn_66ff0ea7-1402-4c4d-8b61-cafdaf4f9337.png?v=1781086195"
+            "image": "https://cdn.shopify.com/s/files/1/0516/9804/1009/files/Saturn_616860d9-427e-470b-beb9-2f219e550d37.png?v=1782198515"
           }
         }
       ],
@@ -1661,16 +2604,16 @@
           "type": "variant",
           "choices": [
             {
-              "value": "Single Battery (30-50 Miles)",
-              "price": 999.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
               "value": "Dual Battery (55-90 Miles)",
               "price": 1299.0,
               "price_delta": 300.0,
               "free": false
+            },
+            {
+              "value": "Single Battery (30-50 Miles)",
+              "price": 999.0,
+              "price_delta": 0.0,
+              "free": true
             }
           ]
         },
@@ -1778,7 +2721,16 @@
         "free": true
       },
       "free_accessories": [],
-      "geometry": {},
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "4'11\"",
+          "height_max": "6'2\""
+        }
+      ],
+      "geometry": {
+        "Rider Height": "4'11\" - 6'2\""
+      },
       "configurations": [
         {
           "options": {
@@ -1815,14 +2767,7 @@
         }
       ],
       "available_options": [],
-      "regular_price": 1999.0,
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "4'11\"",
-          "height_max": "6'2\""
-        }
-      ]
+      "regular_price": 1999.0
     }
   ],
   "available_accessories": [
@@ -1873,14 +2818,6 @@
       "on_sale": true,
       "free": false,
       "url": "https://www.heybike.com/products/pet-bike-basket"
-    },
-    {
-      "name": "Heybike Tail Bag",
-      "price": 59.0,
-      "regular_price": 79.0,
-      "on_sale": true,
-      "free": false,
-      "url": "https://www.heybike.com/products/heybike-tail-bag"
     },
     {
       "name": "Dual Rear Side Baskets Set",
@@ -1969,7 +2906,63 @@
       "on_sale": false,
       "free": false,
       "url": "https://www.heybike.com/products/steel-cable-lock"
+    },
+    {
+      "name": "Utility Upgrade Kit",
+      "price": 177.0,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.heybike.com/products/heybike-utility-upgrade-kit"
+    },
+    {
+      "name": "Rider's Essential Kit",
+      "price": 157.0,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.heybike.com/products/riders-essential-kit"
+    },
+    {
+      "name": "Heavy-Duty Cargo Kit",
+      "price": 203.0,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.heybike.com/products/heavy-duty-cargo-kit"
+    },
+    {
+      "name": "Universal Adventure Kit",
+      "price": 232.0,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.heybike.com/products/universal-adventure-kit"
+    },
+    {
+      "name": "Urban Utility Kit",
+      "price": 187.0,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.heybike.com/products/urban-utility-kit"
+    },
+    {
+      "name": "Phone Holder",
+      "price": 49.0,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.heybike.com/products/heybike-handle-bar-bag-副本-1"
+    },
+    {
+      "name": "LED Bike Headlight",
+      "price": 69.0,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://www.heybike.com/products/hero-rear-rack-for-step-through-version-副本-1"
     }
   ],
-  "available_accessories_count": 18
+  "available_accessories_count": 24
 }

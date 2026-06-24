@@ -1,7 +1,7 @@
 {
   "brand": "trek",
   "scraper": "scrape_trek.py",
-  "generated_at": "2026-06-24T03:31:18.354868+00:00",
+  "generated_at": "2026-06-24T08:06:23.661998+00:00",
   "fields_audited": [
     "motor_w",
     "battery_wh",
@@ -17,10 +17,10 @@
     "drive_type"
   ],
   "summary": {
-    "models": 60,
-    "present": 617,
+    "models": 59,
+    "present": 607,
     "resolved": 0,
-    "open": 103,
+    "open": 101,
     "needs_image": 0,
     "unpublished": 0
   },
@@ -1190,7 +1190,7 @@
         "max_speed_mph": {
           "status": "present",
           "source": "scraped",
-          "value": 28,
+          "value": 20,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
@@ -1293,7 +1293,7 @@
         "max_speed_mph": {
           "status": "present",
           "source": "scraped",
-          "value": 28,
+          "value": 20,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
@@ -1396,7 +1396,7 @@
         "max_speed_mph": {
           "status": "present",
           "source": "scraped",
-          "value": 28,
+          "value": 20,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
@@ -1499,7 +1499,7 @@
         "max_speed_mph": {
           "status": "present",
           "source": "scraped",
-          "value": 28,
+          "value": 20,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
@@ -1618,7 +1618,7 @@
         "weight_lb": {
           "status": "present",
           "source": "scraped",
-          "value": 41.1,
+          "value": 41.2,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
@@ -1721,7 +1721,7 @@
         "weight_lb": {
           "status": "present",
           "source": "scraped",
-          "value": 41.1,
+          "value": 41.2,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
@@ -2192,109 +2192,6 @@
       "id": "trek__fuel-ex-5-gen-2",
       "model": "Fuel+ EX 5 Gen 2",
       "url": "https://www.trekbikes.com/bikes/mountain-bikes/electric-mountain-bikes/fuel/fuel-ex/fuel-ex-5-gen-2/p/56298/",
-      "fields": {
-        "motor_w": {
-          "status": "present",
-          "source": "scraped",
-          "value": 250,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "battery_wh": {
-          "status": "present",
-          "source": "scraped",
-          "value": 580,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "torque_nm": {
-          "status": "present",
-          "source": "scraped",
-          "value": 60,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "max_speed_mph": {
-          "status": "present",
-          "source": "scraped",
-          "value": 20,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "range_mi": {
-          "status": "open",
-          "source": null,
-          "value": null,
-          "note": "",
-          "first_flagged": "2026-06-22",
-          "resolved_at": null
-        },
-        "weight_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 44.8,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "max_load_lb": {
-          "status": "open",
-          "source": null,
-          "value": null,
-          "note": "",
-          "first_flagged": "2026-06-22",
-          "resolved_at": null
-        },
-        "fit_height_min_in": {
-          "status": "present",
-          "source": "scraped",
-          "value": 61,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "sensor_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "torque",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "brake_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hydraulic_disc",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "frame_material": {
-          "status": "present",
-          "source": "scraped",
-          "value": "carbon",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "drive_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "mid",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        }
-      }
-    },
-    {
-      "id": "trek__fuel-ex-8-gen-2",
-      "model": "Fuel+ EX 8 Gen 2",
-      "url": "https://www.trekbikes.com/bikes/mountain-bikes/electric-mountain-bikes/fuel/fuel-ex/fuel-ex-8-gen-2/p/56301/",
       "fields": {
         "motor_w": {
           "status": "present",
@@ -4074,7 +3971,7 @@
         "max_speed_mph": {
           "status": "present",
           "source": "scraped",
-          "value": 28,
+          "value": 20,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
@@ -4177,7 +4074,7 @@
         "max_speed_mph": {
           "status": "present",
           "source": "scraped",
-          "value": 28,
+          "value": 20,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
@@ -5635,7 +5532,7 @@
         "weight_lb": {
           "status": "present",
           "source": "scraped",
-          "value": 57.4,
+          "value": 59.0,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
@@ -5738,7 +5635,7 @@
         "weight_lb": {
           "status": "present",
           "source": "scraped",
-          "value": 57.4,
+          "value": 59.0,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
@@ -5841,7 +5738,7 @@
         "weight_lb": {
           "status": "present",
           "source": "scraped",
-          "value": 57.4,
+          "value": 59.0,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
@@ -5944,7 +5841,7 @@
         "weight_lb": {
           "status": "present",
           "source": "scraped",
-          "value": 57.4,
+          "value": 59.0,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
@@ -6047,7 +5944,7 @@
         "weight_lb": {
           "status": "present",
           "source": "scraped",
-          "value": 57.4,
+          "value": 59.0,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
@@ -6150,7 +6047,7 @@
         "weight_lb": {
           "status": "present",
           "source": "scraped",
-          "value": 57.4,
+          "value": 59.0,
           "note": "",
           "first_flagged": null,
           "resolved_at": null

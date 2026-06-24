@@ -2,8 +2,8 @@
   "source": "https://www.mokwheel.com",
   "logo": "https://www.mokwheel.com/cdn/shop/files/mokwheel_logo.png?v=1737345448",
   "collection": "electric-bikes",
-  "scraped_at": "2026-06-10T23:40:42.186247+00:00",
-  "model_count": 18,
+  "scraped_at": "2026-06-24T04:31:00.522647+00:00",
+  "model_count": 19,
   "models": [
     {
       "model": "Asphalt Ebike",
@@ -18,19 +18,19 @@
         "colors": [
           {
             "name": "Khaki",
-            "hex": "#857e72",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/3_feb8f637-da48-402e-ac27-f343956ae6cc.jpg?v=1779074641"
           },
           {
             "name": "Orange",
-            "hex": "#f38b29",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/3_7cf218f7-8e0b-4f9a-b108-10af29217f02.jpg?v=1779074815"
           },
           {
             "name": "Denim",
-            "hex": "#3b3f56",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/3_da1019d3-840c-40e4-b0b2-d8f4b3465cae.jpg?v=1779074873"
           }
@@ -42,40 +42,14 @@
           "Regular price": "$1,699.99",
           "Shop All E-Bikes": "Your new favorite ride is just a click away.",
           "Free": "$499.99",
-          "Frame:": "Step Over",
-          "*Ships Within 2 Business Days": "In stock",
-          "Free Gifts": "$179.98",
-          "Battery": "48V 14.7A Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Power:500W Peak Power:860W Torque: 70Nm+",
-          "Speed Class": "20 mph (Throttle) / 28 mph (PAS)",
-          "Weight": "64 lbs",
-          "Range": "50~60miles",
-          "Payload Capacity": "350 lbs",
-          "Sensor": "Torque+Cadence Sensor",
-          "Tires": "27.5\" x 2.4\" Tire",
-          "Display": "LED Integrated",
-          "Gearing": "Shimano 7-Speed",
-          "Derailleur": "7-speed Shimano",
-          "Brakes": "TEKTRO TKD171 Hydraulic Disc Brakes",
-          "Brake lever": "Aluminum Alloy, with power cutoff",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 44T chainring",
-          "Front Fork": "100mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Throttle": "Thumb Throttle",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 700mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Customized Comfort Leather Seat",
-          "Spokes": "Heavy-duty carbon steel, 13G × 263 mm (front) / 223 mm (rear)",
+          "1": "10",
+          "Rider Height": "5'5\" - 6'7\"",
+          "Height: 5'6″-6'6″": "Inseam: 2'7″-3'0″",
           "Q:": "We purchased 2 Asphalt ST’s early last year. When did these bikes get the water proof rating?",
-          "A:": "Hello Eric, Thank you for reaching out! For detailed answers please contact us at support@mokwheel.com. Our team will be happy to assist you. Best regards, Mokwheel Support Team",
-          "Rider Height": "5'6\" - 6'6\""
+          "A:": "Hello Eric, Thank you for reaching out! For detailed answers please contact us at support@mokwheel.com. Our team will be happy to assist you. Best regards, Mokwheel Support Team"
         }
       },
-      "spec_count": 33,
+      "spec_count": 8,
       "scrape_error": null,
       "is_new": false,
       "shipping": {
@@ -83,7 +57,16 @@
         "free": true
       },
       "free_accessories": [],
-      "geometry": {},
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'5\"",
+          "height_max": "6'7\""
+        }
+      ],
+      "geometry": {
+        "Rider Height": "5'5\" - 6'7\""
+      },
       "configurations": [
         {
           "options": {
@@ -96,7 +79,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/3_feb8f637-da48-402e-ac27-f343956ae6cc.jpg?v=1779074641",
           "color": {
             "name": "Khaki",
-            "hex": "#857e72",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/3_feb8f637-da48-402e-ac27-f343956ae6cc.jpg?v=1779074641"
           }
@@ -112,7 +95,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/3_7cf218f7-8e0b-4f9a-b108-10af29217f02.jpg?v=1779074815",
           "color": {
             "name": "Orange",
-            "hex": "#f38b29",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/3_7cf218f7-8e0b-4f9a-b108-10af29217f02.jpg?v=1779074815"
           }
@@ -128,7 +111,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/3_da1019d3-840c-40e4-b0b2-d8f4b3465cae.jpg?v=1779074873",
           "color": {
             "name": "Denim",
-            "hex": "#3b3f56",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/3_da1019d3-840c-40e4-b0b2-d8f4b3465cae.jpg?v=1779074873"
           }
@@ -138,14 +121,7 @@
       "regular_price": 1599.99,
       "family_id": "mokwheel__asphalt-ebike",
       "tier": "Step-Over",
-      "frame_style": "Step-Over (Mid-Step)",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'6\"",
-          "height_max": "6'6\""
-        }
-      ]
+      "frame_style": "Step-Over (Mid-Step)"
     },
     {
       "model": "Asphalt ST Ebike",
@@ -163,19 +139,19 @@
         "colors": [
           {
             "name": "White",
-            "hex": "#efefef",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_6910f332-ec05-4c90-ac5c-0fbe2d49dd1e.jpg?v=1751451110"
           },
           {
             "name": "Lapis",
-            "hex": "#6c7cb2",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_3c41b1ec-de5c-45df-bb5c-a61e8776658f.jpg?v=1751451110"
           },
           {
             "name": "Mocha",
-            "hex": "#857e72",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_b6c45b81-339b-4b61-8c38-6d13b9b16920.jpg?v=1751451110"
           }
@@ -187,40 +163,14 @@
           "Regular price": "$1,699.99",
           "Shop All E-Bikes": "Your new favorite ride is just a click away.",
           "Free": "$499.99",
-          "Frame:": "Step Through",
-          "*Ships Within 2 Business Days": "In stock",
-          "Free Gifts": "$179.98",
-          "Battery": "48V 14.7A Complies with UL standards, IPX7 Waterproof",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Charger": "48V 3A",
-          "Motor": "Continuous Power: 500W Peak Power: 860W Torque: 70Nm+",
-          "Speed Class": "20 mph (Throttle) / 28 mph (PAS)",
-          "Weight": "63 lbs",
-          "Range": "50~60miles",
-          "Payload Capacity": "300 lbs",
-          "Sensor": "Torque+Cadence Sensor",
-          "Tires": "27.5\" x 2.4\" Tire",
-          "Display": "LED Integrated",
-          "Brakes": "TEKTRO TKD171 Hydraulic Disc Brakes",
-          "Gearing": "Shimano 7-Speed",
-          "Derailleur": "7-speed Shimano",
-          "Brake lever": "Aluminum Alloy, with power cutoff",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 44T chainring",
-          "Front Fork": "100mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Throttle": "Thumb Throttle",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Customized Comfort Leather Seat",
-          "Spokes": "Heavy-duty carbon steel, 13G × 263 mm (front) / 223 mm (rear)",
+          "1": "10",
+          "Rider Height": "5'5\" - 6'7\"",
+          "Height: 5'2″-6'2″": "Inseam: 2'5″-3'0″",
           "Q:": "I'm new at this .. does this bike ride on its own or do you hv to peddle? Ty April",
-          "A:": "The weight of the Asphalt St is 63 lbs.",
-          "Rider Height": "5'5\" - 6'7\""
+          "A:": "The weight of the Asphalt St is 63 lbs."
         }
       },
-      "spec_count": 33,
+      "spec_count": 8,
       "scrape_error": null,
       "is_new": false,
       "shipping": {
@@ -228,7 +178,16 @@
         "free": true
       },
       "free_accessories": [],
-      "geometry": {},
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'5\"",
+          "height_max": "6'7\""
+        }
+      ],
+      "geometry": {
+        "Rider Height": "5'5\" - 6'7\""
+      },
       "configurations": [
         {
           "options": {
@@ -242,7 +201,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_6910f332-ec05-4c90-ac5c-0fbe2d49dd1e.jpg?v=1751451110",
           "color": {
             "name": "White",
-            "hex": "#efefef",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_6910f332-ec05-4c90-ac5c-0fbe2d49dd1e.jpg?v=1751451110"
           }
@@ -259,7 +218,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_3c41b1ec-de5c-45df-bb5c-a61e8776658f.jpg?v=1751451110",
           "color": {
             "name": "Lapis",
-            "hex": "#6c7cb2",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_3c41b1ec-de5c-45df-bb5c-a61e8776658f.jpg?v=1751451110"
           }
@@ -276,7 +235,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_b6c45b81-339b-4b61-8c38-6d13b9b16920.jpg?v=1751451110",
           "color": {
             "name": "Mocha",
-            "hex": "#857e72",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_b6c45b81-339b-4b61-8c38-6d13b9b16920.jpg?v=1751451110"
           }
@@ -286,14 +245,7 @@
       "regular_price": 1599.99,
       "family_id": "mokwheel__asphalt-ebike",
       "tier": "Step-Thru",
-      "frame_style": "Step-Thru",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'5\"",
-          "height_max": "6'7\""
-        }
-      ]
+      "frame_style": "Step-Thru"
     },
     {
       "model": "Basalt 2.0 Ebike",
@@ -308,25 +260,25 @@
         "colors": [
           {
             "name": "Phantom Black",
-            "hex": "#858585",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_7f4897d4-171e-4c47-a7a3-d7a0f387eb2e.jpg?v=1751513339"
           },
           {
             "name": "Grey",
-            "hex": "#5d5d5d",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_106729c1-3647-41ae-abb7-c7182b9db75d.jpg?v=1751536708"
           },
           {
             "name": "DarkBlue",
-            "hex": "#98a8d0",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_b65f3eaf-c8ae-401f-95ab-a30301c1d44c.jpg?v=1751536708"
           },
           {
             "name": "Jungle Camo",
-            "hex": "#5a5d48",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_563f4e67-cc52-4885-af1e-cb219bce75e6.jpg?v=1751513339"
           }
@@ -338,47 +290,13 @@
           "Regular price": "$1,699.99",
           "Shop All E-Bikes": "Your new favorite ride is just a click away.",
           "Free": "$499.99",
-          "Version": "Basalt 2.0",
-          "Frame:": "Step Over",
-          "*Ships Within 2 Business Days.": "In stock",
-          "Free Gifts": "$179.98",
-          "Battery": "48V 19.6Ah ,Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Power: 750W Peak Power: 1100W Torque: 90Nm+",
-          "Speed Class": "20 mph (Throttle) / 28 mph (PAS)",
-          "Weight": "80 lbs",
-          "Range": "60~80miles",
-          "Payload Capacity": "450 lbs",
-          "Sensor": "Torque+Cadence Sensor",
-          "Tires": "26\" × 4.0\" Fat Tire (Puncture-Resistant)",
-          "Display": "Detachable High-Definition Display",
-          "Brakes": "TEKTRO TKD171 Hydraulic Disc Brakes",
-          "Brake LEVER": "Aluminum Alloy, with power cutoff",
-          "Gearing": "Shimano 8-Speed",
-          "Derailleur": "8 Speed Shimano",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 52T chainring",
-          "Front Fork": "110mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Throttle": "Thumb Throttle",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 720mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Customized Comfort Leather Seat",
-          "Spokes": "Heavy-duty carbon steel, 12G × 248 mm (front) / 219 mm (rear)",
-          "Rider Height": "5'7\" - 6'9\"",
-          "Reach": "17\"",
-          "Top Tube Length": "25\"",
-          "Standover Height": "30\"",
-          "Wheelbase": "46\"",
-          "Min Saddle Height": "33\"",
-          "Max Saddle Height": "41\"",
-          "Head Tube Length": "6\"",
+          "1": "10",
+          "Rider Height": "5'5\" - 6'7\"",
+          "Height: 5'7″-6'7″": "Inseam: 2'7″-3'2″",
           "Q:": "What class is the Basalt 2.0 and is it legal on paths i michigan"
         }
       },
-      "spec_count": 41,
+      "spec_count": 7,
       "scrape_error": null,
       "is_new": false,
       "shipping": {
@@ -386,15 +304,15 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'5\"",
+          "height_max": "6'7\""
+        }
+      ],
       "geometry": {
-        "Rider Height": "5'7\" - 6'9\"",
-        "Reach": "17\"",
-        "Top Tube Length": "25\"",
-        "Standover Height": "30\"",
-        "Wheelbase": "46\"",
-        "Min Saddle Height": "33\"",
-        "Max Saddle Height": "41\"",
-        "Head Tube Length": "6\""
+        "Rider Height": "5'5\" - 6'7\""
       },
       "configurations": [
         {
@@ -408,7 +326,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_7f4897d4-171e-4c47-a7a3-d7a0f387eb2e.jpg?v=1751513339",
           "color": {
             "name": "Phantom Black",
-            "hex": "#858585",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_7f4897d4-171e-4c47-a7a3-d7a0f387eb2e.jpg?v=1751513339"
           }
@@ -424,7 +342,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_106729c1-3647-41ae-abb7-c7182b9db75d.jpg?v=1751536708",
           "color": {
             "name": "Grey",
-            "hex": "#5d5d5d",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_106729c1-3647-41ae-abb7-c7182b9db75d.jpg?v=1751536708"
           }
@@ -440,7 +358,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_b65f3eaf-c8ae-401f-95ab-a30301c1d44c.jpg?v=1751536708",
           "color": {
             "name": "DarkBlue",
-            "hex": "#98a8d0",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_b65f3eaf-c8ae-401f-95ab-a30301c1d44c.jpg?v=1751536708"
           }
@@ -456,7 +374,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_563f4e67-cc52-4885-af1e-cb219bce75e6.jpg?v=1751513339",
           "color": {
             "name": "Jungle Camo",
-            "hex": "#5a5d48",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_563f4e67-cc52-4885-af1e-cb219bce75e6.jpg?v=1751513339"
           }
@@ -465,14 +383,7 @@
       "available_options": [],
       "family_id": "mokwheel__basalt-2-0-ebike",
       "tier": "Step-Over",
-      "frame_style": "Step-Over (Mid-Step)",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'7\"",
-          "height_max": "6'9\""
-        }
-      ]
+      "frame_style": "Step-Over (Mid-Step)"
     },
     {
       "model": "Basalt ST 2.0 Ebike",
@@ -491,31 +402,31 @@
         "colors": [
           {
             "name": "White",
-            "hex": "#efefef",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_60fb4986-f749-42d1-a27c-feed80a42e9d.jpg?v=1761124133"
           },
           {
             "name": "Orange",
-            "hex": "#f38b29",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_2b90b661-4361-4ea9-a131-5ba7f16edcc8.jpg?v=1761124020"
           },
           {
             "name": "Olive Green",
-            "hex": "#898f57",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_10d05097-4053-43f4-a889-d5f85adf4909.jpg?v=1761123313"
           },
           {
             "name": "Crystal Pink",
-            "hex": "#f5c5c3",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_73e3013e-4c17-4c12-b12c-fcc02f7e2214.jpg?v=1761123863"
           },
           {
             "name": "Jungle Camo",
-            "hex": "#5a5d48",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/mi1.jpg?v=1761123611"
           }
@@ -527,47 +438,15 @@
           "Regular price": "$1,699.99",
           "Shop All E-Bikes": "Your new favorite ride is just a click away.",
           "Free": "$499.99",
-          "Frame:": "Step Through",
-          "*Ships Within 2 Business Days.": "In stock",
-          "Free Gifts": "$179.98",
-          "Battery": "48V 19.6Ah Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Power: 750W Peak Power: 1100W Torque: 90Nm+",
-          "Speed Class": "20 mph (Throttle) / 28 mph (PAS)",
-          "Weight": "80 lbs",
-          "Range": "60~80miles",
-          "Payload Capacity": "450 lbs",
-          "Sensor": "Torque+Cadence Sensor",
-          "Tires": "26\" × 4.0\" Fat Tire (Puncture-Resistant)",
-          "Display": "Detachable High-Definition Display",
-          "Brakes": "TEKTRO TKD171 Hydraulic Disc Brakes",
-          "Brake LEVER": "Aluminum Alloy, with power cutoff",
-          "Gearing": "Shimano 8-Speed",
-          "Derailleur": "8-Speed Shimano",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 52T chainring",
-          "Front Fork": "110mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Throttle": "Thumb Throttle",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Customized Comfort Leather Seat",
-          "Spokes": "Heavy-duty carbon steel, 12G × 248 mm (front) / 219 mm (rear)",
-          "Rider Height": "5'6\" - 6'8\"",
-          "Reach": "16\"",
-          "Top Tube Length": "24\"",
-          "Standover Height": "17\"",
-          "Wheelbase": "46\"",
-          "Min Saddle Height": "34\"",
-          "Max Saddle Height": "42\"",
-          "Head Tube Length": "6\"",
+          "1": "10",
+          "Rider Height": "5'5\" - 6'7\"",
+          "Height: 5'3″-6'3″": "Inseam: 2'5″-3'0″",
+          "Height: 5'5″-6'5″": "Inseam: 2'6″-3'1″",
           "Q:": "What should the PSI be on the Basalt ST?",
           "A:": "The max PSI on the Basalt ST 2.0 is 30 psi. Therefore, we would suggest setting the PSI around 25."
         }
       },
-      "spec_count": 41,
+      "spec_count": 9,
       "scrape_error": null,
       "is_new": false,
       "shipping": {
@@ -575,15 +454,15 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'5\"",
+          "height_max": "6'7\""
+        }
+      ],
       "geometry": {
-        "Rider Height": "5'6\" - 6'8\"",
-        "Reach": "16\"",
-        "Top Tube Length": "24\"",
-        "Standover Height": "17\"",
-        "Wheelbase": "46\"",
-        "Min Saddle Height": "34\"",
-        "Max Saddle Height": "42\"",
-        "Head Tube Length": "6\""
+        "Rider Height": "5'5\" - 6'7\""
       },
       "configurations": [
         {
@@ -598,7 +477,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_60fb4986-f749-42d1-a27c-feed80a42e9d.jpg?v=1761124133",
           "color": {
             "name": "White",
-            "hex": "#efefef",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_60fb4986-f749-42d1-a27c-feed80a42e9d.jpg?v=1761124133"
           }
@@ -615,7 +494,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_2b90b661-4361-4ea9-a131-5ba7f16edcc8.jpg?v=1761124020",
           "color": {
             "name": "Orange",
-            "hex": "#f38b29",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_2b90b661-4361-4ea9-a131-5ba7f16edcc8.jpg?v=1761124020"
           }
@@ -632,7 +511,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_10d05097-4053-43f4-a889-d5f85adf4909.jpg?v=1761123313",
           "color": {
             "name": "Olive Green",
-            "hex": "#898f57",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_10d05097-4053-43f4-a889-d5f85adf4909.jpg?v=1761123313"
           }
@@ -649,7 +528,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_73e3013e-4c17-4c12-b12c-fcc02f7e2214.jpg?v=1761123863",
           "color": {
             "name": "Crystal Pink",
-            "hex": "#f5c5c3",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_73e3013e-4c17-4c12-b12c-fcc02f7e2214.jpg?v=1761123863"
           }
@@ -666,7 +545,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/mi1.jpg?v=1761123611",
           "color": {
             "name": "Jungle Camo",
-            "hex": "#5a5d48",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/mi1.jpg?v=1761123611"
           }
@@ -683,7 +562,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_60fb4986-f749-42d1-a27c-feed80a42e9d.jpg?v=1761124133",
           "color": {
             "name": "White",
-            "hex": "#efefef",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_60fb4986-f749-42d1-a27c-feed80a42e9d.jpg?v=1761124133"
           }
@@ -700,7 +579,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_2b90b661-4361-4ea9-a131-5ba7f16edcc8.jpg?v=1761124020",
           "color": {
             "name": "Orange",
-            "hex": "#f38b29",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_2b90b661-4361-4ea9-a131-5ba7f16edcc8.jpg?v=1761124020"
           }
@@ -717,7 +596,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_10d05097-4053-43f4-a889-d5f85adf4909.jpg?v=1761123313",
           "color": {
             "name": "Olive Green",
-            "hex": "#898f57",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_10d05097-4053-43f4-a889-d5f85adf4909.jpg?v=1761123313"
           }
@@ -745,14 +624,7 @@
       ],
       "family_id": "mokwheel__basalt-2-0-ebike",
       "tier": "Step-Thru",
-      "frame_style": "Step-Thru",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'6\"",
-          "height_max": "6'8\""
-        }
-      ]
+      "frame_style": "Step-Thru"
     },
     {
       "model": "FLINT  PRO ST  Ebike",
@@ -767,15 +639,9 @@
         "colors": [
           {
             "name": "White",
-            "hex": "#efefef",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_6c2a0b6a-1b78-45cf-a18f-bb7bbab52d86.jpg?v=1764743002"
-          },
-          {
-            "name": "Crystal Pink",
-            "hex": "#f5c5c3",
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_c246793b-1fb8-4e40-9aad-006cc493c38c.jpg?v=1764743002"
           },
           {
             "name": "Skyblue",
@@ -784,8 +650,14 @@
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_89f38e07-36d8-4b6d-9bb2-9475c82aa2c2.jpg?v=1764743002"
           },
           {
+            "name": "Crystal Pink",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_c246793b-1fb8-4e40-9aad-006cc493c38c.jpg?v=1764743002"
+          },
+          {
             "name": "Mocha",
-            "hex": "#857e72",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_ef7e71a7-834a-479e-af1c-2501578ce578.jpg?v=1764743002"
           }
@@ -797,45 +669,12 @@
           "Regular price": "$1,699.99",
           "Shop All E-Bikes": "Your new favorite ride is just a click away.",
           "Free": "$499.99",
-          "Version": "FLINT PRO ST – Belt Drive",
-          "Frame:": "Step Through",
-          "*Ships Within 2 Business Days.": "In stock",
-          "Free Gifts": "$179.98",
-          "Battery": "36V 10Ah Complies with UL standards, IPX7 Waterproof",
-          "Charger": "36V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Power: 250W Peak Power: 500W Torque: 40Nm",
-          "Speed Class": "20 mph (PAS)",
-          "Weight": "35 lbs",
-          "Range": "50~70miles",
-          "Payload Capacity": "300 lbs",
-          "Sensor": "Torque+Cadence Sensor",
-          "Tires": "CST 700×45C",
-          "Display": "Intuitive Ride Data Display",
-          "Brakes": "TEKTRO HD-M275 Hydraulic Brakes",
-          "Gearing": "Single-Speed Belt Drive",
-          "Derailleur": "Single-Speed Belt Drive",
-          "Brake lever": "Aluminum Alloy",
-          "Chain": "Gates Carbon Fiber Belt",
-          "Crank Set": "Aluminum alloy, 170mm, 55T chainring",
-          "Front Fork": "65mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "High-resilience cushioning",
-          "Spokes": "Heavy-duty carbon steel, 13G × 278 mm (front) / 263 mm (rear) , 13G × 280 mm (front) / 263mm (rear)",
+          "1": "11",
           "Rider Height": "5'5\" - 6'7\"",
-          "Reach": "16\"",
-          "Top Tube Length": "24\"",
-          "Standover Height": "17\"",
-          "Wheelbase": "44\"",
-          "Min Saddle Height": "34\"",
-          "Max Saddle Height": "43\"",
-          "Head Tube Length": "7\""
+          "Height: 5'5″-6'5″": "Inseam: 2'6″-3'1″"
         }
       },
-      "spec_count": 39,
+      "spec_count": 6,
       "scrape_error": null,
       "is_new": false,
       "shipping": {
@@ -843,15 +682,15 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'5\"",
+          "height_max": "6'7\""
+        }
+      ],
       "geometry": {
-        "Rider Height": "5'5\" - 6'7\"",
-        "Reach": "16\"",
-        "Top Tube Length": "24\"",
-        "Standover Height": "17\"",
-        "Wheelbase": "44\"",
-        "Min Saddle Height": "34\"",
-        "Max Saddle Height": "43\"",
-        "Head Tube Length": "7\""
+        "Rider Height": "5'5\" - 6'7\""
       },
       "configurations": [
         {
@@ -865,25 +704,9 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_6c2a0b6a-1b78-45cf-a18f-bb7bbab52d86.jpg?v=1764743002",
           "color": {
             "name": "White",
-            "hex": "#efefef",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_6c2a0b6a-1b78-45cf-a18f-bb7bbab52d86.jpg?v=1764743002"
-          }
-        },
-        {
-          "options": {
-            "Color": "Crystal Pink"
-          },
-          "price": 1599.99,
-          "sku": "M030ZCFSP1PM",
-          "variant_id": 49283333554422,
-          "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_c246793b-1fb8-4e40-9aad-006cc493c38c.jpg?v=1764743002",
-          "color": {
-            "name": "Crystal Pink",
-            "hex": "#f5c5c3",
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_c246793b-1fb8-4e40-9aad-006cc493c38c.jpg?v=1764743002"
           }
         },
         {
@@ -904,6 +727,22 @@
         },
         {
           "options": {
+            "Color": "Crystal Pink"
+          },
+          "price": 1599.99,
+          "sku": "M030ZCFSP1PM",
+          "variant_id": 49283333554422,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_c246793b-1fb8-4e40-9aad-006cc493c38c.jpg?v=1764743002",
+          "color": {
+            "name": "Crystal Pink",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_c246793b-1fb8-4e40-9aad-006cc493c38c.jpg?v=1764743002"
+          }
+        },
+        {
+          "options": {
             "Color": "Mocha"
           },
           "price": 1599.99,
@@ -913,7 +752,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_ef7e71a7-834a-479e-af1c-2501578ce578.jpg?v=1764743002",
           "color": {
             "name": "Mocha",
-            "hex": "#857e72",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_ef7e71a7-834a-479e-af1c-2501578ce578.jpg?v=1764743002"
           }
@@ -922,14 +761,7 @@
       "available_options": [],
       "family_id": "mokwheel__flint-pro-ebike",
       "tier": "Step-Thru",
-      "frame_style": "Step-Thru",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'5\"",
-          "height_max": "6'7\""
-        }
-      ]
+      "frame_style": "Step-Thru"
     },
     {
       "model": "FLINT Ebike",
@@ -944,25 +776,25 @@
         "colors": [
           {
             "name": "Grey",
-            "hex": "#5d5d5d",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_3328f933-2c3b-47b1-9225-11ecacf4cf72.jpg?v=1762914863"
           },
           {
             "name": "Steel Blue",
-            "hex": "#98a8d0",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_10c3db59-0491-4d26-81ef-d11005b29ca6.jpg?v=1762914863"
           },
           {
             "name": "Orange",
-            "hex": "#f38b29",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_2aa9ebf8-eac5-413f-87ac-aefd4609b8d7.jpg?v=1762914839"
           },
           {
             "name": "Phantom Black",
-            "hex": "#858585",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_78974104-2d76-445c-b02e-33ad21f452eb.jpg?v=1762914863"
           }
@@ -974,47 +806,14 @@
           "Regular price": "$1,699.99",
           "Shop All E-Bikes": "Your new favorite ride is just a click away.",
           "Free": "$499.99",
-          "Version": "FLINT – Chain Drive",
-          "Frame:": "Step Over",
-          "*Ships Within 2 Business Days": "In stock",
-          "Free Gifts": "$179.98",
-          "Battery": "36V 10Ah Complies with UL standards, IPX7 Waterproof",
-          "Charger": "36V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Power: 350W Peak Power: 550W Torque: 40Nm",
-          "Speed Class": "20 mph (PAS)",
-          "Weight": "36 lbs",
-          "Range": "50~70miles",
-          "Payload Capacity": "350 lbs",
-          "Sensor": "Torque+Cadence Sensor",
-          "Tires": "CST 700×45C",
-          "Display": "Intuitive Ride Data Display",
-          "Brakes": "Logan LOGAN HD-M500 Hydraulic Brakes",
-          "Brake LEVER": "Aluminum Alloy",
-          "Gearing": "Shimano 8-Speed",
-          "Derailleur": "8-Speed Shimano",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 46T chainring",
-          "Front Fork": "Aluminum front fork",
-          "Frame": "6061 Aluminum Alloy",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 700mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "High-resilience cushioning",
-          "Spokes": "Heavy-duty carbon steel, 13G × 278 mm (front) / 253 mm (rear) , 13G × 280 mm (front) / 255 mm (rear)",
+          "1": "11",
           "Rider Height": "5'5\" - 6'7\"",
-          "Reach": "16\"",
-          "Top Tube Length": "24\"",
-          "Standover Height": "30\"",
-          "Wheelbase": "43\"",
-          "Min Saddle Height": "34\"",
-          "Max Saddle Height": "43\"",
-          "Head Tube Length": "6\"",
+          "Height: 5'5″-6'5″": "Inseam: 2'7″-3'1″",
           "Q:": "Can the Flint be set to Class 3 (28 mph)?",
           "A:": "The FLINT is a Class one ebike as it is not equipped with a throttle. It is a pedal only ebike. Therefore, its top speed is 20 mph."
         }
       },
-      "spec_count": 41,
+      "spec_count": 8,
       "scrape_error": null,
       "is_new": false,
       "shipping": {
@@ -1022,15 +821,15 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'5\"",
+          "height_max": "6'7\""
+        }
+      ],
       "geometry": {
-        "Rider Height": "5'5\" - 6'7\"",
-        "Reach": "16\"",
-        "Top Tube Length": "24\"",
-        "Standover Height": "30\"",
-        "Wheelbase": "43\"",
-        "Min Saddle Height": "34\"",
-        "Max Saddle Height": "43\"",
-        "Head Tube Length": "6\""
+        "Rider Height": "5'5\" - 6'7\""
       },
       "configurations": [
         {
@@ -1044,7 +843,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_3328f933-2c3b-47b1-9225-11ecacf4cf72.jpg?v=1762914863",
           "color": {
             "name": "Grey",
-            "hex": "#5d5d5d",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_3328f933-2c3b-47b1-9225-11ecacf4cf72.jpg?v=1762914863"
           }
@@ -1060,7 +859,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_10c3db59-0491-4d26-81ef-d11005b29ca6.jpg?v=1762914863",
           "color": {
             "name": "Steel Blue",
-            "hex": "#98a8d0",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_10c3db59-0491-4d26-81ef-d11005b29ca6.jpg?v=1762914863"
           }
@@ -1072,11 +871,11 @@
           "price": 1399.99,
           "sku": "M027ZCFT1GEM",
           "variant_id": 49283293184246,
-          "available": true,
+          "available": false,
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_2aa9ebf8-eac5-413f-87ac-aefd4609b8d7.jpg?v=1762914839",
           "color": {
             "name": "Orange",
-            "hex": "#f38b29",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_2aa9ebf8-eac5-413f-87ac-aefd4609b8d7.jpg?v=1762914839"
           }
@@ -1092,7 +891,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_78974104-2d76-445c-b02e-33ad21f452eb.jpg?v=1762914863",
           "color": {
             "name": "Phantom Black",
-            "hex": "#858585",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_78974104-2d76-445c-b02e-33ad21f452eb.jpg?v=1762914863"
           }
@@ -1101,19 +900,12 @@
       "available_options": [],
       "family_id": "mokwheel__flint-ebike",
       "tier": "Step-Over",
-      "frame_style": "Step-Over (Mid-Step)",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'5\"",
-          "height_max": "6'7\""
-        }
-      ]
+      "frame_style": "Step-Over (Mid-Step)"
     },
     {
       "model": "FLINT PRO Ebike",
       "handle": "flint-pro",
-      "url": "https://www.mokwheel.com/products/flint-pro?variant=47809327333622",
+      "url": "https://www.mokwheel.com/products/flint-pro?variant=49283328540918",
       "product_types": [
         "Commuter / Urban"
       ],
@@ -1122,28 +914,28 @@
       "options": {
         "colors": [
           {
-            "name": "Orange",
-            "hex": "#f38b29",
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_c2185923-dc67-4cea-a830-b87eafd4f8b6.jpg?v=1762918244"
-          },
-          {
             "name": "Grey",
-            "hex": "#5d5d5d",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_54e32ca1-cd9e-4c31-bfec-dea77bd68fea.jpg?v=1762918244"
           },
           {
             "name": "Steel Blue",
-            "hex": "#98a8d0",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_61a0a9a9-5fba-481f-b2a3-fec41816e583.jpg?v=1762918244"
           },
           {
             "name": "Phantom Black",
-            "hex": "#858585",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_94676090-3f54-4782-bf25-b8a060424ca9.jpg?v=1762918543"
+          },
+          {
+            "name": "Orange",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_c2185923-dc67-4cea-a830-b87eafd4f8b6.jpg?v=1762918244"
           }
         ]
       },
@@ -1153,46 +945,13 @@
           "Regular price": "$1,699.99",
           "Shop All E-Bikes": "Your new favorite ride is just a click away.",
           "Free": "$499.99",
-          "Version": "FLINT PRO – Belt Drive",
-          "Frame:": "Step Over",
-          "*Ships Within 2 Business Days": "In stock",
-          "Free Gifts": "$179.98",
-          "Battery": "36V 10Ah Complies with UL standards, IPX7 Waterproof",
-          "Charger": "36V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Power: 250W Peak Power: 500W Torque: 40Nm",
-          "Speed Class": "20 mph (PAS)",
-          "Weight": "31 lbs",
-          "Range": "50~70miles",
-          "Payload Capacity": "350 lbs",
-          "Sensor": "Torque+Cadence Sensor",
-          "Tires": "CST 700×45C",
-          "Display": "Intuitive Ride Data Display",
-          "Brakes": "TEKTRO HD-M275 Hydraulic Brakes",
-          "Gearing": "Single-Speed Belt Drive",
-          "Derailleur": "Single-Speed Belt Drive",
-          "Brake lever": "Aluminum Alloy",
-          "Chain": "Gates Carbon Fiber Belt",
-          "Crank Set": "Aluminum alloy, 170mm, 60T chainring",
-          "Front Fork": "Aluminum front fork",
-          "Frame": "6061 Aluminum Alloy",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 700mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "High-resilience cushioning",
-          "Spokes": "Heavy-duty carbon steel, 13G × 278 mm (front) / 263 mm (rear) , 13G × 280 mm (front) / 263mm (rear)",
+          "1": "11",
           "Rider Height": "5'5\" - 6'7\"",
-          "Reach": "17\"",
-          "Top Tube Length": "24\"",
-          "Standover Height": "30\"",
-          "Wheelbase": "44\"",
-          "Min Saddle Height": "34\"",
-          "Max Saddle Height": "43\"",
-          "Head Tube Length": "6\"",
+          "Height: 5'5″-6'5″": "Inseam: 2'7″-3'1″",
           "Q:": "En qué lugar sercano a Lawrence ma puedo ver esta bicicleta físicamente?"
         }
       },
-      "spec_count": 40,
+      "spec_count": 7,
       "scrape_error": null,
       "is_new": false,
       "shipping": {
@@ -1200,33 +959,17 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'5\"",
+          "height_max": "6'7\""
+        }
+      ],
       "geometry": {
-        "Rider Height": "5'5\" - 6'7\"",
-        "Reach": "17\"",
-        "Top Tube Length": "24\"",
-        "Standover Height": "30\"",
-        "Wheelbase": "44\"",
-        "Min Saddle Height": "34\"",
-        "Max Saddle Height": "43\"",
-        "Head Tube Length": "6\""
+        "Rider Height": "5'5\" - 6'7\""
       },
       "configurations": [
-        {
-          "options": {
-            "Color": "Orange"
-          },
-          "price": 1599.99,
-          "sku": "M029ZCFP1GEM",
-          "variant_id": 47809327333622,
-          "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_c2185923-dc67-4cea-a830-b87eafd4f8b6.jpg?v=1762918244",
-          "color": {
-            "name": "Orange",
-            "hex": "#f38b29",
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_c2185923-dc67-4cea-a830-b87eafd4f8b6.jpg?v=1762918244"
-          }
-        },
         {
           "options": {
             "Color": "Grey"
@@ -1238,7 +981,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_54e32ca1-cd9e-4c31-bfec-dea77bd68fea.jpg?v=1762918244",
           "color": {
             "name": "Grey",
-            "hex": "#5d5d5d",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_54e32ca1-cd9e-4c31-bfec-dea77bd68fea.jpg?v=1762918244"
           }
@@ -1254,7 +997,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_61a0a9a9-5fba-481f-b2a3-fec41816e583.jpg?v=1762918244",
           "color": {
             "name": "Steel Blue",
-            "hex": "#98a8d0",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_61a0a9a9-5fba-481f-b2a3-fec41816e583.jpg?v=1762918244"
           }
@@ -1270,23 +1013,32 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_94676090-3f54-4782-bf25-b8a060424ca9.jpg?v=1762918543",
           "color": {
             "name": "Phantom Black",
-            "hex": "#858585",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_94676090-3f54-4782-bf25-b8a060424ca9.jpg?v=1762918543"
+          }
+        },
+        {
+          "options": {
+            "Color": "Orange"
+          },
+          "price": 1599.99,
+          "sku": "M029ZCFP1GEM",
+          "variant_id": 47809327333622,
+          "available": false,
+          "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_c2185923-dc67-4cea-a830-b87eafd4f8b6.jpg?v=1762918244",
+          "color": {
+            "name": "Orange",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_c2185923-dc67-4cea-a830-b87eafd4f8b6.jpg?v=1762918244"
           }
         }
       ],
       "available_options": [],
       "family_id": "mokwheel__flint-pro-ebike",
       "tier": "Step-Over",
-      "frame_style": "Step-Over (Mid-Step)",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'5\"",
-          "height_max": "6'7\""
-        }
-      ]
+      "frame_style": "Step-Over (Mid-Step)"
     },
     {
       "model": "FLINT ST Ebike",
@@ -1301,7 +1053,7 @@
         "colors": [
           {
             "name": "Crystal Pink",
-            "hex": "#f5c5c3",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_3c24764b-5e90-4c8d-b30d-ee36d09f59c8.jpg?v=1762919107"
           },
@@ -1313,13 +1065,13 @@
           },
           {
             "name": "White",
-            "hex": "#efefef",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_9d728bdc-90cb-4e2d-8634-d56c51b78b0d.jpg?v=1764742948"
           },
           {
             "name": "Mocha",
-            "hex": "#857e72",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_1ad675dd-3d27-4d69-89b7-7416840f2624.jpg?v=1764742948"
           }
@@ -1331,47 +1083,14 @@
           "Regular price": "$1,699.99",
           "Shop All E-Bikes": "Your new favorite ride is just a click away.",
           "Free": "$499.99",
-          "Version": "FLINT ST – Chain Drive",
-          "Frame:": "Step Through",
-          "*Ships Within 2 Business Days.": "In stock",
-          "Free Gifts": "$179.98",
-          "Battery": "36V 10Ah Complies with UL standards, IPX7 Waterproof",
-          "Charger": "36V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Power: 350W Peak Power: 550W Torque: 40Nm",
-          "Speed Class": "20 mph (PAS)",
-          "Weight": "40 lbs",
-          "Range": "50~70miles",
-          "Payload Capacity": "300 lbs",
-          "Sensor": "Torque+Cadence Sensor",
-          "Tires": "CST 700×45C",
-          "Display": "Intuitive Ride Data Display",
-          "Brakes": "LOGAN HD-M500 Hydraulic Brakes",
-          "Brake LEVER": "Aluminum Alloy",
-          "Gearing": "Shimano 8-Speed",
-          "Derailleur": "8-Speed Shimano",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 46T chainring",
-          "Front Fork": "65mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "High-resilience cushioning",
-          "Spokes": "Heavy-duty carbon steel, 13G × 278 mm (front) / 253 mm (rear) , 13G × 280 mm (front) / 255 mm (rear)",
+          "1": "11",
           "Rider Height": "5'5\" - 6'7\"",
-          "Reach": "16\"",
-          "Top Tube Length": "24\"",
-          "Standover Height": "17\"",
-          "Wheelbase": "44\"",
-          "Min Saddle Height": "32\"",
-          "Max Saddle Height": "41\"",
-          "Head Tube Length": "7\"",
+          "Height: 5'5″-6'5″": "Inseam: 2'6″-3'1″",
           "Q:": "Hi! Do you have this in stock in your HB store? Does it have a throttle? If delivered do you assemble? Also does it have pedal assist? Thank you",
           "A:": "We do not have inventory documented for Mokwheel HB. You will have to contact the shop directly - (909) 918-8623 The FLINT series does not have a throttle and is strictly pedal assist only."
         }
       },
-      "spec_count": 41,
+      "spec_count": 8,
       "scrape_error": null,
       "is_new": false,
       "shipping": {
@@ -1379,15 +1098,15 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'5\"",
+          "height_max": "6'7\""
+        }
+      ],
       "geometry": {
-        "Rider Height": "5'5\" - 6'7\"",
-        "Reach": "16\"",
-        "Top Tube Length": "24\"",
-        "Standover Height": "17\"",
-        "Wheelbase": "44\"",
-        "Min Saddle Height": "32\"",
-        "Max Saddle Height": "41\"",
-        "Head Tube Length": "7\""
+        "Rider Height": "5'5\" - 6'7\""
       },
       "configurations": [
         {
@@ -1401,7 +1120,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_3c24764b-5e90-4c8d-b30d-ee36d09f59c8.jpg?v=1762919107",
           "color": {
             "name": "Crystal Pink",
-            "hex": "#f5c5c3",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_3c24764b-5e90-4c8d-b30d-ee36d09f59c8.jpg?v=1762919107"
           }
@@ -1413,7 +1132,7 @@
           "price": 1399.99,
           "sku": "M028ZCFS3BEM",
           "variant_id": 49283340534006,
-          "available": true,
+          "available": false,
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_995a6644-e7a9-4a47-a410-bb3e2e3fa0da.jpg?v=1764742948",
           "color": {
             "name": "Skyblue",
@@ -1433,7 +1152,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_9d728bdc-90cb-4e2d-8634-d56c51b78b0d.jpg?v=1764742948",
           "color": {
             "name": "White",
-            "hex": "#efefef",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_9d728bdc-90cb-4e2d-8634-d56c51b78b0d.jpg?v=1764742948"
           }
@@ -1449,7 +1168,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_1ad675dd-3d27-4d69-89b7-7416840f2624.jpg?v=1764742948",
           "color": {
             "name": "Mocha",
-            "hex": "#857e72",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_1ad675dd-3d27-4d69-89b7-7416840f2624.jpg?v=1764742948"
           }
@@ -1458,21 +1177,14 @@
       "available_options": [],
       "family_id": "mokwheel__flint-ebike",
       "tier": "Step-Thru",
-      "frame_style": "Step-Thru",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'5\"",
-          "height_max": "6'7\""
-        }
-      ]
+      "frame_style": "Step-Thru"
     },
     {
       "model": "Granite E-Trike",
       "handle": "granite",
       "url": "https://www.mokwheel.com/products/granite",
       "product_types": [
-        "Cargo"
+        "Trike"
       ],
       "price_from": 1999.99,
       "currency": "USD",
@@ -1480,13 +1192,13 @@
         "colors": [
           {
             "name": "Steel Blue",
-            "hex": "#98a8d0",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_e9fea1db-9920-406c-ad09-723323fb53ed.jpg?v=1750227627"
           },
           {
             "name": "Grey",
-            "hex": "#5d5d5d",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_d424171e-1291-4a09-a8bd-616170f4e88e.jpg?v=1750227628"
           }
@@ -1498,47 +1210,14 @@
           "Regular price": "$1,699.99",
           "Shop All E-Bikes": "Your new favorite ride is just a click away.",
           "Free": "$499.99",
-          "*Ships Within 2 Business Days.": "In stock",
-          "Free Gift": "$99.99",
-          "Battery": "48V 15Ah Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 2A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Power: 500W Peak Power:860W Torque: 70Nm+",
-          "Basket's Max Load": "Front 55 lbs and Rear 220 lbs",
-          "Weight": "101 lbs",
-          "Range": "45~55miles",
-          "Speed": "15 mph (Throttle) / 20 mph (PAS)",
-          "Payload Capacity": "350 lbs",
-          "Sensor": "Cadence sensor",
-          "Frame": "6061 Aluminum Alloy",
-          "Brakes": "ZOOM HB-892E Hydraulic Brake",
-          "Tires": "20\" × 3.0\" Tire",
-          "Display": "LED Integrated",
-          "Gearing": "Shimano 7-Speed",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 46T chainring",
-          "Derailleur": "7-speed Shimano",
-          "Brake lever": "Aluminum Alloy, with power cutoff",
-          "Front Fork": "80mm fork travel",
-          "Throttle": "Thumb Throttle",
-          "Handlebar Length": "Aluminum Alloy, φ31.8mm, 620 mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Customized Comfort Leather Seat",
-          "Spokes": "Heavy-duty carbon steel ，13G×183mm",
-          "Rider Height": "5'0\" - 6'2\"",
-          "Reach": "20\"",
-          "Top Tube Length": "26\"",
-          "Standover Height": "13\"",
-          "Wheelbase": "49\"",
-          "Min Saddle Height": "32\"",
-          "Max Saddle Height": "38\"",
-          "Head Tube Length": "7\"",
+          "1": "12",
+          "Rider Height": "5'5\" - 6'7\"",
+          "Height: 5'1″-6'1″": "Inseam: 2'4″-2'11″",
           "Q:": "Do u ship to Puerto Rico?",
           "A:": "Hello Steve, We only ship to the continental US. I am sorry for any inconvenience. Regards, Chad"
         }
       },
-      "spec_count": 41,
+      "spec_count": 8,
       "scrape_error": null,
       "is_new": false,
       "shipping": {
@@ -1546,15 +1225,15 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'5\"",
+          "height_max": "6'7\""
+        }
+      ],
       "geometry": {
-        "Rider Height": "5'0\" - 6'2\"",
-        "Reach": "20\"",
-        "Top Tube Length": "26\"",
-        "Standover Height": "13\"",
-        "Wheelbase": "49\"",
-        "Min Saddle Height": "32\"",
-        "Max Saddle Height": "38\"",
-        "Head Tube Length": "7\""
+        "Rider Height": "5'5\" - 6'7\""
       },
       "configurations": [
         {
@@ -1564,11 +1243,11 @@
           "price": 1999.99,
           "sku": "M18ZCSLC03SB",
           "variant_id": 46305292452086,
-          "available": true,
+          "available": false,
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_e9fea1db-9920-406c-ad09-723323fb53ed.jpg?v=1750227627",
           "color": {
             "name": "Steel Blue",
-            "hex": "#98a8d0",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_e9fea1db-9920-406c-ad09-723323fb53ed.jpg?v=1750227627"
           }
@@ -1584,20 +1263,108 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_d424171e-1291-4a09-a8bd-616170f4e88e.jpg?v=1750227628",
           "color": {
             "name": "Grey",
-            "hex": "#5d5d5d",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_d424171e-1291-4a09-a8bd-616170f4e88e.jpg?v=1750227628"
           }
         }
       ],
-      "available_options": [],
+      "available_options": []
+    },
+    {
+      "model": "Mesa Plus ST Ebike",
+      "handle": "mesa-plus-st",
+      "url": "https://www.mokwheel.com/products/mesa-plus-st",
+      "product_types": [
+        "Fat Tire",
+        "Commuter / Urban"
+      ],
+      "price_from": 1199.99,
+      "currency": "USD",
+      "options": {
+        "colors": [
+          {
+            "name": "Tan",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_b121363c-50b2-4c70-931f-fbced6825a44.jpg?v=1750228069"
+          },
+          {
+            "name": "Grey",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_147985fb-6f64-4e06-96d1-fd38e641b0dc.jpg?v=1750228069"
+          }
+        ]
+      },
+      "warranty": "2-Year Warranty",
+      "specs": {
+        "all": {
+          "Regular price": "$1,699.99",
+          "Shop All E-Bikes": "Your new favorite ride is just a click away.",
+          "Free": "$499.99",
+          "1": "10",
+          "Rider Height": "5'5\" - 6'7\"",
+          "Height: 5'3″-6'3″": "Inseam: 2'4″-3'1″",
+          "Q:": "I need a new battery for this bike. How do I get one put the key in the charge hole now it does not work . Battery will not charge.",
+          "A:": "You can purchase a new battery on our website, Mokwheel.com. Search Battery (MESA PLUS ST) in the search bar to go to the page to purchase."
+        }
+      },
+      "spec_count": 8,
+      "scrape_error": null,
+      "is_new": false,
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": [],
       "frame_sizes": [
         {
           "size": null,
-          "height_min": "5'0\"",
-          "height_max": "6'2\""
+          "height_min": "5'5\"",
+          "height_max": "6'7\""
         }
-      ]
+      ],
+      "geometry": {
+        "Rider Height": "5'5\" - 6'7\""
+      },
+      "configurations": [
+        {
+          "options": {
+            "Color": "Tan"
+          },
+          "price": 1199.99,
+          "sku": "M003ZCMP030S",
+          "variant_id": 44582975570166,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_b121363c-50b2-4c70-931f-fbced6825a44.jpg?v=1750228069",
+          "color": {
+            "name": "Tan",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_b121363c-50b2-4c70-931f-fbced6825a44.jpg?v=1750228069"
+          }
+        },
+        {
+          "options": {
+            "Color": "Grey"
+          },
+          "price": 1199.99,
+          "sku": "M003ZCMP040S",
+          "variant_id": 49854921539830,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_147985fb-6f64-4e06-96d1-fd38e641b0dc.jpg?v=1750228069",
+          "color": {
+            "name": "Grey",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_147985fb-6f64-4e06-96d1-fd38e641b0dc.jpg?v=1750228069"
+          }
+        }
+      ],
+      "available_options": [],
+      "regular_price": 1299.99,
+      "frame_style": "Step-Thru"
     },
     {
       "model": "Obsidian 2.0 Ebike",
@@ -1612,19 +1379,19 @@
         "colors": [
           {
             "name": "Black and Red",
-            "hex": "#2a1112",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_e3f31d1e-8b1c-4a4b-a20d-5e3ba2174787.jpg?v=1752822987"
           },
           {
             "name": "Yellow and Black",
-            "hex": "#1f1a00",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_ed98fa71-89cd-4937-a503-ab329231fbb1.jpg?v=1752822987"
           },
           {
             "name": "Jungle Camo",
-            "hex": "#5a5d48",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_abddfbbd-697e-481c-a52d-5d1035e4012e.jpg?v=1752822987"
           }
@@ -1636,49 +1403,15 @@
           "Regular price": "$1,699.99",
           "Shop All E-Bikes": "Your new favorite ride is just a click away.",
           "Free": "$499.99",
-          "Version": "Obsidian 2.0",
-          "Frame:": "Step Over",
-          "*Ships Within 2 Business Days": "In stock",
-          "Free Gift": "$99.99",
-          "Battery": "48V 19.6Ah , Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Rated Power: 750W Continuous Power: 1000W Peak Power: 1300W Torque: 105Nm+",
-          "Speed Class": "20 mph (Throttle) / 28 mph (PAS)",
-          "Weight": "77 lbs",
-          "Range": "60~80miles",
-          "Payload Capacity": "560 lbs",
-          "Sensor": "Torque+Cadence Sensor",
-          "Brakes": "TEKTRO TKD171 Hydraulic Disc Brakes",
-          "Tires": "26\" × 4.0\" Fat Tire (Puncture-Resistant)",
-          "Display": "Detachable High-Definition Display",
-          "Gearing": "Shimano 10-Speed",
-          "Derailleur": "10-speed Shimano",
-          "Brake lever": "Aluminum Alloy, with power cutoff",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 46T chainring",
-          "Front Fork": "130mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Throttle": "Thumb Throttle",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 720mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Customized Comfort Leather Seat",
-          "Spokes": "Heavy-duty carbon steel, 12G × 248 mm (front) / 216 mm (rear)",
-          "Rider Height": "5'6\" - 6'8\"",
-          "Reach": "17\"",
-          "Top Tube Length": "25\"",
-          "Standover Height": "30\"",
-          "Wheelbase": "48\"",
-          "Min Saddle Height": "35\"",
-          "Max Saddle Height": "41\"",
-          "Head Tube Length": "6\"",
-          "Q:": "does the standard bike come with any lights?",
-          "A:": "Paul, Yes the bikes come with a throttle as well. Though it can be disabled in the technical settings menu, if required or desired. It can also be removed. Chad",
+          "1": "11",
+          "Rider Height": "5'5\" - 6'7\"",
+          "Height: 5'7″-6'7″": "Inseam: 2'7″-3'5″",
+          "Q:": "Does the obsidian 2.0 come with the inverter.",
+          "A:": "The Obsidian 2.0 does not come with an inverter. It will need to be purchased separately.",
           "Rear Rack Max Load": "55 lbs"
         }
       },
-      "spec_count": 42,
+      "spec_count": 8,
       "scrape_error": null,
       "is_new": false,
       "shipping": {
@@ -1686,15 +1419,15 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'5\"",
+          "height_max": "6'7\""
+        }
+      ],
       "geometry": {
-        "Rider Height": "5'6\" - 6'8\"",
-        "Reach": "17\"",
-        "Top Tube Length": "25\"",
-        "Standover Height": "30\"",
-        "Wheelbase": "48\"",
-        "Min Saddle Height": "35\"",
-        "Max Saddle Height": "41\"",
-        "Head Tube Length": "6\""
+        "Rider Height": "5'5\" - 6'7\""
       },
       "configurations": [
         {
@@ -1708,7 +1441,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_e3f31d1e-8b1c-4a4b-a20d-5e3ba2174787.jpg?v=1752822987",
           "color": {
             "name": "Black and Red",
-            "hex": "#2a1112",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_e3f31d1e-8b1c-4a4b-a20d-5e3ba2174787.jpg?v=1752822987"
           }
@@ -1724,7 +1457,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_ed98fa71-89cd-4937-a503-ab329231fbb1.jpg?v=1752822987",
           "color": {
             "name": "Yellow and Black",
-            "hex": "#1f1a00",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_ed98fa71-89cd-4937-a503-ab329231fbb1.jpg?v=1752822987"
           }
@@ -1740,7 +1473,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_abddfbbd-697e-481c-a52d-5d1035e4012e.jpg?v=1752822987",
           "color": {
             "name": "Jungle Camo",
-            "hex": "#5a5d48",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_abddfbbd-697e-481c-a52d-5d1035e4012e.jpg?v=1752822987"
           }
@@ -1749,14 +1482,7 @@
       "available_options": [],
       "family_id": "mokwheel__obsidian-2-0-ebike",
       "tier": "Step-Over",
-      "frame_style": "Step-Over (Mid-Step)",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'6\"",
-          "height_max": "6'8\""
-        }
-      ]
+      "frame_style": "Step-Over (Mid-Step)"
     },
     {
       "model": "Obsidian ST 2.0 Ebike",
@@ -1771,19 +1497,19 @@
         "colors": [
           {
             "name": "Black and Red",
-            "hex": "#2a1112",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_c0c64e53-eff2-4958-837e-6214b2c41a07.jpg?v=1752825994"
           },
           {
             "name": "Blue and Grey",
-            "hex": "#7f8388",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_805b9035-0ce4-413b-8bb1-bdde66030afc.jpg?v=1752825994"
           },
           {
             "name": "Desert Camo",
-            "hex": "#5c443e",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_14757809-f2a3-4090-9515-c1b730b5968a.jpg?v=1752825994"
           }
@@ -1795,49 +1521,15 @@
           "Regular price": "$1,699.99",
           "Shop All E-Bikes": "Your new favorite ride is just a click away.",
           "Free": "$499.99",
-          "Version": "Obsidian ST 2.0",
-          "Frame:": "Step Through",
-          "*Ships Within 2 Business Days.": "In stock",
-          "Free Gift": "$99.99",
-          "Battery": "48V 19.6Ah Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Rated power：750W Continuous Power: 1000W Peak Power: 1300W Torque: 105Nm+",
-          "Speed Class": "20 mph (Throttle) / 28 mph (PAS)",
-          "Weight": "77 lbs",
-          "Range": "60~80 miles",
-          "Payload Capacity": "560 lbs",
-          "Sensor": "Torque+Cadence Sensor",
-          "Brakes": "TEKTRO TKD171 Hydraulic Disc Brakes",
-          "Tires": "26\" × 4.0\" Fat Tire (Puncture-Resistant)",
-          "Display": "Detachable High-Definition Display",
-          "Gearing": "Shimano 10-Speed",
-          "Derailleur": "10-speed Shimano",
-          "Brake lever": "Aluminum Alloy, with power cutoff",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 46T chainring",
-          "Front Fork": "130mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Throttle": "Thumb Throttle",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Hydraulic Two-Stage Adjustable Seat",
-          "Spokes": "Heavy-duty carbon steel, 12G × 248 mm (front) / 216 mm (rear)",
-          "Rider Height": "5'6\" - 6'8\"",
-          "Reach": "19\"",
-          "Top Tube Length": "25\"",
-          "Standover Height": "20\"",
-          "Wheelbase": "50\"",
-          "Min Saddle Height": "35\"",
-          "Max Saddle Height": "41\"",
-          "Head Tube Length": "6\"",
+          "1": "11",
+          "Rider Height": "5'5\" - 6'7\"",
+          "Height: 5'3″-6'3″": "Inseam: 2'7″-3'2″",
           "Q:": "What bike works best for a 5’1” female?",
           "A:": "The Models that would be best for someone who is 5'1\" based on the size of our models, I would suggest looking at the Asphalt ST, Basalt ST 2.0 (standard), Scoria, and Slate models.",
           "Rear Rack Max Load": "55 lbs"
         }
       },
-      "spec_count": 42,
+      "spec_count": 8,
       "scrape_error": null,
       "is_new": false,
       "shipping": {
@@ -1845,15 +1537,15 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'5\"",
+          "height_max": "6'7\""
+        }
+      ],
       "geometry": {
-        "Rider Height": "5'6\" - 6'8\"",
-        "Reach": "19\"",
-        "Top Tube Length": "25\"",
-        "Standover Height": "20\"",
-        "Wheelbase": "50\"",
-        "Min Saddle Height": "35\"",
-        "Max Saddle Height": "41\"",
-        "Head Tube Length": "6\""
+        "Rider Height": "5'5\" - 6'7\""
       },
       "configurations": [
         {
@@ -1867,7 +1559,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_c0c64e53-eff2-4958-837e-6214b2c41a07.jpg?v=1752825994",
           "color": {
             "name": "Black and Red",
-            "hex": "#2a1112",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_c0c64e53-eff2-4958-837e-6214b2c41a07.jpg?v=1752825994"
           }
@@ -1883,7 +1575,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_805b9035-0ce4-413b-8bb1-bdde66030afc.jpg?v=1752825994",
           "color": {
             "name": "Blue and Grey",
-            "hex": "#7f8388",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_805b9035-0ce4-413b-8bb1-bdde66030afc.jpg?v=1752825994"
           }
@@ -1899,7 +1591,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_14757809-f2a3-4090-9515-c1b730b5968a.jpg?v=1752825994",
           "color": {
             "name": "Desert Camo",
-            "hex": "#5c443e",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_14757809-f2a3-4090-9515-c1b730b5968a.jpg?v=1752825994"
           }
@@ -1908,14 +1600,7 @@
       "available_options": [],
       "family_id": "mokwheel__obsidian-2-0-ebike",
       "tier": "Step-Thru",
-      "frame_style": "Step-Thru",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'6\"",
-          "height_max": "6'8\""
-        }
-      ]
+      "frame_style": "Step-Thru"
     },
     {
       "model": "Onyx Ebike",
@@ -1930,19 +1615,19 @@
         "colors": [
           {
             "name": "Brown Gray",
-            "hex": "#897a7c",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/d4da8f352393c545c6c12ca6795aa0d4_b58772c5-e54b-4aa5-8429-6aa99fdc35ea.jpg?v=1757226733"
           },
           {
             "name": "Black and Blue",
-            "hex": "#161a1e",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/b4d82cdbf5d89bea68ec50a9da18b7be_21414198-a02d-4077-bfa1-8b210e95916d.jpg?v=1757226937"
           },
           {
             "name": "Jungle Camo",
-            "hex": "#5a5d48",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1e391a7f0c2577959f380afecee0bb81_090f422a-2889-4c1b-aa7e-95868edc8b3e.jpg?v=1743588476"
           }
@@ -1954,47 +1639,14 @@
           "Regular price": "$1,699.99",
           "Shop All E-Bikes": "Your new favorite ride is just a click away.",
           "Free": "$499.99",
-          "Frame:": "Step Over",
-          "*Ships Within 2 Business Days": "In stock",
-          "Free Gift": "$99.99",
-          "Battery": "48V 19.6A, Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Mid-drive MotorRated Power: 750W Continuous Power: 1000W Peak Power: 1300W Torque: 210Nm+",
-          "Speed Class": "20 mph (Throttle) / 28 mph (PAS)",
-          "Weight": "89 lbs",
-          "Range": "60~80miles",
-          "Payload Capacity": "560 lbs",
-          "Sensor": "Torque+Cadence Sensor",
-          "Brakes": "TEKTRO HD-E3940 4-Piston Hydraulic Brake",
-          "Tires": "26\" × 4.0\" Fat Tire (Puncture-Resistant)",
-          "Display": "HD Stem Display",
-          "Gearing": "Shimano 10-Speed",
-          "Derailleur": "10-speed Shimano",
-          "Brake lever": "Aluminum Alloy, with power cutoff",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 44T chainring",
-          "Front Fork": "135mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Throttle": "Thumb Throttle",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 720mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Hydraulic Two-Stage Adjustable Seat",
-          "Spokes": "Heavy-duty carbon steel, 12G × 248 mm (front) / 251 mm (rear)",
-          "Rider Height": "5'7\" - 6'9\"",
-          "Reach": "19\"",
-          "Top Tube Length": "25\"",
-          "Standover Height": "31\"",
-          "Wheelbase": "50\"",
-          "Min Saddle Height": "35\"",
-          "Max Saddle Height": "41\"",
-          "Head Tube Length": "6\"",
+          "1": "10",
+          "Rider Height": "5'5\" - 6'7\"",
+          "Height: 5'7″-6'7″": "Inseam: 2'9″-3'3″",
           "Q:": "Does this Mohawk have a headlights blinkers or turn signals and brake lights",
           "Rear Rack Max Load": "55 lbs"
         }
       },
-      "spec_count": 40,
+      "spec_count": 7,
       "scrape_error": null,
       "is_new": false,
       "shipping": {
@@ -2002,15 +1654,15 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'5\"",
+          "height_max": "6'7\""
+        }
+      ],
       "geometry": {
-        "Rider Height": "5'7\" - 6'9\"",
-        "Reach": "19\"",
-        "Top Tube Length": "25\"",
-        "Standover Height": "31\"",
-        "Wheelbase": "50\"",
-        "Min Saddle Height": "35\"",
-        "Max Saddle Height": "41\"",
-        "Head Tube Length": "6\""
+        "Rider Height": "5'5\" - 6'7\""
       },
       "configurations": [
         {
@@ -2024,7 +1676,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/d4da8f352393c545c6c12ca6795aa0d4_b58772c5-e54b-4aa5-8429-6aa99fdc35ea.jpg?v=1757226733",
           "color": {
             "name": "Brown Gray",
-            "hex": "#897a7c",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/d4da8f352393c545c6c12ca6795aa0d4_b58772c5-e54b-4aa5-8429-6aa99fdc35ea.jpg?v=1757226733"
           }
@@ -2040,7 +1692,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/b4d82cdbf5d89bea68ec50a9da18b7be_21414198-a02d-4077-bfa1-8b210e95916d.jpg?v=1757226937",
           "color": {
             "name": "Black and Blue",
-            "hex": "#161a1e",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/b4d82cdbf5d89bea68ec50a9da18b7be_21414198-a02d-4077-bfa1-8b210e95916d.jpg?v=1757226937"
           }
@@ -2056,7 +1708,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1e391a7f0c2577959f380afecee0bb81_090f422a-2889-4c1b-aa7e-95868edc8b3e.jpg?v=1743588476",
           "color": {
             "name": "Jungle Camo",
-            "hex": "#5a5d48",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1e391a7f0c2577959f380afecee0bb81_090f422a-2889-4c1b-aa7e-95868edc8b3e.jpg?v=1743588476"
           }
@@ -2065,14 +1717,7 @@
       "available_options": [],
       "family_id": "mokwheel__onyx-ebike",
       "tier": "Step-Over",
-      "frame_style": "Step-Over (Mid-Step)",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'7\"",
-          "height_max": "6'9\""
-        }
-      ]
+      "frame_style": "Step-Over (Mid-Step)"
     },
     {
       "model": "Onyx ST Ebike",
@@ -2087,19 +1732,19 @@
         "colors": [
           {
             "name": "Mint Green",
-            "hex": "#898f57",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_8a9c6b25-c2cf-43cb-8f61-1769eecf0521.jpg?v=1750932862"
           },
           {
             "name": "Desert Camo",
-            "hex": "#5c443e",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_e4523239-8760-4024-813a-cbabd770664e.jpg?v=1750932862"
           },
           {
             "name": "Panda",
-            "hex": "#181614",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_f59ac15c-fef8-492a-a22d-44dd4da350a4.jpg?v=1750932862"
           }
@@ -2111,48 +1756,15 @@
           "Regular price": "$1,699.99",
           "Shop All E-Bikes": "Your new favorite ride is just a click away.",
           "Free": "$499.99",
-          "Frame:": "Step Through",
-          "*Ships Within 2 Business Days.": "In stock",
-          "Free Gift": "$99.99",
-          "Battery": "48V 19.6A , Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Mid-drive MotorRated Power: 750W Continuous Power: 1000W Peak Power: 1300W Torque: 210Nm+",
-          "Speed Class": "20 mph (Throttle) / 28 mph (PAS)",
-          "Weight": "88 lbs",
-          "Range": "60~80miles",
-          "Payload Capacity": "560 lbs",
-          "Sensor": "Torque+Cadence Sensor",
-          "Tires": "26\" × 4.0\" Fat Tire (Puncture-Resistant)",
-          "Display": "HD Stem Display",
-          "Brakes": "TEKTRO HD-E3940 4-Piston Hydraulic Brake",
-          "Gearing": "Shimano 10-Speed",
-          "Derailleur": "10-speed Shimano",
-          "Brake lever": "Aluminum Alloy, with power cutoff",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 44T chainring",
-          "Front Fork": "135mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Throttle": "Thumb Throttle",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Hydraulic Two-Stage Adjustable Seat",
-          "Spokes": "Heavy-duty carbon steel, 12G × 248 mm (front) / 251 mm (rear)",
+          "1": "10",
           "Rider Height": "5'5\" - 6'7\"",
-          "Reach": "19\"",
-          "Top Tube Length": "25\"",
-          "Standover Height": "20\"",
-          "Wheelbase": "50\"",
-          "Min Saddle Height": "35\"",
-          "Max Saddle Height": "41\"",
-          "Head Tube Length": "6\"",
+          "Height: 5'7″-6'7″": "Inseam: 2'9″-3'2″",
           "Q:": "Are the bike electronics water proof? I see the display says waterproof but am looking for information on the battery, charging port, and motor. Also who is the manufacturer of the motor?",
           "A:": "We specify that our displays and components are all water-resistant with an IPX4 rating. They are not waterproof. Mokwheel manufactures our own motors. We do not outsource the motor.",
           "Rear Rack Max Load": "55 lbs"
         }
       },
-      "spec_count": 41,
+      "spec_count": 8,
       "scrape_error": null,
       "is_new": false,
       "shipping": {
@@ -2160,15 +1772,15 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'5\"",
+          "height_max": "6'7\""
+        }
+      ],
       "geometry": {
-        "Rider Height": "5'5\" - 6'7\"",
-        "Reach": "19\"",
-        "Top Tube Length": "25\"",
-        "Standover Height": "20\"",
-        "Wheelbase": "50\"",
-        "Min Saddle Height": "35\"",
-        "Max Saddle Height": "41\"",
-        "Head Tube Length": "6\""
+        "Rider Height": "5'5\" - 6'7\""
       },
       "configurations": [
         {
@@ -2182,7 +1794,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_8a9c6b25-c2cf-43cb-8f61-1769eecf0521.jpg?v=1750932862",
           "color": {
             "name": "Mint Green",
-            "hex": "#898f57",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_8a9c6b25-c2cf-43cb-8f61-1769eecf0521.jpg?v=1750932862"
           }
@@ -2194,11 +1806,11 @@
           "price": 3299.99,
           "sku": "M32ZCYXST4DC",
           "variant_id": 47780903420150,
-          "available": false,
+          "available": true,
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_e4523239-8760-4024-813a-cbabd770664e.jpg?v=1750932862",
           "color": {
             "name": "Desert Camo",
-            "hex": "#5c443e",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_e4523239-8760-4024-813a-cbabd770664e.jpg?v=1750932862"
           }
@@ -2214,7 +1826,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_f59ac15c-fef8-492a-a22d-44dd4da350a4.jpg?v=1750932862",
           "color": {
             "name": "Panda",
-            "hex": "#181614",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_f59ac15c-fef8-492a-a22d-44dd4da350a4.jpg?v=1750932862"
           }
@@ -2223,14 +1835,7 @@
       "available_options": [],
       "family_id": "mokwheel__onyx-ebike",
       "tier": "Step-Thru",
-      "frame_style": "Step-Thru",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'5\"",
-          "height_max": "6'7\""
-        }
-      ]
+      "frame_style": "Step-Thru"
     },
     {
       "model": "Scoria 2.0 Ebike",
@@ -2245,33 +1850,33 @@
         "colors": [
           {
             "name": "White",
-            "hex": "#efefef",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/d92e076f69cb1a6f81c9bab8cd8f57a2_9b840356-5b3e-4a16-a915-10e63ec37bf2.jpg?v=1778470510"
           },
           {
-            "name": "Dark Blue",
-            "hex": "#98a8d0",
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/000878ce6144c05ffac949f66b05a18b_94e1f32e-9ddc-4d7a-9dc2-1ec601a9bc4e.jpg?v=1778466168"
-          },
-          {
             "name": "Firebrick",
-            "hex": "#ed4f4b",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/520f764beb1954cab793b251ed2a5a3f_268688f7-655a-4c56-accc-7066909d44ad.jpg?v=1778470358"
           },
           {
             "name": "Olive Green",
-            "hex": "#898f57",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/8c15d41b9b829464843b5aa4449a28f3_3f7a7eb9-7dd5-4ce1-80b2-5388ff37d152.jpg?v=1778470109"
           },
           {
             "name": "Orange",
-            "hex": "#f38b29",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/c8682a1b6d56a22c3b0a59f59bf75cf5_1dad519a-fbfa-4d82-b464-7b60c134af02.jpg?v=1777012224"
+          },
+          {
+            "name": "Dark Blue",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/000878ce6144c05ffac949f66b05a18b_94e1f32e-9ddc-4d7a-9dc2-1ec601a9bc4e.jpg?v=1778466168"
           }
         ]
       },
@@ -2281,46 +1886,14 @@
           "Regular price": "$1,699.99",
           "Shop All E-Bikes": "Your new favorite ride is just a click away.",
           "Free": "$499.99",
-          "*Ships Within 2 Business Days": "In stock",
-          "Free Gifts": "$179.98",
-          "Battery": "48V 19.6Ah , Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Power: 750W Peak Power: 1100W Torque: 90Nm+",
-          "Speed Class": "20 mph (Throttle) / 28 mph (PAS)",
-          "Weight": "82 lbs",
-          "Range": "60~80miles",
-          "Payload Capacity": "350 lbs",
-          "Sensor": "Torque+Cadence Sensor",
-          "Brakes": "TEKTRO TKD171 Hydraulic Disc Brakes",
-          "Brake lever": "Aluminum Alloy, with power cutoff",
-          "Tires": "20\"x 4.0\" Fat Tire (Puncture-Resistant)",
-          "Display": "Detachable High-Definition Display",
-          "Derailleur": "8 Speed Shimano",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 52T chainring",
-          "Front Fork": "100mm fork travel",
-          "Frame": "6061 Aluminum Alloy",
-          "Gearing": "Shimano 8-Speed",
-          "Throttle": "Thumb Throttle",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Customized Comfort Leather Seat",
-          "Spokes": "Heavy-duty carbon steel, 13G × 172 mm (front) / 123 mm (rear) , 13G × 172 mm (front) / 125 mm (rear)",
-          "Rider Height": "5'0\" - 6'2\"",
-          "Reach": "19\"",
-          "Top Tube Length": "25\"",
-          "Standover Height": "16\"",
-          "Wheelbase": "46\"",
-          "Min Saddle Height": "30\"",
-          "Max Saddle Height": "35\"",
-          "Head Tube Length": "6\"",
+          "1": "11",
+          "Rider Height": "5'5\" - 6'7\"",
+          "Height: 5'1″-6'1″": "Inseam: 2'4″-2'11″",
           "A:": "Thank you for your feedback. We are continually looking forward. Please keep checking in to see what we have to offer. Chad",
           "Q:": "How are routine maintenance and repairs best addressed?"
         }
       },
-      "spec_count": 40,
+      "spec_count": 8,
       "scrape_error": null,
       "is_new": false,
       "shipping": {
@@ -2328,15 +1901,15 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'5\"",
+          "height_max": "6'7\""
+        }
+      ],
       "geometry": {
-        "Rider Height": "5'0\" - 6'2\"",
-        "Reach": "19\"",
-        "Top Tube Length": "25\"",
-        "Standover Height": "16\"",
-        "Wheelbase": "46\"",
-        "Min Saddle Height": "30\"",
-        "Max Saddle Height": "35\"",
-        "Head Tube Length": "6\""
+        "Rider Height": "5'5\" - 6'7\""
       },
       "configurations": [
         {
@@ -2350,25 +1923,9 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/d92e076f69cb1a6f81c9bab8cd8f57a2_9b840356-5b3e-4a16-a915-10e63ec37bf2.jpg?v=1778470510",
           "color": {
             "name": "White",
-            "hex": "#efefef",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/d92e076f69cb1a6f81c9bab8cd8f57a2_9b840356-5b3e-4a16-a915-10e63ec37bf2.jpg?v=1778470510"
-          }
-        },
-        {
-          "options": {
-            "Color": "Dark Blue"
-          },
-          "price": 1799.99,
-          "sku": "M007ZCSC18DB",
-          "variant_id": 45214144168182,
-          "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/000878ce6144c05ffac949f66b05a18b_94e1f32e-9ddc-4d7a-9dc2-1ec601a9bc4e.jpg?v=1778466168",
-          "color": {
-            "name": "Dark Blue",
-            "hex": "#98a8d0",
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/000878ce6144c05ffac949f66b05a18b_94e1f32e-9ddc-4d7a-9dc2-1ec601a9bc4e.jpg?v=1778466168"
           }
         },
         {
@@ -2382,7 +1939,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/520f764beb1954cab793b251ed2a5a3f_268688f7-655a-4c56-accc-7066909d44ad.jpg?v=1778470358",
           "color": {
             "name": "Firebrick",
-            "hex": "#ed4f4b",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/520f764beb1954cab793b251ed2a5a3f_268688f7-655a-4c56-accc-7066909d44ad.jpg?v=1778470358"
           }
@@ -2398,7 +1955,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/8c15d41b9b829464843b5aa4449a28f3_3f7a7eb9-7dd5-4ce1-80b2-5388ff37d152.jpg?v=1778470109",
           "color": {
             "name": "Olive Green",
-            "hex": "#898f57",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/8c15d41b9b829464843b5aa4449a28f3_3f7a7eb9-7dd5-4ce1-80b2-5388ff37d152.jpg?v=1778470109"
           }
@@ -2414,20 +1971,29 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/c8682a1b6d56a22c3b0a59f59bf75cf5_1dad519a-fbfa-4d82-b464-7b60c134af02.jpg?v=1777012224",
           "color": {
             "name": "Orange",
-            "hex": "#f38b29",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/c8682a1b6d56a22c3b0a59f59bf75cf5_1dad519a-fbfa-4d82-b464-7b60c134af02.jpg?v=1777012224"
           }
+        },
+        {
+          "options": {
+            "Color": "Dark Blue"
+          },
+          "price": 1799.99,
+          "sku": "M007ZCSC18DB",
+          "variant_id": 45214144168182,
+          "available": false,
+          "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/000878ce6144c05ffac949f66b05a18b_94e1f32e-9ddc-4d7a-9dc2-1ec601a9bc4e.jpg?v=1778466168",
+          "color": {
+            "name": "Dark Blue",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/000878ce6144c05ffac949f66b05a18b_94e1f32e-9ddc-4d7a-9dc2-1ec601a9bc4e.jpg?v=1778466168"
+          }
         }
       ],
-      "available_options": [],
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'0\"",
-          "height_max": "6'2\""
-        }
-      ]
+      "available_options": []
     },
     {
       "model": "Slate Ebike",
@@ -2441,16 +2007,16 @@
       "options": {
         "colors": [
           {
-            "name": "Platinum",
-            "hex": "#f2f2f2",
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_167e372e-4506-4f02-b885-3c9b91aff62f.jpg?v=1750228443"
-          },
-          {
             "name": "Denim",
-            "hex": "#3b3f56",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_e97c72e4-f7df-4c9e-adf0-0fe1147b3740.jpg?v=1750228422"
+          },
+          {
+            "name": "Platinum",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_167e372e-4506-4f02-b885-3c9b91aff62f.jpg?v=1750228443"
           }
         ]
       },
@@ -2460,48 +2026,14 @@
           "Regular price": "$1,699.99",
           "Shop All E-Bikes": "Your new favorite ride is just a click away.",
           "Free": "$499.99",
-          "*Ships Within 2 Business Days": "In stock",
-          "Free Gifts": "$179.98",
-          "Battery": "48V 15Ah Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Powerr: 500W Peak Power:860W Torque: 70Nm+",
-          "Pedals Assist Intelligent": "1-5 Level",
-          "Speed": "20 mph (Throttle) / 25 mph (PAS)",
-          "Weight": "54 lbs",
-          "Range": "50~60miles",
-          "Payload Capacity": "350 lbs",
-          "Sensor": "Torque+Cadence Sensor",
-          "Brakes": "LOGAN HD-E500 Hydraulic Brakes",
-          "Tires": "20\" × 3.0\" Tire",
-          "Display": "Detachable High-Definition Display",
-          "Derailleur": "7-speed Shimano",
-          "Brake lever": "Aluminum Alloy, with power cutoff",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 165mm, 52T chainring",
-          "Front Fork": "80mm fork travel",
-          "Frame": "6061 Aluminum Alloy",
-          "Gearing": "Shimano 7-Speed",
-          "Throttle": "Thumb Throttle",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 620 mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Customized Comfort Leather Seat",
-          "Spokes": "Heavy-duty carbon steel, 13G × 172 mm (front) / 123 mm (rear), 13G × 125 mm (rear)",
-          "Rider Height": "5'0\" - 6'2\"",
-          "Reach": "20\"",
-          "Top Tube Length": "25\"",
-          "Stand over Height": "16\"",
-          "Wheelbase": "43\"",
-          "Min Saddle Height": "32\"",
-          "Max Saddle Height": "37\"",
-          "Head Tube Length": "7\"",
-          "Handlebar Length": "Aluminum Alloy, φ31.8mm, 620 mm",
+          "1": "11",
+          "Rider Height": "5'5\" - 6'7\"",
+          "Height: 5'1″-6'1″": "Inseam: 2'4″-2'11″",
           "Q:": "how much does the foldable Slate Ebike weigh",
           "A:": "The weight of the Mokwheel Slate is 54 lbs."
         }
       },
-      "spec_count": 42,
+      "spec_count": 8,
       "scrape_error": null,
       "is_new": false,
       "shipping": {
@@ -2509,33 +2041,17 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'5\"",
+          "height_max": "6'7\""
+        }
+      ],
       "geometry": {
-        "Rider Height": "5'0\" - 6'2\"",
-        "Reach": "20\"",
-        "Top Tube Length": "25\"",
-        "Stand over Height": "16\"",
-        "Wheelbase": "43\"",
-        "Min Saddle Height": "32\"",
-        "Max Saddle Height": "37\"",
-        "Head Tube Length": "7\""
+        "Rider Height": "5'5\" - 6'7\""
       },
       "configurations": [
-        {
-          "options": {
-            "Color": "Platinum"
-          },
-          "price": 1499.99,
-          "sku": "M17ZCZDC01SP",
-          "variant_id": 46012259074294,
-          "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_167e372e-4506-4f02-b885-3c9b91aff62f.jpg?v=1750228443",
-          "color": {
-            "name": "Platinum",
-            "hex": "#f2f2f2",
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_167e372e-4506-4f02-b885-3c9b91aff62f.jpg?v=1750228443"
-          }
-        },
         {
           "options": {
             "Color": "Denim"
@@ -2547,20 +2063,29 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_e97c72e4-f7df-4c9e-adf0-0fe1147b3740.jpg?v=1750228422",
           "color": {
             "name": "Denim",
-            "hex": "#3b3f56",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_e97c72e4-f7df-4c9e-adf0-0fe1147b3740.jpg?v=1750228422"
           }
+        },
+        {
+          "options": {
+            "Color": "Platinum"
+          },
+          "price": 1499.99,
+          "sku": "M17ZCZDC01SP",
+          "variant_id": 46012259074294,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_167e372e-4506-4f02-b885-3c9b91aff62f.jpg?v=1750228443",
+          "color": {
+            "name": "Platinum",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_167e372e-4506-4f02-b885-3c9b91aff62f.jpg?v=1750228443"
+          }
         }
       ],
-      "available_options": [],
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'0\"",
-          "height_max": "6'2\""
-        }
-      ]
+      "available_options": []
     },
     {
       "model": "Tarmac Ebike",
@@ -2579,19 +2104,19 @@
         "colors": [
           {
             "name": "Phantom Black",
-            "hex": "#858585",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/8b9cc7c9808a81fc8db0eaf67a4d79d7.jpg?v=1747895515"
           },
           {
             "name": "Pine Green",
-            "hex": "#a3afab",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/8c15d41b9b829464843b5aa4449a28f3.jpg?v=1747895515"
           },
           {
             "name": "Marine Blue",
-            "hex": "#99a8ce",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/000878ce6144c05ffac949f66b05a18b.jpg?v=1747895515"
           }
@@ -2603,47 +2128,15 @@
           "Regular price": "$1,699.99",
           "Shop All E-Bikes": "Your new favorite ride is just a click away.",
           "Free": "$499.99",
-          "Frame:": "Step Over",
-          "*Ships Within 2 Business Days": "In stock",
-          "Free Gifts": "$179.98",
-          "Battery": "48V 15Ah Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Power:750W Peak Power:920W Torque: 75Nm",
-          "Speed Class": "20 mph (Throttle) / 28 mph (PAS)",
-          "Weight": "66 lbs",
-          "Range": "50~60miles",
-          "Payload Capacity": "350 lbs",
-          "Sensor": "Torque+Cadence Sensor",
-          "Tires": "29\" x 2.35\" Tire",
-          "Display": "Detachable High-Definition Display",
-          "Gearing": "Shimano 8-Speed",
-          "Derailleur": "8-speed Shimano",
-          "Brakes": "TEKTRO TKD171 Hydraulic Disc Brakes",
-          "Brake lever": "Aluminum Alloy, with power cutoff",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 46T chainring",
-          "Front Fork": "80mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Throttle": "Thumb Throttle",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Customized Comfort Leather Seat",
-          "Spokes": "Heavy-duty carbon steel, 13G × 275 mm (front) / 245 mm (rear) , 13G × 275 mm (front) / 243 mm (rear)",
-          "Rider Height": "5'7\" - 6'7\"",
-          "Reach": "17\"",
-          "Top Tube Length": "25\"",
-          "Standover Height": "32\"",
-          "Wheelbase": "47\"",
-          "Min Saddle Height": "36\"",
-          "Max Saddle Height": "44\"",
-          "Head Tube Length": "6\"",
+          "1": "11",
+          "Rider Height": "5'5\" - 6'7\"",
+          "Height: 5'5″-6'5″": "Inseam: 2'9″-3'2″",
+          "Height: 5'7″-6'7″": "Inseam: 2'8″-3'1″",
           "Q:": "Does this bike have a throttle",
           "A:": "Yes, the Tarmac does have a throttle. The only models that do not come equipped with a throttle are the FLINT (ST) (PRO)."
         }
       },
-      "spec_count": 41,
+      "spec_count": 9,
       "scrape_error": null,
       "is_new": false,
       "shipping": {
@@ -2651,15 +2144,15 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'5\"",
+          "height_max": "6'7\""
+        }
+      ],
       "geometry": {
-        "Rider Height": "5'7\" - 6'7\"",
-        "Reach": "17\"",
-        "Top Tube Length": "25\"",
-        "Standover Height": "32\"",
-        "Wheelbase": "47\"",
-        "Min Saddle Height": "36\"",
-        "Max Saddle Height": "44\"",
-        "Head Tube Length": "6\""
+        "Rider Height": "5'5\" - 6'7\""
       },
       "configurations": [
         {
@@ -2674,7 +2167,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/8b9cc7c9808a81fc8db0eaf67a4d79d7.jpg?v=1747895515",
           "color": {
             "name": "Phantom Black",
-            "hex": "#858585",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/8b9cc7c9808a81fc8db0eaf67a4d79d7.jpg?v=1747895515"
           }
@@ -2691,7 +2184,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/8c15d41b9b829464843b5aa4449a28f3.jpg?v=1747895515",
           "color": {
             "name": "Pine Green",
-            "hex": "#a3afab",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/8c15d41b9b829464843b5aa4449a28f3.jpg?v=1747895515"
           }
@@ -2704,11 +2197,11 @@
           "price": 1699.99,
           "sku": "M020ZCTC2MBL",
           "variant_id": 47780920262902,
-          "available": true,
+          "available": false,
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/000878ce6144c05ffac949f66b05a18b.jpg?v=1747895515",
           "color": {
             "name": "Marine Blue",
-            "hex": "#99a8ce",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/000878ce6144c05ffac949f66b05a18b.jpg?v=1747895515"
           }
@@ -2725,7 +2218,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/8b9cc7c9808a81fc8db0eaf67a4d79d7.jpg?v=1747895515",
           "color": {
             "name": "Phantom Black",
-            "hex": "#858585",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/8b9cc7c9808a81fc8db0eaf67a4d79d7.jpg?v=1747895515"
           }
@@ -2742,7 +2235,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/8c15d41b9b829464843b5aa4449a28f3.jpg?v=1747895515",
           "color": {
             "name": "Pine Green",
-            "hex": "#a3afab",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/8c15d41b9b829464843b5aa4449a28f3.jpg?v=1747895515"
           }
@@ -2770,19 +2263,12 @@
       ],
       "family_id": "mokwheel__tarmac-ebike",
       "tier": "Step-Over",
-      "frame_style": "Step-Over (Mid-Step)",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'7\"",
-          "height_max": "6'7\""
-        }
-      ]
+      "frame_style": "Step-Over (Mid-Step)"
     },
     {
       "model": "Tarmac ST Ebike",
       "handle": "tarmac-st",
-      "url": "https://www.mokwheel.com/products/tarmac-st?variant=48888485216502",
+      "url": "https://www.mokwheel.com/products/tarmac-st?variant=48888485249270",
       "product_types": [
         "Commuter / Urban"
       ],
@@ -2791,22 +2277,22 @@
       "options": {
         "colors": [
           {
-            "name": "Hazelnut Yellow",
-            "hex": "#fdefc8",
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_f159e57f-bf37-4171-ac2b-3a3cac826129.jpg?v=1757676097"
-          },
-          {
             "name": "Smoke Grey",
-            "hex": "#c1c2c6",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_66363b3d-18de-4654-9abf-8843857fc367.jpg?v=1757676238"
           },
           {
             "name": "Crimson Red",
-            "hex": "#ee5e56",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_1d21a153-df8d-4a73-9a6f-ddb24090c87f.jpg?v=1757676239"
+          },
+          {
+            "name": "Hazelnut Yellow",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_f159e57f-bf37-4171-ac2b-3a3cac826129.jpg?v=1757676097"
           }
         ]
       },
@@ -2816,47 +2302,14 @@
           "Regular price": "$1,699.99",
           "Shop All E-Bikes": "Your new favorite ride is just a click away.",
           "Free": "$499.99",
-          "Frame:": "Step Through",
-          "*Ships Within 2 Business Days": "In stock",
-          "Free Gifts": "$179.98",
-          "Battery": "48V 15Ah Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Power:750W Peak Power:920W Torque: 75Nm",
-          "Speed Class": "20 mph (Throttle) / 28 mph (PAS)",
-          "Weight": "57 lbs",
-          "Range": "50~60miles",
-          "Payload Capacity": "300lbs",
-          "Sensor": "Torque+Cadence Sensor",
-          "Tires": "27.5\" x 2.4\" Tire",
-          "Display": "Detachable High-Definition Display",
-          "Gearing": "Shimano 8-Speed",
-          "Derailleur": "8-speed Shimano",
-          "Brakes": "TEKTRO TKD171 Hydraulic Disc Brakes",
-          "Brake lever": "Aluminum Alloy, with power cutoff",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 46T chainring",
-          "Front Fork": "80mm Adjustable Suspension",
-          "Frame": "6061 Aluminum Alloy",
-          "Throttle": "Thumb Throttle",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Customized Comfort Leather Seat",
-          "Spokes": "Heavy-duty carbon steel, 13G × 263 mm (front) / 226 mm (rear) , 13G × 265 mm (front) / 224 mm (rear)",
-          "Rider Height": "5'6\" - 6'8\"",
-          "Reach": "16\"",
-          "Top Tube Length": "23\"",
-          "Standover Height": "19\"",
-          "Wheelbase": "44\"",
-          "Min Saddle Height": "32\"",
-          "Max Saddle Height": "41\"",
-          "Head Tube Length": "7\"",
+          "1": "11",
+          "Rider Height": "5'5\" - 6'7\"",
+          "Height: 5'6″-6'8″": "Inseam: 2'5″-3'0″",
           "Q:": "What’s the difference in the tarmac and tarmac st",
           "A:": "The Tarmac ST is equipped with 27.5\" x 2.35\" tires."
         }
       },
-      "spec_count": 41,
+      "spec_count": 8,
       "scrape_error": null,
       "is_new": false,
       "shipping": {
@@ -2864,33 +2317,17 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'5\"",
+          "height_max": "6'7\""
+        }
+      ],
       "geometry": {
-        "Rider Height": "5'6\" - 6'8\"",
-        "Reach": "16\"",
-        "Top Tube Length": "23\"",
-        "Standover Height": "19\"",
-        "Wheelbase": "44\"",
-        "Min Saddle Height": "32\"",
-        "Max Saddle Height": "41\"",
-        "Head Tube Length": "7\""
+        "Rider Height": "5'5\" - 6'7\""
       },
       "configurations": [
-        {
-          "options": {
-            "Color": "Hazelnut Yellow"
-          },
-          "price": 1699.99,
-          "sku": "M022ZCTS01HY",
-          "variant_id": 48888485216502,
-          "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_f159e57f-bf37-4171-ac2b-3a3cac826129.jpg?v=1757676097",
-          "color": {
-            "name": "Hazelnut Yellow",
-            "hex": "#fdefc8",
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_f159e57f-bf37-4171-ac2b-3a3cac826129.jpg?v=1757676097"
-          }
-        },
         {
           "options": {
             "Color": "Smoke Grey"
@@ -2898,11 +2335,11 @@
           "price": 1699.99,
           "sku": "M022ZCTS02SG",
           "variant_id": 48888485249270,
-          "available": false,
+          "available": true,
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_66363b3d-18de-4654-9abf-8843857fc367.jpg?v=1757676238",
           "color": {
             "name": "Smoke Grey",
-            "hex": "#c1c2c6",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_66363b3d-18de-4654-9abf-8843857fc367.jpg?v=1757676238"
           }
@@ -2914,27 +2351,36 @@
           "price": 1699.99,
           "sku": "M022ZCTS03CR",
           "variant_id": 48888485282038,
-          "available": false,
+          "available": true,
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_1d21a153-df8d-4a73-9a6f-ddb24090c87f.jpg?v=1757676239",
           "color": {
             "name": "Crimson Red",
-            "hex": "#ee5e56",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_1d21a153-df8d-4a73-9a6f-ddb24090c87f.jpg?v=1757676239"
+          }
+        },
+        {
+          "options": {
+            "Color": "Hazelnut Yellow"
+          },
+          "price": 1699.99,
+          "sku": "M022ZCTMV4AE",
+          "variant_id": 48888485216502,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_f159e57f-bf37-4171-ac2b-3a3cac826129.jpg?v=1757676097",
+          "color": {
+            "name": "Hazelnut Yellow",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/1_f159e57f-bf37-4171-ac2b-3a3cac826129.jpg?v=1757676097"
           }
         }
       ],
       "available_options": [],
       "family_id": "mokwheel__tarmac-ebike",
       "tier": "Step-Thru",
-      "frame_style": "Step-Thru",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'6\"",
-          "height_max": "6'8\""
-        }
-      ]
+      "frame_style": "Step-Thru"
     },
     {
       "model": "Tor Plus Ebike",
@@ -2949,13 +2395,13 @@
         "colors": [
           {
             "name": "Green",
-            "hex": "#718078",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_dfe6e67c-b528-42ef-b20c-e3c08b5103f0.jpg?v=1752060848"
           },
           {
             "name": "Grey",
-            "hex": "#5d5d5d",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_88a778cc-9c76-419c-8acd-d03f4e789185.jpg?v=1750414568"
           }
@@ -2967,39 +2413,14 @@
           "Regular price": "$1,699.99",
           "Shop All E-Bikes": "Your new favorite ride is just a click away.",
           "Free": "$499.99",
-          "*Ships Within 2 Business Days.": "In stock",
-          "Free Gifts": "$179.98",
-          "Battery": "48V 15Ah ,Complies with UL standards, IPX7 Waterproof",
-          "Charger": "48V 3A",
-          "WATERPROOF RATING": "IPX6 (Whole Bike)",
-          "Motor": "Continuous Power: 750W Peak Power: 1100W Torque: 90Nm+",
-          "Speed Class": "20 mph (Throttle) / 28 mph (PAS)",
-          "Weight": "81 lbs",
-          "Range": "50~60miles",
-          "Payload Capacity": "450 lbs",
-          "Sensor": "Cadence Sensors",
-          "Brakes": "LOGAN HD-E480 Hydraulic Brakes",
-          "Tires": "26\" × 4.0\" Fat Tire (Puncture-Resistant)",
-          "Display": "LED Integrated",
-          "Brake lever": "Aluminum Alloy, with power cutoff",
-          "Chain": "KMC Stainless Chain",
-          "Crank Set": "Aluminum alloy, 170mm, 46T chainring",
-          "Derailleur": "7-speed Shimano",
-          "Front Fork": "110mm fork travel",
-          "Frame": "6061 Aluminum Alloy",
-          "Gearing": "Shimano 7-Speed",
-          "Throttle": "Thumb Throttle",
-          "Handlebar": "Aluminum Alloy, φ31.8mm, 680mm",
-          "Kickstand": "Sturdy Aluminum Alloy",
-          "Rims": "Aluminum Alloy",
-          "Saddle": "Customized Comfort Leather Seat",
-          "Spokes": "Heavy-duty carbon steel, 12G × 248 mm (front) / 219 mm (rear)",
+          "1": "10",
+          "Rider Height": "5'5\" - 6'7\"",
+          "Height: 5'7″-6'7″": "Inseam: 2'7″-3'3″",
           "A:": "Hello Jeff, We can help out. Please contact us at our email address: Support@Mokwheel.com then we can get this process going for you. Thanks, Chad",
-          "Q:": "Tell me what I get for buying your bike? I have owned rad rover for five years! Great bike! Yours haas the same style and even better ! So tell what extras I can get Patient cool!",
-          "Rider Height": "5'6\" - 6'8\""
+          "Q:": "Tell me what I get for buying your bike? I have owned rad rover for five years! Great bike! Yours haas the same style and even better ! So tell what extras I can get Patient cool!"
         }
       },
-      "spec_count": 32,
+      "spec_count": 8,
       "scrape_error": null,
       "is_new": false,
       "shipping": {
@@ -3007,7 +2428,16 @@
         "free": true
       },
       "free_accessories": [],
-      "geometry": {},
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'5\"",
+          "height_max": "6'7\""
+        }
+      ],
+      "geometry": {
+        "Rider Height": "5'5\" - 6'7\""
+      },
       "configurations": [
         {
           "options": {
@@ -3020,7 +2450,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_dfe6e67c-b528-42ef-b20c-e3c08b5103f0.jpg?v=1752060848",
           "color": {
             "name": "Green",
-            "hex": "#718078",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_dfe6e67c-b528-42ef-b20c-e3c08b5103f0.jpg?v=1752060848"
           }
@@ -3036,21 +2466,14 @@
           "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_88a778cc-9c76-419c-8acd-d03f4e789185.jpg?v=1750414568",
           "color": {
             "name": "Grey",
-            "hex": "#5d5d5d",
+            "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0550/4424/3702/files/2_88a778cc-9c76-419c-8acd-d03f4e789185.jpg?v=1750414568"
           }
         }
       ],
       "available_options": [],
-      "regular_price": 1299.99,
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'6\"",
-          "height_max": "6'8\""
-        }
-      ]
+      "regular_price": 1299.99
     }
   ],
   "available_accessories": [

@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-24T03:31:17.952548+00:00",
-  "total_models": 466,
+  "generated_at": "2026-06-24T08:06:23.292780+00:00",
+  "total_models": 450,
   "expected_fields": [
     "motor_w",
     "battery_wh",
@@ -25,135 +25,135 @@
   ],
   "coverage": {
     "frame_size_count": {
-      "count": 466,
+      "count": 450,
       "pct": 100
     },
     "brake_type": {
-      "count": 463,
-      "pct": 99
+      "count": 423,
+      "pct": 94
     },
     "drive_type": {
-      "count": 463,
-      "pct": 99
-    },
-    "battery_wh": {
-      "count": 462,
-      "pct": 99
+      "count": 423,
+      "pct": 94
     },
     "cell_brand": {
-      "count": 458,
-      "pct": 98
+      "count": 420,
+      "pct": 93
     },
-    "drivetrain_type": {
-      "count": 457,
-      "pct": 98
-    },
-    "suspension": {
-      "count": 450,
-      "pct": 97
-    },
-    "display_type": {
-      "count": 449,
-      "pct": 96
-    },
-    "motor_w": {
-      "count": 449,
-      "pct": 96
+    "battery_wh": {
+      "count": 419,
+      "pct": 93
     },
     "fit_height_min_in": {
-      "count": 440,
-      "pct": 94
+      "count": 416,
+      "pct": 92
     },
     "fit_height_min_mm": {
-      "count": 440,
-      "pct": 94
+      "count": 416,
+      "pct": 92
     },
     "fit_height_max_in": {
-      "count": 438,
-      "pct": 94
+      "count": 415,
+      "pct": 92
     },
     "fit_height_max_mm": {
-      "count": 438,
-      "pct": 94
+      "count": 415,
+      "pct": 92
     },
-    "torque_nm": {
-      "count": 434,
-      "pct": 93
+    "drivetrain_type": {
+      "count": 414,
+      "pct": 92
     },
-    "frame_material": {
-      "count": 432,
-      "pct": 93
+    "motor_w": {
+      "count": 412,
+      "pct": 92
     },
-    "frame_size_rider_range": {
-      "count": 426,
+    "suspension": {
+      "count": 411,
       "pct": 91
     },
-    "weight_lb": {
-      "count": 415,
+    "display_type": {
+      "count": 406,
+      "pct": 90
+    },
+    "frame_size_rider_range": {
+      "count": 401,
       "pct": 89
     },
-    "max_speed_mph": {
-      "count": 398,
-      "pct": 85
+    "torque_nm": {
+      "count": 399,
+      "pct": 89
     },
-    "sensor_type": {
-      "count": 394,
-      "pct": 85
+    "frame_material": {
+      "count": 392,
+      "pct": 87
+    },
+    "weight_lb": {
+      "count": 369,
+      "pct": 82
     },
     "warranty_years": {
-      "count": 384,
-      "pct": 82
+      "count": 366,
+      "pct": 81
     },
-    "gears": {
-      "count": 382,
-      "pct": 82
-    },
-    "range_mi": {
-      "count": 373,
+    "sensor_type": {
+      "count": 362,
       "pct": 80
     },
+    "max_speed_mph": {
+      "count": 351,
+      "pct": 78
+    },
+    "range_mi": {
+      "count": 346,
+      "pct": 77
+    },
+    "gears": {
+      "count": 345,
+      "pct": 77
+    },
     "notable_tech": {
-      "count": 303,
-      "pct": 65
-    },
-    "max_load_lb": {
-      "count": 299,
-      "pct": 64
-    },
-    "ul_listed": {
-      "count": 287,
+      "count": 280,
       "pct": 62
     },
+    "max_load_lb": {
+      "count": 272,
+      "pct": 60
+    },
+    "ul_listed": {
+      "count": 262,
+      "pct": 58
+    },
     "motor_peak_w": {
-      "count": 237,
-      "pct": 51
+      "count": 210,
+      "pct": 47
     },
     "classes": {
-      "count": 208,
-      "pct": 45
+      "count": 198,
+      "pct": 44
     },
     "rack_load_lb": {
-      "count": 168,
+      "count": 160,
       "pct": 36
     },
     "connectivity": {
-      "count": 150,
-      "pct": 32
+      "count": 132,
+      "pct": 29
     },
     "water_resistance": {
-      "count": 115,
-      "pct": 25
+      "count": 91,
+      "pct": 20
     },
     "removable_battery": {
-      "count": 77,
-      "pct": 17
+      "count": 83,
+      "pct": 18
     },
     "range_min_mi": {
-      "count": 35,
-      "pct": 8
+      "count": 33,
+      "pct": 7
     },
     "awd": {
-      "count": 8,
+      "count": 7,
       "pct": 2
     },
     "custom_speed_mode": {
@@ -177,12 +177,6 @@
       "model": "Level 4 ADV Step-Through Ebike",
       "field": "motor_w",
       "label": "Motor power (W)"
-    },
-    {
-      "brand": "aventon",
-      "model": "Ramblas ADV Ebike",
-      "field": "rack_load_lb",
-      "label": "Rear-rack load (lb)"
     },
     {
       "brand": "blix",
@@ -390,9 +384,147 @@
     },
     {
       "brand": "cannondale",
+      "model": "Habit Neo 1",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Habit Neo 1",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Habit Neo 1",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Habit Neo 1",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Habit Neo 1",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Habit Neo 2",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Habit Neo 2",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Habit Neo 2",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Habit Neo 2",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Habit Neo 2",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Habit Neo 3",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Habit Neo 3",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Habit Neo 3",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Habit Neo 3",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Habit Neo 3",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Mavaro Neo 1 Low StepThru",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Mavaro Neo 1 Low StepThru",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Mavaro Neo 1 Low StepThru",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Mavaro Neo 1 Low StepThru",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "cannondale",
       "model": "Mavaro Neo 1 Low StepThru",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Mavaro Neo 2 Low StepThru",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Mavaro Neo 2 Low StepThru",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Mavaro Neo 2 Low StepThru",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Mavaro Neo 2 Low StepThru",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
     },
     {
       "brand": "cannondale",
@@ -403,8 +535,38 @@
     {
       "brand": "cannondale",
       "model": "Mavaro Neo 3 Low StepThru",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Mavaro Neo 3 Low StepThru",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Mavaro Neo 3 Low StepThru",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Mavaro Neo 3 Low StepThru",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Mavaro Neo 3 Low StepThru",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "cannondale",
+      "model": "Mavaro Neo 3 Low StepThru",
+      "field": "range_mi",
+      "label": "Range (mi)"
     },
     {
       "brand": "cannondale",
@@ -990,6 +1152,24 @@
     },
     {
       "brand": "engwe",
+      "model": "ENGWE L16",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE L16",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "engwe",
+      "model": "ENGWE L16",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "engwe",
       "model": "ENGWE L20 2.0",
       "field": "sensor_type",
       "label": "Pedal-assist sensor type"
@@ -1189,8 +1369,8 @@
     {
       "brand": "euphree",
       "model": "Solar Sparrow Belt",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
     },
     {
       "brand": "euphree",
@@ -1404,6 +1584,12 @@
     },
     {
       "brand": "heybike",
+      "model": "ALPHA",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "heybike",
       "model": "ALPHA — Step-Thru",
       "field": "fit_height_min_in",
       "label": "Rider height range"
@@ -1416,6 +1602,12 @@
     },
     {
       "brand": "heybike",
+      "model": "ALPHA — Step-Thru",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "heybike",
       "model": "Helio F",
       "field": "fit_height_min_in",
       "label": "Rider height range"
@@ -1425,6 +1617,36 @@
       "model": "Helio F",
       "field": "frame_size_rider_range",
       "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "heybike",
+      "model": "Hero — 1000W Rear Hub · Step-Over",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "heybike",
+      "model": "Hero — 1000W Rear Hub · Step-Thru",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "heybike",
+      "model": "Hero — 750W Mid-Drive · Step-Over",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "heybike",
+      "model": "Hero — 750W Mid-Drive · Step-Thru",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "heybike",
+      "model": "Horizon",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
     },
     {
       "brand": "heybike",
@@ -1446,6 +1668,96 @@
     },
     {
       "brand": "heybike",
+      "model": "Mars 2.0 750/1000W",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "heybike",
+      "model": "Mars 2.0 750/1000W",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "heybike",
+      "model": "Mars 2.0 750/1000W",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "heybike",
+      "model": "Mars 2.0 750/1000W（Brad‘s Deal）",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "heybike",
+      "model": "Mars 2.0 750/1000W（Brad‘s Deal）",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "heybike",
+      "model": "Mars 2.0 750/1000W（Brad‘s Deal）",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "heybike",
+      "model": "Mars 2.0 750/1000W（Brad‘s Deal） — 1000W (Peak 1800W)",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "heybike",
+      "model": "Mars 2.0 750/1000W（Brad‘s Deal） — 1000W (Peak 1800W)",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "heybike",
+      "model": "Mars 2.0 750/1000W（Brad‘s Deal） — 1000W (Peak 1800W)",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "heybike",
+      "model": "Mars 2.0 750/1000W（Slick deals）",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "heybike",
+      "model": "Mars 2.0 750/1000W（Slick deals）",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "heybike",
+      "model": "Mars 2.0 750/1000W（Slick deals）",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "heybike",
+      "model": "Mars 2.0 750/1000W（Slick deals） — 1000W (Peak 1800W)",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "heybike",
+      "model": "Mars 2.0 750/1000W（Slick deals） — 1000W (Peak 1800W)",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "heybike",
+      "model": "Mars 2.0 750/1000W（Slick deals） — 1000W (Peak 1800W)",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "heybike",
       "model": "Mars 3.0",
       "field": "fit_height_min_in",
       "label": "Rider height range"
@@ -1459,8 +1771,20 @@
     {
       "brand": "heybike",
       "model": "Mars 3.0",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "heybike",
+      "model": "Mars 3.0",
       "field": "sensor_type",
       "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "heybike",
+      "model": "Ranger 3.0 Pro",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
     },
     {
       "brand": "heybike",
@@ -1566,6 +1890,18 @@
     },
     {
       "brand": "himiway",
+      "model": "Himiway A7 Commuter eBike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "himiway",
+      "model": "Himiway A7 Commuter eBike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "himiway",
       "model": "Himiway A7 Pro Commuter eBike",
       "field": "max_speed_mph",
       "label": "Top speed (mph)"
@@ -1602,25 +1938,85 @@
     },
     {
       "brand": "himiway",
-      "model": "Himiway D5 2.0 Series eBike",
+      "model": "Himiway D5 2.0 20\" eBike",
       "field": "fit_height_min_in",
       "label": "Rider height range"
     },
     {
       "brand": "himiway",
-      "model": "Himiway D5 2.0 Series eBike",
+      "model": "Himiway D5 2.0 20\" eBike",
       "field": "frame_size_rider_range",
       "label": "Rider height range per frame size"
     },
     {
       "brand": "himiway",
-      "model": "Himiway D5 2.0 Series eBike — Step-Thru",
+      "model": "Himiway D5 2.0 20\" eBike — 15Ah+20Ah",
       "field": "fit_height_min_in",
       "label": "Rider height range"
     },
     {
       "brand": "himiway",
-      "model": "Himiway D5 2.0 Series eBike — Step-Thru",
+      "model": "Himiway D5 2.0 20\" eBike — 15Ah+20Ah",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "himiway",
+      "model": "Himiway D5 2.0 Camo eBike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "himiway",
+      "model": "Himiway D5 2.0 Camo eBike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "himiway",
+      "model": "Himiway D5 2.0 ST eBike — Step-Thru · 15Ah",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "himiway",
+      "model": "Himiway D5 2.0 ST eBike — Step-Thru · 15Ah",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "himiway",
+      "model": "Himiway D5 2.0 ST eBike — Step-Thru · 15Ah+20Ah",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "himiway",
+      "model": "Himiway D5 2.0 ST eBike — Step-Thru · 15Ah+20Ah",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "himiway",
+      "model": "Himiway D5 2.0 eBike — Step-Over · 15Ah",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "himiway",
+      "model": "Himiway D5 2.0 eBike — Step-Over · 15Ah",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "himiway",
+      "model": "Himiway D5 2.0 eBike — Step-Over · 15Ah+20Ah",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "himiway",
+      "model": "Himiway D5 2.0 eBike — Step-Over · 15Ah+20Ah",
       "field": "frame_size_rider_range",
       "label": "Rider height range per frame size"
     },
@@ -1689,6 +2085,1716 @@
       "model": "Atlas",
       "field": "max_speed_mph",
       "label": "Top speed (mph)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Asphalt Ebike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Asphalt Ebike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Asphalt Ebike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Asphalt Ebike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Asphalt Ebike",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Asphalt Ebike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Asphalt Ebike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Asphalt Ebike",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Asphalt Ebike",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Asphalt Ebike",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Asphalt Ebike",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Asphalt Ebike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Asphalt Ebike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Asphalt Ebike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Asphalt Ebike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Asphalt ST Ebike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Asphalt ST Ebike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Asphalt ST Ebike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Asphalt ST Ebike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Asphalt ST Ebike",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Asphalt ST Ebike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Asphalt ST Ebike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Asphalt ST Ebike",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Asphalt ST Ebike",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Asphalt ST Ebike",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Asphalt ST Ebike",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Asphalt ST Ebike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Asphalt ST Ebike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Asphalt ST Ebike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Asphalt ST Ebike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Basalt 2.0 Ebike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Basalt 2.0 Ebike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Basalt 2.0 Ebike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Basalt 2.0 Ebike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Basalt 2.0 Ebike",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Basalt 2.0 Ebike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Basalt 2.0 Ebike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Basalt 2.0 Ebike",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Basalt 2.0 Ebike",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Basalt 2.0 Ebike",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Basalt 2.0 Ebike",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Basalt 2.0 Ebike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Basalt 2.0 Ebike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Basalt 2.0 Ebike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Basalt 2.0 Ebike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Basalt ST 2.0 Ebike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Basalt ST 2.0 Ebike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Basalt ST 2.0 Ebike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Basalt ST 2.0 Ebike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Basalt ST 2.0 Ebike",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Basalt ST 2.0 Ebike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Basalt ST 2.0 Ebike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Basalt ST 2.0 Ebike",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Basalt ST 2.0 Ebike",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Basalt ST 2.0 Ebike",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Basalt ST 2.0 Ebike",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Basalt ST 2.0 Ebike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Basalt ST 2.0 Ebike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Basalt ST 2.0 Ebike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Basalt ST 2.0 Ebike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT Ebike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT Ebike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT Ebike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT Ebike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT Ebike",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT Ebike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT Ebike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT Ebike",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT Ebike",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT Ebike",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT Ebike",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT Ebike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT Ebike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT Ebike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT Ebike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT PRO Ebike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT PRO Ebike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT PRO Ebike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT PRO Ebike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT PRO Ebike",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT PRO Ebike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT PRO Ebike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT PRO Ebike",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT PRO Ebike",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT PRO Ebike",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT PRO Ebike",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT PRO Ebike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT PRO Ebike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT PRO Ebike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT PRO Ebike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT PRO ST Ebike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT PRO ST Ebike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT PRO ST Ebike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT PRO ST Ebike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT PRO ST Ebike",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT PRO ST Ebike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT PRO ST Ebike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT PRO ST Ebike",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT PRO ST Ebike",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT PRO ST Ebike",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT PRO ST Ebike",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT PRO ST Ebike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT PRO ST Ebike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT PRO ST Ebike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT PRO ST Ebike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT ST Ebike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT ST Ebike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT ST Ebike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT ST Ebike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT ST Ebike",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT ST Ebike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT ST Ebike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT ST Ebike",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT ST Ebike",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT ST Ebike",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT ST Ebike",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT ST Ebike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT ST Ebike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT ST Ebike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "FLINT ST Ebike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Granite E-Trike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Granite E-Trike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Granite E-Trike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Granite E-Trike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Granite E-Trike",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Granite E-Trike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Granite E-Trike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Granite E-Trike",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Granite E-Trike",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Granite E-Trike",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Granite E-Trike",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Granite E-Trike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Granite E-Trike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Granite E-Trike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Granite E-Trike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Mesa Plus ST Ebike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Mesa Plus ST Ebike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Mesa Plus ST Ebike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Mesa Plus ST Ebike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Mesa Plus ST Ebike",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Mesa Plus ST Ebike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Mesa Plus ST Ebike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Mesa Plus ST Ebike",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Mesa Plus ST Ebike",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Mesa Plus ST Ebike",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Mesa Plus ST Ebike",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Mesa Plus ST Ebike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Mesa Plus ST Ebike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Mesa Plus ST Ebike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Mesa Plus ST Ebike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Obsidian 2.0 Ebike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Obsidian 2.0 Ebike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Obsidian 2.0 Ebike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Obsidian 2.0 Ebike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Obsidian 2.0 Ebike",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Obsidian 2.0 Ebike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Obsidian 2.0 Ebike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Obsidian 2.0 Ebike",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Obsidian 2.0 Ebike",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Obsidian 2.0 Ebike",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Obsidian 2.0 Ebike",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Obsidian 2.0 Ebike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Obsidian 2.0 Ebike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Obsidian 2.0 Ebike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Obsidian 2.0 Ebike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Obsidian ST 2.0 Ebike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Obsidian ST 2.0 Ebike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Obsidian ST 2.0 Ebike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Obsidian ST 2.0 Ebike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Obsidian ST 2.0 Ebike",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Obsidian ST 2.0 Ebike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Obsidian ST 2.0 Ebike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Obsidian ST 2.0 Ebike",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Obsidian ST 2.0 Ebike",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Obsidian ST 2.0 Ebike",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Obsidian ST 2.0 Ebike",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Obsidian ST 2.0 Ebike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Obsidian ST 2.0 Ebike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Obsidian ST 2.0 Ebike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Obsidian ST 2.0 Ebike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Onyx Ebike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Onyx Ebike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Onyx Ebike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Onyx Ebike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Onyx Ebike",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Onyx Ebike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Onyx Ebike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Onyx Ebike",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Onyx Ebike",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Onyx Ebike",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Onyx Ebike",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Onyx Ebike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Onyx Ebike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Onyx Ebike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Onyx Ebike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Onyx ST Ebike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Onyx ST Ebike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Onyx ST Ebike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Onyx ST Ebike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Onyx ST Ebike",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Onyx ST Ebike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Onyx ST Ebike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Onyx ST Ebike",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Onyx ST Ebike",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Onyx ST Ebike",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Onyx ST Ebike",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Onyx ST Ebike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Onyx ST Ebike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Onyx ST Ebike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Onyx ST Ebike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Scoria 2.0 Ebike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Scoria 2.0 Ebike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Scoria 2.0 Ebike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Scoria 2.0 Ebike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Scoria 2.0 Ebike",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Scoria 2.0 Ebike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Scoria 2.0 Ebike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Scoria 2.0 Ebike",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Scoria 2.0 Ebike",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Scoria 2.0 Ebike",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Scoria 2.0 Ebike",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Scoria 2.0 Ebike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Scoria 2.0 Ebike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Scoria 2.0 Ebike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Scoria 2.0 Ebike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Slate Ebike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Slate Ebike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Slate Ebike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Slate Ebike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Slate Ebike",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Slate Ebike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Slate Ebike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Slate Ebike",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Slate Ebike",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Slate Ebike",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Slate Ebike",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Slate Ebike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Slate Ebike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Slate Ebike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Slate Ebike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tarmac Ebike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tarmac Ebike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tarmac Ebike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tarmac Ebike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tarmac Ebike",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tarmac Ebike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tarmac Ebike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tarmac Ebike",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tarmac Ebike",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tarmac Ebike",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tarmac Ebike",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tarmac Ebike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tarmac Ebike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tarmac Ebike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tarmac Ebike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tarmac ST Ebike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tarmac ST Ebike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tarmac ST Ebike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tarmac ST Ebike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tarmac ST Ebike",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tarmac ST Ebike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tarmac ST Ebike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tarmac ST Ebike",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tarmac ST Ebike",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tarmac ST Ebike",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tarmac ST Ebike",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tarmac ST Ebike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tarmac ST Ebike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tarmac ST Ebike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tarmac ST Ebike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tor Plus Ebike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tor Plus Ebike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tor Plus Ebike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tor Plus Ebike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tor Plus Ebike",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tor Plus Ebike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tor Plus Ebike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tor Plus Ebike",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tor Plus Ebike",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tor Plus Ebike",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tor Plus Ebike",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tor Plus Ebike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tor Plus Ebike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tor Plus Ebike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "mokwheel",
+      "model": "Tor Plus Ebike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
     },
     {
       "brand": "priority",
@@ -1836,6 +3942,60 @@
     },
     {
       "brand": "ride1up",
+      "model": "CF RACER1",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "CF RACER1",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "ROADSTER V3",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "ROADSTER V3",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "ride1up",
+      "model": "ROADSTER V3",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "ROADSTER V3 — Rigid",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "ROADSTER V3 — Rigid",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "ROADSTER V3 — Suspension",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "ROADSTER V3 — Suspension",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "ride1up",
       "model": "Revv1 DRT",
       "field": "drivetrain_type",
       "label": "Drivetrain type"
@@ -1875,12 +4035,6 @@
       "model": "Revv1 HT",
       "field": "drivetrain_type",
       "label": "Drivetrain type"
-    },
-    {
-      "brand": "ride1up",
-      "model": "Revv1 HT",
-      "field": "frame_size_rider_range",
-      "label": "Rider height range per frame size"
     },
     {
       "brand": "ride1up",
@@ -1908,9 +4062,21 @@
     },
     {
       "brand": "ride1up",
+      "model": "VORSA — FT · Step-Over",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "ride1up",
       "model": "VORSA — FT · Step-Thru",
       "field": "frame_material",
       "label": "Frame material"
+    },
+    {
+      "brand": "ride1up",
+      "model": "VORSA — FT · Step-Thru",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
     },
     {
       "brand": "ride1up",
@@ -1920,9 +4086,21 @@
     },
     {
       "brand": "ride1up",
+      "model": "VORSA — Lite · Step-Over",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "ride1up",
       "model": "VORSA — Lite · Step-Thru",
       "field": "frame_material",
       "label": "Frame material"
+    },
+    {
+      "brand": "ride1up",
+      "model": "VORSA — Lite · Step-Thru",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
     },
     {
       "brand": "ride1up",
@@ -1932,9 +4110,21 @@
     },
     {
       "brand": "ride1up",
+      "model": "VORSA — Standard · Step-Over",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "ride1up",
       "model": "VORSA — Standard · Step-Thru",
       "field": "frame_material",
       "label": "Frame material"
+    },
+    {
+      "brand": "ride1up",
+      "model": "VORSA — Standard · Step-Thru",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
     },
     {
       "brand": "segway",
@@ -1962,37 +4152,61 @@
     },
     {
       "brand": "segway",
-      "model": "Segway Myon Electric Bike",
+      "model": "Segway Myon Electric Bike (M/L)",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "segway",
+      "model": "Segway Myon Electric Bike (M/L)",
       "field": "frame_material",
       "label": "Frame material"
     },
     {
       "brand": "segway",
-      "model": "Segway Myon Electric Bike",
+      "model": "Segway Myon Electric Bike (M/L)",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "segway",
+      "model": "Segway Myon Electric Bike (M/L)",
       "field": "sensor_type",
       "label": "Pedal-assist sensor type"
     },
     {
       "brand": "segway",
-      "model": "Segway Myon Electric Bike",
+      "model": "Segway Myon Electric Bike (M/L)",
       "field": "warranty_years",
       "label": "Warranty (years)"
     },
     {
       "brand": "segway",
-      "model": "Segway Myon S Electric Bike",
+      "model": "Segway Myon Electric Bike (XS/S)",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "segway",
+      "model": "Segway Myon Electric Bike (XS/S)",
       "field": "frame_material",
       "label": "Frame material"
     },
     {
       "brand": "segway",
-      "model": "Segway Myon S Electric Bike",
+      "model": "Segway Myon Electric Bike (XS/S)",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "segway",
+      "model": "Segway Myon Electric Bike (XS/S)",
       "field": "sensor_type",
       "label": "Pedal-assist sensor type"
     },
     {
       "brand": "segway",
-      "model": "Segway Myon S Electric Bike",
+      "model": "Segway Myon Electric Bike (XS/S)",
       "field": "warranty_years",
       "label": "Warranty (years)"
     },
@@ -2064,66 +4278,6 @@
     },
     {
       "brand": "specialized",
-      "model": "Haul ST",
-      "field": "fit_height_min_in",
-      "label": "Rider height range"
-    },
-    {
-      "brand": "specialized",
-      "model": "Haul ST",
-      "field": "frame_size_rider_range",
-      "label": "Rider height range per frame size"
-    },
-    {
-      "brand": "specialized",
-      "model": "Haul ST",
-      "field": "max_load_lb",
-      "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Haul ST",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Levo 4 EVO Comp",
-      "field": "max_load_lb",
-      "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Levo 4 EVO Comp",
-      "field": "max_speed_mph",
-      "label": "Top speed (mph)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Levo 4 EVO Comp",
-      "field": "range_mi",
-      "label": "Range (mi)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Levo 4 EVO Pro",
-      "field": "max_load_lb",
-      "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Levo 4 EVO Pro",
-      "field": "max_speed_mph",
-      "label": "Top speed (mph)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Levo 4 EVO Pro",
-      "field": "range_mi",
-      "label": "Range (mi)"
-    },
-    {
-      "brand": "specialized",
       "model": "S-Works Levo 4 X",
       "field": "max_speed_mph",
       "label": "Top speed (mph)"
@@ -2136,30 +4290,6 @@
     },
     {
       "brand": "specialized",
-      "model": "S-Works Turbo Creo 2",
-      "field": "max_load_lb",
-      "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "specialized",
-      "model": "S-Works Turbo Creo 2",
-      "field": "max_speed_mph",
-      "label": "Top speed (mph)"
-    },
-    {
-      "brand": "specialized",
-      "model": "S-Works Turbo Creo 2",
-      "field": "range_mi",
-      "label": "Range (mi)"
-    },
-    {
-      "brand": "specialized",
-      "model": "S-Works Turbo Creo 2",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
       "model": "S-Works Turbo Kenevo SL 2 Frameset",
       "field": "brake_type",
       "label": "Brake type"
@@ -2221,24 +4351,6 @@
     {
       "brand": "specialized",
       "model": "S-Works Turbo Levo 4 Frameset",
-      "field": "range_mi",
-      "label": "Range (mi)"
-    },
-    {
-      "brand": "specialized",
-      "model": "S-Works Turbo Levo 4 LTD",
-      "field": "max_load_lb",
-      "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "specialized",
-      "model": "S-Works Turbo Levo 4 LTD",
-      "field": "max_speed_mph",
-      "label": "Top speed (mph)"
-    },
-    {
-      "brand": "specialized",
-      "model": "S-Works Turbo Levo 4 LTD",
       "field": "range_mi",
       "label": "Range (mi)"
     },
@@ -2316,57 +4428,9 @@
     },
     {
       "brand": "specialized",
-      "model": "Turbo Como 4.0",
-      "field": "max_load_lb",
-      "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Como 4.0",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Como 4.0 IGH",
-      "field": "max_load_lb",
-      "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Como 4.0 IGH",
-      "field": "weight_lb",
-      "label": "Weight (lb)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Como 5.0 IGH",
-      "field": "max_load_lb",
-      "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Como 5.0 IGH",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "specialized",
       "model": "Turbo Creo 2 Comp",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Creo 2 Comp",
-      "field": "max_load_lb",
-      "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Creo 2 Comp",
-      "field": "max_speed_mph",
-      "label": "Top speed (mph)"
     },
     {
       "brand": "specialized",
@@ -2383,42 +4447,6 @@
     {
       "brand": "specialized",
       "model": "Turbo Creo 2 Comp",
-      "field": "range_mi",
-      "label": "Range (mi)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Creo 2 Comp",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Creo 2 Comp",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Creo 2 Comp E5",
-      "field": "max_load_lb",
-      "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Creo 2 Comp E5",
-      "field": "max_speed_mph",
-      "label": "Top speed (mph)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Creo 2 Comp E5",
-      "field": "range_mi",
-      "label": "Range (mi)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Creo 2 Comp E5",
       "field": "sensor_type",
       "label": "Pedal-assist sensor type"
     },
@@ -2479,24 +4507,6 @@
     {
       "brand": "specialized",
       "model": "Turbo Kenevo SL 2 Expert",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Kenevo SL 2 Öhlins Coil",
-      "field": "max_load_lb",
-      "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Kenevo SL 2 Öhlins Coil",
-      "field": "range_mi",
-      "label": "Range (mi)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Kenevo SL 2 Öhlins Coil",
       "field": "sensor_type",
       "label": "Pedal-assist sensor type"
     },
@@ -2643,78 +4653,6 @@
       "model": "Turbo Levo R Expert",
       "field": "range_mi",
       "label": "Range (mi)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Levo SL 2 Comp",
-      "field": "max_load_lb",
-      "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Levo SL 2 Comp",
-      "field": "max_speed_mph",
-      "label": "Top speed (mph)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Levo SL 2 Comp",
-      "field": "range_mi",
-      "label": "Range (mi)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Levo SL 2 Comp",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Levo SL 2 Comp Alloy",
-      "field": "max_load_lb",
-      "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Levo SL 2 Comp Alloy",
-      "field": "max_speed_mph",
-      "label": "Top speed (mph)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Levo SL 2 Comp Alloy",
-      "field": "range_mi",
-      "label": "Range (mi)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Levo SL 2 Comp Alloy",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Levo SL 2 Expert",
-      "field": "max_load_lb",
-      "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Levo SL 2 Expert",
-      "field": "max_speed_mph",
-      "label": "Top speed (mph)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Levo SL 2 Expert",
-      "field": "range_mi",
-      "label": "Range (mi)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Levo SL 2 Expert",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
@@ -2892,42 +4830,12 @@
     },
     {
       "brand": "specialized",
-      "model": "Turbo Vado 4.0 Step-Through",
-      "field": "max_load_lb",
-      "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Vado 5.0 IGH",
-      "field": "max_load_lb",
-      "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "specialized",
       "model": "Turbo Vado 5.0 IGH Step-Through",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
     },
     {
       "brand": "specialized",
-      "model": "Turbo Vado SL 2 4.0",
-      "field": "max_load_lb",
-      "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 4.0",
-      "field": "range_mi",
-      "label": "Range (mi)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 4.0",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
       "model": "Turbo Vado SL 2 4.0 EQ",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
@@ -2940,24 +4848,6 @@
     },
     {
       "brand": "specialized",
-      "model": "Turbo Vado SL 2 4.0 Step-Through",
-      "field": "max_load_lb",
-      "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 4.0 Step-Through",
-      "field": "range_mi",
-      "label": "Range (mi)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 4.0 Step-Through",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
       "model": "Turbo Vado SL 2 4.0 Step-Through EQ",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
@@ -3007,66 +4897,6 @@
     {
       "brand": "specialized",
       "model": "Turbo Vado SL 2 5.0 Step-Through EQ",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 6.0 Carbon",
-      "field": "max_load_lb",
-      "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 6.0 Carbon",
-      "field": "range_mi",
-      "label": "Range (mi)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 6.0 Carbon",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 6.0 EQ Carbon",
-      "field": "max_load_lb",
-      "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 6.0 EQ Carbon",
-      "field": "range_mi",
-      "label": "Range (mi)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 6.0 EQ Carbon",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
-      "model": "Vado SL 2 LTD",
-      "field": "max_load_lb",
-      "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Vado SL 2 LTD",
-      "field": "max_speed_mph",
-      "label": "Top speed (mph)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Vado SL 2 LTD",
-      "field": "range_mi",
-      "label": "Range (mi)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Vado SL 2 LTD",
       "field": "sensor_type",
       "label": "Pedal-assist sensor type"
     },
@@ -3457,24 +5287,6 @@
     {
       "brand": "trek",
       "model": "Fuel+ EX 5 Gen 2",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "trek",
-      "model": "Fuel+ EX 8 Gen 2",
-      "field": "max_load_lb",
-      "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "trek",
-      "model": "Fuel+ EX 8 Gen 2",
-      "field": "range_mi",
-      "label": "Range (mi)"
-    },
-    {
-      "brand": "trek",
-      "model": "Fuel+ EX 8 Gen 2",
       "field": "warranty_years",
       "label": "Warranty (years)"
     },
@@ -4146,9 +5958,21 @@
     },
     {
       "brand": "urtopia",
+      "model": "Carbon 1 Pro E-Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "urtopia",
       "model": "Carbon 1 Step-Thru E-Bike",
       "field": "suspension",
       "label": "Suspension"
+    },
+    {
+      "brand": "urtopia",
+      "model": "Carbon Classic E-Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
     },
     {
       "brand": "urtopia",
@@ -4458,9 +6282,99 @@
     },
     {
       "brand": "wired",
+      "model": "WIRED Predator",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Predator",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Predator",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Predator",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Predator",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Predator",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Predator",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Predator",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Predator",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Predator",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Raven",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Raven",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Raven",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Raven",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "wired",
       "model": "WIRED Raven",
       "field": "fit_height_min_in",
       "label": "Rider height range"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Raven",
+      "field": "frame_material",
+      "label": "Frame material"
     },
     {
       "brand": "wired",
@@ -4473,33 +6387,231 @@
       "model": "WIRED Raven",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Raven",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Raven",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Raven",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Raven",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Viper",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Viper",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Viper",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Viper",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Viper",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Viper",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Viper",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Viper",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Viper",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Viper",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Scout",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Scout",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Scout",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Scout",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Scout",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Scout",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Scout",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Scout",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Scout",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Scout",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Warrior",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Warrior",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Warrior",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Warrior",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Warrior",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Warrior",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Warrior",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Warrior",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Warrior",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
     }
   ],
   "frame_style_review": [],
   "summary": {
-    "models_flagged": 285,
-    "missing_rows": 718,
+    "models_flagged": 309,
+    "missing_rows": 1070,
     "missing_by_field": {
-      "motor_w": 17,
-      "battery_wh": 4,
-      "weight_lb": 16,
-      "range_mi": 93,
-      "brake_type": 3,
-      "frame_material": 34,
-      "drive_type": 3,
-      "torque_nm": 32,
-      "warranty_years": 75,
-      "display_type": 17,
-      "drivetrain_type": 9,
-      "suspension": 16,
-      "cell_brand": 8,
-      "fit_height_min_in": 26,
-      "max_speed_mph": 68,
-      "max_load_lb": 167,
-      "sensor_type": 72,
-      "rack_load_lb": 18,
+      "motor_w": 38,
+      "battery_wh": 31,
+      "weight_lb": 43,
+      "range_mi": 104,
+      "brake_type": 27,
+      "frame_material": 58,
+      "drive_type": 27,
+      "torque_nm": 51,
+      "warranty_years": 77,
+      "display_type": 44,
+      "drivetrain_type": 36,
+      "suspension": 39,
+      "cell_brand": 30,
+      "fit_height_min_in": 34,
+      "max_speed_mph": 99,
+      "max_load_lb": 178,
+      "sensor_type": 88,
+      "rack_load_lb": 17,
       "frame_size_count": 0,
-      "frame_size_rider_range": 40
+      "frame_size_rider_range": 49
     },
     "frame_style_review": 0
   }

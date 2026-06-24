@@ -1,7 +1,7 @@
 {
   "brand": "cannondale",
   "scraper": "scrape_cannondale.py",
-  "generated_at": "2026-06-24T03:31:18.319772+00:00",
+  "generated_at": "2026-06-24T08:06:23.630965+00:00",
   "fields_audited": [
     "motor_w",
     "battery_wh",
@@ -17,12 +17,12 @@
     "drive_type"
   ],
   "summary": {
-    "models": 35,
-    "present": 301,
+    "models": 38,
+    "present": 318,
     "resolved": 10,
-    "open": 74,
+    "open": 90,
     "needs_image": 0,
-    "unpublished": 35
+    "unpublished": 38
   },
   "models": [
     {
@@ -953,9 +953,318 @@
       }
     },
     {
+      "id": "cannondale__habit-neo-1-smu",
+      "model": "Habit Neo 1",
+      "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/habit-neo/habit-neo-1-smu",
+      "fields": {
+        "motor_w": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 480,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "unpublished",
+          "source": "known_absent",
+          "value": null,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 62,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "cannondale__habit-neo-2-smu",
+      "model": "Habit Neo 2",
+      "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/habit-neo/habit-neo-2-smu",
+      "fields": {
+        "motor_w": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 480,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "unpublished",
+          "source": "known_absent",
+          "value": null,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 62,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "cannondale__habit-neo-3-smu",
+      "model": "Habit Neo 3",
+      "url": "https://www.cannondale.com/en-us/bikes/electric/e-mountain/habit-neo/habit-neo-3-smu",
+      "fields": {
+        "motor_w": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 480,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "unpublished",
+          "source": "known_absent",
+          "value": null,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 62,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
       "id": "cannondale__mavaro-neo-1-low-stepthru",
       "model": "Mavaro Neo 1 Low StepThru",
-      "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/mavaro-neo/mavaro-neo-1-low-stepthru",
+      "url": "https://www.cannondale.com/en-us/80/en-us/bikes/electric/e-urban/mavaro-neo/mavaro-neo-1-low-stepthru",
       "fields": {
         "motor_w": {
           "status": "present",
@@ -966,11 +1275,11 @@
           "resolved_at": null
         },
         "battery_wh": {
-          "status": "present",
-          "source": "scraped",
-          "value": 750,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "torque_nm": {
@@ -1058,7 +1367,7 @@
     {
       "id": "cannondale__mavaro-neo-2-low-stepthru",
       "model": "Mavaro Neo 2 Low StepThru",
-      "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/mavaro-neo/mavaro-neo-2-low-stepthru",
+      "url": "https://www.cannondale.com/en-us/80/en-us/bikes/electric/e-urban/mavaro-neo/mavaro-neo-2-low-stepthru",
       "fields": {
         "motor_w": {
           "status": "present",
@@ -1069,11 +1378,11 @@
           "resolved_at": null
         },
         "battery_wh": {
-          "status": "present",
-          "source": "scraped",
-          "value": 625,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "torque_nm": {
@@ -1161,7 +1470,7 @@
     {
       "id": "cannondale__mavaro-neo-3-low-stepthru",
       "model": "Mavaro Neo 3 Low StepThru",
-      "url": "https://www.cannondale.com/en-us/bikes/electric/e-urban/mavaro-neo/mavaro-neo-3-low-stepthru",
+      "url": "https://www.cannondale.com/en-us/80/en-us/bikes/electric/e-urban/mavaro-neo/mavaro-neo-3-low-stepthru",
       "fields": {
         "motor_w": {
           "status": "present",
@@ -1172,11 +1481,11 @@
           "resolved_at": null
         },
         "battery_wh": {
-          "status": "present",
-          "source": "scraped",
-          "value": 500,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "torque_nm": {
@@ -1196,11 +1505,11 @@
           "resolved_at": null
         },
         "range_mi": {
-          "status": "present",
-          "source": "scraped",
-          "value": 70,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "weight_lb": {

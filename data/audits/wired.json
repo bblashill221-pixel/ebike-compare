@@ -1,7 +1,7 @@
 {
   "brand": "wired",
   "scraper": "scrape_wired.py",
-  "generated_at": "2026-06-24T03:31:18.367710+00:00",
+  "generated_at": "2026-06-24T08:06:23.674401+00:00",
   "fields_audited": [
     "motor_w",
     "battery_wh",
@@ -18,9 +18,9 @@
   ],
   "summary": {
     "models": 7,
-    "present": 82,
-    "resolved": 0,
-    "open": 2,
+    "present": 47,
+    "resolved": 1,
+    "open": 36,
     "needs_image": 0,
     "unpublished": 0
   },
@@ -245,11 +245,11 @@
           "resolved_at": null
         },
         "battery_wh": {
-          "status": "present",
-          "source": "scraped",
-          "value": 2520,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "torque_nm": {
@@ -261,27 +261,27 @@
           "resolved_at": null
         },
         "max_speed_mph": {
-          "status": "present",
-          "source": "scraped",
-          "value": 28,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "range_mi": {
-          "status": "present",
-          "source": "scraped",
-          "value": 90,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "weight_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 160.0,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_load_lb": {
@@ -301,27 +301,27 @@
           "resolved_at": null
         },
         "sensor_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "torque + cadence",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "brake_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hydraulic_disc",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "frame_material": {
-          "status": "present",
-          "source": "scraped",
-          "value": "aluminum",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "drive_type": {
@@ -342,17 +342,17 @@
         "motor_w": {
           "status": "present",
           "source": "scraped",
-          "value": 2000,
+          "value": 5000,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
         },
         "battery_wh": {
-          "status": "present",
-          "source": "scraped",
-          "value": 2520,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "torque_nm": {
@@ -364,27 +364,27 @@
           "resolved_at": null
         },
         "max_speed_mph": {
-          "status": "present",
-          "source": "scraped",
-          "value": 28,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "range_mi": {
-          "status": "present",
-          "source": "scraped",
-          "value": 90,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "weight_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 142.0,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_load_lb": {
@@ -404,27 +404,27 @@
           "resolved_at": null
         },
         "sensor_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "torque + cadence",
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": "torque",
           "note": "",
           "first_flagged": null,
           "resolved_at": null
         },
         "brake_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hydraulic_disc",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "frame_material": {
-          "status": "present",
-          "source": "scraped",
-          "value": "aluminum",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "drive_type": {
@@ -445,17 +445,17 @@
         "motor_w": {
           "status": "present",
           "source": "scraped",
-          "value": 2000,
+          "value": 8000,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
         },
         "battery_wh": {
-          "status": "present",
-          "source": "scraped",
-          "value": 2520,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "torque_nm": {
@@ -467,27 +467,27 @@
           "resolved_at": null
         },
         "max_speed_mph": {
-          "status": "present",
-          "source": "scraped",
-          "value": 28,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "range_mi": {
           "status": "present",
           "source": "scraped",
-          "value": 90,
+          "value": 11,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
         },
         "weight_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 160.0,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_load_lb": {
@@ -507,27 +507,27 @@
           "resolved_at": null
         },
         "sensor_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "torque + cadence",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "brake_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hydraulic_disc",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "frame_material": {
-          "status": "present",
-          "source": "scraped",
-          "value": "aluminum",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "drive_type": {
@@ -554,43 +554,43 @@
           "resolved_at": null
         },
         "battery_wh": {
-          "status": "present",
-          "source": "scraped",
-          "value": 2520,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "torque_nm": {
-          "status": "present",
-          "source": "scraped",
-          "value": 180,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_speed_mph": {
-          "status": "present",
-          "source": "scraped",
-          "value": 28,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "range_mi": {
-          "status": "present",
-          "source": "scraped",
-          "value": 90,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "weight_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 145.0,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_load_lb": {
@@ -610,27 +610,27 @@
           "resolved_at": null
         },
         "sensor_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "torque + cadence",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "brake_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hydraulic_disc",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "frame_material": {
-          "status": "present",
-          "source": "scraped",
-          "value": "aluminum",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "drive_type": {
@@ -657,11 +657,11 @@
           "resolved_at": null
         },
         "battery_wh": {
-          "status": "present",
-          "source": "scraped",
-          "value": 2520,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "torque_nm": {
@@ -673,27 +673,27 @@
           "resolved_at": null
         },
         "max_speed_mph": {
-          "status": "present",
-          "source": "scraped",
-          "value": 28,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "range_mi": {
-          "status": "present",
-          "source": "scraped",
-          "value": 90,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "weight_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 145.0,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_load_lb": {
@@ -713,27 +713,27 @@
           "resolved_at": null
         },
         "sensor_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "torque + cadence",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "brake_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hydraulic_disc",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "frame_material": {
-          "status": "present",
-          "source": "scraped",
-          "value": "aluminum",
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "drive_type": {

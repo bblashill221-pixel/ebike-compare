@@ -2,7 +2,7 @@
   "source": "https://newurtopia.com",
   "logo": "http://newurtopia.com/cdn/shop/files/20250916-164432.jpg?v=1758012291",
   "collection": "e-bikes",
-  "scraped_at": "2026-06-14T02:35:44.135875+00:00",
+  "scraped_at": "2026-06-24T04:53:24.262207+00:00",
   "model_count": 11,
   "models": [
     {
@@ -77,21 +77,21 @@
       "frame_sizes": [
         {
           "size": "Small",
-          "height_min": "5'3\"",
-          "height_max": "5'9\""
+          "height_min": null,
+          "height_max": null
         },
         {
           "size": "Medium",
-          "height_min": "5'7\"",
-          "height_max": "6'1\""
+          "height_min": null,
+          "height_max": null
         },
         {
           "size": "Large",
-          "height_min": "5'11\"",
-          "height_max": "6'5\""
+          "height_min": null,
+          "height_max": null
         }
       ],
-      "regular_price": 2499.0,
+      "is_new": false,
       "shipping": {
         "cost": 0,
         "free": true
@@ -103,7 +103,42 @@
           "free": true,
           "detail": "Front: Integrated StVZO headlight Rear: StVZO rear light (Not ARES lights)"
         }
-      ]
+      ],
+      "geometry": {
+        "Rider Height": "5'3\" - 6'5\""
+      },
+      "available_options": [
+        {
+          "group": "Size",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "S",
+              "free": true
+            },
+            {
+              "value": "M",
+              "free": true
+            },
+            {
+              "value": "L",
+              "free": true
+            }
+          ]
+        },
+        {
+          "group": "Included accessories",
+          "type": "accessory",
+          "choices": [
+            {
+              "value": "Lights",
+              "price": 0,
+              "free": true
+            }
+          ]
+        }
+      ],
+      "regular_price": 2499.0
     },
     {
       "model": "Carbon 1 Step-Thru E-Bike",
@@ -179,8 +214,7 @@
           "height_max": "6'1\""
         }
       ],
-      "regular_price": 2499.0,
-      "frame_style": "Step-Thru",
+      "is_new": false,
       "shipping": {
         "cost": 0,
         "free": true
@@ -192,7 +226,43 @@
           "free": true,
           "detail": "Front: Integrated StVZO headlight"
         }
-      ]
+      ],
+      "geometry": {
+        "Rider Height": "5'1\" - 6'1\""
+      },
+      "available_options": [
+        {
+          "group": "Style",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "Creme",
+              "free": true
+            },
+            {
+              "value": "Glacier Blue",
+              "free": true
+            },
+            {
+              "value": "Matte Black",
+              "free": true
+            }
+          ]
+        },
+        {
+          "group": "Included accessories",
+          "type": "accessory",
+          "choices": [
+            {
+              "value": "Lights",
+              "price": 0,
+              "free": true
+            }
+          ]
+        }
+      ],
+      "regular_price": 2499.0,
+      "frame_style": "Step-Thru"
     },
     {
       "model": "Carbon Classic E-Bike",
@@ -267,26 +337,53 @@
       "frame_sizes": [
         {
           "size": "Small",
-          "height_min": "5'3\"",
-          "height_max": "5'9\""
+          "height_min": null,
+          "height_max": null
         },
         {
           "size": "Medium",
-          "height_min": "5'7\"",
-          "height_max": "6'1\""
+          "height_min": null,
+          "height_max": null
         },
         {
           "size": "Large",
-          "height_min": "5'11\"",
-          "height_max": "6'5\""
+          "height_min": null,
+          "height_max": null
         }
       ],
-      "regular_price": 2299.0,
+      "is_new": false,
       "shipping": {
         "cost": 0,
         "free": true
       },
-      "free_accessories": []
+      "free_accessories": [],
+      "geometry": {
+        "Rider Height": "5'3\" - 6'5\""
+      },
+      "available_options": [
+        {
+          "group": "Size",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "S",
+              "free": true
+            },
+            {
+              "value": "M",
+              "free": true
+            },
+            {
+              "value": "L",
+              "free": true
+            }
+          ]
+        }
+      ],
+      "regular_price": 2299.0,
+      "family_id": "urtopia__carbon-classic-e-bike",
+      "tier": "Step-Over",
+      "frame_style": "Step-Over (Mid-Step)"
     },
     {
       "model": "Carbon Classic Step-Thru E-Bike",
@@ -356,20 +453,46 @@
           "height_max": "6'1\""
         }
       ],
-      "regular_price": 2299.0,
-      "frame_style": "Step-Thru",
+      "is_new": false,
       "shipping": {
         "cost": 0,
         "free": true
       },
-      "free_accessories": []
+      "free_accessories": [],
+      "geometry": {
+        "Rider Height": "5'1\" - 6'1\""
+      },
+      "available_options": [
+        {
+          "group": "Style",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "Glacier Blue",
+              "free": true
+            },
+            {
+              "value": "Creme",
+              "free": true
+            },
+            {
+              "value": "Matte Black",
+              "free": true
+            }
+          ]
+        }
+      ],
+      "regular_price": 2299.0,
+      "family_id": "urtopia__carbon-classic-e-bike",
+      "tier": "Step-Thru",
+      "frame_style": "Step-Thru"
     },
     {
       "model": "Carbon Fold 1 E-Bike",
       "handle": "urtopia-carbon-fold",
       "url": "https://newurtopia.com/products/urtopia-carbon-fold",
       "product_types": [
-        "Folding"
+        "Commuter / Urban"
       ],
       "price_from": 1799.0,
       "currency": "USD",
@@ -441,7 +564,7 @@
           "height_max": "6'1\""
         }
       ],
-      "regular_price": 2299.0,
+      "is_new": false,
       "shipping": {
         "cost": 0,
         "free": true
@@ -453,14 +576,31 @@
           "free": true,
           "detail": "Integrated rear lights"
         }
-      ]
+      ],
+      "geometry": {
+        "Rider Height": "5'1\" - 6'1\""
+      },
+      "available_options": [
+        {
+          "group": "Included accessories",
+          "type": "accessory",
+          "choices": [
+            {
+              "value": "Rearlights",
+              "price": 0,
+              "free": true
+            }
+          ]
+        }
+      ],
+      "regular_price": 2299.0
     },
     {
       "model": "Carbon Fold 2 E-Bike",
       "handle": "urtopia-carbon-fold-2-ebike",
       "url": "https://newurtopia.com/products/urtopia-carbon-fold-2-ebike",
       "product_types": [
-        "Folding"
+        "Commuter / Urban"
       ],
       "price_from": 1899.0,
       "currency": "USD",
@@ -530,18 +670,23 @@
           "height_max": "6'1\""
         }
       ],
+      "is_new": false,
       "shipping": {
         "cost": 0,
         "free": true
       },
-      "free_accessories": []
+      "free_accessories": [],
+      "geometry": {
+        "Rider Height": "5'1\" - 6'1\""
+      },
+      "available_options": []
     },
     {
       "model": "Carbon Fold Step-Thru E-Bike",
       "handle": "urtopia-carbon-fold-step-thru-ebike",
       "url": "https://newurtopia.com/products/urtopia-carbon-fold-step-thru-ebike",
       "product_types": [
-        "Folding"
+        "Commuter / Urban"
       ],
       "price_from": 1599.0,
       "currency": "USD",
@@ -602,13 +747,18 @@
           "height_max": "6'5\""
         }
       ],
-      "regular_price": 2099.0,
-      "frame_style": "Step-Thru",
+      "is_new": false,
       "shipping": {
         "cost": 0,
         "free": true
       },
-      "free_accessories": []
+      "free_accessories": [],
+      "geometry": {
+        "Rider Height": "4'11\" - 6'5\""
+      },
+      "available_options": [],
+      "regular_price": 2099.0,
+      "frame_style": "Step-Thru"
     },
     {
       "model": "Carbon Fusion GT E-Bike",
@@ -684,7 +834,7 @@
           "height_max": "6'3\""
         }
       ],
-      "regular_price": 2799.0,
+      "is_new": false,
       "shipping": {
         "cost": 0,
         "free": true
@@ -696,7 +846,42 @@
           "free": true,
           "detail": "Front: Integrated StVZO headlight Rear: StVZO rear light (Not ARES lights)"
         }
-      ]
+      ],
+      "geometry": {
+        "Rider Height": "5'3\" - 6'3\""
+      },
+      "available_options": [
+        {
+          "group": "Style",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "Blazing Black",
+              "free": true
+            },
+            {
+              "value": "Deep Sea Blue",
+              "free": true
+            },
+            {
+              "value": "Vital Orange",
+              "free": true
+            }
+          ]
+        },
+        {
+          "group": "Included accessories",
+          "type": "accessory",
+          "choices": [
+            {
+              "value": "Lights",
+              "price": 0,
+              "free": true
+            }
+          ]
+        }
+      ],
+      "regular_price": 2799.0
     },
     {
       "model": "Carbon Fusion Pro E-Bike",
@@ -770,12 +955,40 @@
           "height_max": "6'3\""
         }
       ],
-      "regular_price": 2499.0,
+      "is_new": false,
       "shipping": {
         "cost": 0,
         "free": true
       },
-      "free_accessories": []
+      "free_accessories": [],
+      "geometry": {
+        "Rider Height": "5'3\" - 6'3\""
+      },
+      "available_options": [
+        {
+          "group": "Style",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "Vital Orange",
+              "free": true
+            },
+            {
+              "value": "Elegant Grey",
+              "free": true
+            },
+            {
+              "value": "Deep Sea Blue",
+              "free": true
+            },
+            {
+              "value": "Blazing Black",
+              "free": true
+            }
+          ]
+        }
+      ],
+      "regular_price": 2499.0
     },
     {
       "model": "Carbon Joy Ultra E-Bike",
@@ -866,12 +1079,17 @@
           "height_max": "6'3\""
         }
       ],
-      "regular_price": 2499.0,
+      "is_new": false,
       "shipping": {
         "cost": 0,
         "free": true
       },
-      "free_accessories": []
+      "free_accessories": [],
+      "geometry": {
+        "Rider Height": "4'11\" - 6'3\""
+      },
+      "available_options": [],
+      "regular_price": 2499.0
     },
     {
       "model": "Urtopia Joy Carbon E-Bike",
@@ -957,12 +1175,17 @@
           "height_max": "6'3\""
         }
       ],
-      "regular_price": 2399.0,
+      "is_new": false,
       "shipping": {
         "cost": 0,
         "free": true
       },
-      "free_accessories": []
+      "free_accessories": [],
+      "geometry": {
+        "Rider Height": "4'11\" - 6'3\""
+      },
+      "available_options": [],
+      "regular_price": 2399.0
     }
   ],
   "available_accessories": [],

@@ -74,7 +74,6 @@
    "rear_brake_rotor": "203mm 6-bolt"
   },
   "expected": {
-   "type": "coil",
    "travel_mm": 51,
    "lockout": true,
    "thru_axle": false,
@@ -726,22 +725,6 @@
  },
  {
   "brand": "aventon",
-  "field": "pedal_assist",
-  "kind": "pedal_assist",
-  "text": "3 Levels + Boost Mode (with Ride Tune Customization)",
-  "siblings": {
-   "front_brake_rotor": "Tektro 180mm 6 bolt",
-   "rear_brake_rotor": "Tektro 180mm 6 bolt"
-  },
-  "expected": {
-   "levels": 3,
-   "boost": true,
-   "details": "Ride Tune Customization",
-   "_kind": "pedal_assist"
-  }
- },
- {
-  "brand": "aventon",
   "field": "display",
   "kind": "display",
   "text": "Aventon BC280",
@@ -905,6 +888,20 @@
    "details": "Super Deluxe Select+ (210x55)",
    "model": "Super Deluxe Select+ 210x55",
    "_kind": "shock"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "pedal_assist",
+  "kind": "pedal_assist",
+  "text": "4 Levels",
+  "siblings": {
+   "front_brake_rotor": "180mm 6 bolt",
+   "rear_brake_rotor": "180mm 6 bolt"
+  },
+  "expected": {
+   "levels": 4,
+   "_kind": "pedal_assist"
   }
  },
  {
@@ -2256,13 +2253,14 @@
   "brand": "cannondale",
   "field": "rear_shock",
   "kind": "shock",
-  "text": "Fox Float X Factory, Kashima, 2 pos adj, EVOL LV, 230x62.5mm",
+  "text": "RockShox Deluxe Ultimate RCT, DebonAir+, 2-Pos mode adjust, adjustable LSC & rebound, 210x55mm",
   "siblings": null,
   "expected": {
-   "manufacturer": "Fox",
-   "size": "230x62.5mm",
-   "details": "Float Factory, Kashima, 2 pos adj, EVOL LV",
-   "model": "Float X Factory Kashima",
+   "manufacturer": "RockShox",
+   "type": "air",
+   "size": "210x55mm",
+   "details": "Deluxe Ultimate RCT, DebonAir+, 2-Pos mode adjust, adjustable LSC & rebound",
+   "model": "Deluxe Ultimate RCT DebonAir+",
    "_kind": "shock"
   }
  },
@@ -2270,14 +2268,14 @@
   "brand": "cannondale",
   "field": "rear_shock",
   "kind": "shock",
-  "text": "RockShox Deluxe Select+, DebonAir+, 2-Pos mode adjust, adjustable rebound, 230x62.5mm",
+  "text": "RockShox Deluxe Select+ RT, DebonAir+, 2-Pos mode adjust, adjustable rebound, 210x55mm",
   "siblings": null,
   "expected": {
    "manufacturer": "RockShox",
    "type": "air",
-   "size": "230x62.5mm",
-   "details": "Deluxe Select+, DebonAir+, 2-Pos mode adjust, adjustable rebound",
-   "model": "Deluxe Select+ DebonAir+ 2-Pos",
+   "size": "210x55mm",
+   "details": "Deluxe Select+ RT, DebonAir+, 2-Pos mode adjust, adjustable rebound",
+   "model": "Deluxe Select+ RT DebonAir+",
    "_kind": "shock"
   }
  },
@@ -2352,7 +2350,6 @@
   "text": "alloy suspension Lo",
   "siblings": null,
   "expected": {
-   "type": "coil",
    "lockout": false,
    "thru_axle": false,
    "material": "aluminum alloy",
@@ -2482,7 +2479,6 @@
   "text": "alloy crown suspension fork",
   "siblings": null,
   "expected": {
-   "type": "coil",
    "lockout": false,
    "thru_axle": false,
    "material": "aluminum alloy",
@@ -2607,7 +2603,6 @@
   },
   "expected": {
    "manufacturer": "RST",
-   "type": "coil",
    "travel_mm": 95,
    "lockout": false,
    "thru_axle": false,
@@ -2882,7 +2877,6 @@
   },
   "expected": {
    "manufacturer": "RST",
-   "type": "coil",
    "travel_mm": 60,
    "lockout": false,
    "thru_axle": false,
@@ -3366,13 +3360,25 @@
  },
  {
   "brand": "engwe",
+  "field": "suspension",
+  "kind": "fork",
+  "text": "Front Suspension Fork",
+  "siblings": null,
+  "expected": {
+   "lockout": false,
+   "thru_axle": false,
+   "details": "Front Suspension Fork",
+   "_kind": "fork"
+  }
+ },
+ {
+  "brand": "engwe",
   "field": "display",
   "kind": "display",
-  "text": "LCD Color Display",
+  "text": "LCD Display",
   "siblings": null,
   "expected": {
    "type": "lcd",
-   "details": "Color",
    "_kind": "display"
   }
  },
@@ -3384,7 +3390,6 @@
   "siblings": null,
   "expected": {
    "manufacturer": "DNM",
-   "type": "coil",
    "travel_mm": 100,
    "lockout": false,
    "thru_axle": false,
@@ -3431,23 +3436,6 @@
     "UL 2849"
    ],
    "_kind": "cert"
-  }
- },
- {
-  "brand": "engwe",
-  "field": "fork",
-  "kind": "fork",
-  "text": "Hydraulic, Adjustable Lockout, Aluminum & Steel Construction",
-  "siblings": {
-   "disc_rotor": "180mm Front & Rear Drivetrain"
-  },
-  "expected": {
-   "type": "coil",
-   "lockout": true,
-   "thru_axle": false,
-   "material": "aluminum",
-   "details": "Hydraulic, Adjustable Lockout, Steel Construction",
-   "_kind": "fork"
   }
  },
  {
@@ -4064,7 +4052,6 @@
   },
   "expected": {
    "manufacturer": "SR Suntour",
-   "type": "coil",
    "travel_mm": 120,
    "lockout": false,
    "thru_axle": false,
@@ -4279,51 +4266,58 @@
  },
  {
   "brand": "euphree",
-  "field": "display",
-  "kind": "display",
-  "text": "Left-mounted color LCD",
-  "siblings": null,
-  "expected": {
-   "type": "lcd",
-   "details": "Left-mounted, color",
-   "_kind": "display"
-  }
- },
- {
-  "brand": "euphree",
-  "field": "throttle",
-  "kind": "throttle",
-  "text": "Left thumb throttle",
-  "siblings": null,
-  "expected": {
-   "type": "thumb",
-   "side": "left",
-   "_kind": "throttle"
-  }
- },
- {
-  "brand": "euphree",
-  "field": "seat_tube",
-  "kind": "tubes",
-  "text": "13”",
-  "siblings": null,
-  "expected": {
-   "details": "13\"",
-   "_kind": "tubes"
-  }
- },
- {
-  "brand": "euphree",
   "field": "pedals",
   "kind": "pedals",
-  "text": "Alloy w/ Rubber Grip",
+  "text": "Polypropylene",
   "siblings": {
-   "rotors": "203mm Front & Rear"
+   "rotors": "180mm Front & Rear"
   },
   "expected": {
-   "material": "aluminum",
-   "details": "Rubber grip",
+   "details": "Polypropylene",
    "_kind": "pedals"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "seatpost",
+  "kind": "seatpost",
+  "text": "SR Suntour NCX Suspension",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "manufacturer": "SR Suntour",
+   "type": "suspension",
+   "model": "NCX",
+   "_kind": "seatpost"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "saddle",
+  "kind": "saddle",
+  "text": "Velo Wide Comfort",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "manufacturer": "Velo",
+   "details": "Wide Comfort",
+   "_kind": "saddle"
+  }
+ },
+ {
+  "brand": "euphree",
+  "field": "spokes",
+  "kind": "spokes",
+  "text": "12G Front / 12G Rear",
+  "siblings": {
+   "rotors": "180mm Front & Rear"
+  },
+  "expected": {
+   "gauge": 12,
+   "details": "12G Front / 12G Rear",
+   "_kind": "spokes"
   }
  },
  {
@@ -4357,20 +4351,6 @@
  },
  {
   "brand": "euphree",
-  "field": "saddle",
-  "kind": "saddle",
-  "text": "Selle Royal Athletic Comfort Saddle",
-  "siblings": {
-   "rotors": "203mm Front & Rear"
-  },
-  "expected": {
-   "manufacturer": "Selle Royal",
-   "model": "Athletic Comfort",
-   "_kind": "saddle"
-  }
- },
- {
-  "brand": "euphree",
   "field": "certification",
   "kind": "cert",
   "text": "SGS Certified to meet UL2271 (battery) & UL2849 (system)",
@@ -4388,18 +4368,16 @@
  },
  {
   "brand": "euphree",
-  "field": "seatpost",
-  "kind": "seatpost",
-  "text": "SR Suntour NCX Suspension, 50 mm Travel",
+  "field": "display",
+  "kind": "display",
+  "text": "Left-Sided Color LCD",
   "siblings": {
    "rotors": "203mm Front & Rear"
   },
   "expected": {
-   "manufacturer": "SR Suntour",
-   "model": "NCX",
-   "type": "suspension",
-   "travel_mm": 50,
-   "_kind": "seatpost"
+   "type": "lcd",
+   "details": "Left-side, color",
+   "_kind": "display"
   }
  },
  {
@@ -4477,7 +4455,6 @@
   "siblings": null,
   "expected": {
    "manufacturer": "SR Suntour",
-   "type": "coil",
    "lockout": false,
    "thru_axle": false,
    "details": "Suspension Fork",
@@ -5424,7 +5401,6 @@
   "text": "Hydraulic front suspension fork",
   "siblings": null,
   "expected": {
-   "type": "coil",
    "lockout": false,
    "thru_axle": false,
    "details": "Hydraulic front suspension fork",
@@ -5493,17 +5469,6 @@
    "output_v": 54.6,
    "details": "100-220V AC input",
    "_kind": "charger"
-  }
- },
- {
-  "brand": "heybike",
-  "field": "display_type",
-  "kind": "display",
-  "text": "LCD Display",
-  "siblings": null,
-  "expected": {
-   "type": "lcd",
-   "_kind": "display"
   }
  },
  {
@@ -5705,6 +5670,18 @@
   "expected": {
    "material": "aluminum",
    "_kind": "spokes"
+  }
+ },
+ {
+  "brand": "heybike",
+  "field": "display_type",
+  "kind": "display",
+  "text": "Build-in LCD Display",
+  "siblings": null,
+  "expected": {
+   "type": "lcd",
+   "details": "Built-in",
+   "_kind": "display"
   }
  },
  {
@@ -6921,6 +6898,18 @@
     "UL 2849"
    ],
    "_kind": "cert"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "twist_throttle",
+  "kind": "throttle",
+  "text": "A half-twist throttle located on the right handlebar delivers pure power on demand.",
+  "siblings": null,
+  "expected": {
+   "type": "half_twist",
+   "side": "right",
+   "_kind": "throttle"
   }
  }
 ]

@@ -1,7 +1,7 @@
 {
   "source": "https://juicedbikes.com",
   "logo": "https://juicedbikes.com/cdn/shop/files/juiced-logo.png",
-  "scraped_at": "2026-06-10T23:55:48.728428+00:00",
+  "scraped_at": "2026-06-24T04:46:57.291734+00:00",
   "model_count": 2,
   "models": [
     {
@@ -13,7 +13,7 @@
         "Fat Tire"
       ],
       "price_from": 1699.0,
-      "regular_price": 1944.0,
+      "regular_price": 1914.0,
       "currency": "USD",
       "options": {
         "colors": [
@@ -48,7 +48,7 @@
             "Version": "Hardtail"
           },
           "price": 1699.0,
-          "regular_price": 1944.0,
+          "regular_price": 1914.0,
           "sku": "501-01806-G002",
           "variant_id": 42940470493261,
           "available": true,
@@ -66,7 +66,7 @@
             "Version": "Hardtail"
           },
           "price": 1699.0,
-          "regular_price": 1944.0,
+          "regular_price": 1914.0,
           "sku": "501-01806-M002",
           "variant_id": 42940470558797,
           "available": true,
@@ -84,7 +84,7 @@
             "Version": "Hardtail"
           },
           "price": 1699.0,
-          "regular_price": 1944.0,
+          "regular_price": 1914.0,
           "sku": "501-01806-O002",
           "variant_id": 42940470624333,
           "available": true,
@@ -132,6 +132,13 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "4'10\"",
+          "height_max": "6'3\""
+        }
+      ],
       "geometry": {
         "Rider Height": "4'10\" - 6'3\"",
         "Seat Height": "31.5 in"
@@ -199,14 +206,7 @@
         }
       ],
       "tier": "Hardtail",
-      "family_id": "juiced__scrambler",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "4'10\"",
-          "height_max": "6'3\""
-        }
-      ]
+      "family_id": "juiced__scrambler"
     },
     {
       "model": "Scrambler — Full Suspension",
@@ -217,7 +217,7 @@
         "Fat Tire"
       ],
       "price_from": 1899.0,
-      "regular_price": 2144.0,
+      "regular_price": 2114.0,
       "currency": "USD",
       "options": {
         "colors": [
@@ -252,7 +252,7 @@
             "Version": "Full Suspension"
           },
           "price": 1899.0,
-          "regular_price": 2144.0,
+          "regular_price": 2114.0,
           "sku": "501-01807-B002",
           "variant_id": 42940470394957,
           "available": true,
@@ -270,7 +270,7 @@
             "Version": "Full Suspension"
           },
           "price": 1899.0,
-          "regular_price": 2144.0,
+          "regular_price": 2114.0,
           "sku": "501-01807-P002",
           "variant_id": 42940470427725,
           "available": true,
@@ -288,7 +288,7 @@
             "Version": "Full Suspension"
           },
           "price": 1899.0,
-          "regular_price": 2144.0,
+          "regular_price": 2114.0,
           "sku": "501-01807-W002",
           "variant_id": 42940470460493,
           "available": true,
@@ -336,6 +336,13 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "4'10\"",
+          "height_max": "6'3\""
+        }
+      ],
       "geometry": {
         "Rider Height": "4'10\" - 6'3\"",
         "Seat Height": "31.5 in"
@@ -403,14 +410,7 @@
         }
       ],
       "tier": "Full Suspension",
-      "family_id": "juiced__scrambler",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "4'10\"",
-          "height_max": "6'3\""
-        }
-      ]
+      "family_id": "juiced__scrambler"
     }
   ],
   "available_accessories": [],

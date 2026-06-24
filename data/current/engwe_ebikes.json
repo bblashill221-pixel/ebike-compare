@@ -2,8 +2,8 @@
   "source": "https://engwe-bikes.com",
   "logo": "https://us.engwe.com/cdn/shop/files/ENGWE_LOGO.png",
   "collection": "all-ebikes+feature-ebikes",
-  "scraped_at": "2026-06-11T00:01:13.216562+00:00",
-  "model_count": 20,
+  "scraped_at": "2026-06-24T04:52:51.833257+00:00",
+  "model_count": 21,
   "models": [
     {
       "model": "ENGWE E26",
@@ -132,9 +132,16 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'7\"",
+          "height_max": "6'7\""
+        }
+      ],
       "geometry": {
         "Rider Heights": "5'7\" - 6'7\"",
-        "Rider Height": "5'7\" - 6'7\"",
+        "Rider Height": "5.6 (ft) -6.5 (ft)",
         "A--Wheelbase": "120.5 cm",
         "C--Reach": "50 cm",
         "D--Standover Height": "72 cm",
@@ -163,14 +170,7 @@
       ],
       "tier": "Step-Over",
       "family_id": "engwe__engwe-e26",
-      "frame_style": "Step-Over (Mid-Step)",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'7\"",
-          "height_max": "6'7\""
-        }
-      ]
+      "frame_style": "Step-Over (Mid-Step)"
     },
     {
       "model": "ENGWE E26 — Step-Thru",
@@ -299,9 +299,16 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'7\"",
+          "height_max": "6'7\""
+        }
+      ],
       "geometry": {
         "Rider Heights": "5'7\" - 6'7\"",
-        "Rider Height": "5'7\" - 6'7\"",
+        "Rider Height": "5.6 (ft) -6.5 (ft)",
         "A--Wheelbase": "120.5 cm",
         "C--Reach": "50 cm",
         "D--Standover Height": "72 cm",
@@ -330,21 +337,13 @@
       ],
       "tier": "Step-Thru",
       "family_id": "engwe__engwe-e26",
-      "frame_style": "Step-Thru",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'7\"",
-          "height_max": "6'7\""
-        }
-      ]
+      "frame_style": "Step-Thru"
     },
     {
       "model": "ENGWE EP-2 Pro",
       "handle": "engwe-ep-2-pro-750w-folding-electric-mountain-bike",
       "url": "https://engwe-bikes.com/products/engwe-ep-2-pro-750w-folding-electric-mountain-bike",
       "product_types": [
-        "Folding",
         "Mountain (eMTB)"
       ],
       "price_from": 1399.0,
@@ -484,14 +483,179 @@
       "available_options": []
     },
     {
+      "model": "ENGWE L16",
+      "handle": "engwe-l16",
+      "url": "https://engwe-bikes.com/products/engwe-l16",
+      "product_types": [
+        "Commuter / Urban"
+      ],
+      "price_from": 899.0,
+      "regular_price": 1199.0,
+      "currency": "USD",
+      "options": {
+        "Style": [
+          "Single Battery",
+          "Dual Battiries"
+        ],
+        "colors": [
+          {
+            "name": "Champagne",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0237/3536/9792/files/188ac7c962863d249c431d4649a7c3a3_94f71001-f5a4-4546-b895-58fdeecd8c98.png?v=1782265026"
+          },
+          {
+            "name": "Black",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0237/3536/9792/files/0cfc068ec4b009a1162d8175ad09535d_a215c0a8-442f-4702-a070-87e76805594d.png?v=1782265026"
+          }
+        ]
+      },
+      "configurations": [
+        {
+          "options": {
+            "Color": "Champagne",
+            "Style": "Single Battery"
+          },
+          "price": 899.0,
+          "regular_price": 1199.0,
+          "available": true,
+          "sku": "L16ChampagneSingle",
+          "variant_id": 47769552978150,
+          "color": {
+            "name": "Champagne",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0237/3536/9792/files/188ac7c962863d249c431d4649a7c3a3_94f71001-f5a4-4546-b895-58fdeecd8c98.png?v=1782265026"
+          }
+        },
+        {
+          "options": {
+            "Color": "Champagne",
+            "Style": "Dual Battiries"
+          },
+          "price": 1399.0,
+          "regular_price": 1699.0,
+          "available": true,
+          "sku": "L16ChampagneDual",
+          "variant_id": 47769553010918,
+          "color": {
+            "name": "Champagne",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0237/3536/9792/files/188ac7c962863d249c431d4649a7c3a3_94f71001-f5a4-4546-b895-58fdeecd8c98.png?v=1782265026"
+          }
+        },
+        {
+          "options": {
+            "Color": "Black",
+            "Style": "Single Battery"
+          },
+          "price": 899.0,
+          "regular_price": 1199.0,
+          "available": true,
+          "sku": "L16BlackSingle",
+          "variant_id": 47769553043686,
+          "color": {
+            "name": "Black",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0237/3536/9792/files/0cfc068ec4b009a1162d8175ad09535d_a215c0a8-442f-4702-a070-87e76805594d.png?v=1782265026"
+          }
+        },
+        {
+          "options": {
+            "Color": "Black",
+            "Style": "Dual Battiries"
+          },
+          "price": 1399.0,
+          "regular_price": 1699.0,
+          "available": true,
+          "sku": "L16BlackDual",
+          "variant_id": 47769553076454,
+          "color": {
+            "name": "Black",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0237/3536/9792/files/0cfc068ec4b009a1162d8175ad09535d_a215c0a8-442f-4702-a070-87e76805594d.png?v=1782265026"
+          }
+        }
+      ],
+      "specs": {
+        "all": {
+          "Motor": "750W Rated Motor, 1500W Peak Output",
+          "Frame Material": "Steel",
+          "Waterproof Rating": "IPX4",
+          "Tires": "16 × 4.0\" Fat Tires",
+          "Top Speed": "25 km/h",
+          "Maximum range": "Up to 70 miles for the single-battery version (PAS mode); Up to 150 miles for the dual-battery version (PAS mode).)",
+          "Single-battery version": "48V 18Ah Lithium-Ion Battery *1",
+          "Dual-battery version": "48V 18Ah lithium-ion battery plus 48V 23Ah lithium-ion battery",
+          "Max Torque": "75 Nm",
+          "Suspension": "Front Suspension Fork",
+          "Brakes": "160mm Hydraulic Disc Brakes",
+          "Charging Time": "6–7 Hours",
+          "Maximum Payload Capacity": "120 kg (264 lbs)",
+          "Drivetrain": "Shimano 7-Speed Gear System",
+          "Display": "LCD Display",
+          "Bike Weight": "Single Battery 39.6 kg (87.3 lbs) Dual Battery 45.7 kg (100.8 lbs)",
+          "Single Battery Version": "48V 18Ah Lithium-Ion*1",
+          "Dual Battery Version": "48V 18Ah Lithium-Ion*1,48V 23Ah Lithium-Ion*1",
+          "Rider Height": "4.0 (ft) -6.0 (ft)",
+          "Payload Capacity": "120 kg (264 lbs)",
+          "A- Total Length": "63.4 in",
+          "B - Wheelbase": "42.7 in",
+          "C - Standover Height": "14.9 in",
+          "D- Handlebar Height": "43.3 in",
+          "E - Seat Height": "33.8 in"
+        }
+      },
+      "spec_count": 25,
+      "warranty": "2-Year Warranty",
+      "scrape_error": null,
+      "is_new": false,
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": [],
+      "geometry": {
+        "Rider Height": "4.0 (ft) -6.0 (ft)",
+        "B - Wheelbase": "42.7 in",
+        "C - Standover Height": "14.9 in",
+        "E - Seat Height": "33.8 in"
+      },
+      "available_options": [
+        {
+          "group": "Style",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "Single Battery",
+              "price": 899.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "Dual Battiries",
+              "price": 1399.0,
+              "price_delta": 500.0,
+              "free": false
+            }
+          ]
+        }
+      ]
+    },
+    {
       "model": "ENGWE L20 2.0",
       "handle": "l20-2-0",
       "url": "https://engwe-bikes.com/products/l20-2-0",
       "product_types": [
         "Commuter / Urban"
       ],
-      "price_from": 1599.0,
-      "regular_price": null,
+      "price_from": 699.0,
+      "regular_price": 1199.0,
       "currency": "USD",
       "options": {
         "colors": [
@@ -502,16 +666,16 @@
             "image": "https://cdn.shopify.com/s/files/1/0237/3536/9792/files/2_a8f3a258-a57c-4e49-9e71-0265d88cc1a2.jpg?v=1758763528"
           },
           {
-            "name": "Orange",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0237/3536/9792/files/ec17cbe168d05b446f874125ec5edd1d.jpg?v=1758763528"
-          },
-          {
             "name": "Onyx Black",
             "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0237/3536/9792/files/2_d63ddc93-985d-4924-8e1a-8866ca15c777.jpg?v=1758763528"
+          },
+          {
+            "name": "Orange",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0237/3536/9792/files/ec17cbe168d05b446f874125ec5edd1d.jpg?v=1758763528"
           },
           {
             "name": "Rose Pink",
@@ -526,9 +690,9 @@
           "options": {
             "Color": "Sea Green"
           },
-          "price": 1599.0,
-          "regular_price": null,
-          "available": false,
+          "price": 699.0,
+          "regular_price": 1199.0,
+          "available": true,
           "sku": "NEWL2OGR13A",
           "variant_id": 44332433866982,
           "color": {
@@ -540,27 +704,11 @@
         },
         {
           "options": {
-            "Color": "Orange"
-          },
-          "price": 1599.0,
-          "regular_price": null,
-          "available": false,
-          "sku": "NEWL2OOR13A",
-          "variant_id": 46524665430246,
-          "color": {
-            "name": "Orange",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0237/3536/9792/files/ec17cbe168d05b446f874125ec5edd1d.jpg?v=1758763528"
-          }
-        },
-        {
-          "options": {
             "Color": "Onyx Black"
           },
-          "price": 1599.0,
-          "regular_price": null,
-          "available": false,
+          "price": 699.0,
+          "regular_price": 1199.0,
+          "available": true,
           "sku": "NEWL2OBK13A",
           "variant_id": 44332433834214,
           "color": {
@@ -572,11 +720,27 @@
         },
         {
           "options": {
+            "Color": "Orange"
+          },
+          "price": 699.0,
+          "regular_price": 1199.0,
+          "available": true,
+          "sku": "NEWL2OOR13A",
+          "variant_id": 46524665430246,
+          "color": {
+            "name": "Orange",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0237/3536/9792/files/ec17cbe168d05b446f874125ec5edd1d.jpg?v=1758763528"
+          }
+        },
+        {
+          "options": {
             "Color": "Rose Pink"
           },
-          "price": 1599.0,
-          "regular_price": null,
-          "available": false,
+          "price": 699.0,
+          "regular_price": 1199.0,
+          "available": true,
           "sku": "NEWL2OPK13A",
           "variant_id": 44332433899750,
           "color": {
@@ -625,23 +789,23 @@
         "free": true
       },
       "free_accessories": [],
-      "geometry": {
-        "Rider Heights": "5'1\" - 6'1\"",
-        "Rider Height": "5'1\" - 6'1\"",
-        "C--Reach": "14.17 inches (36 cm)",
-        "D--Standover Height": "14.9 inches (38 cm)",
-        "E--Wheelbase": "47.2 inches (120 cm)",
-        "F--Minimum Saddle Height": "35.4 inches (90 cm)",
-        "G--Maximum Saddle Height": "40.55 inches (103 cm)"
-      },
-      "available_options": [],
       "frame_sizes": [
         {
           "size": null,
           "height_min": "5'1\"",
           "height_max": "6'1\""
         }
-      ]
+      ],
+      "geometry": {
+        "Rider Heights": "5'1\" - 6'1\"",
+        "Rider Height": "5.0 (ft) -6.0 (ft)",
+        "C--Reach": "14.17 inches (36 cm)",
+        "D--Standover Height": "14.9 inches (38 cm)",
+        "E--Wheelbase": "47.2 inches (120 cm)",
+        "F--Minimum Saddle Height": "35.4 inches (90 cm)",
+        "G--Maximum Saddle Height": "40.55 inches (103 cm)"
+      },
+      "available_options": []
     },
     {
       "model": "ENGWE LE20",
@@ -903,9 +1067,16 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'1\"",
+          "height_max": "6'3\""
+        }
+      ],
       "geometry": {
         "Rider Heights": "5'1\" - 6'3\"",
-        "Rider Height": "5'1\" - 6'3\"",
+        "Rider Height": "5.0 (ft) -6.2 (ft)",
         "C--Reach": "50 cm",
         "D--Standover Height": "47 cm",
         "E--Wheelbase": "126.5 cm",
@@ -969,14 +1140,7 @@
         }
       ],
       "tier": "Single Battery",
-      "family_id": "engwe__le20",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'1\"",
-          "height_max": "6'3\""
-        }
-      ]
+      "family_id": "engwe__le20"
     },
     {
       "model": "ENGWE LE20 — Dual Battery",
@@ -1238,9 +1402,16 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'1\"",
+          "height_max": "6'3\""
+        }
+      ],
       "geometry": {
         "Rider Heights": "5'1\" - 6'3\"",
-        "Rider Height": "5'1\" - 6'3\"",
+        "Rider Height": "5.0 (ft) -6.2 (ft)",
         "C--Reach": "50 cm",
         "D--Standover Height": "47 cm",
         "E--Wheelbase": "126.5 cm",
@@ -1304,14 +1475,7 @@
         }
       ],
       "tier": "Dual Battery",
-      "family_id": "engwe__le20",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'1\"",
-          "height_max": "6'3\""
-        }
-      ]
+      "family_id": "engwe__le20"
     },
     {
       "model": "ENGWE M20",
@@ -1441,9 +1605,16 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'3\"",
+          "height_max": "6'3\""
+        }
+      ],
       "geometry": {
         "Rider Heights": "5'3\" - 6'3\"",
-        "Rider Height": "5'3\" - 6'3\"",
+        "Rider Height": "5.0 (ft) -6.8 (ft)",
         "C--Reach": "37 cm",
         "D--Standover Height": "76.2 cm",
         "E--Wheelbase": "115.2 cm",
@@ -1470,14 +1641,7 @@
         }
       ],
       "tier": "Single Battery",
-      "family_id": "engwe__m20",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'3\"",
-          "height_max": "6'3\""
-        }
-      ]
+      "family_id": "engwe__m20"
     },
     {
       "model": "ENGWE M20 — Dual Battery",
@@ -1607,9 +1771,16 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'3\"",
+          "height_max": "6'3\""
+        }
+      ],
       "geometry": {
         "Rider Heights": "5'3\" - 6'3\"",
-        "Rider Height": "5'3\" - 6'3\"",
+        "Rider Height": "5.0 (ft) -6.8 (ft)",
         "C--Reach": "37 cm",
         "D--Standover Height": "76.2 cm",
         "E--Wheelbase": "115.2 cm",
@@ -1636,14 +1807,7 @@
         }
       ],
       "tier": "Dual Battery",
-      "family_id": "engwe__m20",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'3\"",
-          "height_max": "6'3\""
-        }
-      ]
+      "family_id": "engwe__m20"
     },
     {
       "model": "ENGWE M20 2.0",
@@ -1854,7 +2018,7 @@
       "product_types": [
         "Commuter / Urban"
       ],
-      "price_from": 1399.0,
+      "price_from": 1499.0,
       "regular_price": 1999.0,
       "currency": "USD",
       "options": {
@@ -1876,7 +2040,7 @@
           "options": {
             "Style": "Single Battery"
           },
-          "price": 1399.0,
+          "price": 1499.0,
           "regular_price": 1999.0,
           "available": true,
           "sku": "m203.020ah",
@@ -1934,6 +2098,13 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'3\"",
+          "height_max": "6'8\""
+        }
+      ],
       "geometry": {
         "Rider Height": "5'3\" - 6'8\"",
         "C - Handlebar Reach": "Adjustable",
@@ -1948,13 +2119,13 @@
           "choices": [
             {
               "value": "Single Battery",
-              "price": 1399.0,
+              "price": 1499.0,
               "price_delta": 0.0,
               "free": true
             },
             {
               "value": "Dual Batteries",
-              "price": 1699.0,
+              "price": 1799.0,
               "price_delta": 300.0,
               "free": false
             }
@@ -1962,14 +2133,7 @@
         }
       ],
       "tier": "Single Battery",
-      "family_id": "engwe__3300-w-electric-bike-motor-engwe-m20-3-0-moped-style-ebike",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'3\"",
-          "height_max": "6'8\""
-        }
-      ]
+      "family_id": "engwe__3300-w-electric-bike-motor-engwe-m20-3-0-moped-style-ebike"
     },
     {
       "model": "ENGWE M20 3.0 — Dual Battery",
@@ -1978,7 +2142,7 @@
       "product_types": [
         "Commuter / Urban"
       ],
-      "price_from": 1699.0,
+      "price_from": 1799.0,
       "regular_price": 2499.0,
       "currency": "USD",
       "options": {
@@ -2000,7 +2164,7 @@
           "options": {
             "Style": "Dual Batteries"
           },
-          "price": 1699.0,
+          "price": 1799.0,
           "regular_price": 2499.0,
           "available": true,
           "sku": "m203.040ah",
@@ -2058,6 +2222,13 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'3\"",
+          "height_max": "6'8\""
+        }
+      ],
       "geometry": {
         "Rider Height": "5'3\" - 6'8\"",
         "C - Handlebar Reach": "Adjustable",
@@ -2072,13 +2243,13 @@
           "choices": [
             {
               "value": "Single Battery",
-              "price": 1399.0,
+              "price": 1499.0,
               "price_delta": 0.0,
               "free": true
             },
             {
               "value": "Dual Batteries",
-              "price": 1699.0,
+              "price": 1799.0,
               "price_delta": 300.0,
               "free": false
             }
@@ -2086,14 +2257,7 @@
         }
       ],
       "tier": "Dual Battery",
-      "family_id": "engwe__3300-w-electric-bike-motor-engwe-m20-3-0-moped-style-ebike",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'3\"",
-          "height_max": "6'8\""
-        }
-      ]
+      "family_id": "engwe__3300-w-electric-bike-motor-engwe-m20-3-0-moped-style-ebike"
     },
     {
       "model": "ENGWE X20",
@@ -2206,9 +2370,16 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'5\"",
+          "height_max": "6'3\""
+        }
+      ],
       "geometry": {
         "Rider Heights": "5'5\" - 6'3\"",
-        "Rider Height": "5'5\" - 6'3\"",
+        "Rider Height": "5.4 (ft) -6.2 (ft)",
         "C -- Reach": "43.7 cm",
         "D -- Standover Height": "63.3 cm",
         "E -- Wheelbase": "112.5 cm",
@@ -2236,14 +2407,7 @@
         }
       ],
       "tier": "Single Battery",
-      "family_id": "engwe__engwe-x20",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'5\"",
-          "height_max": "6'3\""
-        }
-      ]
+      "family_id": "engwe__engwe-x20"
     },
     {
       "model": "ENGWE X20 — Dual Battery",
@@ -2356,9 +2520,16 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'5\"",
+          "height_max": "6'3\""
+        }
+      ],
       "geometry": {
         "Rider Heights": "5'5\" - 6'3\"",
-        "Rider Height": "5'5\" - 6'3\"",
+        "Rider Height": "5.4 (ft) -6.2 (ft)",
         "C -- Reach": "43.7 cm",
         "D -- Standover Height": "63.3 cm",
         "E -- Wheelbase": "112.5 cm",
@@ -2386,14 +2557,7 @@
         }
       ],
       "tier": "Dual Battery",
-      "family_id": "engwe__engwe-x20",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'5\"",
-          "height_max": "6'3\""
-        }
-      ]
+      "family_id": "engwe__engwe-x20"
     },
     {
       "model": "ENGWE X24",
@@ -2527,23 +2691,23 @@
         "free": true
       },
       "free_accessories": [],
-      "geometry": {
-        "Rider Heights": "5'7\" - 6'5\"",
-        "Rider Height": "5'7\" - 6'5\"",
-        "C--Reach": "41.2 cm",
-        "D--Standover Height": "73.6 cm",
-        "E--Wheelbase": "118.4 cm",
-        "F--Minimum Saddle Height": "90.2 cm",
-        "G--Maximum Saddle Height": "121.5 cm"
-      },
-      "available_options": [],
       "frame_sizes": [
         {
           "size": null,
           "height_min": "5'7\"",
           "height_max": "6'5\""
         }
-      ]
+      ],
+      "geometry": {
+        "Rider Heights": "5'7\" - 6'5\"",
+        "Rider Height": "5.6 (ft) -6.4 (ft)",
+        "C--Reach": "41.2 cm",
+        "D--Standover Height": "73.6 cm",
+        "E--Wheelbase": "118.4 cm",
+        "F--Minimum Saddle Height": "90.2 cm",
+        "G--Maximum Saddle Height": "121.5 cm"
+      },
+      "available_options": []
     },
     {
       "model": "EP-2 3.0",
@@ -2838,6 +3002,13 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'5\"",
+          "height_max": "6'3\""
+        }
+      ],
       "geometry": {
         "Rider Heights": "5'5\" - 6'3\"",
         "A--Wheelbase": "113.5 cm",
@@ -2846,14 +3017,7 @@
         "E--Minimum Saddle Height": "86 cm",
         "F--Maximum Saddle Height": "102 cm"
       },
-      "available_options": [],
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'5\"",
-          "height_max": "6'3\""
-        }
-      ]
+      "available_options": []
     },
     {
       "model": "L20 3.0",

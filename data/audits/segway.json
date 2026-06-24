@@ -1,7 +1,7 @@
 {
   "brand": "segway",
   "scraper": "scrape_segway.py",
-  "generated_at": "2026-06-24T03:31:18.345595+00:00",
+  "generated_at": "2026-06-24T08:06:23.653556+00:00",
   "fields_audited": [
     "motor_w",
     "battery_wh",
@@ -18,9 +18,9 @@
   ],
   "summary": {
     "models": 5,
-    "present": 44,
+    "present": 42,
     "resolved": 5,
-    "open": 11,
+    "open": 13,
     "needs_image": 0,
     "unpublished": 0
   },
@@ -130,7 +130,7 @@
     },
     {
       "id": "segway__segway-ebike-myon",
-      "model": "Segway Myon Electric Bike",
+      "model": "Segway Myon Electric Bike (M/L)",
       "url": "https://store.segway.com/segway-ebike-myon",
       "fields": {
         "motor_w": {
@@ -190,11 +190,11 @@
           "resolved_at": null
         },
         "fit_height_min_in": {
-          "status": "present",
-          "source": "scraped",
-          "value": 63,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "sensor_type": {
@@ -233,7 +233,7 @@
     },
     {
       "id": "segway__segway-ebike-myon-s",
-      "model": "Segway Myon S Electric Bike",
+      "model": "Segway Myon Electric Bike (XS/S)",
       "url": "https://store.segway.com/segway-ebike-myon-s",
       "fields": {
         "motor_w": {
@@ -293,11 +293,11 @@
           "resolved_at": null
         },
         "fit_height_min_in": {
-          "status": "present",
-          "source": "scraped",
-          "value": 61,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "sensor_type": {

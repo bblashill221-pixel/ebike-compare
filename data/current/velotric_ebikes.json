@@ -2,7 +2,7 @@
   "source": "https://www.velotricbike.com",
   "logo": "https://www.velotricbike.com/cdn/shop/files/20230607-183010.png?v=1686133833&width=256",
   "collection": "electric-bikes",
-  "scraped_at": "2026-06-10T23:29:58.668570+00:00",
+  "scraped_at": "2026-06-24T04:12:33.003819+00:00",
   "model_count": 18,
   "models": [
     {
@@ -13,7 +13,7 @@
         "Cruiser",
         "Commuter / Urban"
       ],
-      "price_from": 1799.0,
+      "price_from": 1699.0,
       "currency": "USD",
       "options": {
         "Size": [
@@ -59,7 +59,7 @@
           }
         ]
       },
-      "warranty": "2-Year Warranty",
+      "warranty": "2-Year Limited Warranty",
       "specs": {
         "all": {
           "Bike Size": "Regular / Large",
@@ -136,9 +136,22 @@
           "detail": "Aluminum Alloy, included, rear mount"
         }
       ],
+      "frame_sizes": [
+        {
+          "size": "Regular",
+          "height_min": "4'11\"",
+          "height_max": "5'8\""
+        },
+        {
+          "size": "Large",
+          "height_min": "5'6\"",
+          "height_max": "6'4\""
+        }
+      ],
       "geometry": {
         "Bike Size": "Regular / Large",
-        "User Height Range": "Regular: 4'11'' - 5'8'' Large: 5'6'' - 6'4''"
+        "User Height Range": "Regular: 4'11'' - 5'8'' Large: 5'6'' - 6'4''",
+        "Rider Height": "4'11\" - 6'4\""
       },
       "configurations": [
         {
@@ -146,7 +159,7 @@
             "Size": "Large",
             "Color": "Violet Haze"
           },
-          "price": 1799.0,
+          "price": 1699.0,
           "sku": "VB010006B",
           "variant_id": 51834046153076,
           "available": true,
@@ -163,7 +176,7 @@
             "Size": "Large",
             "Color": "Lemans Blue"
           },
-          "price": 1799.0,
+          "price": 1699.0,
           "sku": "VB010012B",
           "variant_id": 54151595327860,
           "available": true,
@@ -180,7 +193,7 @@
             "Size": "Large",
             "Color": "Ocean Mist"
           },
-          "price": 1799.0,
+          "price": 1699.0,
           "sku": "VB010002AFR",
           "variant_id": 51834045956468,
           "available": true,
@@ -197,7 +210,7 @@
             "Size": "Large",
             "Color": "Classic Scarlet"
           },
-          "price": 1799.0,
+          "price": 1699.0,
           "sku": "VB010004AFR",
           "variant_id": 51834046120308,
           "available": true,
@@ -214,7 +227,7 @@
             "Size": "Large",
             "Color": "Satin White"
           },
-          "price": 1799.0,
+          "price": 1699.0,
           "sku": "VB010008AFR",
           "variant_id": 51834046185844,
           "available": true,
@@ -231,7 +244,7 @@
             "Size": "Large",
             "Color": "Slate Gray"
           },
-          "price": 1799.0,
+          "price": 1699.0,
           "sku": "VB010010B",
           "variant_id": 51834046218612,
           "available": true,
@@ -248,7 +261,7 @@
             "Size": "Regular",
             "Color": "Violet Haze"
           },
-          "price": 1799.0,
+          "price": 1699.0,
           "sku": "VB010005B",
           "variant_id": 51834046022004,
           "available": true,
@@ -265,7 +278,7 @@
             "Size": "Regular",
             "Color": "Lemans Blue"
           },
-          "price": 1799.0,
+          "price": 1699.0,
           "sku": "VB010011B",
           "variant_id": 54151595360628,
           "available": true,
@@ -282,7 +295,7 @@
             "Size": "Regular",
             "Color": "Ocean Mist"
           },
-          "price": 1799.0,
+          "price": 1699.0,
           "sku": "VB010001B",
           "variant_id": 51834045923700,
           "available": true,
@@ -299,7 +312,7 @@
             "Size": "Regular",
             "Color": "Classic Scarlet"
           },
-          "price": 1799.0,
+          "price": 1699.0,
           "sku": "VB010003B",
           "variant_id": 51834045989236,
           "available": true,
@@ -316,7 +329,7 @@
             "Size": "Regular",
             "Color": "Satin White"
           },
-          "price": 1799.0,
+          "price": 1699.0,
           "sku": "VB010007B",
           "variant_id": 51834046054772,
           "available": true,
@@ -333,7 +346,7 @@
             "Size": "Regular",
             "Color": "Slate Gray"
           },
-          "price": 1799.0,
+          "price": 1699.0,
           "sku": "VB010009B",
           "variant_id": 51834046087540,
           "available": true,
@@ -353,13 +366,13 @@
           "choices": [
             {
               "value": "Large",
-              "price": 1799.0,
+              "price": 1699.0,
               "price_delta": 0.0,
               "free": true
             },
             {
               "value": "Regular",
-              "price": 1799.0,
+              "price": 1699.0,
               "price_delta": 0.0,
               "free": true
             }
@@ -382,18 +395,7 @@
           ]
         }
       ],
-      "frame_sizes": [
-        {
-          "size": "Regular",
-          "height_min": "4'11\"",
-          "height_max": "5'8\""
-        },
-        {
-          "size": "Large",
-          "height_min": "5'6\"",
-          "height_max": "6'4\""
-        }
-      ]
+      "regular_price": 1799.0
     },
     {
       "model": "Velotric Discover 2 Ebike",
@@ -414,29 +416,29 @@
             "name": "Cherry Crimson",
             "hex": "#AD0B01",
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/D2_CherryCrimson_rightside1_1.png?v=1711444757"
+            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/Discover_2-Cherry_Crimson_right_side_1_1_1.png?v=1781150053"
           },
           {
             "name": "Pine Green",
             "hex": "#0A2827",
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/D2_PineGreen_rightside1_1.png?v=1764669990"
+            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/D2_Pine_Green_right_side_1_1_1.png?v=1781150053"
           },
           {
             "name": "Mint",
             "hex": "#95BFC0",
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/D2_Mint_rightside1_1.png?v=1764669990"
+            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/D2_Mint_right_side_1_1_1.png?v=1781150053"
           },
           {
             "name": "Stone Gray",
             "hex": "#75777A",
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/D2_Gray_rightside1_1.png?v=1764669990"
+            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/D2_Gray_right_side_1_1_1.png?v=1781150053"
           }
         ]
       },
-      "warranty": "2-Year Warranty",
+      "warranty": "2-Year Limited Warranty",
       "specs": {
         "all": {
           "Bike Size": "Regular/Large",
@@ -519,9 +521,22 @@
           "detail": "Aluminum Alloy, included, rear mount"
         }
       ],
+      "frame_sizes": [
+        {
+          "size": "Regular",
+          "height_min": "4'11\"",
+          "height_max": "5'9\""
+        },
+        {
+          "size": "Large",
+          "height_min": "5'6\"",
+          "height_max": "6'4\""
+        }
+      ],
       "geometry": {
         "Bike Size": "Regular/Large",
-        "User Height Range": "Regular: 4'11\" ~ 5'9\"/Large: 5'6\" ~ 6'4\""
+        "User Height Range": "Regular: 4'11\" ~ 5'9\"/Large: 5'6\" ~ 6'4\"",
+        "Rider Height": "4'11\" - 6'4\""
       },
       "configurations": [
         {
@@ -533,12 +548,12 @@
           "sku": "VD050006B",
           "variant_id": 42376523055287,
           "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/D2_CherryCrimson_rightside1_1.png?v=1711444757",
+          "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/Discover_2-Cherry_Crimson_right_side_1_1_1.png?v=1781150053",
           "color": {
             "name": "Cherry Crimson",
             "hex": "#AD0B01",
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/D2_CherryCrimson_rightside1_1.png?v=1711444757"
+            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/Discover_2-Cherry_Crimson_right_side_1_1_1.png?v=1781150053"
           }
         },
         {
@@ -550,12 +565,12 @@
           "sku": "VD050004B",
           "variant_id": 42376515813559,
           "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/D2_PineGreen_rightside1_1.png?v=1764669990",
+          "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/D2_Pine_Green_right_side_1_1_1.png?v=1781150053",
           "color": {
             "name": "Pine Green",
             "hex": "#0A2827",
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/D2_PineGreen_rightside1_1.png?v=1764669990"
+            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/D2_Pine_Green_right_side_1_1_1.png?v=1781150053"
           }
         },
         {
@@ -567,12 +582,12 @@
           "sku": "VD050008B",
           "variant_id": 42376523088055,
           "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/D2_Mint_rightside1_1.png?v=1764669990",
+          "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/D2_Mint_right_side_1_1_1.png?v=1781150053",
           "color": {
             "name": "Mint",
             "hex": "#95BFC0",
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/D2_Mint_rightside1_1.png?v=1764669990"
+            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/D2_Mint_right_side_1_1_1.png?v=1781150053"
           }
         },
         {
@@ -584,12 +599,12 @@
           "sku": "VD050002B",
           "variant_id": 42376515780791,
           "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/D2_Gray_rightside1_1.png?v=1764669990",
+          "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/D2_Gray_right_side_1_1_1.png?v=1781150053",
           "color": {
             "name": "Stone Gray",
             "hex": "#75777A",
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/D2_Gray_rightside1_1.png?v=1764669990"
+            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/D2_Gray_right_side_1_1_1.png?v=1781150053"
           }
         },
         {
@@ -601,12 +616,12 @@
           "sku": "VD050005B",
           "variant_id": 42376522989751,
           "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/D2_CherryCrimson_rightside1_1.png?v=1711444757",
+          "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/Discover_2-Cherry_Crimson_right_side_1_1_1.png?v=1781150053",
           "color": {
             "name": "Cherry Crimson",
             "hex": "#AD0B01",
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/D2_CherryCrimson_rightside1_1.png?v=1711444757"
+            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/Discover_2-Cherry_Crimson_right_side_1_1_1.png?v=1781150053"
           }
         },
         {
@@ -617,13 +632,13 @@
           "price": 1699.0,
           "sku": "VD050003B",
           "variant_id": 42376515748023,
-          "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/D2_PineGreen_rightside1_1.png?v=1764669990",
+          "available": false,
+          "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/D2_Pine_Green_right_side_1_1_1.png?v=1781150053",
           "color": {
             "name": "Pine Green",
             "hex": "#0A2827",
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/D2_PineGreen_rightside1_1.png?v=1764669990"
+            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/D2_Pine_Green_right_side_1_1_1.png?v=1781150053"
           }
         },
         {
@@ -635,12 +650,12 @@
           "sku": "VD050007B",
           "variant_id": 42376523022519,
           "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/D2_Mint_rightside1_1.png?v=1764669990",
+          "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/D2_Mint_right_side_1_1_1.png?v=1781150053",
           "color": {
             "name": "Mint",
             "hex": "#95BFC0",
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/D2_Mint_rightside1_1.png?v=1764669990"
+            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/D2_Mint_right_side_1_1_1.png?v=1781150053"
           }
         },
         {
@@ -652,12 +667,12 @@
           "sku": null,
           "variant_id": 42376515715255,
           "available": false,
-          "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/D2_Gray_rightside1_1.png?v=1764669990",
+          "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/D2_Gray_right_side_1_1_1.png?v=1781150053",
           "color": {
             "name": "Stone Gray",
             "hex": "#75777A",
             "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/D2_Gray_rightside1_1.png?v=1764669990"
+            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/D2_Gray_right_side_1_1_1.png?v=1781150053"
           }
         }
       ],
@@ -702,19 +717,7 @@
           ]
         }
       ],
-      "regular_price": 1999.0,
-      "frame_sizes": [
-        {
-          "size": "Regular",
-          "height_min": "4'11\"",
-          "height_max": "5'9\""
-        },
-        {
-          "size": "Large",
-          "height_min": "5'6\"",
-          "height_max": "6'4\""
-        }
-      ]
+      "regular_price": 1999.0
     },
     {
       "model": "Velotric Discover 3 Ebike",
@@ -763,7 +766,7 @@
           }
         ]
       },
-      "warranty": "2-Year Warranty",
+      "warranty": "2-Year Limited Warranty",
       "specs": {
         "all": {
           "Bike Size": "Regular / Large",
@@ -855,6 +858,18 @@
           "detail": "Aluminum Alloy, Included, Rear Mount"
         }
       ],
+      "frame_sizes": [
+        {
+          "size": "Regular",
+          "height_min": "5'2\"",
+          "height_max": "5'11\""
+        },
+        {
+          "size": "Large",
+          "height_min": "5'9\"",
+          "height_max": "6'7\""
+        }
+      ],
       "geometry": {
         "Bike Size": "Regular / Large",
         "User Height Range": "R：5'2''~5'11'' L：5'9''~6'7'' （With Suspension Seatpost） R：4'11''~5'9'' L：5'6''~6'4'' （Without Suspension Seatpost）",
@@ -862,7 +877,8 @@
         "Wheelbase": "1113mm",
         "Stand-Over Height": "400mm",
         "Min Saddle Height": "829mm",
-        "Max Saddle Height": "985mm"
+        "Max Saddle Height": "985mm",
+        "Rider Height": "5'2\" - 6'7\""
       },
       "configurations": [
         {
@@ -1042,18 +1058,6 @@
             }
           ]
         }
-      ],
-      "frame_sizes": [
-        {
-          "size": "Regular",
-          "height_min": "5'2\"",
-          "height_max": "5'11\""
-        },
-        {
-          "size": "Large",
-          "height_min": "5'9\"",
-          "height_max": "6'7\""
-        }
       ]
     },
     {
@@ -1085,7 +1089,7 @@
           }
         ]
       },
-      "warranty": "2-Year Warranty",
+      "warranty": "2-Year Limited Warranty",
       "specs": {
         "all": {
           "Bike Size": "Regular / Large",
@@ -1177,6 +1181,18 @@
           "detail": "Aluminum Alloy, Included, Rear Mount"
         }
       ],
+      "frame_sizes": [
+        {
+          "size": "Regular",
+          "height_min": "5'2\"",
+          "height_max": "5'11\""
+        },
+        {
+          "size": "Large",
+          "height_min": "5'9\"",
+          "height_max": "6'7\""
+        }
+      ],
       "geometry": {
         "Bike Size": "Regular / Large",
         "User Height Range": "R：5'2''~5'11'' L：5'9''~6'7'' （With Suspension Seatpost） R：4'11''~5'9'' L：5'6''~6'4'' （Without Suspension Seatpost）",
@@ -1184,7 +1200,8 @@
         "Wheelbase": "1113mm",
         "Stand-Over Height": "399mm",
         "Min Saddle Height": "838mm",
-        "Max Saddle Height": "995mm"
+        "Max Saddle Height": "995mm",
+        "Rider Height": "5'2\" - 6'7\""
       },
       "configurations": [
         {
@@ -1296,18 +1313,6 @@
             }
           ]
         }
-      ],
-      "frame_sizes": [
-        {
-          "size": "Regular",
-          "height_min": "5'2\"",
-          "height_max": "5'11\""
-        },
-        {
-          "size": "Large",
-          "height_min": "5'9\"",
-          "height_max": "6'7\""
-        }
       ]
     },
     {
@@ -1315,9 +1320,9 @@
       "handle": "velotric-fold-1",
       "url": "https://www.velotricbike.com/products/velotric-fold-1",
       "product_types": [
-        "Folding"
+        "Commuter / Urban"
       ],
-      "price_from": 1299.0,
+      "price_from": 999.0,
       "currency": "USD",
       "options": {
         "colors": [
@@ -1341,7 +1346,7 @@
           }
         ]
       },
-      "warranty": "2-Year Warranty",
+      "warranty": "2-Year Limited Warranty",
       "specs": {
         "all": {
           "Bike Size": "One Size",
@@ -1428,16 +1433,24 @@
           "detail": "Aluminum Alloy, included, rear mount"
         }
       ],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "4'9\"",
+          "height_max": "6'5\""
+        }
+      ],
       "geometry": {
         "Bike Size": "One Size",
-        "User Height Range": "Regular: 4'9\" ~ 6'5\""
+        "User Height Range": "Regular: 4'9\" ~ 6'5\"",
+        "Rider Height": "4'9\" - 6'5\""
       },
       "configurations": [
         {
           "options": {
             "Color": "Stone Gray"
           },
-          "price": 1299.0,
+          "price": 999.0,
           "sku": "VF010001E",
           "variant_id": 42388153958583,
           "available": true,
@@ -1453,7 +1466,7 @@
           "options": {
             "Color": "Electric Blue"
           },
-          "price": 1299.0,
+          "price": 999.0,
           "sku": "VF010003D",
           "variant_id": 42388154024119,
           "available": true,
@@ -1469,7 +1482,7 @@
           "options": {
             "Color": "Pearl White"
           },
-          "price": 1299.0,
+          "price": 999.0,
           "sku": "VF010002E",
           "variant_id": 42388153991351,
           "available": true,
@@ -1510,26 +1523,25 @@
           ]
         }
       ],
-      "regular_price": 1499.0,
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "4'9\"",
-          "height_max": "6'5\""
-        }
-      ]
+      "regular_price": 1499.0
     },
     {
       "model": "Velotric Fold 1 Plus Ebike",
       "handle": "velotric-fold-1-plus",
       "url": "https://www.velotricbike.com/products/velotric-fold-1-plus",
       "product_types": [
-        "Folding"
+        "Commuter / Urban"
       ],
-      "price_from": 1499.0,
+      "price_from": 1399.0,
       "currency": "USD",
       "options": {
         "colors": [
+          {
+            "name": "Mango",
+            "hex": "#FFBC00",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/F1__Mango_1.png?v=1744970971"
+          },
           {
             "name": "Stone Gray",
             "hex": "#75777A",
@@ -1541,12 +1553,6 @@
             "hex": "#D2C3EF",
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/F1__Violet_Haze_1_1.png?v=1773211164"
-          },
-          {
-            "name": "Mango",
-            "hex": "#FFBC00",
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/F1__Mango_1.png?v=1744970971"
           },
           {
             "name": "Electric Blue",
@@ -1562,7 +1568,7 @@
           }
         ]
       },
-      "warranty": "2-Year Warranty",
+      "warranty": "2-Year Limited Warranty",
       "specs": {
         "all": {
           "Bike Size": "One Size",
@@ -1649,16 +1655,40 @@
           "detail": "Aluminum Alloy, included, rear mount"
         }
       ],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "4'9\"",
+          "height_max": "6'5\""
+        }
+      ],
       "geometry": {
         "Bike Size": "One Size",
-        "User Height Range": "4'9'' ~ 6'5''"
+        "User Height Range": "4'9'' ~ 6'5''",
+        "Rider Height": "4'9\" - 6'5\""
       },
       "configurations": [
         {
           "options": {
+            "Color": "Mango"
+          },
+          "price": 1399.0,
+          "sku": "VF030004B",
+          "variant_id": 51987166101876,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/F1__Mango_1.png?v=1744970971",
+          "color": {
+            "name": "Mango",
+            "hex": "#FFBC00",
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/F1__Mango_1.png?v=1744970971"
+          }
+        },
+        {
+          "options": {
             "Color": "Stone Gray"
           },
-          "price": 1499.0,
+          "price": 1399.0,
           "sku": "VF030001B",
           "variant_id": 51783863501172,
           "available": true,
@@ -1674,7 +1704,7 @@
           "options": {
             "Color": "Violet Haze"
           },
-          "price": 1499.0,
+          "price": 1399.0,
           "sku": "VF030005B",
           "variant_id": 54068599619956,
           "available": true,
@@ -1688,25 +1718,9 @@
         },
         {
           "options": {
-            "Color": "Mango"
-          },
-          "price": 1499.0,
-          "sku": "VF030004B",
-          "variant_id": 51987166101876,
-          "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/F1__Mango_1.png?v=1744970971",
-          "color": {
-            "name": "Mango",
-            "hex": "#FFBC00",
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/F1__Mango_1.png?v=1744970971"
-          }
-        },
-        {
-          "options": {
             "Color": "Electric Blue"
           },
-          "price": 1499.0,
+          "price": 1399.0,
           "sku": "VF030003B",
           "variant_id": 51783863566708,
           "available": true,
@@ -1722,7 +1736,7 @@
           "options": {
             "Color": "Pearl White"
           },
-          "price": 1499.0,
+          "price": 1399.0,
           "sku": "VF030002B",
           "variant_id": 51783863533940,
           "available": true,
@@ -1763,13 +1777,7 @@
           ]
         }
       ],
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "4'9\"",
-          "height_max": "6'5\""
-        }
-      ]
+      "regular_price": 1499.0
     },
     {
       "model": "Velotric GoMad Ebike",
@@ -1807,7 +1815,7 @@
           }
         ]
       },
-      "warranty": "2-Year Warranty",
+      "warranty": "2-Year Limited Warranty",
       "specs": {
         "all": {
           "Bike Size": "One Size",
@@ -1913,6 +1921,13 @@
           "detail": "Included as Standard Equipment"
         }
       ],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'0\"",
+          "height_max": "6'3\""
+        }
+      ],
       "geometry": {
         "Bike Size": "One Size",
         "User Height Range": "5'0'' ~ 6'3''",
@@ -1920,7 +1935,8 @@
         "Wheelbase": "1171mm",
         "Stand-Over Height": "500mm",
         "Min Saddle Height": "720mm",
-        "Max Saddle Height": "930mm"
+        "Max Saddle Height": "930mm",
+        "Rider Height": "5'0\" - 6'3\""
       },
       "configurations": [
         {
@@ -2034,14 +2050,7 @@
       ],
       "tier": "GoMad Only",
       "family_id": "velotric__velotric-gomad-utility-ebike",
-      "regular_price": null,
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'0\"",
-          "height_max": "6'3\""
-        }
-      ]
+      "regular_price": null
     },
     {
       "model": "Velotric GoMad Ebike — GoMad + Passenger Kit",
@@ -2079,7 +2088,7 @@
           }
         ]
       },
-      "warranty": "2-Year Warranty",
+      "warranty": "2-Year Limited Warranty",
       "specs": {
         "all": {
           "Bike Size": "One Size",
@@ -2185,6 +2194,13 @@
           "detail": "Included as Standard Equipment"
         }
       ],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'0\"",
+          "height_max": "6'3\""
+        }
+      ],
       "geometry": {
         "Bike Size": "One Size",
         "User Height Range": "5'0'' ~ 6'3''",
@@ -2192,7 +2208,8 @@
         "Wheelbase": "1171mm",
         "Stand-Over Height": "500mm",
         "Min Saddle Height": "720mm",
-        "Max Saddle Height": "930mm"
+        "Max Saddle Height": "930mm",
+        "Rider Height": "5'0\" - 6'3\""
       },
       "configurations": [
         {
@@ -2306,14 +2323,7 @@
       ],
       "regular_price": null,
       "tier": "GoMad + Passenger Kit",
-      "family_id": "velotric__velotric-gomad-utility-ebike",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'0\"",
-          "height_max": "6'3\""
-        }
-      ]
+      "family_id": "velotric__velotric-gomad-utility-ebike"
     },
     {
       "model": "Velotric GoMad Ebike — GoMad + Young Passenger Kit",
@@ -2351,7 +2361,7 @@
           }
         ]
       },
-      "warranty": "2-Year Warranty",
+      "warranty": "2-Year Limited Warranty",
       "specs": {
         "all": {
           "Bike Size": "One Size",
@@ -2457,6 +2467,13 @@
           "detail": "Included as Standard Equipment"
         }
       ],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'0\"",
+          "height_max": "6'3\""
+        }
+      ],
       "geometry": {
         "Bike Size": "One Size",
         "User Height Range": "5'0'' ~ 6'3''",
@@ -2464,7 +2481,8 @@
         "Wheelbase": "1171mm",
         "Stand-Over Height": "500mm",
         "Min Saddle Height": "720mm",
-        "Max Saddle Height": "930mm"
+        "Max Saddle Height": "930mm",
+        "Rider Height": "5'0\" - 6'3\""
       },
       "configurations": [
         {
@@ -2578,14 +2596,7 @@
       ],
       "regular_price": null,
       "tier": "GoMad + Young Passenger Kit",
-      "family_id": "velotric__velotric-gomad-utility-ebike",
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'0\"",
-          "height_max": "6'3\""
-        }
-      ]
+      "family_id": "velotric__velotric-gomad-utility-ebike"
     },
     {
       "model": "Velotric Nomad 2 Fat Tire Ebike",
@@ -2594,7 +2605,7 @@
       "product_types": [
         "Fat Tire"
       ],
-      "price_from": 1999.0,
+      "price_from": 1799.0,
       "currency": "USD",
       "options": {
         "Style": [
@@ -2620,7 +2631,7 @@
           }
         ]
       },
-      "warranty": "2-Year Warranty",
+      "warranty": "2-Year Limited Warranty",
       "specs": {
         "all": {
           "Bike Size": "Regular / Large",
@@ -2702,9 +2713,22 @@
           "detail": "Aluminum Alloy, included, rear mount"
         }
       ],
+      "frame_sizes": [
+        {
+          "size": "Regular",
+          "height_min": "5'2\"",
+          "height_max": "5'11\""
+        },
+        {
+          "size": "Large",
+          "height_min": "5'10\"",
+          "height_max": "6'5\""
+        }
+      ],
       "geometry": {
         "Bike Size": "Regular / Large",
-        "User Height Range": "Step-Thru / Regular: 5'2'' - 5'11'' Step-Thru / Large: 5'10'' - 6'5'' High-Step / Regular:5'2'' - 5'11'' High-Step / Large: 5'10'' - 6'5''"
+        "User Height Range": "Step-Thru / Regular: 5'2'' - 5'11'' Step-Thru / Large: 5'10'' - 6'5'' High-Step / Regular:5'2'' - 5'11'' High-Step / Large: 5'10'' - 6'5''",
+        "Rider Height": "5'2\" - 6'5\""
       },
       "configurations": [
         {
@@ -2713,7 +2737,7 @@
             "Size": "Large",
             "Color": "Midnight Blue"
           },
-          "price": 1999.0,
+          "price": 1799.0,
           "sku": "VN040002A",
           "variant_id": 51721860088180,
           "available": true,
@@ -2731,7 +2755,7 @@
             "Size": "Large",
             "Color": "Sage"
           },
-          "price": 1999.0,
+          "price": 1799.0,
           "sku": "VN040004A",
           "variant_id": 51721927885172,
           "available": true,
@@ -2751,13 +2775,13 @@
           "choices": [
             {
               "value": "Step-Thru",
-              "price": 1999.0,
+              "price": 1799.0,
               "price_delta": 0.0,
               "free": true
             },
             {
               "value": "High-Step",
-              "price": 1999.0,
+              "price": 1799.0,
               "price_delta": 0.0,
               "free": true
             }
@@ -2769,13 +2793,13 @@
           "choices": [
             {
               "value": "Regular",
-              "price": 1999.0,
+              "price": 1799.0,
               "price_delta": 0.0,
               "free": true
             },
             {
               "value": "Large",
-              "price": 1999.0,
+              "price": 1799.0,
               "price_delta": 0.0,
               "free": true
             }
@@ -2803,22 +2827,10 @@
           ]
         }
       ],
+      "regular_price": null,
       "tier": "Step-Over",
       "family_id": "velotric__velotric-nomad-2",
-      "frame_style": "Step-Over (Mid-Step)",
-      "regular_price": null,
-      "frame_sizes": [
-        {
-          "size": "Regular",
-          "height_min": "5'2\"",
-          "height_max": "5'11\""
-        },
-        {
-          "size": "Large",
-          "height_min": "5'10\"",
-          "height_max": "6'5\""
-        }
-      ]
+      "frame_style": "Step-Over (Mid-Step)"
     },
     {
       "model": "Velotric Nomad 2 Fat Tire Ebike — Step-Thru",
@@ -2827,7 +2839,7 @@
       "product_types": [
         "Fat Tire"
       ],
-      "price_from": 1999.0,
+      "price_from": 1799.0,
       "currency": "USD",
       "options": {
         "Style": [
@@ -2859,7 +2871,7 @@
           }
         ]
       },
-      "warranty": "2-Year Warranty",
+      "warranty": "2-Year Limited Warranty",
       "specs": {
         "all": {
           "Bike Size": "Regular / Large",
@@ -2941,9 +2953,22 @@
           "detail": "Aluminum Alloy, included, rear mount"
         }
       ],
+      "frame_sizes": [
+        {
+          "size": "Regular",
+          "height_min": "5'2\"",
+          "height_max": "5'11\""
+        },
+        {
+          "size": "Large",
+          "height_min": "5'10\"",
+          "height_max": "6'5\""
+        }
+      ],
       "geometry": {
         "Bike Size": "Regular / Large",
-        "User Height Range": "Step-Thru / Regular: 5'2'' - 5'11'' Step-Thru / Large: 5'10'' - 6'5'' High-Step / Regular:5'2'' - 5'11'' High-Step / Large: 5'10'' - 6'5''"
+        "User Height Range": "Step-Thru / Regular: 5'2'' - 5'11'' Step-Thru / Large: 5'10'' - 6'5'' High-Step / Regular:5'2'' - 5'11'' High-Step / Large: 5'10'' - 6'5''",
+        "Rider Height": "5'2\" - 6'5\""
       },
       "configurations": [
         {
@@ -2952,7 +2977,7 @@
             "Size": "Regular",
             "Color": "Midnight Blue"
           },
-          "price": 1999.0,
+          "price": 1799.0,
           "sku": "VN030005A",
           "variant_id": 51721859989876,
           "available": true,
@@ -2970,7 +2995,7 @@
             "Size": "Regular",
             "Color": "Cranberry"
           },
-          "price": 1999.0,
+          "price": 1799.0,
           "sku": "VN030001A",
           "variant_id": 51721927524724,
           "available": true,
@@ -2988,7 +3013,7 @@
             "Size": "Regular",
             "Color": "Olive"
           },
-          "price": 1999.0,
+          "price": 1799.0,
           "sku": "VN030007A",
           "variant_id": 51721859694964,
           "available": true,
@@ -3006,7 +3031,7 @@
             "Size": "Large",
             "Color": "Midnight Blue"
           },
-          "price": 1999.0,
+          "price": 1799.0,
           "sku": "VN030006A",
           "variant_id": 51721860022644,
           "available": true,
@@ -3024,7 +3049,7 @@
             "Size": "Large",
             "Color": "Cranberry"
           },
-          "price": 1999.0,
+          "price": 1799.0,
           "sku": "VN030002A",
           "variant_id": 51724207292788,
           "available": true,
@@ -3042,7 +3067,7 @@
             "Size": "Large",
             "Color": "Olive"
           },
-          "price": 1999.0,
+          "price": 1799.0,
           "sku": "VN030008A",
           "variant_id": 51724205457780,
           "available": true,
@@ -3062,13 +3087,13 @@
           "choices": [
             {
               "value": "Step-Thru",
-              "price": 1999.0,
+              "price": 1799.0,
               "price_delta": 0.0,
               "free": true
             },
             {
               "value": "High-Step",
-              "price": 1999.0,
+              "price": 1799.0,
               "price_delta": 0.0,
               "free": true
             }
@@ -3080,13 +3105,13 @@
           "choices": [
             {
               "value": "Regular",
-              "price": 1999.0,
+              "price": 1799.0,
               "price_delta": 0.0,
               "free": true
             },
             {
               "value": "Large",
-              "price": 1999.0,
+              "price": 1799.0,
               "price_delta": 0.0,
               "free": true
             }
@@ -3117,19 +3142,7 @@
       "regular_price": null,
       "tier": "Step-Thru",
       "family_id": "velotric__velotric-nomad-2",
-      "frame_style": "Step-Thru",
-      "frame_sizes": [
-        {
-          "size": "Regular",
-          "height_min": "5'2\"",
-          "height_max": "5'11\""
-        },
-        {
-          "size": "Large",
-          "height_min": "5'10\"",
-          "height_max": "6'5\""
-        }
-      ]
+      "frame_style": "Step-Thru"
     },
     {
       "model": "Velotric Nomad 2X Full Suspension Fat Tire Ebike",
@@ -3139,7 +3152,7 @@
         "Fat Tire",
         "Mountain (eMTB)"
       ],
-      "price_from": 2399.0,
+      "price_from": 2199.0,
       "currency": "USD",
       "options": {
         "Style": [
@@ -3167,7 +3180,7 @@
           }
         ]
       },
-      "warranty": "2-Year Warranty",
+      "warranty": "2-Year Limited Warranty",
       "specs": {
         "all": {
           "Bike Size": "Step-Thru / High-Step",
@@ -3259,6 +3272,18 @@
           "detail": "Aluminum Alloy, Included, Rear Mount"
         }
       ],
+      "frame_sizes": [
+        {
+          "size": "Regular",
+          "height_min": "4'11\"",
+          "height_max": "5'10\""
+        },
+        {
+          "size": "Large",
+          "height_min": "5'10\"",
+          "height_max": "6'5\""
+        }
+      ],
       "geometry": {
         "Bike Size": "Step-Thru / High-Step",
         "User Height Range": "Step-Thru: 4'11'' - 5'10'' High-Step: 5'10'' - 6'5''",
@@ -3266,7 +3291,8 @@
         "Wheelbase": "1330mm",
         "Stand-Over Height": "450mm",
         "Min Saddle Height": "795mm",
-        "Max Saddle Height": "1100mm"
+        "Max Saddle Height": "1100mm",
+        "Rider Height": "4'11\" - 6'5\""
       },
       "configurations": [
         {
@@ -3274,7 +3300,7 @@
             "Style": "High-Step",
             "Color": "Obsidian"
           },
-          "price": 2399.0,
+          "price": 2199.0,
           "sku": "VN020001B",
           "variant_id": 52091391934836,
           "available": true,
@@ -3291,7 +3317,7 @@
             "Style": "High-Step",
             "Color": "Royal Blue"
           },
-          "price": 2399.0,
+          "price": 2199.0,
           "sku": "VN020004B",
           "variant_id": 52090323927412,
           "available": true,
@@ -3308,7 +3334,7 @@
             "Style": "High-Step",
             "Color": "Multi-Terrain Camo"
           },
-          "price": 2499.0,
+          "price": 2299.0,
           "sku": "VN020003B",
           "variant_id": 52348980396404,
           "available": true,
@@ -3328,13 +3354,13 @@
           "choices": [
             {
               "value": "Step-Thru",
-              "price": 2399.0,
+              "price": 2199.0,
               "price_delta": 0.0,
               "free": true
             },
             {
               "value": "High-Step",
-              "price": 2399.0,
+              "price": 2199.0,
               "price_delta": 0.0,
               "free": true
             }
@@ -3346,31 +3372,31 @@
           "choices": [
             {
               "value": "Sage",
-              "price": 2399.0,
+              "price": 2199.0,
               "price_delta": 0.0,
               "free": true
             },
             {
               "value": "Multi-Terrain Camo",
-              "price": 2499.0,
+              "price": 2299.0,
               "price_delta": 100.0,
               "free": false
             },
             {
               "value": "Fig",
-              "price": 2399.0,
+              "price": 2199.0,
               "price_delta": 0.0,
               "free": true
             },
             {
               "value": "Obsidian",
-              "price": 2399.0,
+              "price": 2199.0,
               "price_delta": 0.0,
               "free": true
             },
             {
               "value": "Royal Blue",
-              "price": 2399.0,
+              "price": 2199.0,
               "price_delta": 0.0,
               "free": true
             }
@@ -3398,22 +3424,10 @@
           ]
         }
       ],
+      "regular_price": null,
       "tier": "Step-Over",
       "family_id": "velotric__velotric-nomad-2x",
-      "frame_style": "Step-Over (Mid-Step)",
-      "regular_price": null,
-      "frame_sizes": [
-        {
-          "size": "Regular",
-          "height_min": "4'11\"",
-          "height_max": "5'10\""
-        },
-        {
-          "size": "Large",
-          "height_min": "5'10\"",
-          "height_max": "6'5\""
-        }
-      ]
+      "frame_style": "Step-Over (Mid-Step)"
     },
     {
       "model": "Velotric Nomad 2X Full Suspension Fat Tire Ebike — Step-Thru",
@@ -3423,7 +3437,7 @@
         "Fat Tire",
         "Mountain (eMTB)"
       ],
-      "price_from": 2399.0,
+      "price_from": 2199.0,
       "currency": "USD",
       "options": {
         "Style": [
@@ -3451,7 +3465,7 @@
           }
         ]
       },
-      "warranty": "2-Year Warranty",
+      "warranty": "2-Year Limited Warranty",
       "specs": {
         "all": {
           "Bike Size": "Step-Thru / High-Step",
@@ -3543,6 +3557,18 @@
           "detail": "Aluminum Alloy, Included, Rear Mount"
         }
       ],
+      "frame_sizes": [
+        {
+          "size": "Regular",
+          "height_min": "4'11\"",
+          "height_max": "5'10\""
+        },
+        {
+          "size": "Large",
+          "height_min": "5'10\"",
+          "height_max": "6'5\""
+        }
+      ],
       "geometry": {
         "Bike Size": "Step-Thru / High-Step",
         "User Height Range": "Step-Thru: 4'11'' - 5'10'' High-Step: 5'10'' - 6'5''",
@@ -3550,7 +3576,8 @@
         "Wheelbase": "1330mm",
         "Stand-Over Height": "450mm",
         "Min Saddle Height": "795mm",
-        "Max Saddle Height": "1100mm"
+        "Max Saddle Height": "1100mm",
+        "Rider Height": "4'11\" - 6'5\""
       },
       "configurations": [
         {
@@ -3558,7 +3585,7 @@
             "Style": "Step-Thru",
             "Color": "Sage"
           },
-          "price": 2399.0,
+          "price": 2199.0,
           "sku": "VN010005B",
           "variant_id": 52091391902068,
           "available": true,
@@ -3575,7 +3602,7 @@
             "Style": "Step-Thru",
             "Color": "Multi-Terrain Camo"
           },
-          "price": 2499.0,
+          "price": 2299.0,
           "sku": "VN010003B",
           "variant_id": 52348980429172,
           "available": true,
@@ -3592,7 +3619,7 @@
             "Style": "Step-Thru",
             "Color": "Fig"
           },
-          "price": 2399.0,
+          "price": 2199.0,
           "sku": "VN010001B",
           "variant_id": 52091391869300,
           "available": true,
@@ -3612,13 +3639,13 @@
           "choices": [
             {
               "value": "Step-Thru",
-              "price": 2399.0,
+              "price": 2199.0,
               "price_delta": 0.0,
               "free": true
             },
             {
               "value": "High-Step",
-              "price": 2399.0,
+              "price": 2199.0,
               "price_delta": 0.0,
               "free": true
             }
@@ -3630,31 +3657,31 @@
           "choices": [
             {
               "value": "Sage",
-              "price": 2399.0,
+              "price": 2199.0,
               "price_delta": 0.0,
               "free": true
             },
             {
               "value": "Multi-Terrain Camo",
-              "price": 2499.0,
+              "price": 2299.0,
               "price_delta": 100.0,
               "free": false
             },
             {
               "value": "Fig",
-              "price": 2399.0,
+              "price": 2199.0,
               "price_delta": 0.0,
               "free": true
             },
             {
               "value": "Obsidian",
-              "price": 2399.0,
+              "price": 2199.0,
               "price_delta": 0.0,
               "free": true
             },
             {
               "value": "Royal Blue",
-              "price": 2399.0,
+              "price": 2199.0,
               "price_delta": 0.0,
               "free": true
             }
@@ -3685,19 +3712,7 @@
       "regular_price": null,
       "tier": "Step-Thru",
       "family_id": "velotric__velotric-nomad-2x",
-      "frame_style": "Step-Thru",
-      "frame_sizes": [
-        {
-          "size": "Regular",
-          "height_min": "4'11\"",
-          "height_max": "5'10\""
-        },
-        {
-          "size": "Large",
-          "height_min": "5'10\"",
-          "height_max": "6'5\""
-        }
-      ]
+      "frame_style": "Step-Thru"
     },
     {
       "model": "Velotric Summit 1 Ebike",
@@ -3706,7 +3721,7 @@
       "product_types": [
         "Hybrid / Fitness"
       ],
-      "price_from": 1999.0,
+      "price_from": 1799.0,
       "currency": "USD",
       "options": {
         "Size": [
@@ -3734,7 +3749,7 @@
           }
         ]
       },
-      "warranty": "2-Year Warranty",
+      "warranty": "2-Year Limited Warranty",
       "specs": {
         "all": {
           "Bike Size": "Regular/Large",
@@ -3810,9 +3825,22 @@
           "detail": "Aluminum Alloy, included, rear mount"
         }
       ],
+      "frame_sizes": [
+        {
+          "size": "Regular",
+          "height_min": "5'1\"",
+          "height_max": "5'10\""
+        },
+        {
+          "size": "Large",
+          "height_min": "5'8\"",
+          "height_max": "6'6\""
+        }
+      ],
       "geometry": {
         "Bike Size": "Regular/Large",
-        "User Height Range": "Regular: 5'1\" ~ 5'10\"/Large: 5'8\" ~ 6'6\""
+        "User Height Range": "Regular: 5'1\" ~ 5'10\"/Large: 5'8\" ~ 6'6\"",
+        "Rider Height": "5'1\" - 6'6\""
       },
       "configurations": [
         {
@@ -3820,7 +3848,7 @@
             "Size": "Large",
             "Color": "Royal Blue"
           },
-          "price": 1999.0,
+          "price": 1799.0,
           "sku": "VS010006C",
           "variant_id": 42388148977847,
           "available": true,
@@ -3837,7 +3865,7 @@
             "Size": "Large",
             "Color": "Sunrise Orange"
           },
-          "price": 1999.0,
+          "price": 1799.0,
           "sku": "VS010004C",
           "variant_id": 42388149010615,
           "available": true,
@@ -3854,7 +3882,7 @@
             "Size": "Large",
             "Color": "Space Black"
           },
-          "price": 1999.0,
+          "price": 1799.0,
           "sku": "VS010002C",
           "variant_id": 42388148945079,
           "available": true,
@@ -3871,7 +3899,7 @@
             "Size": "Regular",
             "Color": "Royal Blue"
           },
-          "price": 1999.0,
+          "price": 1799.0,
           "sku": "VS010005C",
           "variant_id": 42388148879543,
           "available": true,
@@ -3888,7 +3916,7 @@
             "Size": "Regular",
             "Color": "Sunrise Orange"
           },
-          "price": 1999.0,
+          "price": 1799.0,
           "sku": "VS010003C",
           "variant_id": 42388148912311,
           "available": true,
@@ -3905,7 +3933,7 @@
             "Size": "Regular",
             "Color": "Space Black"
           },
-          "price": 1999.0,
+          "price": 1799.0,
           "sku": "VS010001C",
           "variant_id": 42388148846775,
           "available": true,
@@ -3925,13 +3953,13 @@
           "choices": [
             {
               "value": "Large",
-              "price": 1999.0,
+              "price": 1799.0,
               "price_delta": 0.0,
               "free": true
             },
             {
               "value": "Regular",
-              "price": 1999.0,
+              "price": 1799.0,
               "price_delta": 0.0,
               "free": true
             }
@@ -3954,18 +3982,7 @@
           ]
         }
       ],
-      "frame_sizes": [
-        {
-          "size": "Regular",
-          "height_min": "5'1\"",
-          "height_max": "5'10\""
-        },
-        {
-          "size": "Large",
-          "height_min": "5'8\"",
-          "height_max": "6'6\""
-        }
-      ]
+      "regular_price": 1999.0
     },
     {
       "model": "Velotric Summit 2 Ebike",
@@ -4002,7 +4019,7 @@
           }
         ]
       },
-      "warranty": "2-Year Warranty",
+      "warranty": "2-Year Limited Warranty",
       "specs": {
         "all": {
           "Bike Size": "Regular / Large",
@@ -4087,6 +4104,18 @@
           "detail": "Aluminum Alloy, Included, Rear Mount"
         }
       ],
+      "frame_sizes": [
+        {
+          "size": "Regular",
+          "height_min": "5'2\"",
+          "height_max": "5'10\""
+        },
+        {
+          "size": "Large",
+          "height_min": "5'7\"",
+          "height_max": "6'5\""
+        }
+      ],
       "geometry": {
         "Bike Size": "Regular / Large",
         "User Height Range": "R：5'2''~5'10'' L：5'7''~6'5''",
@@ -4094,7 +4123,8 @@
         "Wheelbase": "1210mm",
         "Stand-Over Height": "720mm",
         "Min Saddle Height": "790mm",
-        "Max Saddle Height": "1000mm"
+        "Max Saddle Height": "1000mm",
+        "Rider Height": "5'2\" - 6'5\""
       },
       "configurations": [
         {
@@ -4235,18 +4265,6 @@
             }
           ]
         }
-      ],
-      "frame_sizes": [
-        {
-          "size": "Regular",
-          "height_min": "5'2\"",
-          "height_max": "5'10\""
-        },
-        {
-          "size": "Large",
-          "height_min": "5'7\"",
-          "height_max": "6'5\""
-        }
       ]
     },
     {
@@ -4256,7 +4274,7 @@
       "product_types": [
         "Road / Gravel"
       ],
-      "price_from": 1399.0,
+      "price_from": 1349.0,
       "currency": "USD",
       "options": {
         "Size": [
@@ -4265,12 +4283,6 @@
         ],
         "colors": [
           {
-            "name": "Sand",
-            "hex": "#DED7CD",
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/T1ST_plus_sand_right_side_1_1_1_1.png?v=1774001769"
-          },
-          {
             "name": "Lava",
             "hex": "#FF6421",
             "swatch_image": null,
@@ -4278,7 +4290,7 @@
           }
         ]
       },
-      "warranty": "2-Year Warranty",
+      "warranty": "2-Year Limited Warranty",
       "specs": {
         "all": {
           "Bike Size": "Regular/Large",
@@ -4349,34 +4361,30 @@
           "detail": "Aluminum Alloy, included, rear mount"
         }
       ],
+      "frame_sizes": [
+        {
+          "size": "Regular",
+          "height_min": "4'11\"",
+          "height_max": "5'9\""
+        },
+        {
+          "size": "Large",
+          "height_min": "5'6\"",
+          "height_max": "6'4\""
+        }
+      ],
       "geometry": {
         "Bike Size": "Regular/Large",
-        "User Height Range": "Regular: 4'11\" ~ 5'9\"/Large: 5'6\" ~ 6'4\""
+        "User Height Range": "Regular: 4'11\" ~ 5'9\"/Large: 5'6\" ~ 6'4\"",
+        "Rider Height": "4'11\" - 6'4\""
       },
       "configurations": [
         {
           "options": {
             "Size": "Regular",
-            "Color": "Sand"
-          },
-          "price": 1399.0,
-          "sku": "VT020002E",
-          "variant_id": 41729523974327,
-          "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/T1ST_plus_sand_right_side_1_1_1_1.png?v=1774001769",
-          "color": {
-            "name": "Sand",
-            "hex": "#DED7CD",
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/T1ST_plus_sand_right_side_1_1_1_1.png?v=1774001769"
-          }
-        },
-        {
-          "options": {
-            "Size": "Regular",
             "Color": "Lava"
           },
-          "price": 1399.0,
+          "price": 1349.0,
           "sku": "VT020004E",
           "variant_id": 41729524039863,
           "available": true,
@@ -4391,26 +4399,9 @@
         {
           "options": {
             "Size": "Large",
-            "Color": "Sand"
-          },
-          "price": 1399.0,
-          "sku": "VT020005E",
-          "variant_id": 43099583873207,
-          "available": false,
-          "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/T1ST_plus_sand_right_side_1_1_1_1.png?v=1774001769",
-          "color": {
-            "name": "Sand",
-            "hex": "#DED7CD",
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/T1ST_plus_sand_right_side_1_1_1_1.png?v=1774001769"
-          }
-        },
-        {
-          "options": {
-            "Size": "Large",
             "Color": "Lava"
           },
-          "price": 1399.0,
+          "price": 1349.0,
           "sku": "VT020006E",
           "variant_id": 43099583905975,
           "available": true,
@@ -4430,13 +4421,13 @@
           "choices": [
             {
               "value": "Regular",
-              "price": 1399.0,
+              "price": 1349.0,
               "price_delta": 0.0,
               "free": true
             },
             {
               "value": "Large",
-              "price": 1399.0,
+              "price": 1349.0,
               "price_delta": 0.0,
               "free": true
             }
@@ -4460,19 +4451,7 @@
         }
       ],
       "regular_price": 1649.0,
-      "frame_style": "Step-Thru",
-      "frame_sizes": [
-        {
-          "size": "Regular",
-          "height_min": "4'11\"",
-          "height_max": "5'9\""
-        },
-        {
-          "size": "Large",
-          "height_min": "5'6\"",
-          "height_max": "6'4\""
-        }
-      ]
+      "frame_style": "Step-Thru"
     },
     {
       "model": "Velotric Tempo Ebike",
@@ -4513,7 +4492,7 @@
           }
         ]
       },
-      "warranty": "2-Year Warranty",
+      "warranty": "2-Year Limited Warranty",
       "specs": {
         "all": {
           "Bike Size": "Regular / Large",
@@ -4597,6 +4576,18 @@
           "detail": "Aluminum Alloy, Included, Rear Mount"
         }
       ],
+      "frame_sizes": [
+        {
+          "size": "Regular",
+          "height_min": "4'10\"",
+          "height_max": "5'5\""
+        },
+        {
+          "size": "Large",
+          "height_min": "5'3\"",
+          "height_max": "5'11\""
+        }
+      ],
       "geometry": {
         "Bike Size": "Regular / Large",
         "User Height Range": "MS/R：4'10''~5'5'' MS/ L：5'3''~5'11'' HS/R：4'11''~5'8'' HS/ L：5'6''~6'4''",
@@ -4604,7 +4595,8 @@
         "Wheelbase": "1122mm",
         "Stand-Over Height": "521mm",
         "Min Saddle Height": "750mm",
-        "Max Saddle Height": "980mm"
+        "Max Saddle Height": "980mm",
+        "Rider Height": "4'10\" - 5'11\""
       },
       "configurations": [
         {
@@ -4806,28 +4798,16 @@
           ]
         }
       ],
-      "frame_style": "Step-Over (Mid-Step)",
-      "frame_sizes": [
-        {
-          "size": "Regular",
-          "height_min": "4'10\"",
-          "height_max": "5'5\""
-        },
-        {
-          "size": "Large",
-          "height_min": "5'3\"",
-          "height_max": "5'11\""
-        }
-      ]
+      "frame_style": "Step-Over (Mid-Step)"
     },
     {
       "model": "Velotric Triker Electric Tricycle",
       "handle": "velotric-triker",
       "url": "https://www.velotricbike.com/products/velotric-triker",
       "product_types": [
-        "Cargo"
+        "Trike"
       ],
-      "price_from": 2499.0,
+      "price_from": 2399.0,
       "currency": "USD",
       "options": {
         "colors": [
@@ -4851,7 +4831,7 @@
           }
         ]
       },
-      "warranty": "2-Year Warranty",
+      "warranty": "2-Year Limited Warranty",
       "specs": {
         "all": {
           "Bike Size": "One Size",
@@ -4933,16 +4913,24 @@
           "detail": "Electric horn integrated with front light, 90 db"
         }
       ],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "4'10\"",
+          "height_max": "6'5\""
+        }
+      ],
       "geometry": {
         "Bike Size": "One Size",
-        "User Height Range": "4'10''-6'5''"
+        "User Height Range": "4'10''-6'5''",
+        "Rider Height": "4'10\" - 6'5\""
       },
       "configurations": [
         {
           "options": {
             "Color": "Pearl White"
           },
-          "price": 2499.0,
+          "price": 2399.0,
           "sku": "VTK10001C",
           "variant_id": 52774419726708,
           "available": true,
@@ -4958,7 +4946,7 @@
           "options": {
             "Color": "Electric Blue"
           },
-          "price": 2499.0,
+          "price": 2399.0,
           "sku": "VTK10003C",
           "variant_id": 52774419661172,
           "available": true,
@@ -4974,7 +4962,7 @@
           "options": {
             "Color": "Cherry Crimson"
           },
-          "price": 2499.0,
+          "price": 2399.0,
           "sku": "VTK10002C",
           "variant_id": 52774419693940,
           "available": true,
@@ -5010,13 +4998,7 @@
           ]
         }
       ],
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "4'10\"",
-          "height_max": "6'5\""
-        }
-      ]
+      "regular_price": 2499.0
     }
   ],
   "available_accessories": [
@@ -5093,14 +5075,6 @@
       "url": "https://www.velotricbike.com/products/velotric-comfortmax-saddle"
     },
     {
-      "name": "Double Spring Comfort Saddle",
-      "price": 49.99,
-      "regular_price": null,
-      "on_sale": false,
-      "free": false,
-      "url": "https://www.velotricbike.com/products/double-spring-comfort-saddle"
-    },
-    {
       "name": "Velotric Breeze 1 Fender",
       "price": 69.99,
       "regular_price": null,
@@ -5147,14 +5121,6 @@
       "on_sale": false,
       "free": false,
       "url": "https://www.velotricbike.com/products/t1-fender-pack"
-    },
-    {
-      "name": "Velotric Summit 1 Rear Rack",
-      "price": 79.99,
-      "regular_price": null,
-      "on_sale": false,
-      "free": false,
-      "url": "https://www.velotricbike.com/products/velotric-summit-1-rear-rack"
     },
     {
       "name": "Velotric Folding Lock",
@@ -5491,14 +5457,6 @@
       "on_sale": false,
       "free": false,
       "url": "https://www.velotricbike.com/products/velotric-battery-connector-coverf1"
-    },
-    {
-      "name": "Velotric Adjustable Stem (60mm)",
-      "price": 52.99,
-      "regular_price": null,
-      "on_sale": false,
-      "free": false,
-      "url": "https://www.velotricbike.com/products/velotric-adjustable-stem-60mm"
     },
     {
       "name": "Velotric D2/S1/N2/N2X/B1 Charger Slim",
@@ -5845,5 +5803,5 @@
       "url": "https://www.velotricbike.com/products/bike-essential-kit"
     }
   ],
-  "available_accessories_count": 103
+  "available_accessories_count": 100
 }

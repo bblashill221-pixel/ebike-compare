@@ -2,7 +2,7 @@
   "source": "https://magicyclebike.com",
   "logo": "https://www.magicyclebike.com/cdn/shop/files/1_6df57213-3554-4317-af8d-cd80d3cce242.jpg?v=1693271847",
   "collection": "e-bikes",
-  "scraped_at": "2026-06-14T02:30:29.790204+00:00",
+  "scraped_at": "2026-06-24T04:53:20.698402+00:00",
   "model_count": 7,
   "models": [
     {
@@ -10,10 +10,9 @@
       "handle": "magicycle-jaguarundi-48v-folding-step-thru-fat-tire-ebike-space-black",
       "url": "https://magicyclebike.com/products/magicycle-jaguarundi-48v-folding-step-thru-fat-tire-ebike-space-black",
       "product_types": [
-        "Folding",
         "Fat Tire"
       ],
-      "price_from": 799.0,
+      "price_from": 999.0,
       "currency": "USD",
       "options": {
         "colors": [
@@ -37,6 +36,50 @@
           }
         ]
       },
+      "configurations": [
+        {
+          "options": {
+            "Color": "Pearl White"
+          },
+          "price": 999.0,
+          "available": false,
+          "sku": "BD20DK0B23W102",
+          "color": {
+            "name": "Pearl White",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/jaguarundi-1.jpg?v=1720755407"
+          }
+        },
+        {
+          "options": {
+            "Color": "Midnight Blue"
+          },
+          "price": 999.0,
+          "available": false,
+          "sku": "BD20DK0P23W102",
+          "color": {
+            "name": "Midnight Blue",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/jaguarundi-blue-1.jpg?v=1720755407"
+          }
+        },
+        {
+          "options": {
+            "Color": "Aqua"
+          },
+          "price": 999.0,
+          "available": false,
+          "sku": "BD20DK0S23W102",
+          "color": {
+            "name": "Aqua",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/jaguarundi-aqua.jpg?v=1712646907"
+          }
+        }
+      ],
       "specs": {
         "all": {
           "Battery": "48V 15Ah lithium battery",
@@ -76,7 +119,19 @@
       "spec_count": 32,
       "warranty": null,
       "scrape_error": null,
-      "regular_price": 1899.0,
+      "is_new": false,
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": [
+        {
+          "name": "Lights",
+          "price": 0,
+          "free": true,
+          "detail": "Integrated front light"
+        }
+      ],
       "frame_sizes": [
         {
           "size": null,
@@ -84,42 +139,31 @@
           "height_max": "6'2\""
         }
       ],
-      "configurations": [
+      "geometry": {
+        "Frame Size": "20\"",
+        "Rider Height": "5'0\" - 6'2\""
+      },
+      "available_options": [
         {
-          "options": {
-            "Color": "Pearl White"
-          },
-          "price": 799.0,
-          "available": false,
-          "sku": "BD20DK0B23W102"
-        },
-        {
-          "options": {
-            "Color": "Midnight Blue"
-          },
-          "price": 799.0,
-          "available": false,
-          "sku": "BD20DK0P23W102"
-        },
-        {
-          "options": {
-            "Color": "Aqua"
-          },
-          "price": 799.0,
-          "available": false,
-          "sku": "BD20DK0S23W102"
+          "group": "Included accessories",
+          "type": "accessory",
+          "choices": [
+            {
+              "value": "Lights",
+              "price": 0,
+              "free": true
+            }
+          ]
         }
       ],
-      "shipping": {
-        "cost": 0,
-        "free": true
-      }
+      "regular_price": 1899.0
     },
     {
       "model": "Magicycle 20\" Deer Step-Thru Full Suspension Ebike SUV",
       "handle": "magicycle-20-deer-step-thru-full-suspension-ebike-suv",
       "url": "https://magicyclebike.com/products/magicycle-20-deer-step-thru-full-suspension-ebike-suv",
       "product_types": [
+        "All-Terrain",
         "Mountain (eMTB)",
         "Fat Tire"
       ],
@@ -158,6 +202,188 @@
           }
         ]
       },
+      "configurations": [
+        {
+          "options": {
+            "Color": "Pearl White",
+            "Limited Special Offer": "Bike Only"
+          },
+          "price": 2099.0,
+          "available": true,
+          "sku": "BB20DK0B24W100",
+          "color": {
+            "name": "Pearl White",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/whitedeer1_cc7ccbe1-cb7a-4a55-8a5d-1de250b1049c.webp?v=1720755455"
+          }
+        },
+        {
+          "options": {
+            "Color": "Pearl White",
+            "Limited Special Offer": "With A Hitch Bike Rack"
+          },
+          "price": 2349.0,
+          "available": true,
+          "sku": "MZH0187",
+          "color": {
+            "name": "Pearl White",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/whitedeer1_cc7ccbe1-cb7a-4a55-8a5d-1de250b1049c.webp?v=1720755455"
+          }
+        },
+        {
+          "options": {
+            "Color": "Pearl White",
+            "Limited Special Offer": "With A Second 20Ah Battery"
+          },
+          "price": 2649.0,
+          "available": true,
+          "sku": "ZH0068",
+          "color": {
+            "name": "Pearl White",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/whitedeer1_cc7ccbe1-cb7a-4a55-8a5d-1de250b1049c.webp?v=1720755455"
+          }
+        },
+        {
+          "options": {
+            "Color": "Dawn Yellow",
+            "Limited Special Offer": "Bike Only"
+          },
+          "price": 2099.0,
+          "available": true,
+          "sku": "BB20DK0J24W100",
+          "color": {
+            "name": "Dawn Yellow",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/miniyellow1_4c12e52e-fa7e-4943-99b1-fac05552df2f.webp?v=1719974727"
+          }
+        },
+        {
+          "options": {
+            "Color": "Dawn Yellow",
+            "Limited Special Offer": "With A Hitch Bike Rack"
+          },
+          "price": 2349.0,
+          "available": true,
+          "sku": "MZH0188",
+          "color": {
+            "name": "Dawn Yellow",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/miniyellow1_4c12e52e-fa7e-4943-99b1-fac05552df2f.webp?v=1719974727"
+          }
+        },
+        {
+          "options": {
+            "Color": "Dawn Yellow",
+            "Limited Special Offer": "With A Second 20Ah Battery"
+          },
+          "price": 2649.0,
+          "available": true,
+          "sku": "ZH0069",
+          "color": {
+            "name": "Dawn Yellow",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/miniyellow1_4c12e52e-fa7e-4943-99b1-fac05552df2f.webp?v=1719974727"
+          }
+        },
+        {
+          "options": {
+            "Color": "Space Gray",
+            "Limited Special Offer": "Bike Only"
+          },
+          "price": 2099.0,
+          "available": true,
+          "sku": "BB20DK0C24W100",
+          "color": {
+            "name": "Space Gray",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/minigrey1_61f04635-6b46-48ed-b4a5-5a6475843944.webp?v=1719994651"
+          }
+        },
+        {
+          "options": {
+            "Color": "Space Gray",
+            "Limited Special Offer": "With A Hitch Bike Rack"
+          },
+          "price": 2349.0,
+          "available": true,
+          "sku": "MZH0189",
+          "color": {
+            "name": "Space Gray",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/minigrey1_61f04635-6b46-48ed-b4a5-5a6475843944.webp?v=1719994651"
+          }
+        },
+        {
+          "options": {
+            "Color": "Space Gray",
+            "Limited Special Offer": "With A Second 20Ah Battery"
+          },
+          "price": 2649.0,
+          "available": true,
+          "sku": "ZH0070",
+          "color": {
+            "name": "Space Gray",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/minigrey1_61f04635-6b46-48ed-b4a5-5a6475843944.webp?v=1719994651"
+          }
+        },
+        {
+          "options": {
+            "Color": "Sierra Blue",
+            "Limited Special Offer": "Bike Only"
+          },
+          "price": 2099.0,
+          "available": true,
+          "sku": "BB20DK0X24W100",
+          "color": {
+            "name": "Sierra Blue",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/20-deer-sierra-blue-1.webp?v=1720507305"
+          }
+        },
+        {
+          "options": {
+            "Color": "Sierra Blue",
+            "Limited Special Offer": "With A Hitch Bike Rack"
+          },
+          "price": 2349.0,
+          "available": true,
+          "sku": "MZH0319",
+          "color": {
+            "name": "Sierra Blue",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/20-deer-sierra-blue-1.webp?v=1720507305"
+          }
+        },
+        {
+          "options": {
+            "Color": "Sierra Blue",
+            "Limited Special Offer": "With A Second 20Ah Battery"
+          },
+          "price": 2649.0,
+          "available": true,
+          "sku": "MZH0320",
+          "color": {
+            "name": "Sierra Blue",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/20-deer-sierra-blue-1.webp?v=1720507305"
+          }
+        }
+      ],
       "specs": {
         "all": {
           "Charging Time": "4 - 7Hours",
@@ -196,7 +422,19 @@
       "spec_count": 31,
       "warranty": null,
       "scrape_error": null,
-      "regular_price": 2499.0,
+      "is_new": false,
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": [
+        {
+          "name": "Lights",
+          "price": 0,
+          "free": true,
+          "detail": "Integrated front and brake lights"
+        }
+      ],
       "frame_sizes": [
         {
           "size": null,
@@ -204,121 +442,49 @@
           "height_max": "6'8\""
         }
       ],
-      "configurations": [
+      "geometry": {
+        "Frame Size": "18\"",
+        "Rider Height": "5'5\" - 6'8\""
+      },
+      "available_options": [
         {
-          "options": {
-            "Color": "Pearl White",
-            "Limited Special Offer": "Bike Only"
-          },
-          "price": 2099.0,
-          "available": true,
-          "sku": "BB20DK0B24W100"
+          "group": "Limited Special Offer",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "Bike Only",
+              "price": 2099.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "With A Hitch Bike Rack",
+              "price": 2349.0,
+              "price_delta": 250.0,
+              "free": false
+            },
+            {
+              "value": "With A Second 20Ah Battery",
+              "price": 2649.0,
+              "price_delta": 550.0,
+              "free": false
+            }
+          ]
         },
         {
-          "options": {
-            "Color": "Pearl White",
-            "Limited Special Offer": "With A Hitch Bike Rack"
-          },
-          "price": 2349.0,
-          "available": true,
-          "sku": "MZH0187"
-        },
-        {
-          "options": {
-            "Color": "Pearl White",
-            "Limited Special Offer": "With A Second 20Ah Battery"
-          },
-          "price": 2649.0,
-          "available": true,
-          "sku": "ZH0068"
-        },
-        {
-          "options": {
-            "Color": "Dawn Yellow",
-            "Limited Special Offer": "Bike Only"
-          },
-          "price": 2099.0,
-          "available": true,
-          "sku": "BB20DK0J24W100"
-        },
-        {
-          "options": {
-            "Color": "Dawn Yellow",
-            "Limited Special Offer": "With A Hitch Bike Rack"
-          },
-          "price": 2349.0,
-          "available": true,
-          "sku": "MZH0188"
-        },
-        {
-          "options": {
-            "Color": "Dawn Yellow",
-            "Limited Special Offer": "With A Second 20Ah Battery"
-          },
-          "price": 2649.0,
-          "available": true,
-          "sku": "ZH0069"
-        },
-        {
-          "options": {
-            "Color": "Space Gray",
-            "Limited Special Offer": "Bike Only"
-          },
-          "price": 2099.0,
-          "available": true,
-          "sku": "BB20DK0C24W100"
-        },
-        {
-          "options": {
-            "Color": "Space Gray",
-            "Limited Special Offer": "With A Hitch Bike Rack"
-          },
-          "price": 2349.0,
-          "available": true,
-          "sku": "MZH0189"
-        },
-        {
-          "options": {
-            "Color": "Space Gray",
-            "Limited Special Offer": "With A Second 20Ah Battery"
-          },
-          "price": 2649.0,
-          "available": true,
-          "sku": "ZH0070"
-        },
-        {
-          "options": {
-            "Color": "Sierra Blue",
-            "Limited Special Offer": "Bike Only"
-          },
-          "price": 2099.0,
-          "available": true,
-          "sku": "BB20DK0X24W100"
-        },
-        {
-          "options": {
-            "Color": "Sierra Blue",
-            "Limited Special Offer": "With A Hitch Bike Rack"
-          },
-          "price": 2349.0,
-          "available": true,
-          "sku": "MZH0319"
-        },
-        {
-          "options": {
-            "Color": "Sierra Blue",
-            "Limited Special Offer": "With A Second 20Ah Battery"
-          },
-          "price": 2649.0,
-          "available": true,
-          "sku": "MZH0320"
+          "group": "Included accessories",
+          "type": "accessory",
+          "choices": [
+            {
+              "value": "Lights",
+              "price": 0,
+              "free": true
+            }
+          ]
         }
       ],
-      "frame_style": "Step-Thru",
-      "shipping": {
-        "cost": 0,
-        "free": true
-      }
+      "regular_price": 2499.0,
+      "frame_style": "Step-Thru"
     },
     {
       "model": "Magicycle 52V 20Ah Cruiser Pro Step-Over Ebike Cruiser",
@@ -344,6 +510,38 @@
           }
         ]
       },
+      "configurations": [
+        {
+          "options": {
+            "Color": "Midnight Blue",
+            "Limited Special Offer": "Bike Only"
+          },
+          "price": 1499.0,
+          "available": true,
+          "sku": "BA26GK0N24W101",
+          "color": {
+            "name": "Midnight Blue",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/cruiser-step-over-1_2dbb1502-e6c1-432e-b3a9-21784af095f3.webp?v=1741764909"
+          }
+        },
+        {
+          "options": {
+            "Color": "Midnight Blue",
+            "Limited Special Offer": "With A Basic Accessories Set"
+          },
+          "price": 1499.0,
+          "available": true,
+          "sku": "MZH0308",
+          "color": {
+            "name": "Midnight Blue",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/cruiser-step-over-1_2dbb1502-e6c1-432e-b3a9-21784af095f3.webp?v=1741764909"
+          }
+        }
+      ],
       "specs": {
         "all": {
           "Battery": "52V 20Ah lithium battery",
@@ -382,7 +580,19 @@
       "spec_count": 31,
       "warranty": null,
       "scrape_error": null,
-      "regular_price": 2399.0,
+      "is_new": false,
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": [
+        {
+          "name": "Lights",
+          "price": 0,
+          "free": true,
+          "detail": "Integrated front and brake lights"
+        }
+      ],
       "frame_sizes": [
         {
           "size": null,
@@ -390,31 +600,43 @@
           "height_max": "6'5\""
         }
       ],
-      "configurations": [
+      "geometry": {
+        "Frame Size": "18\"",
+        "Rider Height": "5'5\" - 6'5\""
+      },
+      "available_options": [
         {
-          "options": {
-            "Color": "Midnight Blue",
-            "Limited Special Offer": "Bike Only"
-          },
-          "price": 1499.0,
-          "available": true,
-          "sku": "BA26GK0N24W101"
+          "group": "Limited Special Offer",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "Bike Only",
+              "price": 1499.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "With A Basic Accessories Set",
+              "price": 1499.0,
+              "price_delta": 0.0,
+              "free": true
+            }
+          ]
         },
         {
-          "options": {
-            "Color": "Midnight Blue",
-            "Limited Special Offer": "With A Basic Accessories Set"
-          },
-          "price": 1499.0,
-          "available": true,
-          "sku": "MZH0308"
+          "group": "Included accessories",
+          "type": "accessory",
+          "choices": [
+            {
+              "value": "Lights",
+              "price": 0,
+              "free": true
+            }
+          ]
         }
       ],
-      "frame_style": "Step-Over (Mid-Step)",
-      "shipping": {
-        "cost": 0,
-        "free": true
-      }
+      "regular_price": 2399.0,
+      "frame_style": "Step-Over (Mid-Step)"
     },
     {
       "model": "Magicycle CT-1 Commuter Torque Sensor Ebike",
@@ -459,6 +681,78 @@
           }
         ]
       },
+      "configurations": [
+        {
+          "options": {
+            "Color": "Tiffany Blue"
+          },
+          "price": 799.0,
+          "available": true,
+          "sku": "1246267",
+          "color": {
+            "name": "Tiffany Blue",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/magicycle-ct-1-commuter-Tiffany-blue.webp?v=1720593817"
+          }
+        },
+        {
+          "options": {
+            "Color": "Maroon"
+          },
+          "price": 799.0,
+          "available": true,
+          "sku": "1246266",
+          "color": {
+            "name": "Maroon",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/magicycle-ct-1-commuter-maroon.webp?v=1720509355"
+          }
+        },
+        {
+          "options": {
+            "Color": "Midnight Blue"
+          },
+          "price": 799.0,
+          "available": false,
+          "sku": "1246264",
+          "color": {
+            "name": "Midnight Blue",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/magicycle-ct-1-commuter-midnight-blue-1.webp?v=1721093091"
+          }
+        },
+        {
+          "options": {
+            "Color": "Ivory"
+          },
+          "price": 1599.0,
+          "available": false,
+          "sku": "1238944",
+          "color": {
+            "name": "Ivory",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/magicycle-ct-1-commuter-ivory-1.webp?v=1721092877"
+          }
+        },
+        {
+          "options": {
+            "Color": "Space Gray"
+          },
+          "price": 1599.0,
+          "available": false,
+          "sku": "1246265",
+          "color": {
+            "name": "Space Gray",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/magicycle-ct-1-commuter-space-gray-1.webp?v=1721092981"
+          }
+        }
+      ],
       "specs": {
         "all": {
           "Battery": "48V 15Ah lithium battery",
@@ -488,7 +782,12 @@
       "spec_count": 22,
       "warranty": null,
       "scrape_error": null,
-      "regular_price": 1899.0,
+      "is_new": false,
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": [],
       "frame_sizes": [
         {
           "size": null,
@@ -496,52 +795,49 @@
           "height_max": "6'8\""
         }
       ],
-      "configurations": [
+      "geometry": {
+        "Frame Size": "26\"",
+        "Rider Height": "5'5\" - 6'8\""
+      },
+      "available_options": [
         {
-          "options": {
-            "Color": "Tiffany Blue"
-          },
-          "price": 799.0,
-          "available": true,
-          "sku": "1246267"
-        },
-        {
-          "options": {
-            "Color": "Maroon"
-          },
-          "price": 799.0,
-          "available": true,
-          "sku": "1246266"
-        },
-        {
-          "options": {
-            "Color": "Midnight Blue"
-          },
-          "price": 799.0,
-          "available": false,
-          "sku": "1246264"
-        },
-        {
-          "options": {
-            "Color": "Ivory"
-          },
-          "price": 1599.0,
-          "available": false,
-          "sku": "1238944"
-        },
-        {
-          "options": {
-            "Color": "Space Gray"
-          },
-          "price": 1599.0,
-          "available": false,
-          "sku": "1246265"
+          "group": "Color",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "Tiffany Blue",
+              "price": 799.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "Maroon",
+              "price": 799.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "Midnight Blue",
+              "price": 799.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "Ivory",
+              "price": 1599.0,
+              "price_delta": 800.0,
+              "free": false
+            },
+            {
+              "value": "Space Gray",
+              "price": 1599.0,
+              "price_delta": 800.0,
+              "free": false
+            }
+          ]
         }
       ],
-      "shipping": {
-        "cost": 0,
-        "free": true
-      }
+      "regular_price": 1899.0
     },
     {
       "model": "Magicycle Cruiser Pro Mid Step-Thru Electric Cruiser Bike",
@@ -573,6 +869,68 @@
           }
         ]
       },
+      "configurations": [
+        {
+          "options": {
+            "Color": "Pearl White",
+            "Limited Special Offer": "Bike Only"
+          },
+          "price": 1499.0,
+          "available": true,
+          "sku": "BA26DK0B24W101",
+          "color": {
+            "name": "Pearl White",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/cruiser-pro-white-1.webp?v=1741766344"
+          }
+        },
+        {
+          "options": {
+            "Color": "Pearl White",
+            "Limited Special Offer": "With A Basic Accessories Set"
+          },
+          "price": 1499.0,
+          "available": true,
+          "sku": "MZH0284",
+          "color": {
+            "name": "Pearl White",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/cruiser-pro-white-1.webp?v=1741766344"
+          }
+        },
+        {
+          "options": {
+            "Color": "Midnight Blue",
+            "Limited Special Offer": "Bike Only"
+          },
+          "price": 1499.0,
+          "available": true,
+          "sku": "BA26DK0N24W101",
+          "color": {
+            "name": "Midnight Blue",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/cruiser-pro-step-thru-blue-1.webp?v=1763358541"
+          }
+        },
+        {
+          "options": {
+            "Color": "Midnight Blue",
+            "Limited Special Offer": "With A Basic Accessories Set"
+          },
+          "price": 1499.0,
+          "available": true,
+          "sku": "MZH0304",
+          "color": {
+            "name": "Midnight Blue",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/cruiser-pro-step-thru-blue-1.webp?v=1763358541"
+          }
+        }
+      ],
       "specs": {
         "all": {
           "Battery": "52V 20Ah lithium battery",
@@ -611,7 +969,19 @@
       "spec_count": 31,
       "warranty": null,
       "scrape_error": null,
-      "regular_price": 2399.0,
+      "is_new": false,
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": [
+        {
+          "name": "Lights",
+          "price": 0,
+          "free": true,
+          "detail": "Integrated front and brake lights"
+        }
+      ],
       "frame_sizes": [
         {
           "size": null,
@@ -619,49 +989,43 @@
           "height_max": "6'5\""
         }
       ],
-      "configurations": [
+      "geometry": {
+        "Frame Size": "18\"",
+        "Rider Height": "5'5\" - 6'5\""
+      },
+      "available_options": [
         {
-          "options": {
-            "Color": "Pearl White",
-            "Limited Special Offer": "Bike Only"
-          },
-          "price": 1499.0,
-          "available": true,
-          "sku": "BA26DK0B24W101"
+          "group": "Limited Special Offer",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "Bike Only",
+              "price": 1499.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "With A Basic Accessories Set",
+              "price": 1499.0,
+              "price_delta": 0.0,
+              "free": true
+            }
+          ]
         },
         {
-          "options": {
-            "Color": "Pearl White",
-            "Limited Special Offer": "With A Basic Accessories Set"
-          },
-          "price": 1499.0,
-          "available": true,
-          "sku": "MZH0284"
-        },
-        {
-          "options": {
-            "Color": "Midnight Blue",
-            "Limited Special Offer": "Bike Only"
-          },
-          "price": 1499.0,
-          "available": true,
-          "sku": "BA26DK0N24W101"
-        },
-        {
-          "options": {
-            "Color": "Midnight Blue",
-            "Limited Special Offer": "With A Basic Accessories Set"
-          },
-          "price": 1499.0,
-          "available": true,
-          "sku": "MZH0304"
+          "group": "Included accessories",
+          "type": "accessory",
+          "choices": [
+            {
+              "value": "Lights",
+              "price": 0,
+              "free": true
+            }
+          ]
         }
       ],
-      "frame_style": "Step-Thru",
-      "shipping": {
-        "cost": 0,
-        "free": true
-      }
+      "regular_price": 2399.0,
+      "frame_style": "Step-Thru"
     },
     {
       "model": "Magicycle Deer 2.0 Step-Thru Full Suspension Torque Sensor Ebike",
@@ -711,6 +1075,158 @@
           }
         ]
       },
+      "configurations": [
+        {
+          "options": {
+            "Tire Size": "20\"",
+            "Color": "Pearl White"
+          },
+          "price": 2499.0,
+          "available": true,
+          "sku": "BB20DK0B24W101",
+          "color": {
+            "name": "Pearl White",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/whitedeer1_cc7ccbe1-cb7a-4a55-8a5d-1de250b1049c.webp?v=1720755455"
+          }
+        },
+        {
+          "options": {
+            "Tire Size": "20\"",
+            "Color": "Dawn Yellow"
+          },
+          "price": 2499.0,
+          "available": false,
+          "sku": "BB20DK0J24W101",
+          "color": {
+            "name": "Dawn Yellow",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/miniyellow1_4c12e52e-fa7e-4943-99b1-fac05552df2f.webp?v=1719974727"
+          }
+        },
+        {
+          "options": {
+            "Tire Size": "20\"",
+            "Color": "Sierra Blue"
+          },
+          "price": 2499.0,
+          "available": true,
+          "sku": "BB20DK0X24W101",
+          "color": {
+            "name": "Sierra Blue",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/20-deer-sierra-blue-1.webp?v=1720507305"
+          }
+        },
+        {
+          "options": {
+            "Tire Size": "20\"",
+            "Color": "Space Gray"
+          },
+          "price": 2499.0,
+          "available": true,
+          "sku": "BB20DK0C24W101",
+          "color": {
+            "name": "Space Gray",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/minigrey1_61f04635-6b46-48ed-b4a5-5a6475843944.webp?v=1719994651"
+          }
+        },
+        {
+          "options": {
+            "Tire Size": "20\"",
+            "Color": "Army Green"
+          },
+          "price": 2499.0,
+          "available": false,
+          "sku": "",
+          "color": {
+            "name": "Army Green",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/26-deer-step-thru-army-green.webp?v=1719828919"
+          }
+        },
+        {
+          "options": {
+            "Tire Size": "26\"",
+            "Color": "Pearl White"
+          },
+          "price": 2499.0,
+          "available": false,
+          "sku": "",
+          "color": {
+            "name": "Pearl White",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/whitedeer1_cc7ccbe1-cb7a-4a55-8a5d-1de250b1049c.webp?v=1720755455"
+          }
+        },
+        {
+          "options": {
+            "Tire Size": "26\"",
+            "Color": "Dawn Yellow"
+          },
+          "price": 2499.0,
+          "available": false,
+          "sku": "",
+          "color": {
+            "name": "Dawn Yellow",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/miniyellow1_4c12e52e-fa7e-4943-99b1-fac05552df2f.webp?v=1719974727"
+          }
+        },
+        {
+          "options": {
+            "Tire Size": "26\"",
+            "Color": "Sierra Blue"
+          },
+          "price": 2499.0,
+          "available": false,
+          "sku": "",
+          "color": {
+            "name": "Sierra Blue",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/20-deer-sierra-blue-1.webp?v=1720507305"
+          }
+        },
+        {
+          "options": {
+            "Tire Size": "26\"",
+            "Color": "Space Gray"
+          },
+          "price": 2499.0,
+          "available": false,
+          "sku": "BB26DK0C23W103",
+          "color": {
+            "name": "Space Gray",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/minigrey1_61f04635-6b46-48ed-b4a5-5a6475843944.webp?v=1719994651"
+          }
+        },
+        {
+          "options": {
+            "Tire Size": "26\"",
+            "Color": "Army Green"
+          },
+          "price": 2499.0,
+          "available": false,
+          "sku": "BB26DK0R23W103",
+          "color": {
+            "name": "Army Green",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/26-deer-step-thru-army-green.webp?v=1719828919"
+          }
+        }
+      ],
       "specs": {
         "all": {
           "Motor": "1000W/1800W(peak) 100Nm brushless hub motor(IP55)",
@@ -749,7 +1265,19 @@
       "spec_count": 31,
       "warranty": null,
       "scrape_error": null,
-      "regular_price": 2999.0,
+      "is_new": false,
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": [
+        {
+          "name": "Lights",
+          "price": 0,
+          "free": true,
+          "detail": "Integrated front and brake lights"
+        }
+      ],
       "frame_sizes": [
         {
           "size": null,
@@ -757,103 +1285,43 @@
           "height_max": "6'8\""
         }
       ],
-      "configurations": [
+      "geometry": {
+        "Frame Size": "18\"",
+        "Rider Height": "5'5\" - 6'8\""
+      },
+      "available_options": [
         {
-          "options": {
-            "Tire Size": "20\"",
-            "Color": "Pearl White"
-          },
-          "price": 2499.0,
-          "available": true,
-          "sku": "BB20DK0B24W101"
+          "group": "Tire Size",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "20\"",
+              "price": 2499.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "26\"",
+              "price": 2499.0,
+              "price_delta": 0.0,
+              "free": true
+            }
+          ]
         },
         {
-          "options": {
-            "Tire Size": "20\"",
-            "Color": "Dawn Yellow"
-          },
-          "price": 2499.0,
-          "available": false,
-          "sku": "BB20DK0J24W101"
-        },
-        {
-          "options": {
-            "Tire Size": "20\"",
-            "Color": "Sierra Blue"
-          },
-          "price": 2499.0,
-          "available": true,
-          "sku": "BB20DK0X24W101"
-        },
-        {
-          "options": {
-            "Tire Size": "20\"",
-            "Color": "Space Gray"
-          },
-          "price": 2499.0,
-          "available": true,
-          "sku": "BB20DK0C24W101"
-        },
-        {
-          "options": {
-            "Tire Size": "20\"",
-            "Color": "Army Green"
-          },
-          "price": 2499.0,
-          "available": false,
-          "sku": ""
-        },
-        {
-          "options": {
-            "Tire Size": "26\"",
-            "Color": "Pearl White"
-          },
-          "price": 2499.0,
-          "available": false,
-          "sku": ""
-        },
-        {
-          "options": {
-            "Tire Size": "26\"",
-            "Color": "Dawn Yellow"
-          },
-          "price": 2499.0,
-          "available": false,
-          "sku": ""
-        },
-        {
-          "options": {
-            "Tire Size": "26\"",
-            "Color": "Sierra Blue"
-          },
-          "price": 2499.0,
-          "available": false,
-          "sku": ""
-        },
-        {
-          "options": {
-            "Tire Size": "26\"",
-            "Color": "Space Gray"
-          },
-          "price": 2499.0,
-          "available": false,
-          "sku": "BB26DK0C23W103"
-        },
-        {
-          "options": {
-            "Tire Size": "26\"",
-            "Color": "Army Green"
-          },
-          "price": 2499.0,
-          "available": false,
-          "sku": "BB26DK0R23W103"
+          "group": "Included accessories",
+          "type": "accessory",
+          "choices": [
+            {
+              "value": "Lights",
+              "price": 0,
+              "free": true
+            }
+          ]
         }
       ],
-      "frame_style": "Step-Thru",
-      "shipping": {
-        "cost": 0,
-        "free": true
-      }
+      "regular_price": 2999.0,
+      "frame_style": "Step-Thru"
     },
     {
       "model": "Magicycle Ocelot Pro Long Range Step-Thru Fat Tire Electric Bike",
@@ -898,6 +1366,248 @@
           }
         ]
       },
+      "configurations": [
+        {
+          "options": {
+            "Color": "Pearl White",
+            "Limited Special Offer": "Bike Only"
+          },
+          "price": 1399.0,
+          "available": true,
+          "sku": "BA20DK0B24W100",
+          "color": {
+            "name": "Pearl White",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/ocelot-pro-white-01.webp?v=1728380301"
+          }
+        },
+        {
+          "options": {
+            "Color": "Pearl White",
+            "Limited Special Offer": "With A Basic Accessories Set"
+          },
+          "price": 1399.0,
+          "available": true,
+          "sku": "MZH0278",
+          "color": {
+            "name": "Pearl White",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/ocelot-pro-white-01.webp?v=1728380301"
+          }
+        },
+        {
+          "options": {
+            "Color": "Pearl White",
+            "Limited Special Offer": "With A Hitch Bike Rack"
+          },
+          "price": 1649.0,
+          "available": true,
+          "sku": "MZH0196",
+          "color": {
+            "name": "Pearl White",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/ocelot-pro-white-01.webp?v=1728380301"
+          }
+        },
+        {
+          "options": {
+            "Color": "Pearl White",
+            "Limited Special Offer": "With A Second 20Ah Battery"
+          },
+          "price": 1949.0,
+          "available": true,
+          "sku": "ZH0015",
+          "color": {
+            "name": "Pearl White",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/ocelot-pro-white-01.webp?v=1728380301"
+          }
+        },
+        {
+          "options": {
+            "Color": "Space Gray",
+            "Limited Special Offer": "Bike Only"
+          },
+          "price": 1399.0,
+          "available": true,
+          "sku": "BA20DK0C24W100",
+          "color": {
+            "name": "Space Gray",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/ocelot-pro-gray-01.webp?v=1716976142"
+          }
+        },
+        {
+          "options": {
+            "Color": "Space Gray",
+            "Limited Special Offer": "With A Basic Accessories Set"
+          },
+          "price": 1399.0,
+          "available": true,
+          "sku": "MZH0279",
+          "color": {
+            "name": "Space Gray",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/ocelot-pro-gray-01.webp?v=1716976142"
+          }
+        },
+        {
+          "options": {
+            "Color": "Space Gray",
+            "Limited Special Offer": "With A Hitch Bike Rack"
+          },
+          "price": 1649.0,
+          "available": true,
+          "sku": "MZH0197",
+          "color": {
+            "name": "Space Gray",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/ocelot-pro-gray-01.webp?v=1716976142"
+          }
+        },
+        {
+          "options": {
+            "Color": "Space Gray",
+            "Limited Special Offer": "With A Second 20Ah Battery"
+          },
+          "price": 1949.0,
+          "available": true,
+          "sku": "ZH0018",
+          "color": {
+            "name": "Space Gray",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/ocelot-pro-gray-01.webp?v=1716976142"
+          }
+        },
+        {
+          "options": {
+            "Color": "Army Green",
+            "Limited Special Offer": "Bike Only"
+          },
+          "price": 1399.0,
+          "available": true,
+          "sku": "BA20DK0R22W100",
+          "color": {
+            "name": "Army Green",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/ocelot-pro-green-01.webp?v=1728380357"
+          }
+        },
+        {
+          "options": {
+            "Color": "Army Green",
+            "Limited Special Offer": "With A Basic Accessories Set"
+          },
+          "price": 1399.0,
+          "available": true,
+          "sku": "MZH0280",
+          "color": {
+            "name": "Army Green",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/ocelot-pro-green-01.webp?v=1728380357"
+          }
+        },
+        {
+          "options": {
+            "Color": "Army Green",
+            "Limited Special Offer": "With A Hitch Bike Rack"
+          },
+          "price": 1649.0,
+          "available": true,
+          "sku": "MZH0198",
+          "color": {
+            "name": "Army Green",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/ocelot-pro-green-01.webp?v=1728380357"
+          }
+        },
+        {
+          "options": {
+            "Color": "Army Green",
+            "Limited Special Offer": "With A Second 20Ah Battery"
+          },
+          "price": 1949.0,
+          "available": true,
+          "sku": "ZH0017",
+          "color": {
+            "name": "Army Green",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/ocelot-pro-green-01.webp?v=1728380357"
+          }
+        },
+        {
+          "options": {
+            "Color": "Maroon",
+            "Limited Special Offer": "Bike Only"
+          },
+          "price": 1499.0,
+          "available": false,
+          "sku": "BA20DK0W24W100",
+          "color": {
+            "name": "Maroon",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/Ocelot-Pro-Torque-Sensor-1.webp?v=1728380201"
+          }
+        },
+        {
+          "options": {
+            "Color": "Maroon",
+            "Limited Special Offer": "With A Basic Accessories Set"
+          },
+          "price": 1698.0,
+          "available": false,
+          "sku": "MZH0337",
+          "color": {
+            "name": "Maroon",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/Ocelot-Pro-Torque-Sensor-1.webp?v=1728380201"
+          }
+        },
+        {
+          "options": {
+            "Color": "Maroon",
+            "Limited Special Offer": "With A Hitch Bike Rack"
+          },
+          "price": 1749.0,
+          "available": false,
+          "sku": "MZH0339",
+          "color": {
+            "name": "Maroon",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/Ocelot-Pro-Torque-Sensor-1.webp?v=1728380201"
+          }
+        },
+        {
+          "options": {
+            "Color": "Maroon",
+            "Limited Special Offer": "With A Second 20Ah Battery"
+          },
+          "price": 2049.0,
+          "available": false,
+          "sku": "MZH0340",
+          "color": {
+            "name": "Maroon",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0759/6549/7626/files/Ocelot-Pro-Torque-Sensor-1.webp?v=1728380201"
+          }
+        }
+      ],
       "specs": {
         "all": {
           "Battery": "52V 20Ah lithium battery",
@@ -936,7 +1646,19 @@
       "spec_count": 31,
       "warranty": null,
       "scrape_error": null,
-      "regular_price": 2399.0,
+      "is_new": false,
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": [
+        {
+          "name": "Lights",
+          "price": 0,
+          "free": true,
+          "detail": "Integrated front and brake lights"
+        }
+      ],
       "frame_sizes": [
         {
           "size": null,
@@ -944,157 +1666,87 @@
           "height_max": "6'2\""
         }
       ],
-      "configurations": [
+      "geometry": {
+        "Frame Size": "20\"",
+        "Rider Height": "4'10\" - 6'2\""
+      },
+      "available_options": [
         {
-          "options": {
-            "Color": "Pearl White",
-            "Limited Special Offer": "Bike Only"
-          },
-          "price": 1399.0,
-          "available": true,
-          "sku": "BA20DK0B24W100"
+          "group": "Color",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "Pearl White",
+              "price": 1399.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "Space Gray",
+              "price": 1399.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "Army Green",
+              "price": 1399.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "Maroon",
+              "price": 1499.0,
+              "price_delta": 100.0,
+              "free": false
+            }
+          ]
         },
         {
-          "options": {
-            "Color": "Pearl White",
-            "Limited Special Offer": "With A Basic Accessories Set"
-          },
-          "price": 1399.0,
-          "available": true,
-          "sku": "MZH0278"
+          "group": "Limited Special Offer",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "Bike Only",
+              "price": 1399.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "With A Basic Accessories Set",
+              "price": 1399.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "With A Hitch Bike Rack",
+              "price": 1649.0,
+              "price_delta": 250.0,
+              "free": false
+            },
+            {
+              "value": "With A Second 20Ah Battery",
+              "price": 1949.0,
+              "price_delta": 550.0,
+              "free": false
+            }
+          ]
         },
         {
-          "options": {
-            "Color": "Pearl White",
-            "Limited Special Offer": "With A Hitch Bike Rack"
-          },
-          "price": 1649.0,
-          "available": true,
-          "sku": "MZH0196"
-        },
-        {
-          "options": {
-            "Color": "Pearl White",
-            "Limited Special Offer": "With A Second 20Ah Battery"
-          },
-          "price": 1949.0,
-          "available": true,
-          "sku": "ZH0015"
-        },
-        {
-          "options": {
-            "Color": "Space Gray",
-            "Limited Special Offer": "Bike Only"
-          },
-          "price": 1399.0,
-          "available": true,
-          "sku": "BA20DK0C24W100"
-        },
-        {
-          "options": {
-            "Color": "Space Gray",
-            "Limited Special Offer": "With A Basic Accessories Set"
-          },
-          "price": 1399.0,
-          "available": true,
-          "sku": "MZH0279"
-        },
-        {
-          "options": {
-            "Color": "Space Gray",
-            "Limited Special Offer": "With A Hitch Bike Rack"
-          },
-          "price": 1649.0,
-          "available": true,
-          "sku": "MZH0197"
-        },
-        {
-          "options": {
-            "Color": "Space Gray",
-            "Limited Special Offer": "With A Second 20Ah Battery"
-          },
-          "price": 1949.0,
-          "available": true,
-          "sku": "ZH0018"
-        },
-        {
-          "options": {
-            "Color": "Army Green",
-            "Limited Special Offer": "Bike Only"
-          },
-          "price": 1399.0,
-          "available": true,
-          "sku": "BA20DK0R22W100"
-        },
-        {
-          "options": {
-            "Color": "Army Green",
-            "Limited Special Offer": "With A Basic Accessories Set"
-          },
-          "price": 1399.0,
-          "available": true,
-          "sku": "MZH0280"
-        },
-        {
-          "options": {
-            "Color": "Army Green",
-            "Limited Special Offer": "With A Hitch Bike Rack"
-          },
-          "price": 1649.0,
-          "available": true,
-          "sku": "MZH0198"
-        },
-        {
-          "options": {
-            "Color": "Army Green",
-            "Limited Special Offer": "With A Second 20Ah Battery"
-          },
-          "price": 1949.0,
-          "available": true,
-          "sku": "ZH0017"
-        },
-        {
-          "options": {
-            "Color": "Maroon",
-            "Limited Special Offer": "Bike Only"
-          },
-          "price": 1499.0,
-          "available": false,
-          "sku": "BA20DK0W24W100"
-        },
-        {
-          "options": {
-            "Color": "Maroon",
-            "Limited Special Offer": "With A Basic Accessories Set"
-          },
-          "price": 1698.0,
-          "available": false,
-          "sku": "MZH0337"
-        },
-        {
-          "options": {
-            "Color": "Maroon",
-            "Limited Special Offer": "With A Hitch Bike Rack"
-          },
-          "price": 1749.0,
-          "available": false,
-          "sku": "MZH0339"
-        },
-        {
-          "options": {
-            "Color": "Maroon",
-            "Limited Special Offer": "With A Second 20Ah Battery"
-          },
-          "price": 2049.0,
-          "available": false,
-          "sku": "MZH0340"
+          "group": "Included accessories",
+          "type": "accessory",
+          "choices": [
+            {
+              "value": "Lights",
+              "price": 0,
+              "free": true
+            }
+          ]
         }
       ],
-      "frame_style": "Step-Thru",
-      "shipping": {
-        "cost": 0,
-        "free": true
-      }
+      "regular_price": 2399.0,
+      "frame_style": "Step-Thru"
     }
-  ]
+  ],
+  "available_accessories": [],
+  "available_accessories_count": 0
 }

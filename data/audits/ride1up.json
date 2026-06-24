@@ -1,7 +1,7 @@
 {
   "brand": "ride1up",
   "scraper": "scrape_ride1up.py",
-  "generated_at": "2026-06-24T03:31:18.344000+00:00",
+  "generated_at": "2026-06-24T08:06:23.651985+00:00",
   "fields_audited": [
     "motor_w",
     "battery_wh",
@@ -18,9 +18,9 @@
   ],
   "summary": {
     "models": 21,
-    "present": 232,
-    "resolved": 8,
-    "open": 12,
+    "present": 219,
+    "resolved": 7,
+    "open": 26,
     "needs_image": 0,
     "unpublished": 0
   },
@@ -71,19 +71,19 @@
           "resolved_at": null
         },
         "weight_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 28.6,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_load_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 225,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "fit_height_min_in": {
@@ -438,111 +438,8 @@
       }
     },
     {
-      "id": "ride1up__prodigy-v2--belt-cvt--step-over",
-      "model": "PRODIGY V2 — Belt CVT · Step-Over",
-      "url": "https://ride1up.com/product/prodigy-v2/?attribute_pa_drive-train=belt-cvt&attribute_pa_frame-type=xr-step-over",
-      "fields": {
-        "motor_w": {
-          "status": "present",
-          "source": "scraped",
-          "value": 250,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "battery_wh": {
-          "status": "present",
-          "source": "scraped",
-          "value": 504,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "torque_nm": {
-          "status": "present",
-          "source": "scraped",
-          "value": 90,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "max_speed_mph": {
-          "status": "present",
-          "source": "scraped",
-          "value": 28,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "range_mi": {
-          "status": "present",
-          "source": "scraped",
-          "value": 50,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "weight_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 61.0,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "max_load_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 300,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "fit_height_min_in": {
-          "status": "present",
-          "source": "scraped",
-          "value": 60,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "sensor_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "torque",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "brake_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hydraulic_disc",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "frame_material": {
-          "status": "resolved",
-          "source": "html_extracted",
-          "value": "aluminum",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "drive_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "mid",
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        }
-      }
-    },
-    {
       "id": "ride1up__prodigy-v2--belt-cvt",
-      "model": "PRODIGY V2 — Belt CVT · Step-Thru",
+      "model": "PRODIGY V2 — Belt CVT",
       "url": "https://ride1up.com/product/prodigy-v2/?attribute_pa_drive-train=belt-cvt&attribute_pa_frame-type=st-step-through",
       "fields": {
         "motor_w": {
@@ -852,6 +749,109 @@
     {
       "id": "ride1up__roadster-v3",
       "model": "ROADSTER V3",
+      "url": "https://ride1up.com/product/roadster-v3/?attribute_pa_frame-type=medium&attribute_pa_variant=belt",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 500,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 360,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 50,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 40,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-24",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 62,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "ride1up__roadster-v3--rigid",
+      "model": "ROADSTER V3 — Rigid",
       "url": "https://ride1up.com/product/roadster-v3/?attribute_pa_frame-type=large&attribute_pa_variant=rigid",
       "fields": {
         "motor_w": {
@@ -895,19 +895,19 @@
           "resolved_at": null
         },
         "weight_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 40.0,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_load_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 300,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "fit_height_min_in": {
@@ -998,19 +998,19 @@
           "resolved_at": null
         },
         "weight_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 40.0,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "max_load_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 300,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "fit_height_min_in": {
@@ -1426,8 +1426,8 @@
           "resolved_at": null
         },
         "fit_height_min_in": {
-          "status": "resolved",
-          "source": "html_extracted",
+          "status": "present",
+          "source": "scraped",
           "value": 62,
           "note": "",
           "first_flagged": null,
@@ -1618,23 +1618,23 @@
         "weight_lb": {
           "status": "present",
           "source": "scraped",
-          "value": 65.0,
+          "value": 61.0,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
         },
         "max_load_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 440,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "fit_height_min_in": {
           "status": "present",
           "source": "scraped",
-          "value": 65,
+          "value": 61,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
@@ -1721,23 +1721,23 @@
         "weight_lb": {
           "status": "present",
           "source": "scraped",
-          "value": 65.0,
+          "value": 61.0,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
         },
         "max_load_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 440,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "fit_height_min_in": {
           "status": "present",
           "source": "scraped",
-          "value": 65,
+          "value": 61,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
@@ -1824,23 +1824,23 @@
         "weight_lb": {
           "status": "present",
           "source": "scraped",
-          "value": 65.0,
+          "value": 61.0,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
         },
         "max_load_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 440,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "fit_height_min_in": {
           "status": "present",
           "source": "scraped",
-          "value": 65,
+          "value": 61,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
@@ -1927,23 +1927,23 @@
         "weight_lb": {
           "status": "present",
           "source": "scraped",
-          "value": 65.0,
+          "value": 61.0,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
         },
         "max_load_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 440,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "fit_height_min_in": {
           "status": "present",
           "source": "scraped",
-          "value": 65,
+          "value": 61,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
@@ -2030,23 +2030,23 @@
         "weight_lb": {
           "status": "present",
           "source": "scraped",
-          "value": 65.0,
+          "value": 61.0,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
         },
         "max_load_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 440,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "fit_height_min_in": {
           "status": "present",
           "source": "scraped",
-          "value": 65,
+          "value": 61,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
@@ -2133,23 +2133,23 @@
         "weight_lb": {
           "status": "present",
           "source": "scraped",
-          "value": 65.0,
+          "value": 61.0,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
         },
         "max_load_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 440,
+          "status": "open",
+          "source": null,
+          "value": null,
           "note": "",
-          "first_flagged": null,
+          "first_flagged": "2026-06-24",
           "resolved_at": null
         },
         "fit_height_min_in": {
           "status": "present",
           "source": "scraped",
-          "value": 65,
+          "value": 61,
           "note": "",
           "first_flagged": null,
           "resolved_at": null
