@@ -3407,17 +3407,6 @@
  },
  {
   "brand": "engwe",
-  "field": "range_throttle_only",
-  "kind": "throttle",
-  "text": "40-85 Miles",
-  "siblings": null,
-  "expected": {
-   "details": "40-85 Miles",
-   "_kind": "throttle"
-  }
- },
- {
-  "brand": "engwe",
   "field": "pedal_assist",
   "kind": "pedal_assist",
   "text": "5 Levels",
@@ -6428,19 +6417,6 @@
  },
  {
   "brand": "himiway",
-  "field": "throttle_range",
-  "kind": "throttle",
-  "text": "40 Miles",
-  "siblings": {
-   "rotors": "180mm front and rear"
-  },
-  "expected": {
-   "details": "40 Miles",
-   "_kind": "throttle"
-  }
- },
- {
-  "brand": "himiway",
   "field": "chainrings",
   "kind": "chainring",
   "text": "44T",
@@ -6493,6 +6469,19 @@
    "lock_on": true,
    "details": "Durable",
    "_kind": "grips"
+  }
+ },
+ {
+  "brand": "himiway",
+  "field": "throttle",
+  "kind": "throttle",
+  "text": "Thumb Throttle",
+  "siblings": {
+   "rotors": "Tektro TR180-52 F:180mm R:180mm"
+  },
+  "expected": {
+   "type": "thumb",
+   "_kind": "throttle"
   }
  },
  {
@@ -6929,6 +6918,21 @@
    "placement": "hub",
    "details": "Rear; Stealth M24 quiet technology",
    "_kind": "motor"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "battery",
+  "kind": "battery",
+  "text": "A removable 48V, 13Ah (624 Wh) lithium-ion battery certified to UL 2271 makes for a clean design while powering your ride for up to 50 miles on a single charge.** The XP Trike2 is also certified to UL 2849.†",
+  "siblings": null,
+  "expected": {
+   "voltage_v": 48,
+   "amphours_ah": 13,
+   "capacity_wh": 624,
+   "removable": true,
+   "details": "Lithium-ion; UL 2271 certified; up to 50 miles",
+   "_kind": "battery"
   }
  }
 ]

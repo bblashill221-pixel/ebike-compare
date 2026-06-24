@@ -1231,11 +1231,27 @@ _MOTOR_ATTR = re.compile(
     r"power|watt|torque|\bnm\b|speed|type|voltage|current|\brpm\b|cadence"
     r"|part|number|warranty|position|location|assist|peak", re.I)
 
+# A component-NAMED field that's really an ATTRIBUTE of that part — a "… part" P/N note, a
+# range, or an electrical rating — rather than a distinct component. Routing these to a
+# parser mints a phantom priced component that duplicates the real part ("Throttle" +
+# "Throttle Range", "Controller" + "Controller part"). Applied to EVERY category.
+# Deliberately conservative: ONLY words that NEVER name a part. NOT dimensions
+# (height/length/width/diameter/capacity) — those are sometimes a bike's sole row for a
+# kind, and excluding them would delete the part. Positional rows (front_/rear_/tail_)
+# carry no attribute word, so genuine front+rear pairs are kept.
+# NB: NO torque/cadence/rpm here — they name real sensors (torque_sensor, cadence_sensor);
+# the motor's own torque/rpm attrs are handled by _MOTOR_ATTR.
+_COMPONENT_ATTR = re.compile(
+    r"(?:^|_)(?:part|range|power|watt|voltage|current|warranty|peak)(?:_|$)", re.I)
+
 
 def _resolver(field: str):
     """Map a (snake) field name to a component parser via tolerant substring rules,
     so label variants (hydraulic_brakes, front_fork, motor_hub, …) are covered."""
     f = field
+    # An attribute/part-note row is not a component (see _COMPONENT_ATTR).
+    if _COMPONENT_ATTR.search(f):
+        return None
     if f == "pedal_assist":
         return _pedal_assist
     if "derailleur" in f or "shifter" in f or "shift_lever" in f or f == "e_shifter":
