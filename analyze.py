@@ -590,7 +590,9 @@ def _notable_tech(specs):
         (r"regen", "regen braking"),
         (r"\babs\b", "ABS"),
         (r"belt|gates", "belt drive"),
-        (r"dual[- ]?battery|second battery|two batteries", "dual-battery"),
+        # NB: dual-battery is handled separately below — it must SHIP as standard, so it's
+        # read from the battery spec (not the blob, where range text like "100 mi with
+        # optional second battery" would falsely trip it).
         # Find My network integration (Apple Find My / iOS Find My, Google Find My
         # Device / Find Hub) and brand "find my bike" locators -- a locate/anti-theft
         # security feature; checked on every model.
@@ -615,10 +617,20 @@ def _notable_tech(specs):
     for pat, label in checks:
         if re.search(pat, b):
             out.append(label)
-    # a 2-pack battery row ("48V 15Ah 720Wh 2 removable LG battery") is dual-battery even
-    # without the word "dual" -- read the battery spec to avoid blob false matches
+    # Dual-battery counts ONLY when the bike ships with two packs as standard — read the
+    # battery spec, the authoritative statement of what's included ("(2) ... batteries",
+    # "Two removable ... batteries", "2x battery", "dual battery"). A second pack offered
+    # as an optional add-on / upgrade is NOT default, so it isn't a feature.
     batt = find_spec(specs, "battery").lower()
-    if "dual-battery" not in out and re.search(r"\b2\s+removable\b|\b2\s*x\s*batter|\btwo\s+batter", batt):
+    ships_dual = re.search(
+        r"\bdual[- ]?batter|\(2\)[^.;]*batter|\b2\s*x\s*batter|\b2\s+removable\b"
+        r"|\btwo\s+(?:removable\s+)?[^.;]*?batter", batt)
+    # ...nor when the spec only says the bike is dual-CAPABLE: "Bosch Dual Battery pack
+    # ready", "dual-battery compatible/expandable" ship with one pack.
+    optional_dual = re.search(
+        r"optional|add[- ]?on|upgrade|sold separately|available separately"
+        r"|\bready\b|compatible|capable|expandable", batt)
+    if ships_dual and not optional_dual:
         out.append("dual-battery")
     return out
 

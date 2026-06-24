@@ -1382,6 +1382,15 @@ def _weight(field, v):
 # pack is the first segment and the larger pack is an optional upgrade.
 _RE_WH_SEG = re.compile(r"\d+\s*wh\s*:", re.I)
 
+# A figure that's explicitly conditional on an OPTIONAL / SECOND / DUAL battery
+# (an upgrade), e.g. "...or 100 miles with optional second battery", "60 mi (100 mi
+# with dual battery)". Strips the number AND its qualifier so the base-config range
+# wins; the add-on pack isn't part of the default bike.
+_RE_OPT_BATT_RANGE = re.compile(
+    r"\b\d[\d.,]*\s*(?:miles?|mi|km|kilometers?)?\s*(?:with|w/|using)\s+"
+    r"(?:the\s+|an?\s+)*(?:optional|second|2nd|additional|extra|dual|two|2)\b"
+    r"[^,.;)]*?batter\w*", re.I)
+
 
 def _range(field, v):
     # When a range is split per battery pack, scope to the FIRST (base) segment so
@@ -1389,6 +1398,8 @@ def _range(field, v):
     segs = list(_RE_WH_SEG.finditer(v))
     if len(segs) >= 2:
         v = v[segs[0].start():segs[1].start()]
+    # Drop a higher figure gated on an optional/second/dual battery add-on.
+    v = _RE_OPT_BATT_RANGE.sub("", v)
     mi, km = _maxnum(v, _RE_MI), _maxnum(v, _RE_KM)
     if mi is None and km is None:
         return None
