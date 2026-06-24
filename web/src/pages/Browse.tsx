@@ -52,7 +52,7 @@ const SORTS: { key: SortKey; label: string }[] = [
 // number only means something when the list is a single type. Across mixed types the
 // percentiles aren't comparable (a small cohort's leader scores ~100 and floats above
 // a genuinely longer-range bike that's merely mid-pack in a bigger cohort). So these
-// are only offered when exactly one Type facet is selected.
+// are hidden from the sort menu until exactly one Type facet is selected.
 const WITHIN_TYPE_SORTS = new Set<SortKey>(["value_desc", "range_score_desc", "power_desc"]);
 
 const last = Number.NEGATIVE_INFINITY;
@@ -245,15 +245,11 @@ export function Browse() {
           className="rounded-lg border-slate-300 text-sm shadow-sm focus:border-brand-500 focus:ring-brand-500"
           aria-label="Sort by"
         >
-          {SORTS.map((s) => {
-            const locked = WITHIN_TYPE_SORTS.has(s.key) && !singleType;
-            return (
-              <option key={s.key} value={s.key} disabled={locked}>
-                {s.label}
-                {locked ? " — select one Type" : ""}
-              </option>
-            );
-          })}
+          {SORTS.filter((s) => singleType || !WITHIN_TYPE_SORTS.has(s.key)).map((s) => (
+            <option key={s.key} value={s.key}>
+              {s.label}
+            </option>
+          ))}
         </select>
         <button type="button" className="btn-ghost lg:hidden" onClick={() => setDrawer(true)}>
           Filters
