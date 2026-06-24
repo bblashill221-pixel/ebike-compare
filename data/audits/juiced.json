@@ -1,7 +1,7 @@
 {
   "brand": "juiced",
   "scraper": "scrape_juiced.py",
-  "generated_at": "2026-06-24T18:04:32.471444+00:00",
+  "generated_at": "2026-06-24T18:26:14.013916+00:00",
   "fields_audited": [
     "motor_w",
     "battery_wh",
@@ -18,9 +18,9 @@
   ],
   "summary": {
     "models": 2,
-    "present": 22,
+    "present": 24,
     "resolved": 0,
-    "open": 2,
+    "open": 0,
     "needs_image": 0,
     "unpublished": 0
   },
@@ -95,12 +95,12 @@
           "resolved_at": null
         },
         "sensor_type": {
-          "status": "open",
-          "source": null,
-          "value": null,
+          "status": "present",
+          "source": "scraped",
+          "value": "cadence",
           "note": "",
           "first_flagged": "2026-06-22",
-          "resolved_at": null
+          "resolved_at": "2026-06-24"
         },
         "brake_type": {
           "status": "present",
@@ -198,12 +198,12 @@
           "resolved_at": null
         },
         "sensor_type": {
-          "status": "open",
-          "source": null,
-          "value": null,
+          "status": "present",
+          "source": "scraped",
+          "value": "cadence",
           "note": "",
           "first_flagged": "2026-06-22",
-          "resolved_at": null
+          "resolved_at": "2026-06-24"
         },
         "brake_type": {
           "status": "present",

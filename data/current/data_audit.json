@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-24T18:04:32.107445+00:00",
+  "generated_at": "2026-06-24T18:26:13.641618+00:00",
   "total_models": 450,
   "expected_fields": [
     "motor_w",
@@ -28,6 +28,10 @@
       "count": 450,
       "pct": 100
     },
+    "sensor_type": {
+      "count": 425,
+      "pct": 94
+    },
     "brake_type": {
       "count": 423,
       "pct": 94
@@ -41,7 +45,7 @@
       "pct": 93
     },
     "battery_wh": {
-      "count": 419,
+      "count": 417,
       "pct": 93
     },
     "fit_height_min_in": {
@@ -60,16 +64,16 @@
       "count": 415,
       "pct": 92
     },
-    "drivetrain_type": {
-      "count": 414,
-      "pct": 92
-    },
     "motor_w": {
       "count": 414,
       "pct": 92
     },
     "suspension": {
-      "count": 411,
+      "count": 410,
+      "pct": 91
+    },
+    "drivetrain_type": {
+      "count": 409,
       "pct": 91
     },
     "display_type": {
@@ -95,10 +99,6 @@
     "warranty_years": {
       "count": 366,
       "pct": 81
-    },
-    "sensor_type": {
-      "count": 362,
-      "pct": 80
     },
     "max_speed_mph": {
       "count": 351,
@@ -199,12 +199,6 @@
     {
       "brand": "buzz",
       "model": "Beekeeper Cargo Ebike",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "buzz",
-      "model": "Beekeeper Cargo Ebike",
       "field": "suspension",
       "label": "Suspension"
     },
@@ -219,12 +213,6 @@
       "model": "Centris 2 Folding Ebike",
       "field": "rack_load_lb",
       "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "buzz",
-      "model": "Centris 2 Folding Ebike",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "buzz",
@@ -283,12 +271,6 @@
     {
       "brand": "cannondale",
       "model": "Adventure Neo Allroad",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "cannondale",
-      "model": "Adventure Neo Allroad",
       "field": "torque_nm",
       "label": "Motor torque (Nm)"
     },
@@ -321,12 +303,6 @@
       "model": "Adventure Neo Allroad Low StepThru",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "cannondale",
-      "model": "Adventure Neo Allroad Low StepThru",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "cannondale",
@@ -895,14 +871,14 @@
     {
       "brand": "cemoto",
       "model": "CEMOTO B28D | 26\" Fat Tire Mountain Ebike All-Terrain Electric Bike",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
     },
     {
       "brand": "cemoto",
-      "model": "CEMOTO B28D | 26\" Fat Tire Mountain Ebike All-Terrain Electric Bike",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
+      "model": "CEMOTO D-Series | 3000W–6000W Off-Road Electric Dirt Bike for Teens & Adults",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
     },
     {
       "brand": "cemoto",
@@ -921,12 +897,6 @@
       "model": "CEMOTO D-Series | 3000W–6000W Off-Road Electric Dirt Bike for Teens & Adults",
       "field": "frame_size_rider_range",
       "label": "Rider height range per frame size"
-    },
-    {
-      "brand": "cemoto",
-      "model": "CEMOTO D-Series | 3000W–6000W Off-Road Electric Dirt Bike for Teens & Adults",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "cemoto",
@@ -955,12 +925,6 @@
     {
       "brand": "cemoto",
       "model": "CEMOTO EB66 | 750W double battery Harley-Like Hi-Tech Ebike",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "cemoto",
-      "model": "CEMOTO EB66 | 750W double battery Harley-Like Hi-Tech Ebike",
       "field": "torque_nm",
       "label": "Motor torque (Nm)"
     },
@@ -975,12 +939,6 @@
       "model": "CEMOTO EBIKE B28 | 27.5\" E Mountain Bike",
       "field": "frame_size_rider_range",
       "label": "Rider height range per frame size"
-    },
-    {
-      "brand": "cemoto",
-      "model": "CEMOTO EBIKE B28 | 27.5\" E Mountain Bike",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "cemoto",
@@ -1009,12 +967,6 @@
     {
       "brand": "cemoto",
       "model": "CEMOTO EBIKE B28A | High Step Fat Tire Ebike",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "cemoto",
-      "model": "CEMOTO EBIKE B28A | High Step Fat Tire Ebike",
       "field": "torque_nm",
       "label": "Motor torque (Nm)"
     },
@@ -1039,20 +991,8 @@
     {
       "brand": "cemoto",
       "model": "Cargo Electric Bike |CEMOTO B69 750W Heavy Duty E-Bike 150kg Capacity",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "cemoto",
-      "model": "Cargo Electric Bike |CEMOTO B69 750W Heavy Duty E-Bike 150kg Capacity",
       "field": "torque_nm",
       "label": "Motor torque (Nm)"
-    },
-    {
-      "brand": "cemoto",
-      "model": "Cemoto EB40 | Electric City Commuter Bike",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "cemoto",
@@ -1104,12 +1044,6 @@
     },
     {
       "brand": "engwe",
-      "model": "ENGWE E26",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "engwe",
       "model": "ENGWE E26 — Step-Thru",
       "field": "display_type",
       "label": "Display type"
@@ -1122,12 +1056,6 @@
     },
     {
       "brand": "engwe",
-      "model": "ENGWE E26 — Step-Thru",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "engwe",
       "model": "ENGWE EP-2 Pro",
       "field": "fit_height_min_in",
       "label": "Rider height range"
@@ -1149,24 +1077,12 @@
       "model": "ENGWE L16",
       "field": "frame_size_rider_range",
       "label": "Rider height range per frame size"
-    },
-    {
-      "brand": "engwe",
-      "model": "ENGWE L16",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "engwe",
       "model": "ENGWE L20 2.0",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "engwe",
-      "model": "ENGWE M20",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
+      "field": "suspension",
+      "label": "Suspension"
     },
     {
       "brand": "engwe",
@@ -1188,12 +1104,6 @@
     },
     {
       "brand": "engwe",
-      "model": "ENGWE M20 2.0",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "engwe",
       "model": "ENGWE M20 2.0 — Dual Battery",
       "field": "fit_height_min_in",
       "label": "Rider height range"
@@ -1212,39 +1122,9 @@
     },
     {
       "brand": "engwe",
-      "model": "ENGWE M20 2.0 — Dual Battery",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "engwe",
-      "model": "ENGWE M20 3.0",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "engwe",
-      "model": "ENGWE M20 3.0 — Dual Battery",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "engwe",
-      "model": "ENGWE M20 — Dual Battery",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "engwe",
       "model": "ENGWE X20",
       "field": "display_type",
       "label": "Display type"
-    },
-    {
-      "brand": "engwe",
-      "model": "ENGWE X20",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "engwe",
@@ -1254,21 +1134,9 @@
     },
     {
       "brand": "engwe",
-      "model": "ENGWE X20 — Dual Battery",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "engwe",
       "model": "ENGWE X24",
       "field": "display_type",
       "label": "Display type"
-    },
-    {
-      "brand": "engwe",
-      "model": "ENGWE X24",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "engwe",
@@ -1303,12 +1171,6 @@
     {
       "brand": "engwe",
       "model": "X26/24/X20",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "engwe",
-      "model": "X26/24/X20",
       "field": "suspension",
       "label": "Suspension"
     },
@@ -1335,12 +1197,6 @@
       "model": "X26/24/X20 — Dual Battery",
       "field": "frame_size_rider_range",
       "label": "Rider height range per frame size"
-    },
-    {
-      "brand": "engwe",
-      "model": "X26/24/X20 — Dual Battery",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "engwe",
@@ -1638,12 +1494,6 @@
     },
     {
       "brand": "heybike",
-      "model": "Horizon",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "heybike",
       "model": "Hybrid",
       "field": "fit_height_min_in",
       "label": "Rider height range"
@@ -1764,21 +1614,9 @@
     },
     {
       "brand": "heybike",
-      "model": "Mars 3.0",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "heybike",
       "model": "Ranger 3.0 Pro",
       "field": "max_speed_mph",
       "label": "Top speed (mph)"
-    },
-    {
-      "brand": "heybike",
-      "model": "Ranger 3.0 Pro",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "heybike",
@@ -1903,12 +1741,6 @@
     {
       "brand": "himiway",
       "model": "Himiway C1 Kids eBike",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "himiway",
-      "model": "Himiway C1 Kids eBike",
       "field": "torque_nm",
       "label": "Motor torque (Nm)"
     },
@@ -2007,18 +1839,6 @@
       "model": "Himiway D5 2.0 eBike — Step-Over · 15Ah+20Ah",
       "field": "frame_size_rider_range",
       "label": "Rider height range per frame size"
-    },
-    {
-      "brand": "juiced",
-      "model": "Scrambler",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "juiced",
-      "model": "Scrambler — Full Suspension",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "lectric",
@@ -3811,6 +3631,12 @@
     {
       "brand": "priority",
       "model": "PRIORITY E-COAST",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY E-COAST",
       "field": "cell_brand",
       "label": "Battery cell brand"
     },
@@ -3849,6 +3675,12 @@
       "model": "PRIORITY E-COAST",
       "field": "weight_lb",
       "label": "Weight (lb)"
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY E-COAST — Step-Thru",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
     },
     {
       "brand": "priority",
@@ -3903,12 +3735,6 @@
       "model": "PRIORITY GLIDE E-BIKE",
       "field": "max_speed_mph",
       "label": "Top speed (mph)"
-    },
-    {
-      "brand": "priority",
-      "model": "PRIORITY GLIDE E-BIKE",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "priority",
@@ -4159,12 +3985,6 @@
     {
       "brand": "segway",
       "model": "Segway Myon Electric Bike (M/L)",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "segway",
-      "model": "Segway Myon Electric Bike (M/L)",
       "field": "warranty_years",
       "label": "Warranty (years)"
     },
@@ -4189,12 +4009,6 @@
     {
       "brand": "segway",
       "model": "Segway Myon Electric Bike (XS/S)",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "segway",
-      "model": "Segway Myon Electric Bike (XS/S)",
       "field": "warranty_years",
       "label": "Warranty (years)"
     },
@@ -4209,12 +4023,6 @@
       "model": "Segway Xafari Fat Tire eBike",
       "field": "frame_material",
       "label": "Frame material"
-    },
-    {
-      "brand": "segway",
-      "model": "Segway Xafari Fat Tire eBike",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "segway",
@@ -4296,12 +4104,6 @@
     },
     {
       "brand": "specialized",
-      "model": "S-Works Turbo Kenevo SL 2 Frameset",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
       "model": "S-Works Turbo Levo 4",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
@@ -4380,12 +4182,6 @@
     },
     {
       "brand": "specialized",
-      "model": "S-Works Turbo Levo SL 2 Di2",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
       "model": "S-Works Turbo Levo SL 2 Frameset",
       "field": "brake_type",
       "label": "Brake type"
@@ -4410,12 +4206,6 @@
     },
     {
       "brand": "specialized",
-      "model": "S-Works Turbo Levo SL 2 Frameset",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
       "model": "Turbo Creo 2 Comp",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
@@ -4431,12 +4221,6 @@
       "model": "Turbo Creo 2 Comp",
       "field": "range_mi",
       "label": "Range (mi)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Creo 2 Comp",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
@@ -4458,12 +4242,6 @@
     },
     {
       "brand": "specialized",
-      "model": "Turbo Creo 2 Expert",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
       "model": "Turbo Kenevo SL 2 Comp",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
@@ -4476,12 +4254,6 @@
     },
     {
       "brand": "specialized",
-      "model": "Turbo Kenevo SL 2 Comp",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
       "model": "Turbo Kenevo SL 2 Expert",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
@@ -4491,12 +4263,6 @@
       "model": "Turbo Kenevo SL 2 Expert",
       "field": "range_mi",
       "label": "Range (mi)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Kenevo SL 2 Expert",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
@@ -4662,12 +4428,6 @@
     },
     {
       "brand": "specialized",
-      "model": "Turbo Levo SL 2 Expert Di2",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
       "model": "Turbo Levo SL 2 Pro",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
@@ -4683,12 +4443,6 @@
       "model": "Turbo Levo SL 2 Pro",
       "field": "range_mi",
       "label": "Range (mi)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Levo SL 2 Pro",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
@@ -4830,12 +4584,6 @@
     },
     {
       "brand": "specialized",
-      "model": "Turbo Vado SL 2 4.0 EQ",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
       "model": "Turbo Vado SL 2 4.0 Step-Through EQ",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
@@ -4845,12 +4593,6 @@
       "model": "Turbo Vado SL 2 4.0 Step-Through EQ",
       "field": "range_mi",
       "label": "Range (mi)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 4.0 Step-Through EQ",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
@@ -4866,12 +4608,6 @@
     },
     {
       "brand": "specialized",
-      "model": "Turbo Vado SL 2 5.0 EQ",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
       "model": "Turbo Vado SL 2 5.0 Step-Through EQ",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
@@ -4881,12 +4617,6 @@
       "model": "Turbo Vado SL 2 5.0 Step-Through EQ",
       "field": "range_mi",
       "label": "Range (mi)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 5.0 Step-Through EQ",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "trek",
@@ -6042,12 +5772,6 @@
     },
     {
       "brand": "velowave",
-      "model": "Ranger 2.0 Fat Tire All-Terrain Electric Bike",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "velowave",
       "model": "Ranger 3.0 Fat Tire All-Terrain Electric Bike",
       "field": "rack_load_lb",
       "label": "Rear-rack load (lb)"
@@ -6091,12 +5815,6 @@
     {
       "brand": "vvolt",
       "model": "Alpha 2.1",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "vvolt",
-      "model": "Alpha 2.1",
       "field": "suspension",
       "label": "Suspension"
     },
@@ -6129,12 +5847,6 @@
       "model": "Alpha II",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "vvolt",
-      "model": "Alpha II",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "vvolt",
@@ -6211,8 +5923,20 @@
     {
       "brand": "wallke",
       "model": "2026 WALLKE Ultra Series | Off-grid Power Station E-Bike — 55Ah · Step-Over",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "wallke",
+      "model": "2026 WALLKE Ultra Series | Off-grid Power Station E-Bike — 55Ah · Step-Over",
       "field": "weight_lb",
       "label": "Weight (lb)"
+    },
+    {
+      "brand": "wallke",
+      "model": "2026 WALLKE Ultra Series | Off-grid Power Station E-Bike — 55Ah · Step-Thru",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
     },
     {
       "brand": "wallke",
@@ -6223,50 +5947,20 @@
     {
       "brand": "wallke",
       "model": "2026 WALLKE Ultra Series | Off-grid Power Station E-Bike — 77Ah",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "wallke",
+      "model": "2026 WALLKE Ultra Series | Off-grid Power Station E-Bike — 77Ah",
       "field": "weight_lb",
       "label": "Weight (lb)"
     },
     {
       "brand": "wallke",
-      "model": "2026 Wallke H7 AWD Step-Thru | 3200W Ebike 40Ah Battery",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "wallke",
-      "model": "2026 Wallke H7 AWD Step-Thru | 3200W Ebike 40Ah Battery — 60Ah",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "wallke",
-      "model": "2026 Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "wallke",
-      "model": "2026 Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery — 60Ah",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "wallke",
-      "model": "2026 Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery — 62Ah",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "wallke",
-      "model": "2026 Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery — 82Ah",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "wallke",
       "model": "WALLKE Titan X1 Carbon Fiber Frame | 3800W Cruiser Ebike",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
     },
     {
       "brand": "wired",
@@ -6309,12 +6003,6 @@
       "model": "WIRED Predator",
       "field": "range_mi",
       "label": "Range (mi)"
-    },
-    {
-      "brand": "wired",
-      "model": "WIRED Predator",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "wired",
@@ -6445,12 +6133,6 @@
     {
       "brand": "wired",
       "model": "WIRED Viper",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "wired",
-      "model": "WIRED Viper",
       "field": "suspension",
       "label": "Suspension"
     },
@@ -6501,12 +6183,6 @@
       "model": "Wired Scout",
       "field": "range_mi",
       "label": "Range (mi)"
-    },
-    {
-      "brand": "wired",
-      "model": "Wired Scout",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "wired",
@@ -6565,23 +6241,17 @@
     {
       "brand": "wired",
       "model": "Wired Warrior",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "wired",
-      "model": "Wired Warrior",
       "field": "weight_lb",
       "label": "Weight (lb)"
     }
   ],
   "frame_style_review": [],
   "summary": {
-    "models_flagged": 307,
-    "missing_rows": 1068,
+    "models_flagged": 295,
+    "missing_rows": 1013,
     "missing_by_field": {
       "motor_w": 36,
-      "battery_wh": 31,
+      "battery_wh": 33,
       "weight_lb": 43,
       "range_mi": 104,
       "brake_type": 27,
@@ -6590,13 +6260,13 @@
       "torque_nm": 51,
       "warranty_years": 77,
       "display_type": 44,
-      "drivetrain_type": 36,
-      "suspension": 39,
+      "drivetrain_type": 41,
+      "suspension": 40,
       "cell_brand": 30,
       "fit_height_min_in": 34,
       "max_speed_mph": 99,
       "max_load_lb": 178,
-      "sensor_type": 88,
+      "sensor_type": 25,
       "rack_load_lb": 17,
       "frame_size_count": 0,
       "frame_size_rider_range": 49

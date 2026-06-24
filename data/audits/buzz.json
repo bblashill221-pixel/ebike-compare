@@ -1,7 +1,7 @@
 {
   "brand": "buzz",
   "scraper": "scrape_buzz.py",
-  "generated_at": "2026-06-24T18:04:32.454808+00:00",
+  "generated_at": "2026-06-24T18:26:13.997555+00:00",
   "fields_audited": [
     "motor_w",
     "battery_wh",
@@ -18,9 +18,9 @@
   ],
   "summary": {
     "models": 4,
-    "present": 39,
+    "present": 41,
     "resolved": 1,
-    "open": 8,
+    "open": 6,
     "needs_image": 0,
     "unpublished": 0
   },
@@ -95,12 +95,12 @@
           "resolved_at": null
         },
         "sensor_type": {
-          "status": "open",
-          "source": null,
-          "value": null,
+          "status": "present",
+          "source": "scraped",
+          "value": "cadence",
           "note": "",
           "first_flagged": "2026-06-22",
-          "resolved_at": null
+          "resolved_at": "2026-06-24"
         },
         "brake_type": {
           "status": "present",
@@ -198,12 +198,12 @@
           "resolved_at": null
         },
         "sensor_type": {
-          "status": "open",
-          "source": null,
-          "value": null,
+          "status": "present",
+          "source": "scraped",
+          "value": "cadence",
           "note": "",
           "first_flagged": "2026-06-22",
-          "resolved_at": null
+          "resolved_at": "2026-06-24"
         },
         "brake_type": {
           "status": "present",

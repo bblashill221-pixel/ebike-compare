@@ -838,6 +838,12 @@ def extract_typed_specs(model: dict) -> dict:
     # card's unknown-sensor fallback reads as an ambiguous cadence+torque glyph.
     if typed.get("sensor_type") is None and typed.get("drive_type") == "mid":
         typed["sensor_type"] = "torque"
+    # Conversely, a HUB-drive bike that never names its sensor is overwhelmingly cadence-
+    # based (a torque sensor on a hub motor is a premium exception that's always called
+    # out), so default an unstated hub sensor to cadence. Uses the authoritative final
+    # drive_type (set above), so hub bikes whose placement was resolved late are covered.
+    elif typed.get("sensor_type") is None and typed.get("drive_type") == "hub":
+        typed["sensor_type"] = "cadence"
     # The parsed drivetrain_type is authoritative: a belt / internal-gear bike HAS that
     # feature even when the spec table never spells out "belt"/"Gates" in scannable text
     # (e.g. Priority E-Coast / Vvolt, where it only survives as the drivetrain_type).

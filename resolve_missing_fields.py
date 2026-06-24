@@ -121,9 +121,12 @@ FIELD_DEFS = {
     "drivetrain_type": (r"belt[\s-]?driven?|\bchain\b|gates", r"drivetrain|belt|chain",
                         r"chainstay|chain\s*guard|chain\s*lock",
                         _p(analyze._drivetrain_type, "drivetrain")),
+    # reject seatpost/"post suspension" marketing — brands (ENGWE) call a suspension
+    # SEATPOST "post suspension" and a fork+seatpost combo a "full suspension system";
+    # neither is a real rear shock. (The _suspension validator also requires a rear shock.)
     "suspension": (r"full[\s-]?suspension|front[\s-]?suspension|suspension\s*fork"
                    r"|hardtail|rigid\s*fork|air\s*fork|coil\s*fork|dual[\s-]?suspension",
-                   r"suspension|fork", r"seat\s*post|seatpost",
+                   r"suspension|fork", r"seat\s*post|seatpost|post[\s-]?suspension",
                    _p(analyze._suspension, "suspension")),
     "display_type": (r"\blcd\b|\bled\b|\btft\b|colou?r\s*(?:display|screen)", r"display|screen",
                      r"headlight|tail\s*light",
@@ -282,8 +285,43 @@ async def fetch_rendered(urls: list[str], workers: int = 3) -> dict:
     return out
 
 
+def revalidate_cache() -> int:
+    """Re-apply the CURRENT accept logic (reject patterns + validator) to every cached
+    snippet in html_extracted.json. Parsers harden over time (e.g. _suspension now
+    requires a real rear shock, so a "full suspension (front fork + post suspension)"
+    marketing snippet no longer reads as full); since the cache is value-first, stale
+    values would otherwise persist forever. Updates changed values and drops entries that
+    no longer validate. Offline (uses stored snippets). Returns the change count."""
+    try:
+        cache = json.loads(OUT_CURATED.read_text())
+    except (FileNotFoundError, ValueError):
+        return 0
+    now = datetime.now(timezone.utc).isoformat()
+    changes = 0
+    for mid in list(cache):
+        for field in list(cache[mid]):
+            defn = FIELD_DEFS.get(field)
+            if not defn:
+                continue
+            rec = cache[mid][field]
+            snippet = rec.get("snippet", "")
+            _, _, reject, validator = defn
+            new = None if (reject and re.search(reject, snippet, re.I)) else validator(snippet)
+            if not new:                         # no longer accepted -> drop
+                del cache[mid][field]; changes += 1
+            elif new != rec.get("value"):       # parser now reads it differently
+                rec["value"] = new; rec["revalidated_at"] = now; changes += 1
+        if not cache[mid]:
+            del cache[mid]
+    OUT_CURATED.write_text(json.dumps(cache, indent=1, ensure_ascii=False))
+    print(f"[*] revalidated html cache: {changes} change(s)", file=sys.stderr)
+    return changes
+
+
 def main():
     ap = argparse.ArgumentParser()
+    ap.add_argument("--revalidate", action="store_true",
+                    help="re-apply current parsers to the cached snippets, then exit")
     ap.add_argument("--brand")
     ap.add_argument("--limit", type=int, default=0, help="max pages per brand")
     ap.add_argument("--passes", type=int, default=3)
@@ -291,6 +329,12 @@ def main():
                     default=str(DATA / "current" / "active" / "ebike.json"))
     args = ap.parse_args()
 
+    if args.revalidate:
+        revalidate_cache()
+        return
+
+    # Self-heal the cache against the current parsers before extracting anything new.
+    revalidate_cache()
     doc = json.load(open(args.input))
     pages = inventory(doc, args.brand)
     if args.limit:

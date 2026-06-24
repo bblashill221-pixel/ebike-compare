@@ -1,7 +1,7 @@
 {
   "brand": "cannondale",
   "scraper": "scrape_cannondale.py",
-  "generated_at": "2026-06-24T18:04:32.456787+00:00",
+  "generated_at": "2026-06-24T18:26:13.998957+00:00",
   "fields_audited": [
     "motor_w",
     "battery_wh",
@@ -18,9 +18,9 @@
   ],
   "summary": {
     "models": 38,
-    "present": 318,
+    "present": 320,
     "resolved": 10,
-    "open": 90,
+    "open": 88,
     "needs_image": 0,
     "unpublished": 38
   },
@@ -198,12 +198,12 @@
           "resolved_at": null
         },
         "sensor_type": {
-          "status": "open",
-          "source": null,
-          "value": null,
+          "status": "present",
+          "source": "scraped",
+          "value": "cadence",
           "note": "",
           "first_flagged": "2026-06-22",
-          "resolved_at": null
+          "resolved_at": "2026-06-24"
         },
         "brake_type": {
           "status": "present",
@@ -507,12 +507,12 @@
           "resolved_at": null
         },
         "sensor_type": {
-          "status": "open",
-          "source": null,
-          "value": null,
+          "status": "present",
+          "source": "scraped",
+          "value": "cadence",
           "note": "",
           "first_flagged": "2026-06-22",
-          "resolved_at": null
+          "resolved_at": "2026-06-24"
         },
         "brake_type": {
           "status": "present",
