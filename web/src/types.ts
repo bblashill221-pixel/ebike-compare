@@ -141,6 +141,14 @@ export interface Analysis {
     value_ratio: number | null;
     /** component_base_value_usd ÷ price — parts cost as a fraction of retail price. */
     bom_pct?: number | null;
+    /** Every line summing to component_base_value_usd (parsed parts + spec estimates). */
+    base_breakdown?: {
+      kind: string;
+      label: string;
+      cost: number;
+      /** researched = real lookup; estimate = catalog heuristic; spec_estimate = from typed specs. */
+      method: "researched" | "estimate" | "spec_estimate";
+    }[];
   };
 }
 

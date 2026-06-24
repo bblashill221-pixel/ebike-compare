@@ -225,13 +225,16 @@ def _synth_specs(entry: dict) -> dict:
 # Unknown material defaults to aluminium (the fleet's modal frame). "steel" is cheap
 # hi-tensile/high-carbon (Q235) — below aluminium; quality steel (chromoly/4130) is a
 # separate, pricier tier ABOVE aluminium (component_quality maps it from the frame text).
-_FRAME_RETAIL = {"steel": 200, "aluminum": 420, "chromoly": 550, "carbon": 1700}
+# "unknown" = the bike publishes no frame material. It's credited a conservative
+# estimate BELOW a described aluminum frame — an unverified frame shouldn't be valued
+# the same as a stated-quality one (Buzz lists no frame; Aventon lists 6061 aluminum).
+_FRAME_RETAIL = {"unknown": 250, "steel": 200, "aluminum": 420, "chromoly": 550, "carbon": 1700}
 _FRAME_FS_MULT = 1.5
 
 
 def _frame_cost(table: dict, a: dict) -> int:
-    mat = (a.get("material") or "aluminum").lower()
-    base = table.get(mat, table["aluminum"])
+    mat = (a.get("material") or "unknown").lower()
+    base = table.get(mat, table["unknown"])
     if a.get("full_suspension") and mat in ("aluminum", "carbon"):
         base = round(base * _FRAME_FS_MULT)
     return base
@@ -250,7 +253,8 @@ def heuristic_retail(entry: dict) -> tuple[int | None, str | None]:
         return 1500, "premium gearbox (Pinion/Rohloff)"
     if cat == "frame":
         a = entry.get("attributes") or {}
-        return _frame_cost(_FRAME_RETAIL, a), f"{a.get('material') or 'aluminum'} frameset"
+        return _frame_cost(_FRAME_RETAIL, a), (
+            f"{a['material']} frameset" if a.get("material") else "frame (material unlisted)")
     fn = _FALLBACK_FN.get(cat)
     if fn:
         c, note = fn(_synth_specs(entry))

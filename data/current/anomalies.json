@@ -1,41 +1,14 @@
 {
-  "generated_at": "2026-06-24T17:47:55.910794+00:00",
+  "generated_at": "2026-06-24T18:04:32.376346+00:00",
   "model_count": 450,
-  "anomaly_count": 57,
+  "anomaly_count": 53,
   "by_severity": {
-    "low": 57
+    "low": 53
   },
   "by_rule": {
-    "value_ratio_outlier": 57
+    "value_ratio_outlier": 53
   },
   "anomalies": [
-    {
-      "id": "buzz__buzz-beekeeper-electric-cargo-bike-e4023",
-      "brand": "buzz",
-      "model": "Beekeeper Cargo Ebike",
-      "url": "https://www.buzzbicycles.com/buzz-beekeeper-electric-cargo-bike-e4023/",
-      "rule": "value_ratio_outlier",
-      "severity": "low",
-      "detail": "price / parts-cost ratio = 0.988"
-    },
-    {
-      "id": "buzz__buzz-centris",
-      "brand": "buzz",
-      "model": "Centris 2 Folding Ebike",
-      "url": "https://www.buzzbicycles.com/buzz-centris/",
-      "rule": "value_ratio_outlier",
-      "severity": "low",
-      "detail": "price / parts-cost ratio = 0.889"
-    },
-    {
-      "id": "buzz__buzz-cerana2",
-      "brand": "buzz",
-      "model": "Cerana 2 Commuter Ebike",
-      "url": "https://www.buzzbicycles.com/buzz-cerana2/",
-      "rule": "value_ratio_outlier",
-      "severity": "low",
-      "detail": "price / parts-cost ratio = 0.952"
-    },
     {
       "id": "cannondale__tesoro-neo-x-2-c66242u",
       "brand": "cannondale",
@@ -343,22 +316,13 @@
       "detail": "price / parts-cost ratio = 0.83"
     },
     {
-      "id": "vanpowers__urbanglide-pro",
-      "brand": "vanpowers",
-      "model": "UrbanGlide-Pro",
-      "url": "https://vanpowers.com/products/urbanglide-pro",
-      "rule": "value_ratio_outlier",
-      "severity": "low",
-      "detail": "price / parts-cost ratio = 0.92"
-    },
-    {
       "id": "vanpowers__urbanglide-standard",
       "brand": "vanpowers",
       "model": "UrbanGlide-Standard",
       "url": "https://vanpowers.com/products/urbanglide-standard",
       "rule": "value_ratio_outlier",
       "severity": "low",
-      "detail": "price / parts-cost ratio = 0.841"
+      "detail": "price / parts-cost ratio = 0.981"
     },
     {
       "id": "vanpowers__urbanglide-ultra",
@@ -367,7 +331,7 @@
       "url": "https://vanpowers.com/products/urbanglide-ultra",
       "rule": "value_ratio_outlier",
       "severity": "low",
-      "detail": "price / parts-cost ratio = 0.881"
+      "detail": "price / parts-cost ratio = 0.979"
     },
     {
       "id": "velowave__grace-step-thru-electric-bike",

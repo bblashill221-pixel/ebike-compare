@@ -93,24 +93,47 @@ export function ValueScoreDebug({ model, onClose }: { model: Model; onClose: () 
           <Row k="parts costed / researched" v={`${cq?.parts_costed ?? "—"} / ${cq?.parts_researched ?? "—"}`} />
         </div>
 
-        <div className="mb-1 text-xs font-semibold text-slate-600">
-          Per-part retail ({parts.length} components · known sum {usd(knownRetail)})
-        </div>
-        <table className="w-full text-xs">
-          <tbody>
-            {parts.map((p, i) => (
-              <tr key={i} className="border-b border-slate-50">
-                <td className="py-0.5 pr-2 text-slate-400">{p.kind}</td>
-                <td className="py-0.5 pr-2 text-slate-700">{p.label}</td>
-                <td className="py-0.5 text-right font-mono tabular-nums text-slate-800">{usd(p.retail)}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        {(() => {
+          // Show EVERY cost that sums to component_base_value_usd — parsed parts AND the
+          // typed-spec system estimates (battery/motor/frame) — so nothing is invisible.
+          const bb = cq?.base_breakdown ?? [];
+          const sum = bb.reduce((s, p) => s + (p.cost ?? 0), 0);
+          const tag = (m: string) =>
+            m === "researched" ? "researched" : m === "spec_estimate" ? "est. from specs" : "est.";
+          return bb.length ? (
+            <>
+              <div className="mb-1 text-xs font-semibold text-slate-600">
+                Base breakdown ({bb.length} costs · sum {usd(sum)})
+              </div>
+              <table className="w-full text-xs">
+                <tbody>
+                  {bb.map((p, i) => (
+                    <tr key={i} className="border-b border-slate-50">
+                      <td className="py-0.5 pr-2 text-slate-400">{p.kind}</td>
+                      <td className="py-0.5 pr-2 text-slate-700">
+                        {p.label}
+                        <span className="ml-1 text-[10px] text-slate-400">({tag(p.method)})</span>
+                      </td>
+                      <td className="py-0.5 text-right font-mono tabular-nums text-slate-800">{usd(p.cost)}</td>
+                    </tr>
+                  ))}
+                  <tr className="border-t border-slate-200 font-semibold">
+                    <td className="py-0.5 pr-2 text-slate-500" colSpan={2}>component_base_value_usd</td>
+                    <td className="py-0.5 text-right font-mono tabular-nums text-slate-900">{usd(sum)}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </>
+          ) : (
+            <div className="mb-1 text-xs font-semibold text-slate-600">
+              Per-part retail ({parts.length} components · known sum {usd(knownRetail)})
+            </div>
+          );
+        })()}
         <p className="mt-3 text-[11px] leading-snug text-slate-400">
-          The base also costs core systems (battery / motor / frame) from typed specs when no
-          branded part was parsed, so <span className="font-mono">component_base_value_usd</span> exceeds
-          the per-part retail sum above. The value score is the inverted rank of{" "}
+          Every line above is summed into <span className="font-mono">component_base_value_usd</span>.
+          "est. from specs" rows cost a core system (battery / motor / frame) from the typed specs
+          when no branded part was parsed. The value score is the inverted rank of{" "}
           <span className="font-mono">value_ratio</span> within the {cohort} cohort.
         </p>
       </div>

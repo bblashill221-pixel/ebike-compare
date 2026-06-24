@@ -1198,6 +1198,10 @@ def component_quality(model: dict, catalog_entries: dict, price, typed: dict) ->
     identified = priced = researched = retail_n = costed = 0
     retail_total = base_total = 0.0
     cats_costed = set()
+    # Every line that contributes to component_base_value_usd, so the UI can show ALL
+    # costs (parsed parts + the typed-spec system estimates) summing to the base — no
+    # invisible fallbacks. {kind, label, cost, method: researched|estimate|spec_estimate}.
+    base_breakdown = []
     for key, cat, part in iter_components(model):
         identified += 1
         e = catalog_entries.get(key) or {"category": cat, "attributes": part}
@@ -1221,6 +1225,11 @@ def component_quality(model: dict, catalog_entries: dict, price, typed: dict) ->
             base_total += rp * qty
             costed += 1
             cats_costed.add(cat)
+            label = " ".join(x for x in (part.get("manufacturer"), part.get("model")) if x) or cat
+            base_breakdown.append({
+                "kind": cat, "label": label + (f" ×{qty}" if qty > 1 else ""),
+                "cost": round(rp * qty, 2),
+                "method": "researched" if r is not None else "estimate"})
     # Cost the big-ticket systems from typed specs when no branded part was parsed
     # (most generic batteries/motors carry no manufacturer -> absent from iter_components).
     if "battery" not in cats_costed and typed.get("battery_wh"):
@@ -1234,18 +1243,22 @@ def component_quality(model: dict, catalog_entries: dict, price, typed: dict) ->
                         _pc = _v.get("pack_count")
                         if isinstance(_pc, int) and _pc > 1:
                             packs = max(packs, _pc)
-        b = _avg_cost({"category": "battery",
+        b, note = heuristic_retail({"category": "battery",
                        "attributes": {"capacity_wh": typed["battery_wh"] * packs,
                                       "cell_brand": typed.get("cell_brand")}})
         if b:
             base_total += b; costed += 1; cats_costed.add("battery")
+            base_breakdown.append({"kind": "battery", "label": note or f"{typed['battery_wh']*packs} Wh battery",
+                                   "cost": b, "method": "spec_estimate"})
     if "motor" not in cats_costed and typed.get("motor_w"):
         place = "mid" if typed.get("drive_type") == "mid" else "hub"
-        b = _avg_cost({"category": "motor",
+        b, note = heuristic_retail({"category": "motor",
                        "attributes": {"power_w": typed["motor_w"], "placement": place,
                                       "torque_nm": typed.get("torque_nm")}})
         if b:
             base_total += b; costed += 1; cats_costed.add("motor")
+            base_breakdown.append({"kind": "motor", "label": note or f"{typed['motor_w']}W {place} motor",
+                                   "cost": b, "method": "spec_estimate"})
     # The frameset is never parsed as a branded part, so its (large, material-driven)
     # cost was previously missing from the base -- inflating value_ratio for carbon
     # bikes. Cost it from the typed frame material + suspension (full-suspension frames
@@ -1258,11 +1271,13 @@ def component_quality(model: dict, catalog_entries: dict, price, typed: dict) ->
         if mat == "steel" and re.search(r"chrom|cro-?mo|\b4130\b|reynolds|columbus",
                                         find_spec(flatten_grouped(model.get("specs") or {}), "frame"), re.I):
             mat = "chromoly"
-        b = _avg_cost({"category": "frame",
+        b, note = heuristic_retail({"category": "frame",
                        "attributes": {"material": mat,
                                       "full_suspension": typed.get("suspension") == "full"}})
         if b:
             base_total += b; costed += 1; cats_costed.add("frame")
+            base_breakdown.append({"kind": "frame", "label": note, "cost": b,
+                                   "method": "spec_estimate"})
     base = round(base_total, 2) if costed else None
     value_ratio = None
     if (price and base and costed >= _VALUE_MIN_PARTS
@@ -1278,6 +1293,8 @@ def component_quality(model: dict, catalog_entries: dict, price, typed: dict) ->
         "value_ratio": value_ratio,
         # parts cost as a fraction of retail price (replaces the old separate BOM file)
         "bom_pct": round(base / price, 4) if base and price else None,
+        # every line summing to component_base_value_usd (parsed parts + spec estimates)
+        "base_breakdown": sorted(base_breakdown, key=lambda x: -x["cost"]),
     }
 
 
