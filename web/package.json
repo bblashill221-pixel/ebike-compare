@@ -5,11 +5,9 @@
   "type": "module",
   "scripts": {
     "copy-data": "node scripts/copy-data.mjs",
-    "copy-dev-data": "node scripts/copy-dev-data.mjs",
-    "clean-dev-data": "node scripts/clean-dev-data.mjs",
-    "predev": "npm run copy-data && npm run copy-dev-data",
+    "predev": "npm run copy-data",
     "dev": "vite",
-    "prebuild": "npm run copy-data && npm run clean-dev-data",
+    "prebuild": "npm run copy-data",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",

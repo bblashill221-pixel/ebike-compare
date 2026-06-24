@@ -23,8 +23,11 @@ export const KIND_LABEL: Record<string, string> = {
 };
 
 export const COLUMN_CONFIG: Record<string, Column[]> = {
-  motor: [c("power_w", "Nominal", " W"), c("peak_w", "Peak", " W"), c("placement", "Drive"),
-          c("torque_nm", "Torque", " Nm"), c("voltage_v", "Voltage", " V"), MAKE, MODEL, EXTRA],
+  // "motor_power" renders combined as "750/1188 W" (Nominal/Peak — see ComponentTable),
+  // so the standalone power_w / peak_w columns are folded into it.
+  motor: [c("motor_power", "Nominal/Peak"), c("placement", "Drive"),
+          c("torque_nm", "Torque", " Nm"), c("voltage_v", "Voltage", " V"),
+          c("protocol", "Protocol"), MAKE, MODEL, EXTRA],
   // "Capacity" renders combined as "720 Wh (48V × 15Ah)" (see ComponentTable),
   // so the standalone Voltage / Ah columns are folded in to save space.
   battery: [c("capacity_wh", "Capacity"), c("total_capacity_wh", "Total", " Wh"),
@@ -41,6 +44,8 @@ export const COLUMN_CONFIG: Record<string, Column[]> = {
   throttle: [c("type", "Type"), c("side", "Side"), MAKE, MODEL, EXTRA],
 
   frame: [c("material", "Material"), c("style", "Style"),
+          c("wheel_size_in", "Wheel size", "″"), c("travel_mm", "Travel", " mm"),
+          c("chainline_mm", "Chainline", " mm"), c("thru_axle", "Thru-axle"),
           c("integrated_battery", "Integrated battery"),
           c("removable_battery", "Removable battery"),
           c("battery_position", "Battery position"),
@@ -49,7 +54,7 @@ export const COLUMN_CONFIG: Record<string, Column[]> = {
           c("folding", "Folding"), EXTRA],
   fork: [c("type", "Type"), c("travel_mm", "Travel", " mm"), c("lockout", "Lockout"),
          c("thru_axle", "Thru-axle"), MAKE, MODEL, EXTRA],
-  shock: [c("type", "Type"), c("size", "Size"), MAKE, MODEL, EXTRA],
+  shock: [c("type", "Type"), c("size", "Size"), c("travel_mm", "Travel", " mm"), MAKE, MODEL, EXTRA],
 
   derailleur: [c("speeds", "Speeds"), c("gearing", "Gearing"), MAKE, MODEL, EXTRA],
   cassette: [c("speeds", "Speeds"), c("cog_range", "Range"), c("gearing", "Gearing"), MAKE, MODEL, EXTRA],

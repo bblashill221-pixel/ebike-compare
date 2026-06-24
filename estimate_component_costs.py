@@ -2,13 +2,18 @@
 """
 Estimate the component (bill-of-materials) cost of every scraped e-bike.
 
-Scans all *_ebikes.json files, reads each model's specs, and applies a
-transparent heuristic cost model to the components it can identify (battery,
-motor, brakes, drivetrain, fork, display, frame, wheels, …). Writes
-`component_cost_estimates.json` with a per-component breakdown, an estimated
-total, and the implied share of the retail price.
+Applies a transparent, brand/tier-aware heuristic model to estimate the RETAIL
+(aftermarket street/replacement) price of the components it can identify (battery,
+motor, brakes, drivetrain, fork, display, frame, wheels, …). Brand drives the
+estimate as much as the spec — a Bosch system battery or a Fox fork costs far
+more than a generic equivalent.
 
-These are ROUGH wholesale/BOM estimates for comparison only -- not actual costs.
+The per-component `cost_*` functions are the project's single retail estimator,
+reused by resolve_component_prices.heuristic_retail to price any catalog part
+that lacks a researched price. (The standalone per-bike report this module used
+to write is no longer part of the pipeline.)
+
+These are ROUGH retail estimates for comparison only -- not actual prices.
 
 Usage: python estimate_component_costs.py [-o component_cost_estimates.json]
 """
@@ -45,6 +50,20 @@ def find_spec(specs: dict, *keywords) -> str:
 
 # ------------------------- per-component cost estimators -------------------------
 
+# A battery's retail/replacement price is driven by BRAND as much as by capacity.
+# Proprietary system batteries (Bosch PowerTube, Specialized SL, Shimano STEPS, …) run
+# far above a generic pack; a pack built on premium 21700 cells (LG/Samsung/Panasonic/
+# Molicel) costs more than a no-name pack. Tiered $/Wh below; a Bosch 625Wh PowerTube
+# lands ~$810 (matches its ~$700-850 street price), a generic 720Wh ~$324.
+# Drive-system brands AND big OEMs that sell their own proprietary integrated packs
+# (Giant EnergyPak, Trek RIB, Cannondale, etc.) — all priced like a system battery, not
+# the generic DTC packs (Aventon/Lectric/…) that correctly fall to the cell-based tiers.
+_SYSTEM_BATTERY = re.compile(
+    r"bosch|brose|specialized|shimano|yamaha|fazua|mahle|\btq\b|darfon"
+    r"|giant|energypak|trek|cannondale|gazelle|riese|haibike|\bcube\b|orbea|canyon", re.I)
+_PREMIUM_CELL = re.compile(r"samsung|\blg\b|panasonic|molicel|sanyo|murata|21700", re.I)
+
+
 def cost_battery(specs):
     blob = find_spec(specs, "battery", "cell")
     per_pack, total_wh, count = battery_system_wh(blob)
@@ -56,13 +75,24 @@ def cost_battery(specs):
             total_wh = per_pack * count
     if total_wh is None:
         return None, "no battery spec"
-    base = round(total_wh * 0.42)                # ~$0.42/Wh wholesale cell+pack
-    if re.search(r"samsung|lg|panasonic|21700", blob, re.I):
-        base = round(base * 1.1)
-    note = f"{round(total_wh)}Wh @ ~$0.42/Wh"
+    if _SYSTEM_BATTERY.search(blob):
+        rate, tier = 1.30, "system-brand pack"
+    elif _PREMIUM_CELL.search(blob):
+        rate, tier = 0.65, "premium cells"
+    else:
+        rate, tier = 0.45, "generic cells"
+    base = round(total_wh * rate)
+    note = f"{round(total_wh)}Wh @ ~${rate:.2f}/Wh ({tier})"
     if count > 1 and per_pack and total_wh != per_pack:
         note += f" ({count}×{round(per_pack)}Wh)"
     return base, note
+
+
+# Premium mid-drive systems command a big retail premium; Bafang M-series are mid-drives
+# but mid-tier, so they get mid-drive (torque-driven) pricing WITHOUT the premium bump.
+_PREMIUM_MOTOR = re.compile(r"bosch|brose|specialized\s*(2\.|sl|turbo)|shimano\s*(ep|steps|e\d)"
+                            r"|yamaha|\btq\b|fazua|mahle|ultro", re.I)
+_MID_MOTOR = re.compile(r"mid[- ]?drive|bottom bracket|bafang\s*m\d", re.I)
 
 
 def cost_motor(specs):
@@ -70,18 +100,28 @@ def cost_motor(specs):
     if not blob:
         return None, "no motor spec"
     w = num(r"(\d{3,4})\s*w", blob)
-    mid = bool(re.search(r"mid[- ]?drive|bottom bracket", blob, re.I))
-    premium = bool(re.search(r"bosch|brose|specialized|shimano ep|yamaha|ultro", blob, re.I))
+    nm = num(r"(\d{2,3})\s*n\W{0,2}m", blob)        # 120Nm / 85 N.m
+    mid = bool(_MID_MOTOR.search(blob) or _PREMIUM_MOTOR.search(blob))
+    premium = bool(_PREMIUM_MOTOR.search(blob))
     if mid:
-        c = 230 + (w or 500) * 0.20
-        note = "mid-drive"
+        # torque tracks a mid-drive's tier/cost better than wattage (a 120Nm unit is
+        # pricier than a 65Nm one); fall back to wattage only when torque is unknown.
+        if nm:
+            c, note = 140 + nm * 3.3, f"mid-drive {int(nm)}Nm"
+        else:
+            c, note = 230 + (w or 500) * 0.20, "mid-drive"
+        if premium:
+            c += 180; note += " (premium brand)"
     else:
-        c = 70 + (w or 500) * 0.11
-        note = "hub motor"
-    if premium:
-        c += 180
-        note += " (premium brand)"
+        c, note = 70 + (w or 500) * 0.11, "hub motor"
+        if premium:
+            c += 120; note += " (premium brand)"
     return round(c), note
+
+
+# Premium brake families (4-piston/quality hydraulic) that retail well above a generic disc.
+_PREMIUM_BRAKE = re.compile(r"magura|deore|\bxtr?\b|\bslx\b|sram\s*(code|guide|level|db8)"
+                            r"|\btrp\b|\bhope\b|\bhayes\b|formula|tektro\s*(orion|hd-?e[4-9])", re.I)
 
 
 def cost_brakes(specs):
@@ -96,6 +136,8 @@ def cost_brakes(specs):
         c, note = 60, "disc brakes"
     if re.search(r"(?:4|four|quad)[- ]?piston", blob, re.I):
         c += 35; note += ", 4-piston"
+    if _PREMIUM_BRAKE.search(blob):
+        c += 40; note += ", premium"
     return c, note
 
 
@@ -104,25 +146,42 @@ def cost_drivetrain(specs):
                      "cassette", "freewheel", "gear", "chain")
     if not blob:
         return None, "no drivetrain spec"
+    if re.search(r"pinion|rohloff", blob, re.I):           # sealed premium gearbox
+        return 650, "premium gearbox (Pinion/Rohloff)"
     if re.search(r"belt|gates|carbon drive", blob, re.I) or \
-       re.search(r"enviolo|cvt|nuvinci|igh|internal gear|auto[- ]?shift", blob, re.I):
+       re.search(r"enviolo|cvt|nuvinci|igh|internal gear|nexus|alfine|auto[- ]?shift", blob, re.I):
         return 320, "belt / internally-geared / CVT"
     if re.search(r"single[- ]?speed", blob, re.I):
         return 30, "single-speed"
     sp = num(r"(\d{1,2})[- ]?speed", blob)
-    return round(45 + (sp or 7) * 6), f"{int(sp) if sp else '~7'}-speed derailleur"
+    c, note = 45 + (sp or 7) * 6, f"{int(sp) if sp else '~7'}-speed derailleur"
+    if re.search(r"\bxtr\b|\bxx1\b|\bx01\b|axs|\bdi2\b", blob, re.I):
+        c += 160; note += " (flagship)"
+    elif re.search(r"deore xt|\bxt\b|\bslx\b|gx eagle|\bgx\b", blob, re.I):
+        c += 90; note += " (high-end)"
+    elif re.search(r"deore|advent x|\bnx\b|cues", blob, re.I):
+        c += 35; note += " (mid)"
+    return round(c), note
+
+
+# Premium suspension makers (air forks/shocks that retail well above generic coil).
+_PREMIUM_FORK = re.compile(r"\bfox\b|rock\s*shox|marzocchi|öhlins|ohlins|\bdvo\b|dt\s*swiss"
+                           r"|suntour\s*(axon|durolux|rux)", re.I)
 
 
 def cost_fork(specs):
     blob = find_spec(specs, "fork", "suspension")
     if not blob:
         return None, "no fork spec"
+    prem = bool(_PREMIUM_FORK.search(blob))
     if re.search(r"\bair\b", blob, re.I):
-        return 175, "air suspension fork"
+        return (350, "premium air fork") if prem else (185, "air suspension fork")
     if re.search(r"full[- ]?suspension|rear (spring|shock)|horst", blob, re.I):
         return 240, "full suspension"
-    if re.search(r"suspension|hydraulic|coil|lock[- ]?out", blob, re.I):
-        return 95, "suspension fork"
+    if re.search(r"carbon", blob, re.I):
+        return 150, "carbon rigid fork"
+    if re.search(r"suspension|hydraulic|coil|lock[- ]?out|travel", blob, re.I):
+        return (210, "premium coil fork") if prem else (95, "suspension fork")
     return 45, "rigid fork"
 
 
@@ -232,9 +291,9 @@ def main():
     out_models.sort(key=lambda r: (r["brand"], r["model"]))
     out = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
-        "disclaimer": ("Rough wholesale/BOM cost ESTIMATES derived heuristically "
-                       "from each bike's published specs. For comparison only; not "
-                       "actual manufacturer costs."),
+        "disclaimer": ("Rough RETAIL price ESTIMATES derived heuristically (brand/spec-"
+                       "aware) from each bike's published specs. For comparison only; "
+                       "not actual prices."),
         "model_count": len(out_models),
         "models": out_models,
     }

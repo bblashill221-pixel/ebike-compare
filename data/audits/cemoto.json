@@ -1,0 +1,750 @@
+{
+  "brand": "cemoto",
+  "scraper": "scrape_cemoto.py",
+  "generated_at": "2026-06-24T01:48:00.654954+00:00",
+  "fields_audited": [
+    "motor_w",
+    "battery_wh",
+    "torque_nm",
+    "max_speed_mph",
+    "range_mi",
+    "weight_lb",
+    "max_load_lb",
+    "fit_height_min_in",
+    "sensor_type",
+    "brake_type",
+    "frame_material",
+    "drive_type"
+  ],
+  "summary": {
+    "models": 7,
+    "present": 55,
+    "resolved": 6,
+    "open": 23,
+    "needs_image": 0,
+    "unpublished": 0
+  },
+  "models": [
+    {
+      "id": "cemoto__fat-tire-mountain-ebike",
+      "model": "CEMOTO B28D | 26\" Fat Tire Mountain Ebike All-Terrain Electric Bike",
+      "url": "https://cemotoride.com/products/fat-tire-mountain-ebike",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 750,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 749,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": 50,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 72.8,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 265,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "cemoto__off-road-electric-dirt-bike-for-adults-teens",
+      "model": "CEMOTO D-Series | 3000W–6000W Off-Road Electric Dirt Bike for Teens & Adults",
+      "url": "https://cemotoride.com/products/off-road-electric-dirt-bike-for-adults-teens",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 3000,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 1008,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 40,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 46,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 286,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "cemoto__eb66-harley-like-hi-tech-ebike",
+      "model": "CEMOTO EB66 | 750W double battery Harley-Like Hi-Tech Ebike",
+      "url": "https://cemotoride.com/products/eb66-harley-like-hi-tech-ebike",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 750,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 720,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": 90,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 90.4,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 265,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "cemoto__cemoto-eb28a-emountain-bike",
+      "model": "CEMOTO EBIKE B28 | 27.5\" E Mountain Bike",
+      "url": "https://cemotoride.com/products/cemoto-eb28a-emountain-bike",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 500,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 624,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": 55,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 72.8,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 265,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "cemoto__cemoto-fat-tire-ebike-eb28a",
+      "model": "CEMOTO EBIKE B28A | High Step Fat Tire Ebike",
+      "url": "https://cemotoride.com/products/cemoto-fat-tire-ebike-eb28a",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 750,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 749,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 72.8,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 265,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "cemoto__premium-cargo-electric-bike-aeb69",
+      "model": "Cargo Electric Bike |CEMOTO B69 750W Heavy Duty E-Bike 150kg Capacity",
+      "url": "https://cemotoride.com/products/premium-cargo-electric-bike-aeb69",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 750,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 960,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": 45,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 70.5,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 331,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "cemoto__cemoto-eb40-electric-city-commuter-bike",
+      "model": "Cemoto EB40 | Electric City Commuter Bike",
+      "url": "https://cemotoride.com/products/cemoto-eb40-electric-city-commuter-bike",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 750,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 720,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 59.5,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 265,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 59,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    }
+  ]
+}

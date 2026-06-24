@@ -1,0 +1,956 @@
+{
+  "brand": "cyke",
+  "scraper": "scrape_cyke.py",
+  "generated_at": "2026-06-24T01:48:00.656365+00:00",
+  "fields_audited": [
+    "motor_w",
+    "battery_wh",
+    "torque_nm",
+    "max_speed_mph",
+    "range_mi",
+    "weight_lb",
+    "max_load_lb",
+    "fit_height_min_in",
+    "sensor_type",
+    "brake_type",
+    "frame_material",
+    "drive_type"
+  ],
+  "summary": {
+    "models": 9,
+    "present": 107,
+    "resolved": 0,
+    "open": 1,
+    "needs_image": 0,
+    "unpublished": 0
+  },
+  "models": [
+    {
+      "id": "cyke__cheetah-hunting-ebike",
+      "model": "Cheetah Hunting Ebike",
+      "url": "https://cykebikes.com/products/cheetah-hunting-ebike",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 750,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 960,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 85,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 100,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 94.8,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 450,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 64,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "cadence",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "cyke__cheetah-hunting-ebike--step-thru",
+      "model": "Cheetah Hunting Ebike — Step-Thru",
+      "url": "https://cykebikes.com/products/cheetah-hunting-ebike",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 750,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 960,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 85,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 100,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 94.8,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 450,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 64,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "cadence",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "cyke__collie-cargo-ebike",
+      "model": "Collie Cargo Ebike",
+      "url": "https://cykebikes.com/products/collie-cargo-ebike",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 750,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 960,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 85,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 100,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 92.2,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 450,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "cadence",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "cyke__falcon-a-full-suspension-ebike",
+      "model": "Falcon A Full Suspension Ebike",
+      "url": "https://cykebikes.com/products/falcon-a-full-suspension-ebike",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 500,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 720,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 130,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 75,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 55.0,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 300,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "cyke__falcon-s-full-suspension-ebike",
+      "model": "Falcon S Full Suspension Ebike",
+      "url": "https://cykebikes.com/products/falcon-s-full-suspension-ebike",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 1000,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 960,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 160,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 65,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 66.0,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 300,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "cyke__falcon-x-full-suspension-ebike",
+      "model": "Falcon X Full Suspension Ebike",
+      "url": "https://cykebikes.com/products/falcon-x-full-suspension-ebike",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 1000,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 960,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 160,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 65,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 82.7,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 300,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "cyke__grizzly-folding-ebike",
+      "model": "Grizzly Foldable Ebike",
+      "url": "https://cykebikes.com/products/grizzly-folding-ebike",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 750,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 960,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 85,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 100,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 92.6,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 450,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "cadence",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "cyke__kingfisher-mid-drive-folding-ebike",
+      "model": "Kingfisher Mid-Drive Folding eBike",
+      "url": "https://cykebikes.com/products/kingfisher-mid-drive-folding-ebike",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 360,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 65,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 57,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 50.0,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 242,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "steel",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "cyke__lynx-commuter-ebike",
+      "model": "Lynx Commuter Ebike",
+      "url": "https://cykebikes.com/products/lynx-commuter-ebike",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 750,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 960,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 85,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 100,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 94.8,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 450,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 64,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "cadence",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    }
+  ]
+}

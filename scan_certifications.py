@@ -16,7 +16,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 DATA = Path(__file__).parent / "data"
-ACTIVE = DATA / "current" / "active" / "ebikes_normalized.json"
+ACTIVE = DATA / "current" / "active" / "ebike.json"
 CURATED = DATA / "curated" / "html_extracted.json"
 HDRS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                       "(KHTML, like Gecko) Chrome/124.0 Safari/537.36",

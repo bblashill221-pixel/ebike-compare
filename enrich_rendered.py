@@ -28,7 +28,7 @@ import scraper_common  # noqa
 from playwright.sync_api import sync_playwright
 
 DATA = Path(__file__).parent / "data"
-ACTIVE = DATA / "current" / "active" / "ebikes_normalized.json"
+ACTIVE = DATA / "current" / "active" / "ebike.json"
 WORKLIST = DATA / "current" / "size_chart_worklist.json"
 
 _RNG = re.compile(r"(\d+)['’]\s*(\d+)?\s*[\"”'’]{0,2}\s*[-~–]\s*(\d+)['’]\s*(\d+)?")

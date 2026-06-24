@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-17T18:57:04.762506+00:00",
-  "total_models": 389,
+  "generated_at": "2026-06-24T01:48:00.308692+00:00",
+  "total_models": 466,
   "expected_fields": [
     "motor_w",
     "battery_wh",
@@ -25,132 +25,132 @@
   ],
   "coverage": {
     "frame_size_count": {
-      "count": 389,
+      "count": 466,
       "pct": 100
     },
-    "battery_wh": {
-      "count": 387,
+    "brake_type": {
+      "count": 463,
       "pct": 99
     },
     "drive_type": {
-      "count": 387,
+      "count": 463,
       "pct": 99
     },
-    "brake_type": {
-      "count": 386,
+    "battery_wh": {
+      "count": 462,
       "pct": 99
     },
     "cell_brand": {
-      "count": 382,
+      "count": 458,
       "pct": 98
     },
     "drivetrain_type": {
-      "count": 380,
+      "count": 457,
       "pct": 98
-    },
-    "motor_w": {
-      "count": 380,
-      "pct": 98
-    },
-    "display_type": {
-      "count": 375,
-      "pct": 96
-    },
-    "warranty_years": {
-      "count": 375,
-      "pct": 96
     },
     "suspension": {
-      "count": 372,
+      "count": 450,
+      "pct": 97
+    },
+    "display_type": {
+      "count": 449,
+      "pct": 96
+    },
+    "motor_w": {
+      "count": 449,
       "pct": 96
     },
     "fit_height_min_in": {
-      "count": 360,
-      "pct": 93
+      "count": 440,
+      "pct": 94
     },
     "fit_height_min_mm": {
-      "count": 360,
+      "count": 440,
+      "pct": 94
+    },
+    "fit_height_max_in": {
+      "count": 438,
+      "pct": 94
+    },
+    "fit_height_max_mm": {
+      "count": 438,
+      "pct": 94
+    },
+    "torque_nm": {
+      "count": 434,
       "pct": 93
     },
     "frame_material": {
-      "count": 359,
-      "pct": 92
-    },
-    "fit_height_max_in": {
-      "count": 358,
-      "pct": 92
-    },
-    "fit_height_max_mm": {
-      "count": 358,
-      "pct": 92
+      "count": 432,
+      "pct": 93
     },
     "frame_size_rider_range": {
-      "count": 358,
-      "pct": 92
-    },
-    "torque_nm": {
-      "count": 350,
-      "pct": 90
+      "count": 426,
+      "pct": 91
     },
     "weight_lb": {
-      "count": 347,
+      "count": 415,
       "pct": 89
     },
     "max_speed_mph": {
-      "count": 329,
+      "count": 398,
       "pct": 85
     },
-    "range_mi": {
-      "count": 327,
-      "pct": 84
+    "sensor_type": {
+      "count": 394,
+      "pct": 85
+    },
+    "warranty_years": {
+      "count": 384,
+      "pct": 82
     },
     "gears": {
-      "count": 310,
+      "count": 382,
+      "pct": 82
+    },
+    "range_mi": {
+      "count": 373,
       "pct": 80
     },
+    "notable_tech": {
+      "count": 303,
+      "pct": 65
+    },
     "max_load_lb": {
-      "count": 292,
-      "pct": 75
+      "count": 299,
+      "pct": 64
     },
     "ul_listed": {
-      "count": 285,
-      "pct": 73
-    },
-    "sensor_type": {
-      "count": 228,
-      "pct": 59
-    },
-    "notable_tech": {
-      "count": 215,
-      "pct": 55
+      "count": 287,
+      "pct": 62
     },
     "motor_peak_w": {
-      "count": 201,
-      "pct": 52
-    },
-    "rack_load_lb": {
-      "count": 159,
-      "pct": 41
+      "count": 237,
+      "pct": 51
     },
     "classes": {
-      "count": 148,
-      "pct": 38
+      "count": 208,
+      "pct": 45
+    },
+    "rack_load_lb": {
+      "count": 168,
+      "pct": 36
     },
     "connectivity": {
-      "count": 121,
-      "pct": 31
+      "count": 150,
+      "pct": 32
     },
     "water_resistance": {
-      "count": 108,
-      "pct": 28
+      "count": 115,
+      "pct": 25
     },
     "removable_battery": {
-      "count": 70,
-      "pct": 18
+      "count": 77,
+      "pct": 17
     },
     "range_min_mi": {
       "count": 35,
-      "pct": 9
+      "pct": 8
     },
     "awd": {
       "count": 8,
@@ -158,7 +158,7 @@
     },
     "custom_speed_mode": {
       "count": 2,
-      "pct": 1
+      "pct": 0
     },
     "kids": {
       "count": 1,
@@ -168,39 +168,15 @@
   "missing": [
     {
       "brand": "aventon",
-      "model": "Current ADV Ebike",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "aventon",
-      "model": "Current EXP Ebike",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "aventon",
       "model": "Level 4 ADV Ebike",
       "field": "motor_w",
       "label": "Motor power (W)"
     },
     {
       "brand": "aventon",
-      "model": "Level 4 ADV Ebike",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "aventon",
       "model": "Level 4 ADV Step-Through Ebike",
       "field": "motor_w",
       "label": "Motor power (W)"
-    },
-    {
-      "brand": "aventon",
-      "model": "Level 4 ADV Step-Through Ebike",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "aventon",
@@ -301,12 +277,6 @@
     {
       "brand": "buzz",
       "model": "Cerana T2 Etrike",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "buzz",
-      "model": "Cerana T2 Etrike",
       "field": "suspension",
       "label": "Suspension"
     },
@@ -324,12 +294,6 @@
     },
     {
       "brand": "cannondale",
-      "model": "Adventure Neo 4",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "cannondale",
       "model": "Adventure Neo Allroad",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
@@ -414,18 +378,6 @@
     },
     {
       "brand": "cannondale",
-      "model": "Cargowagen Neo",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "cannondale",
-      "model": "Cargowagen Neo",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
-    },
-    {
-      "brand": "cannondale",
       "model": "FlyingV",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
@@ -438,45 +390,15 @@
     },
     {
       "brand": "cannondale",
-      "model": "FlyingV",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "cannondale",
       "model": "Mavaro Neo 1 Low StepThru",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
     },
     {
       "brand": "cannondale",
-      "model": "Mavaro Neo 1 Low StepThru",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "cannondale",
-      "model": "Mavaro Neo 1 Low StepThru",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
-    },
-    {
-      "brand": "cannondale",
       "model": "Mavaro Neo 2 Low StepThru",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "cannondale",
-      "model": "Mavaro Neo 2 Low StepThru",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "cannondale",
-      "model": "Mavaro Neo 2 Low StepThru",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
     },
     {
       "brand": "cannondale",
@@ -486,12 +408,6 @@
     },
     {
       "brand": "cannondale",
-      "model": "Mavaro Neo 3 Low StepThru",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "cannondale",
       "model": "Moterra 1",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
@@ -507,12 +423,6 @@
       "model": "Moterra 1",
       "field": "range_mi",
       "label": "Range (mi)"
-    },
-    {
-      "brand": "cannondale",
-      "model": "Moterra 1",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "cannondale",
@@ -534,12 +444,6 @@
     },
     {
       "brand": "cannondale",
-      "model": "Moterra 2",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "cannondale",
       "model": "Moterra 3",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
@@ -555,12 +459,6 @@
       "model": "Moterra 3",
       "field": "range_mi",
       "label": "Range (mi)"
-    },
-    {
-      "brand": "cannondale",
-      "model": "Moterra 3",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "cannondale",
@@ -582,12 +480,6 @@
     },
     {
       "brand": "cannondale",
-      "model": "Moterra 4",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "cannondale",
       "model": "Moterra 4 Plus",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
@@ -603,12 +495,6 @@
       "model": "Moterra 4 Plus",
       "field": "range_mi",
       "label": "Range (mi)"
-    },
-    {
-      "brand": "cannondale",
-      "model": "Moterra 4 Plus",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "cannondale",
@@ -630,12 +516,6 @@
     },
     {
       "brand": "cannondale",
-      "model": "Moterra LT 1",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "cannondale",
       "model": "Moterra Neo Carbon 2",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
@@ -651,12 +531,6 @@
       "model": "Moterra Neo Carbon 2",
       "field": "range_mi",
       "label": "Range (mi)"
-    },
-    {
-      "brand": "cannondale",
-      "model": "Moterra Neo Carbon 2",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "cannondale",
@@ -678,12 +552,6 @@
     },
     {
       "brand": "cannondale",
-      "model": "Moterra SL 1",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "cannondale",
       "model": "Moterra SL 2",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
@@ -702,12 +570,6 @@
     },
     {
       "brand": "cannondale",
-      "model": "Moterra SL 2",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "cannondale",
       "model": "Moterra SL LAB71",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
@@ -723,12 +585,6 @@
       "model": "Moterra SL LAB71",
       "field": "range_mi",
       "label": "Range (mi)"
-    },
-    {
-      "brand": "cannondale",
-      "model": "Moterra SL LAB71",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "cannondale",
@@ -744,12 +600,6 @@
     },
     {
       "brand": "cannondale",
-      "model": "Synapse Neo",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "cannondale",
       "model": "Synapse Neo Allroad 1",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
@@ -759,12 +609,6 @@
       "model": "Synapse Neo Allroad 1",
       "field": "range_mi",
       "label": "Range (mi)"
-    },
-    {
-      "brand": "cannondale",
-      "model": "Synapse Neo Allroad 1",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "cannondale",
@@ -780,12 +624,6 @@
     },
     {
       "brand": "cannondale",
-      "model": "Synapse Neo Allroad 2",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "cannondale",
       "model": "Tesoro Neo Carbon 1",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
@@ -795,18 +633,6 @@
       "model": "Tesoro Neo Carbon 1",
       "field": "range_mi",
       "label": "Range (mi)"
-    },
-    {
-      "brand": "cannondale",
-      "model": "Tesoro Neo Carbon 1",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "cannondale",
-      "model": "Tesoro Neo Carbon 1",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
     },
     {
       "brand": "cannondale",
@@ -822,51 +648,15 @@
     },
     {
       "brand": "cannondale",
-      "model": "Tesoro Neo Carbon 2",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "cannondale",
-      "model": "Tesoro Neo Carbon 2",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
-    },
-    {
-      "brand": "cannondale",
       "model": "Tesoro Neo X 1",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
     },
     {
       "brand": "cannondale",
-      "model": "Tesoro Neo X 1",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "cannondale",
-      "model": "Tesoro Neo X 1",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
-    },
-    {
-      "brand": "cannondale",
       "model": "Tesoro Neo X 1 StepThru",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "cannondale",
-      "model": "Tesoro Neo X 1 StepThru",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "cannondale",
-      "model": "Tesoro Neo X 1 StepThru",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
     },
     {
       "brand": "cannondale",
@@ -876,33 +666,15 @@
     },
     {
       "brand": "cannondale",
-      "model": "Tesoro Neo X 2",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "cannondale",
       "model": "Tesoro Neo X 2 StepThru",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
     },
     {
       "brand": "cannondale",
-      "model": "Tesoro Neo X 2 StepThru",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "cannondale",
       "model": "Tesoro Neo X 3",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "cannondale",
-      "model": "Tesoro Neo X 3",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "cannondale",
@@ -1440,27 +1212,9 @@
     },
     {
       "brand": "evelo",
-      "model": "EVELO Atlas Electric Bike",
-      "field": "range_mi",
-      "label": "Range (mi)"
-    },
-    {
-      "brand": "evelo",
-      "model": "EVELO Atlas Electric Bike",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "evelo",
       "model": "EVELO Compass Electric Trike",
       "field": "rack_load_lb",
       "label": "Rear-rack load (lb)"
-    },
-    {
-      "brand": "evelo",
-      "model": "EVELO Compass Electric Trike",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "evelo",
@@ -1469,16 +1223,172 @@
       "label": "Rear-rack load (lb)"
     },
     {
-      "brand": "evelo",
-      "model": "EVELO Galaxy Lux Electric Bike",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
+      "brand": "giant",
+      "model": "Defy Advanced E+ Elite 1",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
     },
     {
-      "brand": "evelo",
-      "model": "EVELO Omega Electric Bike",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
+      "brand": "giant",
+      "model": "Defy Advanced E+ Elite 1",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "giant",
+      "model": "Defy Advanced E+ Elite 1",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "giant",
+      "model": "Defy Advanced E+ Elite 1",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "giant",
+      "model": "Defy Advanced E+ Elite 1",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "giant",
+      "model": "Defy Advanced E+ Elite AR",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "giant",
+      "model": "Defy Advanced E+ Elite AR",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "giant",
+      "model": "Defy Advanced E+ Elite AR",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "giant",
+      "model": "Defy Advanced E+ Elite AR",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "giant",
+      "model": "Defy Advanced E+ Elite AR",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "giant",
+      "model": "Reign E+ 2",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "giant",
+      "model": "Reign E+ 2",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "giant",
+      "model": "Reign E+ 2",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "giant",
+      "model": "Reign E+ 2",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "giant",
+      "model": "Stance E+ 0",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "giant",
+      "model": "Stance E+ 0",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "giant",
+      "model": "Stance E+ 0",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "giant",
+      "model": "Stance E+ 0",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "giant",
+      "model": "Stance E+ 0",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "giant",
+      "model": "Stance E+ 1",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "giant",
+      "model": "Stance E+ 1",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "giant",
+      "model": "Stance E+ 1",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "giant",
+      "model": "Stance E+ 1",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "giant",
+      "model": "Stance E+ 1",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "giant",
+      "model": "Talon E+",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "giant",
+      "model": "Talon E+",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "giant",
+      "model": "Talon E+",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "giant",
+      "model": "Talon E+",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
     },
     {
       "brand": "heybike",
@@ -1494,12 +1404,6 @@
     },
     {
       "brand": "heybike",
-      "model": "ALPHA",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "heybike",
       "model": "ALPHA — Step-Thru",
       "field": "fit_height_min_in",
       "label": "Rider height range"
@@ -1509,12 +1413,6 @@
       "model": "ALPHA — Step-Thru",
       "field": "frame_size_rider_range",
       "label": "Rider height range per frame size"
-    },
-    {
-      "brand": "heybike",
-      "model": "ALPHA — Step-Thru",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "heybike",
@@ -1740,12 +1638,6 @@
     },
     {
       "brand": "lectric",
-      "model": "Lectric XPress1",
-      "field": "frame_material",
-      "label": "Frame material"
-    },
-    {
-      "brand": "lectric",
       "model": "Lectric XPress2",
       "field": "frame_material",
       "label": "Frame material"
@@ -1782,15 +1674,9 @@
     },
     {
       "brand": "magician",
-      "model": "Alpha",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "magician",
-      "model": "Alpha Mini",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
+      "model": "Alpha — Step-Thru",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
     },
     {
       "brand": "magician",
@@ -1805,28 +1691,10 @@
       "label": "Top speed (mph)"
     },
     {
-      "brand": "magician",
-      "model": "Atlas",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "magicycle",
-      "model": "Magicycle CT-1 Commuter Torque Sensor Ebike",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
-    },
-    {
       "brand": "priority",
       "model": "PRIORITY CURRENT PLUS E-BIKE",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "priority",
-      "model": "PRIORITY CURRENT PLUS E-BIKE",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "priority",
@@ -1836,9 +1704,15 @@
     },
     {
       "brand": "priority",
-      "model": "PRIORITY E-COAST",
-      "field": "battery_wh",
-      "label": "Battery capacity (Wh)"
+      "model": "PRIORITY CURRENT PLUS E-BIKE — Enviolo",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY CURRENT PLUS E-BIKE — Enviolo",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
     },
     {
       "brand": "priority",
@@ -1861,18 +1735,6 @@
     {
       "brand": "priority",
       "model": "PRIORITY E-COAST",
-      "field": "fit_height_min_in",
-      "label": "Rider height range"
-    },
-    {
-      "brand": "priority",
-      "model": "PRIORITY E-COAST",
-      "field": "frame_size_rider_range",
-      "label": "Rider height range per frame size"
-    },
-    {
-      "brand": "priority",
-      "model": "PRIORITY E-COAST",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
     },
@@ -1891,6 +1753,48 @@
     {
       "brand": "priority",
       "model": "PRIORITY E-COAST",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY E-COAST — Step-Thru",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY E-COAST — Step-Thru",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY E-COAST — Step-Thru",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY E-COAST — Step-Thru",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY E-COAST — Step-Thru",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY E-COAST — Step-Thru",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "priority",
+      "model": "PRIORITY E-COAST — Step-Thru",
       "field": "weight_lb",
       "label": "Weight (lb)"
     },
@@ -1923,18 +1827,6 @@
       "model": "PRIORITY GLIDE E-BIKE",
       "field": "warranty_years",
       "label": "Warranty (years)"
-    },
-    {
-      "brand": "priority",
-      "model": "PRIORITY SKYLINE SMART.SHIFT E-BIKE",
-      "field": "fit_height_min_in",
-      "label": "Rider height range"
-    },
-    {
-      "brand": "priority",
-      "model": "PRIORITY SKYLINE SMART.SHIFT E-BIKE",
-      "field": "frame_size_rider_range",
-      "label": "Rider height range per frame size"
     },
     {
       "brand": "priority",
@@ -1995,6 +1887,18 @@
       "model": "Revv1 HT",
       "field": "motor_w",
       "label": "Motor power (W)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "TRAILRUSH",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "ride1up",
+      "model": "TRAILRUSH",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
     },
     {
       "brand": "ride1up",
@@ -2022,13 +1926,13 @@
     },
     {
       "brand": "ride1up",
-      "model": "VORSA — Vorsa · Step-Over",
+      "model": "VORSA — Standard · Step-Over",
       "field": "frame_material",
       "label": "Frame material"
     },
     {
       "brand": "ride1up",
-      "model": "VORSA — Vorsa · Step-Thru",
+      "model": "VORSA — Standard · Step-Thru",
       "field": "frame_material",
       "label": "Frame material"
     },
@@ -2202,12 +2106,6 @@
     },
     {
       "brand": "specialized",
-      "model": "Levo 4 EVO Comp",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
       "model": "Levo 4 EVO Pro",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
@@ -2226,12 +2124,6 @@
     },
     {
       "brand": "specialized",
-      "model": "Levo 4 EVO Pro",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
       "model": "S-Works Levo 4 X",
       "field": "max_speed_mph",
       "label": "Top speed (mph)"
@@ -2241,12 +2133,6 @@
       "model": "S-Works Levo 4 X",
       "field": "range_mi",
       "label": "Range (mi)"
-    },
-    {
-      "brand": "specialized",
-      "model": "S-Works Levo 4 X",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
@@ -2316,12 +2202,6 @@
     },
     {
       "brand": "specialized",
-      "model": "S-Works Turbo Levo 4",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
       "model": "S-Works Turbo Levo 4 Frameset",
       "field": "brake_type",
       "label": "Brake type"
@@ -2346,18 +2226,6 @@
     },
     {
       "brand": "specialized",
-      "model": "S-Works Turbo Levo 4 Frameset",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
-      "model": "S-Works Turbo Levo 4 Frameset",
-      "field": "suspension",
-      "label": "Suspension"
-    },
-    {
-      "brand": "specialized",
       "model": "S-Works Turbo Levo 4 LTD",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
@@ -2376,12 +2244,6 @@
     },
     {
       "brand": "specialized",
-      "model": "S-Works Turbo Levo 4 LTD",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
       "model": "S-Works Turbo Levo R",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
@@ -2397,12 +2259,6 @@
       "model": "S-Works Turbo Levo R",
       "field": "range_mi",
       "label": "Range (mi)"
-    },
-    {
-      "brand": "specialized",
-      "model": "S-Works Turbo Levo R",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
@@ -2457,12 +2313,6 @@
       "model": "S-Works Turbo Levo SL 2 Frameset",
       "field": "sensor_type",
       "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
-      "model": "S-Works Turbo Levo SL 2 Frameset",
-      "field": "suspension",
-      "label": "Suspension"
     },
     {
       "brand": "specialized",
@@ -2478,21 +2328,9 @@
     },
     {
       "brand": "specialized",
-      "model": "Turbo Como 4.0",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
       "model": "Turbo Como 4.0 IGH",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Como 4.0 IGH",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
@@ -2514,12 +2352,6 @@
     },
     {
       "brand": "specialized",
-      "model": "Turbo Como 5.0 IGH",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
       "model": "Turbo Creo 2 Comp",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
@@ -2688,12 +2520,6 @@
     },
     {
       "brand": "specialized",
-      "model": "Turbo Levo 4 Alloy",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
       "model": "Turbo Levo 4 Comp",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
@@ -2709,12 +2535,6 @@
       "model": "Turbo Levo 4 Comp",
       "field": "range_mi",
       "label": "Range (mi)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Levo 4 Comp",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
@@ -2736,12 +2556,6 @@
     },
     {
       "brand": "specialized",
-      "model": "Turbo Levo 4 Comp Alloy",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
       "model": "Turbo Levo 4 Expert",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
@@ -2757,12 +2571,6 @@
       "model": "Turbo Levo 4 Expert",
       "field": "range_mi",
       "label": "Range (mi)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Levo 4 Expert",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
@@ -2784,12 +2592,6 @@
     },
     {
       "brand": "specialized",
-      "model": "Turbo Levo 4 Pro",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
       "model": "Turbo Levo R Comp",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
@@ -2805,12 +2607,6 @@
       "model": "Turbo Levo R Comp",
       "field": "range_mi",
       "label": "Range (mi)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Levo R Comp",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
@@ -2832,12 +2628,6 @@
     },
     {
       "brand": "specialized",
-      "model": "Turbo Levo R Comp Alloy",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
       "model": "Turbo Levo R Expert",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
@@ -2853,12 +2643,6 @@
       "model": "Turbo Levo R Expert",
       "field": "range_mi",
       "label": "Range (mi)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Levo R Expert",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
@@ -3006,12 +2790,6 @@
     },
     {
       "brand": "specialized",
-      "model": "Turbo Vado 3 EVO 4.0",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
       "model": "Turbo Vado 3 EVO 5.0",
       "field": "frame_material",
       "label": "Frame material"
@@ -3033,12 +2811,6 @@
       "model": "Turbo Vado 3 EVO 5.0",
       "field": "range_mi",
       "label": "Range (mi)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Vado 3 EVO 5.0",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
@@ -3066,12 +2838,6 @@
     },
     {
       "brand": "specialized",
-      "model": "Turbo Vado 3 EVO 6.0",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
       "model": "Turbo Vado 3 X 4.0",
       "field": "frame_material",
       "label": "Frame material"
@@ -3096,12 +2862,6 @@
     },
     {
       "brand": "specialized",
-      "model": "Turbo Vado 3 X 4.0",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
       "model": "Turbo Vado 3 X 6.0",
       "field": "frame_material",
       "label": "Frame material"
@@ -3123,12 +2883,6 @@
       "model": "Turbo Vado 3 X 6.0",
       "field": "range_mi",
       "label": "Range (mi)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Vado 3 X 6.0",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
@@ -3138,21 +2892,9 @@
     },
     {
       "brand": "specialized",
-      "model": "Turbo Vado 4.0",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
       "model": "Turbo Vado 4.0 Step-Through",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Vado 4.0 Step-Through",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
@@ -3162,21 +2904,9 @@
     },
     {
       "brand": "specialized",
-      "model": "Turbo Vado 5.0 IGH",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "specialized",
       "model": "Turbo Vado 5.0 IGH Step-Through",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "specialized",
-      "model": "Turbo Vado 5.0 IGH Step-Through",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "specialized",
@@ -3228,19 +2958,19 @@
     },
     {
       "brand": "specialized",
-      "model": "Turbo Vado SL 2 4.0 Step-Through  EQ",
+      "model": "Turbo Vado SL 2 4.0 Step-Through EQ",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
     },
     {
       "brand": "specialized",
-      "model": "Turbo Vado SL 2 4.0 Step-Through  EQ",
+      "model": "Turbo Vado SL 2 4.0 Step-Through EQ",
       "field": "range_mi",
       "label": "Range (mi)"
     },
     {
       "brand": "specialized",
-      "model": "Turbo Vado SL 2 4.0 Step-Through  EQ",
+      "model": "Turbo Vado SL 2 4.0 Step-Through EQ",
       "field": "sensor_type",
       "label": "Pedal-assist sensor type"
     },
@@ -3341,118 +3071,1078 @@
       "label": "Pedal-assist sensor type"
     },
     {
-      "brand": "tern",
-      "model": "GSD P00",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
+      "brand": "trek",
+      "model": "Charter+ 4S",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
     },
     {
-      "brand": "tern",
-      "model": "GSD P10",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
+      "brand": "trek",
+      "model": "Charter+ 4S",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
     },
     {
-      "brand": "tern",
-      "model": "GSD R14",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
+      "brand": "trek",
+      "model": "Charter+ 4S Lowstep",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
     },
     {
-      "brand": "tern",
-      "model": "GSD S10",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
+      "brand": "trek",
+      "model": "Charter+ 4S Lowstep",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
     },
     {
-      "brand": "tern",
-      "model": "HSD P10",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
+      "brand": "trek",
+      "model": "Charter+ 5S Lowstep",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
     },
     {
-      "brand": "tern",
-      "model": "HSD P5i",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
+      "brand": "trek",
+      "model": "Charter+ 5S Lowstep",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
     },
     {
-      "brand": "tern",
-      "model": "HSD S00",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
+      "brand": "trek",
+      "model": "Checkpoint+ SL 5",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
     },
     {
-      "brand": "tern",
-      "model": "HSD S11",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
+      "brand": "trek",
+      "model": "Checkpoint+ SL 5",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
     },
     {
-      "brand": "tern",
-      "model": "NBD P8i",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
+      "brand": "trek",
+      "model": "Checkpoint+ SL 6 AXS",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
     },
     {
-      "brand": "tern",
-      "model": "NBD S5i",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
+      "brand": "trek",
+      "model": "Checkpoint+ SL 6 AXS",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
     },
     {
-      "brand": "tern",
-      "model": "Orox R14 (27.5\")",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
+      "brand": "trek",
+      "model": "Checkpoint+ SL 7 AXS",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
     },
     {
-      "brand": "tern",
-      "model": "Orox S12 (27.5\")",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
+      "brand": "trek",
+      "model": "Checkpoint+ SL 7 AXS",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
     },
     {
-      "brand": "tern",
-      "model": "Quick Haul D8",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
+      "brand": "trek",
+      "model": "Domane+ ALR 5",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
     },
     {
-      "brand": "tern",
-      "model": "Quick Haul Long D9",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
+      "brand": "trek",
+      "model": "Domane+ ALR 5",
+      "field": "range_mi",
+      "label": "Range (mi)"
     },
     {
-      "brand": "tern",
-      "model": "Quick Haul P9 Sport",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
+      "brand": "trek",
+      "model": "Domane+ ALR 5",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
     },
     {
-      "brand": "tern",
-      "model": "Vektron P10",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
+      "brand": "trek",
+      "model": "Domane+ ALR 6 AXS",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
     },
     {
-      "brand": "tern",
-      "model": "Vektron P5i",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
+      "brand": "trek",
+      "model": "Domane+ ALR 6 AXS",
+      "field": "range_mi",
+      "label": "Range (mi)"
     },
     {
-      "brand": "tern",
-      "model": "Vektron Q9",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
+      "brand": "trek",
+      "model": "Domane+ ALR 6 AXS",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
     },
     {
-      "brand": "tern",
-      "model": "Vektron S10",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
+      "brand": "trek",
+      "model": "Domane+ SLR 6",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Domane+ SLR 6",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "trek",
+      "model": "Domane+ SLR 6",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Domane+ SLR 7",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Domane+ SLR 7",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "trek",
+      "model": "Domane+ SLR 7",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Domane+ SLR 9",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Domane+ SLR 9",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "trek",
+      "model": "Domane+ SLR 9",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "FX+ 1",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "FX+ 1",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "FX+ 1 Midstep",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "FX+ 1 Midstep",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "FX+ 1S",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "FX+ 1S",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "FX+ 1S Midstep",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "FX+ 1S Midstep",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "FX+ 7S",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "FX+ 7S",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "FX+ 7S Midstep",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "FX+ 7S Midstep",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fetch+ 2",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fetch+ 2",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fetch+ 2",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fetch+ 2",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fetch+ 4",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fetch+ 4",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "trek",
+      "model": "Fetch+ 4",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fetch+ 4",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fetch+ 4",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel EXe 5",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel EXe 5",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel EXe 5",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel EXe 5",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel EXe 5",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel EXe 5",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel EXe 5",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel EXe 8 GX AXS T-Type",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel EXe 8 GX AXS T-Type",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel EXe 8 GX AXS T-Type",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel EXe 8 GX AXS T-Type",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel EXe 8 GX AXS T-Type",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel EXe 8 GX AXS T-Type",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel EXe 8 GX AXS T-Type",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ EX 5 Gen 2",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ EX 5 Gen 2",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ EX 5 Gen 2",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ EX 8 Gen 2",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ EX 8 Gen 2",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ EX 8 Gen 2",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ EX 9.7 Gen 2",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ EX 9.7 Gen 2",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ EX 9.7 Gen 2",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ EX 9.8 Eagle 90 Gen 2",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ EX 9.8 Eagle 90 Gen 2",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ EX 9.8 Eagle 90 Gen 2",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ EX 9.8 Eagle 90 Gen 2",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ EX 9.8 XT Di2 Gen 2",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ EX 9.8 XT Di2 Gen 2",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ EX 9.8 XT Di2 Gen 2",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ EX 9.8 XT Di2 Gen 2",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ EX 9.8 XT Gen 2",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ EX 9.8 XT Gen 2",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ EX 9.8 XT Gen 2",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ EX 9.8 XT Gen 2",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ EX 9.9 X0 AXS Gen 2",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ EX 9.9 X0 AXS Gen 2",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ EX 9.9 X0 AXS Gen 2",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ EX 9.9 X0 AXS Gen 2",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ LX 9.8 Eagle 90 Gen 2",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ LX 9.8 Eagle 90 Gen 2",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ LX 9.8 Eagle 90 Gen 2",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ LX 9.8 Eagle 90 Gen 2",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ LX 9.8 XT Di2 Gen 2",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ LX 9.8 XT Di2 Gen 2",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ LX 9.8 XT Di2 Gen 2",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ LX 9.8 XT Di2 Gen 2",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ LX 9.8 XT Gen 2",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ LX 9.8 XT Gen 2",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ LX 9.8 XT Gen 2",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ LX 9.8 XT Gen 2",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ LX 9.9 X0 AXS Gen 2",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ LX 9.9 X0 AXS Gen 2",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ LX 9.9 X0 AXS Gen 2",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ LX 9.9 X0 AXS Gen 2",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ MX 9.8 Eagle 90 Gen 2",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ MX 9.8 Eagle 90 Gen 2",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ MX 9.8 Eagle 90 Gen 2",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ MX 9.8 Eagle 90 Gen 2",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ MX 9.8 XT Di2 Gen 2",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ MX 9.8 XT Di2 Gen 2",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ MX 9.8 XT Di2 Gen 2",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ MX 9.8 XT Di2 Gen 2",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ MX 9.8 XT Gen 2",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ MX 9.8 XT Gen 2",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ MX 9.8 XT Gen 2",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ MX 9.8 XT Gen 2",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ MX 9.9 X0 AXS Gen 2",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ MX 9.9 X0 AXS Gen 2",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ MX 9.9 X0 AXS Gen 2",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "trek",
+      "model": "Fuel+ MX 9.9 X0 AXS Gen 2",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Loft Go! 7D EQ Step-Thru",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Loft Go! 7D EQ Step-Thru",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Marlin+ 6",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Marlin+ 6",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "trek",
+      "model": "Marlin+ 6",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Marlin+ 8",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Marlin+ 8",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "trek",
+      "model": "Marlin+ 8",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Ponto Go!",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Ponto Go!",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Ponto Go! S",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Ponto Go! S",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Powerfly FS+ 4 Gen 4",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "trek",
+      "model": "Powerfly FS+ 4 Gen 4",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Powerfly FS+ 4 Gen 4",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "trek",
+      "model": "Powerfly FS+ 4 Gen 4",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Rail+ 5 Gen 5",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Rail+ 5 Gen 5",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "trek",
+      "model": "Rail+ 5 Gen 5",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Rail+ 8 Gen 5",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Rail+ 8 Gen 5",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "trek",
+      "model": "Rail+ 8 Gen 5",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Rail+ 9.7 Gen 5",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Rail+ 9.7 Gen 5",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "trek",
+      "model": "Rail+ 9.7 Gen 5",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Rail+ 9.8 GX AXS T-Type Gen 5",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Rail+ 9.8 GX AXS T-Type Gen 5",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "trek",
+      "model": "Rail+ 9.8 GX AXS T-Type Gen 5",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Rail+ 9.9 X0 AXS T-Type Gen 5",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Rail+ 9.9 X0 AXS T-Type Gen 5",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "trek",
+      "model": "Rail+ 9.9 X0 AXS T-Type Gen 5",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Slash+ 9.7",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Slash+ 9.7",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "trek",
+      "model": "Slash+ 9.7",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Slash+ 9.9",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Slash+ 9.9",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "trek",
+      "model": "Slash+ 9.9",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Townie Go!",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Townie Go!",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Townie Go! 7D EQ Step-Over",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Townie Go! 7D EQ Step-Over",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Townie Go! 7D EQ Step-Thru",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Townie Go! 7D EQ Step-Thru",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Townie Go! S",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Townie Go! S",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Vale Go! 9D EQ",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "trek",
+      "model": "Vale Go! 9D EQ",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Vale Go! 9D EQ",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Verve+ 1 Lowstep LT",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Verve+ 1 Lowstep LT",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Verve+ 2 Lowstep Gen 3",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Verve+ 2 Lowstep Gen 3",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Verve+ 3 Gen 3",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Verve+ 3 Gen 3",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Verve+ 3 Lowstep Gen 3",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Verve+ 3 Lowstep Gen 3",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Verve+ 4S Gen 3",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Verve+ 4S Gen 3",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "trek",
+      "model": "Verve+ 4S Lowstep Gen 3",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "trek",
+      "model": "Verve+ 4S Lowstep Gen 3",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
     },
     {
       "brand": "urtopia",
@@ -3495,6 +4185,42 @@
       "model": "Carbon Fusion GT E-Bike",
       "field": "suspension",
       "label": "Suspension"
+    },
+    {
+      "brand": "urtopia",
+      "model": "Carbon Joy Ultra E-Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "vanpowers",
+      "model": "UrbanCross-Pro",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "vanpowers",
+      "model": "UrbanCross-Ultra",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "vanpowers",
+      "model": "UrbanGlide-Pro",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "vanpowers",
+      "model": "UrbanGlide-Standard",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "vanpowers",
+      "model": "UrbanGlide-Ultra",
+      "field": "frame_material",
+      "label": "Frame material"
     },
     {
       "brand": "velowave",
@@ -3630,12 +4356,6 @@
     },
     {
       "brand": "vvolt",
-      "model": "Centauri II",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
-    },
-    {
-      "brand": "vvolt",
       "model": "Centauri SE",
       "field": "cell_brand",
       "label": "Battery cell brand"
@@ -3651,12 +4371,6 @@
       "model": "Centauri SE",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "vvolt",
-      "model": "Centauri SE",
-      "field": "sensor_type",
-      "label": "Pedal-assist sensor type"
     },
     {
       "brand": "vvolt",
@@ -3759,51 +4473,33 @@
       "model": "WIRED Raven",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "wired",
-      "model": "WIRED Viper",
-      "field": "fit_height_min_in",
-      "label": "Rider height range"
-    },
-    {
-      "brand": "wired",
-      "model": "WIRED Viper",
-      "field": "frame_size_rider_range",
-      "label": "Rider height range per frame size"
-    },
-    {
-      "brand": "wired",
-      "model": "WIRED Viper",
-      "field": "max_load_lb",
-      "label": "Max load / payload (lb)"
     }
   ],
   "frame_style_review": [],
   "summary": {
-    "models_flagged": 237,
-    "missing_rows": 602,
+    "models_flagged": 285,
+    "missing_rows": 718,
     "missing_by_field": {
-      "motor_w": 9,
-      "battery_wh": 2,
-      "weight_lb": 7,
-      "range_mi": 62,
+      "motor_w": 17,
+      "battery_wh": 4,
+      "weight_lb": 16,
+      "range_mi": 93,
       "brake_type": 3,
-      "frame_material": 30,
-      "drive_type": 2,
-      "torque_nm": 39,
-      "warranty_years": 7,
-      "display_type": 14,
+      "frame_material": 34,
+      "drive_type": 3,
+      "torque_nm": 32,
+      "warranty_years": 75,
+      "display_type": 17,
       "drivetrain_type": 9,
-      "suspension": 17,
-      "cell_brand": 7,
-      "fit_height_min_in": 29,
-      "max_speed_mph": 60,
-      "max_load_lb": 97,
-      "sensor_type": 161,
-      "rack_load_lb": 16,
+      "suspension": 16,
+      "cell_brand": 8,
+      "fit_height_min_in": 26,
+      "max_speed_mph": 68,
+      "max_load_lb": 167,
+      "sensor_type": 72,
+      "rack_load_lb": 18,
       "frame_size_count": 0,
-      "frame_size_rider_range": 31
+      "frame_size_rider_range": 40
     },
     "frame_style_review": 0
   }

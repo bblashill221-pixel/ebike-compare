@@ -318,10 +318,13 @@ export function SensorIcon({ className, type }: IconProps & { type?: string | nu
       {ch}
     </text>
   );
-  // both, or unknown (shown muted) -> split layout with cornered letters
-  if (both || !known) {
-    const tT = known ? "text-rose-600" : "text-slate-300";
-    const tC = known ? "text-sky-600" : "text-slate-300";
+  // unknown/absent -> a single "?" so a missing sensor can't read as a real
+  // cadence+torque sensor (the card tile forces every icon to brand-blue)
+  if (!known) {
+    return <Svg className={className}>{letter("?", 12, 12.5, 16, "text-slate-400")}</Svg>;
+  }
+  // both -> split layout with cornered letters
+  if (both) {
     return (
       <Svg className={className}>
         <line
@@ -329,8 +332,8 @@ export function SensorIcon({ className, type }: IconProps & { type?: string | nu
           stroke="currentColor" className="text-slate-300"
           strokeWidth={1.5} strokeLinecap="round"
         />
-        {letter("T", 7, 7, 10, tT)}
-        {letter("C", 17, 17, 10, tC)}
+        {letter("T", 7, 7, 10, "text-rose-600")}
+        {letter("C", 17, 17, 10, "text-sky-600")}
       </Svg>
     );
   }
@@ -339,6 +342,124 @@ export function SensorIcon({ className, type }: IconProps & { type?: string | nu
     <Svg className={className}>
       {hasT ? letter("T", 12, 12.5, 17, "text-rose-600")
             : letter("C", 12, 12.5, 17, "text-sky-600")}
+    </Svg>
+  );
+}
+
+// --- card "Highlights" icons (brand-blue line icons) ---
+export function LeafIcon({ className }: IconProps) {
+  return (
+    <Svg className={className}>
+      <g className="text-brand-600" {...base}>
+        <path d="M5 19c0-7 5-12 14-13 0 9-5 14-12 14a6 6 0 0 1-2-1Z" />
+        <path d="M9 15c2.5-2.5 5-3.5 8-4" />
+      </g>
+    </Svg>
+  );
+}
+
+export function CheckIcon({ className }: IconProps) {
+  return (
+    <Svg className={className}>
+      <g className="text-brand-600" {...base}>
+        <circle cx="12" cy="12" r="8.5" />
+        <path d="m8.5 12 2.4 2.4 4.6-4.8" />
+      </g>
+    </Svg>
+  );
+}
+
+export function BuildingIcon({ className }: IconProps) {
+  return (
+    <Svg className={className}>
+      <g className="text-brand-600" {...base}>
+        <path d="M5 20V7l6-3v16M11 20V9l8 3v8M3 20h18" />
+        <path d="M7.5 8.5v0M7.5 11.5v0M7.5 14.5v0M14.5 13v0M14.5 16v0" />
+      </g>
+    </Svg>
+  );
+}
+
+export function StarIcon({ className }: IconProps) {
+  return (
+    <Svg className={className}>
+      <path
+        className="text-[#F59E0B]"
+        fill="currentColor" stroke="currentColor" strokeWidth={1} strokeLinejoin="round"
+        d="m12 3 2.6 5.27 5.82.85-4.21 4.1.99 5.78L12 16.77 6.8 19l.99-5.78-4.21-4.1 5.82-.85Z"
+      />
+    </Svg>
+  );
+}
+
+// Folding: two hinged panels with a curved arrow folding one onto the other.
+export function FoldIcon({ className }: IconProps) {
+  return (
+    <Svg className={className}>
+      <g className="text-brand-600" {...base}>
+        <path d="M4 18V8l7-3v13z" />
+        <path d="M11 5l7 3v10l-7 3" />
+        <circle cx="11" cy="12" r="0.9" fill="currentColor" stroke="none" />
+        <path d="M14.5 4.5a5 5 0 0 1 0 5" strokeWidth={1.4} />
+      </g>
+    </Svg>
+  );
+}
+
+// Brake: a disc rotor (ring + drilled holes) with a caliper at the top.
+export function BrakeIcon({ className }: IconProps) {
+  return (
+    <Svg className={className}>
+      <g className="text-brand-600" {...base}>
+        <circle cx="11" cy="13" r="7.5" />
+        <circle cx="11" cy="13" r="3" />
+        <path d="M16 6.5h4.5v4" />
+      </g>
+      <g className="text-brand-600" fill="currentColor">
+        <circle cx="11" cy="7.5" r="0.7" />
+        <circle cx="16" cy="13" r="0.7" />
+        <circle cx="11" cy="18.5" r="0.7" />
+        <circle cx="6" cy="13" r="0.7" />
+      </g>
+    </Svg>
+  );
+}
+
+// Suspension fork: twin stanchions into a crown, with a coil spring on one leg.
+export function ForkIcon({ className }: IconProps) {
+  return (
+    <Svg className={className}>
+      <g className="text-brand-600" {...base}>
+        <path d="M7 3v6M17 3v6" />
+        <path d="M7 9h10" />
+        <path d="M8.5 9l-1.5 11M15.5 9l1.5 11" />
+        <path d="M7 12.5l3 1.2M7.4 15l3 1.2M7.8 17.5l3 1.2" />
+      </g>
+    </Svg>
+  );
+}
+
+// Tire: a wheel with a knobby tread ring and a hub.
+export function TireIcon({ className }: IconProps) {
+  return (
+    <Svg className={className}>
+      <g className="text-brand-600" {...base}>
+        <circle cx="12" cy="12" r="9" />
+        <circle cx="12" cy="12" r="5" />
+        <circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none" />
+      </g>
+    </Svg>
+  );
+}
+
+// Tag: a price tag with a punch hole (blue), for the Price metric.
+export function TagIcon({ className }: IconProps) {
+  return (
+    <Svg className={className}>
+      <g className="text-blue-600" {...base}>
+        <path d="M3.6 12.6l8-8a2 2 0 0 1 1.4-.6H19a1.5 1.5 0 0 1 1.5 1.5v5.6a2 2 0 0 1-.6 1.4l-8 8a1.5 1.5 0 0 1-2.1 0l-6.2-6.2a1.5 1.5 0 0 1 0-2.1Z" />
+        <circle cx="16" cy="8" r="1.3" fill="currentColor" stroke="none" />
+      </g>
     </Svg>
   );
 }

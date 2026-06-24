@@ -1,0 +1,647 @@
+{
+  "brand": "priority",
+  "scraper": "scrape_priority.py",
+  "generated_at": "2026-06-24T01:48:00.673523+00:00",
+  "fields_audited": [
+    "motor_w",
+    "battery_wh",
+    "torque_nm",
+    "max_speed_mph",
+    "range_mi",
+    "weight_lb",
+    "max_load_lb",
+    "fit_height_min_in",
+    "sensor_type",
+    "brake_type",
+    "frame_material",
+    "drive_type"
+  ],
+  "summary": {
+    "models": 6,
+    "present": 40,
+    "resolved": 19,
+    "open": 13,
+    "needs_image": 0,
+    "unpublished": 0
+  },
+  "models": [
+    {
+      "id": "priority__currentplus",
+      "model": "PRIORITY CURRENT PLUS E-BIKE",
+      "url": "https://www.prioritybicycles.com/products/currentplus?variant=40138959814733",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 500,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 720,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 140,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 75,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 56.5,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "priority__currentplus--enviolo-3499",
+      "model": "PRIORITY CURRENT PLUS E-BIKE — Enviolo",
+      "url": "https://www.prioritybicycles.com/products/currentplus?variant=40138959847501",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 500,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 720,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 140,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 75,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 56.5,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-23",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "priority__ecoast",
+      "model": "PRIORITY E-COAST",
+      "url": "https://www.prioritybicycles.com/products/ecoast?variant=39744733642829",
+      "fields": {
+        "motor_w": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": 500,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": 576,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 66,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": "cadence",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "priority__ecoast--step-thru",
+      "model": "PRIORITY E-COAST — Step-Thru",
+      "url": "https://www.prioritybicycles.com/products/ecoast?variant=39744734036045",
+      "fields": {
+        "motor_w": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": 500,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": 576,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": "cadence",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "priority__priority-glide-e-bike",
+      "model": "PRIORITY GLIDE E-BIKE",
+      "url": "https://www.prioritybicycles.com/products/priority-glide-e-bike",
+      "fields": {
+        "motor_w": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": 350,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 374,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 49.0,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 300,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 62,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "priority__priority-skyline-smart-shift-e-bike",
+      "model": "PRIORITY SKYLINE SMART.SHIFT E-BIKE",
+      "url": "https://www.prioritybicycles.com/products/priority-skyline-smart-shift-e-bike",
+      "fields": {
+        "motor_w": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": 750,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 720,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": 90,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 68.0,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 300,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 64,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1162 @@
+{
+  "brand": "urtopia",
+  "scraper": "scrape_urtopia.py",
+  "generated_at": "2026-06-24T01:48:00.690487+00:00",
+  "fields_audited": [
+    "motor_w",
+    "battery_wh",
+    "torque_nm",
+    "max_speed_mph",
+    "range_mi",
+    "weight_lb",
+    "max_load_lb",
+    "fit_height_min_in",
+    "sensor_type",
+    "brake_type",
+    "frame_material",
+    "drive_type"
+  ],
+  "summary": {
+    "models": 11,
+    "present": 130,
+    "resolved": 2,
+    "open": 0,
+    "needs_image": 0,
+    "unpublished": 0
+  },
+  "models": [
+    {
+      "id": "urtopia__urtopia-carbon-1-pro-ebike",
+      "model": "Carbon 1 Pro E-Bike",
+      "url": "https://newurtopia.com/products/urtopia-carbon-1-pro-ebike",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 350,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 353,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 42,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 25,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 80,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 37.0,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 240,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 63,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "urtopia__urtopia-carbon-1-step-thru-ebike",
+      "model": "Carbon 1 Step-Thru E-Bike",
+      "url": "https://newurtopia.com/products/urtopia-carbon-1-step-thru-ebike",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 350,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 353,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 25,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 80,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 36.0,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 240,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "urtopia__urtopia-carbon-classic-ebike",
+      "model": "Carbon Classic E-Bike",
+      "url": "https://newurtopia.com/products/urtopia-carbon-classic-ebike",
+      "fields": {
+        "motor_w": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": 750,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 353,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 75,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 38.0,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 240,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 63,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "urtopia__urtopia-carbon-classic-step-thru-ebike",
+      "model": "Carbon Classic Step-Thru E-Bike",
+      "url": "https://newurtopia.com/products/urtopia-carbon-classic-step-thru-ebike",
+      "fields": {
+        "motor_w": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": 750,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 353,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 75,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 38.0,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 240,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "urtopia__urtopia-carbon-fold",
+      "model": "Carbon Fold 1 E-Bike",
+      "url": "https://newurtopia.com/products/urtopia-carbon-fold",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 252,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 42,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 40,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 29.0,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 220,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "urtopia__urtopia-carbon-fold-2-ebike",
+      "model": "Carbon Fold 2 E-Bike",
+      "url": "https://newurtopia.com/products/urtopia-carbon-fold-2-ebike",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 245,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 42,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 40,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 35.0,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 220,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "urtopia__urtopia-carbon-fold-step-thru-ebike",
+      "model": "Carbon Fold Step-Thru E-Bike",
+      "url": "https://newurtopia.com/products/urtopia-carbon-fold-step-thru-ebike",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 252,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 42,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 50,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 31.0,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 220,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 59,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "urtopia__urtopia-carbon-fusion-gt",
+      "model": "Carbon Fusion GT E-Bike",
+      "url": "https://newurtopia.com/products/urtopia-carbon-fusion-gt",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 700,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 529,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 80,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 70,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 55.0,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 330,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 63,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "urtopia__urtopia-fusion-pro-carbon-long-range-ebike",
+      "model": "Carbon Fusion Pro E-Bike",
+      "url": "https://newurtopia.com/products/urtopia-fusion-pro-carbon-long-range-ebike",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 500,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 529,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 25,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 75,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 48.0,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 330,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 63,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "urtopia__urtopia-carbon-joy-ultra-ebike",
+      "model": "Carbon Joy Ultra E-Bike",
+      "url": "https://newurtopia.com/products/urtopia-carbon-joy-ultra-ebike",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 500,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 529,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 25,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 70,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 42.0,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 330,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 59,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "urtopia__urtopia-joy-carbon-fat-tire-ebike",
+      "model": "Urtopia Joy Carbon E-Bike",
+      "url": "https://newurtopia.com/products/urtopia-joy-carbon-fat-tire-ebike",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 500,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 529,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 25,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 70,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 45.0,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 330,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 59,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    }
+  ]
+}

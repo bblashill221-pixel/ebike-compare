@@ -2447,18 +2447,17 @@
    "extracted_at": "2026-06-15T00:57:52.289425+00:00"
   },
   "range_mi": {
-   "value": 500,
+   "value": 60,
    "snippet": "n the integrated rear rack, paired with a 500-watt rear hub motor that offers a 60-mile range (varies based on rider weight, pedal assist level, and conditions). With",
    "url": "https://www.prioritybicycles.com/products/ecoast",
    "pass": 1,
    "extracted_at": "2026-06-15T00:57:52.289425+00:00"
   },
   "suspension": {
-   "value": "full",
-   "snippet": "Years Priority Gives Bicycles All Bicycles VANTH FULL SUSPENSION ENDURO 600 600ADX 600HXT ACE APOLLO GRAVEL BRUZER",
+   "value": "rigid",
+   "snippet": "rust-resistant aluminum frame and fork yield a cruiser",
    "url": "https://www.prioritybicycles.com/products/ecoast",
-   "pass": 1,
-   "extracted_at": "2026-06-15T00:57:52.289425+00:00"
+   "pass": 0
   },
   "sensor_type": {
    "value": "cadence",
@@ -2480,6 +2479,12 @@
    "source": "https://www.prioritybicycles.com/products/ecoast",
    "standard": "UL 2271",
    "resolved_at": "2026-06-16T16:58:30.663382+00:00"
+  },
+  "battery_wh": {
+   "value": 576,
+   "snippet": "removable 576 watt-hour battery housed within the",
+   "url": "https://www.prioritybicycles.com/products/ecoast",
+   "pass": 0
   }
  },
  "priority__priority-glide-e-bike": {
@@ -3117,13 +3122,6 @@
    "url": "https://newurtopia.com/products/urtopia-carbon-joy-ultra-ebike",
    "pass": 2,
    "extracted_at": "2026-06-15T00:56:24.685818+00:00"
-  },
-  "suspension": {
-   "value": "full",
-   "snippet": "as snow, sand, or muddy trails. Combined with its full suspension system, it ensures a stable and controlled ride e",
-   "url": "https://newurtopia.com/products/urtopia-carbon-joy-ultra-ebike",
-   "pass": 2,
-   "extracted_at": "2026-06-15T00:56:24.685818+00:00"
   }
  },
  "urtopia__urtopia-joy-carbon-fat-tire-ebike": {
@@ -3218,6 +3216,13 @@
    "source": "https://magicyclebike.com/products/magicycle-ct-1-commuter-torque-sensor-electric-bike",
    "standard": "UL 2849",
    "resolved_at": "2026-06-16T16:58:15.439678+00:00"
+  },
+  "torque_nm": {
+   "value": 60,
+   "snippet": "Magicycle CT-1 Commuter (Torque Sensor): 60 N.m (from Magicycle model-comparison page)",
+   "url": "https://magicyclebike.com/pages/compare",
+   "pass": "manual",
+   "extracted_at": "2026-06-20T23:44:15.125495+00:00"
   }
  },
  "magicycle__magicycle-52v-20ah-cruiser-pro-mid-step-thru-mountain-electric-bike-pearl-white": {
@@ -4385,6 +4390,78 @@
    "source": "https://wiredebikes.com/products/wired-viper",
    "standard": "UL2271",
    "resolved_at": "2026-06-16T16:59:41.550920+00:00"
+  }
+ },
+ "vanpowers__cycanon": {
+  "warranty_years": {
+   "value": 6,
+   "snippet": "By Series Shop By Style 18/7 Online Service 30-Days Return Free Shipping Up to 6 Years Warranty All E-Bikes GrandTeton All-Terrain E-Bikes UrbanGlide City Step-throu",
+   "url": "https://vanpowers.com/products/cycanon",
+   "pass": 1,
+   "extracted_at": "2026-06-21T22:43:09.688879+00:00"
+  }
+ },
+ "vanpowers__grandteton-pro": {
+  "warranty_years": {
+   "value": 6,
+   "snippet": "By Series Shop By Style 18/7 Online Service 30-Days Return Free Shipping Up to 6 Years Warranty All E-Bikes GrandTeton All-Terrain E-Bikes UrbanGlide City Step-throu",
+   "url": "https://vanpowers.com/products/grandteton-pro",
+   "pass": 1,
+   "extracted_at": "2026-06-21T22:43:09.688879+00:00"
+  }
+ },
+ "vanpowers__grandteton-ultra": {
+  "warranty_years": {
+   "value": 6,
+   "snippet": "By Series Shop By Style 18/7 Online Service 30-Days Return Free Shipping Up to 6 Years Warranty All E-Bikes GrandTeton All-Terrain E-Bikes UrbanGlide City Step-throu",
+   "url": "https://vanpowers.com/products/grandteton-ultra",
+   "pass": 1,
+   "extracted_at": "2026-06-21T22:43:09.688879+00:00"
+  }
+ },
+ "vanpowers__urbancross-pro": {
+  "warranty_years": {
+   "value": 6,
+   "snippet": "By Series Shop By Style 18/7 Online Service 30-Days Return Free Shipping Up to 6 Years Warranty All E-Bikes GrandTeton All-Terrain E-Bikes UrbanGlide City Step-throu",
+   "url": "https://vanpowers.com/products/urbancross-pro",
+   "pass": 1,
+   "extracted_at": "2026-06-21T22:43:09.688879+00:00"
+  }
+ },
+ "vanpowers__urbancross-ultra": {
+  "warranty_years": {
+   "value": 6,
+   "snippet": "By Series Shop By Style 18/7 Online Service 30-Days Return Free Shipping Up to 6 Years Warranty All E-Bikes GrandTeton All-Terrain E-Bikes UrbanGlide City Step-throu",
+   "url": "https://vanpowers.com/products/urbancross-ultra",
+   "pass": 1,
+   "extracted_at": "2026-06-21T22:43:09.688879+00:00"
+  }
+ },
+ "vanpowers__urbanglide-pro": {
+  "display_type": {
+   "value": "color_tft",
+   "snippet": "bility Display with Auto Brightness The 3.5\" full-color display offers 600 NIT brightness for clear visibility in",
+   "url": "https://vanpowers.com/products/urbanglide-pro",
+   "pass": 1,
+   "extracted_at": "2026-06-21T22:43:09.688879+00:00"
+  }
+ },
+ "vanpowers__urbanglide-standard": {
+  "display_type": {
+   "value": "color_tft",
+   "snippet": "bility Display with Auto Brightness The 3.5\" full-color display offers 600 NIT brightness for clear visibility in",
+   "url": "https://vanpowers.com/products/urbanglide-standard",
+   "pass": 1,
+   "extracted_at": "2026-06-21T22:43:09.688879+00:00"
+  }
+ },
+ "vanpowers__urbanglide-ultra": {
+  "display_type": {
+   "value": "color_tft",
+   "snippet": "bility Display with Auto Brightness The 3.5\" full-color display offers 600 NIT brightness for clear visibility in",
+   "url": "https://vanpowers.com/products/urbanglide-ultra",
+   "pass": 1,
+   "extracted_at": "2026-06-21T22:43:09.688879+00:00"
   }
  }
 }

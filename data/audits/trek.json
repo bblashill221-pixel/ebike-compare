@@ -1,0 +1,6209 @@
+{
+  "brand": "trek",
+  "scraper": "scrape_trek.py",
+  "generated_at": "2026-06-24T01:48:00.686380+00:00",
+  "fields_audited": [
+    "motor_w",
+    "battery_wh",
+    "torque_nm",
+    "max_speed_mph",
+    "range_mi",
+    "weight_lb",
+    "max_load_lb",
+    "fit_height_min_in",
+    "sensor_type",
+    "brake_type",
+    "frame_material",
+    "drive_type"
+  ],
+  "summary": {
+    "models": 60,
+    "present": 617,
+    "resolved": 0,
+    "open": 103,
+    "needs_image": 0,
+    "unpublished": 0
+  },
+  "models": [
+    {
+      "id": "trek__charter-4s",
+      "model": "Charter+ 4S",
+      "url": "https://www.trekbikes.com/bikes/hybrid-bikes/electric-hybrid-bikes/charter/charter-4s/p/64072/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 540,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 90,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 68,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 67.2,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 65,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__charter-4s-lowstep",
+      "model": "Charter+ 4S Lowstep",
+      "url": "https://www.trekbikes.com/bikes/hybrid-bikes/electric-hybrid-bikes/charter/charter-4s-lowstep/p/64073/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 540,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 90,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 68,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 67.2,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 58,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__charter-5s-lowstep",
+      "model": "Charter+ 5S Lowstep",
+      "url": "https://www.trekbikes.com/bikes/hybrid-bikes/electric-hybrid-bikes/charter/charter-5s-lowstep/p/64881/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 800,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 90,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 68,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 67.2,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 58,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__checkpoint-sl-5",
+      "model": "Checkpoint+ SL 5",
+      "url": "https://www.trekbikes.com/bikes/road-bikes/gravel-bikes/electric-gravel-bikes/checkpoint/checkpoint-sl-5/p/58107/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 360,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 50,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 31.0,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 56,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__checkpoint-sl-6-axs",
+      "model": "Checkpoint+ SL 6 AXS",
+      "url": "https://www.trekbikes.com/bikes/road-bikes/gravel-bikes/electric-gravel-bikes/checkpoint/checkpoint-sl-6-axs/p/58115/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 360,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 50,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 31.0,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 56,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__checkpoint-sl-7-axs",
+      "model": "Checkpoint+ SL 7 AXS",
+      "url": "https://www.trekbikes.com/bikes/road-bikes/gravel-bikes/electric-gravel-bikes/checkpoint/checkpoint-sl-7-axs/p/58122/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 360,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 50,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 31.0,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 62,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__domane-alr-5",
+      "model": "Domane+ ALR 5",
+      "url": "https://www.trekbikes.com/bikes/electric-bikes/electric-road-bikes/domane-alr-5/p/56175/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 360,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 31.4,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 56,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__domane-alr-6-axs",
+      "model": "Domane+ ALR 6 AXS",
+      "url": "https://www.trekbikes.com/bikes/electric-bikes/electric-road-bikes/domane-alr-6-axs/p/56196/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 360,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 31.4,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 56,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__domane-slr-6",
+      "model": "Domane+ SLR 6",
+      "url": "https://www.trekbikes.com/bikes/electric-bikes/electric-road-bikes/domane-slr/domane-slr-6/p/46164/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 360,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 50,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 26.1,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 62,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__domane-slr-7",
+      "model": "Domane+ SLR 7",
+      "url": "https://www.trekbikes.com/bikes/electric-bikes/electric-road-bikes/domane-slr/domane-slr-7/p/58152/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 360,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 26.1,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 62,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__domane-slr-9",
+      "model": "Domane+ SLR 9",
+      "url": "https://www.trekbikes.com/bikes/electric-bikes/electric-road-bikes/domane-slr/domane-slr-9/p/58187/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 360,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 26.1,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 62,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__fx-1",
+      "model": "FX+ 1",
+      "url": "https://www.trekbikes.com/bikes/hybrid-bikes/electric-hybrid-bikes/fx/fx-1/p/56161/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 500,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 520,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 50,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 48.7,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__fx-1-midstep",
+      "model": "FX+ 1 Midstep",
+      "url": "https://www.trekbikes.com/bikes/hybrid-bikes/electric-hybrid-bikes/fx/fx-1-midstep/p/56162/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 500,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 520,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 50,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 48.7,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__fx-1s",
+      "model": "FX+ 1S",
+      "url": "https://www.trekbikes.com/bikes/hybrid-bikes/electric-hybrid-bikes/fx/fx-1s/p/49668/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 500,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 520,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 50,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 48.7,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__fx-1s-midstep",
+      "model": "FX+ 1S Midstep",
+      "url": "https://www.trekbikes.com/bikes/hybrid-bikes/electric-hybrid-bikes/fx/fx-1s-midstep/p/49669/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 500,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 520,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 50,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 48.7,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__fx-7s",
+      "model": "FX+ 7S",
+      "url": "https://www.trekbikes.com/bikes/hybrid-bikes/electric-hybrid-bikes/fx/fx-7s/p/47897/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 360,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 50,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 50,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 41.1,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__fx-7s-midstep",
+      "model": "FX+ 7S Midstep",
+      "url": "https://www.trekbikes.com/bikes/hybrid-bikes/electric-hybrid-bikes/fx/fx-7s-midstep/p/48007/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 360,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 50,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 50,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 41.1,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 58,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__fetch-2",
+      "model": "Fetch+ 2",
+      "url": "https://www.trekbikes.com/bikes/hybrid-bikes/electric-hybrid-bikes/fetch/fetch-2/p/37640/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 75,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 86,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 165.3,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 63,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__fetch-4",
+      "model": "Fetch+ 4",
+      "url": "https://www.trekbikes.com/bikes/hybrid-bikes/electric-hybrid-bikes/fetch/fetch-4/p/37114/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 75,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 86,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 165.3,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 63,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__fuel-exe-5",
+      "model": "Fuel EXe 5",
+      "url": "https://www.trekbikes.com/bikes/mountain-bikes/electric-mountain-bikes/fuel-exe/fuel-exe-5/p/41476/",
+      "fields": {
+        "motor_w": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 360,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 50,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__fuel-exe-8-gx-axs-t-type",
+      "model": "Fuel EXe 8 GX AXS T-Type",
+      "url": "https://www.trekbikes.com/bikes/mountain-bikes/electric-mountain-bikes/fuel-exe/fuel-exe-8-gx-axs-t-type/p/41550/",
+      "fields": {
+        "motor_w": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 360,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 50,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__fuel-ex-5-gen-2",
+      "model": "Fuel+ EX 5 Gen 2",
+      "url": "https://www.trekbikes.com/bikes/mountain-bikes/electric-mountain-bikes/fuel/fuel-ex/fuel-ex-5-gen-2/p/56298/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 580,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 44.8,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__fuel-ex-8-gen-2",
+      "model": "Fuel+ EX 8 Gen 2",
+      "url": "https://www.trekbikes.com/bikes/mountain-bikes/electric-mountain-bikes/fuel/fuel-ex/fuel-ex-8-gen-2/p/56301/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 580,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 44.8,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__fuel-ex-9-7-gen-2",
+      "model": "Fuel+ EX 9.7 Gen 2",
+      "url": "https://www.trekbikes.com/bikes/mountain-bikes/electric-mountain-bikes/fuel/fuel-ex/fuel-ex-9-7-gen-2/p/79613/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 580,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 44.8,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__fuel-ex-9-8-eagle-90-gen-2",
+      "model": "Fuel+ EX 9.8 Eagle 90 Gen 2",
+      "url": "https://www.trekbikes.com/bikes/mountain-bikes/electric-mountain-bikes/fuel/fuel-ex/fuel-ex-9-8-eagle-90-gen-2/p/56292/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 580,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 44.8,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__fuel-ex-9-8-xt-di2-gen-2",
+      "model": "Fuel+ EX 9.8 XT Di2 Gen 2",
+      "url": "https://www.trekbikes.com/bikes/mountain-bikes/electric-mountain-bikes/fuel/fuel-ex/fuel-ex-9-8-xt-di2-gen-2/p/58895/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 580,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 44.8,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__fuel-ex-9-8-xt-gen-2",
+      "model": "Fuel+ EX 9.8 XT Gen 2",
+      "url": "https://www.trekbikes.com/bikes/mountain-bikes/electric-mountain-bikes/fuel/fuel-ex/fuel-ex-9-8-xt-gen-2/p/59088/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 580,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 44.8,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__fuel-ex-9-9-x0-axs-gen-2",
+      "model": "Fuel+ EX 9.9 X0 AXS Gen 2",
+      "url": "https://www.trekbikes.com/bikes/mountain-bikes/electric-mountain-bikes/fuel/fuel-ex/fuel-ex-9-9-x0-axs-gen-2/p/56079/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 580,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 44.8,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__fuel-lx-9-8-eagle-90-gen-2",
+      "model": "Fuel+ LX 9.8 Eagle 90 Gen 2",
+      "url": "https://www.trekbikes.com/bikes/mountain-bikes/electric-mountain-bikes/fuel/fuel-lx/fuel-lx-9-8-eagle-90-gen-2/p/59230/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 580,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 44.8,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__fuel-lx-9-8-xt-di2-gen-2",
+      "model": "Fuel+ LX 9.8 XT Di2 Gen 2",
+      "url": "https://www.trekbikes.com/bikes/mountain-bikes/electric-mountain-bikes/fuel/fuel-lx/fuel-lx-9-8-xt-di2-gen-2/p/59258/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 580,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 44.8,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__fuel-lx-9-8-xt-gen-2",
+      "model": "Fuel+ LX 9.8 XT Gen 2",
+      "url": "https://www.trekbikes.com/bikes/mountain-bikes/electric-mountain-bikes/fuel/fuel-lx/fuel-lx-9-8-xt-gen-2/p/59216/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 580,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 44.8,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__fuel-lx-9-9-x0-axs-gen-2",
+      "model": "Fuel+ LX 9.9 X0 AXS Gen 2",
+      "url": "https://www.trekbikes.com/bikes/mountain-bikes/electric-mountain-bikes/fuel/fuel-lx/fuel-lx-9-9-x0-axs-gen-2/p/56081/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 580,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 44.8,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__fuel-mx-9-8-eagle-90-gen-2",
+      "model": "Fuel+ MX 9.8 Eagle 90 Gen 2",
+      "url": "https://www.trekbikes.com/bikes/mountain-bikes/electric-mountain-bikes/fuel/fuel-mx/fuel-mx-9-8-eagle-90-gen-2/p/59227/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 580,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 44.8,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__fuel-mx-9-8-xt-di2-gen-2",
+      "model": "Fuel+ MX 9.8 XT Di2 Gen 2",
+      "url": "https://www.trekbikes.com/bikes/mountain-bikes/electric-mountain-bikes/fuel/fuel-mx/fuel-mx-9-8-xt-di2-gen-2/p/59260/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 580,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 44.8,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__fuel-mx-9-8-xt-gen-2",
+      "model": "Fuel+ MX 9.8 XT Gen 2",
+      "url": "https://www.trekbikes.com/bikes/mountain-bikes/electric-mountain-bikes/fuel/fuel-mx/fuel-mx-9-8-xt-gen-2/p/59218/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 580,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 44.8,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__fuel-mx-9-9-x0-axs-gen-2",
+      "model": "Fuel+ MX 9.9 X0 AXS Gen 2",
+      "url": "https://www.trekbikes.com/bikes/mountain-bikes/electric-mountain-bikes/fuel/fuel-mx/fuel-mx-9-9-x0-axs-gen-2/p/56080/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 580,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 44.8,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__loft-go-7d-eq-step-thru",
+      "model": "Loft Go! 7D EQ Step-Thru",
+      "url": "https://www.trekbikes.com/bikes/electra-bikes/electra-ebikes/loft-go/loft-go-7d-eq-step-thru/p/36415/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 40,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 40,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 46.3,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 66,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mechanical_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__marlin-6",
+      "model": "Marlin+ 6",
+      "url": "https://www.trekbikes.com/bikes/mountain-bikes/electric-mountain-bikes/marlin/marlin-6/p/57380/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 400,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 50,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 48.3,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 57,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__marlin-8",
+      "model": "Marlin+ 8",
+      "url": "https://www.trekbikes.com/bikes/mountain-bikes/electric-mountain-bikes/marlin/marlin-8/p/57378/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 400,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 50,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 48.3,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 57,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__ponto-go",
+      "model": "Ponto Go!",
+      "url": "https://www.trekbikes.com/bikes/electra-bikes/electra-ebikes/comfort-ebikes/ponto-go/ponto-go/p/59517/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 750,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 625,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 65,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 80.0,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 59,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__ponto-go-s",
+      "model": "Ponto Go! S",
+      "url": "https://www.trekbikes.com/bikes/electra-bikes/electra-ebikes/comfort-ebikes/ponto-go/ponto-go-s/p/41206/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 750,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 625,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 65,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 80.0,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 59,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__powerfly-fs-4-gen-4",
+      "model": "Powerfly FS+ 4 Gen 4",
+      "url": "https://www.trekbikes.com/bikes/mountain-bikes/electric-mountain-bikes/powerfly/powerfly-full-suspension/powerfly-fs-4-gen-4/p/48615/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 600,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 85,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 56.4,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__rail-5-gen-5",
+      "model": "Rail+ 5 Gen 5",
+      "url": "https://www.trekbikes.com/bikes/mountain-bikes/electric-mountain-bikes/rail/rail-5-gen-5/p/79216/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 800,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 85,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 52.9,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__rail-8-gen-5",
+      "model": "Rail+ 8 Gen 5",
+      "url": "https://www.trekbikes.com/bikes/mountain-bikes/electric-mountain-bikes/rail/rail-8-gen-5/p/79221/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 800,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 85,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 52.9,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__rail-9-7-gen-5",
+      "model": "Rail+ 9.7 Gen 5",
+      "url": "https://www.trekbikes.com/bikes/mountain-bikes/electric-mountain-bikes/rail/rail-9-7-gen-5/p/48469/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 800,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 85,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 52.9,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__rail-9-8-gx-axs-t-type-gen-5",
+      "model": "Rail+ 9.8 GX AXS T-Type Gen 5",
+      "url": "https://www.trekbikes.com/bikes/mountain-bikes/electric-mountain-bikes/rail/rail-9-8-gx-axs-t-type-gen-5/p/48455/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 800,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 85,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 52.9,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__rail-9-9-x0-axs-t-type-gen-5",
+      "model": "Rail+ 9.9 X0 AXS T-Type Gen 5",
+      "url": "https://www.trekbikes.com/bikes/mountain-bikes/electric-mountain-bikes/rail/rail-9-9-x0-axs-t-type-gen-5/p/48461/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 800,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 85,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 52.9,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__slash-9-7",
+      "model": "Slash+ 9.7",
+      "url": "https://www.trekbikes.com/bikes/mountain-bikes/electric-mountain-bikes/slash/slash-9-7/p/57406/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 580,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 48.1,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__slash-9-9",
+      "model": "Slash+ 9.9",
+      "url": "https://www.trekbikes.com/bikes/mountain-bikes/electric-mountain-bikes/slash/slash-9-9/p/57635/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 580,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 48.1,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "carbon",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__townie-go",
+      "model": "Townie Go!",
+      "url": "https://www.trekbikes.com/bikes/electra-bikes/electra-ebikes/townie-go/townie-go/p/47368/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 500,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 520,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 50,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 57.7,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 59,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__townie-go-7d-eq-step-over",
+      "model": "Townie Go! 7D EQ Step-Over",
+      "url": "https://www.trekbikes.com/bikes/electra-bikes/electra-ebikes/townie-go/townie-go-7d-eq-step-over/p/49996/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 40,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 40,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 46.1,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 65,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mechanical_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__townie-go-7d-eq-step-thru",
+      "model": "Townie Go! 7D EQ Step-Thru",
+      "url": "https://www.trekbikes.com/bikes/electra-bikes/electra-ebikes/townie-go/townie-go-7d-eq-step-thru/p/49995/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 40,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 40,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 46.1,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 59,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mechanical_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__townie-go-s",
+      "model": "Townie Go! S",
+      "url": "https://www.trekbikes.com/bikes/electra-bikes/electra-ebikes/townie-go/townie-go-s/p/47367/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 500,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 520,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 50,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 57.7,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 59,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__vale-go-9d-eq",
+      "model": "Vale Go! 9D EQ",
+      "url": "https://www.trekbikes.com/bikes/electra-bikes/electra-ebikes/vale-go/vale-go-9d-eq/p/34871/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 50,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 65,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 53.9,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 64,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__verve-1-lowstep-lt",
+      "model": "Verve+ 1 Lowstep LT",
+      "url": "https://www.trekbikes.com/bikes/hybrid-bikes/electric-hybrid-bikes/verve/verve-1-lowstep-lt/p/40990/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 75,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 50,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 57.4,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__verve-2-lowstep-gen-3",
+      "model": "Verve+ 2 Lowstep Gen 3",
+      "url": "https://www.trekbikes.com/bikes/hybrid-bikes/electric-hybrid-bikes/verve/verve-2-lowstep-gen-3/p/41518/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 400,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 50,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 50,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 57.4,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 61,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__verve-3-gen-3",
+      "model": "Verve+ 3 Gen 3",
+      "url": "https://www.trekbikes.com/bikes/hybrid-bikes/electric-hybrid-bikes/verve/verve-3-gen-3/p/40666/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 545,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 75,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 50,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 57.4,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 65,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__verve-3-lowstep-gen-3",
+      "model": "Verve+ 3 Lowstep Gen 3",
+      "url": "https://www.trekbikes.com/bikes/hybrid-bikes/electric-hybrid-bikes/verve/verve-3-lowstep-gen-3/p/40667/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 545,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 75,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 50,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 57.4,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 58,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__verve-4s-gen-3",
+      "model": "Verve+ 4S Gen 3",
+      "url": "https://www.trekbikes.com/bikes/hybrid-bikes/electric-hybrid-bikes/verve/verve-4s-gen-3/p/40674/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 545,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 75,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 50,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 57.4,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 65,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "trek__verve-4s-lowstep-gen-3",
+      "model": "Verve+ 4S Lowstep Gen 3",
+      "url": "https://www.trekbikes.com/bikes/hybrid-bikes/electric-hybrid-bikes/verve/verve-4s-lowstep-gen-3/p/40675/",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 250,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 545,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 75,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 50,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 57.4,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 58,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    }
+  ]
+}

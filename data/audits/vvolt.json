@@ -1,0 +1,441 @@
+{
+  "brand": "vvolt",
+  "scraper": "scrape_vvolt.py",
+  "generated_at": "2026-06-24T01:48:00.697009+00:00",
+  "fields_audited": [
+    "motor_w",
+    "battery_wh",
+    "torque_nm",
+    "max_speed_mph",
+    "range_mi",
+    "weight_lb",
+    "max_load_lb",
+    "fit_height_min_in",
+    "sensor_type",
+    "brake_type",
+    "frame_material",
+    "drive_type"
+  ],
+  "summary": {
+    "models": 4,
+    "present": 22,
+    "resolved": 15,
+    "open": 11,
+    "needs_image": 0,
+    "unpublished": 0
+  },
+  "models": [
+    {
+      "id": "vvolt__alpha-2-1",
+      "model": "Alpha 2.1",
+      "url": "https://vvolt.com/products/alpha-2-1",
+      "fields": {
+        "motor_w": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": 350,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": 374,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 45,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 40,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 44.0,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 57,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "vvolt__alpha-ii",
+      "model": "Alpha II",
+      "url": "https://vvolt.com/products/alpha-ii",
+      "fields": {
+        "motor_w": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": 350,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 45,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 20,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 40,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 44.0,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 57,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "vvolt__centauri-ii",
+      "model": "Centauri II",
+      "url": "https://vvolt.com/products/centauri-ii",
+      "fields": {
+        "motor_w": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": 350,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": 490,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 120,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 53.0,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 57,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "vvolt__centauri-se",
+      "model": "Centauri SE",
+      "url": "https://vvolt.com/products/centauri-se",
+      "fields": {
+        "motor_w": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": 350,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": 490,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 120,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 50.0,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 57,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-22",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "resolved",
+          "source": "html_extracted",
+          "value": "mid",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    }
+  ]
+}

@@ -29,6 +29,7 @@ export const BOOL_LABELS: Record<BoolField, string> = {
   on_sale: "On sale",
   ul_listed: "UL / EN certified",
   awd: "AWD (dual motor)",
+  folding: "Folding",
   kids: "Exclude Kids Ebikes",
 };
 
@@ -69,7 +70,7 @@ export function matchPriceTier(hi: number, bHi: number): PriceTier | undefined {
   return PRICE_TIERS.find((t) => priceTierMax(t, bHi) === hi);
 }
 
-/** Human label for a max preset: "Any price" / "≤ $4,000". */
+/** Human label for a max preset: "Any price" / "Up to $4,000". */
 export function priceTierLabel(t: PriceTier): string {
-  return t.max == null ? "Any price" : `≤ $${t.max.toLocaleString()}`;
+  return t.max == null ? "Any price" : `Up to $${t.max.toLocaleString()}`;
 }

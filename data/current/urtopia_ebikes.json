@@ -91,7 +91,19 @@
           "height_max": "6'5\""
         }
       ],
-      "regular_price": 2499.0
+      "regular_price": 2499.0,
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": [
+        {
+          "name": "Lights",
+          "price": 0,
+          "free": true,
+          "detail": "Front: Integrated StVZO headlight Rear: StVZO rear light (Not ARES lights)"
+        }
+      ]
     },
     {
       "model": "Carbon 1 Step-Thru E-Bike",
@@ -167,7 +179,20 @@
           "height_max": "6'1\""
         }
       ],
-      "regular_price": 2499.0
+      "regular_price": 2499.0,
+      "frame_style": "Step-Thru",
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": [
+        {
+          "name": "Lights",
+          "price": 0,
+          "free": true,
+          "detail": "Front: Integrated StVZO headlight"
+        }
+      ]
     },
     {
       "model": "Carbon Classic E-Bike",
@@ -256,7 +281,12 @@
           "height_max": "6'5\""
         }
       ],
-      "regular_price": 2299.0
+      "regular_price": 2299.0,
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": []
     },
     {
       "model": "Carbon Classic Step-Thru E-Bike",
@@ -326,7 +356,13 @@
           "height_max": "6'1\""
         }
       ],
-      "regular_price": 2299.0
+      "regular_price": 2299.0,
+      "frame_style": "Step-Thru",
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": []
     },
     {
       "model": "Carbon Fold 1 E-Bike",
@@ -405,7 +441,19 @@
           "height_max": "6'1\""
         }
       ],
-      "regular_price": 2299.0
+      "regular_price": 2299.0,
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": [
+        {
+          "name": "Rearlights",
+          "price": 0,
+          "free": true,
+          "detail": "Integrated rear lights"
+        }
+      ]
     },
     {
       "model": "Carbon Fold 2 E-Bike",
@@ -481,7 +529,12 @@
           "height_min": "5'1\"",
           "height_max": "6'1\""
         }
-      ]
+      ],
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": []
     },
     {
       "model": "Carbon Fold Step-Thru E-Bike",
@@ -549,7 +602,13 @@
           "height_max": "6'5\""
         }
       ],
-      "regular_price": 2099.0
+      "regular_price": 2099.0,
+      "frame_style": "Step-Thru",
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": []
     },
     {
       "model": "Carbon Fusion GT E-Bike",
@@ -625,7 +684,19 @@
           "height_max": "6'3\""
         }
       ],
-      "regular_price": 2799.0
+      "regular_price": 2799.0,
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": [
+        {
+          "name": "Lights",
+          "price": 0,
+          "free": true,
+          "detail": "Front: Integrated StVZO headlight Rear: StVZO rear light (Not ARES lights)"
+        }
+      ]
     },
     {
       "model": "Carbon Fusion Pro E-Bike",
@@ -699,7 +770,12 @@
           "height_max": "6'3\""
         }
       ],
-      "regular_price": 2499.0
+      "regular_price": 2499.0,
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": []
     },
     {
       "model": "Carbon Joy Ultra E-Bike",
@@ -790,7 +866,12 @@
           "height_max": "6'3\""
         }
       ],
-      "regular_price": 2499.0
+      "regular_price": 2499.0,
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": []
     },
     {
       "model": "Urtopia Joy Carbon E-Bike",
@@ -876,7 +957,14 @@
           "height_max": "6'3\""
         }
       ],
-      "regular_price": 2399.0
+      "regular_price": 2399.0,
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": []
     }
-  ]
+  ],
+  "available_accessories": [],
+  "available_accessories_count": 0
 }

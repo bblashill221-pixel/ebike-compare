@@ -82,26 +82,47 @@ function RangeSlider({
   // synchronously on every change, and commit FROM the ref.
   const draftRef = useRef<[number, number]>(value);
   const movedRef = useRef(false);   // did a drag change the value since pointer-down?
+  const trackRef = useRef<HTMLDivElement>(null);
   const update = (d: [number, number]) => { movedRef.current = true; draftRef.current = d; setDraft(d); };
   // resync the handles when the committed value changes externally (Reset, etc.)
   useEffect(() => { draftRef.current = value; setDraft(value); }, [value[0], value[1]]);
   const [lo, hi] = draft;
-  // "modified" once narrowed from the full catalog bounds — drives whether the
-  // thumbs (circles) show at all, and whether a bare click resets.
+  // "modified" once narrowed from the slider's bounds — drives whether the thumbs
+  // (circles) show at all.
   const modified = lo > bLo || hi < bHi;
   const span = bHi - bLo;
   const pct = (v: number) => (span > 0 ? ((v - bLo) / span) * 100 : 0);
+  const clampN = (v: number) => Math.min(bHi, Math.max(bLo, v));
   const commit = () => onCommit(draftRef.current[0], draftRef.current[1]);
-  // Pointer-up on a thumb with NO drag = a click on the "Reset" circle: snap the
-  // WHOLE slider back to full range (clears the filter), so a handle can never get
-  // locked at the absolute min/max. A drag commits the new range as usual.
+  // Pointer-up on a thumb with NO drag, ONLY when the two handles overlap
+  // (high == low): a click on the single visible circle snaps the handles back to
+  // fill the whole slider [bLo, bHi] (= the dropdown's range for price). A click on
+  // a non-overlapping thumb does nothing — it can't wipe a set value. A drag commits.
   const end = () => {
-    if (modified && !movedRef.current) {
+    const [clo, chi] = draftRef.current;
+    if (clo === chi && !movedRef.current) {
       update([bLo, bHi]);
       onCommit(bLo, bHi);
     } else {
       commit();
     }
+  };
+  // Click anywhere on the track/line (not on a thumb) moves whichever handle is
+  // NEARER the click to that point, and commits. The transparent range inputs pass
+  // track clicks through (pointer-events:none), so a non-INPUT target = a track click.
+  const onTrackPointerDown = (e: React.PointerEvent) => {
+    if ((e.target as HTMLElement).tagName === "INPUT") return; // thumb handles itself
+    const el = trackRef.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    if (rect.width <= 0) return;
+    const ratio = Math.min(1, Math.max(0, (e.clientX - rect.left) / rect.width));
+    const val = clampN(Math.round(bLo + ratio * span));
+    const [clo, chi] = draftRef.current;
+    const next: [number, number] =
+      Math.abs(val - clo) <= Math.abs(val - chi) ? [Math.min(val, chi), chi] : [clo, Math.max(val, clo)];
+    update(next);
+    onCommit(next[0], next[1]);
   };
   const fmt = (v: number) => `${prefix ?? ""}${v.toLocaleString()}${unit ? ` ${unit}` : ""}`;
   return (
@@ -110,7 +131,7 @@ function RangeSlider({
       <div className="mb-2 text-center text-xs font-semibold tabular-nums text-slate-700">
         {fmt(lo)} – {fmt(hi)}
       </div>
-      <div className="range-track relative h-4">
+      <div className="range-track relative h-4" ref={trackRef} onPointerDown={onTrackPointerDown}>
         <div className="absolute top-1/2 h-1 w-full -translate-y-1/2 rounded-full bg-slate-200" />
         <div
           className="absolute top-1/2 h-1 -translate-y-1/2 rounded-full bg-brand-500"
@@ -124,7 +145,7 @@ function RangeSlider({
           step={1}
           value={lo}
           aria-label={`${label} minimum`}
-          title={modified ? "Reset" : undefined}
+          title={lo === hi ? "Click to reset" : undefined}
           onPointerDown={() => { movedRef.current = false; }}
           onChange={(e) => update([Math.min(Number(e.target.value), draftRef.current[1]), draftRef.current[1]])}
           onPointerUp={end}
@@ -139,7 +160,7 @@ function RangeSlider({
           step={1}
           value={hi}
           aria-label={`${label} maximum`}
-          title={modified ? "Reset" : undefined}
+          title={lo === hi ? "Click to reset" : undefined}
           onPointerDown={() => { movedRef.current = false; }}
           onChange={(e) => update([draftRef.current[0], Math.max(Number(e.target.value), draftRef.current[0])])}
           onPointerUp={end}
@@ -205,6 +226,61 @@ export function FacetPanel({ facetOptions, rangeBounds, facetCounts, filters, se
     setFilters({ enums: {}, bools: {}, ranges: {}, riderHeightIn: null });
     setShowSoldOut(false); // back to the default: available-only
   };
+
+  // One numeric-range section (slider + the price dropdown). Pulled out so Price
+  // can render right after the Type facet while the rest stay in the ranges block.
+  const renderRange = ({ field, label }: { field: RangeField; label: string }) => {
+    const [catLo, catHi] = rangeBounds[field] ?? [0, 0];
+    if (catHi <= catLo) return null;
+    const { unit } = fieldLabel(field);
+    // The price dropdown only INITIALIZES the range: it picks a budget ceiling that
+    // scopes the slider to [floor, ceiling] (so the range is small and easy to
+    // adjust). The slider's two handles then move freely inside that track. Other
+    // ranges span their full catalog bounds. The dropdown's value is sticky — it's
+    // driven by the stored ceiling, NOT by where the handles sit.
+    const ceiling = field === "price" ? (filters.priceCeiling ?? catHi) : catHi;
+    const bLo = catLo;
+    const bHi = ceiling;
+    const [lo, hi] = filters.ranges[field] ?? [bLo, bHi];
+    const priceSel = field === "price" ? (matchPriceTier(ceiling, catHi)?.label ?? "Any") : "";
+    return (
+      <Section key={field} label={label} open={!collapsed[field]} onToggle={() => toggleSection(field)}>
+        {field === "price" && (
+          <select
+            value={priceSel}
+            onChange={(e) => {
+              const t = PRICE_TIERS.find((x) => x.label === e.target.value);
+              if (!t) return;
+              // pick the budget ceiling; (re)initialize the range to fill [floor, ceiling].
+              const newCeiling = priceTierMax(t, catHi);
+              const ranges = { ...filters.ranges };
+              if (newCeiling >= catHi) delete ranges.price; // "Any price" -> no price filter
+              else ranges.price = [catLo, newCeiling];
+              setFilters({ ...filters, priceCeiling: t.max, ranges });
+            }}
+            aria-label="Maximum budget"
+            className="mb-3 w-full rounded border-slate-300 text-sm"
+          >
+            {PRICE_TIERS.map((t) => (
+              <option key={t.label} value={t.label}>
+                {priceTierLabel(t)}
+              </option>
+            ))}
+          </select>
+        )}
+        <RangeSlider
+          bLo={bLo}
+          bHi={bHi}
+          value={[lo, hi]}
+          unit={unit}
+          prefix={field === "price" ? "$" : undefined}
+          label={labelize(field)}
+          onCommit={(nlo, nhi) => setRange(field, nlo, nhi)}
+        />
+      </Section>
+    );
+  };
+  const priceSection = RANGE_SECTIONS.find((s) => s.field === "price");
 
   return (
     <div className="space-y-5">
@@ -314,6 +390,9 @@ export function FacetPanel({ facetOptions, rangeBounds, facetCounts, filters, se
         <p className="mt-1 text-xs text-slate-400">Bikes without a listed fit range are hidden.</p>
       </Section>
 
+      {/* price: placed right after rider height */}
+      {priceSection && renderRange(priceSection)}
+
       {/* enum facets */}
       {ENUM_SECTIONS.map(({ field, label }) => {
         const options = facetOptions[field] ?? [];
@@ -351,7 +430,7 @@ export function FacetPanel({ facetOptions, rangeBounds, facetCounts, filters, se
       })}
 
       {/* pedal-assist sensor: single-select (No Preference = unset) */}
-      <Section label="Sensor" open={!collapsed.sensor_type} onToggle={() => toggleSection("sensor_type")}>
+      <Section label="Sensor Type" open={!collapsed.sensor_type} onToggle={() => toggleSection("sensor_type")}>
         <select
           value={filters.enums.sensor_type?.[0] ?? ""}
           onChange={(e) => {
@@ -367,59 +446,8 @@ export function FacetPanel({ facetOptions, rangeBounds, facetCounts, filters, se
         </select>
       </Section>
 
-      {/* numeric ranges */}
-      {RANGE_SECTIONS.map(({ field, label }) => {
-        const [catLo, catHi] = rangeBounds[field] ?? [0, 0];
-        if (catHi <= catLo) return null;
-        const { unit } = fieldLabel(field);
-        // Every range (price included) spans the full catalog bounds; the price
-        // dropdown only sets the MAX, and the slider's low handle sets an optional min.
-        const bLo = catLo;
-        const bHi = catHi;
-        const [lo, hi] = filters.ranges[field] ?? [bLo, bHi];
-        // The price dropdown is derived from the current upper bound: the matching
-        // max preset, or a transient "Custom" when the user dragged the high handle
-        // off a preset value.
-        const maxTier = field === "price" ? matchPriceTier(hi, catHi) : undefined;
-        const priceSel = field === "price" ? (maxTier ? maxTier.label : "__custom") : "";
-        return (
-          <Section key={field} label={label} open={!collapsed[field]} onToggle={() => toggleSection(field)}>
-            {field === "price" && (
-              <select
-                value={priceSel}
-                onChange={(e) => {
-                  const t = PRICE_TIERS.find((x) => x.label === e.target.value);
-                  if (!t) return;
-                  // set the MAX only; min resets to the catalog floor (drag to raise it)
-                  setRange(field, catLo, priceTierMax(t, catHi));
-                }}
-                aria-label="Maximum budget"
-                className="mb-3 w-full rounded border-slate-300 text-sm"
-              >
-                {!maxTier && (
-                  <option value="__custom" disabled>
-                    {`Custom (≤ $${Math.round(hi).toLocaleString()})`}
-                  </option>
-                )}
-                {PRICE_TIERS.map((t) => (
-                  <option key={t.label} value={t.label}>
-                    {priceTierLabel(t)}
-                  </option>
-                ))}
-              </select>
-            )}
-            <RangeSlider
-              bLo={bLo}
-              bHi={bHi}
-              value={[lo, hi]}
-              unit={unit}
-              prefix={field === "price" ? "$" : undefined}
-              label={labelize(field)}
-              onCommit={(nlo, nhi) => setRange(field, nlo, nhi)}
-            />
-          </Section>
-        );
-      })}
+      {/* numeric ranges (Price already rendered above, right after Type) */}
+      {RANGE_SECTIONS.filter((s) => s.field !== "price").map(renderRange)}
     </div>
   );
 }

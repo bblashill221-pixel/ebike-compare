@@ -1,20 +1,29 @@
-// Copies the normalized dataset into public/ so the static app can fetch it.
+// Produces public/ebike.json — the dataset the static app fetches.
+//
+// This runs the SLIM web build (slim_web_build.py): it drops fields the web never
+// reads and INTERNS repeated spec values into a shared `specs_values` table, so the
+// served file is ~60% smaller than the full internal build and the app shares one
+// object per unique component. (A plain copy of the full active file would defeat
+// that interning — which is exactly the regression this script previously caused by
+// overwriting the slim build promoted by rebuild_offline.sh.)
 //
 // Guard: the weekly scrape cron (run_scrape.sh) wipes + re-scrapes the per-brand
 // files, and if it is interrupted partway, normalize.py emits a TRUNCATED active
 // dataset (far fewer models/brands). rebuild_offline.sh / run_scrape.sh gate
-// promotion on validate_build.py, but this copy runs from predev/prebuild and
-// must not blindly overwrite a good public/ build with a truncated active. So we
-// refuse to copy when the source has dramatically fewer models than the dataset
-// already in public/ (recover from data/legacy/<date>/ instead). Override with
-// FORCE_COPY_DATA=1 for an intentional shrink.
+// promotion on validate_build.py, but this copy runs from predev/prebuild and must
+// not blindly overwrite a good public/ build with a truncated active. So we refuse
+// when the source has dramatically fewer models than the dataset already in public/
+// (recover from data/legacy/<date>/ instead). Override with FORCE_COPY_DATA=1.
 import { copyFileSync, mkdirSync, existsSync, readFileSync } from "node:fs";
+import { spawnSync } from "node:child_process";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const here = dirname(fileURLToPath(import.meta.url));
-const src = resolve(here, "../../data/current/active/ebikes_normalized.json");
-const dest = resolve(here, "../public/ebikes_normalized.json");
+const repo = resolve(here, "../..");
+const src = resolve(repo, "data/current/active/ebike.json");
+const dest = resolve(here, "../public/ebike.json");
+const slimScript = resolve(repo, "slim_web_build.py");
 
 if (!existsSync(src)) {
   console.error(`[copy-data] source not found: ${src}`);
@@ -53,5 +62,39 @@ if (existsSync(dest) && !process.env.FORCE_COPY_DATA) {
 }
 
 mkdirSync(dirname(dest), { recursive: true });
-copyFileSync(src, dest);
-console.log(`[copy-data] ${src} -> ${dest} (${srcN} models)`);
+
+// Prefer the project venv's python (the pipeline's interpreter), else PATH python3.
+const venvPy = resolve(repo, ".venv/bin/python");
+const pythonBin = existsSync(venvPy) ? venvPy : "python3";
+
+let slimmed = false;
+if (existsSync(slimScript)) {
+  const r = spawnSync(pythonBin, [slimScript, "-i", src, "-o", dest], {
+    stdio: ["ignore", "inherit", "inherit"],
+  });
+  slimmed = r.status === 0;
+  if (!slimmed) {
+    console.warn(
+      `[copy-data] slim build failed (python: ${pythonBin}, status ${r.status ?? r.error?.code}); ` +
+        `falling back to a full-file copy — the served file will be larger and un-interned.`
+    );
+  }
+}
+
+if (!slimmed) {
+  // Fallback: serve the full file so the app still works (no specs_values interning).
+  copyFileSync(src, dest);
+  console.log(`[copy-data] ${src} -> ${dest} (${srcN} models, FULL/un-slimmed)`);
+}
+
+// The QA anomaly report ships in every build now (dev + prod): the /qa page is
+// reachable in production behind a client-side gate (localStorage `qa`). NOTE this
+// makes anomalies.json publicly fetchable — the gate hides only the page UI.
+const qaSrc = resolve(repo, "data/current/anomalies.json");
+const qaDest = resolve(here, "../public/anomalies.json");
+if (existsSync(qaSrc)) {
+  copyFileSync(qaSrc, qaDest);
+  console.log(`[copy-data] ${qaSrc} -> ${qaDest}`);
+} else {
+  console.log(`[copy-data] no anomalies.json yet (run audit_anomalies.py) — skipping`);
+}

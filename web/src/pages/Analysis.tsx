@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { useData } from "../data/DataProvider";
 import { DistributionPlot } from "../components/DistributionPlot";
 import { formatNumber, formatPrice } from "../format";
+import { PRODUCT_TYPE_ORDER } from "../search/orama";
 
 const FIELD_META: Record<string, { label: string; unit?: string; price?: boolean; ratio?: boolean }> = {
   price: { label: "Price", price: true },
@@ -14,20 +16,28 @@ const FIELD_META: Record<string, { label: string; unit?: string; price?: boolean
   bom_pct: { label: "Est. component cost (% of retail)" },
   value_ratio: { label: "Price ÷ est. parts cost (lower = better value)", ratio: true },
   component_retail_value_usd: { label: "Est. parts value (aftermarket retail)", price: true },
-  component_wholesale_value_usd: { label: "Est. parts cost (OEM wholesale)", price: true },
 };
 
 const ORDER = [
   "price", "battery_wh", "motor_w", "motor_peak_w", "torque_nm", "range_mi",
   "weight_lb", "gears", "bom_pct", "value_ratio",
-  "component_retail_value_usd", "component_wholesale_value_usd",
+  "component_retail_value_usd",
 ];
 
 export function Analysis() {
-  const { analysisStats, disclaimer, models, status } = useData();
+  const { analysisStats, analysisStatsByType, disclaimer, models, status } = useData();
+  // null = all eBikes (fleet-wide); a type narrows the analysis to that cohort.
+  const [type, setType] = useState<string | null>(null);
   if (status === "loading") return <Center>Loading…</Center>;
 
-  const fields = ORDER.filter((f) => analysisStats[f]);
+  // eBike types that have a stats cohort, in canonical display order
+  const types = PRODUCT_TYPE_ORDER.filter((t) => analysisStatsByType[t]);
+  const active = type && analysisStatsByType[type] ? type : null;
+  const stats = active ? analysisStatsByType[active] : analysisStats;
+  const count = active
+    ? models.filter((m) => m.product_type === active).length
+    : models.length;
+  const fields = ORDER.filter((f) => stats[f]);
 
   const fmt = (f: string, v: number) => {
     const meta = FIELD_META[f];
@@ -39,15 +49,49 @@ export function Analysis() {
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-6">
-      <h1 className="text-xl font-bold text-slate-900">Fleet analysis</h1>
-      <p className="mt-1 max-w-3xl text-sm text-slate-500">
-        Where each spec sits across the {models.length} bikes we track. Bands show the 10th–90th
-        percentile; the line is the median. These are comparison aids — there is no overall ranking.
+      <h1 className="text-xl font-bold text-slate-900">eBike Analysis</h1>
+
+      {/* eBike-type selector: pick a type to scope the analysis to that cohort; the
+          "No preference" radio (back to all eBikes) appears once a type is chosen. */}
+      <fieldset className="mt-3">
+        <legend className="sr-only">eBike type</legend>
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-1.5">
+          {types.map((t) => (
+            <label key={t} className="flex items-center gap-2 whitespace-nowrap text-sm text-slate-700">
+              <input
+                type="radio"
+                name="analysis-type"
+                checked={type === t}
+                onChange={() => setType(t)}
+                className="border-slate-300 text-brand-600 focus:ring-brand-500"
+              />
+              {t}
+            </label>
+          ))}
+          {type && (
+            <label className="flex items-center gap-2 whitespace-nowrap text-sm text-slate-400">
+              <input
+                type="radio"
+                name="analysis-type"
+                checked={false}
+                onChange={() => setType(null)}
+                className="border-slate-300 text-brand-600 focus:ring-brand-500"
+              />
+              No preference
+            </label>
+          )}
+        </div>
+      </fieldset>
+
+      <p className="mt-2 max-w-3xl text-sm text-slate-500">
+        Where each spec sits across the {count} {active ? `${active} ` : ""}bikes
+        {active ? " in this category" : " we track"}. Bands show the 10th–90th percentile;
+        the line is the median. These are comparison aids — there is no overall ranking.
       </p>
 
       <div className="mt-5 grid gap-4 sm:grid-cols-2">
         {fields.map((f) => {
-          const s = analysisStats[f];
+          const s = stats[f];
           const meta = FIELD_META[f];
           return (
             <div key={f} className="card p-4">

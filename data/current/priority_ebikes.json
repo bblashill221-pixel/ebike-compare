@@ -2,13 +2,13 @@
   "source": "https://www.prioritybicycles.com",
   "logo": "https://cdn.shopify.com/s/files/1/1245/1481/files/Priority_Bicycles_Logo.png?v=1736454354",
   "collection": "all",
-  "scraped_at": "2026-06-10T23:53:15.634095+00:00",
-  "model_count": 4,
+  "scraped_at": "2026-06-23T22:28:35.315081+00:00",
+  "model_count": 6,
   "models": [
     {
       "model": "PRIORITY CURRENT PLUS E-BIKE",
       "handle": "currentplus",
-      "url": "https://www.prioritybicycles.com/products/currentplus",
+      "url": "https://www.prioritybicycles.com/products/currentplus?variant=40138959814733",
       "product_types": [
         "Commuter / Urban"
       ],
@@ -124,6 +124,80 @@
         },
         "Rider Height": "5'0\" - 6'3\""
       },
+      "configurations": [
+        {
+          "options": {
+            "Step 1 Select Your Gearing System": "Shimano ($3299)",
+            "Step 2 Select Your Size": "Small",
+            "Step 3 Select Your Color": "White"
+          },
+          "price": 3299.0,
+          "sku": "1220203",
+          "variant_id": 40138959814733,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/1245/1481/files/Priority_CurrentPlus_PopSci_Hero.jpg?v=1778509032"
+        },
+        {
+          "options": {
+            "Step 1 Select Your Gearing System": "Shimano ($3299)",
+            "Step 2 Select Your Size": "Small",
+            "Step 3 Select Your Color": "Charcoal"
+          },
+          "price": 3299.0,
+          "sku": "1220204",
+          "variant_id": 40138959880269,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/1245/1481/files/Current2.0_Hero2_AUG2024_1of1.png?v=1732288695"
+        },
+        {
+          "options": {
+            "Step 1 Select Your Gearing System": "Shimano ($3299)",
+            "Step 2 Select Your Size": "Medium",
+            "Step 3 Select Your Color": "White"
+          },
+          "price": 3299.0,
+          "sku": "1220303",
+          "variant_id": 40138959945805,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/1245/1481/files/Priority_CurrentPlus_PopSci_Hero.jpg?v=1778509032"
+        },
+        {
+          "options": {
+            "Step 1 Select Your Gearing System": "Shimano ($3299)",
+            "Step 2 Select Your Size": "Medium",
+            "Step 3 Select Your Color": "Charcoal"
+          },
+          "price": 3299.0,
+          "sku": "1220304",
+          "variant_id": 40138960011341,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/1245/1481/files/Current2.0_Hero2_AUG2024_1of1.png?v=1732288695"
+        },
+        {
+          "options": {
+            "Step 1 Select Your Gearing System": "Shimano ($3299)",
+            "Step 2 Select Your Size": "Large",
+            "Step 3 Select Your Color": "White"
+          },
+          "price": 3299.0,
+          "sku": "1220403",
+          "variant_id": 40138960076877,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/1245/1481/files/Priority_CurrentPlus_PopSci_Hero.jpg?v=1778509032"
+        },
+        {
+          "options": {
+            "Step 1 Select Your Gearing System": "Shimano ($3299)",
+            "Step 2 Select Your Size": "Large",
+            "Step 3 Select Your Color": "Charcoal"
+          },
+          "price": 3299.0,
+          "sku": "1220404",
+          "variant_id": 40138960142413,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/1245/1481/files/Current2.0_Hero2_AUG2024_1of1.png?v=1732288695"
+        }
+      ],
       "available_options": [
         {
           "group": "Step 1 Select Your Gearing System",
@@ -131,11 +205,15 @@
           "choices": [
             {
               "value": "Shimano ($3299)",
+              "price": 3299.0,
+              "price_delta": 0.0,
               "free": true
             },
             {
               "value": "Enviolo ($3499)",
-              "free": true
+              "price": 3499.0,
+              "price_delta": 200.0,
+              "free": false
             }
           ]
         },
@@ -145,24 +223,310 @@
           "choices": [
             {
               "value": "Small",
+              "price": 3299.0,
+              "price_delta": 0.0,
               "free": true
             },
             {
               "value": "Medium",
+              "price": 3299.0,
+              "price_delta": 0.0,
               "free": true
             },
             {
               "value": "Large",
+              "price": 3299.0,
+              "price_delta": 0.0,
+              "free": true
+            }
+          ]
+        },
+        {
+          "group": "Step 3 Select Your Color",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "White",
+              "price": 3299.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "Charcoal",
+              "price": 3299.0,
+              "price_delta": 0.0,
               "free": true
             }
           ]
         }
-      ]
+      ],
+      "tier": "Shimano",
+      "family_id": "priority__currentplus",
+      "regular_price": null
+    },
+    {
+      "model": "PRIORITY CURRENT PLUS E-BIKE — Enviolo",
+      "handle": "currentplus--enviolo-3499",
+      "url": "https://www.prioritybicycles.com/products/currentplus?variant=40138959847501",
+      "product_types": [
+        "Commuter / Urban"
+      ],
+      "price_from": 3499.0,
+      "currency": "USD",
+      "options": {
+        "Step 1 Select Your Gearing System": [
+          "Shimano ($3299)",
+          "Enviolo ($3499)"
+        ],
+        "Step 2 Select Your Size": [
+          "Small",
+          "Medium",
+          "Large"
+        ],
+        "colors": [
+          {
+            "name": "White",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/1245/1481/files/Priority_CurrentPlus_PopSci_Hero.jpg?v=1778509032"
+          },
+          {
+            "name": "Charcoal",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/1245/1481/files/Current2.0_Hero2_AUG2024_1of1.png?v=1732288695"
+          }
+        ]
+      },
+      "warranty": null,
+      "specs": {
+        "all": {
+          "Battery": "A large 720Wh battery delivers extended ride times, ensuring riders can enjoy extended trips without worrying about recharging",
+          "Motor": "500w mid-drive torque sensing motor with class leading 140NM of max torque",
+          "Range": "20-75 miles based on pedal assist mode and throttle usage (lower pedal assist levels and less frequent throttle usage will naturally result in longer range)",
+          "Top Speed": "Ships as a Class 2, 20MPH setting, but can increase to Class 3, 28MPH setting. (Please note local laws)",
+          "Belt Drive": "Gates Carbon Drive CDX belt",
+          "Rear Hub": "E-bike specific Shimano Inter-5 internal hub to maximize responsiveness or enviolo Heavy Duty CVT hub for all-season riding",
+          "Brakes": "Dual piston hydraulic disc brakes, 180mm rotors, integrated with an electric motor cut-off switch for safer stopping and enhanced control",
+          "Frame & Fork": "Accessible & comfortable mid-step 6061 aluminum frame & fork",
+          "Fenders & Mounts": "Composite fenders and braze ons for front and rear accessories",
+          "Display": "Backlit display with 5 assist modes, speedometer, trip distance, and odometer",
+          "Lights": "Automatic front and rear lights, Ultra-bright 600lm front",
+          "Seat": "Gel-padded comfort saddle",
+          "Stem/Grips": "Height adjustable stem with ergonomic support grips",
+          "Kickstand": "Frame-mounted rear kickstand",
+          "Bicycle Weight": "55-56.5 lbs. (with battery, pedals, and fenders installed)",
+          "Approx. Inseam and Height": "Small: 26.0\" - 29.0\" 5'0 - 5'6 | Medium: 29.0\" - 32.0\" 5'6 - 5'10 | Large: 32.0\" - 35.0\" 5'10 - 6'3",
+          "(A) Reach": "Small: 15.74\" (400mm) | Medium: 16.14\" (410mm) | Large: 16.33\" (415mm)",
+          "(B) Stack": "Small: 23.62\" (600mm) | Medium: 23.62\" (600mm) | Large: 25.19\" (640mm)",
+          "(C) Min Seat Height (from ground)": "Small: 30.5\" | Medium: 32.5\" | Large: 34.5\"",
+          "(D) Max Seat Height (from ground)": "Small: 36.5\" | Medium: 40.5\" | Large: 42.5\"",
+          "(E) Stepover height (from ground)": "Small: 22.5\" | Medium: 23.5\" | Large: 24.5\"",
+          "Rider Height": "5'0\" - 6'3\""
+        }
+      },
+      "spec_count": 21,
+      "scrape_error": null,
+      "is_new": false,
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": "Small",
+          "height_min": "5'0\"",
+          "height_max": "5'6\""
+        },
+        {
+          "size": "Medium",
+          "height_min": "5'6\"",
+          "height_max": "5'10\""
+        },
+        {
+          "size": "Large",
+          "height_min": "5'10\"",
+          "height_max": "6'3\""
+        }
+      ],
+      "geometry": {
+        "Approx. Inseam and Height": {
+          "Small": "26.0\" - 29.0\" 5'0 - 5'6",
+          "Medium": "29.0\" - 32.0\" 5'6 - 5'10",
+          "Large": "32.0\" - 35.0\" 5'10 - 6'3"
+        },
+        "(A) Reach": {
+          "Small": "15.74\" (400mm)",
+          "Medium": "16.14\" (410mm)",
+          "Large": "16.33\" (415mm)"
+        },
+        "(B) Stack": {
+          "Small": "23.62\" (600mm)",
+          "Medium": "23.62\" (600mm)",
+          "Large": "25.19\" (640mm)"
+        },
+        "(C) Min Seat Height (from ground)": {
+          "Small": "30.5\"",
+          "Medium": "32.5\"",
+          "Large": "34.5\""
+        },
+        "(D) Max Seat Height (from ground)": {
+          "Small": "36.5\"",
+          "Medium": "40.5\"",
+          "Large": "42.5\""
+        },
+        "(E) Stepover height (from ground)": {
+          "Small": "22.5\"",
+          "Medium": "23.5\"",
+          "Large": "24.5\""
+        },
+        "Rider Height": "5'0\" - 6'3\""
+      },
+      "configurations": [
+        {
+          "options": {
+            "Step 1 Select Your Gearing System": "Enviolo ($3499)",
+            "Step 2 Select Your Size": "Small",
+            "Step 3 Select Your Color": "White"
+          },
+          "price": 3499.0,
+          "sku": "1220203E",
+          "variant_id": 40138959847501,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/1245/1481/files/Priority_CurrentPlus_PopSci_Hero.jpg?v=1778509032"
+        },
+        {
+          "options": {
+            "Step 1 Select Your Gearing System": "Enviolo ($3499)",
+            "Step 2 Select Your Size": "Small",
+            "Step 3 Select Your Color": "Charcoal"
+          },
+          "price": 3499.0,
+          "sku": "1220204E",
+          "variant_id": 40138959913037,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/1245/1481/files/Current2.0_Hero2_AUG2024_1of1.png?v=1732288695"
+        },
+        {
+          "options": {
+            "Step 1 Select Your Gearing System": "Enviolo ($3499)",
+            "Step 2 Select Your Size": "Medium",
+            "Step 3 Select Your Color": "White"
+          },
+          "price": 3499.0,
+          "sku": "1220303E",
+          "variant_id": 40138959978573,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/1245/1481/files/Priority_CurrentPlus_PopSci_Hero.jpg?v=1778509032"
+        },
+        {
+          "options": {
+            "Step 1 Select Your Gearing System": "Enviolo ($3499)",
+            "Step 2 Select Your Size": "Medium",
+            "Step 3 Select Your Color": "Charcoal"
+          },
+          "price": 3499.0,
+          "sku": "1220304E",
+          "variant_id": 40138960044109,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/1245/1481/files/Current2.0_Hero2_AUG2024_1of1.png?v=1732288695"
+        },
+        {
+          "options": {
+            "Step 1 Select Your Gearing System": "Enviolo ($3499)",
+            "Step 2 Select Your Size": "Large",
+            "Step 3 Select Your Color": "White"
+          },
+          "price": 3499.0,
+          "sku": "1220403E",
+          "variant_id": 40138960109645,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/1245/1481/files/Priority_CurrentPlus_PopSci_Hero.jpg?v=1778509032"
+        },
+        {
+          "options": {
+            "Step 1 Select Your Gearing System": "Enviolo ($3499)",
+            "Step 2 Select Your Size": "Large",
+            "Step 3 Select Your Color": "Charcoal"
+          },
+          "price": 3499.0,
+          "sku": "1220404E",
+          "variant_id": 40138960175181,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/1245/1481/files/Current2.0_Hero2_AUG2024_1of1.png?v=1732288695"
+        }
+      ],
+      "available_options": [
+        {
+          "group": "Step 1 Select Your Gearing System",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "Shimano ($3299)",
+              "price": 3299.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "Enviolo ($3499)",
+              "price": 3499.0,
+              "price_delta": 200.0,
+              "free": false
+            }
+          ]
+        },
+        {
+          "group": "Step 2 Select Your Size",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "Small",
+              "price": 3299.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "Medium",
+              "price": 3299.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "Large",
+              "price": 3299.0,
+              "price_delta": 0.0,
+              "free": true
+            }
+          ]
+        },
+        {
+          "group": "Step 3 Select Your Color",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "White",
+              "price": 3299.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "Charcoal",
+              "price": 3299.0,
+              "price_delta": 0.0,
+              "free": true
+            }
+          ]
+        }
+      ],
+      "regular_price": null,
+      "tier": "Enviolo",
+      "family_id": "priority__currentplus"
     },
     {
       "model": "PRIORITY E-COAST",
       "handle": "ecoast",
-      "url": "https://www.prioritybicycles.com/products/ecoast",
+      "url": "https://www.prioritybicycles.com/products/ecoast?variant=39744733642829",
       "product_types": [
         "Commuter / Urban"
       ],
@@ -191,6 +555,157 @@
             "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/1245/1481/products/E-Coast_diamond_Charcoal_Hero_1of1.jpg?v=1708103588"
+          }
+        ]
+      },
+      "warranty": null,
+      "specs": {
+        "all": {
+          "Approx. Inseam": "DIAMOND: 32 - 35\" | STEP-THROUGH: 26 - 32\"",
+          "Approx. Height": "DIAMOND: 5'6 - 6'4\" | STEP-THROUGH: 5'0 - 6'0\"",
+          "Seat Tube Length": "DIAMOND: 18\" | STEP-THROUGH: 17\"",
+          "Effective Top Tube": "DIAMOND: 658mm | STEP-THROUGH: 620mm",
+          "Head Tube Length": "DIAMOND: 165mm | STEP-THROUGH: 150mm",
+          "Head Tube Angle": "DIAMOND: 70 degrees | STEP-THROUGH: 68 degrees",
+          "Seat Tube Angle": "DIAMOND: 70 degrees | STEP-THROUGH: 69 degrees",
+          "Wheelbase": "DIAMOND: 1165mm | STEP-THROUGH: 1127mm",
+          "Chainstay Length": "DIAMOND: 473mm | STEP-THROUGH: 473mm"
+        }
+      },
+      "spec_count": 9,
+      "scrape_error": null,
+      "is_new": false,
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": [],
+      "geometry": {
+        "Approx. Inseam": "DIAMOND: 32 - 35\" | STEP-THROUGH: 26 - 32\"",
+        "Seat Tube Length": "DIAMOND: 18\" | STEP-THROUGH: 17\"",
+        "Effective Top Tube": "DIAMOND: 658mm | STEP-THROUGH: 620mm",
+        "Head Tube Length": "DIAMOND: 165mm | STEP-THROUGH: 150mm",
+        "Head Tube Angle": "DIAMOND: 70 degrees | STEP-THROUGH: 68 degrees",
+        "Seat Tube Angle": "DIAMOND: 70 degrees | STEP-THROUGH: 69 degrees",
+        "Wheelbase": "DIAMOND: 1165mm | STEP-THROUGH: 1127mm",
+        "Chainstay Length": "DIAMOND: 473mm | STEP-THROUGH: 473mm"
+      },
+      "configurations": [
+        {
+          "options": {
+            "Step 1 Select Your Frame Style": "Diamond",
+            "Step 2 Select Your Color": "Gloss White"
+          },
+          "price": 1999.0,
+          "sku": "1044803",
+          "variant_id": 39744733642829,
+          "available": false,
+          "image": "https://cdn.shopify.com/s/files/1/1245/1481/products/E-Coast_diamond_white_hero_1of1.jpg?v=1708103588"
+        },
+        {
+          "options": {
+            "Step 1 Select Your Frame Style": "Diamond",
+            "Step 2 Select Your Color": "Gloss Indigo"
+          },
+          "price": 1999.0,
+          "sku": "1044804",
+          "variant_id": 42841656361037,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/1245/1481/products/E-Coast_diamond_Indigo_Hero_1of1.jpg?v=1708103588"
+        },
+        {
+          "options": {
+            "Step 1 Select Your Frame Style": "Diamond",
+            "Step 2 Select Your Color": "Gloss Charcoal"
+          },
+          "price": 1999.0,
+          "sku": "1044809",
+          "variant_id": 39740699082829,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/1245/1481/products/E-Coast_diamond_Charcoal_Hero_1of1.jpg?v=1708103588"
+        }
+      ],
+      "available_options": [
+        {
+          "group": "Step 1 Select Your Frame Style",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "Diamond",
+              "price": 1999.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "Step-Through",
+              "price": 1999.0,
+              "price_delta": 0.0,
+              "free": true
+            }
+          ]
+        },
+        {
+          "group": "Step 2 Select Your Color",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "Gloss White",
+              "price": 1999.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "Gloss Indigo",
+              "price": 1999.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "Gloss Charcoal",
+              "price": 1999.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "Gloss Mint",
+              "price": 1999.0,
+              "price_delta": 0.0,
+              "free": true
+            }
+          ]
+        }
+      ],
+      "tier": "Step-Over",
+      "family_id": "priority__ecoast",
+      "frame_style": "Step-Over (Mid-Step)",
+      "regular_price": null
+    },
+    {
+      "model": "PRIORITY E-COAST — Step-Thru",
+      "handle": "ecoast--step-thru",
+      "url": "https://www.prioritybicycles.com/products/ecoast?variant=39744734036045",
+      "product_types": [
+        "Commuter / Urban"
+      ],
+      "price_from": 1999.0,
+      "currency": "USD",
+      "options": {
+        "Step 1 Select Your Frame Style": [
+          "Diamond",
+          "Step-Through"
+        ],
+        "colors": [
+          {
+            "name": "Gloss White",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/1245/1481/products/E-Coast_diamond_white_hero_1of1.jpg?v=1708103588"
+          },
+          {
+            "name": "Gloss Indigo",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/1245/1481/products/E-Coast_diamond_Indigo_Hero_1of1.jpg?v=1708103588"
           },
           {
             "name": "Gloss Mint",
@@ -232,6 +747,41 @@
         "Wheelbase": "DIAMOND: 1165mm | STEP-THROUGH: 1127mm",
         "Chainstay Length": "DIAMOND: 473mm | STEP-THROUGH: 473mm"
       },
+      "configurations": [
+        {
+          "options": {
+            "Step 1 Select Your Frame Style": "Step-Through",
+            "Step 2 Select Your Color": "Gloss White"
+          },
+          "price": 1999.0,
+          "sku": "1044903",
+          "variant_id": 39744734036045,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/1245/1481/products/E-Coast_Step_white_hero_1of1.jpg?v=1708103588"
+        },
+        {
+          "options": {
+            "Step 1 Select Your Frame Style": "Step-Through",
+            "Step 2 Select Your Color": "Gloss Indigo"
+          },
+          "price": 1999.0,
+          "sku": "1044904",
+          "variant_id": 39744726499405,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/1245/1481/products/E-Coast_Step_Indigo_Hero_1of1.jpg?v=1708103588"
+        },
+        {
+          "options": {
+            "Step 1 Select Your Frame Style": "Step-Through",
+            "Step 2 Select Your Color": "Gloss Mint"
+          },
+          "price": 1999.0,
+          "sku": "1044911",
+          "variant_id": 39740699115597,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/1245/1481/products/E-Coast_Step_mint_hero_1of1.jpg?v=1708103588"
+        }
+      ],
       "available_options": [
         {
           "group": "Step 1 Select Your Frame Style",
@@ -239,15 +789,53 @@
           "choices": [
             {
               "value": "Diamond",
+              "price": 1999.0,
+              "price_delta": 0.0,
               "free": true
             },
             {
               "value": "Step-Through",
+              "price": 1999.0,
+              "price_delta": 0.0,
+              "free": true
+            }
+          ]
+        },
+        {
+          "group": "Step 2 Select Your Color",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "Gloss White",
+              "price": 1999.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "Gloss Indigo",
+              "price": 1999.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "Gloss Charcoal",
+              "price": 1999.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "Gloss Mint",
+              "price": 1999.0,
+              "price_delta": 0.0,
               "free": true
             }
           ]
         }
-      ]
+      ],
+      "regular_price": null,
+      "tier": "Step-Thru",
+      "family_id": "priority__ecoast",
+      "frame_style": "Step-Thru"
     },
     {
       "model": "PRIORITY GLIDE E-BIKE",
@@ -334,6 +922,13 @@
         "free": true
       },
       "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'2\"",
+          "height_max": "5'10\""
+        }
+      ],
       "geometry": {
         "Minimum Inseam": "small/medium: 26.5\" | medium/large: 30\"",
         "Rider Height": "5'2\" - 5'10\"",
@@ -349,6 +944,74 @@
         "(H) Chain Stay": "small/medium: 444mm in Stock Position | medium/large: 444mm in Stock Position",
         "(I) Wheelbase": "small/medium: 1081mm | medium/large: 1116mm"
       },
+      "configurations": [
+        {
+          "options": {
+            "Step 1 Select Your Size": "Small/Medium",
+            "Step 2 Select Your Color": "Navy"
+          },
+          "price": 1799.0,
+          "sku": "1161104",
+          "variant_id": 42590924439629,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/1245/1481/files/Glide_Hero_Indigo_1of1_8eadcf9c-9617-4e65-8e34-226c16b7886e.jpg?v=1768254124"
+        },
+        {
+          "options": {
+            "Step 1 Select Your Size": "Small/Medium",
+            "Step 2 Select Your Color": "Black"
+          },
+          "price": 1799.0,
+          "sku": "1161101",
+          "variant_id": 42590924472397,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/1245/1481/files/Glide_Hero_MatteBlack_1of1_9341a37b-da2e-4b6a-a35b-10b5b1defbcd.jpg?v=1768254798"
+        },
+        {
+          "options": {
+            "Step 1 Select Your Size": "Small/Medium",
+            "Step 2 Select Your Color": "White"
+          },
+          "price": 1799.0,
+          "sku": "1161103",
+          "variant_id": 42595680878669,
+          "available": false,
+          "image": "https://cdn.shopify.com/s/files/1/1245/1481/files/Glide_White_Hero_Jan2026.jpg?v=1768322620"
+        },
+        {
+          "options": {
+            "Step 1 Select Your Size": "Medium/Large",
+            "Step 2 Select Your Color": "Navy"
+          },
+          "price": 1799.0,
+          "sku": "1161204",
+          "variant_id": 42590924505165,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/1245/1481/files/Glide_Hero_Indigo_1of1_8eadcf9c-9617-4e65-8e34-226c16b7886e.jpg?v=1768254124"
+        },
+        {
+          "options": {
+            "Step 1 Select Your Size": "Medium/Large",
+            "Step 2 Select Your Color": "Black"
+          },
+          "price": 1799.0,
+          "sku": "1161201",
+          "variant_id": 42590924537933,
+          "available": false,
+          "image": "https://cdn.shopify.com/s/files/1/1245/1481/files/Glide_Hero_MatteBlack_1of1_9341a37b-da2e-4b6a-a35b-10b5b1defbcd.jpg?v=1768254798"
+        },
+        {
+          "options": {
+            "Step 1 Select Your Size": "Medium/Large",
+            "Step 2 Select Your Color": "White"
+          },
+          "price": 1799.0,
+          "sku": "1161203",
+          "variant_id": 42595680911437,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/1245/1481/files/Glide_White_Hero_Jan2026.jpg?v=1768322620"
+        }
+      ],
       "available_options": [
         {
           "group": "Step 1 Select Your Size",
@@ -356,20 +1019,41 @@
           "choices": [
             {
               "value": "Small/Medium",
+              "price": 1799.0,
+              "price_delta": 0.0,
               "free": true
             },
             {
               "value": "Medium/Large",
+              "price": 1799.0,
+              "price_delta": 0.0,
               "free": true
             }
           ]
-        }
-      ],
-      "frame_sizes": [
+        },
         {
-          "size": null,
-          "height_min": "5'2\"",
-          "height_max": "5'10\""
+          "group": "Step 2 Select Your Color",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "Navy",
+              "price": 1799.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "Black",
+              "price": 1799.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "White",
+              "price": 1799.0,
+              "price_delta": 0.0,
+              "free": true
+            }
+          ]
         }
       ]
     },
@@ -442,7 +1126,8 @@
           "(I) Reach": "Small: 416mm | Medium: 418mm | Large: 442mm",
           "(J) Fork A-C": "Small: 480mm | Medium: 480mm | Large: 480mm",
           "(K) Fork Offset": "Small: 42mm | Medium: 42mm | Large: 42mm",
-          "(L) Crank": "Small: 170mm | Medium: 170mm | Large: 170mm"
+          "(L) Crank": "Small: 170mm | Medium: 170mm | Large: 170mm",
+          "Rider Height": "5'4\" - 6'3\""
         }
       },
       "spec_count": 43,
@@ -470,6 +1155,23 @@
           "price": 0,
           "free": true,
           "detail": "Integrated with rear fender, 48.5 lbs weight limit"
+        }
+      ],
+      "frame_sizes": [
+        {
+          "size": "Small",
+          "height_min": "5'4\"",
+          "height_max": "5'7\""
+        },
+        {
+          "size": "Medium",
+          "height_min": "5'7\"",
+          "height_max": "5'10\""
+        },
+        {
+          "size": "Large",
+          "height_min": "5'10\"",
+          "height_max": "6'3\""
         }
       ],
       "geometry": {
@@ -527,8 +1229,41 @@
           "Small": "416mm",
           "Medium": "418mm",
           "Large": "442mm"
-        }
+        },
+        "Rider Height": "5'4\" - 6'3\""
       },
+      "configurations": [
+        {
+          "options": {
+            "Step 1 Select Your Size": "Small"
+          },
+          "price": 3999.0,
+          "sku": "1074204",
+          "variant_id": 41989831262285,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/1245/1481/files/Skyline_Hero_June2025_1of1.jpg?v=1754423481"
+        },
+        {
+          "options": {
+            "Step 1 Select Your Size": "Medium"
+          },
+          "price": 3999.0,
+          "sku": "1074304",
+          "variant_id": 41989831295053,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/1245/1481/files/Skyline_Hero_June2025_1of1.jpg?v=1754423481"
+        },
+        {
+          "options": {
+            "Step 1 Select Your Size": "Large"
+          },
+          "price": 3999.0,
+          "sku": "1074404",
+          "variant_id": 41989831327821,
+          "available": true,
+          "image": "https://cdn.shopify.com/s/files/1/1245/1481/files/Skyline_Hero_June2025_1of1.jpg?v=1754423481"
+        }
+      ],
       "available_options": [
         {
           "group": "Step 1 Select Your Size",
@@ -536,14 +1271,20 @@
           "choices": [
             {
               "value": "Small",
+              "price": 3999.0,
+              "price_delta": 0.0,
               "free": true
             },
             {
               "value": "Medium",
+              "price": 3999.0,
+              "price_delta": 0.0,
               "free": true
             },
             {
               "value": "Large",
+              "price": 3999.0,
+              "price_delta": 0.0,
               "free": true
             }
           ]

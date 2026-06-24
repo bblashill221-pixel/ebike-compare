@@ -24,11 +24,22 @@ function batteryCapacity(obj: Record<string, SpecValue>): string {
   return parts.join(" ");
 }
 
+/** Motor power as "750/1188 W" (Nominal/Peak), or whichever single figure exists. */
+function motorPower(obj: Record<string, SpecValue>): string {
+  const nom = _num(obj.power_w), pk = _num(obj.peak_w);
+  if (nom != null && pk != null) return `${formatNumber(nom, 2, false)}/${formatNumber(pk, 2, false)} W`;
+  if (nom != null) return `${formatNumber(nom, 2, false)} W`;
+  if (pk != null) return `${formatNumber(pk, 2, false)} W`;
+  return "";
+}
+
 function rawValue(col: Column, obj: Record<string, SpecValue>): SpecValue {
   // capacity is present when Wh, or V+Ah (computable), is available
   if (col.key === "capacity_wh") {
     return _num(obj.capacity_wh) ?? (_num(obj.voltage_v) != null || _num(obj.amphours_ah) != null ? 1 : null);
   }
+  // combined motor power present when either nominal or peak exists
+  if (col.key === "motor_power") return _num(obj.power_w) ?? _num(obj.peak_w) ?? null;
   return obj[col.key] ?? null;
 }
 
@@ -38,8 +49,9 @@ function isEmpty(v: SpecValue): boolean {
   return v == null || v === "" || v === false || (Array.isArray(v) && v.length === 0);
 }
 
-function renderCell(col: Column, obj: Record<string, SpecValue>, units: UnitSystem): string {
+export function renderCell(col: Column, obj: Record<string, SpecValue>, units: UnitSystem): string {
   if (col.key === "capacity_wh") return batteryCapacity(obj);
+  if (col.key === "motor_power") return motorPower(obj);
   const v = rawValue(col, obj);
   if (isEmpty(v)) return "";
   if (typeof v === "boolean") return v ? "✓" : "";

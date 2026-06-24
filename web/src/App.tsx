@@ -45,10 +45,10 @@ export default function App() {
           <Route path="/compare" element={<Compare />} />
           <Route path="/analysis" element={<Analysis />} />
           <Route path="/disclosure" element={<Disclosure />} />
-          {/* DEV-ONLY: the QA anomalies page is registered only in development
-              (import.meta.env.DEV); it's tree-shaken out of the production build,
-              and its data (anomalies.json) is never copied into production. */}
-          {import.meta.env.DEV && <Route path="/qa" element={<QaAnomalies />} />}
+          {/* QA anomalies page lives at the same URL in every build. In dev a nav
+              link is shown (Header); in production there's no link and the page
+              gates itself behind a client-side flag (localStorage `qa`). */}
+          <Route path="/qa" element={<QaAnomalies />} />
           <Route path="*" element={<Browse />} />
         </Routes>
       </main>

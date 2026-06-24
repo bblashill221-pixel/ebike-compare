@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Normalize all per-brand *_ebikes.json into one combined, snake_case JSON that
-adheres to a common schema: `ebikes_normalized.json`.
+adheres to a common schema: `ebike.json`.
 
 The raw per-brand files stay the source of truth; this is a simple, derived
 build step (the wrapper runs it last). The output is a flat array of model
@@ -14,7 +14,7 @@ import re
 from datetime import datetime, timezone
 from pathlib import Path
 
-from bike_taxonomy import classify_product_types, pick_frame_style, STEP_OVER
+from bike_taxonomy import classify_product_types, frame_style_of, pick_frame_style, primary_type, STEP_OVER
 
 # Curated frame-style verdicts (image-inferred) for bikes that don't state one,
 # keyed by "<brand>__<source_id>". Applied only as a fallback in _frame_style.
@@ -73,6 +73,16 @@ def _apply_overrides(nm: dict) -> dict:
                 # mid-drive whose placement/brand the page never stated)
                 mo = nm.setdefault("specs", {}).setdefault("ebike_system", {}).setdefault("motor", {})
                 mo.update(v)
+            elif k == "add_included_accessories" and isinstance(v, list):
+                # Append curated $0 bundled items the text scraper can't see -- e.g. a
+                # PDP promo (Monarc's free Smart Helmet) that lives outside the spec
+                # table. Deduped by name against the derived list; never replaces it.
+                inc = nm.setdefault("included_accessories", [])
+                have = {str(a.get("name", "")).lower() for a in inc}
+                for a in v:
+                    if str(a.get("name", "")).lower() not in have:
+                        inc.append(a)
+                        have.add(str(a.get("name", "")).lower())
             elif k == "specs" and isinstance(v, dict):
                 # deep-merge a {group: {field: value}} spec patch (e.g. fix a
                 # manufacturer typo like ENGWE X24's "600 mile" range -> 60)
@@ -131,12 +141,52 @@ def _frame_sizes_from_options(variant_options: dict) -> list | None:
     return None
 
 
+def _parse_labeled_sizes(s: str, sizes: list) -> dict | None:
+    """Parse a per-size value written as labeled segments — "Large: 58 lbs |
+    Medium: 57 lbs" — into {size_label: value}, keyed by the model's own size
+    labels. Returns None unless every segment's label matches a known size and all
+    sizes are covered."""
+    by_lc = {sz.lower(): sz for sz in sizes}
+    out = {}
+    for seg in s.split("|"):
+        mt = re.match(r"^\s*([^:]+?)\s*:\s*(.+?)\s*$", seg)
+        if not mt:
+            return None
+        label = mt.group(1).strip().lower()
+        if label not in by_lc:
+            return None
+        out[by_lc[label]] = mt.group(2).strip()
+    return out if set(out) == set(sizes) else None
+
+
+_TRADEMARK = re.compile(r"\s*[®™℠]")
+
+
+def _clean_tm(s: str) -> str:
+    return re.sub(r"\s{2,}", " ", _TRADEMARK.sub("", s)).strip()
+
+
+def _strip_trademarks(obj):
+    """Drop ®/™/℠ symbols (with any leading space) from every spec string so brand and
+    component names read cleanly ("Zoom® Adjustable Stem" -> "Zoom Adjustable Stem").
+    Recurses dict KEYS and values + lists; collapses any double space the removal leaves."""
+    if isinstance(obj, dict):
+        return {(_clean_tm(k) if isinstance(k, str) else k): _strip_trademarks(v)
+                for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [_strip_trademarks(v) for v in obj]
+    if isinstance(obj, str):
+        return _clean_tm(obj)
+    return obj
+
+
 def _split_geometry_by_size(grouped: dict, frame_sizes: list | None) -> None:
-    """Geometry usually differs per frame size; the scrape bundles one figure per
-    size into a space-separated value ("432mm 470mm" for the 17"/19" frames).
-    Split each such value into a {size_label: value} map so the per-size geometry
-    is structured data, not a blob. Single-figure values stay as strings; a stray
-    chart-header row ("Rider Height Inseam") is dropped."""
+    """Geometry usually differs per frame size; the scrape bundles the per-size
+    figures into one value — either space-separated ("432mm 470mm" for the 17"/19"
+    frames) or labeled ("Large: 58 lbs | Medium: 57 lbs"). Split each into a
+    {size_label: value} map so the per-size geometry is structured data, not a blob
+    (an un-split labeled string renders as one smeared cell). Single-figure values
+    stay as strings; a stray chart-header row ("Rider Height Inseam") is dropped."""
     geo = grouped.get("geometry")
     sizes = [s.get("size") for s in (frame_sizes or []) if s.get("size")]
     if not isinstance(geo, dict) or len(sizes) < 2:
@@ -150,9 +200,51 @@ def _split_geometry_by_size(grouped: dict, frame_sizes: list | None) -> None:
             if re.search(r"rider|height|inseam", s, re.I):   # chart header captured as a row
                 geo.pop(k, None)
             continue
+        # labeled per-size form first ("<Size>: v | <Size>: v")
+        if ":" in s:
+            labeled = _parse_labeled_sizes(s, sizes)
+            if labeled:
+                geo[k] = labeled
+                continue
         toks = s.split()
         if len(toks) == len(sizes):
             geo[k] = {sz: tok for sz, tok in zip(sizes, toks)}
+
+
+_DT_BELT_RE = re.compile(r"belt|gates|cvt|enviolo|carbon drive|pinion|rohloff", re.I)
+
+
+def _narrow_drivetrain_configs(grouped: dict, configs: list) -> None:
+    """Ride1Up lists BOTH drivetrain options in one spec block, suffixing each field
+    by config code (…_lx_ls = belt/CVT, …_xr_st = chain). After the config split a
+    model still carries both, so a Chain bike wrongly reads as belt + internal-gear.
+    Narrow the drivetrain group to this model's actual drive-train (from its own
+    configurations) by dropping the non-matching config's suffixed fields."""
+    dt = grouped.get("drivetrain")
+    if not isinstance(dt, dict):
+        return
+    # classifier rows: drivetrain_<suffix> -> "belt" | "chain"
+    suffix_type = {k[len("drivetrain_"):]: ("belt" if _DT_BELT_RE.search(str(v)) else "chain")
+                   for k, v in dt.items()
+                   if k.startswith("drivetrain_") and k != "drivetrain"}
+    if len(suffix_type) < 2:
+        return
+    # this model's drive-train, from its (post-split) configurations
+    dtrains = {str(c.get("options", {}).get("drive-train", "")).lower()
+               for c in (configs or []) if c.get("options", {}).get("drive-train")}
+    if len(dtrains) != 1:
+        return
+    want = "belt" if _DT_BELT_RE.search(next(iter(dtrains))) else "chain"
+    drop = {s for s, t in suffix_type.items() if t != want}
+    keep = next((s for s, t in suffix_type.items() if t == want), None)
+    if not drop or not keep:
+        return
+    for k in list(dt):
+        if any(k.endswith("_" + s) for s in drop):
+            del dt[k]
+    # collapse the ambiguous bare "drivetrain" row to the kept config's value
+    if f"drivetrain_{keep}" in dt:
+        dt["drivetrain"] = dt[f"drivetrain_{keep}"]
 
 
 def _style_bucket(s: str) -> str | None:
@@ -194,6 +286,41 @@ def _collapse_rider_height(grouped: dict, frame_style: str) -> None:
     if r:
         fmt = lambda i: f"{int(i) // 12}'{int(i) % 12}\""
         geo[key] = f"{fmt(r[0])} - {fmt(r[1])}"
+
+
+def _collapse_geometry_by_frame(grouped: dict, frame_style: str) -> None:
+    """On a frame-style-split card, any spec row that bundles both frames' figures
+    in one labeled string ("DIAMOND: 18\" | STEP-THROUGH: 17\"") collapses to THIS
+    card's frame style, so each card shows only its own values instead of a smeared
+    blob. Scans EVERY group (not just geometry) -- a per-frame "Approx. Height" can
+    land under general/special-features too. Only fires when every segment label
+    maps to a frame style."""
+    if not frame_style:
+        return
+    for group in grouped.values():
+        if not isinstance(group, dict):
+            continue
+        for k in list(group):
+            v = group[k]
+            if not isinstance(v, str) or "|" not in v or ":" not in v:
+                continue
+            segs = []
+            for seg in v.split("|"):
+                mt = re.match(r"^\s*([^:]+?)\s*:\s*(.+?)\s*$", seg)
+                if not mt:
+                    segs = []
+                    break
+                segs.append((mt.group(1).strip(), mt.group(2).strip()))
+            if len(segs) < 2:
+                continue
+            styled = [(frame_style_of(lbl), val) for lbl, val in segs]
+            if any(st is None for st, _ in styled):
+                continue  # not frame-labeled (e.g. size labels) — leave for the size splitter
+            match = next((val for st, val in styled if st == frame_style), None)
+            if match is not None:
+                group[k] = match
+            elif len({val for _, val in styled}) == 1:
+                group[k] = styled[0][1]   # both frames share the figure
 
 
 def _awd_motor_rows(rows: dict, name: str = "") -> None:
@@ -287,6 +414,17 @@ def _is_folding(m: dict, rows: dict) -> bool:
     return False
 
 
+def _folding(m: dict, rows: dict, name: str) -> bool:
+    """Whether the bike folds — the `folding` FEATURE flag. True when the frame/whole
+    bike folds (_is_folding) OR the brand names/tags/url it a folder (the name signal the
+    old "Folding" product type relied on, so name-only folders like "Velotric Fold 1"
+    aren't lost). \\bfold matches fold/folding/foldable but not unrelated substrings."""
+    if _is_folding(m, rows):
+        return True
+    hay = " ".join(str(x) for x in (name, m.get("url") or "", *(m.get("tags") or [])))
+    return bool(re.search(r"\bfold", hay, re.I))
+
+
 # Mirrors the Mountain (eMTB) rule in bike_taxonomy._TYPE_RULES; used to scrub
 # unreliable terrain words out of tire model names before classification.
 _MTB_TERRAIN = re.compile(
@@ -302,11 +440,13 @@ def _is_mid_drive(rows: dict) -> bool:
 
 
 def _max_wheel_in(rows: dict):
-    """Largest wheel/tire diameter in inches (20-29) from the tire/wheel rows, or
-    None. 700c road wheels count as ~28"."""
-    text = " ".join(str(v) for k, v in rows.items() if re.search(r"tire|tyre|wheel", k, re.I))
+    """Largest wheel/tire diameter in inches (20-29) from the tire/wheel/rim rows, or
+    None. 700c road wheels count as ~28". Also reads the ISO pairing some brands use
+    on rim/rim-strip rows ("27.5/650", "29/622") — Trek lists the size only there on
+    some bikes. The unit-anchored match still ignores "28mm hook" / "30 rim" noise."""
+    text = " ".join(str(v) for k, v in rows.items() if re.search(r"tire|tyre|wheel|rim", k, re.I))
     dias = [float(x) for x in re.findall(
-        r"\b(2\d(?:\.\d)?)\s*(?:[\"”]|in\b|inch|×|x|\*)", text, re.I)]
+        r"\b(2\d(?:\.\d)?)\s*(?:[\"”]|in\b|inch|×|x|\*|/\s*\d{3}\b)", text, re.I)]
     if re.search(r"\b700\s*c\b", text, re.I):
         dias.append(28.0)
     return max(dias) if dias else None
@@ -340,6 +480,15 @@ _NOT_EMTB_NAME = re.compile(
     r"commuter|urban|\bcity\b|cargo|trike|moped|touring|cruiser|\bgravel\b|\broad\b"
     r"|hybrid|fitness|step[-\s]?thr", re.I)
 
+# Unambiguous "the brand calls this a mountain bike" terms. When one of these is in
+# the name/tags/vendor type, the eMTB label STAYS even if the bike doesn't meet the
+# structural definition (mid-drive + big wheels) -- a brand may label its own model
+# an eMTB. Deliberately excludes "full suspension" / "all-terrain" / "trail" / "dirt"
+# / "off-road": those ride on fat cruisers and tire tread names, so they still need
+# the structural gate to qualify.
+_EMTB_STRONG = re.compile(r"\bmtb\b|\bemtb\b|mountain|enduro|downhill|hard[\s-]?tail"
+                          r"|\blevo\b|\bkenevo\b", re.I)
+
 
 def _product_types(m: dict, name: str, raw_specs: dict) -> list[str]:
     """Vendor product_type strings are marketing junk; classify onto the shared
@@ -358,7 +507,9 @@ def _product_types(m: dict, name: str, raw_specs: dict) -> list[str]:
     # eMTB / hybrid carries that signal in its name/tags, not the tire tread name.
     tires = _MTB_TERRAIN.sub(" ", tires)
     tires = re.sub(r"hybrid|fitness", " ", tires, flags=re.I)
-    folds = "folding frame" if _is_folding(m, rows) else ""
+    # NB folding is a FEATURE (the `folding` boolean), not a use category — it is no
+    # longer fed to the classifier, so a folding bike keeps its real type (commuter,
+    # fat tire, ...). _is_folding still drives the boolean in the model build below.
     raw_type = " ".join(m.get("product_types") or []) or m.get("product_type") or ""
     tags = " ".join(str(t) for t in (m.get("tags") or []))
     # explicit vendor category options (e.g. Ride1Up's bike_type = "Gravel")
@@ -367,19 +518,27 @@ def _product_types(m: dict, name: str, raw_specs: dict) -> list[str]:
         str(v) for k, vals in options.items()
         if isinstance(vals, list) and ("type" in k.lower() or "categor" in k.lower())
         for v in vals)
-    extra = " ".join(t for t in (m.get("vehicle_type"), m.get("url"), folds,
+    extra = " ".join(t for t in (m.get("vehicle_type"), m.get("url"),
                                  tires, opt_types, tags) if t)
     types = classify_product_types(name or "", raw_type, extra)
     # eMTB is reserved for a mid-drive on >= 27.5" wheels; demote keyword matches
-    # that don't qualify (hub-drive "all-terrain"/fat bikes, small-wheel bikes).
-    if "Mountain (eMTB)" in types and not _emtb_qualifies(rows):
+    # that don't qualify (hub-drive "all-terrain"/fat bikes, small-wheel bikes) --
+    # UNLESS the brand unambiguously names it a mountain bike (_EMTB_STRONG in the
+    # model NAME), in which case the brand's label wins and the eMTB tag stays. Only
+    # the name counts here -- vendor tags/collections file fat cruisers under broad
+    # "Mountain"/"All-Terrain" buckets and would over-promote.
+    if ("Mountain (eMTB)" in types and not _emtb_qualifies(rows)
+            and not _EMTB_STRONG.search(name or "")):
         types = [t for t in types if t != "Mountain (eMTB)"] or ["Commuter / Urban"]
     # Structural promotion: a mid-drive on >= 27.5" wheels with a trail-grade
     # suspension fork (>= 120mm) is an eMTB even when the name/tags/description
     # don't say so (e.g. Ride1Up "TrailRush", Cyke "Falcon X" -- glued/keyword-less
-    # names whose mountain signal is only in geometry/components).
+    # names whose mountain signal is only in geometry/components). But a bike already
+    # carrying a high-confidence non-MTB category (Cargo / Trike) is NOT an eMTB just
+    # because it has a suspension fork -- Trek's Fetch+ cargo line runs a 130mm+ fork.
     elif ("Mountain (eMTB)" not in types and _emtb_qualifies(rows)
           and _fork_travel_mm(rows) >= 120
+          and not {"Cargo", "Trike"} & set(types)
           and not _NOT_EMTB_NAME.search(name or "")):
         types = ["Mountain (eMTB)"] + [t for t in types if t != "Commuter / Urban"]
     # "Cargo" is a high-confidence category: require an explicit cargo word in the
@@ -390,9 +549,12 @@ def _product_types(m: dict, name: str, raw_specs: dict) -> list[str]:
     # NB checks name + `extra` (not generic spec rows, where "cargo capacity" would
     # false-positive, and not the echoed label).
     if "Cargo" in types and not re.search(
-            r"cargo|hauler|utility|long[\s-]?tail|xpedition", f"{name or ''} {extra}", re.I):
+            r"cargo|\bhaul|utility|long[\s-]?tail|xpedition", f"{name or ''} {extra}", re.I):
         types = [t for t in types if t != "Cargo"] or ["Commuter / Urban"]
-    return types
+    # ONE type per e-bike (deliberate simplification): keep only the MOST-SPECIFIC
+    # label. A bike that's both Cargo and Commuter is just "Cargo"; the multi-label
+    # set was dropped to avoid the complexity of a bike living under several types.
+    return [primary_type(types)]
 
 
 def _prices(m: dict, configs: list) -> tuple:
@@ -637,6 +799,7 @@ def normalize_model(brand: str, m: dict) -> dict:
     _awd_motor_rows(raw_specs.get("all") or {}, name)
     grouped = group_specs(raw_specs.get("all") or {}, m.get("geometry") or {}, brand)
     _collapse_rider_height(grouped, frame_style)
+    _collapse_geometry_by_frame(grouped, frame_style)
     product_types = _product_types(m, name, raw_specs)
     # per-frame-size chart (enrich/scraper) wins; else derive sizes from a multi-
     # valued "Size" variant option (heights left null when no per-size chart).
@@ -644,7 +807,10 @@ def normalize_model(brand: str, m: dict) -> dict:
     img_h = (IMAGE_HEIGHTS.get(f"{brand}__{source_id}") or {}).get("frame_sizes")
     frame_sizes = img_h or m.get("frame_sizes") or _frame_sizes_from_options(variant_options)
     _split_geometry_by_size(grouped, frame_sizes)
-    return {
+    _narrow_drivetrain_configs(grouped, configs)
+    # "Zoom® Stem" -> "Zoom Stem": strip ®/™ from EVERY string in the model (specs,
+    # included/free accessories, brand_extra, …), applied once to the whole record.
+    return _strip_trademarks({
         "id": f"{brand}__{source_id}",
         "brand": brand,
         "model": name,
@@ -656,6 +822,9 @@ def normalize_model(brand: str, m: dict) -> dict:
         "source_id": source_id,
         "product_type": product_types[0],
         "product_types": product_types,
+        # folding is a FEATURE, not a use category: a boolean derived from the frame /
+        # whole-bike fold signal + name/tags (drives the "Folds" filter, feature score, chip).
+        "folding": _folding(m, raw_specs.get("all") or {}, name),
         "frame_style": frame_style,
         # explicit "new" from a site new-arrival tag (not a catalog-diff guess)
         "is_new": _is_new(m),
@@ -685,7 +854,7 @@ def normalize_model(brand: str, m: dict) -> dict:
         "included_accessories": _included_accessories(m),
         "scrape_error": m.get("scrape_error"),
         "brand_extra": brand_extra,
-    }
+    })
 
 
 def main():
@@ -722,7 +891,7 @@ def main():
         "brands": brands,
         "models": models,
     }
-    path = DATA / "current" / "active" / "ebikes_normalized.json"
+    path = DATA / "current" / "active" / "ebike.json"
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(out, indent=2, ensure_ascii=False))
 

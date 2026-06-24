@@ -24,6 +24,13 @@ export function Header() {
           <NavLink to="/analysis" className={navClass}>
             Analysis
           </NavLink>
+          {/* QA link shows only in dev; in production /qa has no link and is
+              gated behind the localStorage `qa` flag. Tree-shaken from prod. */}
+          {import.meta.env.DEV && (
+            <NavLink to="/qa" className={navClass}>
+              QA
+            </NavLink>
+          )}
         </nav>
       </div>
     </header>

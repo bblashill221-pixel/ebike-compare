@@ -127,8 +127,23 @@ def _aventon(page: str) -> list[dict]:
     return out
 
 
+_PRIORITY_SZ = r"X-?Small|Small|Medium|X-?Large|Large"
+
+
 def _priority(page: str) -> list[dict]:
     txt = " ".join(html.unescape(re.sub(r"<[^>]+>", " ", page)).split())
+    # Current format: a sizing table "Measurement <S> <M> <L> ... Approx. Height <r1> <r2> <r3>".
+    m = re.search(r"Approx\.?\s*Height(.{0,160})", txt, re.I)
+    if m:
+        pairs = _ranges(m.group(1))
+        hdr = re.search(rf"Measurement\s+((?:{_PRIORITY_SZ})(?:\s+(?:{_PRIORITY_SZ}))*)", txt, re.I)
+        sizes = re.findall(_PRIORITY_SZ, hdr.group(1), re.I) if hdr else []
+        # only treat as a per-size table when a real "Measurement S M L" header is present;
+        # otherwise a single-size bike could pick up stray ranges from a comparison block.
+        if pairs and sizes:
+            return [{"size": sizes[i].title(), "height_min": lo, "height_max": hi}
+                    for i, (lo, hi) in enumerate(pairs) if i < len(sizes)]
+    # Legacy format: an "Inseam and Height" segment with sizes just before it.
     m = re.search(r"(?:Approx\.?\s*)?Inseam\s*and\s*Height(.{0,400})", txt, re.I)
     if not m:
         return []

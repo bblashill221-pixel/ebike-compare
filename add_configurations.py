@@ -23,7 +23,8 @@ COLLECTION = {
     "aventon": "ebikes", "velotric": "electric-bikes", "heybike": "electric-bike",
     "mokwheel": "electric-bikes", "himiway": "ebikes", "euphree": "electric-bikes",
     "vvolt": "e-bikes", "evelo": "evelo-bikes", "blix": "all",
-    "monarc": "marker-bikes", "velowave": "all-ebikes",
+    "monarc": "all-ebikes", "velowave": "all-ebikes", "priority": "electric",
+    "magician": "all-product",
 }
 # brands whose scraper already builds per-config prices (so don't re-fetch a
 # Shopify collection feed they don't expose under one handle)

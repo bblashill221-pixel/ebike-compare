@@ -33,7 +33,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 DATA = Path(__file__).parent / "data"
-ACTIVE = DATA / "current" / "active" / "ebikes_normalized.json"
+ACTIVE = DATA / "current" / "active" / "ebike.json"
 CACHE_PATH = DATA / "curated" / "image_heights.json"
 WORKLIST = DATA / "current" / "image_height_worklist.json"
 

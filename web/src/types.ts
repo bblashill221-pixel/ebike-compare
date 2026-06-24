@@ -1,4 +1,4 @@
-// Types for data/current/active/ebikes_normalized.json (schema_version 1.0).
+// Types for data/current/active/ebike.json (schema_version 1.0).
 
 export interface Availability {
   status: "in_stock" | "sold_out" | "unknown";
@@ -107,23 +107,40 @@ export interface SpecsTyped {
 
 export interface Analysis {
   specs_typed: SpecsTyped;
+  /** Cohort-relative ranks (vs the bike's primary-type peers). */
   percentiles: Record<string, number>;
+  /** Per-dimension 0–100, each ranked within the primary-type cohort:
+   *  power, torque, range, battery, price, value, feature. No overall score. */
   scores: Record<string, number>;
+  /** The bike's own features that are rarest among its same-type peers. */
+  feature_notable?: string[];
+  /** The most-specific product type — the cohort the scores are ranked within. */
+  primary_type?: string;
   highlights: string[];
-  /** Part-price facts joined from the component catalog. The two value roll-ups
-   *  are independent estimates (retail = aftermarket street value; wholesale =
-   *  OEM cost proxy) — never blend them into one score. */
+  /** What makes this bike stand out from its type peers: top-quartile magnitude specs
+   *  (with the figure as `value`) + equipment uncommon in the cohort (`value` empty). */
+  standouts?: { label: string; value?: string }[];
+  /** Curated premium/notable equipment the bike has (security, OTA, regen, premium
+   *  components, …) — shown in the "Uncommon Features" card; replaces the Feature score. */
+  uncommon_features?: string[];
+  /** Part-price facts joined from the component catalog — a brand/spec-aware RETAIL
+   *  estimate per part (researched where looked up). A standalone value signal, never
+   *  blended into an overall score. */
   component_quality?: {
     parts_identified: number;
     parts_priced: number;
+    /** Parts backed by a real price lookup (vs a brand/spec heuristic estimate). */
+    parts_researched?: number;
     /** Parts contributing to the complete component base (researched or heuristic). */
     parts_costed: number;
+    /** Sum of the identified parts' retail value (aftermarket street/replacement). */
     component_retail_value_usd: number | null;
-    component_wholesale_value_usd: number | null;
-    /** Complete est. component cost: per-part avg(retail, wholesale), summed. */
+    /** Complete est. component retail cost (incl. core systems costed from typed specs). */
     component_base_value_usd: number | null;
     /** price ÷ component_base_value_usd — lower = more parts per dollar. */
     value_ratio: number | null;
+    /** component_base_value_usd ÷ price — parts cost as a fraction of retail price. */
+    bom_pct?: number | null;
   };
 }
 
@@ -151,6 +168,8 @@ export interface Model {
   product_types?: string[];
   /** "Step-Thru" | "Step-Over (Mid-Step)" when the frame style is known. */
   frame_style?: string | null;
+  /** Whether the bike folds — a feature, not a product type. */
+  folding?: boolean;
   /** True only when the brand's site explicitly tags it a new arrival. */
   is_new?: boolean;
   /** Published frame sizes and the count, when the brand offers more than one. */
@@ -207,5 +226,11 @@ export interface RawData {
   brands: Brand[];
   models: Model[];
   analysis_stats: AnalysisStats;
+  analysis_stats_by_type?: Record<string, AnalysisStats>;
   analysis_disclaimer: string;
+  /** Shared table of unique parsed components, keyed by `category|manufacturer|model`
+   *  (with a `#N` suffix on content collisions). Each model.specs[group][field] that is
+   *  a component holds its key here; DataProvider rehydrates them (sharing one object per
+   *  unique component) before use. Entries carry `catalog_key` + `retail_usd`. */
+  components?: Record<string, SpecValue>;
 }

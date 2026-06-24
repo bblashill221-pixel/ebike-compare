@@ -190,6 +190,12 @@ def material(text: str, *allowed: str) -> str | None:
     low = text.lower()
     for name, pat in _MATERIAL_RULES:
         if name in allowed and re.search(pat, low):
+            # keep "Aluminum Alloy" together as one material (like a 6061 grade) instead of
+            # collapsing to bare "aluminum"; a specific grade still wins (callers append it,
+            # e.g. frame -> "Aluminum 6061"), so only do this when no numbered grade is present
+            if (name == "aluminum" and re.search(r"\balloy\b", low)
+                    and not re.search(r"\b(6061|6063|7005|7046|a3\d{2}|a380)\b", low)):
+                return "aluminum alloy"
             return name
     return None
 
@@ -278,8 +284,12 @@ def _fork(v, brand):
         out["type"] = "rigid"
     elif re.search(r"\bair\b", low):
         out["type"] = "air"
-    elif re.search(r"coil|spring|mechanical|hydraulic|suspension|lockout", low):
+    elif re.search(r"\bcoil\b|\bspring\b", low):
         out["type"] = "coil"
+    # NB: "hydraulic"/"suspension"/"lockout"/"mechanical" describe damping/features, NOT
+    # the spring, so they no longer imply a coil spring -- asserting "coil" on a "Hydraulic
+    # Suspension Fork" conflicts with its own name (Vanpowers UrbanGlide). Such forks are
+    # left with no `type` (still a suspension fork via travel/lockout below).
     if out.get("type") != "rigid":
         # prefer an mm value explicitly labeled "travel"; else the first mm that
         # isn't an offset/axle/spacing/rotor measurement.
@@ -297,6 +307,9 @@ def _fork(v, brand):
                     break
     out["lockout"] = bool(re.search(r"lock[\s-]?out", low))
     out["thru_axle"] = bool(re.search(r"thru[\s-]?axle|thru axle", low))
+    mat = material(low, "carbon", "aluminum", "steel", "magnesium")
+    if mat:
+        out["material"] = mat
     out["details"] = _clean(rest)
     return out
 
@@ -314,6 +327,10 @@ def _shock(v, brand):
     m, rest = _consume(rest, r"(\d{2,3}\s*[x×]\s*\d{2,3}(?:\.\d)?\s*mm)")  # eye-to-eye x stroke
     if m:
         out["size"] = re.sub(r"\s*", "", m.group(1)).replace("×", "x")
+    mt = re.search(r"(\d{2,3})\s*mm\s*(?:of\s+)?(?:rear\s+)?(?:wheel\s+)?travel", rest, re.I)
+    if mt:
+        out["travel_mm"] = int(mt.group(1))
+        rest = rest.replace(mt.group(0), " ", 1)
     out["details"] = _clean(rest)
     return out
 
@@ -399,6 +416,32 @@ def _brake(v, brand, rotor_text=""):
     return out
 
 
+# Bosch publishes a fixed torque per motor LINE and never states wattage (all units
+# are 250W nominal). Many spec rows give only the line name ("Bosch Performance Line
+# Speed, 250W") — so when the text doesn't state Nm, fill the known line torque.
+# Most specific patterns first. An explicit Nm in the row always wins over this.
+_BOSCH_TORQUE = [
+    (re.compile(r"cargo line"), 85),
+    (re.compile(r"performance line cx|performance cx"), 85),
+    (re.compile(r"performance line speed|performance speed"), 85),
+    (re.compile(r"performance line sprint|performance sprint"), 75),
+    (re.compile(r"performance line"), 75),
+    (re.compile(r"active line plus"), 50),
+    (re.compile(r"active line"), 40),
+]
+
+
+def bosch_torque(text: str) -> int | None:
+    """Known Bosch line torque (Nm) from a motor spec string; None if not a Bosch line."""
+    if not re.search(r"\bbosch\b", text, re.I):
+        return None
+    low = text.lower()
+    for rx, nm in _BOSCH_TORQUE:
+        if rx.search(low):
+            return nm
+    return None
+
+
 def _motor(v, brand):
     rest = v
     out = {}
@@ -420,7 +463,10 @@ def _motor(v, brand):
     # Peak (1440W in Boost Mode)") the standard peak stays a peak.
     boost_is_peak = bool(re.search(r"\d\s*w(?:att)?s?\s*peak[^)0-9]{0,10}boost", low))
     low = re.sub(r"\([^)]*boost[^)]*\)", " ", low)
-    if re.search(r"mid[\s-]?drive|mid[\s-]?motor", low):
+    # "Ultro" is Aventon's mid-drive family (Ultro S / Ultro X); their hub motors
+    # are never named Ultro, and the trail rows ("Aventon Ultro X") often omit the
+    # "mid-drive" word, so the model name alone settles placement.
+    if re.search(r"mid[\s-]?drive|mid[\s-]?motor|\bultro\b", low):
         out["placement"] = "mid"
     elif re.search(r"\bhub\b", low):
         out["placement"] = "hub"
@@ -440,7 +486,7 @@ def _motor(v, brand):
         cont = low[:mp.start()] + " " + low[mp.end():]
     else:
         cont = low
-    m, _ = _consume(cont, r"(\d{3,4})\s*w\b")
+    m, _ = _consume(cont, r"(\d{3,4})\s*w(?:att)?s?\b")
     if m:
         out["power_w"] = int(m.group(1))
     # The boost figure is the true peak (highest shipped-mode output). When the
@@ -454,6 +500,14 @@ def _motor(v, brand):
     m = re.search(r"(\d{2,3})\s*n[·.\s]?m", low)
     if m:
         out["torque_nm"] = int(m.group(1))
+    # Bosch states torque per line, not in every row — fill the known line value
+    # (and the 250W nominal) when the text didn't already give them.
+    if man == "Bosch":
+        if "torque_nm" not in out:
+            t = bosch_torque(low)
+            if t is not None:
+                out["torque_nm"] = t
+        out.setdefault("power_w", 250)
     volt = voltage_v(low)
     if volt is not None:
         out["voltage_v"] = volt
@@ -967,6 +1021,27 @@ def _frame(v, brand):
             continue
         if re.search(r"step[\s-]?over|high[\s-]?step|mid[\s-]?step", cl):
             out["style"] = "step_over"
+            continue
+        # structured geometry clauses -> their own fields (keep them out of Details)
+        m = re.search(r"(\d{2,3})\s*mm\s*(?:of\s*)?(?:rear\s*)?(?:wheel\s*)?travel", cl)
+        if m:
+            out["travel_mm"] = int(m.group(1))
+            continue
+        m = re.search(r"(\d{2,3})\s*mm\s*chain\s*line", cl)
+        if m:
+            out["chainline_mm"] = int(m.group(1))
+            continue
+        if re.search(r"thru[\s-]?axle|dropout|drop[\s-]?out", cl):
+            ax = re.search(r"(\d{2,3})\s*[x×]\s*(\d{1,3})", cl)
+            out["thru_axle"] = f"{ax.group(1)}x{ax.group(2)}mm" if ax else _clean(clause)
+            continue
+        m = re.fullmatch(r'\s*(\d{2}(?:\.\d)?)\s*(?:["”″\']|in(?:ch(?:es)?)?)\s*(?:wheels?)?\s*',
+                         clause, re.I)
+        if m:
+            out["wheel_size_in"] = m.group(1)
+            continue
+        if re.search(r"kickstand", cl):
+            out["mounts"] = sorted(set((out.get("mounts") or []) + ["kickstand"]))
             continue
         leftover.append(clause)
     det = ", ".join(leftover)
@@ -1518,8 +1593,54 @@ def _canon_material(result):
                 result["details"] = det
             else:
                 result.pop("details", None)
-    result["material"] = f"aluminum {g.group(1).upper()}" if g else "aluminum"
+    if g:
+        result["material"] = f"aluminum {g.group(1).upper()}"
+    elif re.search(r"\balloy\b", (result["material"] + " " + (result.get("details") or "")).lower()):
+        result["material"] = "aluminum alloy"   # keep "Aluminum Alloy" together, like a grade
+    else:
+        result["material"] = "aluminum"
     return result
+
+
+def _finalize_motor(result, value):
+    """Post-process a MOTOR component (after the live OR cached/LLM parse): fill the known
+    Bosch line torque + 250W nominal, and capture the comm `protocol` (CAN bus / UART) when
+    the system advertises it. Gated to motors so Bosch batteries/etc. are untouched; an
+    explicit Nm/W in the text always wins."""
+    if not (result and result.get("_kind") == "motor"):
+        return result
+    if result.get("manufacturer") == "Bosch":
+        if result.get("torque_nm") is None:
+            t = bosch_torque(value)
+            if t is not None:
+                result["torque_nm"] = t
+        result.setdefault("power_w", 250)
+    # "Ultro" is Aventon's mid-drive family (Ultro S / Ultro X); their trail rows
+    # ("Aventon Ultro X") often omit "mid-drive" and parse/cache as hub. Force mid so
+    # drive_type reads correctly and the eMTB structural gate qualifies (Current ADV/EXP).
+    if result.get("placement") != "mid" and re.search(r"\bultro\b", value, re.I):
+        result["placement"] = "mid"
+    # communication protocol (only the real bus token — never the English word "can")
+    if "protocol" not in result:
+        mp = re.search(r"can[\s-]?bus|\buart\b", value, re.I)
+        if mp:
+            result["protocol"] = "UART" if mp.group(0).lower() == "uart" else "CAN bus"
+            # drop the protocol token from model/details so it isn't echoed beside the field
+            rx = re.compile(r"\bcan[\s-]?bus(?:\s+system)?\b|\buart\b", re.I)
+            for fld in ("model", "details"):
+                if result.get(fld):
+                    cleaned = _clean(rx.sub("", result[fld]))
+                    if cleaned:
+                        result[fld] = cleaned
+                    else:
+                        result.pop(fld, None)
+    return result
+
+
+# Kinds whose rule parser now extracts more structured fields (and far shorter Details)
+# than the cached LLM parse — prefer the rule parser for these (skip the LLM cache), so
+# big run-on Details (wheel size / travel / chainline / thru-axle / headtube …) get split out.
+_RULE_PREFERRED = {"frame", "fork", "shock"}
 
 
 def parse_component(field: str, value, brand: str | None = None,
@@ -1529,12 +1650,12 @@ def parse_component(field: str, value, brand: str | None = None,
     fn = _resolver(field)
     if fn is None or not isinstance(value, str) or not value.strip():
         return None
-    if _LLM_COMPONENTS:
-        kind = fn.__name__.lstrip("_")
+    kind = fn.__name__.lstrip("_")
+    if _LLM_COMPONENTS and kind not in _RULE_PREFERRED:
         key = _hashlib.sha256(f"{kind}|{brand}|{value}".encode()).hexdigest()[:20]
         hit = _LLM_COMPONENTS.get(key)
         if hit:
-            return _canon_material(_json.loads(_json.dumps(hit["parsed"])))  # fresh copy
+            return _finalize_motor(_canon_material(_json.loads(_json.dumps(hit["parsed"]))), value)
     value = _dethousand(value)   # "1,200W" must parse as 1200, not 200
     sized = None if fn is _brake else _split_by_size(value)
     if fn is _brake:
@@ -1564,4 +1685,4 @@ def parse_component(field: str, value, brand: str | None = None,
         result["_kind"] = fn.__name__.lstrip("_")
         _strip_parsed_from_details(result)
         _canon_material(result)
-    return result
+    return _finalize_motor(result, value)

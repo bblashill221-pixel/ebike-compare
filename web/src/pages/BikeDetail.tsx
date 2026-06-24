@@ -5,17 +5,19 @@ import { ColorSwatches, upchargeText } from "../components/ColorSwatches";
 import { useColorSelection, defaultColorIndex, colorSoldOut, soldOutColors } from "../colorSelection";
 import { useShowSoldOut } from "../soldOut";
 import { useCompare } from "../compare/CompareContext";
-import { formatPrice, titleCase, colorChipStyle, fieldLabel } from "../format";
+import { formatPrice, formatNumber, titleCase, colorChipStyle, fieldLabel } from "../format";
 import { useUnits, inToFtIn } from "../units";
 import { colorPrices, defaultDims, lowestPrice, variantPrice } from "../pricing";
 import { VariantPicker } from "../components/VariantPicker";
 import { Price } from "../components/Price";
 import { ScorePanel } from "../components/ScorePanel";
+import { SpecialFeaturesCard } from "../components/UncommonFeaturesList";
+import { HighlightsList } from "../components/HighlightsList";
 import { SpecTable } from "../components/SpecTable";
 import { DistributionPlot } from "../components/DistributionPlot";
 import { AffiliateLink } from "../components/AffiliateLink";
 import { displayName, primaryImage } from "../components/BikeCard";
-import { BatteryIcon, MotorIcon, RangeIcon, RiderHeightIcon, TorqueIcon, WeightIcon } from "../components/icons";
+import { BatteryIcon, MotorIcon, RangeIcon, RiderHeightIcon, TagIcon, TorqueIcon, WeightIcon } from "../components/icons";
 
 const GROUP_ORDER = [
   "general_info",
@@ -32,34 +34,63 @@ const GROUP_ORDER = [
   // paid add-ons with prices).
 ];
 
+// Each metric gets a tinted circular icon badge matching the icon's own color
+// (the icons are self-colored: battery emerald, motor amber, torque rose, range
+// sky, weight violet, price tag blue) -- see the "How it compares" card grid.
 const PERCENTILE_FIELDS: {
   field: string;
   label: string;
   unit?: string;
-  icon?: React.ReactNode;
+  icon: React.ReactNode;
+  badge: string;
 }[] = [
-  { field: "price", label: "Price", unit: "$" },
-  { field: "battery_wh", label: "Battery", unit: " Wh", icon: <BatteryIcon /> },
-  { field: "motor_w", label: "Motor", unit: " W", icon: <MotorIcon /> },
-  { field: "torque_nm", label: "Torque", unit: " Nm", icon: <TorqueIcon /> },
-  { field: "range_mi", label: "Range", unit: " mi", icon: <RangeIcon /> },
-  { field: "weight_lb", label: "Weight", unit: " lb", icon: <WeightIcon /> },
+  { field: "price", label: "Price", unit: "$", icon: <TagIcon className="h-5 w-5" />, badge: "bg-blue-50" },
+  { field: "battery_wh", label: "Battery", unit: " Wh", icon: <BatteryIcon className="h-5 w-5" />, badge: "bg-emerald-50" },
+  { field: "motor_w", label: "Motor", unit: " W", icon: <MotorIcon className="h-5 w-5" />, badge: "bg-amber-50" },
+  { field: "torque_nm", label: "Torque", unit: " Nm", icon: <TorqueIcon className="h-5 w-5" />, badge: "bg-rose-50" },
+  { field: "range_mi", label: "Range", unit: " mi", icon: <RangeIcon className="h-5 w-5" />, badge: "bg-sky-50" },
+  { field: "weight_lb", label: "Weight", unit: " lb", icon: <WeightIcon className="h-5 w-5" />, badge: "bg-violet-50" },
 ];
 
 // Per-frame-size geometry: normalize structures each per-size attribute as a
 // {sizeLabel: value} map (e.g. {"17\"": "432mm", "19\"": "470mm"}); a single
 // shared figure stays a string. Build one row per attribute, aligned to `sizes`.
+// A trailing LENGTH unit on a geometry value ("44.4 cm", '17.5"'); angles ("73.5°")
+// carry no length unit and keep their ° on the value.
+const GEO_LEN_UNIT = /\s*(cm|mm|inches|inch|in|")$/i;
+const geoUnitLabel = (raw: string) =>
+  raw === '"' ? "in" : raw.toLowerCase().replace(/inch(es)?/, "in");
+
 function geometryRows(geo: Record<string, unknown>, sizes: string[]) {
   const rows: { label: string; vals: string[]; span: boolean }[] = [];
   for (const [k, v] of Object.entries(geo)) {
-    const label = fieldLabel(k).label;
+    let label = fieldLabel(k).label;
+    let vals: string[];
+    let span: boolean;
     if (v && typeof v === "object" && !Array.isArray(v)) {
       const dict = v as Record<string, unknown>;
-      const vals = sizes.map((sz) => (dict[sz] == null ? "" : String(dict[sz])));
-      if (vals.some(Boolean)) rows.push({ label, vals, span: false });
+      vals = sizes.map((sz) => (dict[sz] == null ? "" : String(dict[sz])));
+      if (!vals.some(Boolean)) continue;
+      span = false;
     } else if (typeof v === "string" && /\d/.test(v)) {
-      rows.push({ label, vals: [v.trim()], span: true }); // shared across sizes
+      vals = [v.trim()]; // shared across sizes
+      span = true;
+    } else {
+      continue;
     }
+    // When a row's values share one length unit (cm/mm/in), move it onto the
+    // label ("Seat Tube Length (cm)") and strip it from each value; angle rows
+    // (°) are left untouched.
+    const units = new Set<string>();
+    for (const val of vals) {
+      const m = val.match(GEO_LEN_UNIT);
+      if (m) units.add(geoUnitLabel(m[1]));
+    }
+    if (units.size === 1) {
+      label = `${label} (${[...units][0]})`;
+      vals = vals.map((val) => val.replace(GEO_LEN_UNIT, "").trim());
+    }
+    rows.push({ label, vals, span });
   }
   return rows;
 }
@@ -101,7 +132,7 @@ function GeometryTable({ geo, sizes }: { geo: Record<string, unknown>; sizes: st
 
 export function BikeDetail() {
   const { id } = useParams();
-  const { byId, models, analysisStats, brandByName, status } = useData();
+  const { byId, models, analysisStats, analysisStatsByType, brandByName, status } = useData();
   const { has, toggle, isFull } = useCompare();
   const model = id ? byId.get(decodeURIComponent(id)) : undefined;
   // selection is shared with the browse cards (and persists for the session);
@@ -145,6 +176,15 @@ export function BikeDetail() {
       </Center>
     );
   }
+
+  // The "how it compares" distributions are drawn from the bike's PRIMARY-TYPE
+  // peers (falling back to the fleet if that cohort's stats are missing).
+  const primaryType = model.analysis?.primary_type;
+  const cohortStats =
+    (primaryType && analysisStatsByType[primaryType]) || analysisStats;
+  const compareHeading = primaryType
+    ? `How it compares to all other ${primaryType} bikes`
+    : "How it compares to the fleet";
 
   const img = model.colors?.[color]?.image ?? primaryImage(model);
   const cPrices = colorPrices(model, dims);
@@ -293,13 +333,18 @@ export function BikeDetail() {
     <div className="mx-auto max-w-7xl px-4 py-6">
       <Link to="/" className="text-sm text-brand-600 hover:underline">← Back to browse</Link>
 
-      <div className="mt-3 grid gap-6 lg:grid-cols-2">
+      {/* Mobile is a single flex column; each desktop column wrapper is display:contents
+          on mobile so its children join the parent flex and can be ordered individually:
+          image (1) → product header (2) → Key Aspects/Geometry (3) → extras (4). Desktop
+          (lg) restores the two independent-flowing columns. */}
+      <div className="mt-3 flex flex-col gap-4 lg:grid lg:grid-cols-2 lg:items-start lg:gap-6">
         {/* no overflow-hidden on the card: the swatch hover tooltips must be
             able to escape; the image wrapper rounds and clips itself instead.
             The overlays anchor to this inner relative wrapper (which hugs the
             image), NOT the card — the grid stretches the card taller than the
             image, which would push a card-anchored pill below the photo. */}
-        <div className="space-y-4">
+        <div className="contents lg:flex lg:flex-col lg:gap-4">
+          <div className="order-1 lg:order-none">
         <div className="card border-slate-100">
           <div className="relative">
             <div className="aspect-[4/3] w-full overflow-hidden rounded-xl bg-slate-100">
@@ -346,6 +391,8 @@ export function BikeDetail() {
             })()}
           </div>
         </div>
+          </div>
+          <div className="order-3 lg:order-none space-y-4">
         {sideGroups.map((g) => {
           const isGeneral = g === "general_info";
           // "Key Aspects" leads with the rider-height fit range; Geometry has the
@@ -375,9 +422,12 @@ export function BikeDetail() {
             </div>
           );
         })}
+          </div>
         </div>
 
-        <div className="space-y-4">
+        {/* RIGHT desktop column: product header + extras (contents on mobile) */}
+        <div className="contents lg:flex lg:flex-col lg:gap-4">
+          <div className="order-2 lg:order-none space-y-4">
           <div>
             <div className="text-sm font-medium uppercase tracking-wide text-brand-600">{model.brand}</div>
             <h1 className="text-2xl font-bold text-slate-900">
@@ -396,6 +446,11 @@ export function BikeDetail() {
             {productTypes.length > 0 && (
               <div className="mt-1.5 text-sm text-slate-500">{productTypes.join(" · ")}</div>
             )}
+            {/* standouts vs same-type peers — same star-list format as the card,
+                left-aligned with the title/price */}
+            <div className="mt-3">
+              <HighlightsList standouts={model.analysis?.standouts} />
+            </div>
           </div>
 
           <div className="flex flex-wrap items-center gap-3">
@@ -455,6 +510,8 @@ export function BikeDetail() {
               {selected ? "✓ Comparing" : "Add to compare"}
             </button>
           </div>
+          </div>
+          <div className="order-4 lg:order-none space-y-4">
 
           {siblings.length > 0 && (
             <div className="card p-4">
@@ -475,18 +532,21 @@ export function BikeDetail() {
             </div>
           )}
 
+          <SpecialFeaturesCard features={model.analysis.uncommon_features} />
+
           <div className="card p-4">
-            <ScorePanel analysis={model.analysis} />
+            <ScorePanel analysis={model.analysis} model={model} />
+          </div>
           </div>
         </div>
       </div>
 
       {/* percentile context */}
       <section className="mt-6 card p-4">
-        <h2 className="mb-3 font-semibold text-slate-800">How it compares to the fleet</h2>
-        <div className="grid gap-x-8 gap-y-4 sm:grid-cols-2">
-          {PERCENTILE_FIELDS.map(({ field, label, unit, icon }) => {
-            let stat = analysisStats[field];
+        <h2 className="mb-3 font-semibold text-slate-800">{compareHeading}</h2>
+        <div className="grid gap-4 sm:grid-cols-2">
+          {PERCENTILE_FIELDS.map(({ field, label, unit, icon, badge }) => {
+            let stat = cohortStats[field];
             let v = valueOf(field);
             let u = unit;
             if (!stat) return null;
@@ -502,14 +562,16 @@ export function BikeDetail() {
               }
             }
             return (
-              <div key={field}>
-                <div className="mb-1 flex justify-between text-sm">
-                  <span className="flex items-center gap-1.5 font-medium text-slate-700">
-                    {icon}
+              <div key={field} className="rounded-xl border border-slate-200 p-4">
+                <div className="mb-3 flex items-center justify-between">
+                  <span className="flex items-center gap-2.5 font-semibold text-slate-800">
+                    <span className={`flex h-10 w-10 items-center justify-center rounded-full ${badge}`}>
+                      {icon}
+                    </span>
                     {label}
                   </span>
-                  <span className="text-slate-500">
-                    {v == null ? "—" : u === "$" ? `$${v}` : `${v}${u ?? ""}`}
+                  <span className="text-xl font-bold text-slate-900">
+                    {v == null ? "—" : u === "$" ? `$${formatNumber(v)}` : `${formatNumber(v)}${u ?? ""}`}
                   </span>
                 </div>
                 <DistributionPlot stat={stat} value={v} unit={u} />

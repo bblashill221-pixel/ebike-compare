@@ -23,6 +23,7 @@ import argparse
 import asyncio
 import json
 import os
+import re
 import sys
 import urllib.request
 from datetime import datetime, timezone
@@ -83,6 +84,24 @@ JS_SPECS = r"""() => {
     return out;
 }"""
 
+# EVELO publishes the bike's range as a "Battery" metafield pill in the main-product
+# feature strip (`.metafields-wrapper`) -- e.g. title "Battery" / text "60 Miles" --
+# NOT in the .spec-item table, so the spec scrape misses it. The same markup repeats
+# in the "you may also like" carousel further down; the main product's strip is the
+# FIRST .metafields-wrapper in the DOM. Return its title/text pairs.
+JS_METAFIELDS = r"""() => {
+    const norm = s => (s || '').replace(/\s+/g, ' ').trim();
+    const wrap = document.querySelector('.metafields-wrapper');
+    if (!wrap) return [];
+    const out = [];
+    for (const mf of wrap.querySelectorAll('.metafield')) {
+        const t = norm(mf.querySelector('.metafield-title') ? mf.querySelector('.metafield-title').textContent : '');
+        const v = norm(mf.querySelector('.metafield-text') ? mf.querySelector('.metafield-text').textContent : '');
+        if (t && v) out.push([t, v]);
+    }
+    return out;
+}"""
+
 JS_PRICE = r"""() => {
     for (const s of document.querySelectorAll('script[type="application/ld+json"]')) {
         let d; try { d = JSON.parse(s.textContent); } catch (e) { continue; }
@@ -126,6 +145,7 @@ async def scrape_model(context, model: dict, retries: int = 3) -> dict:
                 await page.wait_for_timeout(1000)
             price = await page.evaluate(JS_PRICE)
             result["warranty"] = await page.evaluate(JS_WARRANTY)
+            metafields = await page.evaluate(JS_METAFIELDS)
             await page.close()
 
             if not pairs:
@@ -140,6 +160,12 @@ async def scrape_model(context, model: dict, retries: int = 3) -> dict:
                 if key in all_specs:
                     continue
                 all_specs[key] = value
+
+            # EVELO's "Battery" feature pill is the bike's range ("60 Miles"); surface
+            # it as a Range spec row (the detailed "Battery" 48V/15AH row stays intact).
+            for label, value in (metafields or []):
+                if label.strip().lower() == "battery" and re.search(r"\d+\s*mile", value, re.I):
+                    all_specs.setdefault("Range", value)
 
             result["specs"] = {"all": all_specs}
             result["spec_count"] = len(all_specs)

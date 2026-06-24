@@ -1,6 +1,11 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { QUESTIONS, setSkipQuiz } from "../findMyEbike";
+import { QUESTIONS, answersFromFilters, filtersFromParams, searchFromAnswers, setSkipQuiz } from "../findMyEbike";
+import { loadStoredFilters, saveStoredFilters } from "../filterStorage";
+import { useData } from "../data/DataProvider";
+import { runSearch } from "../search/orama";
+import { useShowSoldOut } from "../soldOut";
+import { useUnits } from "../units";
 
 // Beginner questionnaire: each dropdown answer carries the technical filter
 // params it contributes (see findMyEbike.ts). Answers are optional; "Find My
@@ -8,65 +13,67 @@ import { QUESTIONS, setSkipQuiz } from "../findMyEbike";
 // filters from it.
 export function FindMyEbike() {
   const navigate = useNavigate();
-  // questionId -> set of checked choice indices (none = no preference)
-  const [answers, setAnswers] = useState<Record<string, number[]>>({});
+  const { db, models, rangeBounds, status } = useData();
+  const [showSoldOut] = useShowSoldOut();
+  const [units] = useUnits();
+  // questionId -> set of checked choice indices (none = no preference). Seed from the
+  // active Browse filters so navigating back from the listing pre-selects the matching
+  // answers (inverse of the answers -> params -> filters hand-off).
+  const [answers, setAnswers] = useState<Record<string, number[]>>(
+    () => answersFromFilters(loadStoredFilters()),
+  );
   const [skipOpen, setSkipOpen] = useState(false);
   const [hideFuture, setHideFuture] = useState(false);
+  // live count of bikes matching the answers so far (null until the index is ready)
+  const [count, setCount] = useState<number | null>(null);
 
-  const toggle = (qid: string, i: number) =>
-    setAnswers((a) => {
-      const cur = a[qid] ?? [];
-      return { ...a, [qid]: cur.includes(i) ? cur.filter((x) => x !== i) : [...cur, i] };
-    });
+  // Persist the answer-derived filters to the shared Browse filter store on every
+  // change, so editing an answer immediately updates the filter settings (matching the
+  // full-replace Browse does on the final hand-off). Skipped until the index is ready
+  // so the range bands resolve against real bounds.
+  const persist = (next: Record<string, number[]>) => {
+    if (status !== "ready") return;
+    saveStoredFilters(
+      filtersFromParams(new URLSearchParams(searchFromAnswers(next)), rangeBounds),
+    );
+  };
+
+  // Single-select per question: picking a choice replaces the answer. Questions
+  // start with NOTHING selected; `clear` removes the answer (back to blank) and is
+  // offered via a trailing "No preference" radio only once a choice has been made.
+  const select = (qid: string, i: number) => {
+    const next = { ...answers, [qid]: [i] };
+    setAnswers(next);
+    persist(next);
+  };
+  const clear = (qid: string) => {
+    const next = { ...answers };
+    delete next[qid];
+    setAnswers(next);
+    persist(next);
+  };
 
   const skipToBikes = () => {
     if (hideFuture) setSkipQuiz(true);
     navigate("/");
   };
 
-  const search = useMemo(() => {
-    // Gather every checked choice's params. Non-price keys reduce per key: enum
-    // keys (type/sensor/frame) merge to a de-duped CSV (Browse containsAny);
-    // numeric keys collapse to the most permissive bound (a *_max widens to the
-    // largest ceiling, everything else to the smallest floor).
-    const vals: Record<string, string[]> = {};
-    // Price spans the LOWEST selected floor to the HIGHEST selected ceiling. An
-    // open-ended tier ("≤ $1,200" has no floor, "$9,000+" no ceiling) drops that
-    // end to the catalog bound — so it's only set when EVERY selected price tier
-    // supplies that end (e.g. ≤$1,200 + $1,000–$2,000 -> floor opens -> [low, 2000]).
-    let priceN = 0;
-    const pMin: number[] = [];
-    const pMax: number[] = [];
-    for (const q of QUESTIONS) {
-      for (const i of answers[q.id] ?? []) {
-        const p = q.choices[i]?.params;
-        if (!p) continue;
-        if ("price_min" in p || "price_max" in p) {
-          priceN++;
-          if (p.price_min != null) pMin.push(Number(p.price_min));
-          if (p.price_max != null) pMax.push(Number(p.price_max));
-        }
-        for (const [k, v] of Object.entries(p)) {
-          if (k === "price_min" || k === "price_max") continue;
-          (vals[k] ??= []).push(v);
-        }
-      }
-    }
-    const sp = new URLSearchParams();
-    if (priceN) {
-      if (pMin.length === priceN) sp.set("price_min", String(Math.min(...pMin)));
-      if (pMax.length === priceN) sp.set("price_max", String(Math.max(...pMax)));
-    }
-    for (const [k, list] of Object.entries(vals)) {
-      const nums = list.map(Number);
-      if (nums.every((n) => !Number.isNaN(n))) {
-        sp.set(k, String(k.endsWith("_max") ? Math.max(...nums) : Math.min(...nums)));
-      } else {
-        sp.set(k, [...new Set(list.flatMap((v) => v.split(",")))].join(","));
-      }
-    }
-    return sp.toString();
-  }, [answers]);
+  const search = useMemo(() => searchFromAnswers(answers), [answers]);
+
+  // Real-time match count: run the SAME filter pipeline Browse uses on the params
+  // the answers produce, so the number on the button is exactly what the results
+  // page will show. Term is "" (the quiz has no search box).
+  useEffect(() => {
+    if (status !== "ready" || !db) return;
+    let cancelled = false;
+    const filters = filtersFromParams(new URLSearchParams(search), rangeBounds);
+    runSearch(db, "", filters, models.length, showSoldOut, units).then((res) => {
+      if (!cancelled) setCount(res.count);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [search, db, status, units, showSoldOut, rangeBounds, models.length]);
 
   const submit = () =>
     navigate({ pathname: "/", search: search ? `?${search}` : "" });
@@ -85,7 +92,7 @@ export function FindMyEbike() {
       </div>
       <p className="mt-1 text-sm text-slate-500">
         Answer as many or as few questions as you like — we'll narrow the catalog to
-        bikes that fit. Skip anything you're unsure about.
+        eBikes that fit. Skip anything you're unsure about.
       </p>
 
       <div className="mt-6 space-y-4">
@@ -100,36 +107,61 @@ export function FindMyEbike() {
               {paren && <span className="ml-1 font-normal text-slate-400">{paren[1]}</span>}
               {q.help && <span className="ml-2 text-xs font-normal text-slate-400">{q.help}</span>}
             </legend>
-            {/* stacked on mobile, inline on one line (wrapping) from `sm` up */}
+            {/* stacked on mobile, inline on one line (wrapping) from `sm` up.
+                Single-select radios; nothing is selected by default. Once a choice
+                is made, a trailing "No preference" radio appears to clear it. */}
             <div className="mt-1.5 flex flex-col gap-1.5 sm:flex-row sm:flex-wrap sm:gap-x-5">
               {q.choices.map((c, i) =>
-                // unchecked = no preference, so the explicit "No preference" option
-                // isn't shown as a checkbox
                 c.label === "No preference" ? null : (
                   <label key={i} className="flex items-center gap-2 whitespace-nowrap text-sm text-slate-700">
                     <input
-                      type="checkbox"
-                      checked={(answers[q.id] ?? []).includes(i)}
-                      onChange={() => toggle(q.id, i)}
-                      className="rounded border-slate-300 text-brand-600 focus:ring-brand-500"
+                      type="radio"
+                      name={q.id}
+                      checked={answers[q.id]?.[0] === i}
+                      onChange={() => select(q.id, i)}
+                      className="border-slate-300 text-brand-600 focus:ring-brand-500"
                     />
                     {c.label}
                   </label>
                 ),
               )}
+              {answers[q.id]?.length ? (
+                <label className="flex items-center gap-2 whitespace-nowrap text-sm text-slate-400">
+                  <input
+                    type="radio"
+                    name={q.id}
+                    checked={false}
+                    onChange={() => clear(q.id)}
+                    className="border-slate-300 text-brand-600 focus:ring-brand-500"
+                  />
+                  No preference
+                </label>
+              ) : null}
             </div>
           </fieldset>
           );
         })}
       </div>
 
-      <div className="mt-7">
+      {/* Sticky action bar: stays visible while scrolling the questions so the live
+          match count (shown on the button) and the empty-set notice are always in view. */}
+      <div className="sticky bottom-0 mt-7 border-t border-slate-200 bg-white/95 py-3 backdrop-blur">
+        {count === 0 && (
+          <p className="mb-2 text-sm font-medium text-amber-700">
+            No eBikes match your criteria yet — try clearing some answers or raising your budget.
+          </p>
+        )}
         <button
           type="button"
           onClick={submit}
           className="w-full cursor-pointer rounded-lg bg-brand-600 px-4 py-2.5 text-center text-sm font-semibold text-white hover:bg-brand-700 sm:w-auto sm:px-8"
         >
           Find My eBike!
+          {count != null && (
+            <span className="ml-1.5 font-normal text-brand-100">
+              · {count} {count === 1 ? "eBike" : "eBikes"}
+            </span>
+          )}
         </button>
       </div>
 

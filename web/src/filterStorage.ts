@@ -18,6 +18,7 @@ export function loadStoredFilters(): Filters | null {
       bools: f.bools ?? {},
       ranges: f.ranges ?? {},
       riderHeightIn: f.riderHeightIn ?? null,
+      priceCeiling: f.priceCeiling ?? null,
     };
   } catch {
     return null;
@@ -29,6 +30,26 @@ export function saveStoredFilters(f: Filters): void {
     localStorage.setItem(KEY, JSON.stringify(f));
   } catch {
     /* storage blocked/full: filters still work for this view */
+  }
+}
+
+// Search text persists like the filter panel: it survives detail-page round-trips
+// and fresh visits, and a ?q= link still overrides it for that visit.
+const SEARCH_KEY = "browse-search";
+
+export function loadStoredSearch(): string {
+  try {
+    return localStorage.getItem(SEARCH_KEY) ?? "";
+  } catch {
+    return "";
+  }
+}
+
+export function saveStoredSearch(q: string): void {
+  try {
+    localStorage.setItem(SEARCH_KEY, q);
+  } catch {
+    /* storage blocked: search still works for this view */
   }
 }
 

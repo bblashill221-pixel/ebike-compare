@@ -11,7 +11,7 @@ import { ActiveFilters } from "../components/ActiveFilters";
 import { useShowSoldOut } from "../soldOut";
 import { useUnits } from "../units";
 import { filtersFromParams, hasQuizParams, QUIZ_PARAM_KEYS } from "../findMyEbike";
-import { loadStoredFilters, saveStoredFilters, sanitizeFilters } from "../filterStorage";
+import { loadStoredFilters, saveStoredFilters, sanitizeFilters, loadStoredSearch, saveStoredSearch } from "../filterStorage";
 
 const EMPTY_FILTERS: Filters = { enums: {}, bools: {}, ranges: {}, riderHeightIn: null };
 
@@ -31,8 +31,7 @@ type SortKey =
   | "value_desc"
   | "range_score_desc"
   | "power_desc"
-  | "parts_retail_desc"
-  | "parts_wholesale_desc";
+  | "parts_retail_desc";
 
 const SORTS: { key: SortKey; label: string }[] = [
   { key: "relevance", label: "Relevance" },
@@ -43,11 +42,10 @@ const SORTS: { key: SortKey; label: string }[] = [
   { key: "torque_desc", label: "Torque (Nm) ↓" },
   { key: "motor_desc", label: "Motor (W) ↓" },
   { key: "weight_asc", label: "Weight (lb) ↑" },
-  { key: "value_desc", label: "Value (parts per $) ↓" },
-  { key: "range_score_desc", label: "Range score ↓" },
-  { key: "power_desc", label: "Power score ↓" },
+  { key: "value_desc", label: "Value (within type) ↓" },
+  { key: "range_score_desc", label: "Range score (within type) ↓" },
+  { key: "power_desc", label: "Power score (within type) ↓" },
   { key: "parts_retail_desc", label: "Parts value (retail $) ↓" },
-  { key: "parts_wholesale_desc", label: "Parts cost (OEM $) ↓" },
 ];
 
 const last = Number.NEGATIVE_INFINITY;
@@ -84,8 +82,6 @@ function sortModels(models: Model[], key: SortKey): Model[] {
       return byDesc((m) => score(m, "power"));
     case "parts_retail_desc":
       return byDesc((m) => cq(m, "component_retail_value_usd"));
-    case "parts_wholesale_desc":
-      return byDesc((m) => cq(m, "component_wholesale_value_usd"));
   }
 }
 
@@ -93,7 +89,8 @@ export function Browse() {
   const { status, error, db, models, byId, facetOptions, rangeBounds } = useData();
   const [params, setParams] = useSearchParams();
 
-  const [term, setTerm] = useState(params.get("q") ?? "");
+  // search text persists like the filters: a ?q= link wins, else the last search
+  const [term, setTerm] = useState(params.get("q") ?? loadStoredSearch());
   const [debounced, setDebounced] = useState(term);
   // filter panel state survives detail-page round-trips and fresh visits;
   // a query-param link overrides it (and the override is persisted below)
@@ -103,6 +100,12 @@ export function Browse() {
   const setFilters = (f: Filters) => {
     setFiltersState(f);
     saveStoredFilters(f);
+    // a filter change resets the listing to the top. Scrolling the WINDOW (not the
+    // filter panel, which is a sticky, internally-scrolled sidebar) leaves the
+    // user's place in the filter list untouched. Also disable the one-time scroll
+    // restore so it can't yank the page back down when the new results arrive.
+    restoredScroll.current = true;
+    window.scrollTo(0, 0);
   };
   const [showSoldOut] = useShowSoldOut();
   const [units] = useUnits();
@@ -147,10 +150,13 @@ export function Browse() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [status, params]);
 
-  // debounce term -> mirror q+sort to the URL
+  // debounce term -> mirror q+sort to the URL; persist the search like the filters
   useEffect(() => {
     const t = setTimeout(() => setDebounced(term), 200);
     return () => clearTimeout(t);
+  }, [term]);
+  useEffect(() => {
+    saveStoredSearch(term);
   }, [term]);
   useEffect(() => {
     const next = new URLSearchParams(params);
@@ -244,7 +250,7 @@ export function Browse() {
             <span className="shrink-0">{results.length} results</span>
             <ActiveFilters filters={filters} setFilters={setFilters} />
           </div>
-          <ResultsGrid models={results} />
+          <ResultsGrid models={results} selectedTypes={filters.enums.product_types ?? []} />
         </div>
       </div>
 

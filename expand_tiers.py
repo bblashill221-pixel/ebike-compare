@@ -56,8 +56,23 @@ DATA = HERE / "data"
 # Strict full-match allowlist: looks/fit keys (color, size, frame-type) and junk
 # keys never match. Frame styles split separately (price-independent) below.
 TIER_KEY = re.compile(
-    r"^(battery[\s_-]?size|version|drive[\s_-]?train|package|bike[\s_-]?type"
-    r"|variant|type)$", re.I)
+    r"^(battery[\s_-]?size|version|drive[\s_-]?train|gearing(?:[\s_-]?system)?"
+    r"|package|bike[\s_-]?type|variant|type)$", re.I)
+
+# Some stores prefix option keys with a step number ("Step 1 Select Your Gearing
+# System") — strip it so the key matches the TIER_KEY allowlist.
+_STEP_PREFIX = re.compile(r"^step\s*\d+\s*[:.\-]?\s*select\s*(?:your\s*)?", re.I)
+
+
+def _norm_key(k: str) -> str:
+    return _STEP_PREFIX.sub("", (k or "").strip()).strip()
+
+
+def _tier_label(v) -> str:
+    """Drop a trailing price parenthetical from a tier value ("Enviolo ($3499)"
+    -> "Enviolo") for the model-name suffix / tier label."""
+    s = str(v or "")
+    return re.sub(r"\s*\(\$[\d,]+\)\s*$", "", s).strip() or s
 
 # Short labels for tier text / model-name suffixes; the searchable bucket name
 # lives in `frame_style`.
@@ -77,7 +92,8 @@ def cfg_color(c: dict):
     if isinstance(c.get("color"), dict) and c["color"].get("name"):
         return c["color"]["name"]
     for k, v in (c.get("options") or {}).items():
-        if k.strip().lower() in ("color", "colour", "colors"):
+        kl = k.strip().lower()
+        if "color" in kl or "colour" in kl:   # "Color" or "Step 2 Select Your Color"
             return v
     return None
 
@@ -156,7 +172,7 @@ def tier_axis(cfgs: list):
         return None
     keys = {k for c in priced for k in (c.get("options") or {})}
     for k in sorted(keys):
-        if not TIER_KEY.match(k.strip()):
+        if not TIER_KEY.match(_norm_key(k)):
             continue
         v2p: dict = {}
         for c in priced:
@@ -260,7 +276,8 @@ def expand_generic(brand: str, m: dict) -> list:
     pristine = copy.deepcopy(m)
     out = []
     for i, (value, price) in enumerate(ordered):
-        label = f"{old_tier} · {value}" if old_tier else value
+        disp = _tier_label(value)
+        label = f"{old_tier} · {disp}" if old_tier else disp
         entry = m if i == 0 else make_sibling(pristine, base_name, label, value)
         if i == 0 and old_tier:
             entry["model"] = f"{base_name} — {label}"

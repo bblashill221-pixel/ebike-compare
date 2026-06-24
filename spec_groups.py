@@ -201,6 +201,14 @@ DISPLAY_ORDER = [
 
 def classify(label: str) -> str:
     low = label.lower().replace("_", " ")   # tolerant of snake_case or spaced labels
+    # Physical pedals belong in Drivetrain. The keyword loop only catches plural
+    # "pedals", so a singular "Pedal" spec falls through to General Info (Key Aspects);
+    # route any bare-pedal label here. Excludes motor-system attributes ("pedal assist/
+    # sensor/mode/...", which are Ebike System) and saddle-to-pedal geometry (Cockpit).
+    if "pedal" in low and not re.search(
+            r"assist|sensor|mode|range|level|type|response|xperience|experience"
+            r"|intelligent|saddle|seat|distance", low):
+        return "Drivetrain"
     for name, keywords in GROUPS:
         if any(k in low for k in keywords):
             return name

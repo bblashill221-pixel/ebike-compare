@@ -1,1602 +1,115 @@
 {
-  "generated_at": "2026-06-17T18:57:05.189508+00:00",
-  "build_date": "2026-06-17",
+  "generated_at": "2026-06-24T01:40:48.502914+00:00",
+  "build_date": "2026-06-24",
   "baseline_date": "2026-06-15",
   "summary": {
-    "models_changed": 226,
-    "removed": 0,
+    "models_changed": 82,
+    "removed": 2,
     "by_type": {
-      "free_feature": 226
+      "added": 79,
+      "price": 1,
+      "sale": 3,
+      "removed": 2
     },
-    "added_suppressed": false
+    "added_suppressed": false,
+    "free_feature_suppressed": true
   },
   "changes": [
     {
-      "id": "aventon__level-3-step-through-commuter-ebike",
-      "brand": "aventon",
-      "model": "Level 3 Step-Through Ebike",
+      "id": "giant__defy-advanced-eplus-elite-1",
+      "brand": "giant",
+      "model": "Defy Advanced E+ Elite 1",
       "types": [
-        "free_feature"
+        "added"
       ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
+      "detail": {}
     },
     {
-      "id": "aventon__pace-4-step-through-ebike",
-      "brand": "aventon",
-      "model": "Pace 4 Step-Through Ebike",
+      "id": "giant__defy-advanced-eplus-elite-ar",
+      "brand": "giant",
+      "model": "Defy Advanced E+ Elite AR",
       "types": [
-        "free_feature"
+        "added"
       ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
+      "detail": {}
     },
     {
-      "id": "aventon__pace-5-rec-step-through-ebike",
-      "brand": "aventon",
-      "model": "Pace 5 REC Step-Through Ebike",
+      "id": "giant__reign-eplus-2-2024",
+      "brand": "giant",
+      "model": "Reign E+ 2",
       "types": [
-        "free_feature"
+        "added"
       ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
+      "detail": {}
     },
     {
-      "id": "aventon__ramblas-adv-ebike",
-      "brand": "aventon",
-      "model": "Ramblas ADV Ebike",
+      "id": "giant__stance-eplus-0-2027",
+      "brand": "giant",
+      "model": "Stance E+ 0",
       "types": [
-        "free_feature"
+        "added"
       ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
+      "detail": {}
     },
     {
-      "id": "aventon__soltera-2-5-ebike",
-      "brand": "aventon",
-      "model": "Soltera 2.5 Ebike",
+      "id": "giant__stance-eplus-1-2027",
+      "brand": "giant",
+      "model": "Stance E+ 1",
       "types": [
-        "free_feature"
+        "added"
       ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
+      "detail": {}
     },
     {
-      "id": "aventon__soltera-3-ebike",
-      "brand": "aventon",
-      "model": "Soltera 3 ADV Ebike",
+      "id": "giant__talon-eplus",
+      "brand": "giant",
+      "model": "Talon E+",
       "types": [
-        "free_feature"
+        "added"
       ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "blix__packa-electric-cargo-bike",
-      "brand": "blix",
-      "model": "Packa Genie Cargo eBike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "blix__packa-electric-cargo-bike--dual-battery",
-      "brand": "blix",
-      "model": "Packa Genie Cargo eBike — Dual Battery",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "buzz__buzz-beekeeper-electric-cargo-bike-e4023",
-      "brand": "buzz",
-      "model": "Beekeeper Cargo Ebike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "buzz__buzz-centris",
-      "brand": "buzz",
-      "model": "Centris 2 Folding Ebike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "buzz__buzz-cerana2",
-      "brand": "buzz",
-      "model": "Cerana 2 Commuter Ebike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "buzz__buzz-e-trike",
-      "brand": "buzz",
-      "model": "Cerana T2 Etrike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "cyke__cheetah-hunting-ebike",
-      "brand": "cyke",
-      "model": "Cheetah Hunting Ebike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "cyke__cheetah-hunting-ebike--step-thru",
-      "brand": "cyke",
-      "model": "Cheetah Hunting Ebike — Step-Thru",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "cyke__collie-cargo-ebike",
-      "brand": "cyke",
-      "model": "Collie Cargo Ebike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "cyke__grizzly-folding-ebike",
-      "brand": "cyke",
-      "model": "Grizzly Foldable Ebike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "cyke__kingfisher-mid-drive-folding-ebike",
-      "brand": "cyke",
-      "model": "Kingfisher Mid-Drive Folding eBike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "cyke__lynx-commuter-ebike",
-      "brand": "cyke",
-      "model": "Lynx Commuter Ebike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "engwe__engwe-ep-2-pro-750w-folding-electric-mountain-bike",
-      "brand": "engwe",
-      "model": "ENGWE EP-2 Pro",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "euphree__city-robin",
-      "brand": "euphree",
-      "model": "City Robin 3",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "euphree__solar-sparrow-chain",
-      "brand": "euphree",
-      "model": "Solar Sparrow",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "euphree__stellar-falcon-2-mid-step",
-      "brand": "euphree",
-      "model": "Stellar Falcon 2 Mid Step",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "euphree__stellar-falcon-2-step-thru",
-      "brand": "euphree",
-      "model": "Stellar Falcon 2 Step Thru",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "evelo__atlas",
-      "brand": "evelo",
-      "model": "EVELO Atlas Electric Bike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "evelo__compass",
-      "brand": "evelo",
-      "model": "EVELO Compass Electric Trike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "evelo__galaxy-lux",
-      "brand": "evelo",
-      "model": "EVELO Galaxy Lux Electric Bike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "evelo__omega",
-      "brand": "evelo",
-      "model": "EVELO Omega Electric Bike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "heybike__alpha",
-      "brand": "heybike",
-      "model": "ALPHA",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "heybike__alpha--step-thru",
-      "brand": "heybike",
-      "model": "ALPHA — Step-Thru",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "heybike__helio-f",
-      "brand": "heybike",
-      "model": "Helio F",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "heybike__hero",
-      "brand": "heybike",
-      "model": "Hero — 1000W Rear Hub · Step-Over",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "heybike__hero--step-thru",
-      "brand": "heybike",
-      "model": "Hero — 1000W Rear Hub · Step-Thru",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "heybike__hero--750w-mid-drive",
-      "brand": "heybike",
-      "model": "Hero — 750W Mid-Drive · Step-Over",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "heybike__hero--750w-mid-drive--step-thru",
-      "brand": "heybike",
-      "model": "Hero — 750W Mid-Drive · Step-Thru",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "heybike__horizon",
-      "brand": "heybike",
-      "model": "Horizon",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "heybike__hybrid",
-      "brand": "heybike",
-      "model": "Hybrid",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "heybike__mars-3-0",
-      "brand": "heybike",
-      "model": "Mars 3.0",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "heybike__ranger-3-0-pro",
-      "brand": "heybike",
-      "model": "Ranger 3.0 Pro",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "heybike__saturn",
-      "brand": "heybike",
-      "model": "Saturn",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "heybike__saturn--dual-battery-55-90-miles",
-      "brand": "heybike",
-      "model": "Saturn — Dual Battery (55-90 Miles)",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "heybike__venus",
-      "brand": "heybike",
-      "model": "Venus",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "himiway__electric-commuter-bike-a3",
-      "brand": "himiway",
-      "model": "A3 / Urban Electric Commuter Bike ST",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "himiway__folding-electric-bike-b3",
-      "brand": "himiway",
-      "model": "B3 / Foldable Electric Commuter Bike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "himiway__all-terrain-step-thru-electric-bike",
-      "brand": "himiway",
-      "model": "D3 ST(Cruiser ST) / All Terrain Electric Bike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "himiway__himiway-electric-fat-bike",
-      "brand": "himiway",
-      "model": "D3(Cruiser) / Long Range Fat Tire Electric Bike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "himiway__all-terrain-electric-bike-d5pro",
-      "brand": "himiway",
-      "model": "D5 Pro / All-terrain Electric Fat Bike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "himiway__all-terrain-electric-bike-d5prost",
-      "brand": "himiway",
-      "model": "D5 Pro ST / All-terrain Electric Fat Bike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "himiway__premium-all-terrain-electric-bike-st",
-      "brand": "himiway",
-      "model": "D5 ST(Zebra ST) / All-terrain Electric Fat Bike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "himiway__premium-all-terrain-electric-bike",
-      "brand": "himiway",
-      "model": "D5(Zebra) / All-terrain Electric Fat Bike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "himiway__himiway-d7-cobra-electric-hunting-bike",
-      "brand": "himiway",
-      "model": "D7 / Full Suspension Electric Hunting Bike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "himiway__escape-pro-moped-style-ebike",
-      "brand": "himiway",
-      "model": "Escape Pro / Long Range Moped-Style E-Bike ST",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "himiway__himiway-a7-commuter-ebike",
-      "brand": "himiway",
-      "model": "Himiway A7 Commuter eBike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "himiway__himiway-a7pro-commuter-ebike",
-      "brand": "himiway",
-      "model": "Himiway A7 Pro Commuter eBike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "himiway__d5-2-20",
-      "brand": "himiway",
-      "model": "Himiway D5 2.0 20\" eBike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "himiway__d5-2-20--15ah-20ah",
-      "brand": "himiway",
-      "model": "Himiway D5 2.0 20\" eBike — 15Ah+20Ah",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "himiway__himiway-d5-st-camo",
-      "brand": "himiway",
-      "model": "Himiway D5 2.0 Camo eBike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "himiway__himiway-d5-st",
-      "brand": "himiway",
-      "model": "Himiway D5 2.0 ST eBike — Step-Thru · 15Ah",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "himiway__himiway-d5-st--15ah-20ah",
-      "brand": "himiway",
-      "model": "Himiway D5 2.0 ST eBike — Step-Thru · 15Ah+20Ah",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "himiway__d5-2",
-      "brand": "himiway",
-      "model": "Himiway D5 2.0 Series eBike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "himiway__d5-2--step-thru",
-      "brand": "himiway",
-      "model": "Himiway D5 2.0 Series eBike — Step-Thru",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "himiway__himiway-d5",
-      "brand": "himiway",
-      "model": "Himiway D5 2.0 eBike — Step-Over · 15Ah",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "himiway__himiway-d5--15ah-20ah",
-      "brand": "himiway",
-      "model": "Himiway D5 2.0 eBike — Step-Over · 15Ah+20Ah",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "himiway__himiway-d7-pro-cobra-electric-hunting-bike",
-      "brand": "himiway",
-      "model": "Himiway D7 Pro Mountain eBike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "juiced__scrambler",
-      "brand": "juiced",
-      "model": "Scrambler",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "juiced__scrambler--full-suspension",
-      "brand": "juiced",
-      "model": "Scrambler — Full Suspension",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "lectric__lectric-xp-trike2",
-      "brand": "lectric",
-      "model": "Lectric XP Trike2",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Turn Signals"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "lectric__lectric-xp-trike2--long-range-step-over",
-      "brand": "lectric",
-      "model": "Lectric XP Trike2 — Long-Range · Step-Over",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Turn Signals"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "lectric__lectric-xp4",
-      "brand": "lectric",
-      "model": "Lectric XP4",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Turn Signals"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "lectric__lectric-xp4--standard-step-over",
-      "brand": "lectric",
-      "model": "Lectric XP4 — Standard · Step-Over",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Turn Signals"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "lectric__lectric-xp4--long-range-step-thru",
-      "brand": "lectric",
-      "model": "Lectric XP4 — Long-Range · Step-Thru",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Turn Signals"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "lectric__lectric-xp4--long-range-step-over",
-      "brand": "lectric",
-      "model": "Lectric XP4 — Long-Range · Step-Over",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Turn Signals"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "lectric__lectric-xpedition2",
-      "brand": "lectric",
-      "model": "Lectric XPedition2",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Turn Signals"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "lectric__lectric-xpedition2--dual-battery-step-over",
-      "brand": "lectric",
-      "model": "Lectric XPedition2 — Dual-Battery · Step-Over",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Turn Signals"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "lectric__lectric-xpedition2--dual-battery-long-range-step-over",
-      "brand": "lectric",
-      "model": "Lectric XPedition2 — Dual-Battery Long-Range · Step-Over",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Turn Signals"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "lectric__lectric-xpress2",
-      "brand": "lectric",
-      "model": "Lectric XPress2",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Turn Signals"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "lectric__lectric-xpress2--750-step-over",
-      "brand": "lectric",
-      "model": "Lectric XPress2 — 750 · Step-Over",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Turn Signals"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "leoguar__fastron-so-fat-tire-ebike",
-      "brand": "leoguar",
-      "model": "Fastron SO Fat Tire Ebike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "leoguar__fastron-st-fat-tire-ebike",
-      "brand": "leoguar",
-      "model": "Fastron ST Fat Tire Ebike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "leoguar__flippo-folding-ebike",
-      "brand": "leoguar",
-      "model": "Flippo Folding Ebike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "leoguar__sprint-fat-tire-utility-ebike",
-      "brand": "leoguar",
-      "model": "Sprint Fat Tire Utility Ebike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "leoguar__zephyr-so-beach-cruiser-ebike",
-      "brand": "leoguar",
-      "model": "Zephyr SO Beach Cruiser Ebike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Basket",
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "leoguar__zephyr-st-beach-cruiser-ebike",
-      "brand": "leoguar",
-      "model": "Zephyr ST Beach Cruiser Ebike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Basket",
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
+      "detail": {}
     },
     {
       "id": "magician__alpha",
       "brand": "magician",
       "model": "Alpha",
       "types": [
-        "free_feature"
+        "price",
+        "sale"
       ],
       "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
+        "price": {
+          "from": 2499.0,
+          "to": 2599.0,
+          "delta": 100.0,
+          "pct": 4,
+          "direction": "rise"
+        },
+        "sale": {
+          "event": "ended"
         }
       }
     },
     {
-      "id": "magician__alpha-mini",
+      "id": "magician__alpha--step-thru",
       "brand": "magician",
-      "model": "Alpha Mini",
+      "model": "Alpha — Step-Thru",
       "types": [
-        "free_feature"
+        "added"
       ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "magicycle__magicycle-jaguarundi-48v-folding-step-thru-fat-tire-ebike-space-black",
-      "brand": "magicycle",
-      "model": "Jaguarundi 2.0 Torque Sensor Folding Fat Tire Ebike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "magicycle__magicycle-20-deer-step-thru-full-suspension-ebike-suv",
-      "brand": "magicycle",
-      "model": "Magicycle 20\" Deer Step-Thru Full Suspension Ebike SUV",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "magicycle__magicycle-52v-20ah-cruiser-pro-step-over-mountain-electric-bike-midnight-blue",
-      "brand": "magicycle",
-      "model": "Magicycle 52V 20Ah Cruiser Pro Step-Over Ebike Cruiser",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "magicycle__magicycle-52v-20ah-cruiser-pro-mid-step-thru-mountain-electric-bike-pearl-white",
-      "brand": "magicycle",
-      "model": "Magicycle Cruiser Pro Mid Step-Thru Electric Cruiser Bike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "magicycle__magicycle-deer-step-thru-full-suspension-torque-sensor-ebike",
-      "brand": "magicycle",
-      "model": "Magicycle Deer 2.0 Step-Thru Full Suspension Torque Sensor Ebike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "magicycle__magicycle-ocelot-pro-long-range-step-thru-fat-tire-electric-bike",
-      "brand": "magicycle",
-      "model": "Magicycle Ocelot Pro Long Range Step-Thru Fat Tire Electric Bike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "mokwheel__granite",
-      "brand": "mokwheel",
-      "model": "Granite E-Trike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Basket"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "mokwheel__obsidian-2-0",
-      "brand": "mokwheel",
-      "model": "Obsidian 2.0 Ebike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "mokwheel__obsidian-st-2-0",
-      "brand": "mokwheel",
-      "model": "Obsidian ST 2.0 Ebike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "mokwheel__onyx",
-      "brand": "mokwheel",
-      "model": "Onyx Ebike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "mokwheel__onyx-st",
-      "brand": "mokwheel",
-      "model": "Onyx ST Ebike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
+      "detail": {}
     },
     {
       "id": "monarc__marker-high-step-ebike",
       "brand": "monarc",
       "model": "Marker High-Step Ebike",
       "types": [
-        "free_feature"
+        "sale"
       ],
       "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders"
-          ],
-          "removed": []
+        "sale": {
+          "event": "started",
+          "discount_pct": 10
         }
       }
     },
@@ -1605,2159 +118,678 @@
       "brand": "monarc",
       "model": "Marker Step-Thru Ebike",
       "types": [
-        "free_feature"
+        "sale"
       ],
       "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders"
-          ],
-          "removed": []
+        "sale": {
+          "event": "started",
+          "discount_pct": 10
         }
       }
     },
     {
-      "id": "priority__currentplus",
+      "id": "monarc__tracer-high-step-ebike",
+      "brand": "monarc",
+      "model": "Tracer High-Step Ebike",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "monarc__tracer-step-thru-ebike",
+      "brand": "monarc",
+      "model": "Tracer Step-Thru Ebike",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "priority__currentplus--enviolo-3499",
       "brand": "priority",
-      "model": "PRIORITY CURRENT PLUS E-BIKE",
+      "model": "PRIORITY CURRENT PLUS E-BIKE — Enviolo",
       "types": [
-        "free_feature"
+        "added"
       ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
+      "detail": {}
     },
     {
-      "id": "priority__priority-glide-e-bike",
+      "id": "priority__ecoast--step-thru",
       "brand": "priority",
-      "model": "PRIORITY GLIDE E-BIKE",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "ride1up__portola",
-      "brand": "ride1up",
-      "model": "PORTOLA",
-      "types": [
-        "free_feature"
+      "model": "PRIORITY E-COAST — Step-Thru",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__charter-4s",
+      "brand": "trek",
+      "model": "Charter+ 4S",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__charter-4s-lowstep",
+      "brand": "trek",
+      "model": "Charter+ 4S Lowstep",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__charter-5s-lowstep",
+      "brand": "trek",
+      "model": "Charter+ 5S Lowstep",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__checkpoint-sl-5",
+      "brand": "trek",
+      "model": "Checkpoint+ SL 5",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__checkpoint-sl-6-axs",
+      "brand": "trek",
+      "model": "Checkpoint+ SL 6 AXS",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__checkpoint-sl-7-axs",
+      "brand": "trek",
+      "model": "Checkpoint+ SL 7 AXS",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__domane-alr-5",
+      "brand": "trek",
+      "model": "Domane+ ALR 5",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__domane-alr-6-axs",
+      "brand": "trek",
+      "model": "Domane+ ALR 6 AXS",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__domane-slr-6",
+      "brand": "trek",
+      "model": "Domane+ SLR 6",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__domane-slr-7",
+      "brand": "trek",
+      "model": "Domane+ SLR 7",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__domane-slr-9",
+      "brand": "trek",
+      "model": "Domane+ SLR 9",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__fx-1",
+      "brand": "trek",
+      "model": "FX+ 1",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__fx-1-midstep",
+      "brand": "trek",
+      "model": "FX+ 1 Midstep",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__fx-1s",
+      "brand": "trek",
+      "model": "FX+ 1S",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__fx-1s-midstep",
+      "brand": "trek",
+      "model": "FX+ 1S Midstep",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__fx-7s",
+      "brand": "trek",
+      "model": "FX+ 7S",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__fx-7s-midstep",
+      "brand": "trek",
+      "model": "FX+ 7S Midstep",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__fetch-2",
+      "brand": "trek",
+      "model": "Fetch+ 2",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__fetch-4",
+      "brand": "trek",
+      "model": "Fetch+ 4",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__fuel-exe-5",
+      "brand": "trek",
+      "model": "Fuel EXe 5",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__fuel-exe-8-gx-axs-t-type",
+      "brand": "trek",
+      "model": "Fuel EXe 8 GX AXS T-Type",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__fuel-ex-5-gen-2",
+      "brand": "trek",
+      "model": "Fuel+ EX 5 Gen 2",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__fuel-ex-8-gen-2",
+      "brand": "trek",
+      "model": "Fuel+ EX 8 Gen 2",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__fuel-ex-9-7-gen-2",
+      "brand": "trek",
+      "model": "Fuel+ EX 9.7 Gen 2",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__fuel-ex-9-8-eagle-90-gen-2",
+      "brand": "trek",
+      "model": "Fuel+ EX 9.8 Eagle 90 Gen 2",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__fuel-ex-9-8-xt-di2-gen-2",
+      "brand": "trek",
+      "model": "Fuel+ EX 9.8 XT Di2 Gen 2",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__fuel-ex-9-8-xt-gen-2",
+      "brand": "trek",
+      "model": "Fuel+ EX 9.8 XT Gen 2",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__fuel-ex-9-9-x0-axs-gen-2",
+      "brand": "trek",
+      "model": "Fuel+ EX 9.9 X0 AXS Gen 2",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__fuel-lx-9-8-eagle-90-gen-2",
+      "brand": "trek",
+      "model": "Fuel+ LX 9.8 Eagle 90 Gen 2",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__fuel-lx-9-8-xt-di2-gen-2",
+      "brand": "trek",
+      "model": "Fuel+ LX 9.8 XT Di2 Gen 2",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__fuel-lx-9-8-xt-gen-2",
+      "brand": "trek",
+      "model": "Fuel+ LX 9.8 XT Gen 2",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__fuel-lx-9-9-x0-axs-gen-2",
+      "brand": "trek",
+      "model": "Fuel+ LX 9.9 X0 AXS Gen 2",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__fuel-mx-9-8-eagle-90-gen-2",
+      "brand": "trek",
+      "model": "Fuel+ MX 9.8 Eagle 90 Gen 2",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__fuel-mx-9-8-xt-di2-gen-2",
+      "brand": "trek",
+      "model": "Fuel+ MX 9.8 XT Di2 Gen 2",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__fuel-mx-9-8-xt-gen-2",
+      "brand": "trek",
+      "model": "Fuel+ MX 9.8 XT Gen 2",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__fuel-mx-9-9-x0-axs-gen-2",
+      "brand": "trek",
+      "model": "Fuel+ MX 9.9 X0 AXS Gen 2",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__loft-go-7d-eq-step-thru",
+      "brand": "trek",
+      "model": "Loft Go! 7D EQ Step-Thru",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__marlin-6",
+      "brand": "trek",
+      "model": "Marlin+ 6",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__marlin-8",
+      "brand": "trek",
+      "model": "Marlin+ 8",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__ponto-go",
+      "brand": "trek",
+      "model": "Ponto Go!",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__ponto-go-s",
+      "brand": "trek",
+      "model": "Ponto Go! S",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__powerfly-fs-4-gen-4",
+      "brand": "trek",
+      "model": "Powerfly FS+ 4 Gen 4",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__rail-5-gen-5",
+      "brand": "trek",
+      "model": "Rail+ 5 Gen 5",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__rail-8-gen-5",
+      "brand": "trek",
+      "model": "Rail+ 8 Gen 5",
+      "types": [
+        "added"
       ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "ride1up__portola--13-4ah",
-      "brand": "ride1up",
-      "model": "PORTOLA — 13.4ah",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "ride1up__portola-c1",
-      "brand": "ride1up",
-      "model": "PORTOLA 13.4AH (CLASS 1)",
+      "detail": {}
+    },
+    {
+      "id": "trek__rail-9-7-gen-5",
+      "brand": "trek",
+      "model": "Rail+ 9.7 Gen 5",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__rail-9-8-gx-axs-t-type-gen-5",
+      "brand": "trek",
+      "model": "Rail+ 9.8 GX AXS T-Type Gen 5",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__rail-9-9-x0-axs-t-type-gen-5",
+      "brand": "trek",
+      "model": "Rail+ 9.9 X0 AXS T-Type Gen 5",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__slash-9-7",
+      "brand": "trek",
+      "model": "Slash+ 9.7",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__slash-9-9",
+      "brand": "trek",
+      "model": "Slash+ 9.9",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__townie-go",
+      "brand": "trek",
+      "model": "Townie Go!",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__townie-go-7d-eq-step-over",
+      "brand": "trek",
+      "model": "Townie Go! 7D EQ Step-Over",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__townie-go-7d-eq-step-thru",
+      "brand": "trek",
+      "model": "Townie Go! 7D EQ Step-Thru",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__townie-go-s",
+      "brand": "trek",
+      "model": "Townie Go! S",
       "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "ride1up__prodigy-v2",
-      "brand": "ride1up",
-      "model": "PRODIGY V2 — Chain · Step-Thru",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "ride1up__prodigy-v2--step-over",
-      "brand": "ride1up",
-      "model": "PRODIGY V2 — Chain · Step-Over",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "ride1up__prodigy-v2--belt-cvt",
-      "brand": "ride1up",
-      "model": "PRODIGY V2 — Belt CVT · Step-Thru",
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__vale-go-9d-eq",
+      "brand": "trek",
+      "model": "Vale Go! 9D EQ",
       "types": [
-        "free_feature"
+        "added"
       ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
+      "detail": {}
     },
-    {
-      "id": "ride1up__prodigy-v2--belt-cvt--step-over",
-      "brand": "ride1up",
-      "model": "PRODIGY V2 — Belt CVT · Step-Over",
+    {
+      "id": "trek__verve-1-lowstep-lt",
+      "brand": "trek",
+      "model": "Verve+ 1 Lowstep LT",
       "types": [
-        "free_feature"
+        "added"
       ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
+      "detail": {}
     },
-    {
-      "id": "ride1up__roadster-v3",
-      "brand": "ride1up",
-      "model": "ROADSTER V3",
+    {
+      "id": "trek__verve-2-lowstep-gen-3",
+      "brand": "trek",
+      "model": "Verve+ 2 Lowstep Gen 3",
       "types": [
-        "free_feature"
+        "added"
       ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders"
-          ],
-          "removed": []
-        }
-      }
+      "detail": {}
     },
-    {
-      "id": "ride1up__roadster-v3--suspension",
-      "brand": "ride1up",
-      "model": "ROADSTER V3 — Suspension",
+    {
+      "id": "trek__verve-3-gen-3",
+      "brand": "trek",
+      "model": "Verve+ 3 Gen 3",
       "types": [
-        "free_feature"
+        "added"
       ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders"
-          ],
-          "removed": []
-        }
-      }
+      "detail": {}
     },
-    {
-      "id": "ride1up__revv-1-drt",
-      "brand": "ride1up",
-      "model": "Revv1 DRT",
+    {
+      "id": "trek__verve-3-lowstep-gen-3",
+      "brand": "trek",
+      "model": "Verve+ 3 Lowstep Gen 3",
       "types": [
-        "free_feature"
+        "added"
       ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders"
-          ],
-          "removed": []
-        }
-      }
+      "detail": {}
     },
-    {
-      "id": "ride1up__revv1-evo",
-      "brand": "ride1up",
-      "model": "Revv1 EVO",
+    {
+      "id": "trek__verve-4s-gen-3",
+      "brand": "trek",
+      "model": "Verve+ 4S Gen 3",
       "types": [
-        "free_feature"
+        "added"
       ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders"
-          ],
-          "removed": []
-        }
-      }
+      "detail": {}
     },
-    {
-      "id": "ride1up__revv-1",
-      "brand": "ride1up",
-      "model": "Revv1 FS",
+    {
+      "id": "trek__verve-4s-lowstep-gen-3",
+      "brand": "trek",
+      "model": "Verve+ 4S Lowstep Gen 3",
       "types": [
-        "free_feature"
+        "added"
       ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders"
-          ],
-          "removed": []
-        }
-      }
+      "detail": {}
     },
-    {
-      "id": "ride1up__revv-1-ht",
-      "brand": "ride1up",
-      "model": "Revv1 HT",
+    {
+      "id": "vanpowers__cycanon",
+      "brand": "vanpowers",
+      "model": "Cycanon",
       "types": [
-        "free_feature"
+        "added"
       ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders"
-          ],
-          "removed": []
-        }
-      }
+      "detail": {}
     },
-    {
-      "id": "ride1up__vorsa",
-      "brand": "ride1up",
-      "model": "VORSA — Lite · Step-Over",
+    {
+      "id": "vanpowers__grandteton-pro",
+      "brand": "vanpowers",
+      "model": "GrandTeton-Pro",
       "types": [
-        "free_feature"
+        "added"
       ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders"
-          ],
-          "removed": []
-        }
-      }
+      "detail": {}
     },
-    {
-      "id": "ride1up__vorsa--step-thru",
-      "brand": "ride1up",
-      "model": "VORSA — Lite · Step-Thru",
+    {
+      "id": "vanpowers__grandteton-ultra",
+      "brand": "vanpowers",
+      "model": "GrandTeton-Ultra",
       "types": [
-        "free_feature"
+        "added"
       ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders"
-          ],
-          "removed": []
-        }
-      }
+      "detail": {}
     },
-    {
-      "id": "ride1up__vorsa--vorsa",
-      "brand": "ride1up",
-      "model": "VORSA — Vorsa · Step-Over",
+    {
+      "id": "vanpowers__urbancross-pro",
+      "brand": "vanpowers",
+      "model": "UrbanCross-Pro",
       "types": [
-        "free_feature"
+        "added"
       ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders"
-          ],
-          "removed": []
-        }
-      }
+      "detail": {}
     },
-    {
-      "id": "ride1up__vorsa--vorsa--step-thru",
-      "brand": "ride1up",
-      "model": "VORSA — Vorsa · Step-Thru",
+    {
+      "id": "vanpowers__urbancross-ultra",
+      "brand": "vanpowers",
+      "model": "UrbanCross-Ultra",
       "types": [
-        "free_feature"
+        "added"
       ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders"
-          ],
-          "removed": []
-        }
-      }
+      "detail": {}
     },
-    {
-      "id": "ride1up__vorsa--ft",
-      "brand": "ride1up",
-      "model": "VORSA — FT · Step-Over",
+    {
+      "id": "vanpowers__urbanglide-pro",
+      "brand": "vanpowers",
+      "model": "UrbanGlide-Pro",
       "types": [
-        "free_feature"
+        "added"
       ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders"
-          ],
-          "removed": []
-        }
-      }
+      "detail": {}
     },
-    {
-      "id": "ride1up__vorsa--ft--step-thru",
-      "brand": "ride1up",
-      "model": "VORSA — FT · Step-Thru",
+    {
+      "id": "vanpowers__urbanglide-standard",
+      "brand": "vanpowers",
+      "model": "UrbanGlide-Standard",
       "types": [
-        "free_feature"
+        "added"
       ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "segway__muxi-electric-bike",
-      "brand": "segway",
-      "model": "Segway MUXI Cargo Electric Bike",
-      "types": [
-        "free_feature"
+      "detail": {}
+    },
+    {
+      "id": "vanpowers__urbanglide-ultra",
+      "brand": "vanpowers",
+      "model": "UrbanGlide-Ultra",
+      "types": [
+        "added"
       ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "segway__segway-ebike-myon",
-      "brand": "segway",
-      "model": "Segway Myon Electric Bike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "segway__segway-ebike-myon-s",
-      "brand": "segway",
-      "model": "Segway Myon S Electric Bike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "segway__segway-ebike-xafari",
-      "brand": "segway",
-      "model": "Segway Xafari Fat Tire eBike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "segway__segway-ebike-xyber",
-      "brand": "segway",
-      "model": "Segway Xyber Electric Bike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "specialized__haul-lt",
-      "brand": "specialized",
-      "model": "Haul LT",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "specialized__haul-st",
-      "brand": "specialized",
-      "model": "Haul ST",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "specialized__turbo-como-40",
-      "brand": "specialized",
-      "model": "Turbo Como 4.0",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "specialized__turbo-como-40-igh",
-      "brand": "specialized",
-      "model": "Turbo Como 4.0 IGH",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "specialized__turbo-como-50-igh",
-      "brand": "specialized",
-      "model": "Turbo Como 5.0 IGH",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "specialized__turbo-vado-3-evo-40",
-      "brand": "specialized",
-      "model": "Turbo Vado 3 EVO 4.0",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "specialized__turbo-vado-3-evo-50",
-      "brand": "specialized",
-      "model": "Turbo Vado 3 EVO 5.0",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "specialized__turbo-vado-3-evo-60",
-      "brand": "specialized",
-      "model": "Turbo Vado 3 EVO 6.0",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "specialized__turbo-vado-3-x-40",
-      "brand": "specialized",
-      "model": "Turbo Vado 3 X 4.0",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "specialized__turbo-vado-3-x-60",
-      "brand": "specialized",
-      "model": "Turbo Vado 3 X 6.0",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "specialized__turbo-vado-40",
-      "brand": "specialized",
-      "model": "Turbo Vado 4.0",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "specialized__turbo-vado-40-step-through",
-      "brand": "specialized",
-      "model": "Turbo Vado 4.0 Step-Through",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "specialized__turbo-vado-50-igh",
-      "brand": "specialized",
-      "model": "Turbo Vado 5.0 IGH",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "specialized__turbo-vado-50-igh-step-through",
-      "brand": "specialized",
-      "model": "Turbo Vado 5.0 IGH Step-Through",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "specialized__turbo-vado-sl-2-40",
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 4.0",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "specialized__turbo-vado-sl-2-40-eq",
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 4.0 EQ",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "specialized__turbo-vado-sl-2-40-step-through-",
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 4.0 Step-Through",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "specialized__turbo-vado-sl-2-40-step-through-eq",
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 4.0 Step-Through  EQ",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "specialized__turbo-vado-sl-2-50-eq",
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 5.0 EQ",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "specialized__turbo-vado-sl-2-50-step-through-eq",
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 5.0 Step-Through EQ",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "specialized__turbo-vado-sl-2-60-carbon",
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 6.0 Carbon",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "specialized__turbo-vado-sl-2-60-eq-carbon",
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 6.0 EQ Carbon",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "tern__gsd-p00",
-      "brand": "tern",
-      "model": "GSD P00",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "tern__gsd-p10",
-      "brand": "tern",
-      "model": "GSD P10",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "tern__gsd-r14",
-      "brand": "tern",
-      "model": "GSD R14",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "tern__gsd-s10",
-      "brand": "tern",
-      "model": "GSD S10",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "tern__hsd-p10",
-      "brand": "tern",
-      "model": "HSD P10",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "tern__hsd-p5i",
-      "brand": "tern",
-      "model": "HSD P5i",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "tern__hsd-s00",
-      "brand": "tern",
-      "model": "HSD S00",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "tern__hsd-s11",
-      "brand": "tern",
-      "model": "HSD S11",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "tern__nbd-p8i",
-      "brand": "tern",
-      "model": "NBD P8i",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "tern__nbd-s5i",
-      "brand": "tern",
-      "model": "NBD S5i",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "tern__orox-r14-275",
-      "brand": "tern",
-      "model": "Orox R14 (27.5\")",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "tern__orox-s12-275",
-      "brand": "tern",
-      "model": "Orox S12 (27.5\")",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "tern__quick-haul-d8",
-      "brand": "tern",
-      "model": "Quick Haul D8",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "tern__quick-haul-long-d9",
-      "brand": "tern",
-      "model": "Quick Haul Long D9",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "tern__quick-haul-p9-sport",
-      "brand": "tern",
-      "model": "Quick Haul P9 Sport",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "tern__vektron-p10",
-      "brand": "tern",
-      "model": "Vektron P10",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "tern__vektron-p5i",
-      "brand": "tern",
-      "model": "Vektron P5i",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "tern__vektron-q9",
-      "brand": "tern",
-      "model": "Vektron Q9",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "tern__vektron-s10",
-      "brand": "tern",
-      "model": "Vektron S10",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "urtopia__urtopia-carbon-1-pro-ebike",
-      "brand": "urtopia",
-      "model": "Carbon 1 Pro E-Bike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "urtopia__urtopia-carbon-1-step-thru-ebike",
-      "brand": "urtopia",
-      "model": "Carbon 1 Step-Thru E-Bike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "urtopia__urtopia-carbon-classic-ebike",
-      "brand": "urtopia",
-      "model": "Carbon Classic E-Bike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "urtopia__urtopia-carbon-classic-step-thru-ebike",
-      "brand": "urtopia",
-      "model": "Carbon Classic Step-Thru E-Bike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "urtopia__urtopia-carbon-fold-2-ebike",
-      "brand": "urtopia",
-      "model": "Carbon Fold 2 E-Bike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "urtopia__urtopia-carbon-fold-step-thru-ebike",
-      "brand": "urtopia",
-      "model": "Carbon Fold Step-Thru E-Bike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "urtopia__urtopia-carbon-fusion-gt",
-      "brand": "urtopia",
-      "model": "Carbon Fusion GT E-Bike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "urtopia__urtopia-fusion-pro-carbon-long-range-ebike",
-      "brand": "urtopia",
-      "model": "Carbon Fusion Pro E-Bike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "urtopia__urtopia-carbon-joy-ultra-ebike",
-      "brand": "urtopia",
-      "model": "Carbon Joy Ultra E-Bike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "urtopia__urtopia-joy-carbon-fat-tire-ebike",
-      "brand": "urtopia",
-      "model": "Urtopia Joy Carbon E-Bike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "velotric__velotric-breeze-1",
-      "brand": "velotric",
-      "model": "Velotric Breeze 1 Cruiser Ebike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "velotric__velotric-discover-2",
-      "brand": "velotric",
-      "model": "Velotric Discover 2 Ebike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "velotric__velotric-discover-3-commuter-ebike",
-      "brand": "velotric",
-      "model": "Velotric Discover 3 Ebike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "velotric__velotric-discover-m-mid-drive-ebike",
-      "brand": "velotric",
-      "model": "Velotric Discover M Ebike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "velotric__velotric-fold-1",
-      "brand": "velotric",
-      "model": "Velotric Fold 1 Ebike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "velotric__velotric-fold-1-plus",
-      "brand": "velotric",
-      "model": "Velotric Fold 1 Plus Ebike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "velotric__velotric-gomad-utility-ebike",
-      "brand": "velotric",
-      "model": "Velotric GoMad Ebike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "velotric__velotric-gomad-utility-ebike--gomad-passenger-kit",
-      "brand": "velotric",
-      "model": "Velotric GoMad Ebike — GoMad + Passenger Kit",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "velotric__velotric-gomad-utility-ebike--gomad-young-passenger-kit",
-      "brand": "velotric",
-      "model": "Velotric GoMad Ebike — GoMad + Young Passenger Kit",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "velotric__velotric-nomad-2",
-      "brand": "velotric",
-      "model": "Velotric Nomad 2 Fat Tire Ebike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "velotric__velotric-nomad-2--step-thru",
-      "brand": "velotric",
-      "model": "Velotric Nomad 2 Fat Tire Ebike — Step-Thru",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "velotric__velotric-nomad-2x",
-      "brand": "velotric",
-      "model": "Velotric Nomad 2X Full Suspension Fat Tire Ebike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "velotric__velotric-nomad-2x--step-thru",
-      "brand": "velotric",
-      "model": "Velotric Nomad 2X Full Suspension Fat Tire Ebike — Step-Thru",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "velotric__velotric-summit-2-hybrid-ebike",
-      "brand": "velotric",
-      "model": "Velotric Summit 2 Ebike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "velotric__velotric-triker",
-      "brand": "velotric",
-      "model": "Velotric Triker Electric Tricycle",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "velowave__brawny-xm",
-      "brand": "velowave",
-      "model": "Brawny XM MTB Mountain Electric Bike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "velowave__breeze-t-torque-sensor-electric-bike",
-      "brand": "velowave",
-      "model": "Breeze T Torque Sensor Electric Bike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "velowave__forest-sm",
-      "brand": "velowave",
-      "model": "Forest SM MTB",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "velowave__forest-xm",
-      "brand": "velowave",
-      "model": "Forest XM MTB",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "velowave__ranger-fat-tire-electric-bike",
-      "brand": "velowave",
-      "model": "Ranger 2.0 Fat Tire All-Terrain Electric Bike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "velowave__ranger-3-0-fat-tire-all-terrain-electric-bike",
-      "brand": "velowave",
-      "model": "Ranger 3.0 Fat Tire All-Terrain Electric Bike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "velowave__ranger-step-thru-electric-bike",
-      "brand": "velowave",
-      "model": "Ranger Step-Thru 2.0 Electric Bike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "velowave__ranger-step-thru-3-0-electric-bike",
-      "brand": "velowave",
-      "model": "Ranger Step-Thru 3.0 Torque Sensor Electric Bike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "velowave__swift-m-mid-drive-mountain-electric-bike",
-      "brand": "velowave",
-      "model": "Swift M Mid-Drive Electric Bike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Fenders",
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "vivi__vivi-ace01-electric-bike-all-terrain-fat-tire-electric-bike",
-      "brand": "vivi",
-      "model": "VIVI ACE01 Electric Bike All Terrain Fat Tire Electric Bike SGS Certified to UL2849",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "vivi__vivi-ace01-pro-electric-bike-torque-sensor-fat-tire-electric-bike-with-app-control",
-      "brand": "vivi",
-      "model": "VIVI ACE01 Pro Electric Bike Torque Sensor Fat Tire Electric Bike with App Control",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "vivi__vivi-ace07-electric-bike-commuter-fat-tire-electric-bike",
-      "brand": "vivi",
-      "model": "VIVI ACE07 Electric Bike Commuter Fat Tire Electric Bike SGS Certified to UL2849",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "vivi__vivi-c26ul-electric-bike-cruiser-electric-commuter-bike",
-      "brand": "vivi",
-      "model": "VIVI C26UL Electric Bike Cruiser Electric Commuter Bike SGS Certified to UL2849",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "vivi__vivi-f26ful-electric-bike-long-range-fat-tire-electric-bike",
-      "brand": "vivi",
-      "model": "VIVI F26FUL Electric Bike Long Range Fat Tire Electric Bike SGS Certified to UL2849",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "vivi__vivi-fm20ul-electric-bike-fat-tire-folding-electric-bike",
-      "brand": "vivi",
-      "model": "VIVI FM20UL Electric Bike 2.4\" Fat Tire Folding Electric Bike SGS Certified to UL2849",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "vivi__vivi-gopina-electric-bike-fat-tire-folding-electric-bike",
-      "brand": "vivi",
-      "model": "VIVI Gopina Electric Bike 3.0\" Fat Tire Folding Electric Bike SGS Certified to UL2849",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "vivi__vivi-h7ul-electric-bike-off-road-electric-mountain-bike",
-      "brand": "vivi",
-      "model": "VIVI H7UL Electric Bike 27.5\" Off Road Electric Mountain Bike SGS Certified to UL2849",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "vivi__vivi-m026shul-electric-bike-hardtail-electric-mountain-bike",
-      "brand": "vivi",
-      "model": "VIVI M026SHUL Electric Bike Hardtail Electric Mountain Bike SGS Certified to UL2849",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "vivi__vivi-m026tgbul-electric-bike-foldable-full-suspension-electric-mountain-bike",
-      "brand": "vivi",
-      "model": "VIVI M026TGBUL Electric Bike Foldable Full Suspension Electric Mountain Bike SGS Certified to UL2849",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "vivi__vivi-mt20ul-electric-bike-fat-tire-folding-electric-bike",
-      "brand": "vivi",
-      "model": "VIVI MT20UL Electric Bike 3.0\" Fat Tire Folding Electric Bike SGS Certified to UL2849",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "vivi__vivi-mt26gul-electric-bike-rambler-electric-commuter-bike",
-      "brand": "vivi",
-      "model": "VIVI MT26GUL Electric Bike Rambler Electric Commuter Bike SGS Certified to UL2849",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "vivi__vivi-pony01-electric-bike-commuter-mini-electric-bike",
-      "brand": "vivi",
-      "model": "VIVI PONY01 Electric Bike Commuter Mini Electric Bike SGS Certified to UL2849",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "vivi__vivi-t01-electric-trike-folding-cargo-electric-tricycle",
-      "brand": "vivi",
-      "model": "VIVI T01 Electric Trike Folding Cargo Electric Tricycle SGS Certified to UL2849",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "wallke__wallke-h7-ultra-step-thru-off-grid-powerstorage-e-bike",
-      "brand": "wallke",
-      "model": "2026 WALLKE H7 Ultra Step-Thru | 4000W Off-Grid Power Station E-Bike with Torque Sensor, 37mph Speed",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "wallke__wallke-h9-ultra-folding-off-grid-powerstorage-e-bike",
-      "brand": "wallke",
-      "model": "2026 WALLKE H9 Ultra Folding | Off-Grid Power Station E-Bike with Torque Sensor, 37mph Speed, 55/77Ah Battery Options",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "wallke__wallke-h9-ultra-folding-off-grid-powerstorage-e-bike--77ah",
-      "brand": "wallke",
-      "model": "2026 WALLKE H9 Ultra Folding | Off-Grid Power Station E-Bike with Torque Sensor, 37mph Speed, 55/77Ah Battery Options — 77Ah",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "wallke__ultra-series",
-      "brand": "wallke",
-      "model": "2026 WALLKE Ultra Series | Off-grid Power Station E-Bike — 55Ah · Step-Thru",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "wallke__ultra-series--step-over",
-      "brand": "wallke",
-      "model": "2026 WALLKE Ultra Series | Off-grid Power Station E-Bike — 55Ah · Step-Over",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "wallke__ultra-series--77ah",
-      "brand": "wallke",
-      "model": "2026 WALLKE Ultra Series | Off-grid Power Station E-Bike — 77Ah",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "wallke__wallke-h7-step-thru",
-      "brand": "wallke",
-      "model": "2026 Wallke H7 AWD Step-Thru | 3200W Ebike 40Ah Battery",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "wallke__wallke-h7-step-thru--60ah",
-      "brand": "wallke",
-      "model": "2026 Wallke H7 AWD Step-Thru | 3200W Ebike 40Ah Battery — 60Ah",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "wallke__h9awd",
-      "brand": "wallke",
-      "model": "2026 Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "wallke__h9awd--60ah",
-      "brand": "wallke",
-      "model": "2026 Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery — 60Ah",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "wallke__h9awd--62ah",
-      "brand": "wallke",
-      "model": "2026 Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery — 62Ah",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "wallke__h9awd--82ah",
-      "brand": "wallke",
-      "model": "2026 Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery — 82Ah",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "wallke__2026-wallke-ravager-r60-series",
-      "brand": "wallke",
-      "model": "2026 Wallke Ravager 60V Series | 60V 70Ah Long-Range Electric Bike | Up to 180+ Miles | 150Nm Torque",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights",
-            "Rear Rack"
-          ],
-          "removed": []
-        }
-      }
-    },
-    {
-      "id": "wallke__wallke-titan-x1",
-      "brand": "wallke",
-      "model": "WALLKE Titan X1 Carbon Fiber Frame | 3800W Cruiser Ebike",
-      "types": [
-        "free_feature"
-      ],
-      "detail": {
-        "free_feature": {
-          "added": [
-            "Lights"
-          ],
-          "removed": []
-        }
-      }
+      "detail": {}
+    },
+    {
+      "id": "lectric__lectric-one",
+      "brand": "lectric",
+      "model": "Lectric ONE",
+      "types": [
+        "removed"
+      ]
+    },
+    {
+      "id": "lectric__lectric-xpress1",
+      "brand": "lectric",
+      "model": "Lectric XPress1",
+      "types": [
+        "removed"
+      ]
     }
   ]
 }

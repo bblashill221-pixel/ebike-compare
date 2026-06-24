@@ -41,7 +41,14 @@ def discover_models() -> list[dict]:
     data = fetch_json(f"{BASE}/products.json?limit=250")
     models = []
     for p in data.get("products", []):
-        if (p.get("product_type") or "").lower() != "bike":
+        ptype = (p.get("product_type") or "").lower()
+        title = (p.get("title") or "").lower()
+        # Monarc tags the Marker line product_type "Bike", but the newer Tracer line has
+        # an EMPTY product_type — include both (any "…Ebike" product), while excluding the
+        # "Accessories" products (helmet, radar, TPMS, spare battery, …).
+        if ptype == "accessories":
+            continue
+        if ptype != "bike" and "ebike" not in title and "e-bike" not in title:
             continue
         variants = p.get("variants", [])
         prices = [float(v["price"]) for v in variants if v.get("price")]

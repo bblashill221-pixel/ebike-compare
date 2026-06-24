@@ -39,7 +39,12 @@ const UNIT_LABEL: Record<string, string> = {
   lb: "lb", mph: "mph", kph: "kph", mi: "mi", km: "km", in: "in", deg: "deg",
   w: "W", v: "V",
 };
+// Fields whose human label can't be derived by title-casing the key.
+const LABEL_OVERRIDES: Record<string, string> = {
+  classes: "Class(es)",
+};
 export function labelize(field: string): string {
+  if (LABEL_OVERRIDES[field]) return LABEL_OVERRIDES[field];
   const parts = field.split("_");
   const last = parts[parts.length - 1];
   if (UNIT_LABEL[last] && parts.length > 1) {
@@ -143,6 +148,9 @@ export function hiddenUnitKeys(keys: string[], system: UnitSystem): Set<string> 
 
 /** Render a parsed spec value (string / number / dict / list) to readable text.
  *  `system` picks which side of any paired imperial/metric field to show. */
+// Component-table bookkeeping added to each parsed component — never shown as a spec.
+const META_KEYS = new Set(["catalog_key", "retail_usd"]);
+
 export function formatSpecValue(value: SpecValue, system: UnitSystem = "imperial"): string {
   if (value == null) return "—";
   if (typeof value === "boolean") return value ? "Yes" : "No";
@@ -154,7 +162,9 @@ export function formatSpecValue(value: SpecValue, system: UnitSystem = "imperial
   const hide = hiddenUnitKeys(Object.keys(obj), system);
   const parts: string[] = [];
   for (const [k, v] of Object.entries(obj)) {
-    if (v == null || v === "" || hide.has(k)) continue;
+    // skip internal/meta keys: _kind and the component-table annotations
+    // (catalog_key, retail_usd) are bookkeeping, not user-facing spec values.
+    if (v == null || v === "" || hide.has(k) || k.startsWith("_") || META_KEYS.has(k)) continue;
     if (k === "details") {
       parts.push(formatSpecValue(v, system));
     } else if (k === "by_size" && v && typeof v === "object" && !Array.isArray(v)) {

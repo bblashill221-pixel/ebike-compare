@@ -15,7 +15,7 @@ import scraper_common  # noqa
 from playwright.sync_api import sync_playwright
 
 DATA = Path(__file__).parent / "data"
-ACTIVE = DATA / "current" / "active" / "ebikes_normalized.json"
+ACTIVE = DATA / "current" / "active" / "ebike.json"
 OUT = DATA / "current" / "size_chart_worklist.json"
 _CHART = re.compile(r"size[-_ ]?chart|size[-_ ]?guide|sizechart|sizeguide|sizing", re.I)
 

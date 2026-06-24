@@ -1,40 +1,46 @@
 #!/usr/bin/env python3
 """
-Resolve TWO independent prices for every part in the component catalog:
+Resolve a single RETAIL price for every part in the component catalog:
 
-  * retail_usd    — aftermarket street/replacement value (what a buyer pays to
-                    buy that exact part) from US bike-component retailers
-                    (Jenson USA, Worldwide Cyclery, Universal Cycles, …) or
-                    manufacturer MSRP.
-  * wholesale_usd — OEM unit cost proxy from AliExpress/Alibaba (by model, or by
-                    the part's spec_class when it carries no model number).
+  * retail_usd — aftermarket street/replacement value (what a buyer pays to buy
+                 that exact part) from US bike-component retailers (Jenson USA,
+                 Worldwide Cyclery, Universal Cycles, …) or manufacturer MSRP.
 
-These are two separate facts — analyze.py rolls each up per bike on its own.
-There is NO blended/overall score (firm project rule).
+Brand matters: a Bosch/Specialized system battery or a Fox fork costs far more
+than a generic equivalent, so the estimators are brand/tier-aware. There is NO
+blended/overall score (firm project rule). (Wholesale/OEM cost was dropped — too
+hard to estimate reliably — so this is retail-only now.)
 
-Cache-first and staleness-aware, like llm_parse_components.py: a part is only
-(re-)priced when it is new or its cached `checked_at` is older than
---max-age-days (default 30) — component prices move slowly, so a monthly refresh
-is plenty and keeps the API spend bounded.
+Monthly refresh, no API key needed — the scraper does the fetching. Three modes
+on the selection commands (plan/scrape/run/export):
+  (default)       only UNRESOLVED parts (no researched price / never looked up)
+  --date M/D/Y    unresolved + any researched price last checked before that date
+  --all           every in-use part (full re-price; in sync with the normalized build)
 
-  python resolve_component_prices.py plan                 # due parts + cost estimate (offline)
-  python resolve_component_prices.py run [--limit N]      # web-assisted lookup via Claude
-  python resolve_component_prices.py export -o work.json  # due parts -> file for in-session research
-  python resolve_component_prices.py ingest work.json     # ingest researched prices (no API key)
-  python resolve_component_prices.py write-catalog        # re-apply cache into the catalog
+  python resolve_component_prices.py plan [--all|--date M/D/Y]   # show the due-set (offline)
+  python resolve_component_prices.py scrape [--all|--date ...]   # KEY-FREE: price due parts from Worldwide Cyclery
+  python resolve_component_prices.py export -o work.json         # due parts -> file for manual research
+  python resolve_component_prices.py ingest work.json            # ingest researched prices (no API key)
+  python resolve_component_prices.py run [--limit N]             # web-assisted lookup via Claude (needs key)
+  python resolve_component_prices.py write-catalog               # re-finalize the catalog (estimate fills the rest)
 
-For model-less parts the retail price falls back to the spec heuristic in
-estimate_component_costs.py (reused, not duplicated); wholesale still comes from
-the OEM range-by-spec lookup.
+`scrape` is the primary key-free refresh: it conservatively matches each part to a
+Worldwide Cyclery (Shopify) listing and writes a researched price only on a strong
+brand+model+category match. For model-less parts (and anything not matched) the retail
+price falls back to the brand/spec heuristic in estimate_component_costs.py.
 
-Cache: data/curated/component_prices.json  (keyed category|manufacturer|model)
+Prices live in the catalog itself (data/component_catalog.json).
 Needs ANTHROPIC_API_KEY only for `run`.
 """
 from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
+import time
+import urllib.parse
+import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -45,10 +51,34 @@ from estimate_component_costs import (
 
 DATA = Path(__file__).parent / "data"
 CATALOG_PATH = DATA / "component_catalog.json"
-CACHE_PATH = DATA / "curated" / "component_prices.json"
+# Prices live IN the catalog (one file): each component's `aftermarket` block holds the
+# researched OR estimated retail price, a method ("researched"|"estimated") and a 0–1
+# confidence. The old separate price cache (component_prices.json) was fully redundant
+# with this and is gone — the "cache" helpers below now read/write the catalog directly.
+
+# Estimate confidence by how much price-driving context the heuristic actually had.
+def _confidence(method: str, basis: str | None) -> float:
+    if method == "researched":
+        return 0.9
+    b = (basis or "").lower()
+    if re.search(r"\d+\s*nm|\d+\s*wh|\d+\s*mm|\d+-speed|gates|pinion|rohloff|carbon", b):
+        return 0.75                      # a real spec drove it (torque/Wh/travel/speed/material)
+    if re.search(r"mid-drive|hub motor|premium|hydraulic|air|suspension|belt|cvt|gear", b):
+        return 0.5                       # type/brand known, but not the precise spec
+    return 0.35                          # flat category default / "assumed"
+
+
+def _is_researched(am: dict, side: str) -> bool:
+    """A side ('retail'/'wholesale') counts as researched when it has a price AND a real
+    source (a URL or a retailer/marketplace domain — not the 'spec_heuristic' tag)."""
+    if am.get(f"{side}_usd") is None:
+        return False
+    if am.get(f"{side}_url"):
+        return True
+    src = (am.get(f"{side}_source") or "").lower()
+    return bool(src) and src != "spec_heuristic"
 MODEL = "claude-opus-4-8"
 PARTS_PER_REQUEST = 8
-DEFAULT_MAX_AGE_DAYS = 30
 
 RETAIL_SOURCES = ("jensonusa.com", "worldwidecyclery.com", "universalcycles.com",
                   "modernbike.com", "bike-discount.de", "manufacturer MSRP")
@@ -87,63 +117,140 @@ def load_catalog() -> dict:
 
 
 def load_cache() -> dict:
-    return load_json(CACHE_PATH, {})
+    """The price 'cache' is now the catalog's own per-part `aftermarket` blocks — one
+    file. Returns {catalog_key: aftermarket-dict} for staleness/research bookkeeping."""
+    return {k: dict(e["aftermarket"]) for k, e in load_catalog().items()
+            if isinstance(e.get("aftermarket"), dict)}
 
 
 def save_cache(cache: dict):
-    CACHE_PATH.write_text(json.dumps(cache, indent=1, ensure_ascii=False))
+    """Persist aftermarket blocks straight back into the catalog (prices live there)."""
+    doc = load_json(CATALOG_PATH, {})
+    comps = doc.get("components") or {}
+    for key, am in cache.items():
+        if key in comps:
+            comps[key]["aftermarket"] = am
+    doc["generated_at"] = now_iso()
+    CATALOG_PATH.write_text(json.dumps(doc, indent=2, ensure_ascii=False))
 
 
 def now_iso() -> str:
     return datetime.now(timezone.utc).isoformat()
 
 
-# ------------------------------ due-key selection ------------------------------
+# ------------------------------ due-set selection ------------------------------
+# Three monthly-refresh modes (no API key needed — the scraper does the fetching):
+#   (default)      only UNRESOLVED parts (no researched price / never looked up)
+#   --date M/D/Y   unresolved PLUS any researched price last checked before that date
+#   --all          every in-use part (full re-price; the set is sourced from the
+#                  normalized build via component_catalog.py, so it stays in sync)
 
-def _age_days(checked_at: str | None) -> float | None:
+def _parse_mdy(s: str) -> datetime:
+    return datetime.strptime(s, "%m/%d/%Y").replace(tzinfo=timezone.utc)
+
+
+def _checked_before(checked_at: str | None, cutoff: datetime) -> bool:
+    """True when a part's last-lookup date is missing/empty or older than the cutoff."""
     if not checked_at:
-        return None
+        return True
     try:
         ts = datetime.fromisoformat(checked_at)
     except ValueError:
-        return None
+        return True
     if ts.tzinfo is None:
         ts = ts.replace(tzinfo=timezone.utc)
-    return (datetime.now(timezone.utc) - ts).total_seconds() / 86400.0
+    return ts < cutoff
 
 
-def is_due(key: str, cache: dict, max_age_days: int) -> bool:
-    """New, never-stamped, or stale -> needs (re-)pricing."""
-    c = cache.get(key)
-    if not c:
-        return True
-    age = _age_days(c.get("checked_at"))
-    return age is None or age >= max_age_days
+def select_due(catalog: dict, cache: dict, *, all_: bool = False,
+               before: datetime | None = None) -> list[str]:
+    """In-use parts that need a (re-)lookup under the selected mode."""
+    out = []
+    for k, e in catalog.items():
+        if e.get("usage_count", 0) <= 0:
+            continue
+        if all_:
+            out.append(k)
+            continue
+        am = cache.get(k) or {}
+        if not _is_researched(am, "retail"):          # unresolved -> always due
+            out.append(k)
+        elif before is not None and _checked_before(am.get("checked_at"), before):
+            out.append(k)
+    return out
 
 
-def due_keys(catalog: dict, cache: dict, max_age_days: int) -> list[str]:
-    # only price parts currently used by at least one bike; dropped-out parts
-    # keep whatever they had (their cache survives for when they return)
-    return [k for k, e in catalog.items()
-            if e.get("usage_count", 0) > 0 and is_due(k, cache, max_age_days)]
+def _mode_label(all_: bool, before: datetime | None) -> str:
+    if all_:
+        return "all in-use parts"
+    if before:
+        return f"unresolved + checked before {before:%m/%d/%Y}"
+    return "unresolved only"
 
 
 # ----------------------------- heuristic fallback -----------------------------
 
 def _synth_specs(entry: dict) -> dict:
-    """A minimal {label: text} specs dict so estimate_component_costs.cost_*
-    (which scan spec labels) work on a single catalog part."""
-    bits = [entry.get("spec_class") or "", entry.get("sample_details") or ""]
+    """A minimal {label: text} specs dict so estimate_component_costs.cost_* (which scan
+    spec text) work on a single catalog part. Renders the entry's make/model + structured
+    attributes back into the WORDING those estimators expect ("Bafang M600 500W mid-drive
+    120Nm"), so brand/tier, placement and torque drive the context-aware estimate."""
+    bits = [entry.get("manufacturer") or "", entry.get("model") or "",
+            entry.get("spec_class") or "", entry.get("sample_details") or ""]
     for k, v in (entry.get("attributes") or {}).items():
-        if k != "_kind" and v not in (None, ""):
+        if k == "_kind" or v in (None, ""):
+            continue
+        if k == "placement":
+            bits.append("mid-drive" if str(v).lower() == "mid" else "hub motor")
+        elif k == "torque_nm":
+            bits.append(f"{v}Nm")
+        elif k == "capacity_wh":
+            bits.append(f"{v}Wh")
+        elif k in ("power_w", "peak_w"):
+            bits.append(f"{v}W")
+        elif k == "travel_mm":
+            bits.append(f"{v}mm travel")
+        elif k in ("speeds", "gears"):
+            bits.append(f"{v}-speed")
+        else:
             bits.append(f"{k} {v}")
-    blob = " ".join(b for b in bits if b)
+    blob = " ".join(str(b) for b in bits if b)
     return {entry.get("category", "part"): blob}
+
+
+# Frameset retail cost by material (USD). The frameset
+# is never parsed as a branded part, so it's costed from the bike's typed frame
+# material; a full-suspension frame (pivots/linkage/bearings) carries a premium over a
+# hardtail/rigid one (the rear shock itself is priced separately as "rear_shock").
+# Unknown material defaults to aluminium (the fleet's modal frame). "steel" is cheap
+# hi-tensile/high-carbon (Q235) — below aluminium; quality steel (chromoly/4130) is a
+# separate, pricier tier ABOVE aluminium (component_quality maps it from the frame text).
+_FRAME_RETAIL = {"steel": 200, "aluminum": 420, "chromoly": 550, "carbon": 1700}
+_FRAME_FS_MULT = 1.5
+
+
+def _frame_cost(table: dict, a: dict) -> int:
+    mat = (a.get("material") or "aluminum").lower()
+    base = table.get(mat, table["aluminum"])
+    if a.get("full_suspension") and mat in ("aluminum", "carbon"):
+        base = round(base * _FRAME_FS_MULT)
+    return base
 
 
 def heuristic_retail(entry: dict) -> tuple[int | None, str | None]:
     """Estimated single-part retail cost for a model-less part."""
     cat = entry.get("category", "")
+    # A Pinion / Rohloff gearbox is a premium sealed transmission (~$1500 retail), but it
+    # parses as a model-less "shifter"/"derailleur" and would otherwise get the ~$18 flat —
+    # crushing the value of bikes like the Priority Skyline (SMART.SHIFT Pinion). Detect it
+    # by maker/model/text regardless of category.
+    ident = (f"{entry.get('manufacturer') or ''} {entry.get('model') or ''} "
+             f"{entry.get('spec_class') or ''} {entry.get('sample_details') or ''}").lower()
+    if re.search(r"\bpinion\b|rohloff", ident):
+        return 1500, "premium gearbox (Pinion/Rohloff)"
+    if cat == "frame":
+        a = entry.get("attributes") or {}
+        return _frame_cost(_FRAME_RETAIL, a), f"{a.get('material') or 'aluminum'} frameset"
     fn = _FALLBACK_FN.get(cat)
     if fn:
         c, note = fn(_synth_specs(entry))
@@ -154,87 +261,53 @@ def heuristic_retail(entry: dict) -> tuple[int | None, str | None]:
     return None, None
 
 
-# Per-type OEM (AliExpress/Alibaba) range-by-spec wholesale rules — the same
-# rules used for the manual price fill, grounded in that research. Returns a
-# representative OEM unit cost in USD for a part with no researched wholesale.
-def heuristic_wholesale(entry: dict) -> tuple[int | None, str | None]:
-    cat = entry.get("category", "")
-    a = entry.get("attributes") or {}
-    sc = (entry.get("spec_class") or "").lower()
-
-    def battery_wh():
-        wh = a.get("capacity_wh")
-        if wh:
-            return wh
-        v, ah = a.get("voltage_v"), a.get("amphours_ah")
-        return v * ah if v and ah else 500
-
-    if cat == "battery":
-        return round(battery_wh() * 0.16), "~$0.16/Wh OEM"
-    if cat == "motor":
-        w = a.get("power_w") or 500
-        if a.get("placement") == "mid" or "mid-drive" in sc:
-            return round(120 + w * 0.18), "OEM mid-drive"
-        return round(w * 0.12), "OEM hub ~$0.12/W"
-    if cat == "brakes":
-        return (30, "OEM hydraulic") if "hydraulic" in sc else (15, "OEM disc")
-    flat = {
-        "chain": 4, "shifter": 9, "derailleur": 13, "crankset": 20, "cassette": 13,
-        "saddle": 10, "grips": 5, "grips_bar_tape": 5, "stem": 8, "handlebar": 10,
-        "handlebars": 10, "seatpost": 12, "seat_post": 12, "charger": 14,
-        "throttle": 6, "pedals": 7, "rear_shock": 35, "hub": 25, "rims": 18,
-    }
-    if cat in flat:
-        return flat[cat], f"OEM {cat}"
-    if cat == "tire":
-        if "x4" in sc or "fat" in sc:
-            return 20, "OEM fat tire"
-        if any(s in sc for s in ("2.4", "1.95", "x2")):
-            return 12, "OEM tire"
-        return 15, "OEM tire"
-    if cat == "display":
-        if "touch" in sc:
-            return 30, "OEM display"
-        if "color" in sc:
-            return 22, "OEM display"
-        if "oled" in sc:
-            return 25, "OEM display"
-        return 12, "OEM display"
-    if cat == "fork":
-        tr = a.get("travel_mm") or 80
-        return round(40 + tr * 0.3), "OEM fork"
-    return None, None
-
-
 # ---------------------------- catalog write-back ----------------------------
 
-def apply_cache_to_catalog(cache: dict) -> int:
-    """Fold every cached price into the catalog's aftermarket block. Returns the
-    number of catalog entries that ended up with at least one price."""
+_GENERIC_PART = 25   # retail fallback for a category with no estimator
+
+_WHOLESALE_FIELDS = ("wholesale_usd", "wholesale_url", "wholesale_source",
+                     "wholesale_method", "wholesale_confidence", "wholesale_basis")
+
+
+def finalize_catalog() -> dict:
+    """Make EVERY in-use component carry a RETAIL price in its `aftermarket` block: keep a
+    researched price where present (method 'researched', confidence 0.9), else fill the
+    brand/context-aware estimate (method 'estimated', confidence by basis). Retail-only —
+    wholesale/OEM cost was dropped (too hard to estimate). The catalog is the single source
+    of truth — researched if looked up, estimate as the fallback."""
     doc = load_json(CATALOG_PATH, {})
     comps = doc.get("components") or {}
-    for key, c in cache.items():
-        e = comps.get(key)
-        if not e:
-            continue
+    researched = estimated = 0
+    for e in comps.values():
         am = e.setdefault("aftermarket", {})
-        for f in ("retail_usd", "retail_url", "retail_source", "wholesale_usd",
-                  "wholesale_url", "wholesale_source", "method", "checked_at", "notes"):
-            if c.get(f) is not None:
-                am[f] = c[f]
-    priced = sum(1 for e in comps.values()
-                 if (e.get("aftermarket") or {}).get("retail_usd") is not None
-                 or (e.get("aftermarket") or {}).get("wholesale_usd") is not None)
-    doc["priced_count"] = priced
+        for k in _WHOLESALE_FIELDS:                       # purge any legacy wholesale fields
+            am.pop(k, None)
+        if _is_researched(am, "retail"):
+            am["retail_method"] = "researched"
+            am["retail_confidence"] = _confidence("researched", None)
+            am.pop("retail_basis", None)
+            researched += 1
+        else:
+            val, note = heuristic_retail(e)
+            if val is None:
+                val, note = _GENERIC_PART, "generic part (no estimator)"
+            am["retail_usd"] = val
+            am["retail_method"] = "estimated"
+            am["retail_basis"] = note
+            am["retail_confidence"] = _confidence("estimated", note)
+            estimated += 1
+        am.setdefault("currency", "USD")
+    doc["priced_count"] = sum(1 for e in comps.values()
+                              if (e.get("aftermarket") or {}).get("retail_usd") is not None)
+    doc["price_sources"] = {"researched": researched, "estimated": estimated}
     doc["generated_at"] = now_iso()
     CATALOG_PATH.write_text(json.dumps(doc, indent=2, ensure_ascii=False))
-    return priced
+    return doc["price_sources"]
 
 
 def _cache_entry(key: str, entry: dict, *, retail_usd=None, retail_url=None,
-                 retail_source=None, wholesale_usd=None, wholesale_url=None,
-                 wholesale_source=None, notes=None) -> dict:
-    method = "model_lookup" if entry.get("model") else "oem_range_by_spec"
+                 retail_source=None, notes=None) -> dict:
+    method = "model_lookup" if entry.get("model") else "spec_heuristic"
     # model-less retail comes from the spec heuristic
     if retail_usd is None and not entry.get("model"):
         retail_usd, h_note = heuristic_retail(entry)
@@ -245,33 +318,25 @@ def _cache_entry(key: str, entry: dict, *, retail_usd=None, retail_url=None,
         "category": entry.get("category"), "manufacturer": entry.get("manufacturer"),
         "model": entry.get("model"), "spec_class": entry.get("spec_class"),
         "retail_usd": retail_usd, "retail_url": retail_url, "retail_source": retail_source,
-        "wholesale_usd": wholesale_usd, "wholesale_url": wholesale_url,
-        "wholesale_source": wholesale_source, "method": method,
-        "checked_at": now_iso(), "notes": notes,
+        "method": method, "checked_at": now_iso(), "notes": notes,
     }
 
 
 # --------------------------------- plan ---------------------------------
 
-def cmd_plan(max_age_days: int):
+def cmd_plan(all_: bool, before):
     catalog, cache = load_catalog(), load_cache()
-    due = due_keys(catalog, cache, max_age_days)
+    due = select_due(catalog, cache, all_=all_, before=before)
     modelled = sum(1 for k in due if catalog[k].get("model"))
-    modelless = len(due) - modelled
-    reqs = (len(due) + PARTS_PER_REQUEST - 1) // PARTS_PER_REQUEST
-    print(f"catalog parts in use: {sum(1 for e in catalog.values() if e.get('usage_count',0)>0)}"
-          f" | cached: {len(cache)} | due (>{max_age_days}d/new): {len(due)}")
-    print(f"  due model-lookup (retail+wholesale): {modelled}")
-    print(f"  due oem-range-by-spec (wholesale; retail=heuristic): {modelless}")
-    print(f"  ~{reqs} web-search requests at {PARTS_PER_REQUEST} parts each")
-    # rough: per request ~6K in (incl. tool results) + 1.5K out at Opus 4.8 prices
-    est = reqs * ((6000 / 1e6 * 5.0) + (1500 / 1e6 * 25.0))
-    print(f"  ~cost estimate at {MODEL} prices: ${est:.2f} (excludes web-search tool fees)")
+    inuse = sum(1 for e in catalog.values() if e.get("usage_count", 0) > 0)
+    print(f"catalog parts in use: {inuse} | mode: {_mode_label(all_, before)} | due: {len(due)}")
+    print(f"  with a model# (scrapable): {modelled} | model-less (heuristic only): {len(due) - modelled}")
     if due:
         print("\n  sample due parts:")
-        for k in due[:6]:
+        for k in due[:8]:
             e = catalog[k]
-            print(f"    {k}  ({'model' if e.get('model') else 'spec_class: '+str(e.get('spec_class'))})")
+            tag = f"model: {e.get('model')}" if e.get("model") else f"spec_class: {e.get('spec_class')}"
+            print(f"    {k}  ({tag})")
 
 
 # --------------------------------- export / ingest ---------------------------------
@@ -283,22 +348,22 @@ def _work_row(key: str, e: dict) -> dict:
             "sample_details": e.get("sample_details")}
 
 
-def cmd_export(max_age_days: int, out: str, limit: int | None):
+def cmd_export(all_: bool, before, out: str, limit: int | None):
     catalog, cache = load_catalog(), load_cache()
-    due = due_keys(catalog, cache, max_age_days)
+    due = select_due(catalog, cache, all_=all_, before=before)
     if limit:
         due = due[:limit]
     rows = [_work_row(k, catalog[k]) for k in due]
     Path(out).write_text(json.dumps(rows, indent=1, ensure_ascii=False))
     print(f"[*] exported {len(rows)} due parts -> {out}")
-    print("    fill: id, retail_usd, retail_url, retail_source, wholesale_usd, "
-          "wholesale_url, wholesale_source, notes  (omit a price you can't find)")
+    print("    fill: id, retail_usd, retail_url, retail_source, notes  "
+          "(omit a price you can't find)")
 
 
 def cmd_ingest(path: str):
     """Ingest researched prices: a list of dicts keyed by `id` (the catalog key)
-    carrying any of retail_*/wholesale_*/notes. Model-less retail auto-fills from
-    the heuristic when omitted."""
+    carrying any of retail_usd/retail_url/retail_source/notes. Model-less retail
+    auto-fills from the heuristic when omitted."""
     catalog, cache = load_catalog(), load_cache()
     data = json.loads(Path(path).read_text())
     n = skipped = 0
@@ -311,38 +376,162 @@ def cmd_ingest(path: str):
         cache[key] = _cache_entry(
             key, entry,
             retail_usd=row.get("retail_usd"), retail_url=row.get("retail_url"),
-            retail_source=row.get("retail_source"),
-            wholesale_usd=row.get("wholesale_usd"), wholesale_url=row.get("wholesale_url"),
-            wholesale_source=row.get("wholesale_source"), notes=row.get("notes"))
+            retail_source=row.get("retail_source"), notes=row.get("notes"))
         n += 1
     save_cache(cache)
-    priced = apply_cache_to_catalog(cache)
-    print(f"[*] ingested {n} parts ({skipped} unknown keys); catalog now {priced} priced")
+    r = finalize_catalog()
+    print(f"[*] ingested {n} parts ({skipped} unknown keys); catalog finalized "
+          f"({r['researched']} researched + {r['estimated']} estimated)")
 
 
 # --------------------------------- write-catalog ---------------------------------
 
 def cmd_write_catalog():
-    priced = apply_cache_to_catalog(load_cache())
-    print(f"[*] applied cache -> catalog ({priced} parts priced)")
+    r = finalize_catalog()
+    print(f"[*] catalog finalized: {r['researched']} researched + "
+          f"{r['estimated']} estimated retail prices (every in-use part now priced)")
+
+
+# --------------------------- scrape (key-free retailer lookup) ---------------------------
+# Worldwide Cyclery is a Shopify store: its predictive-search endpoint returns structured
+# {title, price, vendor, handle} JSON with no API key. We query "<maker> <model>" per due
+# part and CONSERVATIVELY match (brand + EVERY model token + a category keyword, minus
+# accessory/sub-part/bundle listings) so a wrong product never overwrites a price — an
+# ambiguous part is left as its brand/spec estimate. Proprietary OEM parts (Bosch/
+# Specialized system batteries, house-brand cockpits) aren't carried here and stay estimated.
+
+WWC_BASE = "https://www.worldwidecyclery.com"
+_UA = {"User-Agent": "Mozilla/5.0 (compatible; ebike-compare price refresh)"}
+
+# category -> keyword(s) the product title MUST contain (a fork query must not land on a
+# cassette; a "handlebars" query must not land on a same-brand chainring). A part whose
+# category is NOT mapped here is never matched — we only price categories we can sanity-
+# check, leaving the rest as estimates.
+_CAT_KEYWORDS = {
+    "brakes": ("brake",), "fork": ("fork", "suspension"), "rear_shock": ("shock",),
+    "derailleur": ("derailleur",), "cassette": ("cassette",), "shifter": ("shift",),
+    "chain": ("chain",), "crankset": ("crank",), "motor": ("motor", "drive unit"),
+    "battery": ("battery",), "tire": ("tire", "tyre"), "display": ("display", "computer"),
+    "saddle": ("saddle",), "seatpost": ("seatpost", "seat post"),
+    "seat_post": ("seatpost", "seat post"), "stem": ("stem",),
+    "handlebar": ("handlebar",), "handlebars": ("handlebar",),
+    "handlebar_tape": ("bar tape", "handlebar tape"), "grips": ("grip",),
+    "grips_bar_tape": ("grip", "bar tape"), "hub": ("hub",),
+    "rims": ("rim", "wheel"), "wheel": ("wheel", "rim"), "pedals": ("pedal",),
+}
+# Sub-part / accessory / service / compatibility / bundle listings that are NOT the
+# complete part we're pricing. (For OEM/ebike parts, WWC often lists only a service
+# piece or a "fits <model>" accessory — e.g. a crank arm "For EP801" or a shock "Damper
+# Shaft Assembly", which name the part in the title but aren't it.)
+_REJECT_TITLE = re.compile(
+    r"\bkit\b|service|\btokens?\b|bleed|\bspare(s)?\b|\bseal\b|bushing|decal|sticker|"
+    r"\bremote\b|adapter|\bmount(ing)?\b|\btool\b|\bstand\b|bottle|\bbag\b|lever only|"
+    r"\bpads?\b|\brotor\b|\bbolt|\bspacer|groupset|\bcombo\b|\bbundle\b|replacement|"
+    r"\bassembly\b|eyelet|\bdamper\b|\bshaft\b|crank arm|arm set|hardware|small part|"
+    r"\bcap\b|\bspider\b|compatible|\bfits?\b|\bfor e\w*\d|\bgroup\b|power meter", re.I)
+_TOK_STOP = {"the", "and", "for", "with", "series", "drive", "unit", "system",
+             "ebike", "e-bike", "bike", "new"}
+
+
+def _toks(s: str | None) -> list[str]:
+    return [t for t in re.split(r"[^a-z0-9]+", (s or "").lower())
+            if len(t) >= 2 and t not in _TOK_STOP]
+
+
+def _wwc_search(query: str, limit: int = 6) -> list[dict]:
+    url = WWC_BASE + "/search/suggest.json?" + urllib.parse.urlencode(
+        {"q": query, "resources[type]": "product", "resources[limit]": limit})
+    try:
+        with urllib.request.urlopen(urllib.request.Request(url, headers=_UA), timeout=20) as r:
+            d = json.loads(r.read())
+        return d.get("resources", {}).get("results", {}).get("products", []) or []
+    except Exception:  # noqa: BLE001 - network/JSON errors -> no match, part stays estimated
+        return []
+
+
+def _match_product(entry: dict, products: list[dict]) -> dict | None:
+    """Conservative match: brand + EVERY model token + a category keyword present, no
+    reject words. Returns the cheapest qualifying listing, or None (leave as estimate)."""
+    man = (entry.get("manufacturer") or "").lower()
+    mtoks = _toks(entry.get("model"))
+    cat_kw = _CAT_KEYWORDS.get(entry.get("category", ""))
+    if not man or not mtoks or not cat_kw:    # need brand + model + a checkable category
+        return None
+    best = None
+    for p in products:
+        title = p.get("title") or ""
+        tl = title.lower()
+        vendor = (p.get("vendor") or "").lower()
+        if man not in vendor:                             # brand must be the product's VENDOR
+            continue                                      # (not just named in the title — that
+        if not all(re.search(rf"\b{re.escape(t)}\b", tl)  #  lets "fits <brand>" parts through)
+                   for t in mtoks):                       # every model token present, whole-word
+            continue                                      # (so "e10" != "e101")
+        if not any(k in tl for k in cat_kw):              # category sanity (required)
+            continue
+        if _REJECT_TITLE.search(tl):                      # not a sub-part / bundle
+            continue
+        try:
+            price = float(p.get("price"))
+        except (TypeError, ValueError):
+            continue
+        if price <= 0:
+            continue
+        if best is None or price < best[0]:               # cheapest qualifying single part
+            best = (price, p.get("handle"), title)
+    if not best:
+        return None
+    return {"retail_usd": round(best[0]),
+            "retail_url": f"{WWC_BASE}/products/{best[1]}",
+            "retail_source": "worldwidecyclery.com",
+            "notes": f"WWC match: {best[2][:80]}"}
+
+
+def cmd_scrape(all_: bool, before, limit: int | None, delay: float = 0.4,
+               categories: set | None = None):
+    catalog, cache = load_catalog(), load_cache()
+    due = [k for k in select_due(catalog, cache, all_=all_, before=before)
+           if catalog[k].get("model")             # only model-numbered parts are scrapable
+           and (not categories or (catalog[k].get("category") or "").lower() in categories)]
+    if limit:
+        due = due[:limit]
+    print(f"[*] scraping Worldwide Cyclery for {len(due)} model-numbered due parts "
+          f"({_mode_label(all_, before)})", file=sys.stderr)
+    matched = missed = 0
+    for i, key in enumerate(due, 1):
+        e = catalog[key]
+        q = f"{e.get('manufacturer') or ''} {e.get('model') or ''}".strip()
+        hit = _match_product(e, _wwc_search(q))
+        if hit:
+            cache[key] = _cache_entry(key, e, **hit)
+            matched += 1
+        else:
+            missed += 1
+        if i % 25 == 0:
+            save_cache(cache)                     # checkpoint
+            print(f"  {i}/{len(due)} ({matched} matched, {missed} no-match)", file=sys.stderr)
+        time.sleep(delay)                         # be polite to the store
+    save_cache(cache)
+    r = finalize_catalog()
+    print(f"[*] scraped {len(due)}: {matched} priced from WWC, {missed} left as estimate; "
+          f"catalog finalized ({r['researched']} researched + {r['estimated']} estimated)")
 
 
 # --------------------------------- run (web-assisted) ---------------------------------
 
 SYSTEM = (
     "You are a bicycle-component pricing researcher. For each part you are given, "
-    "use web search to find current US prices and return STRICT JSON only.\n"
+    "use web search to find the current US retail price and return STRICT JSON only.\n"
     "For each part determine, in USD:\n"
     "- retail_usd: the current aftermarket street/replacement price from a reputable "
     "US bike-component retailer (jensonusa.com, worldwidecyclery.com, universalcycles.com, "
-    "modernbike.com) or the manufacturer MSRP. Give retail_url and retail_source (the domain).\n"
-    "- wholesale_usd: a representative OEM unit price from aliexpress.com or alibaba.com for "
-    "the exact part, or — when the part has no model number — the closest match to its "
-    "spec_class. Give wholesale_url and wholesale_source.\n"
+    "modernbike.com) or the manufacturer MSRP. Give retail_url and retail_source (the domain). "
+    "Take the brand into account — a Bosch/Specialized system battery or a Fox fork costs far "
+    "more than a generic equivalent.\n"
     "Rules: prices are plain numbers (no $ or commas). If you genuinely cannot find a price, "
     "use null for it and say why in notes. Never invent a price or URL. Output ONLY a JSON "
-    'object: {"results":[{"id","retail_usd","retail_url","retail_source","wholesale_usd",'
-    '"wholesale_url","wholesale_source","notes"}, ...]} with one entry per part id.'
+    'object: {"results":[{"id","retail_usd","retail_url","retail_source","notes"}, ...]} '
+    "with one entry per part id."
 )
 
 
@@ -351,7 +540,7 @@ def _part_line(key: str, e: dict) -> str:
         return (f'{key} | {e.get("category")} | maker={e.get("manufacturer")} '
                 f'| model={e.get("model")} | specs={json.dumps(e.get("attributes") or {})}')
     return (f'{key} | {e.get("category")} | maker={e.get("manufacturer")} '
-            f'| NO MODEL — price wholesale by spec_class="{e.get("spec_class")}"')
+            f'| NO MODEL — price retail by spec_class="{e.get("spec_class")}"')
 
 
 def _extract_json(text: str) -> dict:
@@ -364,11 +553,11 @@ def _extract_json(text: str) -> dict:
     return json.loads(s[start:end + 1]) if start >= 0 and end > start else {}
 
 
-def cmd_run(max_age_days: int, limit: int | None):
+def cmd_run(all_: bool, before, limit: int | None):
     import anthropic
     client = anthropic.Anthropic()
     catalog, cache = load_catalog(), load_cache()
-    due = due_keys(catalog, cache, max_age_days)
+    due = select_due(catalog, cache, all_=all_, before=before)
     if limit:
         due = due[:limit]
     if not due:
@@ -402,25 +591,33 @@ def cmd_run(max_age_days: int, limit: int | None):
             cache[key] = _cache_entry(
                 key, catalog[key],
                 retail_usd=r.get("retail_usd"), retail_url=r.get("retail_url"),
-                retail_source=r.get("retail_source"),
-                wholesale_usd=r.get("wholesale_usd"), wholesale_url=r.get("wholesale_url"),
-                wholesale_source=r.get("wholesale_source"), notes=r.get("notes"))
+                retail_source=r.get("retail_source"), notes=r.get("notes"))
             priced += 1
         save_cache(cache)   # checkpoint after every batch
         print(f"  priced {min(i + PARTS_PER_REQUEST, len(due))}/{len(due)}", file=sys.stderr)
-    n_priced = apply_cache_to_catalog(cache)
-    print(f"[*] processed {priced} parts ({errors} batch errors); catalog {n_priced} priced")
+    r = finalize_catalog()
+    print(f"[*] processed {priced} parts ({errors} batch errors); catalog finalized "
+          f"({r['researched']} researched + {r['estimated']} estimated)")
 
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
-    for name in ("plan", "run", "export", "ingest", "write-catalog"):
+    SELECTION = ("plan", "scrape", "run", "export")
+    for name in ("plan", "scrape", "run", "export", "ingest", "write-catalog"):
         p = sub.add_parser(name)
-        p.add_argument("--max-age-days", type=int, default=DEFAULT_MAX_AGE_DAYS)
-        if name in ("run", "export"):
+        if name in SELECTION:
+            p.add_argument("--all", action="store_true",
+                           help="re-price every in-use part (default: only unresolved parts)")
+            p.add_argument("--date", type=_parse_mdy, default=None, metavar="MM/DD/YYYY",
+                           help="also re-price researched parts last checked before this date")
+        if name in ("scrape", "run", "export"):
             p.add_argument("--limit", type=int, default=None)
+        if name == "scrape":
+            p.add_argument("--categories", default=None,
+                           help="comma-separated catalog categories to restrict to "
+                                "(e.g. brakes,derailleur,shifter,cassette,chain,crankset,fork,shock,rear_shock,tire)")
         if name == "export":
             p.add_argument("-o", "--out", default="/tmp/component_prices_work.json")
         if name == "ingest":
@@ -428,11 +625,15 @@ def main():
     args = ap.parse_args()
 
     if args.cmd == "plan":
-        cmd_plan(args.max_age_days)
+        cmd_plan(args.all, args.date)
+    elif args.cmd == "scrape":
+        cats = ({c.strip().lower() for c in args.categories.split(",") if c.strip()}
+                if args.categories else None)
+        cmd_scrape(args.all, args.date, args.limit, categories=cats)
     elif args.cmd == "run":
-        cmd_run(args.max_age_days, args.limit)
+        cmd_run(args.all, args.date, args.limit)
     elif args.cmd == "export":
-        cmd_export(args.max_age_days, args.out, args.limit)
+        cmd_export(args.all, args.date, args.out, args.limit)
     elif args.cmd == "ingest":
         cmd_ingest(args.path)
     elif args.cmd == "write-catalog":

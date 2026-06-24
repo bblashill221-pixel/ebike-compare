@@ -4,7 +4,15 @@ import { BikeCard } from "./BikeCard";
 
 const PAGE = 48; // cards rendered up front; more load as the sentinel scrolls in
 
-export function ResultsGrid({ models }: { models: Model[] }) {
+export function ResultsGrid({
+  models,
+  selectedTypes = [],
+}: {
+  models: Model[];
+  /** product types currently selected in the filter; the card shows the matching
+   *  type pill instead of the default (primary) type when one applies. */
+  selectedTypes?: string[];
+}) {
   const [visible, setVisible] = useState(PAGE);
   const sentinel = useRef<HTMLDivElement | null>(null);
 
@@ -40,7 +48,7 @@ export function ResultsGrid({ models }: { models: Model[] }) {
     <>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {models.slice(0, visible).map((m) => (
-          <BikeCard key={m.id} model={m} />
+          <BikeCard key={m.id} model={m} selectedTypes={selectedTypes} />
         ))}
       </div>
       {visible < models.length && <div ref={sentinel} className="h-1" aria-hidden />}

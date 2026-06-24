@@ -13,7 +13,7 @@ Checks (thresholds below; tune freely):
 
 Exit 0 = OK to promote; exit 1 = problems (printed). No network, idempotent.
 
-Usage:  python validate_build.py [-i ebikes_normalized.json] [--baseline path]
+Usage:  python validate_build.py [-i ebike.json] [--baseline path]
 """
 from __future__ import annotations
 
@@ -23,7 +23,7 @@ import json
 from pathlib import Path
 
 DATA = Path(__file__).parent / "data"
-ACTIVE = DATA / "current" / "active" / "ebikes_normalized.json"
+ACTIVE = DATA / "current" / "active" / "ebike.json"
 
 MAX_COUNT_DROP = 0.20      # fail if today's count < (1 - this) * baseline count
 MAX_COVERAGE_DROP = 15     # fail if a core field's % coverage drops > this many points
@@ -72,10 +72,21 @@ def _coverage(models: list) -> dict:
     return cov
 
 
+# accept the current name and the pre-rename one, so older archives still serve as baselines
+_BASELINE_NAMES = ("ebike.json", "ebikes_normalized.json")
+
+
+def _baseline_in(d: str) -> Path | None:
+    for name in _BASELINE_NAMES:
+        p = Path(d, name)
+        if p.exists():
+            return p
+    return None
+
+
 def find_baseline() -> Path | None:
-    dirs = sorted(p for p in glob.glob(str(DATA / "legacy" / "*"))
-                  if Path(p, "ebikes_normalized.json").exists())
-    return Path(dirs[-1], "ebikes_normalized.json") if dirs else None
+    dirs = sorted(p for p in glob.glob(str(DATA / "legacy" / "*")) if _baseline_in(p))
+    return _baseline_in(dirs[-1]) if dirs else None
 
 
 def validate(cur: list, base: list) -> list[str]:
@@ -123,7 +134,10 @@ def main() -> int:
     ap.add_argument("--baseline", default=None)
     args = ap.parse_args()
 
-    cur = json.load(open(args.input)).get("models", [])
+    _curdoc = json.load(open(args.input))
+    from component_refs import rehydrate
+    rehydrate(_curdoc)   # tolerate an already-interned build (no-op on an inline one)
+    cur = _curdoc.get("models", [])
     bpath = Path(args.baseline) if args.baseline else find_baseline()
     if not bpath or not bpath.exists():
         print("[validate] no baseline to compare against — skipping (first build).")

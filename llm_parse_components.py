@@ -76,7 +76,7 @@ def collect_rows() -> list[dict]:
 def build_registry() -> dict:
     """kind -> field -> type, surveyed from the current build's parsed
     components (the LLM may only emit fields the pipeline already knows)."""
-    doc = json.load(open(DATA / "current" / "active" / "ebikes_normalized.json"))
+    doc = json.load(open(DATA / "current" / "active" / "ebike.json"))
     reg: dict = defaultdict(dict)
     for m in doc.get("models", []):
         for rows in (m.get("specs") or {}).values():

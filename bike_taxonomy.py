@@ -21,9 +21,9 @@ import re
 PRODUCT_TYPES = [
     "Commuter / Urban",
     "Mountain (eMTB)",
+    "All-Terrain",
     "Road / Gravel",
     "Cargo",
-    "Folding",
     "Trike",
     "Cruiser",
     "eMoto",
@@ -31,16 +31,19 @@ PRODUCT_TYPES = [
     "Hybrid / Fitness",
 ]
 
-# A bike can belong to several categories ("folding cargo fat bike" is Cargo +
-# Folding + Fat tire); rule order ranks the primary label — utility categories
-# trump terrain, an explicit "fat" name trumps all-terrain marketing copy, and
-# the tire-width fallback only catches fat bikes that never say so.
+# A bike can belong to several categories ("cargo fat bike" is Cargo + Fat tire);
+# rule order ranks the primary label — utility categories trump terrain, an explicit
+# "fat" name trumps all-terrain marketing copy, and the tire-width fallback only
+# catches fat bikes that never say so. NB folding is a FEATURE, not a type (a folding
+# bike still has a real use category) — it's captured as the `folding` boolean in
+# normalize, not here.
 _TYPE_RULES = [
     # "xpedition": Lectric's cargo line carries no cargo word in name/specs.
     # NB a trike is a wheel configuration, not a use category — a *cargo* trike
     # still matches "cargo"/"hauler"; a plain trike classifies on its other signals.
-    ("Cargo", re.compile(r"cargo|long[\s-]?tail|utility|hauler|xpedition", re.I)),
-    ("Folding", re.compile(r"fold", re.I)),
+    # \bhaul catches "Haul" / "Quick Haul" / "hauler" / "hauling" (Specialized Haul,
+    # Tern Quick Haul) -- compact utility/cargo bikes that don't say "cargo".
+    ("Cargo", re.compile(r"cargo|long[\s-]?tail|utility|\bhaul|xpedition", re.I)),
     # A trike has 3 wheels — identified by name ("trike"/"tricycle"/"e-trike"/
     # "triker"); no spec carries a wheel count. The (?<!s) keeps "strike" out.
     ("Trike", re.compile(r"(?<!s)trike|tricycle", re.I)),
@@ -53,10 +56,19 @@ _TYPE_RULES = [
         r"\be-?moto\b|motorcycle|motor[\s-]?bike|moped|scrambler|chopper|harley"
         r"|dirt[\s-]?bike|caf[eé][\s-]?racer", re.I)),
     ("Fat Tire", re.compile(r"\bfat\b", re.I)),
+    # All-Terrain (adventure/SUV): the site/name says so. Sits ABOVE eMTB in
+    # PRIMARY_SPECIFICITY, so an explicit all-terrain tag wins over the eMTB signal
+    # ("keyword always overrides"). "all-terrain" was moved here OUT of the eMTB rule.
+    ("All-Terrain", re.compile(r"all[\s-]?terrain|overland|\bsuv\b", re.I)),
     ("Mountain (eMTB)", re.compile(
         r"\bmtb\b|\bemtb\b|mountain|enduro|downhill|hard[\s-]?tail"
-        r"|full[\s-]?sus|all[\s-]?terrain|off[\s-]?road|\btrail\b|\bdirt\b", re.I)),
-    ("Road / Gravel", re.compile(r"\broad\b|gravel|\bracer\b|all[\s-]?road", re.I)),
+        r"|full[\s-]?sus|off[\s-]?road|\btrail\b|\bdirt\b"
+        # Specialized's eMTB lines — name classifies them (their SL mid-drive often
+        # mis-parses as hub, so the structural gate alone would miss them).
+        r"|\blevo\b|\bkenevo\b", re.I)),
+    # "creo" = Specialized's gravel/road SL line (drop-bar); name alone classifies it,
+    # so siblings whose scraped tags dropped the road/gravel signal don't fall to Commuter.
+    ("Road / Gravel", re.compile(r"\broad\b|gravel|\bracer\b|all[\s-]?road|\bcreo\b", re.I)),
     ("Cruiser", re.compile(r"cruiser|beach", re.I)),
     ("Hybrid / Fitness", re.compile(r"hybrid|fitness", re.I)),
     ("Fat Tire", re.compile(r"[2-9]\d?\s*[\"”']?\s*[x×]\s*4(?:\.\d)?\b", re.I)),
@@ -83,6 +95,39 @@ def classify_product_type(name: str, raw_type: str = "", extra_text: str = "") -
     return classify_product_types(name, raw_type, extra_text)[0]
 
 
+# Primary-type selection: when a bike matches several categories, the PRIMARY label
+# is the MOST SPECIFIC one (a use/identity category beats a trait). Distinct from the
+# _TYPE_RULES order (which ranks confidence for the multi-label list). Used for the
+# display chip and the per-type scoring cohort in analyze.py.
+PRIMARY_SPECIFICITY = [
+    "Trike",
+    "eMoto",
+    "Cargo",
+    # All-Terrain sits ABOVE eMTB so an explicit all-terrain/SUV keyword wins over the
+    # eMTB signal ("keyword always overrides"). The STRUCTURAL All-Terrain promotion
+    # (analyze.py) only runs on non-eMTB bikes, so eMTBs aren't pulled down by it.
+    "All-Terrain",
+    "Mountain (eMTB)",
+    "Fat Tire",
+    "Cruiser",
+    "Road / Gravel",
+    # Commuter / Urban outranks Hybrid / Fitness: a hybrid/fitness e-bike is
+    # essentially a kind of urban commuter, so when a bike is both, its home
+    # cohort is Commuter. Hybrid / Fitness sits last (least specific).
+    "Commuter / Urban",
+    "Hybrid / Fitness",
+]
+_SPECIFICITY_RANK = {label: i for i, label in enumerate(PRIMARY_SPECIFICITY)}
+
+
+def primary_type(types: list[str]) -> str:
+    """The most-specific label among a model's product_types (see PRIMARY_SPECIFICITY).
+    Unknown labels sort last; empty list falls back to the generic bucket."""
+    if not types:
+        return "Commuter / Urban"
+    return min(types, key=lambda t: _SPECIFICITY_RANK.get(t, len(PRIMARY_SPECIFICITY)))
+
+
 # ------------------------------ frame style ------------------------------
 
 STEP_THRU = "Step-Thru"
@@ -93,7 +138,7 @@ FRAME_STYLES = [STEP_THRU, STEP_OVER]
 # Himiway "D3 ST"); matched only as standalone tokens.
 _THRU = re.compile(r"step[\s_-]?thr(u|ough)|low[\s_-]?step|easy[\s_-]?entry|\bst\b", re.I)
 _THRU_GLUED = re.compile(r"(?<=[a-z])ST\b")  # camel-glued shorthand: "CruiserST"
-_OVER = re.compile(r"step[\s_-]?over|high[\s_-]?step|mid[\s_-]?step|\bxr\b|\bhs\b", re.I)
+_OVER = re.compile(r"step[\s_-]?over|high[\s_-]?step|mid[\s_-]?step|\bxr\b|\bhs\b|\bdiamond\b", re.I)
 
 
 def frame_style_of(text) -> str | None:

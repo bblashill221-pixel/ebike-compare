@@ -84,7 +84,7 @@ def main():
                     help="field-level summary across ALL component kinds")
     ap.add_argument("--examples", type=int, default=3)
     ap.add_argument("-i", "--input",
-                    default=str(DATA / "current" / "active" / "ebikes_normalized.json"))
+                    default=str(DATA / "current" / "active" / "ebike.json"))
     args = ap.parse_args()
 
     if args.fields:

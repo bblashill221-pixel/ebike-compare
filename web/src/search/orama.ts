@@ -9,9 +9,9 @@ import type { UnitSystem } from "../units";
 export const PRODUCT_TYPE_ORDER = [
   "Commuter / Urban",
   "Mountain (eMTB)",
+  "All-Terrain",
   "Road / Gravel",
   "Cargo",
-  "Folding",
   "Trike",
   "Cruiser",
   "eMoto",
@@ -30,7 +30,7 @@ export const ENUM_FIELDS = [
   "sensor_type",
 ] as const;
 
-export const BOOL_FIELDS = ["is_new", "on_sale", "ul_listed", "awd", "kids"] as const;
+export const BOOL_FIELDS = ["is_new", "on_sale", "ul_listed", "awd", "folding", "kids"] as const;
 
 export const RANGE_FIELDS = [
   "price",
@@ -63,6 +63,7 @@ const schema = {
   on_sale: "boolean",
   ul_listed: "boolean",
   awd: "boolean",
+  folding: "boolean",
   kids: "boolean",
   available: "boolean",
   price: "number",
@@ -94,7 +95,7 @@ function toDoc(m: Model): Record<string, unknown> {
     m.brand,
     ...productTypes,
     ...(t.notable_tech ?? []),
-    ...(m.analysis?.highlights ?? []),
+    ...(m.analysis?.standouts ?? []).map((s) => s.label),
   ]
     .filter(Boolean)
     .join(" ");
@@ -113,6 +114,7 @@ function toDoc(m: Model): Record<string, unknown> {
     on_sale: !!m.pricing?.on_sale,
     ul_listed: !!t.ul_listed,
     awd: !!t.awd,
+    folding: !!m.folding,
     kids: !!t.kids,
     available: isAvailable(m),
     // lowest purchasable price across colors/configurations
@@ -147,6 +149,11 @@ export interface Filters {
   ranges: Partial<Record<RangeField, [number, number]>>;
   /** Rider height in inches; keep models whose fit envelope contains it. null = off. */
   riderHeightIn?: number | null;
+  /** Budget ceiling chosen in the price dropdown. It scopes the price slider to
+   *  [catalog floor, priceCeiling] and is the target the slider snaps back to on
+   *  reset; null = "Any price" (slider spans the full catalog). The actual price
+   *  filter is ranges.price — this is UI-only and ignored by the search query. */
+  priceCeiling?: number | null;
 }
 
 export interface SearchResult {

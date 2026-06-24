@@ -9,16 +9,15 @@ fleet into one deduped catalog keyed by category|manufacturer|model:
     data/component_catalog.json
 
 Each entry records which bikes use the part (usage_count / used_by) plus an
-`aftermarket` block meant to be filled by resolve_component_prices.py with TWO
-independent prices — `retail_usd` (aftermarket street/replacement value) and
-`wholesale_usd` (OEM cost) — each with its source + url, a `method`
-(model_lookup / oem_range_by_spec / spec_heuristic) and a `checked_at` stamp.
-Both are quality signals that feed the analysis layer (analyze.py joins the
-catalog back per bike as two roll-ups under `analysis.component_quality`).
+`aftermarket` block meant to be filled by resolve_component_prices.py with the
+part's `retail_usd` (brand/spec-aware aftermarket street/replacement value) +
+its source + url, a `method` (model_lookup / spec_heuristic) and a `checked_at`
+stamp. It's a quality signal that feeds the analysis layer (analyze.py joins the
+catalog back per bike as a retail roll-up under `analysis.component_quality`).
 
 For parts with no model number, `spec_class` carries a stable text class
-(e.g. "48V 20Ah ebike battery") that the resolver prices against an OEM
-marketplace range.
+(e.g. "48V 20Ah ebike battery") that the resolver prices via the brand/spec
+heuristic.
 
 Rebuilds re-derive the fleet usage from scratch but PRESERVE the aftermarket
 block of every key, and keep entries that dropped out of the fleet
@@ -59,7 +58,6 @@ _CATEGORY_RULES = [
 
 _EMPTY_AFTERMARKET = {
     "retail_usd": None, "retail_url": None, "retail_source": None,
-    "wholesale_usd": None, "wholesale_url": None, "wholesale_source": None,
     "currency": "USD", "method": None, "checked_at": None, "notes": None,
 }
 # Legacy single-price keys carried by older catalogs; folded into retail_usd on
@@ -182,11 +180,13 @@ def build_catalog(models: list, previous: dict) -> dict:
 
 def main():
     ap = argparse.ArgumentParser(description="Aggregate the fleet's component part catalog.")
-    ap.add_argument("-i", "--input", default=str(DATA / "current" / "active" / "ebikes_normalized.json"))
+    ap.add_argument("-i", "--input", default=str(DATA / "current" / "active" / "ebike.json"))
     ap.add_argument("-o", "--output", default=str(DATA / "component_catalog.json"))
     args = ap.parse_args()
 
     doc = json.load(open(args.input))
+    from component_refs import rehydrate
+    rehydrate(doc)   # tolerate an already-interned build (no-op on an inline one)
     try:
         previous = json.load(open(args.output))
     except FileNotFoundError:
@@ -194,8 +194,7 @@ def main():
 
     components = build_catalog(doc.get("models", []), previous)
     priced = sum(1 for e in components.values()
-                 if (e.get("aftermarket") or {}).get("retail_usd") is not None
-                 or (e.get("aftermarket") or {}).get("wholesale_usd") is not None)
+                 if (e.get("aftermarket") or {}).get("retail_usd") is not None)
     out = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "component_count": len(components),

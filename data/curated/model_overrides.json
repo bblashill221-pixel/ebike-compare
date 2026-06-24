@@ -1,16 +1,105 @@
 {
   "engwe__engwe-x24": {
-    "specs": { "general_info": { "max_range_mi": 60, "max_range_km": 97 } }
+    "specs": {
+      "general_info": {
+        "max_range_mi": 60,
+        "max_range_km": 97
+      }
+    }
+  },
+  "wallke__wallke-h7-step-thru": {
+    "frame_sizes": [
+      {
+        "size": null,
+        "height_min": "5'8\"",
+        "height_max": "6'6\""
+      }
+    ],
+    "specs": {
+      "general_other": {
+        "rider_height": "5'8\" - 6'6\"",
+        "recommended_height": "5'8\" - 6'6\""
+      }
+    }
+  },
+  "wallke__wallke-h7-step-thru--60ah": {
+    "frame_sizes": [
+      {
+        "size": null,
+        "height_min": "5'8\"",
+        "height_max": "6'6\""
+      }
+    ],
+    "specs": {
+      "general_other": {
+        "rider_height": "5'8\" - 6'6\"",
+        "recommended_height": "5'8\" - 6'6\""
+      }
+    }
+  },
+  "priority__ecoast": {
+    "specs": {
+      "general_info": {
+        "max_range_mi": 60,
+        "max_range_km": 97
+      }
+    },
+    "geometry": {
+      "rider_height_range": "5'6\" - 6'4\"",
+      "min_standover_height": "32\""
+    }
+  },
+  "priority__ecoast--step-thru": {
+    "specs": {
+      "general_info": {
+        "max_range_mi": 60,
+        "max_range_km": 97
+      }
+    },
+    "geometry": {
+      "rider_height_range": "5'0\" - 6'0\"",
+      "min_standover_height": "26\""
+    }
+  },
+  "ride1up__vorsa--vorsa": {
+    "model": "VORSA — Standard · Step-Over",
+    "tier": "Standard · Step-Over"
+  },
+  "ride1up__vorsa--vorsa--step-thru": {
+    "model": "VORSA — Standard · Step-Thru",
+    "tier": "Standard · Step-Thru"
+  },
+  "ride1up__vorsa--ft": {
+    "product_type": "Fat Tire",
+    "product_types": [
+      "Fat Tire"
+    ]
+  },
+  "ride1up__vorsa--ft--step-thru": {
+    "product_type": "Fat Tire",
+    "product_types": [
+      "Fat Tire"
+    ]
   },
   "velowave__forest-sm": {
     "product_type": "Mountain (eMTB)",
-    "product_types": ["Mountain (eMTB)"],
-    "motor": { "manufacturer": "Bafang", "details": "Mid-drive" }
+    "product_types": [
+      "Mountain (eMTB)"
+    ],
+    "motor": {
+      "manufacturer": "Bafang",
+      "details": "Mid-drive"
+    }
   },
   "velowave__forest-xm": {
     "product_type": "Mountain (eMTB)",
-    "product_types": ["Mountain (eMTB)"],
-    "motor": { "manufacturer": "Bafang", "details": "Mid-drive" }
+    "product_types": [
+      "Mountain (eMTB)"
+    ],
+    "motor": {
+      "manufacturer": "Bafang",
+      "details": "Mid-drive"
+    }
   },
   "cyke__falcon-a-full-suspension-ebike": {
     "frame_sizes": [
@@ -53,6 +142,20 @@
         "height_max": "6'4\""
       }
     ]
+  },
+  "wired__wired-viper": {
+    "geometry": {
+      "rider_height_range": "4'10\" - 5'11\"",
+      "load_capacity": "450 lbs",
+      "total_length": "74\"",
+      "wheelbase": "49.5\"",
+      "handlebar_height": "43.6\"",
+      "max_seat_height": "35\"",
+      "min_seat_height": "30.3\"",
+      "step_thru_height": "23.5\"",
+      "rear_rack_height": "28.7\"",
+      "bottom_bracket_height": "13\""
+    }
   },
   "wired__wired-cruiser": {
     "geometry": {
@@ -117,5 +220,25 @@
       "bottom_bracket_height": "12.6\"",
       "total_length": "81.5\""
     }
+  },
+  "monarc__tracer-high-step-ebike": {
+    "add_included_accessories": [
+      {
+        "name": "Smart Helmet",
+        "price": 0,
+        "free": true,
+        "detail": "Free smart helmet bundled with the bike (limited-time promotion); connects to the Monarc smart system."
+      }
+    ]
+  },
+  "monarc__tracer-step-thru-ebike": {
+    "add_included_accessories": [
+      {
+        "name": "Smart Helmet",
+        "price": 0,
+        "free": true,
+        "detail": "Free smart helmet bundled with the bike (limited-time promotion); connects to the Monarc smart system."
+      }
+    ]
   }
 }

@@ -1,10 +1,20 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-// DEV-ONLY QA page: renders data/current/anomalies.json (audit_anomalies.py) — a
-// ranked triage list of likely-misclassified / misparsed bikes. The route is
-// registered only when import.meta.env.DEV, and anomalies.json is copied into
-// public/ only by `predev` (never bundled into production), so this never ships.
+// QA page: renders data/current/anomalies.json (audit_anomalies.py) — a ranked
+// triage list of likely-misclassified / misparsed bikes. The route lives at /qa in
+// every build. In dev it's always visible (and linked from the Header); in
+// production there's no link and access is gated behind a client-side flag
+// (localStorage `qa` === "1"). This is a soft gate — anomalies.json is publicly
+// fetchable, so it hides only the page UI, not the underlying data.
+function qaAllowed(): boolean {
+  if (import.meta.env.DEV) return true;
+  try {
+    return localStorage.getItem("qa") === "1";
+  } catch {
+    return false;
+  }
+}
 
 type Anomaly = {
   id: string;
@@ -43,6 +53,11 @@ export function QaAnomalies() {
       .catch((e) => setError(String(e)));
   }, []);
 
+  // Production gate: no link points here; reachable only with the localStorage
+  // flag set. Render a generic not-found rather than reveal the page.
+  if (!qaAllowed())
+    return <Wrap><p className="text-sm text-slate-500">Page not found.</p></Wrap>;
+
   if (error)
     return (
       <Wrap>
@@ -62,7 +77,7 @@ export function QaAnomalies() {
       <div className="mb-1 flex items-baseline gap-2">
         <h1 className="text-xl font-bold text-slate-900">QA · Anomalies</h1>
         <span className="rounded bg-rose-600 px-1.5 py-0.5 text-[10px] font-semibold uppercase text-white">
-          Dev only
+          {import.meta.env.DEV ? "Dev" : "Internal"}
         </span>
       </div>
       <p className="mb-4 text-sm text-slate-500">

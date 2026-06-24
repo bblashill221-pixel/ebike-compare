@@ -21,16 +21,20 @@ def num(pattern: str, text: str) -> float | None:
 # Mid-drive vs hub: most premium mid-drives never say "mid-drive" in the spec —
 # they're identified by the motor brand/model. Recognize the known mid-drive
 # systems (Bosch — all e-bike drive units, Brose, Shimano STEPS/EP, Yamaha PW, TQ
-# HPR, DJI Avinox, Bafang M-series/Ultra, Specialized full-power 2.x/3.x) plus the
-# literal wording. Carve-outs for look-alike HUBs: Mahle (Specialized SL / Creo SL
-# rear hub) and Bafang G0xx geared hubs are NOT mid-drive.
+# HPR, DJI Avinox, Bafang M-series/Ultra, Specialized full-power 2.x/3.x, Giant
+# SyncDrive — Yamaha-built mid-drive) plus the literal wording. Carve-outs for
+# look-alike HUBs: Mahle (Specialized SL / Creo SL rear hub) and Bafang G0xx geared
+# hubs are NOT mid-drive.
 _MID_DRIVE_RE = re.compile(
     r"mid[\s-]?drive|mid[\s-]?motor|bottom bracket"
     r"|bosch|brose|yamaha|shimano\s*(?:ep|steps|e\d{4})|\bsteps\b"
-    r"|\btq\b|\bhpr\b|avinox"
+    r"|\btq\b|\bhpr\b|avinox|syncdrive(?!\s*move)"   # SyncDrive Pro/Sport/Core = mid; SyncDriveMove = hub
     r"|bafang\s*(?:m\d|ultra|max)|\bm[456]\d{2}\b"
+    r"|\bultro\b"   # Aventon's mid-drive family (Ultro S / Ultro X); hub motors never named Ultro
     r"|specialized\s*[23]\.\d", re.I)
-_HUB_OVERRIDE_RE = re.compile(r"mahle|bafang\s*g0|\bg0\d\d\b", re.I)
+# An explicit "hub drive"/"hub motor" wins over a brand match (Giant's lightweight
+# SyncDriveMove on the Defy E+ is a HUB drive even though "syncdrive" reads as mid).
+_HUB_OVERRIDE_RE = re.compile(r"mahle|bafang\s*g0|\bg0\d\d\b|hub[\s-]?drive|hub[\s-]?motor", re.I)
 
 
 def is_mid_drive(text) -> bool:
@@ -77,20 +81,29 @@ _CM = re.compile(r"(\d{2,3})\s*(?:[-–~]\s*(\d{2,3}))?\s*cm")   # "200cm" or "1
 _DEC_FT = re.compile(r"(\d(?:\.\d)?)\s*(?:ft\b|feet\b)")
 
 
+# A parsed rider height is only kept if it's physically plausible (4'0"–7'6").
+# Guards against corrupt source data — e.g. Wallke's mangled "12'1"" (= 145") or
+# "5'85"" (5ft + 85in = 145") — producing absurd "2'1" – 12'1"" fit ranges.
+_HEIGHT_MIN_IN, _HEIGHT_MAX_IN = 48.0, 90.0
+
+
 def height_tokens_in(text: str) -> list[float]:
-    """Every height mentioned in `text`, in inches. Prefers feet-inch notation;
-    falls back to centimetres, then decimal feet. Returns [] when none parse."""
+    """Every PLAUSIBLE rider height in `text`, in inches (implausible values from
+    corrupt data are dropped). Prefers feet-inch notation; falls back to centimetres,
+    then decimal feet. Returns [] when none parse."""
     # normalise prime + curly-quote + en/em-dash variants to ASCII ' " -
     t = (str(text).replace("″", '"').replace("′", "'")
          .replace("’", "'").replace("‘", "'").replace("”", '"').replace("“", '"')
          .replace("–", "-").replace("—", "-"))
     feet_inch = [int(f) * 12 + (int(i) if i else 0) for f, i in _FEET_INCH.findall(t)]
     if feet_inch:
-        return [float(v) for v in feet_inch]
-    if "cm" in t.lower():
-        return [round(float(c) / 2.54, 1)
+        vals = [float(v) for v in feet_inch]
+    elif "cm" in t.lower():
+        vals = [round(float(c) / 2.54, 1)
                 for lo, hi in _CM.findall(t) for c in (lo, hi) if c]
-    return [round(float(f) * 12, 1) for f in _DEC_FT.findall(t)]
+    else:
+        vals = [round(float(f) * 12, 1) for f in _DEC_FT.findall(t)]
+    return [v for v in vals if _HEIGHT_MIN_IN <= v <= _HEIGHT_MAX_IN]
 
 
 def height_range_in(value) -> tuple[float, float] | None:

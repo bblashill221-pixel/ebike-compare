@@ -445,6 +445,24 @@ def merge_geometry(configs: list[dict]) -> dict:
 def build_model(fam: dict, configs: list[dict], handle_img: dict) -> dict:
     skus = fam["skus"]
     prices = [s["price"] for s in skus if s["price"] is not None]
+    # Colors available per frame style, from the SKUs (frame is encoded in each
+    # product's handle/title -> parse_frame). Lectric's PDP color buttons list EVERY
+    # frame's colorway, so a scraped config carries all colors; narrow each config to
+    # its own frame's colors so the frame-split cards (expand_lectric) show only that
+    # frame's colorways + photos (e.g. XPress2 Cruiser=Step-Thru White/Blue vs
+    # Commuter=High-Step Green/Grey). A color sold in both frames stays in both.
+    frame_colors: dict[str, set] = {}
+    for s in skus:
+        if s.get("color") and s.get("frame_style"):
+            frame_colors.setdefault(s["frame_style"], set()).add(s["color"])
+    if len(frame_colors) > 1:
+        for c in configs:
+            fc = frame_colors.get(c.get("frame_style"))
+            if fc and c.get("colors"):
+                narrowed = [cc for cc in c["colors"]
+                            if (cc.get("label") or cc.get("name")) in fc]
+                if narrowed:
+                    c["colors"] = narrowed
     perf = []
     for c in configs:
         for p in c.get("performance_options", []):

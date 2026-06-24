@@ -34,8 +34,12 @@ ACC_COLLECTION = {
     "wired": "accessories", "magician": "accessories",
     "engwe": None, "wallke": None, "cyke": "ebike-gear", "leoguar": None,
 }
-# Brands/models that are not free shipping (none known; placeholder for overrides).
-NON_FREE_SHIPPING: dict = {}
+# Brands that are NOT free shipping (charged / "calculated at checkout"). Overrides the
+# DTC free default; cost None = known-not-free but amount unpublished (the card shows a
+# blank line, never a false "Free Shipping").
+NON_FREE_SHIPPING: dict = {
+    "magician": {"cost": None, "free": False},
+}
 
 INCLUDED_RE = re.compile(r"\b(included|comes with|standard|integrated)\b", re.I)
 NOT_INCLUDED_RE = re.compile(r"not included|sold separately|optional|n/?a\b", re.I)

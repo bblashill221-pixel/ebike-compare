@@ -288,7 +288,7 @@ def main():
     ap.add_argument("--limit", type=int, default=0, help="max pages per brand")
     ap.add_argument("--passes", type=int, default=3)
     ap.add_argument("-i", "--input",
-                    default=str(DATA / "current" / "active" / "ebikes_normalized.json"))
+                    default=str(DATA / "current" / "active" / "ebike.json"))
     args = ap.parse_args()
 
     doc = json.load(open(args.input))

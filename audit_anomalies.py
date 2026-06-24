@@ -7,7 +7,7 @@ Each check encodes a domain rule (most learned from a real bug), so a rule
 written once guards the whole fleet — and every future scrape — automatically,
 turning "inspect every bike" into "review a short ranked triage list".
 
-Reads data/current/active/ebikes_normalized.json; writes
+Reads data/current/active/ebike.json; writes
 data/current/anomalies.json ({generated_at, model_count, by_rule, severity
 counts, anomalies:[{id,brand,model,url,rule,severity,detail}]}). Advisory only
 (never fails the build); the dev-only QA page renders the report.
@@ -26,7 +26,7 @@ from pathlib import Path
 DATA = Path(__file__).parent / "data"
 
 _TRIKE = re.compile(r"(?<!s)trike|tricycle", re.I)
-_CARGO = re.compile(r"cargo|hauler|utility|long[\s-]?tail|xpedition", re.I)
+_CARGO = re.compile(r"cargo|\bhaul|utility|long[\s-]?tail|xpedition", re.I)
 _HYBRID = re.compile(r"hybrid|fitness", re.I)
 # canonical component materials; aluminum may carry an alloy grade ("aluminum 6061")
 _MATERIALS = {
@@ -137,11 +137,14 @@ def audit(models: list[dict]) -> list[dict]:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description="Flag likely-misclassified / misparsed bikes.")
-    ap.add_argument("-i", "--input", default=str(DATA / "current" / "active" / "ebikes_normalized.json"))
+    ap.add_argument("-i", "--input", default=str(DATA / "current" / "active" / "ebike.json"))
     ap.add_argument("-o", "--output", default=str(DATA / "current" / "anomalies.json"))
     args = ap.parse_args()
 
-    models = json.load(open(args.input)).get("models", [])
+    doc = json.load(open(args.input))
+    from component_refs import rehydrate
+    rehydrate(doc)   # tolerate an already-interned build (no-op on an inline one)
+    models = doc.get("models", [])
     anomalies = audit(models)
     by_rule = Counter(a["rule"] for a in anomalies)
     by_sev = Counter(a["severity"] for a in anomalies)

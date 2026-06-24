@@ -16,9 +16,9 @@ Outputs (all of):
   - console: a coverage table for every typed field + a missing-by-field summary;
   - data/current/data_audit.json: coverage + the full brand/model/field missing list;
   - data/current/data_audit_missing.csv: the missing rows for spreadsheet triage;
-  - a `data_audit` block stamped onto each model in ebikes_normalized.json.
+  - a `data_audit` block stamped onto each model in ebike.json.
 
-Usage:  python audit.py [-i data/current/active/ebikes_normalized.json]
+Usage:  python audit.py [-i data/current/active/ebike.json]
 """
 from __future__ import annotations
 
@@ -212,12 +212,14 @@ def print_report(report: dict) -> None:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description="Audit normalized models for missing expected specs.")
-    ap.add_argument("-i", "--input", default=str(DATA / "current" / "active" / "ebikes_normalized.json"))
+    ap.add_argument("-i", "--input", default=str(DATA / "current" / "active" / "ebike.json"))
     ap.add_argument("--json", default=str(DATA / "current" / "data_audit.json"))
     ap.add_argument("--csv", default=str(DATA / "current" / "data_audit_missing.csv"))
     args = ap.parse_args()
 
     doc = json.load(open(args.input))
+    from component_refs import rehydrate
+    rehydrate(doc)   # tolerate an already-interned build (no-op on an inline one)
     models = doc.get("models", [])
     report = audit(models)
 

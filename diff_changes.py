@@ -4,8 +4,8 @@ Daily change-log: diff the freshly-built normalized fleet against the previous
 build and record what changed per model.
 
 Runs as the LAST pipeline stage (after analyze.py + audit.py), comparing the
-current `data/current/active/ebikes_normalized.json` to the most-recent archived
-build in `data/legacy/<date>/ebikes_normalized.json` (run_scrape.sh archives the
+current `data/current/active/ebike.json` to the most-recent archived
+build in `data/legacy/<date>/ebike.json` (run_scrape.sh archives the
 prior build there before each run). Models are matched by their stable `id`
 (`brand__handle`). Tracked changes:
 
@@ -20,11 +20,11 @@ prior build there before each run). Models are matched by their stable `id`
 Outputs (pure-compute, no network, idempotent against a fixed baseline):
   - data/current/changes.json        -- summary + the full change list
   - data/changes/<date>.json         -- dated history copy
-  - per-model `changed_today` stamp written back into ebikes_normalized.json
+  - per-model `changed_today` stamp written back into ebike.json
     (so the web can render "Price drop" / "On sale" / "New" / "Back in stock"
     badges with no extra fetch); omitted when a model didn't change.
 
-Usage:  python diff_changes.py [-i ebikes_normalized.json] [--baseline <path>]
+Usage:  python diff_changes.py [-i ebike.json] [--baseline <path>]
 """
 from __future__ import annotations
 
@@ -37,12 +37,19 @@ from pathlib import Path
 
 HERE = Path(__file__).parent
 DATA = HERE / "data"
-ACTIVE = DATA / "current" / "active" / "ebikes_normalized.json"
+ACTIVE = DATA / "current" / "active" / "ebike.json"
 
 # If more than this fraction of the fleet reads as "added", the baseline is
 # stale/partial (a very old archive, or the first run after a big import) rather
 # than a real day-over-day reference — so drop the "added" flood from the log.
 ADDED_FLOOD_FRACTION = 0.25
+
+# Same idea for "New freebie": if a freebie change shows up on more than this
+# fraction of the fleet, the baseline predates the field that feeds it (e.g. a build
+# from before included_accessories existed), so every model's gear reads as newly
+# "added" — bogus. A real day-over-day diff touches only a handful, so above this we
+# suppress free_feature entirely (no spurious "New freebie" badges).
+FREE_FLOOD_FRACTION = 0.25
 
 
 # ----------------------------- field accessors ------------------------------
@@ -149,15 +156,25 @@ def build_changes(current: list, baseline: list) -> tuple[list, list]:
     return rows, removed
 
 
+# accept the current name and the pre-rename one, so older archives still serve as baselines
+_BASELINE_NAMES = ("ebike.json", "ebikes_normalized.json")
+
+
+def _baseline_in(d: str) -> Path | None:
+    for name in _BASELINE_NAMES:
+        p = Path(d, name)
+        if p.exists():
+            return p
+    return None
+
+
 def find_baseline(current_date: str) -> Path | None:
     """Most-recent archived build; prefer one dated before today's build."""
-    dirs = sorted(p for p in glob.glob(str(DATA / "legacy" / "*"))
-                  if Path(p, "ebikes_normalized.json").exists())
+    dirs = sorted(p for p in glob.glob(str(DATA / "legacy" / "*")) if _baseline_in(p))
     if not dirs:
         return None
     before = [p for p in dirs if Path(p).name < current_date]
-    chosen = (before or dirs)[-1]
-    return Path(chosen, "ebikes_normalized.json")
+    return _baseline_in((before or dirs)[-1])
 
 
 def main() -> int:
@@ -168,6 +185,8 @@ def main() -> int:
     args = ap.parse_args()
 
     doc = json.load(open(args.input))
+    from component_refs import rehydrate
+    rehydrate(doc)   # tolerate an already-interned build (no-op on an inline one)
     models = doc.get("models", [])
     gen = (doc.get("generated_at") or datetime.now(timezone.utc).isoformat())
     today = gen[:10]
@@ -190,6 +209,23 @@ def main() -> int:
     if suppressed_added:
         rows = [r for r in rows if "added" not in r["types"]]
 
+    # Free-feature flood guard: a "New freebie" must come from a real day-over-day
+    # diff. When too many models show one, the baseline predates the freebie field,
+    # so strip free_feature from the log AND from the per-model changed_today stamps
+    # (which feed the "New freebie" badge), dropping rows left with nothing.
+    free_count = sum(1 for r in rows if "free_feature" in r.get("types", []))
+    suppressed_free = bool(baseline) and free_count > FREE_FLOOD_FRACTION * max(len(models), 1)
+    if suppressed_free:
+        for r in rows:
+            if "free_feature" in r.get("types", []):
+                r["types"].remove("free_feature")          # shared with changed_today.types
+                r.get("detail", {}).pop("free_feature", None)
+        rows = [r for r in rows if r["types"]]              # added rows keep ["added"]
+        for m in models:
+            ct = m.get("changed_today")
+            if ct and not ct.get("types"):
+                m.pop("changed_today", None)
+
     by_type: dict = {}
     for r in rows + removed:
         for t in r["types"]:
@@ -204,6 +240,7 @@ def main() -> int:
             "removed": len(removed),
             "by_type": by_type,
             "added_suppressed": suppressed_added,
+            "free_feature_suppressed": suppressed_free,
         },
         "changes": rows + removed,
     }

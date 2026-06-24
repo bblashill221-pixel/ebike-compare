@@ -6,7 +6,7 @@
 # It archives the previous build (scrape returns + normalized) to
 # data/legacy/<date>/, then runs each scraper with the project's venv writing to
 # data/current/<brand>_ebikes.json, then enrich -> normalize
-# (data/current/active/ebikes_normalized.json) -> metrics. Logs to logs/scrape.log.
+# (data/current/active/ebike.json) -> metrics. Logs to logs/scrape.log.
 # One scraper failing does not stop the other; the script exits non-zero if any
 # scraper failed.
 #
@@ -60,6 +60,9 @@ SCRAPERS=(
     "scrape_buzz.py|buzz_ebikes|"
     "scrape_magicycle.py|magicycle_ebikes|"
     "scrape_urtopia.py|urtopia_ebikes|"
+    "scrape_trek.py|trek_ebikes|"
+    "scrape_giant.py|giant_ebikes|"
+    "scrape_vanpowers.py|vanpowers_ebikes|"
 )
 
 run_all() {
@@ -70,13 +73,13 @@ run_all() {
     if compgen -G "$CURRENT_DIR/*_ebikes.json" > /dev/null; then
         local oldstamp
         oldstamp=$("$PY" -c "import json,glob,sys;
-f=glob.glob('$ACTIVE_DIR/ebikes_normalized.json');
+f=glob.glob('$ACTIVE_DIR/ebike.json');
 print((json.load(open(f[0])).get('generated_at','') or '')[:10]) if f else print('')" 2>/dev/null)
         [ -z "$oldstamp" ] && oldstamp="$(date +%F)"
         local dest="$LEGACY_DIR/$oldstamp"
         mkdir -p "$dest"
         mv -f "$CURRENT_DIR"/*_ebikes.json "$dest/" 2>/dev/null || true
-        [ -f "$ACTIVE_DIR/ebikes_normalized.json" ] && mv -f "$ACTIVE_DIR/ebikes_normalized.json" "$dest/"
+        [ -f "$ACTIVE_DIR/ebike.json" ] && mv -f "$ACTIVE_DIR/ebike.json" "$dest/"
         echo "$(date -Is) : archived previous build -> $dest"
     fi
     for entry in "${SCRAPERS[@]}"; do
@@ -123,20 +126,19 @@ print((json.load(open(f[0])).get('generated_at','') or '')[:10]) if f else print
     # brand site, where the platform supports it (best effort).
     "$PY" "$PROJECT_DIR/add_deep_links.py" || true
     # Normalize unifies all brands AND does the detailed spec grouping + component
-    # parsing into ebikes_normalized.json (the single transform step).
+    # parsing into ebike.json (the single transform step).
     "$PY" "$PROJECT_DIR/normalize.py" || true
     # Aggregate the fleet-wide part catalog (manufacturer + model number per
     # component) used for price lookups; prior lookups are preserved.
     "$PY" "$PROJECT_DIR/component_catalog.py" || true
-    # Refresh per-part prices (retail + wholesale) only for parts that are new or
-    # whose lookup is >30 days old (cheap + idempotent); then fold the cache into
-    # the catalog. `run` needs ANTHROPIC_API_KEY; if absent/failed, write-catalog
-    # still applies whatever prices are already cached.
-    "$PY" "$PROJECT_DIR/resolve_component_prices.py" run --max-age-days 30 || true
+    # Refresh per-part RETAIL prices, KEY-FREE: scrape Worldwide Cyclery (Shopify) for
+    # any UNRESOLVED parts (new / never looked up) and conservatively match them. Existing
+    # researched prices are kept. For a periodic full refresh of stale researched prices,
+    # run `resolve_component_prices.py scrape --date MM/DD/YYYY` (or --all) out of band.
+    "$PY" "$PROJECT_DIR/resolve_component_prices.py" scrape || true
+    # Finalize the catalog: every in-use part priced (researched or context estimate +
+    # method + confidence). bom_pct is now derived from this, so no separate cost file.
     "$PY" "$PROJECT_DIR/resolve_component_prices.py" write-catalog || true
-    # Metrics last: BOM cost estimates, then the typed-fact + scoring analysis layer.
-    "$PY" "$PROJECT_DIR/estimate_component_costs.py" \
-        -o "$CURRENT_DIR/component_cost_estimates.json" || true
     "$PY" "$PROJECT_DIR/analyze.py" || true
     # Data audit: flag models missing expected spec values (report + CSV +
     # per-model annotation). Reads typed specs only; safe to re-run.
@@ -155,6 +157,10 @@ print((json.load(open(f[0])).get('generated_at','') or '')[:10]) if f else print
     # record price/sale/free-feature/stock/new/removed changes (+ changed_today
     # stamp). Pure-compute, idempotent against a fixed baseline.
     "$PY" "$PROJECT_DIR/diff_changes.py" || true
+    # Rewrite the active build with the content-addressed `components` table + refs
+    # (every component once, priced, linked to the catalog). Must run AFTER the steps
+    # above that read inline specs (normalize/analyze/audit/validate/diff).
+    "$PY" "$PROJECT_DIR/intern_components.py" || true
     echo "===== $(date -Is) : run complete (rc=$rc) ====="
     echo
     return $rc

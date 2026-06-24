@@ -59,7 +59,8 @@
   "expected": {
    "material": "aluminum 6061",
    "integrated_battery": true,
-   "details": "Gravity cast single-butted; internal battery",
+   "folding": false,
+   "details": "Gravity Cast Single-Butted Aluminum Alloy",
    "_kind": "frame"
   }
  },
@@ -73,10 +74,11 @@
    "rear_brake_rotor": "203mm 6-bolt"
   },
   "expected": {
-   "type": "suspension",
+   "type": "coil",
    "travel_mm": 51,
    "lockout": true,
-   "details": "Threaded steerer for quill stem; 15x110 spacing; black stanchions",
+   "thru_axle": false,
+   "details": "Threaded Steerer Tube for Quill Stem 15x110 spacing, adjustable lockout black stanchions",
    "_kind": "fork"
   }
  },
@@ -90,7 +92,9 @@
    "rear_brake_rotor": "203mm 6-bolt"
   },
   "expected": {
-   "details": "110mm",
+   "travel_mm": 110,
+   "lockout": false,
+   "thru_axle": false,
    "_kind": "fork"
   }
  },
@@ -537,7 +541,8 @@
   "expected": {
    "material": "aluminum 6061",
    "integrated_battery": true,
-   "details": "internal battery; one-piece diecast front triangle",
+   "folding": false,
+   "details": "Aluminum Alloy with. One piece - Diecast aluminum front triangle",
    "_kind": "frame"
   }
  },
@@ -866,8 +871,8 @@
   },
   "expected": {
    "manufacturer": "RockShox",
-   "model": "Deluxe Select+",
-   "size": "210x55",
+   "details": "Deluxe Select+ (210x55)",
+   "model": "Deluxe Select+ 210x55",
    "_kind": "shock"
   }
  },
@@ -897,8 +902,8 @@
   },
   "expected": {
    "manufacturer": "RockShox",
-   "model": "Super Deluxe Select+",
-   "size": "210x55",
+   "details": "Super Deluxe Select+ (210x55)",
+   "model": "Super Deluxe Select+ 210x55",
    "_kind": "shock"
   }
  },
@@ -1042,7 +1047,10 @@
   "text": "Aluminum Alloy",
   "siblings": null,
   "expected": {
-   "material": "aluminum",
+   "material": "aluminum alloy",
+   "integrated_battery": false,
+   "folding": false,
+   "details": "Aluminum Alloy",
    "_kind": "frame"
   }
  },
@@ -1053,7 +1061,9 @@
   "text": "Steel",
   "siblings": null,
   "expected": {
-   "details": "Steel",
+   "lockout": false,
+   "thru_axle": false,
+   "material": "steel",
    "_kind": "fork"
   }
  },
@@ -1302,6 +1312,9 @@
   "siblings": null,
   "expected": {
    "material": "aluminum 6061",
+   "integrated_battery": false,
+   "folding": false,
+   "details": "Aluminum Alloy",
    "_kind": "frame"
   }
  },
@@ -1313,7 +1326,10 @@
   "siblings": null,
   "expected": {
    "type": "rigid",
-   "details": "Steel, 1 1/8\" threadless",
+   "lockout": false,
+   "thru_axle": false,
+   "material": "steel",
+   "details": "1 1/8\" Threadless",
    "_kind": "fork"
   }
  },
@@ -1634,7 +1650,9 @@
   "text": "Front",
   "siblings": null,
   "expected": {
-   "details": "Front suspension",
+   "lockout": false,
+   "thru_axle": false,
+   "details": "Front",
    "_kind": "fork"
   }
  },
@@ -1712,12 +1730,17 @@
   "text": "SmartForm C3 Alloy step-thru frame, removable downtube battery, fully internal cable routing, post mount disc, dual water bottle headtube mount",
   "siblings": null,
   "expected": {
-   "material": "aluminum",
+   "material": "aluminum alloy",
+   "integrated_battery": true,
+   "folding": false,
    "style": "step_thru",
    "removable_battery": true,
+   "battery_position": "downtube",
    "cable_routing": "internal",
-   "brake_mount": "post mount",
-   "details": "SmartForm C3; dual water bottle headtube mounts",
+   "brake_mount": "post_mount_disc",
+   "mounts": [
+    "water bottle"
+   ],
    "_kind": "frame"
   }
  },
@@ -1728,6 +1751,9 @@
   "text": "SmartForm C3 Alloy blades, 1-1/8\" steerer, post mount disc, mid-blade rack/fender mounts, crown accessory mount, 45mm offset",
   "siblings": null,
   "expected": {
+   "lockout": false,
+   "thru_axle": false,
+   "material": "aluminum alloy",
    "details": "SmartForm C3 Alloy blades, 1-1/8\" steerer, post mount disc, mid-blade rack/fender mounts, crown accessory mount, 45mm offset",
    "_kind": "fork"
   }
@@ -1741,7 +1767,9 @@
   "expected": {
    "manufacturer": "Bosch",
    "model": "Active Line",
-   "_kind": "motor"
+   "_kind": "motor",
+   "torque_nm": 40,
+   "power_w": 250
   }
  },
  {
@@ -2014,6 +2042,8 @@
   "siblings": null,
   "expected": {
    "type": "rigid",
+   "lockout": false,
+   "thru_axle": false,
    "details": "No suspension",
    "_kind": "fork"
   }
@@ -2025,10 +2055,19 @@
   "text": "SmartForm C3 Alloy frame, removable downtube battery, semi-internal cable routing, tapered 1-1/8\"-1.5\" headtube, post mount disc, waterbottle and headtube rack mounts",
   "siblings": null,
   "expected": {
-   "material": "aluminum",
+   "material": "aluminum alloy",
+   "integrated_battery": true,
+   "folding": false,
    "removable_battery": true,
-   "brake_mount": "post mount",
-   "details": "SmartForm C3; semi-internal cable routing; tapered 1-1/8\"-1.5\" headtube; water bottle and headtube rack mounts",
+   "battery_position": "downtube",
+   "cable_routing": "semi_internal",
+   "headtube": "tapered 1-1/8\"-1.5\"",
+   "brake_mount": "post_mount_disc",
+   "mounts": [
+    "rack",
+    "water bottle"
+   ],
+   "details": "SmartForm C3 Alloy frame",
    "_kind": "frame"
   }
  },
@@ -2220,11 +2259,10 @@
   "text": "Fox Float X Factory, Kashima, 2 pos adj, EVOL LV, 230x62.5mm",
   "siblings": null,
   "expected": {
-   "manufacturer": "FOX",
-   "model": "Float X Factory",
-   "type": "air",
+   "manufacturer": "Fox",
    "size": "230x62.5mm",
-   "details": "Kashima coat; 2-position adjust; EVOL LV",
+   "details": "Float Factory, Kashima, 2 pos adj, EVOL LV",
+   "model": "Float X Factory Kashima",
    "_kind": "shock"
   }
  },
@@ -2236,10 +2274,10 @@
   "siblings": null,
   "expected": {
    "manufacturer": "RockShox",
-   "model": "Deluxe Select+",
    "type": "air",
    "size": "230x62.5mm",
-   "details": "DebonAir+; 2-position mode adjust; adjustable rebound",
+   "details": "Deluxe Select+, DebonAir+, 2-Pos mode adjust, adjustable rebound",
+   "model": "Deluxe Select+ DebonAir+ 2-Pos",
    "_kind": "shock"
   }
  },
@@ -2301,6 +2339,9 @@
   "siblings": null,
   "expected": {
    "material": "aluminum 6061",
+   "integrated_battery": false,
+   "folding": false,
+   "details": "al alloy",
    "_kind": "frame"
   }
  },
@@ -2311,8 +2352,11 @@
   "text": "alloy suspension Lo",
   "siblings": null,
   "expected": {
-   "type": "suspension",
-   "details": "Alloy, Lo",
+   "type": "coil",
+   "lockout": false,
+   "thru_axle": false,
+   "material": "aluminum alloy",
+   "details": "alloy suspension Lo",
    "_kind": "fork"
   }
  },
@@ -2374,7 +2418,9 @@
   "siblings": null,
   "expected": {
    "material": "steel",
-   "details": "Carbon steel",
+   "integrated_battery": false,
+   "folding": false,
+   "details": "Carbon",
    "_kind": "frame"
   }
  },
@@ -2436,8 +2482,11 @@
   "text": "alloy crown suspension fork",
   "siblings": null,
   "expected": {
-   "type": "suspension",
-   "details": "Alloy crown",
+   "type": "coil",
+   "lockout": false,
+   "thru_axle": false,
+   "material": "aluminum alloy",
+   "details": "alloy crown suspension fork",
    "_kind": "fork"
   }
  },
@@ -2541,7 +2590,10 @@
    "brake_rotor": "180mm brake rotor"
   },
   "expected": {
-   "material": "aluminum",
+   "material": "aluminum alloy",
+   "integrated_battery": false,
+   "folding": false,
+   "details": "Aluminum alloy",
    "_kind": "frame"
   }
  },
@@ -2555,8 +2607,11 @@
   },
   "expected": {
    "manufacturer": "RST",
-   "type": "suspension",
+   "type": "coil",
    "travel_mm": 95,
+   "lockout": false,
+   "thru_axle": false,
+   "details": "front suspension fork",
    "_kind": "fork"
   }
  },
@@ -2827,8 +2882,11 @@
   },
   "expected": {
    "manufacturer": "RST",
-   "type": "suspension",
+   "type": "coil",
    "travel_mm": 60,
+   "lockout": false,
+   "thru_axle": false,
+   "details": "front suspension fork",
    "_kind": "fork"
   }
  },
@@ -2952,8 +3010,11 @@
    "brake_rotor": "TEKTRO HD-E730, 3T, 203x2mm"
   },
   "expected": {
-   "material": "aluminum",
-   "details": "17\"/19\" sizes, 150mm travel",
+   "material": "aluminum alloy",
+   "integrated_battery": false,
+   "folding": false,
+   "travel_mm": 150,
+   "details": "Aluminum alloy, 17\"/19\"Size",
    "_kind": "frame"
   }
  },
@@ -2967,10 +3028,9 @@
   },
   "expected": {
    "manufacturer": "RockShox",
-   "model": "Deluxe Select C1",
    "type": "air",
-   "size": "190x45mm",
-   "details": "DebonAir+ air spring; Maxima Plush lubricant",
+   "details": "RS-DELUXE SELECT-C1, 190mmx45mm, iDebonAir+ spring, Maxima Plush dynamic suspension lubricant",
+   "model": "RS-DELUXE SELECT-C1 190mmx45mm iDebonAir+",
    "_kind": "shock"
   }
  },
@@ -3199,9 +3259,10 @@
   "text": "3 Step Alloy Foldable Frame",
   "siblings": null,
   "expected": {
-   "material": "aluminum",
+   "material": "aluminum alloy",
+   "integrated_battery": false,
    "folding": true,
-   "details": "3-step",
+   "details": "3 Step Alloy Frame",
    "_kind": "frame"
   }
  },
@@ -3322,8 +3383,13 @@
   "text": "Full Suspension/ Front 100mm Adjustable / Rear DNM 55mm Adjustable Travel",
   "siblings": null,
   "expected": {
+   "manufacturer": "DNM",
+   "type": "coil",
    "travel_mm": 100,
-   "details": "Full suspension; front 100mm adjustable; rear DNM 55mm adjustable",
+   "lockout": false,
+   "thru_axle": false,
+   "details": "Suspension/ Front Adjustable / Rear 55mm Adjustable Travel",
+   "model": "Full",
    "_kind": "fork"
   }
  },
@@ -3376,9 +3442,11 @@
    "disc_rotor": "180mm Front & Rear Drivetrain"
   },
   "expected": {
-   "type": "suspension",
+   "type": "coil",
    "lockout": true,
-   "details": "Hydraulic; aluminum & steel construction",
+   "thru_axle": false,
+   "material": "aluminum",
+   "details": "Hydraulic, Adjustable Lockout, Steel Construction",
    "_kind": "fork"
   }
  },
@@ -3604,7 +3672,8 @@
    "disc_rotor": "203mm Front & Rear Drivetrain"
   },
   "expected": {
-   "details": "30mm Travel Wheel Set",
+   "travel_mm": 30,
+   "details": "Wheel Set",
    "_kind": "shock"
   }
  },
@@ -3995,10 +4064,12 @@
   },
   "expected": {
    "manufacturer": "SR Suntour",
-   "model": "XCM",
    "type": "coil",
    "travel_mm": 120,
+   "lockout": false,
+   "thru_axle": false,
    "details": "Mechanical",
+   "model": "XCM",
    "_kind": "fork"
   }
  },
@@ -4184,7 +4255,10 @@
   },
   "expected": {
    "type": "rigid",
-   "details": "Aluminum",
+   "lockout": false,
+   "thru_axle": false,
+   "material": "aluminum",
+   "details": "Fork",
    "_kind": "fork"
   }
  },
@@ -4389,7 +4463,9 @@
   "siblings": null,
   "expected": {
    "material": "aluminum 6061",
-   "details": "Hydroformed T6",
+   "integrated_battery": false,
+   "folding": false,
+   "details": "Hydroformed Aluminum T6",
    "_kind": "frame"
   }
  },
@@ -4401,8 +4477,11 @@
   "siblings": null,
   "expected": {
    "manufacturer": "SR Suntour",
+   "type": "coil",
+   "lockout": false,
+   "thru_axle": false,
+   "details": "Suspension Fork",
    "model": "XCM",
-   "type": "suspension",
    "_kind": "fork"
   }
  },
@@ -4576,7 +4655,9 @@
   "siblings": null,
   "expected": {
    "material": "aluminum 6061",
-   "details": "high-strength",
+   "integrated_battery": false,
+   "folding": false,
+   "details": "High-Strength Aluminum Alloy",
    "_kind": "frame"
   }
  },
@@ -4587,7 +4668,10 @@
   "text": "Custom 6061 Alloy with Steel Steerer Tube, Designed for Fenders",
   "siblings": null,
   "expected": {
-   "details": "Custom 6061 Alloy with Steel Steerer Tube, Designed for Fenders",
+   "lockout": false,
+   "thru_axle": false,
+   "material": "aluminum 6061",
+   "details": "Custom Alloy with Steel Steerer Tube, Designed for Fenders",
    "_kind": "fork"
   }
  },
@@ -4684,6 +4768,638 @@
   }
  },
  {
+  "brand": "giant",
+  "field": "motor",
+  "kind": "motor",
+  "text": "SyncDriveMove Plus Hub drive 30Nm (≈75Nm-equivalent)",
+  "siblings": null,
+  "expected": {
+   "placement": "hub",
+   "torque_nm": 30,
+   "details": "SyncDriveMove Plus (≈-equivalent)",
+   "_kind": "motor"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "controller",
+  "kind": "controller",
+  "text": "Mode support switch from SRAM bonus button",
+  "siblings": null,
+  "expected": {
+   "details": "Mode support switch from SRAM bonus button",
+   "_kind": "controller"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "display",
+  "kind": "display",
+  "text": "Giant RideControl GO, frame-integrated LED console Optional wireless ANT+ display",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Giant",
+   "type": "lcd",
+   "details": "RideControl GO, frame-integrated LED console Optional wireless ANT+ display",
+   "model": "RideControl GO frame-integrated LED",
+   "_kind": "display"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "battery",
+  "kind": "battery",
+  "text": "Giant EnergyPak 400Wh, Aluminium casing with highest safety standard (EN50604), CO2 Neutral production, Giant EnergyPak Plus 200 range extender compatible",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Giant",
+   "capacity_wh": 400,
+   "details": "Aluminium casing with highest safety standard (EN50604), CO2 Neutral production, Plus 200 range extender compatible",
+   "model": "EnergyPak",
+   "_kind": "battery"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "charger",
+  "kind": "charger",
+  "text": "Giant EnergyPak smart charger 4A",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Giant",
+   "amps_a": 4.0,
+   "details": "charger",
+   "model": "EnergyPak smart",
+   "_kind": "charger"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "frame",
+  "kind": "frame",
+  "text": "Advanced-grade composite,12x145 thru-axle",
+  "siblings": null,
+  "expected": {
+   "integrated_battery": false,
+   "folding": false,
+   "thru_axle": "12x145mm",
+   "details": "Advanced-grade composite",
+   "_kind": "frame"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "fork",
+  "kind": "fork",
+  "text": "Advanced SL-Grade Composite, Full-Composite OverDrive Aero Steerer, 12x100mm thru-axle, Disc",
+  "siblings": null,
+  "expected": {
+   "travel_mm": 100,
+   "lockout": false,
+   "thru_axle": true,
+   "details": "Advanced SL-Grade Composite, Full-Composite OverDrive Aero Steerer, 12x thru-axle, Disc",
+   "_kind": "fork"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "handlebar",
+  "kind": "handlebars",
+  "text": "Giant Contact SLR D-Fuse 31.8 carbon",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Giant",
+   "material": "carbon",
+   "details": "31.8",
+   "model": "Contact SLR D-Fuse",
+   "_kind": "handlebars"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "stem",
+  "kind": "stem",
+  "text": "Contact SLR Aerolight 31.8 carbon",
+  "siblings": null,
+  "expected": {
+   "material": "carbon",
+   "adjustable": false,
+   "details": "Contact SLR Aerolight 31.8",
+   "_kind": "stem"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "seatpost",
+  "kind": "seatpost",
+  "text": "Giant D-Fuse SL, Composite, 16mm offset",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Giant",
+   "offset_mm": 16,
+   "details": "Composite, offset",
+   "model": "D-Fuse SL",
+   "_kind": "seatpost"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "saddle",
+  "kind": "saddle",
+  "text": "Giant Fleet SL",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Giant",
+   "model": "Fleet SL",
+   "_kind": "saddle"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "shifters",
+  "kind": "derailleur",
+  "text": "Sram Force AXS",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "SRAM",
+   "model": "Force AXS",
+   "_kind": "derailleur"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "brakes",
+  "kind": "brake",
+  "text": "Sram Force AXS HRD, Centerline 160mm center-lock [F] 160mm 6-bols [R]",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "SRAM",
+   "rotor_mm": 160,
+   "kind": "disc",
+   "details": "Force AXS HRD, Centerline center-lock [F] 6-bols [R]",
+   "model": "Force AXS HRD Centerline",
+   "_kind": "brake"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "brake_levers",
+  "kind": "brake",
+  "text": "Sram Force AXS HRD",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "SRAM",
+   "model": "Force AXS HRD",
+   "_kind": "brake"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "cassette",
+  "kind": "cassette",
+  "text": "SRAM Force XG-1270 10x33T 12-speed",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "SRAM",
+   "speeds": 12,
+   "model": "Force XG-1270 10x33T",
+   "_kind": "cassette"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "chain",
+  "kind": "chain",
+  "text": "Sram Force 12-speed",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "SRAM",
+   "model": "Force 12-speed",
+   "_kind": "chain"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "crankset",
+  "kind": "crankset",
+  "text": "Sram Force X-SYNC 33/46T BCD107 chain ring Praxis E Crank Carbon ISIS",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "SRAM",
+   "chainring_t": 46,
+   "details": "33/ BCD107 chain ring Praxis E Crank Carbon ISIS",
+   "model": "Force X-SYNC",
+   "_kind": "crankset"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "bottom_bracket",
+  "kind": "bottom_bracket",
+  "text": "Giant E+ System BBSS",
+  "siblings": null,
+  "expected": {
+   "sealed": false,
+   "torque_sensor": false,
+   "details": "Giant E+ System BBSS",
+   "_kind": "bottom_bracket"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "rims",
+  "kind": "rims",
+  "text": "Giant SLR 1 E+ 36 Carbon Disc Wheel System, Hookless, Tubeless Ready, 12mm thru-axle, w/ Sapim spoke E-Light [R] CX-Ray [F], e-bike optimized",
+  "siblings": null,
+  "expected": {
+   "double_wall": false,
+   "details": "Giant SLR 1 E+ 36 Carbon Disc Wheel System, Hookless, Tubeless Ready, 12mm thru-axle, w/ Sapim spoke E-Light [R] CX-Ray [F], e-bike optimized",
+   "_kind": "rims"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "tires",
+  "kind": "tire",
+  "text": "Cadex Classic, tubeless, 700x32, folding",
+  "siblings": null,
+  "expected": {
+   "size": "700c",
+   "width_mm": 32,
+   "tubeless": true,
+   "details": "Cadex Classic, tubeless, folding",
+   "_kind": "tire"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "lighting",
+  "kind": "light",
+  "text": "Seatpost clamp integrated tail light",
+  "siblings": null,
+  "expected": {
+   "brake_light": false,
+   "turn_signal": false,
+   "integrated": true,
+   "details": "Seatpost clamp integrated tail light",
+   "_kind": "light"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "controller",
+  "kind": "controller",
+  "text": "Mode support switch from SRAM Blips",
+  "siblings": null,
+  "expected": {
+   "details": "Mode support switch from SRAM Blips",
+   "_kind": "controller"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "shock",
+  "kind": "shock",
+  "text": "-",
+  "siblings": null,
+  "expected": {
+   "_kind": "shock"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "handlebar",
+  "kind": "handlebars",
+  "text": "Giant Contact SL D-Fuse 31.8 alloy",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Giant",
+   "material": "aluminum alloy",
+   "details": "31.8 alloy",
+   "model": "Contact SL D-Fuse",
+   "_kind": "handlebars"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "stem",
+  "kind": "stem",
+  "text": "Contact SL Aerolight 31.8 alloy",
+  "siblings": null,
+  "expected": {
+   "material": "aluminum alloy",
+   "adjustable": false,
+   "details": "Contact SL Aerolight 31.8 alloy",
+   "_kind": "stem"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "seatpost",
+  "kind": "seatpost",
+  "text": "Giant D-Fuse, Composite, 14mm offset",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Giant",
+   "offset_mm": 14,
+   "details": "Composite, offset",
+   "model": "D-Fuse",
+   "_kind": "seatpost"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "saddle",
+  "kind": "saddle",
+  "text": "Giant Approach",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Giant",
+   "model": "Approach",
+   "_kind": "saddle"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "shifters",
+  "kind": "derailleur",
+  "text": "Sram Rival AXS",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "SRAM",
+   "model": "Rival AXS",
+   "_kind": "derailleur"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "cassette",
+  "kind": "cassette",
+  "text": "Sram XPLR XG-1251 10x44T 12-speed",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "SRAM",
+   "speeds": 12,
+   "model": "XPLR XG-1251 10x44T",
+   "_kind": "cassette"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "chain",
+  "kind": "chain",
+  "text": "Sram Rival 12-speed",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "SRAM",
+   "model": "Rival 12-speed",
+   "_kind": "chain"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "crankset",
+  "kind": "crankset",
+  "text": "Sram X-SYNC 46T BCD107 chain ring, Praxis E crank Alloy ISIS",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "SRAM",
+   "chainring_t": 46,
+   "details": "chain ring, Praxis E crank Alloy ISIS",
+   "model": "X-SYNC BCD107",
+   "_kind": "crankset"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "rims",
+  "kind": "rims",
+  "text": "Giant P-R2 Alloy Disc Wheel System, Tubeless Ready, 22mm inner width, 12mm thru-axle",
+  "siblings": null,
+  "expected": {
+   "material": "aluminum alloy",
+   "double_wall": false,
+   "details": "Giant P-R2 Alloy Disc Wheel System, Tubeless Ready, 22mm inner width, 12mm thru-axle",
+   "_kind": "rims"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "spokes",
+  "kind": "spokes",
+  "text": "Sapim spoke E-Light [R] Race [F], e-bike optimized",
+  "siblings": null,
+  "expected": {
+   "details": "Sapim spoke E-Light [R] Race [F], e-bike optimized",
+   "_kind": "spokes"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "tires",
+  "kind": "tire",
+  "text": "Schwalbe G-one Allround Performance, RaceGuard, Brown side-wall, tubeless, 700x35",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Schwalbe",
+   "size": "700c",
+   "width_mm": 35,
+   "tubeless": true,
+   "details": "G-one Allround Performance, RaceGuard, Brown side-wall, tubeless",
+   "model": "G-one Allround Performance RaceGuard",
+   "_kind": "tire"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "motor",
+  "kind": "motor",
+  "text": "Giant SyncDrive Pro2 85Nm, PedalPlus 6-Sensor technology, Class 1, Max Assist Speed: 20MPH",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Giant",
+   "torque_nm": 85,
+   "details": "SyncDrive Pro2, PedalPlus 6-Sensor technology, Class 1, Max Assist Speed: 20MPH",
+   "model": "SyncDrive Pro2 PedalPlus 6-Sensor",
+   "_kind": "motor"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "display",
+  "kind": "display",
+  "text": "Giant RideControl GO, frame integrated LED console Optional wireless ANT+ display",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Giant",
+   "type": "lcd",
+   "details": "RideControl GO, frame integrated LED console Optional wireless ANT+ display",
+   "model": "RideControl GO frame",
+   "_kind": "display"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "battery",
+  "kind": "battery",
+  "text": "Giant EnergyPak 800Wh, 22700 Lithium cell technology, Aluminium casing with highest safety standard (EN50604), CO2 Neutral production Giant EnergyPak Plus 250 range extender compatible (exculde S size)",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Giant",
+   "capacity_wh": 800,
+   "details": "22700 Lithium cell technology, Aluminium casing with highest safety standard (EN50604), CO2 Neutral production Plus 250 range extender compatible (exculde S size)",
+   "model": "EnergyPak",
+   "_kind": "battery"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "charger",
+  "kind": "charger",
+  "text": "Giant EnergyPak 6A smart charger, 60% in 2:15h",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Giant",
+   "amps_a": 6.0,
+   "details": "charger, 60% in 2:15h",
+   "model": "EnergyPak smart",
+   "_kind": "charger"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "frame",
+  "kind": "frame",
+  "text": "ALUXX SL-grade aluminum, Advanced Forged Composite Upper Rocker, 160mm Maestro suspension system, 'Boost' 148x12mm, Universal Derailleur Hanger",
+  "siblings": null,
+  "expected": {
+   "material": "aluminum",
+   "integrated_battery": false,
+   "folding": false,
+   "details": "ALUXX SL-grade, Advanced Forged Composite Upper Rocker, 160mm Maestro suspension system, 'Boost' 148x12mm, Universal Derailleur Hanger",
+   "_kind": "frame"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "fork",
+  "kind": "fork",
+  "text": "Fox 38 Rhythm E-Optimized, 29er, 170mm travel, 44mm offset, Grip damper Sweep-Adj Boost, Kabolt-X 110",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Fox",
+   "travel_mm": 170,
+   "lockout": false,
+   "thru_axle": false,
+   "details": "38 Rhythm E-Optimized, 29er, 44mm offset, Grip damper Sweep-Adj Boost, Kabolt- 110",
+   "_kind": "fork"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "shock",
+  "kind": "shock",
+  "text": "Fox Float X Performance, EVOL Large Volume sleeve, 205x62.5mm Trunnion mount, custom tuned, recommended sag: 30%",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Fox",
+   "size": "205x62.5mm",
+   "details": "Float Performance, EVOL Large Volume sleeve, Trunnion mount, custom tuned, recommended sag: 30%",
+   "model": "Float X Performance EVOL",
+   "_kind": "shock"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "grips",
+  "kind": "grips",
+  "text": "Giant Tactal Pro-E, tapered design, 135mm Ø28~30mm (S/M) 142mm Ø29~32mm (L/XL)",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Giant",
+   "lock_on": false,
+   "ergonomic": false,
+   "details": "Tactal Pro-E, tapered design, 135mm Ø28~30mm (S/M) 142mm Ø29~32mm (L/XL)",
+   "model": "Tactal Pro-E tapered design",
+   "_kind": "grips"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "pedals",
+  "kind": "pedals",
+  "text": "Flatpedal",
+  "siblings": null,
+  "expected": {
+   "details": "Flatpedal",
+   "_kind": "pedals"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "bottom_bracket",
+  "kind": "bottom_bracket",
+  "text": "n/a",
+  "siblings": null,
+  "expected": {
+   "sealed": false,
+   "torque_sensor": false,
+   "details": "n/a",
+   "_kind": "bottom_bracket"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "spokes",
+  "kind": "spokes",
+  "text": "Sapim E-Lite [R] Race [F], e-bike optimized",
+  "siblings": null,
+  "expected": {
+   "details": "Sapim E-Lite [R] Race [F], e-bike optimized",
+   "_kind": "spokes"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "grips",
+  "kind": "grips",
+  "text": "Giant Tactal Pro single lock-on",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Giant",
+   "lock_on": true,
+   "ergonomic": false,
+   "details": "single lock-on",
+   "model": "Tactal Pro",
+   "_kind": "grips"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "pedals",
+  "kind": "pedals",
+  "text": "Large platform pedal, 28-pins, PP cage, Steel axle",
+  "siblings": null,
+  "expected": {
+   "type": "platform",
+   "details": "Large pedal, 28-pins, PP cage, Steel axle",
+   "_kind": "pedals"
+  }
+ },
+ {
+  "brand": "giant",
+  "field": "lighting",
+  "kind": "light",
+  "text": "-",
+  "siblings": null,
+  "expected": {
+   "brake_light": false,
+   "turn_signal": false,
+   "integrated": false,
+   "_kind": "light"
+  }
+ },
+ {
   "brand": "heybike",
   "field": "frame",
   "kind": "frame",
@@ -4691,8 +5407,13 @@
   "siblings": null,
   "expected": {
    "material": "aluminum 6061",
+   "integrated_battery": false,
+   "folding": false,
    "removable_battery": true,
-   "details": "rear rack and fenders included; hydraulic disc; kickstand mount",
+   "mounts": [
+    "kickstand"
+   ],
+   "details": "Aluminum Alloy Frame, removable lithium-ion, rear rack and fenders included, hydraulic disc brakes",
    "_kind": "frame"
   }
  },
@@ -4703,8 +5424,10 @@
   "text": "Hydraulic front suspension fork",
   "siblings": null,
   "expected": {
-   "type": "suspension",
-   "details": "Hydraulic",
+   "type": "coil",
+   "lockout": false,
+   "thru_axle": false,
+   "details": "Hydraulic front suspension fork",
    "_kind": "fork"
   }
  },
@@ -4915,6 +5638,9 @@
   "siblings": null,
   "expected": {
    "material": "aluminum 6061",
+   "integrated_battery": false,
+   "folding": false,
+   "details": "Aluminum Alloy",
    "_kind": "frame"
   }
  },
@@ -4954,8 +5680,9 @@
   "siblings": null,
   "expected": {
    "type": "rigid",
+   "lockout": false,
    "thru_axle": true,
-   "details": "Hydroformed",
+   "details": "Hydroformed Fork with Thru Axle",
    "_kind": "fork"
   }
  },
@@ -5106,9 +5833,11 @@
    "rotors": "F:160mm R:160mm"
   },
   "expected": {
-   "details": "Front: aluminum, Rear: A356 steel",
-   "_kind": "frame",
-   "material": "aluminum 6061"
+   "material": "aluminum 6061",
+   "integrated_battery": false,
+   "folding": false,
+   "details": "Front: aluminum Rear:A356 Steel",
+   "_kind": "frame"
   }
  },
  {
@@ -5120,8 +5849,11 @@
    "rotors": "F:160mm R:160mm"
   },
   "expected": {
+   "travel_mm": 12,
+   "lockout": false,
    "thru_axle": true,
-   "details": "6061 aluminum; 100x12mm; rack/fender mounts; post disc mount",
+   "material": "aluminum 6061",
+   "details": "100* thru axle, rack mounts, fender mounts, post disc mount",
    "_kind": "fork"
   }
  },
@@ -5406,7 +6138,9 @@
   "expected": {
    "type": "coil",
    "travel_mm": 40,
-   "details": "Disc mount",
+   "lockout": false,
+   "thru_axle": false,
+   "details": "suspention fork, is disc mount",
    "_kind": "fork"
   }
  },
@@ -5508,6 +6242,9 @@
   },
   "expected": {
    "material": "aluminum 6061",
+   "integrated_battery": false,
+   "folding": false,
+   "details": "Aluminum frame",
    "_kind": "frame"
   }
  },
@@ -5665,9 +6402,8 @@
   },
   "expected": {
    "manufacturer": "DNM",
+   "details": "rear shock 190*45mm",
    "model": "A0-38RC",
-   "size": "190x45mm",
-   "details": "Rear",
    "_kind": "shock"
   }
  },
@@ -5880,6 +6616,9 @@
   "siblings": null,
   "expected": {
    "material": "aluminum 6061",
+   "integrated_battery": false,
+   "folding": false,
+   "details": "Aluminum",
    "_kind": "frame"
   }
  },
@@ -5890,10 +6629,10 @@
   "text": "KKE inverted front fork 140mm travel FS: KKE Rear shock",
   "siblings": null,
   "expected": {
-   "manufacturer": "KKE",
-   "type": "suspension",
    "travel_mm": 140,
-   "details": "Inverted; FS version: KKE rear shock",
+   "lockout": false,
+   "thru_axle": false,
+   "details": "KKE inverted front fork FS: KKE Rear shock",
    "_kind": "fork"
   }
  },
@@ -5949,229 +6688,11 @@
   "brand": "lectric",
   "field": "motor_power",
   "kind": "motor",
-  "text": "1310W peak",
+  "text": "819W peak",
   "siblings": null,
   "expected": {
-   "peak_w": 1310,
+   "peak_w": 819,
    "_kind": "motor"
-  }
- },
- {
-  "brand": "lectric",
-  "field": "pedal_assist",
-  "kind": "pedal_assist",
-  "text": "Five levels of pedal-assist and an ergonomic thumb throttle deliver the speed and power to own the road as a Class 1, 2, or 3 eBike.**",
-  "siblings": null,
-  "expected": {
-   "levels": 5,
-   "details": "Ergonomic thumb throttle; Class 1, 2, or 3 eBike",
-   "_kind": "pedal_assist"
-  }
- },
- {
-  "brand": "lectric",
-  "field": "thumb_throttle",
-  "kind": "throttle",
-  "text": "An ergonomic below-the-bar trigger throttle on the left hand side is easily engaged with your thumb while simultaneously eliminating joint fatigue.",
-  "siblings": null,
-  "expected": {
-   "type": "trigger",
-   "side": "left",
-   "details": "Below-the-bar, thumb-operated, ergonomic",
-   "_kind": "throttle"
-  }
- },
- {
-  "brand": "lectric",
-  "field": "color_lcd_display",
-  "kind": "display",
-  "text": "A backlit, heads-up color LCD display with a USB-A port provides trip and battery intelligence on the go. IP-65 rated electrical components ensure greater water and dust resistance.",
-  "siblings": null,
-  "expected": {
-   "type": "lcd",
-   "details": "Backlit, heads-up, color; USB-A port; IP-65 rated components",
-   "_kind": "display"
-  }
- },
- {
-  "brand": "lectric",
-  "field": "motor_controller",
-  "kind": "controller",
-  "text": "24 amp controller is IP-65 rated and potted for weather proofing and thermal management.",
-  "siblings": null,
-  "expected": {
-   "amps_a": 24,
-   "details": "IP-65 rated and potted for weather proofing and thermal management",
-   "_kind": "controller"
-  }
- },
- {
-  "brand": "lectric",
-  "field": "motor",
-  "kind": "motor",
-  "text": "A Sutto 750W rear hub-motor (1310W Peak) with 85Nm of torque delivers power and speed quicker than ever before. New Stealth M24 technology is 400% quieter*, delivering a hushed motor experience without sacrificing power.",
-  "siblings": null,
-  "expected": {
-   "manufacturer": "Sutto",
-   "power_w": 750,
-   "peak_w": 1310,
-   "torque_nm": 85,
-   "placement": "hub",
-   "details": "Rear; Stealth M24 quiet technology",
-   "_kind": "motor"
-  }
- },
- {
-  "brand": "lectric",
-  "field": "battery",
-  "kind": "battery",
-  "text": "Available with a Long-Range 48V 14ah (672 Wh) lithium-ion battery certified to UL 2271 to power your ride for up to 60 miles, respectively.†‡ The Lectric ONE is also certified to UL 2849.",
-  "siblings": null,
-  "expected": {
-   "voltage_v": 48,
-   "amphours_ah": 14,
-   "capacity_wh": 672,
-   "details": "Long-range; lithium-ion; UL 2271 certified; up to 60 miles",
-   "_kind": "battery"
-  }
- },
- {
-  "brand": "lectric",
-  "field": "city_tires",
-  "kind": "tire",
-  "text": "20x2.5'' city tires featuring a reflective strip are equipped with 3mm Hippo Skin with an Aramid Floc Breaker. Shark Skin Protection on the sidewall offers pinch flat protection and all-weather reliability. Slime is installed to prevent flat tires at no additional cost.",
-  "siblings": null,
-  "expected": {
-   "diameter_in": 20,
-   "width_in": 2.5,
-   "details": "City; reflective strip; 3mm Hippo Skin with Aramid Floc Breaker; Shark Skin sidewall protection; Slime installed",
-   "_kind": "tire"
-  }
- },
- {
-  "brand": "lectric",
-  "field": "front_fork",
-  "kind": "fork",
-  "text": "This rigid fork is fully aluminum and ultra lightweight, featuring a thru axle dropout.",
-  "siblings": null,
-  "expected": {
-   "type": "rigid",
-   "thru_axle": true,
-   "details": "Fully aluminum, ultra lightweight",
-   "_kind": "fork"
-  }
- },
- {
-  "brand": "lectric",
-  "field": "cranks",
-  "kind": "crankset",
-  "text": "Pinion aluminum cranks are 165mm in length.",
-  "siblings": null,
-  "expected": {
-   "manufacturer": "Pinion",
-   "length_mm": 165,
-   "details": "Aluminum",
-   "_kind": "crankset"
-  }
- },
- {
-  "brand": "lectric",
-  "field": "brakes",
-  "kind": "brake",
-  "text": "Hydraulic mineral oil brakes and 180mm rotors (1.8mm thick) offer ultimate stopping power and peace of mind in wet or dry conditions.",
-  "siblings": null,
-  "expected": {
-   "actuation": "hydraulic",
-   "rotor_mm": 180,
-   "rotor_thickness_mm": 1.8,
-   "details": "Mineral oil",
-   "_kind": "brake"
-  }
- },
- {
-  "brand": "lectric",
-  "field": "pas_sensor",
-  "kind": "sensor",
-  "text": "Lectric's PWR™ allows the rider to control the eBike's output with no additional effort so that a torque sensor is not necessary for smooth rides. Instead, the Lectric ONE has a simply designed and affordable cadence sensor with 96 magnets simulated so you can reach high speeds with ease.",
-  "siblings": null,
-  "expected": {
-   "type": "cadence",
-   "details": "96 simulated magnets; Lectric PWR programming",
-   "_kind": "sensor"
-  }
- },
- {
-  "brand": "lectric",
-  "field": "safety_lights",
-  "kind": "light",
-  "text": "An integrated safety system, featuring a headlamp and a brake-activated taillight powered by the battery allows you to be seen at any time of day.",
-  "siblings": null,
-  "expected": {
-   "integrated": true,
-   "brake_light": true,
-   "details": "Headlamp and brake-activated taillight, battery powered",
-   "_kind": "light"
-  }
- },
- {
-  "brand": "lectric",
-  "field": "adjustable_handlebar_stem",
-  "kind": "handlebars",
-  "text": "Easily adjustable handlebar stem riser includes a quick-release lever to comfortably adjust your handlebar reach to your liking; bring your handlebars toward you or push them further back.",
-  "siblings": null,
-  "expected": {
-   "details": "Adjustable stem riser with quick-release lever for handlebar reach",
-   "_kind": "handlebars"
-  }
- },
- {
-  "brand": "lectric",
-  "field": "lock_on_grips",
-  "kind": "grips",
-  "text": "Ergonomic lock-on grips add comfort so you can ride longer. The plastic sleeve inside helps lock the grips into place and also allows the grips to be easily removed.",
-  "siblings": null,
-  "expected": {
-   "ergonomic": true,
-   "lock_on": true,
-   "details": "Plastic locking sleeve, easily removable",
-   "_kind": "grips"
-  }
- },
- {
-  "brand": "lectric",
-  "field": "saddle",
-  "kind": "saddle",
-  "text": "A custom-designed saddle compliments a sportier look while adding comfort so you can ride longer.",
-  "siblings": null,
-  "expected": {
-   "details": "Custom-designed",
-   "_kind": "saddle"
-  }
- },
- {
-  "brand": "lectric",
-  "field": "frame",
-  "kind": "frame",
-  "text": "6000-series-aluminum frame is sturdy yet lightweight. The chainstays feature vertical dropouts and speciality designed splits on each side for easy access to the belt drive.",
-  "siblings": null,
-  "expected": {
-   "material": "aluminum",
-   "details": "6000 series; chainstay vertical dropouts with splits for easy belt-drive access",
-   "_kind": "frame"
-  }
- },
- {
-  "brand": "lectric",
-  "field": "safety_certified",
-  "kind": "cert",
-  "text": "The Lectric ONE is certified to UL 2849. Additionally, the ONE's lithium-ion battery is certified to UL 2271.",
-  "siblings": null,
-  "expected": {
-   "standards": [
-    "UL 2271",
-    "UL 2849"
-   ],
-   "_kind": "cert"
   }
  },
  {
@@ -6223,6 +6744,21 @@
  },
  {
   "brand": "lectric",
+  "field": "motor",
+  "kind": "motor",
+  "text": "A 300W rear hub-motor (819W Peak) with 28Nm of torque delivers power and speed quicker than ever before. Stealth M24 technology is 400% quieter‡, delivering a hushed motor experience without sacrificing power.",
+  "siblings": null,
+  "expected": {
+   "power_w": 300,
+   "peak_w": 819,
+   "torque_nm": 28,
+   "placement": "hub",
+   "details": "Rear; Stealth M24 quiet technology",
+   "_kind": "motor"
+  }
+ },
+ {
+  "brand": "lectric",
   "field": "motor_controller",
   "kind": "controller",
   "text": "15 amp controller is IP-65 rated with built in thermal sensors to eliminate burn-out.",
@@ -6231,6 +6767,20 @@
    "amps_a": 15,
    "details": "IP-65 rated with built-in thermal sensors",
    "_kind": "controller"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "brakes",
+  "kind": "brake",
+  "text": "Hydraulic mineral oil brakes and 180mm rotors (1.8mm thick) offer ultimate stopping power and peace of mind in wet or dry conditions.",
+  "siblings": null,
+  "expected": {
+   "actuation": "hydraulic",
+   "rotor_mm": 180,
+   "rotor_thickness_mm": 1.8,
+   "details": "Mineral oil",
+   "_kind": "brake"
   }
  },
  {
@@ -6338,7 +6888,10 @@
   "siblings": null,
   "expected": {
    "type": "rigid",
-   "details": "Steel, threadless headset",
+   "lockout": false,
+   "thru_axle": false,
+   "material": "steel",
+   "details": "Fork with a threadless headset",
    "_kind": "fork"
   }
  },
@@ -6350,7 +6903,9 @@
   "siblings": null,
   "expected": {
    "material": "aluminum",
-   "details": "6000 series",
+   "integrated_battery": false,
+   "folding": false,
+   "details": "6000-series- frame is sturdy yet lightweight",
    "_kind": "frame"
   }
  },
@@ -6366,481 +6921,6 @@
     "UL 2849"
    ],
    "_kind": "cert"
-  }
- },
- {
-  "brand": "lectric",
-  "field": "chain",
-  "kind": "chain",
-  "text": "A KMC Z8 steel chain offers consistent tension for a secure performance throughout your ride.",
-  "siblings": null,
-  "expected": {
-   "manufacturer": "KMC",
-   "model": "Z8",
-   "details": "Steel",
-   "_kind": "chain"
-  }
- },
- {
-  "brand": "lectric",
-  "field": "hydraulic_brakes",
-  "kind": "brake",
-  "text": "Get ultimate stopping power with Star Union hydraulic brakes paired with 180mm rotors (2.3mm thick), making it as easy to stop as it is to go, whether in wet or dry conditions. Paired with ergonomically designed aluminum brake levers for durability.",
-  "siblings": null,
-  "expected": {
-   "manufacturer": "Star Union",
-   "actuation": "hydraulic",
-   "rotor_mm": 180,
-   "rotor_thickness_mm": 2.3,
-   "details": "Ergonomic aluminum levers",
-   "_kind": "brake"
-  }
- },
- {
-  "brand": "lectric",
-  "field": "pedals",
-  "kind": "pedals",
-  "text": "Custom-designed 6000 Series Aluminum pedals with protruding grip pins improve foot traction for an optimal experience.",
-  "siblings": null,
-  "expected": {
-   "material": "aluminum",
-   "details": "Custom 6000 series, protruding grip pins",
-   "_kind": "pedals"
-  }
- },
- {
-  "brand": "leoguar",
-  "field": "brake_levers",
-  "kind": "brake",
-  "text": "Tektro Brake Lever with Power Cut-Off Sensor",
-  "siblings": {
-   "rotors": "180mm Rotor"
-  },
-  "expected": {
-   "manufacturer": "Tektro",
-   "details": "Levers with power cut-off sensor",
-   "_kind": "brake"
-  }
- },
- {
-  "brand": "leoguar",
-  "field": "rotors",
-  "kind": "brake",
-  "text": "180mm Rotor",
-  "siblings": {
-   "rotors": "180mm Rotor"
-  },
-  "expected": {
-   "rotor_mm": 180,
-   "_kind": "brake"
-  }
- },
- {
-  "brand": "leoguar",
-  "field": "charger",
-  "kind": "charger",
-  "text": "54.6V DC, 3A smart charger, operates on 100V-240V AC power outlets",
-  "siblings": {
-   "rotors": "180mm Rotor"
-  },
-  "expected": {
-   "output_v": 54.6,
-   "amps_a": 3,
-   "details": "Smart; 100-240V AC input",
-   "_kind": "charger"
-  }
- },
- {
-  "brand": "leoguar",
-  "field": "headlight",
-  "kind": "light",
-  "text": "48V LED with quick disconnect",
-  "siblings": {
-   "rotors": "180mm Rotor"
-  },
-  "expected": {
-   "details": "48V LED with quick disconnect",
-   "_kind": "light"
-  }
- },
- {
-  "brand": "leoguar",
-  "field": "motor_hub",
-  "kind": "motor",
-  "text": "48V 750W 85Nm",
-  "siblings": {
-   "rotors": "180mm Rotor"
-  },
-  "expected": {
-   "voltage_v": 48,
-   "power_w": 750,
-   "torque_nm": 85,
-   "_kind": "motor"
-  }
- },
- {
-  "brand": "leoguar",
-  "field": "battery",
-  "kind": "battery",
-  "text": "48V15Ah (720Wh) Canbus Protocol, Certified by UL 2271",
-  "siblings": {
-   "rotors": "180mm Rotor"
-  },
-  "expected": {
-   "voltage_v": 48,
-   "amphours_ah": 15,
-   "capacity_wh": 720,
-   "details": "CANbus protocol; UL 2271 certified",
-   "_kind": "battery"
-  }
- },
- {
-  "brand": "leoguar",
-  "field": "sensor",
-  "kind": "sensor",
-  "text": "Cadence Sensor",
-  "siblings": {
-   "rotors": "180mm Rotor"
-  },
-  "expected": {
-   "type": "cadence",
-   "_kind": "sensor"
-  }
- },
- {
-  "brand": "leoguar",
-  "field": "display",
-  "kind": "display",
-  "text": "Color Display and 5 Speed Levels, Canbus Protocol",
-  "siblings": {
-   "rotors": "180mm Rotor"
-  },
-  "expected": {
-   "type": "color",
-   "details": "5 speed levels; CANbus protocol",
-   "_kind": "display"
-  }
- },
- {
-  "brand": "leoguar",
-  "field": "throttle_assist",
-  "kind": "throttle",
-  "text": "Half Twist Throttle",
-  "siblings": {
-   "rotors": "180mm Rotor"
-  },
-  "expected": {
-   "type": "half_twist",
-   "_kind": "throttle"
-  }
- },
- {
-  "brand": "leoguar",
-  "field": "tail_light",
-  "kind": "light",
-  "text": "LED with brake light",
-  "siblings": {
-   "rotors": "180mm Rotor"
-  },
-  "expected": {
-   "brake_light": true,
-   "details": "LED",
-   "_kind": "light"
-  }
- },
- {
-  "brand": "leoguar",
-  "field": "chainrings",
-  "kind": "chainring",
-  "text": "52T Alloy Forged",
-  "siblings": {
-   "rotors": "180mm Rotor"
-  },
-  "expected": {
-   "teeth": 52,
-   "details": "Alloy forged",
-   "_kind": "chainring"
-  }
- },
- {
-  "brand": "leoguar",
-  "field": "crankset",
-  "kind": "crankset",
-  "text": "Alloy Forged 6.89\"",
-  "siblings": {
-   "rotors": "180mm Rotor"
-  },
-  "expected": {
-   "length_mm": 175,
-   "details": "Alloy Forged",
-   "_kind": "crankset"
-  }
- },
- {
-  "brand": "leoguar",
-  "field": "rear_derailleur",
-  "kind": "derailleur",
-  "text": "Shimano RD-M360/acera",
-  "siblings": {
-   "rotors": "180mm Rotor"
-  },
-  "expected": {
-   "manufacturer": "Shimano",
-   "model": "Acera RD-M360",
-   "_kind": "derailleur"
-  }
- },
- {
-  "brand": "leoguar",
-  "field": "rims",
-  "kind": "rims",
-  "text": "26'' * 3.15\" 36h,  Alloy Double Wall",
-  "siblings": {
-   "rotors": "180mm Rotor"
-  },
-  "expected": {
-   "size_in": 26,
-   "material": "aluminum",
-   "double_wall": true,
-   "details": "3.15\" wide, 36h",
-   "_kind": "rims"
-  }
- },
- {
-  "brand": "leoguar",
-  "field": "tires",
-  "kind": "tire",
-  "text": "Vee 26''*4.0, 72TPI",
-  "siblings": {
-   "rotors": "180mm Rotor"
-  },
-  "expected": {
-   "manufacturer": "Vee",
-   "diameter_in": 26,
-   "width_in": 4,
-   "details": "72 TPI",
-   "_kind": "tire"
-  }
- },
- {
-  "brand": "leoguar",
-  "field": "spokes",
-  "kind": "spokes",
-  "text": "Stainless Steel, 13G Front / 12G Rear",
-  "siblings": {
-   "rotors": "180mm Rotor"
-  },
-  "expected": {
-   "material": "stainless steel",
-   "details": "13G front / 12G rear",
-   "_kind": "spokes"
-  }
- },
- {
-  "brand": "leoguar",
-  "field": "handlebars",
-  "kind": "handlebars",
-  "text": "Aluminum Alloy, D:1.25\"   W:29.53\"",
-  "siblings": {
-   "rotors": "180mm Rotor"
-  },
-  "expected": {
-   "material": "aluminum",
-   "clamp_mm": 31.8,
-   "width_mm": 750,
-   "_kind": "handlebars"
-  }
- },
- {
-  "brand": "leoguar",
-  "field": "stem",
-  "kind": "stem",
-  "text": "Black 3D Forged, 3.15\" Length, 7° Rise, 1.25\" Handlebar Clamp",
-  "siblings": {
-   "rotors": "180mm Rotor"
-  },
-  "expected": {
-   "length_mm": 80,
-   "angle_deg": 7,
-   "clamp_mm": 31.8,
-   "details": "Black, 3D forged",
-   "_kind": "stem"
-  }
- },
- {
-  "brand": "leoguar",
-  "field": "saddle",
-  "kind": "saddle",
-  "text": "Custom made comfy Leather Seat (Litchi Texture)",
-  "siblings": {
-   "rotors": "180mm Rotor"
-  },
-  "expected": {
-   "details": "Custom made comfy Leather Seat (Litchi Texture)",
-   "_kind": "saddle"
-  }
- },
- {
-  "brand": "leoguar",
-  "field": "seatpost",
-  "kind": "seatpost",
-  "text": "1.21\" 13.78\" length, forged and rigid",
-  "siblings": {
-   "rotors": "180mm Rotor"
-  },
-  "expected": {
-   "diameter_mm": 30.7,
-   "length_mm": 350,
-   "details": "Forged and rigid",
-   "_kind": "seatpost"
-  }
- },
- {
-  "brand": "leoguar",
-  "field": "pedals",
-  "kind": "pedals",
-  "text": "Wellgo Brand, Double Bearing and Forged",
-  "siblings": {
-   "rotors": "180mm Rotor"
-  },
-  "expected": {
-   "details": "Wellgo Brand, Double Bearing and Forged",
-   "_kind": "pedals"
-  }
- },
- {
-  "brand": "leoguar",
-  "field": "cassette",
-  "kind": "cassette",
-  "text": "Shimano CS-HG20-8/12-32T/8sp cassette",
-  "siblings": {
-   "rotors": "180mm Rotor"
-  },
-  "expected": {
-   "manufacturer": "Shimano",
-   "model": "CS-HG20-8",
-   "cog_range": "12-32T",
-   "speeds": 8,
-   "_kind": "cassette"
-  }
- },
- {
-  "brand": "leoguar",
-  "field": "front_fork",
-  "kind": "fork",
-  "text": "Alloy threadless and oil suspension with lockout,  3.14\" travel",
-  "siblings": {
-   "rotors": "180mm Rotor"
-  },
-  "expected": {
-   "type": "suspension",
-   "lockout": true,
-   "travel_mm": 80,
-   "details": "Alloy, threadless, oil suspension",
-   "_kind": "fork"
-  }
- },
- {
-  "brand": "leoguar",
-  "field": "shift_lever",
-  "kind": "derailleur",
-  "text": "8sp Trigger Lever",
-  "siblings": {
-   "rotors": "180mm Rotor"
-  },
-  "expected": {
-   "speeds": 8,
-   "details": "Trigger lever shifter",
-   "_kind": "derailleur"
-  }
- },
- {
-  "brand": "leoguar",
-  "field": "chain",
-  "kind": "chain",
-  "text": "128 links, 8sp, KMC Rust-proof",
-  "siblings": {
-   "rotors": "180mm Rotor"
-  },
-  "expected": {
-   "manufacturer": "KMC",
-   "links": 128,
-   "details": "8 spd; rust-proof",
-   "_kind": "chain"
-  }
- },
- {
-  "brand": "leoguar",
-  "field": "a_head_tube_length",
-  "kind": "tubes",
-  "text": "5.91\"",
-  "siblings": {
-   "rotors": "180mm Rotor"
-  },
-  "expected": {
-   "details": "5.91\"",
-   "_kind": "tubes"
-  }
- },
- {
-  "brand": "leoguar",
-  "field": "b_top_tube_length",
-  "kind": "tubes",
-  "text": "24.41\"",
-  "siblings": {
-   "rotors": "180mm Rotor"
-  },
-  "expected": {
-   "details": "24.41\"",
-   "_kind": "tubes"
-  }
- },
- {
-  "brand": "leoguar",
-  "field": "cassette",
-  "kind": "cassette",
-  "text": "Shimano MF-TZ500-7, 14-28T, threaded",
-  "siblings": {
-   "rotors": "160mm Rotor"
-  },
-  "expected": {
-   "manufacturer": "Shimano",
-   "model": "MF-TZ500-7",
-   "cog_range": "14-28T",
-   "speeds": 7,
-   "details": "Threaded freewheel",
-   "_kind": "cassette"
-  }
- },
- {
-  "brand": "leoguar",
-  "field": "motor_hub",
-  "kind": "motor",
-  "text": "48V, 350W, 45Nm",
-  "siblings": {
-   "rotors": "160mm Rotor"
-  },
-  "expected": {
-   "voltage_v": 48,
-   "power_w": 350,
-   "torque_nm": 45,
-   "_kind": "motor"
-  }
- },
- {
-  "brand": "leoguar",
-  "field": "battery",
-  "kind": "battery",
-  "text": "48V 10Ah (480Wh) Canbus Protocol",
-  "siblings": {
-   "rotors": "160mm Rotor"
-  },
-  "expected": {
-   "voltage_v": 48,
-   "amphours_ah": 10,
-   "capacity_wh": 480,
-   "details": "CANbus protocol",
-   "_kind": "battery"
   }
  }
 ]
