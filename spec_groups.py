@@ -230,13 +230,15 @@ def group_specs(all_specs: dict, geometry: dict | None = None,
     geometry = _strip_diagram_labels(geometry or {}, legend)
     geo_labels = set(geometry)
     snaked = {snake(k): v for k, v in (all_specs or {}).items()}  # for sibling lookup
-    # "Drive Unit" is a synonym for "Motor" (mid-drive systems often list both rows with
-    # identical content). Fold drive_unit -> motor so the bike doesn't get two identical
-    # motor components (which double-counts the motor in the value base and shows it twice
-    # in the parts list). Skip on AWD bikes, where _awd_motor_rows already split the motor
-    # into Front/Rear rows and dropped the combined one.
+    # "Drive Unit" / "Mid Drive Motor" / "Hub Motor" are synonyms for "Motor" (a single
+    # motor named by its placement); listings often carry both a generic "Motor" row and
+    # one of these, yielding two identical motor components (double-counts the motor in the
+    # value base + shows twice). Fold them onto `motor` so a single-motor bike has one motor
+    # field. Skip on AWD bikes, where _awd_motor_rows already split the motor into Front/Rear
+    # rows (those keep their own field names and aren't folded).
     has_side_motor = any(re.match(r"\s*(front|rear)\s+motor\b", k, re.I)
                          for k in (all_specs or {}))
+    _MOTOR_SYNONYMS = {"drive_unit", "mid_drive_motor", "hub_motor"}
     buckets: dict[str, "OrderedDict"] = {}
     horn_present = False
     for label, value in (all_specs or {}).items():
@@ -252,7 +254,7 @@ def group_specs(all_specs: dict, geometry: dict | None = None,
             horn_present = True
         # classify on the original (spaced) label; emit a snake_case field name.
         field = snake(label)
-        if field == "drive_unit" and not has_side_motor:
+        if field in _MOTOR_SYNONYMS and not has_side_motor:
             field = "motor"
         group = buckets.setdefault(classify(low), OrderedDict())
         parsed = parse_component(field, value, brand, siblings=snaked)

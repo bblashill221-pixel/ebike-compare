@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-06-24T17:22:12.310615+00:00",
+  "generated_at": "2026-06-24T17:35:21.416112+00:00",
   "model_count": 450,
-  "anomaly_count": 62,
+  "anomaly_count": 57,
   "by_severity": {
-    "low": 62
+    "low": 57
   },
   "by_rule": {
-    "value_ratio_outlier": 62
+    "value_ratio_outlier": 57
   },
   "anomalies": [
     {
@@ -71,24 +71,6 @@
       "rule": "value_ratio_outlier",
       "severity": "low",
       "detail": "price / parts-cost ratio = 0.917"
-    },
-    {
-      "id": "himiway__all-terrain-electric-bike-d5pro",
-      "brand": "himiway",
-      "model": "D5 Pro / All-terrain Electric Fat Bike",
-      "url": "https://himiwaybike.com/products/all-terrain-electric-bike-d5pro?variant=41033767223371",
-      "rule": "value_ratio_outlier",
-      "severity": "low",
-      "detail": "price / parts-cost ratio = 0.95"
-    },
-    {
-      "id": "himiway__all-terrain-electric-bike-d5prost",
-      "brand": "himiway",
-      "model": "D5 Pro ST / All-terrain Electric Fat Bike",
-      "url": "https://himiwaybike.com/products/all-terrain-electric-bike-d5prost?variant=41037280477259",
-      "rule": "value_ratio_outlier",
-      "severity": "low",
-      "detail": "price / parts-cost ratio = 0.95"
     },
     {
       "id": "himiway__d5-2-20--15ah-20ah",
@@ -286,34 +268,7 @@
       "url": "https://www.trekbikes.com/bikes/electra-bikes/electra-ebikes/vale-go/vale-go-9d-eq/p/34871/",
       "rule": "value_ratio_outlier",
       "severity": "low",
-      "detail": "price / parts-cost ratio = 0.741"
-    },
-    {
-      "id": "trek__verve-2-lowstep-gen-3",
-      "brand": "trek",
-      "model": "Verve+ 2 Lowstep Gen 3",
-      "url": "https://www.trekbikes.com/bikes/hybrid-bikes/electric-hybrid-bikes/verve/verve-2-lowstep-gen-3/p/41518/",
-      "rule": "value_ratio_outlier",
-      "severity": "low",
-      "detail": "price / parts-cost ratio = 0.88"
-    },
-    {
-      "id": "trek__verve-3-gen-3",
-      "brand": "trek",
-      "model": "Verve+ 3 Gen 3",
-      "url": "https://www.trekbikes.com/bikes/hybrid-bikes/electric-hybrid-bikes/verve/verve-3-gen-3/p/40666/",
-      "rule": "value_ratio_outlier",
-      "severity": "low",
-      "detail": "price / parts-cost ratio = 0.956"
-    },
-    {
-      "id": "trek__verve-3-lowstep-gen-3",
-      "brand": "trek",
-      "model": "Verve+ 3 Lowstep Gen 3",
-      "url": "https://www.trekbikes.com/bikes/hybrid-bikes/electric-hybrid-bikes/verve/verve-3-lowstep-gen-3/p/40667/",
-      "rule": "value_ratio_outlier",
-      "severity": "low",
-      "detail": "price / parts-cost ratio = 0.962"
+      "detail": "price / parts-cost ratio = 0.903"
     },
     {
       "id": "urtopia__urtopia-carbon-classic-ebike",

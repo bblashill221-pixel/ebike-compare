@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-24T17:22:12.067237+00:00",
+  "generated_at": "2026-06-24T17:35:21.171771+00:00",
   "total_models": 450,
   "expected_fields": [
     "motor_w",
@@ -65,7 +65,7 @@
       "pct": 92
     },
     "motor_w": {
-      "count": 412,
+      "count": 414,
       "pct": 92
     },
     "suspension": {
@@ -125,8 +125,8 @@
       "pct": 58
     },
     "motor_peak_w": {
-      "count": 210,
-      "pct": 47
+      "count": 199,
+      "pct": 44
     },
     "classes": {
       "count": 198,
@@ -166,18 +166,6 @@
     }
   },
   "missing": [
-    {
-      "brand": "aventon",
-      "model": "Level 4 ADV Ebike",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
-    {
-      "brand": "aventon",
-      "model": "Level 4 ADV Step-Through Ebike",
-      "field": "motor_w",
-      "label": "Motor power (W)"
-    },
     {
       "brand": "blix",
       "model": "Packa Genie Cargo eBike",
@@ -6589,10 +6577,10 @@
   ],
   "frame_style_review": [],
   "summary": {
-    "models_flagged": 309,
-    "missing_rows": 1070,
+    "models_flagged": 307,
+    "missing_rows": 1068,
     "missing_by_field": {
-      "motor_w": 38,
+      "motor_w": 36,
       "battery_wh": 31,
       "weight_lb": 43,
       "range_mi": 104,

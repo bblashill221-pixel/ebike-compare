@@ -176,20 +176,6 @@
  },
  {
   "brand": "aventon",
-  "field": "motor_torque",
-  "kind": "motor",
-  "text": "80Nm",
-  "siblings": {
-   "front_brake_rotor": "180mm 6 bolt",
-   "rear_brake_rotor": "203mm 6-bolt"
-  },
-  "expected": {
-   "torque_nm": 80,
-   "_kind": "motor"
-  }
- },
- {
-  "brand": "aventon",
   "field": "display",
   "kind": "display",
   "text": "Aventon BC147",
@@ -721,6 +707,22 @@
    "lock_on": true,
    "ergonomic": true,
    "_kind": "grips"
+  }
+ },
+ {
+  "brand": "aventon",
+  "field": "motor",
+  "kind": "motor",
+  "text": "36V, 750W Hub Drive",
+  "siblings": {
+   "front_brake_rotor": "Tektro 180mm 6 bolt",
+   "rear_brake_rotor": "Tektro 180mm 6 bolt"
+  },
+  "expected": {
+   "voltage_v": 36,
+   "power_w": 750,
+   "placement": "hub",
+   "_kind": "motor"
   }
  },
  {
@@ -2022,17 +2024,6 @@
  },
  {
   "brand": "cannondale",
-  "field": "motor_power",
-  "kind": "motor",
-  "text": "250W",
-  "siblings": null,
-  "expected": {
-   "power_w": 250,
-   "_kind": "motor"
-  }
- },
- {
-  "brand": "cannondale",
   "field": "suspension",
   "kind": "fork",
   "text": "No suspension",
@@ -2066,6 +2057,21 @@
    ],
    "details": "SmartForm C3 Alloy frame",
    "_kind": "frame"
+  }
+ },
+ {
+  "brand": "cannondale",
+  "field": "drive_unit",
+  "kind": "motor",
+  "text": "Bafang G020 Hub, 250W (20mph)",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Bafang",
+   "model": "G020",
+   "placement": "hub",
+   "power_w": 250,
+   "details": "20 mph",
+   "_kind": "motor"
   }
  },
  {
@@ -2385,17 +2391,6 @@
  },
  {
   "brand": "cemoto",
-  "field": "motor_peak_power",
-  "kind": "motor",
-  "text": "3000W 3000W 6000W",
-  "siblings": null,
-  "expected": {
-   "details": "3000W 3000W 6000W",
-   "_kind": "motor"
-  }
- },
- {
-  "brand": "cemoto",
   "field": "battery",
   "kind": "battery",
   "text": "48V15Ah Li-ion",
@@ -2444,6 +2439,18 @@
    "diameter_in": 20,
    "width_in": 4,
    "_kind": "tire"
+  }
+ },
+ {
+  "brand": "cemoto",
+  "field": "motor",
+  "kind": "motor",
+  "text": "500W Brushless Motor",
+  "siblings": null,
+  "expected": {
+   "power_w": 500,
+   "details": "Brushless",
+   "_kind": "motor"
   }
  },
  {
@@ -4424,17 +4431,6 @@
  },
  {
   "brand": "evelo",
-  "field": "maximum_motor_assisted_speed",
-  "kind": "motor",
-  "text": "Up to 20 MPH - Can be raised for areas that allow higher speeds",
-  "siblings": null,
-  "expected": {
-   "details": "Up to 20 MPH - Can be raised for areas that allow higher speeds",
-   "_kind": "motor"
-  }
- },
- {
-  "brand": "evelo",
   "field": "frame",
   "kind": "frame",
   "text": "Hydroformed Aluminum 6061 T6",
@@ -4596,6 +4592,23 @@
   "expected": {
    "details": "42.5\"",
    "_kind": "handlebars"
+  }
+ },
+ {
+  "brand": "evelo",
+  "field": "motor",
+  "kind": "motor",
+  "text": "500W Bafang BBS02 Mid-Drive Brushless Motor w/ 105N.m. Torque. 48V",
+  "siblings": null,
+  "expected": {
+   "manufacturer": "Bafang",
+   "model": "BBS02",
+   "power_w": 500,
+   "placement": "mid",
+   "torque_nm": 105,
+   "voltage_v": 48,
+   "details": "Brushless",
+   "_kind": "motor"
   }
  },
  {
@@ -6651,28 +6664,6 @@
   }
  },
  {
-  "brand": "juiced",
-  "field": "peak_motor_power",
-  "kind": "motor",
-  "text": "1764 W",
-  "siblings": null,
-  "expected": {
-   "power_w": 1764,
-   "_kind": "motor"
-  }
- },
- {
-  "brand": "lectric",
-  "field": "motor_power",
-  "kind": "motor",
-  "text": "819W peak",
-  "siblings": null,
-  "expected": {
-   "peak_w": 819,
-   "_kind": "motor"
-  }
- },
- {
   "brand": "lectric",
   "field": "pedal_assist",
   "kind": "pedal_assist",
@@ -6910,6 +6901,34 @@
    "type": "half_twist",
    "side": "right",
    "_kind": "throttle"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "suspension_fork",
+  "kind": "fork",
+  "text": "The Cloud 50 suspension front fork provides shock absorption for a smooth and cloud-soft ride. Adjust the preload or lock it out to tailor each ride to your preference based on payload capacity and weight distribution.",
+  "siblings": null,
+  "expected": {
+   "lockout": false,
+   "thru_axle": false,
+   "details": "The Cloud 50 suspension front fork provides shock absorption for a smooth and cloud-soft ride. Adjust the preload or lock it out to tailor each ride to your preference based on payload capacity and weight distribution",
+   "_kind": "fork"
+  }
+ },
+ {
+  "brand": "lectric",
+  "field": "stealth_m24_motor",
+  "kind": "motor",
+  "text": "A 500W rear hub motor (1092W peak) with 65 Nm of torque supplies power and speed quicker than ever before. Stealth M24 technology ensures a quieter motor experience without sacrificing power.",
+  "siblings": null,
+  "expected": {
+   "power_w": 500,
+   "peak_w": 1092,
+   "torque_nm": 65,
+   "placement": "hub",
+   "details": "Rear; Stealth M24 quiet technology",
+   "_kind": "motor"
   }
  }
 ]

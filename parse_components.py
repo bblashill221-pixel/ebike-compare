@@ -1223,6 +1223,15 @@ def _display(v, brand):
     return out
 
 
+# A "motor"-named field that's really a motor ATTRIBUTE (rating/descriptor/part note),
+# not the motor itself — kept out of _motor so it doesn't become a phantom component.
+# NB: do NOT include type/brand/name/class — "Motor Type: Bafang M600 mid-drive" NAMES
+# the motor, so those rows are the component. Only ratings/quantities/part-notes are attrs.
+_MOTOR_ATTR = re.compile(
+    r"power|watt|torque|\bnm\b|speed|type|voltage|current|\brpm\b|cadence"
+    r"|part|number|warranty|position|location|assist|peak", re.I)
+
+
 def _resolver(field: str):
     """Map a (snake) field name to a component parser via tolerant substring rules,
     so label variants (hydraulic_brakes, front_fork, motor_hub, …) are covered."""
@@ -1254,7 +1263,12 @@ def _resolver(field: str):
         return _controller
     if "sensor" in f:
         return _sensor
-    if "motor" in f or f == "drive_unit":
+    # "motor" in the field name isn't enough — motor ATTRIBUTE rows (Motor Power, Motor
+    # Torque, Motor Type, Max Motor Assisted Speed, "Motor part" P/N notes) describe the
+    # motor, they aren't a second motor. Routing them to _motor mints phantom priced motor
+    # components (double-counting in the value base, extra rows in the parts list). Only the
+    # motor itself — motor / drive_unit / front|rear|mid_drive|hub motor — is a component.
+    if ("motor" in f or f == "drive_unit") and not _MOTOR_ATTR.search(f):
         return _motor
     if f == "battery":
         return _battery
