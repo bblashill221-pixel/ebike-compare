@@ -1,0 +1,2501 @@
+{
+  "brand": "puckipuppy",
+  "scraper": "scrape_puckipuppy.py",
+  "generated_at": "2026-07-01T07:57:45.824374+00:00",
+  "fields_audited": [
+    "motor_w",
+    "battery_wh",
+    "torque_nm",
+    "max_speed_mph",
+    "range_mi",
+    "weight_lb",
+    "max_load_lb",
+    "fit_height_min_in",
+    "sensor_type",
+    "brake_type",
+    "frame_material",
+    "drive_type"
+  ],
+  "summary": {
+    "models": 24,
+    "present": 234,
+    "resolved": 0,
+    "open": 54,
+    "needs_image": 0,
+    "unpublished": 0
+  },
+  "models": [
+    {
+      "id": "puckipuppy__alaskan",
+      "model": "Alaskan Etrike",
+      "url": "https://puckipuppy.com/products/alaskan",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 750,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 648,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 15,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 55,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "weight_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 500,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 64,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque + cadence",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__beagle-1",
+      "model": "Beagle",
+      "url": "https://puckipuppy.com/products/beagle-1",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 1350,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 720,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 66.0,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 400,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 64,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque + cadence",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mechanical_disc",
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__beagle-2",
+      "model": "Beagle 2 Ebike",
+      "url": "https://puckipuppy.com/products/beagle-2",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 750,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 720,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 77.6,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 400,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 64,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque + cadence",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__beagle-2-st",
+      "model": "Beagle 2 ST Ebike",
+      "url": "https://puckipuppy.com/products/beagle-2-st",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 750,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 720,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 76.0,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 400,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 64,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque + cadence",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__beagle",
+      "model": "Beagle Ebike",
+      "url": "https://puckipuppy.com/products/beagle",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 1350,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 720,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 66.0,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 400,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 64,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque + cadence",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mechanical_disc",
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__boxer",
+      "model": "Boxer Ebike",
+      "url": "https://puckipuppy.com/products/boxer",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 750,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 960,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 80,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 85.6,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 400,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 64,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque + cadence",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__boxer-st",
+      "model": "Boxer ST Ebike",
+      "url": "https://puckipuppy.com/products/boxer-st",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 750,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 960,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 80,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 84.6,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 400,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 64,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque + cadence",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__bulldog",
+      "model": "Bulldog Ebike",
+      "url": "https://puckipuppy.com/products/bulldog",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 750,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "battery_wh": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 130,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 95.5,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 400,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 64,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque + cadence",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__bulldog-pro",
+      "model": "Bulldog Pro Ebike",
+      "url": "https://puckipuppy.com/products/bulldog-pro",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 750,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "battery_wh": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 130,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 94.1,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 400,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 64,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque + cadence",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__corgi",
+      "model": "Corgi Ebike",
+      "url": "https://puckipuppy.com/products/corgi",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 750,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 960,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 80,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 74.7,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 400,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 64,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque + cadence",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__dachshund-ebike",
+      "model": "Dachshund Ebike",
+      "url": "https://puckipuppy.com/products/dachshund-ebike",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 500,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 720,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 72.6,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 450,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 64,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque + cadence",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__dachshund-pro-ebike",
+      "model": "Dachshund Pro Ebike",
+      "url": "https://puckipuppy.com/products/dachshund-pro-ebike",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 750,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 720,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 83.3,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 450,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 64,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque + cadence",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__doberman",
+      "model": "Doberman Ebike",
+      "url": "https://puckipuppy.com/products/doberman",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 350,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 360,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 25,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 70,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 42.0,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 350,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 64,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque + cadence",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__goldenr-camouflage",
+      "model": "GoldenR Ebike",
+      "url": "https://puckipuppy.com/products/goldenr-camouflage",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 1600,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 960,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 80,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 85.7,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 400,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 64,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque + cadence",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__goldenr-pro",
+      "model": "GoldenR Pro Ebike",
+      "url": "https://puckipuppy.com/products/goldenr-pro",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 1100,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 960,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 80,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 92.6,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 400,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 64,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque + cadence",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__husky",
+      "model": "Husky Etrike",
+      "url": "https://puckipuppy.com/products/husky",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 750,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 835,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 15,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 80,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "weight_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 500,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 64,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque + cadence",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__husky-plus",
+      "model": "Husky Plus Etrike",
+      "url": "https://puckipuppy.com/products/husky-plus",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 750,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 835,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 15,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 110,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "weight_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 500,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 64,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque + cadence",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__labrador",
+      "model": "Labrador Ebike",
+      "url": "https://puckipuppy.com/products/labrador",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 750,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 960,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 80,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 85.7,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 400,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 64,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque + cadence",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__labrador-pro",
+      "model": "Labrador Pro Ebike",
+      "url": "https://puckipuppy.com/products/labrador-pro",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 750,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 960,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 100,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 85.7,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 400,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 64,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque + cadence",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__labrador-pro-st",
+      "model": "Labrador Pro ST Ebike",
+      "url": "https://puckipuppy.com/products/labrador-pro-st",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 750,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 960,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 80,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 87.1,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 400,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 64,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque + cadence",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__poodle",
+      "model": "Poodle Ebike",
+      "url": "https://puckipuppy.com/products/poodle",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 750,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 720,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 75,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 63.1,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 350,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 64,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque + cadence",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__rottweiler",
+      "model": "Rottweiler Etrike",
+      "url": "https://puckipuppy.com/products/rottweiler",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 750,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 720,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 15,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 55,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "weight_lb": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 500,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 64,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque + cadence",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__samoyed",
+      "model": "Samoyed Ebike",
+      "url": "https://puckipuppy.com/products/samoyed",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 750,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 720,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 75.8,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 350,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 64,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque + cadence",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "mechanical_disc",
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__schnauzer",
+      "model": "Schnauzer Ebike",
+      "url": "https://puckipuppy.com/products/schnauzer",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 750,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 720,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "torque_nm": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 28,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 60,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 83.8,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 450,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": "2026-06-28"
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 64,
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "torque + cadence",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        },
+        "frame_material": {
+          "status": "open",
+          "source": null,
+          "value": null,
+          "note": "",
+          "first_flagged": "2026-06-26",
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": "2026-06-28",
+          "resolved_at": "2026-06-28"
+        }
+      }
+    }
+  ]
+}

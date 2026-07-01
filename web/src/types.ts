@@ -90,6 +90,22 @@ export interface SpecsTyped {
   /** True when the bike advertises a custom/user-adjustable speed mode. */
   custom_speed_mode?: boolean | null;
   display_type?: string;
+  /** Component build grade from the tier/kind of parts (4 bands), or absent when Unrated. */
+  build_tier?: string | null;
+  /** The premium-component differentiators behind the grade (chips). */
+  build_markers?: string[];
+  /** Value meter: "Exceptional" | "Outstanding" | "Great" | "Good", or null when Unrated. */
+  value_level?: string | null;
+  /** typical price of (type × build-tier) peers ÷ this bike's price (>1 = better deal). */
+  value_index?: number | null;
+  /** median effective price of the (type × build-tier) peer group — the value-score "why". */
+  value_typical?: number | null;
+  /** worth of this bike's free included accessories, credited toward value (capped). */
+  value_extras?: number | null;
+  /** number of same-(type × build-tier) peers the value was ranked against. */
+  value_peers?: number | null;
+  /** the next-better value band + the price this bike would need to reach it. */
+  value_next?: { label: string; price: number } | null;
   water_resistance?: string;
   ul_listed?: boolean;
   warranty_years?: number;
@@ -174,7 +190,7 @@ export interface Model {
   product_type?: string;
   /** Every matching use category, primary first ("Cargo", "Folding", ...). */
   product_types?: string[];
-  /** "Step-Thru" | "Step-Over (Mid-Step)" when the frame style is known. */
+  /** "Step-Thru" | "Step-Over" when the frame style is known. */
   frame_style?: string | null;
   /** Whether the bike folds — a feature, not a product type. */
   folding?: boolean;

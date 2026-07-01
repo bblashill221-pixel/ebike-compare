@@ -1,23 +1,25 @@
-import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import { Link, useParams, useNavigate, useLocation } from "react-router-dom";
 import { useData } from "../data/DataProvider";
 import { ColorSwatches, upchargeText } from "../components/ColorSwatches";
 import { useColorSelection, defaultColorIndex, colorSoldOut, soldOutColors } from "../colorSelection";
-import { useShowSoldOut } from "../soldOut";
+import { isAvailable, useShowSoldOut } from "../soldOut";
 import { useCompare } from "../compare/CompareContext";
-import { formatPrice, formatNumber, titleCase, colorChipStyle, fieldLabel } from "../format";
+import { formatPrice, formatNumber, titleCase, groupLabel, colorChipStyle, fieldLabel } from "../format";
 import { useUnits, inToFtIn } from "../units";
 import { colorPrices, defaultDims, lowestPrice, variantPrice } from "../pricing";
 import { VariantPicker } from "../components/VariantPicker";
 import { Price } from "../components/Price";
-import { ScorePanel } from "../components/ScorePanel";
+import { BuildGrade } from "../components/BuildGrade";
+import { ValuePips } from "../components/ValueMeter";
+import type { Model } from "../types";
 import { SpecialFeaturesCard } from "../components/UncommonFeaturesList";
 import { HighlightsList } from "../components/HighlightsList";
 import { SpecTable } from "../components/SpecTable";
-import { DistributionPlot } from "../components/DistributionPlot";
 import { AffiliateLink } from "../components/AffiliateLink";
 import { displayName, primaryImage } from "../components/BikeCard";
-import { BatteryIcon, MotorIcon, RangeIcon, RiderHeightIcon, TagIcon, TorqueIcon, WeightIcon } from "../components/icons";
+import { HowItCompares, HowItComparesLegend } from "../components/HowItCompares";
+import { BatteryIcon, BoltIcon, MotorIcon, RangeIcon, RiderHeightIcon, TagIcon, TorqueIcon, WeightIcon } from "../components/icons";
 
 const GROUP_ORDER = [
   "general_info",
@@ -34,25 +36,6 @@ const GROUP_ORDER = [
   // paid add-ons with prices).
 ];
 
-// Each metric gets a tinted circular icon badge matching the icon's own color
-// (the icons are self-colored: battery emerald, motor amber, torque rose, range
-// sky, weight violet, price tag blue) -- see the "How it compares" card grid.
-const PERCENTILE_FIELDS: {
-  field: string;
-  label: string;
-  unit?: string;
-  icon: React.ReactNode;
-  badge: string;
-  // LOWER is better -> a value below the median is the "good" (green) direction
-  lowerBetter?: boolean;
-}[] = [
-  { field: "price", label: "Price", unit: "$", icon: <TagIcon className="h-4 w-4" />, badge: "bg-blue-50", lowerBetter: true },
-  { field: "battery_wh", label: "Battery", unit: " Wh", icon: <BatteryIcon className="h-4 w-4" />, badge: "bg-emerald-50" },
-  { field: "motor_w", label: "Motor", unit: " W", icon: <MotorIcon className="h-4 w-4" />, badge: "bg-amber-50" },
-  { field: "torque_nm", label: "Torque", unit: " Nm", icon: <TorqueIcon className="h-4 w-4" />, badge: "bg-rose-50" },
-  { field: "range_mi", label: "Range", unit: " mi", icon: <RangeIcon className="h-4 w-4" />, badge: "bg-sky-50" },
-  { field: "weight_lb", label: "Weight", unit: " lb", icon: <WeightIcon className="h-4 w-4" />, badge: "bg-violet-50", lowerBetter: true },
-];
 
 // Per-frame-size geometry: normalize structures each per-size attribute as a
 // {sizeLabel: value} map (e.g. {"17\"": "432mm", "19\"": "470mm"}); a single
@@ -134,7 +117,17 @@ function GeometryTable({ geo, sizes }: { geo: Record<string, unknown>; sizes: st
 
 export function BikeDetail() {
   const { id } = useParams();
-  const { byId, models, analysisStats, analysisStatsByType, brandByName, status } = useData();
+  const navigate = useNavigate();
+  const location = useLocation();
+  // Back returns to wherever the user came from BEFORE entering the detail flow (browse,
+  // compare, ...), ignoring all in-page activity. "Other versions" links use `replace`, so
+  // hopping between sibling detail pages never grows history — it stays [referrer, detail],
+  // and navigate(-1) lands on the referrer. We capture "did we arrive via in-app nav" ONCE
+  // at mount (a ref, so a later sibling `replace` can't flip location.key out of "default"
+  // on a direct load); location.key === "default" only on a fresh load / external link.
+  const enteredInApp = useRef(location.key !== "default");
+  const goBack = () => (enteredInApp.current ? navigate(-1) : navigate("/"));
+  const { byId, models, brandByName, status } = useData();
   const { has, toggle, isFull } = useCompare();
   const model = id ? byId.get(decodeURIComponent(id)) : undefined;
   // selection is shared with the browse cards (and persists for the session);
@@ -172,7 +165,7 @@ export function BikeDetail() {
     return (
       <Center>
         <div className="text-center">
-          <p className="mb-3">That e-bike could not be found.</p>
+          <p className="mb-3">That eBike could not be found.</p>
           <Link to="/" className="btn-primary">Back to browse</Link>
         </div>
       </Center>
@@ -182,11 +175,14 @@ export function BikeDetail() {
   // The "how it compares" distributions are drawn from the bike's PRIMARY-TYPE
   // peers (falling back to the fleet if that cohort's stats are missing).
   const primaryType = model.analysis?.primary_type;
-  const cohortStats =
-    (primaryType && analysisStatsByType[primaryType]) || analysisStats;
   const compareHeading = primaryType
-    ? `How it compares to all other ${primaryType} bikes`
-    : "How it compares to the fleet";
+    ? `How It Compares to All Other ${primaryType} Bikes`
+    : "How It Compares to the Fleet";
+
+  // Cohort = same-type bikes you can actually BUY: sold-out bikes are excluded so the rank
+  // and Low/Median/High match what Browse shows. A sold-out bike isn't part of the rankings
+  // at all — its "How It Compares" card is hidden entirely (see `ranked` below).
+  const ranked = isAvailable(model);
 
   const img = model.colors?.[color]?.image ?? primaryImage(model);
   const cPrices = colorPrices(model, dims);
@@ -197,8 +193,11 @@ export function BikeDetail() {
       ? [model.product_type]
       : [];
   const selected = has(model.id);
+  // "Other versions" omits sold-out siblings unless the global Sold-out toggle is on
+  // (consistent with how sold-out colors / Browse results are hidden).
   const siblings = model.family_id
-    ? models.filter((x) => x.family_id === model.family_id && x.id !== model.id)
+    ? models.filter((x) => x.family_id === model.family_id && x.id !== model.id
+        && (showSoldOut || isAvailable(x)))
     : [];
   const t = model.analysis?.specs_typed ?? {};
   // manufacturer's recommended rider-height range, shown in the active unit
@@ -235,12 +234,13 @@ export function BikeDetail() {
         </div>
       </div>
     ) : null;
-  const valueOf = (field: string) =>
-    field === "price" ? model.price ?? model.price_min : (t[field] as number | undefined);
 
   const hasGroup = (g: string) => !!model.specs?.[g] && Object.keys(model.specs[g]).length > 0;
   // these sit under the image (left column) instead of the main spec flow
-  const SIDE_GROUPS = ["general_info", "geometry"];
+  // general_info is dropped from display; geometry now renders as a full-width card in
+  // the main spec section (last, just before Accessories) rather than in the sidebar.
+  const SIDE_GROUPS = ["general_info", "geometry"];   // still excluded from main groups...
+  const MAIN_SKIP = ["general_info"];                 // ...but geometry IS shown in main
   // Rider height + frame-size labels live in Key Aspects (with the Frame Sizes
   // breakdown); drop their duplicate copies from Geometry so the cards don't
   // repeat them. Covers rider_height, user_height_range, approx height, inseam,
@@ -256,8 +256,12 @@ export function BikeDetail() {
       return Object.fromEntries(Object.entries(src).filter(([k]) => !isGeoDup(k)));
     return src;
   };
-  const sideGroups = SIDE_GROUPS.filter((g) => Object.keys(sideGroupData(g)).length > 0);
-  const groups = GROUP_ORDER.filter((g) => !SIDE_GROUPS.includes(g) && hasGroup(g));
+  // general_info ("Key Aspects") is dropped from display (duplicative — its values live in
+  // the "How It Compares" table + rider-fit header); geometry now renders in the main spec
+  // section (last card, before Accessories), so the sidebar group list is empty.
+  const sideGroups = SIDE_GROUPS.filter(
+    (g) => g !== "general_info" && g !== "geometry" && Object.keys(sideGroupData(g)).length > 0);
+  const groups = GROUP_ORDER.filter((g) => !MAIN_SKIP.includes(g) && hasGroup(g));
   // Frameset, Wheelset, Brakes and Drivetrain share a single combined card; the
   // card renders at the position of whichever member comes first in GROUP_ORDER.
   const FRAMESET_CARD = ["frameset", "wheelset", "brakes", "drivetrain"];
@@ -299,6 +303,34 @@ export function BikeDetail() {
     if (m.brand === model.brand) for (const t of famTokens(m.model)) brandFamilies.add(t);
   }
   const myFamilies = famTokens(model.model);
+  // A "general" accessory is a genuinely universal bolt-on; the brand catalog also lists
+  // apparel and niche/other-model items, so we don't treat "no model token" as universal —
+  // it must match a known accessory category.
+  const UNIVERSAL = /\b(lock|light|headlight|tail.?light|fender|mudguard|bell|horn|mirror|phone|mount|bottle|cage|pump|basket|pannier|bag|kickstand|grip|tire|tyre|tube|charger|lube|net|strap|tool|wrench|helmet|cushion|holder|seat.?post|saddle|key|rack)\b/i;
+  const APPAREL = /\b(shirt|tee|jersey|glove|sock|hat|cap|hoodie|beanie|apparel|clothing|shorts?|pants?|jacket|sticker|decal|poster)\b/i;
+  // Mine model names from the brand's accessory COMPATIBILITY lists — the part after a
+  // spaced " - " ("Fender Set - Sinch / Sinch ST") — so models that AREN'T in our catalog
+  // (Sinch, Ramblas, Level) are still recognized as other-models and hidden. Skip
+  // colors/sizes (variant suffixes like "- Blue", "- 20\"") and universal words, and only
+  // keep tokens that recur (≥2 accessories) so one-off 3rd-party product names don't count.
+  // colors / sizes (variant suffixes) + generic accessory-descriptor words, so only real
+  // model names get mined (not "Sport Rider Hitch Rack" type product descriptors).
+  const VARIANT = new Set(("black white blue red green grey gray silver pink purple orange yellow sand fuchsia matte gloss teal tan brown beige navy inch receiver mips small medium large left right pair color size "
+    + "bike ebike hitch sport rider type pin version kit set pack bundle adapter system edition platform support stays replacement part parts cable wire front rear").split(" "));
+  const brandAccs = brandByName.get(model.brand)?.available_accessories ?? [];
+  const compatFreq = new Map<string, number>();
+  for (const a of brandAccs) {
+    const compat = (a.name || "").split(/\s[-–]\s/).slice(1).join(" ");
+    // raw occurrences (not deduped) so a single accessory that repeats a model with its
+    // trims — "… - Ramblas / Ramblas ADV" — still reaches the ≥2 mining threshold.
+    for (let t of compat.toLowerCase().replace(/[^a-z0-9]+/g, " ").split(" ")) {
+      t = t.replace(/\d+$/, "");
+      if (t.length >= 3 && !ACC_STOP.has(t) && !VARIANT.has(t) && !UNIVERSAL.test(t) && !/^\d+$/.test(t))
+        compatFreq.set(t, (compatFreq.get(t) ?? 0) + 1);
+    }
+  }
+  const brandModelTokens = new Set<string>(brandFamilies);
+  for (const [t, c] of compatFreq) if (c >= 2) brandModelTokens.add(t);
   // Some brands have product LINES that aren't catalog model names: Specialized's
   // "Globe" is its cargo sub-brand (the Haul line) and "Tero" is an eMTB line, so a
   // "Globe Passenger Seat" or "Tero Kickstand" is line-specific, not universal. Map
@@ -309,7 +341,7 @@ export function BikeDetail() {
   };
   const aliases = LINE_ALIASES[model.brand] ?? {};
   const accFamilies = (name: string): string[] => {
-    const fa = [...famTokens(name)].filter((t) => brandFamilies.has(t));
+    const fa = [...famTokens(name)].filter((t) => brandModelTokens.has(t));
     const low = name.toLowerCase();
     for (const [tok, fam] of Object.entries(aliases)) {
       if (new RegExp(`\\b${tok}\\b`).test(low)) fa.push(fam);
@@ -317,14 +349,15 @@ export function BikeDetail() {
     return [...new Set(fa)];
   };
   const appliesToThisModel = (name: string): boolean => {
+    if (APPAREL.test(name)) return false;
     const fa = accFamilies(name);
-    // Batteries and replacement parts are inherently model-specific (a "Cafe Cruiser
-    // Battery" / "500 Series Replacement Parts" is never universal) -> require a match
-    // to THIS model's family; otherwise it's for another (often unlisted) model.
-    const modelSpecific = /\bbatter/i.test(name) && !/charger/i.test(name)
+    if (fa.some((t) => myFamilies.has(t))) return true;     // names THIS model -> show
+    // Batteries / replacement parts are inherently model-specific; if it didn't match
+    // this model above, it's for another (often unlisted) model -> hide.
+    const modelSpecific = (/\bbatter/i.test(name) && !/charger/i.test(name))
       || /replacement\s+parts?/i.test(name);
-    if (modelSpecific) return fa.some((t) => myFamilies.has(t));
-    return fa.length === 0 || fa.some((t) => myFamilies.has(t));
+    if (modelSpecific || fa.length) return false;           // other-model part
+    return UNIVERSAL.test(name);                            // general only if a known universal
   };
   const paidAccessories = (brandByName.get(model.brand)?.available_accessories ?? [])
     .filter((a) => !a.free && a.price != null && !includedNames.has(a.name.toLowerCase())
@@ -333,7 +366,7 @@ export function BikeDetail() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-6">
-      <Link to="/" className="text-sm text-brand-600 hover:underline">← Back to browse</Link>
+      <button onClick={goBack} className="text-sm text-brand-600 hover:underline">← Back</button>
 
       {/* Mobile is a single flex column; each desktop column wrapper is display:contents
           on mobile so its children join the parent flex and can be ordered individually:
@@ -395,6 +428,73 @@ export function BikeDetail() {
         </div>
           </div>
           <div className="order-3 lg:order-none space-y-4">
+        {/* Value score + the coarse "why": build tier (quality) and the typical price for
+            that tier/type vs. this bike's price. The premium components stay in Highlights. */}
+        {model.analysis?.specs_typed?.build_tier && (
+          <div className="space-y-2 rounded-xl border border-slate-200 p-3">
+            {model.analysis.specs_typed.value_level && (
+              <div className="flex flex-wrap items-center gap-2">
+                <ValuePips level={model.analysis.specs_typed.value_level} />
+                <span className="text-sm font-semibold text-slate-700">
+                  {model.analysis.specs_typed.value_level} value
+                </span>
+              </div>
+            )}
+            <div className="flex flex-wrap items-center gap-x-1.5 gap-y-1 text-xs text-slate-500">
+              <BuildGrade model={model} />
+              {model.analysis.specs_typed.value_typical != null && model.price != null && (
+                <span>
+                  · similar ≈ {formatPrice(model.analysis.specs_typed.value_typical, model.currency)} ·
+                  this bike {formatPrice(model.price, model.currency)}
+                  {model.analysis.specs_typed.value_extras
+                    ? ` (incl. ~${formatPrice(model.analysis.specs_typed.value_extras, model.currency)} extras)`
+                    : ""}
+                </span>
+              )}
+            </div>
+            {model.analysis.specs_typed.value_level &&
+              model.analysis.specs_typed.value_index != null &&
+              (() => {
+                const t = model.analysis!.specs_typed;
+                const idx = t.value_index!;
+                const below = Math.round((1 - 1 / idx) * 100);
+                const markers = t.build_markers ?? [];
+                return (
+                  <details className="text-xs text-slate-500">
+                    <summary className="cursor-pointer select-none font-medium text-slate-600 hover:text-slate-800">
+                      How this value was scored
+                    </summary>
+                    <ol className="mt-1.5 list-decimal space-y-1 pl-4 marker:text-slate-400">
+                      <li>
+                        Build grade <span className="font-semibold text-slate-700">{t.build_tier}</span>
+                        {markers.length ? ` — ${markers.join(", ")}` : ""}.
+                      </li>
+                      <li>
+                        Ranked against <span className="font-semibold text-slate-700">{t.value_peers}</span>{" "}
+                        {t.build_tier}-tier {model.product_type} bikes (typical ≈{" "}
+                        {formatPrice(t.value_typical, model.currency)}).
+                      </li>
+                      <li>
+                        Priced {formatPrice(model.price, model.currency)}
+                        {t.value_extras ? ` (−${formatPrice(t.value_extras, model.currency)} extras)` : ""} →{" "}
+                        <span className="font-semibold text-slate-700">{idx.toFixed(2)}×</span> (
+                        {Math.abs(below)}% {below >= 0 ? "below" : "above"} typical).
+                      </li>
+                      <li>
+                        <span className="font-semibold text-slate-700">{t.value_level}</span>
+                        {t.value_next
+                          ? `. For ${t.value_next.label} it would need to be ≤ ${formatPrice(
+                              t.value_next.price,
+                              model.currency,
+                            )}.`
+                          : " — the top band."}
+                      </li>
+                    </ol>
+                  </details>
+                );
+              })()}
+          </div>
+        )}
         {sideGroups.map((g) => {
           const isGeneral = g === "general_info";
           // "Key Aspects" leads with the rider-height fit range; Geometry has the
@@ -411,8 +511,8 @@ export function BikeDetail() {
             return null;
           return (
             <div key={g} className="card p-4">
-              <h2 className="mb-2 font-bold text-slate-800">
-                {isGeneral ? "Key Aspects" : titleCase(g)}
+              <h2 className="mb-2 font-bold uppercase tracking-wide text-slate-800">
+                {isGeneral ? "Key Aspects" : groupLabel(g)}
               </h2>
               {geoTable ?? (
                 <SpecTable
@@ -431,7 +531,17 @@ export function BikeDetail() {
         <div className="contents lg:flex lg:flex-col lg:gap-4">
           <div className="order-2 lg:order-none space-y-4">
           <div>
-            <div className="text-sm font-medium uppercase tracking-wide text-brand-600">{model.brand}</div>
+            {/* brand name links to the brand's product page (same target as "View at …") */}
+            <div className="text-sm font-medium uppercase tracking-wide text-brand-600">
+              <AffiliateLink
+                brand={model.brand}
+                url={model.url}
+                showBadge={false}
+                className="hover:text-brand-700 hover:underline"
+              >
+                {model.brand}
+              </AffiliateLink>
+            </div>
             <h1 className="text-2xl font-bold text-slate-900">
               {displayName(model)}
               {model.tier && (
@@ -519,12 +629,13 @@ export function BikeDetail() {
 
           {siblings.length > 0 && (
             <div className="card p-4">
-              <h3 className="mb-2 font-semibold text-slate-800">Other versions of this bike</h3>
+              <h3 className="mb-2 font-bold uppercase tracking-wide text-slate-800">Other versions of this bike</h3>
               <ul className="space-y-1.5">
                 {siblings.map((s) => (
                   <li key={s.id} className="flex items-baseline justify-between gap-3 text-sm">
                     <Link
                       to={`/bike/${encodeURIComponent(s.id)}`}
+                      replace
                       className="font-medium text-brand-700 hover:underline"
                     >
                       {s.tier ?? s.model}
@@ -537,53 +648,20 @@ export function BikeDetail() {
           )}
 
           <SpecialFeaturesCard features={model.analysis.uncommon_features} />
-
-          <div className="card p-4">
-            <ScorePanel analysis={model.analysis} model={model} />
-          </div>
           </div>
         </div>
       </div>
 
-      {/* percentile context */}
+      {/* percentile context — a table vs the bike's same-type cohort: min / median /
+          max, this bike's value, and its signed difference from the median (green when
+          on the "better" side for that metric, red when worse). */}
+      {ranked && (
       <section className="mt-6 card p-4">
-        <h2 className="mb-3 font-semibold text-slate-800">{compareHeading}</h2>
-        <div className="grid max-w-3xl gap-2.5 sm:grid-cols-2">
-          {PERCENTILE_FIELDS.map(({ field, label, unit, icon, badge, lowerBetter }) => {
-            let stat = cohortStats[field];
-            let v = valueOf(field);
-            let u = unit;
-            if (!stat) return null;
-            // show the unit-dependent fields in the selected system (scaling the
-            // value and the whole distribution keeps the percentile position).
-            if (units === "metric") {
-              const conv = field === "range_mi" ? 1.60934 : field === "weight_lb" ? 0.453592 : null;
-              if (conv) {
-                const sc = (n: number) => n * conv;
-                stat = { ...stat, min: sc(stat.min), p10: sc(stat.p10), p50: sc(stat.p50), p90: sc(stat.p90), max: sc(stat.max) };
-                if (v != null) v = Math.round(sc(v));
-                u = field === "range_mi" ? " km" : " kg";
-              }
-            }
-            return (
-              <div key={field} className="rounded-lg border border-slate-200 p-3">
-                <div className="mb-2 flex items-center justify-between">
-                  <span className="flex items-center gap-2 text-sm font-semibold text-slate-800">
-                    <span className={`flex h-7 w-7 items-center justify-center rounded-full ${badge}`}>
-                      {icon}
-                    </span>
-                    {label}
-                  </span>
-                  <span className="text-base font-bold text-slate-900">
-                    {v == null ? "—" : u === "$" ? `$${formatNumber(v)}` : `${formatNumber(v)}${u ?? ""}`}
-                  </span>
-                </div>
-                <DistributionPlot stat={stat} value={v} unit={u} lowerBetter={lowerBetter} />
-              </div>
-            );
-          })}
-        </div>
+        <h2 className="mb-4 text-lg font-bold tracking-wide text-slate-800">{compareHeading}</h2>
+        <HowItCompares model={model} models={models} units={units} compact />
+        <HowItComparesLegend />
       </section>
+      )}
 
       {/* grouped specs — single column so the section order reads top-to-bottom */}
       <section className="mt-6 grid gap-4">
@@ -593,14 +671,14 @@ export function BikeDetail() {
             if (g !== framesetCardGroups[0]) return null;
             return (
               <div key="frameset-card" className="card p-4">
-                <h2 className="mb-2 font-bold text-slate-800">Frameset</h2>
+                <h2 className="mb-2 font-bold uppercase tracking-wide text-slate-800">Frameset</h2>
                 {FRAMESET_SUBS.map((sub, i) => {
                   const present = sub.groups.filter((cg) => groups.includes(cg));
                   if (!present.length) return null;
                   return (
                     <div key={sub.heading ?? present[0]} className={i > 0 ? "mt-4" : undefined}>
                       {sub.heading && (
-                        <h3 className="mb-2 font-bold text-slate-800">{sub.heading}</h3>
+                        <h3 className="mb-2 font-bold uppercase tracking-wide text-slate-800">{sub.heading}</h3>
                       )}
                       {present.map((cg) => (
                         <SpecTable key={cg} group={model.specs[cg]} emphasize hideCaptured />
@@ -611,9 +689,25 @@ export function BikeDetail() {
               </div>
             );
           }
+          if (g === "geometry") {
+            // rider-height / frame-size dups stripped; per-size table when multi-size.
+            const geoData = sideGroupData("geometry");
+            const sizeLabels = frameSizes.map((s) => s.size);
+            const useTable = sizeLabels.length > 1;
+            if (useTable ? !geoTableHasRows(geoData, sizeLabels) : !Object.keys(geoData).length)
+              return null;
+            return (
+              <div key={g} className="card p-4">
+                <h2 className="mb-2 font-bold uppercase tracking-wide text-slate-800">Geometry</h2>
+                {useTable
+                  ? <GeometryTable geo={geoData} sizes={sizeLabels} />
+                  : <SpecTable group={geoData} emphasize />}
+              </div>
+            );
+          }
           return (
             <div key={g} className="card p-4">
-              <h2 className="mb-2 font-bold text-slate-800">{titleCase(g)}</h2>
+              <h2 className="mb-2 font-bold uppercase tracking-wide text-slate-800">{groupLabel(g)}</h2>
               <SpecTable group={model.specs[g]} emphasize hideCaptured />
             </div>
           );
@@ -621,7 +715,7 @@ export function BikeDetail() {
 
         {(included.length > 0 || paidAccessories.length > 0) && (
           <div className="card p-4">
-            <h2 className="mb-2 font-semibold text-slate-800">Accessories</h2>
+            <h2 className="mb-2 font-bold uppercase tracking-wide text-slate-800">Accessories</h2>
             <ul className="space-y-1.5 text-sm">
               {included.map((a) => (
                 <li key={`inc-${a.name}`} className="flex items-baseline justify-between gap-3">

@@ -3,14 +3,15 @@
 # Cron-friendly wrapper for the e-bike scrapers (Aventon + Lectric + Ride1Up +
 # Specialized + Velotric + Heybike + Mokwheel + EVELO + Himiway + Euphree + Vvolt
 # + Blix + Tern + Priority + Monarc + Velowave + Segway + Juiced + VIVI + CEMOTO).
-# It archives the previous build (scrape returns + normalized) to
-# data/legacy/<date>/, then runs each scraper with the project's venv writing to
-# data/current/<brand>_ebikes.json, then enrich -> normalize
-# (data/current/active/ebike.json) -> metrics. Logs to logs/scrape.log.
-# One scraper failing does not stop the other; the script exits non-zero if any
-# scraper failed.
+# It archives the previous build to data/legacy/<date>/, then runs every scraper IN
+# PARALLEL (up to SCRAPE_PARALLEL=6 at once) — each writes only its own
+# data/current/<brand>_ebikes.json, so they can't collide. Once ALL scrapers finish, the
+# sequential tail runs: enrich -> UPDATE COMPONENTS (price new/unresolved parts) ->
+# CREATE ebike.json (normalize/analyze/build) -> publish to web/public/. Logs to
+# logs/scrape.log. One scraper failing does not stop the others; the script exits non-zero
+# if any scraper failed or the build didn't validate.
 #
-# Usage:  ./run_scrape.sh
+# Usage:  ./run_scrape.sh            (SCRAPE_PARALLEL=N to change concurrency)
 # Cron:   0 6 * * 1  /home/bblashill/ebike-compare/run_scrape.sh
 #
 set -uo pipefail
@@ -63,6 +64,8 @@ SCRAPERS=(
     "scrape_trek.py|trek_ebikes|"
     "scrape_giant.py|giant_ebikes|"
     "scrape_vanpowers.py|vanpowers_ebikes|"
+    "scrape_puckipuppy.py|puckipuppy_ebikes|"
+    "scrape_bakcou.py|bakcou_ebikes|"
 )
 
 run_all() {
@@ -82,17 +85,36 @@ print((json.load(open(f[0])).get('generated_at','') or '')[:10]) if f else print
         [ -f "$ACTIVE_DIR/ebike.json" ] && mv -f "$ACTIVE_DIR/ebike.json" "$dest/"
         echo "$(date -Is) : archived previous build -> $dest"
     fi
+    # SCRAPE all brands in PARALLEL. Each scraper writes ONLY its own brand file and hits
+    # its own vendor domain, so there is nothing to race on; we just bound how many run at
+    # once (SCRAPE_PARALLEL, default 6) since the Playwright/Chromium scrapers are RAM-heavy.
+    # Each job logs to its own file; the logs are stitched in declared order afterward so
+    # parallel output doesn't interleave, and a per-job failure marker sets rc=1.
+    local MAX_PAR="${SCRAPE_PARALLEL:-6}"
+    local jobdir; jobdir="$(mktemp -d)"
+    echo "--- $(date -Is) : scraping ${#SCRAPERS[@]} brands, up to $MAX_PAR in parallel ---"
     for entry in "${SCRAPERS[@]}"; do
+        while [ "$(jobs -rp | wc -l)" -ge "$MAX_PAR" ]; do wait -n; done
         IFS='|' read -r script base args <<< "$entry"
-        local latest="$CURRENT_DIR/${base}.json"
-        echo "--- $(date -Is) : $script ---"
-        if "$PY" "$PROJECT_DIR/$script" -o "$latest" $args; then
-            echo "$(date -Is) : OK -> $latest"
-        else
-            echo "$(date -Is) : FAILED -> $script"
-            rc=1
-        fi
+        (
+            latest="$CURRENT_DIR/${base}.json"
+            blog="$jobdir/${base}.log"
+            echo "--- $(date -Is) : $script ---" > "$blog"
+            if "$PY" "$PROJECT_DIR/$script" -o "$latest" $args >> "$blog" 2>&1; then
+                echo "$(date -Is) : OK -> $latest" >> "$blog"
+            else
+                echo "$(date -Is) : FAILED -> $script" >> "$blog"
+                touch "$jobdir/${base}.failed"
+            fi
+        ) &
     done
+    wait   # barrier: every scraper has finished before enrichment/build begins
+    for entry in "${SCRAPERS[@]}"; do
+        IFS='|' read -r script base _ <<< "$entry"
+        [ -f "$jobdir/${base}.log" ] && cat "$jobdir/${base}.log"
+        [ -f "$jobdir/${base}.failed" ] && rc=1
+    done
+    rm -rf "$jobdir"
     # Fill any missing per-model warranty (brand-level policy) and refresh the
     # component cost estimates from the final data.
     echo "--- $(date -Is) : fill_warranty + shipping/accessories + component costs ---"
@@ -125,42 +147,16 @@ print((json.load(open(f[0])).get('generated_at','') or '')[:10]) if f else print
     # Each tiered sibling gets a URL that preselects its configuration on the
     # brand site, where the platform supports it (best effort).
     "$PY" "$PROJECT_DIR/add_deep_links.py" || true
-    # Normalize unifies all brands AND does the detailed spec grouping + component
-    # parsing into ebike.json (the single transform step).
-    "$PY" "$PROJECT_DIR/normalize.py" || true
-    # Aggregate the fleet-wide part catalog (manufacturer + model number per
-    # component) used for price lookups; prior lookups are preserved.
-    "$PY" "$PROJECT_DIR/component_catalog.py" || true
-    # Refresh per-part RETAIL prices, KEY-FREE: scrape Worldwide Cyclery (Shopify) for
-    # any UNRESOLVED parts (new / never looked up) and conservatively match them. Existing
-    # researched prices are kept. For a periodic full refresh of stale researched prices,
-    # run `resolve_component_prices.py scrape --date MM/DD/YYYY` (or --all) out of band.
-    "$PY" "$PROJECT_DIR/resolve_component_prices.py" scrape || true
-    # Finalize the catalog: every in-use part priced (researched or context estimate +
-    # method + confidence). bom_pct is now derived from this, so no separate cost file.
-    "$PY" "$PROJECT_DIR/resolve_component_prices.py" write-catalog || true
-    "$PY" "$PROJECT_DIR/analyze.py" || true
-    # Data audit: flag models missing expected spec values (report + CSV +
-    # per-model annotation). Reads typed specs only; safe to re-run.
-    "$PY" "$PROJECT_DIR/audit.py" || true
-    # Correctness triage (advisory): flag likely-misclassified / misparsed bikes
-    # into data/current/anomalies.json for the dev-only QA page.
-    "$PY" "$PROJECT_DIR/audit_anomalies.py" || true
-    # Sanity gate: fail the run (rc=1) if the new build looks broken vs the prior
-    # one (model count crash, a brand at 0, fleet-wide coverage regression), so a
-    # bad scrape/normalize can be caught before it's published.
-    if ! "$PY" "$PROJECT_DIR/validate_build.py"; then
-        echo "$(date -Is) : BUILD VALIDATION FAILED — review before publishing"
+    # Order of operations: scrape all (above) -> UPDATE COMPONENTS -> CREATE ebike.json.
+    # Delegated to the shared offline pipeline with --refresh-prices, which runs:
+    # normalize -> component_catalog -> resolve_component_prices scrape (price new/unresolved
+    # parts off the freshly built catalog) -> write-catalog -> analyze -> audits -> validate
+    # -> diff_changes -> intern_components -> slim_web_build -> promote to web/public/.
+    # (For a price-only refresh without re-scraping brands, use update_prices.sh.)
+    if ! "$PROJECT_DIR/rebuild_offline.sh" --refresh-prices; then
+        echo "$(date -Is) : rebuild_offline (components+build+publish) FAILED — web/public/ left untouched"
         rc=1
     fi
-    # Daily change-log: diff this build against the previous archived build and
-    # record price/sale/free-feature/stock/new/removed changes (+ changed_today
-    # stamp). Pure-compute, idempotent against a fixed baseline.
-    "$PY" "$PROJECT_DIR/diff_changes.py" || true
-    # Rewrite the active build with the content-addressed `components` table + refs
-    # (every component once, priced, linked to the catalog). Must run AFTER the steps
-    # above that read inline specs (normalize/analyze/audit/validate/diff).
-    "$PY" "$PROJECT_DIR/intern_components.py" || true
     echo "===== $(date -Is) : run complete (rc=$rc) ====="
     echo
     return $rc

@@ -140,6 +140,30 @@ export function SpecTable({
     }
   }
 
+  // Fold the pedal-assist SENSOR type and the pedal_assist levels/boost into the Motor
+  // block (assist_type / assist_levels / boost), then drop their standalone sections — they
+  // read as motor/system attributes. The raw sensor/pedal_assist fields stay in the model
+  // data, so the filter facets are unaffected. Only folds when a Motor block exists.
+  if (buckets.motor?.length) {
+    const motor = buckets.motor[0].obj;
+    const sensorType = buckets.sensor?.find((i) => !isEmpty(i.obj.type))?.obj.type;
+    if (!isEmpty(sensorType) && isEmpty(motor.assist_type)) motor.assist_type = sensorType;
+    const magnets = buckets.sensor?.find((i) => !isEmpty(i.obj.magnets))?.obj.magnets;
+    if (!isEmpty(magnets) && isEmpty(motor.assist_magnets)) motor.assist_magnets = magnets;
+    const pa = buckets.pedal_assist?.[0]?.obj;
+    if (pa) {
+      if (!isEmpty(pa.levels) && isEmpty(motor.assist_levels)) motor.assist_levels = pa.levels;
+      if (!isEmpty(pa.boost) && isEmpty(motor.boost)) motor.boost = pa.boost;
+    }
+    for (const k of ["sensor", "pedal_assist"]) {
+      if (buckets[k]) {
+        delete buckets[k];
+        const i = order.indexOf(k);
+        if (i >= 0) order.splice(i, 1);
+      }
+    }
+  }
+
   // canonical component order (consistent across bikes, not scrape order)
   order.sort((a, b) => kindRank(a) - kindRank(b));
   // certifications render at the very BOTTOM of the section (below the scalar

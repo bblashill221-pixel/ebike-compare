@@ -62,7 +62,7 @@ function computeFacetOptions(models: Model[]): Record<EnumField, string[]> {
       sets.product_types.add(pt);
     }
     if (m.frame_style) sets.frame_style.add(m.frame_style);
-    for (const f of ["drive_type", "brake_type", "frame_material", "suspension", "sensor_type"] as EnumField[]) {
+    for (const f of ["drive_type", "brake_type", "frame_material", "suspension", "sensor_type", "build_tier", "value_level"] as EnumField[]) {
       const v = t[f] as string | undefined;
       if (!v) continue;
       // bare "disc" = a disc brake whose actuation (hydraulic/mechanical) is
@@ -74,6 +74,9 @@ function computeFacetOptions(models: Model[]): Record<EnumField, string[]> {
   for (const f of ENUM_FIELDS) out[f] = [...sets[f]].sort();
   // Types read best in the canonical taxonomy order, not alphabetically.
   out.product_types = PRODUCT_TYPE_ORDER.filter((t) => sets.product_types.has(t));
+  // Build grade & value read best high→low, not alphabetically.
+  out.build_tier = ["Premium", "Enhanced", "Standard", "Budget"].filter((v) => sets.build_tier.has(v));
+  out.value_level = ["Exceptional", "Outstanding", "Great", "Good"].filter((v) => sets.value_level.has(v));
   return out;
 }
 

@@ -1,0 +1,844 @@
+{
+  "generated_at": "2026-06-27T23:21:23.988808+00:00",
+  "build_date": "2026-06-27",
+  "baseline_date": "2026-06-26",
+  "summary": {
+    "models_changed": 65,
+    "removed": 3,
+    "by_type": {
+      "added": 46,
+      "stock": 7,
+      "price": 13,
+      "sale": 13,
+      "free_feature": 2,
+      "removed": 3
+    },
+    "added_suppressed": false,
+    "free_feature_suppressed": false
+  },
+  "changes": [
+    {
+      "id": "aventon__ramblas-adv-ebike",
+      "brand": "aventon",
+      "model": "Ramblas ADV Ebike",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "euphree__solar-sparrow",
+      "brand": "euphree",
+      "model": "Solar Sparrow Belt",
+      "types": [
+        "stock"
+      ],
+      "detail": {
+        "stock": {
+          "event": "sold_out"
+        }
+      }
+    },
+    {
+      "id": "giant__defy-advanced-eplus-elite-1",
+      "brand": "giant",
+      "model": "Defy Advanced E+ Elite 1",
+      "types": [
+        "stock"
+      ],
+      "detail": {
+        "stock": {
+          "event": "sold_out"
+        }
+      }
+    },
+    {
+      "id": "giant__defy-advanced-eplus-elite-ar",
+      "brand": "giant",
+      "model": "Defy Advanced E+ Elite AR",
+      "types": [
+        "stock"
+      ],
+      "detail": {
+        "stock": {
+          "event": "sold_out"
+        }
+      }
+    },
+    {
+      "id": "himiway__c5-electric-motorbike",
+      "brand": "himiway",
+      "model": "Himiway C5 Electric Motorbike",
+      "types": [
+        "stock"
+      ],
+      "detail": {
+        "stock": {
+          "event": "sold_out"
+        }
+      }
+    },
+    {
+      "id": "juiced__scrambler",
+      "brand": "juiced",
+      "model": "Scrambler",
+      "types": [
+        "price",
+        "sale"
+      ],
+      "detail": {
+        "price": {
+          "from": 1699.0,
+          "to": 1694.0,
+          "delta": -5.0,
+          "pct": 0,
+          "direction": "drop"
+        },
+        "sale": {
+          "event": "deepened",
+          "from_pct": 11,
+          "to_pct": 13
+        }
+      }
+    },
+    {
+      "id": "juiced__scrambler--full-suspension",
+      "brand": "juiced",
+      "model": "Scrambler — Full Suspension",
+      "types": [
+        "price",
+        "sale"
+      ],
+      "detail": {
+        "price": {
+          "from": 1899.0,
+          "to": 1894.0,
+          "delta": -5.0,
+          "pct": 0,
+          "direction": "drop"
+        },
+        "sale": {
+          "event": "deepened",
+          "from_pct": 10,
+          "to_pct": 12
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__alaskan",
+      "brand": "puckipuppy",
+      "model": "Alaskan Etrike",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "puckipuppy__beagle-1",
+      "brand": "puckipuppy",
+      "model": "Beagle",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "puckipuppy__beagle-2",
+      "brand": "puckipuppy",
+      "model": "Beagle 2 Ebike",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "puckipuppy__beagle-2-st",
+      "brand": "puckipuppy",
+      "model": "Beagle 2 ST Ebike",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "puckipuppy__beagle",
+      "brand": "puckipuppy",
+      "model": "Beagle Ebike",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "puckipuppy__boxer",
+      "brand": "puckipuppy",
+      "model": "Boxer Ebike",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "puckipuppy__boxer-st",
+      "brand": "puckipuppy",
+      "model": "Boxer ST Ebike",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "puckipuppy__bulldog",
+      "brand": "puckipuppy",
+      "model": "Bulldog Ebike",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "puckipuppy__bulldog-pro",
+      "brand": "puckipuppy",
+      "model": "Bulldog Pro Ebike",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "puckipuppy__corgi",
+      "brand": "puckipuppy",
+      "model": "Corgi Ebike",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "puckipuppy__dachshund-ebike",
+      "brand": "puckipuppy",
+      "model": "Dachshund Ebike",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "puckipuppy__dachshund-pro-ebike",
+      "brand": "puckipuppy",
+      "model": "Dachshund Pro Ebike",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "puckipuppy__doberman",
+      "brand": "puckipuppy",
+      "model": "Doberman Ebike",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "puckipuppy__goldenr-camouflage",
+      "brand": "puckipuppy",
+      "model": "GoldenR Ebike",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "puckipuppy__goldenr-pro",
+      "brand": "puckipuppy",
+      "model": "GoldenR Pro Ebike",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "puckipuppy__husky",
+      "brand": "puckipuppy",
+      "model": "Husky Etrike",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "puckipuppy__husky-plus",
+      "brand": "puckipuppy",
+      "model": "Husky Plus Etrike",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "puckipuppy__labrador",
+      "brand": "puckipuppy",
+      "model": "Labrador Ebike",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "puckipuppy__labrador-pro",
+      "brand": "puckipuppy",
+      "model": "Labrador Pro Ebike",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "puckipuppy__labrador-pro-st",
+      "brand": "puckipuppy",
+      "model": "Labrador Pro ST Ebike",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "puckipuppy__poodle",
+      "brand": "puckipuppy",
+      "model": "Poodle Ebike",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "puckipuppy__rottweiler",
+      "brand": "puckipuppy",
+      "model": "Rottweiler Etrike",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "puckipuppy__samoyed",
+      "brand": "puckipuppy",
+      "model": "Samoyed Ebike",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "puckipuppy__schnauzer",
+      "brand": "puckipuppy",
+      "model": "Schnauzer Ebike",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "specialized__haul-st",
+      "brand": "specialized",
+      "model": "Haul ST",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "specialized__levo-4-evo-comp",
+      "brand": "specialized",
+      "model": "Levo 4 EVO Comp",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "specialized__levo-4-evo-pro",
+      "brand": "specialized",
+      "model": "Levo 4 EVO Pro",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "specialized__s-works-turbo-creo-2-sram-red--xx1-eagle-axs",
+      "brand": "specialized",
+      "model": "S-Works Turbo Creo 2",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "specialized__turbo-como-40",
+      "brand": "specialized",
+      "model": "Turbo Como 4.0",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "specialized__turbo-como-40-igh",
+      "brand": "specialized",
+      "model": "Turbo Como 4.0 IGH",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "specialized__turbo-como-50-igh",
+      "brand": "specialized",
+      "model": "Turbo Como 5.0 IGH",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "specialized__turbo-creo-2-comp-sram-apex--x1-eagle-axs",
+      "brand": "specialized",
+      "model": "Turbo Creo 2 Comp",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "specialized__turbo-creo-2-comp-e5-sram-apex-eagle",
+      "brand": "specialized",
+      "model": "Turbo Creo 2 Comp E5",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "specialized__turbo-kenevo-sl-2-ohlins-coil",
+      "brand": "specialized",
+      "model": "Turbo Kenevo SL 2 Öhlins Coil",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "specialized__turbo-levo-sl-2-comp",
+      "brand": "specialized",
+      "model": "Turbo Levo SL 2 Comp",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "specialized__turbo-levo-sl-2-comp-alloy",
+      "brand": "specialized",
+      "model": "Turbo Levo SL 2 Comp Alloy",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "specialized__turbo-levo-sl-2-expert",
+      "brand": "specialized",
+      "model": "Turbo Levo SL 2 Expert",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "specialized__turbo-vado-40-step-through",
+      "brand": "specialized",
+      "model": "Turbo Vado 4.0 Step-Through",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "specialized__turbo-vado-50-igh",
+      "brand": "specialized",
+      "model": "Turbo Vado 5.0 IGH",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "specialized__turbo-vado-sl-2-40",
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 4.0",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "specialized__turbo-vado-sl-2-40-step-through-",
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 4.0 Step-Through",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "specialized__turbo-vado-sl-2-60-carbon",
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 6.0 Carbon",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "specialized__turbo-vado-sl-2-60-eq-carbon",
+      "brand": "specialized",
+      "model": "Turbo Vado SL 2 6.0 EQ Carbon",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "trek__fuel-exe-8-gx-axs-t-type",
+      "brand": "trek",
+      "model": "Fuel EXe 8 GX AXS T-Type",
+      "types": [
+        "stock"
+      ],
+      "detail": {
+        "stock": {
+          "event": "sold_out"
+        }
+      }
+    },
+    {
+      "id": "urtopia__urtopia-carbon-atom-ebike",
+      "brand": "urtopia",
+      "model": "Carbon Atom E-Bike",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "vanpowers__grandteton-pro",
+      "brand": "vanpowers",
+      "model": "GrandTeton-Pro",
+      "types": [
+        "stock"
+      ],
+      "detail": {
+        "stock": {
+          "event": "sold_out"
+        }
+      }
+    },
+    {
+      "id": "velotric__velotric-tempo-city-ebike--step-thru",
+      "brand": "velotric",
+      "model": "Velotric Tempo Ebike — Step-Thru",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "velowave__breeze-t-torque-sensor-electric-bike",
+      "brand": "velowave",
+      "model": "Breeze T Torque Sensor Electric Bike",
+      "types": [
+        "price",
+        "sale"
+      ],
+      "detail": {
+        "price": {
+          "from": 1499.0,
+          "to": 1299.0,
+          "delta": -200.0,
+          "pct": -13,
+          "direction": "drop"
+        },
+        "sale": {
+          "event": "started",
+          "discount_pct": 13
+        }
+      }
+    },
+    {
+      "id": "velowave__grace-step-thru-electric-bike",
+      "brand": "velowave",
+      "model": "Grace 2.0 Step-Thru Electric Bike",
+      "types": [
+        "price",
+        "sale"
+      ],
+      "detail": {
+        "price": {
+          "from": 1699.0,
+          "to": 1499.0,
+          "delta": -200.0,
+          "pct": -12,
+          "direction": "drop"
+        },
+        "sale": {
+          "event": "started",
+          "discount_pct": 12
+        }
+      }
+    },
+    {
+      "id": "velowave__pony-step-thru-electric-bike",
+      "brand": "velowave",
+      "model": "Pony Compact Step-Thru Electric Bike",
+      "types": [
+        "price",
+        "sale"
+      ],
+      "detail": {
+        "price": {
+          "from": 1499.0,
+          "to": 1299.0,
+          "delta": -200.0,
+          "pct": -13,
+          "direction": "drop"
+        },
+        "sale": {
+          "event": "started",
+          "discount_pct": 13
+        }
+      }
+    },
+    {
+      "id": "velowave__ranger-fat-tire-electric-bike",
+      "brand": "velowave",
+      "model": "Ranger 2.0 Fat Tire All-Terrain Electric Bike",
+      "types": [
+        "price",
+        "sale"
+      ],
+      "detail": {
+        "price": {
+          "from": 1499.0,
+          "to": 1299.0,
+          "delta": -200.0,
+          "pct": -13,
+          "direction": "drop"
+        },
+        "sale": {
+          "event": "started",
+          "discount_pct": 13
+        }
+      }
+    },
+    {
+      "id": "velowave__ranger-3-0-fat-tire-all-terrain-electric-bike",
+      "brand": "velowave",
+      "model": "Ranger 3.0 Fat Tire All-Terrain Electric Bike",
+      "types": [
+        "price",
+        "sale"
+      ],
+      "detail": {
+        "price": {
+          "from": 1599.0,
+          "to": 1399.0,
+          "delta": -200.0,
+          "pct": -13,
+          "direction": "drop"
+        },
+        "sale": {
+          "event": "started",
+          "discount_pct": 13
+        }
+      }
+    },
+    {
+      "id": "velowave__ranger-step-thru-electric-bike",
+      "brand": "velowave",
+      "model": "Ranger Step-Thru 2.0 Electric Bike",
+      "types": [
+        "price",
+        "sale"
+      ],
+      "detail": {
+        "price": {
+          "from": 1499.0,
+          "to": 1299.0,
+          "delta": -200.0,
+          "pct": -13,
+          "direction": "drop"
+        },
+        "sale": {
+          "event": "started",
+          "discount_pct": 13
+        }
+      }
+    },
+    {
+      "id": "velowave__ranger-step-thru-3-0-electric-bike",
+      "brand": "velowave",
+      "model": "Ranger Step-Thru 3.0 Torque Sensor Electric Bike",
+      "types": [
+        "price",
+        "sale"
+      ],
+      "detail": {
+        "price": {
+          "from": 1599.0,
+          "to": 1399.0,
+          "delta": -200.0,
+          "pct": -13,
+          "direction": "drop"
+        },
+        "sale": {
+          "event": "started",
+          "discount_pct": 13
+        }
+      }
+    },
+    {
+      "id": "velowave__swift-m-mid-drive-mountain-electric-bike",
+      "brand": "velowave",
+      "model": "Swift M Mid-Drive Electric Bike",
+      "types": [
+        "price",
+        "sale"
+      ],
+      "detail": {
+        "price": {
+          "from": 1799.0,
+          "to": 1599.0,
+          "delta": -200.0,
+          "pct": -11,
+          "direction": "drop"
+        },
+        "sale": {
+          "event": "started",
+          "discount_pct": 11
+        }
+      }
+    },
+    {
+      "id": "wallke__wallke-h9-ultra-folding-off-grid-powerstorage-e-bike",
+      "brand": "wallke",
+      "model": "2026 WALLKE H9 Ultra AWD Folding | Off-Grid Power Station E-Bike with Torque Sensor, 37mph Speed, 55/77Ah Battery Options",
+      "types": [
+        "price",
+        "sale",
+        "free_feature",
+        "stock"
+      ],
+      "detail": {
+        "price": {
+          "from": 2399.0,
+          "to": 1899.0,
+          "delta": -500.0,
+          "pct": -21,
+          "direction": "drop"
+        },
+        "sale": {
+          "event": "ended"
+        },
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Lights"
+          ]
+        },
+        "stock": {
+          "event": "back_in_stock"
+        }
+      }
+    },
+    {
+      "id": "wallke__wallke-h9-ultra-folding-off-grid-powerstorage-e-bike--77ah",
+      "brand": "wallke",
+      "model": "2026 WALLKE H9 Ultra AWD Folding | Off-Grid Power Station E-Bike with Torque Sensor, 37mph Speed, 55/77Ah Battery Options — 77Ah",
+      "types": [
+        "price",
+        "sale",
+        "free_feature"
+      ],
+      "detail": {
+        "price": {
+          "from": 2979.0,
+          "to": 2299.0,
+          "delta": -680.0,
+          "pct": -23,
+          "direction": "drop"
+        },
+        "sale": {
+          "event": "reduced",
+          "from_pct": 14,
+          "to_pct": 7
+        },
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Lights"
+          ]
+        }
+      }
+    },
+    {
+      "id": "wallke__wallke-h7-step-thru--60ah",
+      "brand": "wallke",
+      "model": "2026 Wallke H7 AWD Step-Thru | 3200W Ebike 40Ah Battery — 60Ah",
+      "types": [
+        "price",
+        "sale"
+      ],
+      "detail": {
+        "price": {
+          "from": 2699.0,
+          "to": 1799.0,
+          "delta": -900.0,
+          "pct": -33,
+          "direction": "drop"
+        },
+        "sale": {
+          "event": "deepened",
+          "from_pct": 16,
+          "to_pct": 44
+        }
+      }
+    },
+    {
+      "id": "trek__fuel-ex-5-gen-2",
+      "brand": "trek",
+      "model": "Fuel+ EX 5 Gen 2",
+      "types": [
+        "removed"
+      ]
+    },
+    {
+      "id": "velotric__velotric-discover-m-mid-drive-ebike",
+      "brand": "velotric",
+      "model": "Velotric Discover M Ebike",
+      "types": [
+        "removed"
+      ]
+    },
+    {
+      "id": "velotric__velotric-t1st-ebike",
+      "brand": "velotric",
+      "model": "Velotric T1 ST Plus Ebike",
+      "types": [
+        "removed"
+      ]
+    }
+  ]
+}

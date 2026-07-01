@@ -57,6 +57,12 @@ EXPECTED_FIELDS: list[tuple[str, str]] = [
     # audited for all bikes (resolver + image fallback try to fill any gaps).
     ("max_speed_mph", "Top speed (mph)"),
     ("max_load_lb", "Max load / payload (lb)"),
+    # peak motor power: brands often state it ONLY in the highlight strip / prose, not the
+    # spec table (Heybike Saturn 1800W) — so AUDIT it to surface the gap, but it is
+    # deliberately absent from resolve_missing_fields.FIELD_DEFS (no prose auto-fill: a
+    # site-wide promo banner's lone peak figure would leak onto every page). Fill it from
+    # the per-bike variant value in the brand scraper, or a curated override.
+    ("motor_peak_w", "Peak motor power (W)"),
     ("sensor_type", "Pedal-assist sensor type"),
 ]
 

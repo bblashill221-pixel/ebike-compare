@@ -15,7 +15,7 @@ export const KIND_LABEL: Record<string, string> = {
   motor: "Motor", battery: "Battery", charger: "Charger", controller: "Controller",
   sensor: "Sensor", pedal_assist: "Pedal assist", display: "Display", throttle: "Throttle",
   frame: "Frame", fork: "Fork / suspension", shock: "Rear shock",
-  derailleur: "Derailleur", cassette: "Cassette", chain: "Chain", chainring: "Chainring",
+  derailleur: "Derailleur", cassette: "Cassette", chain: "Chain / Belt", chainring: "Chainring",
   crankset: "Crankset", bottom_bracket: "Bottom bracket", pedals: "Pedals",
   brake: "Brakes", wheel: "Wheel", tire: "Tire", rims: "Rim", spokes: "Spokes", tubes: "Tubes",
   handlebars: "Handlebar", stem: "Stem", seatpost: "Seatpost", saddle: "Saddle",
@@ -25,8 +25,13 @@ export const KIND_LABEL: Record<string, string> = {
 export const COLUMN_CONFIG: Record<string, Column[]> = {
   // "motor_power" renders combined as "750/1188 W" (Nominal/Peak — see ComponentTable),
   // so the standalone power_w / peak_w columns are folded into it.
+  // Assist type (pedal-assist SENSOR torque/cadence) and Assist levels / Boost (from the
+  // pedal_assist component) are folded into the Motor block by SpecTable, so they read as
+  // motor/system attributes rather than separate Sensor / Pedal-assist sections.
   motor: [c("motor_power", "Nominal/Peak"), c("placement", "Drive"),
           c("torque_nm", "Torque", " Nm"), c("voltage_v", "Voltage", " V"),
+          c("assist_type", "Assist type"), c("assist_magnets", "Magnets"),
+          c("assist_levels", "Assist levels"), c("boost", "Boost"),
           c("protocol", "Protocol"), MAKE, MODEL, EXTRA],
   // "Capacity" renders combined as "720 Wh (48V × 15Ah)" (see ComponentTable),
   // so the standalone Voltage / Ah columns are folded in to save space.
@@ -36,8 +41,8 @@ export const COLUMN_CONFIG: Record<string, Column[]> = {
             c("weight_lb", "Weight", " lb"), c("primary_weight_lb", "Primary weight", " lb"),
             c("secondary_weight_lb", "Secondary weight", " lb"),
             MAKE, MODEL, EXTRA],
-  charger: [c("output_v", "Output", " V"), c("amps_a", "Amps", " A"), MAKE, MODEL, EXTRA],
-  controller: [c("voltage_v", "Voltage", " V"), c("amps_a", "Amps", " A"), EXTRA],
+  charger: [c("output_v", "Output", " V"), c("amps_a", "Amps", " A"), c("charge_time_h", "Charge Time", " hr"), MAKE, MODEL, EXTRA],
+  controller: [c("voltage_v", "Voltage", " V"), c("amps_a", "Amps", " A"), c("mosfets", "MOSFETs"), EXTRA],
   sensor: [c("type", "Type"), c("magnets", "Magnets"), EXTRA],
   pedal_assist: [c("levels", "Levels"), c("boost", "Boost"), EXTRA],
   display: [c("type", "Type"), c("size_in", "Size", "″"), c("bluetooth", "Bluetooth"), MAKE, MODEL, EXTRA],
@@ -53,12 +58,12 @@ export const COLUMN_CONFIG: Record<string, Column[]> = {
           c("brake_mount", "Brake mount"), c("mounts", "Mounts"),
           c("folding", "Folding"), EXTRA],
   fork: [c("type", "Type"), c("travel_mm", "Travel", " mm"), c("lockout", "Lockout"),
-         c("thru_axle", "Thru-axle"), MAKE, MODEL, EXTRA],
+         c("preload", "Preload"), c("thru_axle", "Thru-axle"), MAKE, MODEL, EXTRA],
   shock: [c("type", "Type"), c("size", "Size"), c("travel_mm", "Travel", " mm"), MAKE, MODEL, EXTRA],
 
   derailleur: [c("speeds", "Speeds"), c("gearing", "Gearing"), MAKE, MODEL, EXTRA],
   cassette: [c("speeds", "Speeds"), c("cog_range", "Range"), c("gearing", "Gearing"), MAKE, MODEL, EXTRA],
-  chain: [c("links", "Links"), MAKE, MODEL, EXTRA],
+  chain: [c("type", "Type"), c("links", "Links"), MAKE, MODEL, EXTRA],
   chainring: [c("teeth", "Teeth"), c("narrow_wide", "Narrow-wide"), MAKE, MODEL, EXTRA],
   crankset: [c("length_mm", "Length", " mm"), c("chainring_t", "Chainring T"), MAKE, MODEL, EXTRA],
   bottom_bracket: [c("type", "Type"), c("torque_sensor", "Torque sensor"), c("sealed", "Sealed"),
@@ -98,3 +103,19 @@ export const COLUMN_CONFIG: Record<string, Column[]> = {
           c("turn_signal", "Turn signals"), c("integrated", "Integrated"), EXTRA],
   cert: [c("standards", "Standards"), EXTRA],
 };
+
+// The parser attempts these optional fields GENERICALLY on every component
+// (manufacturer fallback, model, CAN bus/UART protocol, UL/CE certification) plus the
+// trailing free-text details. Rather than list them per-kind, append them to every kind
+// in a canonical trailing order so all consumers (ComponentTable, CompareTable) surface
+// them whenever data is present — empty columns auto-hide. Any inline copy in a kind's
+// feature list is stripped first so there's exactly one, consistently ordered.
+const GENERIC_TRAILING: Column[] = [MAKE, MODEL, c("protocol", "Protocol"),
+                                    c("certifications", "Certifications"), EXTRA];
+const GENERIC_KEYS = new Set(GENERIC_TRAILING.map((col) => col.key));
+// `cert` is the dedicated certifications kind (its own `standards` column) — leave it be.
+for (const kind of Object.keys(COLUMN_CONFIG)) {
+  if (kind === "cert") continue;
+  const feature = COLUMN_CONFIG[kind].filter((col) => !GENERIC_KEYS.has(col.key));
+  COLUMN_CONFIG[kind] = [...feature, ...GENERIC_TRAILING];
+}

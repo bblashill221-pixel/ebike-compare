@@ -7,6 +7,8 @@ export const ENUM_SECTIONS: { field: EnumField; label: string }[] = [
   { field: "product_types", label: "Type" },
   { field: "brand", label: "Brand" },
   { field: "frame_style", label: "Frame style" },
+  { field: "value_level", label: "Value" },
+  { field: "build_tier", label: "Build grade" },
   { field: "drive_type", label: "Drive" },
   { field: "brake_type", label: "Brakes" },
   { field: "frame_material", label: "Frame" },
@@ -28,9 +30,10 @@ export const BOOL_LABELS: Record<BoolField, string> = {
   is_new: "New",
   on_sale: "On Sale",
   ul_listed: "UL / EN certified",
-  awd: "AWD (dual motor)",
+  awd: "AWD",
   folding: "Folding",
-  kids: "Exclude Kids Ebikes",
+  full_suspension: "Full Suspension",
+  kids: "Exclude Kids eBikes",
 };
 
 // Pedal-assist sensor: a single-select dropdown (default "No Preference" = unset),

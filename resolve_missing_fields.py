@@ -79,14 +79,22 @@ def _speed_mph(snippet: str):
     return None
 
 
+# A bike's total payload (rider + cargo) below this is implausible — it's a stray weight
+# or accessory figure, not the rider+cargo limit (the lowest real payload in the data is
+# 165 lb). Mirrors analyze._MIN_PAYLOAD_LB.
+_MIN_PAYLOAD_LB = 150
+
+
 def _load_lb(snippet: str):
     # max load = the largest stated capacity in the window (the bike's payload, not a
     # smaller rack/accessory limit that may sit nearby)
+    v = None
     if lb := [int(x) for x in re.findall(r"(\d{2,3})\s*(?:lbs?|pounds)\b", snippet, re.I)]:
-        return max(lb)
-    if kg := [int(x) for x in re.findall(r"(\d{2,3})\s*kg\b", snippet, re.I)]:
-        return round(max(kg) * 2.205)
-    return None
+        v = max(lb)
+    elif kg := [int(x) for x in re.findall(r"(\d{2,3})\s*kg\b", snippet, re.I)]:
+        v = round(max(kg) * 2.205)
+    # reject an implausibly low payload — a stray weight/accessory number, not the limit
+    return v if v is not None and v >= _MIN_PAYLOAD_LB else None
 
 
 # field -> (value pattern, concept keyword, reject pattern, snippet->value)
@@ -95,6 +103,13 @@ FIELD_DEFS = {
     "motor_w": (r"\d{3,4}\s*-?\s*w(?:att)?s?\b(?!h)(?![\s-]*hours?)", r"motor|power",
                 r"charger|inverter|output\s*port|watt[\s-]?hours?",
                 lambda s: analyze._motor_w({"motor": s})[0]),
+    # NB: motor_peak_w is intentionally NOT here (so the resolver does NOT auto-fill it from
+    # page prose). It IS audited (EXPECTED_FIELDS) so the gap is reported, but peak power
+    # can't be safely mined from marketing copy — sites like Heybike put a single peak
+    # figure in a site-wide promo banner ("1800W Peak Power") that poisons EVERY product
+    # page's text, so prose extraction would write one bike's peak onto all of them. The
+    # reliable per-bike source is the product-form variant value ("250W (Peak 500W)"),
+    # which belongs in the brand scraper, not the whole-page resolver.
     "battery_wh": (r"\d{3,4}\s*-?\s*wh\b|\d{1,2}(?:\.\d)?\s*-?\s*ah\b", r"batter",
                    r"extender|second battery|extra battery",
                    _p(analyze._battery_wh, "battery")),

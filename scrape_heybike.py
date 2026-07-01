@@ -271,6 +271,32 @@ JS_SWATCH_HEX = r"""() => {
 }"""
 
 
+# Heybike states PEAK motor power ONLY in a product "Version" option value
+# ("250W (Peak 500W)", "750W (Peak 1400W)"), never the spec table — so the Motor
+# row alone reads as nominal-only and the parser can't find a peak. Fold the option's
+# peak into the Motor row ("…(Peak 1800W)") so motor peak_w / motor_peak_w resolve.
+_OPTION_PEAK_RE = re.compile(r"\d{3,4}\s*W\s*\(\s*Peak\s*(\d{3,4})\s*W\s*\)", re.I)
+
+
+def fold_option_peak(all_specs: dict, options: dict) -> bool:
+    """If a product option states a motor peak ("…W (Peak NNNNW)") and the Motor spec
+    has no peak yet, append it. Idempotent (guarded on 'peak'). Returns True if applied."""
+    motor_key = next((k for k in all_specs if k.lower() == "motor"), None)
+    if not motor_key or not isinstance(all_specs[motor_key], str):
+        return False
+    if "peak" in all_specs[motor_key].lower():
+        return False
+    for name, vals in (options or {}).items():
+        if name == "colors" or not isinstance(vals, list):
+            continue
+        for ov in vals:
+            m = _OPTION_PEAK_RE.search(str(ov))
+            if m:
+                all_specs[motor_key] = f"{all_specs[motor_key]} (Peak {m.group(1)}W)"
+                return True
+    return False
+
+
 async def scrape_model(context, model: dict, retries: int = 3) -> dict:
     result = dict(model)
     for attempt in range(1, retries + 1):
@@ -335,6 +361,7 @@ async def scrape_model(context, model: dict, retries: int = 3) -> dict:
             for label, value in pairs:
                 key = " ".join(label.split())
                 all_specs[key] = value
+            fold_option_peak(all_specs, result.get("options", {}))
 
             result["specs"] = {"all": all_specs}
             result["spec_count"] = len(all_specs)

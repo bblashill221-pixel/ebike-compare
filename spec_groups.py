@@ -294,6 +294,32 @@ def group_specs(all_specs: dict, geometry: dict | None = None,
             prefix = (m.group(1) + "_") if m.group(1) else ""
             unit = ("_" + m.group(2)) if m.group(2) else ""
             bat[f"{prefix}weight{unit}"] = sys_bucket.pop(fld)
+    # A single suspension row can bundle a front fork AND a rear shock ("Front: …
+    # Fork … Rear: Horst Link Suspension"); that parses as only a fork, so the rear
+    # shock never gets its own value/cost line. Mint it as a separate rear_shock
+    # component and trim the fork's details to the front (so the fork is no longer
+    # priced as a whole full-suspension system). Only when the Frameset has a fork
+    # that names a rear shock and no shock component yet.
+    fs = buckets.get("Frameset")
+    if isinstance(fs, dict) and not any(
+            isinstance(c, dict) and c.get("_kind") == "shock" for c in fs.values()):
+        for c in list(fs.values()):
+            if not (isinstance(c, dict) and c.get("_kind") == "fork"):
+                continue
+            det = c.get("details") or ""
+            if not (re.search(r"\bfront\b", det, re.I) and re.search(
+                    r"\brear\b[^.]*?(suspension|shock|spring|link|horst)", det, re.I)):
+                continue
+            front, _, rear = (re.split(r"(\brear\b\s*:?\s*)", det, maxsplit=1, flags=re.I) + ["", ""])[:3]
+            sh = parse_component("rear_shock", rear, brand)
+            if sh and sh.get("_kind") == "shock":
+                fs["rear_shock"] = sh
+                front = re.sub(r"\bfront\b\s*:?\s*", "", front, flags=re.I).strip(" ,;:")
+                if front:
+                    c["details"] = front
+                else:
+                    c.pop("details", None)
+            break
     if geometry:
         buckets["Geometry"] = OrderedDict((snake(k), v) for k, v in geometry.items())
     out: "OrderedDict" = OrderedDict()

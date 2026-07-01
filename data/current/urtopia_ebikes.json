@@ -2,8 +2,8 @@
   "source": "https://newurtopia.com",
   "logo": "http://newurtopia.com/cdn/shop/files/20250916-164432.jpg?v=1758012291",
   "collection": "e-bikes",
-  "scraped_at": "2026-06-24T04:53:24.262207+00:00",
-  "model_count": 11,
+  "scraped_at": "2026-06-27T05:08:16.631963+00:00",
+  "model_count": 12,
   "models": [
     {
       "model": "Carbon 1 Pro E-Bike",
@@ -154,9 +154,9 @@
           "One Size"
         ],
         "Style": [
+          "Matte Black",
           "Creme",
-          "Glacier Blue",
-          "Matte Black"
+          "Glacier Blue"
         ],
         "colors": [
           {
@@ -236,15 +236,15 @@
           "type": "variant",
           "choices": [
             {
+              "value": "Matte Black",
+              "free": true
+            },
+            {
               "value": "Creme",
               "free": true
             },
             {
               "value": "Glacier Blue",
-              "free": true
-            },
-            {
-              "value": "Matte Black",
               "free": true
             }
           ]
@@ -262,7 +262,91 @@
         }
       ],
       "regular_price": 2499.0,
-      "frame_style": "Step-Thru"
+      "frame_style": "Step-Thru (Mid-Step)"
+    },
+    {
+      "model": "Carbon Atom E-Bike",
+      "handle": "urtopia-carbon-atom-ebike",
+      "url": "https://newurtopia.com/products/urtopia-carbon-atom-ebike",
+      "product_types": [
+        "Commuter / Urban"
+      ],
+      "price_from": 2499.0,
+      "currency": "USD",
+      "options": {
+        "Size": [
+          "One Size"
+        ],
+        "colors": [
+          {
+            "name": "Moonligt",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0583/5810/4213/files/blue5.png?v=1782383645"
+          },
+          {
+            "name": "Copper",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0583/5810/4213/files/blue3_1_7eea1596-7530-42e8-aadf-2ac4e937aa69.png?v=1782383644"
+          },
+          {
+            "name": "Olive",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0583/5810/4213/files/blue4_b5fbdc68-0234-488c-b940-8e33e0f9d650.png?v=1782383645"
+          }
+        ]
+      },
+      "specs": {
+        "all": {
+          "Model": "Carbon Atom E-bike",
+          "Weight": "58 lbs w/o acc.",
+          "Frame": "Carbon fiber (frame)",
+          "Range": "Up to 95 miles",
+          "Top Speed": "20 mph by default, 28 mph upon unlock",
+          "Max Load": "330 lbs",
+          "Rider Height": "5'3\" - 6'3\"",
+          "Brakes": "TEKTRO hydraulic disc brake",
+          "Tires": "Kenda 26’’ X 2.4’’, puncture-resistant tires",
+          "Water Resistance": "IP65",
+          "Motor": "48V, 750W (Peak Power 1250W) hub motor, 90Nm",
+          "Throttle": "Yes (up to 20 mph)",
+          "Battery": "802Wh, LG M58 Li-ion, certified to UL-2271, removable battery",
+          "Pedal Assist": "4 levels",
+          "Charger": "48V 4.5A, 4 hrs full charge",
+          "Display": "3.5’’ Color LCD",
+          "Sensors": "Torque sensor",
+          "Lights": "Front: External front light, 100 Lux",
+          "Chainring": "52T",
+          "Cassette": "12-32T, 8-Speed",
+          "Rear Derailleur": "Shimano ACERA 8-Speed",
+          "Shifter": "7-Speed Trigger",
+          "Handlebar": "Aluminum, Ø31.8mm, 700mm，With aluminum Stem, extender 0-90° adjustable",
+          "Fork": "Suspension Fork, 80mm travel, w/ lockout",
+          "Seat Post": "Aluminum suspension seatpost, 30mm travel"
+        }
+      },
+      "spec_count": 25,
+      "warranty": null,
+      "scrape_error": null,
+      "frame_sizes": [
+        {
+          "size": "One Size",
+          "height_min": "5'3\"",
+          "height_max": "6'3\""
+        }
+      ],
+      "is_new": false,
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": [],
+      "geometry": {
+        "Rider Height": "5'3\" - 6'3\""
+      },
+      "available_options": []
     },
     {
       "model": "Carbon Classic E-Bike",
@@ -281,16 +365,16 @@
         ],
         "colors": [
           {
-            "name": "Blu",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0583/5810/4213/files/image_17_755a7136-c4a4-489f-a7a9-4bc18d002b63.png?v=1777273047"
-          },
-          {
             "name": "Matte Black",
             "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0583/5810/4213/files/2x_02894872-62c2-47a1-9bfb-47c0db8da938.png?v=1761286537"
+          },
+          {
+            "name": "Blu",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0583/5810/4213/files/image_17_755a7136-c4a4-489f-a7a9-4bc18d002b63.png?v=1777273047"
           },
           {
             "name": "Creme",
@@ -313,7 +397,7 @@
           "Tires": "700C (ISO 622mm BSD), 40C (45C max.) tires, puncture-proof tire",
           "Water Resistance": "IP65",
           "Class": "Class 2",
-          "Motor": "750W (peak) rear hub, 60Nm",
+          "Motor": "350W (Peak Power 750W) rear hub, 60Nm",
           "Battery": "352.8Wh Samsung Li-ion, certified to UL-2271, removable battery",
           "Pedal Assist": "5 levels",
           "Charger": "2.5H fast charger",
@@ -383,7 +467,7 @@
       "regular_price": 2299.0,
       "family_id": "urtopia__carbon-classic-e-bike",
       "tier": "Step-Over",
-      "frame_style": "Step-Over (Mid-Step)"
+      "frame_style": "Step-Over"
     },
     {
       "model": "Carbon Classic Step-Thru E-Bike",
@@ -425,7 +509,7 @@
           "Tires": "700C (ISO 622mm BSD), 40C (45C max.) tires, puncture-proof tire",
           "Water Resistance": "IP65",
           "Class": "Class 2",
-          "Motor": "750W (peak) rear hub, 60Nm",
+          "Motor": "350W (Peak Power 750W) rear hub, 60Nm",
           "Battery": "352.8Wh Samsung Li-ion, certified to UL-2271, removable battery",
           "Pedal Assist": "4 levels",
           "Charger": "2.5H fast charger",
@@ -485,7 +569,7 @@
       "regular_price": 2299.0,
       "family_id": "urtopia__carbon-classic-e-bike",
       "tier": "Step-Thru",
-      "frame_style": "Step-Thru"
+      "frame_style": "Step-Thru (Mid-Step)"
     },
     {
       "model": "Carbon Fold 1 E-Bike",
@@ -758,7 +842,7 @@
       },
       "available_options": [],
       "regular_price": 2099.0,
-      "frame_style": "Step-Thru"
+      "frame_style": "Step-Thru (Mid-Step)"
     },
     {
       "model": "Carbon Fusion GT E-Bike",
@@ -1106,16 +1190,16 @@
         ],
         "colors": [
           {
-            "name": "Glacier Blue",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0583/5810/4213/files/2x_bdf9ace3-4f13-45ac-ad9a-1ede2756c582.png?v=1779704094"
-          },
-          {
             "name": "Rose Red",
             "hex": null,
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0583/5810/4213/files/2x_d8500b0f-29b8-47f0-ae1e-5a3b8393ad49.png?v=1779704773"
+          },
+          {
+            "name": "Glacier Blue",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0583/5810/4213/files/2x_bdf9ace3-4f13-45ac-ad9a-1ede2756c582.png?v=1779704094"
           },
           {
             "name": "Creme",

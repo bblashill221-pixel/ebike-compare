@@ -136,7 +136,11 @@ def cost_brakes(specs):
         c, note = 60, "disc brakes"
     if re.search(r"(?:4|four|quad)[- ]?piston", blob, re.I):
         c += 35; note += ", 4-piston"
-    if _PREMIUM_BRAKE.search(blob):
+    # flagship stoppers (SRAM Maven, Magura Gustav/MT7) retail ~$260/wheel — well above
+    # the generic premium bump; price them as top-tier.
+    if re.search(r"\bmaven\b|gustav|\bmt7\b", blob, re.I):
+        c += 130; note += ", top-tier"
+    elif _PREMIUM_BRAKE.search(blob):
         c += 40; note += ", premium"
     return c, note
 
@@ -148,11 +152,16 @@ def cost_drivetrain(specs):
         return None, "no drivetrain spec"
     if re.search(r"pinion|rohloff", blob, re.I):           # sealed premium gearbox
         return 650, "premium gearbox (Pinion/Rohloff)"
-    if re.search(r"belt|gates|carbon drive", blob, re.I) or \
-       re.search(r"enviolo|cvt|nuvinci|igh|internal gear|nexus|alfine|auto[- ]?shift", blob, re.I):
-        return 320, "belt / internally-geared / CVT"
+    # internally-geared / CVT hubs are premium (whether belt- or chain-driven)
+    if re.search(r"enviolo|\bcvt\b|nuvinci|\bigh\b|internal gear|nexus|alfine|auto[- ]?shift", blob, re.I):
+        return 320, "internally-geared / CVT"
+    # a SINGLE-SPEED drive is cheap — a belt (Gates) costs more than a single-speed chain.
+    # Check this BEFORE the generic belt branch so a single-speed belt isn't priced as IGH.
     if re.search(r"single[- ]?speed", blob, re.I):
-        return 30, "single-speed"
+        belt = bool(re.search(r"belt|gates|carbon drive", blob, re.I))
+        return (140, "single-speed belt") if belt else (30, "single-speed")
+    if re.search(r"belt|gates|carbon drive", blob, re.I):  # geared belt (usually belt+IGH)
+        return 320, "belt drive"
     sp = num(r"(\d{1,2})[- ]?speed", blob)
     c, note = 45 + (sp or 7) * 6, f"{int(sp) if sp else '~7'}-speed derailleur"
     if re.search(r"\bxtr\b|\bxx1\b|\bx01\b|axs|\bdi2\b", blob, re.I):
@@ -183,6 +192,21 @@ def cost_fork(specs):
     if re.search(r"suspension|hydraulic|coil|lock[- ]?out|travel", blob, re.I):
         return (210, "premium coil fork") if prem else (95, "suspension fork")
     return 45, "rigid fork"
+
+
+def cost_shock(specs):
+    """Rear shock (the damper that makes a bike full-suspension) — priced separately
+    from the front fork. Premium makers (Fox/RockShox/Öhlins) cost well above a budget
+    OEM air/coil shock."""
+    blob = find_spec(specs, "rear_shock", "shock", "suspension")
+    if not blob:
+        return None, "no shock spec"
+    prem = bool(_PREMIUM_FORK.search(blob))
+    if re.search(r"\bair\b", blob, re.I):
+        return (300, "premium air shock") if prem else (170, "air rear shock")
+    if re.search(r"coil|spring", blob, re.I):
+        return (260, "premium coil shock") if prem else (120, "coil rear shock")
+    return (260, "premium rear shock") if prem else (150, "rear shock")
 
 
 def cost_display(specs):

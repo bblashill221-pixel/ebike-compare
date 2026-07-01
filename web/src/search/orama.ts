@@ -28,9 +28,14 @@ export const ENUM_FIELDS = [
   "frame_material",
   "suspension",
   "sensor_type",
+  "build_tier",
+  "value_level",
 ] as const;
 
-export const BOOL_FIELDS = ["is_new", "on_sale", "ul_listed", "awd", "folding", "kids"] as const;
+// Order is also the Features chip order (the index/schema are order-independent). is_new +
+// on_sale lead (the panel renders them, then "Sold out", to start the top line); the rest
+// pack into full rows after (Full Suspension + UL/EN, AWD + Folding, Exclude Kids).
+export const BOOL_FIELDS = ["is_new", "on_sale", "ul_listed", "kids", "full_suspension", "awd", "folding"] as const;
 
 export const RANGE_FIELDS = [
   "price",
@@ -59,11 +64,14 @@ const schema = {
   frame_material: "enum",
   suspension: "enum",
   sensor_type: "enum",
+  build_tier: "enum",
+  value_level: "enum",
   is_new: "boolean",
   on_sale: "boolean",
   ul_listed: "boolean",
   awd: "boolean",
   folding: "boolean",
+  full_suspension: "boolean",
   kids: "boolean",
   available: "boolean",
   price: "number",
@@ -110,11 +118,14 @@ function toDoc(m: Model): Record<string, unknown> {
     frame_material: t.frame_material || "unknown",
     suspension: t.suspension || "unknown",
     sensor_type: t.sensor_type || "unknown",
+    build_tier: (t.build_tier as string) || "unknown",
+    value_level: (t.value_level as string) || "unknown",
     is_new: !!m.is_new,
     on_sale: !!m.pricing?.on_sale,
     ul_listed: !!t.ul_listed,
     awd: !!t.awd,
     folding: !!m.folding,
+    full_suspension: t.suspension === "full",
     kids: !!t.kids,
     available: isAvailable(m),
     // lowest purchasable price across colors/configurations

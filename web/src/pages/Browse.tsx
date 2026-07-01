@@ -31,11 +31,13 @@ type SortKey =
   | "value_desc"
   | "range_score_desc"
   | "power_desc"
+  | "payload_desc"
   | "parts_retail_desc"
   | "discount_pct_desc";
 
 const SORTS: { key: SortKey; label: string }[] = [
   { key: "relevance", label: "Relevance" },
+  { key: "value_desc", label: "Best value" },
   { key: "price_asc", label: "Price: low → high" },
   { key: "price_desc", label: "Price: high → low" },
   { key: "battery_desc", label: "Battery (Wh) ↓" },
@@ -43,10 +45,10 @@ const SORTS: { key: SortKey; label: string }[] = [
   { key: "torque_desc", label: "Torque (Nm) ↓" },
   { key: "motor_desc", label: "Motor (W) ↓" },
   { key: "weight_asc", label: "Weight (lb) ↑" },
-  { key: "value_desc", label: "Value (within type) ↓" },
   { key: "range_score_desc", label: "Range score (within type) ↓" },
   { key: "power_desc", label: "Power score (within type) ↓" },
-  { key: "parts_retail_desc", label: "Parts value (retail $) ↓" },
+  { key: "payload_desc", label: "Payload (within type) ↓" },
+  { key: "parts_retail_desc", label: "Parts total (retail $) ↓" },
   { key: "discount_pct_desc", label: "Percent discounted ↓" },
 ];
 
@@ -54,12 +56,14 @@ const SORTS: { key: SortKey; label: string }[] = [
 // filter is active (and an active one falls back to relevance if that filter is cleared).
 const SALE_SORTS = new Set<SortKey>(["discount_pct_desc"]);
 
-// Cohort-relative sorts: each ranks a bike against its OWN product-type peers, so the
-// number only means something when the list is a single type. Across mixed types the
-// percentiles aren't comparable (a small cohort's leader scores ~100 and floats above
-// a genuinely longer-range bike that's merely mid-pack in a bigger cohort). So these
-// are hidden from the sort menu until exactly one Type facet is selected.
-const WITHIN_TYPE_SORTS = new Set<SortKey>(["value_desc", "range_score_desc", "power_desc"]);
+// Cohort-relative sorts: each ranks a bike against its OWN product-type peers (the number
+// shown on the bike's detail card). With one or more Types selected the list interleaves
+// each bike by its own-type rank. Shown once ≥1 Type facet is selected; hidden for the
+// full fleet, where the small-cohort bias is worst — a 4-bike type's leader scores ~100
+// and would float above a bike that's genuinely better but mid-pack in a 100-bike type.
+// VALUE is exempt: it's the headline "is this a good deal" sort, so it's always offered
+// (it still ranks within type, so its top is best-value-per-type interleaved).
+const WITHIN_TYPE_SORTS = new Set<SortKey>(["range_score_desc", "power_desc", "payload_desc"]);
 
 const last = Number.NEGATIVE_INFINITY;
 const typed = (m: Model, k: string) => (m.analysis?.specs_typed?.[k] as number | undefined);
@@ -87,12 +91,26 @@ function sortModels(models: Model[], key: SortKey): Model[] {
       return byDesc((m) => typed(m, "motor_w"));
     case "weight_asc":
       return arr.sort((a, b) => (typed(a, "weight_lb") ?? Infinity) - (typed(b, "weight_lb") ?? Infinity));
-    case "value_desc":
-      return byDesc((m) => score(m, "value"));
+    case "value_desc": {
+      // value band first (Exceptional → Good, Unrated last), then cheapest within the band
+      const rank: Record<string, number> = { Exceptional: 4, Outstanding: 3, Great: 2, Good: 1 };
+      return arr.sort((a, b) => {
+        const ra = rank[a.analysis?.specs_typed?.value_level ?? ""] ?? 0;
+        const rb = rank[b.analysis?.specs_typed?.value_level ?? ""] ?? 0;
+        if (rb !== ra) return rb - ra;
+        return (lowestPrice(a) ?? Infinity) - (lowestPrice(b) ?? Infinity);
+      });
+    }
     case "range_score_desc":
       return byDesc((m) => score(m, "range"));
     case "power_desc":
       return byDesc((m) => score(m, "power"));
+    case "payload_desc":
+      // payload (max load) is comparable in absolute lb across types, so sort by the raw
+      // figure — within one type this IS the within-type order, and across multiple types
+      // it stays true highest-first (a within-type percentile would wrongly float a low-
+      // payload bike that merely leads a small type above a genuinely higher-payload one).
+      return byDesc((m) => typed(m, "max_load_lb"));
     case "parts_retail_desc":
       return byDesc((m) => cq(m, "component_retail_value_usd"));
     case "discount_pct_desc":
@@ -128,7 +146,7 @@ export function Browse() {
   // an explicit ?sort= in a shared link still wins for that visit
   const [sort, setSortState] = useState<SortKey>(
     (params.get("sort") as SortKey) ??
-      ((localStorage.getItem("browse-sort") as SortKey) || "relevance"),
+      ((localStorage.getItem("browse-sort") as SortKey) || "price_asc"),
   );
   const setSort = (s: SortKey) => {
     setSortState(s);
@@ -197,18 +215,20 @@ export function Browse() {
     };
   }, [db, debounced, filters, models.length, showSoldOut, units]);
 
-  // A within-type sort is only meaningful when the list is scoped to one type; the
-  // discount sort only when the list is scoped to sale bikes (the On Sale filter).
-  const singleType = (filters.enums.product_types ?? []).length === 1;
+  // A within-type sort needs at least one Type selected: each bike is ranked against its
+  // OWN type's peers, then all selected types are interleaved (best-in-its-type floats up).
+  // With no type at all (the full fleet) the small-cohort bias is worst, so it stays hidden.
+  // The discount sort only applies when the list is scoped to sale bikes (On Sale filter).
+  const typeScoped = (filters.enums.product_types ?? []).length >= 1;
   const onSale = filters.bools.on_sale === true;
-  // If such a sort is active but its scope is gone (type cleared, On Sale toggled off,
+  // If such a sort is active but its scope is gone (all types cleared, On Sale toggled off,
   // or a stored sort loaded without the scope), fall back to relevance so the grid never
   // shows a misleading order.
   useEffect(() => {
-    if (!singleType && WITHIN_TYPE_SORTS.has(sort)) setSort("relevance");
+    if (!typeScoped && WITHIN_TYPE_SORTS.has(sort)) setSort("relevance");
     else if (!onSale && SALE_SORTS.has(sort)) setSort("relevance");
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [singleType, onSale, sort]);
+  }, [typeScoped, onSale, sort]);
 
   const results = useMemo(() => {
     const list = ids.map((id) => byId.get(id)).filter((m): m is Model => !!m);
@@ -231,7 +251,7 @@ export function Browse() {
     if (savedScroll.current > 0) window.scrollTo(0, savedScroll.current);
   }, [results]);
 
-  if (status === "loading") return <CenterMsg>Loading e-bikes…</CenterMsg>;
+  if (status === "loading") return <CenterMsg>Loading eBikes…</CenterMsg>;
   if (status === "error") return <CenterMsg>Failed to load data: {error}</CenterMsg>;
 
   const facetPanel = (
@@ -258,7 +278,7 @@ export function Browse() {
         >
           {SORTS.filter(
             (s) =>
-              (singleType || !WITHIN_TYPE_SORTS.has(s.key)) &&
+              (typeScoped || !WITHIN_TYPE_SORTS.has(s.key)) &&
               (onSale || !SALE_SORTS.has(s.key)),
           ).map((s) => (
             <option key={s.key} value={s.key}>

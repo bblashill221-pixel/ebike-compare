@@ -26,6 +26,7 @@ import argparse
 import asyncio
 import json
 import os
+import re
 import sys
 import urllib.request
 from datetime import datetime, timezone
@@ -68,7 +69,18 @@ def discover_models() -> list[dict]:
     models = []
     for p in data.get("products", []):
         variants = p.get("variants", [])
-        prices = [float(v["price"]) for v in variants if v.get("price")]
+        priced = [v for v in variants if v.get("price")]
+        prices = [float(v["price"]) for v in priced]
+        # Regular (compare-at) price behind the displayed "from" price — the cheapest
+        # variant's Shopify compare_at_price when it's a genuine markdown. Mokwheel marks
+        # some models down this way (Tor Plus $1199.99 vs $1299.99); we previously dropped
+        # it, so no sale was ever detected. normalize derives on_sale/discount from it.
+        regular = None
+        if priced:
+            cheap = min(priced, key=lambda v: float(v["price"]))
+            cap = cheap.get("compare_at_price")
+            if cap and float(cap) > float(cheap["price"]):
+                regular = float(cap)
         images = [img.get("src") for img in p.get("images", []) if img.get("src")]
         fallback = images[0] if images else None
 
@@ -91,6 +103,7 @@ def discover_models() -> list[dict]:
                 p.get("title") or "", p.get("product_type") or "",
                 " ".join(p.get("tags") or [])),
             "price_from": min(prices) if prices else None,
+            "regular_price": regular,
             "currency": "USD",
             "options": options,
         })
@@ -105,12 +118,22 @@ def discover_models() -> list[dict]:
 # A generic scan over the section handles both.
 JS_SPECS = r"""() => {
     const norm = s => (s || '').replace(/\s+/g, ' ').trim();
-    // Scan the whole document, not just the keynote spec section: spec rows for
-    // some models live outside .alp-keynote-specification. The per-row guards
-    // below (name != value, length caps, dedupe) reject unrelated divs.
-    const sec = document.body;
     const out = [], seen = new Set();
-    for (const div of sec.querySelectorAll('div')) {
+    const push = (name, value) => {
+        if (name && value && name !== value && name.length <= 40 &&
+            value.length <= 200 && !seen.has(name)) { seen.add(name); out.push([name, value]); }
+    };
+    // Current markup (GemPages "gb-specs-table-v1"): a row with a --label cell and a
+    // --value cell. Mokwheel moved to this from the old .alp-keynote-specification.
+    for (const row of document.querySelectorAll('.gb-specs-table-v1__row')) {
+        const label = row.querySelector('.gb-specs-table-v1__cell--label');
+        const value = row.querySelector('.gb-specs-table-v1__cell--value');
+        if (label && value) push(norm(label.innerText), norm(value.innerText));
+    }
+    if (out.length) return out;
+    // Legacy keynote markup, kept as a fallback: <div><b>Name</b><span>Value</span></div>
+    // (Technical tab) or <div><span>Name</span><span>Value</span></div> (Geometry tab).
+    for (const div of document.body.querySelectorAll('div')) {
         const kids = [...div.children];
         const b = kids.find(k => k.tagName === 'B');
         const spans = kids.filter(k => k.tagName === 'SPAN');
@@ -119,11 +142,7 @@ JS_SPECS = r"""() => {
         else if (spans.length === 2 && kids.length === 2) {
             name = norm(spans[0].innerText); value = norm(spans[1].innerText);
         }
-        if (name && value && name !== value && name.length <= 40 &&
-            value.length <= 200 && !seen.has(name)) {
-            seen.add(name);
-            out.push([name, value]);
-        }
+        push(name, value);
     }
     return out;
 }"""
@@ -159,6 +178,29 @@ JS_SWATCH_HEX = r"""async () => {
 }"""
 
 
+# Static-HTML fallback: the GemPages spec table is in the raw HTML, but lazy-loads
+# unreliably under Playwright on some models (FLINT/Tarmac/Onyx/Slate). When the rendered
+# pass extracts nothing, parse the gb-specs-table rows straight out of the page source.
+_STATIC_SPEC_ROW = re.compile(
+    r"__cell--label[^>]*>(.*?)</div>\s*<div[^>]*__cell--value[^>]*>(.*?)</div>", re.S | re.I)
+
+
+def static_specs(url: str) -> list:
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        html = urllib.request.urlopen(req, timeout=30).read().decode("utf-8", "ignore")
+    except Exception:
+        return []
+    out, seen = [], set()
+    for label, value in _STATIC_SPEC_ROW.findall(html):
+        label = " ".join(re.sub(r"<[^>]+>", " ", label).split())
+        value = " ".join(re.sub(r"<[^>]+>", " ", value).split())
+        if label and value and label != value and len(label) <= 40 and label not in seen:
+            seen.add(label)
+            out.append([label, value])
+    return out
+
+
 async def scrape_model(context, model: dict, retries: int = 3) -> dict:
     result = dict(model)
     for attempt in range(1, retries + 1):
@@ -174,8 +216,11 @@ async def scrape_model(context, model: dict, retries: int = 3) -> dict:
                 await page.mouse.wheel(0, 2500)
                 await page.wait_for_timeout(250)
             try:
-                await page.wait_for_selector(".alp-keynote-specification, .Sp_alp_new, .Sp_tech",
-                                             state="attached", timeout=20000)
+                # the current GemPages spec table (.gb-specs-table-v1__row) lazy-loads on
+                # scroll; wait for it (or the legacy keynote markup) so JS_SPECS has rows.
+                await page.wait_for_selector(
+                    ".gb-specs-table-v1__row, .alp-keynote-specification, .Sp_alp_new, .Sp_tech",
+                    state="attached", timeout=20000)
             except Exception:
                 pass
             pairs = []
@@ -189,6 +234,8 @@ async def scrape_model(context, model: dict, retries: int = 3) -> dict:
             result["warranty"] = await page.evaluate(JS_WARRANTY)
             await page.close()
 
+            if not pairs:               # rendered pass missed the lazy table — read the source
+                pairs = static_specs(model["url"])
             if not pairs:
                 raise RuntimeError("no specs extracted")
 

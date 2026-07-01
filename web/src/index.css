@@ -56,7 +56,9 @@
   border-radius: 9999px;
   background: #fff;
   border: 2px solid theme("colors.brand.600");
-  box-shadow: 0 1px 2px rgb(0 0 0 / 0.15);
+  /* white ring sets each +/− circle slightly apart from the price line — the line
+     stops at the ring instead of running into the circle. */
+  box-shadow: 0 0 0 3px #fff, 0 1px 2px rgb(0 0 0 / 0.15);
   cursor: pointer;
 }
 .range-dual::-moz-range-thumb {
@@ -66,26 +68,35 @@
   border-radius: 9999px;
   background: #fff;
   border: 2px solid theme("colors.brand.600");
-  box-shadow: 0 1px 2px rgb(0 0 0 / 0.15);
+  box-shadow: 0 0 0 3px #fff, 0 1px 2px rgb(0 0 0 / 0.15);
   cursor: pointer;
 }
 .range-dual::-moz-range-track {
   background: transparent;
 }
-/* Pristine (full-range, unmodified) sliders hide their thumbs — the circles only
-   appear once the range has been narrowed. Thumbs stay grabbable (pointer-events
-   auto from above) so a filter can still be started. */
-.range-dual--pristine::-webkit-slider-thumb {
-  opacity: 0;
+/* The two thumbs carry a + (low / raise the minimum) and − (high / lower the maximum)
+   glyph in brand-600. The white thumb fill stays; the glyph overlays it. Drag is unchanged. */
+.range-dual--lo::-webkit-slider-thumb {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 4.5v7M4.5 8h7' stroke='%231f63c4' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px;
 }
-.range-dual--pristine::-moz-range-thumb {
-  opacity: 0;
+.range-dual--hi::-webkit-slider-thumb {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8h7' stroke='%231f63c4' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px;
 }
-/* ...but fade them in faintly while hovering the track, so a pristine slider is
-   still discoverable/grabbable to start a filter. */
-.range-track:hover .range-dual--pristine::-webkit-slider-thumb {
-  opacity: 0.4;
+.range-dual--lo::-moz-range-thumb {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 4.5v7M4.5 8h7' stroke='%231f63c4' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px;
 }
-.range-track:hover .range-dual--pristine::-moz-range-thumb {
-  opacity: 0.4;
+.range-dual--hi::-moz-range-thumb {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8h7' stroke='%231f63c4' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px;
 }

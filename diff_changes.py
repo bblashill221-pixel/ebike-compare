@@ -32,6 +32,8 @@ import argparse
 import glob
 import json
 import re
+import sys
+from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -156,6 +158,55 @@ def build_changes(current: list, baseline: list) -> tuple[list, list]:
     return rows, removed
 
 
+# --- core-field COVERAGE-REGRESSION check ------------------------------------
+# Catches a scraper that silently breaks (a brand's spec extraction stops working, so
+# whole models lose their key fields) — exactly the failure that left every Mokwheel
+# model blank. Compared model-by-model (matched id) against the previous build so a
+# parser change that affects the whole fleet doesn't read as one brand regressing.
+_CORE_FIELDS = ("motor_w", "battery_wh", "weight_lb", "range_mi",
+                "brake_type", "frame_material", "drive_type")
+
+
+def _present(m: dict, f: str) -> bool:
+    v = ((m.get("analysis") or {}).get("specs_typed") or {}).get(f)
+    return v not in (None, "", [])
+
+
+def coverage_regressions(current: list, baseline: list) -> list:
+    """Per-brand: core-field coverage that DROPPED vs the previous build (over models in
+    both). A brand whose coverage collapses (and most models lost most fields) is flagged
+    `severe` — the broken-scraper signal."""
+    base_by_id = {m.get("id"): m for m in baseline}
+    agg: dict = defaultdict(lambda: {"cur": 0, "base": 0, "cells": 0,
+                                     "models": 0, "drops": Counter()})
+    for m in current:
+        b = base_by_id.get(m.get("id"))
+        if b is None:
+            continue
+        a = agg[m.get("brand")]
+        a["models"] += 1
+        for f in _CORE_FIELDS:
+            a["cells"] += 1
+            cp, bp = _present(m, f), _present(b, f)
+            a["cur"] += cp
+            a["base"] += bp
+            if bp and not cp:
+                a["drops"][f] += 1
+    out = []
+    for brand, a in agg.items():
+        if not a["cells"]:
+            continue
+        cur_pct, base_pct = 100 * a["cur"] / a["cells"], 100 * a["base"] / a["cells"]
+        drop = base_pct - cur_pct
+        if drop >= 25 and base_pct >= 40:          # a meaningful collapse, not normal churn
+            out.append({"brand": brand, "models": a["models"],
+                        "coverage_before": round(base_pct), "coverage_after": round(cur_pct),
+                        "drop_pts": round(drop), "fields_lost": dict(a["drops"]),
+                        "severe": cur_pct <= 15 and a["models"] >= 3})
+    out.sort(key=lambda x: -x["drop_pts"])
+    return out
+
+
 # accept the current name and the pre-rename one, so older archives still serve as baselines
 _BASELINE_NAMES = ("ebike.json", "ebikes_normalized.json")
 
@@ -231,10 +282,15 @@ def main() -> int:
         for t in r["types"]:
             by_type[t] = by_type.get(t, 0) + 1
 
+    # Core-field coverage regressions (broken-scraper detector). Computed over models
+    # present in BOTH builds so a fresh import / fleet-wide parser change doesn't trip it.
+    cov_regressions = coverage_regressions(models, baseline) if baseline else []
+
     report = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "build_date": today,
         "baseline_date": baseline_date,
+        "coverage_regressions": cov_regressions,
         "summary": {
             "models_changed": len(rows),
             "removed": len(removed),
@@ -258,6 +314,12 @@ def main() -> int:
         note = f"  (baseline stale/partial — {added_count} 'added' suppressed)" if suppressed_added else ""
         print(f"[*] diff_changes vs {baseline_date}: {len(rows)} models changed, "
               f"{len(removed)} removed.  by_type={by_type}{note}")
+    # Loud, can't-miss warning for a coverage collapse (likely a broken scraper).
+    for c in cov_regressions:
+        flag = "SEVERE — likely a broken scraper" if c["severe"] else "coverage drop"
+        print(f"[!! {flag}] {c['brand']}: core-field coverage {c['coverage_before']}%"
+              f"→{c['coverage_after']}% ({c['drop_pts']} pts) across {c['models']} models; "
+              f"fields lost: {c['fields_lost']}", file=sys.stderr)
     return 0
 
 

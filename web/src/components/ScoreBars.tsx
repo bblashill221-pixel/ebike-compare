@@ -7,6 +7,8 @@ import { ValueScoreDebug } from "./ValueScoreDebug";
 // bike's PRIMARY-TYPE peers (not the whole fleet); "feature" is rarity-weighted
 // equipment breadth. There is deliberately no composite/overall score (project
 // rule), so never sum/average them.
+// "value" was removed — replaced by the component BUILD GRADE (tier + markers),
+// which conveys component quality without a fragile parts-cost estimate.
 export const SCORE_ORDER = [
   "power",
   "torque",
@@ -14,7 +16,6 @@ export const SCORE_ORDER = [
   "battery",
   "weight",
   "price",
-  "value",
 ];
 
 // Single-hue (brand) intensity ramp: same color family throughout, deeper = higher.

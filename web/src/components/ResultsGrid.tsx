@@ -40,7 +40,7 @@ export function ResultsGrid({
   if (!models.length) {
     return (
       <div className="card p-10 text-center text-slate-500">
-        No e-bikes match these filters. Try widening the price/spec ranges or clearing a filter.
+        No eBikes match these filters. Try widening the price/spec ranges or clearing a filter.
       </div>
     );
   }

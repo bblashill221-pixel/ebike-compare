@@ -1,12 +1,14 @@
 import {
   BatteryIcon, MotorIcon, PayloadIcon, RangeIcon, SensorIcon, SpeedIcon, TorqueIcon,
-  WeightIcon, StarIcon, GearsIcon, BrakeIcon, ForkIcon, TireIcon, FoldIcon,
+  WeightIcon, StarIcon, GearsIcon, BrakeIcon, ForkIcon, TireIcon, FoldIcon, TagIcon,
 } from "./icons";
 
 /** Small icon for a single Highlights entry: magnitude standouts reuse their spec-tile
  *  icon; equipment maps to the closest icon, with a star as the generic fallback. */
 export function standoutIcon(label: string, className: string) {
   const l = label.toLowerCase();
+  // the value-meter lead highlight ("Exceptional value" / "Value score unavailable …")
+  if (l.includes("value")) return <TagIcon className={className} />;
   if (l.includes("long range")) return <RangeIcon className={className} />;
   if (l.includes("torque sensor") || l.includes("sensor")) return <SensorIcon type="torque" className={className} />;
   if (l.includes("torque")) return <TorqueIcon className={className} />;

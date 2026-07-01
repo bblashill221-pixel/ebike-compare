@@ -8,6 +8,7 @@ import { Browse } from "./pages/Browse";
 import { FindMyEbike } from "./pages/FindMyEbike";
 import { BikeDetail } from "./pages/BikeDetail";
 import { Compare } from "./pages/Compare";
+import { ValueTable } from "./pages/ValueTable";
 import { Analysis } from "./pages/Analysis";
 import { Disclosure } from "./pages/Disclosure";
 import { QaAnomalies } from "./pages/QaAnomalies";
@@ -43,6 +44,7 @@ export default function App() {
           <Route path="/find" element={<FindMyEbike />} />
           <Route path="/bike/:id" element={<BikeDetail />} />
           <Route path="/compare" element={<Compare />} />
+          <Route path="/value" element={<ValueTable />} />
           <Route path="/analysis" element={<Analysis />} />
           <Route path="/disclosure" element={<Disclosure />} />
           {/* QA anomalies page lives at the same URL in every build. In dev a nav

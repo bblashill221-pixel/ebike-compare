@@ -21,17 +21,18 @@ def num(pattern: str, text: str) -> float | None:
 # Mid-drive vs hub: most premium mid-drives never say "mid-drive" in the spec —
 # they're identified by the motor brand/model. Recognize the known mid-drive
 # systems (Bosch — all e-bike drive units, Brose, Shimano STEPS/EP, Yamaha PW, TQ
-# HPR, DJI Avinox, Bafang M-series/Ultra, Specialized full-power 2.x/3.x, Giant
-# SyncDrive — Yamaha-built mid-drive) plus the literal wording. Carve-outs for
-# look-alike HUBs: Mahle (Specialized SL / Creo SL rear hub) and Bafang G0xx geared
-# hubs are NOT mid-drive.
+# HPR, DJI Avinox, Bafang M-series/Ultra, Specialized 2.x/3.x full-power AND the
+# lightweight 1.x SL mid-motor — both are mid-mounted, Giant SyncDrive — Yamaha-built
+# mid-drive) plus the literal wording. Carve-outs for genuine look-alike HUBs: Mahle
+# X35-class rear hubs and Bafang G0xx geared hubs are NOT mid-drive. (The Specialized
+# SL system is a mid-drive, not a Mahle hub — no Specialized spec ever names Mahle.)
 _MID_DRIVE_RE = re.compile(
     r"mid[\s-]?drive|mid[\s-]?motor|bottom bracket"
     r"|bosch|brose|yamaha|shimano\s*(?:ep|steps|e\d{4})|\bsteps\b"
     r"|\btq\b|\bhpr\b|avinox|syncdrive(?!\s*move)"   # SyncDrive Pro/Sport/Core = mid; SyncDriveMove = hub
     r"|bafang\s*(?:m\d|ultra|max)|\bm[456]\d{2}\b"
     r"|\bultro\b"   # Aventon's mid-drive family (Ultro S / Ultro X); hub motors never named Ultro
-    r"|specialized\s*[23]\.\d", re.I)
+    r"|specialized\s*(?:sl\s*)?[123]\.\d", re.I)  # 2.x/3.x full-power + 1.x SL (either word order)
 # An explicit "hub drive"/"hub motor" wins over a brand match (Giant's lightweight
 # SyncDriveMove on the Defy E+ is a HUB drive even though "syncdrive" reads as mid).
 _HUB_OVERRIDE_RE = re.compile(r"mahle|bafang\s*g0|\bg0\d\d\b|hub[\s-]?drive|hub[\s-]?motor", re.I)

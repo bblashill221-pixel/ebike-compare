@@ -37,7 +37,7 @@ _HYDRAULIC_BRAKE = re.compile(
 # Mechanical (cable-actuated) disc brake signals, incl. Tektro's MD- series.
 _MECHANICAL_BRAKE = re.compile(r"mechanical|cable|\bMD[-\s]?[A-Z]?\d", re.I)
 SUSPENSION = ("RockShox", "Rock Shox", "SR Suntour", "Suntour", "Fox", "Manitou",
-              "X-Fusion", "DNM", "Mozo", "RST", "Marzocchi", "Mastodon", "Zoom")
+              "X-Fusion", "DNM", "Mozo", "RST", "Marzocchi", "Mastodon", "Zoom", "Exsho")
 MOTORS = ("Bosch", "Bafang", "Shengyi", "Ananda", "Das-Kit", "DAS-KIT", "Dapu",
           "Mivice", "Yamaha", "Brose", "Mahle", "Hyena", "Aikema", "AKM", "MPF",
           "TranzX", "Ultro", "Globe", "Shimano", "Fazua", "TQ")
@@ -50,6 +50,20 @@ SADDLES = ("Selle Royal", "SelleRoyal", "Selle", "Velo", "WTB", "Brooks", "SDG",
            "DDK", "Cionlli")
 DISPLAYS = ("Bosch", "King-Meter", "KingMeter", "Bafang", "APT", "Ananda")
 HOUSE = {"specialized": ("Globe", "Roval", "Specialized")}
+
+# Brands seen on wheels/rims/spokes/cockpit that don't live in a category tuple
+# above. Used only by the generic fallback (below), never to override a
+# category-specific match.
+WHEEL_GOODS = ("DT Swiss", "DT-Swiss", "Mavic", "Alexrims", "Alex Rims", "Alex",
+               "Jalco", "Weinmann", "Sun Ringle", "SunRingle", "Rodi", "Mach1",
+               "Sapim", "Pillar", "WTB", "Stan's", "Sun")
+
+# Union of every known component brand — the generic per-component fallback walks
+# this when a category parser found no manufacturer. Multi-word/longer spellings
+# sort first via _brands_for so "Sun Ringle" wins over "Sun", etc.
+ALL_BRANDS = tuple(dict.fromkeys(
+    SHIFTING + BRAKES + SUSPENSION + MOTORS + CELLS + TIRES + SADDLES
+    + DISPLAYS + WHEEL_GOODS))
 
 
 def _brands_for(brands: tuple, brand: str | None) -> list:
@@ -249,6 +263,10 @@ def _chain(v, brand):
     man, rest = _find_brand(rest, _brands_for(SHIFTING, brand))
     if man:
         out["manufacturer"] = man
+    # a bike's drive can be a roller chain OR a (carbon) belt — Gates / carbon-drive /
+    # CDX-CDN / "belt" mark a belt; otherwise it's a chain.
+    out["type"] = "belt" if re.search(
+        r"\bgates\b|carbon\s*drive|\bcd[xn]\b|center\s?track|\bbelt\b", v, re.I) else "chain"
     m, rest = _consume(rest, r"(\d{2,3})\s*(?:l\b|link)")           # 154L / 122 Link
     if m:
         out["links"] = int(m.group(1))
@@ -286,10 +304,11 @@ def _fork(v, brand):
         out["type"] = "air"
     elif re.search(r"\bcoil\b|\bspring\b", low):
         out["type"] = "coil"
-    # NB: "hydraulic"/"suspension"/"lockout"/"mechanical" describe damping/features, NOT
-    # the spring, so they no longer imply a coil spring -- asserting "coil" on a "Hydraulic
-    # Suspension Fork" conflicts with its own name (Vanpowers UrbanGlide). Such forks are
-    # left with no `type` (still a suspension fork via travel/lockout below).
+    elif re.search(r"hydraulic", low):
+        # A "hydraulic suspension fork" that names neither air nor coil — the common
+        # budget-ebike spec. Air/coil (the actual spring medium) are more specific and
+        # win above; hydraulic is the fallback suspension type, not just damping.
+        out["type"] = "hydraulic"
     if out.get("type") != "rigid":
         # prefer an mm value explicitly labeled "travel"; else the first mm that
         # isn't an offset/axle/spacing/rotor measurement.
@@ -300,13 +319,22 @@ def _fork(v, brand):
             rest = rest.replace(mt.group(0), " ", 1)
         else:
             for mm in re.finditer(r"(\d{2,3})\s*mm", rest):
-                tail = rest[mm.end():mm.end() + 12].lower()
-                if not re.match(r"\s*(offset|spacing|axle|rotor|stanchion|steer)", tail):
+                tail = rest[mm.end():mm.end() + 24].lower()
+                # Skip diameters/dimensions that aren't travel: stanchion/inner-tube/steerer
+                # bores etc. An optional adjective may sit between ("38mm reinforced inner tube").
+                if not re.match(r"\s*(?:\w+\s+){0,2}(offset|spacing|axle|rotor|stanchion|"
+                                r"steer|inner|tube|chassis|crown|leg|diameter|bore)", tail):
                     out["travel_mm"] = int(mm.group(1))
                     rest = rest[:mm.start()] + " " + rest[mm.end():]
                     break
     out["lockout"] = bool(re.search(r"lock[\s-]?out", low))
-    out["thru_axle"] = bool(re.search(r"thru[\s-]?axle|thru axle", low))
+    # preload adjustment — independent of lockout; a fork can have both.
+    out["preload"] = bool(re.search(r"pre[\s-]?load", low))
+    # thru-axle: the words OR a thru-axle dimension (12/15/20 × hub-width, e.g. 15x110,
+    # 12x148 Boost) — those standards are always thru-axles, so a fork that only states
+    # the dimension still reads as one (detail-driven backfill of the predefined field).
+    out["thru_axle"] = bool(re.search(
+        r"thru[\s-]?axle|\b(?:12|15|20)\s*[x×]\s*\d{2,3}\b|\bboost\b", low))
     mat = material(low, "carbon", "aluminum", "steel", "magnesium")
     if mat:
         out["material"] = mat
@@ -573,6 +601,17 @@ def battery_system_wh(v: str):
     count = battery_pack_count(v)
     if not whs:
         return None, None, count
+    # Asymmetric standard dual: two+ DIFFERENT packs the bike actually ships with,
+    # summed in the spec (e.g. "Front 1440Wh + rear 720Wh" -> primary 1440Wh,
+    # total 2160Wh, 2 packs). Gated to a genuine additive listing ("+", or both
+    # front & rear) and never an optional/expandable or already-combined figure,
+    # so symmetric duals ("2 x 500Wh") and ranges still fall through below.
+    distinct = sorted(set(whs), reverse=True)
+    additive = ("+" in v) or bool(
+        re.search(r"\bfront\b", v, re.I) and re.search(r"\brear\b", v, re.I))
+    if (len(distinct) >= 2 and additive and not _BATT_OPTIONAL.search(v)
+            and not re.search(r"combined|total", v, re.I)):
+        return distinct[0], sum(distinct), len(distinct)
     per_pack = min(whs)
     if re.search(r"combined|total", v, re.I):
         total = max(whs)
@@ -619,7 +658,8 @@ def _battery(v, brand):
         out["removable"] = False
     elif re.search(r"removable|detachable", v, re.I):
         out["removable"] = True
-    # leftover details: drop the numbers/cell brand we captured
+    # leftover details: drop the numbers/cell brand we captured (UL cert is handled
+    # by _finalize_battery so it applies to the cached/LLM parse too).
     if cell:
         rest = re.sub(r"(?<![A-Za-z])" + re.escape(cell) + r"(?![A-Za-z])", "", rest, flags=re.I)
     for pat in (r"\d{3,4}\s*wh", r"\d{2,3}\s*v\b", r"\d{1,2}(?:\.\d)?\s*ah",
@@ -635,10 +675,12 @@ def _tire(v, brand):
     man, rest = _find_brand(rest, _brands_for(TIRES, brand))
     if man:
         out["manufacturer"] = man
-    # wheel diameter x tire width, e.g. 26x4.0, 27.5 x 2.20, 29x2.4", 700x45c.
-    # Split into separate diameter + width. The (?<!\d) stops the diameter being
-    # taken out of a 3-digit number. 700-series are road/ISO (width in mm).
-    m = re.search(r"(?<!\d)(\d{2,3}(?:\.\d)?)\s*[x×]\s*(\d{1,2}(?:\.\d+)?)\s*([c\"”]?)", rest)
+    # wheel diameter x tire width, e.g. 26x4.0, 27.5 x 2.20, 29x2.4", 700x45c, and the
+    # inch-quoted 26" x 4.0" / 26” X 4.0 forms (Bakcou). Split into separate diameter +
+    # width; an optional inch mark may sit between the diameter and the x, and the x may
+    # be upper-case (re.I). The (?<!\d) stops the diameter being taken out of a 3-digit
+    # number. 700-series are road/ISO (width in mm).
+    m = re.search(r"(?<!\d)(\d{2,3}(?:\.\d)?)\s*[\"”']?\s*[x×]\s*(\d{1,2}(?:\.\d+)?)\s*([c\"”]?)", rest, re.I)
     if m:
         dia, wid, suffix = float(m.group(1)), float(m.group(2)), m.group(3)
         if dia >= 100 or suffix.lower() == "c":          # road/ISO, e.g. 700c
@@ -819,13 +861,19 @@ def _charger(v, brand):
 def _controller(v, brand):
     rest = v
     out = {}
+    man, rest = _find_brand(rest, _brands_for(MOTORS, brand))
+    if man:
+        out["manufacturer"] = man
     mv = re.search(r"(\d{2,3})\s*v", v, re.I)
     if mv:
         out["voltage_v"] = int(mv.group(1))
     ma = re.search(r"(\d{1,3})\s*a\b", v, re.I)
     if ma:
         out["amps_a"] = int(ma.group(1))
-    for pat in (r"\d{2,3}\s*v", r"\d{1,3}\s*a\b"):
+    mm = re.search(r"(\d{1,2})\s*mosfet", v, re.I)
+    if mm:
+        out["mosfets"] = int(mm.group(1))
+    for pat in (r"\d{2,3}\s*v", r"\d{1,3}\s*a\b", r"\d{1,2}\s*mosfets?"):
         rest = re.sub(pat, " ", rest, flags=re.I)
     out["details"] = _clean(rest)
     return out
@@ -1016,10 +1064,10 @@ def _frame(v, brand):
             if mounts:
                 out["mounts"] = sorted(set(mounts + (out.get("mounts") or [])))
                 continue
-        if re.search(r"step[\s-]?(thru|through)|low[\s-]?step|easy[\s-]?entry", cl):
-            out["style"] = "step_thru"
+        if re.search(r"step[\s-]?(thru|through)|low[\s-]?step|mid[\s-]?step|easy[\s-]?entry", cl):
+            out["style"] = "step_thru"   # mid-step buckets with step-thru
             continue
-        if re.search(r"step[\s-]?over|high[\s-]?step|mid[\s-]?step", cl):
+        if re.search(r"step[\s-]?over|high[\s-]?step", cl):
             out["style"] = "step_over"
             continue
         # structured geometry clauses -> their own fields (keep them out of Details)
@@ -1672,20 +1720,151 @@ def _finalize_motor(result, value):
     # drive_type reads correctly and the eMTB structural gate qualifies (Current ADV/EXP).
     if result.get("placement") != "mid" and re.search(r"\bultro\b", value, re.I):
         result["placement"] = "mid"
-    # communication protocol (only the real bus token — never the English word "can")
-    if "protocol" not in result:
-        mp = re.search(r"can[\s-]?bus|\buart\b", value, re.I)
-        if mp:
-            result["protocol"] = "UART" if mp.group(0).lower() == "uart" else "CAN bus"
-            # drop the protocol token from model/details so it isn't echoed beside the field
-            rx = re.compile(r"\bcan[\s-]?bus(?:\s+system)?\b|\buart\b", re.I)
-            for fld in ("model", "details"):
-                if result.get(fld):
-                    cleaned = _clean(rx.sub("", result[fld]))
-                    if cleaned:
-                        result[fld] = cleaned
-                    else:
-                        result.pop(fld, None)
+    return result
+
+
+# Electrical components that can advertise a communication bus. The protocol field
+# is optional — only stamped when the spec actually names CAN bus / UART.
+_ELECTRICAL_KINDS = {"motor", "display", "controller", "sensor", "throttle",
+                     "charger", "light", "battery", "pedal_assist"}
+# Only the real bus token — never the bare English word "can".
+_PROTOCOL_RE = re.compile(r"can[\s-]?bus|\buart\b", re.I)
+_PROTOCOL_STRIP = re.compile(r"\bcan[\s-]?bus(?:\s+system)?\b|\buart\b", re.I)
+
+
+# UL safety certification on a battery: a numbered standard (UL2271 cell pack /
+# UL2849 whole-system / UL2580) when stated, else a bare "UL listed/certified".
+_UL_NUM_RE = re.compile(r"\bUL[-\s]?(\d{3,4})\b", re.I)
+_UL_BARE_RE = re.compile(r"\bUL\b[\s-]*(?:listed|certif\w*|approved|rated)", re.I)
+_UL_STRIP_RE = re.compile(
+    r"\bUL[-\s]?\d{3,4}\b[\s-]*(?:listed|certif\w*|approved|rated)?"
+    r"|\bUL\b[\s-]*(?:listed|certif\w*|approved|rated)", re.I)
+# Once the cert is captured structurally, dangling cert verbiage ("certified to",
+# "UL listed") in details is redundant noise — scrub it.
+_CERT_VERBIAGE_RE = re.compile(r"\b(?:certif\w*|listed|approved|rated)\b(?:\s+to)?", re.I)
+# CE conformity mark — only the real mark phrasing, never a stray "CE" inside a word.
+_CE_RE = re.compile(r"\bCE\b[\s-]*(?:marked|mark|certif\w*|approved|compliant)"
+                    r"|(?:certif\w*|approved|compliant)[\s-]*(?:to\s+)?\bCE\b", re.I)
+_CE_STRIP_RE = re.compile(r"\bCE\b[\s-]*(?:marked|mark|certif\w*|approved|compliant)?", re.I)
+
+
+def _wh_round(x):
+    return int(x) if x == int(x) else round(x, 1)
+
+
+def _finalize_cert(result, value):
+    """GENERIC safety certification for ANY component: a UL numbered standard
+    (UL2271 cell pack / UL2849 system / UL2580), a bare "UL listed/certified", and/or
+    a CE mark -> an optional `certifications` list, with the cert verbiage scrubbed from
+    details. Runs on both the live and cached/LLM parse; a list already present wins.
+    The dedicated `cert` kind is skipped (it carries its own `standards`)."""
+    if not result or result.get("_kind") == "cert" or result.get("certifications"):
+        return result
+    certs = ["UL " + n for n in dict.fromkeys(_UL_NUM_RE.findall(value))]
+    if not certs and _UL_BARE_RE.search(value):
+        certs = ["UL"]
+    if _CE_RE.search(value):
+        certs.append("CE")
+    if not certs:
+        return result
+    result["certifications"] = certs
+    if result.get("details"):
+        scrubbed = _CE_STRIP_RE.sub("", _CERT_VERBIAGE_RE.sub("", _UL_STRIP_RE.sub("", result["details"])))
+        cleaned = _clean(scrubbed)
+        if cleaned:
+            result["details"] = cleaned
+        else:
+            result.pop("details", None)
+    return result
+
+
+def _finalize_battery(result, value):
+    """Battery-specific post-processing that must apply to the cached/LLM parse too: the
+    asymmetric-dual pack math ("front 1440Wh + rear 720Wh") which a cached parse otherwise
+    collapses to a single pack. Runs on both paths; battery_system_wh already gates this to
+    a genuine additive listing, so we only act when it found a real multi-pack sum."""
+    if not (result and result.get("_kind") == "battery"):
+        return result
+    per_pack, total_wh, count = battery_system_wh(value)
+    if (per_pack is not None and total_wh and count >= 2 and total_wh != per_pack
+            and ("+" in value
+                 or (re.search(r"\bfront\b", value, re.I) and re.search(r"\brear\b", value, re.I)))):
+        result["capacity_wh"] = _wh_round(per_pack)
+        result["pack_count"] = count
+        result["total_capacity_wh"] = _wh_round(total_wh)
+    return result
+
+
+def _finalize_brand(result, value, brand):
+    """GENERIC manufacturer fallback for every component (frame excepted — its "brand" is
+    just the bike marque). Anchored to the START of the leftover details so an incidental
+    mid-string mention is ignored ("...switch from SRAM bonus button"). Runs on both paths;
+    a manufacturer the category parser already found always wins. NB: model extraction is
+    deliberately NOT here — it runs live-path-only (see _extract_model), because cached LLM
+    `details` are noisy and the extractor mistakes descriptors ("fat", "boron") for models."""
+    if not result or result.get("_kind") == "frame" or result.get("manufacturer"):
+        return result
+    det = result.get("details", "")
+    for b in _brands_for(ALL_BRANDS, brand):   # longest spelling first
+        # Not followed by a letter or a possessive apostrophe: "Lectric's PWR allows…"
+        # is marketing prose, not a Lectric-made sensor.
+        m = re.match(r"\W*" + re.escape(b) + r"(?![A-Za-z'’])", det, re.I)
+        if m:
+            result["manufacturer"] = b
+            result["details"] = _clean(det[m.end():])
+            break
+    return result
+
+
+def _extract_model(result):
+    """Pull a model/series name out of the leftover details when a manufacturer is set
+    and none is recorded yet (e.g. "SRAM Apex Hydraulic Disc" -> model "Apex"). Live-path
+    only: rule-parser leftovers are clean enough for this; cached LLM details are not."""
+    if not (result and result.get("manufacturer") and not result.get("model")):
+        return result
+    mdl = _leading_model(result.get("details", ""))
+    if mdl:
+        det = result["details"]
+        result["model"] = mdl
+        tail = det[len(mdl):] if det[:len(mdl)].lower() == mdl.lower() else det.replace(mdl, "", 1)
+        result["details"] = _clean(tail)
+    return result
+
+
+def _finalize_controller(result, value):
+    """Controller MOSFET count — a finalizer (not just in the rule parser) so a cached/LLM
+    parse picks it up too; strips the token from details. A value already present wins."""
+    if not (result and result.get("_kind") == "controller") or "mosfets" in result:
+        return result
+    m = re.search(r"(\d{1,2})\s*mosfet", value, re.I)
+    if m:
+        result["mosfets"] = int(m.group(1))
+        if result.get("details"):
+            cleaned = _clean(re.sub(r"\d{1,2}\s*mosfets?", "", result["details"], flags=re.I))
+            if cleaned:
+                result["details"] = cleaned
+            else:
+                result.pop("details", None)
+    return result
+
+
+def _finalize_protocol(result, value):
+    """Capture the comm bus (CAN bus / UART) on any electrical component, and drop
+    the token from model/details so it isn't echoed beside the field. Runs after the
+    live OR cached/LLM parse; an explicit protocol already present always wins."""
+    if not (result and result.get("_kind") in _ELECTRICAL_KINDS) or "protocol" in result:
+        return result
+    m = _PROTOCOL_RE.search(value)
+    if not m:
+        return result
+    result["protocol"] = "UART" if m.group(0).lower() == "uart" else "CAN bus"
+    for fld in ("model", "details"):
+        if result.get(fld):
+            cleaned = _clean(_PROTOCOL_STRIP.sub("", result[fld]))
+            if cleaned:
+                result[fld] = cleaned
+            else:
+                result.pop(fld, None)
     return result
 
 
@@ -1701,6 +1880,23 @@ def _finalize_seatpost(result, value):
             result["routing"] = "internal"
         elif re.search(r"\bexternal\b", low):
             result["routing"] = "external"
+    return result
+
+
+def _finalize(result, value, brand):
+    """Apply every cross-cutting/optional extractor — kind-specific (motor / seatpost /
+    battery dual-pack) and GENERIC (protocol / certification / manufacturer) — to a parsed
+    component. Called on BOTH the live and cached/LLM paths, so no optional field is shadowed
+    for a cached string (the cache returns early). Each step is a no-op when its signal is
+    absent and respects fields already present. Order matters: protocol & cert scrub their
+    tokens from details before the brand step pulls a model out of the leftover."""
+    result = _finalize_motor(result, value)
+    result = _finalize_seatpost(result, value)
+    result = _finalize_controller(result, value)
+    result = _finalize_protocol(result, value)
+    result = _finalize_cert(result, value)
+    result = _finalize_battery(result, value)
+    result = _finalize_brand(result, value, brand)
     return result
 
 
@@ -1722,8 +1918,7 @@ def parse_component(field: str, value, brand: str | None = None,
         key = _hashlib.sha256(f"{kind}|{brand}|{value}".encode()).hexdigest()[:20]
         hit = _LLM_COMPONENTS.get(key)
         if hit:
-            return _finalize_seatpost(
-                _finalize_motor(_canon_material(_json.loads(_json.dumps(hit["parsed"]))), value), value)
+            return _finalize(_canon_material(_json.loads(_json.dumps(hit["parsed"]))), value, brand)
     value = _dethousand(value)   # "1,200W" must parse as 1200, not 200
     sized = None if fn is _brake else _split_by_size(value)
     if fn is _brake:
@@ -1738,19 +1933,19 @@ def parse_component(field: str, value, brand: str | None = None,
         result = _parse_sized(fn, sized[0], sized[1], brand)
     else:
         result = fn(value, brand)
-    # When a manufacturer was found, pull the model/series out of the leftover
-    # (e.g. "SRAM Apex Hydraulic Disc 160mm" -> manufacturer SRAM, model "Apex").
-    if result and result.get("manufacturer") and not result.get("model"):
-        mdl = _leading_model(result.get("details", ""))
-        if mdl:
-            det = result["details"]
-            result["model"] = mdl
-            tail = det[len(mdl):] if det[:len(mdl)].lower() == mdl.lower() else det.replace(mdl, "", 1)
-            result["details"] = _clean(tail)
-    # Stamp the canonical component kind (the parser's name) so the UI can pick
-    # the right feature columns without re-deriving the type from noisy labels.
+    # Stamp the canonical component kind (the parser's name) so the UI — and the
+    # kind-gated finalizers — can pick the right fields without re-deriving the type
+    # from noisy labels. Done first so _finalize_brand can skip the frame kind.
     if result:
         result["_kind"] = fn.__name__.lstrip("_")
+    # Manufacturer fallback + model extraction run on the CLEAN rule-parser leftover,
+    # before details are stripped/canonicalized, so the model name isn't mangled. Model
+    # extraction is live-path-only — cached LLM details are too noisy (see _extract_model).
+    result = _extract_model(_finalize_brand(result, value, brand))
+    if result:
         _strip_parsed_from_details(result)
         _canon_material(result)
-    return _finalize_seatpost(_finalize_motor(result, value), value)
+    # Cross-cutting/optional extractors — the SAME chain the cache-hit path runs, so every
+    # optional field (protocol, certification, manufacturer) is attempted uniformly on both
+    # paths. _finalize_brand here is an idempotent no-op when one was already found above.
+    return _finalize(result, value, brand)

@@ -37,8 +37,9 @@ from pathlib import Path
 from spec_parse import num, find_spec, blob, kg_to_lb, percentile_rank, height_range_in, is_mid_drive
 from parse_components import bosch_torque
 from spec_groups import flatten_grouped
+from estimate_component_costs import cost_brakes, cost_tires, cost_fork, cost_shock, cost_drivetrain, cost_display
 from component_catalog import iter_components
-from resolve_component_prices import heuristic_retail
+from resolve_component_prices import heuristic_retail, _dt_tier, _DT_PRICE
 from component_refs import rehydrate
 
 HERE = Path(__file__).parent
@@ -82,6 +83,27 @@ def _battery_wh(specs):
         if v and ah:
             wh = v * ah
     return round(wh) if wh else None
+
+
+def _battery_total_wh(model):
+    """Total shipped capacity = battery size(s) × number of packs: the stated combined
+    total, else per-pack capacity × pack_count, across the bike's battery component(s).
+    Read off the parsed component (the grouped specs), so a dual-battery bike compares on
+    everything it ships with, not one pack. Mirrors the value base's battery total."""
+    best = None
+    for d in (model.get("specs") or {}).values():
+        if isinstance(d, dict):
+            for v in d.values():
+                if isinstance(v, dict) and v.get("_kind") == "battery":
+                    tot, cap, pc = (v.get("total_capacity_wh"), v.get("capacity_wh"),
+                                    v.get("pack_count"))
+                    cand = (tot if isinstance(tot, (int, float)) else
+                            cap * pc if isinstance(cap, (int, float))
+                                        and isinstance(pc, int) and pc > 1 else
+                            cap if isinstance(cap, (int, float)) else None)
+                    if cand:
+                        best = max(best or 0, cand)
+    return round(best) if best else None
 
 
 def _cell_brand(specs):
@@ -151,7 +173,17 @@ def _motor_w(specs):
     cont_txt = re.sub(rf"\d{{3,4}}\s*{_W}\s*peak", " ", txt, flags=re.I)
     cont_txt = re.sub(rf"peak[^0-9,()/]{{0,14}}\d{{3,4}}\s*{_W}", " ", cont_txt, flags=re.I)
     cont_txt = re.sub(r"\d{3,4}\s*w?\s*peak", " ", cont_txt, flags=re.I)
-    cont = num(rf"(\d{{3,4}})\s*{_W}", cont_txt)
+    # Prefer a bare wattage that ISN'T the peak: brands that publish peak-first render
+    # the motor as "1092W | 500W 1092W peak ..." (Lectric) — the leading bare 1092 is
+    # the peak restated, while 500 is the true rated/nominal. Take the lowest non-peak
+    # bare as nominal; if every bare equals the peak (genuine rated==peak), keep it.
+    bares = [int(x) for x in re.findall(rf"(\d{{3,4}})\s*{_W}", cont_txt, re.I)]
+    if peak and any(b != peak for b in bares):
+        cont = float(min(b for b in bares if b != peak))
+    elif bares:
+        cont = float(bares[0])
+    else:
+        cont = None
     # With a boost figure present it is the true peak; when its wording says
     # "peak", the standard "Peak"-labeled figure is really the nominal.
     if boost:
@@ -209,8 +241,18 @@ def _drive_type(specs):
     return "hub"
 
 
+# "range" also appears in rider-fit and component rows ("rider_height_range",
+# "gear range", "cassette 11-36") -- the bare-number fallback would then read a
+# height (4'11" -> 11) or a cog count as miles. Exclude those keys so a brand that
+# publishes NO range (Cannondale) yields None instead of an invented figure.
+_RANGE_KEY_BAD = re.compile(
+    r"height|rider|\bfit\b|inseam|stand[\s-]?over|\breach\b|cog|cassette|gear|"
+    r"\bspeed\b|\bsize\b|tire|wheel|spoke", re.I)
+
+
 def _range_vals(specs):
-    txt = find_spec(specs, "range")
+    txt = " | ".join(str(v) for k, v in specs.items()
+                     if "range" in k.lower() and not _RANGE_KEY_BAD.search(k))
     vals = [float(g) for g in re.findall(r"(\d{2,3})\s*(?:mile|mi\b)", txt, re.I)]
     if not vals:                                   # bare numbers in a range row
         vals = [float(g) for g in re.findall(r"\b(\d{2,3})\b", txt)]
@@ -273,6 +315,10 @@ _RACK_LOAD_RE = re.compile(r"(?<![bt])rack", re.I)
 # NOT the bike's payload: rack/basket sub-limits, the fork, or the bike's OWN
 # (gross/curb/net/unladen) weight.
 _LOAD_NOT_BIKE = ("rack", "basket", "fork", "gross_weight", "curb", "net_weight", "unladen")
+# A bike's total payload (rider + cargo) below this is implausible — it's a stray weight,
+# rack/accessory sub-limit, or a misread number (the lowest real payload in the data is
+# 165 lb). Guards both the spec parse and the HTML-extracted fallback. See [[qa-invariants]].
+_MIN_PAYLOAD_LB = 150
 
 
 def _lbs_from(specs, label_re, bad=()):
@@ -294,8 +340,11 @@ def _lbs_from(specs, label_re, bad=()):
 
 
 def _max_load_lb(specs):
-    """The BIKE's max payload / total-weight limit (lb) -- not a rack/basket/own weight."""
-    return _lbs_from(specs, _BIKE_LOAD_RE, _LOAD_NOT_BIKE)
+    """The BIKE's max payload / total-weight limit (lb) -- not a rack/basket/own weight.
+    An implausibly low figure (< _MIN_PAYLOAD_LB) is a stray weight/accessory number, not
+    the rider+cargo limit, so it's rejected rather than published as a 40-lb 'payload'."""
+    v = _lbs_from(specs, _BIKE_LOAD_RE, _LOAD_NOT_BIKE)
+    return v if v is not None and v >= _MIN_PAYLOAD_LB else None
 
 
 def _rack_load_lb(specs):
@@ -354,7 +403,7 @@ def _drivetrain_type(specs):
         return None
     if re.search(r"belt|gates|carbon drive", txt):
         return "belt"
-    if re.search(r"enviolo|cvt|nuvinci|internal gear|igh|auto[- ]?shift|pinion|gearbox"
+    if re.search(r"enviolo|\bcvt\b|nuvinci|internal gear|\bigh\b|auto[- ]?shift|pinion|gearbox"
                  r"|rohloff|nexus|alfine|hub gear", txt):
         return "internal_gear"
     if re.search(r"single[- ]?speed|singlespeed|\b1[- ]?speed", txt):
@@ -425,7 +474,25 @@ def _suspension(specs, has_rear_shock=False):
     return "rigid"
 
 
-def _frame_material(specs):
+def _frame_component_material(specs):
+    """The parsed frame component's own canonical material (e.g. 'steel'), if any.
+    The component parser isolates it cleanly, so it's authoritative when the flattened
+    frameset text would otherwise misread an orphaned qualifier."""
+    found = []
+    def walk(o):
+        if isinstance(o, dict):
+            if o.get("_kind") == "frame" and isinstance(o.get("material"), str):
+                found.append(o["material"].lower())
+            for v in o.values():
+                walk(v)
+        elif isinstance(o, list):
+            for v in o:
+                walk(v)
+    walk(specs)
+    return found[0] if found else None
+
+
+def _frame_material(specs, grouped=None):
     txt = find_spec(specs, "frame").lower()
     if not txt:
         return None
@@ -436,6 +503,17 @@ def _frame_material(specs):
     if re.search(r"(?<!high )(?<!high-)(?<!low )(?<!low-)(?<!mid )(?<!mid-)"
                  r"(?<!medium )(?<!medium-)(?<!mild )(?<!mild-)"
                  r"carbon(?![\s-]*(?:steel|drive|belt))", txt):
+        # The flattened frameset text can re-orphan a steel qualifier when the parser
+        # split "Carbon Steel" into material:"steel" + details:"Carbon" (CEMOTO EB66):
+        # the bare "Carbon" then reads as carbon fibre. Trust the component's own
+        # parsed material when it cleanly says steel/aluminium and not carbon. The
+        # component dicts only survive in the GROUPED specs, not the flattened text.
+        cm = _frame_component_material(grouped if grouped is not None else specs)
+        if cm and not re.search(r"carbon|composite", cm):
+            if re.search(r"alum|alloy|6061|6063|7005", cm):
+                return "aluminum"
+            if re.search(r"steel|chromoly|cr-?mo|\biron\b", cm):
+                return "steel"
         return "carbon"
     # A named aluminium alloy (6061/6063/7005; A356/A380 castings) or Giant's ALUXX
     # means the frame is aluminium even when the text also says "steel" (a mislabelled
@@ -617,6 +695,14 @@ def _notable_tech(specs):
     for pat, label in checks:
         if re.search(pat, b):
             out.append(label)
+    # Quiet motor — a property of the motor, so read ONLY the motor spec field. A broad
+    # blob scan false-matches a "Decibell" bell, a SRAM "DB" brake, a 90 dB horn or a
+    # "silent" tire; scoping to the motor row keeps it to genuine low-noise drive claims
+    # ("Stealth M24 quiet technology", "internal stator", "angled gear, quiet").
+    motor_txt = find_spec(specs, "motor").lower()
+    if re.search(r"quiet|low[\s-]?noise|noise[\s-]?reduc|internal stator|whisper"
+                 r"|near[\s-]?silent", motor_txt):
+        out.append("quiet motor")
     # Dual-battery counts ONLY when the bike ships with two packs as standard — read the
     # battery spec, the authoritative statement of what's included ("(2) ... batteries",
     # "Two removable ... batteries", "2x battery", "dual battery"). A second pack offered
@@ -783,7 +869,12 @@ def extract_typed_specs(model: dict) -> dict:
     class_rows = _class_speed_rows(specs)
     bike_classes = _classes(class_rows)
     typed = {
-        "battery_wh": _battery_wh(specs),
+        # total shipped capacity = the larger of the component-summed total (per-pack ×
+        # number) and the text-parsed figure — the component undercounts when it only
+        # captured one of differing packs (Himiway D5 15Ah+20Ah), the text undercounts
+        # when it states one pack of an identical pair (Monarc 720 ×2).
+        "battery_wh": max((x for x in (_battery_total_wh(model), _battery_wh(specs)) if x),
+                          default=None),
         "cell_brand": _cell_brand(specs),
         "removable_battery": True if re.search(r"removable", find_spec(specs, "battery"), re.I) else None,
         "motor_w": motor_w,
@@ -800,7 +891,7 @@ def extract_typed_specs(model: dict) -> dict:
         "drivetrain_type": _drivetrain_type(specs),
         "gears": _gears(specs),
         "suspension": _suspension(specs, _has_rear_shock(model)),
-        "frame_material": _frame_material(specs),
+        "frame_material": _frame_material(specs, model.get("specs") or {}),
         "sensor_type": _sensor_type(specs),
         "classes": bike_classes,
         "max_speed_mph": _max_speed_mph(class_rows, bike_classes),
@@ -828,7 +919,12 @@ def extract_typed_specs(model: dict) -> dict:
     applied = []
     for f, e in ext.items():
         if typed.get(f) in (None, "", []):
-            typed[f] = e.get("value")
+            val = e.get("value")
+            # same plausibility floor as the spec parse — an HTML-mined "payload" below
+            # _MIN_PAYLOAD_LB is a stray weight/accessory figure, not the bike's limit.
+            if f == "max_load_lb" and isinstance(val, (int, float)) and val < _MIN_PAYLOAD_LB:
+                continue
+            typed[f] = val
             applied.append(f)
     if applied:
         model["html_extracted"] = sorted(applied)
@@ -943,6 +1039,7 @@ def compute_scores(pct: dict, price_pct, value_rank, feature_score) -> dict:
     s["torque"] = _rank("torque_nm")
     s["range"] = _rank("range_mi")
     s["battery"] = _rank("battery_wh")
+    s["payload"] = _rank("max_load_lb")
     # weight: lighter ranks higher. weight_lb_pct is ALREADY inverted in
     # compute_percentiles (weight_lb is in INVERTED, like price), so use it directly —
     # a second (1 - wp) here would double-invert it back to heavier-is-higher.
@@ -1025,7 +1122,8 @@ _STANDOUT_FEATURE_LABELS = {
     "belt drive": "Belt Drive",
     "dropper post": "Dropper Post",
     "electronic shifting": "Electronic Shifting",
-    "internal gear hub": "Internal Gear Hub",
+    # NB: a plain internal gear hub is common, not a standout — omitted from highlights AND
+    # special features. Only the premium named Pinion/Rohloff Gearbox (component_highlights) shows.
     "high-end drivetrain": "High-End Drivetrain",
     "color display": "Color Display",
     "carbon frame": "Carbon Frame",
@@ -1063,6 +1161,9 @@ _STANDOUT_ABS_MOTOR_PEAK_W = 2500   # peak
 _PREM_BRAKE = re.compile(
     r"magura|\bxtr?\b|deore xt|\bslx\b|\bdeore\b|sram\s*(code|guide|level|db8)"
     r"|\btrp\b|\bhope\b|\bhayes\b|formula|tektro\s*(orion|hd-?e[4-9])", re.I)
+# 4-/6-piston calipers are a genuine premium step over the usual 2-piston, on ANY brand
+# (e.g. Juiced Scrambler's "Talon 4-Piston") — counted even when the brand isn't named.
+_MULTI_PISTON = re.compile(r"\b(?:4|6|four|six)[\s-]?piston", re.I)
 _PREM_SUSP = re.compile(
     r"\bfox\b|rock\s*shox|marzocchi|öhlins|ohlins|\bdvo\b|dt\s*swiss"
     r"|suntour\s*(axon|durolux|rux)", re.I)
@@ -1119,6 +1220,233 @@ def component_highlights(model: dict, typed: dict) -> list:
     if cell:
         add("Cells", cell)
     return out
+
+
+# ===================== BUILD GRADE + VALUE METER — tune here =====================
+# Tweak these constants, rebuild, then eye-test with `python value_preview.py`.
+#
+# BUILD GRADE = the tier/kind of a bike's PARTS (categorical brand/type facts — robust to
+# mis-parse, NOT a dollar estimate, NOT raw spec magnitude: a 100Nm no-name hub is not
+# premium, a Bosch mid-drive is). A bike's points (assigned below) fall into the first band
+# it clears, scanning high→low. 4 bands so a decent mainstream build (Aventon Aventure 3)
+# isn't lumped with true entry-level (a low-end VIVI).
+BUILD_BANDS = [("Premium", 4.0), ("Enhanced", 2.0), ("Standard", 1.0), ("Budget", 0.0)]
+# Lightweight-engineering credit — a premium axis the component markers can't see. A
+# lightweight bike reaches premium-ness by REMOVING weight (lighter, pricier parts), the
+# opposite of the beefy components scored elsewhere, so it stays invisible to a "count the
+# heavy premium parts" grade. Credited only when genuinely light in ABSOLUTE terms AND
+# still carrying a real battery (light *despite* capacity, not by stripping it) — this
+# excludes both heavy-for-their-class fat/cargo/moto bikes and minimal small-battery bikes.
+LIGHTWEIGHT_MAX_LB = 46.0
+LIGHTWEIGHT_MIN_WH = 450
+LIGHTWEIGHT_POINTS = 1.0
+
+# CONFIDENCE GATE: every one of these component facts must be known to grade/score a bike.
+# Missing any → Unrated: no build tier, no value meter, an "insufficient data" highlight
+# (so a broken-scrape bike never gets a confident-but-wrong grade).
+VALUE_REQUIRED_FIELDS = ("drive_type", "brake_type", "drivetrain_type", "sensor_type")
+
+# VALUE METER = typical_price(peer group) ÷ price  (>1 = cheaper than its peers = better
+# deal). Peers = same product TYPE and same BUILD TIER (so an exceptional eMTB is judged
+# against eMTBs of like quality, naturally costing more than a commuter). A bike with fewer
+# than VALUE_MIN_GROUP same-(type×tier) peers gets NO meter — we never mix in other tiers to
+# pad a thin cell (that inverts the signal: it made the cheapest premium cargo bike look
+# under-valued). Bands are fixed MAGNITUDE thresholds (NOT percentile ranks — near-equal
+# values stay in the same band); tune "Exceptional" to ~the top 15%.
+VALUE_PEER_KEYS = ("product_type", "build_tier")
+VALUE_MIN_GROUP = 4
+VALUE_BANDS = [("Exceptional", 1.55), ("Outstanding", 1.14), ("Great", 0.91), ("Good", 0.0)]
+
+# Free included accessories add real value, so they discount the EFFECTIVE price the value
+# meter scores on (a bike that throws in a rack/lights/2nd battery is a better deal). Only
+# free items count (paid add-ons have price > 0); the total is capped so a budget bike can't
+# be inflated by a pile of cheap extras. Worths are estimated retail $ by name keyword.
+ACCESSORY_WORTH = {
+    "battery": 400, "passenger": 150, "child": 150, "seat": 80,
+    "rack": 50, "basket": 50, "pannier": 50, "trunk": 40, "bag": 30,
+    "light": 35, "fender": 30, "mudguard": 30, "lock": 30, "pump": 20,
+    "kickstand": 15, "mirror": 15, "phone": 15, "bell": 10, "charger": 0,
+}
+ACCESSORY_WORTH_DEFAULT = 20
+INCLUDED_VALUE_CAP_FRAC = 0.20
+
+# Valuable INTEGRATED features (regen, GPS/anti-theft, app, signalling) also add real value
+# the build grade doesn't see — credit them the same way as free accessories (effective-price
+# discount, shared cap). Detected from notable_tech + connectivity. Each category counts once
+# (a GPS unit that's also the anti-theft alarm isn't paid twice).
+FEATURE_WORTH = [
+    (("gps", "anti-theft", "antitheft", "tracker", "alarm", "find my"), 100),  # security/GPS
+    (("electronic shift", "auto-shift", "autoshift", "smart.shift", "automatiq"), 60),  # auto/e-shift
+    (("regen",), 40),                                                          # regen braking
+    (("turn signal", "turn-signal", "blinker", "brake light"), 30),            # signalling
+    (("app", "bluetooth", "smartphone", "connected"), 20),                     # app / connectivity
+]
+
+
+def build_grade(model: dict, typed: dict) -> dict:
+    """{tier, markers, rated}. `markers` = the premium-component differentiators (chips);
+    `tier` = the coarse build band, or None when Unrated (too little component data)."""
+    rated = all(typed.get(f) not in (None, "", []) for f in VALUE_REQUIRED_FIELDS)
+    comps = list(iter_components(model))
+    flat = flatten_grouped(model.get("specs") or {})
+    markers, pts = [], 0.0
+
+    def mark(label, p):
+        markers.append(label)
+        return p
+
+    # drivetrain groupset tier (same derivation as component_quality)
+    _ORDER = {"budget": 0, "mid": 1, "high": 2, "elite": 3}
+    dt = "budget"
+    for _k, c, p in comps:
+        if c in _DT_PRICE and _DT_MAKER.search(p.get("manufacturer") or ""):
+            tt = _dt_tier(f"{p.get('manufacturer') or ''} {p.get('model') or ''}".lower())
+            if _ORDER[tt] > _ORDER[dt]:
+                dt = tt
+
+    # Motor: a premium system >> a generic hub; a mid-drive >> a hub regardless of wattage.
+    prem_motor = next((p for _k, c, p in comps if c == "motor"
+                       and (p.get("manufacturer") or "").lower() in _PREM_MOTOR), None)
+    if prem_motor:
+        pts += mark(f"{(prem_motor.get('manufacturer') or '').title()} motor", 3)
+    elif typed.get("drive_type") == "mid":
+        pts += mark("Mid-drive", 1.5)
+    # Torque sensor — every mid-drive has one (assumed), so it's only worth SHOWING as a
+    # marker on a HUB motor, where it's a genuine upgrade over the typical cadence sensor.
+    # (It still adds its small quality weight either way.)
+    if "torque" in (typed.get("sensor_type") or ""):
+        pts += 0.5
+        if typed.get("drive_type") == "hub":
+            markers.append("Torque sensor")
+    # Brakes — plain hydraulic is table stakes (89%); premium calipers count: a premium
+    # brand (Magura/XT/Code…) OR a 4-/6-piston caliper (a real step up on any brand). The
+    # piston count lives on the parsed brake dict ("pistons"), which the flattened text
+    # drops — and a brand-less brake (Juiced's "Talon 4-Piston" parses with no manufacturer)
+    # isn't yielded by iter_components. So scan the brake spec dicts directly.
+    _brake_prem = bool(_MULTI_PISTON.search(find_spec(flat, "brake")))
+    for _grp, _fields in (model.get("specs") or {}).items():
+        if _brake_prem:
+            break
+        if not isinstance(_fields, dict):
+            continue
+        for _v in _fields.values():
+            if (isinstance(_v, dict) and _v.get("_kind") == "brake"
+                    and (_PREM_BRAKE.search(_part_name(_v)) or (_v.get("pistons") or 0) >= 4)):
+                _brake_prem = True
+                break
+    if _brake_prem:
+        pts += mark("Premium brakes", 1.5)
+    # Drivetrain grade
+    gm = _PREM_GEARBOX.search(find_spec(flat, "drivetrain", "gear", "shift", "transmission", "cassette"))
+    if gm:
+        pts += mark(f"{gm.group(0).split()[0].title()} gearbox", 2.5)
+    elif dt == "elite":
+        pts += mark("Elite drivetrain", 2.5)
+    elif dt == "high":
+        pts += mark("High-end drivetrain", 1.5)
+    elif typed.get("drivetrain_type") == "belt":
+        pts += mark("Belt drive", 1.5)
+    elif typed.get("drivetrain_type") == "internal_gear":
+        pts += mark("Internally-geared", 1.5)
+    # Suspension
+    susp = typed.get("suspension") or ""
+    if any(c in ("fork", "shock", "rear_shock", "suspension") and _PREM_SUSP.search(_part_name(p))
+           for _k, c, p in comps):
+        pts += mark("Premium suspension", 1.5)
+    elif susp == "full":
+        pts += mark("Full suspension", 1)
+    elif "air" in susp:
+        pts += mark("Air suspension", 1)
+    # Cells / frame
+    cell = _PREM_CELL.get((typed.get("cell_brand") or "").lower())
+    if cell:
+        pts += mark(f"{cell} cells", 0.5)
+    if typed.get("frame_material") == "carbon":
+        pts += mark("Carbon frame", 1.5)
+    # Lightweight engineering (see LIGHTWEIGHT_* above): genuinely light in absolute terms
+    # while still carrying a real battery — premium achieved by removing weight, which the
+    # component markers above can't reward.
+    _wt = typed.get("weight_lb")
+    if _wt is not None and _wt <= LIGHTWEIGHT_MAX_LB and (typed.get("battery_wh") or 0) >= LIGHTWEIGHT_MIN_WH:
+        pts += mark("Lightweight build", LIGHTWEIGHT_POINTS)
+
+    tier = None
+    if rated:
+        for _name, _cut in BUILD_BANDS:
+            if pts >= _cut:
+                tier = _name
+                break
+    return {"tier": tier, "markers": markers, "rated": rated}
+
+
+def included_value(model: dict) -> float:
+    """Estimated retail worth of a bike's FREE included accessories (paid add-ons, price > 0,
+    don't count), summed by name keyword via ACCESSORY_WORTH."""
+    total = 0.0
+    for a in (model.get("included_accessories") or []):
+        if not isinstance(a, dict) or a.get("price"):
+            continue
+        name = (a.get("name") or "").lower()
+        total += next((v for kw, v in ACCESSORY_WORTH.items() if kw in name),
+                      ACCESSORY_WORTH_DEFAULT)
+    return total
+
+
+def feature_value(model: dict) -> float:
+    """Estimated value of a bike's detected INTEGRATED features (regen, GPS/anti-theft, app,
+    signalling) — credited toward value like accessories. Each FEATURE_WORTH category once."""
+    t = (model.get("analysis") or {}).get("specs_typed") or {}
+    blob = " ".join(str(x) for x in (t.get("notable_tech") or []) + (t.get("connectivity") or [])).lower()
+    return sum(worth for kws, worth in FEATURE_WORTH if any(k in blob for k in kws))
+
+
+def assign_value_meter(models: list) -> None:
+    """Set specs_typed.value_level (Exceptional/Great/Good/Fair, or None=Unrated) and
+    value_index on every bike. value_index = typical price of the bike's (type × build-tier)
+    peers ÷ its own price (>1 = cheaper than peers = better deal); banded by VALUE_BANDS.
+    A magnitude, not a rank, so near-equal deals share a band. Build tier must be assigned
+    first (Unrated bikes have tier None and get no meter)."""
+    import statistics
+
+    def _ctx(m):
+        t = (m.get("analysis") or {}).get("specs_typed") or {}
+        return t, m.get("price"), t.get("build_tier"), m.get("product_type") or "Commuter / Urban"
+
+    def _extras(m, price):                    # free accessories + integrated features, capped
+        return min(included_value(m) + feature_value(m), price * INCLUDED_VALUE_CAP_FRAC) if price else 0.0
+
+    # Score on the EFFECTIVE price (sticker − included-extras worth), peers and bike alike,
+    # so a bike only beats its group by including MORE than they do.
+    by_tier = defaultdict(list)
+    for m in models:
+        _t, price, tier, typ = _ctx(m)
+        if tier and price:
+            by_tier[(typ, tier)].append(price - _extras(m, price))
+    med_tier = {k: statistics.median(v) for k, v in by_tier.items() if len(v) >= VALUE_MIN_GROUP}
+
+    _levels = [name for name, _ in VALUE_BANDS]
+    for m in models:
+        t, price, tier, typ = _ctx(m)
+        typical = med_tier.get((typ, tier)) if tier and price else None
+        if not typical:                      # Unrated, no price, or too few same-tier peers
+            t["value_level"] = t["value_index"] = t["value_typical"] = None
+            t["value_extras"] = t["value_peers"] = t["value_next"] = None
+            continue
+        extras = _extras(m, price)
+        ratio = typical / (price - extras)
+        level = next((name for name, cut in VALUE_BANDS if ratio >= cut), "Good")
+        t["value_level"] = level
+        t["value_index"] = round(ratio, 3)
+        t["value_typical"] = round(typical)   # peer-group median effective price (the "why")
+        t["value_extras"] = round(extras)     # this bike's credited free-accessory worth
+        t["value_peers"] = len(by_tier[(typ, tier)])   # how many same-(type×tier) bikes
+        # the next-better band + the price this bike would need to reach it (detail "why")
+        i = _levels.index(level)
+        if i > 0:
+            nxt, nxt_cut = VALUE_BANDS[i - 1]
+            t["value_next"] = {"label": nxt, "price": round(typical / nxt_cut) + round(extras)}
+        else:
+            t["value_next"] = None
 
 
 def standout_features(typed: dict, model: dict) -> set:
@@ -1192,6 +1520,157 @@ def _avg_cost(entry: dict):
     return heuristic_retail(entry)[0]
 
 
+# "4 hours", "4.5 hr", "4-6 hours" (range -> take the high/full-charge end)
+_CHARGE_TIME_RE = re.compile(
+    r"(\d{1,2}(?:\.\d)?)\s*(?:[-–]|to)\s*(\d{1,2}(?:\.\d)?)\s*h(?:ou)?rs?\b"
+    r"|(\d{1,2}(?:\.\d)?)\s*h(?:ou)?rs?\b", re.I)
+
+
+def _stated_charge_time(specs) -> float | None:
+    """A charge time stated in the bike's specs (a 'Charging time' row or the charger
+    details). Returns the high end of any range (full charge), in hours."""
+    best = None
+    for k, v in flatten_grouped(specs).items():
+        s = str(v)
+        if "charg" not in f"{k} {s}".lower() or not re.search(r"h(?:ou)?rs?\b", s, re.I):
+            continue
+        for mt in _CHARGE_TIME_RE.finditer(s):
+            val = float(mt.group(2) or mt.group(3))
+            if 0.5 <= val <= 24:
+                best = val if best is None else max(best, val)
+    return best
+
+
+def _calc_charge_time(charger: dict, battery: dict | None) -> float | None:
+    """Estimate full-charge hours from the battery's amp-hours ÷ the charger's amps
+    (the constant-current phase). Uses the per-pack capacity (one charger, one pack);
+    falls back to capacity_wh ÷ nominal voltage for Ah."""
+    amps = charger.get("amps_a")
+    if not isinstance(amps, (int, float)) or amps <= 0:
+        return None
+    b = battery or {}
+    ah = b.get("amphours_ah")
+    if not isinstance(ah, (int, float)):
+        wh, v = b.get("capacity_wh"), (b.get("voltage_v") or 48)
+        if isinstance(wh, (int, float)) and v:
+            ah = wh / v
+    if not isinstance(ah, (int, float)) or ah <= 0:
+        return None
+    return round(ah / amps, 1)
+
+
+def _set_charge_time(model: dict) -> None:
+    """Set `charge_time_h` on the bike's charger component — the stated value if the
+    specs give one, else an estimate from the battery size and charger amps."""
+    charger = battery = None
+    for d in (model.get("specs") or {}).values():
+        if isinstance(d, dict):
+            for v in d.values():
+                if isinstance(v, dict):
+                    if v.get("_kind") == "charger" and charger is None:
+                        charger = v
+                    elif v.get("_kind") == "battery" and battery is None:
+                        battery = v
+    if charger is None:
+        return
+    t = _stated_charge_time(model.get("specs") or {})
+    if t is None:
+        t = _calc_charge_time(charger, battery)
+    if t is not None:
+        charger["charge_time_h"] = t
+
+
+def _drop_throttle_if_class1(model: dict, typed: dict) -> None:
+    """A Class-1-only e-bike is pedal-assist with NO throttle (the throttle is exactly
+    what makes a bike Class 2). So drop any throttle component from a class==[1] bike —
+    it's the differentiator between a Class 1 and Class 2 build (e.g. Ride1Up Portola)."""
+    if typed.get("classes") != [1]:
+        return
+    for d in (model.get("specs") or {}).values():
+        if isinstance(d, dict):
+            for k in [k for k, v in d.items() if isinstance(v, dict) and v.get("_kind") == "throttle"]:
+                del d[k]
+
+
+_BELT_TXT = re.compile(r"gates[\w\s\-/]{0,22}|carbon\s*belt(?:\s*drive)?|belt[\s-]?drive", re.I)
+
+
+def _ensure_belt_component(model: dict, typed: dict) -> None:
+    """Belt-driven bikes whose belt was never parsed as a transmission part get a
+    synthesized one, so the "Chain / Belt" row shows a Belt (and the value base counts
+    it as a part rather than via the typed fallback). No-op if a chain/belt part exists."""
+    if typed.get("drivetrain_type") != "belt":
+        return
+    specs = model.setdefault("specs", {})
+    for d in specs.values():
+        if isinstance(d, dict):
+            for v in d.values():
+                if isinstance(v, dict) and v.get("_kind") == "chain":
+                    return
+    blob = " ".join(str(x) for x in flatten_grouped(specs).values())
+    comp = {"_kind": "chain", "type": "belt"}
+    if re.search(r"\bgates\b", blob, re.I):
+        comp["manufacturer"] = "Gates"
+    dt = specs.setdefault("drivetrain", {})
+    existing = dt.get("belt")
+    if isinstance(existing, str) and existing.strip():
+        comp["details"] = existing.strip()
+    else:
+        mt = _BELT_TXT.search(blob)
+        comp["details"] = mt.group(0).strip().rstrip("-/ ") if mt else "Belt drive"
+    dt["belt"] = comp
+
+
+# Included free accessories add real value the buyer gets (fenders, rack, smart helmet,
+# …). Estimated street value per category, first match wins; one credit per category.
+_ACCESSORY_VALUE = [
+    (re.compile(r"smart\s*helmet", re.I), 150, "Smart Helmet"),
+    (re.compile(r"helmet", re.I), 60, "Helmet"),
+    (re.compile(r"\brack\b|carrier|levelup", re.I), 55, "Rack"),
+    (re.compile(r"fender|mudguard", re.I), 30, "Fenders"),
+    (re.compile(r"basket", re.I), 40, "Basket"),
+    (re.compile(r"pannier|\bbag\b", re.I), 45, "Bag"),
+    (re.compile(r"\block\b", re.I), 30, "Lock"),
+    (re.compile(r"phone|\bmount\b", re.I), 20, "Phone Mount"),
+    (re.compile(r"mirror", re.I), 15, "Mirror"),
+    (re.compile(r"\bpump\b", re.I), 20, "Pump"),
+    (re.compile(r"running board", re.I), 40, "Running Boards"),
+    (re.compile(r"turn signal", re.I), 25, "Turn Signals"),
+    (re.compile(r"horn|bell", re.I), 12, "Horn / Bell"),
+    (re.compile(r"kickstand", re.I), 18, "Kickstand"),
+    (re.compile(r"light|headlight|tail\s*light", re.I), 30, "Lights"),
+]
+
+
+# Frame value as a function of the bike's NON-frame component value, by material:
+# (multiplier × non-frame parts, floor, ceiling). Carbon frames are a larger share of a
+# build than aluminium; the floor/ceiling keep budget and ultra-premium bikes sane.
+# Ceilings keep the material ordering intact across bikes: a frame's worth rises steel <
+# chromoly ≤ aluminum < carbon, so an aluminum frame can NEVER out-value a carbon one
+# (aluminum's ceiling = carbon's floor = 500). Premium-component bikes scale UP within
+# their material's band, never past it.
+# Real drivetrain component makers — gates groupset-tier propagation so a mis-parsed junk
+# part (a frame washer in the derailleur slot) can't read or inherit the groupset price.
+_DT_MAKER = re.compile(r"sram|shimano|micro\s*shift|campagnolo|sensah|ltwoo|sunrace|\bkmc\b"
+                       r"|\bfsa\b|praxis|race\s*face|e[\*\.]?thirteen|\bbox\b|rotor|enviolo|pinion|rohloff",
+                       re.I)
+_FRAME_FROM_PARTS = {       # factors re-tuned 2026-06-26 for the now-complete tier proxy
+    "carbon":   (2.2, 500, 2600),
+    "chromoly": (0.9, 350, 500),
+    "aluminum": (0.7, 200, 500),   # unused since 2026-06-27 (aluminum is now flat — see below)
+    "steel":    (0.6, 180, 350),
+    "unknown":  (0.65, 200, 450),
+}
+# Aluminum is a commodity: a non-premium 6061 ebike frame's replacement cost is fairly
+# CONSISTENT (~$200-350 in the market), so it gets a FLAT baseline instead of scaling off
+# the build kit (which over-spread it $200-500 and pinned 27% at the ceiling). Full
+# suspension adds a FIXED amount for the swingarm/linkage/pivot bearings — that hardware
+# costs about the same regardless of frame material, and the rear shock is costed
+# separately — rather than a percentage. (carbon/chromoly/steel keep the build-kit scaling.)
+_ALU_FRAME_BASE = 280
+_FULL_SUSP_FRAME_ADD = 140
+
+
 def component_quality(model: dict, catalog_entries: dict, price, typed: dict) -> dict:
     """Join the component catalog back onto one bike. Reports part counts, the
     aftermarket RETAIL roll-up, and a COMPLETE component base = sum over the bike's
@@ -1201,14 +1680,29 @@ def component_quality(model: dict, catalog_entries: dict, price, typed: dict) ->
     missing brands. `value_ratio` = price / base (lower = more parts per dollar =
     better value); gated to bikes with the core systems costed. Retail-only — wholesale
     was dropped (too hard to estimate). Facts only — never blended."""
-    identified = priced = researched = retail_n = costed = 0
-    retail_total = base_total = 0.0
-    cats_costed = set()
-    # Every line that contributes to component_base_value_usd, so the UI can show ALL
-    # costs (parsed parts + the typed-spec system estimates) summing to the base — no
-    # invisible fallbacks. {kind, label, cost, method: researched|estimate|spec_estimate}.
-    base_breakdown = []
-    for key, cat, part in iter_components(model):
+    identified = 0
+    # Collect every parsed part first, THEN cap per category before summing — so a part
+    # that surfaces in several spec rows isn't double-counted: e.g. a Rohloff E14 parsed
+    # from both the shifter and its cable-housing row, or brake levers / cable-housing
+    # priced as extra full calipers next to the front+rear pair (Tern GSD R14). Legit
+    # multiplicity is kept: brakes & tires up to 2 (front+rear), motors up to 2 on AWD.
+    comps = list(iter_components(model))
+    # The bike's groupset tier = the best-identified drivetrain part. A premium build is a
+    # uniform groupset, but only one part may name it (Rail+: derailleur "X0 AXS", cassette
+    # bare "SRAM"). Propagate that tier to the bare-brand singles so they don't fall to the
+    # budget flat. Only propagate for high/elite groupsets (premium builds are uniform);
+    # budget/mid bikes are often genuinely mixed, so leave those parts at their own tier.
+    # Gate on a real drivetrain MAKER so a mis-parsed junk part ("Trek Frame Part Curved
+    # Washer" landing in the derailleur slot) can't read or inherit the groupset price.
+    _ORDER = {"budget": 0, "mid": 1, "high": 2, "elite": 3}
+    dt_tier = "budget"
+    for _key, _cat, _part in comps:
+        if _cat in _DT_PRICE and _DT_MAKER.search(_part.get("manufacturer") or ""):
+            t = _dt_tier(f"{_part.get('manufacturer') or ''} {_part.get('model') or ''}".lower())
+            if _ORDER[t] > _ORDER[dt_tier]:
+                dt_tier = t
+    parsed = []
+    for key, cat, part in comps:
         identified += 1
         e = catalog_entries.get(key) or {"category": cat, "attributes": part}
         am = e.get("aftermarket") or {}
@@ -1217,44 +1711,87 @@ def component_quality(model: dict, catalog_entries: dict, price, typed: dict) ->
         pc = part.get("pack_count") if cat == "battery" else None
         qty = pc if isinstance(pc, int) and pc > 1 else 1
         r = am.get("retail_usd")
-        if r is not None:
-            retail_n += 1
-            retail_total += r * qty
-            priced += 1
-        # the catalog now prices every part (researched or estimated); track how many
-        # are a real lookup vs an estimate so the actual-vs-estimate split stays visible.
-        if am.get("retail_method") == "researched":
-            researched += 1
         # complete per-part base: researched retail where known, else the heuristic
         rp = r if r is not None else heuristic_retail(e)[0]
-        if rp is not None:
-            base_total += rp * qty
-            costed += 1
-            cats_costed.add(cat)
-            label = " ".join(x for x in (part.get("manufacturer"), part.get("model")) if x) or cat
-            base_breakdown.append({
-                "kind": cat, "label": label + (f" ×{qty}" if qty > 1 else ""),
-                "cost": round(rp * qty, 2),
-                "method": "researched" if r is not None else "estimate"})
+        method = "researched" if r is not None else "estimate"
+        # Floor drivetrain/brake parts at their groupset-TIER estimate: a premium part
+        # (AXS/Di2/XTR/Dura-Ace, SRAM Maven) is routinely mis-priced low — a bogus cheap
+        # scrape match (Dura-Ace RD researched $27, Maven Ultimate $16) or the budget flat.
+        # Drivetrain singles also inherit the bike's groupset tier (so a bare-"SRAM" cog on
+        # an X0 AXS build isn't a $22 budget cassette). Correct highs (XTR Di2 $665) are
+        # kept; only the floored ones re-flag as an estimate.
+        if cat in ("derailleur", "cassette", "shifter", "crankset", "chain", "brakes"):
+            floor_p = heuristic_retail(e)[0] or 0
+            if (cat in _DT_PRICE and dt_tier in ("high", "elite")
+                    and _DT_MAKER.search(part.get("manufacturer") or "")):
+                floor_p = max(floor_p, _DT_PRICE[cat][dt_tier])
+            if floor_p and (rp is None or floor_p > rp):
+                rp, r, method = floor_p, None, "estimate"
+        if rp is None:
+            continue
+        label = " ".join(x for x in (part.get("manufacturer"), part.get("model")) if x) or cat
+        parsed.append({
+            "kind": cat, "label": label + (f" ×{qty}" if qty > 1 else ""),
+            "cost": round(rp * qty, 2),
+            "retail": (r * qty) if r is not None else None,
+            "method": method})
+
+    # Per-category cap: keep the N most expensive instances (paired brakes/tires -> 2,
+    # AWD motors -> 2, everything singular -> 1). Drops duplicate / sub-part lines.
+    def _cap(cat):
+        if cat in ("brakes", "tire"):
+            return 2
+        if cat == "motor":
+            return 2 if typed.get("awd") else 1
+        return 1
+    # "shock" and "rear_shock" are the same part (the bike's one rear shock, sometimes
+    # listed under both labels — e.g. Trek's "Fox Float X" + "Fox DHX2" rows); cap them
+    # together so it's costed once, keeping the dearer line.
+    by_cat: dict = {}
+    for p in parsed:
+        by_cat.setdefault("shock" if p["kind"] == "rear_shock" else p["kind"], []).append(p)
+    base_breakdown = []
+    for cat, items in by_cat.items():
+        items.sort(key=lambda x: -x["cost"])
+        base_breakdown.extend(items[:_cap(cat)])
+
+    priced = retail_n = sum(1 for p in base_breakdown if p["retail"] is not None)
+    researched = sum(1 for p in base_breakdown if p["method"] == "researched")
+    retail_total = sum(p["retail"] for p in base_breakdown if p["retail"] is not None)
+    base_total = sum(p["cost"] for p in base_breakdown)
+    costed = len(base_breakdown)
+    cats_costed = {p["kind"] for p in base_breakdown}
+    for p in base_breakdown:       # drop the internal helper key before emit
+        p.pop("retail", None)
     # Cost the big-ticket systems from typed specs when no branded part was parsed
     # (most generic batteries/motors carry no manufacturer -> absent from iter_components).
     if "battery" not in cats_costed and typed.get("battery_wh"):
-        # honor multi-pack systems (Monarc dual-battery): the bike ships with N packs,
-        # so it's worth N× a single pack — read pack_count off the parsed battery.
-        packs = 1
+        # Cost the TOTAL capacity the bike ships with — but read it off the parsed
+        # battery component's own fields, never by multiplying typed.battery_wh. On a
+        # multi-pack bike typed.battery_wh is unreliable: it may be the PER-PACK figure
+        # (Monarc: 720, ships 2) OR the already-COMBINED total (Wired: 2100), depending
+        # on which Wh the spec text stated first — so blindly ×pack_count double-counts
+        # the latter. total_capacity_wh is authoritative; else per-pack × pack_count.
+        total_wh = None
         for _fields in (model.get("specs") or {}).values():
             if isinstance(_fields, dict):
                 for _v in _fields.values():
                     if isinstance(_v, dict) and _v.get("_kind") == "battery":
+                        _tot, _cap = _v.get("total_capacity_wh"), _v.get("capacity_wh")
                         _pc = _v.get("pack_count")
-                        if isinstance(_pc, int) and _pc > 1:
-                            packs = max(packs, _pc)
+                        cand = (_tot if isinstance(_tot, (int, float)) else
+                                _cap * _pc if isinstance(_cap, (int, float))
+                                            and isinstance(_pc, int) and _pc > 1 else
+                                _cap if isinstance(_cap, (int, float)) else None)
+                        if cand:
+                            total_wh = max(total_wh or 0, cand)
+        total_wh = total_wh or typed["battery_wh"]
         b, note = heuristic_retail({"category": "battery",
-                       "attributes": {"capacity_wh": typed["battery_wh"] * packs,
+                       "attributes": {"capacity_wh": total_wh,
                                       "cell_brand": typed.get("cell_brand")}})
         if b:
             base_total += b; costed += 1; cats_costed.add("battery")
-            base_breakdown.append({"kind": "battery", "label": note or f"{typed['battery_wh']*packs} Wh battery",
+            base_breakdown.append({"kind": "battery", "label": note or f"{total_wh} Wh battery",
                                    "cost": b, "method": "spec_estimate"})
     if "motor" not in cats_costed and typed.get("motor_w"):
         place = "mid" if typed.get("drive_type") == "mid" else "hub"
@@ -1265,25 +1802,137 @@ def component_quality(model: dict, catalog_entries: dict, price, typed: dict) ->
             base_total += b; costed += 1; cats_costed.add("motor")
             base_breakdown.append({"kind": "motor", "label": note or f"{typed['motor_w']}W {place} motor",
                                    "cost": b, "method": "spec_estimate"})
-    # The frameset is never parsed as a branded part, so its (large, material-driven)
-    # cost was previously missing from the base -- inflating value_ratio for carbon
-    # bikes. Cost it from the typed frame material + suspension (full-suspension frames
-    # carry a premium; unknown material defaults to aluminium).
+    # House-brand brakes & tires carry no manufacturer, so iter_components skips them and the
+    # build kit (which scales the frame) under-counts on budget bikes — the Lectric XPress2
+    # parses only fork + chain even though it ships 602 hydraulic brakes and slick tires.
+    # Cost them from the spec when no branded part was counted, BEFORE the frame so the build
+    # kit reflects them.
+    _flat = flatten_grouped(model.get("specs") or {})
+
+    def _fill(kind, cost, label):
+        nonlocal base_total, costed
+        base_total += cost; costed += 1; cats_costed.add(kind)
+        base_breakdown.append({"kind": kind, "label": label, "cost": round(cost),
+                               "method": "spec_estimate"})
+
+    # === Complete the CORE component set for EVERY bike ===========================
+    # House-brand / unlisted parts don't parse (iter_components is manufacturer-only), so
+    # budget bikes' bases were badly under-counted (Lectric XPress2: only fork+chain). Every
+    # eBike has these core parts — estimate any that weren't parsed so bases are comparable.
+    #
+    # TIER-INDICATING parts first (brakes, tires, fork, drivetrain): their cost varies with
+    # build quality, so they + any branded parts form the FRAME proxy below. cost_* return a
+    # spec-driven estimate, with a conservative default when the bike lists no such spec.
+    if "brakes" not in cats_costed:
+        c, note = cost_brakes(_flat); _fill("brakes", c or 60, note or "disc brakes (est.)")
+    if "tire" not in cats_costed:
+        c, note = cost_tires(_flat); _fill("tire", c or 55, note or "tires (est.)")
+    if not ({"fork", "shock"} & cats_costed):
+        c, note = cost_fork(_flat); _fill("fork", c or 45, note or "rigid fork")
+    # A full-suspension bike also has a REAR SHOCK. When it wasn't costed (a house-brand /
+    # unbranded shock that iter_components skips, or one bundled into the fork's spec row),
+    # estimate it so the breakdown lists fork AND shock separately rather than folding the
+    # rear shock's value into the fork line.
+    if not ({"shock", "rear_shock"} & cats_costed) and typed.get("suspension") == "full":
+        c, note = cost_shock(_flat); _fill("shock", c or 150, note or "rear shock")
+    _DT = {"chain", "derailleur", "cassette", "crankset", "chainring", "belt", "bottom_bracket"}
+    # A belt-drive bike's drive belt (Gates etc.) is worth ~$90 — far more than a $14 chain.
+    # Ensure it's reflected: most belts parse as a "chain" that heuristic_retail already
+    # prices as a belt, but some parse as a generic cheap chain (Trek Fetch+ 2 = $14) or
+    # don't parse at all. Floor the chain/belt cost at the belt value via a top-up. An
+    # Enviolo/NuVinci CVT hub (drive_type "internal_gear") is essentially always belt-driven
+    # (EVELO Galaxy Lux lists only the CVT, never the belt), so count its belt too.
+    _belt_driven = typed.get("drivetrain_type") == "belt" or (
+        typed.get("drivetrain_type") == "internal_gear"
+        and re.search(r"enviolo|nuvinci", find_spec(
+            _flat, "gearing", "shift", "drivetrain", "transmission", "derailleur"), re.I))
+    if _belt_driven:
+        best = max((b["cost"] for b in base_breakdown if b["kind"] in ("chain", "belt")),
+                   default=0)
+        if best < 90:
+            _fill("belt", 90 - best, "carbon drive belt" + (" (top-up)" if best else ""))
+    dt_costed = sum(b["cost"] for b in base_breakdown if b["kind"] in _DT)
+    dt_est, dt_note = cost_drivetrain(_flat)
+    dt_target = dt_est or 75
+    if dt_costed < dt_target:   # fill an absent drivetrain, or top a chain-only bike up to the groupset
+        _fill("drivetrain", dt_target - dt_costed,
+              (dt_note or "drivetrain") + (" (top-up)" if dt_costed else " (est.)"))
+
+    # FRAME: scale off the tier-indicating build kit (everything costed so far except battery
+    # & motor — those are Wh/W-priced and would let a big cheap battery inflate the frame).
+    # Computed BEFORE the uniform flat-fills below so those don't dilute the tier signal.
     if "frame" not in cats_costed:
-        mat = typed.get("frame_material")
-        # quality steel (chromoly/4130/Reynolds/Columbus) costs MORE than aluminium,
-        # unlike the cheap hi-tensile/Q235 steel that the "steel" tier prices below it;
-        # split it out for costing only (the displayed frame_material stays "steel").
+        mat = typed.get("frame_material") or "aluminum"   # most unlisted ebike frames are aluminium
         if mat == "steel" and re.search(r"chrom|cro-?mo|\b4130\b|reynolds|columbus",
-                                        find_spec(flatten_grouped(model.get("specs") or {}), "frame"), re.I):
+                                        find_spec(_flat, "frame"), re.I):
             mat = "chromoly"
-        b, note = heuristic_retail({"category": "frame",
-                       "attributes": {"material": mat,
-                                      "full_suspension": typed.get("suspension") == "full"}})
-        if b:
-            base_total += b; costed += 1; cats_costed.add("frame")
-            base_breakdown.append({"kind": "frame", "label": note, "cost": b,
-                                   "method": "spec_estimate"})
+        full = typed.get("suspension") == "full"
+        if mat == "aluminum":
+            # flat baseline + fixed full-suspension add (not scaled off the build kit)
+            fv = _ALU_FRAME_BASE + (_FULL_SUSP_FRAME_ADD if full else 0)
+            note = "aluminum frameset" + (" (full-suspension)" if full else "")
+        else:
+            factor, floor, ceil = _FRAME_FROM_PARTS.get(mat, _FRAME_FROM_PARTS["unknown"])
+            build_kit = sum(b["cost"] for b in base_breakdown if b["kind"] not in ("battery", "motor"))
+            fv = build_kit * factor
+            if full and mat == "carbon":
+                fv *= 1.4
+            fv = max(floor, min(fv, ceil))
+            note = f"{mat if mat != 'unknown' else 'unlisted'} frameset (scaled to build kit)"
+        if price:                       # a frame is never worth more than half the whole bike
+            fv = min(fv, price * 0.5)
+        _fill("frame", round(fv), note)
+
+    # COMPLETENESS flat-fills: parts every bike has whose value barely varies by tier, so a
+    # uniform conservative OEM flat is used. These complete the BASE but are excluded from the
+    # frame proxy above (added after it). Branded versions, when parsed, already counted.
+    if not ({"wheel", "rims", "rim", "hub", "spokes", "tubes"} & cats_costed):
+        _fill("wheel", 90, "wheelset (est.)")
+    for _k, _v, _lbl in (("saddle", 30, "saddle"), ("seatpost", 45, "seatpost"),
+                         ("handlebars", 30, "handlebar"), ("stem", 25, "stem"),
+                         ("grips", 18, "grips")):
+        if _k not in cats_costed:
+            _fill(_k, _v, _lbl + " (est.)")
+    if "controller" not in cats_costed:
+        _fill("controller", 45, "controller (est.)")
+    if "display" not in cats_costed:
+        c, note = cost_display(_flat); _fill("display", c or 28, (note or "display") + " (est.)")
+    if "sensor" not in cats_costed:
+        _fill("sensor", 35, "pedal-assist sensor (est.)")
+    if "pedals" not in cats_costed:
+        _fill("pedals", 20, "pedals (est.)")
+    # residual big-ticket: bikes that listed no Wh / W to estimate from (rare) still get a
+    # conservative generic so the core is complete.
+    if "battery" not in cats_costed:
+        _fill("battery", 250, "battery (generic est.)")
+    if "motor" not in cats_costed:
+        _fill("motor", 120, "hub motor (generic est.)")
+    # Credit the INCLUDED free accessories (fenders, rack, smart helmet, …) — real value the
+    # base otherwise ignores. Use the accessory's STATED price when the source gives one
+    # (e.g. a $149 included rack), else a conservative per-category estimate. One credit per
+    # category (or per distinct named item when it carries its own price); skip "Lights" when
+    # a branded light part is already costed (avoid double-counting that system).
+    acc_seen: set = set()
+    for a in (model.get("included_accessories") or []):
+        name = a.get("name") or ""
+        pr = a.get("price")
+        priced = pr if isinstance(pr, (int, float)) and pr > 0 else None
+        match = next(((val, label) for pat, val, label in _ACCESSORY_VALUE if pat.search(name)), None)
+        label = match[1] if match else None
+        if label == "Lights" and "light" in cats_costed:
+            continue
+        key = label or name.strip().lower()      # dedup by category, or by name for priced extras
+        if not key or key in acc_seen:
+            continue
+        cost = priced if priced is not None else (match[0] if match else None)
+        if not cost:                             # no stated price and no category estimate -> skip
+            continue
+        cost = min(cost, 250)                     # sanity cap a single accessory
+        acc_seen.add(key)
+        base_total += cost; costed += 1; cats_costed.add("accessory")
+        base_breakdown.append({"kind": "accessory",
+                               "label": f"{label or name.strip()} (incl.)", "cost": round(cost),
+                               "method": "researched" if priced is not None else "spec_estimate"})
     base = round(base_total, 2) if costed else None
     value_ratio = None
     if (price and base and costed >= _VALUE_MIN_PARTS
@@ -1323,22 +1972,34 @@ def uncommon_features(typed: dict, blob: str) -> list:
     if "CANbus system" in nt:         out.append("CANbus System")
     # premium drivetrain
     if "electronic shifting" in nt:   out.append("Electronic Shifting")
-    if "internal gear hub" in nt:     out.append("Internal Gear Hub")
+    # NB: a plain internal gear hub is common, not a standout — only the premium sealed
+    # gearboxes (Pinion/Rohloff) below are surfaced.
     if "belt drive" in nt:            out.append("Belt Drive")
     if re.search(r"pinion|rohloff", blob): out.append("Gearbox (Pinion/Rohloff)")
     if "high-end drivetrain" in nt:   out.append("High-End Drivetrain")
     # premium ride kit
+    if typed.get("awd"):              out.append("Dual Motor")
     if (typed.get("frame_material") or "").lower() == "carbon": out.append("Carbon Frame")
     if "dropper post" in nt:          out.append("Dropper Post")
     if "dual-battery" in nt:          out.append("Dual Battery")
+    if "quiet motor" in nt:           out.append("Quiet Motor")
     if "regen braking" in nt:         out.append("Regen Braking")
     if "ABS" in nt:                   out.append("ABS")
     if "4-piston brakes" in nt:       out.append("4-Piston Brakes")
+    # safety/alert — an (electric) horn or a bell, from specs or included accessories.
+    # \bbell\b needs a word boundary, so "Decibell" (a bell brand) won't false-match here.
+    if re.search(r"\bhorn\b|\bbell\b", blob): out.append("Horn / Bell")
     return out
 
 
 # ---- All-Terrain: heavy, big-battery, capable adventure bikes (vs eMTB) -------------
-_AT_EXEMPT = {"eMoto", "Cargo", "Trike", "Mountain (eMTB)", "All-Terrain"}
+_AT_EXEMPT = {"eMoto", "Cargo", "Trike", "Mountain (eMTB)", "Cruiser", "All-Terrain"}
+
+# All-Terrain structural promotion thresholds: a big-tire bike (fat-classified, or a measured
+# 2.8–4" tire) with a HEAVY package and a LARGE battery is "an eMTB with fat tires" — not a
+# plain Fat Tire / light folder / commuter. Tune here; >4" extreme fat stays Fat Tire.
+AT_MIN_WEIGHT = 55      # lb
+AT_MIN_BATTERY = 700    # Wh
 
 
 def _max_tire_in(model: dict):
@@ -1358,41 +2019,34 @@ def _pctile(xs: list, q: int):
 
 
 def promote_all_terrain(models: list, typed_by_id: dict) -> list:
-    """Reclassify non-eMTB bikes to All-Terrain when they're heavier + longer-range than an
-    eMTB and capable (wide tires / extra power / full suspension). Thresholds are eMTB-
-    relative (battery ≥ P85, weight ≥ P90). Keyword All-Terrain already won via taxonomy.
-    Returns the borderline list (close but not firm) for review. Run before cohorts."""
-    bat_min = _pctile([typed_by_id[m["id"]].get("battery_wh") for m in models
-                       if m.get("product_type") == "Mountain (eMTB)"], 85)
-    wt_p90 = _pctile([typed_by_id[m["id"]].get("weight_lb") for m in models
-                      if m.get("product_type") == "Mountain (eMTB)"], 90)
-    wt_p85 = _pctile([typed_by_id[m["id"]].get("weight_lb") for m in models
-                      if m.get("product_type") == "Mountain (eMTB)"], 85)
+    """Reclassify a big-tire bike (Fat-Tire classified, or a measured 2.8–4" tire) to
+    All-Terrain when it's heavy (≥ AT_MIN_WEIGHT) AND has a large battery (≥ AT_MIN_BATTERY)
+    — the heavy, big-battery adventure package ("an eMTB with fat tires"). Light/small-battery
+    fat folders stay Fat Tire; exempt types (eMTB/Cargo/Cruiser/eMoto/Trike) keep their
+    identity; keyword All-Terrain already won. Returns the borderline list. Run before cohorts."""
     border = []
-    if not (bat_min and wt_p90):
-        return border
     for m in models:
         if m.get("product_type") in _AT_EXEMPT:
             continue
         t = typed_by_id[m["id"]]
         tire = _max_tire_in(m)
-        if tire is not None and tire > 4:               # >4" stays Fat Tire
+        if tire is not None and tire > 4:               # >4" extreme fat stays Fat Tire
             continue
-        if (t.get("battery_wh") or 0) < bat_min:        # gate: big battery (≥ eMTB P85)
+        # "big tires": fat-tire classification (tire width often isn't parsed) OR a measured
+        # 2.8–4" tire. The All-Terrain bike is one of these with a heavy, big-battery package.
+        big_tire = ("Fat Tire" in (m.get("product_types") or [])
+                    or (tire is not None and 2.8 <= tire <= 4.0))
+        if not big_tire:
             continue
-        signals = sum([
-            (t.get("motor_peak_w") or 0) >= 1000 or (t.get("motor_w") or 0) >= 1000,  # extra power
-            tire is not None and 2.8 <= tire <= 4.0,                                  # wide (vs eMTB)
-            t.get("suspension") == "full",                                            # full suspension
-        ])
-        heavy = (t.get("weight_lb") or 0) >= wt_p90
-        if heavy and signals >= 1:
+        wt, bat = t.get("weight_lb") or 0, t.get("battery_wh") or 0
+        if wt >= AT_MIN_WEIGHT and bat >= AT_MIN_BATTERY:
             m["product_type"] = "All-Terrain"
-            m["product_types"] = ["All-Terrain"]
-        elif ((t.get("weight_lb") or 0) >= (wt_p85 or wt_p90)) or signals >= 1:
+            m["product_types"] = ["All-Terrain"] + [x for x in (m.get("product_types") or [])
+                                                    if x != "All-Terrain"]
+        elif wt >= AT_MIN_WEIGHT - 5 and bat >= AT_MIN_BATTERY - 100:   # close but short
             border.append({"id": m["id"], "brand": m["brand"], "model": m["model"],
-                           "current_type": m["product_type"], "battery_wh": t.get("battery_wh"),
-                           "weight_lb": t.get("weight_lb"), "tire_in": tire, "signals": signals})
+                           "current_type": m["product_type"], "battery_wh": bat,
+                           "weight_lb": wt, "tire_in": tire})
     return border
 
 
@@ -1444,6 +2098,9 @@ def main():
     cq_by_id = {}
     for m in models:
         t = extract_typed_specs(m)
+        _set_charge_time(m)   # charger.charge_time_h: stated value, else battery-size estimate
+        _ensure_belt_component(m, t)   # belt-driven bikes get a Belt part if none was parsed
+        _drop_throttle_if_class1(m, t)  # Class-1-only bikes have no throttle
         # frame_sizes is always a non-empty array (single-size = collection of one)
         m["frame_sizes"] = _ensure_frame_sizes(m, t)
         m["frame_size_count"] = len(m["frame_sizes"])
@@ -1544,6 +2201,9 @@ def main():
         prev = cohort_prev[typ]
         feature_notable = sorted((fl for fl in my_flags if prev.get(fl, 1) < 0.5),
                                  key=lambda fl: prev.get(fl, 1))[:4]
+        _bg = build_grade(m, t)
+        t["build_tier"] = _bg["tier"]            # in specs_typed so it filters/sorts/searches
+        t["build_markers"] = _bg["markers"]
         m["analysis"] = {
             "specs_typed": t,
             "percentiles": pct,
@@ -1559,6 +2219,9 @@ def main():
                              *(a.get("name", "") for a in (m.get("included_accessories") or []))]).lower()),
             "component_quality": cq_by_id[m["id"]],
         }
+
+    # Value meter: needs every bike's build tier + price first, so it runs after Pass 2.
+    assign_value_meter(models)
 
     doc["analysis_stats"] = stats
     doc["analysis_stats_by_type"] = stats_by_type

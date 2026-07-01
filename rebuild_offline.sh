@@ -10,20 +10,43 @@
 # Promotes the result to web/public/ only if validate_build.py passes, so a known
 # good build isn't replaced by a broken one.
 #
-# Usage:  ./rebuild_offline.sh
+# Usage:  ./rebuild_offline.sh [--refresh-prices [scrape-args...]]
+#
+#   --refresh-prices   Before folding prices, run the component-price network refresh
+#                      (resolve_component_prices.py scrape). Any args after it are
+#                      forwarded to that subcommand (e.g. --date MM/DD/YYYY, --all,
+#                      --categories ..., --limit N). Without this flag the rebuild is
+#                      fully offline / cache-only (no network) — the default.
 set -uo pipefail
 PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$PROJECT_DIR"
 PY="$PROJECT_DIR/.venv/bin/python"
 [ -x "$PY" ] || PY=python3
 
+# Parse: --refresh-prices toggles the price network step; everything else is forwarded
+# to `resolve_component_prices.py scrape`.
+REFRESH_PRICES=0
+SCRAPE_ARGS=()
+while [ $# -gt 0 ]; do
+    case "$1" in
+        --refresh-prices) REFRESH_PRICES=1 ;;
+        *) SCRAPE_ARGS+=("$1") ;;
+    esac
+    shift
+done
+
 run() { echo "--- $(date -Is) : $1"; "$PY" "$PROJECT_DIR/$1" "${@:2}"; }
 
 run normalize.py
 run component_catalog.py
-# Offline: fold the catalog's component retail prices (researched or brand/spec
-# estimate) into the freshly rebuilt catalog so analyze.py's value roll-up picks them
-# up. No network — the price refresh (resolve_component_prices.py run) is run_scrape.sh.
+# Optional NETWORK price refresh: scrape Worldwide Cyclery for due parts (unresolved
+# always; researched re-checked per the forwarded --date/--all). Runs here so it sees the
+# freshly rebuilt catalog's in-use parts. Skipped by default (offline / cache-only).
+if [ "$REFRESH_PRICES" = 1 ]; then
+    run resolve_component_prices.py scrape "${SCRAPE_ARGS[@]}"
+fi
+# Fold the catalog's component retail prices (researched or brand/spec estimate) into the
+# freshly rebuilt catalog so analyze.py's value roll-up picks them up. No network.
 run resolve_component_prices.py write-catalog
 run analyze.py
 run audit.py

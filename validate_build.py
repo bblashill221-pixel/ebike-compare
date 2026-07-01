@@ -22,6 +22,8 @@ import glob
 import json
 from pathlib import Path
 
+from normalize import EXCLUDE_BRANDS  # intentionally-dropped brands (single source of truth)
+
 DATA = Path(__file__).parent / "data"
 ACTIVE = DATA / "current" / "active" / "ebike.json"
 
@@ -96,6 +98,8 @@ def validate(cur: list, base: list) -> list[str]:
                         f"(> {int(MAX_COUNT_DROP * 100)}%)")
     cb, bb = _by_brand(cur), _by_brand(base)
     for brand, cnt in sorted(bb.items()):
+        if brand in EXCLUDE_BRANDS:            # intentionally dropped — not a data-loss bug
+            continue
         if cnt > 0 and cb.get(brand, 0) == 0:
             problems.append(f"brand '{brand}' went {cnt} -> 0 models")
     cc, bc = _coverage(cur), _coverage(base)

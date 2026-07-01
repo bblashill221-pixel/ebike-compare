@@ -14,7 +14,7 @@ import re
 from datetime import datetime, timezone
 from pathlib import Path
 
-from bike_taxonomy import classify_product_types, frame_style_of, pick_frame_style, primary_type, STEP_OVER
+from bike_taxonomy import classify_product_types, frame_style_of, pick_frame_style, primary_type, STEP_OVER, STEP_THRU
 
 # Curated frame-style verdicts (image-inferred) for bikes that don't state one,
 # keyed by "<brand>__<source_id>". Applied only as a fallback in _frame_style.
@@ -251,9 +251,9 @@ def _style_bucket(s: str) -> str | None:
     """Coarse frame-style bucket for matching a rider-height dict key to a model's
     frame style. Ride1Up codes its frame tabs ST (step-thru) / XR (high-step)."""
     s = (s or "").strip().lower()
-    if s == "st" or "thru" in s:
+    if s == "st" or "thru" in s or "mid-step" in s or "mid step" in s:  # mid-step -> thru bucket
         return "thru"
-    if s in ("xr", "hs") or "over" in s or "high" in s or "mid-step" in s or "diamond" in s:
+    if s in ("xr", "hs") or "over" in s or "high" in s or "diamond" in s:
         return "over"
     return None
 
@@ -737,6 +737,124 @@ _WH_VAH = re.compile(r"(\d+(?:\.\d+)?)\s*wh\s*\(\s*(\d+(?:\.\d+)?)\s*v\s*[,\s]*"
                      r"(\d+(?:\.\d+)?)\s*ah", re.I)
 
 
+# Detail-driven backfill of predefined component fields, run AFTER group_specs so it
+# applies uniformly whether a component was freshly parsed or arrived pre-parsed from the
+# scrape. Only fills a field when it's empty — never overwrites the primary parse.
+_BELT_RE = re.compile(r"gates|carbon\s*drive|\bcd[xn]\b|center\s?track|\bbelt\b", re.I)
+_THRU_AXLE_RE = re.compile(r"thru[\s-]?axle|\b(?:12|15|20)\s*[x×]\s*\d{2,3}\b|\bboost\b", re.I)
+
+
+# Some brands' geometry tables prefix every VALUE with the column header / model name
+# (Ride1Up Portola: "Portola: 59lbs", "Portola: 38.2in"). Strip a leading "<label>: "
+# when a measurement (a digit) follows, so the value is just the figure.
+_GEO_LABEL_PREFIX = re.compile(r"^[A-Za-z][A-Za-z .&'/+-]{0,30}:\s*")
+
+
+def _strip_geo_label_prefix(geo: dict) -> None:
+    def fix(s):
+        m = _GEO_LABEL_PREFIX.match(s)
+        return s[m.end():].strip() if m and re.search(r"\d", s[m.end():]) else s
+    for k, v in list((geo or {}).items()):
+        if isinstance(v, str):
+            geo[k] = fix(v)
+        elif isinstance(v, dict):
+            for kk, vv in list(v.items()):
+                if isinstance(vv, str):
+                    v[kk] = fix(vv)
+
+
+def _backfill_component_fields(grouped: dict) -> None:
+    for group in (grouped or {}).values():
+        if not isinstance(group, dict):
+            continue
+        for c in group.values():
+            if not isinstance(c, dict) or not c.get("_kind"):
+                continue
+            kind = c["_kind"]
+            txt = " ".join(str(c.get(k) or "") for k in ("manufacturer", "model", "details"))
+            # the drive can be a roller chain OR a (carbon) belt — record which.
+            if kind == "chain" and not c.get("type"):
+                c["type"] = "belt" if _BELT_RE.search(txt) else "chain"
+            # a fork stating a thru-axle dimension (12x148, 15x110, Boost) IS a thru-axle.
+            elif kind == "fork" and c.get("thru_axle") is not True and _THRU_AXLE_RE.search(txt):
+                c["thru_axle"] = True
+
+
+# Heybike's Mars 2.0 family states the motor PER VERSION — either only in the tier label
+# ("750W (Peak 1400W)" / "1000W (Peak 1800W)") or in one multi-version "Hub rear" row
+# ("750W Version: 80Nm torque, … 1400W (peak) 1000W Version: 100Nm torque, … 1800W
+# (peak)") — and never as a plain Motor row, so nominal/peak/torque don't parse for the
+# right variant. Using the tier's nominal, pull THIS variant's block out of the
+# multi-version row (keeping its torque) and emit one clean Motor row; if there's no such
+# row, synthesize from the tier label. Gated to heybike (hub — its mid-drives, e.g. the
+# Alpha, already carry their own Motor row and never reach here).
+_TIER_MOTOR_RE = re.compile(r"(\d{3,4})\s*W\s*\(\s*Peak\s*(\d{3,4})\s*W\s*\)", re.I)
+_VER_MOTOR_KEY = re.compile(r"\d{3,4}\s*W\s*Version\s*:", re.I)
+
+
+def _synth_motor_from_tier(rows: dict, tier, brand: str | None) -> None:
+    if brand != "heybike" or any(k.lower() == "motor" for k in rows):
+        return
+    ver_key = next((k for k, v in rows.items()
+                    if isinstance(v, str) and _VER_MOTOR_KEY.search(v)), None)
+    mt = _TIER_MOTOR_RE.search(str(tier or ""))
+    if ver_key:
+        # choose this variant's nominal from the tier label, else the LOWEST version
+        # (the untiered base card defaults to its cheapest motor option)
+        if mt:
+            nominal = mt.group(1)
+        else:
+            ws = sorted(int(w) for w in re.findall(r"(\d{3,4})\s*W\s*Version", rows[ver_key], re.I))
+            nominal = str(ws[0]) if ws else None
+        blk = (re.search(rf"{nominal}\s*W\s*Version\s*:(.*?)(?={_VER_MOTOR_KEY.pattern}|$)",
+                         rows[ver_key], re.I | re.S) if nominal else None)
+        del rows[ver_key]
+        if blk:
+            b = blk.group(1)
+            pk = re.search(r"(\d{3,4})\s*W\s*\(\s*peak", b, re.I)
+            tq = re.search(r"(\d{2,3})\s*N", b)
+            rows["Motor"] = (f"{nominal}W Hub Motor"
+                             + (f" (Peak {pk.group(1)}W)" if pk else "")
+                             + (f", {tq.group(1)}Nm torque" if tq else ""))
+    elif mt:   # no multi-version row, motor stated only in the tier label
+        rows["Motor"] = f"{mt.group(1)}W Hub Motor (Peak {mt.group(2)}W)"
+
+
+# A bike sold in Single- vs Dual-battery TIERS (Blix Packa Genie) lists the dual capacity
+# in ONE Battery row ("672Wh (48V) 1st battery, front 672Wh (48V) 2nd battery, rear"), so
+# the SINGLE tier wrongly parses as dual (pack_count 2, 1344Wh). When the tier ships one
+# pack, trim the row to the first battery's capacity so it parses as a single 672Wh pack.
+_BATT_DUAL_DESC = re.compile(r"2nd\s+battery|second\s+battery|\bdual\b|\+\s*\d{3,4}\s*wh", re.I)
+_BATT_FIRST_CAP = re.compile(r"\s*(\d{3,4}(?:\.\d+)?\s*wh(?:\s*\(\s*\d+\s*v\s*\))?)", re.I)
+
+
+def _resolve_single_battery_tier(rows: dict, tier) -> None:
+    if not tier or "single" not in str(tier).lower():
+        return
+    bk = next((k for k in rows if k.lower() == "battery"), None)
+    if not bk or not isinstance(rows[bk], str) or not _BATT_DUAL_DESC.search(rows[bk]):
+        return
+    m = _BATT_FIRST_CAP.match(rows[bk])
+    if m:
+        rows[bk] = m.group(1)
+
+
+def _resolve_belt_tier(rows: dict, tier) -> None:
+    """The "belt" drivetrain VARIANT (Ride1Up Roadster V3) inherits the geared variants'
+    scraped chain spec ("9-speed chain" + a derailleur), so it reads as a derailleur bike
+    and the belt is never detected or valued. When the tier IS the belt option, drop the
+    derailleur and swap the drivetrain for a (single-speed) Gates belt."""
+    if not tier or not re.fullmatch(r"\s*belt(?:\s*drive)?\s*", str(tier), re.I):
+        return
+    # a single-speed belt has no derailleur/shifter/cassette and no multi-speed chain — drop
+    # all of those geared rows, then add ONE clean belt drivetrain row.
+    drop = ("derailleur", "shifter", "cassette", "freewheel", "drivetrain",
+            "gearing", "transmission")
+    for k in [k for k in rows if any(t in k.lower() for t in drop)]:
+        del rows[k]
+    rows["Drivetrain"] = "Gates belt drive, single-speed"
+
+
 def _consolidate_battery_versions(rows: dict, tier, name: str = "") -> None:
     """Collapse redundant per-version battery rows into one canonical "Battery" row
     for THIS battery tier's pack, so a clean battery component is parsed and the
@@ -782,12 +900,16 @@ def normalize_model(brand: str, m: dict) -> dict:
     options = m.get("options") or {}
     raw_specs = m.get("specs") or {}
     colors = _resolve_colors(options.get("colors") or [], configs)
-    # text-derived style wins; else a curated image-inferred override (for bikes
-    # the vendor never labels); else the conventional Step-Over default (every
-    # ebike is step-thru or step-over). Override keyed by brand+source_id.
-    frame_style = (_frame_style(m, name, raw_specs)
-                   or FRAME_OVERRIDES.get(f"{brand}__{source_id}")
+    # A curated image-inferred override is AUTHORITATIVE (a human verified the photo, so it
+    # wins over a scraped/baked or text-derived style); else the text-derived style; else the
+    # conventional Step-Over default (every ebike is step-thru or step-over). Keyed brand+source_id.
+    frame_style = (FRAME_OVERRIDES.get(f"{brand}__{source_id}")
+                   or _frame_style(m, name, raw_specs)
                    or STEP_OVER)
+    if frame_style in ("Step-Over (Mid-Step)",):   # collapse legacy labels baked in old data
+        frame_style = STEP_OVER
+    elif frame_style in ("Step-Thru (Mid-Step)", "Step-Thru"):  # legacy/override -> canonical
+        frame_style = STEP_THRU
     variant_options = {k: v for k, v in options.items() if k != "colors"}
     brand_extra = {k: v for k, v in m.items() if k not in _MAPPED}
     if m.get("configs"):
@@ -796,8 +918,13 @@ def normalize_model(brand: str, m: dict) -> dict:
     # from each scraper's verbatim flat `specs.all`. Geometry becomes one of the
     # groups (`specs.geometry`) — not a separate top-level field.
     _consolidate_battery_versions(raw_specs.get("all") or {}, m.get("tier"), name)
+    _resolve_single_battery_tier(raw_specs.get("all") or {}, m.get("tier"))
+    _resolve_belt_tier(raw_specs.get("all") or {}, m.get("tier"))
     _awd_motor_rows(raw_specs.get("all") or {}, name)
+    _synth_motor_from_tier(raw_specs.get("all") or {}, m.get("tier"), brand)
+    _strip_geo_label_prefix(m.get("geometry") or {})
     grouped = group_specs(raw_specs.get("all") or {}, m.get("geometry") or {}, brand)
+    _backfill_component_fields(grouped)
     _collapse_rider_height(grouped, frame_style)
     _collapse_geometry_by_frame(grouped, frame_style)
     product_types = _product_types(m, name, raw_specs)
@@ -857,12 +984,19 @@ def normalize_model(brand: str, m: dict) -> dict:
     })
 
 
+# Brands intentionally excluded from the catalog (their scraped file may still exist, but
+# their models are dropped from the combined output). Lowercase brand keys.
+EXCLUDE_BRANDS = {"vivi"}
+
+
 def main():
     models, brands = [], []
     for f in sorted(glob.glob(str(DATA / "current" / "*_ebikes.json"))):
         if f.endswith("_normalized.json"):
             continue
         brand = Path(f).stem.replace("_ebikes", "")
+        if brand.lower() in EXCLUDE_BRANDS:
+            continue
         d = json.load(open(f))
         brands.append({
             "brand": brand,

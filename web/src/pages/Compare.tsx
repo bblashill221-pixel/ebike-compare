@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { useEffect, type ReactNode } from "react";
+import { Link, useSearchParams, useNavigate, useLocation } from "react-router-dom";
 import { useData } from "../data/DataProvider";
 import { useCompare } from "../compare/CompareContext";
 import type { Model } from "../types";
@@ -7,11 +7,12 @@ import { titleCase, formatPrice, formatNumber } from "../format";
 import { useUnits, inToFtIn, type UnitSystem } from "../units";
 import { sensorLabel } from "../filterMeta";
 import { Price } from "../components/Price";
-import { SCORE_ORDER } from "../components/ScoreBars";
+import { HowEachComparesTable, HowEachComparesByMetric, HowItComparesLegend } from "../components/HowItCompares";
 import { CompareTable } from "../components/CompareTable";
 import { AffiliateLink } from "../components/AffiliateLink";
 import { primaryImage } from "../components/BikeCard";
 import { UncommonFeaturesList } from "../components/UncommonFeaturesList";
+import { BatteryIcon, BrakeIcon, CheckIcon, FoldIcon, ForkIcon, GearsIcon, MotorIcon, PayloadIcon, RangeIcon, RiderHeightIcon, SpeedIcon, TagIcon, TorqueIcon, WeightIcon } from "../components/icons";
 
 // ----- key spec rows (the at-a-glance comparison; deliberately curated, not every
 // parsed component — e.g. pedals/grips live only in the detailed tables below) -----
@@ -31,38 +32,68 @@ function heightRange(t: Record<string, unknown>, u: UnitSystem): string {
   return `${f(inMin)}–${f(inMax)}`;
 }
 
-type Row = { label: string; get: (m: Model, u: UnitSystem) => string };
+type Row = { label: string; icon?: ReactNode; get: (m: Model, u: UnitSystem) => string };
+const I = "h-4 w-4";
 const T = (m: Model) => (m.analysis?.specs_typed ?? {}) as Record<string, number | string | undefined>;
 const n = (v: unknown) => (typeof v === "number" ? v : undefined);
 
 const KEY_SPECS: Row[] = [
-  { label: "Price", get: (m) => (m.price ?? m.price_min) != null ? formatPrice(m.price ?? m.price_min) : "—" },
-  { label: "Motor", get: (m) => { const t = T(m); const w = n(t.motor_w); if (w == null) return "—"; const pk = n(t.motor_peak_w); return `${formatNumber(w, 0)} W${pk ? ` (${formatNumber(pk, 0)} W peak)` : ""}`; } },
-  { label: "Torque", get: (m) => { const v = n(T(m).torque_nm); return v != null ? `${v} Nm` : "—"; } },
-  { label: "Battery", get: (m) => { const v = n(T(m).battery_wh); return v != null ? `${formatNumber(v, 0)} Wh` : "—"; } },
-  { label: "Range", get: (m, u) => { const t = T(m); const v = n(t.range_mi); if (v == null) return "—"; const lo = n(t.range_min_mi); return lo != null && lo !== v ? `${mi(lo, u).replace(/ \w+$/, "")}–${mi(v, u)}` : mi(v, u); } },
-  { label: "Top speed", get: (m, u) => { const v = n(T(m).max_speed_mph); return v != null ? mph(v, u) : "—"; } },
-  { label: "Weight", get: (m, u) => { const v = n(T(m).weight_lb); return v != null ? lb(v, u) : "—"; } },
-  { label: "Max Payload", get: (m, u) => { const v = n(T(m).max_load_lb); return v != null ? lb(v, u) : "—"; } },
+  { label: "Price", icon: <TagIcon className={I} />, get: (m) => (m.price ?? m.price_min) != null ? formatPrice(m.price ?? m.price_min) : "—" },
+  { label: "Motor", icon: <MotorIcon className={I} />, get: (m) => { const t = T(m); const w = n(t.motor_w); if (w == null) return "—"; const pk = n(t.motor_peak_w); return `${formatNumber(w, 0)} W${pk ? ` (${formatNumber(pk, 0)} W peak)` : ""}`; } },
+  { label: "Torque", icon: <TorqueIcon className={I} />, get: (m) => { const v = n(T(m).torque_nm); return v != null ? `${v} Nm` : "—"; } },
+  { label: "Battery", icon: <BatteryIcon className={I} />, get: (m) => { const v = n(T(m).battery_wh); return v != null ? `${formatNumber(v, 0)} Wh` : "—"; } },
+  { label: "Range", icon: <RangeIcon className={I} />, get: (m, u) => { const t = T(m); const v = n(t.range_mi); if (v == null) return "—"; const lo = n(t.range_min_mi); return lo != null && lo !== v ? `${mi(lo, u).replace(/ \w+$/, "")}–${mi(v, u)}` : mi(v, u); } },
+  { label: "Top speed", icon: <SpeedIcon className={I} />, get: (m, u) => { const v = n(T(m).max_speed_mph); return v != null ? mph(v, u) : "—"; } },
+  { label: "Weight", icon: <WeightIcon className={I} />, get: (m, u) => { const v = n(T(m).weight_lb); return v != null ? lb(v, u) : "—"; } },
+  { label: "Max Payload", icon: <PayloadIcon className={I} />, get: (m, u) => { const v = n(T(m).max_load_lb); return v != null ? lb(v, u) : "—"; } },
   { label: "Drive Type", get: (m) => cap(T(m).drive_type) },
   { label: "Sensor Type", get: (m) => { const s = T(m).sensor_type; return typeof s === "string" && s ? sensorLabel(s) : "—"; } },
-  { label: "Brakes", get: (m) => cap(T(m).brake_type) },
-  { label: "Gears", get: (m) => { const v = n(T(m).gears); return v != null ? `${v}-speed` : "—"; } },
+  { label: "Brakes", icon: <BrakeIcon className={I} />, get: (m) => cap(T(m).brake_type) },
+  { label: "Gears", icon: <GearsIcon className={I} />, get: (m) => { const v = n(T(m).gears); return v != null ? `${v}-speed` : "—"; } },
   { label: "Drivetrain", get: (m) => cap(T(m).drivetrain_type) },
-  { label: "Suspension", get: (m) => cap(T(m).suspension) },
+  { label: "Suspension", icon: <ForkIcon className={I} />, get: (m) => cap(T(m).suspension) },
   { label: "Frame", get: (m) => cap(T(m).frame_material) },
   { label: "Display", get: (m) => cap(T(m).display_type) },
-  { label: "Height Range", get: (m, u) => heightRange(T(m), u) },
-  { label: "Warranty", get: (m) => { const v = n(T(m).warranty_years); return v != null ? `${v} yr` : "—"; } },
-  { label: "Folding", get: (m) => (m.folding ? "Yes" : "—") },
+  { label: "Height Range", icon: <RiderHeightIcon className={I} />, get: (m, u) => heightRange(T(m), u) },
+  { label: "Warranty", icon: <CheckIcon className={I} />, get: (m) => { const v = n(T(m).warranty_years); return v != null ? `${v} yr` : "—"; } },
+  { label: "Folding", icon: <FoldIcon className={I} />, get: (m) => (m.folding ? "Yes" : "—") },
   // CAN bus is shown as the Motor's "Protocol" field (in the eBike System breakdown), not here.
 ];
 
+const isBlank = (v: string) => v === "" || v === "—" || v.toUpperCase() === "N/A";
+
+// Mobile: a spec field as its label + one line per eBike (name — value). Amber tint when they differ.
+function MobileSpecRow({ label, icon, models, values }: { label: ReactNode; icon?: ReactNode; models: Model[]; values: string[] }) {
+  const differ = new Set(values.filter((v) => !isBlank(v))).size > 1;
+  return (
+    <div className="px-3 py-2">
+      <div className="flex items-center gap-2 text-sm font-medium text-slate-500">
+        {icon && <span className="flex w-4 shrink-0 justify-center">{icon}</span>}
+        {label}
+      </div>
+      <div className={`mt-1 space-y-0.5 rounded ${differ ? "bg-amber-50/60 px-2 py-1" : ""}`}>
+        {models.map((m, i) => (
+          <div key={m.id} className="flex items-start justify-between gap-2 text-sm">
+            <span className="min-w-0 flex-1 text-xs font-medium uppercase leading-tight tracking-wide text-slate-400">{m.model}</span>
+            <span className="min-w-0 max-w-[52%] shrink-0 break-words text-right font-medium leading-tight text-slate-800">{values[i]}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export function Compare() {
-  const { byId, status } = useData();
+  const { byId, models: allModels, status } = useData();
   const { ids: trayIds, toggle } = useCompare();
   const [params] = useSearchParams();
   const [units] = useUnits();
+  const navigate = useNavigate();
+  const location = useLocation();
+  // Return to wherever the user came from; location.key is "default" only on a direct
+  // load with no history to go back to, in which case fall back to the Ebikes list.
+  const goBack = () =>
+    location.key !== "default" ? navigate(-1) : navigate("/");
 
   // Seed the compare tray from ?ids= on first load (shareable URLs).
   const urlIds = (params.get("ids") ?? "").split(",").map((s) => s.trim()).filter(Boolean);
@@ -87,23 +118,27 @@ export function Compare() {
       <Center>
         <div className="max-w-md text-center">
           <p className="mb-3 text-slate-600">
-            Add at least two e-bikes to compare. Browse and tap <strong>Compare</strong> on the bikes you’re weighing.
+            Add at least two eBikes to compare. Browse and tap <strong>Compare</strong> on the bikes you’re weighing.
           </p>
-          <Link to="/" className="btn-primary">Browse e-bikes</Link>
+          <Link to="/" className="btn-primary">Browse eBikes</Link>
         </div>
       </Center>
     );
   }
 
-  const cols = `minmax(8rem,10rem) repeat(${models.length}, minmax(0,1fr))`;
+  // Always lay out a 4-eBike comparison: real bikes fill from the left, the remaining slots
+  // are empty "Add an eBike" placeholders so the grid is constant no matter how many are compared.
+  const empties = Math.max(0, 4 - models.length);
+  const cols = `minmax(8rem,10rem) repeat(4, minmax(0,1fr))`;
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-6">
-      <h1 className="text-xl font-bold text-slate-900">Compare {models.length} e-bikes</h1>
-      <Link to="/" className="mb-4 mt-1 inline-block text-sm text-brand-600 hover:underline">← Back to browse</Link>
+      <h1 className="text-xl font-bold text-slate-900">Compare {models.length} eBikes</h1>
+      <button onClick={goBack} className="mb-4 mt-1 inline-block text-sm text-brand-600 hover:underline">← Back</button>
 
       {/* header + key specs + scores */}
-      <div className="card mb-6 overflow-x-auto">
+      <div className="card mb-6">
+       <div className="overflow-x-auto">
         <div className="min-w-[40rem]">
           {/* model headers — image + brand + name + price all link to the detail page */}
           <div className="grid border-b border-slate-100" style={{ gridTemplateColumns: cols }}>
@@ -115,7 +150,7 @@ export function Compare() {
                   className="group block rounded hover:bg-slate-50"
                 >
                   {primaryImage(m) ? (
-                    <img src={primaryImage(m)!} alt="" className="mb-2 h-20 w-full object-contain" />
+                    <img src={primaryImage(m)!} alt="" className="mb-2 h-20 w-full object-contain object-left" />
                   ) : null}
                   <div className="text-xs font-medium uppercase tracking-wide text-brand-600">{m.brand}</div>
                   <div className="font-bold text-slate-900 group-hover:text-brand-700">{m.model}</div>
@@ -131,10 +166,34 @@ export function Compare() {
                 </div>
               </div>
             ))}
+            {Array.from({ length: empties }).map((_, i) => (
+              <Link key={`add-${i}`} to="/" className="flex items-center justify-center border-l border-dashed border-slate-200 p-3 text-center text-sm text-slate-400 hover:text-brand-600">
+                + Add an eBike
+              </Link>
+            ))}
           </div>
+          {/* desktop: Special Features + Key Specs as eBike columns */}
+          <div className="hidden md:block">
+          {/* Special Features — placed right under the price. It's a single grid row,
+              so all columns stretch to the same height and stay aligned even when a bike
+              has fewer (or no) special features (those cells read "—"). Shown only when
+              at least one compared bike has any. */}
+          {models.some((m) => (m.analysis?.uncommon_features ?? []).length > 0) && (
+            <div className="grid border-b border-slate-100" style={{ gridTemplateColumns: cols }}>
+              <div className="bg-slate-50/50 p-2 text-sm font-medium text-slate-500">Special Features</div>
+              {models.map((m) => (
+                <div key={m.id} className="border-l border-slate-100 p-2">
+                  <UncommonFeaturesList features={m.analysis?.uncommon_features} />
+                </div>
+              ))}
+              {Array.from({ length: empties }).map((_, i) => (
+                <div key={`e-${i}`} className="border-l border-slate-100 p-2" />
+              ))}
+            </div>
+          )}
           {/* key specs — a curated at-a-glance comparison; every key is always shown
               (a bike missing that value reads "—"), differences shaded */}
-          {KEY_SPECS.map(({ label, get }) => {
+          {KEY_SPECS.map(({ label, icon, get }) => {
             const vals = models.map((m) => get(m, units));
             // hide a row when NONE of the compared bikes have that value (all —/N/A) —
             // e.g. "Folding" won't show when comparing eMTBs. Rows where SOME bikes have
@@ -144,81 +203,65 @@ export function Compare() {
             const differ = new Set(vals.filter(has)).size > 1;
             return (
               <div key={label} className="grid border-b border-slate-50" style={{ gridTemplateColumns: cols }}>
-                <div className="bg-slate-50/50 p-2 text-sm font-medium text-slate-500">{label}</div>
+                <div className="flex items-center gap-2 bg-slate-50/50 p-2 text-sm font-medium text-slate-500">
+                  <span className="flex w-4 shrink-0 justify-center">{icon}</span>
+                  {label}
+                </div>
                 {vals.map((v, i) => (
                   <div key={i} className={`border-l border-slate-100 p-2 text-sm text-slate-800 ${differ ? "bg-amber-50/60" : ""}`}>
                     {v}
                   </div>
                 ))}
-              </div>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* Special Features — premium/notable equipment each bike has (above Dimension Scores) */}
-      {models.some((m) => (m.analysis?.uncommon_features ?? []).length > 0) && (
-        <div className="card mb-4 overflow-x-auto">
-          <h3 className="border-b border-slate-100 bg-slate-50 px-4 py-2 font-semibold text-slate-800">Special Features</h3>
-          <div className="min-w-[40rem]">
-            <div className="grid border-b border-slate-100" style={{ gridTemplateColumns: cols }}>
-              <div className="px-4 py-2" />
-              {models.map((m) => (
-                <div key={m.id} className="truncate border-l border-slate-100 px-4 py-2 text-xs font-bold text-slate-800">{m.model}</div>
-              ))}
-            </div>
-            <div className="grid" style={{ gridTemplateColumns: cols }}>
-              <div className="bg-slate-50/50 px-4 py-2" />
-              {models.map((m) => (
-                <div key={m.id} className="border-l border-slate-100 px-4 py-2">
-                  <UncommonFeaturesList features={m.analysis?.uncommon_features} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Dimension Scores — independent comparison ratings (0–100, ranked within type) */}
-      <div className="card mb-4 overflow-x-auto">
-        <h3 className="border-b border-slate-100 bg-slate-50 px-4 py-2 font-semibold text-slate-800">Dimension Scores</h3>
-        <div className="min-w-[40rem]">
-          <div className="grid border-b border-slate-100" style={{ gridTemplateColumns: cols }}>
-            <div className="p-2" />
-            {models.map((m) => (
-              <div key={m.id} className="truncate border-l border-slate-100 p-2 text-xs font-bold text-slate-800">{m.model}</div>
-            ))}
-          </div>
-          {SCORE_ORDER.filter((k) => models.some((m) => k in (m.analysis?.scores ?? {}))).map((k) => {
-            const vals = models.map((m) => m.analysis?.scores?.[k]);
-            const best = Math.max(...vals.map((v) => v ?? -1));
-            return (
-              <div key={k} className="grid border-b border-slate-50" style={{ gridTemplateColumns: cols }}>
-                <div className="bg-slate-50/50 p-2 text-sm font-medium text-slate-500">{titleCase(k)}</div>
-                {vals.map((v, i) => (
-                  <div key={i} className="border-l border-slate-100 p-2">
-                    <div className="flex items-center gap-2">
-                      <div className="h-2 flex-1 overflow-hidden rounded-full bg-slate-100">
-                        <div className="h-full rounded-full bg-brand-500" style={{ width: `${Math.max(0, Math.min(100, v ?? 0))}%` }} />
-                      </div>
-                      <span className={`w-7 text-right text-xs tabular-nums ${v != null && v === best && best > 0 ? "font-bold text-emerald-600" : "text-slate-500"}`}>
-                        {v != null ? Math.round(v) : "—"}
-                      </span>
-                    </div>
-                  </div>
+                {Array.from({ length: empties }).map((_, i) => (
+                  <div key={`e-${i}`} className="border-l border-slate-100 p-2" />
                 ))}
               </div>
             );
           })}
+          </div>
+        </div>
+       </div>
+        {/* mobile: inverted — Special Features + Key Specs, one line per eBike */}
+        <div className="divide-y divide-slate-100 border-t border-slate-100 md:hidden">
+          {models.some((m) => (m.analysis?.uncommon_features ?? []).length > 0) && (
+            <div className="px-3 py-2">
+              <div className="text-sm font-medium text-slate-500">Special Features</div>
+              <div className="mt-1 space-y-2">
+                {models.map((m) => (
+                  <div key={m.id}>
+                    <div className="text-xs font-medium uppercase tracking-wide text-slate-400">{m.model}</div>
+                    <UncommonFeaturesList features={m.analysis?.uncommon_features} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+          {KEY_SPECS.map(({ label, icon, get }) => {
+            const vals = models.map((m) => get(m, units));
+            if (!vals.some((v) => !isBlank(v))) return null;
+            return <MobileSpecRow key={label} label={label} icon={icon} models={models} values={vals} />;
+          })}
         </div>
       </div>
 
-      <p className="mb-4 text-xs text-slate-400">
-        Scores are independent comparison aids (0–100); the best in each row is highlighted. There is no overall winner — compare on what matters to you. Differing spec rows below are shaded.
-      </p>
+      {/* How each bike compares to its OWN type — ONE combined table: metric names once on the
+          left, each model a group of angled columns (Low/Median/High/This eBike/Diff/Rank, or
+          Median/This eBike/Diff/Rank when 4 bikes), numbered-bolt rank, grid lines. */}
+      <div className="card mb-4 overflow-x-auto p-4">
+        <h3 className="mb-3 font-semibold text-slate-800">How Each Compares Within Its Type</h3>
+        {/* desktop: one combined table with all bikes side by side */}
+        <div className="hidden md:block">
+          <HowEachComparesTable models={models} allModels={allModels} units={units} />
+        </div>
+        {/* mobile: inverted — one card per metric (field name = header), a row per eBike */}
+        <div className="md:hidden">
+          <HowEachComparesByMetric models={models} allModels={allModels} units={units} />
+        </div>
+        <HowItComparesLegend badge />
+      </div>
 
       <div className="overflow-x-auto">
-        <div className="min-w-[40rem]">
+        <div className="md:min-w-[40rem]">
           <CompareTable models={models} />
         </div>
       </div>

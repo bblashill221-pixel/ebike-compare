@@ -33,6 +33,13 @@ export function titleCase(s: string): string {
     .trim();
 }
 
+/** Spec-group key -> display label, with brand-cased special cases ("eBike System"
+ *  instead of titleCase's "Ebike System"). Falls back to titleCase for everything else. */
+const GROUP_LABELS: Record<string, string> = { ebike_system: "eBike System" };
+export function groupLabel(g: string): string {
+  return GROUP_LABELS[g] ?? titleCase(g);
+}
+
 /** snake_case field name -> human label, preserving common unit suffixes. */
 const UNIT_LABEL: Record<string, string> = {
   wh: "Wh", kwh: "kWh", nm: "Nm", ah: "Ah", mm: "mm", cm: "cm", kg: "kg",
@@ -82,10 +89,13 @@ export function formatPrice(n: number | null | undefined, currency = "USD"): str
     return new Intl.NumberFormat("en-US", {
       style: "currency",
       currency,
-      maximumFractionDigits: 0,
+      // show cents when present (so $289.99 isn't rounded to $290 — must match the brand
+      // site exactly), but keep whole-dollar prices clean ($1,595, not $1,595.00).
+      minimumFractionDigits: Number.isInteger(n) ? 0 : 2,
+      maximumFractionDigits: 2,
     }).format(n);
   } catch {
-    return `$${Math.round(n)}`;
+    return `$${n.toFixed(Number.isInteger(n) ? 0 : 2)}`;
   }
 }
 

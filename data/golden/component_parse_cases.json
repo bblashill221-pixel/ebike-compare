@@ -76,7 +76,8 @@
   "expected": {
    "travel_mm": 51,
    "lockout": true,
-   "thru_axle": false,
+   "preload": false,
+   "thru_axle": true,
    "details": "Threaded Steerer Tube for Quill Stem 15x110 spacing, adjustable lockout black stanchions",
    "_kind": "fork"
   }
@@ -93,6 +94,7 @@
   "expected": {
    "travel_mm": 110,
    "lockout": false,
+   "preload": false,
    "thru_axle": false,
    "_kind": "fork"
   }
@@ -857,8 +859,8 @@
   "expected": {
    "manufacturer": "RockShox",
    "details": "Deluxe Select+ (210x55)",
-   "model": "Deluxe Select+ 210x55",
-   "_kind": "shock"
+   "_kind": "shock",
+   "model": "Deluxe Select+ 210x55"
   }
  },
  {
@@ -888,8 +890,8 @@
   "expected": {
    "manufacturer": "RockShox",
    "details": "Super Deluxe Select+ (210x55)",
-   "model": "Super Deluxe Select+ 210x55",
-   "_kind": "shock"
+   "_kind": "shock",
+   "model": "Super Deluxe Select+ 210x55"
   }
  },
  {
@@ -1061,6 +1063,7 @@
   "siblings": null,
   "expected": {
    "lockout": false,
+   "preload": false,
    "thru_axle": false,
    "material": "steel",
    "_kind": "fork"
@@ -1326,6 +1329,7 @@
   "expected": {
    "type": "rigid",
    "lockout": false,
+   "preload": false,
    "thru_axle": false,
    "material": "steel",
    "details": "1 1/8\" Threadless",
@@ -1650,6 +1654,7 @@
   "siblings": null,
   "expected": {
    "lockout": false,
+   "preload": false,
    "thru_axle": false,
    "details": "Front",
    "_kind": "fork"
@@ -1751,6 +1756,7 @@
   "siblings": null,
   "expected": {
    "lockout": false,
+   "preload": false,
    "thru_axle": false,
    "material": "aluminum alloy",
    "details": "SmartForm C3 Alloy blades, 1-1/8\" steerer, post mount disc, mid-blade rack/fender mounts, crown accessory mount, 45mm offset",
@@ -1910,8 +1916,9 @@
   "siblings": null,
   "expected": {
    "double_wall": true,
-   "details": "Cannondale 2",
-   "_kind": "rims"
+   "details": "2",
+   "_kind": "rims",
+   "manufacturer": "Cannondale"
   }
  },
  {
@@ -2031,6 +2038,7 @@
   "expected": {
    "type": "rigid",
    "lockout": false,
+   "preload": false,
    "thru_axle": false,
    "details": "No suspension",
    "_kind": "fork"
@@ -2145,8 +2153,9 @@
   "text": "Bafang SR PA14.32.S Sensor",
   "siblings": null,
   "expected": {
-   "details": "Bafang SR PA14.32.S Sensor",
-   "_kind": "bottom_bracket"
+   "details": "SR PA14.32.S Sensor",
+   "_kind": "bottom_bracket",
+   "manufacturer": "Bafang"
   }
  },
  {
@@ -2238,8 +2247,9 @@
   "siblings": null,
   "expected": {
    "torque_sensor": true,
-   "details": "Bafang SR PA221.32.ST.C",
-   "_kind": "bottom_bracket"
+   "details": "SR PA221.32.ST.C",
+   "_kind": "bottom_bracket",
+   "manufacturer": "Bafang"
   }
  },
  {
@@ -2266,8 +2276,8 @@
    "type": "air",
    "size": "210x55mm",
    "details": "Deluxe Ultimate RCT, DebonAir+, 2-Pos mode adjust, adjustable LSC & rebound",
-   "model": "Deluxe Ultimate RCT DebonAir+",
-   "_kind": "shock"
+   "_kind": "shock",
+   "model": "Deluxe Ultimate RCT DebonAir+"
   }
  },
  {
@@ -2281,8 +2291,8 @@
    "type": "air",
    "size": "210x55mm",
    "details": "Deluxe Select+ RT, DebonAir+, 2-Pos mode adjust, adjustable rebound",
-   "model": "Deluxe Select+ RT DebonAir+",
-   "_kind": "shock"
+   "_kind": "shock",
+   "model": "Deluxe Select+ RT DebonAir+"
   }
  },
  {
@@ -2357,6 +2367,7 @@
   "siblings": null,
   "expected": {
    "lockout": false,
+   "preload": false,
    "thru_axle": false,
    "material": "aluminum alloy",
    "details": "alloy suspension Lo",
@@ -2487,6 +2498,7 @@
   "siblings": null,
   "expected": {
    "lockout": false,
+   "preload": false,
    "thru_axle": false,
    "material": "aluminum alloy",
    "details": "alloy crown suspension fork",
@@ -2612,6 +2624,7 @@
    "manufacturer": "RST",
    "travel_mm": 95,
    "lockout": false,
+   "preload": false,
    "thru_axle": false,
    "details": "front suspension fork",
    "_kind": "fork"
@@ -2886,6 +2899,7 @@
    "manufacturer": "RST",
    "travel_mm": 60,
    "lockout": false,
+   "preload": false,
    "thru_axle": false,
    "details": "front suspension fork",
    "_kind": "fork"
@@ -3031,8 +3045,8 @@
    "manufacturer": "RockShox",
    "type": "air",
    "details": "RS-DELUXE SELECT-C1, 190mmx45mm, iDebonAir+ spring, Maxima Plush dynamic suspension lubricant",
-   "model": "RS-DELUXE SELECT-C1 190mmx45mm iDebonAir+",
-   "_kind": "shock"
+   "_kind": "shock",
+   "model": "RS-DELUXE SELECT-C1 190mmx45mm iDebonAir+"
   }
  },
  {
@@ -3373,6 +3387,7 @@
   "siblings": null,
   "expected": {
    "lockout": false,
+   "preload": false,
    "thru_axle": false,
    "details": "Front Suspension Fork",
    "_kind": "fork"
@@ -3399,10 +3414,11 @@
    "manufacturer": "DNM",
    "travel_mm": 100,
    "lockout": false,
+   "preload": false,
    "thru_axle": false,
    "details": "Suspension/ Front Adjustable / Rear 55mm Adjustable Travel",
-   "model": "Full",
-   "_kind": "fork"
+   "_kind": "fork",
+   "model": "Full"
   }
  },
  {
@@ -4050,10 +4066,11 @@
    "manufacturer": "SR Suntour",
    "travel_mm": 120,
    "lockout": false,
+   "preload": false,
    "thru_axle": false,
    "details": "Mechanical",
-   "model": "XCM",
-   "_kind": "fork"
+   "_kind": "fork",
+   "model": "XCM"
   }
  },
  {
@@ -4239,6 +4256,7 @@
   "expected": {
    "type": "rigid",
    "lockout": false,
+   "preload": false,
    "thru_axle": false,
    "material": "aluminum",
    "details": "Fork",
@@ -4284,8 +4302,8 @@
   "expected": {
    "manufacturer": "SR Suntour",
    "type": "suspension",
-   "model": "NCX",
-   "_kind": "seatpost"
+   "_kind": "seatpost",
+   "model": "NCX"
   }
  },
  {
@@ -4441,10 +4459,11 @@
   "expected": {
    "manufacturer": "SR Suntour",
    "lockout": false,
+   "preload": false,
    "thru_axle": false,
    "details": "Suspension Fork",
-   "model": "XCM",
-   "_kind": "fork"
+   "_kind": "fork",
+   "model": "XCM"
   }
  },
  {
@@ -4648,6 +4667,7 @@
   "siblings": null,
   "expected": {
    "lockout": false,
+   "preload": false,
    "thru_axle": false,
    "material": "aluminum 6061",
    "details": "Custom Alloy with Steel Steerer Tube, Designed for Fenders",
@@ -4780,8 +4800,8 @@
    "manufacturer": "Giant",
    "type": "lcd",
    "details": "RideControl GO, frame-integrated LED console Optional wireless ANT+ display",
-   "model": "RideControl GO frame-integrated LED",
-   "_kind": "display"
+   "_kind": "display",
+   "model": "RideControl GO frame-integrated LED"
   }
  },
  {
@@ -4794,8 +4814,8 @@
    "manufacturer": "Giant",
    "capacity_wh": 400,
    "details": "Aluminium casing with highest safety standard (EN50604), CO2 Neutral production, Plus 200 range extender compatible",
-   "model": "EnergyPak",
-   "_kind": "battery"
+   "_kind": "battery",
+   "model": "EnergyPak"
   }
  },
  {
@@ -4808,8 +4828,8 @@
    "manufacturer": "Giant",
    "amps_a": 4.0,
    "details": "charger",
-   "model": "EnergyPak smart",
-   "_kind": "charger"
+   "_kind": "charger",
+   "model": "EnergyPak smart"
   }
  },
  {
@@ -4835,6 +4855,7 @@
   "expected": {
    "travel_mm": 100,
    "lockout": false,
+   "preload": false,
    "thru_axle": true,
    "details": "Advanced SL-Grade Composite, Full-Composite OverDrive Aero Steerer, 12x thru-axle, Disc",
    "_kind": "fork"
@@ -4850,8 +4871,8 @@
    "manufacturer": "Giant",
    "material": "carbon",
    "details": "31.8",
-   "model": "Contact SLR D-Fuse",
-   "_kind": "handlebars"
+   "_kind": "handlebars",
+   "model": "Contact SLR D-Fuse"
   }
  },
  {
@@ -4877,8 +4898,8 @@
    "manufacturer": "Giant",
    "offset_mm": 16,
    "details": "Composite, offset",
-   "model": "D-Fuse SL",
-   "_kind": "seatpost"
+   "_kind": "seatpost",
+   "model": "D-Fuse SL"
   }
  },
  {
@@ -4889,8 +4910,8 @@
   "siblings": null,
   "expected": {
    "manufacturer": "Giant",
-   "model": "Fleet SL",
-   "_kind": "saddle"
+   "_kind": "saddle",
+   "model": "Fleet SL"
   }
  },
  {
@@ -4901,8 +4922,8 @@
   "siblings": null,
   "expected": {
    "manufacturer": "SRAM",
-   "model": "Force AXS",
-   "_kind": "derailleur"
+   "_kind": "derailleur",
+   "model": "Force AXS"
   }
  },
  {
@@ -4916,8 +4937,8 @@
    "rotor_mm": 160,
    "kind": "disc",
    "details": "Force AXS HRD, Centerline center-lock [F] 6-bols [R]",
-   "model": "Force AXS HRD Centerline",
-   "_kind": "brake"
+   "_kind": "brake",
+   "model": "Force AXS HRD Centerline"
   }
  },
  {
@@ -4928,8 +4949,8 @@
   "siblings": null,
   "expected": {
    "manufacturer": "SRAM",
-   "model": "Force AXS HRD",
-   "_kind": "brake"
+   "_kind": "brake",
+   "model": "Force AXS HRD"
   }
  },
  {
@@ -4941,8 +4962,8 @@
   "expected": {
    "manufacturer": "SRAM",
    "speeds": 12,
-   "model": "Force XG-1270 10x33T",
-   "_kind": "cassette"
+   "_kind": "cassette",
+   "model": "Force XG-1270 10x33T"
   }
  },
  {
@@ -4953,8 +4974,9 @@
   "siblings": null,
   "expected": {
    "manufacturer": "SRAM",
-   "model": "Force 12-speed",
-   "_kind": "chain"
+   "type": "chain",
+   "_kind": "chain",
+   "model": "Force 12-speed"
   }
  },
  {
@@ -4967,8 +4989,8 @@
    "manufacturer": "SRAM",
    "chainring_t": 46,
    "details": "33/ BCD107 chain ring Praxis E Crank Carbon ISIS",
-   "model": "Force X-SYNC",
-   "_kind": "crankset"
+   "_kind": "crankset",
+   "model": "Force X-SYNC"
   }
  },
  {
@@ -4980,8 +5002,9 @@
   "expected": {
    "sealed": false,
    "torque_sensor": false,
-   "details": "Giant E+ System BBSS",
-   "_kind": "bottom_bracket"
+   "_kind": "bottom_bracket",
+   "manufacturer": "Giant",
+   "model": "E+ System BBSS"
   }
  },
  {
@@ -4992,8 +5015,10 @@
   "siblings": null,
   "expected": {
    "double_wall": false,
-   "details": "Giant SLR 1 E+ 36 Carbon Disc Wheel System, Hookless, Tubeless Ready, 12mm thru-axle, w/ Sapim spoke E-Light [R] CX-Ray [F], e-bike optimized",
-   "_kind": "rims"
+   "details": "1 E+ 36 Carbon Disc Wheel System, Hookless, Tubeless Ready, 12mm thru-axle, w/ Sapim spoke E-Light [R] CX-Ray [F], e-bike optimized",
+   "_kind": "rims",
+   "manufacturer": "Giant",
+   "model": "SLR"
   }
  },
  {
@@ -5055,8 +5080,8 @@
    "manufacturer": "Giant",
    "material": "aluminum alloy",
    "details": "31.8 alloy",
-   "model": "Contact SL D-Fuse",
-   "_kind": "handlebars"
+   "_kind": "handlebars",
+   "model": "Contact SL D-Fuse"
   }
  },
  {
@@ -5082,8 +5107,8 @@
    "manufacturer": "Giant",
    "offset_mm": 14,
    "details": "Composite, offset",
-   "model": "D-Fuse",
-   "_kind": "seatpost"
+   "_kind": "seatpost",
+   "model": "D-Fuse"
   }
  },
  {
@@ -5094,8 +5119,8 @@
   "siblings": null,
   "expected": {
    "manufacturer": "Giant",
-   "model": "Approach",
-   "_kind": "saddle"
+   "_kind": "saddle",
+   "model": "Approach"
   }
  },
  {
@@ -5106,8 +5131,8 @@
   "siblings": null,
   "expected": {
    "manufacturer": "SRAM",
-   "model": "Rival AXS",
-   "_kind": "derailleur"
+   "_kind": "derailleur",
+   "model": "Rival AXS"
   }
  },
  {
@@ -5119,8 +5144,8 @@
   "expected": {
    "manufacturer": "SRAM",
    "speeds": 12,
-   "model": "XPLR XG-1251 10x44T",
-   "_kind": "cassette"
+   "_kind": "cassette",
+   "model": "XPLR XG-1251 10x44T"
   }
  },
  {
@@ -5131,8 +5156,9 @@
   "siblings": null,
   "expected": {
    "manufacturer": "SRAM",
-   "model": "Rival 12-speed",
-   "_kind": "chain"
+   "type": "chain",
+   "_kind": "chain",
+   "model": "Rival 12-speed"
   }
  },
  {
@@ -5145,8 +5171,8 @@
    "manufacturer": "SRAM",
    "chainring_t": 46,
    "details": "chain ring, Praxis E crank Alloy ISIS",
-   "model": "X-SYNC BCD107",
-   "_kind": "crankset"
+   "_kind": "crankset",
+   "model": "X-SYNC BCD107"
   }
  },
  {
@@ -5158,8 +5184,10 @@
   "expected": {
    "material": "aluminum alloy",
    "double_wall": false,
-   "details": "Giant P-R2 Alloy Disc Wheel System, Tubeless Ready, 22mm inner width, 12mm thru-axle",
-   "_kind": "rims"
+   "details": "Alloy Disc Wheel System, Tubeless Ready, 22mm inner width, 12mm thru-axle",
+   "_kind": "rims",
+   "manufacturer": "Giant",
+   "model": "P-R2"
   }
  },
  {
@@ -5169,8 +5197,9 @@
   "text": "Sapim spoke E-Light [R] Race [F], e-bike optimized",
   "siblings": null,
   "expected": {
-   "details": "Sapim spoke E-Light [R] Race [F], e-bike optimized",
-   "_kind": "spokes"
+   "details": "spoke E-Light [R] Race [F], e-bike optimized",
+   "_kind": "spokes",
+   "manufacturer": "Sapim"
   }
  },
  {
@@ -5185,8 +5214,8 @@
    "width_mm": 35,
    "tubeless": true,
    "details": "G-one Allround Performance, RaceGuard, Brown side-wall, tubeless",
-   "model": "G-one Allround Performance RaceGuard",
-   "_kind": "tire"
+   "_kind": "tire",
+   "model": "G-one Allround Performance RaceGuard"
   }
  },
  {
@@ -5199,8 +5228,8 @@
    "manufacturer": "Giant",
    "torque_nm": 85,
    "details": "SyncDrive Pro2, PedalPlus 6-Sensor technology, Class 1, Max Assist Speed: 20MPH",
-   "model": "SyncDrive Pro2 PedalPlus 6-Sensor",
-   "_kind": "motor"
+   "_kind": "motor",
+   "model": "SyncDrive Pro2 PedalPlus 6-Sensor"
   }
  },
  {
@@ -5213,8 +5242,8 @@
    "manufacturer": "Giant",
    "type": "lcd",
    "details": "RideControl GO, frame integrated LED console Optional wireless ANT+ display",
-   "model": "RideControl GO frame",
-   "_kind": "display"
+   "_kind": "display",
+   "model": "RideControl GO frame"
   }
  },
  {
@@ -5227,8 +5256,8 @@
    "manufacturer": "Giant",
    "capacity_wh": 800,
    "details": "22700 Lithium cell technology, Aluminium casing with highest safety standard (EN50604), CO2 Neutral production Plus 250 range extender compatible (exculde S size)",
-   "model": "EnergyPak",
-   "_kind": "battery"
+   "_kind": "battery",
+   "model": "EnergyPak"
   }
  },
  {
@@ -5241,8 +5270,8 @@
    "manufacturer": "Giant",
    "amps_a": 6.0,
    "details": "charger, 60% in 2:15h",
-   "model": "EnergyPak smart",
-   "_kind": "charger"
+   "_kind": "charger",
+   "model": "EnergyPak smart"
   }
  },
  {
@@ -5269,7 +5298,8 @@
    "manufacturer": "Fox",
    "travel_mm": 170,
    "lockout": false,
-   "thru_axle": false,
+   "preload": false,
+   "thru_axle": true,
    "details": "38 Rhythm E-Optimized, 29er, 44mm offset, Grip damper Sweep-Adj Boost, Kabolt- 110",
    "_kind": "fork"
   }
@@ -5284,8 +5314,8 @@
    "manufacturer": "Fox",
    "size": "205x62.5mm",
    "details": "Float Performance, EVOL Large Volume sleeve, Trunnion mount, custom tuned, recommended sag: 30%",
-   "model": "Float X Performance EVOL",
-   "_kind": "shock"
+   "_kind": "shock",
+   "model": "Float X Performance EVOL"
   }
  },
  {
@@ -5299,8 +5329,8 @@
    "lock_on": false,
    "ergonomic": false,
    "details": "Tactal Pro-E, tapered design, 135mm Ø28~30mm (S/M) 142mm Ø29~32mm (L/XL)",
-   "model": "Tactal Pro-E tapered design",
-   "_kind": "grips"
+   "_kind": "grips",
+   "model": "Tactal Pro-E tapered design"
   }
  },
  {
@@ -5334,8 +5364,10 @@
   "text": "Sapim E-Lite [R] Race [F], e-bike optimized",
   "siblings": null,
   "expected": {
-   "details": "Sapim E-Lite [R] Race [F], e-bike optimized",
-   "_kind": "spokes"
+   "details": "e-bike optimized",
+   "_kind": "spokes",
+   "manufacturer": "Sapim",
+   "model": "E-Lite [R] Race [F]"
   }
  },
  {
@@ -5349,8 +5381,8 @@
    "lock_on": true,
    "ergonomic": false,
    "details": "single lock-on",
-   "model": "Tactal Pro",
-   "_kind": "grips"
+   "_kind": "grips",
+   "model": "Tactal Pro"
   }
  },
  {
@@ -5403,9 +5435,11 @@
   "text": "Hydraulic front suspension fork",
   "siblings": null,
   "expected": {
+   "type": "hydraulic",
    "lockout": false,
+   "preload": false,
    "thru_axle": false,
-   "details": "Hydraulic front suspension fork",
+   "details": "front suspension fork",
    "_kind": "fork"
   }
  },
@@ -5456,8 +5490,11 @@
   "expected": {
    "capacity_wh": 680,
    "removable": true,
-   "details": "UL 2271 certified, lithium-ion",
-   "_kind": "battery"
+   "details": "lithium-ion",
+   "_kind": "battery",
+   "certifications": [
+    "UL 2271"
+   ]
   }
  },
  {
@@ -5648,6 +5685,7 @@
   "expected": {
    "type": "rigid",
    "lockout": false,
+   "preload": false,
    "thru_axle": true,
    "details": "Hydroformed Fork with Thru Axle",
    "_kind": "fork"
@@ -5828,11 +5866,11 @@
    "rotors": "F:160mm R:160mm"
   },
   "expected": {
-   "travel_mm": 12,
    "lockout": false,
+   "preload": false,
    "thru_axle": true,
    "material": "aluminum 6061",
-   "details": "100* thru axle, rack mounts, fender mounts, post disc mount",
+   "details": "100*12mm thru axle, rack mounts, fender mounts, post disc mount",
    "_kind": "fork"
   }
  },
@@ -6118,6 +6156,7 @@
    "type": "coil",
    "travel_mm": 40,
    "lockout": false,
+   "preload": false,
    "thru_axle": false,
    "details": "suspention fork, is disc mount",
    "_kind": "fork"
@@ -6382,8 +6421,8 @@
   "expected": {
    "manufacturer": "DNM",
    "details": "rear shock 190*45mm",
-   "model": "A0-38RC",
-   "_kind": "shock"
+   "_kind": "shock",
+   "model": "A0-38RC"
   }
  },
  {
@@ -6610,6 +6649,7 @@
   "expected": {
    "travel_mm": 140,
    "lockout": false,
+   "preload": false,
    "thru_axle": false,
    "details": "KKE inverted front fork FS: KKE Rear shock",
    "_kind": "fork"
@@ -6695,8 +6735,12 @@
   "siblings": null,
   "expected": {
    "voltage_v": 48,
-   "details": "375Wh standard or 672Wh long-range options; lithium-ion; UL 2271 certified; up to 80 miles",
-   "_kind": "battery"
+   "details": "375Wh standard or 672Wh long-range options; lithium-ion, up to 80 miles",
+   "_kind": "battery",
+   "certifications": [
+    "UL 2271",
+    "UL 2849"
+   ]
   }
  },
  {
@@ -6786,8 +6830,9 @@
   "siblings": null,
   "expected": {
    "type": "cadence",
-   "details": "Lectric PWR wattage-regulation programming",
-   "_kind": "sensor"
+   "details": "PWR wattage-regulation programming",
+   "_kind": "sensor",
+   "manufacturer": "Lectric"
   }
  },
  {
@@ -6846,6 +6891,7 @@
   "expected": {
    "type": "rigid",
    "lockout": false,
+   "preload": false,
    "thru_axle": false,
    "material": "steel",
    "details": "Fork with a threadless headset",
@@ -6900,6 +6946,7 @@
   "siblings": null,
   "expected": {
    "lockout": false,
+   "preload": true,
    "thru_axle": false,
    "details": "The Cloud 50 suspension front fork provides shock absorption for a smooth and cloud-soft ride. Adjust the preload or lock it out to tailor each ride to your preference based on payload capacity and weight distribution",
    "_kind": "fork"
@@ -6931,8 +6978,12 @@
    "amphours_ah": 13,
    "capacity_wh": 624,
    "removable": true,
-   "details": "Lithium-ion; UL 2271 certified; up to 50 miles",
-   "_kind": "battery"
+   "details": "Lithium-ion, up to 50 miles",
+   "_kind": "battery",
+   "certifications": [
+    "UL 2271",
+    "UL 2849"
+   ]
   }
  }
 ]

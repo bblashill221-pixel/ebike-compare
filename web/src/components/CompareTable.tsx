@@ -1,5 +1,5 @@
 import type { Model, SpecValue } from "../types";
-import { fieldLabel, formatSpecValue, titleCase, withUnit, hiddenUnitKeys } from "../format";
+import { fieldLabel, formatSpecValue, titleCase, groupLabel, withUnit, hiddenUnitKeys } from "../format";
 import { useUnits, type UnitSystem } from "../units";
 import { COLUMN_CONFIG, KIND_LABEL } from "./componentColumns";
 import { renderCell } from "./ComponentTable";
@@ -18,8 +18,6 @@ const GROUP_ORDER = [
   "geometry",
   "included_accessories",
 ];
-
-const GROUP_LABEL: Record<string, string> = { ebike_system: "eBike System" };
 
 // canonical kind order within a group (the order KIND_LABEL is declared in)
 const KIND_RANK: Record<string, number> = Object.fromEntries(
@@ -104,6 +102,8 @@ function groupRows(models: Model[], group: string, units: UnitSystem): Row[] {
   // Pedal-assist is folded INTO the Motor section (it's a motor/system attribute), not
   // shown as its own block — when a motor is present in this group.
   const foldPA = kinds.has("motor") && kinds.has("pedal_assist");
+  // The pedal-assist SENSOR (torque/cadence) folds into Motor as "Assist type".
+  const foldSensor = kinds.has("motor") && kinds.has("sensor");
   // First non-empty scalar field in this group whose key matches rx (used to re-home a
   // loose eBike-System value under its component header, e.g. charging time -> Charger).
   const scalarMatch = (m: Model, rx: RegExp): SpecValue | undefined => {
@@ -116,6 +116,7 @@ function groupRows(models: Model[], group: string, units: UnitSystem): Row[] {
   // components first, broken into their canonical fields (like the detail page)
   for (const kind of [...kinds].sort((a, b) => (KIND_RANK[a] ?? 99) - (KIND_RANK[b] ?? 99))) {
     if (foldPA && kind === "pedal_assist") continue;     // rendered under Motor below
+    if (foldSensor && kind === "sensor") continue;       // assist type rendered under Motor
     const merged = models.map((m) => mergeKind(m, group, kind));
     // Model always leads, then Make, then the kind's feature columns (config order).
     const colRank = (key: string) => (key === "model" ? 0 : key === "manufacturer" ? 1 : 2);
@@ -132,19 +133,34 @@ function groupRows(models: Model[], group: string, units: UnitSystem): Row[] {
       const values = merged.map((o) => (o ? formatSpecValue(o, units) : "—"));
       if (values.some((v) => !isEmptyCell(v))) sub.push({ label: "Spec", values, indent: true });
     }
-    // Pedal-assist belongs under Motor: "Assist Modes" from the pedal_assist component's
-    // levels, else a loose assist-modes scalar; plus the component's Boost.
+    // Assist type / levels / boost belong under Motor (folded from the pedal-assist
+    // sensor + pedal_assist components), not shown as their own sections.
     if (kind === "motor") {
+      const typeVals = models.map((m) => {
+        const s = mergeKind(m, group, "sensor");
+        if (s) {
+          const r = renderCell({ key: "type", header: "Assist type" }, s, units);
+          if (!isEmptyCell(r)) return r;
+        }
+        const v = scalarMatch(m, /^(pedal_?assist_type|assist_type|sensor_type)$/i);
+        return v != null ? String(formatSpecValue(v, units)) : "—";
+      });
+      if (typeVals.some((v) => !isEmptyCell(v))) sub.push({ label: "Assist type", values: typeVals, indent: true });
+      const magnetVals = models.map((m) => {
+        const s = mergeKind(m, group, "sensor");
+        return s ? renderCell({ key: "magnets", header: "Magnets" }, s, units) : "—";
+      });
+      if (magnetVals.some((v) => !isEmptyCell(v))) sub.push({ label: "Magnets", values: magnetVals, indent: true });
       const modeVals = models.map((m) => {
         const pa = mergeKind(m, group, "pedal_assist");
         if (pa) {
-          const r = renderCell({ key: "levels", header: "Assist Levels" }, pa, units);
+          const r = renderCell({ key: "levels", header: "Assist levels" }, pa, units);
           if (!isEmptyCell(r)) return r;
         }
         const v = scalarMatch(m, /^(pedal_?assist_(modes|levels|type)|assist_(modes|levels))$/i);
         return v != null ? String(formatSpecValue(v, units)) : "—";
       });
-      if (modeVals.some((v) => !isEmptyCell(v))) sub.push({ label: "Assist Levels", values: modeVals, indent: true });
+      if (modeVals.some((v) => !isEmptyCell(v))) sub.push({ label: "Assist levels", values: modeVals, indent: true });
       const boostVals = models.map((m) => {
         const pa = mergeKind(m, group, "pedal_assist");
         return pa ? renderCell({ key: "boost", header: "Boost" }, pa, units) : "—";
@@ -220,7 +236,8 @@ function Card({ title, rows, cols, models }: { title: string; rows: Row[]; cols:
   return (
     <div className="card overflow-hidden">
       <h3 className="border-b border-slate-100 bg-slate-50 px-4 py-2 font-semibold text-slate-800">{title}</h3>
-      <div>
+      {/* desktop: eBikes as columns */}
+      <div className="hidden md:block">
         {/* model-name header row (same as the Metrics card) */}
         <div className="grid border-b border-slate-100" style={{ gridTemplateColumns: cols }}>
           <div className="px-4 py-2" />
@@ -235,6 +252,18 @@ function Card({ title, rows, cols, models }: { title: string; rows: Row[]; cols:
             </div>
           ) : (
             <RowLine key={`${row.label}-${idx}`} row={row} cols={cols} />
+          ),
+        )}
+      </div>
+      {/* mobile: inverted — each field lists a line per eBike (name — value) */}
+      <div className="md:hidden">
+        {rows.map((row, idx) =>
+          row.section ? (
+            <div key={`ms${idx}`} className="border-b border-slate-100 bg-slate-50/70 px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-slate-700">
+              {row.label}
+            </div>
+          ) : (
+            <MobileRow key={`m-${row.label}-${idx}`} row={row} models={models} />
           ),
         )}
       </div>
@@ -256,6 +285,24 @@ function RowLine({ row, cols }: { row: Row; cols: string }) {
   );
 }
 
+// Mobile: one field = its label + a line per eBike (name — value). Amber tint when values differ.
+function MobileRow({ row, models }: { row: Row; models: Model[] }) {
+  const differ = new Set(row.values.filter((v) => !isEmptyCell(v))).size > 1;
+  return (
+    <div className={`border-b border-slate-100 px-4 py-2 last:border-0 ${row.indent ? "pl-6" : ""}`}>
+      <div className="text-sm font-medium text-slate-500">{row.label}</div>
+      <div className={`mt-1 space-y-0.5 rounded ${differ ? "bg-amber-50/60 px-2 py-1" : ""}`}>
+        {models.map((m, i) => (
+          <div key={m.id} className="flex items-start justify-between gap-2 text-sm">
+            <span className="min-w-0 flex-1 text-xs font-medium uppercase leading-tight tracking-wide text-slate-400">{m.model}</span>
+            <span className="min-w-0 max-w-[52%] shrink-0 break-words text-right font-medium leading-tight text-slate-800">{row.values[i]}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export function CompareTable({ models }: { models: Model[] }) {
   const [units] = useUnits();
   const cols = `minmax(8rem,12rem) repeat(${models.length}, minmax(0,1fr))`;
@@ -264,7 +311,7 @@ export function CompareTable({ models }: { models: Model[] }) {
       {GROUP_ORDER.filter((g) => models.some((m) => m.specs?.[g] && Object.keys(m.specs[g]).length)).map(
         (group) => (
           <div key={group} className="space-y-6">
-            <Card title={GROUP_LABEL[group] ?? titleCase(group)} rows={groupRows(models, group, units)} cols={cols} models={models} />
+            <Card title={groupLabel(group)} rows={groupRows(models, group, units)} cols={cols} models={models} />
             {/* Safety & Support sits right after eBike System */}
             {group === "ebike_system" && (
               <Card title="Safety and Support" rows={safetyRows(models)} cols={cols} models={models} />

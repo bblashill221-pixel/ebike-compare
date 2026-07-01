@@ -45,7 +45,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from estimate_component_costs import (
-    cost_battery, cost_motor, cost_brakes, cost_drivetrain, cost_fork,
+    cost_battery, cost_motor, cost_brakes, cost_drivetrain, cost_fork, cost_shock,
     cost_display, cost_tires,
 )
 
@@ -90,7 +90,8 @@ WHOLESALE_SOURCES = ("aliexpress.com", "alibaba.com")
 # whole drivetrain, not one part — they use the per-part flats below instead.
 _FALLBACK_FN = {
     "battery": cost_battery, "motor": cost_motor, "brakes": cost_brakes,
-    "fork": cost_fork, "display": cost_display, "tire": cost_tires,
+    "fork": cost_fork, "shock": cost_shock, "rear_shock": cost_shock,
+    "display": cost_display, "tire": cost_tires,
 }
 # Flat single-part retail estimates for categories without a per-part spec-cost
 # function (street price of a budget OEM single, grounded in the price research).
@@ -228,8 +229,31 @@ def _synth_specs(entry: dict) -> dict:
 # "unknown" = the bike publishes no frame material. It's credited a conservative
 # estimate BELOW a described aluminum frame — an unverified frame shouldn't be valued
 # the same as a stated-quality one (Buzz lists no frame; Aventon lists 6061 aluminum).
-_FRAME_RETAIL = {"unknown": 250, "steel": 200, "aluminum": 420, "chromoly": 550, "carbon": 1700}
+_FRAME_RETAIL = {"unknown": 250, "steel": 200, "aluminum": 350, "chromoly": 550, "carbon": 1700}
 _FRAME_FS_MULT = 1.5
+
+# Editorial frame-build-quality multiplier by brand, applied to the aluminum/carbon
+# material base. A flat per-material price is unrealistic: a name-brand maker's frameset
+# (hydroforming, butting, integrated battery, internal routing, better welds/finish) is
+# worth materially more than a budget DTC frame of the same alloy. These are coarse,
+# hand-set tiers (frame quality only — NOT overall brand desirability); brands absent
+# here default to 1.0. Keep Aventon clearly above Buzz/budget per prior guidance.
+_FRAME_TIER = {
+    # premium traditional bike makers (real frame engineering)
+    "specialized": 1.40, "trek": 1.40, "cannondale": 1.35, "giant": 1.35,
+    # premium direct-to-consumer / known-good framesets
+    "tern": 1.30, "priority": 1.30, "aventon": 1.25, "evelo": 1.20,
+    "urtopia": 1.20, "vvolt": 1.20,
+    # solid mid-tier
+    "ride1up": 1.05, "velotric": 1.05, "blix": 1.00, "juiced": 1.00,
+    "lectric": 1.00, "mokwheel": 1.00, "magicycle": 1.00, "heybike": 1.00,
+    "himiway": 1.00, "segway": 1.00, "monarc": 1.00, "euphree": 1.00,
+    # value / budget DTC (Aventon's frame beats these)
+    "wired": 0.95, "vanpowers": 0.90, "buzz": 0.90, "velowave": 0.90,
+    "engwe": 0.85, "wallke": 0.85, "magician": 0.85, "cyke": 0.85,
+    "vivi": 0.80, "cemoto": 0.80, "leoguar": 0.80,
+}
+_FRAME_TIER_MATS = ("aluminum", "carbon")   # tier brand-quality only where build varies
 
 
 def _frame_cost(table: dict, a: dict) -> int:
@@ -237,7 +261,36 @@ def _frame_cost(table: dict, a: dict) -> int:
     base = table.get(mat, table["unknown"])
     if a.get("full_suspension") and mat in ("aluminum", "carbon"):
         base = round(base * _FRAME_FS_MULT)
+    if mat in _FRAME_TIER_MATS:
+        base = round(base * _FRAME_TIER.get((a.get("brand") or "").lower(), 1.0))
     return base
+
+
+# Tier-aware retail for drivetrain SINGLES: a flat $25 derailleur badly under-prices an
+# AXS/Di2/XTR/Transmission part (real $300–650). Classify the groupset tier from the
+# part's name and price the single accordingly. (Eagle Transmission/T-Type spans tiers,
+# so it isn't an elite marker by itself — the flagship NAME is: XX/X0/XTR/Red/Dura-Ace.)
+_DT_PRICE = {
+    "derailleur": {"elite": 550, "high": 280, "mid": 130, "budget": 25},
+    "cassette":   {"elite": 380, "high": 160, "mid": 70,  "budget": 22},
+    "shifter":    {"elite": 200, "high": 95,  "mid": 40,  "budget": 18},
+    "crankset":   {"elite": 360, "high": 175, "mid": 90,  "budget": 45},
+    "chain":      {"elite": 65,  "high": 40,  "mid": 22,  "budget": 14},
+}
+_DT_ELITE = re.compile(r"\b(xx|x0|xtr|red|xx1|x01)\b|dur[ae].?ace", re.I)  # dur[ae]: source typo "Dure-Ace"
+_DT_HIGH = re.compile(r"\b(gx|xt|force|ultegra|grx)\b|\baxs\b|\bdi2\b", re.I)
+_DT_MID = re.compile(r"\b(nx|slx|deore|105|rival|apex|cues|advent|sx|tiagra)\b"
+                     r"|enviolo|nexus|nuvinci|inter-?\d", re.I)
+
+
+def _dt_tier(ident: str) -> str:
+    if _DT_ELITE.search(ident):
+        return "elite"
+    if _DT_HIGH.search(ident):
+        return "high"
+    if _DT_MID.search(ident):
+        return "mid"
+    return "budget"
 
 
 def heuristic_retail(entry: dict) -> tuple[int | None, str | None]:
@@ -251,6 +304,16 @@ def heuristic_retail(entry: dict) -> tuple[int | None, str | None]:
              f"{entry.get('spec_class') or ''} {entry.get('sample_details') or ''}").lower()
     if re.search(r"\bpinion\b|rohloff", ident):
         return 1500, "premium gearbox (Pinion/Rohloff)"
+    # A carbon drive belt (Gates CDX/CDN) parses as a "chain" but retails far more than a
+    # $14 chain. Price it as a belt when the part identifies as Gates / carbon drive / a
+    # belt (CDX/CenterTrack is the premium line). Scoped to chain/belt so a Gates-branded
+    # crankset or cog keeps its own category price.
+    if cat in ("chain", "belt") and re.search(
+            r"\bgates\b|carbon\s*drive|\bcd[xn]\b|center\s?track|belt", ident):
+        return (100 if re.search(r"\bcdx\b|center\s?track", ident) else 80), "carbon drive belt"
+    if cat in _DT_PRICE:
+        tier = _dt_tier(ident)
+        return _DT_PRICE[cat][tier], f"{cat} ({tier} tier)"
     if cat == "frame":
         a = entry.get("attributes") or {}
         return _frame_cost(_FRAME_RETAIL, a), (

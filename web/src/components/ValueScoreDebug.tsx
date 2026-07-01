@@ -1,6 +1,7 @@
 // DEV-ONLY debug overlay: breaks down every input that produces a model's `value`
 // dimension score. Rendered only when import.meta.env.DEV (see ScoreBars), so it is
 // tree-shaken out of production builds — never shown to real users.
+import { useEffect } from "react";
 import type { ReactNode } from "react";
 import type { Model, SpecValue } from "../types";
 import { lowestPrice } from "../pricing";
@@ -43,6 +44,14 @@ export function ValueScoreDebug({ model, onClose }: { model: Model; onClose: () 
   const score = model.analysis?.scores?.value;
   const cohort = model.analysis?.primary_type ?? "Commuter / Urban";
   const price = lowestPrice(model);
+  // close on Escape
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [onClose]);
   const parts = collectParts(model);
   const knownRetail = parts.reduce((s, p) => s + (p.retail ?? 0), 0);
 

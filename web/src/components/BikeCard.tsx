@@ -11,15 +11,63 @@ import { AffiliateLink } from "./AffiliateLink";
 import { ColorSwatches, upchargeText } from "./ColorSwatches";
 import { BatteryIcon, MotorIcon, PayloadIcon, RangeIcon, RiderHeightIcon, SensorIcon, SpeedIcon, TorqueIcon, WeightIcon, CheckIcon, BuildingIcon } from "./icons";
 import { HighlightsList } from "./HighlightsList";
+import { ValuePips, valueHighlightLabel } from "./ValueMeter";
 import { useUnits, inToFtIn } from "../units";
 
 export function primaryImage(m: Model): string | null {
   return m.colors?.find((c) => c.image)?.image ?? null;
 }
 
-/** Model name without the redundant tier suffix (the tier badge carries it). */
+/** Model name without the redundant tier suffix (the tier badge carries it).
+ *  Used on the DETAIL page and tables — the full, untruncated name. */
 export function displayName(m: Model): string {
   return m.tier ? m.model.replace(` — ${m.tier}`, "") : m.model;
+}
+
+/** A shortened name for the CARD only (the detail page keeps `displayName`). Strips
+ *  boilerplate that bloats sellers' SEO-style titles so the name fits one line:
+ *   1. seller marketing / descriptor tail after a " | " or " / " separator (a trailing
+ *      ST/SO/XR frame token is preserved across a slash — Himiway "A3 / … Bike ST");
+ *   2. "Electric Bike" / eBike / E-Bike filler;  3. "SGS Certified to UL2849";
+ *   4. a redundant leading brand prefix (the brand is shown elsewhere on the card);
+ *   5. a leading model year ("2026") and leading spec descriptors (wheel size / battery);
+ *   6. feature/type words shown elsewhere as pills (Torque Sensor, Fat Tire, Full
+ *      Suspension, Long Range, Mid-Drive, All-Terrain, Off-Road, Folding, Hardtail) plus a
+ *      trailing bike-type word (Cruiser/Commuter/Mountain/Cargo/…).
+ *  Frame-style words (Step-Thru, Step-Over, Low/High-Step) are deliberately KEPT — they
+ *  DISTINGUISH two real variants of the same model. Falls back to the full name if
+ *  stripping leaves nothing. */
+const _esc = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+const _DESC = /\b(?:torque|cadence)\s+sensor\b|\bfat[\s-]?tire\b|\bfull\s+suspension\b|\blong[\s-]?range\b|\bmid[\s-]?drive\b|\ball[\s-]?terrain\b|\boff[\s-]?road\b|\bfold(?:ing|able)\b|\bhardtail\b/gi;
+export function cardName(m: Model): string {
+  let s = displayName(m);
+  // 1. separator tail. For "/" keep a trailing frame token; for "|" just drop the tail.
+  if (/\s+\/\s+/.test(s)) {
+    const before = s.split(/\s+\/\s+/)[0];
+    const frame = s.match(/\b(ST|SO|XR)\s*$/i);
+    s = frame ? `${before} ${frame[1].toUpperCase()}` : before;
+  }
+  s = s.split(/\s+\|\s+/)[0];
+  // 5. leading model year, then leading spec descriptors (20" / 52V 20Ah / 750W)
+  s = s.replace(/^(?:19|20)\d{2}\s+/, "");
+  // 4. redundant leading brand prefix (before the spec strip so "VIVI 20\"…" both go)
+  if (m.brand) s = s.replace(new RegExp(`^${_esc(m.brand)}\\s+`, "i"), "");
+  // VIVI titles are pure SEO ("VIVI <code> Electric Bike <prose>") — the model number is
+  // everything before the first "Electric", so keep only that (e.g. "ACE01 Pro", "Gopina").
+  if (m.brand === "vivi") s = s.split(/\s+electric\b/i)[0].trim();
+  s = s.replace(/^(?:\d+(?:\.\d+)?"\s+|\d+\s*v(?:\s+\d+(?:\.\d+)?\s*ah)?\s+|\d+\s*w\s+)+/i, "");
+  // 3 + 2. certification + "electric bike" boilerplate (anywhere in the name)
+  s = s
+    .replace(/\bsgs\s+certified(?:\s+to\s+ul\s?2849)?\b/gi, "")
+    .replace(/\bcertified\s+to\s+ul\s?2849\b/gi, "")
+    .replace(/\bul\s?2849\b/gi, "")
+    .replace(/\belectric\s+(?:mountain\s+|fat[- ]?tire\s+|commuter\s+|city\s+|road\s+|cargo\s+|cruiser\s+)?bike\b/gi, "")
+    .replace(/\be-?bike\b/gi, "");
+  // 6. pill-redundant feature words, then a trailing bike-type word
+  s = s.replace(_DESC, "").replace(/\s{2,}/g, " ").trim();
+  s = s.replace(/\s+(?:cruiser|commuter|mountain|cargo|moped|trike|suv)\s*$/i, "");
+  s = s.replace(/\s{2,}/g, " ").replace(/^[\s\-–—|,]+|[\s\-–—|,]+$/g, "");
+  return s || displayName(m);
 }
 
 function Spec({
@@ -38,11 +86,41 @@ function Spec({
     <div className="group relative flex flex-col items-center gap-0.5 rounded-lg border border-slate-200 py-2 text-center">
       <span className="[&_*]:!text-brand-600">{icon}</span>
       <span className="whitespace-nowrap text-[10px] font-semibold tracking-tight text-slate-800">{value}</span>
-      <span className="pointer-events-none absolute -top-6 left-1/2 z-50 -translate-x-1/2 whitespace-nowrap rounded bg-slate-800 px-1.5 py-0.5 text-[10px] font-medium text-white opacity-0 transition-opacity duration-150 group-hover:opacity-100">
+      <span className="pointer-events-none absolute -top-1 left-1/2 z-50 -translate-x-1/2 whitespace-nowrap rounded bg-slate-800 px-1.5 py-0.5 text-[10px] font-medium text-white opacity-0 transition-opacity duration-150 group-hover:opacity-100">
         {label}
       </span>
     </div>
   );
+}
+
+// Shorter type label for the CARD pill only (keeps it tight on one line with the
+// frame-style pill); the detail page and facets keep the full product_type.
+const _CARD_TYPE_LABEL: Record<string, string> = {
+  "Commuter / Urban": "Commuter",
+  "Mountain (eMTB)": "eMTB",
+};
+const typeLabel = (pt: string) => _CARD_TYPE_LABEL[pt] ?? pt;
+
+/** The bracketed trim shown after the card title, or null for none. Shows the tier's
+ *  MEANINGFUL differentiators (Dual Battery, Belt, Long-Range, 1000W Rear Hub, …) — incl.
+ *  on a base model whose tier is meaningful (Roadster V3 "belt"). Dropped parts: the FRAME
+ *  STYLE (Step-Thru/Over, Low/High-Step) — already shown by the frame-style pill — and
+ *  DEFAULT markers ("… Only" / Standard / Base / Default / Single Battery). Compound tiers
+ *  are " · "-separated ("1000W Rear Hub · Step-Over" -> "1000W Rear Hub"); an add-on
+ *  "Base + Add-on" shows just the add-on. Null when nothing meaningful is left. */
+const _FRAME_TIER = /^(step[\s-]?thr(u|ough)|step[\s-]?over|low[\s-]?step|high[\s-]?step|mid[\s-]?step|stepthru|lowstep)$/i;
+const _DEFAULT_TIER = /^(.*\bonly|standard|base|default|single\s+(?:battery|pack|charger))$/i;
+function tierLabel(m: Model): string | null {
+  let raw = (m.tier ?? "").trim();
+  if (!raw) return null;
+  if (raw.includes("+") && !raw.includes("·")) raw = raw.slice(raw.lastIndexOf("+") + 1).trim();
+  const parts = raw
+    .split(/\s*·\s*/)
+    .map((s) => s.trim())
+    .filter((s) => s && !_FRAME_TIER.test(s) && !_DEFAULT_TIER.test(s));
+  const t = parts.join(" · ");
+  if (!t) return null;
+  return t.charAt(0).toUpperCase() + t.slice(1);   // "belt" -> "Belt"
 }
 
 // Small icon for a product-type pill: a building for commuter/urban/hybrid types,
@@ -50,26 +128,6 @@ function Spec({
 function typeIcon(pt: string, className: string) {
   if (/commut|urban|hybrid|fitness/i.test(pt)) return <BuildingIcon className={className} />;
   return <span className={`inline-block rounded-full border-[2.5px] border-current ${className}`} aria-hidden />;
-}
-
-type ChangeBadge = { key: string; label: string; cls: string };
-
-/** Up to two "what changed today" badges (from diff_changes.py's changed_today),
- * highest-signal first, for the image corner. */
-function changeBadges(model: Model): ChangeBadge[] {
-  const c = model.changed_today;
-  if (!c) return [];
-  const d = c.detail ?? {};
-  const out: ChangeBadge[] = [];
-  if (d.stock?.event === "back_in_stock")
-    out.push({ key: "stock", label: "Back in stock", cls: "bg-emerald-600" });
-  if (d.price?.direction === "drop")
-    out.push({ key: "price", label: d.price.pct != null ? `↓ ${Math.abs(d.price.pct)}%` : "Price drop", cls: "bg-rose-600" });
-  if (d.sale?.event === "started") out.push({ key: "sale", label: "Now on sale", cls: "bg-amber-500" });
-  else if (d.sale?.event === "deepened") out.push({ key: "sale", label: "Bigger deal", cls: "bg-amber-500" });
-  if (d.free_feature && d.free_feature.added.length)
-    out.push({ key: "free", label: "New freebie", cls: "bg-violet-600" });
-  return out.slice(0, 2);
 }
 
 function BikeCardImpl({ model }: { model: Model; selectedTypes?: string[] }) {
@@ -201,26 +259,6 @@ function BikeCardImpl({ model }: { model: Model; selectedTypes?: string[] }) {
             />
           </div>
         )}
-        {/* corner badges: an explicit "New" (site new-arrival tag) first, then
-            up to one "what changed today" badge */}
-        {(() => {
-          const newBadge: ChangeBadge[] = model.is_new
-            ? [{ key: "new", label: "New", cls: "bg-brand-600" }]
-            : [];
-          const badges = [...newBadge, ...changeBadges(model)].slice(0, 2);
-          return badges.length > 0 ? (
-            <div className="pointer-events-none absolute right-2 top-2 flex flex-col items-end gap-1">
-              {badges.map((b) => (
-                <span
-                  key={b.key}
-                  className={`rounded-full px-2 py-0.5 text-[10px] font-semibold text-white shadow-sm ${b.cls}`}
-                >
-                  {b.label}
-                </span>
-              ))}
-            </div>
-          ) : null;
-        })()}
         {/* current color, over the bottom middle of the image; when a hex is known
             the name is shown in that colour on a contrasting (black/white) chip */}
         {model.colors?.[color]?.name && (() => {
@@ -248,12 +286,21 @@ function BikeCardImpl({ model }: { model: Model; selectedTypes?: string[] }) {
               View at {capitalize(model.brand)} →
             </AffiliateLink>
           </div>
-          <Link to={`/bike/${encodeURIComponent(model.id)}`} className="line-clamp-2 font-semibold text-slate-900 hover:text-brand-700">
-            {displayName(model)}
+          <Link
+            to={`/bike/${encodeURIComponent(model.id)}`}
+            title={model.model}
+            className="block truncate font-semibold text-slate-900 hover:text-brand-700"
+          >
+            {cardName(model)}
+            {tierLabel(model) && (
+              <span className="font-normal text-slate-500"> ({tierLabel(model)})</span>
+            )}
           </Link>
-          {/* Directly under the name: the eBike type pill, then the Step-Thru/Step-Over
-              frame-style option, then any trim/tier. */}
-          <div className="flex flex-wrap items-center gap-1.5">
+          {/* Under the name: the eBike type pill (icon + full type name + value pips) and the
+              Step-Thru/Step-Over frame-style pill. flex-wrap GUARANTEES both stay inside the
+              card — one line when they fit, else the frame-style pill drops to a second line;
+              the type name is never truncated. Tier/trim sits in brackets after the title. */}
+          <div className="flex flex-wrap items-center gap-1">
             {(() => {
               const allTypes = model.product_types ?? (model.product_type ? [model.product_type] : []);
               // always show the bike's PRIMARY type (its identity), not whatever type
@@ -262,19 +309,23 @@ function BikeCardImpl({ model }: { model: Model; selectedTypes?: string[] }) {
               const shown = model.product_type ?? allTypes[0];
               if (!shown) return null;
               return (
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-violet-100 px-2.5 py-1 text-xs font-medium text-violet-700">
-                  {typeIcon(shown, "h-3.5 w-3.5")}
-                  {shown}
+                <span
+                  title={valueHighlightLabel(model.analysis?.specs_typed)}
+                  className="inline-flex shrink-0 items-center gap-1 rounded-full bg-violet-100 px-2 py-1 text-xs font-medium text-violet-700"
+                >
+                  <span className="shrink-0">{typeIcon(shown, "h-3.5 w-3.5")}</span>
+                  <span className="whitespace-nowrap">{typeLabel(shown)}</span>
+                  {/* value meter pips merged into the type badge (value is type-relative) */}
+                  <span className="shrink-0">
+                    <ValuePips level={model.analysis?.specs_typed?.value_level} />
+                  </span>
                 </span>
               );
             })()}
             {model.frame_style && (
-              <span className="inline-flex items-center rounded-full bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600">
+              <span className="inline-flex shrink-0 items-center whitespace-nowrap rounded-full bg-slate-100 px-2 py-1 text-xs font-medium text-slate-600">
                 {model.frame_style}
               </span>
-            )}
-            {model.tier && (
-              <span className="chip bg-amber-100 text-amber-800">{model.tier}</span>
             )}
           </div>
         </div>
@@ -374,9 +425,17 @@ function BikeCardImpl({ model }: { model: Model; selectedTypes?: string[] }) {
           />
         </div>
 
-        {/* Highlights: the bike's standouts (top-quartile specs as "label: value" +
-            uncommon equipment), star header — shared with the detail page */}
-        <HighlightsList standouts={model.analysis?.standouts} />
+        {/* Highlights: the rated value level is already shown by the pips on the type badge,
+            so it's NOT repeated here — only Unrated bikes get a highlight (to explain why
+            they have no pips), followed by the bike's standouts. */}
+        <HighlightsList
+          standouts={[
+            ...(model.analysis?.specs_typed?.value_level
+              ? []
+              : [{ label: valueHighlightLabel(model.analysis?.specs_typed) }]),
+            ...(model.analysis?.standouts ?? []),
+          ]}
+        />
 
         {/* Includes: bundled accessories — green-check "Includes:" header on its own
             line, with the accessory list on the line below (mirrors Highlights) */}

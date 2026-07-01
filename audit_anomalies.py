@@ -28,6 +28,17 @@ DATA = Path(__file__).parent / "data"
 _TRIKE = re.compile(r"(?<!s)trike|tricycle", re.I)
 _CARGO = re.compile(r"cargo|\bhaul|utility|long[\s-]?tail|xpedition", re.I)
 _HYBRID = re.compile(r"hybrid|fitness", re.I)
+# A genuine full-suspension bike names a rear shock somewhere in its specs; the
+# bug class (ENGWE L20 2.0) is "full" inferred from marketing prose with no rear
+# shock anywhere. Used to flag "full" claims that lack any rear-suspension signal.
+_REAR_SHOCK = re.compile(
+    r"rear\s*(?:shock|travel|suspension|damper|swingarm|link)|\bshock\b|air\s*shock"
+    r"|\bhorst\b|dual\s+suspension|front\s+and\s+rear", re.I)
+# Wh consumed per mile of CLAIMED range. Real (even optimistic eco) single-battery
+# claims sit above ~4 Wh/mi; a figure this low almost always means the range was
+# read off a DUAL-battery spec while battery_wh is the single pack (Tern Orox /
+# EVELO Omega bug), or a straight parse error.
+_MIN_WH_PER_MI = 3.5
 # canonical component materials; aluminum may carry an alloy grade ("aluminum 6061")
 _MATERIALS = {
     "carbon", "steel", "stainless", "stainless steel", "carbon steel", "chromoly",
@@ -40,7 +51,9 @@ _ALUMINUM_OK = re.compile(r"^aluminum( [a-z0-9.-]+)?$")
 # value (almost always a parse error) trips a flag.
 _BOUNDS = {
     "battery_wh": (80, 5000), "motor_w": (150, 8000), "motor_peak_w": (150, 12000),
-    "torque_nm": (10, 500), "weight_lb": (14, 175), "range_mi": (5, 250),
+    # range floor 15: a real marketed ebike never claims <~29 mi, so a teens value is
+    # almost always a feet'inches leak (rider height "4'11"" -> 11) or a cog count.
+    "torque_nm": (10, 500), "weight_lb": (14, 175), "range_mi": (15, 250),
     "gears": (1, 14), "max_speed_mph": (10, 60),
 }
 _SEV_RANK = {"high": 0, "medium": 1, "low": 2}
@@ -62,6 +75,19 @@ def _materials(m: dict):
             for v in o:
                 yield from walk(v)
     yield from walk(m.get("specs") or {})
+
+
+def _has_rear_shock(m: dict) -> bool:
+    """True if any spec key OR string value names a rear shock / rear suspension."""
+    def walk(o) -> bool:
+        if isinstance(o, dict):
+            return any(_REAR_SHOCK.search(str(k)) or walk(v) for k, v in o.items())
+        if isinstance(o, list):
+            return any(walk(v) for v in o)
+        if isinstance(o, str):
+            return bool(_REAR_SHOCK.search(o))
+        return False
+    return walk(m.get("specs") or {})
 
 
 def audit(models: list[dict]) -> list[dict]:
@@ -121,9 +147,37 @@ def audit(models: list[dict]) -> list[dict]:
                 flag(m, "numeric_implausible", "high", f"{f}={v} outside [{lo}, {hi}]")
 
         # --- value ratio sanity ---
-        vr = (m.get("analysis") or {}).get("component_quality", {}).get("value_ratio")
-        if isinstance(vr, (int, float)) and (vr < 1.0 or vr > 15):
+        cq = (m.get("analysis") or {}).get("component_quality") or {}
+        vr = cq.get("value_ratio")
+        # now that EVERY bike carries a complete core-component base, bases are higher and
+        # value_ratios sit lower across the board — flag only genuinely suspicious extremes
+        # (parts worth far more than price, or absurdly more than parts).
+        if isinstance(vr, (int, float)) and (vr < 0.55 or vr > 15):
             flag(m, "value_ratio_outlier", "low", f"price / parts-cost ratio = {vr}")
+
+        # --- range read off a dual battery (Tern Orox / EVELO Omega bug) ---
+        wh, rng = t.get("battery_wh"), t.get("range_mi")
+        if (isinstance(wh, (int, float)) and isinstance(rng, (int, float)) and rng > 0
+                and wh / rng < _MIN_WH_PER_MI):
+            flag(m, "range_vs_battery", "high",
+                 f"{wh}Wh / {rng}mi = {wh / rng:.1f} Wh/mi — range likely from a "
+                 f"second/optional battery, not this pack")
+
+        # --- duplicate drive motor on a non-AWD bike (Habit Neo 3 bug) ---
+        motors = [b for b in (cq.get("base_breakdown") or []) if b.get("kind") == "motor"]
+        if len(motors) > 1 and not t.get("awd"):
+            flag(m, "extra_motor_not_awd", "high",
+                 f"{len(motors)} motor cost lines {[b.get('label') for b in motors]} "
+                 f"but awd={t.get('awd')!r}")
+
+        # --- "full" suspension with no rear-shock signal (ENGWE L20 2.0 bug) ---
+        if t.get("suspension") == "full" and not _has_rear_shock(m):
+            flag(m, "full_susp_no_rear_shock", "medium",
+                 "suspension=full but no rear shock named anywhere in specs")
+
+        # --- hub motor must carry a sensor (we default hub→cadence) ---
+        if t.get("drive_type") == "hub" and not t.get("sensor_type"):
+            flag(m, "hub_no_sensor", "medium", "hub drive but sensor_type is unset")
 
         # --- enum singletons (a value held by exactly one bike = misparse candidate) ---
         for f, c in enum_counts.items():

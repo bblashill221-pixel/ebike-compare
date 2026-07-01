@@ -1,0 +1,879 @@
+{
+  "generated_at": "2026-06-28T20:15:52.866663+00:00",
+  "build_date": "2026-06-28",
+  "baseline_date": "2026-06-27",
+  "coverage_regressions": [
+    {
+      "brand": "wired",
+      "models": 7,
+      "coverage_before": 100,
+      "coverage_after": 47,
+      "drop_pts": 53,
+      "fields_lost": {
+        "battery_wh": 5,
+        "weight_lb": 5,
+        "range_mi": 5,
+        "brake_type": 5,
+        "frame_material": 5,
+        "motor_w": 1
+      },
+      "severe": false
+    }
+  ],
+  "summary": {
+    "models_changed": 47,
+    "removed": 10,
+    "by_type": {
+      "added": 1,
+      "free_feature": 19,
+      "sale": 27,
+      "price": 8,
+      "removed": 10
+    },
+    "added_suppressed": false,
+    "free_feature_suppressed": false
+  },
+  "changes": [
+    {
+      "id": "engwe__comfort-ebike-full-suspension-ebike-engwe-l20-3-0",
+      "brand": "engwe",
+      "model": "L20 3.0",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "mokwheel__asphalt",
+      "brand": "mokwheel",
+      "model": "Asphalt Ebike",
+      "types": [
+        "free_feature"
+      ],
+      "detail": {
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mokwheel__asphalt-st",
+      "brand": "mokwheel",
+      "model": "Asphalt ST Ebike",
+      "types": [
+        "free_feature"
+      ],
+      "detail": {
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mokwheel__basalt-2-0",
+      "brand": "mokwheel",
+      "model": "Basalt 2.0 Ebike",
+      "types": [
+        "free_feature"
+      ],
+      "detail": {
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mokwheel__basalt-st-2-0-s",
+      "brand": "mokwheel",
+      "model": "Basalt ST 2.0 Ebike",
+      "types": [
+        "free_feature"
+      ],
+      "detail": {
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mokwheel__flint-pro-st",
+      "brand": "mokwheel",
+      "model": "FLINT PRO ST Ebike",
+      "types": [
+        "free_feature"
+      ],
+      "detail": {
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mokwheel__flint",
+      "brand": "mokwheel",
+      "model": "FLINT Ebike",
+      "types": [
+        "free_feature"
+      ],
+      "detail": {
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mokwheel__flint-pro",
+      "brand": "mokwheel",
+      "model": "FLINT PRO Ebike",
+      "types": [
+        "free_feature"
+      ],
+      "detail": {
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mokwheel__flint-st",
+      "brand": "mokwheel",
+      "model": "FLINT ST Ebike",
+      "types": [
+        "free_feature"
+      ],
+      "detail": {
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mokwheel__granite",
+      "brand": "mokwheel",
+      "model": "Granite E-Trike",
+      "types": [
+        "free_feature"
+      ],
+      "detail": {
+        "free_feature": {
+          "added": [
+            "Basket"
+          ],
+          "removed": [
+            "Free shipping"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mokwheel__mesa-plus-st",
+      "brand": "mokwheel",
+      "model": "Mesa Plus ST Ebike",
+      "types": [
+        "free_feature"
+      ],
+      "detail": {
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mokwheel__obsidian-2-0",
+      "brand": "mokwheel",
+      "model": "Obsidian 2.0 Ebike",
+      "types": [
+        "free_feature"
+      ],
+      "detail": {
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping",
+            "Rear Rack"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mokwheel__obsidian-st-2-0",
+      "brand": "mokwheel",
+      "model": "Obsidian ST 2.0 Ebike",
+      "types": [
+        "free_feature"
+      ],
+      "detail": {
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping",
+            "Rear Rack"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mokwheel__onyx",
+      "brand": "mokwheel",
+      "model": "Onyx Ebike",
+      "types": [
+        "free_feature"
+      ],
+      "detail": {
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping",
+            "Rear Rack"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mokwheel__onyx-st",
+      "brand": "mokwheel",
+      "model": "Onyx ST Ebike",
+      "types": [
+        "free_feature"
+      ],
+      "detail": {
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping",
+            "Rear Rack"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mokwheel__scoria",
+      "brand": "mokwheel",
+      "model": "Scoria 2.0 Ebike",
+      "types": [
+        "free_feature"
+      ],
+      "detail": {
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mokwheel__slate",
+      "brand": "mokwheel",
+      "model": "Slate Ebike",
+      "types": [
+        "free_feature"
+      ],
+      "detail": {
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mokwheel__tarmac",
+      "brand": "mokwheel",
+      "model": "Tarmac Ebike",
+      "types": [
+        "free_feature"
+      ],
+      "detail": {
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mokwheel__tarmac-st",
+      "brand": "mokwheel",
+      "model": "Tarmac ST Ebike",
+      "types": [
+        "free_feature"
+      ],
+      "detail": {
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mokwheel__tor-plus",
+      "brand": "mokwheel",
+      "model": "Tor Plus Ebike",
+      "types": [
+        "free_feature"
+      ],
+      "detail": {
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping"
+          ]
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__beagle-1",
+      "brand": "puckipuppy",
+      "model": "Beagle",
+      "types": [
+        "sale"
+      ],
+      "detail": {
+        "sale": {
+          "event": "started",
+          "discount_pct": 40
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__beagle-2",
+      "brand": "puckipuppy",
+      "model": "Beagle 2 Ebike",
+      "types": [
+        "sale"
+      ],
+      "detail": {
+        "sale": {
+          "event": "started",
+          "discount_pct": 17
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__beagle-2-st",
+      "brand": "puckipuppy",
+      "model": "Beagle 2 ST Ebike",
+      "types": [
+        "sale"
+      ],
+      "detail": {
+        "sale": {
+          "event": "started",
+          "discount_pct": 9
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__beagle",
+      "brand": "puckipuppy",
+      "model": "Beagle Ebike",
+      "types": [
+        "sale"
+      ],
+      "detail": {
+        "sale": {
+          "event": "started",
+          "discount_pct": 42
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__boxer",
+      "brand": "puckipuppy",
+      "model": "Boxer Ebike",
+      "types": [
+        "sale"
+      ],
+      "detail": {
+        "sale": {
+          "event": "started",
+          "discount_pct": 13
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__boxer-st",
+      "brand": "puckipuppy",
+      "model": "Boxer ST Ebike",
+      "types": [
+        "sale"
+      ],
+      "detail": {
+        "sale": {
+          "event": "started",
+          "discount_pct": 13
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__bulldog",
+      "brand": "puckipuppy",
+      "model": "Bulldog Ebike",
+      "types": [
+        "sale"
+      ],
+      "detail": {
+        "sale": {
+          "event": "started",
+          "discount_pct": 25
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__bulldog-pro",
+      "brand": "puckipuppy",
+      "model": "Bulldog Pro Ebike",
+      "types": [
+        "sale"
+      ],
+      "detail": {
+        "sale": {
+          "event": "started",
+          "discount_pct": 5
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__corgi",
+      "brand": "puckipuppy",
+      "model": "Corgi Ebike",
+      "types": [
+        "sale"
+      ],
+      "detail": {
+        "sale": {
+          "event": "started",
+          "discount_pct": 7
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__dachshund-ebike",
+      "brand": "puckipuppy",
+      "model": "Dachshund Ebike",
+      "types": [
+        "sale"
+      ],
+      "detail": {
+        "sale": {
+          "event": "started",
+          "discount_pct": 25
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__doberman",
+      "brand": "puckipuppy",
+      "model": "Doberman Ebike",
+      "types": [
+        "sale"
+      ],
+      "detail": {
+        "sale": {
+          "event": "started",
+          "discount_pct": 18
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__goldenr-camouflage",
+      "brand": "puckipuppy",
+      "model": "GoldenR Ebike",
+      "types": [
+        "sale"
+      ],
+      "detail": {
+        "sale": {
+          "event": "started",
+          "discount_pct": 45
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__goldenr-pro",
+      "brand": "puckipuppy",
+      "model": "GoldenR Pro Ebike",
+      "types": [
+        "sale"
+      ],
+      "detail": {
+        "sale": {
+          "event": "started",
+          "discount_pct": 14
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__labrador",
+      "brand": "puckipuppy",
+      "model": "Labrador Ebike",
+      "types": [
+        "sale"
+      ],
+      "detail": {
+        "sale": {
+          "event": "started",
+          "discount_pct": 46
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__labrador-pro",
+      "brand": "puckipuppy",
+      "model": "Labrador Pro Ebike",
+      "types": [
+        "sale"
+      ],
+      "detail": {
+        "sale": {
+          "event": "started",
+          "discount_pct": 18
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__labrador-pro-st",
+      "brand": "puckipuppy",
+      "model": "Labrador Pro ST Ebike",
+      "types": [
+        "sale"
+      ],
+      "detail": {
+        "sale": {
+          "event": "started",
+          "discount_pct": 6
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__poodle",
+      "brand": "puckipuppy",
+      "model": "Poodle Ebike",
+      "types": [
+        "sale"
+      ],
+      "detail": {
+        "sale": {
+          "event": "started",
+          "discount_pct": 25
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__samoyed",
+      "brand": "puckipuppy",
+      "model": "Samoyed Ebike",
+      "types": [
+        "sale"
+      ],
+      "detail": {
+        "sale": {
+          "event": "started",
+          "discount_pct": 10
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__schnauzer",
+      "brand": "puckipuppy",
+      "model": "Schnauzer Ebike",
+      "types": [
+        "sale"
+      ],
+      "detail": {
+        "sale": {
+          "event": "started",
+          "discount_pct": 29
+        }
+      }
+    },
+    {
+      "id": "velowave__breeze-t-torque-sensor-electric-bike",
+      "brand": "velowave",
+      "model": "Breeze T Torque Sensor Electric Bike",
+      "types": [
+        "price",
+        "sale"
+      ],
+      "detail": {
+        "price": {
+          "from": 1499.0,
+          "to": 1299.0,
+          "delta": -200.0,
+          "pct": -13,
+          "direction": "drop"
+        },
+        "sale": {
+          "event": "started",
+          "discount_pct": 13
+        }
+      }
+    },
+    {
+      "id": "velowave__grace-step-thru-electric-bike",
+      "brand": "velowave",
+      "model": "Grace 2.0 Step-Thru Electric Bike",
+      "types": [
+        "price",
+        "sale"
+      ],
+      "detail": {
+        "price": {
+          "from": 1699.0,
+          "to": 1499.0,
+          "delta": -200.0,
+          "pct": -12,
+          "direction": "drop"
+        },
+        "sale": {
+          "event": "started",
+          "discount_pct": 12
+        }
+      }
+    },
+    {
+      "id": "velowave__pony-step-thru-electric-bike",
+      "brand": "velowave",
+      "model": "Pony Compact Step-Thru Electric Bike",
+      "types": [
+        "price",
+        "sale"
+      ],
+      "detail": {
+        "price": {
+          "from": 1499.0,
+          "to": 1299.0,
+          "delta": -200.0,
+          "pct": -13,
+          "direction": "drop"
+        },
+        "sale": {
+          "event": "started",
+          "discount_pct": 13
+        }
+      }
+    },
+    {
+      "id": "velowave__ranger-fat-tire-electric-bike",
+      "brand": "velowave",
+      "model": "Ranger 2.0 Fat Tire All-Terrain Electric Bike",
+      "types": [
+        "price",
+        "sale"
+      ],
+      "detail": {
+        "price": {
+          "from": 1499.0,
+          "to": 1299.0,
+          "delta": -200.0,
+          "pct": -13,
+          "direction": "drop"
+        },
+        "sale": {
+          "event": "started",
+          "discount_pct": 13
+        }
+      }
+    },
+    {
+      "id": "velowave__ranger-3-0-fat-tire-all-terrain-electric-bike",
+      "brand": "velowave",
+      "model": "Ranger 3.0 Fat Tire All-Terrain Electric Bike",
+      "types": [
+        "price",
+        "sale"
+      ],
+      "detail": {
+        "price": {
+          "from": 1599.0,
+          "to": 1399.0,
+          "delta": -200.0,
+          "pct": -13,
+          "direction": "drop"
+        },
+        "sale": {
+          "event": "started",
+          "discount_pct": 13
+        }
+      }
+    },
+    {
+      "id": "velowave__ranger-step-thru-electric-bike",
+      "brand": "velowave",
+      "model": "Ranger Step-Thru 2.0 Electric Bike",
+      "types": [
+        "price",
+        "sale"
+      ],
+      "detail": {
+        "price": {
+          "from": 1499.0,
+          "to": 1299.0,
+          "delta": -200.0,
+          "pct": -13,
+          "direction": "drop"
+        },
+        "sale": {
+          "event": "started",
+          "discount_pct": 13
+        }
+      }
+    },
+    {
+      "id": "velowave__ranger-step-thru-3-0-electric-bike",
+      "brand": "velowave",
+      "model": "Ranger Step-Thru 3.0 Torque Sensor Electric Bike",
+      "types": [
+        "price",
+        "sale"
+      ],
+      "detail": {
+        "price": {
+          "from": 1599.0,
+          "to": 1399.0,
+          "delta": -200.0,
+          "pct": -13,
+          "direction": "drop"
+        },
+        "sale": {
+          "event": "started",
+          "discount_pct": 13
+        }
+      }
+    },
+    {
+      "id": "velowave__swift-m-mid-drive-mountain-electric-bike",
+      "brand": "velowave",
+      "model": "Swift M Mid-Drive Electric Bike",
+      "types": [
+        "price",
+        "sale"
+      ],
+      "detail": {
+        "price": {
+          "from": 1799.0,
+          "to": 1599.0,
+          "delta": -200.0,
+          "pct": -11,
+          "direction": "drop"
+        },
+        "sale": {
+          "event": "started",
+          "discount_pct": 11
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__beagle-2-ebike",
+      "brand": "puckipuppy",
+      "model": "Beagle 2 Ebike",
+      "types": [
+        "removed"
+      ]
+    },
+    {
+      "id": "puckipuppy__boxer-1",
+      "brand": "puckipuppy",
+      "model": "Boxer Ebike",
+      "types": [
+        "removed"
+      ]
+    },
+    {
+      "id": "puckipuppy__boxer-st-1",
+      "brand": "puckipuppy",
+      "model": "Boxer ST Ebike",
+      "types": [
+        "removed"
+      ]
+    },
+    {
+      "id": "puckipuppy__bulldog-camouflage",
+      "brand": "puckipuppy",
+      "model": "Bulldog Ebike",
+      "types": [
+        "removed"
+      ]
+    },
+    {
+      "id": "puckipuppy__bulldog-pro-ebike",
+      "brand": "puckipuppy",
+      "model": "Bulldog Pro Ebike",
+      "types": [
+        "removed"
+      ]
+    },
+    {
+      "id": "puckipuppy__goldenr-pro-ebike",
+      "brand": "puckipuppy",
+      "model": "GoldenR Pro Ebike",
+      "types": [
+        "removed"
+      ]
+    },
+    {
+      "id": "puckipuppy__labrador-pro-1",
+      "brand": "puckipuppy",
+      "model": "Labrador Pro Ebike",
+      "types": [
+        "removed"
+      ]
+    },
+    {
+      "id": "puckipuppy__labrador-pro-st-camouflage",
+      "brand": "puckipuppy",
+      "model": "Labrador Pro ST Ebike",
+      "types": [
+        "removed"
+      ]
+    },
+    {
+      "id": "velotric__velotric-discover-m-mid-drive-ebike",
+      "brand": "velotric",
+      "model": "Velotric Discover M Ebike",
+      "types": [
+        "removed"
+      ]
+    },
+    {
+      "id": "velotric__velotric-t1st-ebike",
+      "brand": "velotric",
+      "model": "Velotric T1 ST Plus Ebike",
+      "types": [
+        "removed"
+      ]
+    }
+  ]
+}

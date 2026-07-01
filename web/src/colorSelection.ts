@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import type { Model } from "./types";
+import { variantPrice } from "./pricing";
 
 // Per-model color selection shared across views: picking a color on a Browse
 // card carries into the detail page and back again. Session-scoped so a fresh
@@ -35,10 +36,23 @@ export function colorSoldOut(model: Model, index: number): boolean {
 /** Index of the first in-stock colorway (0 when none/all are available). */
 export function defaultColorIndex(model: Model): number {
   const colors = model.colors ?? [];
+  if (!colors.length) return 0;
   const sold = soldOutColors(model);
-  if (!sold.size) return 0;
-  const i = colors.findIndex((c) => !sold.has((c.name ?? "").toLowerCase()));
-  return i >= 0 ? i : 0;
+  // available (not sold-out) color indices; fall back to all if every color is sold out
+  const avail = colors.map((_, i) => i)
+    .filter((i) => !sold.has((colors[i].name ?? "").toLowerCase()));
+  const pool = avail.length ? avail : colors.map((_, i) => i);
+  // default to the CHEAPEST available colorway (some colors carry an upcharge), so the
+  // bike initializes showing its least-expensive configuration; fall back to the first
+  // available color when no per-color price is known.
+  let bestI = pool[0];
+  let bestP: number | null = null;
+  for (const i of pool) {
+    const p = variantPrice(model, colors[i].name ?? undefined);
+    if (p == null) continue;
+    if (bestP == null || p < bestP) { bestP = p; bestI = i; }
+  }
+  return bestI;
 }
 
 function stored(id: string | undefined, count: number, fallback: number): number {

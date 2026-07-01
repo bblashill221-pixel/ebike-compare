@@ -7,8 +7,8 @@ Two classifiers live here so every brand maps onto the same vocabulary:
   - classify_product_types(): every matching PRODUCT_TYPES label (vendor
     `product_type` strings are marketing junk — "Zebra", "D5 2.0",
     "Electric_Bicycles"); classify_product_type() is its primary label;
-  - frame_style_of() / pick_frame_style(): "Step-Thru" vs "Step-Over
-    (Mid-Step)" from option values, config labels, or model names. The site
+  - frame_style_of() / pick_frame_style(): "Step-Thru" vs "Step-Over"
+    from option values, config labels, or model names. The site
     filters on these two buckets (low/mid/high-step all read as one of them).
 
 Scrapers should call these when building a model dict; normalize.py applies
@@ -55,7 +55,9 @@ _TYPE_RULES = [
     ("eMoto", re.compile(
         r"\be-?moto\b|motorcycle|motor[\s-]?bike|moped|scrambler|chopper|harley"
         r"|dirt[\s-]?bike|caf[eé][\s-]?racer", re.I)),
-    ("Fat Tire", re.compile(r"\bfat\b", re.I)),
+    # \bfat\b, but NOT Schwalbe's "Fat Frank" — a 2.35" balloon/cruiser tire, never a fat
+    # bike (it was mis-classifying the Leoguar Zephyr Beach Cruiser as Fat Tire).
+    ("Fat Tire", re.compile(r"\bfat\b(?!\s*frank)", re.I)),
     # All-Terrain (adventure/SUV): the site/name says so. Sits ABOVE eMTB in
     # PRIMARY_SPECIFICITY, so an explicit all-terrain tag wins over the eMTB signal
     # ("keyword always overrides"). "all-terrain" was moved here OUT of the eMTB rule.
@@ -131,14 +133,17 @@ def primary_type(types: list[str]) -> str:
 # ------------------------------ frame style ------------------------------
 
 STEP_THRU = "Step-Thru"
-STEP_OVER = "Step-Over (Mid-Step)"
+STEP_OVER = "Step-Over"
 FRAME_STYLES = [STEP_THRU, STEP_OVER]
 
 # Bare "ST"/"XR" are brand shorthands (Ride1Up, Velowave "Asphalt ST",
 # Himiway "D3 ST"); matched only as standalone tokens.
-_THRU = re.compile(r"step[\s_-]?thr(u|ough)|low[\s_-]?step|easy[\s_-]?entry|\bst\b", re.I)
+# mid-step counts as STEP-THRU (the bucket is a low/dropped bar you step through, not a
+# high diamond top tube you swing over) — the "(Mid-Step)" qualifier was dropped from the
+# label so the pill fits one line on the card.
+_THRU = re.compile(r"step[\s_-]?thr(u|ough)|low[\s_-]?step|mid[\s_-]?step|easy[\s_-]?entry|\bst\b", re.I)
 _THRU_GLUED = re.compile(r"(?<=[a-z])ST\b")  # camel-glued shorthand: "CruiserST"
-_OVER = re.compile(r"step[\s_-]?over|high[\s_-]?step|mid[\s_-]?step|\bxr\b|\bhs\b|\bdiamond\b", re.I)
+_OVER = re.compile(r"step[\s_-]?over|high[\s_-]?step|\bxr\b|\bhs\b|\bdiamond\b", re.I)
 
 
 def frame_style_of(text) -> str | None:

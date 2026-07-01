@@ -1,875 +1,255 @@
 {
-  "generated_at": "2026-06-24T18:26:14.337334+00:00",
-  "build_date": "2026-06-24",
-  "baseline_date": "2026-06-15",
+  "generated_at": "2026-07-01T07:57:46.264337+00:00",
+  "build_date": "2026-07-01",
+  "baseline_date": "2026-06-27",
+  "coverage_regressions": [],
   "summary": {
-    "models_changed": 159,
-    "removed": 28,
+    "models_changed": 58,
+    "removed": 23,
     "by_type": {
-      "price": 61,
-      "sale": 40,
-      "stock": 6,
-      "added": 89,
-      "removed": 28
+      "added": 12,
+      "free_feature": 19,
+      "sale": 27,
+      "price": 8,
+      "removed": 23
     },
     "added_suppressed": false,
-    "free_feature_suppressed": true
+    "free_feature_suppressed": false
   },
   "changes": [
     {
-      "id": "aventon__aventure-3-ebike",
-      "brand": "aventon",
-      "model": "Aventure 3 Ebike",
-      "types": [
-        "price",
-        "sale"
-      ],
-      "detail": {
-        "price": {
-          "from": 1999.0,
-          "to": 1749.0,
-          "delta": -250.0,
-          "pct": -13,
-          "direction": "drop"
-        },
-        "sale": {
-          "event": "started",
-          "discount_pct": 13
-        }
-      }
-    },
-    {
-      "id": "aventon__aventure-3-step-through-ebike",
-      "brand": "aventon",
-      "model": "Aventure 3 Step-Through Ebike",
-      "types": [
-        "price",
-        "sale"
-      ],
-      "detail": {
-        "price": {
-          "from": 1999.0,
-          "to": 1749.0,
-          "delta": -250.0,
-          "pct": -13,
-          "direction": "drop"
-        },
-        "sale": {
-          "event": "started",
-          "discount_pct": 13
-        }
-      }
-    },
-    {
-      "id": "aventon__aventure-m-ebike",
-      "brand": "aventon",
-      "model": "Aventure M Ebike",
-      "types": [
-        "price",
-        "sale"
-      ],
-      "detail": {
-        "price": {
-          "from": 2899.0,
-          "to": 2649.0,
-          "delta": -250.0,
-          "pct": -9,
-          "direction": "drop"
-        },
-        "sale": {
-          "event": "started",
-          "discount_pct": 9
-        }
-      }
-    },
-    {
-      "id": "aventon__soltera-3-ebike",
-      "brand": "aventon",
-      "model": "Soltera 3 ADV Ebike",
-      "types": [
-        "stock"
-      ],
-      "detail": {
-        "stock": {
-          "event": "back_in_stock"
-        }
-      }
-    },
-    {
-      "id": "buzz__buzz-beekeeper-electric-cargo-bike-e4023",
-      "brand": "buzz",
-      "model": "Beekeeper Cargo Ebike",
-      "types": [
-        "price"
-      ],
-      "detail": {
-        "price": {
-          "from": 999.99,
-          "to": 799.99,
-          "delta": -200.0,
-          "pct": -20,
-          "direction": "drop"
-        }
-      }
-    },
-    {
-      "id": "buzz__buzz-centris",
-      "brand": "buzz",
-      "model": "Centris 2 Folding Ebike",
-      "types": [
-        "price"
-      ],
-      "detail": {
-        "price": {
-          "from": 899.99,
-          "to": 719.99,
-          "delta": -180.0,
-          "pct": -20,
-          "direction": "drop"
-        }
-      }
-    },
-    {
-      "id": "buzz__buzz-cerana2",
-      "brand": "buzz",
-      "model": "Cerana 2 Commuter Ebike",
-      "types": [
-        "price"
-      ],
-      "detail": {
-        "price": {
-          "from": 999.99,
-          "to": 799.99,
-          "delta": -200.0,
-          "pct": -20,
-          "direction": "drop"
-        }
-      }
-    },
-    {
-      "id": "cannondale__habit-neo-1-smu",
-      "brand": "cannondale",
-      "model": "Habit Neo 1",
+      "id": "bakcou__flatlander-sd",
+      "brand": "bakcou",
+      "model": "Flatlander SD",
       "types": [
         "added"
       ],
       "detail": {}
     },
     {
-      "id": "cannondale__habit-neo-2-smu",
-      "brand": "cannondale",
-      "model": "Habit Neo 2",
+      "id": "bakcou__kodiak-awd",
+      "brand": "bakcou",
+      "model": "Kodiak AWD",
       "types": [
         "added"
       ],
       "detail": {}
     },
     {
-      "id": "cannondale__habit-neo-3-smu",
-      "brand": "cannondale",
-      "model": "Habit Neo 3",
+      "id": "bakcou__kodiak-sd",
+      "brand": "bakcou",
+      "model": "Kodiak AWD SD",
       "types": [
         "added"
       ],
       "detail": {}
     },
     {
-      "id": "cannondale__moterra-lt-1-c65144u",
-      "brand": "cannondale",
-      "model": "Moterra LT 1",
+      "id": "bakcou__mule-fat-tire-electric-bike",
+      "brand": "bakcou",
+      "model": "Mule",
       "types": [
-        "stock"
+        "added"
       ],
-      "detail": {
-        "stock": {
-          "event": "back_in_stock"
-        }
-      }
+      "detail": {}
     },
     {
-      "id": "engwe__engwe-l16",
+      "id": "bakcou__mule-jager",
+      "brand": "bakcou",
+      "model": "Mule Jäger",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "bakcou__mule-jager-sd",
+      "brand": "bakcou",
+      "model": "Mule Jäger SD",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "bakcou__mule-sd-1",
+      "brand": "bakcou",
+      "model": "Mule SD",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "bakcou__mule-step-through-st-26",
+      "brand": "bakcou",
+      "model": "Mule Step-Through (ST) 26\"",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "bakcou__scout-fat-tire-electric-bike",
+      "brand": "bakcou",
+      "model": "Scout",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "bakcou__scout-jager",
+      "brand": "bakcou",
+      "model": "Scout Jäger",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "bakcou__storm-fat-tire-electric-bike",
+      "brand": "bakcou",
+      "model": "Storm G2",
+      "types": [
+        "added"
+      ],
+      "detail": {}
+    },
+    {
+      "id": "engwe__comfort-ebike-full-suspension-ebike-engwe-l20-3-0",
       "brand": "engwe",
-      "model": "ENGWE L16",
+      "model": "L20 3.0",
       "types": [
         "added"
       ],
       "detail": {}
     },
     {
-      "id": "engwe__l20-2-0",
-      "brand": "engwe",
-      "model": "ENGWE L20 2.0",
+      "id": "mokwheel__asphalt",
+      "brand": "mokwheel",
+      "model": "Asphalt Ebike",
       "types": [
-        "price",
-        "sale",
-        "stock"
+        "free_feature"
       ],
       "detail": {
-        "price": {
-          "from": 1599.0,
-          "to": 699.0,
-          "delta": -900.0,
-          "pct": -56,
-          "direction": "drop"
-        },
-        "sale": {
-          "event": "started",
-          "discount_pct": 42
-        },
-        "stock": {
-          "event": "back_in_stock"
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping"
+          ]
         }
       }
     },
     {
-      "id": "engwe__3300-w-electric-bike-motor-engwe-m20-3-0-moped-style-ebike",
-      "brand": "engwe",
-      "model": "ENGWE M20 3.0",
+      "id": "mokwheel__asphalt-st",
+      "brand": "mokwheel",
+      "model": "Asphalt ST Ebike",
       "types": [
-        "price",
-        "sale"
+        "free_feature"
       ],
       "detail": {
-        "price": {
-          "from": 1399.0,
-          "to": 1499.0,
-          "delta": 100.0,
-          "pct": 7,
-          "direction": "rise"
-        },
-        "sale": {
-          "event": "reduced",
-          "from_pct": 30,
-          "to_pct": 25
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping"
+          ]
         }
       }
     },
     {
-      "id": "engwe__3300-w-electric-bike-motor-engwe-m20-3-0-moped-style-ebike--dual-battery",
-      "brand": "engwe",
-      "model": "ENGWE M20 3.0 — Dual Battery",
+      "id": "mokwheel__basalt-2-0",
+      "brand": "mokwheel",
+      "model": "Basalt 2.0 Ebike",
       "types": [
-        "price",
-        "sale"
+        "free_feature"
       ],
       "detail": {
-        "price": {
-          "from": 1699.0,
-          "to": 1799.0,
-          "delta": 100.0,
-          "pct": 6,
-          "direction": "rise"
-        },
-        "sale": {
-          "event": "reduced",
-          "from_pct": 32,
-          "to_pct": 28
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping"
+          ]
         }
       }
     },
     {
-      "id": "evelo__atlas",
-      "brand": "evelo",
-      "model": "EVELO Atlas Electric Bike",
+      "id": "mokwheel__basalt-st-2-0-s",
+      "brand": "mokwheel",
+      "model": "Basalt ST 2.0 Ebike",
       "types": [
-        "price",
-        "sale"
+        "free_feature"
       ],
       "detail": {
-        "price": {
-          "from": 3899.0,
-          "to": 3799.0,
-          "delta": -100.0,
-          "pct": -3,
-          "direction": "drop"
-        },
-        "sale": {
-          "event": "deepened",
-          "from_pct": 15,
-          "to_pct": 17
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping"
+          ]
         }
       }
     },
     {
-      "id": "evelo__compass",
-      "brand": "evelo",
-      "model": "EVELO Compass Electric Trike",
+      "id": "mokwheel__flint-pro-st",
+      "brand": "mokwheel",
+      "model": "FLINT PRO ST Ebike",
       "types": [
-        "price",
-        "sale"
+        "free_feature"
       ],
       "detail": {
-        "price": {
-          "from": 3599.0,
-          "to": 3499.0,
-          "delta": -100.0,
-          "pct": -3,
-          "direction": "drop"
-        },
-        "sale": {
-          "event": "deepened",
-          "from_pct": 16,
-          "to_pct": 19
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping"
+          ]
         }
       }
     },
     {
-      "id": "evelo__galaxy-lux",
-      "brand": "evelo",
-      "model": "EVELO Galaxy Lux Electric Bike",
+      "id": "mokwheel__flint",
+      "brand": "mokwheel",
+      "model": "FLINT Ebike",
       "types": [
-        "price",
-        "sale"
+        "free_feature"
       ],
       "detail": {
-        "price": {
-          "from": 3399.0,
-          "to": 3299.0,
-          "delta": -100.0,
-          "pct": -3,
-          "direction": "drop"
-        },
-        "sale": {
-          "event": "deepened",
-          "from_pct": 17,
-          "to_pct": 20
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping"
+          ]
         }
       }
     },
     {
-      "id": "evelo__omega",
-      "brand": "evelo",
-      "model": "EVELO Omega Electric Bike",
+      "id": "mokwheel__flint-pro",
+      "brand": "mokwheel",
+      "model": "FLINT PRO Ebike",
       "types": [
-        "price",
-        "sale"
+        "free_feature"
       ],
       "detail": {
-        "price": {
-          "from": 3899.0,
-          "to": 3799.0,
-          "delta": -100.0,
-          "pct": -3,
-          "direction": "drop"
-        },
-        "sale": {
-          "event": "deepened",
-          "from_pct": 11,
-          "to_pct": 14
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping"
+          ]
         }
       }
     },
     {
-      "id": "giant__defy-advanced-eplus-elite-1",
-      "brand": "giant",
-      "model": "Defy Advanced E+ Elite 1",
+      "id": "mokwheel__flint-st",
+      "brand": "mokwheel",
+      "model": "FLINT ST Ebike",
       "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "giant__defy-advanced-eplus-elite-ar",
-      "brand": "giant",
-      "model": "Defy Advanced E+ Elite AR",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "giant__reign-eplus-2-2024",
-      "brand": "giant",
-      "model": "Reign E+ 2",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "giant__stance-eplus-0-2027",
-      "brand": "giant",
-      "model": "Stance E+ 0",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "giant__stance-eplus-1-2027",
-      "brand": "giant",
-      "model": "Stance E+ 1",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "giant__talon-eplus",
-      "brand": "giant",
-      "model": "Talon E+",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "heybike__alpha",
-      "brand": "heybike",
-      "model": "ALPHA",
-      "types": [
-        "price"
+        "free_feature"
       ],
       "detail": {
-        "price": {
-          "from": 1299.0,
-          "to": 1799.0,
-          "delta": 500.0,
-          "pct": 38,
-          "direction": "rise"
-        }
-      }
-    },
-    {
-      "id": "heybike__alpha--step-thru",
-      "brand": "heybike",
-      "model": "ALPHA — Step-Thru",
-      "types": [
-        "price"
-      ],
-      "detail": {
-        "price": {
-          "from": 1299.0,
-          "to": 1799.0,
-          "delta": 500.0,
-          "pct": 38,
-          "direction": "rise"
-        }
-      }
-    },
-    {
-      "id": "heybike__mars-2-0",
-      "brand": "heybike",
-      "model": "Mars 2.0 750/1000W",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "heybike__mars-2-0-750-1000w-deal",
-      "brand": "heybike",
-      "model": "Mars 2.0 750/1000W（Brad‘s Deal）",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "heybike__mars-2-0-750-1000w-deal--1000w-peak-1800w",
-      "brand": "heybike",
-      "model": "Mars 2.0 750/1000W（Brad‘s Deal） — 1000W (Peak 1800W)",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "heybike__mars-2-0-750-1000w-slick-deals",
-      "brand": "heybike",
-      "model": "Mars 2.0 750/1000W（Slick deals）",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "heybike__mars-2-0-750-1000w-slick-deals--1000w-peak-1800w",
-      "brand": "heybike",
-      "model": "Mars 2.0 750/1000W（Slick deals） — 1000W (Peak 1800W)",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "heybike__ranger-3-0-pro",
-      "brand": "heybike",
-      "model": "Ranger 3.0 Pro",
-      "types": [
-        "price",
-        "sale"
-      ],
-      "detail": {
-        "price": {
-          "from": 1499.0,
-          "to": 1399.0,
-          "delta": -100.0,
-          "pct": -7,
-          "direction": "drop"
-        },
-        "sale": {
-          "event": "deepened",
-          "from_pct": 25,
-          "to_pct": 30
-        }
-      }
-    },
-    {
-      "id": "himiway__all-terrain-electric-bike-d5pro",
-      "brand": "himiway",
-      "model": "D5 Pro / All-terrain Electric Fat Bike",
-      "types": [
-        "price",
-        "sale"
-      ],
-      "detail": {
-        "price": {
-          "from": 1799.0,
-          "to": 1999.0,
-          "delta": 200.0,
-          "pct": 11,
-          "direction": "rise"
-        },
-        "sale": {
-          "event": "reduced",
-          "from_pct": 31,
-          "to_pct": 23
-        }
-      }
-    },
-    {
-      "id": "himiway__all-terrain-electric-bike-d5prost",
-      "brand": "himiway",
-      "model": "D5 Pro ST / All-terrain Electric Fat Bike",
-      "types": [
-        "price",
-        "sale"
-      ],
-      "detail": {
-        "price": {
-          "from": 1799.0,
-          "to": 1999.0,
-          "delta": 200.0,
-          "pct": 11,
-          "direction": "rise"
-        },
-        "sale": {
-          "event": "reduced",
-          "from_pct": 31,
-          "to_pct": 23
-        }
-      }
-    },
-    {
-      "id": "himiway__d5-2-20",
-      "brand": "himiway",
-      "model": "Himiway D5 2.0 20\" eBike",
-      "types": [
-        "price"
-      ],
-      "detail": {
-        "price": {
-          "from": 1999.0,
-          "to": 1799.0,
-          "delta": -200.0,
-          "pct": -10,
-          "direction": "drop"
-        }
-      }
-    },
-    {
-      "id": "himiway__d5-2-20--15ah-20ah",
-      "brand": "himiway",
-      "model": "Himiway D5 2.0 20\" eBike — 15Ah+20Ah",
-      "types": [
-        "price"
-      ],
-      "detail": {
-        "price": {
-          "from": 2399.0,
-          "to": 2199.0,
-          "delta": -200.0,
-          "pct": -8,
-          "direction": "drop"
-        }
-      }
-    },
-    {
-      "id": "himiway__himiway-d5-st-camo",
-      "brand": "himiway",
-      "model": "Himiway D5 2.0 Camo eBike",
-      "types": [
-        "price",
-        "sale"
-      ],
-      "detail": {
-        "price": {
-          "from": 2199.0,
-          "to": 1999.0,
-          "delta": -200.0,
-          "pct": -9,
-          "direction": "drop"
-        },
-        "sale": {
-          "event": "deepened",
-          "from_pct": 8,
-          "to_pct": 17
-        }
-      }
-    },
-    {
-      "id": "himiway__himiway-d5-st",
-      "brand": "himiway",
-      "model": "Himiway D5 2.0 ST eBike — Step-Thru · 15Ah",
-      "types": [
-        "price"
-      ],
-      "detail": {
-        "price": {
-          "from": 1999.0,
-          "to": 1799.0,
-          "delta": -200.0,
-          "pct": -10,
-          "direction": "drop"
-        }
-      }
-    },
-    {
-      "id": "himiway__himiway-d5-st--15ah-20ah",
-      "brand": "himiway",
-      "model": "Himiway D5 2.0 ST eBike — Step-Thru · 15Ah+20Ah",
-      "types": [
-        "price"
-      ],
-      "detail": {
-        "price": {
-          "from": 2399.0,
-          "to": 2199.0,
-          "delta": -200.0,
-          "pct": -8,
-          "direction": "drop"
-        }
-      }
-    },
-    {
-      "id": "himiway__himiway-d5",
-      "brand": "himiway",
-      "model": "Himiway D5 2.0 eBike — Step-Over · 15Ah",
-      "types": [
-        "price"
-      ],
-      "detail": {
-        "price": {
-          "from": 1999.0,
-          "to": 1799.0,
-          "delta": -200.0,
-          "pct": -10,
-          "direction": "drop"
-        }
-      }
-    },
-    {
-      "id": "himiway__himiway-d5--15ah-20ah",
-      "brand": "himiway",
-      "model": "Himiway D5 2.0 eBike — Step-Over · 15Ah+20Ah",
-      "types": [
-        "price"
-      ],
-      "detail": {
-        "price": {
-          "from": 2399.0,
-          "to": 2199.0,
-          "delta": -200.0,
-          "pct": -8,
-          "direction": "drop"
-        }
-      }
-    },
-    {
-      "id": "juiced__scrambler",
-      "brand": "juiced",
-      "model": "Scrambler",
-      "types": [
-        "sale"
-      ],
-      "detail": {
-        "sale": {
-          "event": "reduced",
-          "from_pct": 13,
-          "to_pct": 11
-        }
-      }
-    },
-    {
-      "id": "juiced__scrambler--full-suspension",
-      "brand": "juiced",
-      "model": "Scrambler — Full Suspension",
-      "types": [
-        "sale"
-      ],
-      "detail": {
-        "sale": {
-          "event": "reduced",
-          "from_pct": 11,
-          "to_pct": 10
-        }
-      }
-    },
-    {
-      "id": "lectric__lectric-xp-lite2",
-      "brand": "lectric",
-      "model": "Lectric XP Lite2",
-      "types": [
-        "sale"
-      ],
-      "detail": {
-        "sale": {
-          "event": "reduced",
-          "from_pct": 43,
-          "to_pct": 41
-        }
-      }
-    },
-    {
-      "id": "lectric__lectric-xpeak2",
-      "brand": "lectric",
-      "model": "Lectric XPeak2",
-      "types": [
-        "price",
-        "sale"
-      ],
-      "detail": {
-        "price": {
-          "from": 1399.0,
-          "to": 1499.0,
-          "delta": 100.0,
-          "pct": 7,
-          "direction": "rise"
-        },
-        "sale": {
-          "event": "reduced",
-          "from_pct": 26,
-          "to_pct": 18
-        }
-      }
-    },
-    {
-      "id": "lectric__lectric-xpeak2--standard-step-over",
-      "brand": "lectric",
-      "model": "Lectric XPeak2 — Standard · Step-Over",
-      "types": [
-        "price"
-      ],
-      "detail": {
-        "price": {
-          "from": 1399.0,
-          "to": 1499.0,
-          "delta": 100.0,
-          "pct": 7,
-          "direction": "rise"
-        }
-      }
-    },
-    {
-      "id": "lectric__lectric-xpeak2--long-range-step-thru",
-      "brand": "lectric",
-      "model": "Lectric XPeak2 — Long-Range · Step-Thru",
-      "types": [
-        "price"
-      ],
-      "detail": {
-        "price": {
-          "from": 1599.0,
-          "to": 1699.0,
-          "delta": 100.0,
-          "pct": 6,
-          "direction": "rise"
-        }
-      }
-    },
-    {
-      "id": "lectric__lectric-xpeak2--long-range-step-over",
-      "brand": "lectric",
-      "model": "Lectric XPeak2 — Long-Range · Step-Over",
-      "types": [
-        "price"
-      ],
-      "detail": {
-        "price": {
-          "from": 1599.0,
-          "to": 1699.0,
-          "delta": 100.0,
-          "pct": 6,
-          "direction": "rise"
-        }
-      }
-    },
-    {
-      "id": "lectric__lectric-xpress2",
-      "brand": "lectric",
-      "model": "Lectric XPress2",
-      "types": [
-        "sale"
-      ],
-      "detail": {
-        "sale": {
-          "event": "deepened",
-          "from_pct": 17,
-          "to_pct": 22
-        }
-      }
-    },
-    {
-      "id": "magician__alpha",
-      "brand": "magician",
-      "model": "Alpha",
-      "types": [
-        "price",
-        "sale"
-      ],
-      "detail": {
-        "price": {
-          "from": 2499.0,
-          "to": 2599.0,
-          "delta": 100.0,
-          "pct": 4,
-          "direction": "rise"
-        },
-        "sale": {
-          "event": "ended"
-        }
-      }
-    },
-    {
-      "id": "magician__alpha--step-thru",
-      "brand": "magician",
-      "model": "Alpha — Step-Thru",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "magicycle__magicycle-jaguarundi-48v-folding-step-thru-fat-tire-ebike-space-black",
-      "brand": "magicycle",
-      "model": "Jaguarundi 2.0 Torque Sensor Folding Fat Tire Ebike",
-      "types": [
-        "price",
-        "sale"
-      ],
-      "detail": {
-        "price": {
-          "from": 799.0,
-          "to": 999.0,
-          "delta": 200.0,
-          "pct": 25,
-          "direction": "rise"
-        },
-        "sale": {
-          "event": "reduced",
-          "from_pct": 58,
-          "to_pct": 47
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping"
+          ]
         }
       }
     },
@@ -878,11 +258,16 @@
       "brand": "mokwheel",
       "model": "Granite E-Trike",
       "types": [
-        "stock"
+        "free_feature"
       ],
       "detail": {
-        "stock": {
-          "event": "sold_out"
+        "free_feature": {
+          "added": [
+            "Basket"
+          ],
+          "removed": [
+            "Free shipping"
+          ]
         }
       }
     },
@@ -891,923 +276,285 @@
       "brand": "mokwheel",
       "model": "Mesa Plus ST Ebike",
       "types": [
-        "added"
+        "free_feature"
       ],
-      "detail": {}
+      "detail": {
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping"
+          ]
+        }
+      }
     },
     {
-      "id": "monarc__marker-high-step-ebike",
-      "brand": "monarc",
-      "model": "Marker High-Step Ebike",
+      "id": "mokwheel__obsidian-2-0",
+      "brand": "mokwheel",
+      "model": "Obsidian 2.0 Ebike",
+      "types": [
+        "free_feature"
+      ],
+      "detail": {
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping",
+            "Rear Rack"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mokwheel__obsidian-st-2-0",
+      "brand": "mokwheel",
+      "model": "Obsidian ST 2.0 Ebike",
+      "types": [
+        "free_feature"
+      ],
+      "detail": {
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping",
+            "Rear Rack"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mokwheel__onyx",
+      "brand": "mokwheel",
+      "model": "Onyx Ebike",
+      "types": [
+        "free_feature"
+      ],
+      "detail": {
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping",
+            "Rear Rack"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mokwheel__onyx-st",
+      "brand": "mokwheel",
+      "model": "Onyx ST Ebike",
+      "types": [
+        "free_feature"
+      ],
+      "detail": {
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping",
+            "Rear Rack"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mokwheel__scoria",
+      "brand": "mokwheel",
+      "model": "Scoria 2.0 Ebike",
+      "types": [
+        "free_feature"
+      ],
+      "detail": {
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mokwheel__slate",
+      "brand": "mokwheel",
+      "model": "Slate Ebike",
+      "types": [
+        "free_feature"
+      ],
+      "detail": {
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mokwheel__tarmac",
+      "brand": "mokwheel",
+      "model": "Tarmac Ebike",
+      "types": [
+        "free_feature"
+      ],
+      "detail": {
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mokwheel__tarmac-st",
+      "brand": "mokwheel",
+      "model": "Tarmac ST Ebike",
+      "types": [
+        "free_feature"
+      ],
+      "detail": {
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mokwheel__tor-plus",
+      "brand": "mokwheel",
+      "model": "Tor Plus Ebike",
+      "types": [
+        "free_feature"
+      ],
+      "detail": {
+        "free_feature": {
+          "added": [],
+          "removed": [
+            "Free shipping"
+          ]
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__beagle-1",
+      "brand": "puckipuppy",
+      "model": "Beagle",
       "types": [
         "sale"
       ],
       "detail": {
         "sale": {
           "event": "started",
-          "discount_pct": 10
+          "discount_pct": 40
         }
       }
     },
     {
-      "id": "monarc__marker-step-thru-ebike",
-      "brand": "monarc",
-      "model": "Marker Step-Thru Ebike",
+      "id": "puckipuppy__beagle-2",
+      "brand": "puckipuppy",
+      "model": "Beagle 2 Ebike",
       "types": [
         "sale"
       ],
       "detail": {
         "sale": {
           "event": "started",
-          "discount_pct": 10
+          "discount_pct": 17
         }
       }
     },
     {
-      "id": "monarc__tracer-high-step-ebike",
-      "brand": "monarc",
-      "model": "Tracer High-Step Ebike",
+      "id": "puckipuppy__beagle-2-st",
+      "brand": "puckipuppy",
+      "model": "Beagle 2 ST Ebike",
       "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "monarc__tracer-step-thru-ebike",
-      "brand": "monarc",
-      "model": "Tracer Step-Thru Ebike",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "priority__currentplus--enviolo-3499",
-      "brand": "priority",
-      "model": "PRIORITY CURRENT PLUS E-BIKE — Enviolo",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "priority__ecoast--step-thru",
-      "brand": "priority",
-      "model": "PRIORITY E-COAST — Step-Thru",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "ride1up__portola",
-      "brand": "ride1up",
-      "model": "PORTOLA",
-      "types": [
-        "price"
-      ],
-      "detail": {
-        "price": {
-          "from": 845.0,
-          "to": 895.0,
-          "delta": 50.0,
-          "pct": 6,
-          "direction": "rise"
-        }
-      }
-    },
-    {
-      "id": "ride1up__portola--13-4ah",
-      "brand": "ride1up",
-      "model": "PORTOLA — 13.4ah",
-      "types": [
-        "price"
-      ],
-      "detail": {
-        "price": {
-          "from": 895.0,
-          "to": 995.0,
-          "delta": 100.0,
-          "pct": 11,
-          "direction": "rise"
-        }
-      }
-    },
-    {
-      "id": "ride1up__portola-c1",
-      "brand": "ride1up",
-      "model": "PORTOLA 13.4AH (CLASS 1)",
-      "types": [
-        "price"
-      ],
-      "detail": {
-        "price": {
-          "from": 895.0,
-          "to": 995.0,
-          "delta": 100.0,
-          "pct": 11,
-          "direction": "rise"
-        }
-      }
-    },
-    {
-      "id": "ride1up__prodigy-v2--step-over",
-      "brand": "ride1up",
-      "model": "PRODIGY V2 — Chain · Step-Over",
-      "types": [
-        "price"
-      ],
-      "detail": {
-        "price": {
-          "from": 1795.0,
-          "to": 1895.0,
-          "delta": 100.0,
-          "pct": 6,
-          "direction": "rise"
-        }
-      }
-    },
-    {
-      "id": "ride1up__roadster-v3--rigid",
-      "brand": "ride1up",
-      "model": "ROADSTER V3 — Rigid",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "ride1up__roadster-v3--suspension",
-      "brand": "ride1up",
-      "model": "ROADSTER V3 — Suspension",
-      "types": [
-        "price"
-      ],
-      "detail": {
-        "price": {
-          "from": 1445.0,
-          "to": 1495.0,
-          "delta": 50.0,
-          "pct": 3,
-          "direction": "rise"
-        }
-      }
-    },
-    {
-      "id": "ride1up__revv-1",
-      "brand": "ride1up",
-      "model": "Revv1 FS",
-      "types": [
-        "price"
-      ],
-      "detail": {
-        "price": {
-          "from": 1895.0,
-          "to": 1995.0,
-          "delta": 100.0,
-          "pct": 5,
-          "direction": "rise"
-        }
-      }
-    },
-    {
-      "id": "ride1up__vorsa--vorsa--step-thru",
-      "brand": "ride1up",
-      "model": "VORSA — Standard · Step-Thru",
-      "types": [
-        "price"
-      ],
-      "detail": {
-        "price": {
-          "from": 1495.0,
-          "to": 1595.0,
-          "delta": 100.0,
-          "pct": 7,
-          "direction": "rise"
-        }
-      }
-    },
-    {
-      "id": "ride1up__vorsa--ft",
-      "brand": "ride1up",
-      "model": "VORSA — FT · Step-Over",
-      "types": [
-        "price"
-      ],
-      "detail": {
-        "price": {
-          "from": 1595.0,
-          "to": 1695.0,
-          "delta": 100.0,
-          "pct": 6,
-          "direction": "rise"
-        }
-      }
-    },
-    {
-      "id": "ride1up__vorsa--ft--step-thru",
-      "brand": "ride1up",
-      "model": "VORSA — FT · Step-Thru",
-      "types": [
-        "price"
-      ],
-      "detail": {
-        "price": {
-          "from": 1595.0,
-          "to": 1695.0,
-          "delta": 100.0,
-          "pct": 6,
-          "direction": "rise"
-        }
-      }
-    },
-    {
-      "id": "segway__segway-ebike-xafari",
-      "brand": "segway",
-      "model": "Segway Xafari Fat Tire eBike",
-      "types": [
-        "price",
         "sale"
       ],
       "detail": {
-        "price": {
-          "from": 1799.99,
-          "to": 1549.99,
-          "delta": -250.0,
-          "pct": -14,
-          "direction": "drop"
-        },
-        "sale": {
-          "event": "deepened",
-          "from_pct": 25,
-          "to_pct": 35
-        }
-      }
-    },
-    {
-      "id": "trek__charter-4s",
-      "brand": "trek",
-      "model": "Charter+ 4S",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__charter-4s-lowstep",
-      "brand": "trek",
-      "model": "Charter+ 4S Lowstep",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__charter-5s-lowstep",
-      "brand": "trek",
-      "model": "Charter+ 5S Lowstep",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__checkpoint-sl-5",
-      "brand": "trek",
-      "model": "Checkpoint+ SL 5",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__checkpoint-sl-6-axs",
-      "brand": "trek",
-      "model": "Checkpoint+ SL 6 AXS",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__checkpoint-sl-7-axs",
-      "brand": "trek",
-      "model": "Checkpoint+ SL 7 AXS",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__domane-alr-5",
-      "brand": "trek",
-      "model": "Domane+ ALR 5",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__domane-alr-6-axs",
-      "brand": "trek",
-      "model": "Domane+ ALR 6 AXS",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__domane-slr-6",
-      "brand": "trek",
-      "model": "Domane+ SLR 6",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__domane-slr-7",
-      "brand": "trek",
-      "model": "Domane+ SLR 7",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__domane-slr-9",
-      "brand": "trek",
-      "model": "Domane+ SLR 9",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__fx-1",
-      "brand": "trek",
-      "model": "FX+ 1",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__fx-1-midstep",
-      "brand": "trek",
-      "model": "FX+ 1 Midstep",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__fx-1s",
-      "brand": "trek",
-      "model": "FX+ 1S",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__fx-1s-midstep",
-      "brand": "trek",
-      "model": "FX+ 1S Midstep",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__fx-7s",
-      "brand": "trek",
-      "model": "FX+ 7S",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__fx-7s-midstep",
-      "brand": "trek",
-      "model": "FX+ 7S Midstep",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__fetch-2",
-      "brand": "trek",
-      "model": "Fetch+ 2",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__fetch-4",
-      "brand": "trek",
-      "model": "Fetch+ 4",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__fuel-exe-5",
-      "brand": "trek",
-      "model": "Fuel EXe 5",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__fuel-exe-8-gx-axs-t-type",
-      "brand": "trek",
-      "model": "Fuel EXe 8 GX AXS T-Type",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__fuel-ex-5-gen-2",
-      "brand": "trek",
-      "model": "Fuel+ EX 5 Gen 2",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__fuel-ex-9-7-gen-2",
-      "brand": "trek",
-      "model": "Fuel+ EX 9.7 Gen 2",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__fuel-ex-9-8-eagle-90-gen-2",
-      "brand": "trek",
-      "model": "Fuel+ EX 9.8 Eagle 90 Gen 2",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__fuel-ex-9-8-xt-di2-gen-2",
-      "brand": "trek",
-      "model": "Fuel+ EX 9.8 XT Di2 Gen 2",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__fuel-ex-9-8-xt-gen-2",
-      "brand": "trek",
-      "model": "Fuel+ EX 9.8 XT Gen 2",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__fuel-ex-9-9-x0-axs-gen-2",
-      "brand": "trek",
-      "model": "Fuel+ EX 9.9 X0 AXS Gen 2",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__fuel-lx-9-8-eagle-90-gen-2",
-      "brand": "trek",
-      "model": "Fuel+ LX 9.8 Eagle 90 Gen 2",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__fuel-lx-9-8-xt-di2-gen-2",
-      "brand": "trek",
-      "model": "Fuel+ LX 9.8 XT Di2 Gen 2",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__fuel-lx-9-8-xt-gen-2",
-      "brand": "trek",
-      "model": "Fuel+ LX 9.8 XT Gen 2",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__fuel-lx-9-9-x0-axs-gen-2",
-      "brand": "trek",
-      "model": "Fuel+ LX 9.9 X0 AXS Gen 2",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__fuel-mx-9-8-eagle-90-gen-2",
-      "brand": "trek",
-      "model": "Fuel+ MX 9.8 Eagle 90 Gen 2",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__fuel-mx-9-8-xt-di2-gen-2",
-      "brand": "trek",
-      "model": "Fuel+ MX 9.8 XT Di2 Gen 2",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__fuel-mx-9-8-xt-gen-2",
-      "brand": "trek",
-      "model": "Fuel+ MX 9.8 XT Gen 2",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__fuel-mx-9-9-x0-axs-gen-2",
-      "brand": "trek",
-      "model": "Fuel+ MX 9.9 X0 AXS Gen 2",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__loft-go-7d-eq-step-thru",
-      "brand": "trek",
-      "model": "Loft Go! 7D EQ Step-Thru",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__marlin-6",
-      "brand": "trek",
-      "model": "Marlin+ 6",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__marlin-8",
-      "brand": "trek",
-      "model": "Marlin+ 8",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__ponto-go",
-      "brand": "trek",
-      "model": "Ponto Go!",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__ponto-go-s",
-      "brand": "trek",
-      "model": "Ponto Go! S",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__powerfly-fs-4-gen-4",
-      "brand": "trek",
-      "model": "Powerfly FS+ 4 Gen 4",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__rail-5-gen-5",
-      "brand": "trek",
-      "model": "Rail+ 5 Gen 5",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__rail-8-gen-5",
-      "brand": "trek",
-      "model": "Rail+ 8 Gen 5",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__rail-9-7-gen-5",
-      "brand": "trek",
-      "model": "Rail+ 9.7 Gen 5",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__rail-9-8-gx-axs-t-type-gen-5",
-      "brand": "trek",
-      "model": "Rail+ 9.8 GX AXS T-Type Gen 5",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__rail-9-9-x0-axs-t-type-gen-5",
-      "brand": "trek",
-      "model": "Rail+ 9.9 X0 AXS T-Type Gen 5",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__slash-9-7",
-      "brand": "trek",
-      "model": "Slash+ 9.7",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__slash-9-9",
-      "brand": "trek",
-      "model": "Slash+ 9.9",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__townie-go",
-      "brand": "trek",
-      "model": "Townie Go!",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__townie-go-7d-eq-step-over",
-      "brand": "trek",
-      "model": "Townie Go! 7D EQ Step-Over",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__townie-go-7d-eq-step-thru",
-      "brand": "trek",
-      "model": "Townie Go! 7D EQ Step-Thru",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__townie-go-s",
-      "brand": "trek",
-      "model": "Townie Go! S",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__vale-go-9d-eq",
-      "brand": "trek",
-      "model": "Vale Go! 9D EQ",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__verve-1-lowstep-lt",
-      "brand": "trek",
-      "model": "Verve+ 1 Lowstep LT",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__verve-2-lowstep-gen-3",
-      "brand": "trek",
-      "model": "Verve+ 2 Lowstep Gen 3",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__verve-3-gen-3",
-      "brand": "trek",
-      "model": "Verve+ 3 Gen 3",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__verve-3-lowstep-gen-3",
-      "brand": "trek",
-      "model": "Verve+ 3 Lowstep Gen 3",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__verve-4s-gen-3",
-      "brand": "trek",
-      "model": "Verve+ 4S Gen 3",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "trek__verve-4s-lowstep-gen-3",
-      "brand": "trek",
-      "model": "Verve+ 4S Lowstep Gen 3",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "vanpowers__cycanon",
-      "brand": "vanpowers",
-      "model": "Cycanon",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "vanpowers__grandteton-pro",
-      "brand": "vanpowers",
-      "model": "GrandTeton-Pro",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "vanpowers__grandteton-ultra",
-      "brand": "vanpowers",
-      "model": "GrandTeton-Ultra",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "vanpowers__urbancross-pro",
-      "brand": "vanpowers",
-      "model": "UrbanCross-Pro",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "vanpowers__urbancross-ultra",
-      "brand": "vanpowers",
-      "model": "UrbanCross-Ultra",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "vanpowers__urbanglide-pro",
-      "brand": "vanpowers",
-      "model": "UrbanGlide-Pro",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "vanpowers__urbanglide-standard",
-      "brand": "vanpowers",
-      "model": "UrbanGlide-Standard",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "vanpowers__urbanglide-ultra",
-      "brand": "vanpowers",
-      "model": "UrbanGlide-Ultra",
-      "types": [
-        "added"
-      ],
-      "detail": {}
-    },
-    {
-      "id": "velotric__velotric-breeze-1",
-      "brand": "velotric",
-      "model": "Velotric Breeze 1 Cruiser Ebike",
-      "types": [
-        "price",
-        "sale"
-      ],
-      "detail": {
-        "price": {
-          "from": 1799.0,
-          "to": 1699.0,
-          "delta": -100.0,
-          "pct": -6,
-          "direction": "drop"
-        },
         "sale": {
           "event": "started",
-          "discount_pct": 6
+          "discount_pct": 9
         }
       }
     },
     {
-      "id": "velotric__velotric-fold-1",
-      "brand": "velotric",
-      "model": "Velotric Fold 1 Ebike",
+      "id": "puckipuppy__beagle",
+      "brand": "puckipuppy",
+      "model": "Beagle Ebike",
       "types": [
-        "price",
         "sale"
       ],
       "detail": {
-        "price": {
-          "from": 1299.0,
-          "to": 999.0,
-          "delta": -300.0,
-          "pct": -23,
-          "direction": "drop"
-        },
         "sale": {
-          "event": "deepened",
-          "from_pct": 13,
-          "to_pct": 33
+          "event": "started",
+          "discount_pct": 42
         }
       }
     },
     {
-      "id": "velotric__velotric-fold-1-plus",
-      "brand": "velotric",
-      "model": "Velotric Fold 1 Plus Ebike",
+      "id": "puckipuppy__boxer",
+      "brand": "puckipuppy",
+      "model": "Boxer Ebike",
       "types": [
-        "price",
         "sale"
       ],
       "detail": {
-        "price": {
-          "from": 1499.0,
-          "to": 1399.0,
-          "delta": -100.0,
-          "pct": -7,
-          "direction": "drop"
-        },
+        "sale": {
+          "event": "started",
+          "discount_pct": 13
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__boxer-st",
+      "brand": "puckipuppy",
+      "model": "Boxer ST Ebike",
+      "types": [
+        "sale"
+      ],
+      "detail": {
+        "sale": {
+          "event": "started",
+          "discount_pct": 13
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__bulldog",
+      "brand": "puckipuppy",
+      "model": "Bulldog Ebike",
+      "types": [
+        "sale"
+      ],
+      "detail": {
+        "sale": {
+          "event": "started",
+          "discount_pct": 25
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__bulldog-pro",
+      "brand": "puckipuppy",
+      "model": "Bulldog Pro Ebike",
+      "types": [
+        "sale"
+      ],
+      "detail": {
+        "sale": {
+          "event": "started",
+          "discount_pct": 5
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__corgi",
+      "brand": "puckipuppy",
+      "model": "Corgi Ebike",
+      "types": [
+        "sale"
+      ],
+      "detail": {
         "sale": {
           "event": "started",
           "discount_pct": 7
@@ -1815,89 +562,125 @@
       }
     },
     {
-      "id": "velotric__velotric-nomad-2",
-      "brand": "velotric",
-      "model": "Velotric Nomad 2 Fat Tire Ebike",
+      "id": "puckipuppy__dachshund-ebike",
+      "brand": "puckipuppy",
+      "model": "Dachshund Ebike",
       "types": [
-        "price"
-      ],
-      "detail": {
-        "price": {
-          "from": 1999.0,
-          "to": 1799.0,
-          "delta": -200.0,
-          "pct": -10,
-          "direction": "drop"
-        }
-      }
-    },
-    {
-      "id": "velotric__velotric-nomad-2--step-thru",
-      "brand": "velotric",
-      "model": "Velotric Nomad 2 Fat Tire Ebike — Step-Thru",
-      "types": [
-        "price"
-      ],
-      "detail": {
-        "price": {
-          "from": 1999.0,
-          "to": 1799.0,
-          "delta": -200.0,
-          "pct": -10,
-          "direction": "drop"
-        }
-      }
-    },
-    {
-      "id": "velotric__velotric-nomad-2x",
-      "brand": "velotric",
-      "model": "Velotric Nomad 2X Full Suspension Fat Tire Ebike",
-      "types": [
-        "price"
-      ],
-      "detail": {
-        "price": {
-          "from": 2399.0,
-          "to": 2199.0,
-          "delta": -200.0,
-          "pct": -8,
-          "direction": "drop"
-        }
-      }
-    },
-    {
-      "id": "velotric__velotric-nomad-2x--step-thru",
-      "brand": "velotric",
-      "model": "Velotric Nomad 2X Full Suspension Fat Tire Ebike — Step-Thru",
-      "types": [
-        "price"
-      ],
-      "detail": {
-        "price": {
-          "from": 2399.0,
-          "to": 2199.0,
-          "delta": -200.0,
-          "pct": -8,
-          "direction": "drop"
-        }
-      }
-    },
-    {
-      "id": "velotric__velotric-summit-1",
-      "brand": "velotric",
-      "model": "Velotric Summit 1 Ebike",
-      "types": [
-        "price",
         "sale"
       ],
       "detail": {
-        "price": {
-          "from": 1999.0,
-          "to": 1799.0,
-          "delta": -200.0,
-          "pct": -10,
-          "direction": "drop"
-        },
+        "sale": {
+          "event": "started",
+          "discount_pct": 25
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__doberman",
+      "brand": "puckipuppy",
+      "model": "Doberman Ebike",
+      "types": [
+        "sale"
+      ],
+      "detail": {
+        "sale": {
+          "event": "started",
+          "discount_pct": 18
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__goldenr-camouflage",
+      "brand": "puckipuppy",
+      "model": "GoldenR Ebike",
+      "types": [
+        "sale"
+      ],
+      "detail": {
+        "sale": {
+          "event": "started",
+          "discount_pct": 45
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__goldenr-pro",
+      "brand": "puckipuppy",
+      "model": "GoldenR Pro Ebike",
+      "types": [
+        "sale"
+      ],
+      "detail": {
+        "sale": {
+          "event": "started",
+          "discount_pct": 14
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__labrador",
+      "brand": "puckipuppy",
+      "model": "Labrador Ebike",
+      "types": [
+        "sale"
+      ],
+      "detail": {
+        "sale": {
+          "event": "started",
+          "discount_pct": 46
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__labrador-pro",
+      "brand": "puckipuppy",
+      "model": "Labrador Pro Ebike",
+      "types": [
+        "sale"
+      ],
+      "detail": {
+        "sale": {
+          "event": "started",
+          "discount_pct": 18
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__labrador-pro-st",
+      "brand": "puckipuppy",
+      "model": "Labrador Pro ST Ebike",
+      "types": [
+        "sale"
+      ],
+      "detail": {
+        "sale": {
+          "event": "started",
+          "discount_pct": 6
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__poodle",
+      "brand": "puckipuppy",
+      "model": "Poodle Ebike",
+      "types": [
+        "sale"
+      ],
+      "detail": {
+        "sale": {
+          "event": "started",
+          "discount_pct": 25
+        }
+      }
+    },
+    {
+      "id": "puckipuppy__samoyed",
+      "brand": "puckipuppy",
+      "model": "Samoyed Ebike",
+      "types": [
+        "sale"
+      ],
+      "detail": {
         "sale": {
           "event": "started",
           "discount_pct": 10
@@ -1905,47 +688,82 @@
       }
     },
     {
-      "id": "velotric__velotric-t1st-ebike",
-      "brand": "velotric",
-      "model": "Velotric T1 ST Plus Ebike",
+      "id": "puckipuppy__schnauzer",
+      "brand": "puckipuppy",
+      "model": "Schnauzer Ebike",
       "types": [
-        "price",
         "sale"
       ],
       "detail": {
-        "price": {
-          "from": 1399.0,
-          "to": 1349.0,
-          "delta": -50.0,
-          "pct": -4,
-          "direction": "drop"
-        },
         "sale": {
-          "event": "deepened",
-          "from_pct": 15,
-          "to_pct": 18
+          "event": "started",
+          "discount_pct": 29
         }
       }
     },
     {
-      "id": "velotric__velotric-triker",
-      "brand": "velotric",
-      "model": "Velotric Triker Electric Tricycle",
+      "id": "velowave__breeze-t-torque-sensor-electric-bike",
+      "brand": "velowave",
+      "model": "Breeze T Torque Sensor Electric Bike",
       "types": [
         "price",
         "sale"
       ],
       "detail": {
         "price": {
-          "from": 2499.0,
-          "to": 2399.0,
-          "delta": -100.0,
-          "pct": -4,
+          "from": 1499.0,
+          "to": 1299.0,
+          "delta": -200.0,
+          "pct": -13,
           "direction": "drop"
         },
         "sale": {
           "event": "started",
-          "discount_pct": 4
+          "discount_pct": 13
+        }
+      }
+    },
+    {
+      "id": "velowave__grace-step-thru-electric-bike",
+      "brand": "velowave",
+      "model": "Grace 2.0 Step-Thru Electric Bike",
+      "types": [
+        "price",
+        "sale"
+      ],
+      "detail": {
+        "price": {
+          "from": 1699.0,
+          "to": 1499.0,
+          "delta": -200.0,
+          "pct": -12,
+          "direction": "drop"
+        },
+        "sale": {
+          "event": "started",
+          "discount_pct": 12
+        }
+      }
+    },
+    {
+      "id": "velowave__pony-step-thru-electric-bike",
+      "brand": "velowave",
+      "model": "Pony Compact Step-Thru Electric Bike",
+      "types": [
+        "price",
+        "sale"
+      ],
+      "detail": {
+        "price": {
+          "from": 1499.0,
+          "to": 1299.0,
+          "delta": -200.0,
+          "pct": -13,
+          "direction": "drop"
+        },
+        "sale": {
+          "event": "started",
+          "discount_pct": 13
         }
       }
     },
@@ -1959,14 +777,15 @@
       ],
       "detail": {
         "price": {
-          "from": 1299.0,
-          "to": 1499.0,
-          "delta": 200.0,
-          "pct": 15,
-          "direction": "rise"
+          "from": 1499.0,
+          "to": 1299.0,
+          "delta": -200.0,
+          "pct": -13,
+          "direction": "drop"
         },
         "sale": {
-          "event": "ended"
+          "event": "started",
+          "discount_pct": 13
         }
       }
     },
@@ -1980,14 +799,15 @@
       ],
       "detail": {
         "price": {
-          "from": 1399.0,
-          "to": 1599.0,
-          "delta": 200.0,
-          "pct": 14,
-          "direction": "rise"
+          "from": 1599.0,
+          "to": 1399.0,
+          "delta": -200.0,
+          "pct": -13,
+          "direction": "drop"
         },
         "sale": {
-          "event": "ended"
+          "event": "started",
+          "discount_pct": 13
         }
       }
     },
@@ -2001,14 +821,15 @@
       ],
       "detail": {
         "price": {
-          "from": 1299.0,
-          "to": 1499.0,
-          "delta": 200.0,
-          "pct": 15,
-          "direction": "rise"
+          "from": 1499.0,
+          "to": 1299.0,
+          "delta": -200.0,
+          "pct": -13,
+          "direction": "drop"
         },
         "sale": {
-          "event": "ended"
+          "event": "started",
+          "discount_pct": 13
         }
       }
     },
@@ -2022,381 +843,220 @@
       ],
       "detail": {
         "price": {
-          "from": 1399.0,
+          "from": 1599.0,
+          "to": 1399.0,
+          "delta": -200.0,
+          "pct": -13,
+          "direction": "drop"
+        },
+        "sale": {
+          "event": "started",
+          "discount_pct": 13
+        }
+      }
+    },
+    {
+      "id": "velowave__swift-m-mid-drive-mountain-electric-bike",
+      "brand": "velowave",
+      "model": "Swift M Mid-Drive Electric Bike",
+      "types": [
+        "price",
+        "sale"
+      ],
+      "detail": {
+        "price": {
+          "from": 1799.0,
           "to": 1599.0,
-          "delta": 200.0,
-          "pct": 14,
-          "direction": "rise"
+          "delta": -200.0,
+          "pct": -11,
+          "direction": "drop"
         },
         "sale": {
-          "event": "ended"
+          "event": "started",
+          "discount_pct": 11
         }
       }
     },
     {
-      "id": "wallke__wallke-h9-ultra-folding-off-grid-powerstorage-e-bike",
-      "brand": "wallke",
-      "model": "2026 WALLKE H9 Ultra Folding | Off-Grid Power Station E-Bike with Torque Sensor, 37mph Speed, 55/77Ah Battery Options",
-      "types": [
-        "price",
-        "sale",
-        "stock"
-      ],
-      "detail": {
-        "price": {
-          "from": 1799.0,
-          "to": 2399.0,
-          "delta": 600.0,
-          "pct": 33,
-          "direction": "rise"
-        },
-        "sale": {
-          "event": "reduced",
-          "from_pct": 47,
-          "to_pct": 29
-        },
-        "stock": {
-          "event": "sold_out"
-        }
-      }
-    },
-    {
-      "id": "wallke__wallke-h9-ultra-folding-off-grid-powerstorage-e-bike--77ah",
-      "brand": "wallke",
-      "model": "2026 WALLKE H9 Ultra Folding | Off-Grid Power Station E-Bike with Torque Sensor, 37mph Speed, 55/77Ah Battery Options — 77Ah",
-      "types": [
-        "price",
-        "sale"
-      ],
-      "detail": {
-        "price": {
-          "from": 2199.0,
-          "to": 2979.0,
-          "delta": 780.0,
-          "pct": 35,
-          "direction": "rise"
-        },
-        "sale": {
-          "event": "reduced",
-          "from_pct": 37,
-          "to_pct": 14
-        }
-      }
-    },
-    {
-      "id": "wallke__ultra-series--step-over",
-      "brand": "wallke",
-      "model": "2026 WALLKE Ultra Series | Off-grid Power Station E-Bike — 55Ah · Step-Over",
-      "types": [
-        "price",
-        "sale",
-        "stock"
-      ],
-      "detail": {
-        "price": {
-          "from": 1799.0,
-          "to": 2399.0,
-          "delta": 600.0,
-          "pct": 33,
-          "direction": "rise"
-        },
-        "sale": {
-          "event": "reduced",
-          "from_pct": 54,
-          "to_pct": 38
-        },
-        "stock": {
-          "event": "sold_out"
-        }
-      }
-    },
-    {
-      "id": "wallke__ultra-series--77ah",
-      "brand": "wallke",
-      "model": "2026 WALLKE Ultra Series | Off-grid Power Station E-Bike — 77Ah",
-      "types": [
-        "price",
-        "sale"
-      ],
-      "detail": {
-        "price": {
-          "from": 2199.0,
-          "to": 2979.0,
-          "delta": 780.0,
-          "pct": 35,
-          "direction": "rise"
-        },
-        "sale": {
-          "event": "reduced",
-          "from_pct": 45,
-          "to_pct": 25
-        }
-      }
-    },
-    {
-      "id": "wallke__2026-wallke-ravager-r60-series",
-      "brand": "wallke",
-      "model": "2026 Wallke Ravager 60V Series | 60V 70Ah Long-Range Electric Bike | Up to 180+ Miles | 150Nm Torque",
-      "types": [
-        "price",
-        "sale"
-      ],
-      "detail": {
-        "price": {
-          "from": 1999.0,
-          "to": 2049.0,
-          "delta": 50.0,
-          "pct": 3,
-          "direction": "rise"
-        },
-        "sale": {
-          "event": "deepened",
-          "from_pct": 13,
-          "to_pct": 15
-        }
-      }
-    },
-    {
-      "id": "wired__wired-raven",
-      "brand": "wired",
-      "model": "WIRED Raven",
-      "types": [
-        "price",
-        "sale"
-      ],
-      "detail": {
-        "price": {
-          "from": 2499.0,
-          "to": 2799.0,
-          "delta": 300.0,
-          "pct": 12,
-          "direction": "rise"
-        },
-        "sale": {
-          "event": "ended"
-        }
-      }
-    },
-    {
-      "id": "aventon__ramblas-adv-ebike",
-      "brand": "aventon",
-      "model": "Ramblas ADV Ebike",
+      "id": "puckipuppy__beagle-2-ebike",
+      "brand": "puckipuppy",
+      "model": "Beagle 2 Ebike",
       "types": [
         "removed"
       ]
     },
     {
-      "id": "himiway__d5-2",
-      "brand": "himiway",
-      "model": "Himiway D5 2.0 Series eBike",
+      "id": "puckipuppy__boxer-1",
+      "brand": "puckipuppy",
+      "model": "Boxer Ebike",
       "types": [
         "removed"
       ]
     },
     {
-      "id": "himiway__d5-2--step-thru",
-      "brand": "himiway",
-      "model": "Himiway D5 2.0 Series eBike — Step-Thru",
+      "id": "puckipuppy__boxer-st-1",
+      "brand": "puckipuppy",
+      "model": "Boxer ST Ebike",
       "types": [
         "removed"
       ]
     },
     {
-      "id": "lectric__lectric-one",
-      "brand": "lectric",
-      "model": "Lectric ONE",
+      "id": "puckipuppy__bulldog-camouflage",
+      "brand": "puckipuppy",
+      "model": "Bulldog Ebike",
       "types": [
         "removed"
       ]
     },
     {
-      "id": "lectric__lectric-xpress1",
-      "brand": "lectric",
-      "model": "Lectric XPress1",
+      "id": "puckipuppy__bulldog-pro-ebike",
+      "brand": "puckipuppy",
+      "model": "Bulldog Pro Ebike",
       "types": [
         "removed"
       ]
     },
     {
-      "id": "ride1up__prodigy-v2--belt-cvt--step-over",
-      "brand": "ride1up",
-      "model": "PRODIGY V2 — Belt CVT · Step-Over",
+      "id": "puckipuppy__goldenr-pro-ebike",
+      "brand": "puckipuppy",
+      "model": "GoldenR Pro Ebike",
       "types": [
         "removed"
       ]
     },
     {
-      "id": "specialized__haul-st",
-      "brand": "specialized",
-      "model": "Haul ST",
+      "id": "puckipuppy__labrador-pro-1",
+      "brand": "puckipuppy",
+      "model": "Labrador Pro Ebike",
       "types": [
         "removed"
       ]
     },
     {
-      "id": "specialized__levo-4-evo-comp",
-      "brand": "specialized",
-      "model": "Levo 4 EVO Comp",
+      "id": "puckipuppy__labrador-pro-st-camouflage",
+      "brand": "puckipuppy",
+      "model": "Labrador Pro ST Ebike",
       "types": [
         "removed"
       ]
     },
     {
-      "id": "specialized__levo-4-evo-pro",
-      "brand": "specialized",
-      "model": "Levo 4 EVO Pro",
+      "id": "velotric__velotric-discover-m-mid-drive-ebike",
+      "brand": "velotric",
+      "model": "Velotric Discover M Ebike",
       "types": [
         "removed"
       ]
     },
     {
-      "id": "specialized__s-works-turbo-creo-2-sram-red--xx1-eagle-axs",
-      "brand": "specialized",
-      "model": "S-Works Turbo Creo 2",
+      "id": "velotric__velotric-t1st-ebike",
+      "brand": "velotric",
+      "model": "Velotric T1 ST Plus Ebike",
       "types": [
         "removed"
       ]
     },
     {
-      "id": "specialized__s-works-turbo-levo-4-ltd",
-      "brand": "specialized",
-      "model": "S-Works Turbo Levo 4 LTD",
-      "types": [
-        "removed"
-      ]
-    },
-    {
-      "id": "specialized__turbo-como-40",
-      "brand": "specialized",
-      "model": "Turbo Como 4.0",
-      "types": [
-        "removed"
-      ]
-    },
-    {
-      "id": "specialized__turbo-como-40-igh",
-      "brand": "specialized",
-      "model": "Turbo Como 4.0 IGH",
-      "types": [
-        "removed"
-      ]
-    },
-    {
-      "id": "specialized__turbo-como-50-igh",
-      "brand": "specialized",
-      "model": "Turbo Como 5.0 IGH",
-      "types": [
-        "removed"
-      ]
-    },
-    {
-      "id": "specialized__turbo-creo-2-comp-sram-apex--x1-eagle-axs",
-      "brand": "specialized",
-      "model": "Turbo Creo 2 Comp",
-      "types": [
-        "removed"
-      ]
-    },
-    {
-      "id": "specialized__turbo-creo-2-comp-e5-sram-apex-eagle",
-      "brand": "specialized",
-      "model": "Turbo Creo 2 Comp E5",
-      "types": [
-        "removed"
-      ]
-    },
-    {
-      "id": "specialized__turbo-kenevo-sl-2-ohlins-coil",
-      "brand": "specialized",
-      "model": "Turbo Kenevo SL 2 Öhlins Coil",
-      "types": [
-        "removed"
-      ]
-    },
-    {
-      "id": "specialized__turbo-levo-sl-2-comp",
-      "brand": "specialized",
-      "model": "Turbo Levo SL 2 Comp",
-      "types": [
-        "removed"
-      ]
-    },
-    {
-      "id": "specialized__turbo-levo-sl-2-comp-alloy",
-      "brand": "specialized",
-      "model": "Turbo Levo SL 2 Comp Alloy",
-      "types": [
-        "removed"
-      ]
-    },
-    {
-      "id": "specialized__turbo-levo-sl-2-expert",
-      "brand": "specialized",
-      "model": "Turbo Levo SL 2 Expert",
-      "types": [
-        "removed"
-      ]
-    },
-    {
-      "id": "specialized__turbo-vado-40-step-through",
-      "brand": "specialized",
-      "model": "Turbo Vado 4.0 Step-Through",
-      "types": [
-        "removed"
-      ]
-    },
-    {
-      "id": "specialized__turbo-vado-50-igh",
-      "brand": "specialized",
-      "model": "Turbo Vado 5.0 IGH",
-      "types": [
-        "removed"
-      ]
-    },
-    {
-      "id": "specialized__turbo-vado-sl-2-40",
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 4.0",
-      "types": [
-        "removed"
-      ]
-    },
-    {
-      "id": "specialized__turbo-vado-sl-2-40-step-through-",
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 4.0 Step-Through",
-      "types": [
-        "removed"
-      ]
-    },
-    {
-      "id": "specialized__turbo-vado-sl-2-60-carbon",
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 6.0 Carbon",
-      "types": [
-        "removed"
-      ]
-    },
-    {
-      "id": "specialized__turbo-vado-sl-2-60-eq-carbon",
-      "brand": "specialized",
-      "model": "Turbo Vado SL 2 6.0 EQ Carbon",
-      "types": [
-        "removed"
-      ]
-    },
-    {
-      "id": "specialized__vado-sl-2-ltd-s-racing",
-      "brand": "specialized",
-      "model": "Vado SL 2 LTD",
-      "types": [
-        "removed"
-      ]
-    },
-    {
-      "id": "vivi__vivi-t01-electric-trike-folding-cargo-electric-tricycle",
+      "id": "vivi__vivi-ace01-electric-bike-all-terrain-fat-tire-electric-bike",
       "brand": "vivi",
-      "model": "VIVI T01 Electric Trike Folding Cargo Electric Tricycle SGS Certified to UL2849",
+      "model": "VIVI ACE01 Electric Bike All Terrain Fat Tire Electric Bike SGS Certified to UL2849",
+      "types": [
+        "removed"
+      ]
+    },
+    {
+      "id": "vivi__vivi-ace01-pro-electric-bike-torque-sensor-fat-tire-electric-bike-with-app-control",
+      "brand": "vivi",
+      "model": "VIVI ACE01 Pro Electric Bike Torque Sensor Fat Tire Electric Bike with App Control",
+      "types": [
+        "removed"
+      ]
+    },
+    {
+      "id": "vivi__vivi-ace07-electric-bike-commuter-fat-tire-electric-bike",
+      "brand": "vivi",
+      "model": "VIVI ACE07 Electric Bike Commuter Fat Tire Electric Bike SGS Certified to UL2849",
+      "types": [
+        "removed"
+      ]
+    },
+    {
+      "id": "vivi__vivi-c26ul-electric-bike-cruiser-electric-commuter-bike",
+      "brand": "vivi",
+      "model": "VIVI C26UL Electric Bike Cruiser Electric Commuter Bike SGS Certified to UL2849",
+      "types": [
+        "removed"
+      ]
+    },
+    {
+      "id": "vivi__vivi-f26ful-electric-bike-long-range-fat-tire-electric-bike",
+      "brand": "vivi",
+      "model": "VIVI F26FUL Electric Bike Long Range Fat Tire Electric Bike SGS Certified to UL2849",
+      "types": [
+        "removed"
+      ]
+    },
+    {
+      "id": "vivi__vivi-fm20ul-electric-bike-fat-tire-folding-electric-bike",
+      "brand": "vivi",
+      "model": "VIVI FM20UL Electric Bike 2.4\" Fat Tire Folding Electric Bike SGS Certified to UL2849",
+      "types": [
+        "removed"
+      ]
+    },
+    {
+      "id": "vivi__vivi-gopina-electric-bike-fat-tire-folding-electric-bike",
+      "brand": "vivi",
+      "model": "VIVI Gopina Electric Bike 3.0\" Fat Tire Folding Electric Bike SGS Certified to UL2849",
+      "types": [
+        "removed"
+      ]
+    },
+    {
+      "id": "vivi__vivi-h7ul-electric-bike-off-road-electric-mountain-bike",
+      "brand": "vivi",
+      "model": "VIVI H7UL Electric Bike 27.5\" Off Road Electric Mountain Bike SGS Certified to UL2849",
+      "types": [
+        "removed"
+      ]
+    },
+    {
+      "id": "vivi__vivi-m026shul-electric-bike-hardtail-electric-mountain-bike",
+      "brand": "vivi",
+      "model": "VIVI M026SHUL Electric Bike Hardtail Electric Mountain Bike SGS Certified to UL2849",
+      "types": [
+        "removed"
+      ]
+    },
+    {
+      "id": "vivi__vivi-m026tgbul-electric-bike-foldable-full-suspension-electric-mountain-bike",
+      "brand": "vivi",
+      "model": "VIVI M026TGBUL Electric Bike Foldable Full Suspension Electric Mountain Bike SGS Certified to UL2849",
+      "types": [
+        "removed"
+      ]
+    },
+    {
+      "id": "vivi__vivi-mt20ul-electric-bike-fat-tire-folding-electric-bike",
+      "brand": "vivi",
+      "model": "VIVI MT20UL Electric Bike 3.0\" Fat Tire Folding Electric Bike SGS Certified to UL2849",
+      "types": [
+        "removed"
+      ]
+    },
+    {
+      "id": "vivi__vivi-mt26gul-electric-bike-rambler-electric-commuter-bike",
+      "brand": "vivi",
+      "model": "VIVI MT26GUL Electric Bike Rambler Electric Commuter Bike SGS Certified to UL2849",
+      "types": [
+        "removed"
+      ]
+    },
+    {
+      "id": "vivi__vivi-pony01-electric-bike-commuter-mini-electric-bike",
+      "brand": "vivi",
+      "model": "VIVI PONY01 Electric Bike Commuter Mini Electric Bike SGS Certified to UL2849",
       "types": [
         "removed"
       ]

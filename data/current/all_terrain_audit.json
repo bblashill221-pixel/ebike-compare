@@ -1,85 +1,194 @@
 {
-  "count": 45,
+  "count": 121,
   "borderline": [
     {
-      "id": "heybike__hybrid",
+      "id": "engwe__engwe-ep-2-pro-750w-folding-electric-mountain-bike",
+      "brand": "engwe",
+      "model": "ENGWE EP-2 Pro",
+      "current_type": "Fat Tire",
+      "battery_wh": 624,
+      "weight_lb": 66.0,
+      "tire_in": 4
+    },
+    {
+      "id": "engwe__l20-2-0",
+      "brand": "engwe",
+      "model": "ENGWE L20 2.0",
+      "current_type": "Commuter / Urban",
+      "battery_wh": 676,
+      "weight_lb": 68.3,
+      "tire_in": 3
+    },
+    {
+      "id": "engwe__m20",
+      "brand": "engwe",
+      "model": "ENGWE M20",
+      "current_type": "Fat Tire",
+      "battery_wh": 624,
+      "weight_lb": 76.7,
+      "tire_in": 4
+    },
+    {
+      "id": "engwe__engwe-x20",
+      "brand": "engwe",
+      "model": "ENGWE X20",
+      "current_type": "Fat Tire",
+      "battery_wh": 691,
+      "weight_lb": 82.0,
+      "tire_in": 4
+    },
+    {
+      "id": "engwe__engwe-x20--dual-battery",
+      "brand": "engwe",
+      "model": "ENGWE X20 — Dual Battery",
+      "current_type": "Fat Tire",
+      "battery_wh": 691,
+      "weight_lb": 82.0,
+      "tire_in": 4
+    },
+    {
+      "id": "heybike__alpha",
       "brand": "heybike",
-      "model": "Hybrid",
-      "current_type": "Road / Gravel",
-      "battery_wh": 864,
-      "weight_lb": 69.0,
-      "tire_in": 2.4,
-      "signals": 0
-    },
-    {
-      "id": "lectric__lectric-xp4--long-range-step-thru",
-      "brand": "lectric",
-      "model": "Lectric XP4 — Long-Range · Step-Thru",
-      "current_type": "Commuter / Urban",
-      "battery_wh": 840,
-      "weight_lb": 62.0,
-      "tire_in": 3,
-      "signals": 2
-    },
-    {
-      "id": "lectric__lectric-xp4--long-range-step-over",
-      "brand": "lectric",
-      "model": "Lectric XP4 — Long-Range · Step-Over",
-      "current_type": "Commuter / Urban",
-      "battery_wh": 840,
-      "weight_lb": 62.0,
-      "tire_in": 3,
-      "signals": 2
-    },
-    {
-      "id": "lectric__lectric-xpeak2--long-range-step-thru",
-      "brand": "lectric",
-      "model": "Lectric XPeak2 — Long-Range · Step-Thru",
+      "model": "ALPHA",
       "current_type": "Fat Tire",
-      "battery_wh": 960,
-      "weight_lb": 64.5,
-      "tire_in": 4,
-      "signals": 2
+      "battery_wh": 680,
+      "weight_lb": 71.6,
+      "tire_in": 4
     },
     {
-      "id": "lectric__lectric-xpeak2--long-range-step-over",
-      "brand": "lectric",
-      "model": "Lectric XPeak2 — Long-Range · Step-Over",
+      "id": "heybike__alpha--step-thru",
+      "brand": "heybike",
+      "model": "ALPHA — Step-Thru",
       "current_type": "Fat Tire",
-      "battery_wh": 960,
-      "weight_lb": 64.5,
-      "tire_in": 4,
-      "signals": 2
+      "battery_wh": 680,
+      "weight_lb": 71.6,
+      "tire_in": 4
     },
     {
-      "id": "specialized__turbo-vado-3-evo-40",
-      "brand": "specialized",
-      "model": "Turbo Vado 3 EVO 4.0",
+      "id": "heybike__horizon",
+      "brand": "heybike",
+      "model": "Horizon",
+      "current_type": "Fat Tire",
+      "battery_wh": 692,
+      "weight_lb": 79.4,
+      "tire_in": 4
+    },
+    {
+      "id": "heybike__mars-2-0",
+      "brand": "heybike",
+      "model": "Mars 2.0 750/1000W",
+      "current_type": "Fat Tire",
+      "battery_wh": 600,
+      "weight_lb": 75.0,
+      "tire_in": 4.0
+    },
+    {
+      "id": "heybike__mars-2-0-750-1000w-deal",
+      "brand": "heybike",
+      "model": "Mars 2.0 750/1000W（Brad‘s Deal）",
+      "current_type": "Fat Tire",
+      "battery_wh": 600,
+      "weight_lb": 75.0,
+      "tire_in": 4.0
+    },
+    {
+      "id": "heybike__mars-2-0-750-1000w-deal--1000w-peak-1800w",
+      "brand": "heybike",
+      "model": "Mars 2.0 750/1000W（Brad‘s Deal） — 1000W (Peak 1800W)",
+      "current_type": "Fat Tire",
+      "battery_wh": 600,
+      "weight_lb": 75.0,
+      "tire_in": 4.0
+    },
+    {
+      "id": "heybike__mars-2-0-750-1000w-slick-deals",
+      "brand": "heybike",
+      "model": "Mars 2.0 750/1000W（Slick deals）",
+      "current_type": "Fat Tire",
+      "battery_wh": 600,
+      "weight_lb": 75.0,
+      "tire_in": 4.0
+    },
+    {
+      "id": "heybike__mars-2-0-750-1000w-slick-deals--1000w-peak-1800w",
+      "brand": "heybike",
+      "model": "Mars 2.0 750/1000W（Slick deals） — 1000W (Peak 1800W)",
+      "current_type": "Fat Tire",
+      "battery_wh": 600,
+      "weight_lb": 75.0,
+      "tire_in": 4.0
+    },
+    {
+      "id": "heybike__mars-3-0",
+      "brand": "heybike",
+      "model": "Mars 3.0",
+      "current_type": "Fat Tire",
+      "battery_wh": 624,
+      "weight_lb": 70.0,
+      "tire_in": 4
+    },
+    {
+      "id": "ride1up__portola--13-4ah",
+      "brand": "ride1up",
+      "model": "PORTOLA — 13.4ah",
       "current_type": "Commuter / Urban",
-      "battery_wh": 840,
+      "battery_wh": 643,
+      "weight_lb": 59.0,
+      "tire_in": 3
+    },
+    {
+      "id": "ride1up__portola-c1",
+      "brand": "ride1up",
+      "model": "PORTOLA 13.4AH (CLASS 1)",
+      "current_type": "Commuter / Urban",
+      "battery_wh": 643,
+      "weight_lb": 59.0,
+      "tire_in": 3
+    },
+    {
+      "id": "trek__ponto-go",
+      "brand": "trek",
+      "model": "Ponto Go!",
+      "current_type": "Fat Tire",
+      "battery_wh": 625,
+      "weight_lb": 80.0,
+      "tire_in": 4.0
+    },
+    {
+      "id": "trek__ponto-go-s",
+      "brand": "trek",
+      "model": "Ponto Go! S",
+      "current_type": "Fat Tire",
+      "battery_wh": 625,
+      "weight_lb": 80.0,
+      "tire_in": 4.0
+    },
+    {
+      "id": "vanpowers__cycanon",
+      "brand": "vanpowers",
+      "model": "Cycanon",
+      "current_type": "Fat Tire",
+      "battery_wh": 624,
+      "weight_lb": 70.5,
+      "tire_in": 4.0
+    },
+    {
+      "id": "velotric__velotric-fold-1",
+      "brand": "velotric",
+      "model": "Velotric Fold 1 Ebike",
+      "current_type": "Commuter / Urban",
+      "battery_wh": 608,
       "weight_lb": 63.0,
-      "tire_in": 2.6,
-      "signals": 0
+      "tire_in": 3
     },
     {
-      "id": "specialized__turbo-vado-3-evo-50",
-      "brand": "specialized",
-      "model": "Turbo Vado 3 EVO 5.0",
+      "id": "velotric__velotric-fold-1-plus",
+      "brand": "velotric",
+      "model": "Velotric Fold 1 Plus Ebike",
       "current_type": "Commuter / Urban",
-      "battery_wh": 840,
-      "weight_lb": 65.0,
-      "tire_in": 2.6,
-      "signals": 0
-    },
-    {
-      "id": "specialized__turbo-vado-3-evo-60",
-      "brand": "specialized",
-      "model": "Turbo Vado 3 EVO 6.0",
-      "current_type": "Commuter / Urban",
-      "battery_wh": 840,
-      "weight_lb": 68.0,
-      "tire_in": 2.6,
-      "signals": 0
+      "battery_wh": 608,
+      "weight_lb": 63.0,
+      "tire_in": 3
     }
   ]
 }

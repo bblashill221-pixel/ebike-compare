@@ -2,6 +2,34 @@ import { titleCase, formatSpecValue, formatNumber } from "../format";
 import { useUnits, type UnitSystem } from "../units";
 import type { SpecValue } from "../types";
 import { COLUMN_CONFIG, KIND_LABEL, type Column } from "./componentColumns";
+import { BatteryIcon, BoltIcon, BrakeIcon, CheckIcon, ForkIcon, FrontLightIcon, GearsIcon, MotorIcon, SensorIcon, TireIcon } from "./icons";
+
+// Colored (self-tinted) icon + badge bg per component kind, echoing the comparison card's
+// metric icons. Unmapped kinds (handlebars, stem, frame, …) just render the heading, no icon.
+const KIND_ICON: Record<string, { Icon: (p: { className?: string }) => JSX.Element; badge: string }> = {
+  motor: { Icon: MotorIcon, badge: "bg-amber-50" },
+  battery: { Icon: BatteryIcon, badge: "bg-emerald-50" },
+  charger: { Icon: BoltIcon, badge: "bg-amber-50" },
+  controller: { Icon: BoltIcon, badge: "bg-slate-100" },
+  sensor: { Icon: SensorIcon, badge: "bg-slate-100" },
+  throttle: { Icon: BoltIcon, badge: "bg-slate-100" },
+  fork: { Icon: ForkIcon, badge: "bg-sky-50" },
+  shock: { Icon: ForkIcon, badge: "bg-sky-50" },
+  derailleur: { Icon: GearsIcon, badge: "bg-blue-50" },
+  cassette: { Icon: GearsIcon, badge: "bg-blue-50" },
+  chain: { Icon: GearsIcon, badge: "bg-blue-50" },
+  chainring: { Icon: GearsIcon, badge: "bg-blue-50" },
+  crankset: { Icon: GearsIcon, badge: "bg-blue-50" },
+  bottom_bracket: { Icon: GearsIcon, badge: "bg-blue-50" },
+  brake: { Icon: BrakeIcon, badge: "bg-rose-50" },
+  wheel: { Icon: TireIcon, badge: "bg-slate-100" },
+  tire: { Icon: TireIcon, badge: "bg-slate-100" },
+  rims: { Icon: TireIcon, badge: "bg-slate-100" },
+  spokes: { Icon: TireIcon, badge: "bg-slate-100" },
+  tubes: { Icon: TireIcon, badge: "bg-slate-100" },
+  light: { Icon: FrontLightIcon, badge: "bg-amber-50" },
+  cert: { Icon: CheckIcon, badge: "bg-emerald-50" },
+};
 
 /** One component instance (e.g. the front brake) plus its position label. */
 export type ComponentInstance = { position: string | null; obj: Record<string, SpecValue> };
@@ -105,10 +133,18 @@ export function ComponentTable({
   return (
     <div className="mb-3">
       <h3
-        className={`mb-1 text-xs uppercase tracking-wide text-slate-500 ${
-          emphasize ? "pl-2 font-bold" : "font-semibold"
+        className={`mb-1 flex items-center gap-2 text-xs uppercase tracking-wide text-slate-500 ${
+          emphasize ? "font-bold" : "font-semibold"
         }`}
       >
+        {KIND_ICON[kind] && (() => {
+          const KIcon = KIND_ICON[kind].Icon;   // slanted badge echoes the comparison card
+          return (
+            <span className={`flex h-5 w-5 shrink-0 -skew-x-6 items-center justify-center rounded ${KIND_ICON[kind].badge}`}>
+              <span className="inline-flex skew-x-6"><KIcon className="h-3 w-3" /></span>
+            </span>
+          );
+        })()}
         {KIND_LABEL[kind] ?? titleCase(kind)}
       </h3>
       <table className="w-full text-sm">

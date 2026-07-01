@@ -33,6 +33,7 @@ ACC_COLLECTION = {
     "euphree": None, "ride1up": None, "specialized": None,
     "wired": "accessories", "magician": "accessories",
     "engwe": None, "wallke": None, "cyke": "ebike-gear", "leoguar": None,
+    "puckipuppy": "accessories",
 }
 # Brands that are NOT free shipping (charged / "calculated at checkout"). Overrides the
 # DTC free default; cost None = known-not-free but amount unpublished (the card shows a

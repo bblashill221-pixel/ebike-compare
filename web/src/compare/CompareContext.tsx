@@ -16,6 +16,7 @@ interface CompareState {
   has: (id: string) => boolean;
   toggle: (id: string) => void;
   remove: (id: string) => void;
+  reorder: (fromId: string, toId: string) => void;
   clear: () => void;
   isFull: boolean;
 }
@@ -49,16 +50,29 @@ export function CompareProvider({ children }: { children: ReactNode }) {
   const remove = useCallback((id: string) => setIds((cur) => cur.filter((x) => x !== id)), []);
   const clear = useCallback(() => setIds([]), []);
 
+  // Move `fromId` to `toId`'s slot: after target when dragging down, before it when dragging up.
+  const reorder = useCallback((fromId: string, toId: string) => {
+    setIds((cur) => {
+      if (fromId === toId) return cur;
+      const from = cur.indexOf(fromId), to = cur.indexOf(toId);
+      if (from < 0 || to < 0) return cur;
+      const next = cur.filter((x) => x !== fromId);
+      next.splice(next.indexOf(toId) + (from < to ? 1 : 0), 0, fromId);
+      return next;
+    });
+  }, []);
+
   const value = useMemo<CompareState>(
     () => ({
       ids,
       has: (id) => ids.includes(id),
       toggle,
       remove,
+      reorder,
       clear,
       isFull: ids.length >= MAX_COMPARE,
     }),
-    [ids, toggle, remove, clear],
+    [ids, toggle, remove, reorder, clear],
   );
 
   return <CompareContext.Provider value={value}>{children}</CompareContext.Provider>;
