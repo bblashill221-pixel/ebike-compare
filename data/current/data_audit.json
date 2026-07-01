@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-01T07:57:45.380947+00:00",
-  "total_models": 491,
+  "generated_at": "2026-07-01T23:36:18.591173+00:00",
+  "total_models": 543,
   "expected_fields": [
     "motor_w",
     "battery_wh",
@@ -26,163 +26,163 @@
   ],
   "coverage": {
     "frame_size_count": {
-      "count": 491,
+      "count": 543,
       "pct": 100
     },
     "sensor_type": {
-      "count": 489,
-      "pct": 100
-    },
-    "brake_type": {
-      "count": 488,
+      "count": 540,
       "pct": 99
-    },
-    "drivetrain_type": {
-      "count": 484,
-      "pct": 99
-    },
-    "cell_brand": {
-      "count": 483,
-      "pct": 98
-    },
-    "battery_wh": {
-      "count": 479,
-      "pct": 98
     },
     "drive_type": {
-      "count": 477,
+      "count": 528,
       "pct": 97
-    },
-    "suspension": {
-      "count": 474,
-      "pct": 97
-    },
-    "display_type": {
-      "count": 473,
-      "pct": 96
-    },
-    "build_tier": {
-      "count": 467,
-      "pct": 95
     },
     "motor_w": {
-      "count": 460,
+      "count": 510,
       "pct": 94
     },
-    "value_extras": {
-      "count": 451,
+    "cell_brand": {
+      "count": 502,
       "pct": 92
     },
-    "value_index": {
-      "count": 451,
-      "pct": 92
+    "battery_wh": {
+      "count": 494,
+      "pct": 91
     },
-    "value_level": {
-      "count": 451,
-      "pct": 92
+    "brake_type": {
+      "count": 492,
+      "pct": 91
     },
-    "value_peers": {
-      "count": 451,
-      "pct": 92
-    },
-    "value_typical": {
-      "count": 451,
-      "pct": 92
-    },
-    "build_markers": {
-      "count": 433,
-      "pct": 88
-    },
-    "frame_material": {
-      "count": 433,
-      "pct": 88
-    },
-    "torque_nm": {
-      "count": 432,
-      "pct": 88
-    },
-    "weight_lb": {
-      "count": 431,
-      "pct": 88
-    },
-    "fit_height_min_in": {
-      "count": 426,
+    "suspension": {
+      "count": 470,
       "pct": 87
     },
-    "fit_height_min_mm": {
-      "count": 426,
-      "pct": 87
+    "drivetrain_type": {
+      "count": 468,
+      "pct": 86
     },
-    "fit_height_max_in": {
-      "count": 425,
-      "pct": 87
-    },
-    "fit_height_max_mm": {
-      "count": 425,
-      "pct": 87
-    },
-    "frame_size_rider_range": {
-      "count": 411,
+    "display_type": {
+      "count": 456,
       "pct": 84
     },
-    "gears": {
-      "count": 408,
+    "build_tier": {
+      "count": 451,
       "pct": 83
     },
+    "fit_height_min_in": {
+      "count": 449,
+      "pct": 83
+    },
+    "fit_height_min_mm": {
+      "count": 449,
+      "pct": 83
+    },
+    "fit_height_max_in": {
+      "count": 448,
+      "pct": 83
+    },
+    "fit_height_max_mm": {
+      "count": 448,
+      "pct": 83
+    },
+    "build_markers": {
+      "count": 444,
+      "pct": 82
+    },
     "max_speed_mph": {
-      "count": 400,
+      "count": 438,
       "pct": 81
     },
-    "value_next": {
-      "count": 391,
+    "value_extras": {
+      "count": 437,
+      "pct": 80
+    },
+    "value_index": {
+      "count": 437,
+      "pct": 80
+    },
+    "value_level": {
+      "count": 437,
+      "pct": 80
+    },
+    "value_peers": {
+      "count": 437,
+      "pct": 80
+    },
+    "value_typical": {
+      "count": 437,
+      "pct": 80
+    },
+    "frame_size_rider_range": {
+      "count": 434,
       "pct": 80
     },
     "range_mi": {
-      "count": 387,
-      "pct": 79
+      "count": 432,
+      "pct": 80
+    },
+    "frame_material": {
+      "count": 423,
+      "pct": 78
+    },
+    "torque_nm": {
+      "count": 419,
+      "pct": 77
+    },
+    "weight_lb": {
+      "count": 415,
+      "pct": 76
+    },
+    "gears": {
+      "count": 393,
+      "pct": 72
+    },
+    "value_next": {
+      "count": 383,
+      "pct": 71
     },
     "warranty_years": {
-      "count": 362,
-      "pct": 74
+      "count": 357,
+      "pct": 66
     },
     "max_load_lb": {
-      "count": 306,
-      "pct": 62
+      "count": 347,
+      "pct": 64
     },
     "notable_tech": {
-      "count": 306,
-      "pct": 62
+      "count": 305,
+      "pct": 56
     },
     "ul_listed": {
-      "count": 271,
-      "pct": 55
-    },
-    "motor_peak_w": {
-      "count": 240,
+      "count": 264,
       "pct": 49
     },
+    "motor_peak_w": {
+      "count": 243,
+      "pct": 45
+    },
     "classes": {
-      "count": 191,
-      "pct": 39
+      "count": 177,
+      "pct": 33
     },
     "rack_load_lb": {
-      "count": 154,
+      "count": 169,
       "pct": 31
     },
     "connectivity": {
-      "count": 145,
-      "pct": 30
+      "count": 147,
+      "pct": 27
     },
     "water_resistance": {
-      "count": 136,
-      "pct": 28
+      "count": 132,
+      "pct": 24
     },
     "removable_battery": {
-      "count": 84,
-      "pct": 17
+      "count": 81,
+      "pct": 15
     },
     "range_min_mi": {
-      "count": 36,
+      "count": 37,
       "pct": 7
     },
     "awd": {
@@ -194,7 +194,7 @@
       "pct": 0
     },
     "kids": {
-      "count": 1,
+      "count": 2,
       "pct": 0
     }
   },
@@ -1785,36 +1785,6 @@
     },
     {
       "brand": "cemoto",
-      "model": "Cargo Electric Bike |CEMOTO B69 750W Heavy Duty E-Bike 150kg Capacity",
-      "field": "drivetrain_type",
-      "label": "Drivetrain type"
-    },
-    {
-      "brand": "cemoto",
-      "model": "Cargo Electric Bike |CEMOTO B69 750W Heavy Duty E-Bike 150kg Capacity",
-      "field": "fit_height_min_in",
-      "label": "Rider height range"
-    },
-    {
-      "brand": "cemoto",
-      "model": "Cargo Electric Bike |CEMOTO B69 750W Heavy Duty E-Bike 150kg Capacity",
-      "field": "frame_size_rider_range",
-      "label": "Rider height range per frame size"
-    },
-    {
-      "brand": "cemoto",
-      "model": "Cargo Electric Bike |CEMOTO B69 750W Heavy Duty E-Bike 150kg Capacity",
-      "field": "motor_peak_w",
-      "label": "Peak motor power (W)"
-    },
-    {
-      "brand": "cemoto",
-      "model": "Cargo Electric Bike |CEMOTO B69 750W Heavy Duty E-Bike 150kg Capacity",
-      "field": "torque_nm",
-      "label": "Motor torque (Nm)"
-    },
-    {
-      "brand": "cemoto",
       "model": "Cemoto EB40 | Electric City Commuter Bike",
       "field": "motor_peak_w",
       "label": "Peak motor power (W)"
@@ -2157,6 +2127,12 @@
     },
     {
       "brand": "evelo",
+      "model": "EVELO Atlas Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "evelo",
       "model": "EVELO Compass Electric Trike",
       "field": "motor_peak_w",
       "label": "Peak motor power (W)"
@@ -2166,6 +2142,12 @@
       "model": "EVELO Compass Electric Trike",
       "field": "rack_load_lb",
       "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "evelo",
+      "model": "EVELO Compass Electric Trike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
     },
     {
       "brand": "evelo",
@@ -2174,6 +2156,18 @@
       "label": "Rear-rack load (lb)"
     },
     {
+      "brand": "evelo",
+      "model": "EVELO Galaxy Lux Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "evelo",
+      "model": "EVELO Omega Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
       "brand": "giant",
       "model": "Defy Advanced E+ Elite 1",
       "field": "max_load_lb",
@@ -2376,6 +2370,3036 @@
       "model": "Talon E+",
       "field": "warranty_years",
       "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Accord Electric Bike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Accord Electric Bike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Accord Electric Bike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Accord Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Accord Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Accord Electric Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Accord Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Accord Electric Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Accord Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Accord Electric Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Accord Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Accord Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Accord Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Aeroluxe Electric Beach Cruiser",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Aeroluxe Electric Beach Cruiser",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Aeroluxe Electric Beach Cruiser",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Aeroluxe Electric Beach Cruiser",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Aeroluxe Electric Beach Cruiser",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Aeroluxe Electric Beach Cruiser",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Aeroluxe Electric Beach Cruiser",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Aeroluxe Electric Beach Cruiser",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Aeroluxe Electric Beach Cruiser",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Aeroluxe Electric Beach Cruiser",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Aeroluxe Electric Beach Cruiser",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Aeroluxe Electric Beach Cruiser",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Aeroluxe Electric Beach Cruiser",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Alpine Fat Tire eBike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Alpine Fat Tire eBike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Alpine Fat Tire eBike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Alpine Fat Tire eBike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Alpine Fat Tire eBike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Alpine Fat Tire eBike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Alpine Fat Tire eBike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Alpine Fat Tire eBike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Alpine Fat Tire eBike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Alpine Fat Tire eBike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Alpine Fat Tire eBike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Alpine Fat Tire eBike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Alpine Fat Tire eBike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Approach Step Over Electric Mountain Bike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Approach Step Over Electric Mountain Bike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Approach Step Over Electric Mountain Bike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Approach Step Over Electric Mountain Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Approach Step Over Electric Mountain Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Approach Step Over Electric Mountain Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Approach Step Over Electric Mountain Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Approach Step Over Electric Mountain Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Approach Step Over Electric Mountain Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Approach Step Over Electric Mountain Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Approach Step Over Electric Mountain Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Approach Step Over Electric Mountain Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Approach Step Over Electric Mountain Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Braeburn Electric Mountain Bike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Braeburn Electric Mountain Bike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Braeburn Electric Mountain Bike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Braeburn Electric Mountain Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Braeburn Electric Mountain Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Braeburn Electric Mountain Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Braeburn Electric Mountain Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Braeburn Electric Mountain Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Braeburn Electric Mountain Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Braeburn Electric Mountain Bike",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Braeburn Electric Mountain Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Braeburn Electric Mountain Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Braeburn Electric Mountain Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Braeburn Electric Mountain Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "CTI 2 City E-Bike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "CTI 2 City E-Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "CTI 2 City E-Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "CTI 2 City E-Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "CTI 2 City E-Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "CTI 2 City E-Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "CTI 2 City E-Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "CTI 2 City E-Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "CTI 2 City E-Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "CTI 2 City E-Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "CTI 2 City E-Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "CTI 3 Step Through Electric Bike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "CTI 3 Step Through Electric Bike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "CTI 3 Step Through Electric Bike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "gotrax",
+      "model": "CTI 3 Step Through Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "CTI 3 Step Through Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "CTI 3 Step Through Electric Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "CTI 3 Step Through Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "CTI 3 Step Through Electric Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "CTI 3 Step Through Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "CTI 3 Step Through Electric Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "CTI 3 Step Through Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "CTI 3 Step Through Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "CTI 3 Step Through Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "CTI Commuter E-Bike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "CTI Commuter E-Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "CTI Commuter E-Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "CTI Commuter E-Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "CTI Commuter E-Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "CTI Commuter E-Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "CTI Commuter E-Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "CTI Commuter E-Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "CTI Commuter E-Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "CTI Commuter E-Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "CTI Commuter E-Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "D1RT Electric Mountain Bike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "D1RT Electric Mountain Bike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "D1RT Electric Mountain Bike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "gotrax",
+      "model": "D1RT Electric Mountain Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "D1RT Electric Mountain Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "D1RT Electric Mountain Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "D1RT Electric Mountain Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "D1RT Electric Mountain Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "D1RT Electric Mountain Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "D1RT Electric Mountain Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "D1RT Electric Mountain Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "D1RT Electric Mountain Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "D1RT Electric Mountain Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "E-Cargo Electric Bike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "E-Cargo Electric Bike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "E-Cargo Electric Bike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "gotrax",
+      "model": "E-Cargo Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "E-Cargo Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "E-Cargo Electric Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "E-Cargo Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "E-Cargo Electric Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "E-Cargo Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "E-Cargo Electric Bike",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "E-Cargo Electric Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "E-Cargo Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "E-Cargo Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "E-Cargo Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "E-Fold Electric Bike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "E-Fold Electric Bike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "E-Fold Electric Bike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "gotrax",
+      "model": "E-Fold Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "E-Fold Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "E-Fold Electric Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "E-Fold Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "E-Fold Electric Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "E-Fold Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "E-Fold Electric Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "E-Fold Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "E-Fold Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "E-Fold Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "EBE1 Electric Bike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "EBE1 Electric Bike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "EBE1 Electric Bike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "gotrax",
+      "model": "EBE1 Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "EBE1 Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "EBE1 Electric Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "EBE1 Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "EBE1 Electric Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "EBE1 Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "EBE1 Electric Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "EBE1 Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "EBE1 Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "EBE1 Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Elevation Electric Bike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Elevation Electric Bike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Elevation Electric Bike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Elevation Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Elevation Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Elevation Electric Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Elevation Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Elevation Electric Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Elevation Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Elevation Electric Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Elevation Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Elevation Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Elevation Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Emerge Electric Bike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Emerge Electric Bike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Emerge Electric Bike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Emerge Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Emerge Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Emerge Electric Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Emerge Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Emerge Electric Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Emerge Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Emerge Electric Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Emerge Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Emerge Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Emerge Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F1 Folding Electric Bike 2.0",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F1 Folding Electric Bike 2.0",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F1 Folding Electric Bike 2.0",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F1 Folding Electric Bike 2.0",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F1 Folding Electric Bike 2.0",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F1 Folding Electric Bike 2.0",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F1 Folding Electric Bike 2.0",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F1 Folding Electric Bike 2.0",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F1 Folding Electric Bike 2.0",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F1 Folding Electric Bike 2.0",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F1 Folding Electric Bike 2.0",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F2 Foldable Electric Bike 2.0",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F2 Foldable Electric Bike 2.0",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F2 Foldable Electric Bike 2.0",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F2 Foldable Electric Bike 2.0",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F2 Foldable Electric Bike 2.0",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F2 Foldable Electric Bike 2.0",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F2 Foldable Electric Bike 2.0",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F2 Foldable Electric Bike 2.0",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F2 Foldable Electric Bike 2.0",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F2 Foldable Electric Bike 2.0",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F2 Foldable Electric Bike 2.0",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F3 Fat Tire Folding E-Bike 2.0",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F3 Fat Tire Folding E-Bike 2.0",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F3 Fat Tire Folding E-Bike 2.0",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F3 Fat Tire Folding E-Bike 2.0",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F3 Fat Tire Folding E-Bike 2.0",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F3 Fat Tire Folding E-Bike 2.0",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F3 Fat Tire Folding E-Bike 2.0",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F3 Fat Tire Folding E-Bike 2.0",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F3 Fat Tire Folding E-Bike 2.0",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F3 Fat Tire Folding E-Bike 2.0",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F3 Fat Tire Folding E-Bike 2.0",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F3 Fat Tire Folding E-Bike 2.0",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F3 Fat Tire Folding E-Bike 2.0",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F5 Fat Tire Folding Electric Bike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F5 Fat Tire Folding Electric Bike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F5 Fat Tire Folding Electric Bike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F5 Fat Tire Folding Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F5 Fat Tire Folding Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F5 Fat Tire Folding Electric Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F5 Fat Tire Folding Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F5 Fat Tire Folding Electric Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F5 Fat Tire Folding Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F5 Fat Tire Folding Electric Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F5 Fat Tire Folding Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F5 Fat Tire Folding Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "F5 Fat Tire Folding Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Fitz16 Electric Dirt Bike for Kids",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Fitz16 Electric Dirt Bike for Kids",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Fitz16 Electric Dirt Bike for Kids",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Fitz16 Electric Dirt Bike for Kids",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Fitz16 Electric Dirt Bike for Kids",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Fitz16 Electric Dirt Bike for Kids",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Fitz16 Electric Dirt Bike for Kids",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Fitz16 Electric Dirt Bike for Kids",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Fitz16 Electric Dirt Bike for Kids",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Fitz16 Electric Dirt Bike for Kids",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Fitz16 Electric Dirt Bike for Kids",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Fitz16 Electric Dirt Bike for Kids",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Fitz16 Electric Dirt Bike for Kids",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "GOTRAX Ranger Electric Bike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "GOTRAX Ranger Electric Bike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "GOTRAX Ranger Electric Bike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "gotrax",
+      "model": "GOTRAX Ranger Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "GOTRAX Ranger Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "GOTRAX Ranger Electric Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "GOTRAX Ranger Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "GOTRAX Ranger Electric Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "GOTRAX Ranger Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "GOTRAX Ranger Electric Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "GOTRAX Ranger Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "GOTRAX Ranger Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "GOTRAX Ranger Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "GOTRAX S3 Mini Electric Bike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "GOTRAX S3 Mini Electric Bike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "GOTRAX S3 Mini Electric Bike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "gotrax",
+      "model": "GOTRAX S3 Mini Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "GOTRAX S3 Mini Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "GOTRAX S3 Mini Electric Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "GOTRAX S3 Mini Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "GOTRAX S3 Mini Electric Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "GOTRAX S3 Mini Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "GOTRAX S3 Mini Electric Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "GOTRAX S3 Mini Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "GOTRAX S3 Mini Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "GOTRAX S3 Mini Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "L1NE Mid Drive eMTB",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "L1NE Mid Drive eMTB",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "L1NE Mid Drive eMTB",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "gotrax",
+      "model": "L1NE Mid Drive eMTB",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "L1NE Mid Drive eMTB",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "L1NE Mid Drive eMTB",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "L1NE Mid Drive eMTB",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "L1NE Mid Drive eMTB",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "L1NE Mid Drive eMTB",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "L1NE Mid Drive eMTB",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "L1NE Mid Drive eMTB",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "L1NE Mid Drive eMTB",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "L1NE Mid Drive eMTB",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "MX1 Mid Drive Electric Bike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "MX1 Mid Drive Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "MX1 Mid Drive Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "MX1 Mid Drive Electric Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "MX1 Mid Drive Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "MX1 Mid Drive Electric Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "MX1 Mid Drive Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "MX1 Mid Drive Electric Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "MX1 Mid Drive Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "MX1 Mid Drive Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "MX1 Mid Drive Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Monte Electric Bike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Monte Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Monte Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Monte Electric Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Monte Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Monte Electric Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Monte Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Monte Electric Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Monte Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Monte Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Monte Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Mustang Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Mustang Electric Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Mustang Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Mustang Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Nephelle Electric 16\" electric bike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Nephelle Electric 16\" electric bike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Nephelle Electric 16\" electric bike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Nephelle Electric 16\" electric bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Nephelle Electric 16\" electric bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Nephelle Electric 16\" electric bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Nephelle Electric 16\" electric bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Nephelle Electric 16\" electric bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Nephelle Electric 16\" electric bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Nephelle Electric 16\" electric bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Nephelle Electric 16\" electric bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Nephelle Electric 16\" electric bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Nephelle Electric 16\" electric bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Porter Electric Cargo Bike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Porter Electric Cargo Bike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Porter Electric Cargo Bike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Porter Electric Cargo Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Porter Electric Cargo Bike",
+      "field": "drive_type",
+      "label": "Motor placement"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Porter Electric Cargo Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Porter Electric Cargo Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Porter Electric Cargo Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Porter Electric Cargo Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Porter Electric Cargo Bike",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Porter Electric Cargo Bike",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Porter Electric Cargo Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Porter Electric Cargo Bike",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Porter Electric Cargo Bike",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Porter Electric Cargo Bike",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Porter Electric Cargo Bike",
+      "field": "sensor_type",
+      "label": "Pedal-assist sensor type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Porter Electric Cargo Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Porter Electric Cargo Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Porter Electric Cargo Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Porter Electric Cargo Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R1 Folding Electric Bike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R1 Folding Electric Bike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R1 Folding Electric Bike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R1 Folding Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R1 Folding Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R1 Folding Electric Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R1 Folding Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R1 Folding Electric Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R1 Folding Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R1 Folding Electric Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R1 Folding Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R1 Folding Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R1 Folding Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R3 Fat Tire Folding E-Bike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R3 Fat Tire Folding E-Bike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R3 Fat Tire Folding E-Bike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R3 Fat Tire Folding E-Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R3 Fat Tire Folding E-Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R3 Fat Tire Folding E-Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R3 Fat Tire Folding E-Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R3 Fat Tire Folding E-Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R3 Fat Tire Folding E-Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R3 Fat Tire Folding E-Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R3 Fat Tire Folding E-Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R3 Fat Tire Folding E-Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R3 Fat Tire Folding E-Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R8 Fat Tire eBike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R8 Fat Tire eBike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R8 Fat Tire eBike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R8 Fat Tire eBike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R8 Fat Tire eBike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R8 Fat Tire eBike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R8 Fat Tire eBike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R8 Fat Tire eBike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R8 Fat Tire eBike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R8 Fat Tire eBike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R8 Fat Tire eBike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R8 Fat Tire eBike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "R8 Fat Tire eBike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Rambo Fat Tire Electric Bike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Rambo Fat Tire Electric Bike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Rambo Fat Tire Electric Bike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Rambo Fat Tire Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Rambo Fat Tire Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Rambo Fat Tire Electric Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Rambo Fat Tire Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Rambo Fat Tire Electric Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Rambo Fat Tire Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Rambo Fat Tire Electric Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Rambo Fat Tire Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Rambo Fat Tire Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Rambo Fat Tire Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Ranger 16 Electric Bike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Ranger 16 Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Ranger 16 Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Ranger 16 Electric Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Ranger 16 Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Ranger 16 Electric Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Ranger 16 Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Ranger 16 Electric Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Ranger 16 Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Ranger 16 Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Ranger 16 Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S1 Electric Bike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S1 Electric Bike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S1 Electric Bike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S1 Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S1 Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S1 Electric Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S1 Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S1 Electric Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S1 Electric Bike",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S1 Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S1 Electric Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S1 Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S1 Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S1 Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S2 Electric Bike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S2 Electric Bike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S2 Electric Bike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S2 Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S2 Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S2 Electric Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S2 Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S2 Electric Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S2 Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S2 Electric Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S2 Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S2 Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S2 Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S4 Power-Assisted Bicycle",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S4 Power-Assisted Bicycle",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S4 Power-Assisted Bicycle",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S4 Power-Assisted Bicycle",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S4 Power-Assisted Bicycle",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S4 Power-Assisted Bicycle",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S4 Power-Assisted Bicycle",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S4 Power-Assisted Bicycle",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S4 Power-Assisted Bicycle",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S4 Power-Assisted Bicycle",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S4 Power-Assisted Bicycle",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S4 Power-Assisted Bicycle",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Shift S4 Power-Assisted Bicycle",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Traveler Electric Bike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Traveler Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Traveler Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Traveler Electric Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Traveler Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Traveler Electric Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Traveler Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Traveler Electric Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Traveler Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Traveler Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Traveler Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Tundra Fat Tire Electric Bike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Tundra Fat Tire Electric Bike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Tundra Fat Tire Electric Bike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Tundra Fat Tire Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Tundra Fat Tire Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Tundra Fat Tire Electric Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Tundra Fat Tire Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Tundra Fat Tire Electric Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Tundra Fat Tire Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Tundra Fat Tire Electric Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Tundra Fat Tire Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Tundra Fat Tire Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Tundra Fat Tire Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Z4 Lite Lightweight Electric Bike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Z4 Lite Lightweight Electric Bike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Z4 Lite Lightweight Electric Bike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Z4 Lite Lightweight Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Z4 Lite Lightweight Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Z4 Lite Lightweight Electric Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Z4 Lite Lightweight Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Z4 Lite Lightweight Electric Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Z4 Lite Lightweight Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Z4 Lite Lightweight Electric Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Z4 Lite Lightweight Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Z4 Lite Lightweight Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Z4 Lite Lightweight Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Z4 Pro Folding Fat Tire Electric Bike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Z4 Pro Folding Fat Tire Electric Bike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Z4 Pro Folding Fat Tire Electric Bike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Z4 Pro Folding Fat Tire Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Z4 Pro Folding Fat Tire Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Z4 Pro Folding Fat Tire Electric Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Z4 Pro Folding Fat Tire Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Z4 Pro Folding Fat Tire Electric Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Z4 Pro Folding Fat Tire Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Z4 Pro Folding Fat Tire Electric Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Z4 Pro Folding Fat Tire Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Z4 Pro Folding Fat Tire Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "Z4 Pro Folding Fat Tire Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "eLo Electric Bike",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "eLo Electric Bike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "eLo Electric Bike",
+      "field": "cell_brand",
+      "label": "Battery cell brand"
+    },
+    {
+      "brand": "gotrax",
+      "model": "eLo Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "eLo Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "gotrax",
+      "model": "eLo Electric Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "gotrax",
+      "model": "eLo Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "gotrax",
+      "model": "eLo Electric Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "gotrax",
+      "model": "eLo Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "eLo Electric Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "gotrax",
+      "model": "eLo Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "eLo Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "gotrax",
+      "model": "eLo Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
     },
     {
       "brand": "heybike",
@@ -2992,26 +6016,8 @@
     {
       "brand": "mokwheel",
       "model": "Asphalt Ebike",
-      "field": "fit_height_min_in",
-      "label": "Rider height range"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Asphalt Ebike",
-      "field": "frame_size_rider_range",
-      "label": "Rider height range per frame size"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Asphalt Ebike",
       "field": "motor_w",
       "label": "Motor power (W)"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Asphalt Ebike",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
     },
     {
       "brand": "mokwheel",
@@ -3022,44 +6028,14 @@
     {
       "brand": "mokwheel",
       "model": "Asphalt ST Ebike",
-      "field": "fit_height_min_in",
-      "label": "Rider height range"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Asphalt ST Ebike",
-      "field": "frame_size_rider_range",
-      "label": "Rider height range per frame size"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Asphalt ST Ebike",
       "field": "motor_w",
       "label": "Motor power (W)"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Asphalt ST Ebike",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
     },
     {
       "brand": "mokwheel",
       "model": "Basalt 2.0 Ebike",
       "field": "drive_type",
       "label": "Motor placement"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Basalt 2.0 Ebike",
-      "field": "fit_height_min_in",
-      "label": "Rider height range"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Basalt 2.0 Ebike",
-      "field": "frame_size_rider_range",
-      "label": "Rider height range per frame size"
     },
     {
       "brand": "mokwheel",
@@ -3076,18 +6052,6 @@
     {
       "brand": "mokwheel",
       "model": "Basalt ST 2.0 Ebike",
-      "field": "fit_height_min_in",
-      "label": "Rider height range"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Basalt ST 2.0 Ebike",
-      "field": "frame_size_rider_range",
-      "label": "Rider height range per frame size"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Basalt ST 2.0 Ebike",
       "field": "motor_w",
       "label": "Motor power (W)"
     },
@@ -3096,18 +6060,6 @@
       "model": "FLINT Ebike",
       "field": "drive_type",
       "label": "Motor placement"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "FLINT Ebike",
-      "field": "fit_height_min_in",
-      "label": "Rider height range"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "FLINT Ebike",
-      "field": "frame_size_rider_range",
-      "label": "Rider height range per frame size"
     },
     {
       "brand": "mokwheel",
@@ -3124,44 +6076,14 @@
     {
       "brand": "mokwheel",
       "model": "FLINT PRO Ebike",
-      "field": "fit_height_min_in",
-      "label": "Rider height range"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "FLINT PRO Ebike",
-      "field": "frame_size_rider_range",
-      "label": "Rider height range per frame size"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "FLINT PRO Ebike",
       "field": "motor_w",
       "label": "Motor power (W)"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "FLINT PRO Ebike",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
     },
     {
       "brand": "mokwheel",
       "model": "FLINT PRO ST Ebike",
       "field": "drive_type",
       "label": "Motor placement"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "FLINT PRO ST Ebike",
-      "field": "fit_height_min_in",
-      "label": "Rider height range"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "FLINT PRO ST Ebike",
-      "field": "frame_size_rider_range",
-      "label": "Rider height range per frame size"
     },
     {
       "brand": "mokwheel",
@@ -3178,146 +6100,8 @@
     {
       "brand": "mokwheel",
       "model": "FLINT ST Ebike",
-      "field": "fit_height_min_in",
-      "label": "Rider height range"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "FLINT ST Ebike",
-      "field": "frame_size_rider_range",
-      "label": "Rider height range per frame size"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "FLINT ST Ebike",
       "field": "motor_w",
       "label": "Motor power (W)"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Granite E-Trike",
-      "field": "fit_height_min_in",
-      "label": "Rider height range"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Granite E-Trike",
-      "field": "frame_size_rider_range",
-      "label": "Rider height range per frame size"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Granite E-Trike",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Mesa Plus ST Ebike",
-      "field": "fit_height_min_in",
-      "label": "Rider height range"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Mesa Plus ST Ebike",
-      "field": "frame_size_rider_range",
-      "label": "Rider height range per frame size"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Obsidian 2.0 Ebike",
-      "field": "fit_height_min_in",
-      "label": "Rider height range"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Obsidian 2.0 Ebike",
-      "field": "frame_size_rider_range",
-      "label": "Rider height range per frame size"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Obsidian ST 2.0 Ebike",
-      "field": "fit_height_min_in",
-      "label": "Rider height range"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Obsidian ST 2.0 Ebike",
-      "field": "frame_size_rider_range",
-      "label": "Rider height range per frame size"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Onyx Ebike",
-      "field": "fit_height_min_in",
-      "label": "Rider height range"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Onyx Ebike",
-      "field": "frame_size_rider_range",
-      "label": "Rider height range per frame size"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Onyx Ebike",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Onyx ST Ebike",
-      "field": "fit_height_min_in",
-      "label": "Rider height range"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Onyx ST Ebike",
-      "field": "frame_size_rider_range",
-      "label": "Rider height range per frame size"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Onyx ST Ebike",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Scoria 2.0 Ebike",
-      "field": "fit_height_min_in",
-      "label": "Rider height range"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Scoria 2.0 Ebike",
-      "field": "frame_size_rider_range",
-      "label": "Rider height range per frame size"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Scoria 2.0 Ebike",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Slate Ebike",
-      "field": "fit_height_min_in",
-      "label": "Rider height range"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Slate Ebike",
-      "field": "frame_size_rider_range",
-      "label": "Rider height range per frame size"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Slate Ebike",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
     },
     {
       "brand": "mokwheel",
@@ -3334,26 +6118,8 @@
     {
       "brand": "mokwheel",
       "model": "Tarmac Ebike",
-      "field": "fit_height_min_in",
-      "label": "Rider height range"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Tarmac Ebike",
-      "field": "frame_size_rider_range",
-      "label": "Rider height range per frame size"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Tarmac Ebike",
       "field": "motor_w",
       "label": "Motor power (W)"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Tarmac Ebike",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
     },
     {
       "brand": "mokwheel",
@@ -3370,38 +6136,8 @@
     {
       "brand": "mokwheel",
       "model": "Tarmac ST Ebike",
-      "field": "fit_height_min_in",
-      "label": "Rider height range"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Tarmac ST Ebike",
-      "field": "frame_size_rider_range",
-      "label": "Rider height range per frame size"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Tarmac ST Ebike",
       "field": "motor_w",
       "label": "Motor power (W)"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Tarmac ST Ebike",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Tor Plus Ebike",
-      "field": "fit_height_min_in",
-      "label": "Rider height range"
-    },
-    {
-      "brand": "mokwheel",
-      "model": "Tor Plus Ebike",
-      "field": "frame_size_rider_range",
-      "label": "Rider height range per frame size"
     },
     {
       "brand": "priority",
@@ -4076,6 +6812,1458 @@
       "label": "Warranty (years)"
     },
     {
+      "brand": "retrospec",
+      "model": "Abbot Rev 2 Commuter Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Abbot Rev 2 Commuter Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Abbot Rev 2 Commuter Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Abbot Rev 2 Commuter Electric Bike",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Abbot Rev 2 Commuter Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Abbot Rev 2 Commuter Electric Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Abbot Rev 2 Commuter Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Abbot Rev 2 Commuter Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Abbot Rev 2 Commuter Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Abbot Rev 2 Commuter Electric Bike - Step Through",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Abbot Rev 2 Commuter Electric Bike - Step Through",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Abbot Rev 2 Commuter Electric Bike - Step Through",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Abbot Rev 2 Commuter Electric Bike - Step Through",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Abbot Rev 2 Commuter Electric Bike - Step Through",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Abbot Rev 2 Commuter Electric Bike - Step Through",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Abbot Rev 2 Commuter Electric Bike - Step Through",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Abbot Rev 2 Commuter Electric Bike - Step Through",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Abbot Rev 2 Commuter Electric Bike - Step Through",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Beaumont Rev 3 City Electric Bike - Step Through",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Beaumont Rev 3 City Electric Bike - Step Through",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Beaumont Rev 3 City Electric Bike - Step Through",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Beaumont Rev 3 City Electric Bike - Step Through",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Beaumont Rev 3 City Electric Bike - Step Through",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Beaumont Rev 3 City Electric Bike - Step Through",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Beaumont Rev 3 City Electric Bike - Step Through",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Beaumont Rev 3 City Electric Bike - Step Through",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Beaumont Rev 3 City Electric Bike - Step Through",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Beaumont Rev 3 City Electric Bike - Step Through",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Beaumont Rev+ City Electric Bike - Step Through",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Beaumont Rev+ City Electric Bike - Step Through",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Beaumont Rev+ City Electric Bike - Step Through",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Beaumont Rev+ City Electric Bike - Step Through",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Beaumont Rev+ City Electric Bike - Step Through",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Beaumont Rev+ City Electric Bike - Step Through",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Beaumont Rev+ City Electric Bike - Step Through",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Beaumont Rev+ City Electric Bike - Step Through",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Beaumont Rev+ City Electric Bike - Step Through",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Boca Rev 2 Electric Tricycle",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Boca Rev 2 Electric Tricycle",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Boca Rev 2 Electric Tricycle",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Boca Rev 2 Electric Tricycle",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Boca Rev 2 Electric Tricycle",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Boca Rev 2 Electric Tricycle",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Boca Rev 2 Electric Tricycle",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Boca Rev 2 Electric Tricycle",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Boca Rev 2 Electric Tricycle",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev 3 Beach Cruiser Electric Bike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev 3 Beach Cruiser Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev 3 Beach Cruiser Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev 3 Beach Cruiser Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev 3 Beach Cruiser Electric Bike",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev 3 Beach Cruiser Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev 3 Beach Cruiser Electric Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev 3 Beach Cruiser Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev 3 Beach Cruiser Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev 3 Beach Cruiser Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev 3 Beach Cruiser Electric Bike - Step Through",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev 3 Beach Cruiser Electric Bike - Step Through",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev 3 Beach Cruiser Electric Bike - Step Through",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev 3 Beach Cruiser Electric Bike - Step Through",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev 3 Beach Cruiser Electric Bike - Step Through",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev 3 Beach Cruiser Electric Bike - Step Through",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev 3 Beach Cruiser Electric Bike - Step Through",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev 3 Beach Cruiser Electric Bike - Step Through",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev 3 Beach Cruiser Electric Bike - Step Through",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev 3 Beach Cruiser Electric Bike - Step Through",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev+ 2 Beach Cruiser Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev+ 2 Beach Cruiser Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev+ 2 Beach Cruiser Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev+ 2 Beach Cruiser Electric Bike",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev+ 2 Beach Cruiser Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev+ 2 Beach Cruiser Electric Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev+ 2 Beach Cruiser Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev+ 2 Beach Cruiser Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev+ 2 Beach Cruiser Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev+ 2 Beach Cruiser Electric Bike - Step Through",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev+ 2 Beach Cruiser Electric Bike - Step Through",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev+ 2 Beach Cruiser Electric Bike - Step Through",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev+ 2 Beach Cruiser Electric Bike - Step Through",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev+ 2 Beach Cruiser Electric Bike - Step Through",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev+ 2 Beach Cruiser Electric Bike - Step Through",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev+ 2 Beach Cruiser Electric Bike - Step Through",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev+ 2 Beach Cruiser Electric Bike - Step Through",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Chatham Rev+ 2 Beach Cruiser Electric Bike - Step Through",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Grateful Dead Koa Rev+ 2 Fat Tire Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Grateful Dead Koa Rev+ 2 Fat Tire Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Grateful Dead Koa Rev+ 2 Fat Tire Electric Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Grateful Dead Koa Rev+ 2 Fat Tire Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Grateful Dead Koa Rev+ 2 Fat Tire Electric Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Grateful Dead Koa Rev+ 2 Fat Tire Electric Bike",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Grateful Dead Koa Rev+ 2 Fat Tire Electric Bike",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Grateful Dead Koa Rev+ 2 Fat Tire Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Grateful Dead Koa Rev+ 2 Fat Tire Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Grateful Dead Koa Rev+ 2 Fat Tire Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Grateful Dead Koa Rev+ 2 Fat Tire Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Grateful Dead Valen Rev+ Fat Tire Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Grateful Dead Valen Rev+ Fat Tire Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Grateful Dead Valen Rev+ Fat Tire Electric Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Grateful Dead Valen Rev+ Fat Tire Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Grateful Dead Valen Rev+ Fat Tire Electric Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Grateful Dead Valen Rev+ Fat Tire Electric Bike",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Grateful Dead Valen Rev+ Fat Tire Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Grateful Dead Valen Rev+ Fat Tire Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Grateful Dead Valen Rev+ Fat Tire Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Grateful Dead Valen Rev+ Fat Tire Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Joe Rev 2 BMX Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Joe Rev 2 BMX Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Joe Rev 2 BMX Electric Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Joe Rev 2 BMX Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Joe Rev 2 BMX Electric Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Joe Rev 2 BMX Electric Bike",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Joe Rev 2 BMX Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Joe Rev 2 BMX Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Joe Rev 2 BMX Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Joe Rev 2 BMX Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Joe Rev BMX Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Joe Rev BMX Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Joe Rev BMX Electric Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Joe Rev BMX Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Joe Rev BMX Electric Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Joe Rev BMX Electric Bike",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Joe Rev BMX Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Joe Rev BMX Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Joe Rev BMX Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Joe Rev BMX Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Judd Rev 2 Folding Electric Bike",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Judd Rev 2 Folding Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Judd Rev 2 Folding Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Judd Rev 2 Folding Electric Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Judd Rev 2 Folding Electric Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Judd Rev 2 Folding Electric Bike",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Judd Rev 2 Folding Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Judd Rev 2 Folding Electric Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Judd Rev 2 Folding Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Judd Rev 2 Folding Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Judd Rev 2 Folding Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev 3 Fat Tire Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev 3 Fat Tire Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev 3 Fat Tire Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev 3 Fat Tire Electric Bike",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev 3 Fat Tire Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev 3 Fat Tire Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev 3 Fat Tire Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev 3 Fat Tire Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev 3 Fat Tire Electric Bike - Step Through",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev 3 Fat Tire Electric Bike - Step Through",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev 3 Fat Tire Electric Bike - Step Through",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev 3 Fat Tire Electric Bike - Step Through",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev 3 Fat Tire Electric Bike - Step Through",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev 3 Fat Tire Electric Bike - Step Through",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev 3 Fat Tire Electric Bike - Step Through",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev 3 Fat Tire Electric Bike - Step Through",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev+ 2 Fat Tire Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev+ 2 Fat Tire Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev+ 2 Fat Tire Electric Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev+ 2 Fat Tire Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev+ 2 Fat Tire Electric Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev+ 2 Fat Tire Electric Bike",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev+ 2 Fat Tire Electric Bike",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev+ 2 Fat Tire Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev+ 2 Fat Tire Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev+ 2 Fat Tire Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev+ 2 Fat Tire Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev+ 2 Fat Tire Electric Bike - Step Through",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev+ 2 Fat Tire Electric Bike - Step Through",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev+ 2 Fat Tire Electric Bike - Step Through",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev+ 2 Fat Tire Electric Bike - Step Through",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev+ 2 Fat Tire Electric Bike - Step Through",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev+ 2 Fat Tire Electric Bike - Step Through",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev+ 2 Fat Tire Electric Bike - Step Through",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev+ 2 Fat Tire Electric Bike - Step Through",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev+ 2 Fat Tire Electric Bike - Step Through",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev+ 2 Fat Tire Electric Bike - Step Through",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Koa Rev+ 2 Fat Tire Electric Bike - Step Through",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Napa Rev Fitness Hybrid Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Napa Rev Fitness Hybrid Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Napa Rev Fitness Hybrid Electric Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Napa Rev Fitness Hybrid Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Napa Rev Fitness Hybrid Electric Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Napa Rev Fitness Hybrid Electric Bike",
+      "field": "max_load_lb",
+      "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Napa Rev Fitness Hybrid Electric Bike",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Napa Rev Fitness Hybrid Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Napa Rev Fitness Hybrid Electric Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Napa Rev Fitness Hybrid Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Napa Rev Fitness Hybrid Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Napa Rev Fitness Hybrid Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Roo Rev Cargo Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Roo Rev Cargo Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Roo Rev Cargo Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Roo Rev Cargo Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Roo Rev Cargo Electric Bike",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Roo Rev Cargo Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Roo Rev Cargo Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Roo Rev Cargo Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Roo Rev XL Cargo Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Roo Rev XL Cargo Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Roo Rev XL Cargo Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Roo Rev XL Cargo Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Roo Rev XL Cargo Electric Bike",
+      "field": "rack_load_lb",
+      "label": "Rear-rack load (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Roo Rev XL Cargo Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Roo Rev XL Cargo Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Roo Rev XL Cargo Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev 2 Fat Tire Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev 2 Fat Tire Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev 2 Fat Tire Electric Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev 2 Fat Tire Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev 2 Fat Tire Electric Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev 2 Fat Tire Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev 2 Fat Tire Electric Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev 2 Fat Tire Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev 2 Fat Tire Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev 2 Fat Tire Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev 3 Fat Tire Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev 3 Fat Tire Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev 3 Fat Tire Electric Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev 3 Fat Tire Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev 3 Fat Tire Electric Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev 3 Fat Tire Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev 3 Fat Tire Electric Bike",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev 3 Fat Tire Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev 3 Fat Tire Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev 3 Fat Tire Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev+ Fat Tire Electric Bike",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev+ Fat Tire Electric Bike",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev+ Fat Tire Electric Bike",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev+ Fat Tire Electric Bike",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev+ Fat Tire Electric Bike",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev+ Fat Tire Electric Bike",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev+ Fat Tire Electric Bike",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev+ Fat Tire Electric Bike",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev+ Fat Tire Electric Bike",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev+ Fat Tire Electric Bike",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev+ Fat Tire Electric Bike - Step Through",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev+ Fat Tire Electric Bike - Step Through",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev+ Fat Tire Electric Bike - Step Through",
+      "field": "fit_height_min_in",
+      "label": "Rider height range"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev+ Fat Tire Electric Bike - Step Through",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev+ Fat Tire Electric Bike - Step Through",
+      "field": "frame_size_rider_range",
+      "label": "Rider height range per frame size"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev+ Fat Tire Electric Bike - Step Through",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev+ Fat Tire Electric Bike - Step Through",
+      "field": "motor_peak_w",
+      "label": "Peak motor power (W)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev+ Fat Tire Electric Bike - Step Through",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev+ Fat Tire Electric Bike - Step Through",
+      "field": "warranty_years",
+      "label": "Warranty (years)"
+    },
+    {
+      "brand": "retrospec",
+      "model": "Valen Rev+ Fat Tire Electric Bike - Step Through",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
       "brand": "ride1up",
       "model": "CF RACER1",
       "field": "max_load_lb",
@@ -4113,45 +8301,15 @@
     },
     {
       "brand": "ride1up",
-      "model": "PRODIGY V2 — Belt CVT",
-      "field": "motor_peak_w",
-      "label": "Peak motor power (W)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "PRODIGY V2 — Chain · Step-Over",
-      "field": "motor_peak_w",
-      "label": "Peak motor power (W)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "PRODIGY V2 — Chain · Step-Thru",
-      "field": "motor_peak_w",
-      "label": "Peak motor power (W)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "ROADSTER V3",
-      "field": "motor_peak_w",
-      "label": "Peak motor power (W)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "ROADSTER V3 — Rigid",
-      "field": "motor_peak_w",
-      "label": "Peak motor power (W)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "ROADSTER V3 — Suspension",
-      "field": "motor_peak_w",
-      "label": "Peak motor power (W)"
+      "model": "Revv1 DRT",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
     },
     {
       "brand": "ride1up",
       "model": "Revv1 DRT",
-      "field": "drivetrain_type",
-      "label": "Drivetrain type"
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
     },
     {
       "brand": "ride1up",
@@ -4218,132 +8376,6 @@
       "model": "Revv1 HT",
       "field": "motor_w",
       "label": "Motor power (W)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "TRAILRUSH",
-      "field": "max_load_lb",
-      "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "TRAILRUSH",
-      "field": "motor_peak_w",
-      "label": "Peak motor power (W)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "TRAILRUSH",
-      "field": "weight_lb",
-      "label": "Weight (lb)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "VORSA — FT · Step-Over",
-      "field": "frame_material",
-      "label": "Frame material"
-    },
-    {
-      "brand": "ride1up",
-      "model": "VORSA — FT · Step-Over",
-      "field": "max_load_lb",
-      "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "VORSA — FT · Step-Over",
-      "field": "motor_peak_w",
-      "label": "Peak motor power (W)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "VORSA — FT · Step-Thru",
-      "field": "frame_material",
-      "label": "Frame material"
-    },
-    {
-      "brand": "ride1up",
-      "model": "VORSA — FT · Step-Thru",
-      "field": "max_load_lb",
-      "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "VORSA — FT · Step-Thru",
-      "field": "motor_peak_w",
-      "label": "Peak motor power (W)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "VORSA — Lite · Step-Over",
-      "field": "frame_material",
-      "label": "Frame material"
-    },
-    {
-      "brand": "ride1up",
-      "model": "VORSA — Lite · Step-Over",
-      "field": "max_load_lb",
-      "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "VORSA — Lite · Step-Over",
-      "field": "motor_peak_w",
-      "label": "Peak motor power (W)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "VORSA — Lite · Step-Thru",
-      "field": "frame_material",
-      "label": "Frame material"
-    },
-    {
-      "brand": "ride1up",
-      "model": "VORSA — Lite · Step-Thru",
-      "field": "max_load_lb",
-      "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "VORSA — Lite · Step-Thru",
-      "field": "motor_peak_w",
-      "label": "Peak motor power (W)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "VORSA — Standard · Step-Over",
-      "field": "frame_material",
-      "label": "Frame material"
-    },
-    {
-      "brand": "ride1up",
-      "model": "VORSA — Standard · Step-Over",
-      "field": "max_load_lb",
-      "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "VORSA — Standard · Step-Over",
-      "field": "motor_peak_w",
-      "label": "Peak motor power (W)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "VORSA — Standard · Step-Thru",
-      "field": "frame_material",
-      "label": "Frame material"
-    },
-    {
-      "brand": "ride1up",
-      "model": "VORSA — Standard · Step-Thru",
-      "field": "max_load_lb",
-      "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "ride1up",
-      "model": "VORSA — Standard · Step-Thru",
-      "field": "motor_peak_w",
-      "label": "Peak motor power (W)"
     },
     {
       "brand": "segway",
@@ -4377,49 +8409,49 @@
     },
     {
       "brand": "segway",
-      "model": "Segway Myon Electric Bike (M/L)",
+      "model": "Segway Myon Electric Bike",
       "field": "fit_height_min_in",
       "label": "Rider height range"
     },
     {
       "brand": "segway",
-      "model": "Segway Myon Electric Bike (M/L)",
+      "model": "Segway Myon Electric Bike",
       "field": "frame_material",
       "label": "Frame material"
     },
     {
       "brand": "segway",
-      "model": "Segway Myon Electric Bike (M/L)",
+      "model": "Segway Myon Electric Bike",
       "field": "frame_size_rider_range",
       "label": "Rider height range per frame size"
     },
     {
       "brand": "segway",
-      "model": "Segway Myon Electric Bike (M/L)",
+      "model": "Segway Myon Electric Bike",
       "field": "warranty_years",
       "label": "Warranty (years)"
     },
     {
       "brand": "segway",
-      "model": "Segway Myon Electric Bike (XS/S)",
+      "model": "Segway Myon S Electric Bike",
       "field": "fit_height_min_in",
       "label": "Rider height range"
     },
     {
       "brand": "segway",
-      "model": "Segway Myon Electric Bike (XS/S)",
+      "model": "Segway Myon S Electric Bike",
       "field": "frame_material",
       "label": "Frame material"
     },
     {
       "brand": "segway",
-      "model": "Segway Myon Electric Bike (XS/S)",
+      "model": "Segway Myon S Electric Bike",
       "field": "frame_size_rider_range",
       "label": "Rider height range per frame size"
     },
     {
       "brand": "segway",
-      "model": "Segway Myon Electric Bike (XS/S)",
+      "model": "Segway Myon S Electric Bike",
       "field": "warranty_years",
       "label": "Warranty (years)"
     },
@@ -6705,30 +10737,6 @@
     },
     {
       "brand": "trek",
-      "model": "Vale Go! 9D EQ",
-      "field": "battery_wh",
-      "label": "Battery capacity (Wh)"
-    },
-    {
-      "brand": "trek",
-      "model": "Vale Go! 9D EQ",
-      "field": "max_load_lb",
-      "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "trek",
-      "model": "Vale Go! 9D EQ",
-      "field": "motor_peak_w",
-      "label": "Peak motor power (W)"
-    },
-    {
-      "brand": "trek",
-      "model": "Vale Go! 9D EQ",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "trek",
       "model": "Verve+ 1 Lowstep LT",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
@@ -6796,24 +10804,6 @@
     {
       "brand": "trek",
       "model": "Verve+ 3 Lowstep Gen 3",
-      "field": "warranty_years",
-      "label": "Warranty (years)"
-    },
-    {
-      "brand": "trek",
-      "model": "Verve+ 4S Gen 3",
-      "field": "max_load_lb",
-      "label": "Max load / payload (lb)"
-    },
-    {
-      "brand": "trek",
-      "model": "Verve+ 4S Gen 3",
-      "field": "motor_peak_w",
-      "label": "Peak motor power (W)"
-    },
-    {
-      "brand": "trek",
-      "model": "Verve+ 4S Gen 3",
       "field": "warranty_years",
       "label": "Warranty (years)"
     },
@@ -7185,9 +11175,93 @@
     },
     {
       "brand": "wired",
+      "model": "WIRED Predator",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Predator",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Predator",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Predator",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Predator",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Predator",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Predator",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Predator",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Predator",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Raven",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Raven",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Raven",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Raven",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "wired",
       "model": "WIRED Raven",
       "field": "fit_height_min_in",
       "label": "Rider height range"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Raven",
+      "field": "frame_material",
+      "label": "Frame material"
     },
     {
       "brand": "wired",
@@ -7200,34 +11274,220 @@
       "model": "WIRED Raven",
       "field": "max_load_lb",
       "label": "Max load / payload (lb)"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Raven",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Raven",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Raven",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Raven",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Viper",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Viper",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Viper",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Viper",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Viper",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Viper",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Viper",
+      "field": "motor_w",
+      "label": "Motor power (W)"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Viper",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Viper",
+      "field": "suspension",
+      "label": "Suspension"
+    },
+    {
+      "brand": "wired",
+      "model": "WIRED Viper",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Scout",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Scout",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Scout",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Scout",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Scout",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Scout",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Scout",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Scout",
+      "field": "torque_nm",
+      "label": "Motor torque (Nm)"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Scout",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Warrior",
+      "field": "battery_wh",
+      "label": "Battery capacity (Wh)"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Warrior",
+      "field": "brake_type",
+      "label": "Brake type"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Warrior",
+      "field": "display_type",
+      "label": "Display type"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Warrior",
+      "field": "drivetrain_type",
+      "label": "Drivetrain type"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Warrior",
+      "field": "frame_material",
+      "label": "Frame material"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Warrior",
+      "field": "max_speed_mph",
+      "label": "Top speed (mph)"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Warrior",
+      "field": "range_mi",
+      "label": "Range (mi)"
+    },
+    {
+      "brand": "wired",
+      "model": "Wired Warrior",
+      "field": "weight_lb",
+      "label": "Weight (lb)"
     }
   ],
   "frame_style_review": [],
   "summary": {
-    "models_flagged": 402,
-    "missing_rows": 1167,
+    "models_flagged": 448,
+    "missing_rows": 1877,
     "missing_by_field": {
-      "motor_w": 31,
-      "battery_wh": 12,
-      "weight_lb": 22,
-      "range_mi": 104,
-      "brake_type": 3,
-      "frame_material": 58,
-      "drive_type": 14,
-      "torque_nm": 59,
-      "warranty_years": 122,
-      "display_type": 18,
-      "drivetrain_type": 7,
-      "suspension": 17,
-      "cell_brand": 8,
-      "fit_height_min_in": 65,
-      "max_speed_mph": 91,
-      "max_load_lb": 185,
-      "motor_peak_w": 251,
-      "sensor_type": 2,
-      "rack_load_lb": 18,
+      "motor_w": 33,
+      "battery_wh": 49,
+      "weight_lb": 90,
+      "range_mi": 111,
+      "brake_type": 51,
+      "frame_material": 120,
+      "drive_type": 15,
+      "torque_nm": 124,
+      "warranty_years": 179,
+      "display_type": 87,
+      "drivetrain_type": 75,
+      "suspension": 73,
+      "cell_brand": 41,
+      "fit_height_min_in": 94,
+      "max_speed_mph": 105,
+      "max_load_lb": 196,
+      "motor_peak_w": 300,
+      "sensor_type": 3,
+      "rack_load_lb": 22,
       "frame_size_count": 0,
-      "frame_size_rider_range": 80
+      "frame_size_rider_range": 109
     },
     "frame_style_review": 0
   }

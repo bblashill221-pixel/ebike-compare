@@ -2,7 +2,7 @@
   "source": "https://www.cannondale.com",
   "logo": "https://www.cannondale.com/-/media/images/cannondale-newc-favicon-32x32.ashx",
   "collection": "bikes/electric",
-  "scraped_at": "2026-06-27T02:17:09.101680+00:00",
+  "scraped_at": "2026-07-01T21:52:09.642740+00:00",
   "model_count": 38,
   "models": [
     {
@@ -666,7 +666,7 @@
           ]
         }
       ],
-      "frame_style": "Step-Thru (Mid-Step)"
+      "frame_style": "Step-Thru"
     },
     {
       "model": "Adventure Neo Allroad Low StepThru",
@@ -833,7 +833,7 @@
           ]
         }
       ],
-      "frame_style": "Step-Thru (Mid-Step)"
+      "frame_style": "Step-Thru"
     },
     {
       "model": "Adventure Neo Allroad Speed",
@@ -1248,7 +1248,7 @@
           ]
         }
       ],
-      "frame_style": "Step-Thru (Mid-Step)"
+      "frame_style": "Step-Thru"
     },
     {
       "model": "Cargowagen Neo",
@@ -1435,7 +1435,7 @@
           },
           "price": 6749,
           "regular_price": null,
-          "available": false,
+          "available": true,
           "sku": "C6401GU10SM",
           "color": {
             "name": "Tungsten Blue",
@@ -2151,7 +2151,7 @@
           },
           "price": 6999,
           "regular_price": null,
-          "available": false,
+          "available": true,
           "sku": "C65075U10SM",
           "color": {
             "name": "Black",
@@ -2546,7 +2546,7 @@
           ]
         }
       ],
-      "frame_style": "Step-Thru (Mid-Step)"
+      "frame_style": "Step-Thru"
     },
     {
       "model": "Mavaro Neo 2 Low StepThru",
@@ -2739,7 +2739,7 @@
           ]
         }
       ],
-      "frame_style": "Step-Thru (Mid-Step)"
+      "frame_style": "Step-Thru"
     },
     {
       "model": "Mavaro Neo 3 Low StepThru",
@@ -2933,7 +2933,7 @@
           ]
         }
       ],
-      "frame_style": "Step-Thru (Mid-Step)"
+      "frame_style": "Step-Thru"
     },
     {
       "model": "Moterra 1",
@@ -3217,9 +3217,22 @@
       "model_year": "2026",
       "family": "Moterra Neo",
       "product_types": [
-        "Mountain (eMTB)"
+        "Mountain (eMTB)",
+        "Road / Gravel"
       ],
-      "tags": [],
+      "tags": [
+        "ELECTRIC-ASSIST",
+        "FLATBAR",
+        "FULLSUSPENSION",
+        "EXPLORE",
+        "MOUNTAIN",
+        "MODERATE",
+        "STEP-OVER",
+        "DIRT",
+        "GRAVEL",
+        "LONG-RANGE",
+        "LARGEBUDGET"
+      ],
       "price_from": 8299.0,
       "regular_price": null,
       "currency": "USD",
@@ -3859,7 +3872,7 @@
           },
           "price": 4499,
           "regular_price": null,
-          "available": false,
+          "available": true,
           "sku": "C65234U10LG",
           "color": {
             "name": "Obsidian",
@@ -5130,7 +5143,7 @@
             "Size": "SM",
             "Color": "Smoke Black"
           },
-          "price": 7699.0,
+          "price": 7699,
           "regular_price": null,
           "available": true,
           "sku": "C65125U20SM",
@@ -5146,7 +5159,7 @@
             "Size": "MD",
             "Color": "Smoke Black"
           },
-          "price": 7699.0,
+          "price": 7699,
           "regular_price": null,
           "available": true,
           "sku": "C65125U20MD",
@@ -5162,7 +5175,7 @@
             "Size": "LG",
             "Color": "Smoke Black"
           },
-          "price": 7699.0,
+          "price": 7699,
           "regular_price": null,
           "available": true,
           "sku": "C65125U20LG",
@@ -5178,7 +5191,7 @@
             "Size": "XL",
             "Color": "Smoke Black"
           },
-          "price": 7699.0,
+          "price": 7699,
           "regular_price": null,
           "available": true,
           "sku": "C65125U20XL",
@@ -5194,7 +5207,7 @@
             "Size": "SM",
             "Color": "Tiger Eye"
           },
-          "price": 7699.0,
+          "price": 7699,
           "regular_price": null,
           "available": false,
           "sku": "C65125U30SM",
@@ -5210,7 +5223,7 @@
             "Size": "MD",
             "Color": "Tiger Eye"
           },
-          "price": 7699.0,
+          "price": 7699,
           "regular_price": null,
           "available": true,
           "sku": "C65125U30MD",
@@ -5226,7 +5239,7 @@
             "Size": "LG",
             "Color": "Tiger Eye"
           },
-          "price": 7699.0,
+          "price": 7699,
           "regular_price": null,
           "available": true,
           "sku": "C65125U30LG",
@@ -5242,7 +5255,7 @@
             "Size": "XL",
             "Color": "Tiger Eye"
           },
-          "price": 7699.0,
+          "price": 7699,
           "regular_price": null,
           "available": true,
           "sku": "C65125U30XL",
@@ -5336,26 +5349,26 @@
           "choices": [
             {
               "value": "SM",
-              "price": 7699.0,
-              "price_delta": 0.0,
+              "price": 7699,
+              "price_delta": 0,
               "free": true
             },
             {
               "value": "MD",
-              "price": 7699.0,
-              "price_delta": 0.0,
+              "price": 7699,
+              "price_delta": 0,
               "free": true
             },
             {
               "value": "LG",
-              "price": 7699.0,
-              "price_delta": 0.0,
+              "price": 7699,
+              "price_delta": 0,
               "free": true
             },
             {
               "value": "XL",
-              "price": 7699.0,
-              "price_delta": 0.0,
+              "price": 7699,
+              "price_delta": 0,
               "free": true
             }
           ]
@@ -7258,7 +7271,7 @@
       ],
       "family_id": "cannondale__tesoro-neo-x-1",
       "tier": "Step-Thru",
-      "frame_style": "Step-Thru (Mid-Step)"
+      "frame_style": "Step-Thru"
     },
     {
       "model": "Tesoro Neo X 2",
@@ -7689,7 +7702,7 @@
       ],
       "family_id": "cannondale__tesoro-neo-x-2",
       "tier": "Step-Thru",
-      "frame_style": "Step-Thru (Mid-Step)"
+      "frame_style": "Step-Thru"
     },
     {
       "model": "Tesoro Neo X 3",

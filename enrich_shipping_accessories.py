@@ -66,7 +66,14 @@ def fetch_accessories(base: str, handle: str) -> list[dict]:
         return []
     out = []
     for p in data.get("products", []):
-        priced = [v for v in p.get("variants", []) if v.get("price")]
+        variants = p.get("variants", [])
+        # Skip accessories that are entirely sold out. Shopify's products.json flags each
+        # variant's `available`; drop the product only when that field is present and every
+        # variant is False (so a missing/unknown availability never drops the item).
+        avail = [v.get("available") for v in variants if "available" in v]
+        if avail and not any(avail):
+            continue
+        priced = [v for v in variants if v.get("price")]
         price = min((float(v["price"]) for v in priced), default=None)
         # sale detection, same rule as the bikes: the compare-at price of the
         # cheapest variant, when it's a genuine markdown over the sale price.

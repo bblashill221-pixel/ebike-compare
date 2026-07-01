@@ -28,7 +28,7 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
-from scraper_common import fetch_json, clean_title, build_colors  # noqa: E402  (also sets LD_LIBRARY_PATH)
+from scraper_common import fetch_json, clean_title, build_colors, shopify_sold_out_options  # noqa: E402  (also sets LD_LIBRARY_PATH)
 from playwright.async_api import async_playwright  # noqa: E402
 
 from bike_taxonomy import classify_product_types
@@ -141,6 +141,7 @@ def discover_models() -> list[dict]:
             else:
                 options[o["name"]] = o.get("values", [])
         options["colors"] = build_colors(color_values, color_idx, variants, fallback)
+        so, ins = shopify_sold_out_options(p)
         models.append({
             "model": clean_title(p.get("title")),
             "handle": p.get("handle"),
@@ -153,6 +154,8 @@ def discover_models() -> list[dict]:
             "price_from": min(prices) if prices else None,
             "currency": "USD",
             "options": options,
+            "sold_out_options": so,
+            "in_stock": ins,
             "shipping": shipping,       # found on the site, not assumed free
             "body_html": p.get("body_html") or "",
         })

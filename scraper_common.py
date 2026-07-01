@@ -64,3 +64,41 @@ def build_colors(color_values, color_idx, variants, fallback_image):
         colors.append({"name": name, "hex": None, "swatch_image": None,
                        "image": img or fallback_image})
     return colors
+
+
+def shopify_sold_out_options(products):
+    """From a Shopify product (or the list of products that make up one model),
+    return (sold_out_options, in_stock).
+
+    `sold_out_options` maps each option axis (Color / Frame / Size / ...) to the
+    values whose EVERY variant is unavailable -- i.e. the colorways/frames/sizes a
+    buyer can no longer order (a value still available in some combo is omitted).
+    `in_stock` is True when any variant is available, False when all are sold out,
+    None when the feed carried no `available` flags. Mirrors normalize._availability
+    but reads the raw Shopify variant `available` field directly at scrape time."""
+    if isinstance(products, dict):
+        products = [products]
+    val_ok: dict = {}          # (axis, value) -> available somewhere?
+    saw_flag = False
+    for p in products or []:
+        names = [o.get("name") for o in (p.get("options") or [])]
+        for v in p.get("variants", []):
+            avail = v.get("available")
+            if avail is None:
+                continue
+            saw_flag = True
+            for i, name in enumerate(names, start=1):
+                val = v.get(f"option{i}")
+                if not name or not val or val == "Default Title":
+                    continue
+                key = (name, str(val))
+                val_ok[key] = val_ok.get(key, False) or bool(avail)
+    if not saw_flag:
+        return {}, None
+    sold_out: dict = {}
+    for (axis, val), ok in val_ok.items():
+        if not ok:
+            sold_out.setdefault(axis, []).append(val)
+    for axis in sold_out:
+        sold_out[axis] = sorted(dict.fromkeys(sold_out[axis]))
+    return sold_out, any(val_ok.values())

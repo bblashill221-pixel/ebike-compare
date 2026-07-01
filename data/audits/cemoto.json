@@ -1,7 +1,7 @@
 {
   "brand": "cemoto",
   "scraper": "scrape_cemoto.py",
-  "generated_at": "2026-07-01T07:57:45.809748+00:00",
+  "generated_at": "2026-07-01T23:36:19.044583+00:00",
   "fields_audited": [
     "motor_w",
     "battery_wh",
@@ -17,10 +17,10 @@
     "drive_type"
   ],
   "summary": {
-    "models": 7,
-    "present": 62,
-    "resolved": 6,
-    "open": 16,
+    "models": 6,
+    "present": 53,
+    "resolved": 5,
+    "open": 14,
     "needs_image": 0,
     "unpublished": 0
   },
@@ -494,109 +494,6 @@
           "status": "present",
           "source": "scraped",
           "value": 265,
-          "note": "",
-          "first_flagged": "2026-06-26",
-          "resolved_at": "2026-06-28"
-        },
-        "fit_height_min_in": {
-          "status": "open",
-          "source": null,
-          "value": null,
-          "note": "",
-          "first_flagged": "2026-06-22",
-          "resolved_at": null
-        },
-        "sensor_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "cadence",
-          "note": "",
-          "first_flagged": "2026-06-22",
-          "resolved_at": "2026-06-28"
-        },
-        "brake_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hydraulic_disc",
-          "note": "",
-          "first_flagged": "2026-06-26",
-          "resolved_at": "2026-06-28"
-        },
-        "frame_material": {
-          "status": "present",
-          "source": "scraped",
-          "value": "aluminum",
-          "note": "",
-          "first_flagged": "2026-06-26",
-          "resolved_at": "2026-06-28"
-        },
-        "drive_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hub",
-          "note": "",
-          "first_flagged": "2026-06-26",
-          "resolved_at": "2026-06-28"
-        }
-      }
-    },
-    {
-      "id": "cemoto__premium-cargo-electric-bike-aeb69",
-      "model": "Cargo Electric Bike |CEMOTO B69 750W Heavy Duty E-Bike 150kg Capacity",
-      "url": "https://cemotoride.com/products/premium-cargo-electric-bike-aeb69",
-      "fields": {
-        "motor_w": {
-          "status": "present",
-          "source": "scraped",
-          "value": 750,
-          "note": "",
-          "first_flagged": "2026-06-26",
-          "resolved_at": "2026-06-28"
-        },
-        "battery_wh": {
-          "status": "present",
-          "source": "scraped",
-          "value": 960,
-          "note": "",
-          "first_flagged": "2026-06-26",
-          "resolved_at": "2026-06-28"
-        },
-        "torque_nm": {
-          "status": "open",
-          "source": null,
-          "value": null,
-          "note": "",
-          "first_flagged": "2026-06-22",
-          "resolved_at": null
-        },
-        "max_speed_mph": {
-          "status": "present",
-          "source": "scraped",
-          "value": 28,
-          "note": "",
-          "first_flagged": "2026-06-26",
-          "resolved_at": "2026-06-28"
-        },
-        "range_mi": {
-          "status": "resolved",
-          "source": "html_extracted",
-          "value": 45,
-          "note": "",
-          "first_flagged": null,
-          "resolved_at": null
-        },
-        "weight_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 70.5,
-          "note": "",
-          "first_flagged": "2026-06-26",
-          "resolved_at": "2026-06-28"
-        },
-        "max_load_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 331,
           "note": "",
           "first_flagged": "2026-06-26",
           "resolved_at": "2026-06-28"

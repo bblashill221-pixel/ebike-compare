@@ -33,7 +33,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-from scraper_common import fetch_json  # noqa: E402  (import also sets LD_LIBRARY_PATH for bundled chromium)
+from scraper_common import fetch_json, shopify_sold_out_options  # noqa: E402  (import also sets LD_LIBRARY_PATH for bundled chromium)
 from playwright.async_api import async_playwright  # noqa: E402
 from warranty_js import JS_WARRANTY
 
@@ -95,6 +95,7 @@ def discover_models() -> list[dict]:
                 options[o["name"]] = o.get("values", [])
         options["colors"] = build_colors(color_values, color_idx, variants, fallback)
 
+        so, ins = shopify_sold_out_options(p)
         models.append({
             "model": p.get("title"),
             "handle": p.get("handle"),
@@ -106,6 +107,8 @@ def discover_models() -> list[dict]:
             "regular_price": regular,
             "currency": "USD",
             "options": options,
+            "sold_out_options": so,
+            "in_stock": ins,
         })
     return models
 

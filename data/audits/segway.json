@@ -1,7 +1,7 @@
 {
   "brand": "segway",
   "scraper": "scrape_segway.py",
-  "generated_at": "2026-07-01T07:57:45.827673+00:00",
+  "generated_at": "2026-07-01T23:36:19.073000+00:00",
   "fields_audited": [
     "motor_w",
     "battery_wh",
@@ -130,7 +130,7 @@
     },
     {
       "id": "segway__segway-ebike-myon",
-      "model": "Segway Myon Electric Bike (M/L)",
+      "model": "Segway Myon Electric Bike",
       "url": "https://store.segway.com/segway-ebike-myon",
       "fields": {
         "motor_w": {
@@ -233,7 +233,7 @@
     },
     {
       "id": "segway__segway-ebike-myon-s",
-      "model": "Segway Myon Electric Bike (XS/S)",
+      "model": "Segway Myon S Electric Bike",
       "url": "https://store.segway.com/segway-ebike-myon-s",
       "fields": {
         "motor_w": {
@@ -469,7 +469,7 @@
         "max_speed_mph": {
           "status": "present",
           "source": "scraped",
-          "value": 35,
+          "value": 43,
           "note": "",
           "first_flagged": "2026-06-26",
           "resolved_at": "2026-06-28"

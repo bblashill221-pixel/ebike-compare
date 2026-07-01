@@ -1,7 +1,7 @@
 {
   "brand": "mokwheel",
   "scraper": "scrape_mokwheel.py",
-  "generated_at": "2026-07-01T07:57:45.821769+00:00",
+  "generated_at": "2026-07-01T23:36:19.064889+00:00",
   "fields_audited": [
     "motor_w",
     "battery_wh",
@@ -18,9 +18,9 @@
   ],
   "summary": {
     "models": 19,
-    "present": 197,
+    "present": 216,
     "resolved": 0,
-    "open": 31,
+    "open": 12,
     "needs_image": 0,
     "unpublished": 0
   },
@@ -28,7 +28,7 @@
     {
       "id": "mokwheel__asphalt",
       "model": "Asphalt Ebike",
-      "url": "https://www.mokwheel.com/products/asphalt",
+      "url": "https://www.mokwheel.com/products/asphalt?variant=45074499371254",
       "fields": {
         "motor_w": {
           "status": "present",
@@ -87,12 +87,12 @@
           "resolved_at": "2026-06-28"
         },
         "fit_height_min_in": {
-          "status": "open",
-          "source": null,
-          "value": null,
+          "status": "present",
+          "source": "scraped",
+          "value": 65,
           "note": "",
           "first_flagged": "2026-06-26",
-          "resolved_at": null
+          "resolved_at": "2026-07-01"
         },
         "sensor_type": {
           "status": "present",
@@ -131,7 +131,7 @@
     {
       "id": "mokwheel__asphalt-st",
       "model": "Asphalt ST Ebike",
-      "url": "https://www.mokwheel.com/products/asphalt-st",
+      "url": "https://www.mokwheel.com/products/asphalt-st?variant=45094120128758",
       "fields": {
         "motor_w": {
           "status": "present",
@@ -190,12 +190,12 @@
           "resolved_at": "2026-06-28"
         },
         "fit_height_min_in": {
-          "status": "open",
-          "source": null,
-          "value": null,
+          "status": "present",
+          "source": "scraped",
+          "value": 65,
           "note": "",
           "first_flagged": "2026-06-26",
-          "resolved_at": null
+          "resolved_at": "2026-07-01"
         },
         "sensor_type": {
           "status": "present",
@@ -234,7 +234,7 @@
     {
       "id": "mokwheel__basalt-2-0",
       "model": "Basalt 2.0 Ebike",
-      "url": "https://www.mokwheel.com/products/basalt-2-0",
+      "url": "https://www.mokwheel.com/products/basalt-2-0?variant=48637482729718",
       "fields": {
         "motor_w": {
           "status": "present",
@@ -293,12 +293,12 @@
           "resolved_at": "2026-06-28"
         },
         "fit_height_min_in": {
-          "status": "open",
-          "source": null,
-          "value": null,
+          "status": "present",
+          "source": "scraped",
+          "value": 65,
           "note": "",
           "first_flagged": "2026-06-26",
-          "resolved_at": null
+          "resolved_at": "2026-07-01"
         },
         "sensor_type": {
           "status": "present",
@@ -337,7 +337,7 @@
     {
       "id": "mokwheel__basalt-st-2-0-s",
       "model": "Basalt ST 2.0 Ebike",
-      "url": "https://www.mokwheel.com/products/basalt-st-2-0-s",
+      "url": "https://www.mokwheel.com/products/basalt-st-2-0-s?variant=49224496120054",
       "fields": {
         "motor_w": {
           "status": "present",
@@ -396,12 +396,12 @@
           "resolved_at": "2026-06-28"
         },
         "fit_height_min_in": {
-          "status": "open",
-          "source": null,
-          "value": null,
+          "status": "present",
+          "source": "scraped",
+          "value": 65,
           "note": "",
           "first_flagged": "2026-06-26",
-          "resolved_at": null
+          "resolved_at": "2026-07-01"
         },
         "sensor_type": {
           "status": "present",
@@ -440,7 +440,7 @@
     {
       "id": "mokwheel__flint",
       "model": "FLINT Ebike",
-      "url": "https://www.mokwheel.com/products/flint",
+      "url": "https://www.mokwheel.com/products/flint?variant=49283295478006",
       "fields": {
         "motor_w": {
           "status": "present",
@@ -499,12 +499,12 @@
           "resolved_at": "2026-06-28"
         },
         "fit_height_min_in": {
-          "status": "open",
-          "source": null,
-          "value": null,
+          "status": "present",
+          "source": "scraped",
+          "value": 65,
           "note": "",
           "first_flagged": "2026-06-26",
-          "resolved_at": null
+          "resolved_at": "2026-07-01"
         },
         "sensor_type": {
           "status": "present",
@@ -543,7 +543,7 @@
     {
       "id": "mokwheel__flint-pro",
       "model": "FLINT PRO Ebike",
-      "url": "https://www.mokwheel.com/products/flint-pro",
+      "url": "https://www.mokwheel.com/products/flint-pro?variant=49283328540918",
       "fields": {
         "motor_w": {
           "status": "present",
@@ -602,12 +602,12 @@
           "resolved_at": "2026-06-28"
         },
         "fit_height_min_in": {
-          "status": "open",
-          "source": null,
-          "value": null,
+          "status": "present",
+          "source": "scraped",
+          "value": 65,
           "note": "",
           "first_flagged": "2026-06-26",
-          "resolved_at": null
+          "resolved_at": "2026-07-01"
         },
         "sensor_type": {
           "status": "present",
@@ -646,7 +646,7 @@
     {
       "id": "mokwheel__flint-pro-st",
       "model": "FLINT PRO ST Ebike",
-      "url": "https://www.mokwheel.com/products/flint-pro-st",
+      "url": "https://www.mokwheel.com/products/flint-pro-st?variant=49283333587190",
       "fields": {
         "motor_w": {
           "status": "present",
@@ -705,12 +705,12 @@
           "resolved_at": "2026-06-28"
         },
         "fit_height_min_in": {
-          "status": "open",
-          "source": null,
-          "value": null,
+          "status": "present",
+          "source": "scraped",
+          "value": 65,
           "note": "",
           "first_flagged": "2026-06-26",
-          "resolved_at": null
+          "resolved_at": "2026-07-01"
         },
         "sensor_type": {
           "status": "present",
@@ -749,7 +749,7 @@
     {
       "id": "mokwheel__flint-st",
       "model": "FLINT ST Ebike",
-      "url": "https://www.mokwheel.com/products/flint-st",
+      "url": "https://www.mokwheel.com/products/flint-st?variant=47809320190198",
       "fields": {
         "motor_w": {
           "status": "present",
@@ -808,12 +808,12 @@
           "resolved_at": "2026-06-28"
         },
         "fit_height_min_in": {
-          "status": "open",
-          "source": null,
-          "value": null,
+          "status": "present",
+          "source": "scraped",
+          "value": 65,
           "note": "",
           "first_flagged": "2026-06-26",
-          "resolved_at": null
+          "resolved_at": "2026-07-01"
         },
         "sensor_type": {
           "status": "present",
@@ -911,12 +911,12 @@
           "resolved_at": "2026-06-28"
         },
         "fit_height_min_in": {
-          "status": "open",
-          "source": null,
-          "value": null,
+          "status": "present",
+          "source": "scraped",
+          "value": 65,
           "note": "",
           "first_flagged": "2026-06-26",
-          "resolved_at": null
+          "resolved_at": "2026-07-01"
         },
         "sensor_type": {
           "status": "present",
@@ -1014,12 +1014,12 @@
           "resolved_at": "2026-06-28"
         },
         "fit_height_min_in": {
-          "status": "open",
-          "source": null,
-          "value": null,
+          "status": "present",
+          "source": "scraped",
+          "value": 65,
           "note": "",
           "first_flagged": "2026-06-26",
-          "resolved_at": null
+          "resolved_at": "2026-07-01"
         },
         "sensor_type": {
           "status": "present",
@@ -1058,7 +1058,7 @@
     {
       "id": "mokwheel__obsidian-2-0",
       "model": "Obsidian 2.0 Ebike",
-      "url": "https://www.mokwheel.com/products/obsidian-2-0",
+      "url": "https://www.mokwheel.com/products/obsidian-2-0?variant=48739951444214",
       "fields": {
         "motor_w": {
           "status": "present",
@@ -1117,12 +1117,12 @@
           "resolved_at": "2026-06-28"
         },
         "fit_height_min_in": {
-          "status": "open",
-          "source": null,
-          "value": null,
+          "status": "present",
+          "source": "scraped",
+          "value": 65,
           "note": "",
           "first_flagged": "2026-06-26",
-          "resolved_at": null
+          "resolved_at": "2026-07-01"
         },
         "sensor_type": {
           "status": "present",
@@ -1161,7 +1161,7 @@
     {
       "id": "mokwheel__obsidian-st-2-0",
       "model": "Obsidian ST 2.0 Ebike",
-      "url": "https://www.mokwheel.com/products/obsidian-st-2-0",
+      "url": "https://www.mokwheel.com/products/obsidian-st-2-0?variant=48741073256694",
       "fields": {
         "motor_w": {
           "status": "present",
@@ -1220,12 +1220,12 @@
           "resolved_at": "2026-06-28"
         },
         "fit_height_min_in": {
-          "status": "open",
-          "source": null,
-          "value": null,
+          "status": "present",
+          "source": "scraped",
+          "value": 65,
           "note": "",
           "first_flagged": "2026-06-26",
-          "resolved_at": null
+          "resolved_at": "2026-07-01"
         },
         "sensor_type": {
           "status": "present",
@@ -1264,7 +1264,7 @@
     {
       "id": "mokwheel__onyx",
       "model": "Onyx Ebike",
-      "url": "https://www.mokwheel.com/products/onyx",
+      "url": "https://www.mokwheel.com/products/onyx?variant=48618664624374",
       "fields": {
         "motor_w": {
           "status": "present",
@@ -1323,12 +1323,12 @@
           "resolved_at": "2026-06-28"
         },
         "fit_height_min_in": {
-          "status": "open",
-          "source": null,
-          "value": null,
+          "status": "present",
+          "source": "scraped",
+          "value": 65,
           "note": "",
           "first_flagged": "2026-06-26",
-          "resolved_at": null
+          "resolved_at": "2026-07-01"
         },
         "sensor_type": {
           "status": "present",
@@ -1367,7 +1367,7 @@
     {
       "id": "mokwheel__onyx-st",
       "model": "Onyx ST Ebike",
-      "url": "https://www.mokwheel.com/products/onyx-st",
+      "url": "https://www.mokwheel.com/products/onyx-st?variant=47780892279030",
       "fields": {
         "motor_w": {
           "status": "present",
@@ -1426,12 +1426,12 @@
           "resolved_at": "2026-06-28"
         },
         "fit_height_min_in": {
-          "status": "open",
-          "source": null,
-          "value": null,
+          "status": "present",
+          "source": "scraped",
+          "value": 65,
           "note": "",
           "first_flagged": "2026-06-26",
-          "resolved_at": null
+          "resolved_at": "2026-07-01"
         },
         "sensor_type": {
           "status": "present",
@@ -1529,12 +1529,12 @@
           "resolved_at": "2026-06-28"
         },
         "fit_height_min_in": {
-          "status": "open",
-          "source": null,
-          "value": null,
+          "status": "present",
+          "source": "scraped",
+          "value": 65,
           "note": "",
           "first_flagged": "2026-06-26",
-          "resolved_at": null
+          "resolved_at": "2026-07-01"
         },
         "sensor_type": {
           "status": "present",
@@ -1632,12 +1632,12 @@
           "resolved_at": "2026-06-28"
         },
         "fit_height_min_in": {
-          "status": "open",
-          "source": null,
-          "value": null,
+          "status": "present",
+          "source": "scraped",
+          "value": 65,
           "note": "",
           "first_flagged": "2026-06-26",
-          "resolved_at": null
+          "resolved_at": "2026-07-01"
         },
         "sensor_type": {
           "status": "present",
@@ -1676,7 +1676,7 @@
     {
       "id": "mokwheel__tarmac",
       "model": "Tarmac Ebike",
-      "url": "https://www.mokwheel.com/products/tarmac",
+      "url": "https://www.mokwheel.com/products/tarmac?variant=47780920197366",
       "fields": {
         "motor_w": {
           "status": "present",
@@ -1735,12 +1735,12 @@
           "resolved_at": "2026-06-28"
         },
         "fit_height_min_in": {
-          "status": "open",
-          "source": null,
-          "value": null,
+          "status": "present",
+          "source": "scraped",
+          "value": 65,
           "note": "",
           "first_flagged": "2026-06-26",
-          "resolved_at": null
+          "resolved_at": "2026-07-01"
         },
         "sensor_type": {
           "status": "present",
@@ -1779,7 +1779,7 @@
     {
       "id": "mokwheel__tarmac-st",
       "model": "Tarmac ST Ebike",
-      "url": "https://www.mokwheel.com/products/tarmac-st",
+      "url": "https://www.mokwheel.com/products/tarmac-st?variant=48888485249270",
       "fields": {
         "motor_w": {
           "status": "present",
@@ -1838,12 +1838,12 @@
           "resolved_at": "2026-06-28"
         },
         "fit_height_min_in": {
-          "status": "open",
-          "source": null,
-          "value": null,
+          "status": "present",
+          "source": "scraped",
+          "value": 65,
           "note": "",
           "first_flagged": "2026-06-26",
-          "resolved_at": null
+          "resolved_at": "2026-07-01"
         },
         "sensor_type": {
           "status": "present",
@@ -1941,12 +1941,12 @@
           "resolved_at": "2026-06-28"
         },
         "fit_height_min_in": {
-          "status": "open",
-          "source": null,
-          "value": null,
+          "status": "present",
+          "source": "scraped",
+          "value": 65,
           "note": "",
           "first_flagged": "2026-06-26",
-          "resolved_at": null
+          "resolved_at": "2026-07-01"
         },
         "sensor_type": {
           "status": "present",

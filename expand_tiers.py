@@ -366,6 +366,9 @@ def expand_lectric(brand: str, m: dict) -> list:
     """Lectric captures per-config specs in `configs`; one entry per battery tier
     AND frame style, each carrying its config's full data."""
     cfgs = [c for c in (m.get("configs") or []) if c.get("price") is not None]
+    # per-(frame|battery) sold-out colours from the scraper (removed so it isn't copied
+    # onto siblings); each split card looks up its own tier below.
+    tiers = m.pop("sold_out_by_tier", None) or {}
     if not cfgs:
         return [m]
     name = m.get("model") or ""
@@ -419,6 +422,12 @@ def expand_lectric(brand: str, m: dict) -> list:
         entry["price_range"] = {"min": c["price"], "max": c["price"],
                                 "currency": (m.get("price_range") or {}).get("currency", "USD")}
         entry["configs"] = [copy.deepcopy(c)]
+        # per-tier sold-out: a colour can be out on THIS battery/frame only. Keyed the same
+        # way build_model wrote it: f"{frame_style}|{battery}".
+        tier = tiers.get(f"{bucket or ''}|{battery or ''}")
+        if tier is not None:
+            entry["sold_out_options"] = {"Colors": tier["Colors"]} if tier.get("Colors") else {}
+            entry["in_stock"] = tier.get("in_stock")
         out.append(entry)
     return out
 

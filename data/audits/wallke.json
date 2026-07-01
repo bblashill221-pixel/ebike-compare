@@ -1,7 +1,7 @@
 {
   "brand": "wallke",
   "scraper": "scrape_wallke.py",
-  "generated_at": "2026-07-01T07:57:45.843705+00:00",
+  "generated_at": "2026-07-01T23:36:19.094408+00:00",
   "fields_audited": [
     "motor_w",
     "battery_wh",
@@ -17,8 +17,8 @@
     "drive_type"
   ],
   "summary": {
-    "models": 14,
-    "present": 153,
+    "models": 15,
+    "present": 165,
     "resolved": 12,
     "open": 3,
     "needs_image": 0,
@@ -374,7 +374,7 @@
         "range_mi": {
           "status": "present",
           "source": "scraped",
-          "value": 200,
+          "value": 180,
           "note": "",
           "first_flagged": "2026-06-26",
           "resolved_at": "2026-06-28"
@@ -477,7 +477,7 @@
         "range_mi": {
           "status": "present",
           "source": "scraped",
-          "value": 200,
+          "value": 180,
           "note": "",
           "first_flagged": "2026-06-26",
           "resolved_at": "2026-06-28"
@@ -580,7 +580,7 @@
         "range_mi": {
           "status": "present",
           "source": "scraped",
-          "value": 200,
+          "value": 180,
           "note": "",
           "first_flagged": "2026-06-26",
           "resolved_at": "2026-06-28"
@@ -645,13 +645,13 @@
     },
     {
       "id": "wallke__wallke-h7-step-thru",
-      "model": "2026 Wallke H7 AWD Step-Thru | 3200W Ebike 40Ah Battery",
+      "model": "2026 Wallke H7 AWD Step-Thru | 3200W Ebike 40/55Ah Battery",
       "url": "https://wallkeebike.com/products/wallke-h7-step-thru",
       "fields": {
         "motor_w": {
           "status": "present",
           "source": "scraped",
-          "value": 750,
+          "value": 1000,
           "note": "",
           "first_flagged": "2026-06-26",
           "resolved_at": "2026-06-28"
@@ -683,7 +683,7 @@
         "range_mi": {
           "status": "present",
           "source": "scraped",
-          "value": 29,
+          "value": 120,
           "note": "",
           "first_flagged": "2026-06-26",
           "resolved_at": "2026-06-28"
@@ -747,14 +747,117 @@
       }
     },
     {
-      "id": "wallke__wallke-h7-step-thru--60ah",
-      "model": "2026 Wallke H7 AWD Step-Thru | 3200W Ebike 40Ah Battery — 60Ah",
+      "id": "wallke__wallke-h7-step-thru--55ah",
+      "model": "2026 Wallke H7 AWD Step-Thru | 3200W Ebike 40/55Ah Battery — 55Ah",
       "url": "https://wallkeebike.com/products/wallke-h7-step-thru",
       "fields": {
         "motor_w": {
           "status": "present",
           "source": "scraped",
-          "value": 750,
+          "value": 1000,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "battery_wh": {
+          "status": "present",
+          "source": "scraped",
+          "value": 2640,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "torque_nm": {
+          "status": "present",
+          "source": "scraped",
+          "value": 150,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_speed_mph": {
+          "status": "present",
+          "source": "scraped",
+          "value": 37,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "range_mi": {
+          "status": "present",
+          "source": "scraped",
+          "value": 165,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "weight_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 130.0,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "max_load_lb": {
+          "status": "present",
+          "source": "scraped",
+          "value": 400,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "fit_height_min_in": {
+          "status": "present",
+          "source": "scraped",
+          "value": 78,
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "sensor_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "cadence",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "brake_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hydraulic_disc",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "frame_material": {
+          "status": "present",
+          "source": "scraped",
+          "value": "aluminum",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        },
+        "drive_type": {
+          "status": "present",
+          "source": "scraped",
+          "value": "hub",
+          "note": "",
+          "first_flagged": null,
+          "resolved_at": null
+        }
+      }
+    },
+    {
+      "id": "wallke__wallke-h7-step-thru--60ah",
+      "model": "2026 Wallke H7 AWD Step-Thru | 3200W Ebike 40/55Ah Battery — 60Ah",
+      "url": "https://wallkeebike.com/products/wallke-h7-step-thru",
+      "fields": {
+        "motor_w": {
+          "status": "present",
+          "source": "scraped",
+          "value": 1000,
           "note": "",
           "first_flagged": "2026-06-26",
           "resolved_at": "2026-06-28"
@@ -786,7 +889,7 @@
         "range_mi": {
           "status": "present",
           "source": "scraped",
-          "value": 43,
+          "value": 180,
           "note": "",
           "first_flagged": "2026-06-26",
           "resolved_at": "2026-06-28"
@@ -851,7 +954,7 @@
     },
     {
       "id": "wallke__h9awd",
-      "model": "2026 Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery",
+      "model": "2026 Wallke H9 AWD | 3200W Folding Ebike 40/62Ah Battery",
       "url": "https://wallkeebike.com/products/h9awd",
       "fields": {
         "motor_w": {
@@ -889,7 +992,7 @@
         "range_mi": {
           "status": "present",
           "source": "scraped",
-          "value": 80,
+          "value": 180,
           "note": "",
           "first_flagged": "2026-06-26",
           "resolved_at": "2026-06-28"
@@ -954,7 +1057,7 @@
     },
     {
       "id": "wallke__h9awd--60ah",
-      "model": "2026 Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery — 60Ah",
+      "model": "2026 Wallke H9 AWD | 3200W Folding Ebike 40/62Ah Battery — 60Ah",
       "url": "https://wallkeebike.com/products/h9awd",
       "fields": {
         "motor_w": {
@@ -992,7 +1095,7 @@
         "range_mi": {
           "status": "present",
           "source": "scraped",
-          "value": 80,
+          "value": 180,
           "note": "",
           "first_flagged": "2026-06-26",
           "resolved_at": "2026-06-28"
@@ -1057,7 +1160,7 @@
     },
     {
       "id": "wallke__h9awd--62ah",
-      "model": "2026 Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery — 62Ah",
+      "model": "2026 Wallke H9 AWD | 3200W Folding Ebike 40/62Ah Battery — 62Ah",
       "url": "https://wallkeebike.com/products/h9awd",
       "fields": {
         "motor_w": {
@@ -1095,7 +1198,7 @@
         "range_mi": {
           "status": "present",
           "source": "scraped",
-          "value": 80,
+          "value": 180,
           "note": "",
           "first_flagged": "2026-06-26",
           "resolved_at": "2026-06-28"
@@ -1160,7 +1263,7 @@
     },
     {
       "id": "wallke__h9awd--82ah",
-      "model": "2026 Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery — 82Ah",
+      "model": "2026 Wallke H9 AWD | 3200W Folding Ebike 40/62Ah Battery — 82Ah",
       "url": "https://wallkeebike.com/products/h9awd",
       "fields": {
         "motor_w": {
@@ -1198,7 +1301,7 @@
         "range_mi": {
           "status": "present",
           "source": "scraped",
-          "value": 80,
+          "value": 180,
           "note": "",
           "first_flagged": "2026-06-26",
           "resolved_at": "2026-06-28"

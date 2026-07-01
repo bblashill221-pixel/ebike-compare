@@ -36,7 +36,7 @@ from pathlib import Path
 # --- Make the locally-extracted Chromium system libs discoverable, if present. ---
 
 from scraper_common import fetch_json  # noqa: E402  (import also sets LD_LIBRARY_PATH for bundled chromium)
-from bike_taxonomy import classify_product_types  # noqa: E402
+from bike_taxonomy import classify_product_types, frame_style_of  # noqa: E402
 from playwright.async_api import async_playwright  # noqa: E402
 from warranty_js import JS_WARRANTY
 
@@ -129,6 +129,7 @@ def discover_skus() -> list[dict]:
             variants = p.get("variants", [])
             prices = [float(v["price"]) for v in variants if v.get("price")]
             images = [img.get("src") for img in p.get("images", []) if img.get("src")]
+            avails = [v.get("available") for v in variants if "available" in v]
             skus.append({
                 "title": p["title"],
                 "handle": p["handle"],
@@ -140,6 +141,8 @@ def discover_skus() -> list[dict]:
                 "color": parse_color(p["title"]),
                 "frame_style": parse_frame(p["title"], p["handle"]),
                 "battery": parse_battery(p["title"], p["handle"], p.get("tags", [])),
+                # this SKU (a colour/frame/battery product) is buyable if any variant is
+                "available": any(avails) if avails else None,
             })
         if len(products) < 250:
             break
@@ -469,6 +472,30 @@ def build_model(fam: dict, configs: list[dict], handle_img: dict) -> dict:
             if p not in perf:
                 perf.append(p)
     merged = merge_specs(configs)
+    # Per-colour availability from the per-SKU `available` flags. Lectric splits a family
+    # into per-(frame, battery) sibling cards (expand_lectric), and a colour can be sold
+    # out on one config while fine on another (e.g. XPedition2 Stratus White is out on the
+    # Long-Range battery only). So key availability by the SAME (frame, battery) the split
+    # uses -- `sold_out_by_tier[f"{frame}|{battery}"]` -- and also keep a family-level
+    # roll-up for the unsplit case. Color lives in the SKU title, not a variant option.
+    fam_ok: dict = {}
+    tier_ok: dict = {}   # "frame|battery" -> {color: available anywhere in that tier?}
+    for s in skus:
+        if s.get("available") is None or not s.get("color"):
+            continue
+        col, av = s["color"], bool(s["available"])
+        fam_ok[col] = fam_ok.get(col, False) or av
+        tk = f"{frame_style_of(s.get('frame_style') or '') or ''}|{s.get('battery') or ''}"
+        bucket = tier_ok.setdefault(tk, {})
+        bucket[col] = bucket.get(col, False) or av
+    sold_out_options = ({"Colors": sorted(c for c, ok in fam_ok.items() if not ok)}
+                        if fam_ok and not all(fam_ok.values()) else {})
+    in_stock = any(fam_ok.values()) if fam_ok else None
+    sold_out_by_tier = {
+        tk: {"Colors": sorted(c for c, ok in cols.items() if not ok),
+             "in_stock": any(cols.values())}
+        for tk, cols in tier_ok.items()
+    }
     return {
         "model": fam["model"],
         "family_code": fam["family_code"],
@@ -487,6 +514,9 @@ def build_model(fam: dict, configs: list[dict], handle_img: dict) -> dict:
             "battery": sorted({s["battery"] for s in skus}),
             "performance": perf,
         },
+        "sold_out_options": sold_out_options,
+        "in_stock": in_stock,
+        "sold_out_by_tier": sold_out_by_tier,
         "configs": configs,
         "specs": merged,
         "accessories": merge_accessories(configs),

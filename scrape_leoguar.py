@@ -22,7 +22,7 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
-from scraper_common import fetch_json, clean_title, build_colors  # noqa: E402  (also sets LD_LIBRARY_PATH)
+from scraper_common import fetch_json, clean_title, build_colors, shopify_sold_out_options  # noqa: E402  (also sets LD_LIBRARY_PATH)
 from bike_taxonomy import classify_product_types
 
 BASE = "https://leoguarbikes.com"
@@ -100,6 +100,7 @@ def discover_models() -> list[dict]:
         options["colors"] = build_colors(color_values, color_idx, variants, fallback)
         page = fetch_html(f"{BASE}/products/{p['handle']}")
         specs = parse_specs(page)
+        so, ins = shopify_sold_out_options(p)
         out.append({
             "model": clean_title(p.get("title")),
             "handle": p.get("handle"),
@@ -109,6 +110,8 @@ def discover_models() -> list[dict]:
                 " ".join(p.get("tags") or [])),
             "price_from": min(prices) if prices else None,
             "currency": "USD",
+            "sold_out_options": so,
+            "in_stock": ins,
             "options": options,
             "specs": {"all": specs},
             "spec_count": len(specs),

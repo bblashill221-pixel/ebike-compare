@@ -66,6 +66,8 @@ SCRAPERS=(
     "scrape_vanpowers.py|vanpowers_ebikes|"
     "scrape_puckipuppy.py|puckipuppy_ebikes|"
     "scrape_bakcou.py|bakcou_ebikes|"
+    "scrape_gotrax.py|gotrax_ebikes|"
+    "scrape_retrospec.py|retrospec_ebikes|"
 )
 
 run_all() {

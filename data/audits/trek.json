@@ -1,7 +1,7 @@
 {
   "brand": "trek",
   "scraper": "scrape_trek.py",
-  "generated_at": "2026-07-01T07:57:45.835374+00:00",
+  "generated_at": "2026-07-01T23:36:19.084261+00:00",
   "fields_audited": [
     "motor_w",
     "battery_wh",
@@ -17,10 +17,10 @@
     "drive_type"
   ],
   "summary": {
-    "models": 58,
-    "present": 597,
+    "models": 56,
+    "present": 576,
     "resolved": 0,
-    "open": 99,
+    "open": 96,
     "needs_image": 0,
     "unpublished": 0
   },
@@ -5279,109 +5279,6 @@
       }
     },
     {
-      "id": "trek__vale-go-9d-eq",
-      "model": "Vale Go! 9D EQ",
-      "url": "https://www.trekbikes.com/bikes/electra-bikes/electra-ebikes/vale-go/vale-go-9d-eq/p/34871/",
-      "fields": {
-        "motor_w": {
-          "status": "present",
-          "source": "scraped",
-          "value": 250,
-          "note": "",
-          "first_flagged": "2026-06-26",
-          "resolved_at": "2026-06-28"
-        },
-        "battery_wh": {
-          "status": "open",
-          "source": null,
-          "value": null,
-          "note": "",
-          "first_flagged": "2026-06-22",
-          "resolved_at": null
-        },
-        "torque_nm": {
-          "status": "present",
-          "source": "scraped",
-          "value": 50,
-          "note": "",
-          "first_flagged": "2026-06-26",
-          "resolved_at": "2026-06-28"
-        },
-        "max_speed_mph": {
-          "status": "present",
-          "source": "scraped",
-          "value": 20,
-          "note": "",
-          "first_flagged": "2026-06-26",
-          "resolved_at": "2026-06-28"
-        },
-        "range_mi": {
-          "status": "present",
-          "source": "scraped",
-          "value": 65,
-          "note": "",
-          "first_flagged": "2026-06-26",
-          "resolved_at": "2026-06-28"
-        },
-        "weight_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 53.9,
-          "note": "",
-          "first_flagged": "2026-06-26",
-          "resolved_at": "2026-06-28"
-        },
-        "max_load_lb": {
-          "status": "open",
-          "source": null,
-          "value": null,
-          "note": "",
-          "first_flagged": "2026-06-22",
-          "resolved_at": null
-        },
-        "fit_height_min_in": {
-          "status": "present",
-          "source": "scraped",
-          "value": 64,
-          "note": "",
-          "first_flagged": "2026-06-26",
-          "resolved_at": "2026-06-28"
-        },
-        "sensor_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "torque",
-          "note": "",
-          "first_flagged": "2026-06-26",
-          "resolved_at": "2026-06-28"
-        },
-        "brake_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hydraulic_disc",
-          "note": "",
-          "first_flagged": "2026-06-26",
-          "resolved_at": "2026-06-28"
-        },
-        "frame_material": {
-          "status": "present",
-          "source": "scraped",
-          "value": "aluminum",
-          "note": "",
-          "first_flagged": "2026-06-26",
-          "resolved_at": "2026-06-28"
-        },
-        "drive_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "mid",
-          "note": "",
-          "first_flagged": "2026-06-26",
-          "resolved_at": "2026-06-28"
-        }
-      }
-    },
-    {
       "id": "trek__verve-1-lowstep-lt",
       "model": "Verve+ 1 Lowstep LT",
       "url": "https://www.trekbikes.com/bikes/hybrid-bikes/electric-hybrid-bikes/verve/verve-1-lowstep-lt/p/40990/",
@@ -5429,7 +5326,7 @@
         "weight_lb": {
           "status": "present",
           "source": "scraped",
-          "value": 59.0,
+          "value": 57.4,
           "note": "",
           "first_flagged": "2026-06-26",
           "resolved_at": "2026-06-28"
@@ -5532,7 +5429,7 @@
         "weight_lb": {
           "status": "present",
           "source": "scraped",
-          "value": 59.0,
+          "value": 57.4,
           "note": "",
           "first_flagged": "2026-06-26",
           "resolved_at": "2026-06-28"
@@ -5635,7 +5532,7 @@
         "weight_lb": {
           "status": "present",
           "source": "scraped",
-          "value": 59.0,
+          "value": 57.4,
           "note": "",
           "first_flagged": "2026-06-26",
           "resolved_at": "2026-06-28"
@@ -5738,7 +5635,7 @@
         "weight_lb": {
           "status": "present",
           "source": "scraped",
-          "value": 59.0,
+          "value": 57.4,
           "note": "",
           "first_flagged": "2026-06-26",
           "resolved_at": "2026-06-28"
@@ -5755,109 +5652,6 @@
           "status": "present",
           "source": "scraped",
           "value": 58,
-          "note": "",
-          "first_flagged": "2026-06-26",
-          "resolved_at": "2026-06-28"
-        },
-        "sensor_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "torque",
-          "note": "",
-          "first_flagged": "2026-06-26",
-          "resolved_at": "2026-06-28"
-        },
-        "brake_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "hydraulic_disc",
-          "note": "",
-          "first_flagged": "2026-06-26",
-          "resolved_at": "2026-06-28"
-        },
-        "frame_material": {
-          "status": "present",
-          "source": "scraped",
-          "value": "aluminum",
-          "note": "",
-          "first_flagged": "2026-06-26",
-          "resolved_at": "2026-06-28"
-        },
-        "drive_type": {
-          "status": "present",
-          "source": "scraped",
-          "value": "mid",
-          "note": "",
-          "first_flagged": "2026-06-26",
-          "resolved_at": "2026-06-28"
-        }
-      }
-    },
-    {
-      "id": "trek__verve-4s-gen-3",
-      "model": "Verve+ 4S Gen 3",
-      "url": "https://www.trekbikes.com/bikes/hybrid-bikes/electric-hybrid-bikes/verve/verve-4s-gen-3/p/40674/",
-      "fields": {
-        "motor_w": {
-          "status": "present",
-          "source": "scraped",
-          "value": 250,
-          "note": "",
-          "first_flagged": "2026-06-26",
-          "resolved_at": "2026-06-28"
-        },
-        "battery_wh": {
-          "status": "present",
-          "source": "scraped",
-          "value": 545,
-          "note": "",
-          "first_flagged": "2026-06-26",
-          "resolved_at": "2026-06-28"
-        },
-        "torque_nm": {
-          "status": "present",
-          "source": "scraped",
-          "value": 75,
-          "note": "",
-          "first_flagged": "2026-06-26",
-          "resolved_at": "2026-06-28"
-        },
-        "max_speed_mph": {
-          "status": "present",
-          "source": "scraped",
-          "value": 28,
-          "note": "",
-          "first_flagged": "2026-06-26",
-          "resolved_at": "2026-06-28"
-        },
-        "range_mi": {
-          "status": "present",
-          "source": "scraped",
-          "value": 50,
-          "note": "",
-          "first_flagged": "2026-06-26",
-          "resolved_at": "2026-06-28"
-        },
-        "weight_lb": {
-          "status": "present",
-          "source": "scraped",
-          "value": 59.0,
-          "note": "",
-          "first_flagged": "2026-06-26",
-          "resolved_at": "2026-06-28"
-        },
-        "max_load_lb": {
-          "status": "open",
-          "source": null,
-          "value": null,
-          "note": "",
-          "first_flagged": "2026-06-22",
-          "resolved_at": null
-        },
-        "fit_height_min_in": {
-          "status": "present",
-          "source": "scraped",
-          "value": 65,
           "note": "",
           "first_flagged": "2026-06-26",
           "resolved_at": "2026-06-28"
@@ -5944,7 +5738,7 @@
         "weight_lb": {
           "status": "present",
           "source": "scraped",
-          "value": 59.0,
+          "value": 57.4,
           "note": "",
           "first_flagged": "2026-06-26",
           "resolved_at": "2026-06-28"

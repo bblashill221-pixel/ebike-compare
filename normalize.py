@@ -652,7 +652,29 @@ def _pricing(m: dict, price: float | None) -> dict:
     }
 
 
-def _availability(configs: list) -> dict:
+def _merge_scraped_availability(av: dict, m: dict | None) -> dict:
+    """Fold a scraper-provided `sold_out_options` (+ optional `in_stock`) into the
+    config-derived availability. Custom / non-generic-Shopify scrapers set these
+    directly on the model (via scraper_common.shopify_sold_out_options or their own
+    platform's stock signal) since they don't feed `configurations` to add_configurations."""
+    if not m:
+        return av
+    so = m.get("sold_out_options")
+    ins = m.get("in_stock")
+    if not so and ins is None:
+        return av
+    merged = {k: list(v) for k, v in (av.get("sold_out_options") or {}).items()}
+    for axis, vals in (so or {}).items():
+        merged[axis] = sorted(set(merged.get(axis, [])) | set(vals))
+    status = av.get("status")
+    in_stock = av.get("in_stock")
+    if status == "unknown":                              # no config flags -> use the scraped signal
+        in_stock = True if ins is None else bool(ins)
+        status = "in_stock" if in_stock else "sold_out"
+    return {"status": status, "in_stock": in_stock, "sold_out_options": merged}
+
+
+def _availability(configs: list, m: dict | None = None) -> dict:
     """Summarize stock from per-configuration `available` flags.
 
     status: "in_stock" (some config available), "sold_out" (all configs
@@ -661,11 +683,13 @@ def _availability(configs: list) -> dict:
     (Color / Frame / Size / ...) so the UI can say which colors/sizes are out
     even when the model overall is buyable. An option value is only listed when
     EVERY config carrying it is unavailable (a color sold out in one size but
-    fine in another is still orderable, so not flagged)."""
+    fine in another is still orderable, so not flagged). A scraper-provided
+    `sold_out_options`/`in_stock` on `m` is merged in (custom scrapers)."""
     flags = [c.get("available") for c in configs
              if isinstance(c, dict) and c.get("available") is not None]
     if not flags:
-        return {"status": "unknown", "in_stock": None, "sold_out_options": {}}
+        return _merge_scraped_availability(
+            {"status": "unknown", "in_stock": None, "sold_out_options": {}}, m)
     any_in = any(flags)
     # value -> still available somewhere?  (keyed by "axis::value")
     val_ok: dict = {}
@@ -681,11 +705,11 @@ def _availability(configs: list) -> dict:
             sold_out.setdefault(axis, []).append(val)
     for axis in sold_out:
         sold_out[axis] = sorted(dict.fromkeys(sold_out[axis]))
-    return {
+    return _merge_scraped_availability({
         "status": "in_stock" if any_in else "sold_out",
         "in_stock": any_in,
         "sold_out_options": sold_out,
-    }
+    }, m)
 
 
 def _cfg_color(c: dict):
@@ -975,7 +999,7 @@ def normalize_model(brand: str, m: dict) -> dict:
         "color_names": [c["name"] for c in colors if c.get("name")],
         "variant_options": variant_options,
         "available_options": m.get("available_options") or [],
-        "availability": _availability(configs),
+        "availability": _availability(configs, m),
         "configurations": configs,
         "free_accessories": m.get("free_accessories") or [],
         "included_accessories": _included_accessories(m),

@@ -2,8 +2,8 @@
   "source": "https://wallkeebike.com",
   "logo": "https://wallkeebike.com/cdn/shop/files/wallke-logo.png",
   "collection": "all-e-bike",
-  "scraped_at": "2026-06-27T05:07:52.316794+00:00",
-  "model_count": 14,
+  "scraped_at": "2026-07-01T21:59:04.328681+00:00",
+  "model_count": 15,
   "models": [
     {
       "model": "2026 WALLKE H7 Ultra Step-Thru | 4000W Off-Grid Power Station E-Bike with Torque Sensor, 37mph Speed",
@@ -79,7 +79,7 @@
           },
           "price": 1499.0,
           "regular_price": 2299.0,
-          "available": true,
+          "available": false,
           "sku": "H7U-55A-BL-X",
           "variant_id": 46341567185068,
           "color": {
@@ -223,7 +223,7 @@
           },
           "price": 1499.0,
           "regular_price": 2299.0,
-          "available": true,
+          "available": false,
           "sku": "H7U-55A-WH-X",
           "variant_id": 46341567021228,
           "color": {
@@ -672,7 +672,7 @@
           ]
         }
       ],
-      "frame_style": "Step-Thru (Mid-Step)"
+      "frame_style": "Step-Thru"
     },
     {
       "model": "2026 WALLKE H9 Ultra AWD Folding | Off-Grid Power Station E-Bike with Torque Sensor, 37mph Speed, 55/77Ah Battery Options",
@@ -1352,7 +1352,7 @@
           "US": "Upgraded version Bag",
           "Mirror": "$59",
           "Part Type": "Required Photos",
-          "Max Range": "Up to 200 miles",
+          "Max Range": "Up to 180 miles",
           "Torque": "150 Nm"
         }
       },
@@ -1457,7 +1457,7 @@
       ],
       "tier": "55Ah · Step-Thru",
       "family_id": "wallke__ultra-series",
-      "frame_style": "Step-Thru (Mid-Step)"
+      "frame_style": "Step-Thru"
     },
     {
       "model": "2026 WALLKE Ultra Series | Off-grid Power Station E-Bike — 55Ah · Step-Over",
@@ -1591,7 +1591,7 @@
           "US": "Upgraded version Bag",
           "Mirror": "$59",
           "Part Type": "Required Photos",
-          "Max Range": "Up to 200 miles",
+          "Max Range": "Up to 180 miles",
           "Torque": "150 Nm"
         }
       },
@@ -1829,7 +1829,7 @@
           "US": "Upgraded version Bag",
           "Mirror": "$59",
           "Part Type": "Required Photos",
-          "Max Range": "Up to 200 miles",
+          "Max Range": "Up to 180 miles",
           "Torque": "150 Nm"
         }
       },
@@ -1937,7 +1937,7 @@
       "frame_style": "Step-Over"
     },
     {
-      "model": "2026 Wallke H7 AWD Step-Thru | 3200W Ebike 40Ah Battery",
+      "model": "2026 Wallke H7 AWD Step-Thru | 3200W Ebike 40/55Ah Battery",
       "handle": "wallke-h7-step-thru",
       "url": "https://wallkeebike.com/products/wallke-h7-step-thru",
       "product_types": [
@@ -1949,13 +1949,15 @@
       "options": {
         "Model": [
           "H7AWD (Dual Motor)-40Ah",
+          "H7 Ultra AWD -55Ah（Energy storage battery）",
           "H7AWD (Dual Motor)-60Ah",
           "H7 (Single Motor)-40Ah"
         ],
-        "Upgrade": [
+        "Free Gift": [
           "None",
-          "Free Blue Trailer",
-          "Only Ebike"
+          "Only Ebike",
+          "(New Bag & Mirrior)",
+          "Free Blue Trailer"
         ],
         "colors": [
           {
@@ -1977,7 +1979,7 @@
           "options": {
             "Model": "H7AWD (Dual Motor)-40Ah",
             "Color": "White",
-            "Upgrade": "None"
+            "Free Gift": "None"
           },
           "price": 1449.0,
           "regular_price": 1599.0,
@@ -1994,98 +1996,8 @@
         {
           "options": {
             "Model": "H7AWD (Dual Motor)-40Ah",
-            "Color": "Black",
-            "Upgrade": "None"
-          },
-          "price": 1449.0,
-          "regular_price": 1599.0,
-          "available": true,
-          "sku": "26-H7A-40A-BK",
-          "variant_id": 46333453303980,
-          "color": {
-            "name": "Black",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-Black-UL.webp?v=1781776918"
-          }
-        },
-        {
-          "options": {
-            "Model": "H7 (Single Motor)-40Ah",
             "Color": "White",
-            "Upgrade": "None"
-          },
-          "price": 2299.0,
-          "regular_price": null,
-          "available": false,
-          "sku": "H7-40A-WH",
-          "variant_id": 43022713585836,
-          "color": {
-            "name": "White",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-White-UL.webp?v=1781776918"
-          }
-        },
-        {
-          "options": {
-            "Model": "H7 (Single Motor)-40Ah",
-            "Color": "White",
-            "Upgrade": "Free Blue Trailer"
-          },
-          "price": 2299.0,
-          "regular_price": 2798.0,
-          "available": false,
-          "sku": "H7-40A-WH",
-          "variant_id": 46182897778860,
-          "color": {
-            "name": "White",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-White-UL.webp?v=1781776918"
-          }
-        },
-        {
-          "options": {
-            "Model": "H7 (Single Motor)-40Ah",
-            "Color": "Black",
-            "Upgrade": "None"
-          },
-          "price": 2299.0,
-          "regular_price": null,
-          "available": false,
-          "sku": "H7-40A-BK",
-          "variant_id": 43022713553068,
-          "color": {
-            "name": "Black",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-Black-UL.webp?v=1781776918"
-          }
-        },
-        {
-          "options": {
-            "Model": "H7 (Single Motor)-40Ah",
-            "Color": "Black",
-            "Upgrade": "Free Blue Trailer"
-          },
-          "price": 2299.0,
-          "regular_price": 2798.0,
-          "available": false,
-          "sku": "H7-40A-BK",
-          "variant_id": 46182898073772,
-          "color": {
-            "name": "Black",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-Black-UL.webp?v=1781776918"
-          }
-        },
-        {
-          "options": {
-            "Model": "H7AWD (Dual Motor)-40Ah",
-            "Color": "White",
-            "Upgrade": "Only Ebike"
+            "Free Gift": "Only Ebike"
           },
           "price": 1799.0,
           "regular_price": 1999.0,
@@ -2103,13 +2015,103 @@
           "options": {
             "Model": "H7AWD (Dual Motor)-40Ah",
             "Color": "Black",
-            "Upgrade": "Only Ebike"
+            "Free Gift": "None"
+          },
+          "price": 1449.0,
+          "regular_price": 1599.0,
+          "available": true,
+          "sku": "26-H7A-40A-BK",
+          "variant_id": 46333453303980,
+          "color": {
+            "name": "Black",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-Black-UL.webp?v=1781776918"
+          }
+        },
+        {
+          "options": {
+            "Model": "H7AWD (Dual Motor)-40Ah",
+            "Color": "Black",
+            "Free Gift": "Only Ebike"
           },
           "price": 1799.0,
           "regular_price": 1999.0,
           "available": false,
           "sku": "EU-26-H7A-40A-BK",
           "variant_id": 46653323083948,
+          "color": {
+            "name": "Black",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-Black-UL.webp?v=1781776918"
+          }
+        },
+        {
+          "options": {
+            "Model": "H7 (Single Motor)-40Ah",
+            "Color": "White",
+            "Free Gift": "None"
+          },
+          "price": 2299.0,
+          "regular_price": null,
+          "available": false,
+          "sku": "H7-40A-WH",
+          "variant_id": 43022713585836,
+          "color": {
+            "name": "White",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-White-UL.webp?v=1781776918"
+          }
+        },
+        {
+          "options": {
+            "Model": "H7 (Single Motor)-40Ah",
+            "Color": "White",
+            "Free Gift": "Free Blue Trailer"
+          },
+          "price": 2299.0,
+          "regular_price": 2798.0,
+          "available": false,
+          "sku": "H7-40A-WH",
+          "variant_id": 46182897778860,
+          "color": {
+            "name": "White",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-White-UL.webp?v=1781776918"
+          }
+        },
+        {
+          "options": {
+            "Model": "H7 (Single Motor)-40Ah",
+            "Color": "Black",
+            "Free Gift": "None"
+          },
+          "price": 2299.0,
+          "regular_price": null,
+          "available": false,
+          "sku": "H7-40A-BK",
+          "variant_id": 43022713553068,
+          "color": {
+            "name": "Black",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-Black-UL.webp?v=1781776918"
+          }
+        },
+        {
+          "options": {
+            "Model": "H7 (Single Motor)-40Ah",
+            "Color": "Black",
+            "Free Gift": "Free Blue Trailer"
+          },
+          "price": 2299.0,
+          "regular_price": 2798.0,
+          "available": false,
+          "sku": "H7-40A-BK",
+          "variant_id": 46182898073772,
           "color": {
             "name": "Black",
             "hex": null,
@@ -2135,7 +2137,7 @@
           "Throttle": "Right-Hand Motorcycle-Style Full-Twist Throttle",
           "Battery": "48V 40Ah (1920Wh), 8.15 kg",
           "Charging Time": "5–6 hours (54.6V6A fast Charging)",
-          "Controller": "48V Front 18A + Rear 22A Integrated Controller",
+          "Controller": "48V Front 20A + Rear 22A Integrated Controller",
           "Frame": "Thickened 6061 Aluminum Alloy Frame",
           "Front Fork": "20\" heavy-duty hydraulic aluminum",
           "Rear Shock": "Aluminum alloy dual rear shock absorbers",
@@ -2152,9 +2154,9 @@
           "Keys for Battery": "×2(Tie on the handlebar)",
           "Pedals": "×1 set",
           "Part Type": "Required Photos",
-          "Max Range": "Up to 29 miles (est. for this battery size)",
+          "Max Range": "Up to 120 miles (est. for this battery size)",
           "Torque": "150 Nm",
-          "Motor": "750W (3200W peak)",
+          "Motor": "1000W (3200W peak)",
           "Rider Height": "12'1\" - 6'6\""
         }
       },
@@ -2194,6 +2196,12 @@
               "free": true
             },
             {
+              "value": "H7 Ultra AWD -55Ah（Energy storage battery）",
+              "price": 1999.0,
+              "price_delta": 550.0,
+              "free": false
+            },
+            {
               "value": "H7AWD (Dual Motor)-60Ah",
               "price": 1799.0,
               "price_delta": 350.0,
@@ -2224,6 +2232,18 @@
               "free": true
             },
             {
+              "value": "Gray",
+              "price": 1999.0,
+              "price_delta": 550.0,
+              "free": false
+            },
+            {
+              "value": "Medium Blue",
+              "price": 1999.0,
+              "price_delta": 550.0,
+              "free": false
+            },
+            {
               "value": "Gradient Blue",
               "price": 1799.0,
               "price_delta": 350.0,
@@ -2238,7 +2258,7 @@
           ]
         },
         {
-          "group": "Upgrade",
+          "group": "Free Gift",
           "type": "variant",
           "choices": [
             {
@@ -2248,15 +2268,21 @@
               "free": true
             },
             {
-              "value": "Free Blue Trailer",
-              "price": 2299.0,
-              "price_delta": 850.0,
-              "free": false
-            },
-            {
               "value": "Only Ebike",
               "price": 1799.0,
               "price_delta": 350.0,
+              "free": false
+            },
+            {
+              "value": "(New Bag & Mirrior)",
+              "price": 1999.0,
+              "price_delta": 550.0,
+              "free": false
+            },
+            {
+              "value": "Free Blue Trailer",
+              "price": 2299.0,
+              "price_delta": 850.0,
               "free": false
             }
           ]
@@ -2264,10 +2290,10 @@
       ],
       "tier": "40Ah",
       "family_id": "wallke__wallke-h7-step-thru",
-      "frame_style": "Step-Thru (Mid-Step)"
+      "frame_style": "Step-Thru"
     },
     {
-      "model": "2026 Wallke H7 AWD Step-Thru | 3200W Ebike 40Ah Battery — 60Ah",
+      "model": "2026 Wallke H7 AWD Step-Thru | 3200W Ebike 40/55Ah Battery — 60Ah",
       "handle": "wallke-h7-step-thru--60ah",
       "url": "https://wallkeebike.com/products/wallke-h7-step-thru",
       "product_types": [
@@ -2279,13 +2305,15 @@
       "options": {
         "Model": [
           "H7AWD (Dual Motor)-40Ah",
+          "H7 Ultra AWD -55Ah（Energy storage battery）",
           "H7AWD (Dual Motor)-60Ah",
           "H7 (Single Motor)-40Ah"
         ],
-        "Upgrade": [
+        "Free Gift": [
           "None",
-          "Free Blue Trailer",
-          "Only Ebike"
+          "Only Ebike",
+          "(New Bag & Mirrior)",
+          "Free Blue Trailer"
         ],
         "colors": [
           {
@@ -2318,44 +2346,8 @@
         {
           "options": {
             "Model": "H7AWD (Dual Motor)-60Ah",
-            "Color": "Gradient Blue",
-            "Upgrade": "None"
-          },
-          "price": 1799.0,
-          "regular_price": null,
-          "available": false,
-          "sku": "H7A-60A-GBL",
-          "variant_id": 44683479515308,
-          "color": {
-            "name": "Gradient Blue",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-White-UL.webp?v=1781776918"
-          }
-        },
-        {
-          "options": {
-            "Model": "H7AWD (Dual Motor)-60Ah",
-            "Color": "Gradient Blue",
-            "Upgrade": "Free Blue Trailer"
-          },
-          "price": 2699.0,
-          "regular_price": 3198.0,
-          "available": false,
-          "sku": "H7A-60A-GBL",
-          "variant_id": 46182899056812,
-          "color": {
-            "name": "Gradient Blue",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-White-UL.webp?v=1781776918"
-          }
-        },
-        {
-          "options": {
-            "Model": "H7AWD (Dual Motor)-60Ah",
             "Color": "White",
-            "Upgrade": "None"
+            "Free Gift": "None"
           },
           "price": 1799.0,
           "regular_price": null,
@@ -2373,7 +2365,7 @@
           "options": {
             "Model": "H7AWD (Dual Motor)-60Ah",
             "Color": "Black",
-            "Upgrade": "None"
+            "Free Gift": "None"
           },
           "price": 1799.0,
           "regular_price": null,
@@ -2390,8 +2382,44 @@
         {
           "options": {
             "Model": "H7AWD (Dual Motor)-60Ah",
+            "Color": "Gradient Blue",
+            "Free Gift": "None"
+          },
+          "price": 1799.0,
+          "regular_price": null,
+          "available": false,
+          "sku": "H7A-60A-GBL",
+          "variant_id": 44683479515308,
+          "color": {
+            "name": "Gradient Blue",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-White-UL.webp?v=1781776918"
+          }
+        },
+        {
+          "options": {
+            "Model": "H7AWD (Dual Motor)-60Ah",
+            "Color": "Gradient Blue",
+            "Free Gift": "Free Blue Trailer"
+          },
+          "price": 2699.0,
+          "regular_price": 3198.0,
+          "available": false,
+          "sku": "H7A-60A-GBL",
+          "variant_id": 46182899056812,
+          "color": {
+            "name": "Gradient Blue",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-White-UL.webp?v=1781776918"
+          }
+        },
+        {
+          "options": {
+            "Model": "H7AWD (Dual Motor)-60Ah",
             "Color": "Gradient Red",
-            "Upgrade": "None"
+            "Free Gift": "None"
           },
           "price": 1799.0,
           "regular_price": null,
@@ -2423,7 +2451,7 @@
           "Throttle": "Right-Hand Motorcycle-Style Full-Twist Throttle",
           "Battery": "48V 60Ah (2880Wh), 8.15 kg",
           "Charging Time": "5–6 hours (54.6V6A fast Charging)",
-          "Controller": "48V Front 18A + Rear 22A Integrated Controller",
+          "Controller": "48V Front 20A + Rear 22A Integrated Controller",
           "Frame": "Thickened 6061 Aluminum Alloy Frame",
           "Front Fork": "20\" heavy-duty hydraulic aluminum",
           "Rear Shock": "Aluminum alloy dual rear shock absorbers",
@@ -2440,9 +2468,9 @@
           "Keys for Battery": "×2(Tie on the handlebar)",
           "Pedals": "×1 set",
           "Part Type": "Required Photos",
-          "Max Range": "Up to 43 miles",
+          "Max Range": "Up to 180 miles",
           "Torque": "150 Nm",
-          "Motor": "750W (3200W peak)",
+          "Motor": "1000W (3200W peak)",
           "Rider Height": "12'1\" - 6'6\""
         }
       },
@@ -2482,6 +2510,12 @@
               "free": true
             },
             {
+              "value": "H7 Ultra AWD -55Ah（Energy storage battery）",
+              "price": 1999.0,
+              "price_delta": 550.0,
+              "free": false
+            },
+            {
               "value": "H7AWD (Dual Motor)-60Ah",
               "price": 1799.0,
               "price_delta": 350.0,
@@ -2512,6 +2546,18 @@
               "free": true
             },
             {
+              "value": "Gray",
+              "price": 1999.0,
+              "price_delta": 550.0,
+              "free": false
+            },
+            {
+              "value": "Medium Blue",
+              "price": 1999.0,
+              "price_delta": 550.0,
+              "free": false
+            },
+            {
               "value": "Gradient Blue",
               "price": 1799.0,
               "price_delta": 350.0,
@@ -2526,7 +2572,7 @@
           ]
         },
         {
-          "group": "Upgrade",
+          "group": "Free Gift",
           "type": "variant",
           "choices": [
             {
@@ -2536,15 +2582,21 @@
               "free": true
             },
             {
-              "value": "Free Blue Trailer",
-              "price": 2299.0,
-              "price_delta": 850.0,
-              "free": false
-            },
-            {
               "value": "Only Ebike",
               "price": 1799.0,
               "price_delta": 350.0,
+              "free": false
+            },
+            {
+              "value": "(New Bag & Mirrior)",
+              "price": 1999.0,
+              "price_delta": 550.0,
+              "free": false
+            },
+            {
+              "value": "Free Blue Trailer",
+              "price": 2299.0,
+              "price_delta": 850.0,
               "free": false
             }
           ]
@@ -2552,10 +2604,282 @@
       ],
       "tier": "60Ah",
       "family_id": "wallke__wallke-h7-step-thru",
-      "frame_style": "Step-Thru (Mid-Step)"
+      "frame_style": "Step-Thru"
     },
     {
-      "model": "2026 Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery",
+      "model": "2026 Wallke H7 AWD Step-Thru | 3200W Ebike 40/55Ah Battery — 55Ah",
+      "handle": "wallke-h7-step-thru--55ah",
+      "url": "https://wallkeebike.com/products/wallke-h7-step-thru",
+      "product_types": [
+        "Commuter / Urban"
+      ],
+      "price_from": 1999.0,
+      "regular_price": null,
+      "currency": "USD",
+      "options": {
+        "Model": [
+          "H7AWD (Dual Motor)-40Ah",
+          "H7 Ultra AWD -55Ah（Energy storage battery）",
+          "H7AWD (Dual Motor)-60Ah",
+          "H7 (Single Motor)-40Ah"
+        ],
+        "Free Gift": [
+          "None",
+          "Only Ebike",
+          "(New Bag & Mirrior)",
+          "Free Blue Trailer"
+        ],
+        "colors": [
+          {
+            "name": "White",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-White-UL.webp?v=1781776918"
+          },
+          {
+            "name": "Gray",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7-Ultra-AWD-Gray-UL-gift.webp?v=1782871702"
+          },
+          {
+            "name": "Medium Blue",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7-Ultra-AWD-Blue-UL-gift.webp?v=1782871687"
+          }
+        ]
+      },
+      "configurations": [
+        {
+          "options": {
+            "Model": "H7 Ultra AWD -55Ah（Energy storage battery）",
+            "Color": "White",
+            "Free Gift": "(New Bag & Mirrior)"
+          },
+          "price": 1999.0,
+          "regular_price": null,
+          "available": true,
+          "sku": "H7UA-55A-WH",
+          "variant_id": 46683272642732,
+          "color": {
+            "name": "White",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7AWD-White-UL.webp?v=1781776918"
+          }
+        },
+        {
+          "options": {
+            "Model": "H7 Ultra AWD -55Ah（Energy storage battery）",
+            "Color": "Gray",
+            "Free Gift": "(New Bag & Mirrior)"
+          },
+          "price": 1999.0,
+          "regular_price": null,
+          "available": true,
+          "sku": "H7UA-55A-GR",
+          "variant_id": 46683273593004,
+          "color": {
+            "name": "Gray",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7-Ultra-AWD-Gray-UL-gift.webp?v=1782871702"
+          }
+        },
+        {
+          "options": {
+            "Model": "H7 Ultra AWD -55Ah（Energy storage battery）",
+            "Color": "Medium Blue",
+            "Free Gift": "(New Bag & Mirrior)"
+          },
+          "price": 1999.0,
+          "regular_price": null,
+          "available": true,
+          "sku": "H7UA-55A-BL",
+          "variant_id": 46683272937644,
+          "color": {
+            "name": "Medium Blue",
+            "hex": null,
+            "swatch_image": null,
+            "image": "https://cdn.shopify.com/s/files/1/0264/4125/2957/files/26-H7-Ultra-AWD-Blue-UL-gift.webp?v=1782871687"
+          }
+        }
+      ],
+      "specs": {
+        "all": {
+          "Total Length": "77.2\"",
+          "Wheelbase": "55\"",
+          "Maxmum Handlebar Height": "50.8\"",
+          "Maximum Seat Height": "44.1\"",
+          "Minimum Seat Height": "34.6\"",
+          "Standover Height": "19.7\"",
+          "Reach": "24.8\"",
+          "Recommended Height": "5'85\" -6'6\"",
+          "Max. Load Capacity": "400 LBS",
+          "eBike Weight": "130 LBS",
+          "Top Speed": "37 MPH",
+          "Riding Mode": "Throttle + Pedal Assist (PAS)",
+          "Throttle": "Right-Hand Motorcycle-Style Full-Twist Throttle",
+          "Battery": "48V 55Ah (2640Wh), 8.15 kg",
+          "Charging Time": "5–6 hours (54.6V6A fast Charging)",
+          "Controller": "48V Front 20A + Rear 22A Integrated Controller",
+          "Frame": "Thickened 6061 Aluminum Alloy Frame",
+          "Front Fork": "20\" heavy-duty hydraulic aluminum",
+          "Rear Shock": "Aluminum alloy dual rear shock absorbers",
+          "Tires": "20\" x 4\" all-terrain fat tires with puncture-resistant capability",
+          "Brakes": "Dual-piston hydraulic disc brakes with oil system, featuring motor cut-off (brake power-off) function",
+          "Handlebar": "Anti-Slip Plastic Grips",
+          "Display": "Full-Color Smart LCD Display",
+          "Light": "48V 1000 Lumen LED Front Light",
+          "Aluminum Alloy": "Kickstand",
+          "Chain": "Rust-Resistant Chain",
+          "Max Payload": "400 lbs",
+          "Safety Certifications": "UN38.3, MSDS, UL Certified",
+          "Other": "Cruise Control",
+          "Keys for Battery": "×2(Tie on the handlebar)",
+          "Pedals": "×1 set",
+          "Part Type": "Required Photos",
+          "Max Range": "Up to 165 miles (est. for this battery size)",
+          "Torque": "150 Nm",
+          "Motor": "1000W (3200W peak)",
+          "Rider Height": "12'1\" - 6'6\""
+        }
+      },
+      "spec_count": 35,
+      "warranty": "1-Year Warranty",
+      "scrape_error": null,
+      "is_new": false,
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'85\"",
+          "height_max": "6'6\""
+        }
+      ],
+      "geometry": {
+        "Wheelbase": "55\"",
+        "Maximum Seat Height": "44.1\"",
+        "Minimum Seat Height": "34.6\"",
+        "Standover Height": "19.7\"",
+        "Reach": "24.8\"",
+        "Rider Height": "12'1\" - 6'6\""
+      },
+      "available_options": [
+        {
+          "group": "Model",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "H7AWD (Dual Motor)-40Ah",
+              "price": 1449.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "H7 Ultra AWD -55Ah（Energy storage battery）",
+              "price": 1999.0,
+              "price_delta": 550.0,
+              "free": false
+            },
+            {
+              "value": "H7AWD (Dual Motor)-60Ah",
+              "price": 1799.0,
+              "price_delta": 350.0,
+              "free": false
+            },
+            {
+              "value": "H7 (Single Motor)-40Ah",
+              "price": 2299.0,
+              "price_delta": 850.0,
+              "free": false
+            }
+          ]
+        },
+        {
+          "group": "Color",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "White",
+              "price": 1449.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "Black",
+              "price": 1449.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "Gray",
+              "price": 1999.0,
+              "price_delta": 550.0,
+              "free": false
+            },
+            {
+              "value": "Medium Blue",
+              "price": 1999.0,
+              "price_delta": 550.0,
+              "free": false
+            },
+            {
+              "value": "Gradient Blue",
+              "price": 1799.0,
+              "price_delta": 350.0,
+              "free": false
+            },
+            {
+              "value": "Gradient Red",
+              "price": 1799.0,
+              "price_delta": 350.0,
+              "free": false
+            }
+          ]
+        },
+        {
+          "group": "Free Gift",
+          "type": "variant",
+          "choices": [
+            {
+              "value": "None",
+              "price": 1449.0,
+              "price_delta": 0.0,
+              "free": true
+            },
+            {
+              "value": "Only Ebike",
+              "price": 1799.0,
+              "price_delta": 350.0,
+              "free": false
+            },
+            {
+              "value": "(New Bag & Mirrior)",
+              "price": 1999.0,
+              "price_delta": 550.0,
+              "free": false
+            },
+            {
+              "value": "Free Blue Trailer",
+              "price": 2299.0,
+              "price_delta": 850.0,
+              "free": false
+            }
+          ]
+        }
+      ],
+      "tier": "55Ah",
+      "family_id": "wallke__wallke-h7-step-thru",
+      "frame_style": "Step-Thru"
+    },
+    {
+      "model": "2026 Wallke H9 AWD | 3200W Folding Ebike 40/62Ah Battery",
       "handle": "h9awd",
       "url": "https://wallkeebike.com/products/h9awd",
       "product_types": [
@@ -2818,7 +3142,7 @@
           "Throttle": "Right-Hand Motorcycle-Style Full-Twist Throttle",
           "Battery": "48V 40Ah, 8.15 kg",
           "Charging Time": "5–6 hours (54.6V6A fast Charging)",
-          "Controller": "48V Front 18A + Rear 22A Integrated Controller",
+          "Controller": "48V Front 20A + Rear 22A Integrated Controller",
           "Frame": "Thickened 6061 Aluminum Alloy Frame",
           "Front Fork": "20\" heavy-duty hydraulic aluminum",
           "Rear Shock": "Aluminum alloy dual rear shock absorbers",
@@ -2836,7 +3160,7 @@
           "Keys for Battery": "*2(Tie on the handlebar)",
           "Pedals": "*1 set",
           "Part Type": "Required Photos",
-          "Max Range": "Up to 80 miles",
+          "Max Range": "Up to 180 miles",
           "Torque": "150 Nm",
           "Motor": "3200W peak",
           "Rider Height": "12'1\" - 6'6\""
@@ -2968,7 +3292,7 @@
       "family_id": "wallke__h9awd"
     },
     {
-      "model": "2026 Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery — 60Ah",
+      "model": "2026 Wallke H9 AWD | 3200W Folding Ebike 40/62Ah Battery — 60Ah",
       "handle": "h9awd--60ah",
       "url": "https://wallkeebike.com/products/h9awd",
       "product_types": [
@@ -3141,7 +3465,7 @@
           "Throttle": "Right-Hand Motorcycle-Style Full-Twist Throttle",
           "Battery": "48V 40Ah, 8.15 kg",
           "Charging Time": "5–6 hours (54.6V6A fast Charging)",
-          "Controller": "48V Front 18A + Rear 22A Integrated Controller",
+          "Controller": "48V Front 20A + Rear 22A Integrated Controller",
           "Frame": "Thickened 6061 Aluminum Alloy Frame",
           "Front Fork": "20\" heavy-duty hydraulic aluminum",
           "Rear Shock": "Aluminum alloy dual rear shock absorbers",
@@ -3159,7 +3483,7 @@
           "Keys for Battery": "*2(Tie on the handlebar)",
           "Pedals": "*1 set",
           "Part Type": "Required Photos",
-          "Max Range": "Up to 80 miles",
+          "Max Range": "Up to 180 miles",
           "Torque": "150 Nm",
           "Motor": "3200W peak",
           "Rider Height": "12'1\" - 6'6\""
@@ -3291,7 +3615,7 @@
       "family_id": "wallke__h9awd"
     },
     {
-      "model": "2026 Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery — 62Ah",
+      "model": "2026 Wallke H9 AWD | 3200W Folding Ebike 40/62Ah Battery — 62Ah",
       "handle": "h9awd--62ah",
       "url": "https://wallkeebike.com/products/h9awd",
       "product_types": [
@@ -3409,7 +3733,7 @@
           "Riding Mode": "Throttle + Pedal Assist (PAS)",
           "Throttle": "Right-Hand Motorcycle-Style Full-Twist Throttle",
           "Charging Time": "5–6 hours (54.6V6A fast Charging)",
-          "Controller": "48V Front 18A + Rear 22A Integrated Controller",
+          "Controller": "48V Front 20A + Rear 22A Integrated Controller",
           "Frame": "Thickened 6061 Aluminum Alloy Frame",
           "Front Fork": "20\" heavy-duty hydraulic aluminum",
           "Rear Shock": "Aluminum alloy dual rear shock absorbers",
@@ -3427,7 +3751,7 @@
           "Keys for Battery": "*2(Tie on the handlebar)",
           "Pedals": "*1 set",
           "Part Type": "Required Photos",
-          "Max Range": "Up to 80 miles",
+          "Max Range": "Up to 180 miles",
           "Torque": "150 Nm",
           "Motor": "3200W peak",
           "Rider Height": "12'1\" - 6'6\""
@@ -3559,7 +3883,7 @@
       "family_id": "wallke__h9awd"
     },
     {
-      "model": "2026 Wallke H9 AWD | 3200W Folding Ebike 40Ah Battery — 82Ah",
+      "model": "2026 Wallke H9 AWD | 3200W Folding Ebike 40/62Ah Battery — 82Ah",
       "handle": "h9awd--82ah",
       "url": "https://wallkeebike.com/products/h9awd",
       "product_types": [
@@ -3732,7 +4056,7 @@
           "Throttle": "Right-Hand Motorcycle-Style Full-Twist Throttle",
           "Battery": "48V 40Ah, 8.15 kg",
           "Charging Time": "5–6 hours (54.6V6A fast Charging)",
-          "Controller": "48V Front 18A + Rear 22A Integrated Controller",
+          "Controller": "48V Front 20A + Rear 22A Integrated Controller",
           "Frame": "Thickened 6061 Aluminum Alloy Frame",
           "Front Fork": "20\" heavy-duty hydraulic aluminum",
           "Rear Shock": "Aluminum alloy dual rear shock absorbers",
@@ -3750,7 +4074,7 @@
           "Keys for Battery": "*2(Tie on the handlebar)",
           "Pedals": "*1 set",
           "Part Type": "Required Photos",
-          "Max Range": "Up to 80 miles",
+          "Max Range": "Up to 180 miles",
           "Torque": "150 Nm",
           "Motor": "3200W peak",
           "Rider Height": "12'1\" - 6'6\""
@@ -4608,7 +4932,7 @@
           "Safety Certifications": "UN38.3, MSDS, UL Certified",
           "Other": "Cruise Control, Alarm and Remote Control (30m Range)",
           "Region": "Gift",
-          "US": "Rear Rack（Combination set purchase）",
+          "US": "Rear Rack（Purchase of bundled sets）",
           "Mirror": "$89",
           "Part Type": "Required Photos",
           "Max Range": "Up to 180 miles",

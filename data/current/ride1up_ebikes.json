@@ -2,8 +2,8 @@
   "source": "https://ride1up.com",
   "logo": "https://ride1up.com/wp-content/uploads/2021/01/ride1up.svg",
   "category": "bikes",
-  "scraped_at": "2026-06-27T02:17:14.886561+00:00",
-  "model_count": 21,
+  "scraped_at": "2026-07-01T21:55:06.762661+00:00",
+  "model_count": 12,
   "models": [
     {
       "slug": "cf-racer1",
@@ -15,7 +15,7 @@
       ],
       "price_range": {
         "min": 2195.0,
-        "max": 2295.0,
+        "max": 2195.0,
         "currency": "USD"
       },
       "configurations": [
@@ -30,7 +30,7 @@
           "image": "https://ride1up.com/wp-content/uploads/2025/06/CF-R1_side_pink-min-jpg.webp",
           "color": {
             "name": "Fuchsia Fusion",
-            "hex": "#826e92",
+            "hex": "#f1f1f1",
             "swatch_image": null,
             "image": "https://ride1up.com/wp-content/uploads/2025/06/CF-R1_side_pink-min-jpg.webp"
           }
@@ -46,25 +46,9 @@
           "image": "https://ride1up.com/wp-content/uploads/2025/06/CF-R1_side_pink-min-jpg.webp",
           "color": {
             "name": "Fuchsia Fusion",
-            "hex": "#826e92",
+            "hex": "#f1f1f1",
             "swatch_image": null,
             "image": "https://ride1up.com/wp-content/uploads/2025/06/CF-R1_side_pink-min-jpg.webp"
-          }
-        },
-        {
-          "options": {
-            "bike_type": "Gravel",
-            "frame_size": "Large",
-            "color": ""
-          },
-          "price": 2295.0,
-          "sku": "CFR1V2-LRG-GRV-GRY",
-          "image": "https://ride1up.com/wp-content/uploads/2023/11/CF-R1_side_grey-min.webp",
-          "color": {
-            "name": "",
-            "hex": null,
-            "swatch_image": null,
-            "image": null
           }
         }
       ],
@@ -78,16 +62,22 @@
         ],
         "colors": [
           {
+            "name": "Clouded Gray",
+            "hex": "#979caa",
+            "swatch_image": null,
+            "image": "https://ride1up.com/wp-content/uploads/2023/11/roadster-black-right-min.jpg"
+          },
+          {
             "name": "Fuchsia Fusion",
-            "hex": "#826e92",
+            "hex": "#f1f1f1",
             "swatch_image": null,
             "image": "https://ride1up.com/wp-content/uploads/2025/06/CF-R1_side_pink-min-jpg.webp"
           },
           {
-            "name": "",
-            "hex": null,
+            "name": "Rainbow Black, Gloss",
+            "hex": "#f1f1f1",
             "swatch_image": null,
-            "image": null
+            "image": "https://ride1up.com/wp-content/uploads/2023/11/roadster-black-right-min.jpg"
           }
         ]
       },
@@ -203,19 +193,16 @@
           "Seat Post": "Carbon 27.2x300mm",
           "Pedals": "Flat Platform Flange Pedals",
           "Additional": "Water Bottle Bosses and Chainstay Guard",
-          "PEDAL SENSOR": "R1CBC Cadence",
-          "FRAME": "Ultra lightweight carbon fiber frame with concealed wiring and electrical components",
-          "CLASS & SPEED": "3 & 28mph",
-          "DRIVETRAIN": "SRAM 12-Speed",
           "Speed": "Class 3 electric bike, with 28mph pedal assist",
           "Range": "16-40 miles depending on rider weight, terrain, incline, level of assist, etc.",
-          "Comfort": "Optimally designed to provide performance-based comfort",
+          "Frame": "Ultra lightweight carbon fiber frame with concealed wiring and electrical components",
+          "Premium Components": "Optimally designed to provide performance-based riding with premium components",
           "Bike Weight": "28.6 lbs",
           "Weight Capacity": "225 lbs",
           "Rider Height": "5'3\" - 6'3\""
         }
       },
-      "spec_count": 33,
+      "spec_count": 30,
       "scrape_error": null,
       "shipping": {
         "cost": 0,
@@ -240,24 +227,6 @@
               "free": true
             }
           ]
-        },
-        {
-          "group": "color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Fuchsia Fusion",
-              "price": 2195.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "",
-              "price": 2295.0,
-              "price_delta": 100.0,
-              "free": false
-            }
-          ]
         }
       ]
     },
@@ -270,7 +239,7 @@
         "Commuter / Urban"
       ],
       "price_range": {
-        "min": 895.0,
+        "min": 945.0,
         "max": 995.0,
         "currency": "USD"
       },
@@ -280,12 +249,12 @@
             "battery-size": "10.4ah",
             "color": "Warm Gray"
           },
-          "price": 895.0,
+          "price": 945.0,
           "sku": "FLD_10AH_WHI-BP",
           "image": "https://ride1up.com/wp-content/uploads/2024/07/Portola-Side-view_warm-gray-jpg.webp",
           "color": {
             "name": "Warm Gray",
-            "hex": "#c3b6a4",
+            "hex": "#f1f1f1",
             "swatch_image": null,
             "image": "https://ride1up.com/wp-content/uploads/2024/07/Portola-Side-view_warm-gray-jpg.webp"
           }
@@ -295,12 +264,12 @@
             "battery-size": "10.4ah",
             "color": "Indigo, Matte"
           },
-          "price": 895.0,
+          "price": 945.0,
           "sku": "FLD_10AH_BLUE-BP",
           "image": "https://ride1up.com/wp-content/uploads/2023/07/Portola-Side-view_indigo-jpg.webp",
           "color": {
             "name": "Indigo, Matte",
-            "hex": "#6a8992",
+            "hex": "#f1f1f1",
             "swatch_image": null,
             "image": "https://ride1up.com/wp-content/uploads/2023/07/Portola-Side-view_indigo-jpg.webp"
           }
@@ -310,12 +279,12 @@
             "battery-size": "10.4ah",
             "color": "Charcoal, Gloss"
           },
-          "price": 895.0,
+          "price": 945.0,
           "sku": "FLD_10AH_BLK-BP",
           "image": "https://ride1up.com/wp-content/uploads/2023/09/Portola-Side-view_charcoal-jpg.webp",
           "color": {
             "name": "Charcoal, Gloss",
-            "hex": "#232323",
+            "hex": "#f1f1f1",
             "swatch_image": null,
             "image": "https://ride1up.com/wp-content/uploads/2023/09/Portola-Side-view_charcoal-jpg.webp"
           }
@@ -325,12 +294,12 @@
             "battery-size": "10.4ah",
             "color": "Sea Turquoise"
           },
-          "price": 895.0,
+          "price": 945.0,
           "sku": "FLD_10AH_GRN-BP",
           "image": "https://ride1up.com/wp-content/uploads/2023/09/Portola-Side-view_seafoam-jpg.webp",
           "color": {
             "name": "Sea Turquoise",
-            "hex": "#54bec6",
+            "hex": "#f1f1f1",
             "swatch_image": null,
             "image": "https://ride1up.com/wp-content/uploads/2023/09/Portola-Side-view_seafoam-jpg.webp"
           }
@@ -344,25 +313,25 @@
         "colors": [
           {
             "name": "Charcoal, Gloss",
-            "hex": "#232323",
+            "hex": "#f1f1f1",
             "swatch_image": null,
             "image": "https://ride1up.com/wp-content/uploads/2023/09/Portola-Side-view_charcoal-jpg.webp"
           },
           {
             "name": "Sea Turquoise",
-            "hex": "#54bec6",
+            "hex": "#f1f1f1",
             "swatch_image": null,
             "image": "https://ride1up.com/wp-content/uploads/2023/09/Portola-Side-view_seafoam-jpg.webp"
           },
           {
             "name": "Warm Gray",
-            "hex": "#c3b6a4",
+            "hex": "#f1f1f1",
             "swatch_image": null,
             "image": "https://ride1up.com/wp-content/uploads/2024/07/Portola-Side-view_warm-gray-jpg.webp"
           },
           {
             "name": "Indigo, Matte",
-            "hex": "#6a8992",
+            "hex": "#f1f1f1",
             "swatch_image": null,
             "image": "https://ride1up.com/wp-content/uploads/2023/07/Portola-Side-view_indigo-jpg.webp"
           }
@@ -450,14 +419,14 @@
           "choices": [
             {
               "value": "10.4ah",
-              "price": 895.0,
+              "price": 945.0,
               "price_delta": 0.0,
               "free": true
             },
             {
               "value": "13.4ah",
               "price": 995.0,
-              "price_delta": 100.0,
+              "price_delta": 50.0,
               "free": false
             }
           ]
@@ -465,7 +434,7 @@
       ],
       "tier": "10.4ah",
       "family_id": "ride1up__portola",
-      "price_from": 895.0,
+      "price_from": 945.0,
       "regular_price": null
     },
     {
@@ -477,7 +446,7 @@
         "Commuter / Urban"
       ],
       "price_range": {
-        "min": 895.0,
+        "min": 945.0,
         "max": 995.0,
         "currency": "USD"
       },
@@ -492,7 +461,7 @@
           "image": "https://ride1up.com/wp-content/uploads/2024/07/Portola-Side-view_warm-gray-jpg.webp",
           "color": {
             "name": "Warm Gray",
-            "hex": "#c3b6a4",
+            "hex": "#f1f1f1",
             "swatch_image": null,
             "image": "https://ride1up.com/wp-content/uploads/2024/07/Portola-Side-view_warm-gray-jpg.webp"
           }
@@ -507,7 +476,7 @@
           "image": "https://ride1up.com/wp-content/uploads/2023/07/Portola-Side-view_indigo-jpg.webp",
           "color": {
             "name": "Indigo, Matte",
-            "hex": "#6a8992",
+            "hex": "#f1f1f1",
             "swatch_image": null,
             "image": "https://ride1up.com/wp-content/uploads/2023/07/Portola-Side-view_indigo-jpg.webp"
           }
@@ -522,7 +491,7 @@
           "image": "https://ride1up.com/wp-content/uploads/2023/09/Portola-Side-view_charcoal-jpg.webp",
           "color": {
             "name": "Charcoal, Gloss",
-            "hex": "#232323",
+            "hex": "#f1f1f1",
             "swatch_image": null,
             "image": "https://ride1up.com/wp-content/uploads/2023/09/Portola-Side-view_charcoal-jpg.webp"
           }
@@ -537,7 +506,7 @@
           "image": "https://ride1up.com/wp-content/uploads/2023/09/Portola-Side-view_seafoam-jpg.webp",
           "color": {
             "name": "Sea Turquoise",
-            "hex": "#54bec6",
+            "hex": "#f1f1f1",
             "swatch_image": null,
             "image": "https://ride1up.com/wp-content/uploads/2023/09/Portola-Side-view_seafoam-jpg.webp"
           }
@@ -551,25 +520,25 @@
         "colors": [
           {
             "name": "Charcoal, Gloss",
-            "hex": "#232323",
+            "hex": "#f1f1f1",
             "swatch_image": null,
             "image": "https://ride1up.com/wp-content/uploads/2023/09/Portola-Side-view_charcoal-jpg.webp"
           },
           {
             "name": "Sea Turquoise",
-            "hex": "#54bec6",
+            "hex": "#f1f1f1",
             "swatch_image": null,
             "image": "https://ride1up.com/wp-content/uploads/2023/09/Portola-Side-view_seafoam-jpg.webp"
           },
           {
             "name": "Warm Gray",
-            "hex": "#c3b6a4",
+            "hex": "#f1f1f1",
             "swatch_image": null,
             "image": "https://ride1up.com/wp-content/uploads/2024/07/Portola-Side-view_warm-gray-jpg.webp"
           },
           {
             "name": "Indigo, Matte",
-            "hex": "#6a8992",
+            "hex": "#f1f1f1",
             "swatch_image": null,
             "image": "https://ride1up.com/wp-content/uploads/2023/07/Portola-Side-view_indigo-jpg.webp"
           }
@@ -657,14 +626,14 @@
           "choices": [
             {
               "value": "10.4ah",
-              "price": 895.0,
+              "price": 945.0,
               "price_delta": 0.0,
               "free": true
             },
             {
               "value": "13.4ah",
               "price": 995.0,
-              "price_delta": 100.0,
+              "price_delta": 50.0,
               "free": false
             }
           ]
@@ -700,7 +669,7 @@
           "image": "https://ride1up.com/wp-content/uploads/2023/09/Portola-Side-view_seafoam-jpg.webp",
           "color": {
             "name": "Sea Turquoise",
-            "hex": "#54bec6",
+            "hex": "#f1f1f1",
             "swatch_image": null,
             "image": "https://ride1up.com/wp-content/uploads/2023/09/Portola-Side-view_seafoam-jpg.webp"
           }
@@ -715,7 +684,7 @@
           "image": "https://ride1up.com/wp-content/uploads/2023/09/Portola-Side-view_charcoal-jpg.webp",
           "color": {
             "name": "Charcoal, Gloss",
-            "hex": "#232323",
+            "hex": "#f1f1f1",
             "swatch_image": null,
             "image": "https://ride1up.com/wp-content/uploads/2023/09/Portola-Side-view_charcoal-jpg.webp"
           }
@@ -728,15 +697,27 @@
         "colors": [
           {
             "name": "Charcoal, Gloss",
-            "hex": "#232323",
+            "hex": "#f1f1f1",
             "swatch_image": null,
             "image": "https://ride1up.com/wp-content/uploads/2023/09/Portola-Side-view_charcoal-jpg.webp"
           },
           {
             "name": "Sea Turquoise",
-            "hex": "#54bec6",
+            "hex": "#f1f1f1",
             "swatch_image": null,
             "image": "https://ride1up.com/wp-content/uploads/2023/09/Portola-Side-view_seafoam-jpg.webp"
+          },
+          {
+            "name": "Warm Gray",
+            "hex": "#f1f1f1",
+            "swatch_image": null,
+            "image": "https://ride1up.com/wp-content/uploads/2023/07/Portola-Side-view_indigo-jpg.webp"
+          },
+          {
+            "name": "Indigo, Matte",
+            "hex": "#f1f1f1",
+            "swatch_image": null,
+            "image": "https://ride1up.com/wp-content/uploads/2023/07/Portola-Side-view_indigo-jpg.webp"
           }
         ]
       },
@@ -815,1466 +796,6 @@
       },
       "free_accessories": [],
       "available_options": []
-    },
-    {
-      "slug": "prodigy-v2",
-      "url": "https://ride1up.com/product/prodigy-v2/?attribute_pa_drive-train=chain&attribute_pa_frame-type=st-step-through",
-      "warranty": "1-Year Warranty",
-      "model": "PRODIGY V2 — Chain · Step-Thru",
-      "product_types": [
-        "Commuter / Urban"
-      ],
-      "price_range": {
-        "min": 1595.0,
-        "max": 2595.0,
-        "currency": "USD"
-      },
-      "configurations": [
-        {
-          "options": {
-            "frame-type": "ST - Step-Through",
-            "drive-train": "Chain",
-            "color": "Onyx Black"
-          },
-          "price": 1595.0,
-          "sku": "PROV2-ST-BLK",
-          "image": "https://ride1up.com/wp-content/uploads/2023/09/Prodigy-V2_PROV2-ST-BLK-Profile-min.jpg",
-          "color": {
-            "name": "Onyx Black",
-            "hex": "#232323",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2023/09/Prodigy-V2_PROV2-LS-BLK-Profile-min.jpg"
-          }
-        },
-        {
-          "options": {
-            "frame-type": "ST - Step-Through",
-            "drive-train": "Chain",
-            "color": "Faded Bronze"
-          },
-          "price": 1795.0,
-          "sku": "PROV2-ST-BRNZ",
-          "image": "https://ride1up.com/wp-content/uploads/2023/09/Prodigy-V2_PROV2-ST-BRNZ-Profile-min.jpg",
-          "color": {
-            "name": "Faded Bronze",
-            "hex": "#665a54",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2023/09/Prodigy-V2_PROV2-XR-BRNZ-Profile-min.jpg"
-          }
-        },
-        {
-          "options": {
-            "frame-type": "ST - Step-Through",
-            "drive-train": "Chain",
-            "color": "Sea Fog"
-          },
-          "price": 1895.0,
-          "sku": "PROV2-ST-WHI",
-          "image": "https://ride1up.com/wp-content/uploads/2023/09/Prodigy-V2_PROV2-ST-WHI-Profile-min.jpg",
-          "color": {
-            "name": "Sea Fog",
-            "hex": "#686f75",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2023/09/Prodigy-V2_PROV2-LS-WHI-Profile-min.jpg"
-          }
-        }
-      ],
-      "options": {
-        "frame-type": [
-          "ST - Step-Through",
-          "XR - Step-Over"
-        ],
-        "drive-train": [
-          "Belt CVT",
-          "Chain"
-        ],
-        "colors": [
-          {
-            "name": "Faded Bronze",
-            "hex": "#665a54",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2023/09/Prodigy-V2_PROV2-XR-BRNZ-Profile-min.jpg"
-          },
-          {
-            "name": "Onyx Black",
-            "hex": "#232323",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2023/09/Prodigy-V2_PROV2-LS-BLK-Profile-min.jpg"
-          },
-          {
-            "name": "Sea Fog",
-            "hex": "#686f75",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2023/09/Prodigy-V2_PROV2-LS-WHI-Profile-min.jpg"
-          }
-        ]
-      },
-      "geometry": {
-        "Rider Height Range": "5'0\" - 6'0\"",
-        "Rider Height": "5'0\" - 6'0\""
-      },
-      "specs": {
-        "all": {
-          "Motor": "Brose TF Sprinter German made mid-drive motor with 90nm torque",
-          "Battery": "36V 14ah Phylion BN21, Samsung Cells, Smart BMS",
-          "Controller": "Brose Frame Integrated Controller",
-          "Display": "Brose Display Allround, 1.5\" Color Display",
-          "PAS Sensor": "Brose Integrated Torque Sensor",
-          "Brakes": "Tektro HD-M745 180mm Hydraulic",
-          "Tires": "Maxxis Rekon Race 27.5 x 2.25\"",
-          "Handlebars": "MTB: 45mm Rise, 9° Sweep 31.8mm Bars",
-          "Grips": "Ergonomic Rubber Locking Grips",
-          "Shifters LX/LS": "Enviolo Stepless Grip Twist Shifter",
-          "Shifters XR/ST": "microShift SL-M819 Advent Trigger Shifter",
-          "Gearing LX/LS": "60T Alloy Chainring",
-          "Gearing XR/ST": "48T Alloy Chainring",
-          "Cassette LX/LS": "Enviolo Trekking Continuous Variable Transmission Hub",
-          "Cassette XR/ST": "Shimano Alivio 9-Speed 11-34T",
-          "Derailleur XR/ST": "microSHIFT RD-M619M Advent 9-Speed",
-          "Drivetrain LX/LS": "CDX Gates Carbon Belt Drive",
-          "Drivetrain XR/ST": "KMC 9-Speed Mid-Drive Chain",
-          "Spokes": "13G Black Stainless Steel",
-          "Saddle": "Selle Royal Viento",
-          "Fork": "100mm Travel Air Fork Suspension",
-          "Seat Post": "Zoom 350mm x 31.6mm",
-          "Stem": "Brose 80mm Rise 25° 31.8mm Bar Clamp",
-          "Front Light": "XC-275 36V 80 Lux Front Light",
-          "Rear Light": "Commuter Glow 6V Rear Light",
-          "Rear Rack": "Custom 40lbs Cargo Rack",
-          "Additional": "Water Bottle Bosses and Chainstay Guard",
-          "PEDAL SENSOR": "Torque",
-          "FRAME": "300lb Rating",
-          "CLASS & SPEED": "Up to 28mph",
-          "DRIVETRAIN": "9-Speed or CVT",
-          "Speed": "Class 3 electric bike, with 28mph pedal assist",
-          "Range": "30-50 miles depending on rider weight, terrain, incline, level of assist, etc.",
-          "Comfort": "Frame geometry & components built for \"the most comfortable ride ever\"",
-          "Bike Weight": "CHAIN: 58lbs / CVT: 61lbs",
-          "Weight Capacity": "300lbs",
-          "Rider Height": "5'0\" - 6'0\""
-        }
-      },
-      "spec_count": 36,
-      "scrape_error": null,
-      "shipping": {
-        "cost": 0,
-        "free": true
-      },
-      "free_accessories": [],
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'0\"",
-          "height_max": "6'0\""
-        }
-      ],
-      "available_options": [
-        {
-          "group": "frame-type",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "ST - Step-Through",
-              "price": 1595.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "XR - Step-Over",
-              "price": 1895.0,
-              "price_delta": 300.0,
-              "free": false
-            }
-          ]
-        },
-        {
-          "group": "drive-train",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Belt CVT",
-              "price": 2495.0,
-              "price_delta": 900.0,
-              "free": false
-            },
-            {
-              "value": "Chain",
-              "price": 1595.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
-          "group": "color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Onyx Black",
-              "price": 1595.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Sea Fog",
-              "price": 1895.0,
-              "price_delta": 300.0,
-              "free": false
-            },
-            {
-              "value": "Faded Bronze",
-              "price": 1795.0,
-              "price_delta": 200.0,
-              "free": false
-            }
-          ]
-        }
-      ],
-      "tier": "Chain · Step-Thru",
-      "family_id": "ride1up__prodigy-v2",
-      "price_from": 1595.0,
-      "regular_price": null,
-      "frame_style": "Step-Thru (Mid-Step)"
-    },
-    {
-      "slug": "prodigy-v2",
-      "url": "https://ride1up.com/product/prodigy-v2/?attribute_pa_drive-train=chain&attribute_pa_frame-type=xr-step-over",
-      "warranty": "1-Year Warranty",
-      "model": "PRODIGY V2 — Chain · Step-Over",
-      "product_types": [
-        "Commuter / Urban"
-      ],
-      "price_range": {
-        "min": 1595.0,
-        "max": 2595.0,
-        "currency": "USD"
-      },
-      "configurations": [
-        {
-          "options": {
-            "frame-type": "XR - Step-Over",
-            "drive-train": "Chain",
-            "color": "Onyx Black"
-          },
-          "price": 1895.0,
-          "sku": "PROV2-XR-BLK",
-          "image": "https://ride1up.com/wp-content/uploads/2023/09/Prodigy-V2_PROV2-XR-BLK-Profile-04-min.jpg",
-          "color": {
-            "name": "Onyx Black",
-            "hex": "#232323",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2023/09/Prodigy-V2_PROV2-LS-BLK-Profile-min.jpg"
-          }
-        },
-        {
-          "options": {
-            "frame-type": "XR - Step-Over",
-            "drive-train": "Chain",
-            "color": "Faded Bronze"
-          },
-          "price": 1895.0,
-          "sku": "PROV2-XR-BRNZ",
-          "image": "https://ride1up.com/wp-content/uploads/2023/09/Prodigy-V2_PROV2-XR-BRNZ-Profile-min.jpg",
-          "color": {
-            "name": "Faded Bronze",
-            "hex": "#665a54",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2023/09/Prodigy-V2_PROV2-XR-BRNZ-Profile-min.jpg"
-          }
-        },
-        {
-          "options": {
-            "frame-type": "XR - Step-Over",
-            "drive-train": "Chain",
-            "color": "Sea Fog"
-          },
-          "price": 1895.0,
-          "sku": "PROV2-XR-WHI",
-          "image": "https://ride1up.com/wp-content/uploads/2023/09/Prodigy-V2_rev_PROV2-XR-WHI-Profile-min.jpg",
-          "color": {
-            "name": "Sea Fog",
-            "hex": "#686f75",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2023/09/Prodigy-V2_PROV2-LS-WHI-Profile-min.jpg"
-          }
-        }
-      ],
-      "options": {
-        "frame-type": [
-          "ST - Step-Through",
-          "XR - Step-Over"
-        ],
-        "drive-train": [
-          "Belt CVT",
-          "Chain"
-        ],
-        "colors": [
-          {
-            "name": "Faded Bronze",
-            "hex": "#665a54",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2023/09/Prodigy-V2_PROV2-XR-BRNZ-Profile-min.jpg"
-          },
-          {
-            "name": "Onyx Black",
-            "hex": "#232323",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2023/09/Prodigy-V2_PROV2-LS-BLK-Profile-min.jpg"
-          },
-          {
-            "name": "Sea Fog",
-            "hex": "#686f75",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2023/09/Prodigy-V2_PROV2-LS-WHI-Profile-min.jpg"
-          }
-        ]
-      },
-      "geometry": {
-        "Rider Height Range": "5'0\" - 6'0\"",
-        "Rider Height": "5'0\" - 6'0\""
-      },
-      "specs": {
-        "all": {
-          "Motor": "Brose TF Sprinter German made mid-drive motor with 90nm torque",
-          "Battery": "36V 14ah Phylion BN21, Samsung Cells, Smart BMS",
-          "Controller": "Brose Frame Integrated Controller",
-          "Display": "Brose Display Allround, 1.5\" Color Display",
-          "PAS Sensor": "Brose Integrated Torque Sensor",
-          "Brakes": "Tektro HD-M745 180mm Hydraulic",
-          "Tires": "Maxxis Rekon Race 27.5 x 2.25\"",
-          "Handlebars": "MTB: 45mm Rise, 9° Sweep 31.8mm Bars",
-          "Grips": "Ergonomic Rubber Locking Grips",
-          "Shifters LX/LS": "Enviolo Stepless Grip Twist Shifter",
-          "Shifters XR/ST": "microShift SL-M819 Advent Trigger Shifter",
-          "Gearing LX/LS": "60T Alloy Chainring",
-          "Gearing XR/ST": "48T Alloy Chainring",
-          "Cassette LX/LS": "Enviolo Trekking Continuous Variable Transmission Hub",
-          "Cassette XR/ST": "Shimano Alivio 9-Speed 11-34T",
-          "Derailleur XR/ST": "microSHIFT RD-M619M Advent 9-Speed",
-          "Drivetrain LX/LS": "CDX Gates Carbon Belt Drive",
-          "Drivetrain XR/ST": "KMC 9-Speed Mid-Drive Chain",
-          "Spokes": "13G Black Stainless Steel",
-          "Saddle": "Selle Royal Viento",
-          "Fork": "100mm Travel Air Fork Suspension",
-          "Seat Post": "Zoom 350mm x 31.6mm",
-          "Stem": "Brose 80mm Rise 25° 31.8mm Bar Clamp",
-          "Front Light": "XC-275 36V 80 Lux Front Light",
-          "Rear Light": "Commuter Glow 6V Rear Light",
-          "Rear Rack": "Custom 40lbs Cargo Rack",
-          "Additional": "Water Bottle Bosses and Chainstay Guard",
-          "PEDAL SENSOR": "Torque",
-          "FRAME": "300lb Rating",
-          "CLASS & SPEED": "Up to 28mph",
-          "DRIVETRAIN": "9-Speed or CVT",
-          "Speed": "Class 3 electric bike, with 28mph pedal assist",
-          "Range": "30-50 miles depending on rider weight, terrain, incline, level of assist, etc.",
-          "Comfort": "Frame geometry & components built for \"the most comfortable ride ever\"",
-          "Bike Weight": "CHAIN: 58lbs / CVT: 61lbs",
-          "Weight Capacity": "300lbs",
-          "Rider Height": "5'0\" - 6'0\""
-        }
-      },
-      "spec_count": 36,
-      "scrape_error": null,
-      "shipping": {
-        "cost": 0,
-        "free": true
-      },
-      "free_accessories": [],
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'0\"",
-          "height_max": "6'0\""
-        }
-      ],
-      "available_options": [
-        {
-          "group": "frame-type",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "ST - Step-Through",
-              "price": 1595.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "XR - Step-Over",
-              "price": 1895.0,
-              "price_delta": 300.0,
-              "free": false
-            }
-          ]
-        },
-        {
-          "group": "drive-train",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Belt CVT",
-              "price": 2495.0,
-              "price_delta": 900.0,
-              "free": false
-            },
-            {
-              "value": "Chain",
-              "price": 1595.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
-          "group": "color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Onyx Black",
-              "price": 1595.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Sea Fog",
-              "price": 1895.0,
-              "price_delta": 300.0,
-              "free": false
-            },
-            {
-              "value": "Faded Bronze",
-              "price": 1795.0,
-              "price_delta": 200.0,
-              "free": false
-            }
-          ]
-        }
-      ],
-      "tier": "Chain · Step-Over",
-      "family_id": "ride1up__prodigy-v2",
-      "price_from": 1895.0,
-      "regular_price": null,
-      "handle": "prodigy-v2--step-over",
-      "frame_style": "Step-Over"
-    },
-    {
-      "slug": "prodigy-v2",
-      "url": "https://ride1up.com/product/prodigy-v2/?attribute_pa_drive-train=belt-cvt&attribute_pa_frame-type=st-step-through",
-      "warranty": "1-Year Warranty",
-      "model": "PRODIGY V2 — Belt CVT",
-      "product_types": [
-        "Commuter / Urban"
-      ],
-      "price_range": {
-        "min": 1595.0,
-        "max": 2595.0,
-        "currency": "USD"
-      },
-      "configurations": [
-        {
-          "options": {
-            "frame-type": "ST - Step-Through",
-            "drive-train": "Belt CVT",
-            "color": "Onyx Black"
-          },
-          "price": 2495.0,
-          "sku": "PROV2-LS-BLK",
-          "image": "https://ride1up.com/wp-content/uploads/2023/09/Prodigy-V2_PROV2-LS-BLK-Profile-min.jpg",
-          "color": {
-            "name": "Onyx Black",
-            "hex": "#232323",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2023/09/Prodigy-V2_PROV2-LS-BLK-Profile-min.jpg"
-          }
-        },
-        {
-          "options": {
-            "frame-type": "ST - Step-Through",
-            "drive-train": "Belt CVT",
-            "color": "Sea Fog"
-          },
-          "price": 2595.0,
-          "sku": "PROV2-LS-WHI",
-          "image": "https://ride1up.com/wp-content/uploads/2023/09/Prodigy-V2_PROV2-LS-WHI-Profile-min.jpg",
-          "color": {
-            "name": "Sea Fog",
-            "hex": "#686f75",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2023/09/Prodigy-V2_PROV2-LS-WHI-Profile-min.jpg"
-          }
-        }
-      ],
-      "options": {
-        "frame-type": [
-          "ST - Step-Through",
-          "XR - Step-Over"
-        ],
-        "drive-train": [
-          "Belt CVT",
-          "Chain"
-        ],
-        "colors": [
-          {
-            "name": "Onyx Black",
-            "hex": "#232323",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2023/09/Prodigy-V2_PROV2-LS-BLK-Profile-min.jpg"
-          },
-          {
-            "name": "Sea Fog",
-            "hex": "#686f75",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2023/09/Prodigy-V2_PROV2-LS-WHI-Profile-min.jpg"
-          }
-        ]
-      },
-      "geometry": {
-        "Rider Height Range": "5'0\" - 6'0\"",
-        "Rider Height": "5'0\" - 6'0\""
-      },
-      "specs": {
-        "all": {
-          "Motor": "Brose TF Sprinter German made mid-drive motor with 90nm torque",
-          "Battery": "36V 14ah Phylion BN21, Samsung Cells, Smart BMS",
-          "Controller": "Brose Frame Integrated Controller",
-          "Display": "Brose Display Allround, 1.5\" Color Display",
-          "PAS Sensor": "Brose Integrated Torque Sensor",
-          "Brakes": "Tektro HD-M745 180mm Hydraulic",
-          "Tires": "Maxxis Rekon Race 27.5 x 2.25\"",
-          "Handlebars": "MTB: 45mm Rise, 9° Sweep 31.8mm Bars",
-          "Grips": "Ergonomic Rubber Locking Grips",
-          "Shifters LX/LS": "Enviolo Stepless Grip Twist Shifter",
-          "Shifters XR/ST": "microShift SL-M819 Advent Trigger Shifter",
-          "Gearing LX/LS": "60T Alloy Chainring",
-          "Gearing XR/ST": "48T Alloy Chainring",
-          "Cassette LX/LS": "Enviolo Trekking Continuous Variable Transmission Hub",
-          "Cassette XR/ST": "Shimano Alivio 9-Speed 11-34T",
-          "Derailleur XR/ST": "microSHIFT RD-M619M Advent 9-Speed",
-          "Drivetrain LX/LS": "CDX Gates Carbon Belt Drive",
-          "Drivetrain XR/ST": "KMC 9-Speed Mid-Drive Chain",
-          "Spokes": "13G Black Stainless Steel",
-          "Saddle": "Selle Royal Viento",
-          "Fork": "100mm Travel Air Fork Suspension",
-          "Seat Post": "Zoom 350mm x 31.6mm",
-          "Stem": "Brose 80mm Rise 25° 31.8mm Bar Clamp",
-          "Front Light": "XC-275 36V 80 Lux Front Light",
-          "Rear Light": "Commuter Glow 6V Rear Light",
-          "Rear Rack": "Custom 40lbs Cargo Rack",
-          "Additional": "Water Bottle Bosses and Chainstay Guard",
-          "PEDAL SENSOR": "Torque",
-          "FRAME": "300lb Rating",
-          "CLASS & SPEED": "Up to 28mph",
-          "DRIVETRAIN": "9-Speed or CVT",
-          "Speed": "Class 3 electric bike, with 28mph pedal assist",
-          "Range": "30-50 miles depending on rider weight, terrain, incline, level of assist, etc.",
-          "Comfort": "Frame geometry & components built for \"the most comfortable ride ever\"",
-          "Bike Weight": "CHAIN: 58lbs / CVT: 61lbs",
-          "Weight Capacity": "300lbs",
-          "Rider Height": "5'0\" - 6'0\""
-        }
-      },
-      "spec_count": 36,
-      "scrape_error": null,
-      "shipping": {
-        "cost": 0,
-        "free": true
-      },
-      "free_accessories": [],
-      "frame_sizes": [
-        {
-          "size": null,
-          "height_min": "5'0\"",
-          "height_max": "6'0\""
-        }
-      ],
-      "available_options": [
-        {
-          "group": "frame-type",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "ST - Step-Through",
-              "price": 1595.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "XR - Step-Over",
-              "price": 1895.0,
-              "price_delta": 300.0,
-              "free": false
-            }
-          ]
-        },
-        {
-          "group": "drive-train",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Belt CVT",
-              "price": 2495.0,
-              "price_delta": 900.0,
-              "free": false
-            },
-            {
-              "value": "Chain",
-              "price": 1595.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
-          "group": "color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Onyx Black",
-              "price": 1595.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Sea Fog",
-              "price": 1895.0,
-              "price_delta": 300.0,
-              "free": false
-            },
-            {
-              "value": "Faded Bronze",
-              "price": 1795.0,
-              "price_delta": 200.0,
-              "free": false
-            }
-          ]
-        }
-      ],
-      "handle": "prodigy-v2--belt-cvt",
-      "regular_price": null,
-      "tier": "Belt CVT",
-      "family_id": "ride1up__prodigy-v2",
-      "price_from": 2495.0,
-      "frame_style": "Step-Thru (Mid-Step)"
-    },
-    {
-      "slug": "roadster-v3",
-      "url": "https://ride1up.com/product/roadster-v3/?attribute_pa_frame-type=medium&attribute_pa_variant=belt",
-      "warranty": "1-Year Warranty",
-      "model": "ROADSTER V3",
-      "product_types": [
-        "Commuter / Urban"
-      ],
-      "price_range": {
-        "min": 1395.0,
-        "max": 1495.0,
-        "currency": "USD"
-      },
-      "configurations": [
-        {
-          "options": {
-            "frame-type": "Medium -",
-            "variant": "belt",
-            "color": "Mint"
-          },
-          "price": 1395.0,
-          "sku": "ROADSTERV3-GRN-MED-BLT",
-          "image": "https://ride1up.com/wp-content/uploads/2024/06/RoadsterV3-mint-belt-side-SM-jpg.webp",
-          "color": {
-            "name": "Mint",
-            "hex": "#c1dfd7",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2024/06/RoadsterV3-mint-belt-side-SM-jpg.webp"
-          }
-        }
-      ],
-      "options": {
-        "frame-type": [
-          "Low-Step -",
-          "Medium -",
-          "Large -"
-        ],
-        "variant": [
-          "Rigid",
-          "Suspension"
-        ],
-        "colors": [
-          {
-            "name": "Mint",
-            "hex": "#c1dfd7",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2024/06/RoadsterV3-mint-belt-side-SM-jpg.webp"
-          }
-        ]
-      },
-      "frame_sizes": [
-        {
-          "size": "Low-Step",
-          "height_min": "5'2\"",
-          "height_max": "5'11\""
-        },
-        {
-          "size": "Medium",
-          "height_min": "5'5\"",
-          "height_max": "5'9\""
-        },
-        {
-          "size": "Large",
-          "height_min": "5'9\"",
-          "height_max": "6'4\""
-        }
-      ],
-      "geometry": {
-        "Rider Height Range": {
-          "LS": "5'2\" - 5'11\"",
-          "MED": "5'5\" - 5'9\"",
-          "LG": "5'9\" - 6'4\""
-        },
-        "Bike Weight (gravel setup)": "Low-Step: 40 lbs | Medium: 40 lbs | Large: 40 lbs",
-        "Weight Capacity": "Low-Step: 300 lbs | Medium: 300 lbs | Large: 300 lbs",
-        "A - Maximum Seat Height": "Low-Step: 42.13in | Medium: 44.09in | Large: 46.46in",
-        "B - Minimum Seat Height": "Low-Step: 33.46in | Medium: 35.04in | Large: 37.4in",
-        "C - Stand-over Height": "Low-Step: 23.2in | Medium: 30.5in | Large: 31.5in",
-        "D - Wheelbase": "Low-Step: 42in | Medium: 42.75in | Large: 43.26in",
-        "E - Top Tube Length": "Low-Step: 21.88in | Medium: 22.71in | Large: 23.66in",
-        "F - Head Tube Length": "Low-Step: 6.29in | Medium: 6.69in | Large: 7.08in",
-        "G - Seat Tube Length": "Low-Step: 19.09in | Medium: 20.47in | Large: 23.83in",
-        "H - Chainstay Length": "Low-Step: 17.08in | Medium: 17.08in | Large: 17.08in",
-        "I - Fork Length": "Low-Step: 16.29in | Medium: 16.29in | Large: 16.29in",
-        "J - Head Tube Angle": "Low-Step: 71° | Medium: 71° | Large: 71°",
-        "K - Seat Tube Angle": "Low-Step: 73.5° | Medium: 73.5° | Large: 73.5°",
-        "L - Stack": "Low-Step: 23.26in | Medium: 23.66in | Large: 24.09in",
-        "M - Handlebar Reach": "Low-Step: 15.9in | Medium: 16.53in | Large: 17.08in",
-        "N - Total Length": "Low-Step: 70.87in | Medium: 72.05in | Large: 72.44in",
-        "O - Handlebar Height": "Low-Step: 39.37in | Medium: 40.16in | Large: 40.55in",
-        "Rider Height": "5'2\" - 6'4\""
-      },
-      "specs": {
-        "all": {
-          "Motor": "500W Angled gear quiet MIVICE hub motor with 50nm of torque",
-          "Battery": "36V, 10Ah (360Wh) Samsung 50GB, 21700 cells removable battery. TUV Certified to UL 2271",
-          "Controller": "36V 18A MIVICE controller - Water resistant",
-          "Display": "Two-tone, 1.3\" VeloFox tempered glass OLED display with integrated throttle",
-          "PAS Sensor": "Intui-Drive torque sensor Learn more.",
-          "Brakes": "Tektro HD-R285, 2-piston hydraulic brakes",
-          "Tires": "700x45c Schwalbe G-One RS OR 700x45c Continental Terra Trail",
-          "Fenders": "Front and rear 2.3\" metal alloy fenders",
-          "Handlebars": "Straight bars; 680mm width; 40mm rise; 31.8mm bar clamp; 10° sweep",
-          "Shifters": "microShift SL-M819 Advent trigger shifter",
-          "Gearing": "44T chainring",
-          "Cassette": "Microshift 11-36T cassette",
-          "Drivetrain": "9-speed high-torque chain",
-          "Derailleur": "microSHIFT Advent clutched 9-speed, RD-M6195M",
-          "Grips": "Ergonomic grips by Ergotec",
-          "Spokes": "Stainless steel 14G front/13G rear",
-          "Saddle": "Selle Royale Vivo",
-          "Seat Post": "31.6mm x 350mm seat post, dual bolt pivot clamp",
-          "Stem": "0-90 degree; 80mm extension; 31.8mm bar clamp hidden cable adjustable stem",
-          "Front Light": "120 lux front light",
-          "Rear Light": "Buchel 8 lux rear light",
-          "Additional": "Water bottle bosses and chainstay guard",
-          "PEDAL SENSOR": "Intui-Drive Torque",
-          "FRAME": "300lb Rating",
-          "CLASS & SPEED": "1-3 & 28mph",
-          "CERTIFIED TO": "ANSI/CAN/UL 2849",
-          "Speed": "Class 1-3 electric bike, with up to 28mph (chain) pedal assist",
-          "Range": "20-40 miles depending on rider weight, terrain, incline, level of assist, etc.",
-          "Bike Weight (gravel setup)": "40 lbs",
-          "Weight Capacity": "300 lbs",
-          "Rider Height": "5'2\" - 6'4\"",
-          "Rear Rack Max Load": "33 lbs"
-        }
-      },
-      "spec_count": 34,
-      "scrape_error": null,
-      "shipping": {
-        "cost": 0,
-        "free": true
-      },
-      "free_accessories": [],
-      "available_options": [
-        {
-          "group": "frame-type",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Large -",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Medium -",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Low-Step -",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
-          "group": "variant",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Suspension",
-              "price": 1495.0,
-              "price_delta": 100.0,
-              "free": false
-            },
-            {
-              "value": "belt",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Rigid",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
-          "group": "color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Onyx Black",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "white-gold",
-              "price": 1495.0,
-              "price_delta": 100.0,
-              "free": false
-            },
-            {
-              "value": "Mint",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        }
-      ],
-      "tier": "belt",
-      "family_id": "ride1up__roadster-v3",
-      "price_from": 1395.0,
-      "regular_price": null
-    },
-    {
-      "slug": "roadster-v3",
-      "url": "https://ride1up.com/product/roadster-v3/?attribute_pa_frame-type=large&attribute_pa_variant=rigid",
-      "warranty": "1-Year Warranty",
-      "model": "ROADSTER V3 — Rigid",
-      "product_types": [
-        "Commuter / Urban"
-      ],
-      "price_range": {
-        "min": 1395.0,
-        "max": 1495.0,
-        "currency": "USD"
-      },
-      "configurations": [
-        {
-          "options": {
-            "frame-type": "Large -",
-            "variant": "Rigid",
-            "color": "Onyx Black"
-          },
-          "price": 1395.0,
-          "sku": "RV3-BLK-LRG-CADJ",
-          "image": "https://ride1up.com/wp-content/uploads/2026/03/RV3-MedLrg_Blk--scaled.webp",
-          "color": {
-            "name": "Onyx Black",
-            "hex": "#232323",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2026/04/RV3_Sus_-MedLrg_Blk--scaled.webp"
-          }
-        },
-        {
-          "options": {
-            "frame-type": "Medium -",
-            "variant": "Rigid",
-            "color": "Onyx Black"
-          },
-          "price": 1395.0,
-          "sku": "RV3-BLK-MED-CADJ",
-          "image": "https://ride1up.com/wp-content/uploads/2026/03/RV3-MedLrg_Blk--scaled.webp",
-          "color": {
-            "name": "Onyx Black",
-            "hex": "#232323",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2026/04/RV3_Sus_-MedLrg_Blk--scaled.webp"
-          }
-        },
-        {
-          "options": {
-            "frame-type": "Low-Step -",
-            "variant": "Rigid",
-            "color": "Onyx Black"
-          },
-          "price": 1395.0,
-          "sku": "RV3-BLK-SML-CADJ",
-          "image": "https://ride1up.com/wp-content/uploads/2026/03/RV3-Lowstep_Blk-scaled.webp",
-          "color": {
-            "name": "Onyx Black",
-            "hex": "#232323",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2026/04/RV3_Sus_-MedLrg_Blk--scaled.webp"
-          }
-        },
-        {
-          "options": {
-            "frame-type": "Low-Step -",
-            "variant": "Rigid",
-            "color": "Mint"
-          },
-          "price": 1395.0,
-          "sku": "RV3-GRN-SML-CADJ",
-          "image": "https://ride1up.com/wp-content/uploads/2026/03/RV3-Lowstep_Grn-scaled.webp",
-          "color": {
-            "name": "Mint",
-            "hex": "#c1dfd7",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2024/06/RoadsterV3-mint-belt-side-SM-jpg.webp"
-          }
-        },
-        {
-          "options": {
-            "frame-type": "Medium -",
-            "variant": "Rigid",
-            "color": "Mint"
-          },
-          "price": 1395.0,
-          "sku": "RV3-GRN-MED-CADJ",
-          "image": "https://ride1up.com/wp-content/uploads/2026/03/RV3-MedLrg_Grn-scaled.webp",
-          "color": {
-            "name": "Mint",
-            "hex": "#c1dfd7",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2024/06/RoadsterV3-mint-belt-side-SM-jpg.webp"
-          }
-        },
-        {
-          "options": {
-            "frame-type": "Large -",
-            "variant": "Rigid",
-            "color": "Mint"
-          },
-          "price": 1395.0,
-          "sku": "RV3-GRN-LRG-CADJ",
-          "image": "https://ride1up.com/wp-content/uploads/2026/03/RV3-MedLrg_Grn-scaled.webp",
-          "color": {
-            "name": "Mint",
-            "hex": "#c1dfd7",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2024/06/RoadsterV3-mint-belt-side-SM-jpg.webp"
-          }
-        }
-      ],
-      "options": {
-        "frame-type": [
-          "Low-Step -",
-          "Medium -",
-          "Large -"
-        ],
-        "variant": [
-          "Rigid",
-          "Suspension"
-        ],
-        "colors": [
-          {
-            "name": "Onyx Black",
-            "hex": "#232323",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2026/04/RV3_Sus_-MedLrg_Blk--scaled.webp"
-          },
-          {
-            "name": "Mint",
-            "hex": "#c1dfd7",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2024/06/RoadsterV3-mint-belt-side-SM-jpg.webp"
-          }
-        ]
-      },
-      "frame_sizes": [
-        {
-          "size": "Low-Step",
-          "height_min": "5'2\"",
-          "height_max": "5'11\""
-        },
-        {
-          "size": "Medium",
-          "height_min": "5'5\"",
-          "height_max": "5'9\""
-        },
-        {
-          "size": "Large",
-          "height_min": "5'9\"",
-          "height_max": "6'4\""
-        }
-      ],
-      "geometry": {
-        "Rider Height Range": {
-          "LS": "5'2\" - 5'11\"",
-          "MED": "5'5\" - 5'9\"",
-          "LG": "5'9\" - 6'4\""
-        },
-        "Bike Weight (gravel setup)": "Low-Step: 40 lbs | Medium: 40 lbs | Large: 40 lbs",
-        "Weight Capacity": "Low-Step: 300 lbs | Medium: 300 lbs | Large: 300 lbs",
-        "A - Maximum Seat Height": "Low-Step: 42.13in | Medium: 44.09in | Large: 46.46in",
-        "B - Minimum Seat Height": "Low-Step: 33.46in | Medium: 35.04in | Large: 37.4in",
-        "C - Stand-over Height": "Low-Step: 23.2in | Medium: 30.5in | Large: 31.5in",
-        "D - Wheelbase": "Low-Step: 42in | Medium: 42.75in | Large: 43.26in",
-        "E - Top Tube Length": "Low-Step: 21.88in | Medium: 22.71in | Large: 23.66in",
-        "F - Head Tube Length": "Low-Step: 6.29in | Medium: 6.69in | Large: 7.08in",
-        "G - Seat Tube Length": "Low-Step: 19.09in | Medium: 20.47in | Large: 23.83in",
-        "H - Chainstay Length": "Low-Step: 17.08in | Medium: 17.08in | Large: 17.08in",
-        "I - Fork Length": "Low-Step: 16.29in | Medium: 16.29in | Large: 16.29in",
-        "J - Head Tube Angle": "Low-Step: 71° | Medium: 71° | Large: 71°",
-        "K - Seat Tube Angle": "Low-Step: 73.5° | Medium: 73.5° | Large: 73.5°",
-        "L - Stack": "Low-Step: 23.26in | Medium: 23.66in | Large: 24.09in",
-        "M - Handlebar Reach": "Low-Step: 15.9in | Medium: 16.53in | Large: 17.08in",
-        "N - Total Length": "Low-Step: 70.87in | Medium: 72.05in | Large: 72.44in",
-        "O - Handlebar Height": "Low-Step: 39.37in | Medium: 40.16in | Large: 40.55in",
-        "Rider Height": "5'2\" - 6'4\""
-      },
-      "specs": {
-        "all": {
-          "Motor": "500W Angled gear quiet MIVICE hub motor with 50nm of torque",
-          "Battery": "36V, 10Ah (360Wh) Samsung 50GB, 21700 cells removable battery. TUV Certified to UL 2271",
-          "Controller": "36V 18A MIVICE controller - Water resistant",
-          "Display": "Two-tone, 1.3\" VeloFox tempered glass OLED display with integrated throttle",
-          "PAS Sensor": "Intui-Drive torque sensor Learn more.",
-          "Brakes": "Tektro HD-R285, 2-piston hydraulic brakes",
-          "Tires": "700x45c Schwalbe G-One RS OR 700x45c Continental Terra Trail",
-          "Fenders": "Front and rear 2.3\" metal alloy fenders",
-          "Handlebars": "Straight bars; 680mm width; 40mm rise; 31.8mm bar clamp; 10° sweep",
-          "Shifters": "microShift SL-M819 Advent trigger shifter",
-          "Gearing": "44T chainring",
-          "Cassette": "Microshift 11-36T cassette",
-          "Drivetrain": "9-speed high-torque chain",
-          "Derailleur": "microSHIFT Advent clutched 9-speed, RD-M6195M",
-          "Grips": "Ergonomic grips by Ergotec",
-          "Spokes": "Stainless steel 14G front/13G rear",
-          "Saddle": "Selle Royale Vivo",
-          "Seat Post": "31.6mm x 350mm seat post, dual bolt pivot clamp",
-          "Stem": "0-90 degree; 80mm extension; 31.8mm bar clamp hidden cable adjustable stem",
-          "Front Light": "120 lux front light",
-          "Rear Light": "Buchel 8 lux rear light",
-          "Additional": "Water bottle bosses and chainstay guard",
-          "PEDAL SENSOR": "Intui-Drive Torque",
-          "FRAME": "300lb Rating",
-          "CLASS & SPEED": "1-3 & 28mph",
-          "CERTIFIED TO": "ANSI/CAN/UL 2849",
-          "Speed": "Class 1-3 electric bike, with up to 28mph (chain) pedal assist",
-          "Range": "20-40 miles depending on rider weight, terrain, incline, level of assist, etc.",
-          "Bike Weight (gravel setup)": "40 lbs",
-          "Weight Capacity": "300 lbs",
-          "Rider Height": "5'2\" - 6'4\"",
-          "Rear Rack Max Load": "33 lbs",
-          "Fork": "6061 aluminum hydroform, 100mm x 12mm thru-axle"
-        }
-      },
-      "spec_count": 34,
-      "scrape_error": null,
-      "shipping": {
-        "cost": 0,
-        "free": true
-      },
-      "free_accessories": [],
-      "available_options": [
-        {
-          "group": "frame-type",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Large -",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Medium -",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Low-Step -",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
-          "group": "variant",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Suspension",
-              "price": 1495.0,
-              "price_delta": 100.0,
-              "free": false
-            },
-            {
-              "value": "belt",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Rigid",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
-          "group": "color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Onyx Black",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "white-gold",
-              "price": 1495.0,
-              "price_delta": 100.0,
-              "free": false
-            },
-            {
-              "value": "Mint",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        }
-      ],
-      "handle": "roadster-v3--rigid",
-      "regular_price": null,
-      "tier": "Rigid",
-      "family_id": "ride1up__roadster-v3",
-      "price_from": 1395.0,
-      "frame_style": "Step-Thru (Mid-Step)"
-    },
-    {
-      "slug": "roadster-v3",
-      "url": "https://ride1up.com/product/roadster-v3/?attribute_pa_frame-type=large&attribute_pa_variant=suspension",
-      "warranty": "1-Year Warranty",
-      "model": "ROADSTER V3 — Suspension",
-      "product_types": [
-        "Commuter / Urban"
-      ],
-      "price_range": {
-        "min": 1395.0,
-        "max": 1495.0,
-        "currency": "USD"
-      },
-      "configurations": [
-        {
-          "options": {
-            "frame-type": "Large -",
-            "variant": "Suspension",
-            "color": "Onyx Black"
-          },
-          "price": 1495.0,
-          "sku": "RV3-BLK-LRG-SUS",
-          "image": "https://ride1up.com/wp-content/uploads/2026/04/RV3_Sus_-MedLrg_Blk--scaled.webp",
-          "color": {
-            "name": "Onyx Black",
-            "hex": "#232323",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2026/04/RV3_Sus_-MedLrg_Blk--scaled.webp"
-          }
-        },
-        {
-          "options": {
-            "frame-type": "Medium -",
-            "variant": "Suspension",
-            "color": "Onyx Black"
-          },
-          "price": 1495.0,
-          "sku": "RV3-BLK-MED-SUS",
-          "image": "https://ride1up.com/wp-content/uploads/2026/04/RV3_Sus_-MedLrg_Blk--scaled.webp",
-          "color": {
-            "name": "Onyx Black",
-            "hex": "#232323",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2026/04/RV3_Sus_-MedLrg_Blk--scaled.webp"
-          }
-        },
-        {
-          "options": {
-            "frame-type": "Low-Step -",
-            "variant": "Suspension",
-            "color": "Onyx Black"
-          },
-          "price": 1495.0,
-          "sku": "RV3-BLK-SML-SUS",
-          "image": "https://ride1up.com/wp-content/uploads/2026/04/RV3_Sus_-Lowstep_Blk-scaled.webp",
-          "color": {
-            "name": "Onyx Black",
-            "hex": "#232323",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2026/04/RV3_Sus_-MedLrg_Blk--scaled.webp"
-          }
-        },
-        {
-          "options": {
-            "frame-type": "Large -",
-            "variant": "Suspension",
-            "color": "white-gold"
-          },
-          "price": 1495.0,
-          "sku": "RV3-WHI-LRG-SUS",
-          "image": "https://ride1up.com/wp-content/uploads/2025/10/RoadsterV3-Lrg-Suspension-Side-scaled.webp",
-          "color": {
-            "name": "white-gold",
-            "hex": null,
-            "swatch_image": null,
-            "image": null
-          }
-        },
-        {
-          "options": {
-            "frame-type": "Medium -",
-            "variant": "Suspension",
-            "color": "white-gold"
-          },
-          "price": 1495.0,
-          "sku": "RV3-WHI-MED-SUS",
-          "image": "https://ride1up.com/wp-content/uploads/2025/10/RoadsterV3-Med-Suspension-Side-scaled.webp",
-          "color": {
-            "name": "white-gold",
-            "hex": null,
-            "swatch_image": null,
-            "image": null
-          }
-        },
-        {
-          "options": {
-            "frame-type": "Low-Step -",
-            "variant": "Suspension",
-            "color": "white-gold"
-          },
-          "price": 1495.0,
-          "sku": "RV3-WHI-SML-SUS",
-          "image": "https://ride1up.com/wp-content/uploads/2025/10/RoadsterV3-Lowstep-Suspension-Side-scaled.webp",
-          "color": {
-            "name": "white-gold",
-            "hex": null,
-            "swatch_image": null,
-            "image": null
-          }
-        }
-      ],
-      "options": {
-        "frame-type": [
-          "Low-Step -",
-          "Medium -",
-          "Large -"
-        ],
-        "variant": [
-          "Rigid",
-          "Suspension"
-        ],
-        "colors": [
-          {
-            "name": "Onyx Black",
-            "hex": "#232323",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2026/04/RV3_Sus_-MedLrg_Blk--scaled.webp"
-          },
-          {
-            "name": "white-gold",
-            "hex": null,
-            "swatch_image": null,
-            "image": null
-          }
-        ]
-      },
-      "frame_sizes": [
-        {
-          "size": "Low-Step",
-          "height_min": "5'2\"",
-          "height_max": "5'11\""
-        },
-        {
-          "size": "Medium",
-          "height_min": "5'5\"",
-          "height_max": "5'9\""
-        },
-        {
-          "size": "Large",
-          "height_min": "5'9\"",
-          "height_max": "6'4\""
-        }
-      ],
-      "geometry": {
-        "Rider Height Range": {
-          "LS": "5'2\" - 5'11\"",
-          "MED": "5'5\" - 5'9\"",
-          "LG": "5'9\" - 6'4\""
-        },
-        "Bike Weight (gravel setup)": "Low-Step: 40 lbs | Medium: 40 lbs | Large: 40 lbs",
-        "Weight Capacity": "Low-Step: 300 lbs | Medium: 300 lbs | Large: 300 lbs",
-        "A - Maximum Seat Height": "Low-Step: 42.13in | Medium: 44.09in | Large: 46.46in",
-        "B - Minimum Seat Height": "Low-Step: 33.46in | Medium: 35.04in | Large: 37.4in",
-        "C - Stand-over Height": "Low-Step: 23.2in | Medium: 30.5in | Large: 31.5in",
-        "D - Wheelbase": "Low-Step: 42in | Medium: 42.75in | Large: 43.26in",
-        "E - Top Tube Length": "Low-Step: 21.88in | Medium: 22.71in | Large: 23.66in",
-        "F - Head Tube Length": "Low-Step: 6.29in | Medium: 6.69in | Large: 7.08in",
-        "G - Seat Tube Length": "Low-Step: 19.09in | Medium: 20.47in | Large: 23.83in",
-        "H - Chainstay Length": "Low-Step: 17.08in | Medium: 17.08in | Large: 17.08in",
-        "I - Fork Length": "Low-Step: 16.29in | Medium: 16.29in | Large: 16.29in",
-        "J - Head Tube Angle": "Low-Step: 71° | Medium: 71° | Large: 71°",
-        "K - Seat Tube Angle": "Low-Step: 73.5° | Medium: 73.5° | Large: 73.5°",
-        "L - Stack": "Low-Step: 23.26in | Medium: 23.66in | Large: 24.09in",
-        "M - Handlebar Reach": "Low-Step: 15.9in | Medium: 16.53in | Large: 17.08in",
-        "N - Total Length": "Low-Step: 70.87in | Medium: 72.05in | Large: 72.44in",
-        "O - Handlebar Height": "Low-Step: 39.37in | Medium: 40.16in | Large: 40.55in",
-        "Rider Height": "5'2\" - 6'4\""
-      },
-      "specs": {
-        "all": {
-          "Motor": "500W Angled gear quiet MIVICE hub motor with 50nm of torque",
-          "Battery": "36V, 10Ah (360Wh) Samsung 50GB, 21700 cells removable battery. TUV Certified to UL 2271",
-          "Controller": "36V 18A MIVICE controller - Water resistant",
-          "Display": "Two-tone, 1.3\" VeloFox tempered glass OLED display with integrated throttle",
-          "PAS Sensor": "Intui-Drive torque sensor Learn more.",
-          "Brakes": "Tektro HD-R285, 2-piston hydraulic brakes",
-          "Tires": "700x45c Continental Terra Trail",
-          "Fenders": "Front and rear 2.3\" metal alloy fenders",
-          "Handlebars": "Straight bars; 680mm width; 40mm rise; 31.8mm bar clamp; 10° sweep",
-          "Shifters": "microShift SL-M819 Advent trigger shifter",
-          "Gearing": "44T chainring",
-          "Cassette": "Microshift 11-36T cassette",
-          "Drivetrain": "9-speed high-torque chain",
-          "Derailleur": "microSHIFT Advent clutched 9-speed, RD-M6195M",
-          "Grips": "Ergonomic grips by Ergotec",
-          "Spokes": "Stainless steel 14G front/13G rear",
-          "Saddle": "Selle Royale Vivo",
-          "Seat Post": "31.6mm x 350mm seat post, dual bolt pivot clamp",
-          "Stem": "0-90 degree; 80mm extension; 31.8mm bar clamp hidden cable adjustable stem",
-          "Front Light": "120 lux front light",
-          "Rear Light": "Buchel 8 lux rear light",
-          "Additional": "Water bottle bosses and chainstay guard",
-          "PEDAL SENSOR": "Intui-Drive Torque",
-          "FRAME": "300lb Rating",
-          "CLASS & SPEED": "1-3 & 28mph",
-          "CERTIFIED TO": "ANSI/CAN/UL 2849",
-          "Speed": "Class 1-3 electric bike, with up to 28mph (chain) pedal assist",
-          "Range": "20-40 miles depending on rider weight, terrain, incline, level of assist, etc.",
-          "Bike Weight (gravel setup)": "40 lbs",
-          "Weight Capacity": "300 lbs",
-          "Rider Height": "5'2\" - 6'4\"",
-          "Rear Rack Max Load": "33 lbs",
-          "Fork": "Trama 35mm travel gravel air suspension fork, 100mm x 12mm thru-axle"
-        }
-      },
-      "spec_count": 34,
-      "scrape_error": null,
-      "shipping": {
-        "cost": 0,
-        "free": true
-      },
-      "free_accessories": [],
-      "available_options": [
-        {
-          "group": "frame-type",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Large -",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Medium -",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Low-Step -",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
-          "group": "variant",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Suspension",
-              "price": 1495.0,
-              "price_delta": 100.0,
-              "free": false
-            },
-            {
-              "value": "belt",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Rigid",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
-          "group": "color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Onyx Black",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "white-gold",
-              "price": 1495.0,
-              "price_delta": 100.0,
-              "free": false
-            },
-            {
-              "value": "Mint",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        }
-      ],
-      "handle": "roadster-v3--suspension",
-      "regular_price": null,
-      "tier": "Suspension",
-      "family_id": "ride1up__roadster-v3",
-      "price_from": 1495.0,
-      "frame_style": "Step-Thru (Mid-Step)"
     },
     {
       "slug": "revv-1-drt",
@@ -2384,17 +905,16 @@
           "Rear light": "StarUnion Brake Light",
           "Seat": "Customized cafe style saddle",
           "Pedals": "Alloy Black Pedals",
-          "SPEED": "28 mph (+)",
-          "RANGE": "30-60 miles depending on battery, rider weight, terrain, incline, level of assist, etc.",
-          "FORKS": "Full Suspension",
           "TUV ANSI/CAN/UL 2849": "TUV ANSI/CAN/UL 2849 & 2271 Compliant: passed rigorous product safety testing for hazard prevention",
+          "Speed": "28+ MPH* on throttle & pedal assist. Additional class modes & speeds.",
+          "Range": "30-60 miles depending on battery, rider weight, terrain, incline, level of assist, etc.",
           "Frame": "Durable Alloy Frame with internal protected & locked electronics",
           "Bike Weight": "91lbs",
           "Weight Capacity": "350lbs",
           "Rider Height": "5'3\" - 6'4\""
         }
       },
-      "spec_count": 29,
+      "spec_count": 28,
       "scrape_error": null,
       "shipping": {
         "cost": 0,
@@ -2768,7 +1288,7 @@
           "image": "https://ride1up.com/wp-content/uploads/2023/01/Revv1_HT_Moss_Profile-NEW-min.jpg",
           "color": {
             "name": "Moss Green",
-            "hex": "#1e4d14",
+            "hex": "#f1f1f1",
             "swatch_image": null,
             "image": "https://ride1up.com/wp-content/uploads/2023/01/Revv1_HT_Moss_Profile-NEW-min.jpg"
           }
@@ -2783,7 +1303,7 @@
           "image": "https://ride1up.com/wp-content/uploads/2023/01/Revv1_HT_Gray_Profile-NEW-min.jpg",
           "color": {
             "name": "Graphite Gray",
-            "hex": "#9a9e9a",
+            "hex": "#f1f1f1",
             "swatch_image": null,
             "image": "https://ride1up.com/wp-content/uploads/2023/01/Revv1_HT_Gray_Profile-NEW-min.jpg"
           }
@@ -2796,13 +1316,13 @@
         "colors": [
           {
             "name": "Moss Green",
-            "hex": "#1e4d14",
+            "hex": "#f1f1f1",
             "swatch_image": null,
             "image": "https://ride1up.com/wp-content/uploads/2023/01/Revv1_HT_Moss_Profile-NEW-min.jpg"
           },
           {
             "name": "Graphite Gray",
-            "hex": "#9a9e9a",
+            "hex": "#f1f1f1",
             "swatch_image": null,
             "image": "https://ride1up.com/wp-content/uploads/2023/01/Revv1_HT_Gray_Profile-NEW-min.jpg"
           }
@@ -2848,8 +1368,8 @@
           "Rear light": "StarUnion Brake Light",
           "Seat": "Customized cafe style saddle",
           "Pedals": "Alloy Black Pedals",
-          "SPEED": "28 mph (+)",
-          "RANGE": "30-60 miles depending on battery, rider weight, terrain, incline, level of assist, etc.",
+          "Speed": "28 mph (+)",
+          "Range": "30-60 miles depending on battery, rider weight, terrain, incline, level of assist, etc.",
           "UL-Compliant": "UL 2849 & 2271 Compliant: passed rigorous product safety testing for hazard prevention",
           "Frame": "Durable Alloy Frame with internal protected & locked electronics",
           "Bike Weight": "83lbs",
@@ -2886,2406 +1406,147 @@
       ]
     },
     {
-      "slug": "trailrush",
-      "url": "https://ride1up.com/product/trailrush/",
-      "warranty": "1-Year Warranty",
-      "model": "TRAILRUSH",
-      "product_types": [
-        "Commuter / Urban"
-      ],
+      "slug": "prodigy-v2",
+      "url": "https://ride1up.com/product/prodigy-v2/",
+      "model": "prodigy-v2",
       "price_range": {
-        "min": 1995.0,
-        "max": 2095.0,
+        "min": null,
+        "max": null,
         "currency": "USD"
       },
-      "configurations": [
-        {
-          "options": {
-            "frame-type": "Medium -",
-            "color": "Galaxy Gray"
-          },
-          "price": 1995.0,
-          "sku": "TRAILRUSH-MED-GRY",
-          "image": "https://ride1up.com/wp-content/uploads/2025/06/black-M-1-scaled.webp",
-          "color": {
-            "name": "Galaxy Gray",
-            "hex": "#2f2b35",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2025/06/black-M-1-scaled.webp"
-          }
-        },
-        {
-          "options": {
-            "frame-type": "Large -",
-            "color": "Galaxy Gray"
-          },
-          "price": 1995.0,
-          "sku": "TRAILRUSH-LRG-GRY",
-          "image": "https://ride1up.com/wp-content/uploads/2025/06/black-M-1-scaled.webp",
-          "color": {
-            "name": "Galaxy Gray",
-            "hex": "#2f2b35",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2025/06/black-M-1-scaled.webp"
-          }
-        },
-        {
-          "options": {
-            "frame-type": "Medium -",
-            "color": "Cobalt"
-          },
-          "price": 1995.0,
-          "sku": "TRAILRUSH-MED-BLU",
-          "image": "https://ride1up.com/wp-content/uploads/2025/06/blue-M-1-scaled.webp",
-          "color": {
-            "name": "Cobalt",
-            "hex": "#3e6479",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2025/06/blue-M-1-scaled.webp"
-          }
-        },
-        {
-          "options": {
-            "frame-type": "Large -",
-            "color": "Cobalt"
-          },
-          "price": 2095.0,
-          "sku": "TRAILRUSH-LRG-BLU",
-          "image": "https://ride1up.com/wp-content/uploads/2025/06/blue-M-1-scaled.webp",
-          "color": {
-            "name": "Cobalt",
-            "hex": "#3e6479",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2025/06/blue-M-1-scaled.webp"
-          }
-        },
-        {
-          "options": {
-            "frame-type": "Medium -",
-            "color": "Burnt Sunset"
-          },
-          "price": 1995.0,
-          "sku": "TRAILRUSH-MED-ORG",
-          "image": "https://ride1up.com/wp-content/uploads/2025/06/orange-M-1-scaled.webp",
-          "color": {
-            "name": "Burnt Sunset",
-            "hex": "#582804",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2025/06/orange-M-1-scaled.webp"
-          }
-        },
-        {
-          "options": {
-            "frame-type": "Large -",
-            "color": "Burnt Sunset"
-          },
-          "price": 1995.0,
-          "sku": "TRAILRUSH-LRG-ORG",
-          "image": "https://ride1up.com/wp-content/uploads/2025/06/orange-M-1-scaled.webp",
-          "color": {
-            "name": "Burnt Sunset",
-            "hex": "#582804",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2025/06/orange-M-1-scaled.webp"
-          }
-        }
-      ],
       "options": {
-        "frame-type": [
-          "Medium -",
-          "Large -"
-        ],
-        "colors": [
-          {
-            "name": "Burnt Sunset",
-            "hex": "#582804",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2025/06/orange-M-1-scaled.webp"
-          },
-          {
-            "name": "Cobalt",
-            "hex": "#3e6479",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2025/06/blue-M-1-scaled.webp"
-          },
-          {
-            "name": "Galaxy Gray",
-            "hex": "#2f2b35",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2025/06/black-M-1-scaled.webp"
-          }
-        ]
-      },
-      "frame_sizes": [
-        {
-          "size": "Medium",
-          "height_min": "5'5\"",
-          "height_max": "5'10\""
-        },
-        {
-          "size": "Large",
-          "height_min": "5'10\"",
-          "height_max": "6'4\""
-        }
-      ],
-      "geometry": {
-        "Bike Weight": {
-          "Large": "58 lbs",
-          "Medium": "57 lbs"
-        },
-        "Weight Capacity": {
-          "Large": "350 lbs",
-          "Medium": "350 lbs"
-        },
-        "Rider Height range": {
-          "Large": "5'10\"-6'4\"",
-          "Medium": "5'5\"-5'10\""
-        },
-        "A - Maximum Seat Height": {
-          "Large": "40.9in",
-          "Medium": "39.8in"
-        },
-        "B - Minimum Seat Height": {
-          "Large": "35in",
-          "Medium": "33.9in"
-        },
-        "C - Stand-over Height": {
-          "Large": "32.3in",
-          "Medium": "31.5in"
-        },
-        "D - Wheelbase": {
-          "Large": "49.1in",
-          "Medium": "47.9in"
-        },
-        "E - Top Tube Length": {
-          "Large": "24.7in",
-          "Medium": "23.6in"
-        },
-        "F - Head Tube Length": {
-          "Large": "5.1in",
-          "Medium": "4.7in"
-        },
-        "G - Seat Tube Length": {
-          "Large": "18.9in",
-          "Medium": "17.7in"
-        },
-        "H - Chainstay Length": {
-          "Large": "18.5in",
-          "Medium": "18.5in"
-        },
-        "I - Fork Length": {
-          "Large": "21.3in",
-          "Medium": "21.3in"
-        },
-        "J - Head Tube Angle": {
-          "Large": "66.5°",
-          "Medium": "66.5°"
-        },
-        "K - Seat Tube Angle": {
-          "Large": "74.5°",
-          "Medium": "74.5°"
-        },
-        "L - Stack": {
-          "Large": "25.9in",
-          "Medium": "25.5in"
-        },
-        "M - Handlebar Reach": {
-          "Large": "18.8in",
-          "Medium": "17.75in"
-        },
-        "N - Total Length": {
-          "Large": "79.1in",
-          "Medium": "77.9in"
-        },
-        "O - Handlebar Height": {
-          "Large": "42.07in",
-          "Medium": "41.8in"
-        },
-        "Rider Height": "5'5\" - 6'4\""
+        "colors": []
       },
       "specs": {
         "all": {
-          "Motor": "Brose TF Sprinter German made mid-drive motor with 90nm torque",
-          "Battery": "36V 14Ah Phylion BN21, Samsung Cells with smart BMS",
-          "Controller": "Brose Frame Integrated Controller",
-          "Display": "Brose Display Allround, 1.5\" Color",
-          "PAS Sensor": "Brose Integrated Torque Sensor",
-          "Fork": "120mm Rockshox Judy Silver TK Air Fork; Hydraulic Lockout, Adjustable Rebound",
-          "Dropper Post": "150mm Exaform KSP900; 31.6mm Seatpost Diameter",
-          "Brakes": "Tektro Orion HD-M745 Quad-Piston Brakes",
-          "Tires": "Maxxis Minion Tubeless Ready DHF/DHR 29\"x2.6\"",
-          "Rims": "Double-walled Aluminum (requires tape and valve for tubeless conversion)",
-          "Handlebars": "780mm Width, 28mm Rise, 6° Sweep",
-          "Grips": "Velo Silica Gel Ergonomic Grips",
-          "Shifters": "Shimano Deore SL-M6000-R Rapidfire Plus",
-          "Gearing": "38T Alloy Chainring",
-          "Cassette": "Shimano HG500-10 11-36T",
-          "Derailleur": "Shimano 10-Speed Deore M6000",
-          "Chain": "KMC e10 Mid-Drive Chain",
-          "Spokes": "Black Stainless Steel, 13G",
-          "Saddle": "Selle Royal SRX",
-          "Stem": "Toothless 0° Bore, 45mm Rise, 35mm Bar Clamp",
-          "Additional": "Water Bottle Bosses and Chainstay Guard",
-          "SPEED": "Up to 28mph",
-          "RANGE": "30-50 miles (504Wh)",
-          "FORKS": "120mm Judy TK Silver",
-          "PEDAL ASSIST": "Torque Sensor",
-          "Frame": "Lightweight Alloy Frame with internal protected & locked electronics",
-          "Bike Weight": "LARGE: 58 lbs / MED: 57 lbs",
-          "Weight Capacity": "350 lbs",
-          "Rider Height": "5'5\" - 6'4\""
+          "Rider Height": "5'0\" - 6'0\""
         }
       },
-      "spec_count": 29,
-      "scrape_error": null,
+      "configurations": [],
+      "spec_count": 0,
+      "warranty": "1-Year Warranty",
+      "scrape_error": "TimeoutError: Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\".component-text\")\n    - waiting for\" https://ride1up.com/product/prodigy-v2/\" navigation to finish...\n    - navigated to \"https://ride1up.com/product/prodigy-v2/\"\n",
       "shipping": {
         "cost": 0,
         "free": true
       },
       "free_accessories": [],
-      "available_options": [
+      "frame_sizes": [
         {
-          "group": "frame-type",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Medium -",
-              "price": 1995.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Large -",
-              "price": 1995.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
+          "size": null,
+          "height_min": "5'0\"",
+          "height_max": "6'0\""
         }
-      ]
+      ],
+      "geometry": {
+        "Rider Height": "5'0\" - 6'0\""
+      },
+      "available_options": []
+    },
+    {
+      "slug": "roadster-v3",
+      "url": "https://ride1up.com/product/roadster-v3/",
+      "model": "roadster-v3",
+      "price_range": {
+        "min": null,
+        "max": null,
+        "currency": "USD"
+      },
+      "options": {
+        "colors": []
+      },
+      "specs": {
+        "all": {
+          "Rear Rack Max Load": "33 lbs",
+          "Rider Height": "5'2\" - 5'11\""
+        }
+      },
+      "configurations": [],
+      "spec_count": 0,
+      "warranty": "1-Year Warranty",
+      "scrape_error": "TimeoutError: Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\".component-text\")\n",
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": [],
+      "frame_sizes": [
+        {
+          "size": null,
+          "height_min": "5'2\"",
+          "height_max": "5'11\""
+        }
+      ],
+      "geometry": {
+        "Rider Height": "5'2\" - 5'11\""
+      },
+      "available_options": []
+    },
+    {
+      "slug": "trailrush",
+      "url": "https://ride1up.com/product/trailrush/",
+      "model": "trailrush",
+      "price_range": {
+        "min": null,
+        "max": null,
+        "currency": "USD"
+      },
+      "options": {
+        "colors": []
+      },
+      "specs": {
+        "all": {}
+      },
+      "configurations": [],
+      "spec_count": 0,
+      "warranty": "1-Year Warranty",
+      "scrape_error": "TimeoutError: Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\".component-text\")\n",
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": [],
+      "geometry": {},
+      "available_options": []
     },
     {
       "slug": "vorsa",
-      "url": "https://ride1up.com/product/vorsa/?attribute_pa_bike-type=lite&attribute_pa_frame2=xr",
-      "warranty": "1-Year Warranty",
-      "model": "VORSA — Lite · Step-Over",
-      "product_types": [
-        "Commuter / Urban"
-      ],
+      "url": "https://ride1up.com/product/vorsa/",
+      "model": "vorsa",
       "price_range": {
-        "min": 1395.0,
-        "max": 1695.0,
+        "min": null,
+        "max": null,
         "currency": "USD"
       },
-      "configurations": [
-        {
-          "options": {
-            "bike_type": "Lite",
-            "frame2": "XR",
-            "color": "Glacier"
-          },
-          "price": 1395.0,
-          "sku": "VORSA-LX-BLU",
-          "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-Lite-Glacier-XR-scaled.webp",
-          "color": {
-            "name": "Glacier",
-            "hex": "#295da9",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-Lite-Glacier-ST-scaled.webp"
-          }
-        },
-        {
-          "options": {
-            "bike_type": "Lite",
-            "frame2": "XR",
-            "color": "Slate"
-          },
-          "price": 1395.0,
-          "sku": "VORSA-LX-GRY",
-          "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-Lite-Slate-XR-scaled.webp",
-          "color": {
-            "name": "Slate",
-            "hex": "#474946",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-Lite-Slate-ST-scaled.webp"
-          }
-        },
-        {
-          "options": {
-            "bike_type": "Lite",
-            "frame2": "XR",
-            "color": "snow"
-          },
-          "price": 1395.0,
-          "sku": "VORSA-LX-WHI",
-          "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-Lite-White-XR-scaled.webp",
-          "color": {
-            "name": "snow",
-            "hex": null,
-            "swatch_image": null,
-            "image": null
-          }
-        }
-      ],
       "options": {
-        "bike_type": [
-          "Lite",
-          "Vorsa",
-          "FT"
-        ],
-        "frame2": [
-          "ST",
-          "XR"
-        ],
-        "colors": [
-          {
-            "name": "Glacier",
-            "hex": "#295da9",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-Lite-Glacier-ST-scaled.webp"
-          },
-          {
-            "name": "Slate",
-            "hex": "#474946",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-Lite-Slate-ST-scaled.webp"
-          },
-          {
-            "name": "snow",
-            "hex": null,
-            "swatch_image": null,
-            "image": null
-          }
-        ]
+        "colors": []
       },
+      "specs": {
+        "all": {
+          "Rear Rack Max Load": "60 lbs",
+          "Rider Height": "5'5\" - 6'4\""
+        }
+      },
+      "configurations": [],
+      "spec_count": 0,
+      "warranty": "1-Year Warranty",
+      "scrape_error": "TimeoutError: Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\".component-text\")\n",
+      "shipping": {
+        "cost": 0,
+        "free": true
+      },
+      "free_accessories": [],
       "frame_sizes": [
         {
-          "size": "St",
-          "height_min": "5'1\"",
-          "height_max": "5'11\""
-        },
-        {
-          "size": "Xr",
+          "size": null,
           "height_min": "5'5\"",
           "height_max": "6'4\""
         }
       ],
       "geometry": {
-        "Rider Height Range": {
-          "XR": "5'5\" - 6'4\"",
-          "ST": "5'1\" - 5'11\""
-        },
-        "Weight (w/out add-ons)": {
-          "Xr": "72 lbs",
-          "St": "72 lbs"
-        },
-        "Weight (with add-ons)": {
-          "Xr": "77 lbs",
-          "St": "77 lbs"
-        },
-        "Weight Capacity": {
-          "Xr": "440 lbs",
-          "St": "440 lbs"
-        },
-        "A - Maximum Seat Height": {
-          "Xr": "40.7in",
-          "St": "38.9in"
-        },
-        "B - Minimum Seat Height": {
-          "Xr": "31.37in",
-          "St": "27.5in"
-        },
-        "C - Stand-over Height": {
-          "Xr": "29.21in",
-          "St": "18.66in"
-        },
-        "D - Wheelbase": {
-          "Xr": "43.5in",
-          "St": "43.6in"
-        },
-        "E - Top Tube Length": {
-          "Xr": "23.8in",
-          "St": "23.7in"
-        },
-        "F - Head Tube Length": {
-          "Xr": "5.5in",
-          "St": "5.5in"
-        },
-        "G - Seat Tube Length": {
-          "Xr": "18.7in",
-          "St": "16.7in"
-        },
-        "H - Chainstay Length": {
-          "Xr": "17.7in",
-          "St": "17.7in"
-        },
-        "I - Fork Length": {
-          "Xr": "19.8in",
-          "St": "19.8in"
-        },
-        "J - Head Tube Angle": {
-          "Xr": "68°",
-          "St": "68°"
-        },
-        "K - Seat Tube Angle": {
-          "Xr": "69°",
-          "St": "69°"
-        },
-        "L - Stack": {
-          "Xr": "25.6in",
-          "St": "25.4in"
-        },
-        "M - Handlebar Reach": {
-          "Xr": "14.9in",
-          "St": "14.8in"
-        },
-        "N - Total Length": {
-          "Xr": "71.7in",
-          "St": "71.8in"
-        },
-        "O - Handlebar Height": {
-          "Xr": "42.9in",
-          "St": "41.4in"
-        },
-        "Rider Height": "5'1\" - 6'4\""
+        "Rider Height": "5'5\" - 6'4\""
       },
-      "specs": {
-        "all": {
-          "Motor": "750W AKM hub motor with 95nm of torque - our strongest hill-climbing motor",
-          "Battery": "15Ah Reention Flamingo with Samsung 50GB cells, 21700 cell formation with Precise CanBus protocol SOC. IPX6 TUV Certified to UL 2271",
-          "Controller": "48V 25A water resistant resin potted 12 Mosfet MIVICE controller",
-          "Display": "Ride1Up 'most customizable PAS' color display with iOS FindMy tracking and USB-C accessory charging",
-          "PAS Sensor": "Ride1Up Intui-Drive torque + R1CBC cadence sensor combo powered by MIVICE Learn more.",
-          "Brakes": "Star Union hydraulic disc brakes with electric motor cutoff; 203mm R, 180mm F rotors",
-          "Tires": "Schwalbe Sam Smart 27.5\" x 2.6\" (65-584)",
-          "Fenders": "Front and rear 2.8\" metal alloy fenders",
-          "Handlebars": "Riser bars; 680mm width; 30mm rise; 31.8mm bar clamp; 10° sweep",
-          "Shifters": "Shimano Acera 8-speed trigger shifter",
-          "Gearing": "48T chainring for higher speeds",
-          "Cassette": "Shimano Acera 11-32T",
-          "Drivetrain": "KMC E8 8-speed chain",
-          "Derailleur": "Shimano Acera 8-speed",
-          "Rear Rack": "150lb rated semi-integrated modular rack",
-          "Grips": "VELO ergonomic silicone grips",
-          "Throttle": "Left-side thumb throttle",
-          "Spokes": "Stainless steel 13G front/12G rear",
-          "Saddle": "VELO saddle",
-          "Fork": "100mm coil spring suspension thru-axle fork with hydraulic lockout",
-          "Seat Post": "31.6mm x 350mm dual-bolt adjustable angle seat post",
-          "Stem": "Sleek 0-60 degree adjustable angle 90mm extension 31.8mm bar clamp stem with 2nd secure point for stability",
-          "Front Light": "100 lux stem-integrated front light",
-          "Rear Light": "Fender-integrated braking light",
-          "Additional": "Front rack bosses + dual bottle cage bosses and rubber chainstay guard",
-          "PEDAL SENSOR": "Torque + Cadence",
-          "FRAME": "440lb Rating (Vorsa/FT)",
-          "CLASS & SPEED": "1-3 & 28mph",
-          "CERTIFIED TO": "ANSI/CAN/UL 2849",
-          "RANGE": "30-60 miles depending on rider weight, terrain, incline, level of assist, etc.",
-          "Speed": "Class 1-3 electric bike, with up to 28mph speeds",
-          "Weight (w/out add-ons)": "65 lbs",
-          "Weight (with add-ons)": "70 lbs",
-          "Weight Capacity": "440 lbs",
-          "Weight": "61 lbs",
-          "Rider Height": "5'1\" - 6'4\"",
-          "Rear Rack Max Load": "60 lbs"
-        }
-      },
-      "spec_count": 36,
-      "scrape_error": null,
-      "shipping": {
-        "cost": 0,
-        "free": true
-      },
-      "free_accessories": [
-        {
-          "name": "Rear Rack",
-          "price": 0,
-          "free": true,
-          "detail": "150lb rated semi-integrated modular rack"
-        },
-        {
-          "name": "Front Light",
-          "price": 0,
-          "free": true,
-          "detail": "100 lux stem-integrated front light"
-        },
-        {
-          "name": "Rear Light",
-          "price": 0,
-          "free": true,
-          "detail": "Fender-integrated braking light"
-        }
-      ],
-      "available_options": [
-        {
-          "group": "bike_type",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Lite",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "FT",
-              "price": 1695.0,
-              "price_delta": 300.0,
-              "free": false
-            },
-            {
-              "value": "Vorsa",
-              "price": 1495.0,
-              "price_delta": 100.0,
-              "free": false
-            }
-          ]
-        },
-        {
-          "group": "frame2",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "ST",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "XR",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
-          "group": "color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Glacier",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Slate",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "snow",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Sage",
-              "price": 1495.0,
-              "price_delta": 100.0,
-              "free": false
-            }
-          ]
-        },
-        {
-          "group": "Included accessories",
-          "type": "accessory",
-          "choices": [
-            {
-              "value": "Rear Rack",
-              "price": 0,
-              "free": true
-            },
-            {
-              "value": "Front Light",
-              "price": 0,
-              "free": true
-            },
-            {
-              "value": "Rear Light",
-              "price": 0,
-              "free": true
-            }
-          ]
-        }
-      ],
-      "tier": "Lite · Step-Over",
-      "family_id": "ride1up__vorsa",
-      "price_from": 1395.0,
-      "regular_price": null,
-      "frame_style": "Step-Over"
-    },
-    {
-      "slug": "vorsa",
-      "url": "https://ride1up.com/product/vorsa/?attribute_pa_bike-type=lite&attribute_pa_frame2=st",
-      "warranty": "1-Year Warranty",
-      "model": "VORSA — Lite · Step-Thru",
-      "product_types": [
-        "Commuter / Urban"
-      ],
-      "price_range": {
-        "min": 1395.0,
-        "max": 1695.0,
-        "currency": "USD"
-      },
-      "configurations": [
-        {
-          "options": {
-            "bike_type": "Lite",
-            "frame2": "ST",
-            "color": "Glacier"
-          },
-          "price": 1395.0,
-          "sku": "VORSA-LS-BLU",
-          "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-Lite-Glacier-ST-scaled.webp",
-          "color": {
-            "name": "Glacier",
-            "hex": "#295da9",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-Lite-Glacier-ST-scaled.webp"
-          }
-        },
-        {
-          "options": {
-            "bike_type": "Lite",
-            "frame2": "ST",
-            "color": "Slate"
-          },
-          "price": 1395.0,
-          "sku": "VORSA-LS-GRY",
-          "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-Lite-Slate-ST-scaled.webp",
-          "color": {
-            "name": "Slate",
-            "hex": "#474946",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-Lite-Slate-ST-scaled.webp"
-          }
-        },
-        {
-          "options": {
-            "bike_type": "Lite",
-            "frame2": "ST",
-            "color": "snow"
-          },
-          "price": 1395.0,
-          "sku": "VORSA-LS-WHI",
-          "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-Lite-White-ST-scaled.webp",
-          "color": {
-            "name": "snow",
-            "hex": null,
-            "swatch_image": null,
-            "image": null
-          }
-        }
-      ],
-      "options": {
-        "bike_type": [
-          "Lite",
-          "Vorsa",
-          "FT"
-        ],
-        "frame2": [
-          "ST",
-          "XR"
-        ],
-        "colors": [
-          {
-            "name": "Glacier",
-            "hex": "#295da9",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-Lite-Glacier-ST-scaled.webp"
-          },
-          {
-            "name": "Slate",
-            "hex": "#474946",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-Lite-Slate-ST-scaled.webp"
-          },
-          {
-            "name": "snow",
-            "hex": null,
-            "swatch_image": null,
-            "image": null
-          }
-        ]
-      },
-      "frame_sizes": [
-        {
-          "size": "St",
-          "height_min": "5'1\"",
-          "height_max": "5'11\""
-        },
-        {
-          "size": "Xr",
-          "height_min": "5'5\"",
-          "height_max": "6'4\""
-        }
-      ],
-      "geometry": {
-        "Rider Height Range": {
-          "XR": "5'5\" - 6'4\"",
-          "ST": "5'1\" - 5'11\""
-        },
-        "Weight (w/out add-ons)": {
-          "Xr": "72 lbs",
-          "St": "72 lbs"
-        },
-        "Weight (with add-ons)": {
-          "Xr": "77 lbs",
-          "St": "77 lbs"
-        },
-        "Weight Capacity": {
-          "Xr": "440 lbs",
-          "St": "440 lbs"
-        },
-        "A - Maximum Seat Height": {
-          "Xr": "40.7in",
-          "St": "38.9in"
-        },
-        "B - Minimum Seat Height": {
-          "Xr": "31.37in",
-          "St": "27.5in"
-        },
-        "C - Stand-over Height": {
-          "Xr": "29.21in",
-          "St": "18.66in"
-        },
-        "D - Wheelbase": {
-          "Xr": "43.5in",
-          "St": "43.6in"
-        },
-        "E - Top Tube Length": {
-          "Xr": "23.8in",
-          "St": "23.7in"
-        },
-        "F - Head Tube Length": {
-          "Xr": "5.5in",
-          "St": "5.5in"
-        },
-        "G - Seat Tube Length": {
-          "Xr": "18.7in",
-          "St": "16.7in"
-        },
-        "H - Chainstay Length": {
-          "Xr": "17.7in",
-          "St": "17.7in"
-        },
-        "I - Fork Length": {
-          "Xr": "19.8in",
-          "St": "19.8in"
-        },
-        "J - Head Tube Angle": {
-          "Xr": "68°",
-          "St": "68°"
-        },
-        "K - Seat Tube Angle": {
-          "Xr": "69°",
-          "St": "69°"
-        },
-        "L - Stack": {
-          "Xr": "25.6in",
-          "St": "25.4in"
-        },
-        "M - Handlebar Reach": {
-          "Xr": "14.9in",
-          "St": "14.8in"
-        },
-        "N - Total Length": {
-          "Xr": "71.7in",
-          "St": "71.8in"
-        },
-        "O - Handlebar Height": {
-          "Xr": "42.9in",
-          "St": "41.4in"
-        },
-        "Rider Height": "5'1\" - 6'4\""
-      },
-      "specs": {
-        "all": {
-          "Motor": "750W AKM hub motor with 95nm of torque - our strongest hill-climbing motor",
-          "Battery": "15Ah Reention Flamingo with Samsung 50GB cells, 21700 cell formation with Precise CanBus protocol SOC. IPX6 TUV Certified to UL 2271",
-          "Controller": "48V 25A water resistant resin potted 12 Mosfet MIVICE controller",
-          "Display": "Ride1Up 'most customizable PAS' color display with iOS FindMy tracking and USB-C accessory charging",
-          "PAS Sensor": "Ride1Up Intui-Drive torque + R1CBC cadence sensor combo powered by MIVICE Learn more.",
-          "Brakes": "Star Union hydraulic disc brakes with electric motor cutoff; 203mm R, 180mm F rotors",
-          "Tires": "Schwalbe Sam Smart 27.5\" x 2.6\" (65-584)",
-          "Fenders": "Front and rear 2.8\" metal alloy fenders",
-          "Handlebars": "Riser bars; 680mm width; 30mm rise; 31.8mm bar clamp; 10° sweep",
-          "Shifters": "Shimano Acera 8-speed trigger shifter",
-          "Gearing": "48T chainring for higher speeds",
-          "Cassette": "Shimano Acera 11-32T",
-          "Drivetrain": "KMC E8 8-speed chain",
-          "Derailleur": "Shimano Acera 8-speed",
-          "Rear Rack": "150lb rated semi-integrated modular rack",
-          "Grips": "VELO ergonomic silicone grips",
-          "Throttle": "Left-side thumb throttle",
-          "Spokes": "Stainless steel 13G front/12G rear",
-          "Saddle": "VELO saddle",
-          "Fork": "100mm coil spring suspension thru-axle fork with hydraulic lockout",
-          "Seat Post": "31.6mm x 350mm dual-bolt adjustable angle seat post",
-          "Stem": "Sleek 0-60 degree adjustable angle 90mm extension 31.8mm bar clamp stem with 2nd secure point for stability",
-          "Front Light": "100 lux stem-integrated front light",
-          "Rear Light": "Fender-integrated braking light",
-          "Additional": "Front rack bosses + dual bottle cage bosses and rubber chainstay guard",
-          "PEDAL SENSOR": "Torque + Cadence",
-          "FRAME": "440lb Rating (Vorsa/FT)",
-          "CLASS & SPEED": "1-3 & 28mph",
-          "CERTIFIED TO": "ANSI/CAN/UL 2849",
-          "RANGE": "30-60 miles depending on rider weight, terrain, incline, level of assist, etc.",
-          "Speed": "Class 1-3 electric bike, with up to 28mph speeds",
-          "Weight (w/out add-ons)": "65 lbs",
-          "Weight (with add-ons)": "70 lbs",
-          "Weight Capacity": "440 lbs",
-          "Weight": "61 lbs",
-          "Rider Height": "5'1\" - 6'4\"",
-          "Rear Rack Max Load": "60 lbs"
-        }
-      },
-      "spec_count": 36,
-      "scrape_error": null,
-      "shipping": {
-        "cost": 0,
-        "free": true
-      },
-      "free_accessories": [
-        {
-          "name": "Rear Rack",
-          "price": 0,
-          "free": true,
-          "detail": "150lb rated semi-integrated modular rack"
-        },
-        {
-          "name": "Front Light",
-          "price": 0,
-          "free": true,
-          "detail": "100 lux stem-integrated front light"
-        },
-        {
-          "name": "Rear Light",
-          "price": 0,
-          "free": true,
-          "detail": "Fender-integrated braking light"
-        }
-      ],
-      "available_options": [
-        {
-          "group": "bike_type",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Lite",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "FT",
-              "price": 1695.0,
-              "price_delta": 300.0,
-              "free": false
-            },
-            {
-              "value": "Vorsa",
-              "price": 1495.0,
-              "price_delta": 100.0,
-              "free": false
-            }
-          ]
-        },
-        {
-          "group": "frame2",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "ST",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "XR",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
-          "group": "color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Glacier",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Slate",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "snow",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Sage",
-              "price": 1495.0,
-              "price_delta": 100.0,
-              "free": false
-            }
-          ]
-        },
-        {
-          "group": "Included accessories",
-          "type": "accessory",
-          "choices": [
-            {
-              "value": "Rear Rack",
-              "price": 0,
-              "free": true
-            },
-            {
-              "value": "Front Light",
-              "price": 0,
-              "free": true
-            },
-            {
-              "value": "Rear Light",
-              "price": 0,
-              "free": true
-            }
-          ]
-        }
-      ],
-      "tier": "Lite · Step-Thru",
-      "family_id": "ride1up__vorsa",
-      "price_from": 1395.0,
-      "regular_price": null,
-      "handle": "vorsa--step-thru",
-      "frame_style": "Step-Thru (Mid-Step)"
-    },
-    {
-      "slug": "vorsa",
-      "url": "https://ride1up.com/product/vorsa/?attribute_pa_bike-type=vorsa&attribute_pa_frame2=xr",
-      "warranty": "1-Year Warranty",
-      "model": "VORSA — Vorsa · Step-Over",
-      "product_types": [
-        "Commuter / Urban"
-      ],
-      "price_range": {
-        "min": 1395.0,
-        "max": 1695.0,
-        "currency": "USD"
-      },
-      "configurations": [
-        {
-          "options": {
-            "bike_type": "Vorsa",
-            "frame2": "XR",
-            "color": "Glacier"
-          },
-          "price": 1595.0,
-          "sku": "VORSA-XR-BLU",
-          "image": "https://ride1up.com/wp-content/uploads/2025/01/VorsaXR_glacier_side_EDIT_web-jpg.webp",
-          "color": {
-            "name": "Glacier",
-            "hex": "#295da9",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-Lite-Glacier-ST-scaled.webp"
-          }
-        },
-        {
-          "options": {
-            "bike_type": "Vorsa",
-            "frame2": "XR",
-            "color": "Sage"
-          },
-          "price": 1495.0,
-          "sku": "VORSA-XR-GN",
-          "image": "https://ride1up.com/wp-content/uploads/2025/01/VorsaXR_sage_side_web-min-jpg.webp",
-          "color": {
-            "name": "Sage",
-            "hex": "#c9d1cc",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2025/01/VorsaXR_sage_side_web-min-jpg.webp"
-          }
-        },
-        {
-          "options": {
-            "bike_type": "Vorsa",
-            "frame2": "XR",
-            "color": "Slate"
-          },
-          "price": 1595.0,
-          "sku": "VORSA-XR-GRY",
-          "image": "https://ride1up.com/wp-content/uploads/2025/01/VorsaXR_slate_side_EDIT_web-jpg.webp",
-          "color": {
-            "name": "Slate",
-            "hex": "#474946",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-Lite-Slate-ST-scaled.webp"
-          }
-        }
-      ],
-      "options": {
-        "bike_type": [
-          "Lite",
-          "Vorsa",
-          "FT"
-        ],
-        "frame2": [
-          "ST",
-          "XR"
-        ],
-        "colors": [
-          {
-            "name": "Glacier",
-            "hex": "#295da9",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-Lite-Glacier-ST-scaled.webp"
-          },
-          {
-            "name": "Sage",
-            "hex": "#c9d1cc",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2025/01/VorsaXR_sage_side_web-min-jpg.webp"
-          },
-          {
-            "name": "Slate",
-            "hex": "#474946",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-Lite-Slate-ST-scaled.webp"
-          }
-        ]
-      },
-      "frame_sizes": [
-        {
-          "size": "St",
-          "height_min": "5'1\"",
-          "height_max": "5'11\""
-        },
-        {
-          "size": "Xr",
-          "height_min": "5'5\"",
-          "height_max": "6'4\""
-        }
-      ],
-      "geometry": {
-        "Rider Height Range": {
-          "XR": "5'5\" - 6'4\"",
-          "ST": "5'1\" - 5'11\""
-        },
-        "Weight (w/out add-ons)": {
-          "Xr": "72 lbs",
-          "St": "72 lbs"
-        },
-        "Weight (with add-ons)": {
-          "Xr": "77 lbs",
-          "St": "77 lbs"
-        },
-        "Weight Capacity": {
-          "Xr": "440 lbs",
-          "St": "440 lbs"
-        },
-        "A - Maximum Seat Height": {
-          "Xr": "40.7in",
-          "St": "38.9in"
-        },
-        "B - Minimum Seat Height": {
-          "Xr": "31.37in",
-          "St": "27.5in"
-        },
-        "C - Stand-over Height": {
-          "Xr": "29.21in",
-          "St": "18.66in"
-        },
-        "D - Wheelbase": {
-          "Xr": "43.5in",
-          "St": "43.6in"
-        },
-        "E - Top Tube Length": {
-          "Xr": "23.8in",
-          "St": "23.7in"
-        },
-        "F - Head Tube Length": {
-          "Xr": "5.5in",
-          "St": "5.5in"
-        },
-        "G - Seat Tube Length": {
-          "Xr": "18.7in",
-          "St": "16.7in"
-        },
-        "H - Chainstay Length": {
-          "Xr": "17.7in",
-          "St": "17.7in"
-        },
-        "I - Fork Length": {
-          "Xr": "19.8in",
-          "St": "19.8in"
-        },
-        "J - Head Tube Angle": {
-          "Xr": "68°",
-          "St": "68°"
-        },
-        "K - Seat Tube Angle": {
-          "Xr": "69°",
-          "St": "69°"
-        },
-        "L - Stack": {
-          "Xr": "25.6in",
-          "St": "25.4in"
-        },
-        "M - Handlebar Reach": {
-          "Xr": "14.9in",
-          "St": "14.8in"
-        },
-        "N - Total Length": {
-          "Xr": "71.7in",
-          "St": "71.8in"
-        },
-        "O - Handlebar Height": {
-          "Xr": "42.9in",
-          "St": "41.4in"
-        },
-        "Rider Height": "5'1\" - 6'4\""
-      },
-      "specs": {
-        "all": {
-          "Motor": "750W AKM hub motor with 95nm of torque - our strongest hill-climbing motor",
-          "Battery": "15Ah Reention Flamingo with Samsung 50GB cells, 21700 cell formation with Precise CanBus protocol SOC. IPX6 TUV Certified to UL 2271",
-          "Controller": "48V 25A water resistant resin potted 12 Mosfet MIVICE controller",
-          "Display": "Ride1Up 'most customizable PAS' color display with iOS FindMy tracking and USB-C accessory charging",
-          "PAS Sensor": "Ride1Up Intui-Drive torque + R1CBC cadence sensor combo powered by MIVICE Learn more.",
-          "Brakes": "Star Union hydraulic disc brakes with electric motor cutoff; 203mm R, 180mm F rotors",
-          "Tires": "Schwalbe Sam Smart 27.5\" x 2.6\" (65-584)",
-          "Fenders": "Front and rear 2.8\" metal alloy fenders",
-          "Handlebars": "Riser bars; 680mm width; 30mm rise; 31.8mm bar clamp; 10° sweep",
-          "Shifters": "Shimano Acera 8-speed trigger shifter",
-          "Gearing": "48T chainring for higher speeds",
-          "Cassette": "Shimano Acera 11-32T",
-          "Drivetrain": "KMC E8 8-speed chain",
-          "Derailleur": "Shimano Acera 8-speed",
-          "Rear Rack": "150lb rated semi-integrated modular rack",
-          "Grips": "VELO ergonomic silicone grips",
-          "Throttle": "Left-side thumb throttle",
-          "Spokes": "Stainless steel 13G front/12G rear",
-          "Saddle": "VELO saddle",
-          "Fork": "100mm coil spring suspension thru-axle fork with hydraulic lockout",
-          "Seat Post": "31.6mm x 350mm dual-bolt adjustable angle seat post",
-          "Stem": "Sleek 0-60 degree adjustable angle 90mm extension 31.8mm bar clamp stem with 2nd secure point for stability",
-          "Front Light": "100 lux stem-integrated front light",
-          "Rear Light": "Fender-integrated braking light",
-          "Additional": "Front rack bosses + dual bottle cage bosses and rubber chainstay guard",
-          "PEDAL SENSOR": "Torque + Cadence",
-          "FRAME": "440lb Rating (Vorsa/FT)",
-          "CLASS & SPEED": "1-3 & 28mph",
-          "CERTIFIED TO": "ANSI/CAN/UL 2849",
-          "RANGE": "30-60 miles depending on rider weight, terrain, incline, level of assist, etc.",
-          "Speed": "Class 1-3 electric bike, with up to 28mph speeds",
-          "Weight (w/out add-ons)": "65 lbs",
-          "Weight (with add-ons)": "70 lbs",
-          "Weight Capacity": "440 lbs",
-          "Weight": "61 lbs",
-          "Rider Height": "5'1\" - 6'4\"",
-          "Rear Rack Max Load": "60 lbs"
-        }
-      },
-      "spec_count": 36,
-      "scrape_error": null,
-      "shipping": {
-        "cost": 0,
-        "free": true
-      },
-      "free_accessories": [
-        {
-          "name": "Rear Rack",
-          "price": 0,
-          "free": true,
-          "detail": "150lb rated semi-integrated modular rack"
-        },
-        {
-          "name": "Front Light",
-          "price": 0,
-          "free": true,
-          "detail": "100 lux stem-integrated front light"
-        },
-        {
-          "name": "Rear Light",
-          "price": 0,
-          "free": true,
-          "detail": "Fender-integrated braking light"
-        }
-      ],
-      "available_options": [
-        {
-          "group": "bike_type",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Lite",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "FT",
-              "price": 1695.0,
-              "price_delta": 300.0,
-              "free": false
-            },
-            {
-              "value": "Vorsa",
-              "price": 1495.0,
-              "price_delta": 100.0,
-              "free": false
-            }
-          ]
-        },
-        {
-          "group": "frame2",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "ST",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "XR",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
-          "group": "color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Glacier",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Slate",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "snow",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Sage",
-              "price": 1495.0,
-              "price_delta": 100.0,
-              "free": false
-            }
-          ]
-        },
-        {
-          "group": "Included accessories",
-          "type": "accessory",
-          "choices": [
-            {
-              "value": "Rear Rack",
-              "price": 0,
-              "free": true
-            },
-            {
-              "value": "Front Light",
-              "price": 0,
-              "free": true
-            },
-            {
-              "value": "Rear Light",
-              "price": 0,
-              "free": true
-            }
-          ]
-        }
-      ],
-      "handle": "vorsa--vorsa",
-      "regular_price": null,
-      "tier": "Vorsa · Step-Over",
-      "family_id": "ride1up__vorsa",
-      "price_from": 1495.0,
-      "frame_style": "Step-Over"
-    },
-    {
-      "slug": "vorsa",
-      "url": "https://ride1up.com/product/vorsa/?attribute_pa_bike-type=vorsa&attribute_pa_frame2=st",
-      "warranty": "1-Year Warranty",
-      "model": "VORSA — Vorsa · Step-Thru",
-      "product_types": [
-        "Commuter / Urban"
-      ],
-      "price_range": {
-        "min": 1395.0,
-        "max": 1695.0,
-        "currency": "USD"
-      },
-      "configurations": [
-        {
-          "options": {
-            "bike_type": "Vorsa",
-            "frame2": "ST",
-            "color": "Glacier"
-          },
-          "price": 1595.0,
-          "sku": "VORSA-ST-BLU",
-          "image": "https://ride1up.com/wp-content/uploads/2025/01/VorsaST_glacier_side__EDIT2_web-jpg.webp",
-          "color": {
-            "name": "Glacier",
-            "hex": "#295da9",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-Lite-Glacier-ST-scaled.webp"
-          }
-        },
-        {
-          "options": {
-            "bike_type": "Vorsa",
-            "frame2": "ST",
-            "color": "Sage"
-          },
-          "price": 1595.0,
-          "sku": "VORSA-ST-GN",
-          "image": "https://ride1up.com/wp-content/uploads/2025/01/VorsaST_sage_side_web-min-jpg.webp",
-          "color": {
-            "name": "Sage",
-            "hex": "#c9d1cc",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2025/01/VorsaXR_sage_side_web-min-jpg.webp"
-          }
-        },
-        {
-          "options": {
-            "bike_type": "Vorsa",
-            "frame2": "ST",
-            "color": "Slate"
-          },
-          "price": 1595.0,
-          "sku": "VORSA-ST-GRY",
-          "image": "https://ride1up.com/wp-content/uploads/2025/01/VorsaST_slate_side_EDIT2_web-jpg.webp",
-          "color": {
-            "name": "Slate",
-            "hex": "#474946",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-Lite-Slate-ST-scaled.webp"
-          }
-        }
-      ],
-      "options": {
-        "bike_type": [
-          "Lite",
-          "Vorsa",
-          "FT"
-        ],
-        "frame2": [
-          "ST",
-          "XR"
-        ],
-        "colors": [
-          {
-            "name": "Glacier",
-            "hex": "#295da9",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-Lite-Glacier-ST-scaled.webp"
-          },
-          {
-            "name": "Sage",
-            "hex": "#c9d1cc",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2025/01/VorsaXR_sage_side_web-min-jpg.webp"
-          },
-          {
-            "name": "Slate",
-            "hex": "#474946",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-Lite-Slate-ST-scaled.webp"
-          }
-        ]
-      },
-      "frame_sizes": [
-        {
-          "size": "St",
-          "height_min": "5'1\"",
-          "height_max": "5'11\""
-        },
-        {
-          "size": "Xr",
-          "height_min": "5'5\"",
-          "height_max": "6'4\""
-        }
-      ],
-      "geometry": {
-        "Rider Height Range": {
-          "XR": "5'5\" - 6'4\"",
-          "ST": "5'1\" - 5'11\""
-        },
-        "Weight (w/out add-ons)": {
-          "Xr": "72 lbs",
-          "St": "72 lbs"
-        },
-        "Weight (with add-ons)": {
-          "Xr": "77 lbs",
-          "St": "77 lbs"
-        },
-        "Weight Capacity": {
-          "Xr": "440 lbs",
-          "St": "440 lbs"
-        },
-        "A - Maximum Seat Height": {
-          "Xr": "40.7in",
-          "St": "38.9in"
-        },
-        "B - Minimum Seat Height": {
-          "Xr": "31.37in",
-          "St": "27.5in"
-        },
-        "C - Stand-over Height": {
-          "Xr": "29.21in",
-          "St": "18.66in"
-        },
-        "D - Wheelbase": {
-          "Xr": "43.5in",
-          "St": "43.6in"
-        },
-        "E - Top Tube Length": {
-          "Xr": "23.8in",
-          "St": "23.7in"
-        },
-        "F - Head Tube Length": {
-          "Xr": "5.5in",
-          "St": "5.5in"
-        },
-        "G - Seat Tube Length": {
-          "Xr": "18.7in",
-          "St": "16.7in"
-        },
-        "H - Chainstay Length": {
-          "Xr": "17.7in",
-          "St": "17.7in"
-        },
-        "I - Fork Length": {
-          "Xr": "19.8in",
-          "St": "19.8in"
-        },
-        "J - Head Tube Angle": {
-          "Xr": "68°",
-          "St": "68°"
-        },
-        "K - Seat Tube Angle": {
-          "Xr": "69°",
-          "St": "69°"
-        },
-        "L - Stack": {
-          "Xr": "25.6in",
-          "St": "25.4in"
-        },
-        "M - Handlebar Reach": {
-          "Xr": "14.9in",
-          "St": "14.8in"
-        },
-        "N - Total Length": {
-          "Xr": "71.7in",
-          "St": "71.8in"
-        },
-        "O - Handlebar Height": {
-          "Xr": "42.9in",
-          "St": "41.4in"
-        },
-        "Rider Height": "5'1\" - 6'4\""
-      },
-      "specs": {
-        "all": {
-          "Motor": "750W AKM hub motor with 95nm of torque - our strongest hill-climbing motor",
-          "Battery": "15Ah Reention Flamingo with Samsung 50GB cells, 21700 cell formation with Precise CanBus protocol SOC. IPX6 TUV Certified to UL 2271",
-          "Controller": "48V 25A water resistant resin potted 12 Mosfet MIVICE controller",
-          "Display": "Ride1Up 'most customizable PAS' color display with iOS FindMy tracking and USB-C accessory charging",
-          "PAS Sensor": "Ride1Up Intui-Drive torque + R1CBC cadence sensor combo powered by MIVICE Learn more.",
-          "Brakes": "Star Union hydraulic disc brakes with electric motor cutoff; 203mm R, 180mm F rotors",
-          "Tires": "Schwalbe Sam Smart 27.5\" x 2.6\" (65-584)",
-          "Fenders": "Front and rear 2.8\" metal alloy fenders",
-          "Handlebars": "Riser bars; 680mm width; 30mm rise; 31.8mm bar clamp; 10° sweep",
-          "Shifters": "Shimano Acera 8-speed trigger shifter",
-          "Gearing": "48T chainring for higher speeds",
-          "Cassette": "Shimano Acera 11-32T",
-          "Drivetrain": "KMC E8 8-speed chain",
-          "Derailleur": "Shimano Acera 8-speed",
-          "Rear Rack": "150lb rated semi-integrated modular rack",
-          "Grips": "VELO ergonomic silicone grips",
-          "Throttle": "Left-side thumb throttle",
-          "Spokes": "Stainless steel 13G front/12G rear",
-          "Saddle": "VELO saddle",
-          "Fork": "100mm coil spring suspension thru-axle fork with hydraulic lockout",
-          "Seat Post": "31.6mm x 350mm dual-bolt adjustable angle seat post",
-          "Stem": "Sleek 0-60 degree adjustable angle 90mm extension 31.8mm bar clamp stem with 2nd secure point for stability",
-          "Front Light": "100 lux stem-integrated front light",
-          "Rear Light": "Fender-integrated braking light",
-          "Additional": "Front rack bosses + dual bottle cage bosses and rubber chainstay guard",
-          "PEDAL SENSOR": "Torque + Cadence",
-          "FRAME": "440lb Rating (Vorsa/FT)",
-          "CLASS & SPEED": "1-3 & 28mph",
-          "CERTIFIED TO": "ANSI/CAN/UL 2849",
-          "RANGE": "30-60 miles depending on rider weight, terrain, incline, level of assist, etc.",
-          "Speed": "Class 1-3 electric bike, with up to 28mph speeds",
-          "Weight (w/out add-ons)": "65 lbs",
-          "Weight (with add-ons)": "70 lbs",
-          "Weight Capacity": "440 lbs",
-          "Weight": "61 lbs",
-          "Rider Height": "5'1\" - 6'4\"",
-          "Rear Rack Max Load": "60 lbs"
-        }
-      },
-      "spec_count": 36,
-      "scrape_error": null,
-      "shipping": {
-        "cost": 0,
-        "free": true
-      },
-      "free_accessories": [
-        {
-          "name": "Rear Rack",
-          "price": 0,
-          "free": true,
-          "detail": "150lb rated semi-integrated modular rack"
-        },
-        {
-          "name": "Front Light",
-          "price": 0,
-          "free": true,
-          "detail": "100 lux stem-integrated front light"
-        },
-        {
-          "name": "Rear Light",
-          "price": 0,
-          "free": true,
-          "detail": "Fender-integrated braking light"
-        }
-      ],
-      "available_options": [
-        {
-          "group": "bike_type",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Lite",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "FT",
-              "price": 1695.0,
-              "price_delta": 300.0,
-              "free": false
-            },
-            {
-              "value": "Vorsa",
-              "price": 1495.0,
-              "price_delta": 100.0,
-              "free": false
-            }
-          ]
-        },
-        {
-          "group": "frame2",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "ST",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "XR",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
-          "group": "color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Glacier",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Slate",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "snow",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Sage",
-              "price": 1495.0,
-              "price_delta": 100.0,
-              "free": false
-            }
-          ]
-        },
-        {
-          "group": "Included accessories",
-          "type": "accessory",
-          "choices": [
-            {
-              "value": "Rear Rack",
-              "price": 0,
-              "free": true
-            },
-            {
-              "value": "Front Light",
-              "price": 0,
-              "free": true
-            },
-            {
-              "value": "Rear Light",
-              "price": 0,
-              "free": true
-            }
-          ]
-        }
-      ],
-      "handle": "vorsa--vorsa--step-thru",
-      "regular_price": null,
-      "tier": "Vorsa · Step-Thru",
-      "family_id": "ride1up__vorsa",
-      "price_from": 1595.0,
-      "frame_style": "Step-Thru (Mid-Step)"
-    },
-    {
-      "slug": "vorsa",
-      "url": "https://ride1up.com/product/vorsa/?attribute_pa_bike-type=ft&attribute_pa_frame2=xr",
-      "warranty": "1-Year Warranty",
-      "model": "VORSA — FT · Step-Over",
-      "product_types": [
-        "Commuter / Urban"
-      ],
-      "price_range": {
-        "min": 1395.0,
-        "max": 1695.0,
-        "currency": "USD"
-      },
-      "configurations": [
-        {
-          "options": {
-            "bike_type": "FT",
-            "frame2": "XR",
-            "color": "Glacier"
-          },
-          "price": 1695.0,
-          "sku": "VORSA-FX-BLU",
-          "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-FT-Glacier-XR-2-scaled.webp",
-          "color": {
-            "name": "Glacier",
-            "hex": "#295da9",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-Lite-Glacier-ST-scaled.webp"
-          }
-        },
-        {
-          "options": {
-            "bike_type": "FT",
-            "frame2": "XR",
-            "color": "Slate"
-          },
-          "price": 1695.0,
-          "sku": "VORSA-FX-GRY",
-          "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-FT-Slate-XR-scaled.webp",
-          "color": {
-            "name": "Slate",
-            "hex": "#474946",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-Lite-Slate-ST-scaled.webp"
-          }
-        },
-        {
-          "options": {
-            "bike_type": "FT",
-            "frame2": "XR",
-            "color": "snow"
-          },
-          "price": 1695.0,
-          "sku": "VORSA-FX-WHI",
-          "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-FT-White-XR--scaled.webp",
-          "color": {
-            "name": "snow",
-            "hex": null,
-            "swatch_image": null,
-            "image": null
-          }
-        }
-      ],
-      "options": {
-        "bike_type": [
-          "Lite",
-          "Vorsa",
-          "FT"
-        ],
-        "frame2": [
-          "ST",
-          "XR"
-        ],
-        "colors": [
-          {
-            "name": "Glacier",
-            "hex": "#295da9",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-Lite-Glacier-ST-scaled.webp"
-          },
-          {
-            "name": "Slate",
-            "hex": "#474946",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-Lite-Slate-ST-scaled.webp"
-          },
-          {
-            "name": "snow",
-            "hex": null,
-            "swatch_image": null,
-            "image": null
-          }
-        ]
-      },
-      "frame_sizes": [
-        {
-          "size": "St",
-          "height_min": "5'1\"",
-          "height_max": "5'11\""
-        },
-        {
-          "size": "Xr",
-          "height_min": "5'5\"",
-          "height_max": "6'4\""
-        }
-      ],
-      "geometry": {
-        "Rider Height Range": {
-          "XR": "5'5\" - 6'4\"",
-          "ST": "5'1\" - 5'11\""
-        },
-        "Weight (w/out add-ons)": {
-          "Xr": "72 lbs",
-          "St": "72 lbs"
-        },
-        "Weight (with add-ons)": {
-          "Xr": "77 lbs",
-          "St": "77 lbs"
-        },
-        "Weight Capacity": {
-          "Xr": "440 lbs",
-          "St": "440 lbs"
-        },
-        "A - Maximum Seat Height": {
-          "Xr": "40.7in",
-          "St": "38.9in"
-        },
-        "B - Minimum Seat Height": {
-          "Xr": "31.37in",
-          "St": "27.5in"
-        },
-        "C - Stand-over Height": {
-          "Xr": "29.21in",
-          "St": "18.66in"
-        },
-        "D - Wheelbase": {
-          "Xr": "43.5in",
-          "St": "43.6in"
-        },
-        "E - Top Tube Length": {
-          "Xr": "23.8in",
-          "St": "23.7in"
-        },
-        "F - Head Tube Length": {
-          "Xr": "5.5in",
-          "St": "5.5in"
-        },
-        "G - Seat Tube Length": {
-          "Xr": "18.7in",
-          "St": "16.7in"
-        },
-        "H - Chainstay Length": {
-          "Xr": "17.7in",
-          "St": "17.7in"
-        },
-        "I - Fork Length": {
-          "Xr": "19.8in",
-          "St": "19.8in"
-        },
-        "J - Head Tube Angle": {
-          "Xr": "68°",
-          "St": "68°"
-        },
-        "K - Seat Tube Angle": {
-          "Xr": "69°",
-          "St": "69°"
-        },
-        "L - Stack": {
-          "Xr": "25.6in",
-          "St": "25.4in"
-        },
-        "M - Handlebar Reach": {
-          "Xr": "14.9in",
-          "St": "14.8in"
-        },
-        "N - Total Length": {
-          "Xr": "71.7in",
-          "St": "71.8in"
-        },
-        "O - Handlebar Height": {
-          "Xr": "42.9in",
-          "St": "41.4in"
-        },
-        "Rider Height": "5'1\" - 6'4\""
-      },
-      "specs": {
-        "all": {
-          "Motor": "750W AKM hub motor with 95nm of torque - our strongest hill-climbing motor",
-          "Battery": "15Ah Reention Flamingo with Samsung 50GB cells, 21700 cell formation with Precise CanBus protocol SOC. IPX6 TUV Certified to UL 2271",
-          "Controller": "48V 25A water resistant resin potted 12 Mosfet MIVICE controller",
-          "Display": "Ride1Up 'most customizable PAS' color display with iOS FindMy tracking and USB-C accessory charging",
-          "PAS Sensor": "Ride1Up Intui-Drive torque + R1CBC cadence sensor combo powered by MIVICE Learn more.",
-          "Brakes": "Star Union hydraulic disc brakes with electric motor cutoff; 203mm R, 180mm F rotors",
-          "Tires": "Schwalbe Sam Smart 27.5\" x 2.6\" (65-584)",
-          "Fenders": "Front and rear 2.8\" metal alloy fenders",
-          "Handlebars": "Riser bars; 680mm width; 30mm rise; 31.8mm bar clamp; 10° sweep",
-          "Shifters": "Shimano Acera 8-speed trigger shifter",
-          "Gearing": "48T chainring for higher speeds",
-          "Cassette": "Shimano Acera 11-32T",
-          "Drivetrain": "KMC E8 8-speed chain",
-          "Derailleur": "Shimano Acera 8-speed",
-          "Rear Rack": "150lb rated semi-integrated modular rack",
-          "Grips": "VELO ergonomic silicone grips",
-          "Throttle": "Left-side thumb throttle",
-          "Spokes": "Stainless steel 13G front/12G rear",
-          "Saddle": "VELO saddle",
-          "Fork": "100mm coil spring suspension thru-axle fork with hydraulic lockout",
-          "Seat Post": "31.6mm x 350mm dual-bolt adjustable angle seat post",
-          "Stem": "Sleek 0-60 degree adjustable angle 90mm extension 31.8mm bar clamp stem with 2nd secure point for stability",
-          "Front Light": "100 lux stem-integrated front light",
-          "Rear Light": "Fender-integrated braking light",
-          "Additional": "Front rack bosses + dual bottle cage bosses and rubber chainstay guard",
-          "PEDAL SENSOR": "Torque + Cadence",
-          "FRAME": "440lb Rating (Vorsa/FT)",
-          "CLASS & SPEED": "1-3 & 28mph",
-          "CERTIFIED TO": "ANSI/CAN/UL 2849",
-          "RANGE": "30-60 miles depending on rider weight, terrain, incline, level of assist, etc.",
-          "Speed": "Class 1-3 electric bike, with up to 28mph speeds",
-          "Weight (w/out add-ons)": "65 lbs",
-          "Weight (with add-ons)": "70 lbs",
-          "Weight Capacity": "440 lbs",
-          "Weight": "61 lbs",
-          "Rider Height": "5'1\" - 6'4\"",
-          "Rear Rack Max Load": "60 lbs"
-        }
-      },
-      "spec_count": 36,
-      "scrape_error": null,
-      "shipping": {
-        "cost": 0,
-        "free": true
-      },
-      "free_accessories": [
-        {
-          "name": "Rear Rack",
-          "price": 0,
-          "free": true,
-          "detail": "150lb rated semi-integrated modular rack"
-        },
-        {
-          "name": "Front Light",
-          "price": 0,
-          "free": true,
-          "detail": "100 lux stem-integrated front light"
-        },
-        {
-          "name": "Rear Light",
-          "price": 0,
-          "free": true,
-          "detail": "Fender-integrated braking light"
-        }
-      ],
-      "available_options": [
-        {
-          "group": "bike_type",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Lite",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "FT",
-              "price": 1695.0,
-              "price_delta": 300.0,
-              "free": false
-            },
-            {
-              "value": "Vorsa",
-              "price": 1495.0,
-              "price_delta": 100.0,
-              "free": false
-            }
-          ]
-        },
-        {
-          "group": "frame2",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "ST",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "XR",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
-          "group": "color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Glacier",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Slate",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "snow",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Sage",
-              "price": 1495.0,
-              "price_delta": 100.0,
-              "free": false
-            }
-          ]
-        },
-        {
-          "group": "Included accessories",
-          "type": "accessory",
-          "choices": [
-            {
-              "value": "Rear Rack",
-              "price": 0,
-              "free": true
-            },
-            {
-              "value": "Front Light",
-              "price": 0,
-              "free": true
-            },
-            {
-              "value": "Rear Light",
-              "price": 0,
-              "free": true
-            }
-          ]
-        }
-      ],
-      "handle": "vorsa--ft",
-      "regular_price": null,
-      "tier": "FT · Step-Over",
-      "family_id": "ride1up__vorsa",
-      "price_from": 1695.0,
-      "frame_style": "Step-Over"
-    },
-    {
-      "slug": "vorsa",
-      "url": "https://ride1up.com/product/vorsa/?attribute_pa_bike-type=ft&attribute_pa_frame2=st",
-      "warranty": "1-Year Warranty",
-      "model": "VORSA — FT · Step-Thru",
-      "product_types": [
-        "Commuter / Urban"
-      ],
-      "price_range": {
-        "min": 1395.0,
-        "max": 1695.0,
-        "currency": "USD"
-      },
-      "configurations": [
-        {
-          "options": {
-            "bike_type": "FT",
-            "frame2": "ST",
-            "color": "Glacier"
-          },
-          "price": 1695.0,
-          "sku": "VORSA-FS-BLU",
-          "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-FT-Glacier-ST-scaled.webp",
-          "color": {
-            "name": "Glacier",
-            "hex": "#295da9",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-Lite-Glacier-ST-scaled.webp"
-          }
-        },
-        {
-          "options": {
-            "bike_type": "FT",
-            "frame2": "ST",
-            "color": "snow"
-          },
-          "price": 1695.0,
-          "sku": "VORSA-FS-WHI",
-          "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-FT-White-ST-scaled.webp",
-          "color": {
-            "name": "snow",
-            "hex": null,
-            "swatch_image": null,
-            "image": null
-          }
-        },
-        {
-          "options": {
-            "bike_type": "FT",
-            "frame2": "ST",
-            "color": "Slate"
-          },
-          "price": 1695.0,
-          "sku": "VORSA-FS-GRY",
-          "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-FT-Slate-ST-scaled.webp",
-          "color": {
-            "name": "Slate",
-            "hex": "#474946",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-Lite-Slate-ST-scaled.webp"
-          }
-        }
-      ],
-      "options": {
-        "bike_type": [
-          "Lite",
-          "Vorsa",
-          "FT"
-        ],
-        "frame2": [
-          "ST",
-          "XR"
-        ],
-        "colors": [
-          {
-            "name": "Glacier",
-            "hex": "#295da9",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-Lite-Glacier-ST-scaled.webp"
-          },
-          {
-            "name": "Slate",
-            "hex": "#474946",
-            "swatch_image": null,
-            "image": "https://ride1up.com/wp-content/uploads/2026/03/Vorsa-Lite-Slate-ST-scaled.webp"
-          },
-          {
-            "name": "snow",
-            "hex": null,
-            "swatch_image": null,
-            "image": null
-          }
-        ]
-      },
-      "frame_sizes": [
-        {
-          "size": "St",
-          "height_min": "5'1\"",
-          "height_max": "5'11\""
-        },
-        {
-          "size": "Xr",
-          "height_min": "5'5\"",
-          "height_max": "6'4\""
-        }
-      ],
-      "geometry": {
-        "Rider Height Range": {
-          "XR": "5'5\" - 6'4\"",
-          "ST": "5'1\" - 5'11\""
-        },
-        "Weight (w/out add-ons)": {
-          "Xr": "72 lbs",
-          "St": "72 lbs"
-        },
-        "Weight (with add-ons)": {
-          "Xr": "77 lbs",
-          "St": "77 lbs"
-        },
-        "Weight Capacity": {
-          "Xr": "440 lbs",
-          "St": "440 lbs"
-        },
-        "A - Maximum Seat Height": {
-          "Xr": "40.7in",
-          "St": "38.9in"
-        },
-        "B - Minimum Seat Height": {
-          "Xr": "31.37in",
-          "St": "27.5in"
-        },
-        "C - Stand-over Height": {
-          "Xr": "29.21in",
-          "St": "18.66in"
-        },
-        "D - Wheelbase": {
-          "Xr": "43.5in",
-          "St": "43.6in"
-        },
-        "E - Top Tube Length": {
-          "Xr": "23.8in",
-          "St": "23.7in"
-        },
-        "F - Head Tube Length": {
-          "Xr": "5.5in",
-          "St": "5.5in"
-        },
-        "G - Seat Tube Length": {
-          "Xr": "18.7in",
-          "St": "16.7in"
-        },
-        "H - Chainstay Length": {
-          "Xr": "17.7in",
-          "St": "17.7in"
-        },
-        "I - Fork Length": {
-          "Xr": "19.8in",
-          "St": "19.8in"
-        },
-        "J - Head Tube Angle": {
-          "Xr": "68°",
-          "St": "68°"
-        },
-        "K - Seat Tube Angle": {
-          "Xr": "69°",
-          "St": "69°"
-        },
-        "L - Stack": {
-          "Xr": "25.6in",
-          "St": "25.4in"
-        },
-        "M - Handlebar Reach": {
-          "Xr": "14.9in",
-          "St": "14.8in"
-        },
-        "N - Total Length": {
-          "Xr": "71.7in",
-          "St": "71.8in"
-        },
-        "O - Handlebar Height": {
-          "Xr": "42.9in",
-          "St": "41.4in"
-        },
-        "Rider Height": "5'1\" - 6'4\""
-      },
-      "specs": {
-        "all": {
-          "Motor": "750W AKM hub motor with 95nm of torque - our strongest hill-climbing motor",
-          "Battery": "15Ah Reention Flamingo with Samsung 50GB cells, 21700 cell formation with Precise CanBus protocol SOC. IPX6 TUV Certified to UL 2271",
-          "Controller": "48V 25A water resistant resin potted 12 Mosfet MIVICE controller",
-          "Display": "Ride1Up 'most customizable PAS' color display with iOS FindMy tracking and USB-C accessory charging",
-          "PAS Sensor": "Ride1Up Intui-Drive torque + R1CBC cadence sensor combo powered by MIVICE Learn more.",
-          "Brakes": "Star Union hydraulic disc brakes with electric motor cutoff; 203mm R, 180mm F rotors",
-          "Tires": "Schwalbe Sam Smart 27.5\" x 2.6\" (65-584)",
-          "Fenders": "Front and rear 2.8\" metal alloy fenders",
-          "Handlebars": "Riser bars; 680mm width; 30mm rise; 31.8mm bar clamp; 10° sweep",
-          "Shifters": "Shimano Acera 8-speed trigger shifter",
-          "Gearing": "48T chainring for higher speeds",
-          "Cassette": "Shimano Acera 11-32T",
-          "Drivetrain": "KMC E8 8-speed chain",
-          "Derailleur": "Shimano Acera 8-speed",
-          "Rear Rack": "150lb rated semi-integrated modular rack",
-          "Grips": "VELO ergonomic silicone grips",
-          "Throttle": "Left-side thumb throttle",
-          "Spokes": "Stainless steel 13G front/12G rear",
-          "Saddle": "VELO saddle",
-          "Fork": "100mm coil spring suspension thru-axle fork with hydraulic lockout",
-          "Seat Post": "31.6mm x 350mm dual-bolt adjustable angle seat post",
-          "Stem": "Sleek 0-60 degree adjustable angle 90mm extension 31.8mm bar clamp stem with 2nd secure point for stability",
-          "Front Light": "100 lux stem-integrated front light",
-          "Rear Light": "Fender-integrated braking light",
-          "Additional": "Front rack bosses + dual bottle cage bosses and rubber chainstay guard",
-          "PEDAL SENSOR": "Torque + Cadence",
-          "FRAME": "440lb Rating (Vorsa/FT)",
-          "CLASS & SPEED": "1-3 & 28mph",
-          "CERTIFIED TO": "ANSI/CAN/UL 2849",
-          "RANGE": "30-60 miles depending on rider weight, terrain, incline, level of assist, etc.",
-          "Speed": "Class 1-3 electric bike, with up to 28mph speeds",
-          "Weight (w/out add-ons)": "65 lbs",
-          "Weight (with add-ons)": "70 lbs",
-          "Weight Capacity": "440 lbs",
-          "Weight": "61 lbs",
-          "Rider Height": "5'1\" - 6'4\"",
-          "Rear Rack Max Load": "60 lbs"
-        }
-      },
-      "spec_count": 36,
-      "scrape_error": null,
-      "shipping": {
-        "cost": 0,
-        "free": true
-      },
-      "free_accessories": [
-        {
-          "name": "Rear Rack",
-          "price": 0,
-          "free": true,
-          "detail": "150lb rated semi-integrated modular rack"
-        },
-        {
-          "name": "Front Light",
-          "price": 0,
-          "free": true,
-          "detail": "100 lux stem-integrated front light"
-        },
-        {
-          "name": "Rear Light",
-          "price": 0,
-          "free": true,
-          "detail": "Fender-integrated braking light"
-        }
-      ],
-      "available_options": [
-        {
-          "group": "bike_type",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Lite",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "FT",
-              "price": 1695.0,
-              "price_delta": 300.0,
-              "free": false
-            },
-            {
-              "value": "Vorsa",
-              "price": 1495.0,
-              "price_delta": 100.0,
-              "free": false
-            }
-          ]
-        },
-        {
-          "group": "frame2",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "ST",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "XR",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            }
-          ]
-        },
-        {
-          "group": "color",
-          "type": "variant",
-          "choices": [
-            {
-              "value": "Glacier",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Slate",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "snow",
-              "price": 1395.0,
-              "price_delta": 0.0,
-              "free": true
-            },
-            {
-              "value": "Sage",
-              "price": 1495.0,
-              "price_delta": 100.0,
-              "free": false
-            }
-          ]
-        },
-        {
-          "group": "Included accessories",
-          "type": "accessory",
-          "choices": [
-            {
-              "value": "Rear Rack",
-              "price": 0,
-              "free": true
-            },
-            {
-              "value": "Front Light",
-              "price": 0,
-              "free": true
-            },
-            {
-              "value": "Rear Light",
-              "price": 0,
-              "free": true
-            }
-          ]
-        }
-      ],
-      "handle": "vorsa--ft--step-thru",
-      "regular_price": null,
-      "tier": "FT · Step-Thru",
-      "family_id": "ride1up__vorsa",
-      "price_from": 1695.0,
-      "frame_style": "Step-Thru (Mid-Step)"
+      "available_options": []
     }
   ],
   "available_accessories": [
@@ -5336,6 +1597,14 @@
       "on_sale": false,
       "free": false,
       "url": "https://ride1up.com/product/ride1up-panniers/"
+    },
+    {
+      "name": "Vorsa Captain’s Chair Bundle",
+      "price": 348.5,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://ride1up.com/product/vorsa-captains-chair-bundle/"
     },
     {
       "name": "Ebike Starter Kit",
@@ -5451,7 +1720,7 @@
     },
     {
       "name": "Passenger Kit",
-      "price": 125.0,
+      "price": 135.0,
       "regular_price": null,
       "on_sale": false,
       "free": false,
@@ -5506,20 +1775,28 @@
       "url": "https://ride1up.com/product/portola-replacement-parts/"
     },
     {
-      "name": "Vorsa Battery",
-      "price": 375.0,
+      "name": "Portola Battery",
+      "price": 345.0,
       "regular_price": null,
       "on_sale": false,
       "free": false,
-      "url": "https://ride1up.com/product/vorsa-battery/"
+      "url": "https://ride1up.com/product/portola-battery/"
     },
     {
       "name": "Roadster v3 Replacement Parts",
-      "price": 25.0,
+      "price": 30.0,
       "regular_price": null,
       "on_sale": false,
       "free": false,
       "url": "https://ride1up.com/product/roadster-v3-replacement-parts/"
+    },
+    {
+      "name": "Roadster v3 Battery",
+      "price": 255.0,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://ride1up.com/product/roadster-v3-battery/"
     },
     {
       "name": "Roadster V2 & V3 Add-On Battery",
@@ -5528,14 +1805,6 @@
       "on_sale": false,
       "free": false,
       "url": "https://ride1up.com/product/roadsterv3-battery-add-on/"
-    },
-    {
-      "name": "CF Racer1 Replacement Battery",
-      "price": 185.0,
-      "regular_price": null,
-      "on_sale": false,
-      "free": false,
-      "url": "https://ride1up.com/product/cf-racer-1-replacement-battery/"
     },
     {
       "name": "Vorsa Replacement Parts",
@@ -5554,20 +1823,20 @@
       "url": "https://ride1up.com/product/prodigy-replacement-parts/"
     },
     {
-      "name": "Roadster v3 Battery",
-      "price": 255.0,
+      "name": "Vorsa Battery",
+      "price": 375.0,
       "regular_price": null,
       "on_sale": false,
       "free": false,
-      "url": "https://ride1up.com/product/roadster-v3-battery/"
+      "url": "https://ride1up.com/product/vorsa-battery/"
     },
     {
-      "name": "Roadster v2 Replacement Battery",
-      "price": 215.0,
+      "name": "CF Racer1 Replacement Battery",
+      "price": 185.0,
       "regular_price": null,
       "on_sale": false,
       "free": false,
-      "url": "https://ride1up.com/product/roadster-v2-replacement-battery/"
+      "url": "https://ride1up.com/product/cf-racer-1-replacement-battery/"
     },
     {
       "name": "TrailRush Replacement Parts",
@@ -5658,6 +1927,14 @@
       "url": "https://ride1up.com/product/rift-replacement-parts/"
     },
     {
+      "name": "CF Racer 1 Dual Battery Add-On",
+      "price": 295.0,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://ride1up.com/product/dual-battery-add-on/"
+    },
+    {
       "name": "Prodigy v2 and TrailRush Battery",
       "price": 395.0,
       "regular_price": null,
@@ -5666,20 +1943,12 @@
       "url": "https://ride1up.com/product/prodigy-v2-battery/"
     },
     {
-      "name": "Portola Battery",
-      "price": 345.0,
+      "name": "Roadster v2 Replacement Battery",
+      "price": 215.0,
       "regular_price": null,
       "on_sale": false,
       "free": false,
-      "url": "https://ride1up.com/product/portola-battery/"
-    },
-    {
-      "name": "Rift Battery",
-      "price": 420.0,
-      "regular_price": null,
-      "on_sale": false,
-      "free": false,
-      "url": "https://ride1up.com/product/rift-battery/"
+      "url": "https://ride1up.com/product/roadster-v2-replacement-battery/"
     },
     {
       "name": "Solar Charger",
@@ -5688,6 +1957,14 @@
       "on_sale": false,
       "free": false,
       "url": "https://ride1up.com/product/solar-charger/"
+    },
+    {
+      "name": "Rift Battery",
+      "price": 420.0,
+      "regular_price": null,
+      "on_sale": false,
+      "free": false,
+      "url": "https://ride1up.com/product/rift-battery/"
     },
     {
       "name": "Turris and LMT’D V2 Battery",
@@ -5706,20 +1983,12 @@
       "url": "https://ride1up.com/product/prodigy-battery/"
     },
     {
-      "name": "Cafe Cruiser Battery",
-      "price": 385.0,
+      "name": "LMT’D V1 and Core-5 Battery",
+      "price": 395.0,
       "regular_price": null,
       "on_sale": false,
       "free": false,
-      "url": "https://ride1up.com/product/cafecruiser-battery/"
-    },
-    {
-      "name": "CF Racer 1 Dual Battery Add-On",
-      "price": 295.0,
-      "regular_price": null,
-      "on_sale": false,
-      "free": false,
-      "url": "https://ride1up.com/product/dual-battery-add-on/"
+      "url": "https://ride1up.com/product/14ah-eel-battery/"
     },
     {
       "name": "Extended Warranty",
@@ -5730,12 +1999,12 @@
       "url": "https://ride1up.com/product/extended-warranty/"
     },
     {
-      "name": "LMT’D V1 and Core-5 Battery",
-      "price": 395.0,
+      "name": "Cafe Cruiser Battery",
+      "price": 385.0,
       "regular_price": null,
       "on_sale": false,
       "free": false,
-      "url": "https://ride1up.com/product/14ah-eel-battery/"
+      "url": "https://ride1up.com/product/cafecruiser-battery/"
     },
     {
       "name": "700 Series Battery",
@@ -5754,5 +2023,5 @@
       "url": "https://ride1up.com/product/500-series-battery/"
     }
   ],
-  "available_accessories_count": 58
+  "available_accessories_count": 59
 }

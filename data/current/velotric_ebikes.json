@@ -2,7 +2,7 @@
   "source": "https://www.velotricbike.com",
   "logo": "https://www.velotricbike.com/cdn/shop/files/20230607-183010.png?v=1686133833&width=256",
   "collection": "electric-bikes",
-  "scraped_at": "2026-06-27T05:07:35.914297+00:00",
+  "scraped_at": "2026-07-01T21:54:36.018140+00:00",
   "model_count": 19,
   "models": [
     {
@@ -1077,13 +1077,13 @@
         "colors": [
           {
             "name": "Platinum Silver",
-            "hex": null,
+            "hex": "#D4CAC4",
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/DM_Platinum_Sliver_right_side_1_1_1.png?v=1775015119"
           },
           {
             "name": "Olivine Green",
-            "hex": null,
+            "hex": "#3E4025",
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/DM_Olivine_Green_right_side_1_1_1.png?v=1773999944"
           }
@@ -1092,17 +1092,95 @@
       "warranty": "2-Year Limited Warranty",
       "specs": {
         "all": {
+          "Bike Size": "Regular / Large",
+          "User Height Range": "R：5'2''~5'11'' L：5'9''~6'7'' （With Suspension Seatpost） R：4'11''~5'9'' L：5'6''~6'4'' （Without Suspension Seatpost）",
+          "Frame": "Triple-Butted Aluminum Alloy",
+          "Fork": "Air suspension 80mm Travel with Lock-out",
+          "Motor": "48V, 500W, 960W(Peak Power) ,100Nm",
+          "Battery": "48V, 16.7Ah (801.6Wh), IPX7, Certificated by UL 2271",
+          "Cell": "Samsung/LG 21700 cell, Certificated by UL2580",
+          "Charger": "48V, 3A Fast Charger",
+          "Sensor": "Torque and Cadence Sensor",
+          "Display": "3.5\" Full color, High brightness, Bluetooth, NFC, Adjustable Angle",
+          "USB Port": "USB Type-C phone Charge",
+          "Throttle": "Trigger-control, Removable",
+          "Pedal Assist": "4 Riding Modes +Auto Mode/Ride Tuning",
+          "Walk Mode": "2.9MPH/ Walk & Hold",
+          "Front Light": "500LM High-output Integrated LED, Adjustable Angle",
+          "Rear Light": "Braking Indicator, Turn Signal, Rear Light Steady/Flash, Integrated with Rear Rack",
+          "Water Resistant": "IPX6",
+          "App": "App OTA",
+          "Anti-theft": "Apple Find My & Google's Find Hub，NFC Card Unlock",
+          "Max Speed (Default）": "20MPH",
+          "Max Speed Adjustable Range": "12~28MPH",
+          "Ebike Class": "1/2/3",
+          "Pedal Assist Range": "95 Miles",
+          "Throttle Range": "70 Miles",
+          "Chainrings": "46T Narrow-Wide Chainring",
+          "Crankset": "Aluminum Alloy, 170mm",
+          "Cassette": "9-speed,11-46T",
+          "Rear Derailleur": "SHIMANO Cues, 9-speed",
+          "Shift Lever": "SHIMANO Cues, 9-speed",
+          "Chain": "KMC eGlide 9-speed",
+          "Brake": "Tektro Hydraulic Disc Brake",
+          "Rotors": "180mm Front/180mm Rear",
+          "Brake Levers": "Aluminum Alloy, with Power Cutoff",
+          "Rims": "Aluminum Alloy",
+          "Front Hub": "NOVATEC Aluminum Alloy, 15x110mm Thru-axle",
+          "Tire": "KENDA 27.5x2.4\" eBike Puncture Resistant Tires",
+          "Handlebar": "Aluminum Alloy, Ф31.8mm, 680mm(R)/700mm(L)",
+          "Grips": "Durable Ergonomic Grips, Lockable",
+          "Stem": "Adjustable, Aluminum Alloy, ф31.8mm, 60mm Length",
+          "Saddle": "VELOTRIC Comfort Ergonomic Seat",
+          "Seatpost": "Aluminum Alloy, Ф30.9mm, Suspension",
+          "Clamp": "Aluminum Alloy, Quick Release",
+          "Fenders": "Aluminum Alloy, Front and Rear Full Coverage",
+          "Rear Rack": "MIK HD Compatible Alloy",
+          "Pedals": "Plastic",
+          "Kickstand": "Aluminum Alloy, Included, Rear Mount",
+          "Bike Weight": "60 lbs *Weight does not include fenders, kickstands, or pedals.",
+          "Rear Rack Load Capacity": "66 lbs",
+          "Max Bike Load Capacity": "440 lbs",
+          "UL Certification": "UL2849 & UL2271",
+          "ISO Standard": "ISO 4210",
+          "Height": "5'2\"~5'11\"",
+          "Reach": "374mm",
+          "Handlebar Height": "1110mm",
+          "Wheelbase": "1113mm",
+          "Stand-Over Height": "399mm",
+          "Min Saddle Height": "838mm",
+          "Max Saddle Height": "995mm",
+          "Total Length": "1812mm",
           "Rider Height": "5'2\" - 6'7\""
         }
       },
-      "spec_count": 0,
-      "scrape_error": "RuntimeError: no specs extracted",
+      "spec_count": 59,
+      "scrape_error": null,
       "is_new": false,
       "shipping": {
         "cost": 0,
         "free": true
       },
-      "free_accessories": [],
+      "free_accessories": [
+        {
+          "name": "Front Light",
+          "price": 0,
+          "free": true,
+          "detail": "500LM High-output Integrated LED, Adjustable Angle"
+        },
+        {
+          "name": "Rear Light",
+          "price": 0,
+          "free": true,
+          "detail": "Braking Indicator, Turn Signal, Rear Light Steady/Flash, Integrated with Rear Rack"
+        },
+        {
+          "name": "Kickstand",
+          "price": 0,
+          "free": true,
+          "detail": "Aluminum Alloy, Included, Rear Mount"
+        }
+      ],
       "frame_sizes": [
         {
           "size": "Regular",
@@ -1116,6 +1194,13 @@
         }
       ],
       "geometry": {
+        "Bike Size": "Regular / Large",
+        "User Height Range": "R：5'2''~5'11'' L：5'9''~6'7'' （With Suspension Seatpost） R：4'11''~5'9'' L：5'6''~6'4'' （Without Suspension Seatpost）",
+        "Reach": "374mm",
+        "Wheelbase": "1113mm",
+        "Stand-Over Height": "399mm",
+        "Min Saddle Height": "838mm",
+        "Max Saddle Height": "995mm",
         "Rider Height": "5'2\" - 6'7\""
       },
       "configurations": [
@@ -1131,7 +1216,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/DM_Platinum_Sliver_right_side_1_1_1.png?v=1775015119",
           "color": {
             "name": "Platinum Silver",
-            "hex": null,
+            "hex": "#D4CAC4",
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/DM_Platinum_Sliver_right_side_1_1_1.png?v=1775015119"
           }
@@ -1148,7 +1233,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/DM_Olivine_Green_right_side_1_1_1.png?v=1773999944",
           "color": {
             "name": "Olivine Green",
-            "hex": null,
+            "hex": "#3E4025",
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/DM_Olivine_Green_right_side_1_1_1.png?v=1773999944"
           }
@@ -1165,7 +1250,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/DM_Platinum_Sliver_right_side_1_1_1.png?v=1775015119",
           "color": {
             "name": "Platinum Silver",
-            "hex": null,
+            "hex": "#D4CAC4",
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/DM_Platinum_Sliver_right_side_1_1_1.png?v=1775015119"
           }
@@ -1182,7 +1267,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/DM_Olivine_Green_right_side_1_1_1.png?v=1773999944",
           "color": {
             "name": "Olivine Green",
-            "hex": null,
+            "hex": "#3E4025",
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/DM_Olivine_Green_right_side_1_1_1.png?v=1773999944"
           }
@@ -1206,6 +1291,27 @@
               "free": true
             }
           ]
+        },
+        {
+          "group": "Included accessories",
+          "type": "accessory",
+          "choices": [
+            {
+              "value": "Front Light",
+              "price": 0,
+              "free": true
+            },
+            {
+              "value": "Rear Light",
+              "price": 0,
+              "free": true
+            },
+            {
+              "value": "Kickstand",
+              "price": 0,
+              "free": true
+            }
+          ]
         }
       ]
     },
@@ -1221,22 +1327,10 @@
       "options": {
         "colors": [
           {
-            "name": "Stone Gray",
-            "hex": "#75777A",
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/F1_StoneGray_rightside1_1.png?v=1713178037"
-          },
-          {
             "name": "Electric Blue",
             "hex": "#0053B2",
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/F1_ElectricBlue_rightside1_1.png?v=1713178049"
-          },
-          {
-            "name": "Pearl White",
-            "hex": "#E6E6E6",
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/F1_PearlWhite_rightside1_1.png?v=1713178049"
           }
         ]
       },
@@ -1342,22 +1436,6 @@
       "configurations": [
         {
           "options": {
-            "Color": "Stone Gray"
-          },
-          "price": 999.0,
-          "sku": "VF010001E",
-          "variant_id": 42388153958583,
-          "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/F1_StoneGray_rightside1_1.png?v=1713178037",
-          "color": {
-            "name": "Stone Gray",
-            "hex": "#75777A",
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/F1_StoneGray_rightside1_1.png?v=1713178037"
-          }
-        },
-        {
-          "options": {
             "Color": "Electric Blue"
           },
           "price": 999.0,
@@ -1370,22 +1448,6 @@
             "hex": "#0053B2",
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/F1_ElectricBlue_rightside1_1.png?v=1713178049"
-          }
-        },
-        {
-          "options": {
-            "Color": "Pearl White"
-          },
-          "price": 999.0,
-          "sku": "VF010002E",
-          "variant_id": 42388153991351,
-          "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/F1_PearlWhite_rightside1_1.png?v=1713178049",
-          "color": {
-            "name": "Pearl White",
-            "hex": "#E6E6E6",
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/F1_PearlWhite_rightside1_1.png?v=1713178049"
           }
         }
       ],
@@ -3036,7 +3098,7 @@
       "regular_price": null,
       "tier": "Step-Thru",
       "family_id": "velotric__velotric-nomad-2",
-      "frame_style": "Step-Thru (Mid-Step)"
+      "frame_style": "Step-Thru"
     },
     {
       "model": "Velotric Nomad 2X Full Suspension Fat Tire Ebike",
@@ -3606,7 +3668,7 @@
       "regular_price": null,
       "tier": "Step-Thru",
       "family_id": "velotric__velotric-nomad-2x",
-      "frame_style": "Step-Thru (Mid-Step)"
+      "frame_style": "Step-Thru"
     },
     {
       "model": "Velotric Summit 1 Ebike",
@@ -4168,17 +4230,16 @@
       "product_types": [
         "Road / Gravel"
       ],
-      "price_from": 1349.0,
+      "price_from": 1399.0,
       "currency": "USD",
       "options": {
         "Size": [
-          "Regular",
-          "Large"
+          "Regular"
         ],
         "colors": [
           {
             "name": "Lava",
-            "hex": null,
+            "hex": "#FF6421",
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/T1ST_plus_lava_right_side_1_1_1.png?v=1764064119"
           }
@@ -4187,17 +4248,74 @@
       "warranty": "2-Year Limited Warranty",
       "specs": {
         "all": {
+          "Bike Size": "Regular/Large",
+          "User Height Range": "Regular: 4'11\" ~ 5'9\"/Large: 5'6\" ~ 6'4\"",
+          "Frame": "6061 Triple-butted Aluminum alloy frame",
+          "Fork": "6061 Aluminum alloy, internal brake routing, 12x100mm thru-axle",
+          "Motor": "350W, Peak 600W, 40Nm",
+          "Battery": "36V, 352.8Wh, IPX7, Certificated by UL 2271",
+          "Cell": "Samsung/LG 21700 cell, Certificated by UL 2580",
+          "Charger": "36V, 2A",
+          "Sensor": "Torque sensor",
+          "Display": "1.8\" Full color, high brightness, Bluetooth, adjustable angle",
+          "USB Port": "USB Type-A phone charge",
+          "Pedal Assist": "3 Riding Modes x 5 PAS Levels",
+          "Walk Mode": "2.9 MPH",
+          "Front Light": "High output integrated LED, 60Lux, adjustable angle",
+          "Rear Light": "LED light",
+          "Water Resistant": "IPX6",
+          "Default Speed": "20 MPH",
+          "Max Speed Adjustable Range": "12~28 MPH",
+          "Class": "1/3",
+          "Pedal Assist Range": "70 Miles",
+          "Chainrings": "46T",
+          "Crankset": "Aluminum Alloy, 170mm",
+          "Freewheel": "8-speed, 11-32T",
+          "Rear Derailleur": "SHIMANO 8-speed",
+          "Shift Lever": "SHIMANO 8-speed",
+          "Chain": "KMC 8-speed",
+          "Brake": "TEKTRO Hydraulic Disc Brake",
+          "Rotors": "160mm front and rear",
+          "Brake Levers": "Aluminum Alloy",
+          "Rims": "Double-wall Aluminum Alloy",
+          "Front Hub": "NOVATEC Aluminum Alloy, 12x100mm thru-axle",
+          "Tire": "KENDA 700×40c eBike puncture resistant tires",
+          "Handlebar": "Aluminum Alloy, Φ31.8mm, 660mm",
+          "Grips": "VELOTRIC ergonomic comfort grips",
+          "Stem": "Adjustable, Aluminum Alloy, φ31.8mm, 60mm",
+          "Saddle": "VELOTRIC urban comfort ergonomic seat",
+          "Seatpost": "Aluminum Alloy, φ30.9mm, 350mm",
+          "Clamp": "Aluminum Alloy",
+          "Pedals": "Plastic",
+          "Kickstand": "Aluminum Alloy, included, rear mount",
+          "Bike Weight": "39lbs",
+          "Max Bike Load Capacity": "330lbs",
+          "UL Certification": "UL 2849",
+          "ISO Standard": "ISO 4210",
           "Rider Height": "4'11\" - 6'4\""
         }
       },
-      "spec_count": 0,
-      "scrape_error": "RuntimeError: no specs extracted",
+      "spec_count": 44,
+      "scrape_error": null,
       "is_new": false,
       "shipping": {
         "cost": 0,
         "free": true
       },
-      "free_accessories": [],
+      "free_accessories": [
+        {
+          "name": "Front Light",
+          "price": 0,
+          "free": true,
+          "detail": "High output integrated LED, 60Lux, adjustable angle"
+        },
+        {
+          "name": "Kickstand",
+          "price": 0,
+          "free": true,
+          "detail": "Aluminum Alloy, included, rear mount"
+        }
+      ],
       "frame_sizes": [
         {
           "size": "Regular",
@@ -4211,6 +4329,8 @@
         }
       ],
       "geometry": {
+        "Bike Size": "Regular/Large",
+        "User Height Range": "Regular: 4'11\" ~ 5'9\"/Large: 5'6\" ~ 6'4\"",
         "Rider Height": "4'11\" - 6'4\""
       },
       "configurations": [
@@ -4219,31 +4339,14 @@
             "Size": "Regular",
             "Color": "Lava"
           },
-          "price": 1349.0,
+          "price": 1399.0,
           "sku": "VT020004E",
           "variant_id": 41729524039863,
           "available": true,
           "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/T1ST_plus_lava_right_side_1_1_1.png?v=1764064119",
           "color": {
             "name": "Lava",
-            "hex": null,
-            "swatch_image": null,
-            "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/T1ST_plus_lava_right_side_1_1_1.png?v=1764064119"
-          }
-        },
-        {
-          "options": {
-            "Size": "Large",
-            "Color": "Lava"
-          },
-          "price": 1349.0,
-          "sku": "VT020006E",
-          "variant_id": 43099583905975,
-          "available": true,
-          "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/T1ST_plus_lava_right_side_1_1_1.png?v=1764064119",
-          "color": {
-            "name": "Lava",
-            "hex": null,
+            "hex": "#FF6421",
             "swatch_image": null,
             "image": "https://cdn.shopify.com/s/files/1/0599/2094/1239/files/T1ST_plus_lava_right_side_1_1_1.png?v=1764064119"
           }
@@ -4251,26 +4354,24 @@
       ],
       "available_options": [
         {
-          "group": "Size",
-          "type": "variant",
+          "group": "Included accessories",
+          "type": "accessory",
           "choices": [
             {
-              "value": "Regular",
-              "price": 1349.0,
-              "price_delta": 0.0,
+              "value": "Front Light",
+              "price": 0,
               "free": true
             },
             {
-              "value": "Large",
-              "price": 1349.0,
-              "price_delta": 0.0,
+              "value": "Kickstand",
+              "price": 0,
               "free": true
             }
           ]
         }
       ],
       "regular_price": 1649.0,
-      "frame_style": "Step-Thru (Mid-Step)"
+      "frame_style": "Step-Thru"
     },
     {
       "model": "Velotric Tempo Ebike",
@@ -4814,7 +4915,7 @@
       "regular_price": null,
       "tier": "Step-Thru",
       "family_id": "velotric__velotric-tempo-city-ebike",
-      "frame_style": "Step-Thru (Mid-Step)"
+      "frame_style": "Step-Thru"
     },
     {
       "model": "Velotric Triker Electric Tricycle",
@@ -5211,14 +5312,6 @@
       "url": "https://www.velotricbike.com/products/velotric-battery-terminal-cover"
     },
     {
-      "name": "Velotric Packer 1 Passenger Foot Rest",
-      "price": 99.99,
-      "regular_price": null,
-      "on_sale": false,
-      "free": false,
-      "url": "https://www.velotricbike.com/products/velotric-packer-1-passenger-foot-rest"
-    },
-    {
       "name": "Velotric Half Twist Throttle Set 3 Pin",
       "price": 47.99,
       "regular_price": null,
@@ -5371,14 +5464,6 @@
       "url": "https://www.velotricbike.com/products/velotric-nomad-inner-tube"
     },
     {
-      "name": "Velotric T-shirt",
-      "price": 35.99,
-      "regular_price": null,
-      "on_sale": false,
-      "free": false,
-      "url": "https://www.velotricbike.com/products/velotric-t-shirt"
-    },
-    {
       "name": "Velotric Polo",
       "price": 39.99,
       "regular_price": null,
@@ -5475,14 +5560,6 @@
       "url": "https://www.velotricbike.com/products/velotric-charger-slim"
     },
     {
-      "name": "Velotric Half Twist Throttle Set",
-      "price": 47.99,
-      "regular_price": null,
-      "on_sale": false,
-      "free": false,
-      "url": "https://www.velotricbike.com/products/velotric-half-twist-throttle-set-2"
-    },
-    {
       "name": "ROCKBROS Cold Weather Windproof Thermal Winter Balaclava Ski Mask Neck Warmer Hood",
       "price": 19.99,
       "regular_price": null,
@@ -5537,14 +5614,6 @@
       "on_sale": false,
       "free": false,
       "url": "https://www.velotricbike.com/products/velotric-breeze-1-display"
-    },
-    {
-      "name": "BiKASE MIK Trunk Bag Big Momma Bicycle Rack Bag",
-      "price": 139.99,
-      "regular_price": null,
-      "on_sale": false,
-      "free": false,
-      "url": "https://www.velotricbike.com/products/bikase-mik-trunk-bag-big-momma-bicycle-rack-bag"
     },
     {
       "name": "Velotric Fold 1 Plus Display",
@@ -5811,5 +5880,5 @@
       "url": "https://www.velotricbike.com/products/bike-essential-kit"
     }
   ],
-  "available_accessories_count": 99
+  "available_accessories_count": 95
 }

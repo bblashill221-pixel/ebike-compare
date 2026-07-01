@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-07-01T07:57:45.714676+00:00",
-  "model_count": 491,
-  "anomaly_count": 11,
+  "generated_at": "2026-07-01T23:36:18.937418+00:00",
+  "model_count": 543,
+  "anomaly_count": 32,
   "by_severity": {
     "medium": 3,
-    "low": 8
+    "low": 29
   },
   "by_rule": {
-    "value_ratio_outlier": 8,
+    "value_ratio_outlier": 29,
     "full_susp_no_rear_shock": 3
   },
   "anomalies": [
@@ -37,15 +37,6 @@
       "rule": "full_susp_no_rear_shock",
       "severity": "medium",
       "detail": "suspension=full but no rear shock named anywhere in specs"
-    },
-    {
-      "id": "buzz__buzz-centris",
-      "brand": "buzz",
-      "model": "Centris 2 Folding Ebike",
-      "url": "https://www.buzzbicycles.com/buzz-centris/",
-      "rule": "value_ratio_outlier",
-      "severity": "low",
-      "detail": "price / parts-cost ratio = 0.512"
     },
     {
       "id": "cemoto__cemoto-eb28a-emountain-bike",
@@ -82,6 +73,204 @@
       "rule": "value_ratio_outlier",
       "severity": "low",
       "detail": "price / parts-cost ratio = 0.527"
+    },
+    {
+      "id": "gotrax__accord-electric-bike",
+      "brand": "gotrax",
+      "model": "Accord Electric Bike",
+      "url": "https://gotrax.com/products/accord-electric-bike",
+      "rule": "value_ratio_outlier",
+      "severity": "low",
+      "detail": "price / parts-cost ratio = 0.483"
+    },
+    {
+      "id": "gotrax__approach-e-mtb",
+      "brand": "gotrax",
+      "model": "Approach Step Over Electric Mountain Bike",
+      "url": "https://gotrax.com/products/approach-e-mtb",
+      "rule": "value_ratio_outlier",
+      "severity": "low",
+      "detail": "price / parts-cost ratio = 0.445"
+    },
+    {
+      "id": "gotrax__astra-electric-dirt-bike-for-kids",
+      "brand": "gotrax",
+      "model": "Fitz16 Electric Dirt Bike for Kids",
+      "url": "https://gotrax.com/products/astra-electric-dirt-bike-for-kids",
+      "rule": "value_ratio_outlier",
+      "severity": "low",
+      "detail": "price / parts-cost ratio = 0.424"
+    },
+    {
+      "id": "gotrax__cti-electric-bike",
+      "brand": "gotrax",
+      "model": "CTI Commuter E-Bike",
+      "url": "https://gotrax.com/products/cti-electric-bike",
+      "rule": "value_ratio_outlier",
+      "severity": "low",
+      "detail": "price / parts-cost ratio = 0.459"
+    },
+    {
+      "id": "gotrax__d1rt-electric-mountain-bike",
+      "brand": "gotrax",
+      "model": "D1RT Electric Mountain Bike",
+      "url": "https://gotrax.com/products/d1rt-electric-mountain-bike",
+      "rule": "value_ratio_outlier",
+      "severity": "low",
+      "detail": "price / parts-cost ratio = 0.483"
+    },
+    {
+      "id": "gotrax__e-fold-electric-bike",
+      "brand": "gotrax",
+      "model": "E-Fold Electric Bike",
+      "url": "https://gotrax.com/products/e-fold-electric-bike",
+      "rule": "value_ratio_outlier",
+      "severity": "low",
+      "detail": "price / parts-cost ratio = 0.412"
+    },
+    {
+      "id": "gotrax__ebe1-folding-e-bike",
+      "brand": "gotrax",
+      "model": "EBE1 Electric Bike",
+      "url": "https://gotrax.com/products/ebe1-folding-e-bike",
+      "rule": "value_ratio_outlier",
+      "severity": "low",
+      "detail": "price / parts-cost ratio = 0.38"
+    },
+    {
+      "id": "gotrax__electric-beach-cruiser",
+      "brand": "gotrax",
+      "model": "Aeroluxe Electric Beach Cruiser",
+      "url": "https://gotrax.com/products/electric-beach-cruiser",
+      "rule": "value_ratio_outlier",
+      "severity": "low",
+      "detail": "price / parts-cost ratio = 0.483"
+    },
+    {
+      "id": "gotrax__elevation-electric-bike",
+      "brand": "gotrax",
+      "model": "Elevation Electric Bike",
+      "url": "https://gotrax.com/products/elevation-electric-bike",
+      "rule": "value_ratio_outlier",
+      "severity": "low",
+      "detail": "price / parts-cost ratio = 0.413"
+    },
+    {
+      "id": "gotrax__elo-electric-bike",
+      "brand": "gotrax",
+      "model": "eLo Electric Bike",
+      "url": "https://gotrax.com/products/elo-electric-bike",
+      "rule": "value_ratio_outlier",
+      "severity": "low",
+      "detail": "price / parts-cost ratio = 0.412"
+    },
+    {
+      "id": "gotrax__emerge-electric-bike",
+      "brand": "gotrax",
+      "model": "Emerge Electric Bike",
+      "url": "https://gotrax.com/products/emerge-electric-bike",
+      "rule": "value_ratio_outlier",
+      "severity": "low",
+      "detail": "price / parts-cost ratio = 0.38"
+    },
+    {
+      "id": "gotrax__f1-electric-bike",
+      "brand": "gotrax",
+      "model": "F1 Folding Electric Bike 2.0",
+      "url": "https://gotrax.com/products/f1-electric-bike",
+      "rule": "value_ratio_outlier",
+      "severity": "low",
+      "detail": "price / parts-cost ratio = 0.483"
+    },
+    {
+      "id": "gotrax__f2-electric-bike",
+      "brand": "gotrax",
+      "model": "F2 Foldable Electric Bike 2.0",
+      "url": "https://gotrax.com/products/f2-electric-bike",
+      "rule": "value_ratio_outlier",
+      "severity": "low",
+      "detail": "price / parts-cost ratio = 0.541"
+    },
+    {
+      "id": "gotrax__gotrax-s3-power-assisted-bicycle",
+      "brand": "gotrax",
+      "model": "GOTRAX S3 Mini Electric Bike",
+      "url": "https://gotrax.com/products/gotrax-s3-power-assisted-bicycle",
+      "rule": "value_ratio_outlier",
+      "severity": "low",
+      "detail": "price / parts-cost ratio = 0.375"
+    },
+    {
+      "id": "gotrax__monte",
+      "brand": "gotrax",
+      "model": "Monte Electric Bike",
+      "url": "https://gotrax.com/products/monte",
+      "rule": "value_ratio_outlier",
+      "severity": "low",
+      "detail": "price / parts-cost ratio = 0.495"
+    },
+    {
+      "id": "gotrax__nephelle-electric-16-electric-bike",
+      "brand": "gotrax",
+      "model": "Nephelle Electric 16\" electric bike",
+      "url": "https://gotrax.com/products/nephelle-electric-16-electric-bike",
+      "rule": "value_ratio_outlier",
+      "severity": "low",
+      "detail": "price / parts-cost ratio = 0.373"
+    },
+    {
+      "id": "gotrax__r1-folding-electric-bike",
+      "brand": "gotrax",
+      "model": "R1 Folding Electric Bike",
+      "url": "https://gotrax.com/products/r1-folding-electric-bike",
+      "rule": "value_ratio_outlier",
+      "severity": "low",
+      "detail": "price / parts-cost ratio = 0.525"
+    },
+    {
+      "id": "gotrax__ranger-16-electric-bike",
+      "brand": "gotrax",
+      "model": "Ranger 16 Electric Bike",
+      "url": "https://gotrax.com/products/ranger-16-electric-bike",
+      "rule": "value_ratio_outlier",
+      "severity": "low",
+      "detail": "price / parts-cost ratio = 0.495"
+    },
+    {
+      "id": "gotrax__shift-s1-folding-electric-bike",
+      "brand": "gotrax",
+      "model": "Shift S1 Electric Bike",
+      "url": "https://gotrax.com/products/shift-s1-folding-electric-bike",
+      "rule": "value_ratio_outlier",
+      "severity": "low",
+      "detail": "price / parts-cost ratio = 0.344"
+    },
+    {
+      "id": "gotrax__shift-s2",
+      "brand": "gotrax",
+      "model": "Shift S2 Electric Bike",
+      "url": "https://gotrax.com/products/shift-s2",
+      "rule": "value_ratio_outlier",
+      "severity": "low",
+      "detail": "price / parts-cost ratio = 0.296"
+    },
+    {
+      "id": "gotrax__shift-s4-power-assisted-bicycle",
+      "brand": "gotrax",
+      "model": "Shift S4 Power-Assisted Bicycle",
+      "url": "https://gotrax.com/products/shift-s4-power-assisted-bicycle",
+      "rule": "value_ratio_outlier",
+      "severity": "low",
+      "detail": "price / parts-cost ratio = 0.446"
+    },
+    {
+      "id": "gotrax__z4-lite-electric-bike",
+      "brand": "gotrax",
+      "model": "Z4 Lite Lightweight Electric Bike",
+      "url": "https://gotrax.com/products/z4-lite-electric-bike",
+      "rule": "value_ratio_outlier",
+      "severity": "low",
+      "detail": "price / parts-cost ratio = 0.508"
     },
     {
       "id": "magicycle__magicycle-ct-1-commuter-torque-sensor-electric-bike",
